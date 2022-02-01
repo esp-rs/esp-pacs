@@ -1,0 +1,7 @@
+esp*/**/src/
+target/
+
+esp32.svd
+esp32c3.svd
+esp32s2.svd
+esp32s3.svd

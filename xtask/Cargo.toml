@@ -1,0 +1,13 @@
+[package]
+name    = "xtask"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow   = "1.0"
+form     = "0.8"
+rustfmt  = "0.10"
+svd2rust = "0.21"
+svdtools = "0.2"
+toml     = "0.5"
