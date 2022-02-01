@@ -1,3 +1,5 @@
+// TODO: add some logging/output of some sort
+
 use std::{
     env,
     fs::{self, File},
@@ -18,8 +20,8 @@ fn main() -> Result<()> {
     let workspace = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let workspace = workspace.parent().unwrap().canonicalize()?;
 
-    // Verify that a PAC was specified and that it is valid, and if so perform all
-    // steps necessary to generate the PAC.
+    // Verify that a chip was specified and that it is valid, and if so perform all
+    // steps necessary to generate the PAC for said chip.
     if let Some(chip) = env::args().nth(1) {
         let chip = chip.to_lowercase().replace("-", "");
         let chip = chip.as_str();
@@ -32,9 +34,10 @@ fn main() -> Result<()> {
                 // because the directory does not exist.
                 fs::remove_dir_all(&path.join("src")).ok();
 
-                patch(chip, &path)?;
-                generate(chip, &path)?;
+                patch_svd(chip, &path)?;
+                generate_pac(chip, &path)?;
                 format(&path)?;
+                clean(&path)?;
                 build(&path)?;
             }
             _ => bail!("invalid chip '{}' specified", chip),
@@ -46,7 +49,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn patch(chip: &str, path: &PathBuf) -> Result<()> {
+fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
     let svd_path = path.join("svd");
 
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
@@ -59,13 +62,13 @@ fn patch(chip: &str, path: &PathBuf) -> Result<()> {
     Ok(())
 }
 
-fn generate(chip: &str, path: &PathBuf) -> Result<()> {
+fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
+    let svd_file = path.join("svd").join(format!("{chip}.svd"));
+    let input = fs::read_to_string(svd_file)?;
+
     let mut config = Config::default();
     config.target = Target::XtensaLX;
     config.output_dir = path.clone();
-
-    let svd_path = path.join("svd").join(format!("{chip}.svd"));
-    let input = fs::read_to_string(svd_path)?;
 
     let device = load_from(&input, &config)?;
 
@@ -83,13 +86,15 @@ fn generate(chip: &str, path: &PathBuf) -> Result<()> {
 }
 
 fn format(path: &PathBuf) -> Result<()> {
+    let lib_file = path.join("lib.rs");
+
     let base_dir = path.join("src");
-    let string_contents = fs::read_to_string(path.join("lib.rs"))?;
+    let string_contents = fs::read_to_string(&lib_file)?;
     create_directory_structure(base_dir, string_contents).map_err(Error::msg)?;
 
-    fs::remove_file(path.join("lib.rs"))?;
+    fs::remove_file(&lib_file)?;
 
-    // TODO: use 'rustfmt' directly, as a library
+    // TODO: consider using 'rustfmt' directly, as a library
     Command::new("cargo")
         .arg("fmt")
         .current_dir(path)
@@ -98,12 +103,16 @@ fn format(path: &PathBuf) -> Result<()> {
     Ok(())
 }
 
-fn build(path: &PathBuf) -> Result<()> {
+fn clean(path: &PathBuf) -> Result<()> {
     Command::new("cargo")
         .arg("clean")
         .current_dir(path)
         .output()?;
 
+    Ok(())
+}
+
+fn build(path: &PathBuf) -> Result<()> {
     let channel = get_channel(path)?;
     let target = get_target(path)?;
 
@@ -125,15 +134,15 @@ fn build(path: &PathBuf) -> Result<()> {
 }
 
 fn get_channel(path: &PathBuf) -> Result<String> {
-    let toolchain_path = path.join("rust-toolchain.toml");
-    let channel = extract_toml_value(&toolchain_path, &["toolchain", "channel"])?;
+    let toolchain_file = path.join("rust-toolchain.toml");
+    let channel = extract_toml_value(&toolchain_file, &["toolchain", "channel"])?;
 
     Ok(channel)
 }
 
 fn get_target(path: &PathBuf) -> Result<String> {
-    let config_path = path.join(".cargo").join("config.toml");
-    let target = extract_toml_value(&config_path, &["build", "target"])?;
+    let config_file = path.join(".cargo").join("config.toml");
+    let target = extract_toml_value(&config_file, &["build", "target"])?;
 
     Ok(target)
 }
@@ -142,9 +151,9 @@ fn extract_toml_value(path: &PathBuf, keys: &[&str]) -> Result<String> {
     let contents = fs::read_to_string(path)?;
     let value = contents.parse::<Value>()?;
 
-    let mut item = value;
+    let mut item = &value;
     for key in keys {
-        item = item.get(key).unwrap().to_owned();
+        item = item.get(key).unwrap();
     }
 
     let item = item.to_string().replace("\"", "");
