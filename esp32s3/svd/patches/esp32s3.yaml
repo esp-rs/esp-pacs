@@ -1,0 +1,34 @@
+_svd: ../esp32s3.base.svd
+
+GPIO:
+  "FUNC*_OUT_SEL_CFG":
+    _modify:
+      "FUNC_OUT_SEL":
+        name: OUT_SEL
+      "FUNC_OUT_INV_SEL":
+        name: INV_SEL
+      "FUNC_OEN_SEL":
+        name: OEN_SEL
+      "FUNC_OEN_INV_SEL":
+        name: OEN_INV_SEL
+
+  "FUNC*_IN_SEL_CFG":
+    _modify:
+      "FUNC_IN_SEL":
+        name: IN_SEL
+      "FUNC_IN_INV_SEL":
+        name: IN_INV_SEL
+      "SIG_IN_SEL":
+        name: SEL
+
+  "IN":
+    _modify:
+      "DATA":
+        access: read-write
+        name: data_next
+
+  "IN1":
+    _modify:
+      "DATA":
+        access: read-write
+        name: data_next

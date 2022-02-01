@@ -1,0 +1,12 @@
+_svd: ../esp32s2.base.svd
+
+GPIO:
+  "IN":
+    _modify:
+      "DATA_NEXT":
+        access: read-write
+  "IN1":
+    _modify:
+      "IN_DATA1_NEXT":
+        access: read-write
+        name: data_next

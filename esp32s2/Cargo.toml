@@ -1,0 +1,41 @@
+[package]
+name = "esp32s2"
+version = "0.1.0"
+authors = ["Jesse Braham <jesse@beta7.io>"]
+edition = "2018"
+readme = "README.md"
+repository = "https://github.com/esp-rs/esp32s2"
+description = "Peripheral access crate for the ESP32-S2"
+keywords = [
+    "embedded",
+    "esp32s2",
+    "no-std",
+    "wifi",
+]
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std",
+]
+include = [
+    "/src/**",
+    "build.rs",
+    "device.x",
+]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+bare-metal = "1.0"
+vcell = "0.1"
+xtensa-lx = "0.4"
+
+[dependencies.xtensa-lx-rt]
+git = "https://github.com/esp-rs/xtensa-lx-rt.git"
+branch = "unify-xtensa-asm"
+features = ["lx6"]
+optional = true
+
+[features]
+# NOTE: these features will need to be updated when support for LX7 is added.
+default = ["xtensa-lx/lx6"]
+rt = ["xtensa-lx-rt/lx6"]

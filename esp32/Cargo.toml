@@ -1,0 +1,30 @@
+[package]
+name = "esp32"
+version = "0.11.0"
+authors = ["Scott Mabin <scott@mabez.dev>", "Arjan Mels <arjan@mels.email>"]
+edition = "2018"
+readme = "README.md"
+repository = "https://github.com/esp-rs/esp32"
+description = "Peripheral access crate for the ESP32"
+keywords = ["no-std", "esp32", "wifi", "embedded"]
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std",
+]
+include = [
+    "src/**",
+    "build.rs",
+    "device.x"
+]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+bare-metal = "1.0"
+vcell = "0.1"
+xtensa-lx = "0.6.0"
+xtensa-lx-rt = { version = "0.8.0", optional = true }
+
+[features]
+default = ["xtensa-lx/esp32"]
+rt = ["xtensa-lx-rt/esp32"]

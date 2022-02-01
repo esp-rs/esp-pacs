@@ -1,0 +1,39 @@
+[package]
+name = "esp32c3"
+version = "0.3.0"
+authors = [
+    "Samir Shetty <samirshetty23@gmail.com>",
+    "Jesse Braham <jesse@beta7.io>",
+]
+edition = "2018"
+description = "Peripheral access crate for the ESP32-C3"
+documentation = "https://docs.rs/esp32c3/"
+readme = "README.md"
+repository = "https://github.com/esp-rs/esp32c3"
+license = "MIT OR Apache-2.0"
+keywords = [
+    "no-std",
+    "esp32-c3",
+    "wifi",
+    "embedded",
+]
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std",
+]
+include = [
+    "/src/**",
+    "build.rs",
+    "device.x"
+]
+
+[dependencies]
+bare-metal = "1.0"
+riscv = "0.7"
+riscv-rt = { version = "0.8", optional = true }
+vcell = "0.1"
+
+[features]
+default = []
+rt = ["riscv-rt"]
