@@ -67,7 +67,7 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     let input = fs::read_to_string(svd_file)?;
 
     let mut config = Config::default();
-    config.target = Target::XtensaLX;
+    config.target = get_svd2rust_target(path)?;
     config.output_dir = path.clone();
 
     let device = load_from(&input, &config)?;
@@ -121,7 +121,7 @@ fn build(path: &PathBuf) -> Result<()> {
             &format!("+{channel}"),
             "build",
             "-Z",
-            "build-std",
+            "build-std=core",
             "--target",
             &target,
         ])
@@ -145,6 +145,14 @@ fn get_target(path: &PathBuf) -> Result<String> {
     let target = extract_toml_value(&config_file, &["build", "target"])?;
 
     Ok(target)
+}
+
+fn get_svd2rust_target(path: &PathBuf) -> Result<Target> {
+    if get_target(path)?.contains("riscv") {
+        Ok(Target::RISCV)
+    } else {
+        Ok(Target::XtensaLX)
+    }
 }
 
 fn extract_toml_value(path: &PathBuf, keys: &[&str]) -> Result<String> {
