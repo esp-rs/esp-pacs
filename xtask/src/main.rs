@@ -20,6 +20,11 @@ fn main() -> Result<()> {
     let workspace = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let workspace = workspace.parent().unwrap().canonicalize()?;
 
+    let patch_only = match env::args().nth(2).as_deref() {
+        Some("--patch-only") => true,
+        _ => false,
+    };
+
     // Verify that a chip was specified and that it is valid, and if so perform all
     // steps necessary to generate the PAC for said chip.
     if let Some(chip) = env::args().nth(1) {
@@ -35,10 +40,12 @@ fn main() -> Result<()> {
                 fs::remove_dir_all(&path.join("src")).ok();
 
                 patch_svd(chip, &path)?;
-                generate_pac(chip, &path)?;
-                format(&path)?;
-                clean(&path)?;
-                build(&path)?;
+                if !patch_only {
+                    generate_pac(chip, &path)?;
+                    format(&path)?;
+                    clean(&path)?;
+                    build(&path)?;
+                }
             }
             _ => bail!("invalid chip '{}' specified", chip),
         }
