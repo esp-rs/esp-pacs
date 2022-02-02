@@ -8,49 +8,67 @@ use std::{
     process::{Command, Stdio},
 };
 
-use anyhow::{bail, Error, Result};
+use anyhow::{Error, Result};
+use clap::Parser;
 use form::util::create_directory_structure;
+use strum::VariantNames;
+use strum_macros::{Display, EnumString, EnumVariantNames};
 use svd2rust::{generate::device::render, load_from, util::build_rs, Config, Target};
 use svdtools::patch::process_file;
 use toml::Value;
 
+#[derive(Debug, Display, EnumString, EnumVariantNames)]
+pub enum Chip {
+    #[strum(serialize = "esp32")]
+    Esp32,
+    #[strum(serialize = "esp32c3")]
+    Esp32c3,
+    #[strum(serialize = "esp32s2")]
+    Esp32s2,
+    #[strum(serialize = "esp32s3")]
+    Esp32s3,
+}
+
+#[derive(Debug, Parser)]
+struct Opts {
+    /// Chip to target
+    #[clap(possible_values = Chip::VARIANTS)]
+    chip: Chip,
+    /// Only patch the SVD, do not generate or build the PAC
+    #[clap(long, conflicts_with = "generate-only")]
+    patch_only: bool,
+    /// Patch the SVD and generate the PAC, but do not build it
+    #[clap(long, conflicts_with = "patch-only")]
+    generate_only: bool,
+}
+
 fn main() -> Result<()> {
+    let opts = Opts::parse();
+
+    let chip = opts.chip.to_string();
+    let chip = chip.as_str();
+
     // The directory containing the cargo manifest for the 'xtask' package is a
     // subdirectory within the cargo workspace.
     let workspace = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let workspace = workspace.parent().unwrap().canonicalize()?;
 
-    let patch_only = match env::args().nth(2).as_deref() {
-        Some("--patch-only") => true,
-        _ => false,
-    };
+    // Remove the src/ directory before we begin. If this fails we will assume it's
+    // because the directory does not exist.
+    let path = workspace.join(chip);
+    fs::remove_dir_all(&path.join("src")).ok();
 
-    // Verify that a chip was specified and that it is valid, and if so perform all
-    // steps necessary to generate the PAC for said chip.
-    if let Some(chip) = env::args().nth(1) {
-        let chip = chip.to_lowercase().replace("-", "");
-        let chip = chip.as_str();
-
-        match chip {
-            "esp32" | "esp32c3" | "esp32s2" | "esp32s3" => {
-                let path = workspace.join(chip);
-
-                // Remove the src/ directory before we begin. If this fails we will assume it's
-                // because the directory does not exist.
-                fs::remove_dir_all(&path.join("src")).ok();
-
-                patch_svd(chip, &path)?;
-                if !patch_only {
-                    generate_pac(chip, &path)?;
-                    format(&path)?;
-                    clean(&path)?;
-                    build(&path)?;
-                }
-            }
-            _ => bail!("invalid chip '{}' specified", chip),
+    // Always patch the SVD upon execution. If '--patch-only' has NOT been set,
+    // then additionally generate and format the PAC. If '--generate-only' has NOT
+    // been set, clean and build the PAC crate.
+    patch_svd(chip, &path)?;
+    if !opts.patch_only {
+        generate_pac(chip, &path)?;
+        format(&path)?;
+        if !opts.generate_only {
+            clean(&path)?;
+            build(&path)?;
         }
-    } else {
-        bail!("no chip specified");
     }
 
     Ok(())
@@ -120,8 +138,8 @@ fn clean(path: &PathBuf) -> Result<()> {
 }
 
 fn build(path: &PathBuf) -> Result<()> {
-    let channel = get_channel(path)?;
-    let target = get_target(path)?;
+    let channel = get_release_channel(path)?;
+    let target = get_build_target(path)?;
 
     Command::new("cargo")
         .args(&[
@@ -140,14 +158,14 @@ fn build(path: &PathBuf) -> Result<()> {
     Ok(())
 }
 
-fn get_channel(path: &PathBuf) -> Result<String> {
+fn get_release_channel(path: &PathBuf) -> Result<String> {
     let toolchain_file = path.join("rust-toolchain.toml");
     let channel = extract_toml_value(&toolchain_file, &["toolchain", "channel"])?;
 
     Ok(channel)
 }
 
-fn get_target(path: &PathBuf) -> Result<String> {
+fn get_build_target(path: &PathBuf) -> Result<String> {
     let config_file = path.join(".cargo").join("config.toml");
     let target = extract_toml_value(&config_file, &["build", "target"])?;
 
@@ -155,7 +173,7 @@ fn get_target(path: &PathBuf) -> Result<String> {
 }
 
 fn get_svd2rust_target(path: &PathBuf) -> Result<Target> {
-    if get_target(path)?.contains("riscv") {
+    if get_build_target(path)?.contains("riscv") {
         Ok(Target::RISCV)
     } else {
         Ok(Target::XtensaLX)
