@@ -10,3 +10,24 @@ GPIO:
       "IN_DATA1_NEXT":
         access: read-write
         name: data_next
+IO_MUX:
+  _delete:
+    _registers:
+      - XTAL_32K_P
+      - XTAL_32K_N
+      - DAC_1
+      - DAC_2
+      - SPICS1
+      - SPIHD
+      - SPIWP
+      - SPICS0
+      - SPIDK
+      - SPIQ
+      - SPID
+      - MTCK
+      - MTDO
+      - MTDI
+      - MTMS
+      - U0TXD
+      - U0RXD
+      - SPICLK
