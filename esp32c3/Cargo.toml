@@ -5,7 +5,7 @@ authors = [
     "Samir Shetty <samirshetty23@gmail.com>",
     "Jesse Braham <jesse@beta7.io>",
 ]
-edition = "2018"
+edition = "2021"
 description = "Peripheral access crate for the ESP32-C3"
 documentation = "https://docs.rs/esp32c3/"
 readme = "README.md"

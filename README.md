@@ -1,6 +1,6 @@
 # esp-pacs
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jessebraham/esp-pacs/CI?label=CI&logo=github&style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/esp-rs/esp-pacs/CI?label=CI&logo=github&style=flat-square)
 ![MIT/Apache-2.0 licensed](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue?style=flat-square)
 [![Matrix](https://img.shields.io/matrix/esp-rs:matrix.org?label=join%20matrix&color=BEC5C9&logo=matrix&style=flat-square)](https://matrix.to/#/#esp-rs:matrix.org)
 
@@ -8,8 +8,11 @@ Peripheral Access Crates for Espressif SoCs and modules. For information on how 
 
 If you discover any errors in an SVD file, please report the issue(s) upstream in the [espressif/svd] repository.
 
+Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**) you will need to first install the [Rust compiler fork] with Xtensa support. The minimum supported Rust version (MSRV) for these devices is `1.58.0`.
+
 [svd2rust documentation]: https://docs.rs/svd2rust/latest/svd2rust/
-[espressif/svd]: https://github.com/espressif/svd
+[espressif/svd]: https://github.com/espressif/svd/
+[rust compiler fork]: https://github.com/esp-rs/rust-build/
 
 ## Generating the PACs
 
