@@ -8,7 +8,7 @@ Peripheral Access Crates for Espressif SoCs and modules. For information on how 
 
 If you discover any errors in an SVD file, please report the issue(s) upstream in the [espressif/svd] repository.
 
-Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**) you will need to first install the [Rust compiler fork] with Xtensa support. The minimum supported Rust version (MSRV) for these devices is `1.58.0`.
+Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**) you will need to first install the [Rust compiler fork] with Xtensa support. The minimum supported Rust version (MSRV) for these devices is `1.58.0`.
 
 [svd2rust documentation]: https://docs.rs/svd2rust/latest/svd2rust/
 [espressif/svd]: https://github.com/espressif/svd/
@@ -25,7 +25,7 @@ USAGE:
     xtask [OPTIONS] <CHIP>
 
 ARGS:
-    <CHIP>    Chip to target [possible values: esp32, esp32c3, esp32s2, esp32s3]
+    <CHIP>    Chip to target [possible values: esp32, esp32c3, esp32s2, esp32s3, esp8266]
 
 OPTIONS:
         --generate-only    Patch the SVD and generate the PAC, but do not build it

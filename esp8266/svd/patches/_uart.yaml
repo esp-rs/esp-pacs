@@ -1,0 +1,7 @@
+"UART*":
+   UART_FIFO:
+    _add:
+      rxfifo_write_byte:
+        description: "R/W share the same address"
+        bitOffset: 0
+        bitWidth: 8

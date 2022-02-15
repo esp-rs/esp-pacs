@@ -1,0 +1,11 @@
+_svd: ../esp8266.base.svd
+
+_include:
+  - "_dport.yaml"
+  - "_gpio.yaml"
+  - "_io_mux.yaml"
+  - "_misc.yaml"
+  - "_rtc.yaml"
+  - "_spi.yaml"
+  - "_timer.yaml"
+  - "_uart.yaml"
