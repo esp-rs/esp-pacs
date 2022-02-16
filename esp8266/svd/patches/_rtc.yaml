@@ -1,0 +1,33 @@
+# https://github.com/cesanta/mongoose-os/blob/f626b5113861634e9a4acc96bdb73de29ed8a4d0/platforms/esp8266/rboot/rboot/rboot.c#L129-L135
+RTC:
+  _add:
+    PAD_XPD_DCDC_CONF:
+      access: read-write
+      addressOffset: 0xA0
+      description: PAD_XPD_DCDC_CONF
+      resetValue: 0x0
+      size: 32
+    RTC_GPIO_CONF:
+      access: read-write
+      addressOffset: 0x90
+      description: RTC_GPIO_CONF
+      resetValue: 0x0
+      size: 32
+    RTC_GPIO_ENABLE:
+      access: read-write
+      addressOffset: 0x74
+      description: RTC_GPIO_ENABLE
+      resetValue: 0x0
+      size: 32
+    RTC_GPIO_IN_DATA:
+      access: read-write
+      addressOffset: 0x8C
+      description: RTC_GPIO_IN_DATA
+      resetValue: 0x0
+      size: 32
+    RTC_GPIO_OUT:
+      access: read-write
+      addressOffset: 0x68
+      description: RTC_GPIO_OUT
+      resetValue: 0x0
+      size: 32

@@ -1,0 +1,30 @@
+"TIMER*":
+  FRC*_CTRL:
+    _add:
+      timer_enable:
+        description: "Enable or disable the timer"
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      rollover:
+        description: "Automatically reload when the counter hits zero"
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      prescale_divider:
+        description: "Pre-scale divider for the timer"
+        bitOffset: 2
+        bitWidth: 2
+        access: read-write
+      interrupt_type:
+        description: "Configure the interrupt type"
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+    prescale_divider:
+      devided_by_1: [0, "divided by 1"]
+      devided_by_16: [1, "divided by 16"]
+      devided_by_256: [2, "divided by 256"]
+    interrupt_type:
+      edge: [0, "edge"]
+      level: [1, "level"]

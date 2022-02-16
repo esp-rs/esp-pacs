@@ -1,0 +1,23 @@
+IO_MUX:
+  "IO_MUX_[MUSG]*": # matches the 16 pin configuration, but not IO_MUX_CONF
+    _add:
+      FUNCTION_SELECT_LOW_BITS:
+        description: "configures IO_MUX function, bottom 2 bits"
+        bitOffset: 4
+        bitWidth: 2
+      FUNCTION_SELECT_HIGH_BIT:
+        description: "configures IO_MUX function, upper bit"
+        bitOffset: 8
+        bitWidth: 1
+      PULLUP:
+        description: "configures pull up"
+        bitOffset: 7
+        bitWidth: 1
+      SLEEP_PULLUP:
+        description: "configures pull up during sleep mode"
+        bitOffset: 3
+        bitWidth: 1
+      SLEEP_ENABLE:
+        description: "configures output enable during sleep mode"
+        bitOffset: 0
+        bitWidth: 1

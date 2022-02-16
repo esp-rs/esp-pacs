@@ -27,6 +27,8 @@ pub enum Chip {
     Esp32s2,
     #[strum(serialize = "esp32s3")]
     Esp32s3,
+    #[strum(serialize = "esp8266")]
+    Esp8266,
 }
 
 #[derive(Debug, Parser)]

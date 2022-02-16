@@ -1,0 +1,114 @@
+"DPORT":
+  EDGE_INT_ENABLE:
+    _add:
+      wdt_edge_int_enable:
+        description: "Enable the watchdog timer edge interrupt"
+        bitOffset: 0
+        bitWidth: 1
+      timer1_edge_int_enable:
+        description: "Enable the timer1 edge interrupt"
+        bitOffset: 1
+        bitWidth: 1
+  _add:
+    IOSWAP:
+      description: IO Swap register
+      addressOffset: 0x28
+      size: 32
+      access: read-write
+      resetValue: 0x00000000
+      fields:
+        uart:
+          description: "Swap UART"
+          bitOffset: 0
+          bitWidth: 1
+        spi:
+          description: "Swap SPI"
+          bitOffset: 1
+          bitWidth: 1
+        uart0:
+          description: "Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"
+          bitOffset: 2
+          bitWidth: 1
+        uart1:
+          description: "Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"
+          bitOffset: 3
+          bitWidth: 1
+        hspi:
+          description: "Set HSPI with higher priority"
+          bitOffset: 5
+          bitWidth: 1
+        double_hspi:
+          description: "Set two SPI masters on HSPI"
+          bitOffset: 6
+          bitWidth: 1
+        double_cspi:
+          description: "Set two SPI masters on CSPI"
+          bitOffset: 7
+          bitWidth: 1
+    SPI_CACHE:
+      description: "Controls SPI memory-mapped caching"
+      addressOffset: 0xc
+      size: 32
+      access: read-write
+      resetValue: 0x00000000
+      fields:
+        cache_flush_start:
+          description: "Flush cache"
+          bitOffset: 0
+          bitWidth: 1
+        cache_empty:
+          description: "Cache is empty"
+          bitOffset: 1
+          bitWidth: 1
+        cache_enable:
+          description: "Cache enable"
+          bitOffset: 8
+          bitWidth: 1
+        busy:
+          description: "SPI busy"
+          bitOffset: 9
+          bitWidth: 1
+        block:
+          description: "Flash memory block to map, in 2mb blocks"
+          bitOffset: 16
+          bitWidth: 3
+        offset:
+          description: "Offset within block to map, in megabytes"
+          bitOffset: 24
+          bitWidth: 2
+        target:
+          description: "Controls where the spi flash is mapped (unconfirmed)"
+          bitOffset: 26
+          bitWidth: 1
+    SPI_INTERRUPT_TYPE:
+      description: "SPI interrupt type register"
+      addressOffset: 0x20
+      size: 32
+      access: read-only
+      resetValue: 0x00000000
+      fields:
+        spi0:
+          description: "SPI0 interrupt"
+          bitOffset: 4
+          bitWidth: 1
+        spi1:
+          description: "SPI1 interrupt"
+          bitOffset: 7
+          bitWidth: 1
+        i2s:
+          description: "I2S interrupt"
+          bitOffset: 9
+          bitWidth: 1
+    SPI_CACHE_TARGET:
+      description: "Control where the cache is mapped (unconfirmed)"
+      addressOffset: 0x24
+      size: 32
+      access: read-write
+      resetValue: 0x00000000
+      fields:
+        target1:
+          bitOffset: 3
+          bitWidth: 1
+        target2:
+          bitOffset: 4
+          bitWidth: 1
