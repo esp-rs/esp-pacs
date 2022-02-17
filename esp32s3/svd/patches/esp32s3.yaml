@@ -32,25 +32,3 @@ GPIO:
       "DATA":
         access: read-write
         name: data_next
-
-INTERRUPT_CORE0:
-  _modify:
-    "MAC_INTR_MAP":
-      name: "PRO_MAC_INTR_MAP"
-    "INTR_STATUS_0":
-      name: "PRO_INTR_STATUS_0"
-    "INTR_STATUS_1":
-      name: "PRO_INTR_STATUS_1"
-    "INTR_STATUS_2":
-      name: "PRO_INTR_STATUS_2"
-
-INTERRUPT_CORE1:
-  _modify:
-    "MAC_INTR_MAP":
-      name: "APP_MAC_INTR_MAP"
-    "INTR_STATUS_0":
-      name: "APP_INTR_STATUS_0"
-    "INTR_STATUS_1":
-      name: "APP_INTR_STATUS_1"
-    "INTR_STATUS_2":
-      name: "APP_INTR_STATUS_2"

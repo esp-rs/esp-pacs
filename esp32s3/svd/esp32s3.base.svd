@@ -16276,7 +16276,7 @@ level.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>MAC_INTR_MAP</name>
+          <name>PRO_MAC_INTR_MAP</name>
           <description>mac interrupt configuration register</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
@@ -17860,7 +17860,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_0</name>
+          <name>PRO_INTR_STATUS_0</name>
           <description>interrupt status register</description>
           <addressOffset>0x18c</addressOffset>
           <size>32</size>
@@ -17875,7 +17875,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_1</name>
+          <name>PRO_INTR_STATUS_1</name>
           <description>interrupt status register</description>
           <addressOffset>0x190</addressOffset>
           <size>32</size>
@@ -17890,7 +17890,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_2</name>
+          <name>PRO_INTR_STATUS_2</name>
           <description>interrupt status register</description>
           <addressOffset>0x194</addressOffset>
           <size>32</size>
@@ -17965,7 +17965,7 @@ level.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>MAC_INTR_MAP</name>
+          <name>APP_MAC_INTR_MAP</name>
           <description>mac interrupt configuration register</description>
           <addressOffset>0x800</addressOffset>
           <size>32</size>
@@ -19549,7 +19549,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_0</name>
+          <name>APP_INTR_STATUS_0</name>
           <description>interrupt status register</description>
           <addressOffset>0x98c</addressOffset>
           <size>32</size>
@@ -19564,7 +19564,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_1</name>
+          <name>APP_INTR_STATUS_1</name>
           <description>interrupt status register</description>
           <addressOffset>0x990</addressOffset>
           <size>32</size>
@@ -19579,7 +19579,7 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INTR_STATUS_2</name>
+          <name>APP_INTR_STATUS_2</name>
           <description>interrupt status register</description>
           <addressOffset>0x994</addressOffset>
           <size>32</size>
@@ -19634,6 +19634,153 @@ level.</description>
             <field>
               <name>INTERRUPT_DATE</name>
               <description>version register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>IO_MUX</name>
+      <description>Input/Output Multiplexer</description>
+      <groupName>IO_MUX</groupName>
+      <baseAddress>0x60009000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0xcc</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>PIN_CTRL</name>
+          <description>Clock Output Configuration Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <resetValue>0x7ff</resetValue>
+          <fields>
+            <field>
+              <name>CLK_OUT1</name>
+              <description>If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_OUT2</name>
+              <description>If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_OUT3</name>
+              <description>If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <dim>49</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <name>GPIO%s</name>
+          <description>IO MUX Configure Register for pad GPIO0</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <resetValue>0xb00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pad in sleep mode. 1: output enabled; 0: output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pad. Set to 1 to put the pad in pad mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pad. 1: internal pull-down enabled; 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pad. 1: input enabled; 0: input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pad. 0: ~5 mA; 1: ~10mA; 2: ~20mA; 3: ~40mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1; 1: Select Function 2; etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled; 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <description>IO MUX Version Control Register</description>
+          <addressOffset>0xfc</addressOffset>
+          <size>32</size>
+          <resetValue>0x1907160</resetValue>
+          <fields>
+            <field>
+              <name>REG_DATE</name>
+              <description>Version control register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
               <access>read-write</access>
