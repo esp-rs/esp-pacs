@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32-C3</series>
-  <version>4</version>
+  <version>5</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -560,10 +560,6 @@
         <size>0xa0</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>APB_CTRL</name>
-        <value>14</value>
-      </interrupt>
       <registers>
         <register>
           <name>SYSCLK_CONF</name>
@@ -3380,10 +3376,6 @@
       <interrupt>
         <name>DMA_CH2</name>
         <value>46</value>
-      </interrupt>
-      <interrupt>
-        <name>DMA_APBPERI_PMS</name>
-        <value>55</value>
       </interrupt>
       <registers>
         <register>
@@ -11744,10 +11736,6 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2C_MASTER</name>
-        <value>11</value>
-      </interrupt>
-      <interrupt>
         <name>I2C_EXT0</name>
         <value>29</value>
       </interrupt>
@@ -12107,7 +12095,7 @@
           </fields>
         </register>
         <register>
-          <name>FIFO_DATA</name>
+          <name>DATA</name>
           <description>I2C_FIFO_DATA_REG</description>
           <addressOffset>0x1c</addressOffset>
           <size>32</size>
@@ -12117,7 +12105,7 @@
               <description>reg_fifo_rdata</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -13049,7 +13037,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2S1</name>
+        <name>I2S</name>
         <value>20</value>
       </interrupt>
       <registers>
@@ -14322,22 +14310,6 @@
         <size>0x19c</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>CORE0_IRAM0_PMS</name>
-        <value>56</value>
-      </interrupt>
-      <interrupt>
-        <name>CORE0_DRAM0_PMS</name>
-        <value>57</value>
-      </interrupt>
-      <interrupt>
-        <name>CORE0_PIF_PMS</name>
-        <value>58</value>
-      </interrupt>
-      <interrupt>
-        <name>CORE0_PIF_PMS_SIZE</name>
-        <value>59</value>
-      </interrupt>
       <registers>
         <register>
           <name>MAC_INTR_MAP</name>
@@ -16048,14 +16020,6 @@
       <interrupt>
         <name>LEDC</name>
         <value>23</value>
-      </interrupt>
-      <interrupt>
-        <name>TIMER1</name>
-        <value>30</value>
-      </interrupt>
-      <interrupt>
-        <name>TIMER2</name>
-        <value>31</value>
       </interrupt>
       <registers>
         <register>
@@ -26442,10 +26406,6 @@
         <size>0x48</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SPI_MEM_REJECT_CACHE</name>
-        <value>40</value>
-      </interrupt>
       <registers>
         <register>
           <name>CTRL</name>
@@ -27081,10 +27041,6 @@
         <size>0xa8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SPI1</name>
-        <value>18</value>
-      </interrupt>
       <registers>
         <register>
           <name>CMD</name>
@@ -31600,15 +31556,15 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SYSTIMER_TARGET0_EDGE</name>
+        <name>SYSTIMER_TARGET0</name>
         <value>37</value>
       </interrupt>
       <interrupt>
-        <name>SYSTIMER_TARGET1_EDGE</name>
+        <name>SYSTIMER_TARGET1</name>
         <value>38</value>
       </interrupt>
       <interrupt>
-        <name>SYSTIMER_TARGET2_EDGE</name>
+        <name>SYSTIMER_TARGET2</name>
         <value>39</value>
       </interrupt>
       <registers>

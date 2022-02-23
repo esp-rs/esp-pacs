@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32</series>
-  <version>3</version>
+  <version>4</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -1987,13 +1987,166 @@
           <description/>
           <addressOffset>0xc0</addressOffset>
           <size>32</size>
-          <resetValue>0xf9c1e06f</resetValue>
           <fields>
             <field>
-              <name>PERIP_CLK_EN</name>
-              <description/>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
+              <name>SPI01_CLK_EN</name>
+              <description>SPI0 and SPI1 module.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART_CLK_EN</name>
+              <description>UART0 module.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2S0_CLK_EN</name>
+              <description>I2S0 module.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART1_CLK_EN</name>
+              <description>UART1 module.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI2_CLK_EN</name>
+              <description>SPI2 module.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_EXT0_CLK_EN</name>
+              <description>I2C0 module.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UHCI0_CLK_EN</name>
+              <description>UDMA0 module.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RMT_CLK_EN</name>
+              <description>RMT module.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PCNT_CLK_EN</name>
+              <description>PCNT module.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LEDC_CLK_EN</name>
+              <description>LEDC module.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UHCI1_CLK_EN</name>
+              <description>UDMA1 module.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMERGROUP_CLK_EN</name>
+              <description>TIMG0 module.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EFUSE_CLK_EN</name>
+              <description>eFuse module.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMERGROUP1_CLK_EN</name>
+              <description>TIMG1 module.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI3_CLK_EN</name>
+              <description>SPI3 module.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM0_CLK_EN</name>
+              <description>PWM0 module.</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_EXT1_CLK_EN</name>
+              <description>I2C1 module.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TWAI_CLK_EN</name>
+              <description>TWAI module.</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM1_CLK_EN</name>
+              <description>PWM1 module.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2S1_CLK_EN</name>
+              <description>I2S1 module.</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI_DMA_CLK_EN</name>
+              <description>SPI_DMA module.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART2_CLK_EN</name>
+              <description>UART2 module.</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART_MEM_CLK_EN</name>
+              <description>Shared memory of UART0 ~ 2.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -2005,10 +2158,164 @@
           <size>32</size>
           <fields>
             <field>
-              <name>PERIP_RST</name>
-              <description/>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
+              <name>SPI01_RST</name>
+              <description>SPI0 and SPI1 module.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART_RST</name>
+              <description>UART0 module.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2S0_RST</name>
+              <description>I2S0 module.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART1_RST</name>
+              <description>UART1 module.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI2_RST</name>
+              <description>SPI2 module.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_EXT0_RST</name>
+              <description>I2C0 module.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UHCI0_RST</name>
+              <description>UDMA0 module.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RMT_RST</name>
+              <description>RMT module.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PCNT_RST</name>
+              <description>PCNT module.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LEDC_RST</name>
+              <description>LEDC module.</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UHCI1_RST</name>
+              <description>UDMA1 module.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMERGROUP_RST</name>
+              <description>TIMG0 module.</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EFUSE_RST</name>
+              <description>eFuse module.</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMERGROUP1_RST</name>
+              <description>TIMG1 module.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI3_RST</name>
+              <description>SPI3 module.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM0_RST</name>
+              <description>PWM0 module.</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_EXT1_RST</name>
+              <description>I2C1 module.</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TWAI_RST</name>
+              <description>TWAI module.</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM1_RST</name>
+              <description>PWM1 module.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2S1_RST</name>
+              <description>I2S1 module.</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPI_DMA_RST</name>
+              <description>SPI_DMA module.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART2_RST</name>
+              <description>UART2 module.</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>UART_MEM_RST</name>
+              <description>Shared memory of UART0 ~ 2.</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -9766,11 +10073,11 @@
           <size>32</size>
           <fields>
             <field>
-              <name>DATA</name>
+              <name>DATA_NEXT</name>
               <description>GPIO0~31 input value</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -9781,11 +10088,11 @@
           <size>32</size>
           <fields>
             <field>
-              <name>DATA</name>
+              <name>DATA_NEXT</name>
               <description>GPIO32~39 input value</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -10842,7 +11149,7 @@
       <baseAddress>0x3ff53000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0x9c</size>
+        <size>0x98</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
@@ -11150,21 +11457,6 @@
               <bitOffset>20</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>DATA</name>
-          <description/>
-          <addressOffset>0x1c</addressOffset>
-          <size>32</size>
-          <fields>
-            <field>
-              <name>FIFO_RDATA</name>
-              <description>The register represent the byte  data read from rxfifo when use apb fifo access</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -49094,7 +49386,7 @@ IDINTEN[4]: DU Interrupt.</description>
               <description>This register stores one byte data  read by rx fifo.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>

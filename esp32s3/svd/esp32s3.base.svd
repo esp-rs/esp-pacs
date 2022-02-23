@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
   <series>ESP32-S3</series>
-  <version>3</version>
+  <version>4</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -45,6 +45,10 @@
         <size>0xb8</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>AES</name>
+        <value>77</value>
+      </interrupt>
       <registers>
         <register>
           <dim>8</dim>
@@ -1423,6 +1427,10 @@
         <size>0x70</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>APB_ADC</name>
+        <value>65</value>
+      </interrupt>
       <registers>
         <register>
           <name>CTRL</name>
@@ -2321,6 +2329,10 @@
         <size>0x15c</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>ASSIST_DEBUG</name>
+        <value>83</value>
+      </interrupt>
       <registers>
         <register>
           <name>CORE_0_INTERRUPT_ENA</name>
@@ -4374,6 +4386,54 @@
         <size>0x320</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>DMA_IN_CH0</name>
+        <value>66</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH1</name>
+        <value>67</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH2</name>
+        <value>68</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH3</name>
+        <value>69</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH4</name>
+        <value>70</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH0</name>
+        <value>71</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH1</name>
+        <value>72</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH2</name>
+        <value>73</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH3</name>
+        <value>74</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH4</name>
+        <value>75</value>
+      </interrupt>
+      <interrupt>
+        <name>APB_PMS_MONITOR_VIOLATE</name>
+        <value>84</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_EXTMEM_REJECT</name>
+        <value>98</value>
+      </interrupt>
       <registers>
         <register>
           <dim>5</dim>
@@ -6235,7 +6295,7 @@
       </addressBlock>
       <interrupt>
         <name>EFUSE</name>
-        <value>44</value>
+        <value>36</value>
       </interrupt>
       <registers>
         <register>
@@ -11465,11 +11525,11 @@
       </addressBlock>
       <interrupt>
         <name>GPIO</name>
-        <value>22</value>
+        <value>16</value>
       </interrupt>
       <interrupt>
         <name>GPIO_NMI</name>
-        <value>23</value>
+        <value>17</value>
       </interrupt>
       <registers>
         <register>
@@ -11706,7 +11766,7 @@
               <description>GPIO input register for GPIO0-31</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -11721,7 +11781,7 @@
               <description>GPIO input register for GPIO32-53</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -12003,21 +12063,21 @@
           <size>32</size>
           <fields>
             <field>
-              <name>FUNC_IN_SEL</name>
+              <name>IN_SEL</name>
               <description>set this value: s=-53: connect GPIO[s] to this port. s=x38: set this port always high level. s=x3C: set this port always low level.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>FUNC_IN_INV_SEL</name>
+              <name>IN_INV_SEL</name>
               <description>set this bit to invert input signal. 1:invert. :not invert.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SIG_IN_SEL</name>
+              <name>SEL</name>
               <description>set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12035,28 +12095,28 @@
           <resetValue>0x100</resetValue>
           <fields>
             <field>
-              <name>FUNC_OUT_SEL</name>
+              <name>OUT_SEL</name>
               <description>The value of the bits: &lt;=s&lt;=256. Set the value to select output signal. s=-255: output of GPIO[n] equals input of peripheral[s]. s=256: output of GPIO[n] equals GPIO_OUT_REG[n].</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>FUNC_OUT_INV_SEL</name>
+              <name>INV_SEL</name>
               <description>set this bit to invert output signal.1:invert.:not invert.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>FUNC_OEN_SEL</name>
+              <name>OEN_SEL</name>
               <description>set this bit to select output enable signal.1:use GPIO_ENABLE_REG[n] as output enable signal.:use peripheral output enable signal.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>FUNC_OEN_INV_SEL</name>
+              <name>OEN_INV_SEL</name>
               <description>set this bit to invert output enable signal.1:invert.:not invert.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -12485,8 +12545,12 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
+        <name>I2C_MST</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
         <name>I2C_EXT0</name>
-        <value>49</value>
+        <value>42</value>
       </interrupt>
       <registers>
         <register>
@@ -12866,7 +12930,7 @@ clock cycles.</description>
               <description>The value of rx FIFO read data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -13808,7 +13872,7 @@ level.</description>
       <description>I2C (Inter-Integrated Circuit) Controller</description>
       <interrupt>
         <name>I2C_EXT1</name>
-        <value>50</value>
+        <value>43</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -13823,7 +13887,7 @@ level.</description>
       </addressBlock>
       <interrupt>
         <name>I2S0</name>
-        <value>32</value>
+        <value>25</value>
       </interrupt>
       <registers>
         <register>
@@ -15132,7 +15196,7 @@ level.</description>
       </addressBlock>
       <interrupt>
         <name>I2S1</name>
-        <value>33</value>
+        <value>26</value>
       </interrupt>
       <registers>
         <register>
@@ -16274,6 +16338,26 @@ level.</description>
         <size>0x1a4</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>CORE_0_IRAM0_PMS_MONITOR_VIOLATE</name>
+        <value>85</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_0_DRAM0_PMS_MONITOR_VIOLATE</name>
+        <value>86</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_0_PIF_PMS_MONITOR_VIOLATE</name>
+        <value>87</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE</name>
+        <value>88</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_CORE0_ACS</name>
+        <value>94</value>
+      </interrupt>
       <registers>
         <register>
           <name>PRO_MAC_INTR_MAP</name>
@@ -17963,6 +18047,26 @@ level.</description>
         <size>0x1a4</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>CORE_1_IRAM0_PMS_MONITOR_VIOLATE</name>
+        <value>89</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_1_DRAM0_PMS_MONITOR_VIOLATE</name>
+        <value>90</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_1_PIF_PMS_MONITOR_VIOLATE</name>
+        <value>91</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE</name>
+        <value>92</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_CORE1_ACS</name>
+        <value>95</value>
+      </interrupt>
       <registers>
         <register>
           <name>APP_MAC_INTR_MAP</name>
@@ -20855,7 +20959,7 @@ level.</description>
       </addressBlock>
       <interrupt>
         <name>LEDC</name>
-        <value>43</value>
+        <value>35</value>
       </interrupt>
       <registers>
         <register>
@@ -21755,7 +21859,7 @@ The least significant eight bits represent the fractional part.</description>
       </addressBlock>
       <interrupt>
         <name>PCNT</name>
-        <value>48</value>
+        <value>41</value>
       </interrupt>
       <registers>
         <register>
@@ -22253,6 +22357,10 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <size>0x30</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PERI_BACKUP</name>
+        <value>97</value>
+      </interrupt>
       <registers>
         <register>
           <name>CONFIG</name>
@@ -22534,7 +22642,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>PWM0</name>
-        <value>39</value>
+        <value>31</value>
       </interrupt>
       <registers>
         <register>
@@ -26325,7 +26433,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       <baseAddress>0x6002c000</baseAddress>
       <interrupt>
         <name>PWM1</name>
-        <value>40</value>
+        <value>32</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -26340,7 +26448,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>RSA</name>
-        <value>51</value>
+        <value>76</value>
       </interrupt>
       <registers>
         <register>
@@ -26586,7 +26694,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>RTC_CORE</name>
-        <value>46</value>
+        <value>39</value>
       </interrupt>
       <registers>
         <register>
@@ -41953,6 +42061,10 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <size>0xb0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>SHA</name>
+        <value>78</value>
+      </interrupt>
       <registers>
         <register>
           <name>MODE</name>
@@ -42163,10 +42275,6 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <size>0xb4</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SPI0</name>
-        <value>28</value>
-      </interrupt>
       <registers>
         <register>
           <name>CMD</name>
@@ -43590,14 +43698,6 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       <name>SPI1</name>
       <baseAddress>0x60002000</baseAddress>
       <description>SPI (Serial Peripheral Interface) Controller</description>
-      <interrupt>
-        <name>SPI1</name>
-        <value>29</value>
-      </interrupt>
-      <interrupt>
-        <name>SPI1_DMA</name>
-        <value>52</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
@@ -45121,35 +45221,15 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>TG0_T0_LEVEL</name>
-        <value>14</value>
+        <value>50</value>
       </interrupt>
       <interrupt>
         <name>TG0_T1_LEVEL</name>
-        <value>15</value>
+        <value>51</value>
       </interrupt>
       <interrupt>
         <name>TG0_WDT_LEVEL</name>
-        <value>16</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_LACT_LEVEL</name>
-        <value>17</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_T0_EDGE</name>
-        <value>58</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_T1_EDGE</name>
-        <value>59</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_WDT_EDGE</name>
-        <value>60</value>
-      </interrupt>
-      <interrupt>
-        <name>TG0_LACT_EDGE</name>
-        <value>61</value>
+        <value>52</value>
       </interrupt>
       <registers>
         <register>
@@ -45797,35 +45877,15 @@ protection is enabled.</description>
       <description>Timer Group</description>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
-        <value>18</value>
+        <value>53</value>
       </interrupt>
       <interrupt>
         <name>TG1_T1_LEVEL</name>
-        <value>19</value>
+        <value>54</value>
       </interrupt>
       <interrupt>
         <name>TG1_WDT_LEVEL</name>
-        <value>20</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_LACT_LEVEL</name>
-        <value>21</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_T0_EDGE</name>
-        <value>62</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_T1_EDGE</name>
-        <value>63</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_WDT_EDGE</name>
-        <value>64</value>
-      </interrupt>
-      <interrupt>
-        <name>TG1_LACT_EDGE</name>
-        <value>65</value>
+        <value>55</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -45840,7 +45900,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>UART0</name>
-        <value>34</value>
+        <value>27</value>
       </interrupt>
       <registers>
         <register>
@@ -47420,7 +47480,7 @@ protection is enabled.</description>
       <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
       <interrupt>
         <name>UART1</name>
-        <value>35</value>
+        <value>28</value>
       </interrupt>
     </peripheral>
     <peripheral derivedFrom="UART0">
@@ -47429,7 +47489,7 @@ protection is enabled.</description>
       <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
       <interrupt>
         <name>UART2</name>
-        <value>36</value>
+        <value>29</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -47444,7 +47504,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>UHCI0</name>
-        <value>12</value>
+        <value>14</value>
       </interrupt>
       <registers>
         <register>
@@ -48513,10 +48573,6 @@ protection is enabled.</description>
       <name>UHCI1</name>
       <baseAddress>0x6000c000</baseAddress>
       <description>Universal Host Controller Interface</description>
-      <interrupt>
-        <name>UHCI1</name>
-        <value>13</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>USB_DEVICE</name>
@@ -48528,6 +48584,10 @@ protection is enabled.</description>
         <size>0x50</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>USB_DEVICE</name>
+        <value>96</value>
+      </interrupt>
       <registers>
         <register>
           <name>EP1</name>
