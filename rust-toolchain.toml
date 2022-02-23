@@ -1,4 +1,0 @@
-# Currently 'rustfmt' fails to build using nightly, as one of its depedencies
-# 'extprim' uses the 'const_fn' cfg_attr, which has been removed.
-[toolchain]
-channel = "stable"
