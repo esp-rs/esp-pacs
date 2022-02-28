@@ -1,1 +1,5 @@
 _svd: ../esp32s3.base.svd
+
+RTC_CNTL:
+  _strip:
+    - "RTC_"
