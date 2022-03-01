@@ -1,1 +1,7 @@
 _svd: ../esp32s2.base.svd
+
+I2C0:
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
