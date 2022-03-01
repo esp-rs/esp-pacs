@@ -3,3 +3,13 @@ _svd: ../esp32c3.base.svd
 RTC_CNTL:
   _strip:
     - "RTC_"
+
+SYSTEM:
+  PERIP_CLK_EN0:
+    _modify:
+      EXT0_CLK_EN:
+        name: I2C_EXT0_CLK_EN
+  PERIP_RST_EN0:
+    _modify:
+      EXT0_RST:
+        name: I2C_EXT0_RST
