@@ -13,3 +13,7 @@ SYSTEM:
     _modify:
       EXT0_RST:
         name: I2C_EXT0_RST
+
+_modify:
+  I2C:
+    name: I2C0
