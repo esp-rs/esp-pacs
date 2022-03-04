@@ -32,3 +32,19 @@ DPORT:
         bitOffset: 7
         bitWidth: 1
         access: read-write
+
+_modify:
+  WDEV:
+    name: RNG
+    groupName: RNG
+    description: Hardware random number generator
+    baseAddress: 0x60035000
+
+RNG:
+  _modify:
+    RND:
+      name: DATA
+      description: Random number data
+      access: read-only
+      addressOffset: 0x144
+      size: 0x20

@@ -30,3 +30,18 @@ TIMG1:
       name: INT_ENA_TIMERS
     INT_ST_TIMG:
       name: INT_ST_TIMERS
+
+_add:
+  RNG:
+    name: RNG
+    groupName: RNG
+    description: Hardware random number generator
+    baseAddress: 0x60026000
+
+RNG:
+  _add:
+    DATA:
+      description: Random number data
+      access: read-only
+      addressOffset: 0xb0
+      size: 0x20
