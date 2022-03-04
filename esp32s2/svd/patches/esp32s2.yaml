@@ -5,3 +5,18 @@ I2C0:
     _modify:
       FIFO_RDATA:
         access: read-write
+
+_add:
+  RNG:
+    name: RNG
+    groupName: RNG
+    description: Hardware random number generator
+    baseAddress: 0x60035000
+
+RNG:
+  _add:
+    DATA:
+      description: Random number data
+      access: read-only
+      addressOffset: 0x110
+      size: 0x20
