@@ -17,3 +17,16 @@ SYSTEM:
 _modify:
   I2C:
     name: I2C0
+
+TIMG0:
+  _modify:
+    INT_ENA_TIMG:
+      name: INT_ENA_TIMERS
+    INT_ST_TIMG:
+      name: INT_ST_TIMERS
+TIMG1:
+  _modify:
+    INT_ENA_TIMG:
+      name: INT_ENA_TIMERS
+    INT_ST_TIMG:
+      name: INT_ST_TIMERS
