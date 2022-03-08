@@ -22,10 +22,10 @@ We use the workflow described by [cargo-xtask] to automate tasks within this mon
 xtask
 
 USAGE:
-    xtask [OPTIONS] <CHIP>
+    xtask [OPTIONS] [CHIPS]...
 
 ARGS:
-    <CHIP>    Chip to target [possible values: esp32, esp32c3, esp32s2, esp32s3, esp8266]
+    <CHIPS>...    Chip(s) to target [possible values: esp32, esp32c3, esp32s2, esp32s3, esp8266]
 
 OPTIONS:
         --generate-only    Patch the SVD and generate the PAC, but do not build it
