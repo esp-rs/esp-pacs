@@ -45,3 +45,9 @@ RNG:
       access: read-only
       addressOffset: 0xb0
       size: 0x20
+
+SPI2:
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
