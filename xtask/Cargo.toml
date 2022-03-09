@@ -6,10 +6,15 @@ publish = false
 
 [dependencies]
 anyhow       = "1.0"
-clap         = { version = "3.0", features = ["derive"] }
+env_logger   = "0.9"
 form         = "0.8"
-strum        = "0.23"
-strum_macros = "0.23"
+log          = "0.4"
+strum        = "0.24"
+strum_macros = "0.24"
 svd2rust     = "0.21"
 svdtools     = "0.2"
 toml         = "0.5"
+
+[dependencies.clap]
+version  = "3.1"
+features = ["derive"]

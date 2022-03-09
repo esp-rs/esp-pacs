@@ -1,5 +1,3 @@
-// TODO: add some logging/output of some sort
-
 use std::{
     env,
     fs::{self, File},
@@ -11,13 +9,14 @@ use std::{
 use anyhow::{Error, Result};
 use clap::Parser;
 use form::util::create_directory_structure;
-use strum::VariantNames;
-use strum_macros::{Display, EnumString, EnumVariantNames};
+use log::{info, warn, LevelFilter};
+use strum::{IntoEnumIterator, VariantNames};
+use strum_macros::{Display, EnumIter, EnumString, EnumVariantNames};
 use svd2rust::{generate::device::render, load_from, util::build_rs, Config, Target};
 use svdtools::patch::process_file;
 use toml::Value;
 
-#[derive(Debug, Display, EnumString, EnumVariantNames)]
+#[derive(Debug, Display, EnumIter, EnumString, EnumVariantNames)]
 pub enum Chip {
     #[strum(serialize = "esp32")]
     Esp32,
@@ -33,9 +32,9 @@ pub enum Chip {
 
 #[derive(Debug, Parser)]
 struct Opts {
-    /// Chip to target
+    /// Chip(s) to target
     #[clap(possible_values = Chip::VARIANTS)]
-    chip: Chip,
+    chips: Vec<Chip>,
     /// Only patch the SVD, do not generate or build the PAC
     #[clap(long, conflicts_with = "generate-only")]
     patch_only: bool,
@@ -45,32 +44,49 @@ struct Opts {
 }
 
 fn main() -> Result<()> {
-    let opts = Opts::parse();
+    env_logger::Builder::new()
+        .filter_module("xtask", LevelFilter::Info)
+        .init();
 
-    let chip = opts.chip.to_string();
-    let chip = chip.as_str();
+    let opts = Opts::parse();
 
     // The directory containing the cargo manifest for the 'xtask' package is a
     // subdirectory within the cargo workspace.
     let workspace = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let workspace = workspace.parent().unwrap().canonicalize()?;
 
-    // Remove the src/ directory before we begin. If this fails we will assume it's
-    // because the directory does not exist.
-    let path = workspace.join(chip);
-    fs::remove_dir_all(&path.join("src")).ok();
+    // One or more chips can be specified as command-line arguments. If none are
+    // provided then the task will be run for all chips.
+    let chips = if !opts.chips.is_empty() {
+        opts.chips.iter().map(|c| c.to_string()).collect::<Vec<_>>()
+    } else {
+        Chip::iter().map(|c| c.to_string()).collect::<Vec<_>>()
+    };
 
-    // Always patch the SVD upon execution. If '--patch-only' has NOT been set,
-    // then additionally generate and format the PAC. If '--generate-only' has NOT
-    // been set, clean and build the PAC crate.
-    patch_svd(chip, &path)?;
-    if !opts.patch_only {
-        generate_pac(chip, &path)?;
-        format(&path)?;
-        if !opts.generate_only {
-            clean(&path)?;
-            build(&path)?;
+    for chip in chips {
+        info!("chip: {chip}");
+
+        // Remove the src/ directory before we begin. If this fails we will assume it's
+        // because the directory does not exist.
+        let path = workspace.join(&chip);
+        if fs::remove_dir_all(&path.join("src")).is_err() {
+            warn!("unable to remove 'src/' directory");
         }
+
+        // Always patch the SVD upon execution. If '--patch-only' has NOT been set, then
+        // additionally generate and format the PAC. If '--generate-only' has NOT been
+        // set, clean and build the PAC crate.
+        patch_svd(&chip, &path)?;
+        if !opts.patch_only {
+            generate_pac(&chip, &path)?;
+            format(&path)?;
+            if !opts.generate_only {
+                clean(&path)?;
+                build(&path)?;
+            }
+        }
+
+        info!("finished with {chip}")
     }
 
     Ok(())
@@ -84,6 +100,8 @@ fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
 
     let from = svd_path.join(format!("{chip}.base.svd.patched"));
     let to = svd_path.join(format!("{chip}.svd"));
+
+    info!("applying patches to SVD file");
     fs::rename(from, to)?;
 
     Ok(())
@@ -91,6 +109,8 @@ fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
 
 fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     let svd_file = path.join("svd").join(format!("{chip}.svd"));
+    info!("generating PAC from '{}'", svd_file.display());
+
     let input = fs::read_to_string(svd_file)?;
 
     let mut config = Config::default();
@@ -113,6 +133,7 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
 }
 
 fn format(path: &PathBuf) -> Result<()> {
+    info!("running `form` and `rustfmt` on PAC");
     let lib_file = path.join("lib.rs");
 
     let base_dir = path.join("src");
@@ -142,6 +163,7 @@ fn clean(path: &PathBuf) -> Result<()> {
 fn build(path: &PathBuf) -> Result<()> {
     let channel = get_release_channel(path)?;
     let target = get_build_target(path)?;
+    info!("building PAC using '{channel}' channel and targeting '{target}'");
 
     Command::new("cargo")
         .args(&[
