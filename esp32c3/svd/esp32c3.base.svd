@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32-C3</series>
-  <version>5</version>
+  <version>6</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -11726,7 +11726,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2C</name>
+      <name>I2C0</name>
       <description>I2C (Inter-Integrated Circuit) Controller</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60013000</baseAddress>
@@ -19214,6 +19214,25 @@
       </registers>
     </peripheral>
     <peripheral>
+      <name>RNG</name>
+      <description>Hardware random number generator</description>
+      <groupName>RNG</groupName>
+      <baseAddress>0x60026000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DATA</name>
+          <description>Random number data</description>
+          <addressOffset>0xb0</addressOffset>
+          <size>32</size>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>RSA</name>
       <description>RSA (Rivest Shamir Adleman) Accelerator</description>
       <groupName>RSA</groupName>
@@ -19475,7 +19494,7 @@
       </interrupt>
       <registers>
         <register>
-          <name>RTC_OPTIONS0</name>
+          <name>OPTIONS0</name>
           <description>rtc configure register</description>
           <addressOffset>0x0</addressOffset>
           <size>32</size>
@@ -19645,7 +19664,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLP_TIMER0</name>
+          <name>SLP_TIMER0</name>
           <description>rtc configure register</description>
           <addressOffset>0x4</addressOffset>
           <size>32</size>
@@ -19660,7 +19679,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLP_TIMER1</name>
+          <name>SLP_TIMER1</name>
           <description>rtc configure register</description>
           <addressOffset>0x8</addressOffset>
           <size>32</size>
@@ -19682,7 +19701,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIME_UPDATE</name>
+          <name>TIME_UPDATE</name>
           <description>rtc configure register</description>
           <addressOffset>0xc</addressOffset>
           <size>32</size>
@@ -19718,7 +19737,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIME_LOW0</name>
+          <name>TIME_LOW0</name>
           <description>rtc configure register</description>
           <addressOffset>0x10</addressOffset>
           <size>32</size>
@@ -19733,7 +19752,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIME_HIGH0</name>
+          <name>TIME_HIGH0</name>
           <description>rtc configure register</description>
           <addressOffset>0x14</addressOffset>
           <size>32</size>
@@ -19748,7 +19767,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STATE0</name>
+          <name>STATE0</name>
           <description>rtc configure register</description>
           <addressOffset>0x18</addressOffset>
           <size>32</size>
@@ -19805,7 +19824,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER1</name>
+          <name>TIMER1</name>
           <description>rtc configure register</description>
           <addressOffset>0x1c</addressOffset>
           <size>32</size>
@@ -19849,7 +19868,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER2</name>
+          <name>TIMER2</name>
           <description>rtc configure register</description>
           <addressOffset>0x20</addressOffset>
           <size>32</size>
@@ -19865,7 +19884,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER3</name>
+          <name>TIMER3</name>
           <description>rtc configure register</description>
           <addressOffset>0x24</addressOffset>
           <size>32</size>
@@ -19902,7 +19921,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER4</name>
+          <name>TIMER4</name>
           <description>rtc configure register</description>
           <addressOffset>0x28</addressOffset>
           <size>32</size>
@@ -19939,7 +19958,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER5</name>
+          <name>TIMER5</name>
           <description>rtc configure register</description>
           <addressOffset>0x2c</addressOffset>
           <size>32</size>
@@ -19955,7 +19974,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIMER6</name>
+          <name>TIMER6</name>
           <description>rtc configure register</description>
           <addressOffset>0x30</addressOffset>
           <size>32</size>
@@ -19978,7 +19997,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_ANA_CONF</name>
+          <name>ANA_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x34</addressOffset>
           <size>32</size>
@@ -20071,7 +20090,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_RESET_STATE</name>
+          <name>RESET_STATE</name>
           <description>rtc configure register</description>
           <addressOffset>0x38</addressOffset>
           <size>32</size>
@@ -20192,7 +20211,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WAKEUP_STATE</name>
+          <name>WAKEUP_STATE</name>
           <description>rtc configure register</description>
           <addressOffset>0x3c</addressOffset>
           <size>32</size>
@@ -20492,7 +20511,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE0</name>
+          <name>STORE0</name>
           <description>rtc configure register</description>
           <addressOffset>0x50</addressOffset>
           <size>32</size>
@@ -20507,7 +20526,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE1</name>
+          <name>STORE1</name>
           <description>rtc configure register</description>
           <addressOffset>0x54</addressOffset>
           <size>32</size>
@@ -20522,7 +20541,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE2</name>
+          <name>STORE2</name>
           <description>rtc configure register</description>
           <addressOffset>0x58</addressOffset>
           <size>32</size>
@@ -20537,7 +20556,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE3</name>
+          <name>STORE3</name>
           <description>rtc configure register</description>
           <addressOffset>0x5c</addressOffset>
           <size>32</size>
@@ -20552,7 +20571,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_EXT_XTL_CONF</name>
+          <name>EXT_XTL_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x60</addressOffset>
           <size>32</size>
@@ -20687,7 +20706,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_EXT_WAKEUP_CONF</name>
+          <name>EXT_WAKEUP_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x64</addressOffset>
           <size>32</size>
@@ -20702,7 +20721,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLP_REJECT_CONF</name>
+          <name>SLP_REJECT_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x68</addressOffset>
           <size>32</size>
@@ -20731,7 +20750,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CPU_PERIOD_CONF</name>
+          <name>CPU_PERIOD_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x6c</addressOffset>
           <size>32</size>
@@ -20753,7 +20772,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CLK_CONF</name>
+          <name>CLK_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x70</addressOffset>
           <size>32</size>
@@ -20895,7 +20914,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLOW_CLK_CONF</name>
+          <name>SLOW_CLK_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x74</addressOffset>
           <size>32</size>
@@ -20925,7 +20944,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SDIO_CONF</name>
+          <name>SDIO_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x78</addressOffset>
           <size>32</size>
@@ -21046,7 +21065,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_BIAS_CONF</name>
+          <name>BIAS_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0x7c</addressOffset>
           <size>32</size>
@@ -21139,7 +21158,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC</name>
+          <name>RTC_CNTL</name>
           <description>rtc configure register</description>
           <addressOffset>0x80</addressOffset>
           <size>32</size>
@@ -21190,7 +21209,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_PWC</name>
+          <name>PWC</name>
           <description>rtc configure register</description>
           <addressOffset>0x84</addressOffset>
           <size>32</size>
@@ -21503,7 +21522,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTCONFIG0</name>
+          <name>WDTCONFIG0</name>
           <description>rtc configure register</description>
           <addressOffset>0x90</addressOffset>
           <size>32</size>
@@ -21603,7 +21622,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTCONFIG1</name>
+          <name>WDTCONFIG1</name>
           <description>rtc configure register</description>
           <addressOffset>0x94</addressOffset>
           <size>32</size>
@@ -21619,7 +21638,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTCONFIG2</name>
+          <name>WDTCONFIG2</name>
           <description>rtc configure register</description>
           <addressOffset>0x98</addressOffset>
           <size>32</size>
@@ -21635,7 +21654,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTCONFIG3</name>
+          <name>WDTCONFIG3</name>
           <description>rtc configure register</description>
           <addressOffset>0x9c</addressOffset>
           <size>32</size>
@@ -21651,7 +21670,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTCONFIG4</name>
+          <name>WDTCONFIG4</name>
           <description>rtc configure register</description>
           <addressOffset>0xa0</addressOffset>
           <size>32</size>
@@ -21667,7 +21686,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTFEED</name>
+          <name>WDTFEED</name>
           <description>rtc configure register</description>
           <addressOffset>0xa4</addressOffset>
           <size>32</size>
@@ -21682,7 +21701,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_WDTWPROTECT</name>
+          <name>WDTWPROTECT</name>
           <description>rtc configure register</description>
           <addressOffset>0xa8</addressOffset>
           <size>32</size>
@@ -21697,7 +21716,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SWD_CONF</name>
+          <name>SWD_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0xac</addressOffset>
           <size>32</size>
@@ -21762,7 +21781,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SWD_WPROTECT</name>
+          <name>SWD_WPROTECT</name>
           <description>rtc configure register</description>
           <addressOffset>0xb0</addressOffset>
           <size>32</size>
@@ -21777,7 +21796,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SW_CPU_STALL</name>
+          <name>SW_CPU_STALL</name>
           <description>rtc configure register</description>
           <addressOffset>0xb4</addressOffset>
           <size>32</size>
@@ -21799,7 +21818,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE4</name>
+          <name>STORE4</name>
           <description>rtc configure register</description>
           <addressOffset>0xb8</addressOffset>
           <size>32</size>
@@ -21814,7 +21833,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE5</name>
+          <name>STORE5</name>
           <description>rtc configure register</description>
           <addressOffset>0xbc</addressOffset>
           <size>32</size>
@@ -21829,7 +21848,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE6</name>
+          <name>STORE6</name>
           <description>rtc configure register</description>
           <addressOffset>0xc0</addressOffset>
           <size>32</size>
@@ -21844,7 +21863,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_STORE7</name>
+          <name>STORE7</name>
           <description>rtc configure register</description>
           <addressOffset>0xc4</addressOffset>
           <size>32</size>
@@ -21859,7 +21878,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_LOW_POWER_ST</name>
+          <name>LOW_POWER_ST</name>
           <description>rtc configure register</description>
           <addressOffset>0xc8</addressOffset>
           <size>32</size>
@@ -22063,7 +22082,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_DIAG0</name>
+          <name>DIAG0</name>
           <description>rtc configure register</description>
           <addressOffset>0xcc</addressOffset>
           <size>32</size>
@@ -22078,7 +22097,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_PAD_HOLD</name>
+          <name>PAD_HOLD</name>
           <description>rtc configure register</description>
           <addressOffset>0xd0</addressOffset>
           <size>32</size>
@@ -22143,70 +22162,70 @@
           </fields>
         </register>
         <register>
-          <name>RTC_BROWN_OUT</name>
+          <name>BROWN_OUT</name>
           <description>rtc configure register</description>
           <addressOffset>0xd8</addressOffset>
           <size>32</size>
           <resetValue>0x43ff0010</resetValue>
           <fields>
             <field>
-              <name>BROWN_OUT_INT_WAIT</name>
+              <name>INT_WAIT</name>
               <description>brown out interrupt wait cycles</description>
               <bitOffset>4</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_CLOSE_FLASH_ENA</name>
+              <name>CLOSE_FLASH_ENA</name>
               <description>enable close flash when brown out happens</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_PD_RF_ENA</name>
+              <name>PD_RF_ENA</name>
               <description>enable power down RF when brown out happens</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_RST_WAIT</name>
+              <name>RST_WAIT</name>
               <description>brown out reset wait cycles</description>
               <bitOffset>16</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_RST_ENA</name>
+              <name>RST_ENA</name>
               <description>enable brown out reset</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_RST_SEL</name>
+              <name>RST_SEL</name>
               <description>1:  4-pos reset</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_ANA_RST_EN</name>
+              <name>ANA_RST_EN</name>
               <description>brown_out origin reset enable</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>BROWN_OUT_CNT_CLR</name>
+              <name>CNT_CLR</name>
               <description>clear brown out counter</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>BROWN_OUT_ENA</name>
+              <name>ENA</name>
               <description>enable brown out</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22222,7 +22241,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIME_LOW1</name>
+          <name>TIME_LOW1</name>
           <description>rtc configure register</description>
           <addressOffset>0xdc</addressOffset>
           <size>32</size>
@@ -22237,7 +22256,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_TIME_HIGH1</name>
+          <name>TIME_HIGH1</name>
           <description>rtc configure register</description>
           <addressOffset>0xe0</addressOffset>
           <size>32</size>
@@ -22252,7 +22271,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_XTAL32K_CLK_FACTOR</name>
+          <name>XTAL32K_CLK_FACTOR</name>
           <description>rtc configure register</description>
           <addressOffset>0xe4</addressOffset>
           <size>32</size>
@@ -22267,7 +22286,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_XTAL32K_CONF</name>
+          <name>XTAL32K_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0xe8</addressOffset>
           <size>32</size>
@@ -22304,7 +22323,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_USB_CONF</name>
+          <name>USB_CONF</name>
           <description>rtc configure register</description>
           <addressOffset>0xec</addressOffset>
           <size>32</size>
@@ -22319,7 +22338,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLP_REJECT_CAUSE</name>
+          <name>SLP_REJECT_CAUSE</name>
           <description>RTC_CNTL_RTC_SLP_REJECT_CAUSE_REG</description>
           <addressOffset>0xf0</addressOffset>
           <size>32</size>
@@ -22334,7 +22353,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_OPTION1</name>
+          <name>OPTION1</name>
           <description>rtc configure register</description>
           <addressOffset>0xf4</addressOffset>
           <size>32</size>
@@ -22349,7 +22368,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_SLP_WAKEUP_CAUSE</name>
+          <name>SLP_WAKEUP_CAUSE</name>
           <description>RTC_CNTL_RTC_SLP_WAKEUP_CAUSE_REG</description>
           <addressOffset>0xf8</addressOffset>
           <size>32</size>
@@ -22364,7 +22383,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_ULP_CP_TIMER_1</name>
+          <name>ULP_CP_TIMER_1</name>
           <description>rtc configure register</description>
           <addressOffset>0xfc</addressOffset>
           <size>32</size>
@@ -22522,7 +22541,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_RETENTION_CTRL</name>
+          <name>RETENTION_CTRL</name>
           <description>rtc configure register</description>
           <addressOffset>0x108</addressOffset>
           <size>32</size>
@@ -22566,7 +22585,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_FIB_SEL</name>
+          <name>FIB_SEL</name>
           <description>rtc configure register</description>
           <addressOffset>0x10c</addressOffset>
           <size>32</size>
@@ -22582,7 +22601,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_GPIO_WAKEUP</name>
+          <name>GPIO_WAKEUP</name>
           <description>rtc configure register</description>
           <addressOffset>0x110</addressOffset>
           <size>32</size>
@@ -22695,7 +22714,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_DBG_SEL</name>
+          <name>DBG_SEL</name>
           <description>rtc configure register</description>
           <addressOffset>0x114</addressOffset>
           <size>32</size>
@@ -22752,7 +22771,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_DBG_MAP</name>
+          <name>DBG_MAP</name>
           <description>rtc configure register</description>
           <addressOffset>0x118</addressOffset>
           <size>32</size>
@@ -22844,7 +22863,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_SENSOR_CTRL</name>
+          <name>SENSOR_CTRL</name>
           <description>rtc configure register</description>
           <addressOffset>0x11c</addressOffset>
           <size>32</size>
@@ -22866,7 +22885,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_DBG_SAR_SEL</name>
+          <name>DBG_SAR_SEL</name>
           <description>rtc configure register</description>
           <addressOffset>0x120</addressOffset>
           <size>32</size>
@@ -22881,7 +22900,7 @@
           </fields>
         </register>
         <register>
-          <name>RTC_CNTL_PG_CTRL</name>
+          <name>PG_CTRL</name>
           <description>rtc configure register</description>
           <addressOffset>0x124</addressOffset>
           <size>32</size>
@@ -28392,7 +28411,7 @@
               <description>Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>USR</name>
@@ -30260,7 +30279,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>EXT0_CLK_EN</name>
+              <name>I2C_EXT0_CLK_EN</name>
               <description>reg_ext0_clk_en</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -30571,7 +30590,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>EXT0_RST</name>
+              <name>I2C_EXT0_RST</name>
               <description>reg_ext0_rst</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32679,7 +32698,7 @@
           </fields>
         </register>
         <register>
-          <name>INT_ENA_TIMG</name>
+          <name>INT_ENA_TIMERS</name>
           <description>INT_ENA_TIMG_REG</description>
           <addressOffset>0x70</addressOffset>
           <size>32</size>
@@ -32723,7 +32742,7 @@
           </fields>
         </register>
         <register>
-          <name>INT_ST_TIMG</name>
+          <name>INT_ST_TIMERS</name>
           <description>INT_ST_TIMG_REG</description>
           <addressOffset>0x78</addressOffset>
           <size>32</size>

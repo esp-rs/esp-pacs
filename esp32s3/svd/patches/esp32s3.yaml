@@ -1,16 +1,1 @@
 _svd: ../esp32s3.base.svd
-
-SPI1:
-  CMD:
-    _modify:
-      UPDATE:
-        access: read-write
-
-SPI2:
-  CMD:
-    _modify:
-      UPDATE:
-        access: read-write
-
-_derive:
-    SPI3: SPI2

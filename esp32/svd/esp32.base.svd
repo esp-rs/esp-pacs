@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32</series>
-  <version>4</version>
+  <version>5</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -2024,7 +2024,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>I2C_EXT0_CLK_EN</name>
+              <name>I2C0_EXT0_CLK_EN</name>
               <description>I2C0 module.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2193,7 +2193,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>I2C_EXT0_RST</name>
+              <name>I2C0_EXT0_RST</name>
               <description>I2C0 module.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -8185,10 +8185,10 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_INST_CONFIG</name>
+              <name>RD_CHIP_VER_REV2</name>
               <description/>
               <bitOffset>20</bitOffset>
-              <bitWidth>8</bitWidth>
+              <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
@@ -11149,7 +11149,7 @@
       <baseAddress>0x3ff53000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0x98</size>
+        <size>0x9c</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
@@ -11457,6 +11457,21 @@
               <bitOffset>20</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA</name>
+          <description/>
+          <addressOffset>0x1c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>FIFO_RDATA</name>
+              <description>The register represent the byte  data read from rxfifo when use apb fifo access</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -29407,6 +29422,25 @@
       </registers>
     </peripheral>
     <peripheral>
+      <name>RNG</name>
+      <description>Hardware random number generator</description>
+      <groupName>RNG</groupName>
+      <baseAddress>0x60035000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DATA</name>
+          <description>Random number data</description>
+          <addressOffset>0x144</addressOffset>
+          <size>32</size>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>RSA</name>
       <description>RSA (Rivest Shamir Adleman) Accelerator</description>
       <groupName>RSA</groupName>
@@ -30714,6 +30748,24 @@
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>DIV128</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DIV256</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DIV512</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DIV1024</name>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ENB_CK8M</name>
@@ -30728,6 +30780,16 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>CK8M_DIV_256</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CK8M</name>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>DIG_XTAL32K_EN</name>
@@ -30805,6 +30867,24 @@
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>XTAL</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PLL</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CK8M</name>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>APLL</name>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>FAST_CLK_RTC_SEL</name>
@@ -30812,6 +30892,16 @@
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>XTAL_DIV_4</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CK8M</name>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ANA_CLK_RTC_SEL</name>
@@ -30819,6 +30909,20 @@
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>SLOW_CK</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CK_XTAL_32K</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>CK8M_D256_OUT</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -52567,25 +52671,6 @@ IDINTEN[4]: DU Interrupt.</description>
         <name>UHCI1</name>
         <value>13</value>
       </interrupt>
-    </peripheral>
-    <peripheral>
-      <name>WDEV</name>
-      <description>Peripheral WDEV</description>
-      <groupName>WDEV</groupName>
-      <baseAddress>0x60035144</baseAddress>
-      <addressBlock>
-        <offset>0x0</offset>
-        <size>0x4</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>RND</name>
-          <description>Hardware random number generator register</description>
-          <addressOffset>0x0</addressOffset>
-          <size>32</size>
-        </register>
-      </registers>
     </peripheral>
   </peripherals>
 </device>

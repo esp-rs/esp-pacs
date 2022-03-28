@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32-S2</series>
-  <version>6</version>
+  <version>7</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -7633,7 +7633,7 @@ The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interru
               <description>The value of RX FIFO read data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -20298,6 +20298,25 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </registers>
     </peripheral>
     <peripheral>
+      <name>RNG</name>
+      <description>Hardware random number generator</description>
+      <groupName>RNG</groupName>
+      <baseAddress>0x60035000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x4</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DATA</name>
+          <description>Random number data</description>
+          <addressOffset>0x110</addressOffset>
+          <size>32</size>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>RSA</name>
       <description>RSA (Rivest Shamir Adleman) Accelerator</description>
       <groupName>RSA</groupName>
@@ -21533,7 +21552,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>SW_STALL_PROCPU_C0</name>
-              <description>When RTC_CNTL_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW.</description>
+              <description>When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -21748,7 +21767,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         </register>
         <register>
           <name>TIME_LOW0</name>
-          <description>Stores the lower 32 bits of RTC timer 0</description>
+          <description>Stores the lower 32 bits of RTC timer 0.</description>
           <addressOffset>0x10</addressOffset>
           <size>32</size>
           <fields>
@@ -21842,35 +21861,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>CPU_STALL_EN</name>
-              <description>Enables the CPU stalling.</description>
+              <description>Enables CPU stalling.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CPU_STALL_WAIT</name>
-              <description>Sets the CPU stall waiting cycles (using the RTC fast clock).</description>
+              <description>Sets the CPU stall waiting cycle (using the RTC fast clock).</description>
               <bitOffset>1</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CK8M_WAIT</name>
-              <description>Sets the 8 MHz clock waiting cycles (using the RTC slow clock).</description>
+              <description>Sets the 8 MHz clock  waiting (using the RTC slow clock).</description>
               <bitOffset>6</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XTL_BUF_WAIT</name>
-              <description>Sets the XTAL waiting cycles (using the RTC slow clock).</description>
+              <description>Sets the XTAL waiting cycle (using the RTC slow clock).</description>
               <bitOffset>14</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PLL_BUF_WAIT</name>
-              <description>Sets the PLL waiting cycles (using the RTC slow clock).</description>
+              <description>Sets the PLL waiting cycle (using the RTC slow clock).</description>
               <bitOffset>24</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -21886,14 +21905,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>ULPCP_TOUCH_START_WAIT</name>
-              <description>Sets the waiting cycles (using the RTC slow clock) before the ULP co-processor or touch controller starts to work.</description>
+              <description>Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>MIN_TIME_CK8M_OFF</name>
-              <description>Sets the minimal cycles for  8 MHz clock (using the RTC slow clock) when powered down.</description>
+              <description>Sets the minimal cycle for  8 MHz clock (using the RTC slow clock) when powered down.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -22057,28 +22076,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>SAR_I2C_FORCE_PD</name>
-              <description>Set this bit to FPD the SAR_I2C.</description>
+              <description>Sets this bit to FPD the SAR_I2C.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SAR_I2C_FORCE_PU</name>
-              <description>Set this bit to FPU the SAR_I2C.</description>
+              <description>Sets this bit to FPU the SAR_I2C.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PLLA_FORCE_PD</name>
-              <description>Set this bit to FPD the PLLA.</description>
+              <description>Sets this bit to FPD the PLLA.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PLLA_FORCE_PU</name>
-              <description>Set this bit to FPU the PLLA.</description>
+              <description>Sets this bit to FPU the PLLA.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22157,7 +22176,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>PROCPU_STAT_VECTOR_SEL</name>
-              <description>Selects the CPU static vector.</description>
+              <description>Selects the CPU state vector.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22173,7 +22192,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>WAKEUP_ENA</name>
-              <description>Selects the wakeup source.</description>
+              <description>Enables the wakeup bitmap.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>17</bitWidth>
               <access>read-write</access>
@@ -22188,21 +22207,21 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SLP_WAKEUP_INT_ENA</name>
-              <description>Enables interrupts when the chip wakes up from sleep.</description>
+              <description>Enables interruption when the chip wakes up from sleep.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SLP_REJECT_INT_ENA</name>
-              <description>Enables interrupts when the chip rejects to go to sleep.</description>
+              <description>Enables interruption when the chip rejects to go to sleep.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SDIO_IDLE_INT_ENA</name>
-              <description>Enables interrupts when the SDIO idles.</description>
+              <description>Enables interruption when the SDIO idles.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22216,7 +22235,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TOUCH_SCAN_DONE_INT_ENA</name>
-              <description>Enables interrupts upon the completion of a touch scanning.</description>
+              <description>Enables interruption upon the completion of a touch scanning.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22230,28 +22249,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TOUCH_DONE_INT_ENA</name>
-              <description>Enables interrupts upon the completion of a single touch.</description>
+              <description>Enables interruption upon the completion of a single touch.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_ACTIVE_INT_ENA</name>
-              <description>Enables interrupts when a touch is detected.</description>
+              <description>Enables interruption when a touch is detected.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_INACTIVE_INT_ENA</name>
-              <description>Enables interrupts when a touch is released.</description>
+              <description>Enables interruption when a touch is released.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>BROWN_OUT_INT_ENA</name>
-              <description>Enables the brownout interrupt.</description>
+              <description>Enables the brown out interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22272,7 +22291,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TSENS_INT_ENA</name>
-              <description>Enables the temperature sensor interrupt.</description>
+              <description>Enables the touch sensor interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22300,28 +22319,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>XTAL32K_DEAD_INT_ENA</name>
-              <description>Enables interrupts when the 32 kHz crystal is dead.</description>
+              <description>Enables interruption when the 32 kHz crystal is dead.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>COCPU_TRAP_INT_ENA</name>
-              <description>Enables interrupts when the ULP-RISCV is trapped.</description>
+              <description>Enables interruption when the ULP-RISCV is trapped.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_TIMEOUT_INT_ENA</name>
-              <description>Enables interrupts when touch sensor times out.</description>
+              <description>Enables interruption when touch sensor times out.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>GLITCH_DET_INT_ENA</name>
-              <description>Enables interrupts when a glitch is detected.</description>
+              <description>Enables interruption when a glitch is detected.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22420,7 +22439,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TSENS_INT_RAW</name>
-              <description>Stores the raw temperature sensor interrupt.</description>
+              <description>Stores the raw touch sensor interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -22568,7 +22587,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TSENS_INT_ST</name>
-              <description>Stores the status of the temperature sensor interrupt.</description>
+              <description>Stores the status of the touch sensor interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -22653,7 +22672,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>WDT_INT_CLR</name>
-              <description>Clears the RTC watchdog interrupt.</description>
+              <description>Enables the RTC watchdog interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -22667,7 +22686,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>ULP_CP_INT_CLR</name>
-              <description>Clears the ULP co-processor interrupt.</description>
+              <description>Enables the ULP co-processor interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -22716,7 +22735,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>TSENS_INT_CLR</name>
-              <description>Clears the temperature sensor interrupt.</description>
+              <description>Clears the touch sensor interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -22780,7 +22799,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SCRATCH0</name>
-              <description>Reservation register 0.</description>
+              <description>Reservation register 0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -22795,7 +22814,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SCRATCH1</name>
-              <description>Reservation register 1.</description>
+              <description>Reservation register 1</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -22810,7 +22829,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SCRATCH2</name>
-              <description>Reservation register 2.</description>
+              <description>Reservation register 2</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -22825,7 +22844,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SCRATCH3</name>
-              <description>Reservation register 3.</description>
+              <description>Reservation register 3</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -22890,14 +22909,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>XTAL32K_XPD_FORCE</name>
-              <description>Set this bit to allow the software to FPD the 32 kHz crystal; Reset this bit to allow the FSM to FPD the 32 kHz crystal.</description>
+              <description>Set 1 to allow the software to FPD the 32 kHz crystal.  Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ENCKINIT_XTAL_32K</name>
-              <description>Set this bit to apply an internal clock to help the 32 kHz crystal to start.</description>
+              <description>Applies an internal clock to help the 32 kHz crystal to start.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22946,14 +22965,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>XTAL32K_GPIO_SEL</name>
-              <description>Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock; 1: selects clock from the RTC GPIO X32P_C.</description>
+              <description>Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock.  1: selects clock from the RTC GPIO X32P_C.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XTL_EXT_CTR_LV</name>
-              <description>0: powers down XTAL at high level; 1: powers down XTAL at low level.</description>
+              <description>0: powers down XTAL at high level  1: powers down XTAL at low level</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -22982,14 +23001,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>EXT_WAKEUP0_LV</name>
-              <description>0: EXT0 at low level, 1: EXT0 at high level.</description>
+              <description>0: external wakeup 0 at low level     1: external wakeup 0 at high level</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>EXT_WAKEUP1_LV</name>
-              <description>0: EXT1 at low level, 1: EXT1 at high level.</description>
+              <description>0: external wakeup 1 at low level     1: external wakeup 1 at high level</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23071,14 +23090,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>CK8M_DIV_SEL_VLD</name>
-              <description>Synchronizes the reg_ck8m_div_sel. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock.</description>
+              <description>Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CK8M_DIV</name>
-              <description>Set the CK8M_D256_OUT divider. 00: divided by 128, 01: divided by 256, 10: divided by 512, 11: divided by 1024.</description>
+              <description>Set the CK8M_D256_OUT divider. 00: divided by 128   01: divided by 256   10: divided by 512  11: divided by 1024.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -23120,14 +23139,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>CK8M_DIV_SEL</name>
-              <description>Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1.</description>
+              <description>Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XTAL_FORCE_NOGATING</name>
-              <description>Set this bit to force no gating to crystal during sleep.</description>
+              <description>Set this bit to force no gating to crystal during sleep</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23169,7 +23188,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>ANA_CLK_RTC_SEL</name>
-              <description>Set this bit to select the RTC slow clock. 0: 90K rtc\_clk, 1: 32k XTAL, 2: 8md256.</description>
+              <description>Set this bit to select the RTC slow clock. 0: 90K rtc_clk  1: 32k XTAL  2: 8md256.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
@@ -23185,14 +23204,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>ANA_CLK_DIV_VLD</name>
-              <description>Synchronizes the reg_rtc_ana_clk_div. Note that you have to invalidate the bus before modifying the frequency divider, and then validate the new divider clock.</description>
+              <description>Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>ANA_CLK_DIV</name>
-              <description>Set the divider for the RTC clock.</description>
+              <description>Set the rtc_clk divider.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -23456,14 +23475,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0xa9002400</resetValue>
           <fields>
             <field>
-              <name>DIG_DBIAS_SLP</name>
-              <description>Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep state.</description>
+              <name>DIG_REG_DBIAS_SLP</name>
+              <description>Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DIG_DBIAS_WAK</name>
+              <name>DIG_REG_DBIAS_WAK</name>
               <description>Configures the regulation factor for the digital system voltage regulator when the CPU is in active status.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>
@@ -23506,14 +23525,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>REGULATOR_FORCE_PD</name>
-              <description>Set this bit to FPD the low-power voltage regulator, which means decreasing its voltage to 0.8 V or lower.</description>
+              <description>Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>REGULATOR_FORCE_PU</name>
-              <description>Set this bit to FPU the low-power voltage regulator, which means increasing its voltage to higher than 0.8 V.</description>
+              <description>Set this bit to FPU the RTC_REG.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23529,49 +23548,49 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>FASTMEM_FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the RTC fast memory.</description>
+              <description>Set this bit to disable the force isolation to the RTC fast memory.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>FASTMEM_FORCE_ISO</name>
-              <description>Set this bit to force isolation of the RTC fast memory.</description>
+              <description>Set this bit to force isolate the RTC fast memory.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SLOWMEM_FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the RTC slow memory.</description>
+              <description>Set this bit to disable the force isolation to the RTC slow memory.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SLOWMEM_FORCE_ISO</name>
-              <description>Set this bit to force isolation of the RTC slow memory.</description>
+              <description>Set this bit to force isolate the RTC slow memory.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>FORCE_ISO</name>
-              <description>Set this bit to force isolation of the RTC peripherals.</description>
+              <description>Set this bit to force isolate the RTC peripherals.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the RTC peripherals.</description>
+              <description>Set this bit to disable the force isolation to the RTC peripherals.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>FASTMEM_FOLW_CPU</name>
-              <description>Set this bit to FPD the RTC fast memory when the CPU is powered down. Reset this bit to FPD the RTC fast memory when the RTC main state machine is powered down.</description>
+              <description>Set 1 to FPD the RTC fast memory when the CPU is powered down.  Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23592,7 +23611,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>SLOWMEM_FOLW_CPU</name>
-              <description>Set this bit to FPD the RTC slow memory when the CPU is powered down. Reset this bit to FPD the RTC slow memory when the RTC main state machine is powered down.</description>
+              <description>Set 1 to FPD the RTC slow memory when the CPU is powered down.  Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23685,7 +23704,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         </register>
         <register>
           <name>DIG_PWC</name>
-          <description>Digital system power configuration register</description>
+          <description>Digital system power configuraiton register</description>
           <addressOffset>0x8c</addressOffset>
           <size>32</size>
           <resetValue>0x555550</resetValue>
@@ -23790,14 +23809,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>WIFI_FORCE_PD</name>
-              <description>Set this bit to FPD the Wi-Fi digital circuit in the digital system.</description>
+              <description>Set this bit to FPD the Wi-Fi circuit.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WIFI_FORCE_PU</name>
-              <description>Set this bit to FPU the Wi-Fi digital circuit in the digital system.</description>
+              <description>Set this bit to FPU the Wi-Fi circuit.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23811,7 +23830,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>DG_WRAP_FORCE_PU</name>
-              <description>Set this bit to FPU the digital system</description>
+              <description>Set this bit to FPD the DC-DC convertor in the digital system.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23881,7 +23900,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>WIFI_PD_EN</name>
-              <description>Set this bit to enable PD for the Wi-Fi digital circuit in sleep.</description>
+              <description>Set this bit to enable PD for the Wi-Fi circuit in sleep.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -23925,28 +23944,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>CLR_DG_PAD_AUTOHOLD</name>
-              <description>Set this bit to clear the auto-hold enabler for the digital GPIOs.</description>
+              <description>Se this bit to clear the auto-hold enabler for the digital GPIOs.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
               <name>DG_PAD_AUTOHOLD_EN</name>
-              <description>Set this bit to allow the digital GPIOs to enter the auto-hold status.</description>
+              <description>Se this bit to allow the digital GPIOs to enter the autohold status.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DG_PAD_FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the digital GPIOs.</description>
+              <description>Set this bit to disable the force isolation to the digital GPIOs.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DG_PAD_FORCE_ISO</name>
-              <description>Set this bit to force isolation of the digital GPIOs.</description>
+              <description>Set this bit to force isolate the digital GPIOs.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -24051,28 +24070,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>WIFI_FORCE_ISO</name>
-              <description>Set this bit to force isolation of the Wi-Fi digital circuits.</description>
+              <description>Set this bit to force isolate the Wi-Fi circuits.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WIFI_FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the Wi-Fi digital circuits.</description>
+              <description>Set this bit to disable the force isolation to the Wi-Fi circuits.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DG_WRAP_FORCE_ISO</name>
-              <description>Set this bit to force isolation of the digital system.</description>
+              <description>Set this bit to force isolate the digital system.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>DG_WRAP_FORCE_NOISO</name>
-              <description>Set this bit to disable the force isolation of the digital system.</description>
+              <description>Set this bit to disable the force isolation to the digital system.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -24144,28 +24163,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>WDT_STG3</name>
-              <description>1: enable at the interrupt stage, 2: enable at the CPU stage,  3: enable at the system stage, 4: enable at the system and RTC stage.</description>
+              <description>1: enable at the interrupt stage 2: enable at the CPU stage  3: enable at the system stage 4: enable at the system and RTC stage.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG2</name>
-              <description>1: enable at the interrupt stage, 2: enable at the CPU stage,  3: enable at the system stage, 4: enable at the system and RTC stage.</description>
+              <description>1: enable at the interrupt stage 2: enable at the CPU stage  3: enable at the system stage 4: enable at the system and RTC stage.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG1</name>
-              <description>1: enable at the interrupt stage, 2: enable at the CPU stage,  3: enable at the system stage, 4: enable at the system and RTC stage.</description>
+              <description>1: enable at the interrupt stage 2: enable at the CPU stage  3: enable at the system stage 4: enable at the system and RTC stage.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>WDT_STG0</name>
-              <description>1: enable at the interrupt stage, 2: enable at the CPU stage,  3: enable at the system stage, 4: enable at the system and RTC stage.</description>
+              <description>1: enable at the interrupt stage 2: enable at the CPU stage  3: enable at the system stage 4: enable at the system and RTC stage.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
@@ -24251,7 +24270,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>WDT_FEED</name>
-              <description>Set this bit to feed the RTC watchdog.</description>
+              <description>Set 1 to feed the RTC watchdog.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
@@ -24356,14 +24375,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>SW_STALL_APPCPU_C1</name>
-              <description>When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW.</description>
+              <description>{reg_sw_stall_appcpu_c1[5:0]  reg_sw_stall_appcpu_c0[1:0]} == 0x86 will stall APP CPU</description>
               <bitOffset>20</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SW_STALL_PROCPU_C1</name>
-              <description>When RTC_CNTL_SW_STALL_PROCPU_C0 is configured to 0x2, setting this bit to 0x21 stalls the CPU by SW.</description>
+              <description>Set this bit to allow the SW to be able to send the CPU into stalling.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
@@ -24657,154 +24676,154 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>TOUCH_PAD0_HOLD</name>
-              <description>Sets the touch GPIO 0 to the holding state.</description>
+              <description>Sets the touch GPIO 0 to hold.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD1_HOLD</name>
-              <description>Sets the touch GPIO 1 to the holding state.</description>
+              <description>Sets the touch GPIO 1 to hold.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD2_HOLD</name>
-              <description>Sets the touch GPIO 2 to the holding state.</description>
+              <description>Sets the touch GPIO 2 to hold.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD3_HOLD</name>
-              <description>Sets the touch GPIO 3 to the holding state.</description>
+              <description>Sets the touch GPIO 3 to hold.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD4_HOLD</name>
-              <description>Sets the touch GPIO 4 to the holding state.</description>
+              <description>Sets the touch GPIO 4 to hold.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD5_HOLD</name>
-              <description>Sets the touch GPIO 5 to the holding state.</description>
+              <description>Sets the touch GPIO 5 to hold.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD6_HOLD</name>
-              <description>Sets the touch GPIO 6 to the holding state.</description>
+              <description>Sets the touch GPIO 6 to hold.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD7_HOLD</name>
-              <description>Sets the touch GPIO 7 to the holding state.</description>
+              <description>Sets the touch GPIO 7 to hold.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD8_HOLD</name>
-              <description>Sets the touch GPIO 8 to the holding state.</description>
+              <description>Sets the touch GPIO 8 to hold.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD9_HOLD</name>
-              <description>Sets the touch GPIO 9 to the holding state.</description>
+              <description>Sets the touch GPIO 9 to hold.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD10_HOLD</name>
-              <description>Sets the touch GPIO 10 to the holding state.</description>
+              <description>Sets the touch GPIO 10 to hold.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD11_HOLD</name>
-              <description>Sets the touch GPIO 11 to the holding state.</description>
+              <description>Sets the touch GPIO 11 to hold.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD12_HOLD</name>
-              <description>Sets the touch GPIO 12 to the holding state.</description>
+              <description>Sets the touch GPIO 12 to hold.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD13_HOLD</name>
-              <description>Sets the touch GPIO 13 to the holding state.</description>
+              <description>Sets the touch GPIO 13 to hold.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TOUCH_PAD14_HOLD</name>
-              <description>Sets the touch GPIO 14 to the holding state.</description>
+              <description>Sets the touch GPIO 14 to hold.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>X32P_HOLD</name>
-              <description>Sets the x32p to the holding state.</description>
+              <description>Sets the x32p to hold.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>X32N_HOLD</name>
-              <description>Sets the x32n to the holding state.</description>
+              <description>Sets the x32n to hold.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PDAC1_HOLD</name>
-              <description>Sets the pdac1 to the holding state.</description>
+              <description>Sets the pdac1 to hold.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PDAC2_HOLD</name>
-              <description>Sets the pdac2 to the holding state.</description>
+              <description>Sets the pdac2 to hold.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PAD19_HOLD</name>
-              <description>Sets the RTG GPIO 19 to the holding state.</description>
+              <description>Sets the RTG GPIO 19 to hold.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PAD20_HOLD</name>
-              <description>Sets the RTG GPIO 20 to the holding state.</description>
+              <description>Sets the RTG GPIO 20 to hold.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PAD21_HOLD</name>
-              <description>Sets the RTG GPIO 21 to the holding state.</description>
+              <description>Sets the RTG GPIO 21 to hold.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -24819,7 +24838,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <fields>
             <field>
               <name>DIG_PAD_HOLD</name>
-              <description>Set GPIO 21 to GPIO 45 to the holding state. (See bitmap to locate any GPIO).</description>
+              <description>Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO).</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -24879,7 +24898,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>INT_WAIT</name>
-              <description>Configures the waiting cycles before sending an interrupt.</description>
+              <description>Configures the waiting cycle before sending an interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
@@ -24900,7 +24919,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>RST_WAIT</name>
-              <description>Configures the waiting cycles before the reset after a brown-out.</description>
+              <description>Configures the waiting cycle before the reset after a brown-out.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
@@ -24914,7 +24933,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>RST_SEL</name>
-              <description>Selects the reset type when a brown-out happens. 1: chip reset, 0: system reset.</description>
+              <description>Selects the reset type when a brown-out happens. 1: chip reset  0: system reset.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -25003,21 +25022,21 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
             <field>
               <name>XTAL32K_RESTART_WAIT</name>
-              <description>Defines the waiting cycles before restarting the 32 kHz crystal oscillator.</description>
+              <description>Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XTAL32K_WDT_TIMEOUT</name>
-              <description>Defines the waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead.</description>
+              <description>Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>XTAL32K_STABLE_THRES</name>
-              <description>Defines the allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable.</description>
+              <description>Defines the maximum allowed restarting period, within which the 32 kHz crystal oscillator can be regarded as stable.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
