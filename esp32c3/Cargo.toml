@@ -30,7 +30,7 @@ include = [
 
 [dependencies]
 bare-metal = "1.0"
-riscv = "0.7"
+riscv = "0.8"
 riscv-rt = { version = "0.8", optional = true }
 vcell = "0.1"
 
