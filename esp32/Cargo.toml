@@ -1,7 +1,10 @@
 [package]
 name = "esp32"
-version = "0.11.0"
-authors = ["Scott Mabin <scott@mabez.dev>", "Arjan Mels <arjan@mels.email>"]
+version = "0.12.0"
+authors = [
+    "Scott Mabin <scott@mabez.dev>",
+    "Arjan Mels <arjan@mels.email>",
+]
 edition = "2021"
 rust-version = "1.58"
 repository = "https://github.com/esp-rs/esp-pacs"
