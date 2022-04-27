@@ -121,7 +121,7 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
 
     let mut device_x = String::new();
     let items = render(&device, &config, &mut device_x)?;
-    let data = items.to_string().replace("]", "]\n");
+    let data = items.to_string();
 
     let mut file = File::create(path.join("lib.rs"))?;
     file.write_all(data.as_ref())?;
@@ -142,7 +142,6 @@ fn format(path: &PathBuf) -> Result<()> {
 
     fs::remove_file(&lib_file)?;
 
-    // TODO: consider using 'rustfmt' directly, as a library
     Command::new("cargo")
         .arg("fmt")
         .current_dir(path)
