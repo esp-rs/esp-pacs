@@ -15,6 +15,7 @@ PROVIDE(PWM1 = DefaultHandler);
 PROVIDE(LEDC = DefaultHandler);
 PROVIDE(EFUSE = DefaultHandler);
 PROVIDE(RTC_CORE = DefaultHandler);
+PROVIDE(RMT = DefaultHandler);
 PROVIDE(PCNT = DefaultHandler);
 PROVIDE(I2C_EXT0 = DefaultHandler);
 PROVIDE(I2C_EXT1 = DefaultHandler);
