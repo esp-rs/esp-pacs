@@ -28,8 +28,8 @@ jobs:
       - uses: Swatinem/rust-cache@v1
       - uses: actions-rs/cargo@v1
         with:
-          command: xtask
-          args: esp32c3
+          command: run
+          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}
 
   check-xtensa:
     name: Generate and build Xtensa PACs
@@ -39,12 +39,13 @@ jobs:
         chip: [esp32, esp32s2, esp32s3, esp8266]
     steps:
       - uses: actions/checkout@v2
-      - uses: esp-rs/xtensa-toolchain@v1
+      - uses: esp-rs/xtensa-toolchain@v1.2
         with:
           default: true
           ldproxy: false
+          buildtargets: ${{ matrix.chip }}
       - uses: Swatinem/rust-cache@v1
       - uses: actions-rs/cargo@v1
         with:
-          command: xtask
-          args: ${{ matrix.chip }}
+          command: run
+          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}

@@ -1,3 +1,30 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+
+    "rust-analyzer.cargo.buildScripts.enable": true,
+    "rust-analyzer.checkOnSave.allTargets": false,
+    "rust-analyzer.procMacro.enable": true,
+
+    // -----------------------------------------------------------------------
+    // Since we have to handle multiple toolchains AND multiple targets, we
+    // we need to give Rust Analyzer some directions.
+    //
+    // Enable ONE target and linked project based on which chip you are
+    // developing for. Changing target/project requires reloading Rust
+    // Analyzer.
+
+    // "rust-analyzer.cargo.target": "xtensa-esp32-none-elf",
+    "rust-analyzer.cargo.target": "riscv32imc-unknown-none-elf",
+    // "rust-analyzer.cargo.target": "xtensa-esp32s2-none-elf",
+    // "rust-analyzer.cargo.target": "xtensa-esp32s3-none-elf",
+    // "rust-analyzer.cargo.target": "xtensa-esp8266-none-elf",
+
+    "rust-analyzer.linkedProjects": [
+        // "esp32/Cargo.toml",
+        "esp32c3/Cargo.toml",
+        // "esp32s2/Cargo.toml",
+        // "esp32s3/Cargo.toml",
+        // "esp8266/Cargo.toml",
+        // "xtask/Cargo.toml",
+    ],
 }

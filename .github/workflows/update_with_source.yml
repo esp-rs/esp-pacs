@@ -42,7 +42,8 @@ jobs:
 
       - uses: actions-rs/cargo@v1
         with:
-          command: xtask
+          command: run
+          args: --manifest-path=xtask/Cargo.toml
 
       - run: |
           git add -f esp32/src
