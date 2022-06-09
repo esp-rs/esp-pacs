@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
   <series>ESP32-S3</series>
-  <version>7</version>
+  <version>8</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -50227,6 +50227,755 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>version register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>SYSTIMER</name>
+      <description>System Timer</description>
+      <groupName>SYSTIMER</groupName>
+      <baseAddress>0x60023000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x90</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>SYSTIMER_TARGET0</name>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>SYSTIMER_TARGET1</name>
+        <value>58</value>
+      </interrupt>
+      <interrupt>
+        <name>SYSTIMER_TARGET2</name>
+        <value>59</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>CONF</name>
+          <description>Configure system timer clock</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x46000000</resetValue>
+          <fields>
+            <field>
+              <name>SYSTIMER_CLK_FO</name>
+              <description>systimer clock force on</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET2_WORK_EN</name>
+              <description>target2 work enable</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET1_WORK_EN</name>
+              <description>target1 work enable</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET0_WORK_EN</name>
+              <description>target0 work enable</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT1_CORE1_STALL_EN</name>
+              <description>If timer unit1 is stalled when core1 stalled</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT1_CORE0_STALL_EN</name>
+              <description>If timer unit1 is stalled when core0 stalled</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT0_CORE1_STALL_EN</name>
+              <description>If timer unit0 is stalled when core1 stalled</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT0_CORE0_STALL_EN</name>
+              <description>If timer unit0 is stalled when core0 stalled</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT1_WORK_EN</name>
+              <description>timer unit1 work enable</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT0_WORK_EN</name>
+              <description>timer unit0 work enable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_EN</name>
+              <description>register file clk gating</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_OP</name>
+          <description>system timer unit0 value update register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_VALUE_VALID</name>
+              <description>timer value is sync and valid</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT0_UPDATE</name>
+              <description>update timer_unit0</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_OP</name>
+          <description>system timer unit1 value update register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_VALUE_VALID</name>
+              <description>timer value is sync and valid</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TIMER_UNIT1_UPDATE</name>
+              <description>update timer unit1</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_LOAD_HI</name>
+          <description>system timer unit0 value high load register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_LOAD_HI</name>
+              <description>timer unit0 load high 20 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_LOAD_LO</name>
+          <description>system timer unit0 value low load register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_LOAD_LO</name>
+              <description>timer unit0 load low 32 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_LOAD_HI</name>
+          <description>system timer unit1 value high load register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_LOAD_HI</name>
+              <description>timer unit1 load high 20 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_LOAD_LO</name>
+          <description>system timer unit1 value low load register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_LOAD_LO</name>
+              <description>timer unit1 load low 32 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET0_HI</name>
+          <description>system timer comp0 value high register</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET0_HI</name>
+              <description>timer taget0 high 20 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET0_LO</name>
+          <description>system timer comp0 value low register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET0_LO</name>
+              <description>timer taget0 low 32 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET1_HI</name>
+          <description>system timer comp1 value high register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET1_HI</name>
+              <description>timer taget1 high 20 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET1_LO</name>
+          <description>system timer comp1 value low register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET1_LO</name>
+              <description>timer taget1 low 32 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET2_HI</name>
+          <description>system timer comp2 value high register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET2_HI</name>
+              <description>timer taget2 high 20 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET2_LO</name>
+          <description>system timer comp2 value low register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_TARGET2_LO</name>
+              <description>timer taget2 low 32 bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET0_CONF</name>
+          <description>system timer comp0 target mode register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_PERIOD</name>
+              <description>target0 period</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>26</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET0_PERIOD_MODE</name>
+              <description>Set target0 to period mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET0_TIMER_UNIT_SEL</name>
+              <description>select which unit to compare</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET1_CONF</name>
+          <description>system timer comp1 target mode register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET1_PERIOD</name>
+              <description>target1 period</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>26</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET1_PERIOD_MODE</name>
+              <description>Set target1 to period mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET1_TIMER_UNIT_SEL</name>
+              <description>select which unit to compare</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TARGET2_CONF</name>
+          <description>system timer comp2 target mode register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET2_PERIOD</name>
+              <description>target2 period</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>26</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET2_PERIOD_MODE</name>
+              <description>Set target2 to period mode</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET2_TIMER_UNIT_SEL</name>
+              <description>select which unit to compare</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_VALUE_HI</name>
+          <description>system timer unit0 value high register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_VALUE_HI</name>
+              <description>timer read value high 20bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_VALUE_LO</name>
+          <description>system timer unit0 value low register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_VALUE_LO</name>
+              <description>timer read value low 32bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_VALUE_HI</name>
+          <description>system timer unit1 value high register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_VALUE_HI</name>
+              <description>timer read value high 20bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_VALUE_LO</name>
+          <description>system timer unit1 value low register</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_VALUE_LO</name>
+              <description>timer read value low 32bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP0_LOAD</name>
+          <description>system timer comp0 conf sync register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_COMP0_LOAD</name>
+              <description>timer comp0 sync enable signal</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP1_LOAD</name>
+          <description>system timer comp1 conf sync register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_COMP1_LOAD</name>
+              <description>timer comp1 sync enable signal</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COMP2_LOAD</name>
+          <description>system timer comp2 conf sync register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_COMP2_LOAD</name>
+              <description>timer comp2 sync enable signal</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT0_LOAD</name>
+          <description>system timer unit0 conf sync register</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT0_LOAD</name>
+              <description>timer unit0 sync enable signal</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UNIT1_LOAD</name>
+          <description>system timer unit1 conf sync register</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIMER_UNIT1_LOAD</name>
+              <description>timer unit1 sync enable signal</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_ENA</name>
+          <description>systimer interrupt enable register</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_INT_ENA</name>
+              <description>interupt0 enable</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET1_INT_ENA</name>
+              <description>interupt1 enable</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TARGET2_INT_ENA</name>
+              <description>interupt2 enable</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_RAW</name>
+          <description>systimer interrupt raw register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_INT_RAW</name>
+              <description>interupt0 raw</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TARGET1_INT_RAW</name>
+              <description>interupt1 raw</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TARGET2_INT_RAW</name>
+              <description>interupt2 raw</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_CLR</name>
+          <description>systimer interrupt clear register</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_INT_CLR</name>
+              <description>interupt0 clear</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TARGET1_INT_CLR</name>
+              <description>interupt1 clear</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>TARGET2_INT_CLR</name>
+              <description>interupt2 clear</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_ST</name>
+          <description>systimer interrupt status register</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_INT_ST</name>
+              <description>interupt0 status</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TARGET1_INT_ST</name>
+              <description>interupt1 status</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TARGET2_INT_ST</name>
+              <description>interupt2 status</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET0_LO</name>
+          <description>system timer comp0 actual target value low register</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_LO_RO</name>
+              <description>actual target value value low 32bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET0_HI</name>
+          <description>system timer comp0 actual target value high register</description>
+          <addressOffset>0x78</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET0_HI_RO</name>
+              <description>actual target value value high 20bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET1_LO</name>
+          <description>system timer comp1 actual target value low register</description>
+          <addressOffset>0x7C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET1_LO_RO</name>
+              <description>actual target value value low 32bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET1_HI</name>
+          <description>system timer comp1 actual target value high register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET1_HI_RO</name>
+              <description>actual target value value high 20bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET2_LO</name>
+          <description>system timer comp2 actual target value low register</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET2_LO_RO</name>
+              <description>actual target value value low 32bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>REAL_TARGET2_HI</name>
+          <description>system timer comp2 actual target value high register</description>
+          <addressOffset>0x88</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TARGET2_HI_RO</name>
+              <description>actual target value value high 20bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>20</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <description>system timer version control register</description>
+          <addressOffset>0xFC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x02012251</resetValue>
+          <fields>
+            <field>
+              <name>DATE</name>
+              <description>systimer register version</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
