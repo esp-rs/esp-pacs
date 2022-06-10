@@ -16,7 +16,7 @@ Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP
 
 ## Generating the PACs
 
-We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. Currently there is only a single task, which generates a Peripheral Access Crate (PAC) for the specified chip.
+We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. Currently there is only a single task which generates a Peripheral Access Crate (PAC) for the specified chip(s). We've opted not to use the `cargo xtask` alias, as this requires a workspace which can cause problems when using different toolchains and targets like we are.
 
 ```text
 xtask
@@ -33,10 +33,10 @@ OPTIONS:
         --patch-only       Only patch the SVD, do not generate or build the PAC
 ```
 
-For example, to generate a PAC for the ESP32-C3 without subsequently building the crate, from the root of the repository run:
+For example, to generate a PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
 
 ```shell
-$ cargo xtask --generate-only esp32c3
+$ cargo run -- --generate-only esp32c3
 ```
 
 [cargo-xtask]: https://github.com/matklad/cargo-xtask/
