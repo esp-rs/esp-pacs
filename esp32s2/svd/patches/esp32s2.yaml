@@ -1,1 +1,4 @@
 _svd: ../esp32s2.base.svd
+
+_include:
+  - ./_systimer.yaml

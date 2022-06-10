@@ -1,0 +1,35 @@
+
+
+
+SYSTIMER:
+  _modify:
+    VALUE_LO:
+      name: UNIT0_VALUE_LO
+    VALUE_HI:
+      name: UNIT0_VALUE_HI
+    UPDATE:
+      name: UNIT0_OP
+  UNIT0_OP:
+    _modify:
+      TIMER_VALUE_VALID:
+        name: TIMER_UNIT0_VALUE_VALID
+      TIMER_UPDATE:
+        name: TIMER_UNIT0_UPDATE
+  INT_ENA:
+    _modify:
+      INT0_ENA:
+        name: TARGET0_INT_ENA
+      INT1_ENA:
+        name: TARGET1_INT_ENA
+      INT2_ENA:
+        name: TARGET2_INT_ENA
+  INT_CLR:
+    _modify:
+      INT0_CLR:
+        name: TARGET0_INT_CLR
+      INT1_CLR:
+        name: TARGET1_INT_CLR
+      INT2_CLR:
+        name: TARGET2_INT_CLR
+    
+            
