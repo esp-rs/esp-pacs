@@ -1,1 +1,13 @@
 _svd: ../esp32c3.base.svd
+
+INTERRUPT_CORE0:
+  _add:
+    _interrupts:
+      SW_INTR_0:
+        value: 50
+      SW_INTR_1:
+        value: 51
+      SW_INTR_2:
+        value: 52
+      SW_INTR_3:
+        value: 53
