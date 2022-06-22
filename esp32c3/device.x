@@ -25,5 +25,9 @@ PROVIDE(DMA_CH2 = DefaultHandler);
 PROVIDE(RSA = DefaultHandler);
 PROVIDE(AES = DefaultHandler);
 PROVIDE(SHA = DefaultHandler);
+PROVIDE(SW_INTR_0 = DefaultHandler);
+PROVIDE(SW_INTR_1 = DefaultHandler);
+PROVIDE(SW_INTR_2 = DefaultHandler);
+PROVIDE(SW_INTR_3 = DefaultHandler);
 PROVIDE(ASSIST_DEBUG = DefaultHandler);
 
