@@ -1,3 +1,14 @@
+PROVIDE(WIFI_MAC = DefaultHandler);
+PROVIDE(WIFI_MAC_NMI = DefaultHandler);
+PROVIDE(WIFI_PWR = DefaultHandler);
+PROVIDE(WIFI_BB = DefaultHandler);
+PROVIDE(BT_MAC = DefaultHandler);
+PROVIDE(BT_BB = DefaultHandler);
+PROVIDE(BT_BB_NMI = DefaultHandler);
+PROVIDE(RWBT = DefaultHandler);
+PROVIDE(RWBLE = DefaultHandler);
+PROVIDE(RWBT_NMI = DefaultHandler);
+PROVIDE(RWBLE_NMI = DefaultHandler);
 PROVIDE(UHCI0 = DefaultHandler);
 PROVIDE(TG0_T0_LEVEL = DefaultHandler);
 PROVIDE(TG0_T1_LEVEL = DefaultHandler);
