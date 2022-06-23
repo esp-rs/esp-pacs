@@ -1,1 +1,25 @@
 _svd: ../esp32.base.svd
+
+DPORT:
+  _add:
+    _interrupts:
+      WIFI_MAC:
+       value: 0
+      WIFI_NMI:
+       value: 1
+      WIFI_BB:
+       value: 2
+      BT_MAC:
+       value: 3
+      BT_BB:
+       value: 4
+      BT_BB_NMI:
+       value: 5
+      RWBT:
+       value: 6
+      RWBLE:
+       value: 7
+      RWBT_NMI:
+       value: 8
+      RWBLE_NMI:
+       value: 9
