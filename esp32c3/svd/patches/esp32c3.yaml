@@ -33,3 +33,5 @@ INTERRUPT_CORE0:
        value: 9
       RWBLE_NMI:
        value: 10
+      TWAI:
+       value: 25

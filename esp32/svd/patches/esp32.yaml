@@ -23,3 +23,5 @@ DPORT:
        value: 8
       RWBLE_NMI:
        value: 9
+      TWAI:
+       value: 45
