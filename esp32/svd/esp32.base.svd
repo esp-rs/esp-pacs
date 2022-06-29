@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32</series>
-  <version>6</version>
+  <version>7</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -43756,13 +43756,659 @@ IDINTEN[4]: DU Interrupt.</description>
       </interrupt>
     </peripheral>
     <peripheral>
+      <name>TWAI</name>
+      <description>Two-Wire Automotive Interface</description>
+      <groupName>TWAI</groupName>
+      <baseAddress>0x3FF6B000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x6C</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>TWAI</name>
+        <value>45</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>MODE</name>
+          <description>Mode Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>RESET_MODE</name>
+              <description>This bit is used to configure the operating mode of the TWAI Controller. 1: Reset mode; 0: Operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LISTEN_ONLY_MODE</name>
+              <description>1: Listen only mode. In this mode the nodes will only receive messages from the bus, without generating the acknowledge signal nor updating the RX error counter.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SELF_TEST_MODE</name>
+              <description>1: Self test mode. In this mode the TX nodes can perform a successful transmission without receiving the acknowledge signal. This mode is often used to test a single node with the self reception request command.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_FILTER_MODE</name>
+              <description>This bit is used to configure the filter mode. 0: Dual filter mode; 1: Single filter mode.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CMD</name>
+          <description>Command Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_REQ</name>
+              <description>Set the bit to 1 to allow the driving nodes start transmission.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>ABORT_TX</name>
+              <description>Set the bit to 1 to cancel a pending transmission request.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>RELEASE_BUF</name>
+              <description>Set the bit to 1 to release the RX buffer.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>CLR_OVERRUN</name>
+              <description>Set the bit to 1 to clear the data overrun status bit.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>SELF_RX_REQ</name>
+              <description>Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>STATUS</name>
+          <description>Status register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RX_BUF_ST</name>
+              <description>1: The data in the RX buffer is not empty, with at least one received data packet.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OVERRUN_ST</name>
+              <description>1: The RX FIFO is full and data overrun has occurred.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_BUF_ST</name>
+              <description>1: The TX buffer is empty, the CPU may write a message into it.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_COMPLETE</name>
+              <description>1: The TWAI controller has successfully received a packet from the bus.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RX_ST</name>
+              <description>1: The TWAI Controller is receiving a message from the bus.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_ST</name>
+              <description>1: The TWAI Controller is transmitting a message to the bus.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ERR_ST</name>
+              <description>1: At least one of the RX/TX error counter has reached or exceeded the value set in register TWAI_ERR_WARNING_LIMIT_REG.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>BUS_OFF_ST</name>
+              <description>1: In bus-off status, the TWAI Controller is no longer involved in bus activities.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_RAW</name>
+          <description>Interrupt Register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RX_INT_ST</name>
+              <description>Receive interrupt. If this bit is set to 1, it indicates there are messages to be handled in the RX FIFO.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_INT_ST</name>
+              <description>Transmit interrupt. If this bit is set to 1, it indicates the message transmitting mis- sion is finished and a new transmission is able to execute.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ERR_WARN_INT_ST</name>
+              <description>Error warning interrupt. If this bit is set to 1, it indicates the error status signal and the bus-off status signal of Status register have changed (e.g., switched from 0 to 1 or from 1 to 0).</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>OVERRUN_INT_ST</name>
+              <description>Data overrun interrupt. If this bit is set to 1, it indicates a data overrun interrupt is generated in the RX FIFO.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ERR_PASSIVE_INT_ST</name>
+              <description>Error passive interrupt. If this bit is set to 1, it indicates the TWAI Controller is switched between error active status and error passive status due to the change of error counters.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ARB_LOST_INT_ST</name>
+              <description>Arbitration lost interrupt. If this bit is set to 1, it indicates an arbitration lost interrupt is generated.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>BUS_ERR_INT_ST</name>
+              <description>Error interrupt. If this bit is set to 1, it indicates an error is detected on the bus.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_ENA</name>
+          <description>Interrupt Enable Register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RX_INT_ENA</name>
+              <description>Set this bit to 1 to enable receive interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_INT_ENA</name>
+              <description>Set this bit to 1 to enable transmit interrupt.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERR_WARN_INT_ENA</name>
+              <description>Set this bit to 1 to enable error warning interrupt.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERRUN_INT_ENA</name>
+              <description>Set this bit to 1 to enable data overrun interrupt.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERR_PASSIVE_INT_ENA</name>
+              <description>Set this bit to 1 to enable error passive interrupt.</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ARB_LOST_INT_ENA</name>
+              <description>Set this bit to 1 to enable arbitration lost interrupt.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BUS_ERR_INT_ENA</name>
+              <description>Set this bit to 1 to enable error interrupt.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BUS_TIMING_0</name>
+          <description>Bus Timing Register 0</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>BAUD_PRESC</name>
+              <description>Baud Rate Prescaler, determines the frequency dividing ratio.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+            </field>
+            <field>
+              <name>SYNC_JUMP_WIDTH</name>
+              <description>Synchronization Jump Width (SJW), 1 \verb+~+ 14 Tq wide.</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BUS_TIMING_1</name>
+          <description>Bus Timing Register 1</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TIME_SEG1</name>
+              <description>The width of PBS1.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>TIME_SEG2</name>
+              <description>The width of PBS2.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>TIME_SAMP</name>
+              <description>The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ARB_LOST_CAP</name>
+          <description>Arbitration Lost Capture Register</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>ARB_LOST_CAP</name>
+              <description>This register contains information about the bit position of lost arbitration.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ERR_CODE_CAP</name>
+          <description>Error Code Capture Register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>ECC_SEGMENT</name>
+              <description>This register contains information about the location of errors, see Table 181 for details.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>5</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ECC_DIRECTION</name>
+              <description>This register contains information about transmission direction of the node when error occurs. 1: Error occurs when receiving a message; 0: Error occurs when transmitting a message</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>ECC_TYPE</name>
+              <description>This register contains information about error types: 00: bit error; 01: form error; 10: stuff error; 11: other type of error</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ERR_WARNING_LIMIT</name>
+          <description>Error Warning Limit Register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000060</resetValue>
+          <fields>
+            <field>
+              <name>ERR_WARNING_LIMIT</name>
+              <description>Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid).</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RX_ERR_CNT</name>
+          <description>Receive Error Counter Register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RX_ERR_CNT</name>
+              <description>The RX error counter register, reflects value changes under reception status.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TX_ERR_CNT</name>
+          <description>Transmit Error Counter Register</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_ERR_CNT</name>
+              <description>The TX error counter register, reflects value changes under transmission status.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_0</name>
+          <description>Data register 0</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_0</name>
+              <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_1</name>
+          <description>Data register 1</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_1</name>
+              <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_2</name>
+          <description>Data register 2</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_2</name>
+              <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_3</name>
+          <description>Data register 3</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_3</name>
+              <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_4</name>
+          <description>Data register 4</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_4</name>
+              <description>In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, it stores the 4th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_5</name>
+          <description>Data register 5</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_5</name>
+              <description>In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, it stores the 5th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_6</name>
+          <description>Data register 6</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_6</name>
+              <description>In reset mode, it is acceptance mask register 2 with R/W Permission. In operation mode, it stores the 6th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_7</name>
+          <description>Data register 7</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_7</name>
+              <description>In reset mode, it is acceptance mask register 3 with R/W Permission. In operation mode, it stores the 7th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_8</name>
+          <description>Data register 8</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_8</name>
+              <description>Stored the 8th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_9</name>
+          <description>Data register 9</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_9</name>
+              <description>Stored the 9th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_10</name>
+          <description>Data register 10</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_10</name>
+              <description>Stored the 10th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_11</name>
+          <description>Data register 11</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_11</name>
+              <description>Stored the 11th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA_12</name>
+          <description>Data register 12</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TX_BYTE_12</name>
+              <description>Stored the 12th byte information of the data to be transmitted under operating mode.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RX_MESSAGE_CNT</name>
+          <description>Receive Message Counter Register</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RX_MESSAGE_COUNTER</name>
+              <description>This register reflects the number of messages available within the RX FIFO.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLOCK_DIVIDER</name>
+          <description>Clock Divider register</description>
+          <addressOffset>0x7C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CD</name>
+              <description>These bits are used to configure frequency dividing coefficients of the external CLKOUT pin.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLOCK_OFF</name>
+              <description>This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EXT_MODE</name>
+              <description>This bit can be configured under reset mode. 1: Extended mode, compatible with CAN2.0B; 0: Basic mode</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>UART0</name>
       <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
       <groupName>UART</groupName>
       <baseAddress>0x3FF40000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0x78</size>
+        <size>0x7C</size>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
