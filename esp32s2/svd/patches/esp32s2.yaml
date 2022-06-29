@@ -7,24 +7,30 @@ INTERRUPT:
   _add:
     _interrupts:
       WIFI_MAC:
-       value: 0
+        value: 0
       WIFI_MAC_NMI:
-       value: 1
+        value: 1
       WIFI_PWR:
-       value: 2
+        value: 2
       WIFI_BB:
-       value: 3
+        value: 3
       BT_MAC:
-       value: 4
+        value: 4
       BT_BB:
-       value: 5
+        value: 5
       BT_BB_NMI:
-       value: 6
+        value: 6
       RWBT:
-       value: 7
+        value: 7
       RWBLE:
-       value: 8
+        value: 8
       RWBT_NMI:
-       value: 9
+        value: 9
       RWBLE_NMI:
-       value: 10
+        value: 10
+
+TWAI:
+  _modify:
+    _interrupts:
+      CAN:
+        name: TWAI

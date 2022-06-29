@@ -18,6 +18,7 @@ PROVIDE(UART0 = DefaultHandler);
 PROVIDE(UART1 = DefaultHandler);
 PROVIDE(LEDC = DefaultHandler);
 PROVIDE(EFUSE = DefaultHandler);
+PROVIDE(TWAI = DefaultHandler);
 PROVIDE(USB_SERIAL_JTAG = DefaultHandler);
 PROVIDE(RTC_CORE = DefaultHandler);
 PROVIDE(RMT = DefaultHandler);
