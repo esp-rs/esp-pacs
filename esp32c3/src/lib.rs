@@ -47,6 +47,7 @@ extern "C" {
     fn UART1();
     fn LEDC();
     fn EFUSE();
+    fn TWAI();
     fn USB_SERIAL_JTAG();
     fn RTC_CORE();
     fn RMT();
@@ -111,7 +112,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector { _handler: UART1 },
     Vector { _handler: LEDC },
     Vector { _handler: EFUSE },
-    Vector { _reserved: 0 },
+    Vector { _handler: TWAI },
     Vector {
         _handler: USB_SERIAL_JTAG,
     },
@@ -983,6 +984,34 @@ impl core::fmt::Debug for TIMG1 {
 }
 #[doc = "Timer Group"]
 pub use timg0 as timg1;
+#[doc = "Two-Wire Automotive Interface"]
+pub struct TWAI {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for TWAI {}
+impl TWAI {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const twai::RegisterBlock = 0x6002_b000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const twai::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for TWAI {
+    type Target = twai::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for TWAI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TWAI").finish()
+    }
+}
+#[doc = "Two-Wire Automotive Interface"]
+pub mod twai;
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
 pub struct UART0 {
     _marker: PhantomData<*const ()>,
@@ -1214,6 +1243,8 @@ pub struct Peripherals {
     pub TIMG0: TIMG0,
     #[doc = "TIMG1"]
     pub TIMG1: TIMG1,
+    #[doc = "TWAI"]
+    pub TWAI: TWAI,
     #[doc = "UART0"]
     pub UART0: UART0,
     #[doc = "UART1"]
@@ -1329,6 +1360,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             TIMG1: TIMG1 {
+                _marker: PhantomData,
+            },
+            TWAI: TWAI {
                 _marker: PhantomData,
             },
             UART0: UART0 {

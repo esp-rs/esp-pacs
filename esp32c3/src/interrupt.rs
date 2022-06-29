@@ -42,6 +42,8 @@ pub enum Interrupt {
     LEDC = 23,
     #[doc = "24 - EFUSE"]
     EFUSE = 24,
+    #[doc = "25 - TWAI"]
+    TWAI = 25,
     #[doc = "26 - USB_SERIAL_JTAG"]
     USB_SERIAL_JTAG = 26,
     #[doc = "27 - RTC_CORE"]
@@ -117,6 +119,7 @@ impl Interrupt {
             22 => Ok(Interrupt::UART1),
             23 => Ok(Interrupt::LEDC),
             24 => Ok(Interrupt::EFUSE),
+            25 => Ok(Interrupt::TWAI),
             26 => Ok(Interrupt::USB_SERIAL_JTAG),
             27 => Ok(Interrupt::RTC_CORE),
             28 => Ok(Interrupt::RMT),

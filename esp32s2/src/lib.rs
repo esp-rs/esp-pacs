@@ -57,7 +57,7 @@ extern "C" {
     fn UART1();
     fn LEDC();
     fn EFUSE();
-    fn CAN();
+    fn TWAI();
     fn RTC_CORE();
     fn RMT();
     fn PCNT();
@@ -162,7 +162,7 @@ pub static __INTERRUPTS: [Vector; 90] = [
     Vector { _reserved: 0 },
     Vector { _handler: LEDC },
     Vector { _handler: EFUSE },
-    Vector { _handler: CAN },
+    Vector { _handler: TWAI },
     Vector { _reserved: 0 },
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
@@ -292,8 +292,8 @@ pub enum Interrupt {
     LEDC = 45,
     #[doc = "46 - EFUSE"]
     EFUSE = 46,
-    #[doc = "47 - CAN"]
-    CAN = 47,
+    #[doc = "47 - TWAI"]
+    TWAI = 47,
     #[doc = "49 - RTC_CORE"]
     RTC_CORE = 49,
     #[doc = "50 - RMT"]
@@ -387,7 +387,7 @@ impl Interrupt {
             38 => Ok(Interrupt::UART1),
             45 => Ok(Interrupt::LEDC),
             46 => Ok(Interrupt::EFUSE),
-            47 => Ok(Interrupt::CAN),
+            47 => Ok(Interrupt::TWAI),
             49 => Ok(Interrupt::RTC_CORE),
             50 => Ok(Interrupt::RMT),
             51 => Ok(Interrupt::PCNT),
