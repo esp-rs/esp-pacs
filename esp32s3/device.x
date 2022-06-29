@@ -29,6 +29,7 @@ PROVIDE(RMT = DefaultHandler);
 PROVIDE(PCNT = DefaultHandler);
 PROVIDE(I2C_EXT0 = DefaultHandler);
 PROVIDE(I2C_EXT1 = DefaultHandler);
+PROVIDE(TWAI = DefaultHandler);
 PROVIDE(TG0_T0_LEVEL = DefaultHandler);
 PROVIDE(TG0_T1_LEVEL = DefaultHandler);
 PROVIDE(TG0_WDT_LEVEL = DefaultHandler);
