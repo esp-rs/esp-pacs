@@ -14,6 +14,12 @@ Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP
 [espressif/svd]: https://github.com/espressif/svd/
 [rust compiler fork]: https://github.com/esp-rs/rust-build/
 
+## Patching the SVDs
+
+[svdtools](https://github.com/stm32-rs/svdtools) is used to patch the SVDs rather than modifying the files directly. This makes it easier to upstream the changes to the official SVDs, which is done periodically. A full description of the patching format is available in the `svdtools` README.
+
+We ask that you please using the YAML patching format rather than directly modifying the SVDs in any contributions.
+
 ## Generating the PACs
 
 We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. Currently there is only a single task which generates a Peripheral Access Crate (PAC) for the specified chip(s). We've opted not to use the `cargo xtask` alias, as this requires a workspace which can cause problems when using different toolchains and targets like we are.
