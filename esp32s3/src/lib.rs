@@ -1330,33 +1330,33 @@ impl core::fmt::Debug for RTC_I2C {
 #[doc = "Peripheral RTC_I2C"]
 pub mod rtc_i2c;
 #[doc = "Peripheral RTC_IO"]
-pub struct RTC_IO {
+pub struct RTCIO {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for RTC_IO {}
-impl RTC_IO {
+unsafe impl Send for RTCIO {}
+impl RTCIO {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rtc_io::RegisterBlock = 0x6000_8400 as *const _;
+    pub const PTR: *const rtcio::RegisterBlock = 0x6000_8400 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const rtc_io::RegisterBlock {
+    pub const fn ptr() -> *const rtcio::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for RTC_IO {
-    type Target = rtc_io::RegisterBlock;
+impl Deref for RTCIO {
+    type Target = rtcio::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for RTC_IO {
+impl core::fmt::Debug for RTCIO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RTC_IO").finish()
+        f.debug_struct("RTCIO").finish()
     }
 }
 #[doc = "Peripheral RTC_IO"]
-pub mod rtc_io;
+pub mod rtcio;
 #[doc = "Peripheral SENSITIVE"]
 pub struct SENSITIVE {
     _marker: PhantomData<*const ()>,
@@ -1980,8 +1980,8 @@ pub struct Peripherals {
     pub RTC_CNTL: RTC_CNTL,
     #[doc = "RTC_I2C"]
     pub RTC_I2C: RTC_I2C,
-    #[doc = "RTC_IO"]
-    pub RTC_IO: RTC_IO,
+    #[doc = "RTCIO"]
+    pub RTCIO: RTCIO,
     #[doc = "SENSITIVE"]
     pub SENSITIVE: SENSITIVE,
     #[doc = "SHA"]
@@ -2127,7 +2127,7 @@ impl Peripherals {
             RTC_I2C: RTC_I2C {
                 _marker: PhantomData,
             },
-            RTC_IO: RTC_IO {
+            RTCIO: RTCIO {
                 _marker: PhantomData,
             },
             SENSITIVE: SENSITIVE {

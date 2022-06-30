@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     #[doc = "0x10 - RTC GPIO output enable bit set register"]
     pub rtc_gpio_enable_w1ts: crate::Reg<rtc_gpio_enable_w1ts::RTC_GPIO_ENABLE_W1TS_SPEC>,
     #[doc = "0x14 - RTC GPIO output enable bit clear register"]
-    pub rtc_gpio_enable_w1tc: crate::Reg<rtc_gpio_enable_w1tc::RTC_GPIO_ENABLE_W1TC_SPEC>,
+    pub enable_w1tc: crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>,
     #[doc = "0x18 - RTC GPIO interrupt status register"]
     pub rtc_gpio_status: crate::Reg<rtc_gpio_status::RTC_GPIO_STATUS_SPEC>,
     #[doc = "0x1c - RTC GPIO interrupt status bit set register"]
@@ -22,7 +22,7 @@ pub struct RegisterBlock {
     #[doc = "0x24 - RTC GPIO input register"]
     pub rtc_gpio_in: crate::Reg<rtc_gpio_in::RTC_GPIO_IN_SPEC>,
     #[doc = "0x28..0x80 - RTC configuration for pin %s"]
-    pub rtc_gpio_pin: [crate::Reg<rtc_gpio_pin::RTC_GPIO_PIN_SPEC>; 22],
+    pub pin: [crate::Reg<pin::PIN_SPEC>; 22],
     #[doc = "0x80 - RTC debug select register"]
     pub rtc_debug_sel: crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>,
     #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
@@ -73,10 +73,10 @@ pub mod rtc_gpio_enable;
 pub type RTC_GPIO_ENABLE_W1TS = crate::Reg<rtc_gpio_enable_w1ts::RTC_GPIO_ENABLE_W1TS_SPEC>;
 #[doc = "RTC GPIO output enable bit set register"]
 pub mod rtc_gpio_enable_w1ts;
-#[doc = "RTC_GPIO_ENABLE_W1TC register accessor: an alias for `Reg<RTC_GPIO_ENABLE_W1TC_SPEC>`"]
-pub type RTC_GPIO_ENABLE_W1TC = crate::Reg<rtc_gpio_enable_w1tc::RTC_GPIO_ENABLE_W1TC_SPEC>;
+#[doc = "ENABLE_W1TC register accessor: an alias for `Reg<ENABLE_W1TC_SPEC>`"]
+pub type ENABLE_W1TC = crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>;
 #[doc = "RTC GPIO output enable bit clear register"]
-pub mod rtc_gpio_enable_w1tc;
+pub mod enable_w1tc;
 #[doc = "RTC_GPIO_STATUS register accessor: an alias for `Reg<RTC_GPIO_STATUS_SPEC>`"]
 pub type RTC_GPIO_STATUS = crate::Reg<rtc_gpio_status::RTC_GPIO_STATUS_SPEC>;
 #[doc = "RTC GPIO interrupt status register"]
@@ -93,10 +93,10 @@ pub mod rtc_gpio_status_w1tc;
 pub type RTC_GPIO_IN = crate::Reg<rtc_gpio_in::RTC_GPIO_IN_SPEC>;
 #[doc = "RTC GPIO input register"]
 pub mod rtc_gpio_in;
-#[doc = "RTC_GPIO_PIN register accessor: an alias for `Reg<RTC_GPIO_PIN_SPEC>`"]
-pub type RTC_GPIO_PIN = crate::Reg<rtc_gpio_pin::RTC_GPIO_PIN_SPEC>;
+#[doc = "PIN register accessor: an alias for `Reg<PIN_SPEC>`"]
+pub type PIN = crate::Reg<pin::PIN_SPEC>;
 #[doc = "RTC configuration for pin %s"]
-pub mod rtc_gpio_pin;
+pub mod pin;
 #[doc = "RTC_DEBUG_SEL register accessor: an alias for `Reg<RTC_DEBUG_SEL_SPEC>`"]
 pub type RTC_DEBUG_SEL = crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>;
 #[doc = "RTC debug select register"]

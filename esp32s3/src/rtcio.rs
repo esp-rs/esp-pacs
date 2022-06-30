@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     #[doc = "0x10 - one set RTC GPIO output enable"]
     pub rtc_gpio_enable_w1ts: crate::Reg<rtc_gpio_enable_w1ts::RTC_GPIO_ENABLE_W1TS_SPEC>,
     #[doc = "0x14 - one clear RTC GPIO output enable"]
-    pub rtc_gpio_enable_w1tc: crate::Reg<rtc_gpio_enable_w1tc::RTC_GPIO_ENABLE_W1TC_SPEC>,
+    pub enable_w1tc: crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>,
     #[doc = "0x18 - RTC GPIO 0 ~ 21 interrupt status"]
     pub rtc_gpio_status: crate::Reg<rtc_gpio_status::RTC_GPIO_STATUS_SPEC>,
     #[doc = "0x1c - One set RTC GPIO 0 ~ 21 interrupt status"]
@@ -21,50 +21,8 @@ pub struct RegisterBlock {
     pub rtc_gpio_status_w1tc: crate::Reg<rtc_gpio_status_w1tc::RTC_GPIO_STATUS_W1TC_SPEC>,
     #[doc = "0x24 - RTC GPIO input data"]
     pub rtc_gpio_in: crate::Reg<rtc_gpio_in::RTC_GPIO_IN_SPEC>,
-    #[doc = "0x28 - configure RTC GPIO0"]
-    pub rtc_gpio_pin0: crate::Reg<rtc_gpio_pin0::RTC_GPIO_PIN0_SPEC>,
-    #[doc = "0x2c - configure RTC GPIO1"]
-    pub rtc_gpio_pin1: crate::Reg<rtc_gpio_pin1::RTC_GPIO_PIN1_SPEC>,
-    #[doc = "0x30 - configure RTC GPIO2"]
-    pub rtc_gpio_pin2: crate::Reg<rtc_gpio_pin2::RTC_GPIO_PIN2_SPEC>,
-    #[doc = "0x34 - configure RTC GPIO3"]
-    pub rtc_gpio_pin3: crate::Reg<rtc_gpio_pin3::RTC_GPIO_PIN3_SPEC>,
-    #[doc = "0x38 - configure RTC GPIO4"]
-    pub rtc_gpio_pin4: crate::Reg<rtc_gpio_pin4::RTC_GPIO_PIN4_SPEC>,
-    #[doc = "0x3c - configure RTC GPIO5"]
-    pub rtc_gpio_pin5: crate::Reg<rtc_gpio_pin5::RTC_GPIO_PIN5_SPEC>,
-    #[doc = "0x40 - configure RTC GPIO6"]
-    pub rtc_gpio_pin6: crate::Reg<rtc_gpio_pin6::RTC_GPIO_PIN6_SPEC>,
-    #[doc = "0x44 - configure RTC GPIO7"]
-    pub rtc_gpio_pin7: crate::Reg<rtc_gpio_pin7::RTC_GPIO_PIN7_SPEC>,
-    #[doc = "0x48 - configure RTC GPIO8"]
-    pub rtc_gpio_pin8: crate::Reg<rtc_gpio_pin8::RTC_GPIO_PIN8_SPEC>,
-    #[doc = "0x4c - configure RTC GPIO9"]
-    pub rtc_gpio_pin9: crate::Reg<rtc_gpio_pin9::RTC_GPIO_PIN9_SPEC>,
-    #[doc = "0x50 - configure RTC GPIO10"]
-    pub rtc_gpio_pin10: crate::Reg<rtc_gpio_pin10::RTC_GPIO_PIN10_SPEC>,
-    #[doc = "0x54 - configure RTC GPIO11"]
-    pub rtc_gpio_pin11: crate::Reg<rtc_gpio_pin11::RTC_GPIO_PIN11_SPEC>,
-    #[doc = "0x58 - configure RTC GPIO12"]
-    pub rtc_gpio_pin12: crate::Reg<rtc_gpio_pin12::RTC_GPIO_PIN12_SPEC>,
-    #[doc = "0x5c - configure RTC GPIO13"]
-    pub rtc_gpio_pin13: crate::Reg<rtc_gpio_pin13::RTC_GPIO_PIN13_SPEC>,
-    #[doc = "0x60 - configure RTC GPIO14"]
-    pub rtc_gpio_pin14: crate::Reg<rtc_gpio_pin14::RTC_GPIO_PIN14_SPEC>,
-    #[doc = "0x64 - configure RTC GPIO15"]
-    pub rtc_gpio_pin15: crate::Reg<rtc_gpio_pin15::RTC_GPIO_PIN15_SPEC>,
-    #[doc = "0x68 - configure RTC GPIO16"]
-    pub rtc_gpio_pin16: crate::Reg<rtc_gpio_pin16::RTC_GPIO_PIN16_SPEC>,
-    #[doc = "0x6c - configure RTC GPIO17"]
-    pub rtc_gpio_pin17: crate::Reg<rtc_gpio_pin17::RTC_GPIO_PIN17_SPEC>,
-    #[doc = "0x70 - configure RTC GPIO18"]
-    pub rtc_gpio_pin18: crate::Reg<rtc_gpio_pin18::RTC_GPIO_PIN18_SPEC>,
-    #[doc = "0x74 - configure RTC GPIO19"]
-    pub rtc_gpio_pin19: crate::Reg<rtc_gpio_pin19::RTC_GPIO_PIN19_SPEC>,
-    #[doc = "0x78 - configure RTC GPIO20"]
-    pub rtc_gpio_pin20: crate::Reg<rtc_gpio_pin20::RTC_GPIO_PIN20_SPEC>,
-    #[doc = "0x7c - configure RTC GPIO21"]
-    pub rtc_gpio_pin21: crate::Reg<rtc_gpio_pin21::RTC_GPIO_PIN21_SPEC>,
+    #[doc = "0x28..0x80 - configure RTC GPIO%s"]
+    pub pin: [crate::Reg<pin::PIN_SPEC>; 22],
     #[doc = "0x80 - configure rtc debug"]
     pub rtc_debug_sel: crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>,
     #[doc = "0x84 - configure RTC PAD0"]
@@ -119,7 +77,7 @@ pub struct RegisterBlock {
     pub sar_i2c_io: crate::Reg<sar_i2c_io::SAR_I2C_IO_SPEC>,
     #[doc = "0xe8 - configure touch pad bufmode"]
     pub touch_ctrl: crate::Reg<touch_ctrl::TOUCH_CTRL_SPEC>,
-    _reserved59: [u8; 0x0110],
+    _reserved38: [u8; 0x0110],
     #[doc = "0x1fc - version"]
     pub date: crate::Reg<date::DATE_SPEC>,
 }
@@ -143,10 +101,10 @@ pub mod rtc_gpio_enable;
 pub type RTC_GPIO_ENABLE_W1TS = crate::Reg<rtc_gpio_enable_w1ts::RTC_GPIO_ENABLE_W1TS_SPEC>;
 #[doc = "one set RTC GPIO output enable"]
 pub mod rtc_gpio_enable_w1ts;
-#[doc = "RTC_GPIO_ENABLE_W1TC register accessor: an alias for `Reg<RTC_GPIO_ENABLE_W1TC_SPEC>`"]
-pub type RTC_GPIO_ENABLE_W1TC = crate::Reg<rtc_gpio_enable_w1tc::RTC_GPIO_ENABLE_W1TC_SPEC>;
+#[doc = "ENABLE_W1TC register accessor: an alias for `Reg<ENABLE_W1TC_SPEC>`"]
+pub type ENABLE_W1TC = crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>;
 #[doc = "one clear RTC GPIO output enable"]
-pub mod rtc_gpio_enable_w1tc;
+pub mod enable_w1tc;
 #[doc = "RTC_GPIO_STATUS register accessor: an alias for `Reg<RTC_GPIO_STATUS_SPEC>`"]
 pub type RTC_GPIO_STATUS = crate::Reg<rtc_gpio_status::RTC_GPIO_STATUS_SPEC>;
 #[doc = "RTC GPIO 0 ~ 21 interrupt status"]
@@ -163,94 +121,10 @@ pub mod rtc_gpio_status_w1tc;
 pub type RTC_GPIO_IN = crate::Reg<rtc_gpio_in::RTC_GPIO_IN_SPEC>;
 #[doc = "RTC GPIO input data"]
 pub mod rtc_gpio_in;
-#[doc = "RTC_GPIO_PIN0 register accessor: an alias for `Reg<RTC_GPIO_PIN0_SPEC>`"]
-pub type RTC_GPIO_PIN0 = crate::Reg<rtc_gpio_pin0::RTC_GPIO_PIN0_SPEC>;
-#[doc = "configure RTC GPIO0"]
-pub mod rtc_gpio_pin0;
-#[doc = "RTC_GPIO_PIN1 register accessor: an alias for `Reg<RTC_GPIO_PIN1_SPEC>`"]
-pub type RTC_GPIO_PIN1 = crate::Reg<rtc_gpio_pin1::RTC_GPIO_PIN1_SPEC>;
-#[doc = "configure RTC GPIO1"]
-pub mod rtc_gpio_pin1;
-#[doc = "RTC_GPIO_PIN2 register accessor: an alias for `Reg<RTC_GPIO_PIN2_SPEC>`"]
-pub type RTC_GPIO_PIN2 = crate::Reg<rtc_gpio_pin2::RTC_GPIO_PIN2_SPEC>;
-#[doc = "configure RTC GPIO2"]
-pub mod rtc_gpio_pin2;
-#[doc = "RTC_GPIO_PIN3 register accessor: an alias for `Reg<RTC_GPIO_PIN3_SPEC>`"]
-pub type RTC_GPIO_PIN3 = crate::Reg<rtc_gpio_pin3::RTC_GPIO_PIN3_SPEC>;
-#[doc = "configure RTC GPIO3"]
-pub mod rtc_gpio_pin3;
-#[doc = "RTC_GPIO_PIN4 register accessor: an alias for `Reg<RTC_GPIO_PIN4_SPEC>`"]
-pub type RTC_GPIO_PIN4 = crate::Reg<rtc_gpio_pin4::RTC_GPIO_PIN4_SPEC>;
-#[doc = "configure RTC GPIO4"]
-pub mod rtc_gpio_pin4;
-#[doc = "RTC_GPIO_PIN5 register accessor: an alias for `Reg<RTC_GPIO_PIN5_SPEC>`"]
-pub type RTC_GPIO_PIN5 = crate::Reg<rtc_gpio_pin5::RTC_GPIO_PIN5_SPEC>;
-#[doc = "configure RTC GPIO5"]
-pub mod rtc_gpio_pin5;
-#[doc = "RTC_GPIO_PIN6 register accessor: an alias for `Reg<RTC_GPIO_PIN6_SPEC>`"]
-pub type RTC_GPIO_PIN6 = crate::Reg<rtc_gpio_pin6::RTC_GPIO_PIN6_SPEC>;
-#[doc = "configure RTC GPIO6"]
-pub mod rtc_gpio_pin6;
-#[doc = "RTC_GPIO_PIN7 register accessor: an alias for `Reg<RTC_GPIO_PIN7_SPEC>`"]
-pub type RTC_GPIO_PIN7 = crate::Reg<rtc_gpio_pin7::RTC_GPIO_PIN7_SPEC>;
-#[doc = "configure RTC GPIO7"]
-pub mod rtc_gpio_pin7;
-#[doc = "RTC_GPIO_PIN8 register accessor: an alias for `Reg<RTC_GPIO_PIN8_SPEC>`"]
-pub type RTC_GPIO_PIN8 = crate::Reg<rtc_gpio_pin8::RTC_GPIO_PIN8_SPEC>;
-#[doc = "configure RTC GPIO8"]
-pub mod rtc_gpio_pin8;
-#[doc = "RTC_GPIO_PIN9 register accessor: an alias for `Reg<RTC_GPIO_PIN9_SPEC>`"]
-pub type RTC_GPIO_PIN9 = crate::Reg<rtc_gpio_pin9::RTC_GPIO_PIN9_SPEC>;
-#[doc = "configure RTC GPIO9"]
-pub mod rtc_gpio_pin9;
-#[doc = "RTC_GPIO_PIN10 register accessor: an alias for `Reg<RTC_GPIO_PIN10_SPEC>`"]
-pub type RTC_GPIO_PIN10 = crate::Reg<rtc_gpio_pin10::RTC_GPIO_PIN10_SPEC>;
-#[doc = "configure RTC GPIO10"]
-pub mod rtc_gpio_pin10;
-#[doc = "RTC_GPIO_PIN11 register accessor: an alias for `Reg<RTC_GPIO_PIN11_SPEC>`"]
-pub type RTC_GPIO_PIN11 = crate::Reg<rtc_gpio_pin11::RTC_GPIO_PIN11_SPEC>;
-#[doc = "configure RTC GPIO11"]
-pub mod rtc_gpio_pin11;
-#[doc = "RTC_GPIO_PIN12 register accessor: an alias for `Reg<RTC_GPIO_PIN12_SPEC>`"]
-pub type RTC_GPIO_PIN12 = crate::Reg<rtc_gpio_pin12::RTC_GPIO_PIN12_SPEC>;
-#[doc = "configure RTC GPIO12"]
-pub mod rtc_gpio_pin12;
-#[doc = "RTC_GPIO_PIN13 register accessor: an alias for `Reg<RTC_GPIO_PIN13_SPEC>`"]
-pub type RTC_GPIO_PIN13 = crate::Reg<rtc_gpio_pin13::RTC_GPIO_PIN13_SPEC>;
-#[doc = "configure RTC GPIO13"]
-pub mod rtc_gpio_pin13;
-#[doc = "RTC_GPIO_PIN14 register accessor: an alias for `Reg<RTC_GPIO_PIN14_SPEC>`"]
-pub type RTC_GPIO_PIN14 = crate::Reg<rtc_gpio_pin14::RTC_GPIO_PIN14_SPEC>;
-#[doc = "configure RTC GPIO14"]
-pub mod rtc_gpio_pin14;
-#[doc = "RTC_GPIO_PIN15 register accessor: an alias for `Reg<RTC_GPIO_PIN15_SPEC>`"]
-pub type RTC_GPIO_PIN15 = crate::Reg<rtc_gpio_pin15::RTC_GPIO_PIN15_SPEC>;
-#[doc = "configure RTC GPIO15"]
-pub mod rtc_gpio_pin15;
-#[doc = "RTC_GPIO_PIN16 register accessor: an alias for `Reg<RTC_GPIO_PIN16_SPEC>`"]
-pub type RTC_GPIO_PIN16 = crate::Reg<rtc_gpio_pin16::RTC_GPIO_PIN16_SPEC>;
-#[doc = "configure RTC GPIO16"]
-pub mod rtc_gpio_pin16;
-#[doc = "RTC_GPIO_PIN17 register accessor: an alias for `Reg<RTC_GPIO_PIN17_SPEC>`"]
-pub type RTC_GPIO_PIN17 = crate::Reg<rtc_gpio_pin17::RTC_GPIO_PIN17_SPEC>;
-#[doc = "configure RTC GPIO17"]
-pub mod rtc_gpio_pin17;
-#[doc = "RTC_GPIO_PIN18 register accessor: an alias for `Reg<RTC_GPIO_PIN18_SPEC>`"]
-pub type RTC_GPIO_PIN18 = crate::Reg<rtc_gpio_pin18::RTC_GPIO_PIN18_SPEC>;
-#[doc = "configure RTC GPIO18"]
-pub mod rtc_gpio_pin18;
-#[doc = "RTC_GPIO_PIN19 register accessor: an alias for `Reg<RTC_GPIO_PIN19_SPEC>`"]
-pub type RTC_GPIO_PIN19 = crate::Reg<rtc_gpio_pin19::RTC_GPIO_PIN19_SPEC>;
-#[doc = "configure RTC GPIO19"]
-pub mod rtc_gpio_pin19;
-#[doc = "RTC_GPIO_PIN20 register accessor: an alias for `Reg<RTC_GPIO_PIN20_SPEC>`"]
-pub type RTC_GPIO_PIN20 = crate::Reg<rtc_gpio_pin20::RTC_GPIO_PIN20_SPEC>;
-#[doc = "configure RTC GPIO20"]
-pub mod rtc_gpio_pin20;
-#[doc = "RTC_GPIO_PIN21 register accessor: an alias for `Reg<RTC_GPIO_PIN21_SPEC>`"]
-pub type RTC_GPIO_PIN21 = crate::Reg<rtc_gpio_pin21::RTC_GPIO_PIN21_SPEC>;
-#[doc = "configure RTC GPIO21"]
-pub mod rtc_gpio_pin21;
+#[doc = "PIN register accessor: an alias for `Reg<PIN_SPEC>`"]
+pub type PIN = crate::Reg<pin::PIN_SPEC>;
+#[doc = "configure RTC GPIO%s"]
+pub mod pin;
 #[doc = "RTC_DEBUG_SEL register accessor: an alias for `Reg<RTC_DEBUG_SEL_SPEC>`"]
 pub type RTC_DEBUG_SEL = crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>;
 #[doc = "configure rtc debug"]
