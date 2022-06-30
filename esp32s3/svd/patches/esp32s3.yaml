@@ -24,3 +24,23 @@ INTERRUPT_CORE0:
        value: 8
       RWBLE_NMI:
        value: 9
+
+_modify:
+  RTC_IO:
+    name: RTCIO
+
+RTCIO:
+  _modify:
+    RTC_GPIO_ENABLE_W1TC:
+      name: ENABLE_W1TC
+  "RTC_GPIO_PIN*":
+    _modify:
+      PAD_DRIVER:
+        name: PIN_PAD_DRIVER
+  _array:
+    RTC_GPIO_PIN*:
+      name: PIN%s
+  ENABLE_W1TC:
+    _modify:
+      RTC_GPIO_ENABLE_W1TC:
+        name: ENABLE_W1TC
