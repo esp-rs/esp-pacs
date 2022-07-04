@@ -31,7 +31,7 @@ include = [
 [dependencies]
 bare-metal = "1.0"
 riscv = "0.8"
-riscv-rt = { version = "0.8", optional = true }
+riscv-rt = { version = "0.9", optional = true }
 vcell = "0.1"
 
 [features]
