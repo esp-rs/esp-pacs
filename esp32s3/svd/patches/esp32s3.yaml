@@ -44,3 +44,13 @@ RTCIO:
     _modify:
       RTC_GPIO_ENABLE_W1TC:
         name: ENABLE_W1TC
+
+TIMG0:
+  "T%s*":
+    _strip:
+      - "T0_"    
+
+TIMG1:
+  "T%s*":
+    _strip:
+      - "T0_"    

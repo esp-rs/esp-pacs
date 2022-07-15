@@ -49,3 +49,21 @@ RTCIO:
     _modify:
       REG_RTCIO_REG_GPIO_ENABLE_W1TC:
         name: ENABLE_W1TC
+
+TIMG0:
+  "T%s*":
+    _strip:
+      - "T0_"    
+  WDTCONFIG1:
+    _modify:
+      WDT_CLK_PRESCALER:
+        name: WDT_CLK_PRESCALE
+
+TIMG1:
+  "T%s*":
+    _strip:
+      - "T0_"    
+  WDTCONFIG1:
+    _modify:
+      WDT_CLK_PRESCALER:
+        name: WDT_CLK_PRESCALE
