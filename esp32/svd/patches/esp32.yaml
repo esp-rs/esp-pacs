@@ -23,3 +23,18 @@ DPORT:
        value: 8
       RWBLE_NMI:
        value: 9
+
+TIMG0:
+  "T0*":
+    _strip:
+      - "T0_"    
+  "T1*":
+    _strip:
+      - "T1_" 
+TIMG1:
+  "T0*":
+    _strip:
+      - "T0_"
+  "*":
+    _strip:
+      - "T0_"    

@@ -33,3 +33,13 @@ INTERRUPT_CORE0:
        value: 9
       RWBLE_NMI:
        value: 10
+
+TIMG0:
+  "T0*":
+    _strip:
+      - "T0_"    
+
+TIMG1:
+  "T0*":
+    _strip:
+      - "T0_"
