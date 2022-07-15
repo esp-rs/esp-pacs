@@ -13,13 +13,13 @@ impl From<crate::R<T1LO_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `T1_LO` reader - Register to store timer 1 time-base counter current value lower 32 bits."]
-pub type T1_LO_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `LO` reader - Register to store timer 1 time-base counter current value lower 32 bits."]
+pub type LO_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 1 time-base counter current value lower 32 bits."]
     #[inline(always)]
-    pub fn t1_lo(&self) -> T1_LO_R {
-        T1_LO_R::new(self.bits)
+    pub fn lo(&self) -> LO_R {
+        LO_R::new(self.bits)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t1lo](index.html) module"]

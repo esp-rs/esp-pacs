@@ -34,22 +34,22 @@ impl From<crate::W<T0UPDATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T0_UPDATE` reader - t0_update"]
-pub type T0_UPDATE_R = crate::BitReader<bool>;
-#[doc = "Field `T0_UPDATE` writer - t0_update"]
-pub type T0_UPDATE_W<'a> = crate::BitWriter<'a, u32, T0UPDATE_SPEC, bool, 31>;
+#[doc = "Field `UPDATE` reader - t0_update"]
+pub type UPDATE_R = crate::BitReader<bool>;
+#[doc = "Field `UPDATE` writer - t0_update"]
+pub type UPDATE_W<'a> = crate::BitWriter<'a, u32, T0UPDATE_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 31 - t0_update"]
     #[inline(always)]
-    pub fn t0_update(&self) -> T0_UPDATE_R {
-        T0_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn update(&self) -> UPDATE_R {
+        UPDATE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - t0_update"]
     #[inline(always)]
-    pub fn t0_update(&mut self) -> T0_UPDATE_W {
-        T0_UPDATE_W::new(self)
+    pub fn update(&mut self) -> UPDATE_W {
+        UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

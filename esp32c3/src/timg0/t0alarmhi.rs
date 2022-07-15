@@ -34,22 +34,22 @@ impl From<crate::W<T0ALARMHI_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T0_ALARM_HI` reader - reg_t0_alarm_hi."]
-pub type T0_ALARM_HI_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `T0_ALARM_HI` writer - reg_t0_alarm_hi."]
-pub type T0_ALARM_HI_W<'a> = crate::FieldWriter<'a, u32, T0ALARMHI_SPEC, u32, u32, 22, 0>;
+#[doc = "Field `ALARM_HI` reader - reg_t0_alarm_hi."]
+pub type ALARM_HI_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `ALARM_HI` writer - reg_t0_alarm_hi."]
+pub type ALARM_HI_W<'a> = crate::FieldWriter<'a, u32, T0ALARMHI_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21 - reg_t0_alarm_hi."]
     #[inline(always)]
-    pub fn t0_alarm_hi(&self) -> T0_ALARM_HI_R {
-        T0_ALARM_HI_R::new((self.bits & 0x003f_ffff) as u32)
+    pub fn alarm_hi(&self) -> ALARM_HI_R {
+        ALARM_HI_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - reg_t0_alarm_hi."]
     #[inline(always)]
-    pub fn t0_alarm_hi(&mut self) -> T0_ALARM_HI_W {
-        T0_ALARM_HI_W::new(self)
+    pub fn alarm_hi(&mut self) -> ALARM_HI_W {
+        ALARM_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

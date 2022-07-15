@@ -13,13 +13,13 @@ impl From<crate::R<T0HI_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `T0_HI` reader - Register to store timer 0 time-base counter current value higher 32 bits."]
-pub type T0_HI_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `HI` reader - Register to store timer 0 time-base counter current value higher 32 bits."]
+pub type HI_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 0 time-base counter current value higher 32 bits."]
     #[inline(always)]
-    pub fn t0_hi(&self) -> T0_HI_R {
-        T0_HI_R::new(self.bits)
+    pub fn hi(&self) -> HI_R {
+        HI_R::new(self.bits)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0hi](index.html) module"]

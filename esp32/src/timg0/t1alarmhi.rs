@@ -34,22 +34,22 @@ impl From<crate::W<T1ALARMHI_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T1_ALARM_HI` reader - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
-pub type T1_ALARM_HI_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `T1_ALARM_HI` writer - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
-pub type T1_ALARM_HI_W<'a> = crate::FieldWriter<'a, u32, T1ALARMHI_SPEC, u32, u32, 32, 0>;
+#[doc = "Field `ALARM_HI` reader - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
+pub type ALARM_HI_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `ALARM_HI` writer - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
+pub type ALARM_HI_W<'a> = crate::FieldWriter<'a, u32, T1ALARMHI_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
     #[inline(always)]
-    pub fn t1_alarm_hi(&self) -> T1_ALARM_HI_R {
-        T1_ALARM_HI_R::new(self.bits)
+    pub fn alarm_hi(&self) -> ALARM_HI_R {
+        ALARM_HI_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
     #[inline(always)]
-    pub fn t1_alarm_hi(&mut self) -> T1_ALARM_HI_W {
-        T1_ALARM_HI_W::new(self)
+    pub fn alarm_hi(&mut self) -> ALARM_HI_W {
+        ALARM_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

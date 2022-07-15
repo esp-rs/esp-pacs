@@ -19,13 +19,13 @@ impl From<crate::W<T0LOAD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T0_LOAD` writer - t0_load"]
-pub type T0_LOAD_W<'a> = crate::FieldWriter<'a, u32, T0LOAD_SPEC, u32, u32, 32, 0>;
+#[doc = "Field `LOAD` writer - t0_load"]
+pub type LOAD_W<'a> = crate::FieldWriter<'a, u32, T0LOAD_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - t0_load"]
     #[inline(always)]
-    pub fn t0_load(&mut self) -> T0_LOAD_W {
-        T0_LOAD_W::new(self)
+    pub fn load(&mut self) -> LOAD_W {
+        LOAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

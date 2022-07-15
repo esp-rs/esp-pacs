@@ -554,5 +554,5 @@ macro_rules! impl_proxy {
         }
     };
 }
-impl_proxy!(u8);
 impl_proxy!(u32);
+impl_proxy!(u8);

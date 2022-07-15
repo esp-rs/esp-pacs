@@ -34,22 +34,22 @@ impl From<crate::W<TUPDATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T0_UPDATE` reader - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
-pub type T0_UPDATE_R = crate::BitReader<bool>;
-#[doc = "Field `T0_UPDATE` writer - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
-pub type T0_UPDATE_W<'a> = crate::BitWriter<'a, u32, TUPDATE_SPEC, bool, 31>;
+#[doc = "Field `UPDATE` reader - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
+pub type UPDATE_R = crate::BitReader<bool>;
+#[doc = "Field `UPDATE` writer - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
+pub type UPDATE_W<'a> = crate::BitWriter<'a, u32, TUPDATE_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
-    pub fn t0_update(&self) -> T0_UPDATE_R {
-        T0_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn update(&self) -> UPDATE_R {
+        UPDATE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
-    pub fn t0_update(&mut self) -> T0_UPDATE_W {
-        T0_UPDATE_W::new(self)
+    pub fn update(&mut self) -> UPDATE_W {
+        UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

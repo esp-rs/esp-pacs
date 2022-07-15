@@ -34,22 +34,22 @@ impl From<crate::W<WDTCONFIG1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WDT_CLK_PRESCALER` reader - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
-pub type WDT_CLK_PRESCALER_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `WDT_CLK_PRESCALER` writer - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
-pub type WDT_CLK_PRESCALER_W<'a> = crate::FieldWriter<'a, u32, WDTCONFIG1_SPEC, u16, u16, 16, 16>;
+#[doc = "Field `WDT_CLK_PRESCALE` reader - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
+pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `WDT_CLK_PRESCALE` writer - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
+pub type WDT_CLK_PRESCALE_W<'a> = crate::FieldWriter<'a, u32, WDTCONFIG1_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bits 16:31 - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
     #[inline(always)]
-    pub fn wdt_clk_prescaler(&self) -> WDT_CLK_PRESCALER_R {
-        WDT_CLK_PRESCALER_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn wdt_clk_prescale(&self) -> WDT_CLK_PRESCALE_R {
+        WDT_CLK_PRESCALE_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 16:31 - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
     #[inline(always)]
-    pub fn wdt_clk_prescaler(&mut self) -> WDT_CLK_PRESCALER_W {
-        WDT_CLK_PRESCALER_W::new(self)
+    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W {
+        WDT_CLK_PRESCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

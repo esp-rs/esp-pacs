@@ -13,13 +13,13 @@ impl From<crate::R<T0HI_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `T0_HI` reader - t0_hi"]
-pub type T0_HI_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `HI` reader - t0_hi"]
+pub type HI_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - t0_hi"]
     #[inline(always)]
-    pub fn t0_hi(&self) -> T0_HI_R {
-        T0_HI_R::new((self.bits & 0x003f_ffff) as u32)
+    pub fn hi(&self) -> HI_R {
+        HI_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 #[doc = "TIMG_T0HI_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0hi](index.html) module"]

@@ -13,13 +13,13 @@ impl From<crate::R<THI_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `T0_HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
-pub type T0_HI_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
+pub type HI_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]
-    pub fn t0_hi(&self) -> T0_HI_R {
-        T0_HI_R::new((self.bits & 0x003f_ffff) as u32)
+    pub fn hi(&self) -> HI_R {
+        HI_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 #[doc = "Timer %s current value, high 22 bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thi](index.html) module"]
