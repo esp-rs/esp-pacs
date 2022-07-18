@@ -1,0 +1,36 @@
+[package]
+name = "esp32c2"
+version = "0.1.0"
+authors = ["Jesse Braham <jesse@beta7.io>"]
+edition = "2021"
+description = "Peripheral access crate for the ESP32-C2"
+documentation = "https://docs.rs/esp32c2/"
+readme = "README.md"
+repository = "https://github.com/esp-rs/esp-pacs"
+license = "MIT OR Apache-2.0"
+keywords = [
+    "no-std",
+    "esp32-c2",
+    "wifi",
+    "embedded",
+]
+categories = [
+    "embedded",
+    "hardware-support",
+    "no-std",
+]
+include = [
+    "/src/**",
+    "build.rs",
+    "device.x"
+]
+
+[dependencies]
+bare-metal = "1.0"
+riscv = "0.8"
+riscv-rt = { version = "0.9", optional = true }
+vcell = "0.1"
+
+[features]
+default = []
+rt = ["riscv-rt"]
