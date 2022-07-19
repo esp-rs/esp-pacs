@@ -2,6 +2,7 @@ esp*/**/src/
 esp*/**/Cargo.lock
 
 esp32.svd
+esp32c2.svd
 esp32c3.svd
 esp32s2.svd
 esp32s3.svd

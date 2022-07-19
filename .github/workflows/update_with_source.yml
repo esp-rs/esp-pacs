@@ -47,6 +47,7 @@ jobs:
 
       - run: |
           git add -f esp32/src
+          git add -f esp32c2/src
           git add -f esp32c3/src
           git add -f esp32s2/src
           git add -f esp32s3/src

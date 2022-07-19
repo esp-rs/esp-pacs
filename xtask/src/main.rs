@@ -20,6 +20,8 @@ use toml::Value;
 pub enum Chip {
     #[strum(serialize = "esp32")]
     Esp32,
+    #[strum(serialize = "esp32c2")]
+    Esp32c2,
     #[strum(serialize = "esp32c3")]
     Esp32c3,
     #[strum(serialize = "esp32s2")]
