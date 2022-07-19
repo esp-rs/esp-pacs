@@ -1,0 +1,122 @@
+#[doc = "Register `RD_TIM_CONF` reader"]
+pub struct R(crate::R<RD_TIM_CONF_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RD_TIM_CONF_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RD_TIM_CONF_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RD_TIM_CONF_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `RD_TIM_CONF` writer"]
+pub struct W(crate::W<RD_TIM_CONF_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<RD_TIM_CONF_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<RD_TIM_CONF_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<RD_TIM_CONF_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `THR_A` reader - Configures hold time for efuse read."]
+pub type THR_A_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `THR_A` writer - Configures hold time for efuse read."]
+pub type THR_A_W<'a> = crate::FieldWriter<'a, u32, RD_TIM_CONF_SPEC, u8, u8, 8, 0>;
+#[doc = "Field `TRD` reader - Configures pulse time for efuse read."]
+pub type TRD_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TRD` writer - Configures pulse time for efuse read."]
+pub type TRD_W<'a> = crate::FieldWriter<'a, u32, RD_TIM_CONF_SPEC, u8, u8, 8, 8>;
+#[doc = "Field `TSUR_A` reader - Configures setup time for efuse read."]
+pub type TSUR_A_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TSUR_A` writer - Configures setup time for efuse read."]
+pub type TSUR_A_W<'a> = crate::FieldWriter<'a, u32, RD_TIM_CONF_SPEC, u8, u8, 8, 16>;
+#[doc = "Field `READ_INIT_NUM` reader - Configures the initial read time of eFuse."]
+pub type READ_INIT_NUM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `READ_INIT_NUM` writer - Configures the initial read time of eFuse."]
+pub type READ_INIT_NUM_W<'a> = crate::FieldWriter<'a, u32, RD_TIM_CONF_SPEC, u8, u8, 8, 24>;
+impl R {
+    #[doc = "Bits 0:7 - Configures hold time for efuse read."]
+    #[inline(always)]
+    pub fn thr_a(&self) -> THR_A_R {
+        THR_A_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bits 8:15 - Configures pulse time for efuse read."]
+    #[inline(always)]
+    pub fn trd(&self) -> TRD_R {
+        TRD_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+    #[doc = "Bits 16:23 - Configures setup time for efuse read."]
+    #[inline(always)]
+    pub fn tsur_a(&self) -> TSUR_A_R {
+        TSUR_A_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+    #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
+    #[inline(always)]
+    pub fn read_init_num(&self) -> READ_INIT_NUM_R {
+        READ_INIT_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Configures hold time for efuse read."]
+    #[inline(always)]
+    pub fn thr_a(&mut self) -> THR_A_W {
+        THR_A_W::new(self)
+    }
+    #[doc = "Bits 8:15 - Configures pulse time for efuse read."]
+    #[inline(always)]
+    pub fn trd(&mut self) -> TRD_W {
+        TRD_W::new(self)
+    }
+    #[doc = "Bits 16:23 - Configures setup time for efuse read."]
+    #[inline(always)]
+    pub fn tsur_a(&mut self) -> TSUR_A_W {
+        TSUR_A_W::new(self)
+    }
+    #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
+    #[inline(always)]
+    pub fn read_init_num(&mut self) -> READ_INIT_NUM_W {
+        READ_INIT_NUM_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Configures read timing parameters.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_tim_conf](index.html) module"]
+pub struct RD_TIM_CONF_SPEC;
+impl crate::RegisterSpec for RD_TIM_CONF_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [rd_tim_conf::R](R) reader structure"]
+impl crate::Readable for RD_TIM_CONF_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [rd_tim_conf::W](W) writer structure"]
+impl crate::Writable for RD_TIM_CONF_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets RD_TIM_CONF to value 0x1201_0201"]
+impl crate::Resettable for RD_TIM_CONF_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x1201_0201
+    }
+}

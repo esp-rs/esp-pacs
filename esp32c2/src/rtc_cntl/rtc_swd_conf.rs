@@ -1,0 +1,178 @@
+#[doc = "Register `RTC_SWD_CONF` reader"]
+pub struct R(crate::R<RTC_SWD_CONF_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RTC_SWD_CONF_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RTC_SWD_CONF_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RTC_SWD_CONF_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `RTC_SWD_CONF` writer"]
+pub struct W(crate::W<RTC_SWD_CONF_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<RTC_SWD_CONF_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<RTC_SWD_CONF_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<RTC_SWD_CONF_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SWD_RESET_FLAG` reader - swd reset flag"]
+pub type SWD_RESET_FLAG_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_RESET_FLAG` writer - swd reset flag"]
+pub type SWD_RESET_FLAG_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 0>;
+#[doc = "Field `SWD_FEED_INT` reader - swd interrupt for feeding"]
+pub type SWD_FEED_INT_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_FEED_INT` writer - swd interrupt for feeding"]
+pub type SWD_FEED_INT_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 1>;
+#[doc = "Field `SWD_BYPASS_RST` reader - Need add desc"]
+pub type SWD_BYPASS_RST_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_BYPASS_RST` writer - Need add desc"]
+pub type SWD_BYPASS_RST_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 17>;
+#[doc = "Field `SWD_SIGNAL_WIDTH` reader - adjust signal width send to swd"]
+pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `SWD_SIGNAL_WIDTH` writer - adjust signal width send to swd"]
+pub type SWD_SIGNAL_WIDTH_W<'a> = crate::FieldWriter<'a, u32, RTC_SWD_CONF_SPEC, u16, u16, 10, 18>;
+#[doc = "Field `SWD_RST_FLAG_CLR` reader - reset swd reset flag"]
+pub type SWD_RST_FLAG_CLR_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_RST_FLAG_CLR` writer - reset swd reset flag"]
+pub type SWD_RST_FLAG_CLR_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 28>;
+#[doc = "Field `SWD_FEED` reader - Sw feed swd"]
+pub type SWD_FEED_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_FEED` writer - Sw feed swd"]
+pub type SWD_FEED_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 29>;
+#[doc = "Field `SWD_DISABLE` reader - disabel SWD"]
+pub type SWD_DISABLE_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_DISABLE` writer - disabel SWD"]
+pub type SWD_DISABLE_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 30>;
+#[doc = "Field `SWD_AUTO_FEED_EN` reader - automatically feed swd when int comes"]
+pub type SWD_AUTO_FEED_EN_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_AUTO_FEED_EN` writer - automatically feed swd when int comes"]
+pub type SWD_AUTO_FEED_EN_W<'a> = crate::BitWriter<'a, u32, RTC_SWD_CONF_SPEC, bool, 31>;
+impl R {
+    #[doc = "Bit 0 - swd reset flag"]
+    #[inline(always)]
+    pub fn swd_reset_flag(&self) -> SWD_RESET_FLAG_R {
+        SWD_RESET_FLAG_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - swd interrupt for feeding"]
+    #[inline(always)]
+    pub fn swd_feed_int(&self) -> SWD_FEED_INT_R {
+        SWD_FEED_INT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 17 - Need add desc"]
+    #[inline(always)]
+    pub fn swd_bypass_rst(&self) -> SWD_BYPASS_RST_R {
+        SWD_BYPASS_RST_R::new(((self.bits >> 17) & 1) != 0)
+    }
+    #[doc = "Bits 18:27 - adjust signal width send to swd"]
+    #[inline(always)]
+    pub fn swd_signal_width(&self) -> SWD_SIGNAL_WIDTH_R {
+        SWD_SIGNAL_WIDTH_R::new(((self.bits >> 18) & 0x03ff) as u16)
+    }
+    #[doc = "Bit 28 - reset swd reset flag"]
+    #[inline(always)]
+    pub fn swd_rst_flag_clr(&self) -> SWD_RST_FLAG_CLR_R {
+        SWD_RST_FLAG_CLR_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Sw feed swd"]
+    #[inline(always)]
+    pub fn swd_feed(&self) -> SWD_FEED_R {
+        SWD_FEED_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - disabel SWD"]
+    #[inline(always)]
+    pub fn swd_disable(&self) -> SWD_DISABLE_R {
+        SWD_DISABLE_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - automatically feed swd when int comes"]
+    #[inline(always)]
+    pub fn swd_auto_feed_en(&self) -> SWD_AUTO_FEED_EN_R {
+        SWD_AUTO_FEED_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - swd reset flag"]
+    #[inline(always)]
+    pub fn swd_reset_flag(&mut self) -> SWD_RESET_FLAG_W {
+        SWD_RESET_FLAG_W::new(self)
+    }
+    #[doc = "Bit 1 - swd interrupt for feeding"]
+    #[inline(always)]
+    pub fn swd_feed_int(&mut self) -> SWD_FEED_INT_W {
+        SWD_FEED_INT_W::new(self)
+    }
+    #[doc = "Bit 17 - Need add desc"]
+    #[inline(always)]
+    pub fn swd_bypass_rst(&mut self) -> SWD_BYPASS_RST_W {
+        SWD_BYPASS_RST_W::new(self)
+    }
+    #[doc = "Bits 18:27 - adjust signal width send to swd"]
+    #[inline(always)]
+    pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W {
+        SWD_SIGNAL_WIDTH_W::new(self)
+    }
+    #[doc = "Bit 28 - reset swd reset flag"]
+    #[inline(always)]
+    pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W {
+        SWD_RST_FLAG_CLR_W::new(self)
+    }
+    #[doc = "Bit 29 - Sw feed swd"]
+    #[inline(always)]
+    pub fn swd_feed(&mut self) -> SWD_FEED_W {
+        SWD_FEED_W::new(self)
+    }
+    #[doc = "Bit 30 - disabel SWD"]
+    #[inline(always)]
+    pub fn swd_disable(&mut self) -> SWD_DISABLE_W {
+        SWD_DISABLE_W::new(self)
+    }
+    #[doc = "Bit 31 - automatically feed swd when int comes"]
+    #[inline(always)]
+    pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W {
+        SWD_AUTO_FEED_EN_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_swd_conf](index.html) module"]
+pub struct RTC_SWD_CONF_SPEC;
+impl crate::RegisterSpec for RTC_SWD_CONF_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [rtc_swd_conf::R](R) reader structure"]
+impl crate::Readable for RTC_SWD_CONF_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [rtc_swd_conf::W](W) writer structure"]
+impl crate::Writable for RTC_SWD_CONF_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets RTC_SWD_CONF to value 0x04b0_0000"]
+impl crate::Resettable for RTC_SWD_CONF_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x04b0_0000
+    }
+}
