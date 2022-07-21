@@ -4,25 +4,25 @@ DPORT:
   _add:
     _interrupts:
       WIFI_MAC:
-       value: 0
+        value: 0
       WIFI_NMI:
-       value: 1
+        value: 1
       WIFI_BB:
-       value: 2
+        value: 2
       BT_MAC:
-       value: 3
+        value: 3
       BT_BB:
-       value: 4
+        value: 4
       BT_BB_NMI:
-       value: 5
+        value: 5
       RWBT:
-       value: 6
+        value: 6
       RWBLE:
-       value: 7
+        value: 7
       RWBT_NMI:
-       value: 8
+        value: 8
       RWBLE_NMI:
-       value: 9
+        value: 9
 
 TIMG0:
   "T0*":
@@ -38,3 +38,119 @@ TIMG1:
   "*":
     _strip:
       - "T0_"    
+
+LEDC:
+  _modify:
+    _registers:
+      HSCH0_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH0:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH1_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH1:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH2_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH2:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH3_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH3:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH4_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH4:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH5_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH5:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH6_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH6:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH7_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH7:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH0_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH0:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH1_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH1:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH2_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH2:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH3_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH3:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH4_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH4:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH5_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH5:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH6_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH6:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH7_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH7:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
