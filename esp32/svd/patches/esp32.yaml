@@ -27,14 +27,146 @@ DPORT:
 TIMG0:
   "T0*":
     _strip:
-      - "T0_"    
+      - "T0_"
   "T1*":
     _strip:
-      - "T1_" 
+      - "T1_"
 TIMG1:
   "T0*":
     _strip:
       - "T0_"
   "*":
     _strip:
-      - "T0_"    
+      - "T0_"
+
+LEDC:
+  _modify:
+    _registers:
+      HSCH0_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH0:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH1_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH1:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH2_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH2:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH3_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH3:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH4_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH4:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH5_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH5:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH6_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH6:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      HSCH7_DUTY:
+        access: read-write
+        fields:
+          DUTY_HSCH7:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH0_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH0:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH1_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH1:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH2_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH2:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH3_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH3:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH4_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH4:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH5_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH5:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH6_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH6:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+      LSCH7_DUTY:
+        access: read-write
+        fields:
+          DUTY_LSCH7:
+            bitOffset: 0
+            bitWidth: 25
+            access: read-write
+  LSTIMER0_CONF:
+    _modify:
+      DIV_NUM_LSTIMER0:
+        name: CLK_DIV_LSTIMER0
+  LSTIMER1_CONF:
+    _modify:
+      DIV_NUM_LSTIMER1:
+        name: CLK_DIV_LSTIMER1
+  LSTIMER2_CONF:
+    _modify:
+      DIV_NUM_LSTIMER2:
+        name: CLK_DIV_LSTIMER2
+  LSTIMER3_CONF:
+    _modify:
+      DIV_NUM_LSTIMER3:
+        name: CLK_DIV_LSTIMER3
