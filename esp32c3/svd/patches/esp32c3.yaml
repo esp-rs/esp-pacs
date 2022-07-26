@@ -12,32 +12,59 @@ INTERRUPT_CORE0:
       SW_INTR_3:
         value: 53
       WIFI_MAC:
-       value: 0
+        value: 0
       WIFI_MAC_NMI:
-       value: 1
+        value: 1
       WIFI_PWR:
-       value: 2
+        value: 2
       WIFI_BB:
-       value: 3
+        value: 3
       BT_MAC:
-       value: 4
+        value: 4
       BT_BB:
-       value: 5
+        value: 5
       BT_BB_NMI:
-       value: 6
+        value: 6
       RWBT:
-       value: 7
+        value: 7
       RWBLE:
-       value: 8
+        value: 8
       RWBT_NMI:
-       value: 9
+        value: 9
       RWBLE_NMI:
-       value: 10
+        value: 10
+
+LEDC:
+  _strip: "LS"
+
+  _array:
+    "CH*_CONF0": {}
+    "CH*_HPOINT": {}
+    "CH*_DUTY": {}
+    "CH*_CONF1": {}
+    "CH*_DUTY_R": {}
+    "TIMER*_CONF": {}
+    "TIMER*_VALUE": {}
+
+  "*":
+    _strip_end: "_LSCH0"
+
+  "CH0_DUTY_R":
+    _modify:
+      "DUTY_LSCH0_R":
+        name: "DUTY_R"
+
+  "TIMER0_CONF":
+    _strip: "LSTIMER0_"
+    _strip_end: "_LSTIMER0"
+
+  "TIMER0_VALUE":
+    _strip: "LSTIMER0_"
 
 TIMG0:
   "T0*":
     _strip:
-      - "T0_"    
+      - "T0_"
 
 TIMG1:
   "T0*":

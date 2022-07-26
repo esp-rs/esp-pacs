@@ -29,6 +29,17 @@ INTERRUPT:
       RWBLE_NMI:
         value: 10
 
+LEDC:
+  "*":
+    _strip_end: "_CH0"
+
+  "TIMER%s_CONF":
+    _strip: "TIMER0_"
+    _strip_end: "_TIMER0"
+
+  "TIMER%s_VALUE":
+    _strip: "TIMER0_"
+
 TWAI:
   _modify:
     _interrupts:
@@ -53,7 +64,7 @@ RTCIO:
 TIMG0:
   "T%s*":
     _strip:
-      - "T0_"    
+      - "T0_"
   WDTCONFIG1:
     _modify:
       WDT_CLK_PRESCALER:
@@ -62,7 +73,7 @@ TIMG0:
 TIMG1:
   "T%s*":
     _strip:
-      - "T0_"    
+      - "T0_"
   WDTCONFIG1:
     _modify:
       WDT_CLK_PRESCALER:

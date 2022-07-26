@@ -1,29 +1,39 @@
 _svd: ../esp32s3.base.svd
 
-
 INTERRUPT_CORE0:
   _add:
     _interrupts:
       WIFI_MAC:
-       value: 0
+        value: 0
       WIFI_NMI:
-       value: 1
+        value: 1
       WIFI_BB:
-       value: 2
+        value: 2
       BT_MAC:
-       value: 3
+        value: 3
       BT_BB:
-       value: 4
+        value: 4
       BT_BB_NMI:
-       value: 5
+        value: 5
       RWBT:
-       value: 6
+        value: 6
       RWBLE:
-       value: 7
+        value: 7
       RWBT_NMI:
-       value: 8
+        value: 8
       RWBLE_NMI:
-       value: 9
+        value: 9
+
+LEDC:
+  "*":
+    _strip_end: "_CH0"
+
+  "TIMER%s_CONF":
+    _strip: "TIMER0_"
+    _strip_end: "_TIMER0"
+
+  "TIMER%s_VALUE":
+    _strip: "TIMER0_"
 
 _modify:
   RTC_IO:
@@ -48,9 +58,9 @@ RTCIO:
 TIMG0:
   "T%s*":
     _strip:
-      - "T0_"    
+      - "T0_"
 
 TIMG1:
   "T%s*":
     _strip:
-      - "T0_"    
+      - "T0_"
