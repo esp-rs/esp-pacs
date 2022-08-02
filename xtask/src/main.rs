@@ -140,7 +140,7 @@ fn format(path: &PathBuf) -> Result<()> {
 
     let base_dir = path.join("src");
     let string_contents = fs::read_to_string(&lib_file)?;
-    create_directory_structure(base_dir, string_contents).map_err(Error::msg)?;
+    create_directory_structure(base_dir, &string_contents).map_err(Error::msg)?;
 
     fs::remove_file(&lib_file)?;
 
