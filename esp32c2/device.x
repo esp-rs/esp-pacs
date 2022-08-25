@@ -1,4 +1,5 @@
 PROVIDE(I2C_MST = DefaultHandler);
+PROVIDE(APB_CTRL = DefaultHandler);
 PROVIDE(GPIO_INTR_PRO = DefaultHandler);
 PROVIDE(GPIO_INTR_PRO_NMI = DefaultHandler);
 PROVIDE(SPI_INTR_1 = DefaultHandler);
