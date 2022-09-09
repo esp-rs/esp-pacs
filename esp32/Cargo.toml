@@ -6,7 +6,7 @@ authors = [
     "Arjan Mels <arjan@mels.email>",
 ]
 edition = "2021"
-rust-version = "1.58"
+rust-version = "1.60"
 repository = "https://github.com/esp-rs/esp-pacs"
 description = "Peripheral access crate for the ESP32"
 keywords = [

@@ -50,3 +50,46 @@ jobs:
         with:
           command: run
           args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}
+
+  msrv-riscv:
+    name: Check MSRV for RISC-V
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chip: [esp32c2, esp32c3]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          target: riscv32imc-unknown-none-elf
+          toolchain: "1.60.0"
+          default: true
+          components: rust-src
+      - uses: Swatinem/rust-cache@v1
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+      - run: |
+          cd ${{ matrix.chip }} && cargo +1.60.0 check
+
+  msrv-xtensa:
+    name: Check MSRV for Xtensa
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chip: [esp32, esp32s2, esp32s3, esp8266]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: esp-rs/xtensa-toolchain@v1.2
+        with:
+          default: true
+          ldproxy: false
+          buildtargets: ${{ matrix.chip }}
+          version: "1.60.0"
+      - uses: Swatinem/rust-cache@v1
+      - uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}

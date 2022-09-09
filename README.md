@@ -8,11 +8,25 @@ Peripheral Access Crates for Espressif SoCs and modules. For information on how 
 
 If you discover any errors in an SVD file, please report the issue(s) upstream in the [espressif/svd] repository.
 
-Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**) you will need to first install the [Rust compiler fork] with Xtensa support. The minimum supported Rust version (MSRV) for these devices is `1.58.0`.
+Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**) you will need to first install the [Rust compiler fork] with Xtensa support.
 
 [svd2rust documentation]: https://docs.rs/svd2rust/latest/svd2rust/
 [espressif/svd]: https://github.com/espressif/svd/
 [rust compiler fork]: https://github.com/esp-rs/rust-build/
+
+## MSRV
+
+The **M**inimum **S**upported **R**ust **V**ersions are:
+
+- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**)
+- `1.60.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
+
+Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork. The [esp-rs/rust-build] repository has pre-compiled release artifacts for most common platforms, and provides installation scripts to aid you in the process.
+
+RISC-V is officially supported by the official Rust compiler.
+
+[esp-rs/rust]: https://github.com/esp-rs/rust
+[esp-rs/rust-build]: https://github.com/esp-rs/rust-build
 
 ## Patching the SVDs
 
