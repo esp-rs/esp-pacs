@@ -70,3 +70,70 @@ TIMG1:
   "T0*":
     _strip:
       - "T0_"
+
+TWAI:
+  DATA_0:
+    _modify:
+      TX_BYTE_0:
+        description: "In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_1:
+    _modify:
+      TX_BYTE_1:
+        description: "In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_2:
+    _modify:
+      TX_BYTE_2:
+        description: "In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_3:
+    _modify:
+      TX_BYTE_3:
+        description: "In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_4:
+    _modify:
+      TX_BYTE_4:
+        description: "In reset mode, it is acceptance code register 4 with R/W Permission. In operation mode, it stores the 4th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_5:
+    _modify:
+      TX_BYTE_5:
+        description: "In reset mode, it is acceptance code register 5 with R/W Permission. In operation mode, it stores the 5th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_6:
+    _modify:
+      TX_BYTE_6:
+        description: "In reset mode, it is acceptance code register 6 with R/W Permission. In operation mode, it stores the 6th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_7:
+    _modify:
+      TX_BYTE_7:
+        description: "In reset mode, it is acceptance code register 7 with R/W Permission. In operation mode, it stores the 7th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_8:
+    _modify:
+      TX_BYTE_8:
+        description: "In operation mode, it stores the 8th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_9:
+    _modify:
+      TX_BYTE_9:
+        description: "In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_10:
+    _modify:
+      TX_BYTE_10:
+        description: "In operation mode, it stores the 10th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_11:
+    _modify:
+      TX_BYTE_11:
+        description: "In operation mode, it stores the 11th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
+  DATA_12:
+    _modify:
+      TX_BYTE_12:
+        description: "In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."
+        access: read-write
