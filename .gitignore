@@ -1,4 +1,3 @@
-esp*/**/src/
 esp*/**/Cargo.lock
 
 esp32.svd

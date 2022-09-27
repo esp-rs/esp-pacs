@@ -1,0 +1,96 @@
+#[doc = "Register `SLC_AHB_TEST` reader"]
+pub struct R(crate::R<SLC_AHB_TEST_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SLC_AHB_TEST_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<SLC_AHB_TEST_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SLC_AHB_TEST_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `SLC_AHB_TEST` writer"]
+pub struct W(crate::W<SLC_AHB_TEST_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SLC_AHB_TEST_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<SLC_AHB_TEST_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<SLC_AHB_TEST_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SLC_AHB_TESTMODE` reader - "]
+pub type SLC_AHB_TESTMODE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SLC_AHB_TESTMODE` writer - "]
+pub type SLC_AHB_TESTMODE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SLC_AHB_TEST_SPEC, u8, u8, 3, O>;
+#[doc = "Field `SLC_AHB_TESTADDR` reader - "]
+pub type SLC_AHB_TESTADDR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SLC_AHB_TESTADDR` writer - "]
+pub type SLC_AHB_TESTADDR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SLC_AHB_TEST_SPEC, u8, u8, 2, O>;
+impl R {
+    #[doc = "Bits 0:2"]
+    #[inline(always)]
+    pub fn slc_ahb_testmode(&self) -> SLC_AHB_TESTMODE_R {
+        SLC_AHB_TESTMODE_R::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn slc_ahb_testaddr(&self) -> SLC_AHB_TESTADDR_R {
+        SLC_AHB_TESTADDR_R::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:2"]
+    #[inline(always)]
+    pub fn slc_ahb_testmode(&mut self) -> SLC_AHB_TESTMODE_W<0> {
+        SLC_AHB_TESTMODE_W::new(self)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn slc_ahb_testaddr(&mut self) -> SLC_AHB_TESTADDR_W<4> {
+        SLC_AHB_TESTADDR_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "SLC_AHB_TEST\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc_ahb_test](index.html) module"]
+pub struct SLC_AHB_TEST_SPEC;
+impl crate::RegisterSpec for SLC_AHB_TEST_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [slc_ahb_test::R](R) reader structure"]
+impl crate::Readable for SLC_AHB_TEST_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [slc_ahb_test::W](W) writer structure"]
+impl crate::Writable for SLC_AHB_TEST_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets SLC_AHB_TEST to value 0"]
+impl crate::Resettable for SLC_AHB_TEST_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
+    }
+}

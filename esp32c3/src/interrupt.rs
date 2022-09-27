@@ -1,0 +1,187 @@
+#[doc = r"Enumeration of all the interrupts."]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum Interrupt {
+    #[doc = "0 - WIFI_MAC"]
+    WIFI_MAC = 0,
+    #[doc = "1 - WIFI_MAC_NMI"]
+    WIFI_MAC_NMI = 1,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - RWBT"]
+    RWBT = 7,
+    #[doc = "8 - RWBLE"]
+    RWBLE = 8,
+    #[doc = "9 - RWBT_NMI"]
+    RWBT_NMI = 9,
+    #[doc = "10 - RWBLE_NMI"]
+    RWBLE_NMI = 10,
+    #[doc = "15 - UHCI0"]
+    UHCI0 = 15,
+    #[doc = "16 - GPIO"]
+    GPIO = 16,
+    #[doc = "17 - GPIO_NMI"]
+    GPIO_NMI = 17,
+    #[doc = "19 - SPI2"]
+    SPI2 = 19,
+    #[doc = "20 - I2S"]
+    I2S = 20,
+    #[doc = "21 - UART0"]
+    UART0 = 21,
+    #[doc = "22 - UART1"]
+    UART1 = 22,
+    #[doc = "23 - LEDC"]
+    LEDC = 23,
+    #[doc = "24 - EFUSE"]
+    EFUSE = 24,
+    #[doc = "25 - TWAI"]
+    TWAI = 25,
+    #[doc = "26 - USB_SERIAL_JTAG"]
+    USB_SERIAL_JTAG = 26,
+    #[doc = "27 - RTC_CORE"]
+    RTC_CORE = 27,
+    #[doc = "28 - RMT"]
+    RMT = 28,
+    #[doc = "29 - I2C_EXT0"]
+    I2C_EXT0 = 29,
+    #[doc = "32 - TG0_T0_LEVEL"]
+    TG0_T0_LEVEL = 32,
+    #[doc = "33 - TG0_WDT_LEVEL"]
+    TG0_WDT_LEVEL = 33,
+    #[doc = "34 - TG1_T0_LEVEL"]
+    TG1_T0_LEVEL = 34,
+    #[doc = "35 - TG1_WDT_LEVEL"]
+    TG1_WDT_LEVEL = 35,
+    #[doc = "37 - SYSTIMER_TARGET0"]
+    SYSTIMER_TARGET0 = 37,
+    #[doc = "38 - SYSTIMER_TARGET1"]
+    SYSTIMER_TARGET1 = 38,
+    #[doc = "39 - SYSTIMER_TARGET2"]
+    SYSTIMER_TARGET2 = 39,
+    #[doc = "43 - APB_ADC"]
+    APB_ADC = 43,
+    #[doc = "44 - DMA_CH0"]
+    DMA_CH0 = 44,
+    #[doc = "45 - DMA_CH1"]
+    DMA_CH1 = 45,
+    #[doc = "46 - DMA_CH2"]
+    DMA_CH2 = 46,
+    #[doc = "47 - RSA"]
+    RSA = 47,
+    #[doc = "48 - AES"]
+    AES = 48,
+    #[doc = "49 - SHA"]
+    SHA = 49,
+    #[doc = "50 - SW_INTR_0"]
+    SW_INTR_0 = 50,
+    #[doc = "51 - SW_INTR_1"]
+    SW_INTR_1 = 51,
+    #[doc = "52 - SW_INTR_2"]
+    SW_INTR_2 = 52,
+    #[doc = "53 - SW_INTR_3"]
+    SW_INTR_3 = 53,
+    #[doc = "54 - ASSIST_DEBUG"]
+    ASSIST_DEBUG = 54,
+}
+#[doc = r" TryFromInterruptError"]
+#[derive(Debug, Copy, Clone)]
+pub struct TryFromInterruptError(());
+impl Interrupt {
+    #[doc = r" Attempt to convert a given value into an `Interrupt`"]
+    #[inline]
+    pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
+        match value {
+            0 => Ok(Interrupt::WIFI_MAC),
+            1 => Ok(Interrupt::WIFI_MAC_NMI),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::RWBT),
+            8 => Ok(Interrupt::RWBLE),
+            9 => Ok(Interrupt::RWBT_NMI),
+            10 => Ok(Interrupt::RWBLE_NMI),
+            15 => Ok(Interrupt::UHCI0),
+            16 => Ok(Interrupt::GPIO),
+            17 => Ok(Interrupt::GPIO_NMI),
+            19 => Ok(Interrupt::SPI2),
+            20 => Ok(Interrupt::I2S),
+            21 => Ok(Interrupt::UART0),
+            22 => Ok(Interrupt::UART1),
+            23 => Ok(Interrupt::LEDC),
+            24 => Ok(Interrupt::EFUSE),
+            25 => Ok(Interrupt::TWAI),
+            26 => Ok(Interrupt::USB_SERIAL_JTAG),
+            27 => Ok(Interrupt::RTC_CORE),
+            28 => Ok(Interrupt::RMT),
+            29 => Ok(Interrupt::I2C_EXT0),
+            32 => Ok(Interrupt::TG0_T0_LEVEL),
+            33 => Ok(Interrupt::TG0_WDT_LEVEL),
+            34 => Ok(Interrupt::TG1_T0_LEVEL),
+            35 => Ok(Interrupt::TG1_WDT_LEVEL),
+            37 => Ok(Interrupt::SYSTIMER_TARGET0),
+            38 => Ok(Interrupt::SYSTIMER_TARGET1),
+            39 => Ok(Interrupt::SYSTIMER_TARGET2),
+            43 => Ok(Interrupt::APB_ADC),
+            44 => Ok(Interrupt::DMA_CH0),
+            45 => Ok(Interrupt::DMA_CH1),
+            46 => Ok(Interrupt::DMA_CH2),
+            47 => Ok(Interrupt::RSA),
+            48 => Ok(Interrupt::AES),
+            49 => Ok(Interrupt::SHA),
+            50 => Ok(Interrupt::SW_INTR_0),
+            51 => Ok(Interrupt::SW_INTR_1),
+            52 => Ok(Interrupt::SW_INTR_2),
+            53 => Ok(Interrupt::SW_INTR_3),
+            54 => Ok(Interrupt::ASSIST_DEBUG),
+            _ => Err(TryFromInterruptError(())),
+        }
+    }
+}
+#[cfg(feature = "rt")]
+#[macro_export]
+#[doc = r" Assigns a handler to an interrupt"]
+#[doc = r""]
+#[doc = r" This macro takes two arguments: the name of an interrupt and the path to the"]
+#[doc = r" function that will be used as the handler of that interrupt. That function"]
+#[doc = r" must have signature `fn()`."]
+#[doc = r""]
+#[doc = r" Optionally, a third argument may be used to declare interrupt local data."]
+#[doc = r" The handler will have exclusive access to these *local* variables on each"]
+#[doc = r" invocation. If the third argument is used then the signature of the handler"]
+#[doc = r" function must be `fn(&mut $NAME::Locals)` where `$NAME` is the first argument"]
+#[doc = r" passed to the macro."]
+#[doc = r""]
+#[doc = r" # Example"]
+#[doc = r""]
+#[doc = r" ``` ignore"]
+#[doc = r" interrupt!(TIM2, periodic);"]
+#[doc = r""]
+#[doc = r" fn periodic() {"]
+#[doc = r#"     print!(".");"#]
+#[doc = r" }"]
+#[doc = r""]
+#[doc = r" interrupt!(TIM3, tick, locals: {"]
+#[doc = r"     tick: bool = false;"]
+#[doc = r" });"]
+#[doc = r""]
+#[doc = r" fn tick(locals: &mut TIM3::Locals) {"]
+#[doc = r"     locals.tick = !locals.tick;"]
+#[doc = r""]
+#[doc = r"     if locals.tick {"]
+#[doc = r#"         println!("Tick");"#]
+#[doc = r"     } else {"]
+#[doc = r#"         println!("Tock");"#]
+#[doc = r"     }"]
+#[doc = r" }"]
+#[doc = r" ```"]
+macro_rules ! interrupt { ($ NAME : ident , $ path : path , locals : { $ ($ lvar : ident : $ lty : ty = $ lval : expr ;) * }) => { # [allow (non_snake_case)] mod $ NAME { pub struct Locals { $ (pub $ lvar : $ lty ,) * } } # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ($ lvar : $ lval ,) * } ; let f : fn (& mut self :: $ NAME :: Locals) = $ path ; f (unsafe { & mut LOCALS }) ; } } ; ($ NAME : ident , $ path : path) => { # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn () = $ path ; f () ; } } }
