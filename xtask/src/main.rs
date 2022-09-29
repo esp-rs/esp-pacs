@@ -10,14 +10,20 @@ use anyhow::{Error, Result};
 use clap::Parser;
 use form::util::create_directory_structure;
 use log::{info, warn, LevelFilter};
-use strum::{IntoEnumIterator, VariantNames};
-use strum_macros::{Display, EnumIter, EnumString, EnumVariantNames};
+use strum::{Display, EnumIter, EnumString, EnumVariantNames, IntoEnumIterator, VariantNames};
 use svd2rust::{generate::device::render, load_from, util::build_rs, Config, Target};
 use svdtools::patch::process_file;
 use toml::Value;
 
-#[derive(Debug, Display, EnumIter, EnumString, EnumVariantNames)]
-pub enum Chip {
+macro_rules! clap_enum_variants {
+    ($e: ty) => {{
+        use clap::builder::{PossibleValuesParser, TypedValueParser};
+        PossibleValuesParser::new(<$e>::VARIANTS).map(|s| s.parse::<$e>().unwrap())
+    }};
+}
+
+#[derive(Debug, Clone, Display, EnumIter, EnumString, EnumVariantNames)]
+enum Chip {
     #[strum(serialize = "esp32")]
     Esp32,
     #[strum(serialize = "esp32c2")]
@@ -35,13 +41,13 @@ pub enum Chip {
 #[derive(Debug, Parser)]
 struct Opts {
     /// Chip(s) to target
-    #[clap(possible_values = Chip::VARIANTS)]
+    #[clap(value_parser = clap_enum_variants!(Chip))]
     chips: Vec<Chip>,
     /// Only patch the SVD, do not generate or build the PAC
-    #[clap(long, conflicts_with = "generate-only")]
+    #[clap(long, conflicts_with = "generate_only")]
     patch_only: bool,
     /// Patch the SVD and generate the PAC, but do not build it
-    #[clap(long, conflicts_with = "patch-only")]
+    #[clap(long, conflicts_with = "patch_only")]
     generate_only: bool,
 }
 
@@ -67,19 +73,19 @@ fn main() -> Result<()> {
 
     for chip in chips {
         info!("chip: {chip}");
-
-        // Remove the src/ directory before we begin. If this fails we will assume it's
-        // because the directory does not exist.
         let path = workspace.join(&chip);
-        if fs::remove_dir_all(&path.join("src")).is_err() {
-            warn!("unable to remove 'src/' directory");
-        }
 
         // Always patch the SVD upon execution. If '--patch-only' has NOT been set, then
         // additionally generate and format the PAC. If '--generate-only' has NOT been
         // set, clean and build the PAC crate.
         patch_svd(&chip, &path)?;
         if !opts.patch_only {
+            // Remove the src/ directory before we generate. If this fails we will assume
+            // it's because the directory does not exist.
+            if fs::remove_dir_all(&path.join("src")).is_err() {
+                warn!("unable to remove 'src/' directory");
+            }
+
             generate_pac(&chip, &path)?;
             format(&path)?;
             if !opts.generate_only {
@@ -113,12 +119,14 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     let svd_file = path.join("svd").join(format!("{chip}.svd"));
     info!("generating PAC from '{}'", svd_file.display());
 
+    let config = Config {
+        target: get_svd2rust_target(path)?,
+        output_dir: path.clone(),
+
+        ..Config::default()
+    };
+
     let input = fs::read_to_string(svd_file)?;
-
-    let mut config = Config::default();
-    config.target = get_svd2rust_target(path)?;
-    config.output_dir = path.clone();
-
     let device = load_from(&input, &config)?;
 
     let mut device_x = String::new();

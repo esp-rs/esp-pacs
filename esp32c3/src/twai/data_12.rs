@@ -1,3 +1,18 @@
+#[doc = "Register `DATA_12` reader"]
+pub struct R(crate::R<DATA_12_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DATA_12_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<DATA_12_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<DATA_12_SPEC>) -> Self {
+        R(reader)
+    }
+}
 #[doc = "Register `DATA_12` writer"]
 pub struct W(crate::W<DATA_12_SPEC>);
 impl core::ops::Deref for W {
@@ -19,10 +34,19 @@ impl From<crate::W<DATA_12_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TX_BYTE_12` writer - Stored the 12th byte information of the data to be transmitted under operating mode."]
+#[doc = "Field `TX_BYTE_12` reader - In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
+pub type TX_BYTE_12_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_BYTE_12` writer - In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
 pub type TX_BYTE_12_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_12_SPEC, u8, u8, 8, O>;
+impl R {
+    #[doc = "Bits 0:7 - In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
+    #[inline(always)]
+    pub fn tx_byte_12(&self) -> TX_BYTE_12_R {
+        TX_BYTE_12_R::new((self.bits & 0xff) as u8)
+    }
+}
 impl W {
-    #[doc = "Bits 0:7 - Stored the 12th byte information of the data to be transmitted under operating mode."]
+    #[doc = "Bits 0:7 - In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
     #[inline(always)]
     pub fn tx_byte_12(&mut self) -> TX_BYTE_12_W<0> {
         TX_BYTE_12_W::new(self)
@@ -34,10 +58,14 @@ impl W {
         self
     }
 }
-#[doc = "Data register 12\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data_12](index.html) module"]
+#[doc = "Data register 12\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [data_12](index.html) module"]
 pub struct DATA_12_SPEC;
 impl crate::RegisterSpec for DATA_12_SPEC {
     type Ux = u32;
+}
+#[doc = "`read()` method returns [data_12::R](R) reader structure"]
+impl crate::Readable for DATA_12_SPEC {
+    type Reader = R;
 }
 #[doc = "`write(|w| ..)` method takes [data_12::W](W) writer structure"]
 impl crate::Writable for DATA_12_SPEC {
