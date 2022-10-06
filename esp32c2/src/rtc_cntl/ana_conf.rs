@@ -48,6 +48,14 @@ pub type I2C_RESET_POR_FORCE_PU_W<'a, const O: u8> =
 pub type SAR_I2C_PU_R = crate::BitReader<bool>;
 #[doc = "Field `SAR_I2C_PU` writer - PLLA force power up"]
 pub type SAR_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+#[doc = "Field `PLLA_FORCE_PD` reader - PLLA force power down"]
+pub type PLLA_FORCE_PD_R = crate::BitReader<bool>;
+#[doc = "Field `PLLA_FORCE_PD` writer - PLLA force power down"]
+pub type PLLA_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+#[doc = "Field `PLLA_FORCE_PU` reader - PLLA force power up"]
+pub type PLLA_FORCE_PU_R = crate::BitReader<bool>;
+#[doc = "Field `PLLA_FORCE_PU` writer - PLLA force power up"]
+pub type PLLA_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
 #[doc = "Field `BBPLL_CAL_SLP_START` reader - start BBPLL calibration during sleep"]
 pub type BBPLL_CAL_SLP_START_R = crate::BitReader<bool>;
 #[doc = "Field `BBPLL_CAL_SLP_START` writer - start BBPLL calibration during sleep"]
@@ -83,6 +91,16 @@ impl R {
     #[inline(always)]
     pub fn sar_i2c_pu(&self) -> SAR_I2C_PU_R {
         SAR_I2C_PU_R::new(((self.bits >> 22) & 1) != 0)
+    }
+    #[doc = "Bit 23 - PLLA force power down"]
+    #[inline(always)]
+    pub fn plla_force_pd(&self) -> PLLA_FORCE_PD_R {
+        PLLA_FORCE_PD_R::new(((self.bits >> 23) & 1) != 0)
+    }
+    #[doc = "Bit 24 - PLLA force power up"]
+    #[inline(always)]
+    pub fn plla_force_pu(&self) -> PLLA_FORCE_PU_R {
+        PLLA_FORCE_PU_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
@@ -125,6 +143,16 @@ impl W {
     #[inline(always)]
     pub fn sar_i2c_pu(&mut self) -> SAR_I2C_PU_W<22> {
         SAR_I2C_PU_W::new(self)
+    }
+    #[doc = "Bit 23 - PLLA force power down"]
+    #[inline(always)]
+    pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W<23> {
+        PLLA_FORCE_PD_W::new(self)
+    }
+    #[doc = "Bit 24 - PLLA force power up"]
+    #[inline(always)]
+    pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W<24> {
+        PLLA_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
