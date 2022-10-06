@@ -29,8 +29,8 @@ pub mod generic;
 extern "C" {
     fn I2C_MST();
     fn APB_CTRL();
-    fn GPIO_INTR_PRO();
-    fn GPIO_INTR_PRO_NMI();
+    fn GPIO();
+    fn GPIO_NMI();
     fn SPI_INTR_1();
     fn SPI_INTR_2();
     fn UART0();
@@ -41,9 +41,9 @@ extern "C" {
     fn I2C_EXT0();
     fn TG0_T0_LEVEL();
     fn TG0_WDT_LEVEL();
-    fn SYSTIMER_TARGET0_EDGE();
-    fn SYSTIMER_TARGET1_EDGE();
-    fn SYSTIMER_TARGET2_EDGE();
+    fn SYSTIMER_TARGET0();
+    fn SYSTIMER_TARGET1();
+    fn SYSTIMER_TARGET2();
     fn SPI_MEM_REJECT_CACHE();
     fn APB_ADC();
     fn DMA_CH0();
@@ -71,12 +71,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 35] = [
     Vector { _reserved: 0 },
     Vector { _handler: I2C_MST },
     Vector { _handler: APB_CTRL },
-    Vector {
-        _handler: GPIO_INTR_PRO,
-    },
-    Vector {
-        _handler: GPIO_INTR_PRO_NMI,
-    },
+    Vector { _handler: GPIO },
+    Vector { _handler: GPIO_NMI },
     Vector {
         _handler: SPI_INTR_1,
     },
@@ -97,13 +93,13 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 35] = [
     },
     Vector { _reserved: 0 },
     Vector {
-        _handler: SYSTIMER_TARGET0_EDGE,
+        _handler: SYSTIMER_TARGET0,
     },
     Vector {
-        _handler: SYSTIMER_TARGET1_EDGE,
+        _handler: SYSTIMER_TARGET1,
     },
     Vector {
-        _handler: SYSTIMER_TARGET2_EDGE,
+        _handler: SYSTIMER_TARGET2,
     },
     Vector {
         _handler: SPI_MEM_REJECT_CACHE,

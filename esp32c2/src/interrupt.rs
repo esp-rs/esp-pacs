@@ -6,10 +6,10 @@ pub enum Interrupt {
     I2C_MST = 11,
     #[doc = "12 - APB_CTRL"]
     APB_CTRL = 12,
-    #[doc = "13 - GPIO_INTR_PRO"]
-    GPIO_INTR_PRO = 13,
-    #[doc = "14 - GPIO_INTR_PRO_NMI"]
-    GPIO_INTR_PRO_NMI = 14,
+    #[doc = "13 - GPIO"]
+    GPIO = 13,
+    #[doc = "14 - GPIO_NMI"]
+    GPIO_NMI = 14,
     #[doc = "15 - SPI_INTR_1"]
     SPI_INTR_1 = 15,
     #[doc = "16 - SPI_INTR_2"]
@@ -30,12 +30,12 @@ pub enum Interrupt {
     TG0_T0_LEVEL = 23,
     #[doc = "24 - TG0_WDT_LEVEL"]
     TG0_WDT_LEVEL = 24,
-    #[doc = "26 - SYSTIMER_TARGET0_EDGE"]
-    SYSTIMER_TARGET0_EDGE = 26,
-    #[doc = "27 - SYSTIMER_TARGET1_EDGE"]
-    SYSTIMER_TARGET1_EDGE = 27,
-    #[doc = "28 - SYSTIMER_TARGET2_EDGE"]
-    SYSTIMER_TARGET2_EDGE = 28,
+    #[doc = "26 - SYSTIMER_TARGET0"]
+    SYSTIMER_TARGET0 = 26,
+    #[doc = "27 - SYSTIMER_TARGET1"]
+    SYSTIMER_TARGET1 = 27,
+    #[doc = "28 - SYSTIMER_TARGET2"]
+    SYSTIMER_TARGET2 = 28,
     #[doc = "29 - SPI_MEM_REJECT_CACHE"]
     SPI_MEM_REJECT_CACHE = 29,
     #[doc = "32 - APB_ADC"]
@@ -55,8 +55,8 @@ impl Interrupt {
         match value {
             11 => Ok(Interrupt::I2C_MST),
             12 => Ok(Interrupt::APB_CTRL),
-            13 => Ok(Interrupt::GPIO_INTR_PRO),
-            14 => Ok(Interrupt::GPIO_INTR_PRO_NMI),
+            13 => Ok(Interrupt::GPIO),
+            14 => Ok(Interrupt::GPIO_NMI),
             15 => Ok(Interrupt::SPI_INTR_1),
             16 => Ok(Interrupt::SPI_INTR_2),
             17 => Ok(Interrupt::UART0),
@@ -67,9 +67,9 @@ impl Interrupt {
             22 => Ok(Interrupt::I2C_EXT0),
             23 => Ok(Interrupt::TG0_T0_LEVEL),
             24 => Ok(Interrupt::TG0_WDT_LEVEL),
-            26 => Ok(Interrupt::SYSTIMER_TARGET0_EDGE),
-            27 => Ok(Interrupt::SYSTIMER_TARGET1_EDGE),
-            28 => Ok(Interrupt::SYSTIMER_TARGET2_EDGE),
+            26 => Ok(Interrupt::SYSTIMER_TARGET0),
+            27 => Ok(Interrupt::SYSTIMER_TARGET1),
+            28 => Ok(Interrupt::SYSTIMER_TARGET2),
             29 => Ok(Interrupt::SPI_MEM_REJECT_CACHE),
             32 => Ok(Interrupt::APB_ADC),
             33 => Ok(Interrupt::DMA_CH0),
