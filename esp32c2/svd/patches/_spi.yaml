@@ -1,0 +1,5 @@
+"SPI*":
+  _strip: "SPI_MEM_"
+
+  "*":
+    _strip: "SPI_MEM_"
