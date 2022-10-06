@@ -1,1 +1,5 @@
 _svd: ../esp32c2.base.svd
+
+_include:
+  - "./_rtc_cntl.yaml"
+  - "./_spi.yaml"

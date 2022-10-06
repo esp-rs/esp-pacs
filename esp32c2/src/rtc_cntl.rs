@@ -60,7 +60,7 @@ pub struct RegisterBlock {
     #[doc = "0x70 - register description"]
     pub bias_conf: BIAS_CONF,
     #[doc = "0x74 - register description"]
-    pub rtc: RTC,
+    pub rtc_cntl: RTC_CNTL,
     #[doc = "0x78 - register description"]
     pub pwc: PWC,
     #[doc = "0x7c - register description"]
@@ -257,10 +257,10 @@ pub mod slow_clk_conf;
 pub type BIAS_CONF = crate::Reg<bias_conf::BIAS_CONF_SPEC>;
 #[doc = "register description"]
 pub mod bias_conf;
-#[doc = "RTC (rw) register accessor: an alias for `Reg<RTC_SPEC>`"]
-pub type RTC = crate::Reg<rtc::RTC_SPEC>;
+#[doc = "RTC_CNTL (rw) register accessor: an alias for `Reg<RTC_CNTL_SPEC>`"]
+pub type RTC_CNTL = crate::Reg<rtc_cntl::RTC_CNTL_SPEC>;
 #[doc = "register description"]
-pub mod rtc;
+pub mod rtc_cntl;
 #[doc = "PWC (rw) register accessor: an alias for `Reg<PWC_SPEC>`"]
 pub type PWC = crate::Reg<pwc::PWC_SPEC>;
 #[doc = "register description"]
