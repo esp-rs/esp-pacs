@@ -3,3 +3,21 @@ _svd: ../esp32c2.base.svd
 _include:
   - "./_rtc_cntl.yaml"
   - "./_spi.yaml"
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_INTR_PRO:
+        name: GPIO
+      GPIO_INTR_PRO_NMI:
+        name: GPIO_NMI
+
+SYSTIMER:
+  _modify:
+    _interrupts:
+      SYSTIMER_TARGET0_EDGE:
+        name: SYSTIMER_TARGET0
+      SYSTIMER_TARGET1_EDGE:
+        name: SYSTIMER_TARGET1
+      SYSTIMER_TARGET2_EDGE:
+        name: SYSTIMER_TARGET2
