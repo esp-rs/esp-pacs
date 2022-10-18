@@ -139,7 +139,7 @@ pub mod strap;
 pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "GPIO0 ~ 31 input register"]
 pub mod in_;
-#[doc = "IN1 (rw) register accessor: an alias for `Reg<IN1_SPEC>`"]
+#[doc = "IN1 (r) register accessor: an alias for `Reg<IN1_SPEC>`"]
 pub type IN1 = crate::Reg<in1::IN1_SPEC>;
 #[doc = "GPIO32 ~ 53 input register"]
 pub mod in1;

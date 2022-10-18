@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32-S2</series>
-  <version>8</version>
+  <version>9</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -6459,11 +6459,11 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_NEXT</name>
+              <name>IN_DATA1_NEXT</name>
               <description>GPIO32 ~ 53 input value. Each bit represents a pad input value.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -6656,49 +6656,49 @@ alternate-channel scan mode.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PIN_SYNC2_BYPASS</name>
+              <name>SYNC2_BYPASS</name>
               <description>For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_PAD_DRIVER</name>
+              <name>PAD_DRIVER</name>
               <description>Pad driver selection. 0: normal output; 1: open drain output..</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_SYNC1_BYPASS</name>
+              <name>SYNC1_BYPASS</name>
               <description>For the first stage synchronization, GPIO input data can be synchro- nized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_TYPE</name>
+              <name>INT_TYPE</name>
               <description>Interrupt type selection. 0: GPIO interrupt disabled; 1: rising edge trigger; 2: falling edge trigger; 3: any edge trigger; 4: low level trigger; 5: high level trigger. (R/W)</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_WAKEUP_ENABLE</name>
+              <name>WAKEUP_ENABLE</name>
               <description>GPIO wake-up enable bit, only wakes up the CPU from Light-sleep.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_CONFIG</name>
+              <name>CONFIG</name>
               <description>Reserved</description>
               <bitOffset>11</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_ENA</name>
+              <name>INT_ENA</name>
               <description>Interrupt enable bits. bit13: CPU interrupt enabled; bit14: CPU non-maskable interrupt enabled.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
@@ -8306,8 +8306,9 @@ The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interru
           </fields>
         </register>
         <register>
-          <dim>8</dim>
+          <dim>16</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-15</dimIndex>
           <name>COMD%s</name>
           <description>I2C command register %s</description>
           <addressOffset>0x58</addressOffset>
@@ -8315,9 +8316,9 @@ The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interru
           <fields>
             <field>
               <name>COMMAND</name>
-              <description>This is the content of command . It consists of three parts:
+              <description>This is the content of command 0. It consists of three parts:
 
-op_code is the command, : RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
+op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
 
 byte_num represents the number of bytes that need to be sent or received.
 
@@ -8328,231 +8329,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
             </field>
             <field>
               <name>COMMAND_DONE</name>
-              <description>When command  is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD8</name>
-          <description>I2C command register 8</description>
-          <addressOffset>0x78</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND8</name>
-              <description>This is the content of command 8. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND8_DONE</name>
-              <description>When command 8 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD9</name>
-          <description>I2C command register 9</description>
-          <addressOffset>0x7C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND9</name>
-              <description>This is the content of command 9. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND9_DONE</name>
-              <description>When command 9 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD10</name>
-          <description>I2C command register 10</description>
-          <addressOffset>0x80</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND10</name>
-              <description>This is the content of command 10. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND10_DONE</name>
-              <description>When command 10 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD11</name>
-          <description>I2C command register 11</description>
-          <addressOffset>0x84</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND11</name>
-              <description>This is the content of command 11. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND11_DONE</name>
-              <description>When command 11 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD12</name>
-          <description>I2C command register 12</description>
-          <addressOffset>0x88</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND12</name>
-              <description>This is the content of command 12. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND12_DONE</name>
-              <description>When command 12 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD13</name>
-          <description>I2C command register 13</description>
-          <addressOffset>0x8C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND13</name>
-              <description>This is the content of command 13. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND13_DONE</name>
-              <description>When command 13 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD14</name>
-          <description>I2C command register 14</description>
-          <addressOffset>0x90</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND14</name>
-              <description>This is the content of command 14. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND14_DONE</name>
-              <description>When command 14 is done in I2C Master mode, this bit changes to high level.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>COMD15</name>
-          <description>I2C command register 15</description>
-          <addressOffset>0x94</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND15</name>
-              <description>This is the content of command 15. It consists of three parts:
-
-op_code is the command, 0: RSTART. 1: WRITE. 2: READ. 3: STOP. 4: END.
-
-byte_num represents the number of bytes that need to be sent or received.
-
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND15_DONE</name>
-              <description>When command 15 is done in I2C Master mode, this bit changes to high level.</description>
+              <description>When command 0 is done in I2C Master mode, this bit changes to high level.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -10520,6 +10297,50 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
         <size>0x190</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>WIFI_MAC</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_MAC_NMI</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_PWR</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_BB</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_MAC</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB_NMI</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT_NMI</name>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE_NMI</name>
+        <value>10</value>
+      </interrupt>
       <registers>
         <register>
           <name>PRO_MAC_INTR_MAP</name>
@@ -13473,350 +13294,6 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           </fields>
         </register>
         <register>
-          <name>GPIO15</name>
-          <description>Configuration register for pad GPIO15</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO16</name>
-          <description>Configuration register for pad GPIO16</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO17</name>
-          <description>Configuration register for pad GPIO17</description>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO18</name>
-          <description>Configuration register for pad GPIO18</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>GPIO19</name>
           <description>Configuration register for pin GPIO19</description>
           <addressOffset>0x50</addressOffset>
@@ -13992,608 +13469,6 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <name>GPIO21</name>
           <description>Configuration register for pin GPIO21</description>
           <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO26</name>
-          <description>Configuration register for pad GPIO26</description>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO27</name>
-          <description>Configuration register for pad GPIO27</description>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO28</name>
-          <description>Configuration register for pad GPIO28</description>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO29</name>
-          <description>Configuration register for pad GPIO29</description>
-          <addressOffset>0x78</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO30</name>
-          <description>Configuration register for pad GPIO30</description>
-          <addressOffset>0x7C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO31</name>
-          <description>Configuration register for pad GPIO31</description>
-          <addressOffset>0x80</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO32</name>
-          <description>Configuration register for pad GPIO32</description>
-          <addressOffset>0x84</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000B00</resetValue>
           <fields>
@@ -15193,522 +14068,6 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           </fields>
         </register>
         <register>
-          <name>GPIO39</name>
-          <description>Configuration register for pad GPIO39</description>
-          <addressOffset>0xA0</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO40</name>
-          <description>Configuration register for pad GPIO40</description>
-          <addressOffset>0xA4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO41</name>
-          <description>Configuration register for pad GPIO41</description>
-          <addressOffset>0xA8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO42</name>
-          <description>Configuration register for pad GPIO42</description>
-          <addressOffset>0xAC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO43</name>
-          <description>Configuration register for pad GPIO43</description>
-          <addressOffset>0xB0</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIO44</name>
-          <description>Configuration register for pad GPIO44</description>
-          <addressOffset>0xB4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000B00</resetValue>
-          <fields>
-            <field>
-              <name>MCU_OE</name>
-              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SLP_SEL</name>
-              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPD</name>
-              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_WPU</name>
-              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_IE</name>
-              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPD</name>
-              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_WPU</name>
-              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_IE</name>
-              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FUN_DRV</name>
-              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MCU_SEL</name>
-              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FILTER_EN</name>
-              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
           <name>GPIO45</name>
           <description>Configuration register for pin GPIO45</description>
           <addressOffset>0xB8</addressOffset>
@@ -15896,6 +14255,1468 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
             </field>
           </fields>
         </register>
+        <register>
+          <name>GPIO15</name>
+          <description>Configuration register for pin GPIO15</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO16</name>
+          <description>Configuration register for pin GPIO16</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO17</name>
+          <description>Configuration register for pin GPIO17</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO18</name>
+          <description>Configuration register for pin GPIO18</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO26</name>
+          <description>Configuration register for pin GPIO26</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO27</name>
+          <description>Configuration register for pin GPIO27</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO28</name>
+          <description>Configuration register for pin GPIO28</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO29</name>
+          <description>Configuration register for pin GPIO29</description>
+          <addressOffset>0x78</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO30</name>
+          <description>Configuration register for pin GPIO30</description>
+          <addressOffset>0x7C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO31</name>
+          <description>Configuration register for pin GPIO31</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO32</name>
+          <description>Configuration register for pin GPIO32</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO39</name>
+          <description>Configuration register for pin GPIO39</description>
+          <addressOffset>0xA0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO40</name>
+          <description>Configuration register for pin GPIO40</description>
+          <addressOffset>0xA4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO41</name>
+          <description>Configuration register for pin GPIO41</description>
+          <addressOffset>0xA8</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO42</name>
+          <description>Configuration register for pin GPIO42</description>
+          <addressOffset>0xAC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO43</name>
+          <description>Configuration register for pin GPIO43</description>
+          <addressOffset>0xB0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO44</name>
+          <description>Configuration register for pin GPIO44</description>
+          <addressOffset>0xB4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000B00</resetValue>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled.</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled.</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>Input enable of the pin. 1: Input enabled. 0: Input disabled.</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA.</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc.</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled.</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
       </registers>
     </peripheral>
     <peripheral>
@@ -15930,7 +15751,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_CH0</name>
+              <name>TIMER_SEL</name>
               <description>This field is used to select one of timers for channel %s.
 
 0: select timer 0.
@@ -15945,49 +15766,49 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
               <access>read-write</access>
             </field>
             <field>
-              <name>SIG_OUT_EN_CH0</name>
+              <name>SIG_OUT_EN</name>
               <description>Set this bit to enable signal output on channel %s.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_LV_CH0</name>
+              <name>IDLE_LV</name>
               <description>This bit is used to control the output value when channel %s is inactive.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PARA_UP_CH0</name>
+              <name>PARA_UP</name>
               <description>This bit is used to update register LEDC_CH%s_HPOINT and LEDC_CH%s_DUTY for channel %s.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OVF_NUM_CH0</name>
+              <name>OVF_NUM</name>
               <description>This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OVF_CNT_EN_CH0</name>
+              <name>OVF_CNT_EN</name>
               <description>This bit is used to enable the ovf_cnt of channel %s.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OVF_CNT_RESET_CH0</name>
+              <name>OVF_CNT_RESET</name>
               <description>Set this bit to reset the ovf_cnt of channel %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OVF_CNT_RESET_ST_CH0</name>
+              <name>OVF_CNT_RESET_ST</name>
               <description>This is the status bit of LEDC_OVF_CNT_RESET_CH%s.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16004,7 +15825,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <size>0x20</size>
           <fields>
             <field>
-              <name>HPOINT_CH0</name>
+              <name>HPOINT</name>
               <description>The output value changes to high when the selected timers has reached the value specified by this register.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
@@ -16021,7 +15842,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <size>0x20</size>
           <fields>
             <field>
-              <name>DUTY_CH0</name>
+              <name>DUTY</name>
               <description>This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>19</bitWidth>
@@ -16039,35 +15860,35 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <resetValue>0x40000000</resetValue>
           <fields>
             <field>
-              <name>DUTY_SCALE_CH0</name>
+              <name>DUTY_SCALE</name>
               <description>This register is used to configure the changing step scale of duty on channel %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_CYCLE_CH0</name>
+              <name>DUTY_CYCLE</name>
               <description>The duty will change every LEDC_DUTY_CYCLE_CH%s on channel %s.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_NUM_CH0</name>
+              <name>DUTY_NUM</name>
               <description>This register is used to control the number of times the duty cycle will be changed.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_INC_CH0</name>
+              <name>DUTY_INC</name>
               <description>This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase. 0: Decrease.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_START_CH0</name>
+              <name>DUTY_START</name>
               <description>Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16084,7 +15905,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <size>0x20</size>
           <fields>
             <field>
-              <name>DUTY_R_CH0</name>
+              <name>DUTY_R</name>
               <description>This register stores the current duty of output signal on channel %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>19</bitWidth>
@@ -16102,42 +15923,42 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>TIMER0_DUTY_RES</name>
+              <name>DUTY_RES</name>
               <description>This register is used to control the range of the counter in timer %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CLK_DIV_TIMER0</name>
+              <name>CLK_DIV</name>
               <description>This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TIMER0_PAUSE</name>
+              <name>PAUSE</name>
               <description>This bit is used to suspend the counter in timer %s.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TIMER0_RST</name>
+              <name>RST</name>
               <description>This bit is used to reset timer %s. The counter will show 0 after reset.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TICK_SEL_TIMER0</name>
+              <name>TICK_SEL</name>
               <description>This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL[1:0] should be 1, otherwise the timer clock may be not accurate. 0: LEDC_PWM_CLK. 1: REF_TICK.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TIMER0_PARA_UP</name>
+              <name>PARA_UP</name>
               <description>Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16154,7 +15975,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER0_CNT</name>
+              <name>CNT</name>
               <description>This register stores the current counter value of timer %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
@@ -20256,13 +20077,13 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           </fields>
         </register>
         <register>
-          <name>RTC_GPIO_ENABLE_W1TC</name>
+          <name>ENABLE_W1TC</name>
           <description>RTC GPIO output enable bit clear register</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>REG_RTCIO_REG_GPIO_ENABLE_W1TC</name>
+              <name>ENABLE_W1TC</name>
               <description>GPIO0 ~ 21 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear RTCIO_RTC_GPIO_ENABLE_REG.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>22</bitWidth>
@@ -20333,13 +20154,13 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <register>
           <dim>22</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>RTC_GPIO_PIN%s</name>
+          <name>PIN%s</name>
           <description>RTC configuration for pin %s</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>GPIO_PIN0_PAD_DRIVER</name>
+              <name>PAD_DRIVER</name>
               <description>Pad driver selection. 0: normal output. 1: open drain.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -25962,14 +25783,17 @@ clear bit</description>
           </fields>
         </register>
         <register>
-          <name>CMD0</name>
-          <description>RTC I2C Command 0</description>
+          <dim>16</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-15</dimIndex>
+          <name>CMD%s</name>
+          <description>RTC I2C Command %s</description>
           <addressOffset>0x38</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000903</resetValue>
           <fields>
             <field>
-              <name>COMMAND0</name>
+              <name>COMMAND</name>
               <description>Content of command 0. For more information, please refer to the register
 I2C_COMD0_REG in Chapter I²C Controller</description>
               <bitOffset>0</bitOffset>
@@ -25977,366 +25801,8 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>COMMAND0_DONE</name>
+              <name>COMMAND_DONE</name>
               <description>When command 0 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD1</name>
-          <description>RTC I2C Command 1</description>
-          <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND1</name>
-              <description>Content of command 1. For more information, please refer to the register
-I2C_COMD1_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND1_DONE</name>
-              <description>When command 1 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD2</name>
-          <description>RTC I2C Command 2</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000902</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND2</name>
-              <description>Content of command 2. For more information, please refer to the register
-I2C_COMD2_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND2_DONE</name>
-              <description>When command 2 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD3</name>
-          <description>RTC I2C Command 3</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000101</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND3</name>
-              <description>Content of command 3. For more information, please refer to the register
-I2C_COMD3_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND3_DONE</name>
-              <description>When command 3 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD4</name>
-          <description>RTC I2C Command 4</description>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND4</name>
-              <description>Content of command 4. For more information, please refer to the register
-I2C_COMD4_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND4_DONE</name>
-              <description>When command 4 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD5</name>
-          <description>RTC I2C Command 5</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001701</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND5</name>
-              <description>Content of command 5. For more information, please refer to the register
-I2C_COMD5_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND5_DONE</name>
-              <description>When command 5 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD6</name>
-          <description>RTC I2C Command 6</description>
-          <addressOffset>0x50</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND6</name>
-              <description>Content of command 6. For more information, please refer to the register
-I2C_COMD6_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND6_DONE</name>
-              <description>When command 6 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD7</name>
-          <description>RTC I2C Command 7</description>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000904</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND7</name>
-              <description>Content of command 7. For more information, please refer to the register
-I2C_COMD7_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND7_DONE</name>
-              <description>When command 7 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD8</name>
-          <description>RTC I2C Command 8</description>
-          <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND8</name>
-              <description>Content of command 8. For more information, please refer to the register
-I2C_COMD8_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND8_DONE</name>
-              <description>When command 8 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD9</name>
-          <description>RTC I2C Command 9</description>
-          <addressOffset>0x5C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000903</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND9</name>
-              <description>Content of command 9. For more information, please refer to the register
-I2C_COMD9_REG in Chapter I²C Controller</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND9_DONE</name>
-              <description>When command 9 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD10</name>
-          <description>RTC I2C Command 10</description>
-          <addressOffset>0x60</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000101</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND10</name>
-              <description>Content of command 10. For more information, please refer to the register
-I2C_COMD10_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND10_DONE</name>
-              <description>When command 10 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD11</name>
-          <description>RTC I2C Command 11</description>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND11</name>
-              <description>Content of command 11. For more information, please refer to the register
-I2C_COMD11_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND11_DONE</name>
-              <description>When command 11 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD12</name>
-          <description>RTC I2C Command 12</description>
-          <addressOffset>0x68</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001701</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND12</name>
-              <description>Content of command 12. For more information, please refer to the register
-I2C_COMD12_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND12_DONE</name>
-              <description>When command 12 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD13</name>
-          <description>RTC I2C Command 13</description>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00001901</resetValue>
-          <fields>
-            <field>
-              <name>COMMAND13</name>
-              <description>Content of command 13. For more information, please refer to the register
-I2C_COMD13_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND13_DONE</name>
-              <description>When command 13 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD14</name>
-          <description>RTC I2C Command 14</description>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND14</name>
-              <description>Content of command 14. For more information, please refer to the register
-I2C_COMD14_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND14_DONE</name>
-              <description>When command 14 is done, this bit changes to 1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CMD15</name>
-          <description>RTC I2C Command 15</description>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>COMMAND15</name>
-              <description>Content of command 15. For more information, please refer to the register
-I2C_COMD15_REG in Chapter I²C Controller.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COMMAND15_DONE</name>
-              <description>When command 15 is done, this bit changes to 1.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -33109,13 +32575,13 @@ alarms mode.</description>
           </fields>
         </register>
         <register>
-          <name>UPDATE</name>
+          <name>UNIT0_OP</name>
           <description>Read out system timer value</description>
           <addressOffset>0x38</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_VALUE_VALID</name>
+              <name>TIMER_UNIT0_VALUE_VALID</name>
               <description>Check if it is valid to read out timer value from registers. 0: Not
 ready to read timer value from registers; 1: Ready to read timer value from registers</description>
               <bitOffset>30</bitOffset>
@@ -33123,7 +32589,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
               <access>read-only</access>
             </field>
             <field>
-              <name>TIMER_UPDATE</name>
+              <name>TIMER_UNIT0_UPDATE</name>
               <description>Update system timer value to registers.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33132,7 +32598,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           </fields>
         </register>
         <register>
-          <name>VALUE_HI</name>
+          <name>UNIT0_VALUE_HI</name>
           <description>System timer value, high 32 bits</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
@@ -33147,7 +32613,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           </fields>
         </register>
         <register>
-          <name>VALUE_LO</name>
+          <name>UNIT0_VALUE_LO</name>
           <description>System timer value, low 32 bits</description>
           <addressOffset>0x40</addressOffset>
           <size>0x20</size>
@@ -33168,21 +32634,21 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>INT0_ENA</name>
+              <name>TARGET0_INT_ENA</name>
               <description>Interrupt enable bit of system timer target 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INT1_ENA</name>
+              <name>TARGET1_INT_ENA</name>
               <description>Interrupt enable bit of system timer target 1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INT2_ENA</name>
+              <name>TARGET2_INT_ENA</name>
               <description>Interrupt enable bit of system timer target 2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33226,21 +32692,21 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>INT0_CLR</name>
+              <name>TARGET0_INT_CLR</name>
               <description>Interrupt clear bit of system timer target 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INT1_CLR</name>
+              <name>TARGET1_INT_CLR</name>
               <description>Interrupt clear bit of system timer target 1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INT2_CLR</name>
+              <name>TARGET2_INT_CLR</name>
               <description>Interrupt clear bit of system timer target 2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33319,56 +32785,56 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <resetValue>0x60002000</resetValue>
           <fields>
             <field>
-              <name>T0_USE_XTAL</name>
+              <name>USE_XTAL</name>
               <description>1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_ALARM_EN</name>
+              <name>ALARM_EN</name>
               <description>When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_LEVEL_INT_EN</name>
+              <name>LEVEL_INT_EN</name>
               <description>When set, an alarm will generate a level type interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_EDGE_INT_EN</name>
+              <name>EDGE_INT_EN</name>
               <description>When set, an alarm will generate an edge type interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_DIVIDER</name>
+              <name>DIVIDER</name>
               <description>Timer %s clock (T%s_clk) prescaler value.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_AUTORELOAD</name>
+              <name>AUTORELOAD</name>
               <description>When set, timer %s auto-reload at alarm is enabled.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_INCREASE</name>
+              <name>INCREASE</name>
               <description>When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_EN</name>
+              <name>EN</name>
               <description>When set, the timer %s time-base counter is enabled.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33385,7 +32851,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LO</name>
+              <name>LO</name>
               <description>After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter of timer %s can be read here.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33402,7 +32868,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_HI</name>
+              <name>HI</name>
               <description>After writing to TIMG_T%sUPDATE_REG, the high 32 bits of the time-base counter of timer %s can be read here.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33419,7 +32885,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_UPDATE</name>
+              <name>UPDATE</name>
               <description>After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -33436,7 +32902,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_LO</name>
+              <name>ALARM_LO</name>
               <description>Timer %s alarm trigger time-base counter value, low 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33453,7 +32919,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_HI</name>
+              <name>ALARM_HI</name>
               <description>
 Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <bitOffset>0</bitOffset>
@@ -33471,7 +32937,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_LO</name>
+              <name>LOAD_LO</name>
               <description>Low 32 bits of the value that a reload will load onto timer %s time-base counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33488,7 +32954,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_HI</name>
+              <name>LOAD_HI</name>
               <description>High 32 bits of the value that a reload will load onto timer %s time-base counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33505,7 +32971,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD</name>
+              <name>LOAD</name>
               <description>Write any value to trigger a timer %s time-base counter reload.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -33614,7 +33080,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
           <resetValue>0x00010000</resetValue>
           <fields>
             <field>
-              <name>WDT_CLK_PRESCALER</name>
+              <name>WDT_CLK_PRESCALE</name>
               <description>MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -34259,7 +33725,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>CAN</name>
+        <name>TWAI</name>
         <value>47</value>
       </interrupt>
       <registers>
