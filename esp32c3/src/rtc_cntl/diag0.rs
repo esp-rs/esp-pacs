@@ -13,13 +13,13 @@ impl From<crate::R<DIAG0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RTC_LOW_POWER_DIAG1` reader - "]
-pub type RTC_LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `LOW_POWER_DIAG1` reader - "]
+pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn rtc_low_power_diag1(&self) -> RTC_LOW_POWER_DIAG1_R {
-        RTC_LOW_POWER_DIAG1_R::new(self.bits)
+    pub fn low_power_diag1(&self) -> LOW_POWER_DIAG1_R {
+        LOW_POWER_DIAG1_R::new(self.bits)
     }
 }
 #[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diag0](index.html) module"]

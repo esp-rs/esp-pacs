@@ -34,23 +34,22 @@ impl From<crate::W<STORE6_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_SCRATCH6` reader - reserved register"]
-pub type RTC_SCRATCH6_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_SCRATCH6` writer - reserved register"]
-pub type RTC_SCRATCH6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STORE6_SPEC, u32, u32, 32, O>;
+#[doc = "Field `SCRATCH6` reader - reserved register"]
+pub type SCRATCH6_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `SCRATCH6` writer - reserved register"]
+pub type SCRATCH6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STORE6_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
-    pub fn rtc_scratch6(&self) -> RTC_SCRATCH6_R {
-        RTC_SCRATCH6_R::new(self.bits)
+    pub fn scratch6(&self) -> SCRATCH6_R {
+        SCRATCH6_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - reserved register"]
     #[inline(always)]
-    pub fn rtc_scratch6(&mut self) -> RTC_SCRATCH6_W<0> {
-        RTC_SCRATCH6_W::new(self)
+    pub fn scratch6(&mut self) -> SCRATCH6_W<0> {
+        SCRATCH6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

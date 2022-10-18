@@ -67,16 +67,14 @@ pub type DG_PERI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC
 pub type DG_PERI_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PERI_FORCE_PU` writer - digital peri force power up"]
 pub type DG_PERI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
-#[doc = "Field `RTC_FASTMEM_FORCE_LPD` reader - fastmemory retention mode in sleep"]
-pub type RTC_FASTMEM_FORCE_LPD_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_FASTMEM_FORCE_LPD` writer - fastmemory retention mode in sleep"]
-pub type RTC_FASTMEM_FORCE_LPD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
-#[doc = "Field `RTC_FASTMEM_FORCE_LPU` reader - fastmemory donlt entry retention mode in sleep"]
-pub type RTC_FASTMEM_FORCE_LPU_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_FASTMEM_FORCE_LPU` writer - fastmemory donlt entry retention mode in sleep"]
-pub type RTC_FASTMEM_FORCE_LPU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+#[doc = "Field `FASTMEM_FORCE_LPD` reader - fastmemory retention mode in sleep"]
+pub type FASTMEM_FORCE_LPD_R = crate::BitReader<bool>;
+#[doc = "Field `FASTMEM_FORCE_LPD` writer - fastmemory retention mode in sleep"]
+pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+#[doc = "Field `FASTMEM_FORCE_LPU` reader - fastmemory donlt entry retention mode in sleep"]
+pub type FASTMEM_FORCE_LPU_R = crate::BitReader<bool>;
+#[doc = "Field `FASTMEM_FORCE_LPU` writer - fastmemory donlt entry retention mode in sleep"]
+pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
 #[doc = "Field `WIFI_FORCE_PD` reader - wifi force power down"]
 pub type WIFI_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `WIFI_FORCE_PD` writer - wifi force power down"]
@@ -164,13 +162,13 @@ impl R {
     }
     #[doc = "Bit 15 - fastmemory retention mode in sleep"]
     #[inline(always)]
-    pub fn rtc_fastmem_force_lpd(&self) -> RTC_FASTMEM_FORCE_LPD_R {
-        RTC_FASTMEM_FORCE_LPD_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn fastmem_force_lpd(&self) -> FASTMEM_FORCE_LPD_R {
+        FASTMEM_FORCE_LPD_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - fastmemory donlt entry retention mode in sleep"]
     #[inline(always)]
-    pub fn rtc_fastmem_force_lpu(&self) -> RTC_FASTMEM_FORCE_LPU_R {
-        RTC_FASTMEM_FORCE_LPU_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn fastmem_force_lpu(&self) -> FASTMEM_FORCE_LPU_R {
+        FASTMEM_FORCE_LPU_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]
@@ -271,13 +269,13 @@ impl W {
     }
     #[doc = "Bit 15 - fastmemory retention mode in sleep"]
     #[inline(always)]
-    pub fn rtc_fastmem_force_lpd(&mut self) -> RTC_FASTMEM_FORCE_LPD_W<15> {
-        RTC_FASTMEM_FORCE_LPD_W::new(self)
+    pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<15> {
+        FASTMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 16 - fastmemory donlt entry retention mode in sleep"]
     #[inline(always)]
-    pub fn rtc_fastmem_force_lpu(&mut self) -> RTC_FASTMEM_FORCE_LPU_W<16> {
-        RTC_FASTMEM_FORCE_LPU_W::new(self)
+    pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<16> {
+        FASTMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]

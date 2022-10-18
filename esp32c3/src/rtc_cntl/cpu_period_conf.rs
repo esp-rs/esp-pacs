@@ -34,38 +34,37 @@ impl From<crate::W<CPU_PERIOD_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_CPUSEL_CONF` reader - CPU sel option"]
-pub type RTC_CPUSEL_CONF_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_CPUSEL_CONF` writer - CPU sel option"]
-pub type RTC_CPUSEL_CONF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PERIOD_CONF_SPEC, bool, O>;
-#[doc = "Field `RTC_CPUPERIOD_SEL` reader - CPU clk sel option"]
-pub type RTC_CPUPERIOD_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_CPUPERIOD_SEL` writer - CPU clk sel option"]
-pub type RTC_CPUPERIOD_SEL_W<'a, const O: u8> =
+#[doc = "Field `CPUSEL_CONF` reader - CPU sel option"]
+pub type CPUSEL_CONF_R = crate::BitReader<bool>;
+#[doc = "Field `CPUSEL_CONF` writer - CPU sel option"]
+pub type CPUSEL_CONF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPU_PERIOD_CONF_SPEC, bool, O>;
+#[doc = "Field `CPUPERIOD_SEL` reader - CPU clk sel option"]
+pub type CPUPERIOD_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CPUPERIOD_SEL` writer - CPU clk sel option"]
+pub type CPUPERIOD_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, CPU_PERIOD_CONF_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
-    pub fn rtc_cpusel_conf(&self) -> RTC_CPUSEL_CONF_R {
-        RTC_CPUSEL_CONF_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn cpusel_conf(&self) -> CPUSEL_CONF_R {
+        CPUSEL_CONF_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bits 30:31 - CPU clk sel option"]
     #[inline(always)]
-    pub fn rtc_cpuperiod_sel(&self) -> RTC_CPUPERIOD_SEL_R {
-        RTC_CPUPERIOD_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    pub fn cpuperiod_sel(&self) -> CPUPERIOD_SEL_R {
+        CPUPERIOD_SEL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
-    pub fn rtc_cpusel_conf(&mut self) -> RTC_CPUSEL_CONF_W<29> {
-        RTC_CPUSEL_CONF_W::new(self)
+    pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<29> {
+        CPUSEL_CONF_W::new(self)
     }
     #[doc = "Bits 30:31 - CPU clk sel option"]
     #[inline(always)]
-    pub fn rtc_cpuperiod_sel(&mut self) -> RTC_CPUPERIOD_SEL_W<30> {
-        RTC_CPUPERIOD_SEL_W::new(self)
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<30> {
+        CPUPERIOD_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

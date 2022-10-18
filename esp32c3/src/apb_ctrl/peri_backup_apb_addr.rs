@@ -59,7 +59,7 @@ impl W {
         self
     }
 }
-#[doc = "APB_CTRL_PERI_BACKUP_APB_ADDR_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [peri_backup_apb_addr](index.html) module"]
+#[doc = "APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [peri_backup_apb_addr](index.html) module"]
 pub struct PERI_BACKUP_APB_ADDR_SPEC;
 impl crate::RegisterSpec for PERI_BACKUP_APB_ADDR_SPEC {
     type Ux = u32;

@@ -191,7 +191,7 @@ pub struct RegisterBlock {
     pub backup_bus_pms_monitor_2: BACKUP_BUS_PMS_MONITOR_2,
     #[doc = "0x16c - SENSITIVE_BACKUP_BUS_PMS_MONITOR_3_REG"]
     pub backup_bus_pms_monitor_3: BACKUP_BUS_PMS_MONITOR_3,
-    #[doc = "0x170 - SENSITIVE_CLOCK_GATE_REG"]
+    #[doc = "0x170 - SENSITIVE_CLOCK_GATE_REG_REG"]
     pub clock_gate: CLOCK_GATE,
     _reserved93: [u8; 0x0e88],
     #[doc = "0xffc - SENSITIVE_DATE_REG"]
@@ -632,7 +632,7 @@ pub type BACKUP_BUS_PMS_MONITOR_3 =
 pub mod backup_bus_pms_monitor_3;
 #[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
-#[doc = "SENSITIVE_CLOCK_GATE_REG"]
+#[doc = "SENSITIVE_CLOCK_GATE_REG_REG"]
 pub mod clock_gate;
 #[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;

@@ -44,38 +44,38 @@ pub type SLP_REJECT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_REJECT_INT_ENA` writer - enable sleep reject interrupt"]
 pub type SLP_REJECT_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_WDT_INT_ENA` reader - enable RTC WDT interrupt"]
-pub type RTC_WDT_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_INT_ENA` writer - enable RTC WDT interrupt"]
-pub type RTC_WDT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
-pub type RTC_BROWN_OUT_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
-pub type RTC_BROWN_OUT_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `WDT_INT_ENA` reader - enable RTC WDT interrupt"]
+pub type WDT_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `WDT_INT_ENA` writer - enable RTC WDT interrupt"]
+pub type WDT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
+pub type BROWN_OUT_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
+pub type BROWN_OUT_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
-pub type RTC_MAIN_TIMER_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
-pub type RTC_MAIN_TIMER_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
+pub type MAIN_TIMER_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
+pub type MAIN_TIMER_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SWD_INT_ENA` reader - enable super watch dog interrupt"]
-pub type RTC_SWD_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SWD_INT_ENA` writer - enable super watch dog interrupt"]
-pub type RTC_SWD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` reader - enable xtal32k_dead interrupt"]
-pub type RTC_XTAL32K_DEAD_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` writer - enable xtal32k_dead interrupt"]
-pub type RTC_XTAL32K_DEAD_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `SWD_INT_ENA` reader - enable super watch dog interrupt"]
+pub type SWD_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_INT_ENA` writer - enable super watch dog interrupt"]
+pub type SWD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` reader - enable xtal32k_dead interrupt"]
+pub type XTAL32K_DEAD_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` writer - enable xtal32k_dead interrupt"]
+pub type XTAL32K_DEAD_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_GLITCH_DET_INT_ENA` reader - enbale gitch det interrupt"]
-pub type RTC_GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_GLITCH_DET_INT_ENA` writer - enbale gitch det interrupt"]
-pub type RTC_GLITCH_DET_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `GLITCH_DET_INT_ENA` reader - enbale gitch det interrupt"]
+pub type GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `GLITCH_DET_INT_ENA` writer - enbale gitch det interrupt"]
+pub type GLITCH_DET_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BBPLL_CAL_INT_ENA` reader - enbale bbpll cal end interrupt"]
-pub type RTC_BBPLL_CAL_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BBPLL_CAL_INT_ENA` writer - enbale bbpll cal end interrupt"]
-pub type RTC_BBPLL_CAL_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `BBPLL_CAL_INT_ENA` reader - enbale bbpll cal end interrupt"]
+pub type BBPLL_CAL_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `BBPLL_CAL_INT_ENA` writer - enbale bbpll cal end interrupt"]
+pub type BBPLL_CAL_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
@@ -90,38 +90,38 @@ impl R {
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    pub fn rtc_wdt_int_ena(&self) -> RTC_WDT_INT_ENA_R {
-        RTC_WDT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt_int_ena(&self) -> WDT_INT_ENA_R {
+        WDT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_ena(&self) -> RTC_BROWN_OUT_INT_ENA_R {
-        RTC_BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn brown_out_int_ena(&self) -> BROWN_OUT_INT_ENA_R {
+        BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_ena(&self) -> RTC_MAIN_TIMER_INT_ENA_R {
-        RTC_MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn main_timer_int_ena(&self) -> MAIN_TIMER_INT_ENA_R {
+        MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
-    pub fn rtc_swd_int_ena(&self) -> RTC_SWD_INT_ENA_R {
-        RTC_SWD_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swd_int_ena(&self) -> SWD_INT_ENA_R {
+        SWD_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_ena(&self) -> RTC_XTAL32K_DEAD_INT_ENA_R {
-        RTC_XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn xtal32k_dead_int_ena(&self) -> XTAL32K_DEAD_INT_ENA_R {
+        XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_ena(&self) -> RTC_GLITCH_DET_INT_ENA_R {
-        RTC_GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn glitch_det_int_ena(&self) -> GLITCH_DET_INT_ENA_R {
+        GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - enbale bbpll cal end interrupt"]
     #[inline(always)]
-    pub fn rtc_bbpll_cal_int_ena(&self) -> RTC_BBPLL_CAL_INT_ENA_R {
-        RTC_BBPLL_CAL_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn bbpll_cal_int_ena(&self) -> BBPLL_CAL_INT_ENA_R {
+        BBPLL_CAL_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
@@ -137,38 +137,38 @@ impl W {
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    pub fn rtc_wdt_int_ena(&mut self) -> RTC_WDT_INT_ENA_W<3> {
-        RTC_WDT_INT_ENA_W::new(self)
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<3> {
+        WDT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_ena(&mut self) -> RTC_BROWN_OUT_INT_ENA_W<9> {
-        RTC_BROWN_OUT_INT_ENA_W::new(self)
+    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<9> {
+        BROWN_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_ena(&mut self) -> RTC_MAIN_TIMER_INT_ENA_W<10> {
-        RTC_MAIN_TIMER_INT_ENA_W::new(self)
+    pub fn main_timer_int_ena(&mut self) -> MAIN_TIMER_INT_ENA_W<10> {
+        MAIN_TIMER_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
-    pub fn rtc_swd_int_ena(&mut self) -> RTC_SWD_INT_ENA_W<15> {
-        RTC_SWD_INT_ENA_W::new(self)
+    pub fn swd_int_ena(&mut self) -> SWD_INT_ENA_W<15> {
+        SWD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_ena(&mut self) -> RTC_XTAL32K_DEAD_INT_ENA_W<16> {
-        RTC_XTAL32K_DEAD_INT_ENA_W::new(self)
+    pub fn xtal32k_dead_int_ena(&mut self) -> XTAL32K_DEAD_INT_ENA_W<16> {
+        XTAL32K_DEAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_ena(&mut self) -> RTC_GLITCH_DET_INT_ENA_W<19> {
-        RTC_GLITCH_DET_INT_ENA_W::new(self)
+    pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W<19> {
+        GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 20 - enbale bbpll cal end interrupt"]
     #[inline(always)]
-    pub fn rtc_bbpll_cal_int_ena(&mut self) -> RTC_BBPLL_CAL_INT_ENA_W<20> {
-        RTC_BBPLL_CAL_INT_ENA_W::new(self)
+    pub fn bbpll_cal_int_ena(&mut self) -> BBPLL_CAL_INT_ENA_W<20> {
+        BBPLL_CAL_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

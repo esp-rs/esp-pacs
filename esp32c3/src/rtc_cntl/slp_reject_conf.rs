@@ -34,10 +34,10 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_SLEEP_REJECT_ENA` reader - sleep reject enable"]
-pub type RTC_SLEEP_REJECT_ENA_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_SLEEP_REJECT_ENA` writer - sleep reject enable"]
-pub type RTC_SLEEP_REJECT_ENA_W<'a, const O: u8> =
+#[doc = "Field `SLEEP_REJECT_ENA` reader - sleep reject enable"]
+pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `SLEEP_REJECT_ENA` writer - sleep reject enable"]
+pub type SLEEP_REJECT_ENA_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SLP_REJECT_CONF_SPEC, u32, u32, 18, O>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
 pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader<bool>;
@@ -52,8 +52,8 @@ pub type DEEP_SLP_REJECT_EN_W<'a, const O: u8> =
 impl R {
     #[doc = "Bits 12:29 - sleep reject enable"]
     #[inline(always)]
-    pub fn rtc_sleep_reject_ena(&self) -> RTC_SLEEP_REJECT_ENA_R {
-        RTC_SLEEP_REJECT_ENA_R::new(((self.bits >> 12) & 0x0003_ffff) as u32)
+    pub fn sleep_reject_ena(&self) -> SLEEP_REJECT_ENA_R {
+        SLEEP_REJECT_ENA_R::new(((self.bits >> 12) & 0x0003_ffff) as u32)
     }
     #[doc = "Bit 30 - enable reject for light sleep"]
     #[inline(always)]
@@ -69,8 +69,8 @@ impl R {
 impl W {
     #[doc = "Bits 12:29 - sleep reject enable"]
     #[inline(always)]
-    pub fn rtc_sleep_reject_ena(&mut self) -> RTC_SLEEP_REJECT_ENA_W<12> {
-        RTC_SLEEP_REJECT_ENA_W::new(self)
+    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<12> {
+        SLEEP_REJECT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - enable reject for light sleep"]
     #[inline(always)]
