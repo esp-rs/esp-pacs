@@ -25,8 +25,8 @@ pub type RD_SPI_PAD_CONFIG_CS0_R = crate::FieldReader<u8, u8>;
 pub type RD_CHIP_VER_REV2_R = crate::BitReader<bool>;
 #[doc = "Field `RD_VOL_LEVEL_HP_INV` reader - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (RO)"]
 pub type RD_VOL_LEVEL_HP_INV_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RD_DIG_VOL_L6` reader - "]
-pub type RD_DIG_VOL_L6_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RD_WAFER_VERSION_MINOR` reader - "]
+pub type RD_WAFER_VERSION_MINOR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_FLASH_CRYPT_CONFIG` reader - read for flash_crypt_config"]
 pub type RD_FLASH_CRYPT_CONFIG_R = crate::FieldReader<u8, u8>;
 impl R {
@@ -60,10 +60,10 @@ impl R {
     pub fn rd_vol_level_hp_inv(&self) -> RD_VOL_LEVEL_HP_INV_R {
         RD_VOL_LEVEL_HP_INV_R::new(((self.bits >> 22) & 3) as u8)
     }
-    #[doc = "Bits 24:27"]
+    #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn rd_dig_vol_l6(&self) -> RD_DIG_VOL_L6_R {
-        RD_DIG_VOL_L6_R::new(((self.bits >> 24) & 0x0f) as u8)
+    pub fn rd_wafer_version_minor(&self) -> RD_WAFER_VERSION_MINOR_R {
+        RD_WAFER_VERSION_MINOR_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 28:31 - read for flash_crypt_config"]
     #[inline(always)]

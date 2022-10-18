@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32</series>
-  <version>7</version>
+  <version>8</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -596,6 +596,46 @@
         <size>0x5C0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>WIFI_MAC</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_NMI</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_BB</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_MAC</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB_NMI</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT_NMI</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE_NMI</name>
+        <value>9</value>
+      </interrupt>
       <registers>
         <register>
           <name>PRO_BOOT_REMAP_CTRL</name>
@@ -1759,165 +1799,167 @@
           <name>PERIP_CLK_EN</name>
           <addressOffset>0xC0</addressOffset>
           <size>0x20</size>
+          <resetValue>0xF9C1E06F</resetValue>
           <fields>
             <field>
+              <name>TIMERS_CLK_EN</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>SPI01_CLK_EN</name>
-              <description>SPI0 and SPI1 module.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART_CLK_EN</name>
-              <description>UART0 module.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
+              <name>WDG_CLK_EN</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>I2S0_CLK_EN</name>
-              <description>I2S0 module.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART1_CLK_EN</name>
-              <description>UART1 module.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI2_CLK_EN</name>
-              <description>SPI2 module.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2C0_EXT0_CLK_EN</name>
-              <description>I2C0 module.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UHCI0_CLK_EN</name>
-              <description>UDMA0 module.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RMT_CLK_EN</name>
-              <description>RMT module.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PCNT_CLK_EN</name>
-              <description>PCNT module.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>LEDC_CLK_EN</name>
-              <description>LEDC module.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UHCI1_CLK_EN</name>
-              <description>UDMA1 module.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIMERGROUP_CLK_EN</name>
-              <description>TIMG0 module.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>EFUSE_CLK_EN</name>
-              <description>eFuse module.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIMERGROUP1_CLK_EN</name>
-              <description>TIMG1 module.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI3_CLK_EN</name>
-              <description>SPI3 module.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PWM0_CLK_EN</name>
-              <description>PWM0 module.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2C_EXT1_CLK_EN</name>
-              <description>I2C1 module.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TWAI_CLK_EN</name>
-              <description>TWAI module.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PWM1_CLK_EN</name>
-              <description>PWM1 module.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2S1_CLK_EN</name>
-              <description>I2S1 module.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI_DMA_CLK_EN</name>
-              <description>SPI_DMA module.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART2_CLK_EN</name>
-              <description>UART2 module.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART_MEM_CLK_EN</name>
-              <description>Shared memory of UART0 ~ 2.</description>
               <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM2_CLK_EN</name>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM3_CLK_EN</name>
+              <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -1929,163 +1971,164 @@
           <size>0x20</size>
           <fields>
             <field>
+              <name>TIMERS_RST</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>SPI01_RST</name>
-              <description>SPI0 and SPI1 module.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART_RST</name>
-              <description>UART0 module.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
+              <name>WDG_RST</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>I2S0_RST</name>
-              <description>I2S0 module.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART1_RST</name>
-              <description>UART1 module.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI2_RST</name>
-              <description>SPI2 module.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2C0_EXT0_RST</name>
-              <description>I2C0 module.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UHCI0_RST</name>
-              <description>UDMA0 module.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>RMT_RST</name>
-              <description>RMT module.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PCNT_RST</name>
-              <description>PCNT module.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>LEDC_RST</name>
-              <description>LEDC module.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UHCI1_RST</name>
-              <description>UDMA1 module.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIMERGROUP_RST</name>
-              <description>TIMG0 module.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>EFUSE_RST</name>
-              <description>eFuse module.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TIMERGROUP1_RST</name>
-              <description>TIMG1 module.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI3_RST</name>
-              <description>SPI3 module.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PWM0_RST</name>
-              <description>PWM0 module.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2C_EXT1_RST</name>
-              <description>I2C1 module.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>TWAI_RST</name>
-              <description>TWAI module.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>PWM1_RST</name>
-              <description>PWM1 module.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>I2S1_RST</name>
-              <description>I2S1 module.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SPI_DMA_RST</name>
-              <description>SPI_DMA module.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART2_RST</name>
-              <description>UART2 module.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>UART_MEM_RST</name>
-              <description>Shared memory of UART0 ~ 2.</description>
               <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM2_RST</name>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWM3_RST</name>
+              <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
@@ -2163,6 +2206,72 @@
               <name>CORE_RST</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BB_RST</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FE_RST</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MAC_RST</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BT_RST</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BTMAC_RST</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDIO_RST</name>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SDIO_HOST_RST</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EMAC_RST</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MACPWR_RST</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RW_BTMAC_RST</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RW_BTLP_RST</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -5536,6 +5645,18 @@
               <access>read-write</access>
             </field>
             <field>
+              <name>RECORD_PDEBUGINST_LOOP_REP</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGINST_LOOP</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RECORD_PDEBUGINST_CINTL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
@@ -5580,6 +5701,12 @@
               <access>read-only</access>
             </field>
             <field>
+              <name>RECORD_PDEBUGDATA_DEP_OTHER</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RECORD_PDEBUGDATA_EXCVEC</name>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
@@ -5592,15 +5719,171 @@
               <access>read-write</access>
             </field>
             <field>
+              <name>RECORD_PDEBUGDATA_INSNTYPE_RER</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_BUFF</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_INSNTYPE_WER</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_BUFFCONFL</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RECORD_PDEBUGDATA_INSNTYPE_ER</name>
               <bitOffset>2</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-write</access>
             </field>
             <field>
+              <name>RECORD_PDEBUGDATA_STALL_DCM</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_LSU</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_ICM</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_IRAMBUSY</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_DEP_LSU</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_IPIF</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_INSNTYPE_RSR</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_TIE</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_INSNTYPE_WSR</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_RUN</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_INSNTYPE_XSR</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_DEP_STR</name>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_DEP</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_BPIFETCH</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_L32R</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_LSPROC</name>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_BPLOAD</name>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_DEP_MEMW</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
               <name>RECORD_PDEBUGDATA_EXCCAUSE</name>
               <bitOffset>16</bitOffset>
               <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_BANKCONFL</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_DEP_HALT</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_ITERMUL</name>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGDATA_STALL_ITERDIV</name>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -5639,6 +5922,42 @@
               <name>RECORD_PDEBUGLS0STAT_SZ</name>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_DTLBM</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_DCM</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_DCH</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_UC</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_WB</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RECORD_PDEBUGLS0STAT_COH</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
@@ -7242,9 +7561,9 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RD_DIG_VOL_L6</name>
+              <name>RD_WAFER_VERSION_MINOR</name>
               <bitOffset>24</bitOffset>
-              <bitWidth>4</bitWidth>
+              <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
@@ -9280,41 +9599,42 @@
         <register>
           <dim>40</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-39</dimIndex>
           <name>PIN%s</name>
           <addressOffset>0x88</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PIN_PAD_DRIVER</name>
-              <description>if set to : normal output  if set to 1: open drain</description>
+              <name>PAD_DRIVER</name>
+              <description>if set to 0: normal output  if set to 1: open drain</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_TYPE</name>
-              <description>if set to : GPIO interrupt disable  if set to 1: rising edge trigger  if set to 2: falling edge trigger  if set to 3: any edge trigger  if set to 4: low level trigger  if set to 5: high level trigger</description>
+              <name>INT_TYPE</name>
+              <description>if set to 0: GPIO interrupt disable  if set to 1: rising edge trigger  if set to 2: falling edge trigger  if set to 3: any edge trigger  if set to 4: low level trigger  if set to 5: high level trigger</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_WAKEUP_ENABLE</name>
+              <name>WAKEUP_ENABLE</name>
               <description>GPIO wake up enable  only available in light sleep</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_CONFIG</name>
+              <name>CONFIG</name>
               <description>NA</description>
               <bitOffset>11</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_ENA</name>
-              <description>bit: APP CPU interrupt enable  bit1: APP CPU non-maskable interrupt enable  bit3: PRO CPU interrupt enable  bit4:  PRO CPU non-maskable interrupt enable  bit5: SDIO's extent interrupt enable</description>
+              <name>INT_ENA</name>
+              <description>bit0: APP CPU interrupt enable  bit1: APP CPU non-maskable interrupt enable  bit3: PRO CPU interrupt enable  bit4:  PRO CPU non-maskable interrupt enable  bit5: SDIO's extent interrupt enable</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -9368,6 +9688,7 @@
         <register>
           <dim>256</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-255</dimIndex>
           <name>FUNC%s_IN_SEL_CFG</name>
           <addressOffset>0x130</addressOffset>
           <size>0x20</size>
@@ -9398,13 +9719,14 @@
         <register>
           <dim>40</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-39</dimIndex>
           <name>FUNC%s_OUT_SEL_CFG</name>
           <addressOffset>0x530</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>OUT_SEL</name>
-              <description>select one of the 256 output to 4 GPIO</description>
+              <description>select one of the 256 output to 40 GPIO</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -9452,13 +9774,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD0_IN</name>
+              <name>SD0_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD0_PRESCALE</name>
+              <name>SD0_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9472,13 +9794,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD1_IN</name>
+              <name>SD1_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD1_PRESCALE</name>
+              <name>SD1_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9492,13 +9814,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD2_IN</name>
+              <name>SD2_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD2_PRESCALE</name>
+              <name>SD2_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9512,13 +9834,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD3_IN</name>
+              <name>SD3_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD3_PRESCALE</name>
+              <name>SD3_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9532,13 +9854,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD4_IN</name>
+              <name>SD4_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD4_PRESCALE</name>
+              <name>SD4_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9552,13 +9874,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD5_IN</name>
+              <name>SD5_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD5_PRESCALE</name>
+              <name>SD5_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9572,13 +9894,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD6_IN</name>
+              <name>SD6_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD6_PRESCALE</name>
+              <name>SD6_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9592,13 +9914,13 @@
           <resetValue>0x0000FF00</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD7_IN</name>
+              <name>SD7_IN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>GPIO_SD7_PRESCALE</name>
+              <name>SD7_PRESCALE</name>
               <bitOffset>8</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
@@ -9606,12 +9928,12 @@
           </fields>
         </register>
         <register>
-          <name>SIGMADELTA_CG</name>
+          <name>CG</name>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>GPIO_SD_CLK_EN</name>
+              <name>SD_CLK_EN</name>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -9619,12 +9941,12 @@
           </fields>
         </register>
         <register>
-          <name>SIGMADELTA_MISC</name>
+          <name>MISC</name>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>GPIO_SPI_SWAP</name>
+              <name>SPI_SWAP</name>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -9632,13 +9954,13 @@
           </fields>
         </register>
         <register>
-          <name>SIGMADELTA_VERSION</name>
+          <name>VERSION</name>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <resetValue>0x01506190</resetValue>
           <fields>
             <field>
-              <name>GPIO_SD_DATE</name>
+              <name>SD_DATE</name>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
               <access>read-write</access>
@@ -10825,20 +11147,21 @@
         <register>
           <dim>16</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-15</dimIndex>
           <name>COMD%s</name>
           <addressOffset>0x58</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
               <name>COMMAND</name>
-              <description>This is the content of command. It consists of three part. op_code is the command  : RSTART   1: WRITE  2: READ  3: STOP . 4:END.  Byte_num represent the number of data need to be send or data need to be received. ack_check_en  ack_exp and ack value are used to control  the ack bit.</description>
+              <description>This is the content of command0. It consists of three part. op_code is the command  0: RSTART   1: WRITE  2: READ  3: STOP . 4:END.  Byte_num represent the number of data need to be send or data need to be received. ack_check_en  ack_exp and ack value are used to control  the ack bit.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>COMMAND_DONE</name>
-              <description>When command is done in I2C Master mode  this bit changes to high level.</description>
+              <description>When command0 is done in I2C Master mode  this bit changes to high level.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -15734,47 +16057,46 @@
       </interrupt>
       <registers>
         <register>
-          <name>HSCH0_CONF0</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>HSCH%s_CONF0</name>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_HSCH0</name>
+              <name>TIMER_SEL</name>
               <description>There are four high speed timers  the two bits are used to select one of them for high speed channel0.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SIG_OUT_EN_HSCH0</name>
+              <name>SIG_OUT_EN</name>
               <description>This is the output enable control bit for high speed channel0</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_LV_HSCH0</name>
+              <name>IDLE_LV</name>
               <description>This bit is used to control the output value when high speed channel0 is off.</description>
               <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CLK_EN</name>
-              <description>This bit is clock gating control signal. when software config LED_PWM internal registers  it controls the register clock.</description>
-              <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
         </register>
         <register>
-          <name>HSCH0_HPOINT</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>HSCH%s_HPOINT</name>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>HPOINT_HSCH0</name>
+              <name>HPOINT</name>
               <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel0 has reached reg_hpoint_hsch0[19:0]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
@@ -15783,55 +16105,61 @@
           </fields>
         </register>
         <register>
-          <name>HSCH0_DUTY</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>HSCH%s_DUTY</name>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DUTY_HSCH0</name>
+              <name>DUTY</name>
               <description>This register represents the current duty of the output signal for high speed channel0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>25</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
         <register>
-          <name>HSCH0_CONF1</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>HSCH%s_CONF1</name>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <resetValue>0x40000000</resetValue>
           <fields>
             <field>
-              <name>DUTY_SCALE_HSCH0</name>
+              <name>DUTY_SCALE</name>
               <description>This register controls the increase or decrease step scale for high speed channel0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_CYCLE_HSCH0</name>
+              <name>DUTY_CYCLE</name>
               <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch0 cycles for high speed channel0.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_NUM_HSCH0</name>
+              <name>DUTY_NUM</name>
               <description>This register is used to control the num of increased or decreased times for high speed channel0.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_INC_HSCH0</name>
+              <name>DUTY_INC</name>
               <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel0.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_START_HSCH0</name>
+              <name>DUTY_START</name>
               <description>When reg_duty_num_hsch0 reg_duty_cycle_hsch0 and reg_duty_scale_hsch0 has been configured. these register won't take effect until set reg_duty_start_hsch0. this bit is automatically cleared by hardware.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15840,60 +16168,16 @@
           </fields>
         </register>
         <register>
-          <name>HSCH0_DUTY_R</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>HSCH%s_DUTY_R</name>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH1_CONF0</name>
-          <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_HSCH1</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel1.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH1</name>
-              <description>This is the output enable control bit for high speed channel1</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH1</name>
-              <description>This bit is used to control the output value when high speed channel1 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH1_HPOINT</name>
-          <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH1</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel1 has reached reg_hpoint_hsch1[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH1_DUTY</name>
-          <addressOffset>0x1C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH1</name>
-              <description>This register represents the current duty of the output signal for high speed channel1.</description>
+              <name>DUTY_R</name>
+              <description>This register represents the current duty cycle of the output signal for high-speed channel %s</description>
               <bitOffset>0</bitOffset>
               <bitWidth>25</bitWidth>
               <access>read-only</access>
@@ -15901,705 +16185,36 @@
           </fields>
         </register>
         <register>
-          <name>HSCH1_CONF1</name>
-          <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH1</name>
-              <description>This register controls the increase or decrease step scale for high speed channel1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH1</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch1 cycles for high speed channel1.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH1</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel1.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH1</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel1.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH1</name>
-              <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH1_DUTY_R</name>
-          <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH2_CONF0</name>
-          <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH2</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel2.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH2</name>
-              <description>This is the output enable control bit for high speed channel2</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH2</name>
-              <description>This bit is used to control the output value when high speed channel2 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH2_HPOINT</name>
-          <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH2</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel2 has reached reg_hpoint_hsch2[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH2_DUTY</name>
-          <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH2</name>
-              <description>This register represents the current duty of the output signal for high speed channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH2_CONF1</name>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH2</name>
-              <description>This register controls the increase or decrease step scale for high speed channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH2</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch2 cycles for high speed channel2.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH2</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel2.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH2</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel2.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH2</name>
-              <description>When reg_duty_num_hsch2 reg_duty_cycle_hsch2 and reg_duty_scale_hsch2 has been configured. these register won't take effect until set reg_duty_start_hsch2. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH2_DUTY_R</name>
-          <addressOffset>0x38</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH3_CONF0</name>
-          <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH3</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel3.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH3</name>
-              <description>This is the output enable control bit for high speed channel3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH3</name>
-              <description>This bit is used to control the output value when high speed channel3 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH3_HPOINT</name>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH3</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel3 has reached reg_hpoint_hsch3[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH3_DUTY</name>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH3</name>
-              <description>This register represents the current duty of the output signal for high speed channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH3_CONF1</name>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH3</name>
-              <description>This register controls the increase or decrease step scale for high speed channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH3</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch3 cycles for high speed channel3.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH3</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel3.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH3</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel3.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH3</name>
-              <description>When reg_duty_num_hsch3 reg_duty_cycle_hsch3 and reg_duty_scale_hsch3 has been configured. these register won't take effect until set reg_duty_start_hsch3. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH3_DUTY_R</name>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH4_CONF0</name>
-          <addressOffset>0x50</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH4</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel4.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH4</name>
-              <description>This is the output enable control bit for high speed channel4</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH4</name>
-              <description>This bit is used to control the output value when high speed channel4 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH4_HPOINT</name>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH4</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel4 has reached reg_hpoint_hsch4[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH4_DUTY</name>
-          <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH4</name>
-              <description>This register represents the current duty of the output signal for high speed channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH4_CONF1</name>
-          <addressOffset>0x5C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH4</name>
-              <description>This register controls the increase or decrease step scale for high speed channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH4</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch4 cycles for high speed channel4.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH4</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel1.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH4</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel4.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH4</name>
-              <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH4_DUTY_R</name>
-          <addressOffset>0x60</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH5_CONF0</name>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH5</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel5.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH5</name>
-              <description>This is the output enable control bit for high speed channel5.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH5</name>
-              <description>This bit is used to control the output value when high speed channel5 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH5_HPOINT</name>
-          <addressOffset>0x68</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH5</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel5 has reached reg_hpoint_hsch5[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH5_DUTY</name>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH5</name>
-              <description>This register represents the current duty of the output signal for high speed channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH5_CONF1</name>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH5</name>
-              <description>This register controls the increase or decrease step scale for high speed channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH5</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch5 cycles for high speed channel5.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH5</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel5.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH5</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel5.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH5</name>
-              <description>When reg_duty_num_hsch5 reg_duty_cycle_hsch5 and reg_duty_scale_hsch5 has been configured. these register won't take effect until set reg_duty_start_hsch5. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH5_DUTY_R</name>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH6_CONF0</name>
-          <addressOffset>0x78</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH6</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel6.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH6</name>
-              <description>This is the output enable control bit for high speed channel6</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH6</name>
-              <description>This bit is used to control the output value when high speed channel6 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH6_HPOINT</name>
-          <addressOffset>0x7C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH6</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel6 has reached reg_hpoint_hsch6[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH6_DUTY</name>
-          <addressOffset>0x80</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH6</name>
-              <description>This register represents the current duty of the output signal for high speed channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH6_CONF1</name>
-          <addressOffset>0x84</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH6</name>
-              <description>This register controls the increase or decrease step scale for high speed channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH6</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch6 cycles for high speed channel6.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH6</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel6.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH6</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel6.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH6</name>
-              <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH6_DUTY_R</name>
-          <addressOffset>0x88</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSCH7_CONF0</name>
-          <addressOffset>0x8C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_HSCH7</name>
-              <description>There are four high speed timers  the two bits are used to select one of them for high speed channel7.  2'b00: seletc hstimer0.   2'b01: select hstimer1.  2'b10: select hstimer2.    2'b11: select hstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_HSCH7</name>
-              <description>This is the output enable control bit for high speed channel7.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_HSCH7</name>
-              <description>This bit is used to control the output value when high speed channel7 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH7_HPOINT</name>
-          <addressOffset>0x90</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_HSCH7</name>
-              <description>The output value changes to high when htimerx(x=[0 3]) selected by high speed channel7 has reached reg_hpoint_hsch7[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH7_DUTY</name>
-          <addressOffset>0x94</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_HSCH7</name>
-              <description>This register represents the current duty of the output signal for high speed channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH7_CONF1</name>
-          <addressOffset>0x98</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_HSCH7</name>
-              <description>This register controls the increase or decrease step scale for high speed channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_HSCH7</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_hsch7 cycles for high speed channel7.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_HSCH7</name>
-              <description>This register is used to control the num of increased or decreased times for high speed channel6.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_HSCH7</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel6.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_HSCH7</name>
-              <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSCH7_DUTY_R</name>
-          <addressOffset>0x9C</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH0_CONF0</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>LSCH%s_CONF0</name>
           <addressOffset>0xA0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_LSCH0</name>
+              <name>TIMER_SEL</name>
               <description>There are four low speed timers  the two bits are used to select one of them for low speed channel0.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SIG_OUT_EN_LSCH0</name>
+              <name>SIG_OUT_EN</name>
               <description>This is the output enable control bit for low speed channel0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_LV_LSCH0</name>
+              <name>IDLE_LV</name>
               <description>This bit is used to control the output value when low speed channel0 is off.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PARA_UP_LSCH0</name>
+              <name>PARA_UP</name>
               <description>This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16608,12 +16223,15 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_HPOINT</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>LSCH%s_HPOINT</name>
           <addressOffset>0xA4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>HPOINT_LSCH0</name>
+              <name>HPOINT</name>
               <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel0 has reached reg_hpoint_lsch0[19:0]</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
@@ -16622,55 +16240,62 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_DUTY</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>LSCH%s_DUTY</name>
           <addressOffset>0xA8</addressOffset>
           <size>0x20</size>
+          <access>read-write</access>
           <fields>
             <field>
-              <name>DUTY_LSCH0</name>
+              <name>DUTY</name>
               <description>This register represents the current duty of the output signal for low speed channel0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>25</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
         <register>
-          <name>LSCH0_CONF1</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>LSCH%s_CONF1</name>
           <addressOffset>0xAC</addressOffset>
           <size>0x20</size>
           <resetValue>0x40000000</resetValue>
           <fields>
             <field>
-              <name>DUTY_SCALE_LSCH0</name>
+              <name>DUTY_SCALE</name>
               <description>This register controls the increase or decrease step scale for low speed channel0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_CYCLE_LSCH0</name>
+              <name>DUTY_CYCLE</name>
               <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch0 cycles for low speed channel0.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_NUM_LSCH0</name>
+              <name>DUTY_NUM</name>
               <description>This register is used to control the num of increased or decreased times for low speed channel6.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_INC_LSCH0</name>
+              <name>DUTY_INC</name>
               <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel6.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_START_LSCH0</name>
+              <name>DUTY_START</name>
               <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16679,67 +16304,16 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_DUTY_R</name>
+          <dim>8</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-7</dimIndex>
+          <name>LSCH%s_DUTY_R</name>
           <addressOffset>0xB0</addressOffset>
           <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH1_CONF0</name>
-          <addressOffset>0xB4</addressOffset>
-          <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_LSCH1</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel1.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH1</name>
-              <description>This is the output enable control bit for low speed channel1.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH1</name>
-              <description>This bit is used to control the output value when low speed channel1 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH1</name>
-              <description>This bit is used to update register LEDC_LSCH1_HPOINT and LEDC_LSCH1_DUTY for low speed channel1.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_HPOINT</name>
-          <addressOffset>0xB8</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH1</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel1 has reached reg_hpoint_lsch1[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_DUTY</name>
-          <addressOffset>0xBC</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH1</name>
-              <description>This register represents the current duty of the output signal for low speed channel1.</description>
+              <name>DUTY_R</name>
+              <description>This register represents the current duty cycle of the output signal for low-speed channel %s</description>
               <bitOffset>0</bitOffset>
               <bitWidth>25</bitWidth>
               <access>read-only</access>
@@ -16747,762 +16321,51 @@
           </fields>
         </register>
         <register>
-          <name>LSCH1_CONF1</name>
-          <addressOffset>0xC0</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH1</name>
-              <description>This register controls the increase or decrease step scale for low speed channel1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH1</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch1 cycles for low speed channel1.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH1</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel1.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH1</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel1.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH1</name>
-              <description>When reg_duty_num_hsch1 reg_duty_cycle_hsch1 and reg_duty_scale_hsch1 has been configured. these register won't take effect until set reg_duty_start_hsch1. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_DUTY_R</name>
-          <addressOffset>0xC4</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH2_CONF0</name>
-          <addressOffset>0xC8</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH2</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel2.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH2</name>
-              <description>This is the output enable control bit for low speed channel2.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH2</name>
-              <description>This bit is used to control the output value when low speed channel2 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH2</name>
-              <description>This bit is used to update register LEDC_LSCH2_HPOINT and LEDC_LSCH2_DUTY for low speed channel2.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_HPOINT</name>
-          <addressOffset>0xCC</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH2</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel2 has reached reg_hpoint_lsch2[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_DUTY</name>
-          <addressOffset>0xD0</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH2</name>
-              <description>This register represents the current duty of the output signal for low speed channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_CONF1</name>
-          <addressOffset>0xD4</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH2</name>
-              <description>This register controls the increase or decrease step scale for low speed channel2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH2</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch2 cycles for low speed channel2.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH2</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel2.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH2</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel2.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH2</name>
-              <description>When reg_duty_num_hsch2 reg_duty_cycle_hsch2 and reg_duty_scale_hsch2 has been configured. these register won't take effect until set reg_duty_start_hsch2. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_DUTY_R</name>
-          <addressOffset>0xD8</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH3_CONF0</name>
-          <addressOffset>0xDC</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH3</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel3.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH3</name>
-              <description>This is the output enable control bit for low speed channel3.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH3</name>
-              <description>This bit is used to control the output value when low speed channel3 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH3</name>
-              <description>This bit is used to update register LEDC_LSCH3_HPOINT and LEDC_LSCH3_DUTY for low speed channel3.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_HPOINT</name>
-          <addressOffset>0xE0</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH3</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel3 has reached reg_hpoint_lsch3[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_DUTY</name>
-          <addressOffset>0xE4</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH3</name>
-              <description>This register represents the current duty of the output signal for low speed channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_CONF1</name>
-          <addressOffset>0xE8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH3</name>
-              <description>This register controls the increase or decrease step scale for low speed channel3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH3</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch3 cycles for low speed channel3.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH3</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel3.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH3</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel3.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH3</name>
-              <description>When reg_duty_num_hsch3 reg_duty_cycle_hsch3 and reg_duty_scale_hsch3 has been configured. these register won't take effect until set reg_duty_start_hsch3. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_DUTY_R</name>
-          <addressOffset>0xEC</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH4_CONF0</name>
-          <addressOffset>0xF0</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH4</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel4.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH4</name>
-              <description>This is the output enable control bit for low speed channel4.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH4</name>
-              <description>This bit is used to control the output value when low speed channel4 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH4</name>
-              <description>This bit is used to update register LEDC_LSCH4_HPOINT and LEDC_LSCH4_DUTY for low speed channel4.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_HPOINT</name>
-          <addressOffset>0xF4</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH4</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel4 has reached reg_hpoint_lsch4[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_DUTY</name>
-          <addressOffset>0xF8</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH4</name>
-              <description>This register represents the current duty of the output signal for low speed channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_CONF1</name>
-          <addressOffset>0xFC</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH4</name>
-              <description>This register controls the increase or decrease step scale for low speed channel4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH4</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch4 cycles for low speed channel4.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH4</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel4.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH4</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel4.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH4</name>
-              <description>When reg_duty_num_hsch4  reg_duty_cycle_hsch4 and reg_duty_scale_hsch4 has been configured. these register won't take effect until set reg_duty_start_hsch4. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_DUTY_R</name>
-          <addressOffset>0x100</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH5_CONF0</name>
-          <addressOffset>0x104</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH5</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel5.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH5</name>
-              <description>This is the output enable control bit for low speed channel5.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH5</name>
-              <description>This bit is used to control the output value when low speed channel5 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH5</name>
-              <description>This bit is used to update register LEDC_LSCH5_HPOINT and LEDC_LSCH5_DUTY for low speed channel5.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_HPOINT</name>
-          <addressOffset>0x108</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH5</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel5 has reached reg_hpoint_lsch5[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_DUTY</name>
-          <addressOffset>0x10C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH5</name>
-              <description>This register represents the current duty of the output signal for low speed channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_CONF1</name>
-          <addressOffset>0x110</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH5</name>
-              <description>This register controls the increase or decrease step scale for low speed channel5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH5</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch5 cycles for low speed channel4.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH5</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel5.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH5</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel5.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH5</name>
-              <description>When reg_duty_num_hsch4  reg_duty_cycle_hsch4 and reg_duty_scale_hsch4 has been configured. these register won't take effect until set reg_duty_start_hsch4. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_DUTY_R</name>
-          <addressOffset>0x114</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH6_CONF0</name>
-          <addressOffset>0x118</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH6</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel6.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH6</name>
-              <description>This is the output enable control bit for low speed channel6.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH6</name>
-              <description>This bit is used to control the output value when low speed channel6 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH6</name>
-              <description>This bit is used to update register LEDC_LSCH6_HPOINT and LEDC_LSCH6_DUTY for low speed channel6.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH6_HPOINT</name>
-          <addressOffset>0x11C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH6</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel6 has reached reg_hpoint_lsch6[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH6_DUTY</name>
-          <addressOffset>0x120</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH6</name>
-              <description>This register represents the current duty of the output signal for low speed channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH6_CONF1</name>
-          <addressOffset>0x124</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH6</name>
-              <description>This register controls the increase or decrease step scale for low speed channel6.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH6</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch6 cycles for low speed channel6.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH6</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel6.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH6</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel6.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH6</name>
-              <description>When reg_duty_num_hsch6  reg_duty_cycle_hsch6 and reg_duty_scale_hsch6 has been configured. these register won't take effect until set reg_duty_start_hsch6. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH6_DUTY_R</name>
-          <addressOffset>0x128</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>LSCH7_CONF0</name>
-          <addressOffset>0x12C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH7</name>
-              <description>There are four low speed timers  the two bits are used to select one of them for low speed channel7.  2'b00: seletc lstimer0.   2'b01: select lstimer1.  2'b10: select lstimer2.    2'b11: select lstimer3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH7</name>
-              <description>This is the output enable control bit for low speed channel7.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH7</name>
-              <description>This bit is used to control the output value when low speed channel7 is off.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH7</name>
-              <description>This bit is used to update register LEDC_LSCH7_HPOINT and LEDC_LSCH7_DUTY for low speed channel7.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH7_HPOINT</name>
-          <addressOffset>0x130</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH7</name>
-              <description>The output value changes to high when lstimerx(x=[0 3]) selected by low speed channel7 has reached reg_hpoint_lsch7[19:0]</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH7_DUTY</name>
-          <addressOffset>0x134</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH7</name>
-              <description>This register represents the current duty of the output signal for low speed channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>25</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH7_CONF1</name>
-          <addressOffset>0x138</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH7</name>
-              <description>This register controls the increase or decrease step scale for low speed channel7.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH7</name>
-              <description>This register is used to increase or decrease the duty every reg_duty_cycle_lsch7 cycles for low speed channel7.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH7</name>
-              <description>This register is used to control the num of increased or decreased times for low speed channel4.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH7</name>
-              <description>This register is used to increase the duty of output signal or decrease the duty of output signal for low speed channel4.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH7</name>
-              <description>When reg_duty_num_hsch4  reg_duty_cycle_hsch4 and reg_duty_scale_hsch4 has been configured. these register won't take effect until set reg_duty_start_hsch4. this bit is automatically cleared by hardware.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH7_DUTY_R</name>
-          <addressOffset>0x13C</addressOffset>
-          <size>0x20</size>
-        </register>
-        <register>
-          <name>HSTIMER0_CONF</name>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>HSTIMER%s_CONF</name>
           <addressOffset>0x140</addressOffset>
           <size>0x20</size>
           <resetValue>0x01000000</resetValue>
           <fields>
             <field>
-              <name>HSTIMER0_DUTY_RES</name>
+              <name>DUTY_RES</name>
               <description>This register controls the range of the counter in high speed timer0. the counter range is [0 2**reg_hstimer0_lim] the max bit width for counter is 20.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DIV_NUM_HSTIMER0</name>
+              <name>DIV_NUM</name>
               <description>This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HSTIMER0_PAUSE</name>
+              <name>PAUSE</name>
               <description>This bit is used to pause the counter in high speed timer0</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HSTIMER0_RST</name>
+              <name>RST</name>
               <description>This bit is used to reset high speed timer0 the counter will be 0 after reset.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TICK_SEL_HSTIMER0</name>
+              <name>TICK_SEL</name>
               <description>This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk  0:ref_tick</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>HSTIMER0_LIM</name>
+              <name>LIM</name>
               <bitOffset>31</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -17510,12 +16373,15 @@
           </fields>
         </register>
         <register>
-          <name>HSTIMER0_VALUE</name>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>HSTIMER%s_VALUE</name>
           <addressOffset>0x144</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>HSTIMER0_CNT</name>
+              <name>CNT</name>
               <description>software can read this register to get the current counter value in high speed timer0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
@@ -17524,244 +16390,58 @@
           </fields>
         </register>
         <register>
-          <name>HSTIMER1_CONF</name>
-          <addressOffset>0x148</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>HSTIMER1_DUTY_RES</name>
-              <description>This register controls the range of the counter in high speed timer1. the counter range is [0 2**reg_hstimer1_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_HSTIMER1</name>
-              <description>This register is used to configure parameter for divider in high speed timer1 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER1_PAUSE</name>
-              <description>This bit is used to pause the counter in high speed timer1</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER1_RST</name>
-              <description>This bit is used to reset high speed timer1 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_HSTIMER1</name>
-              <description>This bit is used to choose apb_clk or ref_tick for high speed timer1. 1'b1:apb_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER1_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSTIMER1_VALUE</name>
-          <addressOffset>0x14C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HSTIMER1_CNT</name>
-              <description>software can read this register to get the current counter value in high speed timer1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSTIMER2_CONF</name>
-          <addressOffset>0x150</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>HSTIMER2_DUTY_RES</name>
-              <description>This register controls the range of the counter in high speed timer2. the counter range is [0 2**reg_hstimer2_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_HSTIMER2</name>
-              <description>This register is used to configure parameter for divider in high speed timer2 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER2_PAUSE</name>
-              <description>This bit is used to pause the counter in high speed timer2</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER2_RST</name>
-              <description>This bit is used to reset high speed timer2 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_HSTIMER2</name>
-              <description>This bit is used to choose apb_clk or ref_tick for high speed timer2. 1'b1:apb_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER2_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSTIMER2_VALUE</name>
-          <addressOffset>0x154</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HSTIMER2_CNT</name>
-              <description>software can read this register to get the current counter value in high speed timer2</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSTIMER3_CONF</name>
-          <addressOffset>0x158</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>HSTIMER3_DUTY_RES</name>
-              <description>This register controls the range of the counter in high speed timer3. the counter range is [0 2**reg_hstimer3_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_HSTIMER3</name>
-              <description>This register is used to configure parameter for divider in high speed timer3 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER3_PAUSE</name>
-              <description>This bit is used to pause the counter in high speed timer3</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER3_RST</name>
-              <description>This bit is used to reset high speed timer3 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_HSTIMER3</name>
-              <description>This bit is used to choose apb_clk or ref_tick for high speed timer3. 1'b1:apb_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>HSTIMER3_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>HSTIMER3_VALUE</name>
-          <addressOffset>0x15C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HSTIMER3_CNT</name>
-              <description>software can read this register to get the current counter value in high speed timer3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER0_CONF</name>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>LSTIMER%s_CONF</name>
           <addressOffset>0x160</addressOffset>
           <size>0x20</size>
           <resetValue>0x01000000</resetValue>
           <fields>
             <field>
-              <name>LSTIMER0_DUTY_RES</name>
+              <name>DUTY_RES</name>
               <description>This register controls the range of the counter in low speed timer0. the counter range is [0 2**reg_lstimer0_lim] the max bit width for counter is 20.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DIV_NUM_LSTIMER0</name>
+              <name>DIV_NUM</name>
               <description>This register is used to configure parameter for divider in low speed timer0 the least significant eight bits represent the decimal part.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_PAUSE</name>
+              <name>PAUSE</name>
               <description>This bit is used to pause the counter in low speed timer0.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_RST</name>
+              <name>RST</name>
               <description>This bit is used to reset low speed timer0 the counter will be 0 after reset.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TICK_SEL_LSTIMER0</name>
+              <name>TICK_SEL</name>
               <description>This bit is used to choose slow_clk or ref_tick for low speed timer0. 1'b1:slow_clk  0:ref_tick</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_PARA_UP</name>
+              <name>PARA_UP</name>
               <description>Set this bit  to update  reg_div_num_lstime0 and  reg_lstimer0_lim.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_LIM</name>
+              <name>LIM</name>
               <bitOffset>31</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
@@ -17769,223 +16449,16 @@
           </fields>
         </register>
         <register>
-          <name>LSTIMER0_VALUE</name>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>LSTIMER%s_VALUE</name>
           <addressOffset>0x164</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LSTIMER0_CNT</name>
+              <name>CNT</name>
               <description>software can read this register to get the current counter value in low speed timer0.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER1_CONF</name>
-          <addressOffset>0x168</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER1_DUTY_RES</name>
-              <description>This register controls the range of the counter in low speed timer1. the counter range is [0 2**reg_lstimer1_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_LSTIMER1</name>
-              <description>This register is used to configure parameter for divider in low speed timer1 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_PAUSE</name>
-              <description>This bit is used to pause the counter in low speed timer1.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_RST</name>
-              <description>This bit is used to reset low speed timer1 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER1</name>
-              <description>This bit is used to choose slow_clk or ref_tick for low speed timer1. 1'b1:slow_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_PARA_UP</name>
-              <description>Set this bit  to update  reg_div_num_lstime1 and  reg_lstimer1_lim.</description>
-              <bitOffset>26</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER1_VALUE</name>
-          <addressOffset>0x16C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER1_CNT</name>
-              <description>software can read this register to get the current counter value in low speed timer1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER2_CONF</name>
-          <addressOffset>0x170</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER2_DUTY_RES</name>
-              <description>This register controls the range of the counter in low speed timer2. the counter range is [0 2**reg_lstimer2_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_LSTIMER2</name>
-              <description>This register is used to configure parameter for divider in low speed timer2 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_PAUSE</name>
-              <description>This bit is used to pause the counter in low speed timer2.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_RST</name>
-              <description>This bit is used to reset low speed timer2 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER2</name>
-              <description>This bit is used to choose slow_clk or ref_tick for low speed timer2. 1'b1:slow_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_PARA_UP</name>
-              <description>Set this bit  to update  reg_div_num_lstime2 and  reg_lstimer2_lim.</description>
-              <bitOffset>26</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER2_VALUE</name>
-          <addressOffset>0x174</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER2_CNT</name>
-              <description>software can read this register to get the current counter value in low speed timer2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>20</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER3_CONF</name>
-          <addressOffset>0x178</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x01000000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER3_DUTY_RES</name>
-              <description>This register controls the range of the counter in low speed timer3. the counter range is [0 2**reg_lstimer3_lim] the max bit width for counter is 20.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIV_NUM_LSTIMER3</name>
-              <description>This register is used to configure parameter for divider in low speed timer3 the least significant eight bits represent the decimal part.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_PAUSE</name>
-              <description>This bit is used to pause the counter in low speed timer3.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_RST</name>
-              <description>This bit is used to reset low speed timer3 the counter will be 0 after reset.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER3</name>
-              <description>This bit is used to choose slow_clk or ref_tick for low speed timer3. 1'b1:slow_clk  0:ref_tick</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_PARA_UP</name>
-              <description>Set this bit  to update  reg_div_num_lstime3 and  reg_lstimer3_lim.</description>
-              <bitOffset>26</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_LIM</name>
-              <bitOffset>31</bitOffset>
-              <bitWidth>5</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER3_VALUE</name>
-          <addressOffset>0x17C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER3_CNT</name>
-              <description>software can read this register to get the current counter value in low speed timer3.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-only</access>
@@ -26573,20 +25046,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CK8M_DIV</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>DIV128</name>
+                  <description>DIV128</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>DIV256</name>
+                  <description>DIV256</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>DIV512</name>
+                  <description>DIV512</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>DIV1024</name>
+                  <description>DIV1024</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -26605,12 +25084,16 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ENB_CK8M_DIV</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CK8M_DIV_256</name>
+                  <description>CK8M_DIV_256</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CK8M</name>
+                  <description>CK8M</description>
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -26691,20 +25174,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>SOC_CLK_SEL</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>XTAL</name>
+                  <description>XTAL</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>PLL</name>
+                  <description>PLL</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CK8M</name>
+                  <description>CK8M</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>APLL</name>
+                  <description>APLL</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -26716,12 +25205,16 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>FAST_CLK_RTC_SEL</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>XTAL_DIV_4</name>
+                  <description>XTAL_DIV_4</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CK8M</name>
+                  <description>CK8M</description>
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -26733,16 +25226,21 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ANA_CLK_RTC_SEL</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>SLOW_CK</name>
+                  <description>SLOW_CK</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CK_XTAL_32K</name>
+                  <description>CK_XTAL_32K</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CK8M_D256_OUT</name>
+                  <description>CK8M_D256_OUT</description>
                   <value>2</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -28193,26 +26691,27 @@
         <register>
           <dim>18</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-17</dimIndex>
           <name>PIN%s</name>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PIN_PAD_DRIVER</name>
-              <description>if set to : normal output  if set to 1: open drain</description>
+              <name>PAD_DRIVER</name>
+              <description>if set to 0: normal output  if set to 1: open drain</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_TYPE</name>
-              <description>if set to : GPIO interrupt disable  if set to 1: rising edge trigger  if set to 2: falling edge trigger  if set to 3: any edge trigger  if set to 4: low level trigger  if set to 5: high level trigger</description>
+              <name>INT_TYPE</name>
+              <description>if set to 0: GPIO interrupt disable  if set to 1: rising edge trigger  if set to 2: falling edge trigger  if set to 3: any edge trigger  if set to 4: low level trigger  if set to 5: high level trigger</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_WAKEUP_ENABLE</name>
+              <name>WAKEUP_ENABLE</name>
               <description>GPIO wake up enable  only available in light sleep</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
@@ -42802,49 +41301,49 @@ IDINTEN[4]: DU Interrupt.</description>
           <resetValue>0x60002000</resetValue>
           <fields>
             <field>
-              <name>T0_ALARM_EN</name>
+              <name>ALARM_EN</name>
               <description>When set  alarm is enabled</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_LEVEL_INT_EN</name>
+              <name>LEVEL_INT_EN</name>
               <description>When set  level type interrupt will be generated during alarm</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_EDGE_INT_EN</name>
+              <name>EDGE_INT_EN</name>
               <description>When set  edge type interrupt will be generated during alarm</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_DIVIDER</name>
+              <name>DIVIDER</name>
               <description>Timer 0 clock (T0_clk) prescale value.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_AUTORELOAD</name>
+              <name>AUTORELOAD</name>
               <description>When set  timer 0 auto-reload at alarming is enabled</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_INCREASE</name>
+              <name>INCREASE</name>
               <description>When set  timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_EN</name>
+              <name>EN</name>
               <description>When set  timer 0 time-base counter is enabled</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -42858,7 +41357,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LO</name>
+              <name>LO</name>
               <description>Register to store timer 0 time-base counter current value lower 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42872,7 +41371,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_HI</name>
+              <name>HI</name>
               <description>Register to store timer 0 time-base counter current value higher 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42886,7 +41385,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_UPDATE</name>
+              <name>UPDATE</name>
               <description>Write any value will trigger a timer 0 time-base counter value update (timer 0 current value will be stored in registers above)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42900,7 +41399,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_LO</name>
+              <name>ALARM_LO</name>
               <description>Timer 0 time-base counter value lower 32 bits that will trigger the alarm</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42914,7 +41413,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_HI</name>
+              <name>ALARM_HI</name>
               <description>Timer 0 time-base counter value higher 32 bits that will trigger the alarm</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42928,7 +41427,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_LO</name>
+              <name>LOAD_LO</name>
               <description>Lower 32 bits of the value that will load into timer 0 time-base counter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42942,7 +41441,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_HI</name>
+              <name>LOAD_HI</name>
               <description>higher 32 bits of the value that will load into timer 0 time-base counter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42956,7 +41455,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD</name>
+              <name>LOAD</name>
               <description>Write any value will trigger timer 0 time-base counter reload</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -42971,49 +41470,49 @@ IDINTEN[4]: DU Interrupt.</description>
           <resetValue>0x60002000</resetValue>
           <fields>
             <field>
-              <name>T1_ALARM_EN</name>
+              <name>ALARM_EN</name>
               <description>When set  alarm is enabled</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_LEVEL_INT_EN</name>
+              <name>LEVEL_INT_EN</name>
               <description>When set  level type interrupt will be generated during alarm</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_EDGE_INT_EN</name>
+              <name>EDGE_INT_EN</name>
               <description>When set  edge type interrupt will be generated during alarm</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_DIVIDER</name>
+              <name>DIVIDER</name>
               <description>Timer 1 clock (T1_clk) prescale value.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_AUTORELOAD</name>
+              <name>AUTORELOAD</name>
               <description>When set  timer 1 auto-reload at alarming is enabled</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_INCREASE</name>
+              <name>INCREASE</name>
               <description>When set  timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T1_EN</name>
+              <name>EN</name>
               <description>When set  timer 1 time-base counter is enabled</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -43027,7 +41526,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_LO</name>
+              <name>LO</name>
               <description>Register to store timer 1 time-base counter current value lower 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43041,7 +41540,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_HI</name>
+              <name>HI</name>
               <description>Register to store timer 1 time-base counter current value higher 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43055,7 +41554,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_UPDATE</name>
+              <name>UPDATE</name>
               <description>Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43069,7 +41568,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_ALARM_LO</name>
+              <name>ALARM_LO</name>
               <description>Timer 1 time-base counter value lower 32 bits that will trigger the alarm</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43083,7 +41582,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_ALARM_HI</name>
+              <name>ALARM_HI</name>
               <description>Timer 1 time-base counter value higher 32 bits that will trigger the alarm</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43097,7 +41596,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_LOAD_LO</name>
+              <name>LOAD_LO</name>
               <description>Lower 32 bits of the value that will load into timer 1 time-base counter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43111,7 +41610,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_LOAD_HI</name>
+              <name>LOAD_HI</name>
               <description>higher 32 bits of the value that will load into timer 1 time-base counter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43125,7 +41624,7 @@ IDINTEN[4]: DU Interrupt.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T1_LOAD</name>
+              <name>LOAD</name>
               <description>Write any value will trigger timer 1 time-base counter reload</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -43152,6 +41651,50 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>WDT_SYS_RESET_LENGTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NS100</name>
+                  <description>100ns</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS200</name>
+                  <description>200ns</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS300</name>
+                  <description>300ns</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS400</name>
+                  <description>400ns</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS500</name>
+                  <description>500ns</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS800</name>
+                  <description>800ns</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS1600</name>
+                  <description>1.6us</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS3200</name>
+                  <description>3.2us</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WDT_CPU_RESET_LENGTH</name>
@@ -43159,6 +41702,50 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>WDT_CPU_RESET_LENGTH</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NS100</name>
+                  <description>100ns</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS200</name>
+                  <description>200ns</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS300</name>
+                  <description>300ns</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS400</name>
+                  <description>400ns</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS500</name>
+                  <description>500ns</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS800</name>
+                  <description>800ns</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS1600</name>
+                  <description>1.6us</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>NS3200</name>
+                  <description>3.2us</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WDT_LEVEL_INT_EN</name>
@@ -43180,6 +41767,30 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>WDT_STG3</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>OFF</name>
+                  <description>Off</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>INTERRUPT</name>
+                  <description>Interrupt</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESET</name>
+                  <description>Reset CPU</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>RESET_SYS</name>
+                  <description>Reset system</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WDT_STG2</name>
@@ -43187,6 +41798,7 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues derivedFrom="WDT_STG3"/>
             </field>
             <field>
               <name>WDT_STG1</name>
@@ -43194,6 +41806,7 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues derivedFrom="WDT_STG3"/>
             </field>
             <field>
               <name>WDT_STG0</name>
@@ -43201,6 +41814,7 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
+              <enumeratedValues derivedFrom="WDT_STG3"/>
             </field>
             <field>
               <name>WDT_EN</name>
@@ -43912,6 +42526,13 @@ IDINTEN[4]: DU Interrupt.</description>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
+            <field>
+              <name>MISS_ST</name>
+              <description>This bit reflects whether the data packet in the RX FIFO is complete. 1: The current packet is missing; 0: The current packet is complete</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
           </fields>
         </register>
         <register>
@@ -44038,12 +42659,12 @@ IDINTEN[4]: DU Interrupt.</description>
               <name>BAUD_PRESC</name>
               <description>Baud Rate Prescaler, determines the frequency dividing ratio.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>6</bitWidth>
+              <bitWidth>14</bitWidth>
             </field>
             <field>
               <name>SYNC_JUMP_WIDTH</name>
               <description>Synchronization Jump Width (SJW), 1 \verb+~+ 14 Tq wide.</description>
-              <bitOffset>6</bitOffset>
+              <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
           </fields>
@@ -44064,7 +42685,7 @@ IDINTEN[4]: DU Interrupt.</description>
               <name>TIME_SEG2</name>
               <description>The width of PBS2.</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>4</bitWidth>
+              <bitWidth>3</bitWidth>
             </field>
             <field>
               <name>TIME_SAMP</name>
@@ -44144,7 +42765,6 @@ IDINTEN[4]: DU Interrupt.</description>
               <description>The RX error counter register, reflects value changes under reception status.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -44382,19 +43002,13 @@ IDINTEN[4]: DU Interrupt.</description>
               <name>CD</name>
               <description>These bits are used to configure frequency dividing coefficients of the external CLKOUT pin.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>3</bitWidth>
+              <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>CLOCK_OFF</name>
               <description>This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>EXT_MODE</name>
-              <description>This bit can be configured under reset mode. 1: Extended mode, compatible with CAN2.0B; 0: Basic mode</description>
-              <bitOffset>7</bitOffset>
+              <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>

@@ -35,36 +35,36 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_PRESC` reader - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub type BAUD_PRESC_R = crate::FieldReader<u8, u8>;
+pub type BAUD_PRESC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BAUD_PRESC` writer - Baud Rate Prescaler, determines the frequency dividing ratio."]
 pub type BAUD_PRESC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u16, u16, 14, O>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
 pub type SYNC_JUMP_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
 pub type SYNC_JUMP_WIDTH_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 0:5 - Baud Rate Prescaler, determines the frequency dividing ratio."]
+    #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
     pub fn baud_presc(&self) -> BAUD_PRESC_R {
-        BAUD_PRESC_R::new((self.bits & 0x3f) as u8)
+        BAUD_PRESC_R::new((self.bits & 0x3fff) as u16)
     }
-    #[doc = "Bits 6:7 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
+    #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
     pub fn sync_jump_width(&self) -> SYNC_JUMP_WIDTH_R {
-        SYNC_JUMP_WIDTH_R::new(((self.bits >> 6) & 3) as u8)
+        SYNC_JUMP_WIDTH_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Baud Rate Prescaler, determines the frequency dividing ratio."]
+    #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
     pub fn baud_presc(&mut self) -> BAUD_PRESC_W<0> {
         BAUD_PRESC_W::new(self)
     }
-    #[doc = "Bits 6:7 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
+    #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
-    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<6> {
+    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<14> {
         SYNC_JUMP_WIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]

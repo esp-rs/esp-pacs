@@ -99,7 +99,7 @@ pub mod err_code_cap;
 pub type ERR_WARNING_LIMIT = crate::Reg<err_warning_limit::ERR_WARNING_LIMIT_SPEC>;
 #[doc = "Error Warning Limit Register"]
 pub mod err_warning_limit;
-#[doc = "RX_ERR_CNT (r) register accessor: an alias for `Reg<RX_ERR_CNT_SPEC>`"]
+#[doc = "RX_ERR_CNT (rw) register accessor: an alias for `Reg<RX_ERR_CNT_SPEC>`"]
 pub type RX_ERR_CNT = crate::Reg<rx_err_cnt::RX_ERR_CNT_SPEC>;
 #[doc = "Receive Error Counter Register"]
 pub mod rx_err_cnt;

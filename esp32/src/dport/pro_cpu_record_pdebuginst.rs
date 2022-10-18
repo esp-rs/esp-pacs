@@ -46,6 +46,16 @@ pub type RECORD_PDEBUGINST_ISRC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` writer - "]
 pub type RECORD_PDEBUGINST_ISRC_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, u8, u8, 3, O>;
+#[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` reader - "]
+pub type RECORD_PDEBUGINST_LOOP_REP_R = crate::BitReader<bool>;
+#[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` writer - "]
+pub type RECORD_PDEBUGINST_LOOP_REP_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, bool, O>;
+#[doc = "Field `RECORD_PDEBUGINST_LOOP` reader - "]
+pub type RECORD_PDEBUGINST_LOOP_R = crate::BitReader<bool>;
+#[doc = "Field `RECORD_PDEBUGINST_LOOP` writer - "]
+pub type RECORD_PDEBUGINST_LOOP_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, bool, O>;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` reader - "]
 pub type RECORD_PDEBUGINST_CINTL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` writer - "]
@@ -67,6 +77,16 @@ impl R {
     pub fn record_pdebuginst_isrc(&self) -> RECORD_PDEBUGINST_ISRC_R {
         RECORD_PDEBUGINST_ISRC_R::new(((self.bits >> 12) & 7) as u8)
     }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn record_pdebuginst_loop_rep(&self) -> RECORD_PDEBUGINST_LOOP_REP_R {
+        RECORD_PDEBUGINST_LOOP_REP_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn record_pdebuginst_loop(&self) -> RECORD_PDEBUGINST_LOOP_R {
+        RECORD_PDEBUGINST_LOOP_R::new(((self.bits >> 21) & 1) != 0)
+    }
     #[doc = "Bits 24:27"]
     #[inline(always)]
     pub fn record_pdebuginst_cintl(&self) -> RECORD_PDEBUGINST_CINTL_R {
@@ -83,6 +103,16 @@ impl W {
     #[inline(always)]
     pub fn record_pdebuginst_isrc(&mut self) -> RECORD_PDEBUGINST_ISRC_W<12> {
         RECORD_PDEBUGINST_ISRC_W::new(self)
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn record_pdebuginst_loop_rep(&mut self) -> RECORD_PDEBUGINST_LOOP_REP_W<20> {
+        RECORD_PDEBUGINST_LOOP_REP_W::new(self)
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn record_pdebuginst_loop(&mut self) -> RECORD_PDEBUGINST_LOOP_W<21> {
+        RECORD_PDEBUGINST_LOOP_W::new(self)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]

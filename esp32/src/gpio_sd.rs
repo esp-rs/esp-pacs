@@ -18,11 +18,11 @@ pub struct RegisterBlock {
     #[doc = "0x1c - "]
     pub sigmadelta7: SIGMADELTA7,
     #[doc = "0x20 - "]
-    pub sigmadelta_cg: SIGMADELTA_CG,
+    pub cg: CG,
     #[doc = "0x24 - "]
-    pub sigmadelta_misc: SIGMADELTA_MISC,
+    pub misc: MISC,
     #[doc = "0x28 - "]
-    pub sigmadelta_version: SIGMADELTA_VERSION,
+    pub version: VERSION,
 }
 #[doc = "SIGMADELTA0 (rw) register accessor: an alias for `Reg<SIGMADELTA0_SPEC>`"]
 pub type SIGMADELTA0 = crate::Reg<sigmadelta0::SIGMADELTA0_SPEC>;
@@ -56,15 +56,15 @@ pub mod sigmadelta6;
 pub type SIGMADELTA7 = crate::Reg<sigmadelta7::SIGMADELTA7_SPEC>;
 #[doc = ""]
 pub mod sigmadelta7;
-#[doc = "SIGMADELTA_CG (rw) register accessor: an alias for `Reg<SIGMADELTA_CG_SPEC>`"]
-pub type SIGMADELTA_CG = crate::Reg<sigmadelta_cg::SIGMADELTA_CG_SPEC>;
+#[doc = "CG (rw) register accessor: an alias for `Reg<CG_SPEC>`"]
+pub type CG = crate::Reg<cg::CG_SPEC>;
 #[doc = ""]
-pub mod sigmadelta_cg;
-#[doc = "SIGMADELTA_MISC (rw) register accessor: an alias for `Reg<SIGMADELTA_MISC_SPEC>`"]
-pub type SIGMADELTA_MISC = crate::Reg<sigmadelta_misc::SIGMADELTA_MISC_SPEC>;
+pub mod cg;
+#[doc = "MISC (rw) register accessor: an alias for `Reg<MISC_SPEC>`"]
+pub type MISC = crate::Reg<misc::MISC_SPEC>;
 #[doc = ""]
-pub mod sigmadelta_misc;
-#[doc = "SIGMADELTA_VERSION (rw) register accessor: an alias for `Reg<SIGMADELTA_VERSION_SPEC>`"]
-pub type SIGMADELTA_VERSION = crate::Reg<sigmadelta_version::SIGMADELTA_VERSION_SPEC>;
+pub mod misc;
+#[doc = "VERSION (rw) register accessor: an alias for `Reg<VERSION_SPEC>`"]
+pub type VERSION = crate::Reg<version::VERSION_SPEC>;
 #[doc = ""]
-pub mod sigmadelta_version;
+pub mod version;
