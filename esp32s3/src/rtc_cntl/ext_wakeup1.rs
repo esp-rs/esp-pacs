@@ -34,29 +34,31 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
-pub type SEL_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT_WAKEUP1_SPEC, u32, u32, 22, O>;
-#[doc = "Field `STATUS_CLR` writer - clear ext wakeup1 status"]
-pub type STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_WAKEUP1_SPEC, bool, O>;
+#[doc = "Field `EXT_WAKEUP1_SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
+pub type EXT_WAKEUP1_SEL_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `EXT_WAKEUP1_SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
+pub type EXT_WAKEUP1_SEL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, EXT_WAKEUP1_SPEC, u32, u32, 22, O>;
+#[doc = "Field `EXT_WAKEUP1_STATUS_CLR` writer - clear ext wakeup1 status"]
+pub type EXT_WAKEUP1_STATUS_CLR_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, EXT_WAKEUP1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn sel(&self) -> SEL_R {
-        SEL_R::new((self.bits & 0x003f_ffff) as u32)
+    pub fn ext_wakeup1_sel(&self) -> EXT_WAKEUP1_SEL_R {
+        EXT_WAKEUP1_SEL_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<0> {
-        SEL_W::new(self)
+    pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W<0> {
+        EXT_WAKEUP1_SEL_W::new(self)
     }
     #[doc = "Bit 22 - clear ext wakeup1 status"]
     #[inline(always)]
-    pub fn status_clr(&mut self) -> STATUS_CLR_W<22> {
-        STATUS_CLR_W::new(self)
+    pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W<22> {
+        EXT_WAKEUP1_STATUS_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

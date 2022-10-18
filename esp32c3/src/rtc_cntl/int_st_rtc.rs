@@ -17,20 +17,20 @@ impl From<crate::R<INT_ST_RTC_SPEC>> for R {
 pub type SLP_WAKEUP_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_REJECT_INT_ST` reader - sleep reject interrupt state"]
 pub type SLP_REJECT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_INT_ST` reader - RTC WDT interrupt state"]
-pub type RTC_WDT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BROWN_OUT_INT_ST` reader - brown out interrupt state"]
-pub type RTC_BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
-pub type RTC_MAIN_TIMER_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SWD_INT_ST` reader - super watch dog interrupt state"]
-pub type RTC_SWD_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_ST` reader - xtal32k dead detection interrupt state"]
-pub type RTC_XTAL32K_DEAD_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_GLITCH_DET_INT_ST` reader - glitch_det_interrupt state"]
-pub type RTC_GLITCH_DET_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BBPLL_CAL_INT_ST` reader - bbpll cal end interrupt state"]
-pub type RTC_BBPLL_CAL_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `WDT_INT_ST` reader - RTC WDT interrupt state"]
+pub type WDT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `BROWN_OUT_INT_ST` reader - brown out interrupt state"]
+pub type BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
+pub type MAIN_TIMER_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_INT_ST` reader - super watch dog interrupt state"]
+pub type SWD_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `XTAL32K_DEAD_INT_ST` reader - xtal32k dead detection interrupt state"]
+pub type XTAL32K_DEAD_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `GLITCH_DET_INT_ST` reader - glitch_det_interrupt state"]
+pub type GLITCH_DET_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `BBPLL_CAL_INT_ST` reader - bbpll cal end interrupt state"]
+pub type BBPLL_CAL_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
@@ -44,38 +44,38 @@ impl R {
     }
     #[doc = "Bit 3 - RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn rtc_wdt_int_st(&self) -> RTC_WDT_INT_ST_R {
-        RTC_WDT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt_int_st(&self) -> WDT_INT_ST_R {
+        WDT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 9 - brown out interrupt state"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_st(&self) -> RTC_BROWN_OUT_INT_ST_R {
-        RTC_BROWN_OUT_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn brown_out_int_st(&self) -> BROWN_OUT_INT_ST_R {
+        BROWN_OUT_INT_ST_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_st(&self) -> RTC_MAIN_TIMER_INT_ST_R {
-        RTC_MAIN_TIMER_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn main_timer_int_st(&self) -> MAIN_TIMER_INT_ST_R {
+        MAIN_TIMER_INT_ST_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 15 - super watch dog interrupt state"]
     #[inline(always)]
-    pub fn rtc_swd_int_st(&self) -> RTC_SWD_INT_ST_R {
-        RTC_SWD_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swd_int_st(&self) -> SWD_INT_ST_R {
+        SWD_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - xtal32k dead detection interrupt state"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_st(&self) -> RTC_XTAL32K_DEAD_INT_ST_R {
-        RTC_XTAL32K_DEAD_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn xtal32k_dead_int_st(&self) -> XTAL32K_DEAD_INT_ST_R {
+        XTAL32K_DEAD_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 19 - glitch_det_interrupt state"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_st(&self) -> RTC_GLITCH_DET_INT_ST_R {
-        RTC_GLITCH_DET_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn glitch_det_int_st(&self) -> GLITCH_DET_INT_ST_R {
+        GLITCH_DET_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - bbpll cal end interrupt state"]
     #[inline(always)]
-    pub fn rtc_bbpll_cal_int_st(&self) -> RTC_BBPLL_CAL_INT_ST_R {
-        RTC_BBPLL_CAL_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn bbpll_cal_int_st(&self) -> BBPLL_CAL_INT_ST_R {
+        BBPLL_CAL_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 #[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st_rtc](index.html) module"]

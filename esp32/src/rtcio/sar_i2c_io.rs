@@ -39,14 +39,22 @@ pub type SAR_DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR_DEBUG_BIT_SEL` writer - "]
 pub type SAR_DEBUG_BIT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 5, O>;
-#[doc = "Field `SAR_I2C_SCL_SEL` reader - Ò0Ó using TOUCH_PAD\\[0\\] as i2c clk Ò1Ó using TOUCH_PAD\\[2\\] as i2c clk"]
+#[doc = "Field `SAR_I2C_SCL_SEL` reader - Ò0Ó using TOUCH_PAD\\[0\\]
+as i2c clk Ò1Ó using TOUCH_PAD\\[2\\]
+as i2c clk"]
 pub type SAR_I2C_SCL_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_I2C_SCL_SEL` writer - Ò0Ó using TOUCH_PAD\\[0\\] as i2c clk Ò1Ó using TOUCH_PAD\\[2\\] as i2c clk"]
+#[doc = "Field `SAR_I2C_SCL_SEL` writer - Ò0Ó using TOUCH_PAD\\[0\\]
+as i2c clk Ò1Ó using TOUCH_PAD\\[2\\]
+as i2c clk"]
 pub type SAR_I2C_SCL_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SAR_I2C_SDA_SEL` reader - Ò0Ó using TOUCH_PAD\\[1\\] as i2c sda Ò1Ó using TOUCH_PAD\\[3\\] as i2c sda"]
+#[doc = "Field `SAR_I2C_SDA_SEL` reader - Ò0Ó using TOUCH_PAD\\[1\\]
+as i2c sda Ò1Ó using TOUCH_PAD\\[3\\]
+as i2c sda"]
 pub type SAR_I2C_SDA_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_I2C_SDA_SEL` writer - Ò0Ó using TOUCH_PAD\\[1\\] as i2c sda Ò1Ó using TOUCH_PAD\\[3\\] as i2c sda"]
+#[doc = "Field `SAR_I2C_SDA_SEL` writer - Ò0Ó using TOUCH_PAD\\[1\\]
+as i2c sda Ò1Ó using TOUCH_PAD\\[3\\]
+as i2c sda"]
 pub type SAR_I2C_SDA_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 2, O>;
 impl R {
@@ -55,12 +63,16 @@ impl R {
     pub fn sar_debug_bit_sel(&self) -> SAR_DEBUG_BIT_SEL_R {
         SAR_DEBUG_BIT_SEL_R::new(((self.bits >> 23) & 0x1f) as u8)
     }
-    #[doc = "Bits 28:29 - Ò0Ó using TOUCH_PAD\\[0\\] as i2c clk Ò1Ó using TOUCH_PAD\\[2\\] as i2c clk"]
+    #[doc = "Bits 28:29 - Ò0Ó using TOUCH_PAD\\[0\\]
+as i2c clk Ò1Ó using TOUCH_PAD\\[2\\]
+as i2c clk"]
     #[inline(always)]
     pub fn sar_i2c_scl_sel(&self) -> SAR_I2C_SCL_SEL_R {
         SAR_I2C_SCL_SEL_R::new(((self.bits >> 28) & 3) as u8)
     }
-    #[doc = "Bits 30:31 - Ò0Ó using TOUCH_PAD\\[1\\] as i2c sda Ò1Ó using TOUCH_PAD\\[3\\] as i2c sda"]
+    #[doc = "Bits 30:31 - Ò0Ó using TOUCH_PAD\\[1\\]
+as i2c sda Ò1Ó using TOUCH_PAD\\[3\\]
+as i2c sda"]
     #[inline(always)]
     pub fn sar_i2c_sda_sel(&self) -> SAR_I2C_SDA_SEL_R {
         SAR_I2C_SDA_SEL_R::new(((self.bits >> 30) & 3) as u8)
@@ -72,12 +84,16 @@ impl W {
     pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<23> {
         SAR_DEBUG_BIT_SEL_W::new(self)
     }
-    #[doc = "Bits 28:29 - Ò0Ó using TOUCH_PAD\\[0\\] as i2c clk Ò1Ó using TOUCH_PAD\\[2\\] as i2c clk"]
+    #[doc = "Bits 28:29 - Ò0Ó using TOUCH_PAD\\[0\\]
+as i2c clk Ò1Ó using TOUCH_PAD\\[2\\]
+as i2c clk"]
     #[inline(always)]
     pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<28> {
         SAR_I2C_SCL_SEL_W::new(self)
     }
-    #[doc = "Bits 30:31 - Ò0Ó using TOUCH_PAD\\[1\\] as i2c sda Ò1Ó using TOUCH_PAD\\[3\\] as i2c sda"]
+    #[doc = "Bits 30:31 - Ò0Ó using TOUCH_PAD\\[1\\]
+as i2c sda Ò1Ó using TOUCH_PAD\\[3\\]
+as i2c sda"]
     #[inline(always)]
     pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<30> {
         SAR_I2C_SDA_SEL_W::new(self)

@@ -40,44 +40,44 @@ pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader<bool>;
 pub type SLP_REJECT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - SDIO idle interrupt raw"]
 pub type SDIO_IDLE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_INT_RAW` reader - RTC WDT interrupt raw"]
-pub type RTC_WDT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_SCAN_DONE_INT_RAW` reader - enable touch scan done interrupt raw"]
-pub type RTC_TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_ULP_CP_INT_RAW` reader - ULP-coprocessor interrupt raw"]
-pub type RTC_ULP_CP_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_DONE_INT_RAW` reader - touch interrupt raw"]
-pub type RTC_TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_ACTIVE_INT_RAW` reader - touch active interrupt raw"]
-pub type RTC_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_INACTIVE_INT_RAW` reader - touch inactive interrupt raw"]
-pub type RTC_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BROWN_OUT_INT_RAW` reader - brown out interrupt raw"]
-pub type RTC_BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_RAW` reader - RTC main timer interrupt raw"]
-pub type RTC_MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SARADC1_INT_RAW` reader - saradc1 interrupt raw"]
-pub type RTC_SARADC1_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TSENS_INT_RAW` reader - tsens interrupt raw"]
-pub type RTC_TSENS_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_COCPU_INT_RAW` reader - riscV cocpu interrupt raw"]
-pub type RTC_COCPU_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SARADC2_INT_RAW` reader - saradc2 interrupt raw"]
-pub type RTC_SARADC2_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SWD_INT_RAW` reader - super watch dog interrupt raw"]
-pub type RTC_SWD_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_RAW` reader - xtal32k dead detection interrupt raw"]
-pub type RTC_XTAL32K_DEAD_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_COCPU_TRAP_INT_RAW` reader - cocpu trap interrupt raw"]
-pub type RTC_COCPU_TRAP_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_TIMEOUT_INT_RAW` reader - touch timeout interrupt raw"]
-pub type RTC_TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_GLITCH_DET_INT_RAW` reader - glitch_det_interrupt_raw"]
-pub type RTC_GLITCH_DET_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW` reader - touch approach mode loop interrupt raw"]
-pub type RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW` writer - touch approach mode loop interrupt raw"]
-pub type RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<'a, const O: u8> =
+#[doc = "Field `WDT_INT_RAW` reader - RTC WDT interrupt raw"]
+pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_SCAN_DONE_INT_RAW` reader - enable touch scan done interrupt raw"]
+pub type TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `ULP_CP_INT_RAW` reader - ULP-coprocessor interrupt raw"]
+pub type ULP_CP_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_DONE_INT_RAW` reader - touch interrupt raw"]
+pub type TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_ACTIVE_INT_RAW` reader - touch active interrupt raw"]
+pub type TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_INACTIVE_INT_RAW` reader - touch inactive interrupt raw"]
+pub type TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `BROWN_OUT_INT_RAW` reader - brown out interrupt raw"]
+pub type BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_INT_RAW` reader - RTC main timer interrupt raw"]
+pub type MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SARADC1_INT_RAW` reader - saradc1 interrupt raw"]
+pub type SARADC1_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TSENS_INT_RAW` reader - tsens interrupt raw"]
+pub type TSENS_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `COCPU_INT_RAW` reader - riscV cocpu interrupt raw"]
+pub type COCPU_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SARADC2_INT_RAW` reader - saradc2 interrupt raw"]
+pub type SARADC2_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_INT_RAW` reader - super watch dog interrupt raw"]
+pub type SWD_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `XTAL32K_DEAD_INT_RAW` reader - xtal32k dead detection interrupt raw"]
+pub type XTAL32K_DEAD_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `COCPU_TRAP_INT_RAW` reader - cocpu trap interrupt raw"]
+pub type COCPU_TRAP_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_TIMEOUT_INT_RAW` reader - touch timeout interrupt raw"]
+pub type TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `GLITCH_DET_INT_RAW` reader - glitch_det_interrupt_raw"]
+pub type GLITCH_DET_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_RAW` reader - touch approach mode loop interrupt raw"]
+pub type TOUCH_APPROACH_LOOP_DONE_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_RAW` writer - touch approach mode loop interrupt raw"]
+pub type TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
@@ -97,102 +97,100 @@ impl R {
     }
     #[doc = "Bit 3 - RTC WDT interrupt raw"]
     #[inline(always)]
-    pub fn rtc_wdt_int_raw(&self) -> RTC_WDT_INT_RAW_R {
-        RTC_WDT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
+        WDT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - enable touch scan done interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_scan_done_int_raw(&self) -> RTC_TOUCH_SCAN_DONE_INT_RAW_R {
-        RTC_TOUCH_SCAN_DONE_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn touch_scan_done_int_raw(&self) -> TOUCH_SCAN_DONE_INT_RAW_R {
+        TOUCH_SCAN_DONE_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ULP-coprocessor interrupt raw"]
     #[inline(always)]
-    pub fn rtc_ulp_cp_int_raw(&self) -> RTC_ULP_CP_INT_RAW_R {
-        RTC_ULP_CP_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ulp_cp_int_raw(&self) -> ULP_CP_INT_RAW_R {
+        ULP_CP_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - touch interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_done_int_raw(&self) -> RTC_TOUCH_DONE_INT_RAW_R {
-        RTC_TOUCH_DONE_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn touch_done_int_raw(&self) -> TOUCH_DONE_INT_RAW_R {
+        TOUCH_DONE_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - touch active interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_active_int_raw(&self) -> RTC_TOUCH_ACTIVE_INT_RAW_R {
-        RTC_TOUCH_ACTIVE_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn touch_active_int_raw(&self) -> TOUCH_ACTIVE_INT_RAW_R {
+        TOUCH_ACTIVE_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - touch inactive interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_inactive_int_raw(&self) -> RTC_TOUCH_INACTIVE_INT_RAW_R {
-        RTC_TOUCH_INACTIVE_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn touch_inactive_int_raw(&self) -> TOUCH_INACTIVE_INT_RAW_R {
+        TOUCH_INACTIVE_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - brown out interrupt raw"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_raw(&self) -> RTC_BROWN_OUT_INT_RAW_R {
-        RTC_BROWN_OUT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn brown_out_int_raw(&self) -> BROWN_OUT_INT_RAW_R {
+        BROWN_OUT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC main timer interrupt raw"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_raw(&self) -> RTC_MAIN_TIMER_INT_RAW_R {
-        RTC_MAIN_TIMER_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn main_timer_int_raw(&self) -> MAIN_TIMER_INT_RAW_R {
+        MAIN_TIMER_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - saradc1 interrupt raw"]
     #[inline(always)]
-    pub fn rtc_saradc1_int_raw(&self) -> RTC_SARADC1_INT_RAW_R {
-        RTC_SARADC1_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn saradc1_int_raw(&self) -> SARADC1_INT_RAW_R {
+        SARADC1_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - tsens interrupt raw"]
     #[inline(always)]
-    pub fn rtc_tsens_int_raw(&self) -> RTC_TSENS_INT_RAW_R {
-        RTC_TSENS_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn tsens_int_raw(&self) -> TSENS_INT_RAW_R {
+        TSENS_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - riscV cocpu interrupt raw"]
     #[inline(always)]
-    pub fn rtc_cocpu_int_raw(&self) -> RTC_COCPU_INT_RAW_R {
-        RTC_COCPU_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn cocpu_int_raw(&self) -> COCPU_INT_RAW_R {
+        COCPU_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - saradc2 interrupt raw"]
     #[inline(always)]
-    pub fn rtc_saradc2_int_raw(&self) -> RTC_SARADC2_INT_RAW_R {
-        RTC_SARADC2_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn saradc2_int_raw(&self) -> SARADC2_INT_RAW_R {
+        SARADC2_INT_RAW_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - super watch dog interrupt raw"]
     #[inline(always)]
-    pub fn rtc_swd_int_raw(&self) -> RTC_SWD_INT_RAW_R {
-        RTC_SWD_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swd_int_raw(&self) -> SWD_INT_RAW_R {
+        SWD_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - xtal32k dead detection interrupt raw"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_raw(&self) -> RTC_XTAL32K_DEAD_INT_RAW_R {
-        RTC_XTAL32K_DEAD_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn xtal32k_dead_int_raw(&self) -> XTAL32K_DEAD_INT_RAW_R {
+        XTAL32K_DEAD_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - cocpu trap interrupt raw"]
     #[inline(always)]
-    pub fn rtc_cocpu_trap_int_raw(&self) -> RTC_COCPU_TRAP_INT_RAW_R {
-        RTC_COCPU_TRAP_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn cocpu_trap_int_raw(&self) -> COCPU_TRAP_INT_RAW_R {
+        COCPU_TRAP_INT_RAW_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - touch timeout interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_timeout_int_raw(&self) -> RTC_TOUCH_TIMEOUT_INT_RAW_R {
-        RTC_TOUCH_TIMEOUT_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn touch_timeout_int_raw(&self) -> TOUCH_TIMEOUT_INT_RAW_R {
+        TOUCH_TIMEOUT_INT_RAW_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - glitch_det_interrupt_raw"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_raw(&self) -> RTC_GLITCH_DET_INT_RAW_R {
-        RTC_GLITCH_DET_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn glitch_det_int_raw(&self) -> GLITCH_DET_INT_RAW_R {
+        GLITCH_DET_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - touch approach mode loop interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_approach_loop_done_int_raw(&self) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_R {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn touch_approach_loop_done_int_raw(&self) -> TOUCH_APPROACH_LOOP_DONE_INT_RAW_R {
+        TOUCH_APPROACH_LOOP_DONE_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 20 - touch approach mode loop interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_approach_loop_done_int_raw(
-        &mut self,
-    ) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<20> {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_RAW_W::new(self)
+    pub fn touch_approach_loop_done_int_raw(&mut self) -> TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<20> {
+        TOUCH_APPROACH_LOOP_DONE_INT_RAW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

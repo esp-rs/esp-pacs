@@ -13,13 +13,13 @@ impl From<crate::R<TIME_LOW1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RTC_TIMER_VALUE1_LOW` reader - RTC timer low 32 bits"]
-pub type RTC_TIMER_VALUE1_LOW_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `TIMER_VALUE1_LOW` reader - RTC timer low 32 bits"]
+pub type TIMER_VALUE1_LOW_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - RTC timer low 32 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value1_low(&self) -> RTC_TIMER_VALUE1_LOW_R {
-        RTC_TIMER_VALUE1_LOW_R::new(self.bits)
+    pub fn timer_value1_low(&self) -> TIMER_VALUE1_LOW_R {
+        TIMER_VALUE1_LOW_R::new(self.bits)
     }
 }
 #[doc = "rtc configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_low1](index.html) module"]

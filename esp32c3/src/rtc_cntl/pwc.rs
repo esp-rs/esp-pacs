@@ -34,22 +34,22 @@ impl From<crate::W<PWC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_PAD_FORCE_HOLD` reader - rtc pad force hold"]
-pub type RTC_PAD_FORCE_HOLD_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_PAD_FORCE_HOLD` writer - rtc pad force hold"]
-pub type RTC_PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+#[doc = "Field `PAD_FORCE_HOLD` reader - rtc pad force hold"]
+pub type PAD_FORCE_HOLD_R = crate::BitReader<bool>;
+#[doc = "Field `PAD_FORCE_HOLD` writer - rtc pad force hold"]
+pub type PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
-    pub fn rtc_pad_force_hold(&self) -> RTC_PAD_FORCE_HOLD_R {
-        RTC_PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pad_force_hold(&self) -> PAD_FORCE_HOLD_R {
+        PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
-    pub fn rtc_pad_force_hold(&mut self) -> RTC_PAD_FORCE_HOLD_W<21> {
-        RTC_PAD_FORCE_HOLD_W::new(self)
+    pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<21> {
+        PAD_FORCE_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

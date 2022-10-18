@@ -34,22 +34,22 @@ impl From<crate::W<FIB_SEL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_FIB_SEL` reader - select use analog fib signal"]
-pub type RTC_FIB_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_FIB_SEL` writer - select use analog fib signal"]
-pub type RTC_FIB_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIB_SEL_SPEC, u8, u8, 3, O>;
+#[doc = "Field `FIB_SEL` reader - select use analog fib signal"]
+pub type FIB_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FIB_SEL` writer - select use analog fib signal"]
+pub type FIB_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIB_SEL_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
-    pub fn rtc_fib_sel(&self) -> RTC_FIB_SEL_R {
-        RTC_FIB_SEL_R::new((self.bits & 7) as u8)
+    pub fn fib_sel(&self) -> FIB_SEL_R {
+        FIB_SEL_R::new((self.bits & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
-    pub fn rtc_fib_sel(&mut self) -> RTC_FIB_SEL_W<0> {
-        RTC_FIB_SEL_W::new(self)
+    pub fn fib_sel(&mut self) -> FIB_SEL_W<0> {
+        FIB_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

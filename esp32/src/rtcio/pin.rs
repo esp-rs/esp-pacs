@@ -34,50 +34,50 @@ impl From<crate::W<PIN_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PIN_PAD_DRIVER` reader - if set to : normal output if set to 1: open drain"]
-pub type PIN_PAD_DRIVER_R = crate::BitReader<bool>;
-#[doc = "Field `PIN_PAD_DRIVER` writer - if set to : normal output if set to 1: open drain"]
-pub type PIN_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
-#[doc = "Field `PIN_INT_TYPE` reader - if set to : GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
-pub type PIN_INT_TYPE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `PIN_INT_TYPE` writer - if set to : GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
-pub type PIN_INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 3, O>;
-#[doc = "Field `PIN_WAKEUP_ENABLE` reader - GPIO wake up enable only available in light sleep"]
-pub type PIN_WAKEUP_ENABLE_R = crate::BitReader<bool>;
-#[doc = "Field `PIN_WAKEUP_ENABLE` writer - GPIO wake up enable only available in light sleep"]
-pub type PIN_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+#[doc = "Field `PAD_DRIVER` reader - if set to 0: normal output if set to 1: open drain"]
+pub type PAD_DRIVER_R = crate::BitReader<bool>;
+#[doc = "Field `PAD_DRIVER` writer - if set to 0: normal output if set to 1: open drain"]
+pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+#[doc = "Field `INT_TYPE` reader - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
+pub type INT_TYPE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `INT_TYPE` writer - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
+pub type INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 3, O>;
+#[doc = "Field `WAKEUP_ENABLE` reader - GPIO wake up enable only available in light sleep"]
+pub type WAKEUP_ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `WAKEUP_ENABLE` writer - GPIO wake up enable only available in light sleep"]
+pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2 - if set to : normal output if set to 1: open drain"]
+    #[doc = "Bit 2 - if set to 0: normal output if set to 1: open drain"]
     #[inline(always)]
-    pub fn pin_pad_driver(&self) -> PIN_PAD_DRIVER_R {
-        PIN_PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn pad_driver(&self) -> PAD_DRIVER_R {
+        PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bits 7:9 - if set to : GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
+    #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
     #[inline(always)]
-    pub fn pin_int_type(&self) -> PIN_INT_TYPE_R {
-        PIN_INT_TYPE_R::new(((self.bits >> 7) & 7) as u8)
+    pub fn int_type(&self) -> INT_TYPE_R {
+        INT_TYPE_R::new(((self.bits >> 7) & 7) as u8)
     }
     #[doc = "Bit 10 - GPIO wake up enable only available in light sleep"]
     #[inline(always)]
-    pub fn pin_wakeup_enable(&self) -> PIN_WAKEUP_ENABLE_R {
-        PIN_WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn wakeup_enable(&self) -> WAKEUP_ENABLE_R {
+        WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2 - if set to : normal output if set to 1: open drain"]
+    #[doc = "Bit 2 - if set to 0: normal output if set to 1: open drain"]
     #[inline(always)]
-    pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<2> {
-        PIN_PAD_DRIVER_W::new(self)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<2> {
+        PAD_DRIVER_W::new(self)
     }
-    #[doc = "Bits 7:9 - if set to : GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
+    #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable if set to 1: rising edge trigger if set to 2: falling edge trigger if set to 3: any edge trigger if set to 4: low level trigger if set to 5: high level trigger"]
     #[inline(always)]
-    pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W<7> {
-        PIN_INT_TYPE_W::new(self)
+    pub fn int_type(&mut self) -> INT_TYPE_W<7> {
+        INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - GPIO wake up enable only available in light sleep"]
     #[inline(always)]
-    pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W<10> {
-        PIN_WAKEUP_ENABLE_W::new(self)
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<10> {
+        WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

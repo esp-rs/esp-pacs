@@ -34,22 +34,22 @@ impl From<crate::W<DATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_CNTL_DATE` reader - verision"]
-pub type RTC_CNTL_DATE_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_CNTL_DATE` writer - verision"]
-pub type RTC_CNTL_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, O>;
+#[doc = "Field `DATE` reader - verision"]
+pub type DATE_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `DATE` writer - verision"]
+pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, O>;
 impl R {
     #[doc = "Bits 0:27 - verision"]
     #[inline(always)]
-    pub fn rtc_cntl_date(&self) -> RTC_CNTL_DATE_R {
-        RTC_CNTL_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+    pub fn date(&self) -> DATE_R {
+        DATE_R::new((self.bits & 0x0fff_ffff) as u32)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - verision"]
     #[inline(always)]
-    pub fn rtc_cntl_date(&mut self) -> RTC_CNTL_DATE_W<0> {
-        RTC_CNTL_DATE_W::new(self)
+    pub fn date(&mut self) -> DATE_W<0> {
+        DATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

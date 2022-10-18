@@ -43,7 +43,7 @@ pub type TIME_SEG1_W<'a, const O: u8> =
 pub type TIME_SEG2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIME_SEG2` writer - The width of PBS2."]
 pub type TIME_SEG2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 3, O>;
 #[doc = "Field `TIME_SAMP` reader - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
 pub type TIME_SAMP_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_SAMP` writer - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
@@ -54,10 +54,10 @@ impl R {
     pub fn time_seg1(&self) -> TIME_SEG1_R {
         TIME_SEG1_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 4:7 - The width of PBS2."]
+    #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
     pub fn time_seg2(&self) -> TIME_SEG2_R {
-        TIME_SEG2_R::new(((self.bits >> 4) & 0x0f) as u8)
+        TIME_SEG2_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
@@ -71,7 +71,7 @@ impl W {
     pub fn time_seg1(&mut self) -> TIME_SEG1_W<0> {
         TIME_SEG1_W::new(self)
     }
-    #[doc = "Bits 4:7 - The width of PBS2."]
+    #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
     pub fn time_seg2(&mut self) -> TIME_SEG2_W<4> {
         TIME_SEG2_W::new(self)

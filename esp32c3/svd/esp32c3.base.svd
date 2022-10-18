@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32-C3</series>
-  <version>8</version>
+  <version>9</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -1057,7 +1057,7 @@
         </register>
         <register>
           <name>REDCY_SIG0</name>
-          <description>APB_CTRL_REDCY_SIG0_REG</description>
+          <description>APB_CTRL_REDCY_SIG0_REG_REG</description>
           <addressOffset>0x94</addressOffset>
           <size>0x20</size>
           <fields>
@@ -1079,7 +1079,7 @@
         </register>
         <register>
           <name>REDCY_SIG1</name>
-          <description>APB_CTRL_REDCY_SIG1_REG</description>
+          <description>APB_CTRL_REDCY_SIG1_REG_REG</description>
           <addressOffset>0x98</addressOffset>
           <size>0x20</size>
           <fields>
@@ -1257,7 +1257,7 @@
         </register>
         <register>
           <name>PERI_BACKUP_CONFIG</name>
-          <description>APB_CTRL_PERI_BACKUP_CONFIG_REG</description>
+          <description>APB_CTRL_PERI_BACKUP_CONFIG_REG_REG</description>
           <addressOffset>0xB4</addressOffset>
           <size>0x20</size>
           <resetValue>0x00006480</resetValue>
@@ -1315,7 +1315,7 @@
         </register>
         <register>
           <name>PERI_BACKUP_APB_ADDR</name>
-          <description>APB_CTRL_PERI_BACKUP_APB_ADDR_REG</description>
+          <description>APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG</description>
           <addressOffset>0xB8</addressOffset>
           <size>0x20</size>
           <fields>
@@ -1330,7 +1330,7 @@
         </register>
         <register>
           <name>PERI_BACKUP_MEM_ADDR</name>
-          <description>APB_CTRL_PERI_BACKUP_MEM_ADDR_REG</description>
+          <description>APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG</description>
           <addressOffset>0xBC</addressOffset>
           <size>0x20</size>
           <fields>
@@ -6613,7 +6613,7 @@
       <baseAddress>0x6003D000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0xA4C</size>
+        <size>0x108C</size>
         <usage>registers</usage>
       </addressBlock>
       <registers>
@@ -11190,55 +11190,56 @@
         <register>
           <dim>26</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-25</dimIndex>
           <name>PIN%s</name>
           <description>GPIO pin configuration register</description>
           <addressOffset>0x74</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>PIN_SYNC2_BYPASS</name>
-              <description>set GPIO input_sync2 signal mode. :disable. 1:trigger at negedge. 2or3:trigger at posedge.</description>
+              <name>SYNC2_BYPASS</name>
+              <description>set GPIO input_sync2 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_PAD_DRIVER</name>
-              <description>set this bit to select pad driver. 1:open-drain. :normal.</description>
+              <name>PAD_DRIVER</name>
+              <description>set this bit to select pad driver. 1:open-drain. 0:normal.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_SYNC1_BYPASS</name>
-              <description>set GPIO input_sync1 signal mode. :disable. 1:trigger at negedge. 2or3:trigger at posedge.</description>
+              <name>SYNC1_BYPASS</name>
+              <description>set GPIO input_sync1 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_TYPE</name>
-              <description>set this value to choose interrupt mode. :disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level</description>
+              <name>INT_TYPE</name>
+              <description>set this value to choose interrupt mode. 0:disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level</description>
               <bitOffset>7</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_WAKEUP_ENABLE</name>
+              <name>WAKEUP_ENABLE</name>
               <description>set this bit to enable GPIO wakeup.(can only wakeup CPU from Light-sleep Mode)</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_CONFIG</name>
+              <name>CONFIG</name>
               <description>reserved</description>
               <bitOffset>11</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PIN_INT_ENA</name>
+              <name>INT_ENA</name>
               <description>set bit 13 to enable CPU interrupt. set bit 14 to enable CPU(not shielded) interrupt.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
@@ -11264,6 +11265,7 @@
         <register>
           <dim>128</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-127</dimIndex>
           <name>FUNC%s_IN_SEL_CFG</name>
           <description>GPIO input function configuration register</description>
           <addressOffset>0x154</addressOffset>
@@ -11271,21 +11273,21 @@
           <fields>
             <field>
               <name>IN_SEL</name>
-              <description>set this value: s=-53: connect GPIO[s] to this port. s=x38: set this port always high level. s=x3C: set this port always low level.</description>
+              <description>set this value: s=0-53: connect GPIO[s] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>IN_INV_SEL</name>
-              <description>set this bit to invert input signal. 1:invert. :not invert.</description>
+              <description>set this bit to invert input signal. 1:invert. 0:not invert.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>SEL</name>
-              <description>set this bit to bypass GPIO. 1:do not bypass GPIO. :bypass GPIO.</description>
+              <description>set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -11295,6 +11297,7 @@
         <register>
           <dim>26</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-25</dimIndex>
           <name>FUNC%s_OUT_SEL_CFG</name>
           <description>GPIO output function select register</description>
           <addressOffset>0x554</addressOffset>
@@ -11303,28 +11306,28 @@
           <fields>
             <field>
               <name>OUT_SEL</name>
-              <description>The value of the bits: &lt;=s&lt;=256. Set the value to select output signal. s=-255: output of GPIO[n] equals input of peripheral[s]. s=256: output of GPIO[n] equals GPIO_OUT_REG[n].</description>
+              <description>The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO[n] equals input of peripheral[s]. s=256: output of GPIO[n] equals GPIO_OUT_REG[n].</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>INV_SEL</name>
-              <description>set this bit to invert output signal.1:invert.:not invert.</description>
+              <description>set this bit to invert output signal.1:invert.0:not invert.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>OEN_SEL</name>
-              <description>set this bit to select output enable signal.1:use GPIO_ENABLE_REG[n] as output enable signal.:use peripheral output enable signal.</description>
+              <description>set this bit to select output enable signal.1:use GPIO_ENABLE_REG[n] as output enable signal.0:use peripheral output enable signal.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
               <name>OEN_INV_SEL</name>
-              <description>set this bit to invert output enable signal.1:invert.:not invert.</description>
+              <description>set this bit to invert output enable signal.1:invert.0:not invert.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -11463,7 +11466,7 @@
       <baseAddress>0x6003E000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
-        <size>0xA0</size>
+        <size>0xA4</size>
         <usage>registers</usage>
       </addressBlock>
       <registers>
@@ -12846,6 +12849,7 @@
         <register>
           <dim>8</dim>
           <dimIncrement>0x4</dimIncrement>
+          <dimIndex>0-7</dimIndex>
           <name>COMD%s</name>
           <description>I2C_COMD%s_REG</description>
           <addressOffset>0x58</addressOffset>
@@ -14310,6 +14314,66 @@
         <size>0x19C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>WIFI_MAC</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_MAC_NMI</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_PWR</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_BB</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_MAC</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB_NMI</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBT_NMI</name>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>RWBLE_NMI</name>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_0</name>
+        <value>50</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_1</name>
+        <value>51</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_2</name>
+        <value>52</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_3</name>
+        <value>53</value>
+      </interrupt>
       <registers>
         <register>
           <name>MAC_INTR_MAP</name>
@@ -16023,55 +16087,58 @@
       </interrupt>
       <registers>
         <register>
-          <name>LSCH0_CONF0</name>
-          <description>LEDC_LSCH0_CONF0.</description>
+          <dim>6</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-5</dimIndex>
+          <name>CH%s_CONF0</name>
+          <description>LEDC_LSCH%s_CONF%s.</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIMER_SEL_LSCH0</name>
+              <name>TIMER_SEL</name>
               <description>reg_timer_sel_lsch0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SIG_OUT_EN_LSCH0</name>
+              <name>SIG_OUT_EN</name>
               <description>reg_sig_out_en_lsch0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IDLE_LV_LSCH0</name>
+              <name>IDLE_LV</name>
               <description>reg_idle_lv_lsch0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PARA_UP_LSCH0</name>
+              <name>PARA_UP</name>
               <description>reg_para_up_lsch0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OVF_NUM_LSCH0</name>
+              <name>OVF_NUM</name>
               <description>reg_ovf_num_lsch0.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OVF_CNT_EN_LSCH0</name>
+              <name>OVF_CNT_EN</name>
               <description>reg_ovf_cnt_en_lsch0.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OVF_CNT_RESET_LSCH0</name>
+              <name>OVF_CNT_RESET</name>
               <description>reg_ovf_cnt_reset_lsch0.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16080,13 +16147,16 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_HPOINT</name>
-          <description>LEDC_LSCH0_HPOINT.</description>
+          <dim>6</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-5</dimIndex>
+          <name>CH%s_HPOINT</name>
+          <description>LEDC_LSCH%s_HPOINT.</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>HPOINT_LSCH0</name>
+              <name>HPOINT</name>
               <description>reg_hpoint_lsch0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
@@ -16095,13 +16165,16 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_DUTY</name>
-          <description>LEDC_LSCH0_DUTY.</description>
+          <dim>6</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-5</dimIndex>
+          <name>CH%s_DUTY</name>
+          <description>LEDC_LSCH%s_DUTY.</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DUTY_LSCH0</name>
+              <name>DUTY</name>
               <description>reg_duty_lsch0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>19</bitWidth>
@@ -16110,42 +16183,45 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_CONF1</name>
-          <description>LEDC_LSCH0_CONF1.</description>
+          <dim>6</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-5</dimIndex>
+          <name>CH%s_CONF1</name>
+          <description>LEDC_LSCH%s_CONF1.</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <resetValue>0x40000000</resetValue>
           <fields>
             <field>
-              <name>DUTY_SCALE_LSCH0</name>
+              <name>DUTY_SCALE</name>
               <description>reg_duty_scale_lsch0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_CYCLE_LSCH0</name>
+              <name>DUTY_CYCLE</name>
               <description>reg_duty_cycle_lsch0.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_NUM_LSCH0</name>
+              <name>DUTY_NUM</name>
               <description>reg_duty_num_lsch0.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_INC_LSCH0</name>
+              <name>DUTY_INC</name>
               <description>reg_duty_inc_lsch0.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>DUTY_START_LSCH0</name>
+              <name>DUTY_START</name>
               <description>reg_duty_start_lsch0.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16154,13 +16230,16 @@
           </fields>
         </register>
         <register>
-          <name>LSCH0_DUTY_R</name>
-          <description>LEDC_LSCH0_DUTY_R.</description>
+          <dim>6</dim>
+          <dimIncrement>0x14</dimIncrement>
+          <dimIndex>0-5</dimIndex>
+          <name>CH%s_DUTY_R</name>
+          <description>LEDC_LSCH%s_DUTY_R.</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DUTY_LSCH0_R</name>
+              <name>DUTY_R</name>
               <description>reg_duty_lsch0_r.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>19</bitWidth>
@@ -16169,779 +16248,52 @@
           </fields>
         </register>
         <register>
-          <name>LSCH1_CONF0</name>
-          <description>LEDC_LSCH1_CONF0.</description>
-          <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH1</name>
-              <description>reg_timer_sel_lsch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH1</name>
-              <description>reg_sig_out_en_lsch1.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH1</name>
-              <description>reg_idle_lv_lsch1.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH1</name>
-              <description>reg_para_up_lsch1.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>OVF_NUM_LSCH1</name>
-              <description>reg_ovf_num_lsch1.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_EN_LSCH1</name>
-              <description>reg_ovf_cnt_en_lsch1.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_RESET_LSCH1</name>
-              <description>reg_ovf_cnt_reset_lsch1.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_HPOINT</name>
-          <description>LEDC_LSCH1_HPOINT.</description>
-          <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH1</name>
-              <description>reg_hpoint_lsch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_DUTY</name>
-          <description>LEDC_LSCH1_DUTY.</description>
-          <addressOffset>0x1C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH1</name>
-              <description>reg_duty_lsch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_CONF1</name>
-          <description>LEDC_LSCH1_CONF1.</description>
-          <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH1</name>
-              <description>reg_duty_scale_lsch1.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH1</name>
-              <description>reg_duty_cycle_lsch1.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH1</name>
-              <description>reg_duty_num_lsch1.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH1</name>
-              <description>reg_duty_inc_lsch1.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH1</name>
-              <description>reg_duty_start_lsch1.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH1_DUTY_R</name>
-          <description>LEDC_LSCH1_DUTY_R.</description>
-          <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH1_R</name>
-              <description>reg_duty_lsch1_r.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_CONF0</name>
-          <description>LEDC_LSCH2_CONF0.</description>
-          <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH2</name>
-              <description>reg_timer_sel_lsch2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH2</name>
-              <description>reg_sig_out_en_lsch2.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH2</name>
-              <description>reg_idle_lv_lsch2.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH2</name>
-              <description>reg_para_up_lsch2.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>OVF_NUM_LSCH2</name>
-              <description>reg_ovf_num_lsch2.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_EN_LSCH2</name>
-              <description>reg_ovf_cnt_en_lsch2.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_RESET_LSCH2</name>
-              <description>reg_ovf_cnt_reset_lsch2.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_HPOINT</name>
-          <description>LEDC_LSCH2_HPOINT.</description>
-          <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH2</name>
-              <description>reg_hpoint_lsch2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_DUTY</name>
-          <description>LEDC_LSCH2_DUTY.</description>
-          <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH2</name>
-              <description>reg_duty_lsch2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_CONF1</name>
-          <description>LEDC_LSCH2_CONF1.</description>
-          <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH2</name>
-              <description>reg_duty_scale_lsch2.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH2</name>
-              <description>reg_duty_cycle_lsch2.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH2</name>
-              <description>reg_duty_num_lsch2.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH2</name>
-              <description>reg_duty_inc_lsch2.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH2</name>
-              <description>reg_duty_start_lsch2.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH2_DUTY_R</name>
-          <description>LEDC_LSCH2_DUTY_R.</description>
-          <addressOffset>0x38</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH2_R</name>
-              <description>reg_duty_lsch2_r.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_CONF0</name>
-          <description>LEDC_LSCH3_CONF0.</description>
-          <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH3</name>
-              <description>reg_timer_sel_lsch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH3</name>
-              <description>reg_sig_out_en_lsch3.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH3</name>
-              <description>reg_idle_lv_lsch3.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH3</name>
-              <description>reg_para_up_lsch3.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>OVF_NUM_LSCH3</name>
-              <description>reg_ovf_num_lsch3.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_EN_LSCH3</name>
-              <description>reg_ovf_cnt_en_lsch3.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_RESET_LSCH3</name>
-              <description>reg_ovf_cnt_reset_lsch3.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_HPOINT</name>
-          <description>LEDC_LSCH3_HPOINT.</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH3</name>
-              <description>reg_hpoint_lsch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_DUTY</name>
-          <description>LEDC_LSCH3_DUTY.</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH3</name>
-              <description>reg_duty_lsch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_CONF1</name>
-          <description>LEDC_LSCH3_CONF1.</description>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH3</name>
-              <description>reg_duty_scale_lsch3.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH3</name>
-              <description>reg_duty_cycle_lsch3.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH3</name>
-              <description>reg_duty_num_lsch3.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH3</name>
-              <description>reg_duty_inc_lsch3.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH3</name>
-              <description>reg_duty_start_lsch3.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH3_DUTY_R</name>
-          <description>LEDC_LSCH3_DUTY_R.</description>
-          <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH3_R</name>
-              <description>reg_duty_lsch3_r.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_CONF0</name>
-          <description>LEDC_LSCH4_CONF0.</description>
-          <addressOffset>0x50</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH4</name>
-              <description>reg_timer_sel_lsch4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH4</name>
-              <description>reg_sig_out_en_lsch4.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH4</name>
-              <description>reg_idle_lv_lsch4.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH4</name>
-              <description>reg_para_up_lsch4.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>OVF_NUM_LSCH4</name>
-              <description>reg_ovf_num_lsch4.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_EN_LSCH4</name>
-              <description>reg_ovf_cnt_en_lsch4.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_RESET_LSCH4</name>
-              <description>reg_ovf_cnt_reset_lsch4.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_HPOINT</name>
-          <description>LEDC_LSCH4_HPOINT.</description>
-          <addressOffset>0x54</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH4</name>
-              <description>reg_hpoint_lsch4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_DUTY</name>
-          <description>LEDC_LSCH4_DUTY.</description>
-          <addressOffset>0x58</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH4</name>
-              <description>reg_duty_lsch4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_CONF1</name>
-          <description>LEDC_LSCH4_CONF1.</description>
-          <addressOffset>0x5C</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH4</name>
-              <description>reg_duty_scale_lsch4.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH4</name>
-              <description>reg_duty_cycle_lsch4.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH4</name>
-              <description>reg_duty_num_lsch4.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH4</name>
-              <description>reg_duty_inc_lsch4.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH4</name>
-              <description>reg_duty_start_lsch4.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH4_DUTY_R</name>
-          <description>LEDC_LSCH4_DUTY_R.</description>
-          <addressOffset>0x60</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH4_R</name>
-              <description>reg_duty_lsch4_r.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_CONF0</name>
-          <description>LEDC_LSCH5_CONF0.</description>
-          <addressOffset>0x64</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>TIMER_SEL_LSCH5</name>
-              <description>reg_timer_sel_lsch5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SIG_OUT_EN_LSCH5</name>
-              <description>reg_sig_out_en_lsch5.</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>IDLE_LV_LSCH5</name>
-              <description>reg_idle_lv_lsch5.</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PARA_UP_LSCH5</name>
-              <description>reg_para_up_lsch5.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-            <field>
-              <name>OVF_NUM_LSCH5</name>
-              <description>reg_ovf_num_lsch5.</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_EN_LSCH5</name>
-              <description>reg_ovf_cnt_en_lsch5.</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVF_CNT_RESET_LSCH5</name>
-              <description>reg_ovf_cnt_reset_lsch5.</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_HPOINT</name>
-          <description>LEDC_LSCH5_HPOINT.</description>
-          <addressOffset>0x68</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>HPOINT_LSCH5</name>
-              <description>reg_hpoint_lsch5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_DUTY</name>
-          <description>LEDC_LSCH5_DUTY.</description>
-          <addressOffset>0x6C</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH5</name>
-              <description>reg_duty_lsch5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_CONF1</name>
-          <description>LEDC_LSCH5_CONF1.</description>
-          <addressOffset>0x70</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x40000000</resetValue>
-          <fields>
-            <field>
-              <name>DUTY_SCALE_LSCH5</name>
-              <description>reg_duty_scale_lsch5.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_CYCLE_LSCH5</name>
-              <description>reg_duty_cycle_lsch5.</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_NUM_LSCH5</name>
-              <description>reg_duty_num_lsch5.</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>10</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_INC_LSCH5</name>
-              <description>reg_duty_inc_lsch5.</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DUTY_START_LSCH5</name>
-              <description>reg_duty_start_lsch5.</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSCH5_DUTY_R</name>
-          <description>LEDC_LSCH5_DUTY_R.</description>
-          <addressOffset>0x74</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>DUTY_LSCH5_R</name>
-              <description>reg_duty_lsch5_r.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>19</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER0_CONF</name>
-          <description>LEDC_LSTIMER0_CONF.</description>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>TIMER%s_CONF</name>
+          <description>LEDC_LSTIMER%s_CONF.</description>
           <addressOffset>0xA0</addressOffset>
           <size>0x20</size>
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>LSTIMER0_DUTY_RES</name>
+              <name>DUTY_RES</name>
               <description>reg_lstimer0_duty_res.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CLK_DIV_LSTIMER0</name>
+              <name>CLK_DIV</name>
               <description>reg_clk_div_lstimer0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_PAUSE</name>
+              <name>PAUSE</name>
               <description>reg_lstimer0_pause.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_RST</name>
+              <name>RST</name>
               <description>reg_lstimer0_rst.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TICK_SEL_LSTIMER0</name>
+              <name>TICK_SEL</name>
               <description>reg_tick_sel_lstimer0.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>LSTIMER0_PARA_UP</name>
+              <name>PARA_UP</name>
               <description>reg_lstimer0_para_up.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16950,212 +16302,17 @@
           </fields>
         </register>
         <register>
-          <name>LSTIMER0_VALUE</name>
-          <description>LEDC_LSTIMER0_VALUE.</description>
+          <dim>4</dim>
+          <dimIncrement>0x8</dimIncrement>
+          <dimIndex>0-3</dimIndex>
+          <name>TIMER%s_VALUE</name>
+          <description>LEDC_LSTIMER%s_VALUE.</description>
           <addressOffset>0xA4</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>LSTIMER0_CNT</name>
+              <name>CNT</name>
               <description>reg_lstimer0_cnt.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER1_CONF</name>
-          <description>LEDC_LSTIMER1_CONF.</description>
-          <addressOffset>0xA8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00800000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER1_DUTY_RES</name>
-              <description>reg_lstimer1_duty_res.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CLK_DIV_LSTIMER1</name>
-              <description>reg_clk_div_lstimer1.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_PAUSE</name>
-              <description>reg_lstimer1_pause.</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_RST</name>
-              <description>reg_lstimer1_rst.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER1</name>
-              <description>reg_tick_sel_lstimer1.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER1_PARA_UP</name>
-              <description>reg_lstimer1_para_up.</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER1_VALUE</name>
-          <description>LEDC_LSTIMER1_VALUE.</description>
-          <addressOffset>0xAC</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER1_CNT</name>
-              <description>reg_lstimer1_cnt.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER2_CONF</name>
-          <description>LEDC_LSTIMER2_CONF.</description>
-          <addressOffset>0xB0</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00800000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER2_DUTY_RES</name>
-              <description>reg_lstimer2_duty_res.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CLK_DIV_LSTIMER2</name>
-              <description>reg_clk_div_lstimer2.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_PAUSE</name>
-              <description>reg_lstimer2_pause.</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_RST</name>
-              <description>reg_lstimer2_rst.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER2</name>
-              <description>reg_tick_sel_lstimer2.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER2_PARA_UP</name>
-              <description>reg_lstimer2_para_up.</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER2_VALUE</name>
-          <description>LEDC_LSTIMER2_VALUE.</description>
-          <addressOffset>0xB4</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER2_CNT</name>
-              <description>reg_lstimer2_cnt.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>14</bitWidth>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER3_CONF</name>
-          <description>LEDC_LSTIMER3_CONF.</description>
-          <addressOffset>0xB8</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00800000</resetValue>
-          <fields>
-            <field>
-              <name>LSTIMER3_DUTY_RES</name>
-              <description>reg_lstimer3_duty_res.</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CLK_DIV_LSTIMER3</name>
-              <description>reg_clk_div_lstimer3.</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>18</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_PAUSE</name>
-              <description>reg_lstimer3_pause.</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_RST</name>
-              <description>reg_lstimer3_rst.</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TICK_SEL_LSTIMER3</name>
-              <description>reg_tick_sel_lstimer3.</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LSTIMER3_PARA_UP</name>
-              <description>reg_lstimer3_para_up.</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>write-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>LSTIMER3_VALUE</name>
-          <description>LEDC_LSTIMER3_VALUE.</description>
-          <addressOffset>0xBC</addressOffset>
-          <size>0x20</size>
-          <fields>
-            <field>
-              <name>LSTIMER3_CNT</name>
-              <description>reg_lstimer3_cnt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
               <access>read-only</access>
@@ -19397,7 +18554,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_ALARM_EN</name>
+              <name>MAIN_TIMER_ALARM_EN</name>
               <description>timer alarm enable bit</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
@@ -19433,7 +18590,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_TIME_UPDATE</name>
+              <name>TIME_UPDATE</name>
               <description>Set 1: to update register with RTC timer</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -19448,7 +18605,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_TIMER_VALUE0_LOW</name>
+              <name>TIMER_VALUE0_LOW</name>
               <description>RTC timer low 32 bits</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -19463,7 +18620,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_TIMER_VALUE0_HIGH</name>
+              <name>TIMER_VALUE0_HIGH</name>
               <description>RTC timer high 16 bits</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -19478,14 +18635,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SW_CPU_INT</name>
+              <name>SW_CPU_INT</name>
               <description>rtc software interrupt to main cpu</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_SLP_REJECT_CAUSE_CLR</name>
+              <name>SLP_REJECT_CAUSE_CLR</name>
               <description>clear rtc sleep reject cause</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
@@ -19900,14 +19057,14 @@
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_DRESET_MASK_APPCPU</name>
+              <name>DRESET_MASK_APPCPU</name>
               <description>configure dreset configure</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DRESET_MASK_PROCPU</name>
+              <name>DRESET_MASK_PROCPU</name>
               <description>configure dreset configure</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -19923,7 +19080,7 @@
           <resetValue>0x00060000</resetValue>
           <fields>
             <field>
-              <name>RTC_WAKEUP_ENA</name>
+              <name>WAKEUP_ENA</name>
               <description>wakeup enable bitmap</description>
               <bitOffset>15</bitOffset>
               <bitWidth>17</bitWidth>
@@ -19952,49 +19109,49 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_ENA</name>
+              <name>WDT_INT_ENA</name>
               <description>enable RTC WDT interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_ENA</name>
+              <name>BROWN_OUT_INT_ENA</name>
               <description>enable brown out interrupt</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_ENA</name>
+              <name>MAIN_TIMER_INT_ENA</name>
               <description>enable RTC main timer interrupt</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_ENA</name>
+              <name>SWD_INT_ENA</name>
               <description>enable super watch dog interrupt</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_ENA</name>
+              <name>XTAL32K_DEAD_INT_ENA</name>
               <description>enable xtal32k_dead  interrupt</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_ENA</name>
+              <name>GLITCH_DET_INT_ENA</name>
               <description>enbale gitch det interrupt</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_ENA</name>
+              <name>BBPLL_CAL_INT_ENA</name>
               <description>enbale bbpll cal end interrupt</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20023,49 +19180,49 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_RAW</name>
+              <name>WDT_INT_RAW</name>
               <description>RTC WDT interrupt raw</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_RAW</name>
+              <name>BROWN_OUT_INT_RAW</name>
               <description>brown out interrupt raw</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_RAW</name>
+              <name>MAIN_TIMER_INT_RAW</name>
               <description>RTC main timer interrupt raw</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_RAW</name>
+              <name>SWD_INT_RAW</name>
               <description>super watch dog interrupt raw</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_RAW</name>
+              <name>XTAL32K_DEAD_INT_RAW</name>
               <description>xtal32k dead detection interrupt raw</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_RAW</name>
+              <name>GLITCH_DET_INT_RAW</name>
               <description>glitch_det_interrupt_raw</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_RAW</name>
+              <name>BBPLL_CAL_INT_RAW</name>
               <description>bbpll cal end interrupt state</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20094,49 +19251,49 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_ST</name>
+              <name>WDT_INT_ST</name>
               <description>RTC WDT interrupt state</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_ST</name>
+              <name>BROWN_OUT_INT_ST</name>
               <description>brown out interrupt state</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_ST</name>
+              <name>MAIN_TIMER_INT_ST</name>
               <description>RTC main timer interrupt state</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_ST</name>
+              <name>SWD_INT_ST</name>
               <description>super watch dog interrupt state</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_ST</name>
+              <name>XTAL32K_DEAD_INT_ST</name>
               <description>xtal32k dead detection interrupt state</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_ST</name>
+              <name>GLITCH_DET_INT_ST</name>
               <description>glitch_det_interrupt state</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_ST</name>
+              <name>BBPLL_CAL_INT_ST</name>
               <description>bbpll cal end interrupt state</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20165,49 +19322,49 @@
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_CLR</name>
+              <name>WDT_INT_CLR</name>
               <description>Clear RTC WDT interrupt state</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_CLR</name>
+              <name>BROWN_OUT_INT_CLR</name>
               <description>Clear brown out interrupt state</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_CLR</name>
+              <name>MAIN_TIMER_INT_CLR</name>
               <description>Clear RTC main timer interrupt state</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_CLR</name>
+              <name>SWD_INT_CLR</name>
               <description>Clear super watch dog interrupt state</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_CLR</name>
+              <name>XTAL32K_DEAD_INT_CLR</name>
               <description>Clear RTC WDT interrupt state</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_CLR</name>
+              <name>GLITCH_DET_INT_CLR</name>
               <description>Clear glitch det interrupt state</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_CLR</name>
+              <name>BBPLL_CAL_INT_CLR</name>
               <description>clear bbpll cal end interrupt state</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20222,7 +19379,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH0</name>
+              <name>SCRATCH0</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -20237,7 +19394,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH1</name>
+              <name>SCRATCH1</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -20252,7 +19409,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH2</name>
+              <name>SCRATCH2</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -20267,7 +19424,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH3</name>
+              <name>SCRATCH3</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -20381,14 +19538,14 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_WDT_STATE</name>
+              <name>WDT_STATE</name>
               <description>state of 32k_wdt</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_GPIO_SEL</name>
+              <name>XTAL32K_GPIO_SEL</name>
               <description>XTAL_32K sel. 0: external XTAL_32K</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20432,7 +19589,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SLEEP_REJECT_ENA</name>
+              <name>SLEEP_REJECT_ENA</name>
               <description>sleep reject enable</description>
               <bitOffset>12</bitOffset>
               <bitWidth>18</bitWidth>
@@ -20461,14 +19618,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_CPUSEL_CONF</name>
+              <name>CPUSEL_CONF</name>
               <description>CPU sel option</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_CPUPERIOD_SEL</name>
+              <name>CPUPERIOD_SEL</name>
               <description>CPU clk sel option</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
@@ -20626,21 +19783,21 @@
           <resetValue>0x00400000</resetValue>
           <fields>
             <field>
-              <name>RTC_ANA_CLK_DIV_VLD</name>
+              <name>ANA_CLK_DIV_VLD</name>
               <description>used to sync div bus. clear vld before set reg_rtc_ana_clk_div</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_ANA_CLK_DIV</name>
+              <name>ANA_CLK_DIV</name>
               <description>the clk divider num of RTC_CLK</description>
               <bitOffset>23</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_SLOW_CLK_NEXT_EDGE</name>
+              <name>SLOW_CLK_NEXT_EDGE</name>
               <description>flag rtc_slow_clk_next_edge</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20917,7 +20074,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_PAD_FORCE_HOLD</name>
+              <name>PAD_FORCE_HOLD</name>
               <description>rtc pad force hold</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
@@ -20989,14 +20146,14 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_FASTMEM_FORCE_LPD</name>
+              <name>FASTMEM_FORCE_LPD</name>
               <description>fastmemory  retention mode in sleep</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_FASTMEM_FORCE_LPU</name>
+              <name>FASTMEM_FORCE_LPU</name>
               <description>fastmemory donlt entry retention mode in sleep</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21394,7 +20551,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_WDT_FEED</name>
+              <name>WDT_FEED</name>
               <description>sw feed rtc wdt</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21526,7 +20683,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH4</name>
+              <name>SCRATCH4</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21541,7 +20698,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH5</name>
+              <name>SCRATCH5</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21556,7 +20713,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH6</name>
+              <name>SCRATCH6</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21571,7 +20728,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_SCRATCH7</name>
+              <name>SCRATCH7</name>
               <description>reserved register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21600,7 +20757,7 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_PERI_ISO</name>
+              <name>PERI_ISO</name>
               <description>rtc peripheral iso</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21642,140 +20799,140 @@
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_TOUCH_STATE_START</name>
+              <name>TOUCH_STATE_START</name>
               <description>touch should start to work</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_TOUCH_STATE_SWITCH</name>
+              <name>TOUCH_STATE_SWITCH</name>
               <description>touch is about to working. Switch rtc main state</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_TOUCH_STATE_SLP</name>
+              <name>TOUCH_STATE_SLP</name>
               <description>touch is in sleep state</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_TOUCH_STATE_DONE</name>
+              <name>TOUCH_STATE_DONE</name>
               <description>touch is done</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_COCPU_STATE_START</name>
+              <name>COCPU_STATE_START</name>
               <description>ulp/cocpu should start to work</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_COCPU_STATE_SWITCH</name>
+              <name>COCPU_STATE_SWITCH</name>
               <description>ulp/cocpu is about to working. Switch rtc main state</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_COCPU_STATE_SLP</name>
+              <name>COCPU_STATE_SLP</name>
               <description>ulp/cocpu is in sleep state</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_COCPU_STATE_DONE</name>
+              <name>COCPU_STATE_DONE</name>
               <description>ulp/cocpu is done</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_XTAL_ISO</name>
+              <name>MAIN_STATE_XTAL_ISO</name>
               <description>no use any more</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_PLL_ON</name>
+              <name>MAIN_STATE_PLL_ON</name>
               <description>rtc main state machine is in states that pll should be running</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_RDY_FOR_WAKEUP</name>
+              <name>RDY_FOR_WAKEUP</name>
               <description>rtc is ready to receive wake up trigger from wake up source</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_WAIT_END</name>
+              <name>MAIN_STATE_WAIT_END</name>
               <description>rtc main state machine has been waited for some cycles</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_IN_WAKEUP_STATE</name>
+              <name>IN_WAKEUP_STATE</name>
               <description>rtc main state machine is in the states of wakeup process</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_IN_LOW_POWER_STATE</name>
+              <name>IN_LOW_POWER_STATE</name>
               <description>rtc main state machine is in the states of low power</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_IN_WAIT_8M</name>
+              <name>MAIN_STATE_IN_WAIT_8M</name>
               <description>rtc main state machine is in wait 8m state</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_IN_WAIT_PLL</name>
+              <name>MAIN_STATE_IN_WAIT_PLL</name>
               <description>rtc main state machine is in wait pll state</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_IN_WAIT_XTL</name>
+              <name>MAIN_STATE_IN_WAIT_XTL</name>
               <description>rtc main state machine is in wait xtal state</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_IN_SLP</name>
+              <name>MAIN_STATE_IN_SLP</name>
               <description>rtc main state machine is in sleep state</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE_IN_IDLE</name>
+              <name>MAIN_STATE_IN_IDLE</name>
               <description>rtc main state machine is in idle state</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_STATE</name>
+              <name>MAIN_STATE</name>
               <description>rtc main state machine status</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
@@ -21790,7 +20947,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_LOW_POWER_DIAG1</name>
+              <name>LOW_POWER_DIAG1</name>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-only</access>
@@ -21804,42 +20961,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_GPIO_PIN0_HOLD</name>
+              <name>GPIO_PIN0_HOLD</name>
               <description>the hold configure of rtc gpio0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN1_HOLD</name>
+              <name>GPIO_PIN1_HOLD</name>
               <description>the hold configure of rtc gpio1</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN2_HOLD</name>
+              <name>GPIO_PIN2_HOLD</name>
               <description>the hold configure of rtc gpio2</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN3_HOLD</name>
+              <name>GPIO_PIN3_HOLD</name>
               <description>the hold configure of rtc gpio3</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN4_HOLD</name>
+              <name>GPIO_PIN4_HOLD</name>
               <description>the hold configure of rtc gpio4</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN5_HOLD</name>
+              <name>GPIO_PIN5_HOLD</name>
               <description>the hold configure of rtc gpio5</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21870,63 +21027,63 @@
           <resetValue>0x43FF0010</resetValue>
           <fields>
             <field>
-              <name>INT_WAIT</name>
+              <name>BROWN_OUT_INT_WAIT</name>
               <description>brown out interrupt wait cycles</description>
               <bitOffset>4</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CLOSE_FLASH_ENA</name>
+              <name>BROWN_OUT_CLOSE_FLASH_ENA</name>
               <description>enable close flash when brown out happens</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>PD_RF_ENA</name>
+              <name>BROWN_OUT_PD_RF_ENA</name>
               <description>enable power down RF when brown out happens</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RST_WAIT</name>
+              <name>BROWN_OUT_RST_WAIT</name>
               <description>brown out reset wait cycles</description>
               <bitOffset>16</bitOffset>
               <bitWidth>10</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RST_ENA</name>
+              <name>BROWN_OUT_RST_ENA</name>
               <description>enable brown out reset</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RST_SEL</name>
+              <name>BROWN_OUT_RST_SEL</name>
               <description>1:  4-pos reset</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>ANA_RST_EN</name>
+              <name>BROWN_OUT_ANA_RST_EN</name>
               <description>brown_out origin reset enable</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_CLR</name>
+              <name>BROWN_OUT_CNT_CLR</name>
               <description>clear brown out counter</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>ENA</name>
+              <name>BROWN_OUT_ENA</name>
               <description>enable brown out</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -21948,7 +21105,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_TIMER_VALUE1_LOW</name>
+              <name>TIMER_VALUE1_LOW</name>
               <description>RTC timer low 32 bits</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -21963,7 +21120,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_TIMER_VALUE1_HIGH</name>
+              <name>TIMER_VALUE1_HIGH</name>
               <description>RTC timer high 16 bits</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -22120,49 +21277,49 @@
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_ENA_W1TS</name>
+              <name>WDT_INT_ENA_W1TS</name>
               <description>enable RTC WDT interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_ENA_W1TS</name>
+              <name>BROWN_OUT_INT_ENA_W1TS</name>
               <description>enable brown out interrupt</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_ENA_W1TS</name>
+              <name>MAIN_TIMER_INT_ENA_W1TS</name>
               <description>enable RTC main timer interrupt</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_ENA_W1TS</name>
+              <name>SWD_INT_ENA_W1TS</name>
               <description>enable super watch dog interrupt</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_ENA_W1TS</name>
+              <name>XTAL32K_DEAD_INT_ENA_W1TS</name>
               <description>enable xtal32k_dead  interrupt</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_ENA_W1TS</name>
+              <name>GLITCH_DET_INT_ENA_W1TS</name>
               <description>enbale gitch det interrupt</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_ENA_W1TS</name>
+              <name>BBPLL_CAL_INT_ENA_W1TS</name>
               <description>enbale bbpll cal interrupt</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22191,49 +21348,49 @@
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_WDT_INT_ENA_W1TC</name>
+              <name>WDT_INT_ENA_W1TC</name>
               <description>clear RTC WDT interrupt enable</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BROWN_OUT_INT_ENA_W1TC</name>
+              <name>BROWN_OUT_INT_ENA_W1TC</name>
               <description>clear brown out interrupt enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_MAIN_TIMER_INT_ENA_W1TC</name>
+              <name>MAIN_TIMER_INT_ENA_W1TC</name>
               <description>Clear RTC main timer interrupt enable</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_SWD_INT_ENA_W1TC</name>
+              <name>SWD_INT_ENA_W1TC</name>
               <description>clear super watch dog interrupt enable</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_XTAL32K_DEAD_INT_ENA_W1TC</name>
+              <name>XTAL32K_DEAD_INT_ENA_W1TC</name>
               <description>clear xtal32k_dead  interrupt enable</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_GLITCH_DET_INT_ENA_W1TC</name>
+              <name>GLITCH_DET_INT_ENA_W1TC</name>
               <description>clear gitch det interrupt enable</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>RTC_BBPLL_CAL_INT_ENA_W1TC</name>
+              <name>BBPLL_CAL_INT_ENA_W1TC</name>
               <description>clear bbpll cal interrupt enable</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22293,7 +21450,7 @@
           <resetValue>0x00000007</resetValue>
           <fields>
             <field>
-              <name>RTC_FIB_SEL</name>
+              <name>FIB_SEL</name>
               <description>select use analog fib signal</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
@@ -22308,105 +21465,105 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_GPIO_WAKEUP_STATUS</name>
+              <name>GPIO_WAKEUP_STATUS</name>
               <description>rtc gpio wakeup flag</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>RTC_GPIO_WAKEUP_STATUS_CLR</name>
+              <name>GPIO_WAKEUP_STATUS_CLR</name>
               <description>clear rtc gpio wakeup flag</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN_CLK_GATE</name>
+              <name>GPIO_PIN_CLK_GATE</name>
               <description>enable rtc io clk gate</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN5_INT_TYPE</name>
+              <name>GPIO_PIN5_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>8</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN4_INT_TYPE</name>
+              <name>GPIO_PIN4_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN3_INT_TYPE</name>
+              <name>GPIO_PIN3_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>14</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN2_INT_TYPE</name>
+              <name>GPIO_PIN2_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>17</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN1_INT_TYPE</name>
+              <name>GPIO_PIN1_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN0_INT_TYPE</name>
+              <name>GPIO_PIN0_INT_TYPE</name>
               <description>configure gpio wakeup type</description>
               <bitOffset>23</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN5_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN5_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio5</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN4_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN4_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio4</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN3_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN3_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio3</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN2_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN2_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio2</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN1_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN1_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio1</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN0_WAKEUP_ENABLE</name>
+              <name>GPIO_PIN0_WAKEUP_ENABLE</name>
               <description>enable wakeup from rtc gpio0</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22421,49 +21578,49 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_DEBUG_12M_NO_GATING</name>
+              <name>DEBUG_12M_NO_GATING</name>
               <description>use for debug</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_BIT_SEL</name>
+              <name>DEBUG_BIT_SEL</name>
               <description>use for debug</description>
               <bitOffset>2</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_SEL0</name>
+              <name>DEBUG_SEL0</name>
               <description>use for debug</description>
               <bitOffset>7</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_SEL1</name>
+              <name>DEBUG_SEL1</name>
               <description>use for debug</description>
               <bitOffset>12</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_SEL2</name>
+              <name>DEBUG_SEL2</name>
               <description>use for debug</description>
               <bitOffset>17</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_SEL3</name>
+              <name>DEBUG_SEL3</name>
               <description>use for debug</description>
               <bitOffset>22</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_DEBUG_SEL4</name>
+              <name>DEBUG_SEL4</name>
               <description>use for debug</description>
               <bitOffset>27</bitOffset>
               <bitWidth>5</bitWidth>
@@ -22478,84 +21635,84 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RTC_GPIO_PIN5_MUX_SEL</name>
+              <name>GPIO_PIN5_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN4_MUX_SEL</name>
+              <name>GPIO_PIN4_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN3_MUX_SEL</name>
+              <name>GPIO_PIN3_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN2_MUX_SEL</name>
+              <name>GPIO_PIN2_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN1_MUX_SEL</name>
+              <name>GPIO_PIN1_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN0_MUX_SEL</name>
+              <name>GPIO_PIN0_MUX_SEL</name>
               <description>use for debug</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN5_FUN_SEL</name>
+              <name>GPIO_PIN5_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN4_FUN_SEL</name>
+              <name>GPIO_PIN4_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN3_FUN_SEL</name>
+              <name>GPIO_PIN3_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN2_FUN_SEL</name>
+              <name>GPIO_PIN2_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN1_FUN_SEL</name>
+              <name>GPIO_PIN1_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RTC_GPIO_PIN0_FUN_SEL</name>
+              <name>GPIO_PIN0_FUN_SEL</name>
               <description>use for debug</description>
               <bitOffset>28</bitOffset>
               <bitWidth>4</bitWidth>
@@ -22651,7 +21808,7 @@
           <resetValue>0x02007270</resetValue>
           <fields>
             <field>
-              <name>RTC_CNTL_DATE</name>
+              <name>DATE</name>
               <description>verision</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
@@ -25870,7 +25027,7 @@
         </register>
         <register>
           <name>CLOCK_GATE</name>
-          <description>SENSITIVE_CLOCK_GATE_REG</description>
+          <description>SENSITIVE_CLOCK_GATE_REG_REG</description>
           <addressOffset>0x170</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000001</resetValue>
@@ -31951,49 +31108,49 @@
           <resetValue>0x60002000</resetValue>
           <fields>
             <field>
-              <name>T0_USE_XTAL</name>
+              <name>USE_XTAL</name>
               <description>reg_t0_use_xtal.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_ALARM_EN</name>
+              <name>ALARM_EN</name>
               <description>reg_t0_alarm_en.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_DIVCNT_RST</name>
+              <name>DIVCNT_RST</name>
               <description>reg_t0_divcnt_rst.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>T0_DIVIDER</name>
+              <name>DIVIDER</name>
               <description>reg_t0_divider.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_AUTORELOAD</name>
+              <name>AUTORELOAD</name>
               <description>reg_t0_autoreload.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_INCREASE</name>
+              <name>INCREASE</name>
               <description>reg_t0_increase.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T0_EN</name>
+              <name>EN</name>
               <description>reg_t0_en.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32008,7 +31165,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LO</name>
+              <name>LO</name>
               <description>t0_lo</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -32023,7 +31180,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_HI</name>
+              <name>HI</name>
               <description>t0_hi</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
@@ -32038,7 +31195,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_UPDATE</name>
+              <name>UPDATE</name>
               <description>t0_update</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32053,7 +31210,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_LO</name>
+              <name>ALARM_LO</name>
               <description>reg_t0_alarm_lo.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -32068,7 +31225,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_ALARM_HI</name>
+              <name>ALARM_HI</name>
               <description>reg_t0_alarm_hi.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
@@ -32083,7 +31240,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_LO</name>
+              <name>LOAD_LO</name>
               <description>reg_t0_load_lo.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -32098,7 +31255,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD_HI</name>
+              <name>LOAD_HI</name>
               <description>reg_t0_load_hi.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
@@ -32113,7 +31270,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>T0_LOAD</name>
+              <name>LOAD</name>
               <description>t0_load</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -32867,7 +32024,7 @@
               <name>BAUD_PRESC</name>
               <description>Baud Rate Prescaler, determines the frequency dividing ratio.</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>13</bitWidth>
+              <bitWidth>14</bitWidth>
             </field>
             <field>
               <name>SYNC_JUMP_WIDTH</name>
@@ -32998,10 +32155,10 @@
           <fields>
             <field>
               <name>TX_BYTE_0</name>
-              <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33013,10 +32170,10 @@
           <fields>
             <field>
               <name>TX_BYTE_1</name>
-              <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33028,10 +32185,10 @@
           <fields>
             <field>
               <name>TX_BYTE_2</name>
-              <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33043,10 +32200,10 @@
           <fields>
             <field>
               <name>TX_BYTE_3</name>
-              <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33058,10 +32215,10 @@
           <fields>
             <field>
               <name>TX_BYTE_4</name>
-              <description>In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, it stores the 4th byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 4 with R/W Permission. In operation mode, it stores the 4th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33073,10 +32230,10 @@
           <fields>
             <field>
               <name>TX_BYTE_5</name>
-              <description>In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, it stores the 5th byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 5 with R/W Permission. In operation mode, it stores the 5th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33088,10 +32245,10 @@
           <fields>
             <field>
               <name>TX_BYTE_6</name>
-              <description>In reset mode, it is acceptance mask register 2 with R/W Permission. In operation mode, it stores the 6th byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 6 with R/W Permission. In operation mode, it stores the 6th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33103,10 +32260,10 @@
           <fields>
             <field>
               <name>TX_BYTE_7</name>
-              <description>In reset mode, it is acceptance mask register 3 with R/W Permission. In operation mode, it stores the 7th byte information of the data to be transmitted under operating mode.</description>
+              <description>In reset mode, it is acceptance code register 7 with R/W Permission. In operation mode, it stores the 7th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33118,10 +32275,10 @@
           <fields>
             <field>
               <name>TX_BYTE_8</name>
-              <description>Stored the 8th byte information of the data to be transmitted under operating mode.</description>
+              <description>In operation mode, it stores the 8th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33133,10 +32290,10 @@
           <fields>
             <field>
               <name>TX_BYTE_9</name>
-              <description>Stored the 9th byte information of the data to be transmitted under operating mode.</description>
+              <description>In operation mode, it stores the 9th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33148,10 +32305,10 @@
           <fields>
             <field>
               <name>TX_BYTE_10</name>
-              <description>Stored the 10th byte information of the data to be transmitted under operating mode.</description>
+              <description>In operation mode, it stores the 10th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33163,10 +32320,10 @@
           <fields>
             <field>
               <name>TX_BYTE_11</name>
-              <description>Stored the 11th byte information of the data to be transmitted under operating mode.</description>
+              <description>In operation mode, it stores the 11th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -33178,10 +32335,10 @@
           <fields>
             <field>
               <name>TX_BYTE_12</name>
-              <description>Stored the 12th byte information of the data to be transmitted under operating mode.</description>
+              <description>In operation mode, it stores the 12th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>

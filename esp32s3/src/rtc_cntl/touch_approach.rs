@@ -37,16 +37,16 @@ impl From<crate::W<TOUCH_APPROACH_SPEC>> for W {
 #[doc = "Field `TOUCH_SLP_CHANNEL_CLR` writer - clear touch slp channel"]
 pub type TOUCH_SLP_CHANNEL_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TOUCH_APPROACH_SPEC, bool, O>;
-#[doc = "Field `MEAS_TIME` reader - approach pads total meas times"]
-pub type MEAS_TIME_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `MEAS_TIME` writer - approach pads total meas times"]
-pub type MEAS_TIME_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_APPROACH_MEAS_TIME` reader - approach pads total meas times"]
+pub type TOUCH_APPROACH_MEAS_TIME_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TOUCH_APPROACH_MEAS_TIME` writer - approach pads total meas times"]
+pub type TOUCH_APPROACH_MEAS_TIME_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, TOUCH_APPROACH_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
-    pub fn meas_time(&self) -> MEAS_TIME_R {
-        MEAS_TIME_R::new(((self.bits >> 24) & 0xff) as u8)
+    pub fn touch_approach_meas_time(&self) -> TOUCH_APPROACH_MEAS_TIME_R {
+        TOUCH_APPROACH_MEAS_TIME_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
 impl W {
@@ -57,8 +57,8 @@ impl W {
     }
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
-    pub fn meas_time(&mut self) -> MEAS_TIME_W<24> {
-        MEAS_TIME_W::new(self)
+    pub fn touch_approach_meas_time(&mut self) -> TOUCH_APPROACH_MEAS_TIME_W<24> {
+        TOUCH_APPROACH_MEAS_TIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

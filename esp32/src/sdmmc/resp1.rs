@@ -13,10 +13,12 @@ impl From<crate::R<RESP1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RESPONSE1` reader - Bit\\[63:32\\] of long response."]
+#[doc = "Field `RESPONSE1` reader - Bit\\[63:32\\]
+of long response."]
 pub type RESPONSE1_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Bit\\[63:32\\] of long response."]
+    #[doc = "Bits 0:31 - Bit\\[63:32\\]
+of long response."]
     #[inline(always)]
     pub fn response1(&self) -> RESPONSE1_R {
         RESPONSE1_R::new(self.bits)

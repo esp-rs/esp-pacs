@@ -44,28 +44,28 @@ pub type SLP_REJECT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_REJECT_INT_RAW` writer - sleep reject interrupt raw"]
 pub type SLP_REJECT_INT_RAW_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_WDT_INT_RAW` reader - RTC WDT interrupt raw"]
-pub type RTC_WDT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_INT_RAW` writer - RTC WDT interrupt raw"]
-pub type RTC_WDT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BROWN_OUT_INT_RAW` reader - brown out interrupt raw"]
-pub type RTC_BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BROWN_OUT_INT_RAW` writer - brown out interrupt raw"]
-pub type RTC_BROWN_OUT_INT_RAW_W<'a, const O: u8> =
+#[doc = "Field `WDT_INT_RAW` reader - RTC WDT interrupt raw"]
+pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `WDT_INT_RAW` writer - RTC WDT interrupt raw"]
+pub type WDT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
+#[doc = "Field `BROWN_OUT_INT_RAW` reader - brown out interrupt raw"]
+pub type BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `BROWN_OUT_INT_RAW` writer - brown out interrupt raw"]
+pub type BROWN_OUT_INT_RAW_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_RAW` reader - RTC main timer interrupt raw"]
-pub type RTC_MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_RAW` writer - RTC main timer interrupt raw"]
-pub type RTC_MAIN_TIMER_INT_RAW_W<'a, const O: u8> =
+#[doc = "Field `MAIN_TIMER_INT_RAW` reader - RTC main timer interrupt raw"]
+pub type MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_INT_RAW` writer - RTC main timer interrupt raw"]
+pub type MAIN_TIMER_INT_RAW_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SWD_INT_RAW` reader - super watch dog interrupt raw"]
-pub type RTC_SWD_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SWD_INT_RAW` writer - super watch dog interrupt raw"]
-pub type RTC_SWD_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BBPLL_CAL_INT_RAW` reader - Need add desc"]
-pub type RTC_BBPLL_CAL_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BBPLL_CAL_INT_RAW` writer - Need add desc"]
-pub type RTC_BBPLL_CAL_INT_RAW_W<'a, const O: u8> =
+#[doc = "Field `SWD_INT_RAW` reader - super watch dog interrupt raw"]
+pub type SWD_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_INT_RAW` writer - super watch dog interrupt raw"]
+pub type SWD_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
+#[doc = "Field `BBPLL_CAL_INT_RAW` reader - Need add desc"]
+pub type BBPLL_CAL_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `BBPLL_CAL_INT_RAW` writer - Need add desc"]
+pub type BBPLL_CAL_INT_RAW_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_RAW_RTC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
@@ -80,28 +80,28 @@ impl R {
     }
     #[doc = "Bit 3 - RTC WDT interrupt raw"]
     #[inline(always)]
-    pub fn rtc_wdt_int_raw(&self) -> RTC_WDT_INT_RAW_R {
-        RTC_WDT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
+        WDT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 9 - brown out interrupt raw"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_raw(&self) -> RTC_BROWN_OUT_INT_RAW_R {
-        RTC_BROWN_OUT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn brown_out_int_raw(&self) -> BROWN_OUT_INT_RAW_R {
+        BROWN_OUT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RTC main timer interrupt raw"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_raw(&self) -> RTC_MAIN_TIMER_INT_RAW_R {
-        RTC_MAIN_TIMER_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn main_timer_int_raw(&self) -> MAIN_TIMER_INT_RAW_R {
+        MAIN_TIMER_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 15 - super watch dog interrupt raw"]
     #[inline(always)]
-    pub fn rtc_swd_int_raw(&self) -> RTC_SWD_INT_RAW_R {
-        RTC_SWD_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swd_int_raw(&self) -> SWD_INT_RAW_R {
+        SWD_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_bbpll_cal_int_raw(&self) -> RTC_BBPLL_CAL_INT_RAW_R {
-        RTC_BBPLL_CAL_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn bbpll_cal_int_raw(&self) -> BBPLL_CAL_INT_RAW_R {
+        BBPLL_CAL_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
@@ -117,28 +117,28 @@ impl W {
     }
     #[doc = "Bit 3 - RTC WDT interrupt raw"]
     #[inline(always)]
-    pub fn rtc_wdt_int_raw(&mut self) -> RTC_WDT_INT_RAW_W<3> {
-        RTC_WDT_INT_RAW_W::new(self)
+    pub fn wdt_int_raw(&mut self) -> WDT_INT_RAW_W<3> {
+        WDT_INT_RAW_W::new(self)
     }
     #[doc = "Bit 9 - brown out interrupt raw"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_raw(&mut self) -> RTC_BROWN_OUT_INT_RAW_W<9> {
-        RTC_BROWN_OUT_INT_RAW_W::new(self)
+    pub fn brown_out_int_raw(&mut self) -> BROWN_OUT_INT_RAW_W<9> {
+        BROWN_OUT_INT_RAW_W::new(self)
     }
     #[doc = "Bit 10 - RTC main timer interrupt raw"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_raw(&mut self) -> RTC_MAIN_TIMER_INT_RAW_W<10> {
-        RTC_MAIN_TIMER_INT_RAW_W::new(self)
+    pub fn main_timer_int_raw(&mut self) -> MAIN_TIMER_INT_RAW_W<10> {
+        MAIN_TIMER_INT_RAW_W::new(self)
     }
     #[doc = "Bit 15 - super watch dog interrupt raw"]
     #[inline(always)]
-    pub fn rtc_swd_int_raw(&mut self) -> RTC_SWD_INT_RAW_W<15> {
-        RTC_SWD_INT_RAW_W::new(self)
+    pub fn swd_int_raw(&mut self) -> SWD_INT_RAW_W<15> {
+        SWD_INT_RAW_W::new(self)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_bbpll_cal_int_raw(&mut self) -> RTC_BBPLL_CAL_INT_RAW_W<20> {
-        RTC_BBPLL_CAL_INT_RAW_W::new(self)
+    pub fn bbpll_cal_int_raw(&mut self) -> BBPLL_CAL_INT_RAW_W<20> {
+        BBPLL_CAL_INT_RAW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

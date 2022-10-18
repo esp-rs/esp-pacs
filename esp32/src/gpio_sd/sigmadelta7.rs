@@ -34,38 +34,37 @@ impl From<crate::W<SIGMADELTA7_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `GPIO_SD7_IN` reader - "]
-pub type GPIO_SD7_IN_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `GPIO_SD7_IN` writer - "]
-pub type GPIO_SD7_IN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SIGMADELTA7_SPEC, u8, u8, 8, O>;
-#[doc = "Field `GPIO_SD7_PRESCALE` reader - "]
-pub type GPIO_SD7_PRESCALE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `GPIO_SD7_PRESCALE` writer - "]
-pub type GPIO_SD7_PRESCALE_W<'a, const O: u8> =
+#[doc = "Field `SD7_IN` reader - "]
+pub type SD7_IN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SD7_IN` writer - "]
+pub type SD7_IN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SIGMADELTA7_SPEC, u8, u8, 8, O>;
+#[doc = "Field `SD7_PRESCALE` reader - "]
+pub type SD7_PRESCALE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SD7_PRESCALE` writer - "]
+pub type SD7_PRESCALE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SIGMADELTA7_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn gpio_sd7_in(&self) -> GPIO_SD7_IN_R {
-        GPIO_SD7_IN_R::new((self.bits & 0xff) as u8)
+    pub fn sd7_in(&self) -> SD7_IN_R {
+        SD7_IN_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn gpio_sd7_prescale(&self) -> GPIO_SD7_PRESCALE_R {
-        GPIO_SD7_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
+    pub fn sd7_prescale(&self) -> SD7_PRESCALE_R {
+        SD7_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn gpio_sd7_in(&mut self) -> GPIO_SD7_IN_W<0> {
-        GPIO_SD7_IN_W::new(self)
+    pub fn sd7_in(&mut self) -> SD7_IN_W<0> {
+        SD7_IN_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn gpio_sd7_prescale(&mut self) -> GPIO_SD7_PRESCALE_W<8> {
-        GPIO_SD7_PRESCALE_W::new(self)
+    pub fn sd7_prescale(&mut self) -> SD7_PRESCALE_W<8> {
+        SD7_PRESCALE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -49,10 +49,10 @@ pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` writer - PROCPU OcdHaltOnReset"]
 pub type OCD_HALT_ON_RESET_PROCPU_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
-#[doc = "Field `RTC_DRESET_MASK_PROCPU` reader - Need add desc"]
-pub type RTC_DRESET_MASK_PROCPU_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_DRESET_MASK_PROCPU` writer - Need add desc"]
-pub type RTC_DRESET_MASK_PROCPU_W<'a, const O: u8> =
+#[doc = "Field `DRESET_MASK_PROCPU` reader - Need add desc"]
+pub type DRESET_MASK_PROCPU_R = crate::BitReader<bool>;
+#[doc = "Field `DRESET_MASK_PROCPU` writer - Need add desc"]
+pub type DRESET_MASK_PROCPU_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
@@ -72,8 +72,8 @@ impl R {
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_dreset_mask_procpu(&self) -> RTC_DRESET_MASK_PROCPU_R {
-        RTC_DRESET_MASK_PROCPU_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn dreset_mask_procpu(&self) -> DRESET_MASK_PROCPU_R {
+        DRESET_MASK_PROCPU_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
@@ -94,8 +94,8 @@ impl W {
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_dreset_mask_procpu(&mut self) -> RTC_DRESET_MASK_PROCPU_W<20> {
-        RTC_DRESET_MASK_PROCPU_W::new(self)
+    pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<20> {
+        DRESET_MASK_PROCPU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

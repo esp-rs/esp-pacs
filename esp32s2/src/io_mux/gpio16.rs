@@ -198,7 +198,7 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register for pad GPIO16\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio16](index.html) module"]
+#[doc = "Configuration register for pin GPIO16\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio16](index.html) module"]
 pub struct GPIO16_SPEC;
 impl crate::RegisterSpec for GPIO16_SPEC {
     type Ux = u32;

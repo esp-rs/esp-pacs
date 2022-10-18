@@ -34,35 +34,43 @@ impl From<crate::W<SW_CPU_STALL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+#[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\]
+reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
 pub type SW_STALL_APPCPU_C1_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+#[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\]
+reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
 pub type SW_STALL_APPCPU_C1_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SW_CPU_STALL_SPEC, u8, u8, 6, O>;
-#[doc = "Field `SW_STALL_PROCPU_C1` reader - {reg_sw_stall_procpu_c1\\[5:0\\] reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
+#[doc = "Field `SW_STALL_PROCPU_C1` reader - {reg_sw_stall_procpu_c1\\[5:0\\]
+reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
 pub type SW_STALL_PROCPU_C1_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SW_STALL_PROCPU_C1` writer - {reg_sw_stall_procpu_c1\\[5:0\\] reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
+#[doc = "Field `SW_STALL_PROCPU_C1` writer - {reg_sw_stall_procpu_c1\\[5:0\\]
+reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
 pub type SW_STALL_PROCPU_C1_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SW_CPU_STALL_SPEC, u8, u8, 6, O>;
 impl R {
-    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
+reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&self) -> SW_STALL_APPCPU_C1_R {
         SW_STALL_APPCPU_C1_R::new(((self.bits >> 20) & 0x3f) as u8)
     }
-    #[doc = "Bits 26:31 - {reg_sw_stall_procpu_c1\\[5:0\\] reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
+    #[doc = "Bits 26:31 - {reg_sw_stall_procpu_c1\\[5:0\\]
+reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&self) -> SW_STALL_PROCPU_C1_R {
         SW_STALL_PROCPU_C1_R::new(((self.bits >> 26) & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
+    #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]
+reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<20> {
         SW_STALL_APPCPU_C1_W::new(self)
     }
-    #[doc = "Bits 26:31 - {reg_sw_stall_procpu_c1\\[5:0\\] reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
+    #[doc = "Bits 26:31 - {reg_sw_stall_procpu_c1\\[5:0\\]
+reg_sw_stall_procpu_c0\\[1:0\\]} == 0x86 will stall PRO CPU"]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<26> {
         SW_STALL_PROCPU_C1_W::new(self)

@@ -37,7 +37,7 @@ impl From<crate::W<GPIO_PIN1_SPEC>> for W {
 #[doc = "Field `GPIO_PIN1_SOURCE` reader - 1: sigma-delta; 0: GPIO_DATA"]
 pub type GPIO_PIN1_SOURCE_R = crate::BitReader<GPIO_PIN1_SOURCE_A>;
 #[doc = "1: sigma-delta; 0: GPIO_DATA\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GPIO_PIN1_SOURCE_A {
     #[doc = "0: sigma-delta"]
     SIGMA_DELTA = 0,
@@ -88,7 +88,7 @@ impl<'a, const O: u8> GPIO_PIN1_SOURCE_W<'a, O> {
 #[doc = "Field `GPIO_PIN1_DRIVER` reader - 1: open drain; 0: normal"]
 pub type GPIO_PIN1_DRIVER_R = crate::BitReader<GPIO_PIN1_DRIVER_A>;
 #[doc = "1: open drain; 0: normal\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum GPIO_PIN1_DRIVER_A {
     #[doc = "0: open drain"]
     OPEN_DRAIN = 0,
@@ -139,7 +139,7 @@ impl<'a, const O: u8> GPIO_PIN1_DRIVER_W<'a, O> {
 #[doc = "Field `GPIO_PIN1_INT_TYPE` reader - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
 pub type GPIO_PIN1_INT_TYPE_R = crate::FieldReader<u8, GPIO_PIN1_INT_TYPE_A>;
 #[doc = "0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum GPIO_PIN1_INT_TYPE_A {
     #[doc = "0: interrupt is disabled"]

@@ -34,15 +34,15 @@ impl From<crate::W<REGULATOR_DRV_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_REGULATOR_DRV_B_MONITOR` reader - No public"]
-pub type RTC_REGULATOR_DRV_B_MONITOR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_REGULATOR_DRV_B_MONITOR` writer - No public"]
-pub type RTC_REGULATOR_DRV_B_MONITOR_W<'a, const O: u8> =
+#[doc = "Field `REGULATOR_DRV_B_MONITOR` reader - No public"]
+pub type REGULATOR_DRV_B_MONITOR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `REGULATOR_DRV_B_MONITOR` writer - No public"]
+pub type REGULATOR_DRV_B_MONITOR_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 6, O>;
-#[doc = "Field `RTC_REGULATOR_DRV_B_SLP` reader - No public"]
-pub type RTC_REGULATOR_DRV_B_SLP_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_REGULATOR_DRV_B_SLP` writer - No public"]
-pub type RTC_REGULATOR_DRV_B_SLP_W<'a, const O: u8> =
+#[doc = "Field `REGULATOR_DRV_B_SLP` reader - No public"]
+pub type REGULATOR_DRV_B_SLP_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `REGULATOR_DRV_B_SLP` writer - No public"]
+pub type REGULATOR_DRV_B_SLP_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 6, O>;
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - No public"]
 pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader<u8, u8>;
@@ -57,13 +57,13 @@ pub type DG_VDD_DRV_B_MONITOR_W<'a, const O: u8> =
 impl R {
     #[doc = "Bits 0:5 - No public"]
     #[inline(always)]
-    pub fn rtc_regulator_drv_b_monitor(&self) -> RTC_REGULATOR_DRV_B_MONITOR_R {
-        RTC_REGULATOR_DRV_B_MONITOR_R::new((self.bits & 0x3f) as u8)
+    pub fn regulator_drv_b_monitor(&self) -> REGULATOR_DRV_B_MONITOR_R {
+        REGULATOR_DRV_B_MONITOR_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 6:11 - No public"]
     #[inline(always)]
-    pub fn rtc_regulator_drv_b_slp(&self) -> RTC_REGULATOR_DRV_B_SLP_R {
-        RTC_REGULATOR_DRV_B_SLP_R::new(((self.bits >> 6) & 0x3f) as u8)
+    pub fn regulator_drv_b_slp(&self) -> REGULATOR_DRV_B_SLP_R {
+        REGULATOR_DRV_B_SLP_R::new(((self.bits >> 6) & 0x3f) as u8)
     }
     #[doc = "Bits 12:19 - No public"]
     #[inline(always)]
@@ -79,13 +79,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - No public"]
     #[inline(always)]
-    pub fn rtc_regulator_drv_b_monitor(&mut self) -> RTC_REGULATOR_DRV_B_MONITOR_W<0> {
-        RTC_REGULATOR_DRV_B_MONITOR_W::new(self)
+    pub fn regulator_drv_b_monitor(&mut self) -> REGULATOR_DRV_B_MONITOR_W<0> {
+        REGULATOR_DRV_B_MONITOR_W::new(self)
     }
     #[doc = "Bits 6:11 - No public"]
     #[inline(always)]
-    pub fn rtc_regulator_drv_b_slp(&mut self) -> RTC_REGULATOR_DRV_B_SLP_W<6> {
-        RTC_REGULATOR_DRV_B_SLP_W::new(self)
+    pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<6> {
+        REGULATOR_DRV_B_SLP_W::new(self)
     }
     #[doc = "Bits 12:19 - No public"]
     #[inline(always)]

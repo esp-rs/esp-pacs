@@ -34,113 +34,106 @@ impl From<crate::W<DBG_SEL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_DEBUG_12M_NO_GATING` reader - use for debug"]
-pub type RTC_DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_DEBUG_12M_NO_GATING` writer - use for debug"]
-pub type RTC_DEBUG_12M_NO_GATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DBG_SEL_SPEC, bool, O>;
-#[doc = "Field `RTC_DEBUG_BIT_SEL` reader - use for debug"]
-pub type RTC_DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_BIT_SEL` writer - use for debug"]
-pub type RTC_DEBUG_BIT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
-#[doc = "Field `RTC_DEBUG_SEL0` reader - use for debug"]
-pub type RTC_DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_SEL0` writer - use for debug"]
-pub type RTC_DEBUG_SEL0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
-#[doc = "Field `RTC_DEBUG_SEL1` reader - use for debug"]
-pub type RTC_DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_SEL1` writer - use for debug"]
-pub type RTC_DEBUG_SEL1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
-#[doc = "Field `RTC_DEBUG_SEL2` reader - use for debug"]
-pub type RTC_DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_SEL2` writer - use for debug"]
-pub type RTC_DEBUG_SEL2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
-#[doc = "Field `RTC_DEBUG_SEL3` reader - use for debug"]
-pub type RTC_DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_SEL3` writer - use for debug"]
-pub type RTC_DEBUG_SEL3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
-#[doc = "Field `RTC_DEBUG_SEL4` reader - use for debug"]
-pub type RTC_DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_DEBUG_SEL4` writer - use for debug"]
-pub type RTC_DEBUG_SEL4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_12M_NO_GATING` reader - use for debug"]
+pub type DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
+#[doc = "Field `DEBUG_12M_NO_GATING` writer - use for debug"]
+pub type DEBUG_12M_NO_GATING_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_SEL_SPEC, bool, O>;
+#[doc = "Field `DEBUG_BIT_SEL` reader - use for debug"]
+pub type DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_BIT_SEL` writer - use for debug"]
+pub type DEBUG_BIT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_SEL0` reader - use for debug"]
+pub type DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_SEL0` writer - use for debug"]
+pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_SEL1` reader - use for debug"]
+pub type DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_SEL1` writer - use for debug"]
+pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_SEL2` reader - use for debug"]
+pub type DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_SEL2` writer - use for debug"]
+pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_SEL3` reader - use for debug"]
+pub type DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_SEL3` writer - use for debug"]
+pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DEBUG_SEL4` reader - use for debug"]
+pub type DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DEBUG_SEL4` writer - use for debug"]
+pub type DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
 impl R {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_12m_no_gating(&self) -> RTC_DEBUG_12M_NO_GATING_R {
-        RTC_DEBUG_12M_NO_GATING_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn debug_12m_no_gating(&self) -> DEBUG_12M_NO_GATING_R {
+        DEBUG_12M_NO_GATING_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:6 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_bit_sel(&self) -> RTC_DEBUG_BIT_SEL_R {
-        RTC_DEBUG_BIT_SEL_R::new(((self.bits >> 2) & 0x1f) as u8)
+    pub fn debug_bit_sel(&self) -> DEBUG_BIT_SEL_R {
+        DEBUG_BIT_SEL_R::new(((self.bits >> 2) & 0x1f) as u8)
     }
     #[doc = "Bits 7:11 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel0(&self) -> RTC_DEBUG_SEL0_R {
-        RTC_DEBUG_SEL0_R::new(((self.bits >> 7) & 0x1f) as u8)
+    pub fn debug_sel0(&self) -> DEBUG_SEL0_R {
+        DEBUG_SEL0_R::new(((self.bits >> 7) & 0x1f) as u8)
     }
     #[doc = "Bits 12:16 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel1(&self) -> RTC_DEBUG_SEL1_R {
-        RTC_DEBUG_SEL1_R::new(((self.bits >> 12) & 0x1f) as u8)
+    pub fn debug_sel1(&self) -> DEBUG_SEL1_R {
+        DEBUG_SEL1_R::new(((self.bits >> 12) & 0x1f) as u8)
     }
     #[doc = "Bits 17:21 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel2(&self) -> RTC_DEBUG_SEL2_R {
-        RTC_DEBUG_SEL2_R::new(((self.bits >> 17) & 0x1f) as u8)
+    pub fn debug_sel2(&self) -> DEBUG_SEL2_R {
+        DEBUG_SEL2_R::new(((self.bits >> 17) & 0x1f) as u8)
     }
     #[doc = "Bits 22:26 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel3(&self) -> RTC_DEBUG_SEL3_R {
-        RTC_DEBUG_SEL3_R::new(((self.bits >> 22) & 0x1f) as u8)
+    pub fn debug_sel3(&self) -> DEBUG_SEL3_R {
+        DEBUG_SEL3_R::new(((self.bits >> 22) & 0x1f) as u8)
     }
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel4(&self) -> RTC_DEBUG_SEL4_R {
-        RTC_DEBUG_SEL4_R::new(((self.bits >> 27) & 0x1f) as u8)
+    pub fn debug_sel4(&self) -> DEBUG_SEL4_R {
+        DEBUG_SEL4_R::new(((self.bits >> 27) & 0x1f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<1> {
-        RTC_DEBUG_12M_NO_GATING_W::new(self)
+    pub fn debug_12m_no_gating(&mut self) -> DEBUG_12M_NO_GATING_W<1> {
+        DEBUG_12M_NO_GATING_W::new(self)
     }
     #[doc = "Bits 2:6 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_bit_sel(&mut self) -> RTC_DEBUG_BIT_SEL_W<2> {
-        RTC_DEBUG_BIT_SEL_W::new(self)
+    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<2> {
+        DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bits 7:11 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<7> {
-        RTC_DEBUG_SEL0_W::new(self)
+    pub fn debug_sel0(&mut self) -> DEBUG_SEL0_W<7> {
+        DEBUG_SEL0_W::new(self)
     }
     #[doc = "Bits 12:16 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<12> {
-        RTC_DEBUG_SEL1_W::new(self)
+    pub fn debug_sel1(&mut self) -> DEBUG_SEL1_W<12> {
+        DEBUG_SEL1_W::new(self)
     }
     #[doc = "Bits 17:21 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<17> {
-        RTC_DEBUG_SEL2_W::new(self)
+    pub fn debug_sel2(&mut self) -> DEBUG_SEL2_W<17> {
+        DEBUG_SEL2_W::new(self)
     }
     #[doc = "Bits 22:26 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<22> {
-        RTC_DEBUG_SEL3_W::new(self)
+    pub fn debug_sel3(&mut self) -> DEBUG_SEL3_W<22> {
+        DEBUG_SEL3_W::new(self)
     }
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
-    pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<27> {
-        RTC_DEBUG_SEL4_W::new(self)
+    pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<27> {
+        DEBUG_SEL4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

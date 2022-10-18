@@ -33,13 +33,13 @@ pub struct RegisterBlock {
     pub gpio13: GPIO13,
     #[doc = "0x3c - Configuration register for pin GPIO14"]
     pub gpio14: GPIO14,
-    #[doc = "0x40 - Configuration register for pad GPIO15"]
+    #[doc = "0x40 - Configuration register for pin GPIO15"]
     pub gpio15: GPIO15,
-    #[doc = "0x44 - Configuration register for pad GPIO16"]
+    #[doc = "0x44 - Configuration register for pin GPIO16"]
     pub gpio16: GPIO16,
-    #[doc = "0x48 - Configuration register for pad GPIO17"]
+    #[doc = "0x48 - Configuration register for pin GPIO17"]
     pub gpio17: GPIO17,
-    #[doc = "0x4c - Configuration register for pad GPIO18"]
+    #[doc = "0x4c - Configuration register for pin GPIO18"]
     pub gpio18: GPIO18,
     #[doc = "0x50 - Configuration register for pin GPIO19"]
     pub gpio19: GPIO19,
@@ -48,19 +48,19 @@ pub struct RegisterBlock {
     #[doc = "0x58 - Configuration register for pin GPIO21"]
     pub gpio21: GPIO21,
     _reserved23: [u8; 0x10],
-    #[doc = "0x6c - Configuration register for pad GPIO26"]
+    #[doc = "0x6c - Configuration register for pin GPIO26"]
     pub gpio26: GPIO26,
-    #[doc = "0x70 - Configuration register for pad GPIO27"]
+    #[doc = "0x70 - Configuration register for pin GPIO27"]
     pub gpio27: GPIO27,
-    #[doc = "0x74 - Configuration register for pad GPIO28"]
+    #[doc = "0x74 - Configuration register for pin GPIO28"]
     pub gpio28: GPIO28,
-    #[doc = "0x78 - Configuration register for pad GPIO29"]
+    #[doc = "0x78 - Configuration register for pin GPIO29"]
     pub gpio29: GPIO29,
-    #[doc = "0x7c - Configuration register for pad GPIO30"]
+    #[doc = "0x7c - Configuration register for pin GPIO30"]
     pub gpio30: GPIO30,
-    #[doc = "0x80 - Configuration register for pad GPIO31"]
+    #[doc = "0x80 - Configuration register for pin GPIO31"]
     pub gpio31: GPIO31,
-    #[doc = "0x84 - Configuration register for pad GPIO32"]
+    #[doc = "0x84 - Configuration register for pin GPIO32"]
     pub gpio32: GPIO32,
     #[doc = "0x88 - Configuration register for pin GPIO33"]
     pub gpio33: GPIO33,
@@ -74,17 +74,17 @@ pub struct RegisterBlock {
     pub gpio37: GPIO37,
     #[doc = "0x9c - Configuration register for pin GPIO38"]
     pub gpio38: GPIO38,
-    #[doc = "0xa0 - Configuration register for pad GPIO39"]
+    #[doc = "0xa0 - Configuration register for pin GPIO39"]
     pub gpio39: GPIO39,
-    #[doc = "0xa4 - Configuration register for pad GPIO40"]
+    #[doc = "0xa4 - Configuration register for pin GPIO40"]
     pub gpio40: GPIO40,
-    #[doc = "0xa8 - Configuration register for pad GPIO41"]
+    #[doc = "0xa8 - Configuration register for pin GPIO41"]
     pub gpio41: GPIO41,
-    #[doc = "0xac - Configuration register for pad GPIO42"]
+    #[doc = "0xac - Configuration register for pin GPIO42"]
     pub gpio42: GPIO42,
-    #[doc = "0xb0 - Configuration register for pad GPIO43"]
+    #[doc = "0xb0 - Configuration register for pin GPIO43"]
     pub gpio43: GPIO43,
-    #[doc = "0xb4 - Configuration register for pad GPIO44"]
+    #[doc = "0xb4 - Configuration register for pin GPIO44"]
     pub gpio44: GPIO44,
     #[doc = "0xb8 - Configuration register for pin GPIO45"]
     pub gpio45: GPIO45,
@@ -158,22 +158,6 @@ pub mod gpio13;
 pub type GPIO14 = crate::Reg<gpio14::GPIO14_SPEC>;
 #[doc = "Configuration register for pin GPIO14"]
 pub mod gpio14;
-#[doc = "GPIO15 (rw) register accessor: an alias for `Reg<GPIO15_SPEC>`"]
-pub type GPIO15 = crate::Reg<gpio15::GPIO15_SPEC>;
-#[doc = "Configuration register for pad GPIO15"]
-pub mod gpio15;
-#[doc = "GPIO16 (rw) register accessor: an alias for `Reg<GPIO16_SPEC>`"]
-pub type GPIO16 = crate::Reg<gpio16::GPIO16_SPEC>;
-#[doc = "Configuration register for pad GPIO16"]
-pub mod gpio16;
-#[doc = "GPIO17 (rw) register accessor: an alias for `Reg<GPIO17_SPEC>`"]
-pub type GPIO17 = crate::Reg<gpio17::GPIO17_SPEC>;
-#[doc = "Configuration register for pad GPIO17"]
-pub mod gpio17;
-#[doc = "GPIO18 (rw) register accessor: an alias for `Reg<GPIO18_SPEC>`"]
-pub type GPIO18 = crate::Reg<gpio18::GPIO18_SPEC>;
-#[doc = "Configuration register for pad GPIO18"]
-pub mod gpio18;
 #[doc = "GPIO19 (rw) register accessor: an alias for `Reg<GPIO19_SPEC>`"]
 pub type GPIO19 = crate::Reg<gpio19::GPIO19_SPEC>;
 #[doc = "Configuration register for pin GPIO19"]
@@ -186,34 +170,6 @@ pub mod gpio20;
 pub type GPIO21 = crate::Reg<gpio21::GPIO21_SPEC>;
 #[doc = "Configuration register for pin GPIO21"]
 pub mod gpio21;
-#[doc = "GPIO26 (rw) register accessor: an alias for `Reg<GPIO26_SPEC>`"]
-pub type GPIO26 = crate::Reg<gpio26::GPIO26_SPEC>;
-#[doc = "Configuration register for pad GPIO26"]
-pub mod gpio26;
-#[doc = "GPIO27 (rw) register accessor: an alias for `Reg<GPIO27_SPEC>`"]
-pub type GPIO27 = crate::Reg<gpio27::GPIO27_SPEC>;
-#[doc = "Configuration register for pad GPIO27"]
-pub mod gpio27;
-#[doc = "GPIO28 (rw) register accessor: an alias for `Reg<GPIO28_SPEC>`"]
-pub type GPIO28 = crate::Reg<gpio28::GPIO28_SPEC>;
-#[doc = "Configuration register for pad GPIO28"]
-pub mod gpio28;
-#[doc = "GPIO29 (rw) register accessor: an alias for `Reg<GPIO29_SPEC>`"]
-pub type GPIO29 = crate::Reg<gpio29::GPIO29_SPEC>;
-#[doc = "Configuration register for pad GPIO29"]
-pub mod gpio29;
-#[doc = "GPIO30 (rw) register accessor: an alias for `Reg<GPIO30_SPEC>`"]
-pub type GPIO30 = crate::Reg<gpio30::GPIO30_SPEC>;
-#[doc = "Configuration register for pad GPIO30"]
-pub mod gpio30;
-#[doc = "GPIO31 (rw) register accessor: an alias for `Reg<GPIO31_SPEC>`"]
-pub type GPIO31 = crate::Reg<gpio31::GPIO31_SPEC>;
-#[doc = "Configuration register for pad GPIO31"]
-pub mod gpio31;
-#[doc = "GPIO32 (rw) register accessor: an alias for `Reg<GPIO32_SPEC>`"]
-pub type GPIO32 = crate::Reg<gpio32::GPIO32_SPEC>;
-#[doc = "Configuration register for pad GPIO32"]
-pub mod gpio32;
 #[doc = "GPIO33 (rw) register accessor: an alias for `Reg<GPIO33_SPEC>`"]
 pub type GPIO33 = crate::Reg<gpio33::GPIO33_SPEC>;
 #[doc = "Configuration register for pin GPIO33"]
@@ -238,30 +194,6 @@ pub mod gpio37;
 pub type GPIO38 = crate::Reg<gpio38::GPIO38_SPEC>;
 #[doc = "Configuration register for pin GPIO38"]
 pub mod gpio38;
-#[doc = "GPIO39 (rw) register accessor: an alias for `Reg<GPIO39_SPEC>`"]
-pub type GPIO39 = crate::Reg<gpio39::GPIO39_SPEC>;
-#[doc = "Configuration register for pad GPIO39"]
-pub mod gpio39;
-#[doc = "GPIO40 (rw) register accessor: an alias for `Reg<GPIO40_SPEC>`"]
-pub type GPIO40 = crate::Reg<gpio40::GPIO40_SPEC>;
-#[doc = "Configuration register for pad GPIO40"]
-pub mod gpio40;
-#[doc = "GPIO41 (rw) register accessor: an alias for `Reg<GPIO41_SPEC>`"]
-pub type GPIO41 = crate::Reg<gpio41::GPIO41_SPEC>;
-#[doc = "Configuration register for pad GPIO41"]
-pub mod gpio41;
-#[doc = "GPIO42 (rw) register accessor: an alias for `Reg<GPIO42_SPEC>`"]
-pub type GPIO42 = crate::Reg<gpio42::GPIO42_SPEC>;
-#[doc = "Configuration register for pad GPIO42"]
-pub mod gpio42;
-#[doc = "GPIO43 (rw) register accessor: an alias for `Reg<GPIO43_SPEC>`"]
-pub type GPIO43 = crate::Reg<gpio43::GPIO43_SPEC>;
-#[doc = "Configuration register for pad GPIO43"]
-pub mod gpio43;
-#[doc = "GPIO44 (rw) register accessor: an alias for `Reg<GPIO44_SPEC>`"]
-pub type GPIO44 = crate::Reg<gpio44::GPIO44_SPEC>;
-#[doc = "Configuration register for pad GPIO44"]
-pub mod gpio44;
 #[doc = "GPIO45 (rw) register accessor: an alias for `Reg<GPIO45_SPEC>`"]
 pub type GPIO45 = crate::Reg<gpio45::GPIO45_SPEC>;
 #[doc = "Configuration register for pin GPIO45"]
@@ -274,3 +206,71 @@ pub mod gpio46;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "GPIO15 (rw) register accessor: an alias for `Reg<GPIO15_SPEC>`"]
+pub type GPIO15 = crate::Reg<gpio15::GPIO15_SPEC>;
+#[doc = "Configuration register for pin GPIO15"]
+pub mod gpio15;
+#[doc = "GPIO16 (rw) register accessor: an alias for `Reg<GPIO16_SPEC>`"]
+pub type GPIO16 = crate::Reg<gpio16::GPIO16_SPEC>;
+#[doc = "Configuration register for pin GPIO16"]
+pub mod gpio16;
+#[doc = "GPIO17 (rw) register accessor: an alias for `Reg<GPIO17_SPEC>`"]
+pub type GPIO17 = crate::Reg<gpio17::GPIO17_SPEC>;
+#[doc = "Configuration register for pin GPIO17"]
+pub mod gpio17;
+#[doc = "GPIO18 (rw) register accessor: an alias for `Reg<GPIO18_SPEC>`"]
+pub type GPIO18 = crate::Reg<gpio18::GPIO18_SPEC>;
+#[doc = "Configuration register for pin GPIO18"]
+pub mod gpio18;
+#[doc = "GPIO26 (rw) register accessor: an alias for `Reg<GPIO26_SPEC>`"]
+pub type GPIO26 = crate::Reg<gpio26::GPIO26_SPEC>;
+#[doc = "Configuration register for pin GPIO26"]
+pub mod gpio26;
+#[doc = "GPIO27 (rw) register accessor: an alias for `Reg<GPIO27_SPEC>`"]
+pub type GPIO27 = crate::Reg<gpio27::GPIO27_SPEC>;
+#[doc = "Configuration register for pin GPIO27"]
+pub mod gpio27;
+#[doc = "GPIO28 (rw) register accessor: an alias for `Reg<GPIO28_SPEC>`"]
+pub type GPIO28 = crate::Reg<gpio28::GPIO28_SPEC>;
+#[doc = "Configuration register for pin GPIO28"]
+pub mod gpio28;
+#[doc = "GPIO29 (rw) register accessor: an alias for `Reg<GPIO29_SPEC>`"]
+pub type GPIO29 = crate::Reg<gpio29::GPIO29_SPEC>;
+#[doc = "Configuration register for pin GPIO29"]
+pub mod gpio29;
+#[doc = "GPIO30 (rw) register accessor: an alias for `Reg<GPIO30_SPEC>`"]
+pub type GPIO30 = crate::Reg<gpio30::GPIO30_SPEC>;
+#[doc = "Configuration register for pin GPIO30"]
+pub mod gpio30;
+#[doc = "GPIO31 (rw) register accessor: an alias for `Reg<GPIO31_SPEC>`"]
+pub type GPIO31 = crate::Reg<gpio31::GPIO31_SPEC>;
+#[doc = "Configuration register for pin GPIO31"]
+pub mod gpio31;
+#[doc = "GPIO32 (rw) register accessor: an alias for `Reg<GPIO32_SPEC>`"]
+pub type GPIO32 = crate::Reg<gpio32::GPIO32_SPEC>;
+#[doc = "Configuration register for pin GPIO32"]
+pub mod gpio32;
+#[doc = "GPIO39 (rw) register accessor: an alias for `Reg<GPIO39_SPEC>`"]
+pub type GPIO39 = crate::Reg<gpio39::GPIO39_SPEC>;
+#[doc = "Configuration register for pin GPIO39"]
+pub mod gpio39;
+#[doc = "GPIO40 (rw) register accessor: an alias for `Reg<GPIO40_SPEC>`"]
+pub type GPIO40 = crate::Reg<gpio40::GPIO40_SPEC>;
+#[doc = "Configuration register for pin GPIO40"]
+pub mod gpio40;
+#[doc = "GPIO41 (rw) register accessor: an alias for `Reg<GPIO41_SPEC>`"]
+pub type GPIO41 = crate::Reg<gpio41::GPIO41_SPEC>;
+#[doc = "Configuration register for pin GPIO41"]
+pub mod gpio41;
+#[doc = "GPIO42 (rw) register accessor: an alias for `Reg<GPIO42_SPEC>`"]
+pub type GPIO42 = crate::Reg<gpio42::GPIO42_SPEC>;
+#[doc = "Configuration register for pin GPIO42"]
+pub mod gpio42;
+#[doc = "GPIO43 (rw) register accessor: an alias for `Reg<GPIO43_SPEC>`"]
+pub type GPIO43 = crate::Reg<gpio43::GPIO43_SPEC>;
+#[doc = "Configuration register for pin GPIO43"]
+pub mod gpio43;
+#[doc = "GPIO44 (rw) register accessor: an alias for `Reg<GPIO44_SPEC>`"]
+pub type GPIO44 = crate::Reg<gpio44::GPIO44_SPEC>;
+#[doc = "Configuration register for pin GPIO44"]
+pub mod gpio44;

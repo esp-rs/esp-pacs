@@ -29,6 +29,8 @@ pub type TX_ST_R = crate::BitReader<bool>;
 pub type ERR_ST_R = crate::BitReader<bool>;
 #[doc = "Field `BUS_OFF_ST` reader - 1: In bus-off status, the TWAI Controller is no longer involved in bus activities."]
 pub type BUS_OFF_ST_R = crate::BitReader<bool>;
+#[doc = "Field `MISS_ST` reader - This bit reflects whether the data packet in the RX FIFO is complete. 1: The current packet is missing; 0: The current packet is complete"]
+pub type MISS_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1: The data in the RX buffer is not empty, with at least one received data packet."]
     #[inline(always)]
@@ -69,6 +71,11 @@ impl R {
     #[inline(always)]
     pub fn bus_off_st(&self) -> BUS_OFF_ST_R {
         BUS_OFF_ST_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - This bit reflects whether the data packet in the RX FIFO is complete. 1: The current packet is missing; 0: The current packet is complete"]
+    #[inline(always)]
+    pub fn miss_st(&self) -> MISS_ST_R {
+        MISS_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "Status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]

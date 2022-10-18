@@ -19,13 +19,13 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_WDT_FEED` writer - sw feed rtc wdt"]
-pub type RTC_WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
+#[doc = "Field `WDT_FEED` writer - sw feed rtc wdt"]
+pub type WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 31 - sw feed rtc wdt"]
     #[inline(always)]
-    pub fn rtc_wdt_feed(&mut self) -> RTC_WDT_FEED_W<31> {
-        RTC_WDT_FEED_W::new(self)
+    pub fn wdt_feed(&mut self) -> WDT_FEED_W<31> {
+        WDT_FEED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

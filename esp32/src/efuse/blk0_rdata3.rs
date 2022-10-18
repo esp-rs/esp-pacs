@@ -59,9 +59,11 @@ pub type RD_CHIP_CPU_FREQ_RATED_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` writer - If set, the ESP32's maximum CPU frequency has been rated"]
 pub type RD_CHIP_CPU_FREQ_RATED_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
-#[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
+#[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\]
+is reserved for internal use"]
 pub type RD_BLK3_PART_RESERVE_R = crate::BitReader<bool>;
-#[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
+#[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\]
+is reserved for internal use"]
 pub type RD_BLK3_PART_RESERVE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
 #[doc = "Field `RD_CHIP_VER_REV1` reader - bit is set to 1 for rev1 silicon"]
@@ -109,7 +111,8 @@ impl R {
     pub fn rd_chip_cpu_freq_rated(&self) -> RD_CHIP_CPU_FREQ_RATED_R {
         RD_CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
+is reserved for internal use"]
     #[inline(always)]
     pub fn rd_blk3_part_reserve(&self) -> RD_BLK3_PART_RESERVE_R {
         RD_BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 1) != 0)
@@ -136,7 +139,8 @@ impl W {
     pub fn rd_chip_cpu_freq_rated(&mut self) -> RD_CHIP_CPU_FREQ_RATED_W<13> {
         RD_CHIP_CPU_FREQ_RATED_W::new(self)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
+is reserved for internal use"]
     #[inline(always)]
     pub fn rd_blk3_part_reserve(&mut self) -> RD_BLK3_PART_RESERVE_W<14> {
         RD_BLK3_PART_RESERVE_W::new(self)

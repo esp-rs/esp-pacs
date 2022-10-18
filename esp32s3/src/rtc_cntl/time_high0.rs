@@ -13,13 +13,13 @@ impl From<crate::R<TIME_HIGH0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RTC_TIMER_VALUE0_HIGH` reader - RTC timer high 16 bits"]
-pub type RTC_TIMER_VALUE0_HIGH_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `TIMER_VALUE0_HIGH` reader - RTC timer high 16 bits"]
+pub type TIMER_VALUE0_HIGH_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value0_high(&self) -> RTC_TIMER_VALUE0_HIGH_R {
-        RTC_TIMER_VALUE0_HIGH_R::new((self.bits & 0xffff) as u16)
+    pub fn timer_value0_high(&self) -> TIMER_VALUE0_HIGH_R {
+        TIMER_VALUE0_HIGH_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[doc = "read rtc_main timer high bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_high0](index.html) module"]

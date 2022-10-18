@@ -34,9 +34,9 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUT_SEL` reader - select one of the 256 output to 4 GPIO"]
+#[doc = "Field `OUT_SEL` reader - select one of the 256 output to 40 GPIO"]
 pub type OUT_SEL_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `OUT_SEL` writer - select one of the 256 output to 4 GPIO"]
+#[doc = "Field `OUT_SEL` writer - select one of the 256 output to 40 GPIO"]
 pub type OUT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, u16, u16, 9, O>;
 #[doc = "Field `INV_SEL` reader - invert the output value if you want to revert the output value setting the value to 1"]
@@ -52,7 +52,7 @@ pub type OEN_INV_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `OEN_INV_SEL` writer - invert the output enable value if you want to revert the output enable value setting the value to 1"]
 pub type OEN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, bool, O>;
 impl R {
-    #[doc = "Bits 0:8 - select one of the 256 output to 4 GPIO"]
+    #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
     pub fn out_sel(&self) -> OUT_SEL_R {
         OUT_SEL_R::new((self.bits & 0x01ff) as u16)
@@ -74,7 +74,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:8 - select one of the 256 output to 4 GPIO"]
+    #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
     pub fn out_sel(&mut self) -> OUT_SEL_W<0> {
         OUT_SEL_W::new(self)

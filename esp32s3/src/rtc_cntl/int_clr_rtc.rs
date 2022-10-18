@@ -28,57 +28,52 @@ pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> =
 #[doc = "Field `SDIO_IDLE_INT_CLR` writer - Clear SDIO idle interrupt state"]
 pub type SDIO_IDLE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type RTC_WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_SCAN_DONE_INT_CLR` writer - clear touch scan done interrupt raw"]
-pub type RTC_TOUCH_SCAN_DONE_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
+pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `TOUCH_SCAN_DONE_INT_CLR` writer - clear touch scan done interrupt raw"]
+pub type TOUCH_SCAN_DONE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_ULP_CP_INT_CLR` writer - Clear ULP-coprocessor interrupt state"]
-pub type RTC_ULP_CP_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `ULP_CP_INT_CLR` writer - Clear ULP-coprocessor interrupt state"]
+pub type ULP_CP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `TOUCH_DONE_INT_CLR` writer - Clear touch done interrupt state"]
+pub type TOUCH_DONE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_DONE_INT_CLR` writer - Clear touch done interrupt state"]
-pub type RTC_TOUCH_DONE_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_ACTIVE_INT_CLR` writer - Clear touch active interrupt state"]
+pub type TOUCH_ACTIVE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_ACTIVE_INT_CLR` writer - Clear touch active interrupt state"]
-pub type RTC_TOUCH_ACTIVE_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_INACTIVE_INT_CLR` writer - Clear touch inactive interrupt state"]
+pub type TOUCH_INACTIVE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_INACTIVE_INT_CLR` writer - Clear touch inactive interrupt state"]
-pub type RTC_TOUCH_INACTIVE_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
+pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
-pub type RTC_BROWN_OUT_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
+pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
-pub type RTC_MAIN_TIMER_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `SARADC1_INT_CLR` writer - Clear saradc1 interrupt state"]
+pub type SARADC1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `TSENS_INT_CLR` writer - Clear tsens interrupt state"]
+pub type TSENS_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `COCPU_INT_CLR` writer - Clear riscV cocpu interrupt state"]
+pub type COCPU_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `SARADC2_INT_CLR` writer - Clear saradc2 interrupt state"]
+pub type SARADC2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
+pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+#[doc = "Field `XTAL32K_DEAD_INT_CLR` writer - Clear RTC WDT interrupt state"]
+pub type XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SARADC1_INT_CLR` writer - Clear saradc1 interrupt state"]
-pub type RTC_SARADC1_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `COCPU_TRAP_INT_CLR` writer - Clear cocpu trap interrupt state"]
+pub type COCPU_TRAP_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TSENS_INT_CLR` writer - Clear tsens interrupt state"]
-pub type RTC_TSENS_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_TIMEOUT_INT_CLR` writer - Clear touch timeout interrupt state"]
+pub type TOUCH_TIMEOUT_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_COCPU_INT_CLR` writer - Clear riscV cocpu interrupt state"]
-pub type RTC_COCPU_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `GLITCH_DET_INT_CLR` writer - Clear glitch det interrupt state"]
+pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SARADC2_INT_CLR` writer - Clear saradc2 interrupt state"]
-pub type RTC_SARADC2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
-pub type RTC_SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type RTC_XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_COCPU_TRAP_INT_CLR` writer - Clear cocpu trap interrupt state"]
-pub type RTC_COCPU_TRAP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_TIMEOUT_INT_CLR` writer - Clear touch timeout interrupt state"]
-pub type RTC_TOUCH_TIMEOUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_GLITCH_DET_INT_CLR` writer - Clear glitch det interrupt state"]
-pub type RTC_GLITCH_DET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_APPROACH_LOOP_DONE_INT_CLR` writer - cleartouch approach mode loop interrupt state"]
-pub type RTC_TOUCH_APPROACH_LOOP_DONE_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_CLR` writer - cleartouch approach mode loop interrupt state"]
+pub type TOUCH_APPROACH_LOOP_DONE_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
@@ -98,95 +93,93 @@ impl W {
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn rtc_wdt_int_clr(&mut self) -> RTC_WDT_INT_CLR_W<3> {
-        RTC_WDT_INT_CLR_W::new(self)
+    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<3> {
+        WDT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - clear touch scan done interrupt raw"]
     #[inline(always)]
-    pub fn rtc_touch_scan_done_int_clr(&mut self) -> RTC_TOUCH_SCAN_DONE_INT_CLR_W<4> {
-        RTC_TOUCH_SCAN_DONE_INT_CLR_W::new(self)
+    pub fn touch_scan_done_int_clr(&mut self) -> TOUCH_SCAN_DONE_INT_CLR_W<4> {
+        TOUCH_SCAN_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Clear ULP-coprocessor interrupt state"]
     #[inline(always)]
-    pub fn rtc_ulp_cp_int_clr(&mut self) -> RTC_ULP_CP_INT_CLR_W<5> {
-        RTC_ULP_CP_INT_CLR_W::new(self)
+    pub fn ulp_cp_int_clr(&mut self) -> ULP_CP_INT_CLR_W<5> {
+        ULP_CP_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Clear touch done interrupt state"]
     #[inline(always)]
-    pub fn rtc_touch_done_int_clr(&mut self) -> RTC_TOUCH_DONE_INT_CLR_W<6> {
-        RTC_TOUCH_DONE_INT_CLR_W::new(self)
+    pub fn touch_done_int_clr(&mut self) -> TOUCH_DONE_INT_CLR_W<6> {
+        TOUCH_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Clear touch active interrupt state"]
     #[inline(always)]
-    pub fn rtc_touch_active_int_clr(&mut self) -> RTC_TOUCH_ACTIVE_INT_CLR_W<7> {
-        RTC_TOUCH_ACTIVE_INT_CLR_W::new(self)
+    pub fn touch_active_int_clr(&mut self) -> TOUCH_ACTIVE_INT_CLR_W<7> {
+        TOUCH_ACTIVE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Clear touch inactive interrupt state"]
     #[inline(always)]
-    pub fn rtc_touch_inactive_int_clr(&mut self) -> RTC_TOUCH_INACTIVE_INT_CLR_W<8> {
-        RTC_TOUCH_INACTIVE_INT_CLR_W::new(self)
+    pub fn touch_inactive_int_clr(&mut self) -> TOUCH_INACTIVE_INT_CLR_W<8> {
+        TOUCH_INACTIVE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9 - Clear brown out interrupt state"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_clr(&mut self) -> RTC_BROWN_OUT_INT_CLR_W<9> {
-        RTC_BROWN_OUT_INT_CLR_W::new(self)
+    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<9> {
+        BROWN_OUT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_clr(&mut self) -> RTC_MAIN_TIMER_INT_CLR_W<10> {
-        RTC_MAIN_TIMER_INT_CLR_W::new(self)
+    pub fn main_timer_int_clr(&mut self) -> MAIN_TIMER_INT_CLR_W<10> {
+        MAIN_TIMER_INT_CLR_W::new(self)
     }
     #[doc = "Bit 11 - Clear saradc1 interrupt state"]
     #[inline(always)]
-    pub fn rtc_saradc1_int_clr(&mut self) -> RTC_SARADC1_INT_CLR_W<11> {
-        RTC_SARADC1_INT_CLR_W::new(self)
+    pub fn saradc1_int_clr(&mut self) -> SARADC1_INT_CLR_W<11> {
+        SARADC1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 12 - Clear tsens interrupt state"]
     #[inline(always)]
-    pub fn rtc_tsens_int_clr(&mut self) -> RTC_TSENS_INT_CLR_W<12> {
-        RTC_TSENS_INT_CLR_W::new(self)
+    pub fn tsens_int_clr(&mut self) -> TSENS_INT_CLR_W<12> {
+        TSENS_INT_CLR_W::new(self)
     }
     #[doc = "Bit 13 - Clear riscV cocpu interrupt state"]
     #[inline(always)]
-    pub fn rtc_cocpu_int_clr(&mut self) -> RTC_COCPU_INT_CLR_W<13> {
-        RTC_COCPU_INT_CLR_W::new(self)
+    pub fn cocpu_int_clr(&mut self) -> COCPU_INT_CLR_W<13> {
+        COCPU_INT_CLR_W::new(self)
     }
     #[doc = "Bit 14 - Clear saradc2 interrupt state"]
     #[inline(always)]
-    pub fn rtc_saradc2_int_clr(&mut self) -> RTC_SARADC2_INT_CLR_W<14> {
-        RTC_SARADC2_INT_CLR_W::new(self)
+    pub fn saradc2_int_clr(&mut self) -> SARADC2_INT_CLR_W<14> {
+        SARADC2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 15 - Clear super watch dog interrupt state"]
     #[inline(always)]
-    pub fn rtc_swd_int_clr(&mut self) -> RTC_SWD_INT_CLR_W<15> {
-        RTC_SWD_INT_CLR_W::new(self)
+    pub fn swd_int_clr(&mut self) -> SWD_INT_CLR_W<15> {
+        SWD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 16 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_clr(&mut self) -> RTC_XTAL32K_DEAD_INT_CLR_W<16> {
-        RTC_XTAL32K_DEAD_INT_CLR_W::new(self)
+    pub fn xtal32k_dead_int_clr(&mut self) -> XTAL32K_DEAD_INT_CLR_W<16> {
+        XTAL32K_DEAD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 17 - Clear cocpu trap interrupt state"]
     #[inline(always)]
-    pub fn rtc_cocpu_trap_int_clr(&mut self) -> RTC_COCPU_TRAP_INT_CLR_W<17> {
-        RTC_COCPU_TRAP_INT_CLR_W::new(self)
+    pub fn cocpu_trap_int_clr(&mut self) -> COCPU_TRAP_INT_CLR_W<17> {
+        COCPU_TRAP_INT_CLR_W::new(self)
     }
     #[doc = "Bit 18 - Clear touch timeout interrupt state"]
     #[inline(always)]
-    pub fn rtc_touch_timeout_int_clr(&mut self) -> RTC_TOUCH_TIMEOUT_INT_CLR_W<18> {
-        RTC_TOUCH_TIMEOUT_INT_CLR_W::new(self)
+    pub fn touch_timeout_int_clr(&mut self) -> TOUCH_TIMEOUT_INT_CLR_W<18> {
+        TOUCH_TIMEOUT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 19 - Clear glitch det interrupt state"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_clr(&mut self) -> RTC_GLITCH_DET_INT_CLR_W<19> {
-        RTC_GLITCH_DET_INT_CLR_W::new(self)
+    pub fn glitch_det_int_clr(&mut self) -> GLITCH_DET_INT_CLR_W<19> {
+        GLITCH_DET_INT_CLR_W::new(self)
     }
     #[doc = "Bit 20 - cleartouch approach mode loop interrupt state"]
     #[inline(always)]
-    pub fn rtc_touch_approach_loop_done_int_clr(
-        &mut self,
-    ) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_CLR_W<20> {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_CLR_W::new(self)
+    pub fn touch_approach_loop_done_int_clr(&mut self) -> TOUCH_APPROACH_LOOP_DONE_INT_CLR_W<20> {
+        TOUCH_APPROACH_LOOP_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

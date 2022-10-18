@@ -15,6 +15,7 @@ jobs:
     name: Generate and build RISC-V PACs
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         chip: [esp32c2, esp32c3]
     steps:
@@ -36,6 +37,7 @@ jobs:
     name: Generate and build Xtensa PACs
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         chip: [esp32, esp32s2, esp32s3, esp8266]
     steps:
@@ -55,6 +57,7 @@ jobs:
     name: Check MSRV for RISC-V
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         chip: [esp32c2, esp32c3]
     steps:
@@ -63,8 +66,13 @@ jobs:
         with:
           profile: minimal
           target: riscv32imc-unknown-none-elf
-          toolchain: "1.60.0"
+          toolchain: nightly
           default: true
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          target: riscv32imc-unknown-none-elf
+          toolchain: "1.60.0"
           components: rust-src
       - uses: Swatinem/rust-cache@v1
       - uses: actions-rs/cargo@v1
@@ -78,6 +86,7 @@ jobs:
     name: Check MSRV for Xtensa
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         chip: [esp32, esp32s2, esp32s3, esp8266]
     steps:
