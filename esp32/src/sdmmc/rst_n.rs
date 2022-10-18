@@ -34,19 +34,27 @@ impl From<crate::W<RST_N_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CARD_RESET` reader - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
+#[doc = "Field `CARD_RESET` reader - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\]
+should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\]
+should be set to 1'b0 to reset card1."]
 pub type CARD_RESET_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CARD_RESET` writer - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
+#[doc = "Field `CARD_RESET` writer - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\]
+should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\]
+should be set to 1'b0 to reset card1."]
 pub type CARD_RESET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RST_N_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 0:1 - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
+    #[doc = "Bits 0:1 - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\]
+should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\]
+should be set to 1'b0 to reset card1."]
     #[inline(always)]
     pub fn card_reset(&self) -> CARD_RESET_R {
         CARD_RESET_R::new((self.bits & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:1 - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
+    #[doc = "Bits 0:1 - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\]
+should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\]
+should be set to 1'b0 to reset card1."]
     #[inline(always)]
     pub fn card_reset(&mut self) -> CARD_RESET_W<0> {
         CARD_RESET_W::new(self)

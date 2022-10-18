@@ -37,7 +37,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
 pub type CK8M_DIV_R = crate::FieldReader<u8, CK8M_DIV_A>;
 #[doc = "CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024.\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CK8M_DIV_A {
     #[doc = "0: DIV128"]
@@ -120,7 +120,7 @@ pub type ENB_CK8M_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, 
 #[doc = "Field `ENB_CK8M_DIV` reader - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
 pub type ENB_CK8M_DIV_R = crate::BitReader<ENB_CK8M_DIV_A>;
 #[doc = "1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ENB_CK8M_DIV_A {
     #[doc = "0: CK8M_DIV_256"]
     CK8M_DIV_256 = 0,
@@ -211,7 +211,7 @@ pub type CK8M_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_S
 #[doc = "Field `SOC_CLK_SEL` reader - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
 pub type SOC_CLK_SEL_R = crate::FieldReader<u8, SOC_CLK_SEL_A>;
 #[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SOC_CLK_SEL_A {
     #[doc = "0: XTAL"]
@@ -290,7 +290,7 @@ impl<'a, const O: u8> SOC_CLK_SEL_W<'a, O> {
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
 pub type FAST_CLK_RTC_SEL_R = crate::BitReader<FAST_CLK_RTC_SEL_A>;
 #[doc = "fast_clk_rtc sel. 0: XTAL div 4 1: CK8M\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FAST_CLK_RTC_SEL_A {
     #[doc = "0: XTAL_DIV_4"]
     XTAL_DIV_4 = 0,
@@ -341,7 +341,7 @@ impl<'a, const O: u8> FAST_CLK_RTC_SEL_W<'a, O> {
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
 pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<u8, ANA_CLK_RTC_SEL_A>;
 #[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum ANA_CLK_RTC_SEL_A {
     #[doc = "0: SLOW_CK"]

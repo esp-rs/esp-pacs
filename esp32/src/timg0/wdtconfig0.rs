@@ -42,7 +42,7 @@ pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> =
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<u8, WDT_SYS_RESET_LENGTH_A>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum WDT_SYS_RESET_LENGTH_A {
     #[doc = "0: 100ns"]
@@ -173,7 +173,7 @@ impl<'a, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, O> {
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<u8, WDT_CPU_RESET_LENGTH_A>;
 #[doc = "length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum WDT_CPU_RESET_LENGTH_A {
     #[doc = "0: 100ns"]
@@ -312,7 +312,7 @@ pub type WDT_EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFI
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_R = crate::FieldReader<u8, WDT_STG3_A>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum WDT_STG3_A {
     #[doc = "0: Off"]

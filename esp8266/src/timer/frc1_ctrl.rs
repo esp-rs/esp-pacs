@@ -41,7 +41,7 @@ pub type FRC1_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FRC1_CTRL_SP
 #[doc = "Field `interrupt_type` reader - Configure the interrupt type"]
 pub type INTERRUPT_TYPE_R = crate::BitReader<INTERRUPT_TYPE_A>;
 #[doc = "Configure the interrupt type\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum INTERRUPT_TYPE_A {
     #[doc = "0: edge"]
     EDGE = 0,
@@ -92,7 +92,7 @@ impl<'a, const O: u8> INTERRUPT_TYPE_W<'a, O> {
 #[doc = "Field `prescale_divider` reader - Pre-scale divider for the timer"]
 pub type PRESCALE_DIVIDER_R = crate::FieldReader<u8, PRESCALE_DIVIDER_A>;
 #[doc = "Pre-scale divider for the timer\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PRESCALE_DIVIDER_A {
     #[doc = "0: divided by 1"]

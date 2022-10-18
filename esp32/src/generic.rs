@@ -119,6 +119,10 @@ where
     #[doc = " Writes 0 to a `Writable` register."]
     #[doc = ""]
     #[doc = " Similar to `write`, but unused bits will contain 0."]
+    #[doc = " "]
+    #[doc = " # Safety"]
+    #[doc = " "]
+    #[doc = " Unsafe to use with registers which don't allow to write 0."]
     #[inline(always)]
     pub unsafe fn write_with_zero<F>(&self, f: F)
     where
@@ -215,6 +219,10 @@ pub struct W<REG: RegisterSpec + ?Sized> {
 }
 impl<REG: RegisterSpec> W<REG> {
     #[doc = " Writes raw bits to the register."]
+    #[doc = " "]
+    #[doc = " # Safety"]
+    #[doc = " "]
+    #[doc = " Read datasheet or reference manual to find what values are allowed to pass."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: REG::Ux) -> &mut Self {
         self.bits = bits;

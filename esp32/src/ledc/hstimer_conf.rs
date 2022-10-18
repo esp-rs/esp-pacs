@@ -34,9 +34,11 @@ impl From<crate::W<HSTIMER_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
+#[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\]
+the max bit width for counter is 20."]
 pub type DUTY_RES_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
+#[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\]
+the max bit width for counter is 20."]
 pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSTIMER_CONF_SPEC, u8, u8, 5, O>;
 #[doc = "Field `DIV_NUM` reader - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
 pub type DIV_NUM_R = crate::FieldReader<u32, u32>;
@@ -60,7 +62,8 @@ pub type LIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LIM` writer - "]
 pub type LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSTIMER_CONF_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\]
+the max bit width for counter is 20."]
     #[inline(always)]
     pub fn duty_res(&self) -> DUTY_RES_R {
         DUTY_RES_R::new((self.bits & 0x1f) as u8)
@@ -92,7 +95,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\]
+the max bit width for counter is 20."]
     #[inline(always)]
     pub fn duty_res(&mut self) -> DUTY_RES_W<0> {
         DUTY_RES_W::new(self)

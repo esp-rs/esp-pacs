@@ -22,7 +22,8 @@ pub type CH_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-7]` reader - The interrupt raw bit for channel %s turns to high level when transmitter in channle%s have send datas more than reg_rmt_tx_lim_ch%s after detecting this interrupt software can updata the old datas with new datas."]
 pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the transmit process is done."]
+    #[doc = "The interrupt raw bit for channel [0-7]
+turns to high level when the transmit process is done."]
     #[inline(always)]
     pub unsafe fn ch_tx_end_int_raw(&self, n: u8) -> CH_TX_END_INT_RAW_R {
         CH_TX_END_INT_RAW_R::new(((self.bits >> (n * 3)) & 1) != 0)
@@ -67,7 +68,8 @@ impl R {
     pub fn ch7_tx_end_int_raw(&self) -> CH_TX_END_INT_RAW_R {
         CH_TX_END_INT_RAW_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when the receive process is done."]
+    #[doc = "The interrupt raw bit for channel [0-7]
+turns to high level when the receive process is done."]
     #[inline(always)]
     pub unsafe fn ch_rx_end_int_raw(&self, n: u8) -> CH_RX_END_INT_RAW_R {
         CH_RX_END_INT_RAW_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
@@ -112,7 +114,9 @@ impl R {
     pub fn ch7_rx_end_int_raw(&self) -> CH_RX_END_INT_RAW_R {
         CH_RX_END_INT_RAW_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when channle [0-7] detects some errors."]
+    #[doc = "The interrupt raw bit for channel [0-7]
+turns to high level when channle [0-7]
+detects some errors."]
     #[inline(always)]
     pub unsafe fn ch_err_int_raw(&self, n: u8) -> CH_ERR_INT_RAW_R {
         CH_ERR_INT_RAW_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
@@ -157,7 +161,10 @@ impl R {
     pub fn ch7_err_int_raw(&self) -> CH_ERR_INT_RAW_R {
         CH_ERR_INT_RAW_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel [0-7] turns to high level when transmitter in channle[0-7] have send datas more than reg_rmt_tx_lim_ch[0-7] after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "The interrupt raw bit for channel [0-7]
+turns to high level when transmitter in channle[0-7]
+have send datas more than reg_rmt_tx_lim_ch[0-7]
+after detecting this interrupt software can updata the old datas with new datas."]
     #[inline(always)]
     pub unsafe fn ch_tx_thr_event_int_raw(&self, n: u8) -> CH_TX_THR_EVENT_INT_RAW_R {
         CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> (n + 24)) & 1) != 0)

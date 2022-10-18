@@ -62,13 +62,21 @@ pub type DAC_INV2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAC_INV2` writer - 00: do not invert any bits 01: invert all bits 10: invert MSB 11: invert all bits except MSB"]
 pub type DAC_INV2_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_DAC_CTRL2_SPEC, u8, u8, 2, O>;
-#[doc = "Field `DAC_CW_EN1` reader - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\] 0: to select register reg_pdac1_dac\\[7:0\\] as source to PDAC1_DAC\\[7:0\\]"]
+#[doc = "Field `DAC_CW_EN1` reader - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\]
+0: to select register reg_pdac1_dac\\[7:0\\]
+as source to PDAC1_DAC\\[7:0\\]"]
 pub type DAC_CW_EN1_R = crate::BitReader<bool>;
-#[doc = "Field `DAC_CW_EN1` writer - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\] 0: to select register reg_pdac1_dac\\[7:0\\] as source to PDAC1_DAC\\[7:0\\]"]
+#[doc = "Field `DAC_CW_EN1` writer - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\]
+0: to select register reg_pdac1_dac\\[7:0\\]
+as source to PDAC1_DAC\\[7:0\\]"]
 pub type DAC_CW_EN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_DAC_CTRL2_SPEC, bool, O>;
-#[doc = "Field `DAC_CW_EN2` reader - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\] 0: to select register reg_pdac2_dac\\[7:0\\] as source to PDAC2_DAC\\[7:0\\]"]
+#[doc = "Field `DAC_CW_EN2` reader - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\]
+0: to select register reg_pdac2_dac\\[7:0\\]
+as source to PDAC2_DAC\\[7:0\\]"]
 pub type DAC_CW_EN2_R = crate::BitReader<bool>;
-#[doc = "Field `DAC_CW_EN2` writer - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\] 0: to select register reg_pdac2_dac\\[7:0\\] as source to PDAC2_DAC\\[7:0\\]"]
+#[doc = "Field `DAC_CW_EN2` writer - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\]
+0: to select register reg_pdac2_dac\\[7:0\\]
+as source to PDAC2_DAC\\[7:0\\]"]
 pub type DAC_CW_EN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_DAC_CTRL2_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:7 - DC offset for DAC1 CW generator"]
@@ -101,12 +109,16 @@ impl R {
     pub fn dac_inv2(&self) -> DAC_INV2_R {
         DAC_INV2_R::new(((self.bits >> 22) & 3) as u8)
     }
-    #[doc = "Bit 24 - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\] 0: to select register reg_pdac1_dac\\[7:0\\] as source to PDAC1_DAC\\[7:0\\]"]
+    #[doc = "Bit 24 - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\]
+0: to select register reg_pdac1_dac\\[7:0\\]
+as source to PDAC1_DAC\\[7:0\\]"]
     #[inline(always)]
     pub fn dac_cw_en1(&self) -> DAC_CW_EN1_R {
         DAC_CW_EN1_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\] 0: to select register reg_pdac2_dac\\[7:0\\] as source to PDAC2_DAC\\[7:0\\]"]
+    #[doc = "Bit 25 - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\]
+0: to select register reg_pdac2_dac\\[7:0\\]
+as source to PDAC2_DAC\\[7:0\\]"]
     #[inline(always)]
     pub fn dac_cw_en2(&self) -> DAC_CW_EN2_R {
         DAC_CW_EN2_R::new(((self.bits >> 25) & 1) != 0)
@@ -143,12 +155,16 @@ impl W {
     pub fn dac_inv2(&mut self) -> DAC_INV2_W<22> {
         DAC_INV2_W::new(self)
     }
-    #[doc = "Bit 24 - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\] 0: to select register reg_pdac1_dac\\[7:0\\] as source to PDAC1_DAC\\[7:0\\]"]
+    #[doc = "Bit 24 - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\]
+0: to select register reg_pdac1_dac\\[7:0\\]
+as source to PDAC1_DAC\\[7:0\\]"]
     #[inline(always)]
     pub fn dac_cw_en1(&mut self) -> DAC_CW_EN1_W<24> {
         DAC_CW_EN1_W::new(self)
     }
-    #[doc = "Bit 25 - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\] 0: to select register reg_pdac2_dac\\[7:0\\] as source to PDAC2_DAC\\[7:0\\]"]
+    #[doc = "Bit 25 - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\]
+0: to select register reg_pdac2_dac\\[7:0\\]
+as source to PDAC2_DAC\\[7:0\\]"]
     #[inline(always)]
     pub fn dac_cw_en2(&mut self) -> DAC_CW_EN2_W<25> {
         DAC_CW_EN2_W::new(self)
