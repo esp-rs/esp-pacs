@@ -101,12 +101,12 @@ pub type DAC_XTAL_32K_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAC_XTAL_32K` writer - DAC_XTAL_32K"]
 pub type DAC_XTAL_32K_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, EXT_XTL_CONF_SPEC, u8, u8, 3, O>;
-#[doc = "Field `RTC_WDT_STATE` reader - state of 32k_wdt"]
-pub type RTC_WDT_STATE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_XTAL32K_GPIO_SEL` reader - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
-pub type RTC_XTAL32K_GPIO_SEL_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_XTAL32K_GPIO_SEL` writer - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
-pub type RTC_XTAL32K_GPIO_SEL_W<'a, const O: u8> =
+#[doc = "Field `WDT_STATE` reader - state of 32k_wdt"]
+pub type WDT_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `XTAL32K_GPIO_SEL` reader - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
+pub type XTAL32K_GPIO_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `XTAL32K_GPIO_SEL` writer - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
+pub type XTAL32K_GPIO_SEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level, 1: power down XTAL at low level"]
 pub type XTL_EXT_CTR_LV_R = crate::BitReader<bool>;
@@ -189,13 +189,13 @@ impl R {
     }
     #[doc = "Bits 20:22 - state of 32k_wdt"]
     #[inline(always)]
-    pub fn rtc_wdt_state(&self) -> RTC_WDT_STATE_R {
-        RTC_WDT_STATE_R::new(((self.bits >> 20) & 7) as u8)
+    pub fn wdt_state(&self) -> WDT_STATE_R {
+        WDT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
     #[doc = "Bit 23 - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
     #[inline(always)]
-    pub fn rtc_xtal32k_gpio_sel(&self) -> RTC_XTAL32K_GPIO_SEL_R {
-        RTC_XTAL32K_GPIO_SEL_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn xtal32k_gpio_sel(&self) -> XTAL32K_GPIO_SEL_R {
+        XTAL32K_GPIO_SEL_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 30 - 0: power down XTAL at high level, 1: power down XTAL at low level"]
     #[inline(always)]
@@ -281,8 +281,8 @@ impl W {
     }
     #[doc = "Bit 23 - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
     #[inline(always)]
-    pub fn rtc_xtal32k_gpio_sel(&mut self) -> RTC_XTAL32K_GPIO_SEL_W<23> {
-        RTC_XTAL32K_GPIO_SEL_W::new(self)
+    pub fn xtal32k_gpio_sel(&mut self) -> XTAL32K_GPIO_SEL_W<23> {
+        XTAL32K_GPIO_SEL_W::new(self)
     }
     #[doc = "Bit 30 - 0: power down XTAL at high level, 1: power down XTAL at low level"]
     #[inline(always)]

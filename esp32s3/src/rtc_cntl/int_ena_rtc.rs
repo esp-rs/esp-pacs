@@ -49,93 +49,88 @@ pub type SDIO_IDLE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_IDLE_INT_ENA` writer - enable SDIO idle interrupt"]
 pub type SDIO_IDLE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_WDT_INT_ENA` reader - enable RTC WDT interrupt"]
-pub type RTC_WDT_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_INT_ENA` writer - enable RTC WDT interrupt"]
-pub type RTC_WDT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_SCAN_DONE_INT_ENA` reader - enable touch scan done interrupt"]
-pub type RTC_TOUCH_SCAN_DONE_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_SCAN_DONE_INT_ENA` writer - enable touch scan done interrupt"]
-pub type RTC_TOUCH_SCAN_DONE_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `WDT_INT_ENA` reader - enable RTC WDT interrupt"]
+pub type WDT_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `WDT_INT_ENA` writer - enable RTC WDT interrupt"]
+pub type WDT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` reader - enable touch scan done interrupt"]
+pub type TOUCH_SCAN_DONE_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_SCAN_DONE_INT_ENA` writer - enable touch scan done interrupt"]
+pub type TOUCH_SCAN_DONE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_ULP_CP_INT_ENA` reader - enable ULP-coprocessor interrupt"]
-pub type RTC_ULP_CP_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_ULP_CP_INT_ENA` writer - enable ULP-coprocessor interrupt"]
-pub type RTC_ULP_CP_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `ULP_CP_INT_ENA` reader - enable ULP-coprocessor interrupt"]
+pub type ULP_CP_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `ULP_CP_INT_ENA` writer - enable ULP-coprocessor interrupt"]
+pub type ULP_CP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `TOUCH_DONE_INT_ENA` reader - enable touch done interrupt"]
+pub type TOUCH_DONE_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_DONE_INT_ENA` writer - enable touch done interrupt"]
+pub type TOUCH_DONE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_DONE_INT_ENA` reader - enable touch done interrupt"]
-pub type RTC_TOUCH_DONE_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_DONE_INT_ENA` writer - enable touch done interrupt"]
-pub type RTC_TOUCH_DONE_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_ACTIVE_INT_ENA` reader - enable touch active interrupt"]
+pub type TOUCH_ACTIVE_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_ACTIVE_INT_ENA` writer - enable touch active interrupt"]
+pub type TOUCH_ACTIVE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_ACTIVE_INT_ENA` reader - enable touch active interrupt"]
-pub type RTC_TOUCH_ACTIVE_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_ACTIVE_INT_ENA` writer - enable touch active interrupt"]
-pub type RTC_TOUCH_ACTIVE_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_INACTIVE_INT_ENA` reader - enable touch inactive interrupt"]
+pub type TOUCH_INACTIVE_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_INACTIVE_INT_ENA` writer - enable touch inactive interrupt"]
+pub type TOUCH_INACTIVE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_INACTIVE_INT_ENA` reader - enable touch inactive interrupt"]
-pub type RTC_TOUCH_INACTIVE_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_INACTIVE_INT_ENA` writer - enable touch inactive interrupt"]
-pub type RTC_TOUCH_INACTIVE_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
+pub type BROWN_OUT_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
+pub type BROWN_OUT_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
-pub type RTC_BROWN_OUT_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
-pub type RTC_BROWN_OUT_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
+pub type MAIN_TIMER_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
+pub type MAIN_TIMER_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
-pub type RTC_MAIN_TIMER_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
-pub type RTC_MAIN_TIMER_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `SARADC1_INT_ENA` reader - enable saradc1 interrupt"]
+pub type SARADC1_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `SARADC1_INT_ENA` writer - enable saradc1 interrupt"]
+pub type SARADC1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `TSENS_INT_ENA` reader - enable tsens interrupt"]
+pub type TSENS_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TSENS_INT_ENA` writer - enable tsens interrupt"]
+pub type TSENS_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `COCPU_INT_ENA` reader - enable riscV cocpu interrupt"]
+pub type COCPU_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `COCPU_INT_ENA` writer - enable riscV cocpu interrupt"]
+pub type COCPU_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `SARADC2_INT_ENA` reader - enable saradc2 interrupt"]
+pub type SARADC2_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `SARADC2_INT_ENA` writer - enable saradc2 interrupt"]
+pub type SARADC2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `SWD_INT_ENA` reader - enable super watch dog interrupt"]
+pub type SWD_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `SWD_INT_ENA` writer - enable super watch dog interrupt"]
+pub type SWD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` reader - enable xtal32k_dead interrupt"]
+pub type XTAL32K_DEAD_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `XTAL32K_DEAD_INT_ENA` writer - enable xtal32k_dead interrupt"]
+pub type XTAL32K_DEAD_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SARADC1_INT_ENA` reader - enable saradc1 interrupt"]
-pub type RTC_SARADC1_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SARADC1_INT_ENA` writer - enable saradc1 interrupt"]
-pub type RTC_SARADC1_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `COCPU_TRAP_INT_ENA` reader - enable cocpu trap interrupt"]
+pub type COCPU_TRAP_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `COCPU_TRAP_INT_ENA` writer - enable cocpu trap interrupt"]
+pub type COCPU_TRAP_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TSENS_INT_ENA` reader - enable tsens interrupt"]
-pub type RTC_TSENS_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TSENS_INT_ENA` writer - enable tsens interrupt"]
-pub type RTC_TSENS_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` reader - enable touch timeout interrupt"]
+pub type TOUCH_TIMEOUT_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_TIMEOUT_INT_ENA` writer - enable touch timeout interrupt"]
+pub type TOUCH_TIMEOUT_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_COCPU_INT_ENA` reader - enable riscV cocpu interrupt"]
-pub type RTC_COCPU_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_COCPU_INT_ENA` writer - enable riscV cocpu interrupt"]
-pub type RTC_COCPU_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `GLITCH_DET_INT_ENA` reader - enbale gitch det interrupt"]
+pub type GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `GLITCH_DET_INT_ENA` writer - enbale gitch det interrupt"]
+pub type GLITCH_DET_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SARADC2_INT_ENA` reader - enable saradc2 interrupt"]
-pub type RTC_SARADC2_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SARADC2_INT_ENA` writer - enable saradc2 interrupt"]
-pub type RTC_SARADC2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_SWD_INT_ENA` reader - enable super watch dog interrupt"]
-pub type RTC_SWD_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_SWD_INT_ENA` writer - enable super watch dog interrupt"]
-pub type RTC_SWD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` reader - enable xtal32k_dead interrupt"]
-pub type RTC_XTAL32K_DEAD_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` writer - enable xtal32k_dead interrupt"]
-pub type RTC_XTAL32K_DEAD_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_COCPU_TRAP_INT_ENA` reader - enable cocpu trap interrupt"]
-pub type RTC_COCPU_TRAP_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_COCPU_TRAP_INT_ENA` writer - enable cocpu trap interrupt"]
-pub type RTC_COCPU_TRAP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_TIMEOUT_INT_ENA` reader - enable touch timeout interrupt"]
-pub type RTC_TOUCH_TIMEOUT_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_TIMEOUT_INT_ENA` writer - enable touch timeout interrupt"]
-pub type RTC_TOUCH_TIMEOUT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_GLITCH_DET_INT_ENA` reader - enbale gitch det interrupt"]
-pub type RTC_GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_GLITCH_DET_INT_ENA` writer - enbale gitch det interrupt"]
-pub type RTC_GLITCH_DET_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
-#[doc = "Field `RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA` reader - touch approach mode loop interrupt"]
-pub type RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA` writer - touch approach mode loop interrupt"]
-pub type RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W<'a, const O: u8> =
+#[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_ENA` reader - touch approach mode loop interrupt"]
+pub type TOUCH_APPROACH_LOOP_DONE_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_ENA` writer - touch approach mode loop interrupt"]
+pub type TOUCH_APPROACH_LOOP_DONE_INT_ENA_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
@@ -155,93 +150,93 @@ impl R {
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    pub fn rtc_wdt_int_ena(&self) -> RTC_WDT_INT_ENA_R {
-        RTC_WDT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wdt_int_ena(&self) -> WDT_INT_ENA_R {
+        WDT_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - enable touch scan done interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_scan_done_int_ena(&self) -> RTC_TOUCH_SCAN_DONE_INT_ENA_R {
-        RTC_TOUCH_SCAN_DONE_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn touch_scan_done_int_ena(&self) -> TOUCH_SCAN_DONE_INT_ENA_R {
+        TOUCH_SCAN_DONE_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - enable ULP-coprocessor interrupt"]
     #[inline(always)]
-    pub fn rtc_ulp_cp_int_ena(&self) -> RTC_ULP_CP_INT_ENA_R {
-        RTC_ULP_CP_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ulp_cp_int_ena(&self) -> ULP_CP_INT_ENA_R {
+        ULP_CP_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - enable touch done interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_done_int_ena(&self) -> RTC_TOUCH_DONE_INT_ENA_R {
-        RTC_TOUCH_DONE_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn touch_done_int_ena(&self) -> TOUCH_DONE_INT_ENA_R {
+        TOUCH_DONE_INT_ENA_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - enable touch active interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_active_int_ena(&self) -> RTC_TOUCH_ACTIVE_INT_ENA_R {
-        RTC_TOUCH_ACTIVE_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn touch_active_int_ena(&self) -> TOUCH_ACTIVE_INT_ENA_R {
+        TOUCH_ACTIVE_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - enable touch inactive interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_inactive_int_ena(&self) -> RTC_TOUCH_INACTIVE_INT_ENA_R {
-        RTC_TOUCH_INACTIVE_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn touch_inactive_int_ena(&self) -> TOUCH_INACTIVE_INT_ENA_R {
+        TOUCH_INACTIVE_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_ena(&self) -> RTC_BROWN_OUT_INT_ENA_R {
-        RTC_BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn brown_out_int_ena(&self) -> BROWN_OUT_INT_ENA_R {
+        BROWN_OUT_INT_ENA_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_ena(&self) -> RTC_MAIN_TIMER_INT_ENA_R {
-        RTC_MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn main_timer_int_ena(&self) -> MAIN_TIMER_INT_ENA_R {
+        MAIN_TIMER_INT_ENA_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - enable saradc1 interrupt"]
     #[inline(always)]
-    pub fn rtc_saradc1_int_ena(&self) -> RTC_SARADC1_INT_ENA_R {
-        RTC_SARADC1_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn saradc1_int_ena(&self) -> SARADC1_INT_ENA_R {
+        SARADC1_INT_ENA_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - enable tsens interrupt"]
     #[inline(always)]
-    pub fn rtc_tsens_int_ena(&self) -> RTC_TSENS_INT_ENA_R {
-        RTC_TSENS_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn tsens_int_ena(&self) -> TSENS_INT_ENA_R {
+        TSENS_INT_ENA_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - enable riscV cocpu interrupt"]
     #[inline(always)]
-    pub fn rtc_cocpu_int_ena(&self) -> RTC_COCPU_INT_ENA_R {
-        RTC_COCPU_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn cocpu_int_ena(&self) -> COCPU_INT_ENA_R {
+        COCPU_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - enable saradc2 interrupt"]
     #[inline(always)]
-    pub fn rtc_saradc2_int_ena(&self) -> RTC_SARADC2_INT_ENA_R {
-        RTC_SARADC2_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn saradc2_int_ena(&self) -> SARADC2_INT_ENA_R {
+        SARADC2_INT_ENA_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
-    pub fn rtc_swd_int_ena(&self) -> RTC_SWD_INT_ENA_R {
-        RTC_SWD_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn swd_int_ena(&self) -> SWD_INT_ENA_R {
+        SWD_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_ena(&self) -> RTC_XTAL32K_DEAD_INT_ENA_R {
-        RTC_XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn xtal32k_dead_int_ena(&self) -> XTAL32K_DEAD_INT_ENA_R {
+        XTAL32K_DEAD_INT_ENA_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - enable cocpu trap interrupt"]
     #[inline(always)]
-    pub fn rtc_cocpu_trap_int_ena(&self) -> RTC_COCPU_TRAP_INT_ENA_R {
-        RTC_COCPU_TRAP_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn cocpu_trap_int_ena(&self) -> COCPU_TRAP_INT_ENA_R {
+        COCPU_TRAP_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - enable touch timeout interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_timeout_int_ena(&self) -> RTC_TOUCH_TIMEOUT_INT_ENA_R {
-        RTC_TOUCH_TIMEOUT_INT_ENA_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn touch_timeout_int_ena(&self) -> TOUCH_TIMEOUT_INT_ENA_R {
+        TOUCH_TIMEOUT_INT_ENA_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_ena(&self) -> RTC_GLITCH_DET_INT_ENA_R {
-        RTC_GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn glitch_det_int_ena(&self) -> GLITCH_DET_INT_ENA_R {
+        GLITCH_DET_INT_ENA_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - touch approach mode loop interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_approach_loop_done_int_ena(&self) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_R {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn touch_approach_loop_done_int_ena(&self) -> TOUCH_APPROACH_LOOP_DONE_INT_ENA_R {
+        TOUCH_APPROACH_LOOP_DONE_INT_ENA_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
@@ -262,95 +257,93 @@ impl W {
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    pub fn rtc_wdt_int_ena(&mut self) -> RTC_WDT_INT_ENA_W<3> {
-        RTC_WDT_INT_ENA_W::new(self)
+    pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<3> {
+        WDT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - enable touch scan done interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_scan_done_int_ena(&mut self) -> RTC_TOUCH_SCAN_DONE_INT_ENA_W<4> {
-        RTC_TOUCH_SCAN_DONE_INT_ENA_W::new(self)
+    pub fn touch_scan_done_int_ena(&mut self) -> TOUCH_SCAN_DONE_INT_ENA_W<4> {
+        TOUCH_SCAN_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - enable ULP-coprocessor interrupt"]
     #[inline(always)]
-    pub fn rtc_ulp_cp_int_ena(&mut self) -> RTC_ULP_CP_INT_ENA_W<5> {
-        RTC_ULP_CP_INT_ENA_W::new(self)
+    pub fn ulp_cp_int_ena(&mut self) -> ULP_CP_INT_ENA_W<5> {
+        ULP_CP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - enable touch done interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_done_int_ena(&mut self) -> RTC_TOUCH_DONE_INT_ENA_W<6> {
-        RTC_TOUCH_DONE_INT_ENA_W::new(self)
+    pub fn touch_done_int_ena(&mut self) -> TOUCH_DONE_INT_ENA_W<6> {
+        TOUCH_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - enable touch active interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_active_int_ena(&mut self) -> RTC_TOUCH_ACTIVE_INT_ENA_W<7> {
-        RTC_TOUCH_ACTIVE_INT_ENA_W::new(self)
+    pub fn touch_active_int_ena(&mut self) -> TOUCH_ACTIVE_INT_ENA_W<7> {
+        TOUCH_ACTIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - enable touch inactive interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_inactive_int_ena(&mut self) -> RTC_TOUCH_INACTIVE_INT_ENA_W<8> {
-        RTC_TOUCH_INACTIVE_INT_ENA_W::new(self)
+    pub fn touch_inactive_int_ena(&mut self) -> TOUCH_INACTIVE_INT_ENA_W<8> {
+        TOUCH_INACTIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
-    pub fn rtc_brown_out_int_ena(&mut self) -> RTC_BROWN_OUT_INT_ENA_W<9> {
-        RTC_BROWN_OUT_INT_ENA_W::new(self)
+    pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<9> {
+        BROWN_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
-    pub fn rtc_main_timer_int_ena(&mut self) -> RTC_MAIN_TIMER_INT_ENA_W<10> {
-        RTC_MAIN_TIMER_INT_ENA_W::new(self)
+    pub fn main_timer_int_ena(&mut self) -> MAIN_TIMER_INT_ENA_W<10> {
+        MAIN_TIMER_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - enable saradc1 interrupt"]
     #[inline(always)]
-    pub fn rtc_saradc1_int_ena(&mut self) -> RTC_SARADC1_INT_ENA_W<11> {
-        RTC_SARADC1_INT_ENA_W::new(self)
+    pub fn saradc1_int_ena(&mut self) -> SARADC1_INT_ENA_W<11> {
+        SARADC1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - enable tsens interrupt"]
     #[inline(always)]
-    pub fn rtc_tsens_int_ena(&mut self) -> RTC_TSENS_INT_ENA_W<12> {
-        RTC_TSENS_INT_ENA_W::new(self)
+    pub fn tsens_int_ena(&mut self) -> TSENS_INT_ENA_W<12> {
+        TSENS_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - enable riscV cocpu interrupt"]
     #[inline(always)]
-    pub fn rtc_cocpu_int_ena(&mut self) -> RTC_COCPU_INT_ENA_W<13> {
-        RTC_COCPU_INT_ENA_W::new(self)
+    pub fn cocpu_int_ena(&mut self) -> COCPU_INT_ENA_W<13> {
+        COCPU_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - enable saradc2 interrupt"]
     #[inline(always)]
-    pub fn rtc_saradc2_int_ena(&mut self) -> RTC_SARADC2_INT_ENA_W<14> {
-        RTC_SARADC2_INT_ENA_W::new(self)
+    pub fn saradc2_int_ena(&mut self) -> SARADC2_INT_ENA_W<14> {
+        SARADC2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
-    pub fn rtc_swd_int_ena(&mut self) -> RTC_SWD_INT_ENA_W<15> {
-        RTC_SWD_INT_ENA_W::new(self)
+    pub fn swd_int_ena(&mut self) -> SWD_INT_ENA_W<15> {
+        SWD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
-    pub fn rtc_xtal32k_dead_int_ena(&mut self) -> RTC_XTAL32K_DEAD_INT_ENA_W<16> {
-        RTC_XTAL32K_DEAD_INT_ENA_W::new(self)
+    pub fn xtal32k_dead_int_ena(&mut self) -> XTAL32K_DEAD_INT_ENA_W<16> {
+        XTAL32K_DEAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17 - enable cocpu trap interrupt"]
     #[inline(always)]
-    pub fn rtc_cocpu_trap_int_ena(&mut self) -> RTC_COCPU_TRAP_INT_ENA_W<17> {
-        RTC_COCPU_TRAP_INT_ENA_W::new(self)
+    pub fn cocpu_trap_int_ena(&mut self) -> COCPU_TRAP_INT_ENA_W<17> {
+        COCPU_TRAP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18 - enable touch timeout interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_timeout_int_ena(&mut self) -> RTC_TOUCH_TIMEOUT_INT_ENA_W<18> {
-        RTC_TOUCH_TIMEOUT_INT_ENA_W::new(self)
+    pub fn touch_timeout_int_ena(&mut self) -> TOUCH_TIMEOUT_INT_ENA_W<18> {
+        TOUCH_TIMEOUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
-    pub fn rtc_glitch_det_int_ena(&mut self) -> RTC_GLITCH_DET_INT_ENA_W<19> {
-        RTC_GLITCH_DET_INT_ENA_W::new(self)
+    pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W<19> {
+        GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 20 - touch approach mode loop interrupt"]
     #[inline(always)]
-    pub fn rtc_touch_approach_loop_done_int_ena(
-        &mut self,
-    ) -> RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W<20> {
-        RTC_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W::new(self)
+    pub fn touch_approach_loop_done_int_ena(&mut self) -> TOUCH_APPROACH_LOOP_DONE_INT_ENA_W<20> {
+        TOUCH_APPROACH_LOOP_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

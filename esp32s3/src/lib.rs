@@ -1357,6 +1357,34 @@ impl core::fmt::Debug for RTCIO {
 }
 #[doc = "Peripheral RTC_IO"]
 pub mod rtcio;
+#[doc = "Peripheral SENS"]
+pub struct SENS {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SENS {}
+impl SENS {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const sens::RegisterBlock = 0x6000_8800 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const sens::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for SENS {
+    type Target = sens::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for SENS {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SENS").finish()
+    }
+}
+#[doc = "Peripheral SENS"]
+pub mod sens;
 #[doc = "Peripheral SENSITIVE"]
 pub struct SENSITIVE {
     _marker: PhantomData<*const ()>,
@@ -1982,6 +2010,8 @@ pub struct Peripherals {
     pub RTC_I2C: RTC_I2C,
     #[doc = "RTCIO"]
     pub RTCIO: RTCIO,
+    #[doc = "SENS"]
+    pub SENS: SENS,
     #[doc = "SENSITIVE"]
     pub SENSITIVE: SENSITIVE,
     #[doc = "SHA"]
@@ -2128,6 +2158,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             RTCIO: RTCIO {
+                _marker: PhantomData,
+            },
+            SENS: SENS {
                 _marker: PhantomData,
             },
             SENSITIVE: SENSITIVE {

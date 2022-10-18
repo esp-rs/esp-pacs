@@ -78,16 +78,14 @@ pub type RESET_FLAG_JTAG_PROCPU_CLR_W<'a, const O: u8> =
 #[doc = "Field `RESET_FLAG_JTAG_APPCPU_CLR` writer - clear jtag reset flag"]
 pub type RESET_FLAG_JTAG_APPCPU_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
-#[doc = "Field `RTC_APP_DRESET_MASK` reader - bypass cpu1 dreset"]
-pub type RTC_APP_DRESET_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_APP_DRESET_MASK` writer - bypass cpu1 dreset"]
-pub type RTC_APP_DRESET_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
-#[doc = "Field `RTC_PRO_DRESET_MASK` reader - bypass cpu0 dreset"]
-pub type RTC_PRO_DRESET_MASK_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_PRO_DRESET_MASK` writer - bypass cpu0 dreset"]
-pub type RTC_PRO_DRESET_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+#[doc = "Field `APP_DRESET_MASK` reader - bypass cpu1 dreset"]
+pub type APP_DRESET_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `APP_DRESET_MASK` writer - bypass cpu1 dreset"]
+pub type APP_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+#[doc = "Field `PRO_DRESET_MASK` reader - bypass cpu0 dreset"]
+pub type PRO_DRESET_MASK_R = crate::BitReader<bool>;
+#[doc = "Field `PRO_DRESET_MASK` writer - bypass cpu0 dreset"]
+pub type PRO_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -141,13 +139,13 @@ impl R {
     }
     #[doc = "Bit 24 - bypass cpu1 dreset"]
     #[inline(always)]
-    pub fn rtc_app_dreset_mask(&self) -> RTC_APP_DRESET_MASK_R {
-        RTC_APP_DRESET_MASK_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn app_dreset_mask(&self) -> APP_DRESET_MASK_R {
+        APP_DRESET_MASK_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - bypass cpu0 dreset"]
     #[inline(always)]
-    pub fn rtc_pro_dreset_mask(&self) -> RTC_PRO_DRESET_MASK_R {
-        RTC_PRO_DRESET_MASK_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn pro_dreset_mask(&self) -> PRO_DRESET_MASK_R {
+        PRO_DRESET_MASK_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {
@@ -193,13 +191,13 @@ impl W {
     }
     #[doc = "Bit 24 - bypass cpu1 dreset"]
     #[inline(always)]
-    pub fn rtc_app_dreset_mask(&mut self) -> RTC_APP_DRESET_MASK_W<24> {
-        RTC_APP_DRESET_MASK_W::new(self)
+    pub fn app_dreset_mask(&mut self) -> APP_DRESET_MASK_W<24> {
+        APP_DRESET_MASK_W::new(self)
     }
     #[doc = "Bit 25 - bypass cpu0 dreset"]
     #[inline(always)]
-    pub fn rtc_pro_dreset_mask(&mut self) -> RTC_PRO_DRESET_MASK_W<25> {
-        RTC_PRO_DRESET_MASK_W::new(self)
+    pub fn pro_dreset_mask(&mut self) -> PRO_DRESET_MASK_W<25> {
+        PRO_DRESET_MASK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

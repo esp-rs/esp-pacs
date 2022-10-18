@@ -110,18 +110,18 @@ pub type PDAC1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC
 pub type PDAC2_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC2_HOLD` writer - hold rtc pad-18"]
 pub type PDAC2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
-#[doc = "Field `RTC_PAD19_HOLD` reader - hold rtc pad-19"]
-pub type RTC_PAD19_HOLD_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_PAD19_HOLD` writer - hold rtc pad-19"]
-pub type RTC_PAD19_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
-#[doc = "Field `RTC_PAD20_HOLD` reader - hold rtc pad-20"]
-pub type RTC_PAD20_HOLD_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_PAD20_HOLD` writer - hold rtc pad-20"]
-pub type RTC_PAD20_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
-#[doc = "Field `RTC_PAD21_HOLD` reader - hold rtc pad-21"]
-pub type RTC_PAD21_HOLD_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_PAD21_HOLD` writer - hold rtc pad-21"]
-pub type RTC_PAD21_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+#[doc = "Field `PAD19_HOLD` reader - hold rtc pad-19"]
+pub type PAD19_HOLD_R = crate::BitReader<bool>;
+#[doc = "Field `PAD19_HOLD` writer - hold rtc pad-19"]
+pub type PAD19_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+#[doc = "Field `PAD20_HOLD` reader - hold rtc pad-20"]
+pub type PAD20_HOLD_R = crate::BitReader<bool>;
+#[doc = "Field `PAD20_HOLD` writer - hold rtc pad-20"]
+pub type PAD20_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+#[doc = "Field `PAD21_HOLD` reader - hold rtc pad-21"]
+pub type PAD21_HOLD_R = crate::BitReader<bool>;
+#[doc = "Field `PAD21_HOLD` writer - hold rtc pad-21"]
+pub type PAD21_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - hold rtc pad0"]
     #[inline(always)]
@@ -220,18 +220,18 @@ impl R {
     }
     #[doc = "Bit 19 - hold rtc pad-19"]
     #[inline(always)]
-    pub fn rtc_pad19_hold(&self) -> RTC_PAD19_HOLD_R {
-        RTC_PAD19_HOLD_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn pad19_hold(&self) -> PAD19_HOLD_R {
+        PAD19_HOLD_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - hold rtc pad-20"]
     #[inline(always)]
-    pub fn rtc_pad20_hold(&self) -> RTC_PAD20_HOLD_R {
-        RTC_PAD20_HOLD_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn pad20_hold(&self) -> PAD20_HOLD_R {
+        PAD20_HOLD_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - hold rtc pad-21"]
     #[inline(always)]
-    pub fn rtc_pad21_hold(&self) -> RTC_PAD21_HOLD_R {
-        RTC_PAD21_HOLD_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn pad21_hold(&self) -> PAD21_HOLD_R {
+        PAD21_HOLD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 impl W {
@@ -332,18 +332,18 @@ impl W {
     }
     #[doc = "Bit 19 - hold rtc pad-19"]
     #[inline(always)]
-    pub fn rtc_pad19_hold(&mut self) -> RTC_PAD19_HOLD_W<19> {
-        RTC_PAD19_HOLD_W::new(self)
+    pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<19> {
+        PAD19_HOLD_W::new(self)
     }
     #[doc = "Bit 20 - hold rtc pad-20"]
     #[inline(always)]
-    pub fn rtc_pad20_hold(&mut self) -> RTC_PAD20_HOLD_W<20> {
-        RTC_PAD20_HOLD_W::new(self)
+    pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<20> {
+        PAD20_HOLD_W::new(self)
     }
     #[doc = "Bit 21 - hold rtc pad-21"]
     #[inline(always)]
-    pub fn rtc_pad21_hold(&mut self) -> RTC_PAD21_HOLD_W<21> {
-        RTC_PAD21_HOLD_W::new(self)
+    pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<21> {
+        PAD21_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

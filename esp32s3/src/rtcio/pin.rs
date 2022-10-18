@@ -34,10 +34,10 @@ impl From<crate::W<PIN_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PIN_PAD_DRIVER` reader - if set to 0: normal output, if set to 1: open drain"]
-pub type PIN_PAD_DRIVER_R = crate::BitReader<bool>;
-#[doc = "Field `PIN_PAD_DRIVER` writer - if set to 0: normal output, if set to 1: open drain"]
-pub type PIN_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+#[doc = "Field `PAD_DRIVER` reader - if set to 0: normal output, if set to 1: open drain"]
+pub type PAD_DRIVER_R = crate::BitReader<bool>;
+#[doc = "Field `PAD_DRIVER` writer - if set to 0: normal output, if set to 1: open drain"]
+pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
 #[doc = "Field `INT_TYPE` reader - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
 pub type INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INT_TYPE` writer - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
@@ -49,8 +49,8 @@ pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, 
 impl R {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
-    pub fn pin_pad_driver(&self) -> PIN_PAD_DRIVER_R {
-        PIN_PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn pad_driver(&self) -> PAD_DRIVER_R {
+        PAD_DRIVER_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
     #[inline(always)]
@@ -66,8 +66,8 @@ impl R {
 impl W {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
-    pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<2> {
-        PIN_PAD_DRIVER_W::new(self)
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<2> {
+        PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
     #[inline(always)]

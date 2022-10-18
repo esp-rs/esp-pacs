@@ -206,7 +206,7 @@ pub struct RegisterBlock {
     #[doc = "0x194 - interrupt status register"]
     pub pro_intr_status_2: PRO_INTR_STATUS_2,
     #[doc = "0x198 - interrupt status register"]
-    pub intr_status_3: INTR_STATUS_3,
+    pub pro_intr_status_3: PRO_INTR_STATUS_3,
     #[doc = "0x19c - clock gate register"]
     pub clock_gate: CLOCK_GATE,
     _reserved104: [u8; 0x065c],
@@ -654,10 +654,10 @@ pub mod pro_intr_status_1;
 pub type PRO_INTR_STATUS_2 = crate::Reg<pro_intr_status_2::PRO_INTR_STATUS_2_SPEC>;
 #[doc = "interrupt status register"]
 pub mod pro_intr_status_2;
-#[doc = "INTR_STATUS_3 (r) register accessor: an alias for `Reg<INTR_STATUS_3_SPEC>`"]
-pub type INTR_STATUS_3 = crate::Reg<intr_status_3::INTR_STATUS_3_SPEC>;
+#[doc = "PRO_INTR_STATUS_3 (r) register accessor: an alias for `Reg<PRO_INTR_STATUS_3_SPEC>`"]
+pub type PRO_INTR_STATUS_3 = crate::Reg<pro_intr_status_3::PRO_INTR_STATUS_3_SPEC>;
 #[doc = "interrupt status register"]
-pub mod intr_status_3;
+pub mod pro_intr_status_3;
 #[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "clock gate register"]

@@ -34,11 +34,10 @@ impl From<crate::W<STATE0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_SW_CPU_INT` writer - rtc software interrupt to main cpu"]
-pub type RTC_SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
-#[doc = "Field `RTC_SLP_REJECT_CAUSE_CLR` writer - clear rtc sleep reject cause"]
-pub type RTC_SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+#[doc = "Field `SW_CPU_INT` writer - rtc software interrupt to main cpu"]
+pub type SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+#[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - clear rtc sleep reject cause"]
+pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
 pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` writer - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
@@ -87,13 +86,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - rtc software interrupt to main cpu"]
     #[inline(always)]
-    pub fn rtc_sw_cpu_int(&mut self) -> RTC_SW_CPU_INT_W<0> {
-        RTC_SW_CPU_INT_W::new(self)
+    pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<0> {
+        SW_CPU_INT_W::new(self)
     }
     #[doc = "Bit 1 - clear rtc sleep reject cause"]
     #[inline(always)]
-    pub fn rtc_slp_reject_cause_clr(&mut self) -> RTC_SLP_REJECT_CAUSE_CLR_W<1> {
-        RTC_SLP_REJECT_CAUSE_CLR_W::new(self)
+    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<1> {
+        SLP_REJECT_CAUSE_CLR_W::new(self)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
     #[inline(always)]

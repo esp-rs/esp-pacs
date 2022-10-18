@@ -21,22 +21,22 @@ pub type CH_TX_ERR_INT_ST_R = crate::BitReader<bool>;
 pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CH_TX_LOOP_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
 pub type CH_TX_LOOP_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH_RX_END_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_RX_END_INT."]
+#[doc = "Field `CH_RX_END_INT_ST[4-7]` reader - The masked interrupt status bit for CH4_RX_END_INT."]
 pub type CH_RX_END_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH_RX_ERR_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_ERR_INT."]
+#[doc = "Field `CH_RX_ERR_INT_ST[4-7]` reader - The masked interrupt status bit for CH4_ERR_INT."]
 pub type CH_RX_ERR_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH0_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH0_RX_THR_EVENT_INT."]
-pub type CH0_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH1_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH1_RX_THR_EVENT_INT."]
-pub type CH1_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH2_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
-pub type CH2_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `CH3_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH3_RX_THR_EVENT_INT."]
-pub type CH3_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `TX_CH0_DMA_ACCESS_FAIL_INT_ST` reader - The masked interrupt status bit for CH0_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH0_DMA_ACCESS_FAIL_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `RX_CH0_DMA_ACCESS_FAIL_INT_ST` reader - The masked interrupt status bit for CH0_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH0_DMA_ACCESS_FAIL_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `CH4_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
+pub type CH4_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `CH5_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH5_RX_THR_EVENT_INT."]
+pub type CH5_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `CH6_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH6_RX_THR_EVENT_INT."]
+pub type CH6_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `CH7_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH7_RX_THR_EVENT_INT."]
+pub type CH7_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_ST` reader - The masked interrupt status bit for CH3_DMA_ACCESS_FAIL_INT."]
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_ST` reader - The masked interrupt status bit for CH7_DMA_ACCESS_FAIL_INT."]
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "The masked interrupt status bit for CH[0-3]_TX_END_INT."]
     #[inline(always)]
@@ -138,85 +138,85 @@ impl R {
     pub fn ch3_tx_loop_int_st(&self) -> CH_TX_LOOP_INT_ST_R {
         CH_TX_LOOP_INT_ST_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-3]_RX_END_INT."]
+    #[doc = "The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
     pub unsafe fn ch_rx_end_int_st(&self, n: u8) -> CH_RX_END_INT_ST_R {
-        CH_RX_END_INT_ST_R::new(((self.bits >> (n + 16)) & 1) != 0)
+        CH_RX_END_INT_ST_R::new(((self.bits >> (n - 4 + 16)) & 1) != 0)
     }
-    #[doc = "Bit 16 - The masked interrupt status bit for CH0_RX_END_INT."]
+    #[doc = "Bit 16 - The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
-    pub fn ch0_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
+    pub fn ch4_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 17 - The masked interrupt status bit for CH1_RX_END_INT."]
+    #[doc = "Bit 17 - The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
-    pub fn ch1_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
+    pub fn ch5_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - The masked interrupt status bit for CH2_RX_END_INT."]
+    #[doc = "Bit 18 - The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
-    pub fn ch2_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
+    pub fn ch6_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bit 19 - The masked interrupt status bit for CH3_RX_END_INT."]
+    #[doc = "Bit 19 - The masked interrupt status bit for CH4_RX_END_INT."]
     #[inline(always)]
-    pub fn ch3_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
+    pub fn ch7_rx_end_int_st(&self) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "The masked interrupt status bit for CH[0-3]_ERR_INT."]
+    #[doc = "The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
     pub unsafe fn ch_rx_err_int_st(&self, n: u8) -> CH_RX_ERR_INT_ST_R {
-        CH_RX_ERR_INT_ST_R::new(((self.bits >> (n + 20)) & 1) != 0)
+        CH_RX_ERR_INT_ST_R::new(((self.bits >> (n - 4 + 20)) & 1) != 0)
     }
-    #[doc = "Bit 20 - The masked interrupt status bit for CH0_ERR_INT."]
+    #[doc = "Bit 20 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
-    pub fn ch0_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
+    pub fn ch4_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
         CH_RX_ERR_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - The masked interrupt status bit for CH1_ERR_INT."]
+    #[doc = "Bit 21 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
-    pub fn ch1_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
+    pub fn ch5_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
         CH_RX_ERR_INT_ST_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Bit 22 - The masked interrupt status bit for CH2_ERR_INT."]
+    #[doc = "Bit 22 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
-    pub fn ch2_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
+    pub fn ch6_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
         CH_RX_ERR_INT_ST_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - The masked interrupt status bit for CH3_ERR_INT."]
+    #[doc = "Bit 23 - The masked interrupt status bit for CH4_ERR_INT."]
     #[inline(always)]
-    pub fn ch3_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
+    pub fn ch7_rx_err_int_st(&self) -> CH_RX_ERR_INT_ST_R {
         CH_RX_ERR_INT_ST_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Bit 24 - The masked interrupt status bit for CH0_RX_THR_EVENT_INT."]
+    #[doc = "Bit 24 - The masked interrupt status bit for CH4_RX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch0_rx_thr_event_int_st(&self) -> CH0_RX_THR_EVENT_INT_ST_R {
-        CH0_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn ch4_rx_thr_event_int_st(&self) -> CH4_RX_THR_EVENT_INT_ST_R {
+        CH4_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - The masked interrupt status bit for CH1_RX_THR_EVENT_INT."]
+    #[doc = "Bit 25 - The masked interrupt status bit for CH5_RX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch1_rx_thr_event_int_st(&self) -> CH1_RX_THR_EVENT_INT_ST_R {
-        CH1_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn ch5_rx_thr_event_int_st(&self) -> CH5_RX_THR_EVENT_INT_ST_R {
+        CH5_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 26 - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
+    #[doc = "Bit 26 - The masked interrupt status bit for CH6_RX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch2_rx_thr_event_int_st(&self) -> CH2_RX_THR_EVENT_INT_ST_R {
-        CH2_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn ch6_rx_thr_event_int_st(&self) -> CH6_RX_THR_EVENT_INT_ST_R {
+        CH6_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 27 - The masked interrupt status bit for CH3_RX_THR_EVENT_INT."]
+    #[doc = "Bit 27 - The masked interrupt status bit for CH7_RX_THR_EVENT_INT."]
     #[inline(always)]
-    pub fn ch3_rx_thr_event_int_st(&self) -> CH3_RX_THR_EVENT_INT_ST_R {
-        CH3_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn ch7_rx_thr_event_int_st(&self) -> CH7_RX_THR_EVENT_INT_ST_R {
+        CH7_RX_THR_EVENT_INT_ST_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 28 - The masked interrupt status bit for CH0_DMA_ACCESS_FAIL_INT."]
+    #[doc = "Bit 28 - The masked interrupt status bit for CH3_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn tx_ch0_dma_access_fail_int_st(&self) -> TX_CH0_DMA_ACCESS_FAIL_INT_ST_R {
-        TX_CH0_DMA_ACCESS_FAIL_INT_ST_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn tx_ch3_dma_access_fail_int_st(&self) -> TX_CH3_DMA_ACCESS_FAIL_INT_ST_R {
+        TX_CH3_DMA_ACCESS_FAIL_INT_ST_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bit 29 - The masked interrupt status bit for CH0_DMA_ACCESS_FAIL_INT."]
+    #[doc = "Bit 29 - The masked interrupt status bit for CH7_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    pub fn rx_ch0_dma_access_fail_int_st(&self) -> RX_CH0_DMA_ACCESS_FAIL_INT_ST_R {
-        RX_CH0_DMA_ACCESS_FAIL_INT_ST_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn rx_ch7_dma_access_fail_int_st(&self) -> RX_CH7_DMA_ACCESS_FAIL_INT_ST_R {
+        RX_CH7_DMA_ACCESS_FAIL_INT_ST_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

@@ -34,16 +34,14 @@ impl From<crate::W<TIMER4_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_WAIT_TIMER` reader - No public"]
-pub type RTC_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `RTC_WAIT_TIMER` writer - No public"]
-pub type RTC_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER4_SPEC, u16, u16, 9, O>;
-#[doc = "Field `RTC_POWERUP_TIMER` reader - No public"]
-pub type RTC_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RTC_POWERUP_TIMER` writer - No public"]
-pub type RTC_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER4_SPEC, u8, u8, 7, O>;
+#[doc = "Field `WAIT_TIMER` reader - No public"]
+pub type WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `WAIT_TIMER` writer - No public"]
+pub type WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER4_SPEC, u16, u16, 9, O>;
+#[doc = "Field `POWERUP_TIMER` reader - No public"]
+pub type POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `POWERUP_TIMER` writer - No public"]
+pub type POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER4_SPEC, u8, u8, 7, O>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` reader - No public"]
 pub type DG_WRAP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` writer - No public"]
@@ -57,13 +55,13 @@ pub type DG_WRAP_POWERUP_TIMER_W<'a, const O: u8> =
 impl R {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
-    pub fn rtc_wait_timer(&self) -> RTC_WAIT_TIMER_R {
-        RTC_WAIT_TIMER_R::new((self.bits & 0x01ff) as u16)
+    pub fn wait_timer(&self) -> WAIT_TIMER_R {
+        WAIT_TIMER_R::new((self.bits & 0x01ff) as u16)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
-    pub fn rtc_powerup_timer(&self) -> RTC_POWERUP_TIMER_R {
-        RTC_POWERUP_TIMER_R::new(((self.bits >> 9) & 0x7f) as u8)
+    pub fn powerup_timer(&self) -> POWERUP_TIMER_R {
+        POWERUP_TIMER_R::new(((self.bits >> 9) & 0x7f) as u8)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
@@ -79,13 +77,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
-    pub fn rtc_wait_timer(&mut self) -> RTC_WAIT_TIMER_W<0> {
-        RTC_WAIT_TIMER_W::new(self)
+    pub fn wait_timer(&mut self) -> WAIT_TIMER_W<0> {
+        WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
-    pub fn rtc_powerup_timer(&mut self) -> RTC_POWERUP_TIMER_W<9> {
-        RTC_POWERUP_TIMER_W::new(self)
+    pub fn powerup_timer(&mut self) -> POWERUP_TIMER_W<9> {
+        POWERUP_TIMER_W::new(self)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
