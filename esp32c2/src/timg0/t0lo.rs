@@ -13,16 +13,16 @@ impl From<crate::R<T0LO_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `LO` reader - After writing to TIMG_T0UPDATE_REG, the low 32 bits of the time-base counter of timer 0 can be read here."]
+#[doc = "Field `LO` reader - After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter of timer %s can be read here."]
 pub type LO_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - After writing to TIMG_T0UPDATE_REG, the low 32 bits of the time-base counter of timer 0 can be read here."]
+    #[doc = "Bits 0:31 - After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]
     pub fn lo(&self) -> LO_R {
         LO_R::new(self.bits)
     }
 }
-#[doc = "Timer $x current value, low 32 bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0lo](index.html) module"]
+#[doc = "Timer %s current value, low 32 bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0lo](index.html) module"]
 pub struct T0LO_SPEC;
 impl crate::RegisterSpec for T0LO_SPEC {
     type Ux = u32;

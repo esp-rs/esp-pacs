@@ -34,23 +34,23 @@ impl From<crate::W<TIME_LOW0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_TIMER_VALUE0_LOW` reader - RTC timer low 32 bits"]
-pub type RTC_TIMER_VALUE0_LOW_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_TIMER_VALUE0_LOW` writer - RTC timer low 32 bits"]
-pub type RTC_TIMER_VALUE0_LOW_W<'a, const O: u8> =
+#[doc = "Field `TIMER_VALUE0_LOW` reader - RTC timer low 32 bits"]
+pub type TIMER_VALUE0_LOW_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `TIMER_VALUE0_LOW` writer - RTC timer low 32 bits"]
+pub type TIMER_VALUE0_LOW_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, TIME_LOW0_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - RTC timer low 32 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value0_low(&self) -> RTC_TIMER_VALUE0_LOW_R {
-        RTC_TIMER_VALUE0_LOW_R::new(self.bits)
+    pub fn timer_value0_low(&self) -> TIMER_VALUE0_LOW_R {
+        TIMER_VALUE0_LOW_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - RTC timer low 32 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value0_low(&mut self) -> RTC_TIMER_VALUE0_LOW_W<0> {
-        RTC_TIMER_VALUE0_LOW_W::new(self)
+    pub fn timer_value0_low(&mut self) -> TIMER_VALUE0_LOW_W<0> {
+        TIMER_VALUE0_LOW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

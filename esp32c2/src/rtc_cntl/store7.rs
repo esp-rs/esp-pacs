@@ -34,23 +34,22 @@ impl From<crate::W<STORE7_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_SCRATCH7` reader - Need add desc"]
-pub type RTC_SCRATCH7_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_SCRATCH7` writer - Need add desc"]
-pub type RTC_SCRATCH7_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STORE7_SPEC, u32, u32, 32, O>;
+#[doc = "Field `SCRATCH7` reader - Need add desc"]
+pub type SCRATCH7_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `SCRATCH7` writer - Need add desc"]
+pub type SCRATCH7_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STORE7_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_scratch7(&self) -> RTC_SCRATCH7_R {
-        RTC_SCRATCH7_R::new(self.bits)
+    pub fn scratch7(&self) -> SCRATCH7_R {
+        SCRATCH7_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_scratch7(&mut self) -> RTC_SCRATCH7_W<0> {
-        RTC_SCRATCH7_W::new(self)
+    pub fn scratch7(&mut self) -> SCRATCH7_W<0> {
+        SCRATCH7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

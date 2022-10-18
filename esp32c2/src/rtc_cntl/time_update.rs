@@ -46,10 +46,10 @@ pub type TIMER_XTL_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIME_UPDAT
 pub type TIMER_SYS_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER_SYS_RST` writer - enable to record system reset time"]
 pub type TIMER_SYS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIME_UPDATE_SPEC, bool, O>;
-#[doc = "Field `RTC_TIME_UPDATE` reader - Set 1: to update register with RTC timer"]
-pub type RTC_TIME_UPDATE_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_TIME_UPDATE` writer - Set 1: to update register with RTC timer"]
-pub type RTC_TIME_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIME_UPDATE_SPEC, bool, O>;
+#[doc = "Field `TIME_UPDATE` reader - Set 1: to update register with RTC timer"]
+pub type TIME_UPDATE_R = crate::BitReader<bool>;
+#[doc = "Field `TIME_UPDATE` writer - Set 1: to update register with RTC timer"]
+pub type TIME_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIME_UPDATE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 27 - Enable to record system stall time"]
     #[inline(always)]
@@ -68,8 +68,8 @@ impl R {
     }
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
-    pub fn rtc_time_update(&self) -> RTC_TIME_UPDATE_R {
-        RTC_TIME_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn time_update(&self) -> TIME_UPDATE_R {
+        TIME_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
@@ -90,8 +90,8 @@ impl W {
     }
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
-    pub fn rtc_time_update(&mut self) -> RTC_TIME_UPDATE_W<31> {
-        RTC_TIME_UPDATE_W::new(self)
+    pub fn time_update(&mut self) -> TIME_UPDATE_W<31> {
+        TIME_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

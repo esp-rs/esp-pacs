@@ -39,10 +39,10 @@ pub type SLP_VAL_HI_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLP_VAL_HI` writer - RTC sleep timer high 16 bits"]
 pub type SLP_VAL_HI_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SLP_TIMER1_SPEC, u16, u16, 16, O>;
-#[doc = "Field `RTC_MAIN_TIMER_ALARM_EN` reader - timer alarm enable bit"]
-pub type RTC_MAIN_TIMER_ALARM_EN_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_MAIN_TIMER_ALARM_EN` writer - timer alarm enable bit"]
-pub type RTC_MAIN_TIMER_ALARM_EN_W<'a, const O: u8> =
+#[doc = "Field `MAIN_TIMER_ALARM_EN` reader - timer alarm enable bit"]
+pub type MAIN_TIMER_ALARM_EN_R = crate::BitReader<bool>;
+#[doc = "Field `MAIN_TIMER_ALARM_EN` writer - timer alarm enable bit"]
+pub type MAIN_TIMER_ALARM_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SLP_TIMER1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:15 - RTC sleep timer high 16 bits"]
@@ -52,8 +52,8 @@ impl R {
     }
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
-    pub fn rtc_main_timer_alarm_en(&self) -> RTC_MAIN_TIMER_ALARM_EN_R {
-        RTC_MAIN_TIMER_ALARM_EN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn main_timer_alarm_en(&self) -> MAIN_TIMER_ALARM_EN_R {
+        MAIN_TIMER_ALARM_EN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {
@@ -64,8 +64,8 @@ impl W {
     }
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
-    pub fn rtc_main_timer_alarm_en(&mut self) -> RTC_MAIN_TIMER_ALARM_EN_W<16> {
-        RTC_MAIN_TIMER_ALARM_EN_W::new(self)
+    pub fn main_timer_alarm_en(&mut self) -> MAIN_TIMER_ALARM_EN_W<16> {
+        MAIN_TIMER_ALARM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

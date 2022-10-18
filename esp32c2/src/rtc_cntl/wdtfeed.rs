@@ -34,22 +34,22 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_WDT_FEED` reader - Need add desc"]
-pub type RTC_WDT_FEED_R = crate::BitReader<bool>;
-#[doc = "Field `RTC_WDT_FEED` writer - Need add desc"]
-pub type RTC_WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
+#[doc = "Field `WDT_FEED` reader - Need add desc"]
+pub type WDT_FEED_R = crate::BitReader<bool>;
+#[doc = "Field `WDT_FEED` writer - Need add desc"]
+pub type WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_wdt_feed(&self) -> RTC_WDT_FEED_R {
-        RTC_WDT_FEED_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn wdt_feed(&self) -> WDT_FEED_R {
+        WDT_FEED_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_wdt_feed(&mut self) -> RTC_WDT_FEED_W<31> {
-        RTC_WDT_FEED_W::new(self)
+    pub fn wdt_feed(&mut self) -> WDT_FEED_W<31> {
+        WDT_FEED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

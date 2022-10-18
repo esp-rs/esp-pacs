@@ -34,23 +34,23 @@ impl From<crate::W<DIAG0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_LOW_POWER_DIAG1` reader - Need add desc"]
-pub type RTC_LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `RTC_LOW_POWER_DIAG1` writer - Need add desc"]
-pub type RTC_LOW_POWER_DIAG1_W<'a, const O: u8> =
+#[doc = "Field `LOW_POWER_DIAG1` reader - Need add desc"]
+pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `LOW_POWER_DIAG1` writer - Need add desc"]
+pub type LOW_POWER_DIAG1_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, DIAG0_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_low_power_diag1(&self) -> RTC_LOW_POWER_DIAG1_R {
-        RTC_LOW_POWER_DIAG1_R::new(self.bits)
+    pub fn low_power_diag1(&self) -> LOW_POWER_DIAG1_R {
+        LOW_POWER_DIAG1_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn rtc_low_power_diag1(&mut self) -> RTC_LOW_POWER_DIAG1_W<0> {
-        RTC_LOW_POWER_DIAG1_W::new(self)
+    pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<0> {
+        LOW_POWER_DIAG1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

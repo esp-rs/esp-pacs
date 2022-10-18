@@ -1,9 +1,9 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Timer $x configuration register"]
+    #[doc = "0x00 - Timer %s configuration register"]
     pub t0config: T0CONFIG,
-    #[doc = "0x04 - Timer $x current value, low 32 bits"]
+    #[doc = "0x04 - Timer %s current value, low 32 bits"]
     pub t0lo: T0LO,
     #[doc = "0x08 - Timer $x current value, high 22 bits"]
     pub t0hi: T0HI,
@@ -58,11 +58,11 @@ pub struct RegisterBlock {
 }
 #[doc = "T0CONFIG (rw) register accessor: an alias for `Reg<T0CONFIG_SPEC>`"]
 pub type T0CONFIG = crate::Reg<t0config::T0CONFIG_SPEC>;
-#[doc = "Timer $x configuration register"]
+#[doc = "Timer %s configuration register"]
 pub mod t0config;
 #[doc = "T0LO (r) register accessor: an alias for `Reg<T0LO_SPEC>`"]
 pub type T0LO = crate::Reg<t0lo::T0LO_SPEC>;
-#[doc = "Timer $x current value, low 32 bits"]
+#[doc = "Timer %s current value, low 32 bits"]
 pub mod t0lo;
 #[doc = "T0HI (r) register accessor: an alias for `Reg<T0HI_SPEC>`"]
 pub type T0HI = crate::Reg<t0hi::T0HI_SPEC>;

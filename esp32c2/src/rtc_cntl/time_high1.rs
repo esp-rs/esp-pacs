@@ -34,23 +34,23 @@ impl From<crate::W<TIME_HIGH1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RTC_TIMER_VALUE1_HIGH` reader - RTC timer high 16 bits"]
-pub type RTC_TIMER_VALUE1_HIGH_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `RTC_TIMER_VALUE1_HIGH` writer - RTC timer high 16 bits"]
-pub type RTC_TIMER_VALUE1_HIGH_W<'a, const O: u8> =
+#[doc = "Field `TIMER_VALUE1_HIGH` reader - RTC timer high 16 bits"]
+pub type TIMER_VALUE1_HIGH_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `TIMER_VALUE1_HIGH` writer - RTC timer high 16 bits"]
+pub type TIMER_VALUE1_HIGH_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, TIME_HIGH1_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value1_high(&self) -> RTC_TIMER_VALUE1_HIGH_R {
-        RTC_TIMER_VALUE1_HIGH_R::new((self.bits & 0xffff) as u16)
+    pub fn timer_value1_high(&self) -> TIMER_VALUE1_HIGH_R {
+        TIMER_VALUE1_HIGH_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]
-    pub fn rtc_timer_value1_high(&mut self) -> RTC_TIMER_VALUE1_HIGH_W<0> {
-        RTC_TIMER_VALUE1_HIGH_W::new(self)
+    pub fn timer_value1_high(&mut self) -> TIMER_VALUE1_HIGH_W<0> {
+        TIMER_VALUE1_HIGH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
