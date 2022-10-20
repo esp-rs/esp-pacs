@@ -1833,6 +1833,34 @@ impl core::fmt::Debug for UHCI1 {
 }
 #[doc = "Universal Host Controller Interface"]
 pub use self::uhci0 as uhci1;
+#[doc = "USB OTG (On-The-Go)"]
+pub struct USB0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USB0 {}
+impl USB0 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const usb0::RegisterBlock = 0x6008_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const usb0::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for USB0 {
+    type Target = usb0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for USB0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB0").finish()
+    }
+}
+#[doc = "USB OTG (On-The-Go)"]
+pub mod usb0;
 #[doc = "Peripheral USB_DEVICE"]
 pub struct USB_DEVICE {
     _marker: PhantomData<*const ()>,
@@ -2044,6 +2072,8 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "UHCI1"]
     pub UHCI1: UHCI1,
+    #[doc = "USB0"]
+    pub USB0: USB0,
     #[doc = "USB_DEVICE"]
     pub USB_DEVICE: USB_DEVICE,
     #[doc = "USB_WRAP"]
@@ -2213,6 +2243,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             UHCI1: UHCI1 {
+                _marker: PhantomData,
+            },
+            USB0: USB0 {
                 _marker: PhantomData,
             },
             USB_DEVICE: USB_DEVICE {
