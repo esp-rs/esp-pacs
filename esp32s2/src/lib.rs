@@ -1480,6 +1480,34 @@ impl core::fmt::Debug for UHCI0 {
 }
 #[doc = "Universal Host Controller Interface"]
 pub mod uhci0;
+#[doc = "USB OTG (On-The-Go)"]
+pub struct USB0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USB0 {}
+impl USB0 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const usb0::RegisterBlock = 0x6008_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const usb0::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for USB0 {
+    type Target = usb0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for USB0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB0").finish()
+    }
+}
+#[doc = "USB OTG (On-The-Go)"]
+pub mod usb0;
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub struct XTS_AES {
     _marker: PhantomData<*const ()>,
@@ -1589,6 +1617,8 @@ pub struct Peripherals {
     pub UART1: UART1,
     #[doc = "UHCI0"]
     pub UHCI0: UHCI0,
+    #[doc = "USB0"]
+    pub USB0: USB0,
     #[doc = "XTS_AES"]
     pub XTS_AES: XTS_AES,
 }
@@ -1725,6 +1755,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             UHCI0: UHCI0 {
+                _marker: PhantomData,
+            },
+            USB0: USB0 {
                 _marker: PhantomData,
             },
             XTS_AES: XTS_AES {
