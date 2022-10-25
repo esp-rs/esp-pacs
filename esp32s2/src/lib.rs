@@ -1508,6 +1508,34 @@ impl core::fmt::Debug for USB0 {
 }
 #[doc = "USB OTG (On-The-Go)"]
 pub mod usb0;
+#[doc = "Peripheral USB_WRAP"]
+pub struct USB_WRAP {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USB_WRAP {}
+impl USB_WRAP {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const usb_wrap::RegisterBlock = 0x3f43_9000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const usb_wrap::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for USB_WRAP {
+    type Target = usb_wrap::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for USB_WRAP {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB_WRAP").finish()
+    }
+}
+#[doc = "Peripheral USB_WRAP"]
+pub mod usb_wrap;
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub struct XTS_AES {
     _marker: PhantomData<*const ()>,
@@ -1619,6 +1647,8 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "USB0"]
     pub USB0: USB0,
+    #[doc = "USB_WRAP"]
+    pub USB_WRAP: USB_WRAP,
     #[doc = "XTS_AES"]
     pub XTS_AES: XTS_AES,
 }
@@ -1758,6 +1788,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             USB0: USB0 {
+                _marker: PhantomData,
+            },
+            USB_WRAP: USB_WRAP {
                 _marker: PhantomData,
             },
             XTS_AES: XTS_AES {
