@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32-S2</series>
-  <version>10</version>
+  <version>11</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -45333,6 +45333,255 @@ If this bit is set to 0, UHCI decoder stops receiving payload data  upon receivi
               <name>RESETAFTERSUSP</name>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>USB_WRAP</name>
+      <description>Peripheral USB_WRAP</description>
+      <groupName>USB_WRAP</groupName>
+      <baseAddress>0x3F439000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0xC</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>OTG_CONF</name>
+          <description>USB OTG Wrapper Configure Register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x001C0000</resetValue>
+          <fields>
+            <field>
+              <name>SRP_SESSEND_OVERRIDE</name>
+              <description>This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SRP_SESSEND_VALUE</name>
+              <description>Software over-ride value of srp session end signal.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PHY_SEL</name>
+              <description>Select internal external PHY. 1'b0: Select internal PHY. 1'b1: Select external PHY.</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DFIFO_FORCE_PD</name>
+              <description>Force the dfifo to go into low power mode. The data in dfifo will not lost.</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DBNCE_FLTR_BYPASS</name>
+              <description>Bypass Debounce filters for avalid,bvalid,vbusvalid,session end, id signals</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EXCHG_PINS_OVERRIDE</name>
+              <description>Enable software controlle USB D+ D- exchange</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EXCHG_PINS</name>
+              <description>USB D+ D- exchange. 1'b0: don't change. 1'b1: exchange D+ D-</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VREFH</name>
+              <description>Control single-end input high threshold,1.76V to 2V, step 80mV</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VREFL</name>
+              <description>Control single-end input low threshold,0.8V to 1.04V, step 80mV</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VREF_OVERRIDE</name>
+              <description>Enable software controlle input  threshold</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_PULL_OVERRIDE</name>
+              <description>Enable software controlle USB D+ D- pullup pulldown</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DP_PULLUP</name>
+              <description>Controlle USB D+ pullup</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DP_PULLDOWN</name>
+              <description>Controlle USB D+ pulldown</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DM_PULLUP</name>
+              <description>Controlle USB D+ pullup</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DM_PULLDOWN</name>
+              <description>Controlle USB D+ pulldown</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PULLUP_VALUE</name>
+              <description>Controlle pullup value. 1'b0: typical value is 2.4K. 1'b1: typical value is 1.2K.</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>USB_PAD_ENABLE</name>
+              <description>Enable USB pad function</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AHB_CLK_FORCE_ON</name>
+              <description>Force ahb clock always on</description>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PHY_CLK_FORCE_ON</name>
+              <description>Force phy clock always on</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PHY_TX_EDGE_SEL</name>
+              <description>Select phy tx signal output clock edge. 1'b0: negedge. 1'b1: posedge.</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DFIFO_FORCE_PU</name>
+              <description>Disable the dfifo to go into low power mode. The data in dfifo will not lost.</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_EN</name>
+              <description>Disable auto clock gating of CSR registers</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TEST_CONF</name>
+          <description>USB Internal PHY Testing Register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>TEST_ENABLE</name>
+              <description>Enable test of the USB pad</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEST_USB_OE</name>
+              <description>USB pad oen in test</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEST_TX_DP</name>
+              <description>USB D+ tx value in test</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEST_TX_DM</name>
+              <description>USB D- tx value in test</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TEST_RX_RCV</name>
+              <description>USB differential rx value in test</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TEST_RX_DP</name>
+              <description>USB D+ rx value in test</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TEST_RX_DM</name>
+              <description>USB D- rx value in test</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <description>Version Control Register</description>
+          <addressOffset>0x3FC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x02102010</resetValue>
+          <fields>
+            <field>
+              <name>USB_WRAP_DATE</name>
+              <description>Date register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
