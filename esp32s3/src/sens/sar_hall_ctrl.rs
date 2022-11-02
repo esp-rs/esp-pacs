@@ -34,66 +34,65 @@ impl From<crate::W<SAR_HALL_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_XPD_HALL` reader - Power on hall sensor and connect to VP and VN"]
-pub type SAR_XPD_HALL_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_XPD_HALL` writer - Power on hall sensor and connect to VP and VN"]
-pub type SAR_XPD_HALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
-#[doc = "Field `SAR_XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type SAR_XPD_HALL_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type SAR_XPD_HALL_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
-#[doc = "Field `SAR_HALL_PHASE` reader - Reverse phase of hall sensor"]
-pub type SAR_HALL_PHASE_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_HALL_PHASE` writer - Reverse phase of hall sensor"]
-pub type SAR_HALL_PHASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
-#[doc = "Field `SAR_HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type SAR_HALL_PHASE_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type SAR_HALL_PHASE_FORCE_W<'a, const O: u8> =
+#[doc = "Field `XPD_HALL` reader - Power on hall sensor and connect to VP and VN"]
+pub type XPD_HALL_R = crate::BitReader<bool>;
+#[doc = "Field `XPD_HALL` writer - Power on hall sensor and connect to VP and VN"]
+pub type XPD_HALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
+#[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
+pub type XPD_HALL_FORCE_R = crate::BitReader<bool>;
+#[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
+pub type XPD_HALL_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
+#[doc = "Field `HALL_PHASE` reader - Reverse phase of hall sensor"]
+pub type HALL_PHASE_R = crate::BitReader<bool>;
+#[doc = "Field `HALL_PHASE` writer - Reverse phase of hall sensor"]
+pub type HALL_PHASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
+#[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
+pub type HALL_PHASE_FORCE_R = crate::BitReader<bool>;
+#[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
+pub type HALL_PHASE_FORCE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
-    pub fn sar_xpd_hall(&self) -> SAR_XPD_HALL_R {
-        SAR_XPD_HALL_R::new(((self.bits >> 28) & 1) != 0)
+    pub fn xpd_hall(&self) -> XPD_HALL_R {
+        XPD_HALL_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn sar_xpd_hall_force(&self) -> SAR_XPD_HALL_FORCE_R {
-        SAR_XPD_HALL_FORCE_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn xpd_hall_force(&self) -> XPD_HALL_FORCE_R {
+        XPD_HALL_FORCE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
-    pub fn sar_hall_phase(&self) -> SAR_HALL_PHASE_R {
-        SAR_HALL_PHASE_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn hall_phase(&self) -> HALL_PHASE_R {
+        HALL_PHASE_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn sar_hall_phase_force(&self) -> SAR_HALL_PHASE_FORCE_R {
-        SAR_HALL_PHASE_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn hall_phase_force(&self) -> HALL_PHASE_FORCE_R {
+        HALL_PHASE_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
-    pub fn sar_xpd_hall(&mut self) -> SAR_XPD_HALL_W<28> {
-        SAR_XPD_HALL_W::new(self)
+    pub fn xpd_hall(&mut self) -> XPD_HALL_W<28> {
+        XPD_HALL_W::new(self)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn sar_xpd_hall_force(&mut self) -> SAR_XPD_HALL_FORCE_W<29> {
-        SAR_XPD_HALL_FORCE_W::new(self)
+    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<29> {
+        XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
-    pub fn sar_hall_phase(&mut self) -> SAR_HALL_PHASE_W<30> {
-        SAR_HALL_PHASE_W::new(self)
+    pub fn hall_phase(&mut self) -> HALL_PHASE_W<30> {
+        HALL_PHASE_W::new(self)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn sar_hall_phase_force(&mut self) -> SAR_HALL_PHASE_FORCE_W<31> {
-        SAR_HALL_PHASE_FORCE_W::new(self)
+    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<31> {
+        HALL_PHASE_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

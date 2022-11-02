@@ -34,38 +34,37 @@ impl From<crate::W<SAR_POWER_XPD_SAR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_FORCE_XPD_SAR` reader - force power on/off saradc"]
-pub type SAR_FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_FORCE_XPD_SAR` writer - force power on/off saradc"]
-pub type SAR_FORCE_XPD_SAR_W<'a, const O: u8> =
+#[doc = "Field `FORCE_XPD_SAR` reader - force power on/off saradc"]
+pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FORCE_XPD_SAR` writer - force power on/off saradc"]
+pub type FORCE_XPD_SAR_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SAR_SARCLK_EN` reader - no public"]
-pub type SAR_SARCLK_EN_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_SARCLK_EN` writer - no public"]
-pub type SAR_SARCLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, bool, O>;
+#[doc = "Field `SARCLK_EN` reader - no public"]
+pub type SARCLK_EN_R = crate::BitReader<bool>;
+#[doc = "Field `SARCLK_EN` writer - no public"]
+pub type SARCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
-    pub fn sar_force_xpd_sar(&self) -> SAR_FORCE_XPD_SAR_R {
-        SAR_FORCE_XPD_SAR_R::new(((self.bits >> 29) & 3) as u8)
+    pub fn force_xpd_sar(&self) -> FORCE_XPD_SAR_R {
+        FORCE_XPD_SAR_R::new(((self.bits >> 29) & 3) as u8)
     }
     #[doc = "Bit 31 - no public"]
     #[inline(always)]
-    pub fn sar_sarclk_en(&self) -> SAR_SARCLK_EN_R {
-        SAR_SARCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn sarclk_en(&self) -> SARCLK_EN_R {
+        SARCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
-    pub fn sar_force_xpd_sar(&mut self) -> SAR_FORCE_XPD_SAR_W<29> {
-        SAR_FORCE_XPD_SAR_W::new(self)
+    pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<29> {
+        FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Bit 31 - no public"]
     #[inline(always)]
-    pub fn sar_sarclk_en(&mut self) -> SAR_SARCLK_EN_W<31> {
-        SAR_SARCLK_EN_W::new(self)
+    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<31> {
+        SARCLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

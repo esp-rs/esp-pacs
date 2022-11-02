@@ -34,68 +34,68 @@ impl From<crate::W<SAR_MEAS1_CTRL1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_FORCE_XPD_AMP` reader - no public"]
-pub type SAR_FORCE_XPD_AMP_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_FORCE_XPD_AMP` writer - no public"]
-pub type SAR_FORCE_XPD_AMP_W<'a, const O: u8> =
+#[doc = "Field `FORCE_XPD_AMP` reader - no public"]
+pub type FORCE_XPD_AMP_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FORCE_XPD_AMP` writer - no public"]
+pub type FORCE_XPD_AMP_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SAR_AMP_RST_FB_FORCE` reader - no public"]
-pub type SAR_AMP_RST_FB_FORCE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_AMP_RST_FB_FORCE` writer - no public"]
-pub type SAR_AMP_RST_FB_FORCE_W<'a, const O: u8> =
+#[doc = "Field `AMP_RST_FB_FORCE` reader - no public"]
+pub type AMP_RST_FB_FORCE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `AMP_RST_FB_FORCE` writer - no public"]
+pub type AMP_RST_FB_FORCE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SAR_AMP_SHORT_REF_FORCE` reader - no public"]
-pub type SAR_AMP_SHORT_REF_FORCE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_AMP_SHORT_REF_FORCE` writer - no public"]
-pub type SAR_AMP_SHORT_REF_FORCE_W<'a, const O: u8> =
+#[doc = "Field `AMP_SHORT_REF_FORCE` reader - no public"]
+pub type AMP_SHORT_REF_FORCE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `AMP_SHORT_REF_FORCE` writer - no public"]
+pub type AMP_SHORT_REF_FORCE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SAR_AMP_SHORT_REF_GND_FORCE` reader - no public"]
-pub type SAR_AMP_SHORT_REF_GND_FORCE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_AMP_SHORT_REF_GND_FORCE` writer - no public"]
-pub type SAR_AMP_SHORT_REF_GND_FORCE_W<'a, const O: u8> =
+#[doc = "Field `AMP_SHORT_REF_GND_FORCE` reader - no public"]
+pub type AMP_SHORT_REF_GND_FORCE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `AMP_SHORT_REF_GND_FORCE` writer - no public"]
+pub type AMP_SHORT_REF_GND_FORCE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 24:25 - no public"]
     #[inline(always)]
-    pub fn sar_force_xpd_amp(&self) -> SAR_FORCE_XPD_AMP_R {
-        SAR_FORCE_XPD_AMP_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn force_xpd_amp(&self) -> FORCE_XPD_AMP_R {
+        FORCE_XPD_AMP_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - no public"]
     #[inline(always)]
-    pub fn sar_amp_rst_fb_force(&self) -> SAR_AMP_RST_FB_FORCE_R {
-        SAR_AMP_RST_FB_FORCE_R::new(((self.bits >> 26) & 3) as u8)
+    pub fn amp_rst_fb_force(&self) -> AMP_RST_FB_FORCE_R {
+        AMP_RST_FB_FORCE_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - no public"]
     #[inline(always)]
-    pub fn sar_amp_short_ref_force(&self) -> SAR_AMP_SHORT_REF_FORCE_R {
-        SAR_AMP_SHORT_REF_FORCE_R::new(((self.bits >> 28) & 3) as u8)
+    pub fn amp_short_ref_force(&self) -> AMP_SHORT_REF_FORCE_R {
+        AMP_SHORT_REF_FORCE_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - no public"]
     #[inline(always)]
-    pub fn sar_amp_short_ref_gnd_force(&self) -> SAR_AMP_SHORT_REF_GND_FORCE_R {
-        SAR_AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 30) & 3) as u8)
+    pub fn amp_short_ref_gnd_force(&self) -> AMP_SHORT_REF_GND_FORCE_R {
+        AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 24:25 - no public"]
     #[inline(always)]
-    pub fn sar_force_xpd_amp(&mut self) -> SAR_FORCE_XPD_AMP_W<24> {
-        SAR_FORCE_XPD_AMP_W::new(self)
+    pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W<24> {
+        FORCE_XPD_AMP_W::new(self)
     }
     #[doc = "Bits 26:27 - no public"]
     #[inline(always)]
-    pub fn sar_amp_rst_fb_force(&mut self) -> SAR_AMP_RST_FB_FORCE_W<26> {
-        SAR_AMP_RST_FB_FORCE_W::new(self)
+    pub fn amp_rst_fb_force(&mut self) -> AMP_RST_FB_FORCE_W<26> {
+        AMP_RST_FB_FORCE_W::new(self)
     }
     #[doc = "Bits 28:29 - no public"]
     #[inline(always)]
-    pub fn sar_amp_short_ref_force(&mut self) -> SAR_AMP_SHORT_REF_FORCE_W<28> {
-        SAR_AMP_SHORT_REF_FORCE_W::new(self)
+    pub fn amp_short_ref_force(&mut self) -> AMP_SHORT_REF_FORCE_W<28> {
+        AMP_SHORT_REF_FORCE_W::new(self)
     }
     #[doc = "Bits 30:31 - no public"]
     #[inline(always)]
-    pub fn sar_amp_short_ref_gnd_force(&mut self) -> SAR_AMP_SHORT_REF_GND_FORCE_W<30> {
-        SAR_AMP_SHORT_REF_GND_FORCE_W::new(self)
+    pub fn amp_short_ref_gnd_force(&mut self) -> AMP_SHORT_REF_GND_FORCE_W<30> {
+        AMP_SHORT_REF_GND_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

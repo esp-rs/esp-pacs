@@ -34,23 +34,23 @@ impl From<crate::W<SAR_ATTEN1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_SAR1_ATTEN` reader - 2-bit attenuation for each pad"]
-pub type SAR_SAR1_ATTEN_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `SAR_SAR1_ATTEN` writer - 2-bit attenuation for each pad"]
-pub type SAR_SAR1_ATTEN_W<'a, const O: u8> =
+#[doc = "Field `SAR1_ATTEN` reader - 2-bit attenuation for each pad"]
+pub type SAR1_ATTEN_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `SAR1_ATTEN` writer - 2-bit attenuation for each pad"]
+pub type SAR1_ATTEN_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_ATTEN1_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad"]
     #[inline(always)]
-    pub fn sar_sar1_atten(&self) -> SAR_SAR1_ATTEN_R {
-        SAR_SAR1_ATTEN_R::new(self.bits)
+    pub fn sar1_atten(&self) -> SAR1_ATTEN_R {
+        SAR1_ATTEN_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad"]
     #[inline(always)]
-    pub fn sar_sar1_atten(&mut self) -> SAR_SAR1_ATTEN_W<0> {
-        SAR_SAR1_ATTEN_W::new(self)
+    pub fn sar1_atten(&mut self) -> SAR1_ATTEN_W<0> {
+        SAR1_ATTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

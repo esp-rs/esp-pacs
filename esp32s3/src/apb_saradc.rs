@@ -30,7 +30,7 @@ pub struct RegisterBlock {
     #[doc = "0x34 - configure apb saradc pattern table"]
     pub sar2_patt_tab4: SAR2_PATT_TAB4,
     #[doc = "0x38 - configure apb saradc arbit"]
-    pub apb_adc_arb_ctrl: APB_ADC_ARB_CTRL,
+    pub arb_ctrl: ARB_CTRL,
     #[doc = "0x3c - configure apb saradc arbit"]
     pub filter_ctrl0: FILTER_CTRL0,
     #[doc = "0x40 - get apb saradc sample data"]
@@ -53,7 +53,7 @@ pub struct RegisterBlock {
     #[doc = "0x6c - configure apb saradc dma"]
     pub dma_conf: DMA_CONF,
     #[doc = "0x70 - configure apb saradc clock"]
-    pub apb_adc_clkm_conf: APB_ADC_CLKM_CONF,
+    pub clkm_conf: CLKM_CONF,
     _reserved26: [u8; 0x04],
     #[doc = "0x78 - get apb saradc2 sample data"]
     pub apb_saradc2_data_status: APB_SARADC2_DATA_STATUS,
@@ -117,10 +117,10 @@ pub mod sar2_patt_tab3;
 pub type SAR2_PATT_TAB4 = crate::Reg<sar2_patt_tab4::SAR2_PATT_TAB4_SPEC>;
 #[doc = "configure apb saradc pattern table"]
 pub mod sar2_patt_tab4;
-#[doc = "APB_ADC_ARB_CTRL (rw) register accessor: an alias for `Reg<APB_ADC_ARB_CTRL_SPEC>`"]
-pub type APB_ADC_ARB_CTRL = crate::Reg<apb_adc_arb_ctrl::APB_ADC_ARB_CTRL_SPEC>;
+#[doc = "ARB_CTRL (rw) register accessor: an alias for `Reg<ARB_CTRL_SPEC>`"]
+pub type ARB_CTRL = crate::Reg<arb_ctrl::ARB_CTRL_SPEC>;
 #[doc = "configure apb saradc arbit"]
-pub mod apb_adc_arb_ctrl;
+pub mod arb_ctrl;
 #[doc = "FILTER_CTRL0 (rw) register accessor: an alias for `Reg<FILTER_CTRL0_SPEC>`"]
 pub type FILTER_CTRL0 = crate::Reg<filter_ctrl0::FILTER_CTRL0_SPEC>;
 #[doc = "configure apb saradc arbit"]
@@ -162,10 +162,10 @@ pub mod int_clr;
 pub type DMA_CONF = crate::Reg<dma_conf::DMA_CONF_SPEC>;
 #[doc = "configure apb saradc dma"]
 pub mod dma_conf;
-#[doc = "APB_ADC_CLKM_CONF (rw) register accessor: an alias for `Reg<APB_ADC_CLKM_CONF_SPEC>`"]
-pub type APB_ADC_CLKM_CONF = crate::Reg<apb_adc_clkm_conf::APB_ADC_CLKM_CONF_SPEC>;
+#[doc = "CLKM_CONF (rw) register accessor: an alias for `Reg<CLKM_CONF_SPEC>`"]
+pub type CLKM_CONF = crate::Reg<clkm_conf::CLKM_CONF_SPEC>;
 #[doc = "configure apb saradc clock"]
-pub mod apb_adc_clkm_conf;
+pub mod clkm_conf;
 #[doc = "APB_SARADC2_DATA_STATUS (r) register accessor: an alias for `Reg<APB_SARADC2_DATA_STATUS_SPEC>`"]
 pub type APB_SARADC2_DATA_STATUS =
     crate::Reg<apb_saradc2_data_status::APB_SARADC2_DATA_STATUS_SPEC>;
