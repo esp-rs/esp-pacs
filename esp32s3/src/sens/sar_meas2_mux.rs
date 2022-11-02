@@ -34,38 +34,37 @@ impl From<crate::W<SAR_MEAS2_MUX_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT"]
-pub type SAR_SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SAR_SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT"]
-pub type SAR_SAR2_PWDET_CCT_W<'a, const O: u8> =
+#[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT"]
+pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT"]
+pub type SAR2_PWDET_CCT_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_MEAS2_MUX_SPEC, u8, u8, 3, O>;
-#[doc = "Field `SAR_SAR2_RTC_FORCE` reader - in sleep, force to use rtc to control ADC"]
-pub type SAR_SAR2_RTC_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_SAR2_RTC_FORCE` writer - in sleep, force to use rtc to control ADC"]
-pub type SAR_SAR2_RTC_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS2_MUX_SPEC, bool, O>;
+#[doc = "Field `SAR2_RTC_FORCE` reader - in sleep, force to use rtc to control ADC"]
+pub type SAR2_RTC_FORCE_R = crate::BitReader<bool>;
+#[doc = "Field `SAR2_RTC_FORCE` writer - in sleep, force to use rtc to control ADC"]
+pub type SAR2_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_MEAS2_MUX_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT"]
     #[inline(always)]
-    pub fn sar_sar2_pwdet_cct(&self) -> SAR_SAR2_PWDET_CCT_R {
-        SAR_SAR2_PWDET_CCT_R::new(((self.bits >> 28) & 7) as u8)
+    pub fn sar2_pwdet_cct(&self) -> SAR2_PWDET_CCT_R {
+        SAR2_PWDET_CCT_R::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31 - in sleep, force to use rtc to control ADC"]
     #[inline(always)]
-    pub fn sar_sar2_rtc_force(&self) -> SAR_SAR2_RTC_FORCE_R {
-        SAR_SAR2_RTC_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn sar2_rtc_force(&self) -> SAR2_RTC_FORCE_R {
+        SAR2_RTC_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT"]
     #[inline(always)]
-    pub fn sar_sar2_pwdet_cct(&mut self) -> SAR_SAR2_PWDET_CCT_W<28> {
-        SAR_SAR2_PWDET_CCT_W::new(self)
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<28> {
+        SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 31 - in sleep, force to use rtc to control ADC"]
     #[inline(always)]
-    pub fn sar_sar2_rtc_force(&mut self) -> SAR_SAR2_RTC_FORCE_W<31> {
-        SAR_SAR2_RTC_FORCE_W::new(self)
+    pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<31> {
+        SAR2_RTC_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

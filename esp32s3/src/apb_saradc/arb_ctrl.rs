@@ -1,22 +1,22 @@
-#[doc = "Register `APB_ADC_ARB_CTRL` reader"]
-pub struct R(crate::R<APB_ADC_ARB_CTRL_SPEC>);
+#[doc = "Register `ARB_CTRL` reader"]
+pub struct R(crate::R<ARB_CTRL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<APB_ADC_ARB_CTRL_SPEC>;
+    type Target = crate::R<ARB_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<APB_ADC_ARB_CTRL_SPEC>> for R {
+impl From<crate::R<ARB_CTRL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<APB_ADC_ARB_CTRL_SPEC>) -> Self {
+    fn from(reader: crate::R<ARB_CTRL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `APB_ADC_ARB_CTRL` writer"]
-pub struct W(crate::W<APB_ADC_ARB_CTRL_SPEC>);
+#[doc = "Register `ARB_CTRL` writer"]
+pub struct W(crate::W<ARB_CTRL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<APB_ADC_ARB_CTRL_SPEC>;
+    type Target = crate::W<ARB_CTRL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,52 +28,48 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<APB_ADC_ARB_CTRL_SPEC>> for W {
+impl From<crate::W<ARB_CTRL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<APB_ADC_ARB_CTRL_SPEC>) -> Self {
+    fn from(writer: crate::W<ARB_CTRL_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `ADC_ARB_APB_FORCE` reader - adc2 arbiter force to enableapb controller"]
 pub type ADC_ARB_APB_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_APB_FORCE` writer - adc2 arbiter force to enableapb controller"]
-pub type ADC_ARB_APB_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_APB_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, O>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` reader - adc2 arbiter force to enable rtc controller"]
 pub type ADC_ARB_RTC_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` writer - adc2 arbiter force to enable rtc controller"]
-pub type ADC_ARB_RTC_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, O>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` reader - adc2 arbiter force to enable wifi controller"]
 pub type ADC_ARB_WIFI_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` writer - adc2 arbiter force to enable wifi controller"]
-pub type ADC_ARB_WIFI_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_WIFI_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, O>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` reader - adc2 arbiter force grant"]
 pub type ADC_ARB_GRANT_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` writer - adc2 arbiter force grant"]
-pub type ADC_ARB_GRANT_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_GRANT_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, O>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` reader - Set adc2 arbiterapb priority"]
 pub type ADC_ARB_APB_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` writer - Set adc2 arbiterapb priority"]
 pub type ADC_ARB_APB_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` reader - Set adc2 arbiter rtc priority"]
 pub type ADC_ARB_RTC_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` writer - Set adc2 arbiter rtc priority"]
 pub type ADC_ARB_RTC_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` reader - Set adc2 arbiter wifi priority"]
 pub type ADC_ARB_WIFI_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` writer - Set adc2 arbiter wifi priority"]
 pub type ADC_ARB_WIFI_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` reader - adc2 arbiter uses fixed priority"]
 pub type ADC_ARB_FIX_PRIORITY_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` writer - adc2 arbiter uses fixed priority"]
 pub type ADC_ARB_FIX_PRIORITY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
@@ -164,21 +160,21 @@ impl W {
         self
     }
 }
-#[doc = "configure apb saradc arbit\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_adc_arb_ctrl](index.html) module"]
-pub struct APB_ADC_ARB_CTRL_SPEC;
-impl crate::RegisterSpec for APB_ADC_ARB_CTRL_SPEC {
+#[doc = "configure apb saradc arbit\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [arb_ctrl](index.html) module"]
+pub struct ARB_CTRL_SPEC;
+impl crate::RegisterSpec for ARB_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [apb_adc_arb_ctrl::R](R) reader structure"]
-impl crate::Readable for APB_ADC_ARB_CTRL_SPEC {
+#[doc = "`read()` method returns [arb_ctrl::R](R) reader structure"]
+impl crate::Readable for ARB_CTRL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [apb_adc_arb_ctrl::W](W) writer structure"]
-impl crate::Writable for APB_ADC_ARB_CTRL_SPEC {
+#[doc = "`write(|w| ..)` method takes [arb_ctrl::W](W) writer structure"]
+impl crate::Writable for ARB_CTRL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets APB_ADC_ARB_CTRL to value 0x0900"]
-impl crate::Resettable for APB_ADC_ARB_CTRL_SPEC {
+#[doc = "`reset()` method sets ARB_CTRL to value 0x0900"]
+impl crate::Resettable for ARB_CTRL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0x0900

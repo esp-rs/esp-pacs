@@ -34,23 +34,22 @@ impl From<crate::W<SAR_MEAS1_MUX_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SAR_SAR1_DIG_FORCE` reader - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
-pub type SAR_SAR1_DIG_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `SAR_SAR1_DIG_FORCE` writer - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
-pub type SAR_SAR1_DIG_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_MUX_SPEC, bool, O>;
+#[doc = "Field `SAR1_DIG_FORCE` reader - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
+pub type SAR1_DIG_FORCE_R = crate::BitReader<bool>;
+#[doc = "Field `SAR1_DIG_FORCE` writer - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
+pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_MEAS1_MUX_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 31 - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
     #[inline(always)]
-    pub fn sar_sar1_dig_force(&self) -> SAR_SAR1_DIG_FORCE_R {
-        SAR_SAR1_DIG_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn sar1_dig_force(&self) -> SAR1_DIG_FORCE_R {
+        SAR1_DIG_FORCE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
     #[inline(always)]
-    pub fn sar_sar1_dig_force(&mut self) -> SAR_SAR1_DIG_FORCE_W<31> {
-        SAR_SAR1_DIG_FORCE_W::new(self)
+    pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<31> {
+        SAR1_DIG_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
