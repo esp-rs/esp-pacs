@@ -19,86 +19,77 @@ impl From<crate::W<IN_INT_CLR_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IN_DONE_CH_INT_CLR` writer - Set this bit to clear the IN_DONE_CH_INT interrupt."]
-pub type IN_DONE_CH_INT_CLR_W<'a, const O: u8> =
+#[doc = "Field `IN_DONE` writer - Set this bit to clear the IN_DONE_CH_INT interrupt."]
+pub type IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `IN_SUC_EOF` writer - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
+pub type IN_SUC_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `IN_ERR_EOF` writer - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
+pub type IN_ERR_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `IN_DSCR_ERR` writer - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
+pub type IN_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `IN_DSCR_EMPTY` writer - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
+pub type IN_DSCR_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `DMA_INFIFO_FULL_WM` writer - Set this bit to clear the INFIFO_FULL_WM_CH_INT interrupt."]
+pub type DMA_INFIFO_FULL_WM_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `IN_SUC_EOF_CH_INT_CLR` writer - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
-pub type IN_SUC_EOF_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `IN_ERR_EOF_CH_INT_CLR` writer - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
-pub type IN_ERR_EOF_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `IN_DSCR_ERR_CH_INT_CLR` writer - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
-pub type IN_DSCR_ERR_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `IN_DSCR_EMPTY_CH_INT_CLR` writer - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub type IN_DSCR_EMPTY_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `DMA_INFIFO_FULL_WM_CH_INT_CLR` writer - Set this bit to clear the INFIFO_FULL_WM_CH_INT interrupt."]
-pub type DMA_INFIFO_FULL_WM_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `INFIFO_OVF_L1_CH_INT_CLR` writer - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
-pub type INFIFO_OVF_L1_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `INFIFO_UDF_L1_CH_INT_CLR` writer - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
-pub type INFIFO_UDF_L1_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `INFIFO_OVF_L3_CH_INT_CLR` writer - Set this bit to clear the INFIFO_OVF_L3_CH_INT interrupt."]
-pub type INFIFO_OVF_L3_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
-#[doc = "Field `INFIFO_UDF_L3_CH_INT_CLR` writer - Set this bit to clear the INFIFO_UDF_L3_CH_INT interrupt."]
-pub type INFIFO_UDF_L3_CH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `INFIFO_OVF_L1` writer - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
+pub type INFIFO_OVF_L1_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `INFIFO_UDF_L1` writer - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
+pub type INFIFO_UDF_L1_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `INFIFO_OVF_L3` writer - Set this bit to clear the INFIFO_OVF_L3_CH_INT interrupt."]
+pub type INFIFO_OVF_L3_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+#[doc = "Field `INFIFO_UDF_L3` writer - Set this bit to clear the INFIFO_UDF_L3_CH_INT interrupt."]
+pub type INFIFO_UDF_L3_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the IN_DONE_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_done_ch_int_clr(&mut self) -> IN_DONE_CH_INT_CLR_W<0> {
-        IN_DONE_CH_INT_CLR_W::new(self)
+    pub fn in_done(&mut self) -> IN_DONE_W<0> {
+        IN_DONE_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_suc_eof_ch_int_clr(&mut self) -> IN_SUC_EOF_CH_INT_CLR_W<1> {
-        IN_SUC_EOF_CH_INT_CLR_W::new(self)
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<1> {
+        IN_SUC_EOF_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_err_eof_ch_int_clr(&mut self) -> IN_ERR_EOF_CH_INT_CLR_W<2> {
-        IN_ERR_EOF_CH_INT_CLR_W::new(self)
+    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<2> {
+        IN_ERR_EOF_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_dscr_err_ch_int_clr(&mut self) -> IN_DSCR_ERR_CH_INT_CLR_W<3> {
-        IN_DSCR_ERR_CH_INT_CLR_W::new(self)
+    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<3> {
+        IN_DSCR_ERR_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
     #[inline(always)]
-    pub fn in_dscr_empty_ch_int_clr(&mut self) -> IN_DSCR_EMPTY_CH_INT_CLR_W<4> {
-        IN_DSCR_EMPTY_CH_INT_CLR_W::new(self)
+    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<4> {
+        IN_DSCR_EMPTY_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear the INFIFO_FULL_WM_CH_INT interrupt."]
     #[inline(always)]
-    pub fn dma_infifo_full_wm_ch_int_clr(&mut self) -> DMA_INFIFO_FULL_WM_CH_INT_CLR_W<5> {
-        DMA_INFIFO_FULL_WM_CH_INT_CLR_W::new(self)
+    pub fn dma_infifo_full_wm(&mut self) -> DMA_INFIFO_FULL_WM_W<5> {
+        DMA_INFIFO_FULL_WM_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_ovf_l1_ch_int_clr(&mut self) -> INFIFO_OVF_L1_CH_INT_CLR_W<6> {
-        INFIFO_OVF_L1_CH_INT_CLR_W::new(self)
+    pub fn infifo_ovf_l1(&mut self) -> INFIFO_OVF_L1_W<6> {
+        INFIFO_OVF_L1_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_udf_l1_ch_int_clr(&mut self) -> INFIFO_UDF_L1_CH_INT_CLR_W<7> {
-        INFIFO_UDF_L1_CH_INT_CLR_W::new(self)
+    pub fn infifo_udf_l1(&mut self) -> INFIFO_UDF_L1_W<7> {
+        INFIFO_UDF_L1_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear the INFIFO_OVF_L3_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_ovf_l3_ch_int_clr(&mut self) -> INFIFO_OVF_L3_CH_INT_CLR_W<8> {
-        INFIFO_OVF_L3_CH_INT_CLR_W::new(self)
+    pub fn infifo_ovf_l3(&mut self) -> INFIFO_OVF_L3_W<8> {
+        INFIFO_OVF_L3_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to clear the INFIFO_UDF_L3_CH_INT interrupt."]
     #[inline(always)]
-    pub fn infifo_udf_l3_ch_int_clr(&mut self) -> INFIFO_UDF_L3_CH_INT_CLR_W<9> {
-        INFIFO_UDF_L3_CH_INT_CLR_W::new(self)
+    pub fn infifo_udf_l3(&mut self) -> INFIFO_UDF_L3_W<9> {
+        INFIFO_UDF_L3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

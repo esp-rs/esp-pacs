@@ -34,23 +34,23 @@ impl From<crate::W<OUT_WIGHT_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TX_WEIGHT_CH` reader - The weight of Tx channel 0."]
-pub type TX_WEIGHT_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `TX_WEIGHT_CH` writer - The weight of Tx channel 0."]
-pub type TX_WEIGHT_CH_W<'a, const O: u8> =
+#[doc = "Field `TX_WEIGHT` reader - The weight of Tx channel 0."]
+pub type TX_WEIGHT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_WEIGHT` writer - The weight of Tx channel 0."]
+pub type TX_WEIGHT_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_WIGHT_CH_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 8:11 - The weight of Tx channel 0."]
     #[inline(always)]
-    pub fn tx_weight_ch(&self) -> TX_WEIGHT_CH_R {
-        TX_WEIGHT_CH_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn tx_weight(&self) -> TX_WEIGHT_R {
+        TX_WEIGHT_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 8:11 - The weight of Tx channel 0."]
     #[inline(always)]
-    pub fn tx_weight_ch(&mut self) -> TX_WEIGHT_CH_W<8> {
-        TX_WEIGHT_CH_W::new(self)
+    pub fn tx_weight(&mut self) -> TX_WEIGHT_W<8> {
+        TX_WEIGHT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,23 +34,23 @@ impl From<crate::W<OUT_PERI_SEL_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PERI_OUT_SEL_CH` reader - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
-pub type PERI_OUT_SEL_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `PERI_OUT_SEL_CH` writer - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
-pub type PERI_OUT_SEL_CH_W<'a, const O: u8> =
+#[doc = "Field `PERI_OUT_SEL` reader - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
+pub type PERI_OUT_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PERI_OUT_SEL` writer - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
+pub type PERI_OUT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_PERI_SEL_CH_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
     #[inline(always)]
-    pub fn peri_out_sel_ch(&self) -> PERI_OUT_SEL_CH_R {
-        PERI_OUT_SEL_CH_R::new((self.bits & 0x3f) as u8)
+    pub fn peri_out_sel(&self) -> PERI_OUT_SEL_R {
+        PERI_OUT_SEL_R::new((self.bits & 0x3f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
     #[inline(always)]
-    pub fn peri_out_sel_ch(&mut self) -> PERI_OUT_SEL_CH_W<0> {
-        PERI_OUT_SEL_CH_W::new(self)
+    pub fn peri_out_sel(&mut self) -> PERI_OUT_SEL_W<0> {
+        PERI_OUT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
