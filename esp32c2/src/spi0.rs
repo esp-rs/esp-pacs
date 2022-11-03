@@ -90,19 +90,19 @@ pub mod cache_fctrl;
 pub type FSM = crate::Reg<fsm::FSM_SPEC>;
 #[doc = "SPI0 FSM status register"]
 pub mod fsm;
-#[doc = "TIMING_CALI (rw) register accessor: an alias for `Reg<TIMING_CALI_SPEC>`"]
+#[doc = "TIMING_CALI (r) register accessor: an alias for `Reg<TIMING_CALI_SPEC>`"]
 pub type TIMING_CALI = crate::Reg<timing_cali::TIMING_CALI_SPEC>;
 #[doc = "SPI0 timing calibration register"]
 pub mod timing_cali;
-#[doc = "DIN_MODE (rw) register accessor: an alias for `Reg<DIN_MODE_SPEC>`"]
+#[doc = "DIN_MODE (r) register accessor: an alias for `Reg<DIN_MODE_SPEC>`"]
 pub type DIN_MODE = crate::Reg<din_mode::DIN_MODE_SPEC>;
 #[doc = "SPI0 input delay mode control register"]
 pub mod din_mode;
-#[doc = "DIN_NUM (rw) register accessor: an alias for `Reg<DIN_NUM_SPEC>`"]
+#[doc = "DIN_NUM (r) register accessor: an alias for `Reg<DIN_NUM_SPEC>`"]
 pub type DIN_NUM = crate::Reg<din_num::DIN_NUM_SPEC>;
 #[doc = "SPI0 input delay number control register"]
 pub mod din_num;
-#[doc = "DOUT_MODE (rw) register accessor: an alias for `Reg<DOUT_MODE_SPEC>`"]
+#[doc = "DOUT_MODE (r) register accessor: an alias for `Reg<DOUT_MODE_SPEC>`"]
 pub type DOUT_MODE = crate::Reg<dout_mode::DOUT_MODE_SPEC>;
 #[doc = "SPI0 output delay mode control register"]
 pub mod dout_mode;

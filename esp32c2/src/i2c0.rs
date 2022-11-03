@@ -161,11 +161,11 @@ pub mod scl_sp_conf;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version register"]
 pub mod date;
-#[doc = "TXFIFO_START_ADDR (rw) register accessor: an alias for `Reg<TXFIFO_START_ADDR_SPEC>`"]
+#[doc = "TXFIFO_START_ADDR (r) register accessor: an alias for `Reg<TXFIFO_START_ADDR_SPEC>`"]
 pub type TXFIFO_START_ADDR = crate::Reg<txfifo_start_addr::TXFIFO_START_ADDR_SPEC>;
 #[doc = "I2C TXFIFO base address register"]
 pub mod txfifo_start_addr;
-#[doc = "RXFIFO_START_ADDR (rw) register accessor: an alias for `Reg<RXFIFO_START_ADDR_SPEC>`"]
+#[doc = "RXFIFO_START_ADDR (r) register accessor: an alias for `Reg<RXFIFO_START_ADDR_SPEC>`"]
 pub type RXFIFO_START_ADDR = crate::Reg<rxfifo_start_addr::RXFIFO_START_ADDR_SPEC>;
 #[doc = "I2C RXFIFO base address register"]
 pub mod rxfifo_start_addr;

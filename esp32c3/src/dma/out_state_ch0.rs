@@ -13,27 +13,27 @@ impl From<crate::R<OUT_STATE_CH0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `OUTLINK_DSCR_ADDR_CH0` reader - This register stores the current outlink descriptor's address."]
-pub type OUTLINK_DSCR_ADDR_CH0_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `OUT_DSCR_STATE_CH0` reader - reserved"]
-pub type OUT_DSCR_STATE_CH0_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `OUT_STATE_CH0` reader - reserved"]
-pub type OUT_STATE_CH0_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `OUTLINK_DSCR_ADDR` reader - This register stores the current outlink descriptor's address."]
+pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `OUT_DSCR_STATE` reader - reserved"]
+pub type OUT_DSCR_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `OUT_STATE` reader - reserved"]
+pub type OUT_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:17 - This register stores the current outlink descriptor's address."]
     #[inline(always)]
-    pub fn outlink_dscr_addr_ch0(&self) -> OUTLINK_DSCR_ADDR_CH0_R {
-        OUTLINK_DSCR_ADDR_CH0_R::new((self.bits & 0x0003_ffff) as u32)
+    pub fn outlink_dscr_addr(&self) -> OUTLINK_DSCR_ADDR_R {
+        OUTLINK_DSCR_ADDR_R::new((self.bits & 0x0003_ffff) as u32)
     }
     #[doc = "Bits 18:19 - reserved"]
     #[inline(always)]
-    pub fn out_dscr_state_ch0(&self) -> OUT_DSCR_STATE_CH0_R {
-        OUT_DSCR_STATE_CH0_R::new(((self.bits >> 18) & 3) as u8)
+    pub fn out_dscr_state(&self) -> OUT_DSCR_STATE_R {
+        OUT_DSCR_STATE_R::new(((self.bits >> 18) & 3) as u8)
     }
     #[doc = "Bits 20:22 - reserved"]
     #[inline(always)]
-    pub fn out_state_ch0(&self) -> OUT_STATE_CH0_R {
-        OUT_STATE_CH0_R::new(((self.bits >> 20) & 7) as u8)
+    pub fn out_state(&self) -> OUT_STATE_R {
+        OUT_STATE_R::new(((self.bits >> 20) & 7) as u8)
     }
 }
 #[doc = "DMA_OUT_STATE_CH0_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_state_ch0](index.html) module"]

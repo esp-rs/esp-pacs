@@ -13,13 +13,13 @@ impl From<crate::R<IN_DSCR_BF0_CH1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `INLINK_DSCR_BF0_CH1` reader - The address of the last inlink descriptor x-1."]
-pub type INLINK_DSCR_BF0_CH1_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `INLINK_DSCR_BF0` reader - The address of the last inlink descriptor x-1."]
+pub type INLINK_DSCR_BF0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the last inlink descriptor x-1."]
     #[inline(always)]
-    pub fn inlink_dscr_bf0_ch1(&self) -> INLINK_DSCR_BF0_CH1_R {
-        INLINK_DSCR_BF0_CH1_R::new(self.bits)
+    pub fn inlink_dscr_bf0(&self) -> INLINK_DSCR_BF0_R {
+        INLINK_DSCR_BF0_R::new(self.bits)
     }
 }
 #[doc = "DMA_IN_DSCR_BF0_CH1_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_dscr_bf0_ch1](index.html) module"]

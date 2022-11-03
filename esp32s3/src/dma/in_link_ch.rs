@@ -34,87 +34,86 @@ impl From<crate::W<IN_LINK_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INLINK_ADDR_CH` reader - This register stores the 20 least significant bits of the first inlink descriptor's address."]
-pub type INLINK_ADDR_CH_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `INLINK_ADDR_CH` writer - This register stores the 20 least significant bits of the first inlink descriptor's address."]
-pub type INLINK_ADDR_CH_W<'a, const O: u8> =
+#[doc = "Field `INLINK_ADDR` reader - This register stores the 20 least significant bits of the first inlink descriptor's address."]
+pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `INLINK_ADDR` writer - This register stores the 20 least significant bits of the first inlink descriptor's address."]
+pub type INLINK_ADDR_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, IN_LINK_CH_SPEC, u32, u32, 20, O>;
-#[doc = "Field `INLINK_AUTO_RET_CH` reader - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
-pub type INLINK_AUTO_RET_CH_R = crate::BitReader<bool>;
-#[doc = "Field `INLINK_AUTO_RET_CH` writer - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
-pub type INLINK_AUTO_RET_CH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
-#[doc = "Field `INLINK_STOP_CH` reader - Set this bit to stop dealing with the inlink descriptors."]
-pub type INLINK_STOP_CH_R = crate::BitReader<bool>;
-#[doc = "Field `INLINK_STOP_CH` writer - Set this bit to stop dealing with the inlink descriptors."]
-pub type INLINK_STOP_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
-#[doc = "Field `INLINK_START_CH` reader - Set this bit to start dealing with the inlink descriptors."]
-pub type INLINK_START_CH_R = crate::BitReader<bool>;
-#[doc = "Field `INLINK_START_CH` writer - Set this bit to start dealing with the inlink descriptors."]
-pub type INLINK_START_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
-#[doc = "Field `INLINK_RESTART_CH` reader - Set this bit to mount a new inlink descriptor."]
-pub type INLINK_RESTART_CH_R = crate::BitReader<bool>;
-#[doc = "Field `INLINK_RESTART_CH` writer - Set this bit to mount a new inlink descriptor."]
-pub type INLINK_RESTART_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
-#[doc = "Field `INLINK_PARK_CH` reader - 1: the inlink descriptor's FSM is in idle state. 0: the inlink descriptor's FSM is working."]
-pub type INLINK_PARK_CH_R = crate::BitReader<bool>;
+#[doc = "Field `INLINK_AUTO_RET` reader - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
+pub type INLINK_AUTO_RET_R = crate::BitReader<bool>;
+#[doc = "Field `INLINK_AUTO_RET` writer - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
+pub type INLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
+#[doc = "Field `INLINK_STOP` reader - Set this bit to stop dealing with the inlink descriptors."]
+pub type INLINK_STOP_R = crate::BitReader<bool>;
+#[doc = "Field `INLINK_STOP` writer - Set this bit to stop dealing with the inlink descriptors."]
+pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
+#[doc = "Field `INLINK_START` reader - Set this bit to start dealing with the inlink descriptors."]
+pub type INLINK_START_R = crate::BitReader<bool>;
+#[doc = "Field `INLINK_START` writer - Set this bit to start dealing with the inlink descriptors."]
+pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
+#[doc = "Field `INLINK_RESTART` reader - Set this bit to mount a new inlink descriptor."]
+pub type INLINK_RESTART_R = crate::BitReader<bool>;
+#[doc = "Field `INLINK_RESTART` writer - Set this bit to mount a new inlink descriptor."]
+pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_CH_SPEC, bool, O>;
+#[doc = "Field `INLINK_PARK` reader - 1: the inlink descriptor's FSM is in idle state. 0: the inlink descriptor's FSM is working."]
+pub type INLINK_PARK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first inlink descriptor's address."]
     #[inline(always)]
-    pub fn inlink_addr_ch(&self) -> INLINK_ADDR_CH_R {
-        INLINK_ADDR_CH_R::new((self.bits & 0x000f_ffff) as u32)
+    pub fn inlink_addr(&self) -> INLINK_ADDR_R {
+        INLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
     }
     #[doc = "Bit 20 - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
     #[inline(always)]
-    pub fn inlink_auto_ret_ch(&self) -> INLINK_AUTO_RET_CH_R {
-        INLINK_AUTO_RET_CH_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn inlink_auto_ret(&self) -> INLINK_AUTO_RET_R {
+        INLINK_AUTO_RET_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set this bit to stop dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_stop_ch(&self) -> INLINK_STOP_CH_R {
-        INLINK_STOP_CH_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn inlink_stop(&self) -> INLINK_STOP_R {
+        INLINK_STOP_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - Set this bit to start dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_start_ch(&self) -> INLINK_START_CH_R {
-        INLINK_START_CH_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn inlink_start(&self) -> INLINK_START_R {
+        INLINK_START_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - Set this bit to mount a new inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_restart_ch(&self) -> INLINK_RESTART_CH_R {
-        INLINK_RESTART_CH_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn inlink_restart(&self) -> INLINK_RESTART_R {
+        INLINK_RESTART_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - 1: the inlink descriptor's FSM is in idle state. 0: the inlink descriptor's FSM is working."]
     #[inline(always)]
-    pub fn inlink_park_ch(&self) -> INLINK_PARK_CH_R {
-        INLINK_PARK_CH_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn inlink_park(&self) -> INLINK_PARK_R {
+        INLINK_PARK_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first inlink descriptor's address."]
     #[inline(always)]
-    pub fn inlink_addr_ch(&mut self) -> INLINK_ADDR_CH_W<0> {
-        INLINK_ADDR_CH_W::new(self)
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<0> {
+        INLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data."]
     #[inline(always)]
-    pub fn inlink_auto_ret_ch(&mut self) -> INLINK_AUTO_RET_CH_W<20> {
-        INLINK_AUTO_RET_CH_W::new(self)
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<20> {
+        INLINK_AUTO_RET_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to stop dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_stop_ch(&mut self) -> INLINK_STOP_CH_W<21> {
-        INLINK_STOP_CH_W::new(self)
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<21> {
+        INLINK_STOP_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to start dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_start_ch(&mut self) -> INLINK_START_CH_W<22> {
-        INLINK_START_CH_W::new(self)
+    pub fn inlink_start(&mut self) -> INLINK_START_W<22> {
+        INLINK_START_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to mount a new inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_restart_ch(&mut self) -> INLINK_RESTART_CH_W<23> {
-        INLINK_RESTART_CH_W::new(self)
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<23> {
+        INLINK_RESTART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

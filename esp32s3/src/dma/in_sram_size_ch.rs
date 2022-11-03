@@ -34,23 +34,23 @@ impl From<crate::W<IN_SRAM_SIZE_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IN_SIZE_CH` reader - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub type IN_SIZE_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `IN_SIZE_CH` writer - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub type IN_SIZE_CH_W<'a, const O: u8> =
+#[doc = "Field `IN_SIZE` reader - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
+pub type IN_SIZE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IN_SIZE` writer - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
+pub type IN_SIZE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, IN_SRAM_SIZE_CH_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
-    pub fn in_size_ch(&self) -> IN_SIZE_CH_R {
-        IN_SIZE_CH_R::new((self.bits & 0x7f) as u8)
+    pub fn in_size(&self) -> IN_SIZE_R {
+        IN_SIZE_R::new((self.bits & 0x7f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Rx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
-    pub fn in_size_ch(&mut self) -> IN_SIZE_CH_W<0> {
-        IN_SIZE_CH_W::new(self)
+    pub fn in_size(&mut self) -> IN_SIZE_W<0> {
+        IN_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

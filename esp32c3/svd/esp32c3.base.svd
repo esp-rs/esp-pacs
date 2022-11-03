@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32-C3</series>
-  <version>9</version>
+  <version>10</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2022 Espressif Systems (Shanghai) PTE LTD
@@ -3385,91 +3385,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_RAW</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_RAW</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_RAW</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals, this raw interrupt is reserved.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH0_INT_RAW</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH0_INT_RAW</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_RAW</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH0_INT_RAW</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 0.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_RAW</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 0.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH0_INT_RAW</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_RAW</name>
+              <name>INFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_RAW</name>
+              <name>INFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH0_INT_RAW</name>
+              <name>OUTFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH0_INT_RAW</name>
+              <name>OUTFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3484,91 +3484,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_ST</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt status bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_ST</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_ST</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH0_INT_ST</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt status bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH0_INT_ST</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt status bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_ST</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH0_INT_ST</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_ST</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH0_INT_ST</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_ST</name>
+              <name>INFIFO_OVF</name>
               <description>The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_ST</name>
+              <name>INFIFO_UDF</name>
               <description>The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH0_INT_ST</name>
+              <name>OUTFIFO_OVF</name>
               <description>The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH0_INT_ST</name>
+              <name>OUTFIFO_UDF</name>
               <description>The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3583,91 +3583,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_ENA</name>
+              <name>IN_DONE</name>
               <description>The interrupt enable bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_ENA</name>
+              <name>IN_SUC_EOF</name>
               <description>The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_ENA</name>
+              <name>IN_ERR_EOF</name>
               <description>The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DONE_CH0_INT_ENA</name>
+              <name>OUT_DONE</name>
               <description>The interrupt enable bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_CH0_INT_ENA</name>
+              <name>OUT_EOF</name>
               <description>The interrupt enable bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_ENA</name>
+              <name>IN_DSCR_ERR</name>
               <description>The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH0_INT_ENA</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_ENA</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH0_INT_ENA</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_ENA</name>
+              <name>INFIFO_OVF</name>
               <description>The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_ENA</name>
+              <name>INFIFO_UDF</name>
               <description>The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH0_INT_ENA</name>
+              <name>OUTFIFO_OVF</name>
               <description>The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH0_INT_ENA</name>
+              <name>OUTFIFO_UDF</name>
               <description>The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3682,91 +3682,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH0_INT_CLR</name>
+              <name>IN_DONE</name>
               <description>Set this bit to clear the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH0_INT_CLR</name>
+              <name>IN_SUC_EOF</name>
               <description>Set this bit to clear the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH0_INT_CLR</name>
+              <name>IN_ERR_EOF</name>
               <description>Set this bit to clear the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH0_INT_CLR</name>
+              <name>OUT_DONE</name>
               <description>Set this bit to clear the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH0_INT_CLR</name>
+              <name>OUT_EOF</name>
               <description>Set this bit to clear the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH0_INT_CLR</name>
+              <name>IN_DSCR_ERR</name>
               <description>Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH0_INT_CLR</name>
+              <name>OUT_DSCR_ERR</name>
               <description>Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH0_INT_CLR</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH0_INT_CLR</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH0_INT_CLR</name>
+              <name>INFIFO_OVF</name>
               <description>Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH0_INT_CLR</name>
+              <name>INFIFO_UDF</name>
               <description>Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH0_INT_CLR</name>
+              <name>OUTFIFO_OVF</name>
               <description>Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH0_INT_CLR</name>
+              <name>OUTFIFO_UDF</name>
               <description>Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3781,91 +3781,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH1_INT_RAW</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH1_INT_RAW</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 1. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH1_INT_RAW</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 1. For other peripherals, this raw interrupt is reserved.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH1_INT_RAW</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 1.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH1_INT_RAW</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 1.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH1_INT_RAW</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 1.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH1_INT_RAW</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 1.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_RAW</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 1.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH1_INT_RAW</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 1.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH1_INT_RAW</name>
+              <name>INFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 1 is overflow.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH1_INT_RAW</name>
+              <name>INFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 1 is underflow.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH1_INT_RAW</name>
+              <name>OUTFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 1 is overflow.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH1_INT_RAW</name>
+              <name>OUTFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 1 is underflow.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3880,91 +3880,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH1_INT_ST</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt status bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH1_INT_ST</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH1_INT_ST</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH1_INT_ST</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt status bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH1_INT_ST</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt status bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH1_INT_ST</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH1_INT_ST</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_ST</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH1_INT_ST</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH1_INT_ST</name>
+              <name>INFIFO_OVF</name>
               <description>The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH1_INT_ST</name>
+              <name>INFIFO_UDF</name>
               <description>The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH1_INT_ST</name>
+              <name>OUTFIFO_OVF</name>
               <description>The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH1_INT_ST</name>
+              <name>OUTFIFO_UDF</name>
               <description>The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3979,91 +3979,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH1_INT_ENA</name>
+              <name>IN_DONE</name>
               <description>The interrupt enable bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH1_INT_ENA</name>
+              <name>IN_SUC_EOF</name>
               <description>The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH1_INT_ENA</name>
+              <name>IN_ERR_EOF</name>
               <description>The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DONE_CH1_INT_ENA</name>
+              <name>OUT_DONE</name>
               <description>The interrupt enable bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_CH1_INT_ENA</name>
+              <name>OUT_EOF</name>
               <description>The interrupt enable bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH1_INT_ENA</name>
+              <name>IN_DSCR_ERR</name>
               <description>The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH1_INT_ENA</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_ENA</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH1_INT_ENA</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH1_INT_ENA</name>
+              <name>INFIFO_OVF</name>
               <description>The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH1_INT_ENA</name>
+              <name>INFIFO_UDF</name>
               <description>The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH1_INT_ENA</name>
+              <name>OUTFIFO_OVF</name>
               <description>The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH1_INT_ENA</name>
+              <name>OUTFIFO_UDF</name>
               <description>The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4078,91 +4078,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH1_INT_CLR</name>
+              <name>IN_DONE</name>
               <description>Set this bit to clear the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH1_INT_CLR</name>
+              <name>IN_SUC_EOF</name>
               <description>Set this bit to clear the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH1_INT_CLR</name>
+              <name>IN_ERR_EOF</name>
               <description>Set this bit to clear the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH1_INT_CLR</name>
+              <name>OUT_DONE</name>
               <description>Set this bit to clear the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH1_INT_CLR</name>
+              <name>OUT_EOF</name>
               <description>Set this bit to clear the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH1_INT_CLR</name>
+              <name>IN_DSCR_ERR</name>
               <description>Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH1_INT_CLR</name>
+              <name>OUT_DSCR_ERR</name>
               <description>Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH1_INT_CLR</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH1_INT_CLR</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH1_INT_CLR</name>
+              <name>INFIFO_OVF</name>
               <description>Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH1_INT_CLR</name>
+              <name>INFIFO_UDF</name>
               <description>Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH1_INT_CLR</name>
+              <name>OUTFIFO_OVF</name>
               <description>Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH1_INT_CLR</name>
+              <name>OUTFIFO_UDF</name>
               <description>Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4177,91 +4177,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH2_INT_RAW</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH2_INT_RAW</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 2. For UHCI0, the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 2.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH2_INT_RAW</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 2. For other peripherals, this raw interrupt is reserved.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH2_INT_RAW</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 2.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH2_INT_RAW</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 2.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH2_INT_RAW</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 2.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH2_INT_RAW</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting outlink descriptor error, including owner error, the second and third word error of outlink descriptor for Tx channel 2.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_RAW</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed, but there is no more inlink for Rx channel 2.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH2_INT_RAW</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 2.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH2_INT_RAW</name>
+              <name>INFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 2 is overflow.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH2_INT_RAW</name>
+              <name>INFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 2 is underflow.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH2_INT_RAW</name>
+              <name>OUTFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 2 is overflow.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH2_INT_RAW</name>
+              <name>OUTFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 2 is underflow.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4276,91 +4276,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH2_INT_ST</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt status bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH2_INT_ST</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH2_INT_ST</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH2_INT_ST</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt status bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH2_INT_ST</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt status bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH2_INT_ST</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH2_INT_ST</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_ST</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH2_INT_ST</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH2_INT_ST</name>
+              <name>INFIFO_OVF</name>
               <description>The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH2_INT_ST</name>
+              <name>INFIFO_UDF</name>
               <description>The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH2_INT_ST</name>
+              <name>OUTFIFO_OVF</name>
               <description>The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH2_INT_ST</name>
+              <name>OUTFIFO_UDF</name>
               <description>The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4375,91 +4375,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH2_INT_ENA</name>
+              <name>IN_DONE</name>
               <description>The interrupt enable bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH2_INT_ENA</name>
+              <name>IN_SUC_EOF</name>
               <description>The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH2_INT_ENA</name>
+              <name>IN_ERR_EOF</name>
               <description>The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DONE_CH2_INT_ENA</name>
+              <name>OUT_DONE</name>
               <description>The interrupt enable bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_CH2_INT_ENA</name>
+              <name>OUT_EOF</name>
               <description>The interrupt enable bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH2_INT_ENA</name>
+              <name>IN_DSCR_ERR</name>
               <description>The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH2_INT_ENA</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_ENA</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH2_INT_ENA</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH2_INT_ENA</name>
+              <name>INFIFO_OVF</name>
               <description>The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH2_INT_ENA</name>
+              <name>INFIFO_UDF</name>
               <description>The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH2_INT_ENA</name>
+              <name>OUTFIFO_OVF</name>
               <description>The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH2_INT_ENA</name>
+              <name>OUTFIFO_UDF</name>
               <description>The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4474,91 +4474,91 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH2_INT_CLR</name>
+              <name>IN_DONE</name>
               <description>Set this bit to clear the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH2_INT_CLR</name>
+              <name>IN_SUC_EOF</name>
               <description>Set this bit to clear the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH2_INT_CLR</name>
+              <name>IN_ERR_EOF</name>
               <description>Set this bit to clear the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DONE_CH2_INT_CLR</name>
+              <name>OUT_DONE</name>
               <description>Set this bit to clear the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH2_INT_CLR</name>
+              <name>OUT_EOF</name>
               <description>Set this bit to clear the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH2_INT_CLR</name>
+              <name>IN_DSCR_ERR</name>
               <description>Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH2_INT_CLR</name>
+              <name>OUT_DSCR_ERR</name>
               <description>Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH2_INT_CLR</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH2_INT_CLR</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH2_INT_CLR</name>
+              <name>INFIFO_OVF</name>
               <description>Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH2_INT_CLR</name>
+              <name>INFIFO_UDF</name>
               <description>Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH2_INT_CLR</name>
+              <name>OUTFIFO_OVF</name>
               <description>Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH2_INT_CLR</name>
+              <name>OUTFIFO_UDF</name>
               <description>Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4640,35 +4640,35 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_RST_CH0</name>
+              <name>IN_RST</name>
               <description>This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_LOOP_TEST_CH0</name>
+              <name>IN_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INDSCR_BURST_EN_CH0</name>
+              <name>INDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DATA_BURST_EN_CH0</name>
+              <name>IN_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_TRANS_EN_CH0</name>
+              <name>MEM_TRANS_EN</name>
               <description>Set this bit 1 to enable automatic transmitting data from memory to memory via DMA.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4683,7 +4683,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_CHECK_OWNER_CH0</name>
+              <name>IN_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4699,56 +4699,56 @@
           <resetValue>0x07800003</resetValue>
           <fields>
             <field>
-              <name>INFIFO_FULL_CH0</name>
+              <name>INFIFO_FULL</name>
               <description>L1 Rx FIFO full signal for Rx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_EMPTY_CH0</name>
+              <name>INFIFO_EMPTY</name>
               <description>L1 Rx FIFO empty signal for Rx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_CNT_CH0</name>
+              <name>INFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_1B_CH0</name>
+              <name>IN_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_2B_CH0</name>
+              <name>IN_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_3B_CH0</name>
+              <name>IN_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_4B_CH0</name>
+              <name>IN_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_BUF_HUNGRY_CH0</name>
+              <name>IN_BUF_HUNGRY</name>
               <description>reserved</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4764,14 +4764,14 @@
           <resetValue>0x00000800</resetValue>
           <fields>
             <field>
-              <name>INFIFO_RDATA_CH0</name>
+              <name>INFIFO_RDATA</name>
               <description>This register stores the data popping from DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_POP_CH0</name>
+              <name>INFIFO_POP</name>
               <description>Set this bit to pop data from DMA FIFO.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4787,42 +4787,42 @@
           <resetValue>0x01100000</resetValue>
           <fields>
             <field>
-              <name>INLINK_ADDR_CH0</name>
+              <name>INLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_AUTO_RET_CH0</name>
+              <name>INLINK_AUTO_RET</name>
               <description>Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_STOP_CH0</name>
+              <name>INLINK_STOP</name>
               <description>Set this bit to stop dealing with the inlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_START_CH0</name>
+              <name>INLINK_START</name>
               <description>Set this bit to start dealing with the inlink descriptors.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_RESTART_CH0</name>
+              <name>INLINK_RESTART</name>
               <description>Set this bit to mount a new inlink descriptor.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_PARK_CH0</name>
+              <name>INLINK_PARK</name>
               <description>1: the inlink descriptor's FSM is in idle state.  0: the inlink descriptor's FSM is working.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -4837,21 +4837,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_ADDR_CH0</name>
+              <name>INLINK_DSCR_ADDR</name>
               <description>This register stores the current inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_STATE_CH0</name>
+              <name>IN_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_STATE_CH0</name>
+              <name>IN_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -4866,7 +4866,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_SUC_EOF_DES_ADDR_CH0</name>
+              <name>IN_SUC_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -4881,7 +4881,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_ERR_EOF_DES_ADDR_CH0</name>
+              <name>IN_ERR_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -4896,7 +4896,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_CH0</name>
+              <name>INLINK_DSCR</name>
               <description>The address of the current inlink descriptor x.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -4911,7 +4911,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF0_CH0</name>
+              <name>INLINK_DSCR_BF0</name>
               <description>The address of the last inlink descriptor x-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -4926,7 +4926,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF1_CH0</name>
+              <name>INLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -4941,7 +4941,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RX_PRI_CH0</name>
+              <name>RX_PRI</name>
               <description>The priority of Rx channel 0. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -4957,7 +4957,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_IN_SEL_CH0</name>
+              <name>PERI_IN_SEL</name>
               <description>This register is used to select peripheral for Rx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -4973,42 +4973,42 @@
           <resetValue>0x00000008</resetValue>
           <fields>
             <field>
-              <name>OUT_RST_CH0</name>
+              <name>OUT_RST</name>
               <description>This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_LOOP_TEST_CH0</name>
+              <name>OUT_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_AUTO_WRBACK_CH0</name>
+              <name>OUT_AUTO_WRBACK</name>
               <description>Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_MODE_CH0</name>
+              <name>OUT_EOF_MODE</name>
               <description>EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 0 is generated when data need to transmit has been popped from FIFO in DMA</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTDSCR_BURST_EN_CH0</name>
+              <name>OUTDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DATA_BURST_EN_CH0</name>
+              <name>OUT_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 0 transmitting data when accessing internal SRAM.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5023,7 +5023,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_CHECK_OWNER_CH0</name>
+              <name>OUT_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5039,49 +5039,49 @@
           <resetValue>0x07800002</resetValue>
           <fields>
             <field>
-              <name>OUTFIFO_FULL_CH0</name>
+              <name>OUTFIFO_FULL</name>
               <description>L1 Tx FIFO full signal for Tx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_EMPTY_CH0</name>
+              <name>OUTFIFO_EMPTY</name>
               <description>L1 Tx FIFO empty signal for Tx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_CNT_CH0</name>
+              <name>OUTFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Tx FIFO for Tx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_1B_CH0</name>
+              <name>OUT_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_2B_CH0</name>
+              <name>OUT_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_3B_CH0</name>
+              <name>OUT_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_4B_CH0</name>
+              <name>OUT_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5096,14 +5096,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTFIFO_WDATA_CH0</name>
+              <name>OUTFIFO_WDATA</name>
               <description>This register stores the data that need to be pushed into DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_PUSH_CH0</name>
+              <name>OUTFIFO_PUSH</name>
               <description>Set this bit to push data into DMA FIFO.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5119,35 +5119,35 @@
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>OUTLINK_ADDR_CH0</name>
+              <name>OUTLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_STOP_CH0</name>
+              <name>OUTLINK_STOP</name>
               <description>Set this bit to stop dealing with the outlink descriptors.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_START_CH0</name>
+              <name>OUTLINK_START</name>
               <description>Set this bit to start dealing with the outlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_RESTART_CH0</name>
+              <name>OUTLINK_RESTART</name>
               <description>Set this bit to restart a new outlink from the last address.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_PARK_CH0</name>
+              <name>OUTLINK_PARK</name>
               <description>1: the outlink descriptor's FSM is in idle state.  0: the outlink descriptor's FSM is working.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5162,21 +5162,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_ADDR_CH0</name>
+              <name>OUTLINK_DSCR_ADDR</name>
               <description>This register stores the current outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_STATE_CH0</name>
+              <name>OUT_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_STATE_CH0</name>
+              <name>OUT_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -5191,7 +5191,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_DES_ADDR_CH0</name>
+              <name>OUT_EOF_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5206,7 +5206,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_BFR_DES_ADDR_CH0</name>
+              <name>OUT_EOF_BFR_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor before the last outlink descriptor.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5221,7 +5221,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_CH0</name>
+              <name>OUTLINK_DSCR</name>
               <description>The address of the current outlink descriptor y.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5236,7 +5236,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF0_CH0</name>
+              <name>OUTLINK_DSCR_BF0</name>
               <description>The address of the last outlink descriptor y-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5251,7 +5251,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF1_CH0</name>
+              <name>OUTLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5266,7 +5266,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_PRI_CH0</name>
+              <name>TX_PRI</name>
               <description>The priority of Tx channel 0. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -5282,7 +5282,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_OUT_SEL_CH0</name>
+              <name>PERI_OUT_SEL</name>
               <description>This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -5297,35 +5297,35 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_RST_CH1</name>
+              <name>IN_RST</name>
               <description>This bit is used to reset DMA channel 1 Rx FSM and Rx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_LOOP_TEST_CH1</name>
+              <name>IN_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INDSCR_BURST_EN_CH1</name>
+              <name>INDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 1 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DATA_BURST_EN_CH1</name>
+              <name>IN_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 1 receiving data when accessing internal SRAM.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_TRANS_EN_CH1</name>
+              <name>MEM_TRANS_EN</name>
               <description>Set this bit 1 to enable automatic transmitting data from memory to memory via DMA.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5340,7 +5340,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_CHECK_OWNER_CH1</name>
+              <name>IN_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5356,56 +5356,56 @@
           <resetValue>0x07800003</resetValue>
           <fields>
             <field>
-              <name>INFIFO_FULL_CH1</name>
+              <name>INFIFO_FULL</name>
               <description>L1 Rx FIFO full signal for Rx channel 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_EMPTY_CH1</name>
+              <name>INFIFO_EMPTY</name>
               <description>L1 Rx FIFO empty signal for Rx channel 1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_CNT_CH1</name>
+              <name>INFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Rx FIFO for Rx channel 1.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_1B_CH1</name>
+              <name>IN_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_2B_CH1</name>
+              <name>IN_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_3B_CH1</name>
+              <name>IN_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_4B_CH1</name>
+              <name>IN_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_BUF_HUNGRY_CH1</name>
+              <name>IN_BUF_HUNGRY</name>
               <description>reserved</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5421,14 +5421,14 @@
           <resetValue>0x00000800</resetValue>
           <fields>
             <field>
-              <name>INFIFO_RDATA_CH1</name>
+              <name>INFIFO_RDATA</name>
               <description>This register stores the data popping from DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_POP_CH1</name>
+              <name>INFIFO_POP</name>
               <description>Set this bit to pop data from DMA FIFO.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5444,42 +5444,42 @@
           <resetValue>0x01100000</resetValue>
           <fields>
             <field>
-              <name>INLINK_ADDR_CH1</name>
+              <name>INLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_AUTO_RET_CH1</name>
+              <name>INLINK_AUTO_RET</name>
               <description>Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_STOP_CH1</name>
+              <name>INLINK_STOP</name>
               <description>Set this bit to stop dealing with the inlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_START_CH1</name>
+              <name>INLINK_START</name>
               <description>Set this bit to start dealing with the inlink descriptors.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_RESTART_CH1</name>
+              <name>INLINK_RESTART</name>
               <description>Set this bit to mount a new inlink descriptor.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_PARK_CH1</name>
+              <name>INLINK_PARK</name>
               <description>1: the inlink descriptor's FSM is in idle state.  0: the inlink descriptor's FSM is working.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5494,21 +5494,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_ADDR_CH1</name>
+              <name>INLINK_DSCR_ADDR</name>
               <description>This register stores the current inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_STATE_CH1</name>
+              <name>IN_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_STATE_CH1</name>
+              <name>IN_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -5523,7 +5523,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_SUC_EOF_DES_ADDR_CH1</name>
+              <name>IN_SUC_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5538,7 +5538,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_ERR_EOF_DES_ADDR_CH1</name>
+              <name>IN_ERR_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5553,7 +5553,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_CH1</name>
+              <name>INLINK_DSCR</name>
               <description>The address of the current inlink descriptor x.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5568,7 +5568,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF0_CH1</name>
+              <name>INLINK_DSCR_BF0</name>
               <description>The address of the last inlink descriptor x-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5583,7 +5583,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF1_CH1</name>
+              <name>INLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5598,7 +5598,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RX_PRI_CH1</name>
+              <name>RX_PRI</name>
               <description>The priority of Rx channel 1. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -5614,7 +5614,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_IN_SEL_CH1</name>
+              <name>PERI_IN_SEL</name>
               <description>This register is used to select peripheral for Rx channel 1. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -5630,42 +5630,42 @@
           <resetValue>0x00000008</resetValue>
           <fields>
             <field>
-              <name>OUT_RST_CH1</name>
+              <name>OUT_RST</name>
               <description>This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_LOOP_TEST_CH1</name>
+              <name>OUT_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_AUTO_WRBACK_CH1</name>
+              <name>OUT_AUTO_WRBACK</name>
               <description>Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_MODE_CH1</name>
+              <name>OUT_EOF_MODE</name>
               <description>EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTDSCR_BURST_EN_CH1</name>
+              <name>OUTDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DATA_BURST_EN_CH1</name>
+              <name>OUT_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5680,7 +5680,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_CHECK_OWNER_CH1</name>
+              <name>OUT_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5696,49 +5696,49 @@
           <resetValue>0x07800002</resetValue>
           <fields>
             <field>
-              <name>OUTFIFO_FULL_CH1</name>
+              <name>OUTFIFO_FULL</name>
               <description>L1 Tx FIFO full signal for Tx channel 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_EMPTY_CH1</name>
+              <name>OUTFIFO_EMPTY</name>
               <description>L1 Tx FIFO empty signal for Tx channel 1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_CNT_CH1</name>
+              <name>OUTFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Tx FIFO for Tx channel 1.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_1B_CH1</name>
+              <name>OUT_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_2B_CH1</name>
+              <name>OUT_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_3B_CH1</name>
+              <name>OUT_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_4B_CH1</name>
+              <name>OUT_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5753,14 +5753,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTFIFO_WDATA_CH1</name>
+              <name>OUTFIFO_WDATA</name>
               <description>This register stores the data that need to be pushed into DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_PUSH_CH1</name>
+              <name>OUTFIFO_PUSH</name>
               <description>Set this bit to push data into DMA FIFO.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5776,35 +5776,35 @@
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>OUTLINK_ADDR_CH1</name>
+              <name>OUTLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_STOP_CH1</name>
+              <name>OUTLINK_STOP</name>
               <description>Set this bit to stop dealing with the outlink descriptors.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_START_CH1</name>
+              <name>OUTLINK_START</name>
               <description>Set this bit to start dealing with the outlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_RESTART_CH1</name>
+              <name>OUTLINK_RESTART</name>
               <description>Set this bit to restart a new outlink from the last address.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_PARK_CH1</name>
+              <name>OUTLINK_PARK</name>
               <description>1: the outlink descriptor's FSM is in idle state.  0: the outlink descriptor's FSM is working.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5819,21 +5819,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_ADDR_CH1</name>
+              <name>OUTLINK_DSCR_ADDR</name>
               <description>This register stores the current outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_STATE_CH1</name>
+              <name>OUT_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_STATE_CH1</name>
+              <name>OUT_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -5848,7 +5848,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_DES_ADDR_CH1</name>
+              <name>OUT_EOF_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5863,7 +5863,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_BFR_DES_ADDR_CH1</name>
+              <name>OUT_EOF_BFR_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor before the last outlink descriptor.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5878,7 +5878,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_CH1</name>
+              <name>OUTLINK_DSCR</name>
               <description>The address of the current outlink descriptor y.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5893,7 +5893,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF0_CH1</name>
+              <name>OUTLINK_DSCR_BF0</name>
               <description>The address of the last outlink descriptor y-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5908,7 +5908,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF1_CH1</name>
+              <name>OUTLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -5923,7 +5923,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_PRI_CH1</name>
+              <name>TX_PRI</name>
               <description>The priority of Tx channel 1. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -5939,7 +5939,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_OUT_SEL_CH1</name>
+              <name>PERI_OUT_SEL</name>
               <description>This register is used to select peripheral for Tx channel 1. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -5954,35 +5954,35 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_RST_CH2</name>
+              <name>IN_RST</name>
               <description>This bit is used to reset DMA channel 2 Rx FSM and Rx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_LOOP_TEST_CH2</name>
+              <name>IN_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INDSCR_BURST_EN_CH2</name>
+              <name>INDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 2 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DATA_BURST_EN_CH2</name>
+              <name>IN_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 2 receiving data when accessing internal SRAM.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_TRANS_EN_CH2</name>
+              <name>MEM_TRANS_EN</name>
               <description>Set this bit 1 to enable automatic transmitting data from memory to memory via DMA.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -5997,7 +5997,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_CHECK_OWNER_CH2</name>
+              <name>IN_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6013,56 +6013,56 @@
           <resetValue>0x07800003</resetValue>
           <fields>
             <field>
-              <name>INFIFO_FULL_CH2</name>
+              <name>INFIFO_FULL</name>
               <description>L1 Rx FIFO full signal for Rx channel 2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_EMPTY_CH2</name>
+              <name>INFIFO_EMPTY</name>
               <description>L1 Rx FIFO empty signal for Rx channel 2.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_CNT_CH2</name>
+              <name>INFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Rx FIFO for Rx channel 2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_1B_CH2</name>
+              <name>IN_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_2B_CH2</name>
+              <name>IN_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_3B_CH2</name>
+              <name>IN_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_4B_CH2</name>
+              <name>IN_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_BUF_HUNGRY_CH2</name>
+              <name>IN_BUF_HUNGRY</name>
               <description>reserved</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6078,14 +6078,14 @@
           <resetValue>0x00000800</resetValue>
           <fields>
             <field>
-              <name>INFIFO_RDATA_CH2</name>
+              <name>INFIFO_RDATA</name>
               <description>This register stores the data popping from DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_POP_CH2</name>
+              <name>INFIFO_POP</name>
               <description>Set this bit to pop data from DMA FIFO.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6101,42 +6101,42 @@
           <resetValue>0x01100000</resetValue>
           <fields>
             <field>
-              <name>INLINK_ADDR_CH2</name>
+              <name>INLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_AUTO_RET_CH2</name>
+              <name>INLINK_AUTO_RET</name>
               <description>Set this bit to return to current inlink descriptor's address, when there are some errors in current receiving data.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_STOP_CH2</name>
+              <name>INLINK_STOP</name>
               <description>Set this bit to stop dealing with the inlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_START_CH2</name>
+              <name>INLINK_START</name>
               <description>Set this bit to start dealing with the inlink descriptors.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_RESTART_CH2</name>
+              <name>INLINK_RESTART</name>
               <description>Set this bit to mount a new inlink descriptor.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_PARK_CH2</name>
+              <name>INLINK_PARK</name>
               <description>1: the inlink descriptor's FSM is in idle state.  0: the inlink descriptor's FSM is working.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6151,21 +6151,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_ADDR_CH2</name>
+              <name>INLINK_DSCR_ADDR</name>
               <description>This register stores the current inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_STATE_CH2</name>
+              <name>IN_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_STATE_CH2</name>
+              <name>IN_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -6180,7 +6180,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_SUC_EOF_DES_ADDR_CH2</name>
+              <name>IN_SUC_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6195,7 +6195,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_ERR_EOF_DES_ADDR_CH2</name>
+              <name>IN_ERR_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6210,7 +6210,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_CH2</name>
+              <name>INLINK_DSCR</name>
               <description>The address of the current inlink descriptor x.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6225,7 +6225,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF0_CH2</name>
+              <name>INLINK_DSCR_BF0</name>
               <description>The address of the last inlink descriptor x-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6240,7 +6240,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF1_CH2</name>
+              <name>INLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6255,7 +6255,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RX_PRI_CH2</name>
+              <name>RX_PRI</name>
               <description>The priority of Rx channel 2. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -6271,7 +6271,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_IN_SEL_CH2</name>
+              <name>PERI_IN_SEL</name>
               <description>This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -6287,42 +6287,42 @@
           <resetValue>0x00000008</resetValue>
           <fields>
             <field>
-              <name>OUT_RST_CH2</name>
+              <name>OUT_RST</name>
               <description>This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_LOOP_TEST_CH2</name>
+              <name>OUT_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_AUTO_WRBACK_CH2</name>
+              <name>OUT_AUTO_WRBACK</name>
               <description>Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_MODE_CH2</name>
+              <name>OUT_EOF_MODE</name>
               <description>EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTDSCR_BURST_EN_CH2</name>
+              <name>OUTDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DATA_BURST_EN_CH2</name>
+              <name>OUT_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6337,7 +6337,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_CHECK_OWNER_CH2</name>
+              <name>OUT_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6353,49 +6353,49 @@
           <resetValue>0x07800002</resetValue>
           <fields>
             <field>
-              <name>OUTFIFO_FULL_CH2</name>
+              <name>OUTFIFO_FULL</name>
               <description>L1 Tx FIFO full signal for Tx channel 2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_EMPTY_CH2</name>
+              <name>OUTFIFO_EMPTY</name>
               <description>L1 Tx FIFO empty signal for Tx channel 2.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_CNT_CH2</name>
+              <name>OUTFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Tx FIFO for Tx channel 2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_1B_CH2</name>
+              <name>OUT_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_2B_CH2</name>
+              <name>OUT_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_3B_CH2</name>
+              <name>OUT_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_4B_CH2</name>
+              <name>OUT_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6410,14 +6410,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTFIFO_WDATA_CH2</name>
+              <name>OUTFIFO_WDATA</name>
               <description>This register stores the data that need to be pushed into DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_PUSH_CH2</name>
+              <name>OUTFIFO_PUSH</name>
               <description>Set this bit to push data into DMA FIFO.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6433,35 +6433,35 @@
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>OUTLINK_ADDR_CH2</name>
+              <name>OUTLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_STOP_CH2</name>
+              <name>OUTLINK_STOP</name>
               <description>Set this bit to stop dealing with the outlink descriptors.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_START_CH2</name>
+              <name>OUTLINK_START</name>
               <description>Set this bit to start dealing with the outlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_RESTART_CH2</name>
+              <name>OUTLINK_RESTART</name>
               <description>Set this bit to restart a new outlink from the last address.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_PARK_CH2</name>
+              <name>OUTLINK_PARK</name>
               <description>1: the outlink descriptor's FSM is in idle state.  0: the outlink descriptor's FSM is working.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
@@ -6476,21 +6476,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_ADDR_CH2</name>
+              <name>OUTLINK_DSCR_ADDR</name>
               <description>This register stores the current outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_STATE_CH2</name>
+              <name>OUT_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_STATE_CH2</name>
+              <name>OUT_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -6505,7 +6505,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_DES_ADDR_CH2</name>
+              <name>OUT_EOF_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6520,7 +6520,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_BFR_DES_ADDR_CH2</name>
+              <name>OUT_EOF_BFR_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor before the last outlink descriptor.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6535,7 +6535,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_CH2</name>
+              <name>OUTLINK_DSCR</name>
               <description>The address of the current outlink descriptor y.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6550,7 +6550,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF0_CH2</name>
+              <name>OUTLINK_DSCR_BF0</name>
               <description>The address of the last outlink descriptor y-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6565,7 +6565,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF1_CH2</name>
+              <name>OUTLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -6580,7 +6580,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_PRI_CH2</name>
+              <name>TX_PRI</name>
               <description>The priority of Tx channel 2. The larger of the value, the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -6596,7 +6596,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_OUT_SEL_CH2</name>
+              <name>PERI_OUT_SEL</name>
               <description>This register is used to select peripheral for Tx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -32025,12 +32025,14 @@
               <description>Baud Rate Prescaler, determines the frequency dividing ratio.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>SYNC_JUMP_WIDTH</name>
               <description>Synchronization Jump Width (SJW), 1 \verb+~+ 14 Tq wide.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32045,18 +32047,21 @@
               <description>The width of PBS1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIME_SEG2</name>
               <description>The width of PBS2.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>3</bitWidth>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIME_SAMP</name>
               <description>The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32116,6 +32121,7 @@
               <description>Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid).</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32130,6 +32136,7 @@
               <description>The RX error counter register, reflects value changes under reception status.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32144,6 +32151,7 @@
               <description>The TX error counter register, reflects value changes under transmission status.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32375,6 +32383,7 @@
               <description>This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>

@@ -34,53 +34,52 @@ impl From<crate::W<IN_CONF1_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DMA_INFIFO_FULL_THRS_CH` reader - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
-pub type DMA_INFIFO_FULL_THRS_CH_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `DMA_INFIFO_FULL_THRS_CH` writer - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
-pub type DMA_INFIFO_FULL_THRS_CH_W<'a, const O: u8> =
+#[doc = "Field `DMA_INFIFO_FULL_THRS` reader - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
+pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `DMA_INFIFO_FULL_THRS` writer - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
+pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, IN_CONF1_CH_SPEC, u16, u16, 12, O>;
-#[doc = "Field `IN_CHECK_OWNER_CH` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type IN_CHECK_OWNER_CH_R = crate::BitReader<bool>;
-#[doc = "Field `IN_CHECK_OWNER_CH` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type IN_CHECK_OWNER_CH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_CONF1_CH_SPEC, bool, O>;
-#[doc = "Field `IN_EXT_MEM_BK_SIZE_CH` reader - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type IN_EXT_MEM_BK_SIZE_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `IN_EXT_MEM_BK_SIZE_CH` writer - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type IN_EXT_MEM_BK_SIZE_CH_W<'a, const O: u8> =
+#[doc = "Field `IN_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type IN_CHECK_OWNER_R = crate::BitReader<bool>;
+#[doc = "Field `IN_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type IN_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF1_CH_SPEC, bool, O>;
+#[doc = "Field `IN_EXT_MEM_BK_SIZE` reader - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
+pub type IN_EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IN_EXT_MEM_BK_SIZE` writer - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
+pub type IN_EXT_MEM_BK_SIZE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, IN_CONF1_CH_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:11 - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
     #[inline(always)]
-    pub fn dma_infifo_full_thrs_ch(&self) -> DMA_INFIFO_FULL_THRS_CH_R {
-        DMA_INFIFO_FULL_THRS_CH_R::new((self.bits & 0x0fff) as u16)
+    pub fn dma_infifo_full_thrs(&self) -> DMA_INFIFO_FULL_THRS_R {
+        DMA_INFIFO_FULL_THRS_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn in_check_owner_ch(&self) -> IN_CHECK_OWNER_CH_R {
-        IN_CHECK_OWNER_CH_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn in_check_owner(&self) -> IN_CHECK_OWNER_R {
+        IN_CHECK_OWNER_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:14 - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn in_ext_mem_bk_size_ch(&self) -> IN_EXT_MEM_BK_SIZE_CH_R {
-        IN_EXT_MEM_BK_SIZE_CH_R::new(((self.bits >> 13) & 3) as u8)
+    pub fn in_ext_mem_bk_size(&self) -> IN_EXT_MEM_BK_SIZE_R {
+        IN_EXT_MEM_BK_SIZE_R::new(((self.bits >> 13) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
     #[inline(always)]
-    pub fn dma_infifo_full_thrs_ch(&mut self) -> DMA_INFIFO_FULL_THRS_CH_W<0> {
-        DMA_INFIFO_FULL_THRS_CH_W::new(self)
+    pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<0> {
+        DMA_INFIFO_FULL_THRS_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn in_check_owner_ch(&mut self) -> IN_CHECK_OWNER_CH_W<12> {
-        IN_CHECK_OWNER_CH_W::new(self)
+    pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<12> {
+        IN_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bits 13:14 - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn in_ext_mem_bk_size_ch(&mut self) -> IN_EXT_MEM_BK_SIZE_CH_W<13> {
-        IN_EXT_MEM_BK_SIZE_CH_W::new(self)
+    pub fn in_ext_mem_bk_size(&mut self) -> IN_EXT_MEM_BK_SIZE_W<13> {
+        IN_EXT_MEM_BK_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

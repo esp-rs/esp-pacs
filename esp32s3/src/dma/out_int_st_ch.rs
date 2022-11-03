@@ -13,62 +13,62 @@ impl From<crate::R<OUT_INT_ST_CH_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `OUT_DONE_CH_INT_ST` reader - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
-pub type OUT_DONE_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_EOF_CH_INT_ST` reader - The raw interrupt status bit for the OUT_EOF_CH_INT interrupt."]
-pub type OUT_EOF_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_DSCR_ERR_CH_INT_ST` reader - The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt."]
-pub type OUT_DSCR_ERR_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_TOTAL_EOF_CH_INT_ST` reader - The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub type OUT_TOTAL_EOF_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUTFIFO_OVF_L1_CH_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L1_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUTFIFO_UDF_L1_CH_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L1_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUTFIFO_OVF_L3_CH_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L3_CH_INT_ST_R = crate::BitReader<bool>;
-#[doc = "Field `OUTFIFO_UDF_L3_CH_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L3_CH_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_DONE` reader - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
+pub type OUT_DONE_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_EOF` reader - The raw interrupt status bit for the OUT_EOF_CH_INT interrupt."]
+pub type OUT_EOF_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_DSCR_ERR` reader - The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt."]
+pub type OUT_DSCR_ERR_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_TOTAL_EOF` reader - The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
+pub type OUT_TOTAL_EOF_R = crate::BitReader<bool>;
+#[doc = "Field `OUTFIFO_OVF_L1` reader - The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
+pub type OUTFIFO_OVF_L1_R = crate::BitReader<bool>;
+#[doc = "Field `OUTFIFO_UDF_L1` reader - The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
+pub type OUTFIFO_UDF_L1_R = crate::BitReader<bool>;
+#[doc = "Field `OUTFIFO_OVF_L3` reader - The raw interrupt status bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
+pub type OUTFIFO_OVF_L3_R = crate::BitReader<bool>;
+#[doc = "Field `OUTFIFO_UDF_L3` reader - The raw interrupt status bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
+pub type OUTFIFO_UDF_L3_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
-    pub fn out_done_ch_int_st(&self) -> OUT_DONE_CH_INT_ST_R {
-        OUT_DONE_CH_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn out_done(&self) -> OUT_DONE_R {
+        OUT_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The raw interrupt status bit for the OUT_EOF_CH_INT interrupt."]
     #[inline(always)]
-    pub fn out_eof_ch_int_st(&self) -> OUT_EOF_CH_INT_ST_R {
-        OUT_EOF_CH_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn out_eof(&self) -> OUT_EOF_R {
+        OUT_EOF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
-    pub fn out_dscr_err_ch_int_st(&self) -> OUT_DSCR_ERR_CH_INT_ST_R {
-        OUT_DSCR_ERR_CH_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn out_dscr_err(&self) -> OUT_DSCR_ERR_R {
+        OUT_DSCR_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
     #[inline(always)]
-    pub fn out_total_eof_ch_int_st(&self) -> OUT_TOTAL_EOF_CH_INT_ST_R {
-        OUT_TOTAL_EOF_CH_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn out_total_eof(&self) -> OUT_TOTAL_EOF_R {
+        OUT_TOTAL_EOF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn outfifo_ovf_l1_ch_int_st(&self) -> OUTFIFO_OVF_L1_CH_INT_ST_R {
-        OUTFIFO_OVF_L1_CH_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn outfifo_ovf_l1(&self) -> OUTFIFO_OVF_L1_R {
+        OUTFIFO_OVF_L1_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
-    pub fn outfifo_udf_l1_ch_int_st(&self) -> OUTFIFO_UDF_L1_CH_INT_ST_R {
-        OUTFIFO_UDF_L1_CH_INT_ST_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn outfifo_udf_l1(&self) -> OUTFIFO_UDF_L1_R {
+        OUTFIFO_UDF_L1_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - The raw interrupt status bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
     #[inline(always)]
-    pub fn outfifo_ovf_l3_ch_int_st(&self) -> OUTFIFO_OVF_L3_CH_INT_ST_R {
-        OUTFIFO_OVF_L3_CH_INT_ST_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn outfifo_ovf_l3(&self) -> OUTFIFO_OVF_L3_R {
+        OUTFIFO_OVF_L3_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - The raw interrupt status bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
     #[inline(always)]
-    pub fn outfifo_udf_l3_ch_int_st(&self) -> OUTFIFO_UDF_L3_CH_INT_ST_R {
-        OUTFIFO_UDF_L3_CH_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn outfifo_udf_l3(&self) -> OUTFIFO_UDF_L3_R {
+        OUTFIFO_UDF_L3_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt of Tx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_int_st_ch](index.html) module"]

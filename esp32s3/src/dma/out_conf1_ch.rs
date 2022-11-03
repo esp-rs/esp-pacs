@@ -34,38 +34,37 @@ impl From<crate::W<OUT_CONF1_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUT_CHECK_OWNER_CH` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_CH_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_CHECK_OWNER_CH` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_CH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF1_CH_SPEC, bool, O>;
-#[doc = "Field `OUT_EXT_MEM_BK_SIZE_CH` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type OUT_EXT_MEM_BK_SIZE_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `OUT_EXT_MEM_BK_SIZE_CH` writer - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type OUT_EXT_MEM_BK_SIZE_CH_W<'a, const O: u8> =
+#[doc = "Field `OUT_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type OUT_CHECK_OWNER_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type OUT_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF1_CH_SPEC, bool, O>;
+#[doc = "Field `OUT_EXT_MEM_BK_SIZE` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
+pub type OUT_EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `OUT_EXT_MEM_BK_SIZE` writer - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
+pub type OUT_EXT_MEM_BK_SIZE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_CONF1_CH_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn out_check_owner_ch(&self) -> OUT_CHECK_OWNER_CH_R {
-        OUT_CHECK_OWNER_CH_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn out_check_owner(&self) -> OUT_CHECK_OWNER_R {
+        OUT_CHECK_OWNER_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn out_ext_mem_bk_size_ch(&self) -> OUT_EXT_MEM_BK_SIZE_CH_R {
-        OUT_EXT_MEM_BK_SIZE_CH_R::new(((self.bits >> 13) & 3) as u8)
+    pub fn out_ext_mem_bk_size(&self) -> OUT_EXT_MEM_BK_SIZE_R {
+        OUT_EXT_MEM_BK_SIZE_R::new(((self.bits >> 13) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn out_check_owner_ch(&mut self) -> OUT_CHECK_OWNER_CH_W<12> {
-        OUT_CHECK_OWNER_CH_W::new(self)
+    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<12> {
+        OUT_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn out_ext_mem_bk_size_ch(&mut self) -> OUT_EXT_MEM_BK_SIZE_CH_W<13> {
-        OUT_EXT_MEM_BK_SIZE_CH_W::new(self)
+    pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<13> {
+        OUT_EXT_MEM_BK_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

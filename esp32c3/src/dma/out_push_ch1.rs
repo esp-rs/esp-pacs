@@ -34,38 +34,37 @@ impl From<crate::W<OUT_PUSH_CH1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUTFIFO_WDATA_CH1` reader - This register stores the data that need to be pushed into DMA FIFO."]
-pub type OUTFIFO_WDATA_CH1_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `OUTFIFO_WDATA_CH1` writer - This register stores the data that need to be pushed into DMA FIFO."]
-pub type OUTFIFO_WDATA_CH1_W<'a, const O: u8> =
+#[doc = "Field `OUTFIFO_WDATA` reader - This register stores the data that need to be pushed into DMA FIFO."]
+pub type OUTFIFO_WDATA_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `OUTFIFO_WDATA` writer - This register stores the data that need to be pushed into DMA FIFO."]
+pub type OUTFIFO_WDATA_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_PUSH_CH1_SPEC, u16, u16, 9, O>;
-#[doc = "Field `OUTFIFO_PUSH_CH1` reader - Set this bit to push data into DMA FIFO."]
-pub type OUTFIFO_PUSH_CH1_R = crate::BitReader<bool>;
-#[doc = "Field `OUTFIFO_PUSH_CH1` writer - Set this bit to push data into DMA FIFO."]
-pub type OUTFIFO_PUSH_CH1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_PUSH_CH1_SPEC, bool, O>;
+#[doc = "Field `OUTFIFO_PUSH` reader - Set this bit to push data into DMA FIFO."]
+pub type OUTFIFO_PUSH_R = crate::BitReader<bool>;
+#[doc = "Field `OUTFIFO_PUSH` writer - Set this bit to push data into DMA FIFO."]
+pub type OUTFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_PUSH_CH1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_wdata_ch1(&self) -> OUTFIFO_WDATA_CH1_R {
-        OUTFIFO_WDATA_CH1_R::new((self.bits & 0x01ff) as u16)
+    pub fn outfifo_wdata(&self) -> OUTFIFO_WDATA_R {
+        OUTFIFO_WDATA_R::new((self.bits & 0x01ff) as u16)
     }
     #[doc = "Bit 9 - Set this bit to push data into DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_push_ch1(&self) -> OUTFIFO_PUSH_CH1_R {
-        OUTFIFO_PUSH_CH1_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn outfifo_push(&self) -> OUTFIFO_PUSH_R {
+        OUTFIFO_PUSH_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_wdata_ch1(&mut self) -> OUTFIFO_WDATA_CH1_W<0> {
-        OUTFIFO_WDATA_CH1_W::new(self)
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<0> {
+        OUTFIFO_WDATA_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to push data into DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_push_ch1(&mut self) -> OUTFIFO_PUSH_CH1_W<9> {
-        OUTFIFO_PUSH_CH1_W::new(self)
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<9> {
+        OUTFIFO_PUSH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -34,23 +34,22 @@ impl From<crate::W<IN_WIGHT_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RX_WEIGHT_CH` reader - The weight of Rx channel 0."]
-pub type RX_WEIGHT_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RX_WEIGHT_CH` writer - The weight of Rx channel 0."]
-pub type RX_WEIGHT_CH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IN_WIGHT_CH_SPEC, u8, u8, 4, O>;
+#[doc = "Field `RX_WEIGHT` reader - The weight of Rx channel 0."]
+pub type RX_WEIGHT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RX_WEIGHT` writer - The weight of Rx channel 0."]
+pub type RX_WEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IN_WIGHT_CH_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 8:11 - The weight of Rx channel 0."]
     #[inline(always)]
-    pub fn rx_weight_ch(&self) -> RX_WEIGHT_CH_R {
-        RX_WEIGHT_CH_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn rx_weight(&self) -> RX_WEIGHT_R {
+        RX_WEIGHT_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 8:11 - The weight of Rx channel 0."]
     #[inline(always)]
-    pub fn rx_weight_ch(&mut self) -> RX_WEIGHT_CH_W<8> {
-        RX_WEIGHT_CH_W::new(self)
+    pub fn rx_weight(&mut self) -> RX_WEIGHT_W<8> {
+        RX_WEIGHT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

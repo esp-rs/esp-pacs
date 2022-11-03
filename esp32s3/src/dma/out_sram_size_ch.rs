@@ -34,23 +34,23 @@ impl From<crate::W<OUT_SRAM_SIZE_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUT_SIZE_CH` reader - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub type OUT_SIZE_CH_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `OUT_SIZE_CH` writer - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
-pub type OUT_SIZE_CH_W<'a, const O: u8> =
+#[doc = "Field `OUT_SIZE` reader - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
+pub type OUT_SIZE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `OUT_SIZE` writer - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
+pub type OUT_SIZE_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_SRAM_SIZE_CH_SPEC, u8, u8, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
-    pub fn out_size_ch(&self) -> OUT_SIZE_CH_R {
-        OUT_SIZE_CH_R::new((self.bits & 0x7f) as u8)
+    pub fn out_size(&self) -> OUT_SIZE_R {
+        OUT_SIZE_R::new((self.bits & 0x7f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
-    pub fn out_size_ch(&mut self) -> OUT_SIZE_CH_W<0> {
-        OUT_SIZE_CH_W::new(self)
+    pub fn out_size(&mut self) -> OUT_SIZE_W<0> {
+        OUT_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

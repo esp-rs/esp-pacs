@@ -48,8 +48,6 @@ pub type FADDR_QUAD_R = crate::BitReader<bool>;
 pub type FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FADDR_OCT` reader - Apply 8 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FADDR_OCT_R = crate::BitReader<bool>;
-#[doc = "Field `FADDR_OCT` writer - Apply 8 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FADDR_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FCMD_DUAL` reader - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FCMD_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FCMD_DUAL` writer - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
@@ -60,8 +58,6 @@ pub type FCMD_QUAD_R = crate::BitReader<bool>;
 pub type FCMD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FCMD_OCT` reader - Apply 8 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
 pub type FCMD_OCT_R = crate::BitReader<bool>;
-#[doc = "Field `FCMD_OCT` writer - Apply 8 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-pub type FCMD_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FREAD_DUAL` reader - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
 pub type FREAD_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FREAD_DUAL` writer - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
@@ -72,8 +68,6 @@ pub type FREAD_QUAD_R = crate::BitReader<bool>;
 pub type FREAD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FREAD_OCT` reader - In the read operations read-data phase apply 8 signals. 1: enable 0: disable. Can be configured in CONF state."]
 pub type FREAD_OCT_R = crate::BitReader<bool>;
-#[doc = "Field `FREAD_OCT` writer - In the read operations read-data phase apply 8 signals. 1: enable 0: disable. Can be configured in CONF state."]
-pub type FREAD_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
 pub type Q_POL_R = crate::BitReader<bool>;
 #[doc = "Field `Q_POL` writer - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
@@ -196,11 +190,6 @@ impl W {
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<6> {
         FADDR_QUAD_W::new(self)
     }
-    #[doc = "Bit 7 - Apply 8 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<7> {
-        FADDR_OCT_W::new(self)
-    }
     #[doc = "Bit 8 - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<8> {
@@ -211,11 +200,6 @@ impl W {
     pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<9> {
         FCMD_QUAD_W::new(self)
     }
-    #[doc = "Bit 10 - Apply 8 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<10> {
-        FCMD_OCT_W::new(self)
-    }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<14> {
@@ -225,11 +209,6 @@ impl W {
     #[inline(always)]
     pub fn fread_quad(&mut self) -> FREAD_QUAD_W<15> {
         FREAD_QUAD_W::new(self)
-    }
-    #[doc = "Bit 16 - In the read operations read-data phase apply 8 signals. 1: enable 0: disable. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn fread_oct(&mut self) -> FREAD_OCT_W<16> {
-        FREAD_OCT_W::new(self)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]

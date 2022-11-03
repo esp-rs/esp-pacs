@@ -34,23 +34,23 @@ impl From<crate::W<OUT_CONF1_CH1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUT_CHECK_OWNER_CH1` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_CH1_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_CHECK_OWNER_CH1` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_CH1_W<'a, const O: u8> =
+#[doc = "Field `OUT_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type OUT_CHECK_OWNER_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
+pub type OUT_CHECK_OWNER_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, OUT_CONF1_CH1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn out_check_owner_ch1(&self) -> OUT_CHECK_OWNER_CH1_R {
-        OUT_CHECK_OWNER_CH1_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn out_check_owner(&self) -> OUT_CHECK_OWNER_R {
+        OUT_CHECK_OWNER_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn out_check_owner_ch1(&mut self) -> OUT_CHECK_OWNER_CH1_W<12> {
-        OUT_CHECK_OWNER_CH1_W::new(self)
+    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<12> {
+        OUT_CHECK_OWNER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
