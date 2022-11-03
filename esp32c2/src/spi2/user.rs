@@ -44,8 +44,6 @@ pub type QPI_MODE_R = crate::BitReader<bool>;
 pub type QPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
 #[doc = "Field `OPI_MODE` reader - Just for master mode. 1: spi controller is in OPI mode (all in 8-b-m). 0: others. Can be configured in CONF state."]
 pub type OPI_MODE_R = crate::BitReader<bool>;
-#[doc = "Field `OPI_MODE` writer - Just for master mode. 1: spi controller is in OPI mode (all in 8-b-m). 0: others. Can be configured in CONF state."]
-pub type OPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
 #[doc = "Field `TSCK_I_EDGE` reader - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
 pub type TSCK_I_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `TSCK_I_EDGE` writer - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
@@ -76,8 +74,6 @@ pub type FWRITE_QUAD_R = crate::BitReader<bool>;
 pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
 #[doc = "Field `FWRITE_OCT` reader - In the write operations read-data phase apply 8 signals. Can be configured in CONF state."]
 pub type FWRITE_OCT_R = crate::BitReader<bool>;
-#[doc = "Field `FWRITE_OCT` writer - In the write operations read-data phase apply 8 signals. Can be configured in CONF state."]
-pub type FWRITE_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
 #[doc = "Field `USR_CONF_NXT` reader - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
 pub type USR_CONF_NXT_R = crate::BitReader<bool>;
 #[doc = "Field `USR_CONF_NXT` writer - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
@@ -236,11 +232,6 @@ impl W {
     pub fn qpi_mode(&mut self) -> QPI_MODE_W<3> {
         QPI_MODE_W::new(self)
     }
-    #[doc = "Bit 4 - Just for master mode. 1: spi controller is in OPI mode (all in 8-b-m). 0: others. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn opi_mode(&mut self) -> OPI_MODE_W<4> {
-        OPI_MODE_W::new(self)
-    }
     #[doc = "Bit 5 - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
     #[inline(always)]
     pub fn tsck_i_edge(&mut self) -> TSCK_I_EDGE_W<5> {
@@ -275,11 +266,6 @@ impl W {
     #[inline(always)]
     pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<13> {
         FWRITE_QUAD_W::new(self)
-    }
-    #[doc = "Bit 14 - In the write operations read-data phase apply 8 signals. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn fwrite_oct(&mut self) -> FWRITE_OCT_W<14> {
-        FWRITE_OCT_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
     #[inline(always)]

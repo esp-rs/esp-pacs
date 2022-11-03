@@ -34,23 +34,23 @@ impl From<crate::W<OUT_PERI_SEL_CH0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PERI_OUT_SEL_CH0` reader - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub type PERI_OUT_SEL_CH0_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `PERI_OUT_SEL_CH0` writer - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub type PERI_OUT_SEL_CH0_W<'a, const O: u8> =
+#[doc = "Field `PERI_OUT_SEL` reader - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
+pub type PERI_OUT_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PERI_OUT_SEL` writer - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
+pub type PERI_OUT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, OUT_PERI_SEL_CH0_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
     #[inline(always)]
-    pub fn peri_out_sel_ch0(&self) -> PERI_OUT_SEL_CH0_R {
-        PERI_OUT_SEL_CH0_R::new((self.bits & 0x3f) as u8)
+    pub fn peri_out_sel(&self) -> PERI_OUT_SEL_R {
+        PERI_OUT_SEL_R::new((self.bits & 0x3f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
     #[inline(always)]
-    pub fn peri_out_sel_ch0(&mut self) -> PERI_OUT_SEL_CH0_W<0> {
-        PERI_OUT_SEL_CH0_W::new(self)
+    pub fn peri_out_sel(&mut self) -> PERI_OUT_SEL_W<0> {
+        PERI_OUT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

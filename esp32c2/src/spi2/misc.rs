@@ -68,28 +68,18 @@ pub type MASTER_CS_POL_R = crate::FieldReader<u8, u8>;
 pub type MASTER_CS_POL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MISC_SPEC, u8, u8, 6, O>;
 #[doc = "Field `CLK_DATA_DTR_EN` reader - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
 pub type CLK_DATA_DTR_EN_R = crate::BitReader<bool>;
-#[doc = "Field `CLK_DATA_DTR_EN` writer - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
-pub type CLK_DATA_DTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `DATA_DTR_EN` reader - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
 pub type DATA_DTR_EN_R = crate::BitReader<bool>;
-#[doc = "Field `DATA_DTR_EN` writer - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
-pub type DATA_DTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `ADDR_DTR_EN` reader - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
 pub type ADDR_DTR_EN_R = crate::BitReader<bool>;
-#[doc = "Field `ADDR_DTR_EN` writer - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
-pub type ADDR_DTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `CMD_DTR_EN` reader - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
 pub type CMD_DTR_EN_R = crate::BitReader<bool>;
-#[doc = "Field `CMD_DTR_EN` writer - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
-pub type CMD_DTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `SLAVE_CS_POL` reader - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
 pub type SLAVE_CS_POL_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_CS_POL` writer - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
 pub type SLAVE_CS_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `DQS_IDLE_EDGE` reader - The default value of spi_dqs. Can be configured in CONF state."]
 pub type DQS_IDLE_EDGE_R = crate::BitReader<bool>;
-#[doc = "Field `DQS_IDLE_EDGE` writer - The default value of spi_dqs. Can be configured in CONF state."]
-pub type DQS_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
 pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
@@ -230,35 +220,10 @@ impl W {
     pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<7> {
         MASTER_CS_POL_W::new(self)
     }
-    #[doc = "Bit 16 - 1: SPI master DTR mode is applied to SPI clk, data and spi_dqs. 0: SPI master DTR mode is only applied to spi_dqs. This bit should be used with bit 17/18/19."]
-    #[inline(always)]
-    pub fn clk_data_dtr_en(&mut self) -> CLK_DATA_DTR_EN_W<16> {
-        CLK_DATA_DTR_EN_W::new(self)
-    }
-    #[doc = "Bit 17 - 1: SPI clk and data of SPI_DOUT and SPI_DIN state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_DOUT and SPI_DIN state are in STR mode. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn data_dtr_en(&mut self) -> DATA_DTR_EN_W<17> {
-        DATA_DTR_EN_W::new(self)
-    }
-    #[doc = "Bit 18 - 1: SPI clk and data of SPI_SEND_ADDR state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_ADDR state are in STR mode. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn addr_dtr_en(&mut self) -> ADDR_DTR_EN_W<18> {
-        ADDR_DTR_EN_W::new(self)
-    }
-    #[doc = "Bit 19 - 1: SPI clk and data of SPI_SEND_CMD state are in DTR mode, including master 1/2/4/8-bm. 0: SPI clk and data of SPI_SEND_CMD state are in STR mode. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn cmd_dtr_en(&mut self) -> CMD_DTR_EN_W<19> {
-        CMD_DTR_EN_W::new(self)
-    }
     #[doc = "Bit 23 - spi slave input cs polarity select. 1: inv 0: not change. Can be configured in CONF state."]
     #[inline(always)]
     pub fn slave_cs_pol(&mut self) -> SLAVE_CS_POL_W<23> {
         SLAVE_CS_POL_W::new(self)
-    }
-    #[doc = "Bit 24 - The default value of spi_dqs. Can be configured in CONF state."]
-    #[inline(always)]
-    pub fn dqs_idle_edge(&mut self) -> DQS_IDLE_EDGE_W<24> {
-        DQS_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle. Can be configured in CONF state."]
     #[inline(always)]

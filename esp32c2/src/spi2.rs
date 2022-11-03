@@ -117,15 +117,15 @@ pub mod ms_dlen;
 pub type MISC = crate::Reg<misc::MISC_SPEC>;
 #[doc = "SPI misc register"]
 pub mod misc;
-#[doc = "DIN_MODE (rw) register accessor: an alias for `Reg<DIN_MODE_SPEC>`"]
+#[doc = "DIN_MODE (r) register accessor: an alias for `Reg<DIN_MODE_SPEC>`"]
 pub type DIN_MODE = crate::Reg<din_mode::DIN_MODE_SPEC>;
 #[doc = "SPI input delay mode configuration"]
 pub mod din_mode;
-#[doc = "DIN_NUM (rw) register accessor: an alias for `Reg<DIN_NUM_SPEC>`"]
+#[doc = "DIN_NUM (r) register accessor: an alias for `Reg<DIN_NUM_SPEC>`"]
 pub type DIN_NUM = crate::Reg<din_num::DIN_NUM_SPEC>;
 #[doc = "SPI input delay number configuration"]
 pub mod din_num;
-#[doc = "DOUT_MODE (rw) register accessor: an alias for `Reg<DOUT_MODE_SPEC>`"]
+#[doc = "DOUT_MODE (r) register accessor: an alias for `Reg<DOUT_MODE_SPEC>`"]
 pub type DOUT_MODE = crate::Reg<dout_mode::DOUT_MODE_SPEC>;
 #[doc = "SPI output delay mode configuration"]
 pub mod dout_mode;

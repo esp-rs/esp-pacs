@@ -231,7 +231,7 @@ pub mod flash_sus_cmd;
 pub type SUS_STATUS = crate::Reg<sus_status::SUS_STATUS_SPEC>;
 #[doc = "SPI1 flash suspend status register"]
 pub mod sus_status;
-#[doc = "TIMING_CALI (rw) register accessor: an alias for `Reg<TIMING_CALI_SPEC>`"]
+#[doc = "TIMING_CALI (r) register accessor: an alias for `Reg<TIMING_CALI_SPEC>`"]
 pub type TIMING_CALI = crate::Reg<timing_cali::TIMING_CALI_SPEC>;
 #[doc = "SPI1 timing control register"]
 pub mod timing_cali;
