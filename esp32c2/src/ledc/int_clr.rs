@@ -19,8 +19,8 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TIMER0_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER0_OVF_INT interrupt."]
-pub type TIMER0_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER0_OVF_INT interrupt."]
+pub type OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 #[doc = "Field `TIMER1_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER1_OVF_INT interrupt."]
 pub type TIMER1_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 #[doc = "Field `TIMER2_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER2_OVF_INT interrupt."]
@@ -60,8 +60,8 @@ pub type OVF_CNT_CH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the LEDC_TIMER0_OVF_INT interrupt."]
     #[inline(always)]
-    pub fn timer0_ovf_int_clr(&mut self) -> TIMER0_OVF_INT_CLR_W<0> {
-        TIMER0_OVF_INT_CLR_W::new(self)
+    pub fn ovf_int_clr(&mut self) -> OVF_INT_CLR_W<0> {
+        OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the LEDC_TIMER1_OVF_INT interrupt."]
     #[inline(always)]

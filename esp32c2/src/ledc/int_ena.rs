@@ -34,10 +34,10 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TIMER0_OVF_INT_ENA` reader - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
-pub type TIMER0_OVF_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `TIMER0_OVF_INT_ENA` writer - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
-pub type TIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+#[doc = "Field `OVF_INT_ENA` reader - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
+pub type OVF_INT_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_INT_ENA` writer - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
+pub type OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Field `TIMER1_OVF_INT_ENA` reader - The interrupt enable bit for the LEDC_TIMER1_OVF_INT interrupt."]
 pub type TIMER1_OVF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER1_OVF_INT_ENA` writer - The interrupt enable bit for the LEDC_TIMER1_OVF_INT interrupt."]
@@ -107,8 +107,8 @@ pub type OVF_CNT_CH5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
     #[inline(always)]
-    pub fn timer0_ovf_int_ena(&self) -> TIMER0_OVF_INT_ENA_R {
-        TIMER0_OVF_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn ovf_int_ena(&self) -> OVF_INT_ENA_R {
+        OVF_INT_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the LEDC_TIMER1_OVF_INT interrupt."]
     #[inline(always)]
@@ -189,8 +189,8 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
     #[inline(always)]
-    pub fn timer0_ovf_int_ena(&mut self) -> TIMER0_OVF_INT_ENA_W<0> {
-        TIMER0_OVF_INT_ENA_W::new(self)
+    pub fn ovf_int_ena(&mut self) -> OVF_INT_ENA_W<0> {
+        OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the LEDC_TIMER1_OVF_INT interrupt."]
     #[inline(always)]
