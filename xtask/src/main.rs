@@ -23,18 +23,14 @@ macro_rules! clap_enum_variants {
 }
 
 #[derive(Debug, Clone, Display, EnumIter, EnumString, EnumVariantNames)]
+#[strum(serialize_all = "lowercase")]
 enum Chip {
-    #[strum(serialize = "esp32")]
     Esp32,
-    #[strum(serialize = "esp32c2")]
     Esp32c2,
-    #[strum(serialize = "esp32c3")]
     Esp32c3,
-    #[strum(serialize = "esp32s2")]
+    Esp32c6,
     Esp32s2,
-    #[strum(serialize = "esp32s3")]
     Esp32s3,
-    #[strum(serialize = "esp8266")]
     Esp8266,
 }
 
@@ -122,6 +118,7 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     let config = Config {
         target: get_svd2rust_target(path)?,
         output_dir: path.clone(),
+        const_generic: true,
 
         ..Config::default()
     };
