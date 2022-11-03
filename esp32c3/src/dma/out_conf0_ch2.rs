@@ -34,97 +34,95 @@ impl From<crate::W<OUT_CONF0_CH2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OUT_RST_CH2` reader - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_RST_CH2` writer - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
-#[doc = "Field `OUT_LOOP_TEST_CH2` reader - reserved"]
-pub type OUT_LOOP_TEST_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_LOOP_TEST_CH2` writer - reserved"]
-pub type OUT_LOOP_TEST_CH2_W<'a, const O: u8> =
+#[doc = "Field `OUT_RST` reader - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
+pub type OUT_RST_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_RST` writer - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
+pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
+#[doc = "Field `OUT_LOOP_TEST` reader - reserved"]
+pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_LOOP_TEST` writer - reserved"]
+pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
+#[doc = "Field `OUT_AUTO_WRBACK` reader - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
+pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_AUTO_WRBACK` writer - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
+pub type OUT_AUTO_WRBACK_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
-#[doc = "Field `OUT_AUTO_WRBACK_CH2` reader - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub type OUT_AUTO_WRBACK_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_AUTO_WRBACK_CH2` writer - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub type OUT_AUTO_WRBACK_CH2_W<'a, const O: u8> =
+#[doc = "Field `OUT_EOF_MODE` reader - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
+pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_EOF_MODE` writer - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
+pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
+#[doc = "Field `OUTDSCR_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
+pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
+#[doc = "Field `OUTDSCR_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
+pub type OUTDSCR_BURST_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
-#[doc = "Field `OUT_EOF_MODE_CH2` reader - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub type OUT_EOF_MODE_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_EOF_MODE_CH2` writer - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub type OUT_EOF_MODE_CH2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
-#[doc = "Field `OUTDSCR_BURST_EN_CH2` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
-pub type OUTDSCR_BURST_EN_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUTDSCR_BURST_EN_CH2` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
-pub type OUTDSCR_BURST_EN_CH2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
-#[doc = "Field `OUT_DATA_BURST_EN_CH2` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
-pub type OUT_DATA_BURST_EN_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `OUT_DATA_BURST_EN_CH2` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
-pub type OUT_DATA_BURST_EN_CH2_W<'a, const O: u8> =
+#[doc = "Field `OUT_DATA_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
+pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_DATA_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
+pub type OUT_DATA_BURST_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, OUT_CONF0_CH2_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
-    pub fn out_rst_ch2(&self) -> OUT_RST_CH2_R {
-        OUT_RST_CH2_R::new((self.bits & 1) != 0)
+    pub fn out_rst(&self) -> OUT_RST_R {
+        OUT_RST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    pub fn out_loop_test_ch2(&self) -> OUT_LOOP_TEST_CH2_R {
-        OUT_LOOP_TEST_CH2_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn out_loop_test(&self) -> OUT_LOOP_TEST_R {
+        OUT_LOOP_TEST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
-    pub fn out_auto_wrback_ch2(&self) -> OUT_AUTO_WRBACK_CH2_R {
-        OUT_AUTO_WRBACK_CH2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn out_auto_wrback(&self) -> OUT_AUTO_WRBACK_R {
+        OUT_AUTO_WRBACK_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
-    pub fn out_eof_mode_ch2(&self) -> OUT_EOF_MODE_CH2_R {
-        OUT_EOF_MODE_CH2_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn out_eof_mode(&self) -> OUT_EOF_MODE_R {
+        OUT_EOF_MODE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    pub fn outdscr_burst_en_ch2(&self) -> OUTDSCR_BURST_EN_CH2_R {
-        OUTDSCR_BURST_EN_CH2_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn outdscr_burst_en(&self) -> OUTDSCR_BURST_EN_R {
+        OUTDSCR_BURST_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
     #[inline(always)]
-    pub fn out_data_burst_en_ch2(&self) -> OUT_DATA_BURST_EN_CH2_R {
-        OUT_DATA_BURST_EN_CH2_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn out_data_burst_en(&self) -> OUT_DATA_BURST_EN_R {
+        OUT_DATA_BURST_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 2 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
-    pub fn out_rst_ch2(&mut self) -> OUT_RST_CH2_W<0> {
-        OUT_RST_CH2_W::new(self)
+    pub fn out_rst(&mut self) -> OUT_RST_W<0> {
+        OUT_RST_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    pub fn out_loop_test_ch2(&mut self) -> OUT_LOOP_TEST_CH2_W<1> {
-        OUT_LOOP_TEST_CH2_W::new(self)
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<1> {
+        OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
-    pub fn out_auto_wrback_ch2(&mut self) -> OUT_AUTO_WRBACK_CH2_W<2> {
-        OUT_AUTO_WRBACK_CH2_W::new(self)
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<2> {
+        OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 2 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
-    pub fn out_eof_mode_ch2(&mut self) -> OUT_EOF_MODE_CH2_W<3> {
-        OUT_EOF_MODE_CH2_W::new(self)
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<3> {
+        OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    pub fn outdscr_burst_en_ch2(&mut self) -> OUTDSCR_BURST_EN_CH2_W<4> {
-        OUTDSCR_BURST_EN_CH2_W::new(self)
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<4> {
+        OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 2 transmitting data when accessing internal SRAM."]
     #[inline(always)]
-    pub fn out_data_burst_en_ch2(&mut self) -> OUT_DATA_BURST_EN_CH2_W<5> {
-        OUT_DATA_BURST_EN_CH2_W::new(self)
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<5> {
+        OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

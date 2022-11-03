@@ -34,29 +34,29 @@ impl From<crate::W<IN_POP_CH2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INFIFO_RDATA_CH2` reader - This register stores the data popping from DMA FIFO."]
-pub type INFIFO_RDATA_CH2_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `INFIFO_POP_CH2` reader - Set this bit to pop data from DMA FIFO."]
-pub type INFIFO_POP_CH2_R = crate::BitReader<bool>;
-#[doc = "Field `INFIFO_POP_CH2` writer - Set this bit to pop data from DMA FIFO."]
-pub type INFIFO_POP_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_POP_CH2_SPEC, bool, O>;
+#[doc = "Field `INFIFO_RDATA` reader - This register stores the data popping from DMA FIFO."]
+pub type INFIFO_RDATA_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `INFIFO_POP` reader - Set this bit to pop data from DMA FIFO."]
+pub type INFIFO_POP_R = crate::BitReader<bool>;
+#[doc = "Field `INFIFO_POP` writer - Set this bit to pop data from DMA FIFO."]
+pub type INFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_POP_CH2_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:11 - This register stores the data popping from DMA FIFO."]
     #[inline(always)]
-    pub fn infifo_rdata_ch2(&self) -> INFIFO_RDATA_CH2_R {
-        INFIFO_RDATA_CH2_R::new((self.bits & 0x0fff) as u16)
+    pub fn infifo_rdata(&self) -> INFIFO_RDATA_R {
+        INFIFO_RDATA_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bit 12 - Set this bit to pop data from DMA FIFO."]
     #[inline(always)]
-    pub fn infifo_pop_ch2(&self) -> INFIFO_POP_CH2_R {
-        INFIFO_POP_CH2_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn infifo_pop(&self) -> INFIFO_POP_R {
+        INFIFO_POP_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 12 - Set this bit to pop data from DMA FIFO."]
     #[inline(always)]
-    pub fn infifo_pop_ch2(&mut self) -> INFIFO_POP_CH2_W<12> {
-        INFIFO_POP_CH2_W::new(self)
+    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<12> {
+        INFIFO_POP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

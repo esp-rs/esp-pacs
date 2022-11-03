@@ -13,13 +13,13 @@ impl From<crate::R<OUT_EOF_DES_ADDR_CH2_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `OUT_EOF_DES_ADDR_CH2` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
-pub type OUT_EOF_DES_ADDR_CH2_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `OUT_EOF_DES_ADDR` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
+pub type OUT_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
     #[inline(always)]
-    pub fn out_eof_des_addr_ch2(&self) -> OUT_EOF_DES_ADDR_CH2_R {
-        OUT_EOF_DES_ADDR_CH2_R::new(self.bits)
+    pub fn out_eof_des_addr(&self) -> OUT_EOF_DES_ADDR_R {
+        OUT_EOF_DES_ADDR_R::new(self.bits)
     }
 }
 #[doc = "DMA_OUT_EOF_DES_ADDR_CH2_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_eof_des_addr_ch2](index.html) module"]
