@@ -18,7 +18,7 @@ Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP
 
 The **M**inimum **S**upported **R**ust **V**ersions are:
 
-- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**)
+- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**)
 - `1.60.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork. The [esp-rs/rust-build] repository has pre-compiled release artifacts for most common platforms, and provides installation scripts to aid you in the process.
@@ -45,7 +45,7 @@ USAGE:
     xtask [OPTIONS] [CHIPS]...
 
 ARGS:
-    <CHIPS>...    Chip(s) to target [possible values: esp32, esp32c3, esp32s2, esp32s3, esp8266]
+    <CHIPS>...    Chip(s) to target [possible values: esp32, esp32c2, esp32c3, esp32c6, esp32s2, esp32s3, esp8266]
 
 OPTIONS:
         --generate-only    Patch the SVD and generate the PAC, but do not build it
