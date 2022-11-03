@@ -13,8 +13,8 @@ impl From<crate::R<INT_ST_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `TIMER0_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
-pub type TIMER0_OVF_INT_ST_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
+pub type OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER1_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER1_OVF_INT interrupt when LEDC_TIMER1_OVF_INT_ENA is set to 1."]
 pub type TIMER1_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER2_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER2_OVF_INT interrupt when LEDC_TIMER2_OVF_INT_ENA is set to 1."]
@@ -48,8 +48,8 @@ pub type OVF_CNT_CH5_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
     #[inline(always)]
-    pub fn timer0_ovf_int_st(&self) -> TIMER0_OVF_INT_ST_R {
-        TIMER0_OVF_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn ovf_int_st(&self) -> OVF_INT_ST_R {
+        OVF_INT_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - This is the masked interrupt status bit for the LEDC_TIMER1_OVF_INT interrupt when LEDC_TIMER1_OVF_INT_ENA is set to 1."]
     #[inline(always)]

@@ -1,1 +1,9 @@
 _svd: ../esp32c2.base.svd
+
+LEDC:
+  "*":
+    _strip:
+      - "TIMER0_"
+    _strip_end:
+      - "_CH0"
+      - "_TIMER0"

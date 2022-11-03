@@ -13,8 +13,8 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `TIMER0_OVF_INT_RAW` reader - Triggered when the timer0 has reached its maximum counter value."]
-pub type TIMER0_OVF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_INT_RAW` reader - Triggered when the timer0 has reached its maximum counter value."]
+pub type OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER1_OVF_INT_RAW` reader - Triggered when the timer1 has reached its maximum counter value."]
 pub type TIMER1_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER2_OVF_INT_RAW` reader - Triggered when the timer2 has reached its maximum counter value."]
@@ -48,8 +48,8 @@ pub type OVF_CNT_CH5_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
-    pub fn timer0_ovf_int_raw(&self) -> TIMER0_OVF_INT_RAW_R {
-        TIMER0_OVF_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn ovf_int_raw(&self) -> OVF_INT_RAW_R {
+        OVF_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
