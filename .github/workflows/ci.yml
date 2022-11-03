@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32c2, esp32c3]
+        chip: [esp32c2, esp32c3, esp32c6]
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -59,7 +59,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32c2, esp32c3]
+        chip: [esp32c2, esp32c3, esp32c6]
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
