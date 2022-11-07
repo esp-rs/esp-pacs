@@ -31,7 +31,7 @@ include = [
 [dependencies]
 critical-section = { version = "1.1.1", optional = true }
 riscv = "0.9.0"
-riscv-rt = { version = "0.9.0", optional = true }
+riscv-rt = { version = "0.10.0", optional = true }
 vcell = "0.1.3"
 
 [features]
