@@ -1,1 +1,15 @@
 _svd: ../esp32s2.base.svd
+
+"SHA":
+  _strip_end: "OP"
+  _modify:
+    "M_%s":
+      name: "M_MEM%s"
+    _registers:
+      M_0:
+        name: M_MEM 
+    "H_%s":
+      name: "H_MEM%s"
+    _registers:
+      H_0:
+        name: H_MEM 
