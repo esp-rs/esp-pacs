@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23 - Reserved."]
     #[inline(always)]
     pub fn rpt4_reserved4_err(&self) -> RPT4_RESERVED4_ERR_R {
-        RPT4_RESERVED4_ERR_R::new((self.bits & 0x00ff_ffff) as u32)
+        RPT4_RESERVED4_ERR_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "Programming error record register 4 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err4](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for RD_REPEAT_ERR4_SPEC {
 }
 #[doc = "`reset()` method sets RD_REPEAT_ERR4 to value 0"]
 impl crate::Resettable for RD_REPEAT_ERR4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -57,7 +57,7 @@ impl R {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first outlink descriptor's address."]
     #[inline(always)]
     pub fn outlink_addr(&self) -> OUTLINK_ADDR_R {
-        OUTLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
+        OUTLINK_ADDR_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 20 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
@@ -83,21 +83,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first outlink descriptor's address."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<0> {
         OUTLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<20> {
         OUTLINK_STOP_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to start dealing with the outlink descriptors."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_start(&mut self) -> OUTLINK_START_W<21> {
         OUTLINK_START_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<22> {
         OUTLINK_RESTART_W::new(self)
     }
@@ -120,11 +124,10 @@ impl crate::Readable for OUT_LINK_CH0_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_link_ch0::W](W) writer structure"]
 impl crate::Writable for OUT_LINK_CH0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_LINK_CH0 to value 0x0080_0000"]
 impl crate::Resettable for OUT_LINK_CH0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0080_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0080_0000;
 }

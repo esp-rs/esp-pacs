@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn fib_sel(&mut self) -> FIB_SEL_W<0> {
         FIB_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FIB_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [fib_sel::W](W) writer structure"]
 impl crate::Writable for FIB_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIB_SEL to value 0x07"]
 impl crate::Resettable for FIB_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

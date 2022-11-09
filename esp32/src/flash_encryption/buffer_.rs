@@ -24,6 +24,7 @@ pub type BUFFER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BUFFER__SPEC, u
 impl W {
     #[doc = "Bits 0:7 - Data buffers for encryption."]
     #[inline(always)]
+    #[must_use]
     pub fn buffer(&mut self) -> BUFFER_W<0> {
         BUFFER_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for BUFFER__SPEC {
 #[doc = "`write(|w| ..)` method takes [buffer_::W](W) writer structure"]
 impl crate::Writable for BUFFER__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BUFFER_%s to value 0"]
 impl crate::Resettable for BUFFER__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

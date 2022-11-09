@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 27:29 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<27> {
         SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bits 30:31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<30> {
         FORCE_XPD_SAR_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CNTL_SENSOR_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cntl_sensor_ctrl::W](W) writer structure"]
 impl crate::Writable for CNTL_SENSOR_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CNTL_SENSOR_CTRL to value 0"]
 impl crate::Resettable for CNTL_SENSOR_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

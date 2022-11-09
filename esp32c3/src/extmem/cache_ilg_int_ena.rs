@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable interrupt by sync configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_sync_op_fault_int_ena(&mut self) -> ICACHE_SYNC_OP_FAULT_INT_ENA_W<0> {
         ICACHE_SYNC_OP_FAULT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable interrupt by preload configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_preload_op_fault_int_ena(&mut self) -> ICACHE_PRELOAD_OP_FAULT_INT_ENA_W<1> {
         ICACHE_PRELOAD_OP_FAULT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt by mmu entry fault."]
     #[inline(always)]
+    #[must_use]
     pub fn mmu_entry_fault_int_ena(&mut self) -> MMU_ENTRY_FAULT_INT_ENA_W<5> {
         MMU_ENTRY_FAULT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The bit is used to enable interrupt by ibus counter overflow."]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_cnt_ovf_int_ena(&mut self) -> IBUS_CNT_OVF_INT_ENA_W<7> {
         IBUS_CNT_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The bit is used to enable interrupt by dbus counter overflow."]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_cnt_ovf_int_ena(&mut self) -> DBUS_CNT_OVF_INT_ENA_W<8> {
         DBUS_CNT_OVF_INT_ENA_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for CACHE_ILG_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_ilg_int_ena::W](W) writer structure"]
 impl crate::Writable for CACHE_ILG_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_ILG_INT_ENA to value 0"]
 impl crate::Resettable for CACHE_ILG_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

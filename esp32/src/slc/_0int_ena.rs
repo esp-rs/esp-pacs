@@ -308,136 +308,163 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit0_int_ena(&mut self) -> FRHOST_BIT0_INT_ENA_W<0> {
         FRHOST_BIT0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit1_int_ena(&mut self) -> FRHOST_BIT1_INT_ENA_W<1> {
         FRHOST_BIT1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit2_int_ena(&mut self) -> FRHOST_BIT2_INT_ENA_W<2> {
         FRHOST_BIT2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit3_int_ena(&mut self) -> FRHOST_BIT3_INT_ENA_W<3> {
         FRHOST_BIT3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit4_int_ena(&mut self) -> FRHOST_BIT4_INT_ENA_W<4> {
         FRHOST_BIT4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit5_int_ena(&mut self) -> FRHOST_BIT5_INT_ENA_W<5> {
         FRHOST_BIT5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit6_int_ena(&mut self) -> FRHOST_BIT6_INT_ENA_W<6> {
         FRHOST_BIT6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn frhost_bit7_int_ena(&mut self) -> FRHOST_BIT7_INT_ENA_W<7> {
         FRHOST_BIT7_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_start_int_ena(&mut self) -> SLC0_RX_START_INT_ENA_W<8> {
         SLC0_RX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_start_int_ena(&mut self) -> SLC0_TX_START_INT_ENA_W<9> {
         SLC0_TX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_udf_int_ena(&mut self) -> SLC0_RX_UDF_INT_ENA_W<10> {
         SLC0_RX_UDF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_ovf_int_ena(&mut self) -> SLC0_TX_OVF_INT_ENA_W<11> {
         SLC0_TX_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_token0_1to0_int_ena(&mut self) -> SLC0_TOKEN0_1TO0_INT_ENA_W<12> {
         SLC0_TOKEN0_1TO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_token1_1to0_int_ena(&mut self) -> SLC0_TOKEN1_1TO0_INT_ENA_W<13> {
         SLC0_TOKEN1_1TO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_done_int_ena(&mut self) -> SLC0_TX_DONE_INT_ENA_W<14> {
         SLC0_TX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_suc_eof_int_ena(&mut self) -> SLC0_TX_SUC_EOF_INT_ENA_W<15> {
         SLC0_TX_SUC_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_done_int_ena(&mut self) -> SLC0_RX_DONE_INT_ENA_W<16> {
         SLC0_RX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_eof_int_ena(&mut self) -> SLC0_RX_EOF_INT_ENA_W<17> {
         SLC0_RX_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tohost_int_ena(&mut self) -> SLC0_TOHOST_INT_ENA_W<18> {
         SLC0_TOHOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_dscr_err_int_ena(&mut self) -> SLC0_TX_DSCR_ERR_INT_ENA_W<19> {
         SLC0_TX_DSCR_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_dscr_err_int_ena(&mut self) -> SLC0_RX_DSCR_ERR_INT_ENA_W<20> {
         SLC0_RX_DSCR_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_dscr_empty_int_ena(&mut self) -> SLC0_TX_DSCR_EMPTY_INT_ENA_W<21> {
         SLC0_TX_DSCR_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_host_rd_ack_int_ena(&mut self) -> SLC0_HOST_RD_ACK_INT_ENA_W<22> {
         SLC0_HOST_RD_ACK_INT_ENA_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_wr_retry_done_int_ena(&mut self) -> SLC0_WR_RETRY_DONE_INT_ENA_W<23> {
         SLC0_WR_RETRY_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_err_eof_int_ena(&mut self) -> SLC0_TX_ERR_EOF_INT_ENA_W<24> {
         SLC0_TX_ERR_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
+    #[must_use]
     pub fn cmd_dtc_int_ena(&mut self) -> CMD_DTC_INT_ENA_W<25> {
         CMD_DTC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_quick_eof_int_ena(&mut self) -> SLC0_RX_QUICK_EOF_INT_ENA_W<26> {
         SLC0_RX_QUICK_EOF_INT_ENA_W::new(self)
     }
@@ -460,11 +487,10 @@ impl crate::Readable for _0INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [_0int_ena::W](W) writer structure"]
 impl crate::Writable for _0INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets _0INT_ENA to value 0"]
 impl crate::Resettable for _0INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

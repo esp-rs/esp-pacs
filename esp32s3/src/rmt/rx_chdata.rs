@@ -33,8 +33,5 @@ impl crate::Readable for RX_CHDATA_SPEC {
 }
 #[doc = "`reset()` method sets RX_CH%sDATA to value 0"]
 impl crate::Resettable for RX_CHDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

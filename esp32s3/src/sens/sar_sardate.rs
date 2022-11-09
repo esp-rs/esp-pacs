@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]
     pub fn sar_date(&self) -> SAR_DATE_R {
-        SAR_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        SAR_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_date(&mut self) -> SAR_DATE_W<0> {
         SAR_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SAR_SARDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_sardate::W](W) writer structure"]
 impl crate::Writable for SAR_SARDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_SARDATE to value 0x0210_1180"]
 impl crate::Resettable for SAR_SARDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0210_1180
-    }
+    const RESET_VALUE: Self::Ux = 0x0210_1180;
 }

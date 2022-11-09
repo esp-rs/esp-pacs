@@ -59,6 +59,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to clear interrupt that core1 initiate illegal PIF bus access."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_monitor_violate_clr(
         &mut self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_CLR_W<0> {
@@ -66,6 +67,7 @@ impl W {
     }
     #[doc = "Bit 1 - Set 1 to enable interrupt that core1 initiate illegal PIF bus access."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_monitor_violate_en(&mut self) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_EN_W<1> {
         CORE_1_PIF_PMS_MONITOR_VIOLATE_EN_W::new(self)
     }
@@ -88,11 +90,10 @@ impl crate::Readable for CORE_1_PIF_PMS_MONITOR_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_pif_pms_monitor_1::W](W) writer structure"]
 impl crate::Writable for CORE_1_PIF_PMS_MONITOR_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_PIF_PMS_MONITOR_1 to value 0x03"]
 impl crate::Resettable for CORE_1_PIF_PMS_MONITOR_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

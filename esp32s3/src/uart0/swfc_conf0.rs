@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
+    #[must_use]
     pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<0> {
         XOFF_THRESHOLD_W::new(self)
     }
     #[doc = "Bits 10:17 - This register stores the Xoff flow control char."]
     #[inline(always)]
+    #[must_use]
     pub fn xoff_char(&mut self) -> XOFF_CHAR_W<10> {
         XOFF_CHAR_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SWFC_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [swfc_conf0::W](W) writer structure"]
 impl crate::Writable for SWFC_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWFC_CONF0 to value 0x4ce0"]
 impl crate::Resettable for SWFC_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4ce0
-    }
+    const RESET_VALUE: Self::Ux = 0x4ce0;
 }

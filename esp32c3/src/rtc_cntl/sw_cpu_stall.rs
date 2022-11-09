@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
     #[inline(always)]
+    #[must_use]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<20> {
         SW_STALL_APPCPU_C1_W::new(self)
     }
     #[doc = "Bits 26:31 - stall cpu by software"]
     #[inline(always)]
+    #[must_use]
     pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<26> {
         SW_STALL_PROCPU_C1_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SW_CPU_STALL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sw_cpu_stall::W](W) writer structure"]
 impl crate::Writable for SW_CPU_STALL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SW_CPU_STALL to value 0"]
 impl crate::Resettable for SW_CPU_STALL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

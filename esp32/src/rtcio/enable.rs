@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 14:31 - GPIO0~17 output enable"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 14) & 0x0003_ffff) as u32)
+        ENABLE_R::new((self.bits >> 14) & 0x0003_ffff)
     }
 }
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output enable"]
     #[inline(always)]
+    #[must_use]
     pub fn enable(&mut self) -> ENABLE_W<14> {
         ENABLE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [enable::W](W) writer structure"]
 impl crate::Writable for ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ENABLE to value 0"]
 impl crate::Resettable for ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

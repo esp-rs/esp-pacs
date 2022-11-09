@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to stall core1"]
     #[inline(always)]
+    #[must_use]
     pub fn control_core_1_runstall(&mut self) -> CONTROL_CORE_1_RUNSTALL_W<0> {
         CONTROL_CORE_1_RUNSTALL_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to open core1 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn control_core_1_clkgate_en(&mut self) -> CONTROL_CORE_1_CLKGATE_EN_W<1> {
         CONTROL_CORE_1_CLKGATE_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to let core1 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn control_core_1_reseting(&mut self) -> CONTROL_CORE_1_RESETING_W<2> {
         CONTROL_CORE_1_RESETING_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for CORE_1_CONTROL_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_control_0::W](W) writer structure"]
 impl crate::Writable for CORE_1_CONTROL_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_CONTROL_0 to value 0x04"]
 impl crate::Resettable for CORE_1_CONTROL_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

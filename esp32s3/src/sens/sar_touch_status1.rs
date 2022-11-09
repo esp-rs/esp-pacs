@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:21 - touch data debounce of touch pad 1"]
     #[inline(always)]
     pub fn sar_touch_pad1_data(&self) -> SAR_TOUCH_PAD1_DATA_R {
-        SAR_TOUCH_PAD1_DATA_R::new((self.bits & 0x003f_ffff) as u32)
+        SAR_TOUCH_PAD1_DATA_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bits 29:31 - touch current debounce of touch pad 1"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for SAR_TOUCH_STATUS1_SPEC {
 }
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS1 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

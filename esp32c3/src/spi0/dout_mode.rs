@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<0> {
         DOUT0_MODE_W::new(self)
     }
     #[doc = "Bit 1 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<1> {
         DOUT1_MODE_W::new(self)
     }
     #[doc = "Bit 2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<2> {
         DOUT2_MODE_W::new(self)
     }
     #[doc = "Bit 3 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<3> {
         DOUT3_MODE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for DOUT_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dout_mode::W](W) writer structure"]
 impl crate::Writable for DOUT_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOUT_MODE to value 0"]
 impl crate::Resettable for DOUT_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -63,7 +63,7 @@ impl R {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
     pub fn inlink_addr(&self) -> INLINK_ADDR_R {
-        INLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
+        INLINK_ADDR_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 20 - when the bit is set, the inlink descriptor returns to the first link node when a packet is error."]
     #[inline(always)]
@@ -94,31 +94,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<0> {
         INLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 20 - when the bit is set, the inlink descriptor returns to the first link node when a packet is error."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<20> {
         INLINK_AUTO_RET_W::new(self)
     }
     #[doc = "Bit 28 - Set the bit to stop to use inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_stop(&mut self) -> INLINK_STOP_W<28> {
         INLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set the bit to start to use inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_start(&mut self) -> INLINK_START_W<29> {
         INLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set the bit to mount on new inlink descriptors."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<30> {
         INLINK_RESTART_W::new(self)
     }
     #[doc = "Bit 31 - SPI DMA read data status bit."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_ena(&mut self) -> DMA_RX_ENA_W<31> {
         DMA_RX_ENA_W::new(self)
     }
@@ -141,11 +147,10 @@ impl crate::Readable for DMA_IN_LINK_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_in_link::W](W) writer structure"]
 impl crate::Writable for DMA_IN_LINK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_IN_LINK to value 0"]
 impl crate::Resettable for DMA_IN_LINK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

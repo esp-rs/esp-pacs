@@ -147,61 +147,73 @@ impl R {
 impl W {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
+    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<13> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_oe(&mut self) -> SLP_OE_W<14> {
         SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_ie(&mut self) -> SLP_IE_W<15> {
         SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<16> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
+    #[must_use]
     pub fn fun_sel(&mut self) -> FUN_SEL_W<17> {
         FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
+    #[must_use]
     pub fn mux_sel(&mut self) -> MUX_SEL_W<19> {
         MUX_SEL_W::new(self)
     }
     #[doc = "Bit 20 - TOUCH_XPD"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd(&mut self) -> XPD_W<20> {
         XPD_W::new(self)
     }
     #[doc = "Bit 21 - TOUCH_TIE_OPT"]
     #[inline(always)]
+    #[must_use]
     pub fn tie_opt(&mut self) -> TIE_OPT_W<21> {
         TIE_OPT_W::new(self)
     }
     #[doc = "Bit 22 - TOUCH_START"]
     #[inline(always)]
+    #[must_use]
     pub fn start(&mut self) -> START_W<22> {
         START_W::new(self)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
+    #[must_use]
     pub fn rue(&mut self) -> RUE_W<27> {
         RUE_W::new(self)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
+    #[must_use]
     pub fn rde(&mut self) -> RDE_W<28> {
         RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
+    #[must_use]
     pub fn drv(&mut self) -> DRV_W<29> {
         DRV_W::new(self)
     }
@@ -224,11 +236,10 @@ impl crate::Readable for TOUCH_PAD11_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_pad11::W](W) writer structure"]
 impl crate::Writable for TOUCH_PAD11_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_PAD11 to value 0x4000_0000"]
 impl crate::Resettable for TOUCH_PAD11_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4000_0000;
 }

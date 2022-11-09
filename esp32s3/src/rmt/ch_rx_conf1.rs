@@ -93,46 +93,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_en(&mut self) -> RX_EN_W<0> {
         RX_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<1> {
         MEM_WR_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<2> {
         APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 3 - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_owner(&mut self) -> MEM_OWNER_W<3> {
         MEM_OWNER_W::new(self)
     }
     #[doc = "Bit 4 - This is the receive filter's enable bit for CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<4> {
         RX_FILTER_EN_W::new(self)
     }
     #[doc = "Bits 5:12 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<5> {
         RX_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 13 - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<13> {
         MEM_RX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn afifo_rst(&mut self) -> AFIFO_RST_W<14> {
         AFIFO_RST_W::new(self)
     }
     #[doc = "Bit 15 - synchronization bit for CHANNEL%s"]
     #[inline(always)]
+    #[must_use]
     pub fn conf_update(&mut self) -> CONF_UPDATE_W<15> {
         CONF_UPDATE_W::new(self)
     }
@@ -155,11 +164,10 @@ impl crate::Readable for CH_RX_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_rx_conf1::W](W) writer structure"]
 impl crate::Writable for CH_RX_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_RX_CONF1 to value 0x01e8"]
 impl crate::Resettable for CH_RX_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01e8
-    }
+    const RESET_VALUE: Self::Ux = 0x01e8;
 }

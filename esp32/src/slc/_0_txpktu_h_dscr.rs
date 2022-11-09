@@ -33,8 +33,5 @@ impl crate::Readable for _0_TXPKTU_H_DSCR_SPEC {
 }
 #[doc = "`reset()` method sets _0_TXPKTU_H_DSCR to value 0"]
 impl crate::Resettable for _0_TXPKTU_H_DSCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

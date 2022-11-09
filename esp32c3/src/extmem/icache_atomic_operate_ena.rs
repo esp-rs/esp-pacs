@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate icache atomic operation protection. In this case, sync/lock operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_atomic_operate_ena(&mut self) -> ICACHE_ATOMIC_OPERATE_ENA_W<0> {
         ICACHE_ATOMIC_OPERATE_ENA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_atomic_operate_ena::W](W) writer structure"]
 impl crate::Writable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_ATOMIC_OPERATE_ENA to value 0x01"]
 impl crate::Resettable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

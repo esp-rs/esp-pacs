@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - timer taget1 low 32 bits"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_target1_lo(&mut self) -> TIMER_TARGET1_LO_W<0> {
         TIMER_TARGET1_LO_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TARGET1_LO_SPEC {
 #[doc = "`write(|w| ..)` method takes [target1_lo::W](W) writer structure"]
 impl crate::Writable for TARGET1_LO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TARGET1_LO to value 0"]
 impl crate::Resettable for TARGET1_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

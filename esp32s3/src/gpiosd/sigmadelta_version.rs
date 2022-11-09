@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
     pub fn gpio_sd_date(&self) -> GPIO_SD_DATE_R {
-        GPIO_SD_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        GPIO_SD_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_sd_date(&mut self) -> GPIO_SD_DATE_W<0> {
         GPIO_SD_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SIGMADELTA_VERSION_SPEC {
 #[doc = "`write(|w| ..)` method takes [sigmadelta_version::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA_VERSION_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA_VERSION to value 0x0180_2260"]
 impl crate::Resettable for SIGMADELTA_VERSION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0180_2260
-    }
+    const RESET_VALUE: Self::Ux = 0x0180_2260;
 }

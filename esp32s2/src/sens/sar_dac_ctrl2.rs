@@ -115,41 +115,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - DC offset for DAC1 CW generator."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_dc1(&mut self) -> DAC_DC1_W<0> {
         DAC_DC1_W::new(self)
     }
     #[doc = "Bits 8:15 - DC offset for DAC2 CW generator."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_dc2(&mut self) -> DAC_DC2_W<8> {
         DAC_DC2_W::new(self)
     }
     #[doc = "Bits 16:17 - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_scale1(&mut self) -> DAC_SCALE1_W<16> {
         DAC_SCALE1_W::new(self)
     }
     #[doc = "Bits 18:19 - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_scale2(&mut self) -> DAC_SCALE2_W<18> {
         DAC_SCALE2_W::new(self)
     }
     #[doc = "Bits 20:21 - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_inv1(&mut self) -> DAC_INV1_W<20> {
         DAC_INV1_W::new(self)
     }
     #[doc = "Bits 22:23 - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_inv2(&mut self) -> DAC_INV2_W<22> {
         DAC_INV2_W::new(self)
     }
     #[doc = "Bit 24 - 1: select CW generator as source for PDAC1_DAC. 0: select register RT- CIO_PDAC1_DAC as source for PDAC1_DAC."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_cw_en1(&mut self) -> DAC_CW_EN1_W<24> {
         DAC_CW_EN1_W::new(self)
     }
     #[doc = "Bit 25 - 1: select CW generator as source for PDAC2_DAC. 0: select register RT- CIO_PDAC2_DAC as source for PDAC2_DAC."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_cw_en2(&mut self) -> DAC_CW_EN2_W<25> {
         DAC_CW_EN2_W::new(self)
     }
@@ -172,11 +180,10 @@ impl crate::Readable for SAR_DAC_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_dac_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_DAC_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_DAC_CTRL2 to value 0x0300_0000"]
 impl crate::Resettable for SAR_DAC_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0300_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0300_0000;
 }

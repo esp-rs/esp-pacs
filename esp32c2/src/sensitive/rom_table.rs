@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn rom_table(&mut self) -> ROM_TABLE_W<0> {
         ROM_TABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ROM_TABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_table::W](W) writer structure"]
 impl crate::Writable for ROM_TABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_TABLE to value 0"]
 impl crate::Resettable for ROM_TABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

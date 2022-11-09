@@ -98,31 +98,37 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W<0> {
         MASK_PRO_IRAM_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W<1> {
         MASK_APP_IRAM_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W<2> {
         MASK_PRO_DRAM_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W<3> {
         MASK_APP_DRAM_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn mask_ahb(&mut self) -> MASK_AHB_W<4> {
         MASK_AHB_W::new(self)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
+    #[must_use]
     pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W<5> {
         MAC_DUMP_MODE_W::new(self)
     }
@@ -145,11 +151,10 @@ impl crate::Readable for IRAM_DRAM_AHB_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [iram_dram_ahb_sel::W](W) writer structure"]
 impl crate::Writable for IRAM_DRAM_AHB_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRAM_DRAM_AHB_SEL to value 0"]
 impl crate::Resettable for IRAM_DRAM_AHB_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

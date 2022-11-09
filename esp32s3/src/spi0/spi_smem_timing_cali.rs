@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_timing_clk_ena(&mut self) -> SPI_SMEM_TIMING_CLK_ENA_W<0> {
         SPI_SMEM_TIMING_CLK_ENA_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_timing_cali(&mut self) -> SPI_SMEM_TIMING_CALI_W<1> {
         SPI_SMEM_TIMING_CALI_W::new(self)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_extra_dummy_cyclelen(&mut self) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<2> {
         SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SPI_SMEM_TIMING_CALI_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_smem_timing_cali::W](W) writer structure"]
 impl crate::Writable for SPI_SMEM_TIMING_CALI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SMEM_TIMING_CALI to value 0"]
 impl crate::Resettable for SPI_SMEM_TIMING_CALI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

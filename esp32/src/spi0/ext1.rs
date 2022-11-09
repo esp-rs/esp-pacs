@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - erase flash delay time by system clock."]
     #[inline(always)]
+    #[must_use]
     pub fn t_erase_time(&mut self) -> T_ERASE_TIME_W<0> {
         T_ERASE_TIME_W::new(self)
     }
     #[doc = "Bits 16:19 - erase flash delay time shift."]
     #[inline(always)]
+    #[must_use]
     pub fn t_erase_shift(&mut self) -> T_ERASE_SHIFT_W<16> {
         T_ERASE_SHIFT_W::new(self)
     }
     #[doc = "Bit 31 - erase flash delay enable."]
     #[inline(always)]
+    #[must_use]
     pub fn t_erase_ena(&mut self) -> T_ERASE_ENA_W<31> {
         T_ERASE_ENA_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for EXT1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext1::W](W) writer structure"]
 impl crate::Writable for EXT1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT1 to value 0x800f_0000"]
 impl crate::Resettable for EXT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x800f_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x800f_0000;
 }

@@ -47,46 +47,55 @@ pub type BBPLL_CAL_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_clr(&mut self) -> SLP_WAKEUP_INT_CLR_W<0> {
         SLP_WAKEUP_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_clr(&mut self) -> SLP_REJECT_INT_CLR_W<1> {
         SLP_REJECT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<3> {
         WDT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9 - Clear brown out interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<9> {
         BROWN_OUT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_clr(&mut self) -> MAIN_TIMER_INT_CLR_W<10> {
         MAIN_TIMER_INT_CLR_W::new(self)
     }
     #[doc = "Bit 15 - Clear super watch dog interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn swd_int_clr(&mut self) -> SWD_INT_CLR_W<15> {
         SWD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 16 - Clear RTC WDT interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_dead_int_clr(&mut self) -> XTAL32K_DEAD_INT_CLR_W<16> {
         XTAL32K_DEAD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 19 - Clear glitch det interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_det_int_clr(&mut self) -> GLITCH_DET_INT_CLR_W<19> {
         GLITCH_DET_INT_CLR_W::new(self)
     }
     #[doc = "Bit 20 - clear bbpll cal end interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn bbpll_cal_int_clr(&mut self) -> BBPLL_CAL_INT_CLR_W<20> {
         BBPLL_CAL_INT_CLR_W::new(self)
     }
@@ -105,11 +114,10 @@ impl crate::RegisterSpec for INT_CLR_RTC_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr_rtc::W](W) writer structure"]
 impl crate::Writable for INT_CLR_RTC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR_RTC to value 0"]
 impl crate::Resettable for INT_CLR_RTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

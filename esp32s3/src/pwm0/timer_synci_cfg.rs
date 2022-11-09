@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
+    #[must_use]
     pub fn timer0_syncisel(&mut self) -> TIMER0_SYNCISEL_W<0> {
         TIMER0_SYNCISEL_W::new(self)
     }
     #[doc = "Bits 3:5 - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_syncisel(&mut self) -> TIMER1_SYNCISEL_W<3> {
         TIMER1_SYNCISEL_W::new(self)
     }
     #[doc = "Bits 6:8 - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
+    #[must_use]
     pub fn timer2_syncisel(&mut self) -> TIMER2_SYNCISEL_W<6> {
         TIMER2_SYNCISEL_W::new(self)
     }
     #[doc = "Bit 9 - invert SYNC0 from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn external_synci0_invert(&mut self) -> EXTERNAL_SYNCI0_INVERT_W<9> {
         EXTERNAL_SYNCI0_INVERT_W::new(self)
     }
     #[doc = "Bit 10 - invert SYNC1 from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn external_synci1_invert(&mut self) -> EXTERNAL_SYNCI1_INVERT_W<10> {
         EXTERNAL_SYNCI1_INVERT_W::new(self)
     }
     #[doc = "Bit 11 - invert SYNC2 from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn external_synci2_invert(&mut self) -> EXTERNAL_SYNCI2_INVERT_W<11> {
         EXTERNAL_SYNCI2_INVERT_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for TIMER_SYNCI_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_synci_cfg::W](W) writer structure"]
 impl crate::Writable for TIMER_SYNCI_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER_SYNCI_CFG to value 0"]
 impl crate::Resettable for TIMER_SYNCI_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

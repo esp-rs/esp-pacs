@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output enable"]
     #[inline(always)]
+    #[must_use]
     pub fn data(&mut self) -> DATA_W<0> {
         DATA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ENABLE1_SPEC {
 #[doc = "`write(|w| ..)` method takes [enable1::W](W) writer structure"]
 impl crate::Writable for ENABLE1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ENABLE1 to value 0"]
 impl crate::Resettable for ENABLE1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

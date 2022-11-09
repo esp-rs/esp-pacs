@@ -104,36 +104,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - enable apb saradc limit the sample num"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_meas_num_limit(&mut self) -> SARADC_MEAS_NUM_LIMIT_W<0> {
         SARADC_MEAS_NUM_LIMIT_W::new(self)
     }
     #[doc = "Bits 1:8 - max conversion number"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_max_meas_num(&mut self) -> SARADC_MAX_MEAS_NUM_W<1> {
         SARADC_MAX_MEAS_NUM_W::new(self)
     }
     #[doc = "Bit 9 - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar1_inv(&mut self) -> SARADC_SAR1_INV_W<9> {
         SARADC_SAR1_INV_W::new(self)
     }
     #[doc = "Bit 10 - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar2_inv(&mut self) -> SARADC_SAR2_INV_W<10> {
         SARADC_SAR2_INV_W::new(self)
     }
     #[doc = "Bit 11 - 1: select saradc timer 0: i2s_ws trigger"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_timer_sel(&mut self) -> SARADC_TIMER_SEL_W<11> {
         SARADC_TIMER_SEL_W::new(self)
     }
     #[doc = "Bits 12:23 - to set saradc timer target"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_timer_target(&mut self) -> SARADC_TIMER_TARGET_W<12> {
         SARADC_TIMER_TARGET_W::new(self)
     }
     #[doc = "Bit 24 - to enable saradc timer trigger"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_timer_en(&mut self) -> SARADC_TIMER_EN_W<24> {
         SARADC_TIMER_EN_W::new(self)
     }
@@ -156,11 +163,10 @@ impl crate::Readable for CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl2::W](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0xa1fe"]
 impl crate::Resettable for CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa1fe
-    }
+    const RESET_VALUE: Self::Ux = 0xa1fe;
 }

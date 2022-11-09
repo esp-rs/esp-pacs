@@ -52,11 +52,13 @@ impl R {
 impl W {
     #[doc = "Bit 23 - clear touch slp channel"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<23> {
         TOUCH_SLP_CHANNEL_CLR_W::new(self)
     }
     #[doc = "Bits 24:31 - approach pads total meas times"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_approach_meas_time(&mut self) -> TOUCH_APPROACH_MEAS_TIME_W<24> {
         TOUCH_APPROACH_MEAS_TIME_W::new(self)
     }
@@ -79,11 +81,10 @@ impl crate::Readable for TOUCH_APPROACH_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_approach::W](W) writer structure"]
 impl crate::Writable for TOUCH_APPROACH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_APPROACH to value 0x5000_0000"]
 impl crate::Resettable for TOUCH_APPROACH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x5000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x5000_0000;
 }

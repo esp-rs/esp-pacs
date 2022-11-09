@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<28> {
         SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 31 - In sleep, force to use RTC to control ADC."]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<31> {
         SAR2_RTC_FORCE_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SAR_MEAS2_MUX_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_meas2_mux::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_MUX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS2_MUX to value 0"]
 impl crate::Resettable for SAR_MEAS2_MUX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

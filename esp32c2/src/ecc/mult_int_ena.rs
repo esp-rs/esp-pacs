@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn calc_done_int_ena(&mut self) -> CALC_DONE_INT_ENA_W<0> {
         CALC_DONE_INT_ENA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MULT_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [mult_int_ena::W](W) writer structure"]
 impl crate::Writable for MULT_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MULT_INT_ENA to value 0"]
 impl crate::Resettable for MULT_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

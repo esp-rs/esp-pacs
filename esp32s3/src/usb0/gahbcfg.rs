@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn glbllntrmsk(&mut self) -> GLBLLNTRMSK_W<0> {
         GLBLLNTRMSK_W::new(self)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
+    #[must_use]
     pub fn hbstlen(&mut self) -> HBSTLEN_W<1> {
         HBSTLEN_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn dmaen(&mut self) -> DMAEN_W<5> {
         DMAEN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<7> {
         NPTXFEMPLVL_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<8> {
         PTXFEMPLVL_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn remmemsupp(&mut self) -> REMMEMSUPP_W<21> {
         REMMEMSUPP_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn notialldmawrit(&mut self) -> NOTIALLDMAWRIT_W<22> {
         NOTIALLDMAWRIT_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn ahbsingle(&mut self) -> AHBSINGLE_W<23> {
         AHBSINGLE_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn invdescendianess(&mut self) -> INVDESCENDIANESS_W<24> {
         INVDESCENDIANESS_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for GAHBCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [gahbcfg::W](W) writer structure"]
 impl crate::Writable for GAHBCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GAHBCFG to value 0"]
 impl crate::Resettable for GAHBCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

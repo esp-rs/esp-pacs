@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn bad_cef_atten_para(&mut self) -> BAD_CEF_ATTEN_PARA_W<0> {
         BAD_CEF_ATTEN_PARA_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
+    #[must_use]
     pub fn bad_cef_atten_para_shift(&mut self) -> BAD_CEF_ATTEN_PARA_SHIFT_W<8> {
         BAD_CEF_ATTEN_PARA_SHIFT_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
+    #[must_use]
     pub fn bad_ola_win2_para_shift(&mut self) -> BAD_OLA_WIN2_PARA_SHIFT_W<12> {
         BAD_OLA_WIN2_PARA_SHIFT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
+    #[must_use]
     pub fn bad_ola_win2_para(&mut self) -> BAD_OLA_WIN2_PARA_W<16> {
         BAD_OLA_WIN2_PARA_W::new(self)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
+    #[must_use]
     pub fn slide_win_len(&mut self) -> SLIDE_WIN_LEN_W<24> {
         SLIDE_WIN_LEN_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for PLC_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [plc_conf1::W](W) writer structure"]
 impl crate::Writable for PLC_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLC_CONF1 to value 0xa017_8a05"]
 impl crate::Resettable for PLC_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa017_8a05
-    }
+    const RESET_VALUE: Self::Ux = 0xa017_8a05;
 }

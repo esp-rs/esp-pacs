@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
     #[inline(always)]
     pub fn cache_mmu_owner(&self) -> CACHE_MMU_OWNER_R {
-        CACHE_MMU_OWNER_R::new((self.bits & 0x00ff_ffff) as u32)
+        CACHE_MMU_OWNER_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_mmu_owner(&mut self) -> CACHE_MMU_OWNER_W<0> {
         CACHE_MMU_OWNER_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_MMU_OWNER_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_mmu_owner::W](W) writer structure"]
 impl crate::Writable for CACHE_MMU_OWNER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_MMU_OWNER to value 0"]
 impl crate::Resettable for CACHE_MMU_OWNER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

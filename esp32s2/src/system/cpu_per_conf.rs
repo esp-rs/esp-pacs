@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to select the clock frequency of CPU or CPU period."]
     #[inline(always)]
+    #[must_use]
     pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<0> {
         CPUPERIOD_SEL_W::new(self)
     }
     #[doc = "Bit 2 - This field is used to select the PLL clock frequency based on CPU period."]
     #[inline(always)]
+    #[must_use]
     pub fn pll_freq_sel(&mut self) -> PLL_FREQ_SEL_W<2> {
         PLL_FREQ_SEL_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to force on CPU wait mode. In this mode, the clock gate of CPU is turned off until any interrupts happen. This mode could also be force on via WAITI instruction."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<3> {
         CPU_WAIT_MODE_FORCE_ON_W::new(self)
     }
     #[doc = "Bits 4:7 - Sets the number of delay cycles to enter CPU wait mode after a WAITI instruction."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<4> {
         CPU_WAITI_DELAY_NUM_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for CPU_PER_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_per_conf::W](W) writer structure"]
 impl crate::Writable for CPU_PER_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_PER_CONF to value 0x0c"]
 impl crate::Resettable for CPU_PER_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0c
-    }
+    const RESET_VALUE: Self::Ux = 0x0c;
 }

@@ -103,7 +103,7 @@ impl R {
     #[doc = "Bits 0:27 - Interrupt enable bits for various invalid cache access reasons"]
     #[inline(always)]
     pub fn cache_ia_int_en(&self) -> CACHE_IA_INT_EN_R {
-        CACHE_IA_INT_EN_R::new((self.bits & 0x0fff_ffff) as u32)
+        CACHE_IA_INT_EN_R::new(self.bits & 0x0fff_ffff)
     }
     #[doc = "Bit 0 - APP CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
@@ -169,66 +169,79 @@ impl R {
 impl W {
     #[doc = "Bits 0:27 - Interrupt enable bits for various invalid cache access reasons"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_en(&mut self) -> CACHE_IA_INT_EN_W<0> {
         CACHE_IA_INT_EN_W::new(self)
     }
     #[doc = "Bit 0 - APP CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_drom0(&mut self) -> CACHE_IA_INT_APP_DROM0_W<0> {
         CACHE_IA_INT_APP_DROM0_W::new(self)
     }
     #[doc = "Bit 1 - APP CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_iram0(&mut self) -> CACHE_IA_INT_APP_IRAM0_W<1> {
         CACHE_IA_INT_APP_IRAM0_W::new(self)
     }
     #[doc = "Bit 2 - APP CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_iram1(&mut self) -> CACHE_IA_INT_APP_IRAM1_W<2> {
         CACHE_IA_INT_APP_IRAM1_W::new(self)
     }
     #[doc = "Bit 3 - APP CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_irom0(&mut self) -> CACHE_IA_INT_APP_IROM0_W<3> {
         CACHE_IA_INT_APP_IROM0_W::new(self)
     }
     #[doc = "Bit 4 - APP CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_dram1(&mut self) -> CACHE_IA_INT_APP_DRAM1_W<4> {
         CACHE_IA_INT_APP_DRAM1_W::new(self)
     }
     #[doc = "Bit 5 - APP CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_app_opposite(&mut self) -> CACHE_IA_INT_APP_OPPOSITE_W<5> {
         CACHE_IA_INT_APP_OPPOSITE_W::new(self)
     }
     #[doc = "Bit 14 - PRO CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_drom0(&mut self) -> CACHE_IA_INT_PRO_DROM0_W<14> {
         CACHE_IA_INT_PRO_DROM0_W::new(self)
     }
     #[doc = "Bit 15 - PRO CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_iram0(&mut self) -> CACHE_IA_INT_PRO_IRAM0_W<15> {
         CACHE_IA_INT_PRO_IRAM0_W::new(self)
     }
     #[doc = "Bit 16 - PRO CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_iram1(&mut self) -> CACHE_IA_INT_PRO_IRAM1_W<16> {
         CACHE_IA_INT_PRO_IRAM1_W::new(self)
     }
     #[doc = "Bit 17 - PRO CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_irom0(&mut self) -> CACHE_IA_INT_PRO_IROM0_W<17> {
         CACHE_IA_INT_PRO_IROM0_W::new(self)
     }
     #[doc = "Bit 18 - PRO CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_dram1(&mut self) -> CACHE_IA_INT_PRO_DRAM1_W<18> {
         CACHE_IA_INT_PRO_DRAM1_W::new(self)
     }
     #[doc = "Bit 19 - PRO CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ia_int_pro_opposite(&mut self) -> CACHE_IA_INT_PRO_OPPOSITE_W<19> {
         CACHE_IA_INT_PRO_OPPOSITE_W::new(self)
     }
@@ -251,11 +264,10 @@ impl crate::Readable for CACHE_IA_INT_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_ia_int_en::W](W) writer structure"]
 impl crate::Writable for CACHE_IA_INT_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_IA_INT_EN to value 0"]
 impl crate::Resettable for CACHE_IA_INT_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

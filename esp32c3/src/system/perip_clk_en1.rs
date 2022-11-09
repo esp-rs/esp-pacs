@@ -135,51 +135,61 @@ impl R {
 impl W {
     #[doc = "Bit 1 - reg_crypto_aes_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<1> {
         CRYPTO_AES_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - reg_crypto_sha_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<2> {
         CRYPTO_SHA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 3 - reg_crypto_rsa_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<3> {
         CRYPTO_RSA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 4 - reg_crypto_ds_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<4> {
         CRYPTO_DS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - reg_crypto_hmac_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<5> {
         CRYPTO_HMAC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - reg_dma_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<6> {
         DMA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 7 - reg_sdio_host_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<7> {
         SDIO_HOST_CLK_EN_W::new(self)
     }
     #[doc = "Bit 8 - reg_lcd_cam_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<8> {
         LCD_CAM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 9 - reg_uart2_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<9> {
         UART2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 10 - reg_tsens_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<10> {
         TSENS_CLK_EN_W::new(self)
     }
@@ -202,11 +212,10 @@ impl crate::Readable for PERIP_CLK_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN1 to value 0x0200"]
 impl crate::Resettable for PERIP_CLK_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

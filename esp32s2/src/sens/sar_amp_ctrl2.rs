@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_dac_xpd_fsm_idle(&mut self) -> SAR1_DAC_XPD_FSM_IDLE_W<0> {
         SAR1_DAC_XPD_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sar_amp_fsm_idle(&mut self) -> XPD_SAR_AMP_FSM_IDLE_W<1> {
         XPD_SAR_AMP_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_rst_fb_fsm_idle(&mut self) -> AMP_RST_FB_FSM_IDLE_W<2> {
         AMP_RST_FB_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_fsm_idle(&mut self) -> AMP_SHORT_REF_FSM_IDLE_W<3> {
         AMP_SHORT_REF_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_gnd_fsm_idle(&mut self) -> AMP_SHORT_REF_GND_FSM_IDLE_W<4> {
         AMP_SHORT_REF_GND_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sar_fsm_idle(&mut self) -> XPD_SAR_FSM_IDLE_W<5> {
         XPD_SAR_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_rstb_fsm_idle(&mut self) -> SAR_RSTB_FSM_IDLE_W<6> {
         SAR_RSTB_FSM_IDLE_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W<16> {
         SAR_AMP_WAIT3_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for SAR_AMP_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_amp_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_AMP_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_AMP_CTRL2 to value 0x000a_0000"]
 impl crate::Resettable for SAR_AMP_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000a_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x000a_0000;
 }

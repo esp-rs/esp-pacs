@@ -24,6 +24,7 @@ pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDRESS_SPEC, 
 impl W {
     #[doc = "Bits 0:7 - The physical address on the off-chip flash must be 8-word boundary aligned."]
     #[inline(always)]
+    #[must_use]
     pub fn address(&mut self) -> ADDRESS_W<0> {
         ADDRESS_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for ADDRESS_SPEC {
 #[doc = "`write(|w| ..)` method takes [address::W](W) writer structure"]
 impl crate::Writable for ADDRESS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADDRESS to value 0"]
 impl crate::Resettable for ADDRESS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

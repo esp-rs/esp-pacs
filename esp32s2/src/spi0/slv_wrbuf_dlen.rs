@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<24> {
         SLV_WR_BUF_DONE_W::new(self)
     }
     #[doc = "Bits 25:31 - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
     #[inline(always)]
+    #[must_use]
     pub fn conf_base_bitlen(&mut self) -> CONF_BASE_BITLEN_W<25> {
         CONF_BASE_BITLEN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SLV_WRBUF_DLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [slv_wrbuf_dlen::W](W) writer structure"]
 impl crate::Writable for SLV_WRBUF_DLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLV_WRBUF_DLEN to value 0xd800_0000"]
 impl crate::Resettable for SLV_WRBUF_DLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xd800_0000
-    }
+    const RESET_VALUE: Self::Ux = 0xd800_0000;
 }

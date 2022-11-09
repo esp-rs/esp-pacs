@@ -28,11 +28,13 @@ pub type PRO_ICACHE_ACS_CNT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - The bit is used to clear dcache counter which include DC_PRELOAD_CNT_REG, DC_PRELOAD_EVICT_CNT_REG, DC_PRELOAD_MISS_CNT_REG, DBUS0-2_ABANDON_CNT_REG, DBUS0-2_ACS_WB_CNT_REG, DBUS0-2_ACS_MISS_CNT_REG and DBUS0-2_ACS_CNT_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_acs_cnt_clr(&mut self) -> PRO_DCACHE_ACS_CNT_CLR_W<0> {
         PRO_DCACHE_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear icache counter which include IC_PRELOAD_CNT_REG, IC_PRELOAD_MISS_CNT_REG, IBUS0-2_ABANDON_CNT_REG, IBUS0-2_ACS_MISS_CNT_REG and IBUS0-2_ACS_CNT_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_acs_cnt_clr(&mut self) -> PRO_ICACHE_ACS_CNT_CLR_W<1> {
         PRO_ICACHE_ACS_CNT_CLR_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for PRO_CACHE_ACS_CNT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cache_acs_cnt_clr::W](W) writer structure"]
 impl crate::Writable for PRO_CACHE_ACS_CNT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_ACS_CNT_CLR to value 0"]
 impl crate::Resettable for PRO_CACHE_ACS_CNT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

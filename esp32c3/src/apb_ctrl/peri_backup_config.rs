@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 4:8 - reg_peri_backup_burst_limit"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_burst_limit(&mut self) -> PERI_BACKUP_BURST_LIMIT_W<4> {
         PERI_BACKUP_BURST_LIMIT_W::new(self)
     }
     #[doc = "Bits 9:18 - reg_peri_backup_tout_thres"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_tout_thres(&mut self) -> PERI_BACKUP_TOUT_THRES_W<9> {
         PERI_BACKUP_TOUT_THRES_W::new(self)
     }
     #[doc = "Bits 19:28 - reg_peri_backup_size"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W<19> {
         PERI_BACKUP_SIZE_W::new(self)
     }
     #[doc = "Bit 29 - reg_peri_backup_start"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W<29> {
         PERI_BACKUP_START_W::new(self)
     }
     #[doc = "Bit 30 - reg_peri_backup_to_mem"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W<30> {
         PERI_BACKUP_TO_MEM_W::new(self)
     }
     #[doc = "Bit 31 - reg_peri_backup_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W<31> {
         PERI_BACKUP_ENA_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for PERI_BACKUP_CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [peri_backup_config::W](W) writer structure"]
 impl crate::Writable for PERI_BACKUP_CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERI_BACKUP_CONFIG to value 0x6480"]
 impl crate::Resettable for PERI_BACKUP_CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6480
-    }
+    const RESET_VALUE: Self::Ux = 0x6480;
 }

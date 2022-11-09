@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
+    #[must_use]
     pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<8> {
         MIN_SLP_VAL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TIMER5_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer5::W](W) writer structure"]
 impl crate::Writable for TIMER5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER5 to value 0x8000"]
 impl crate::Resettable for TIMER5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

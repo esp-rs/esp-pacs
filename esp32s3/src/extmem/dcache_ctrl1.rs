@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_shut_core0_bus(&mut self) -> DCACHE_SHUT_CORE0_BUS_W<0> {
         DCACHE_SHUT_CORE0_BUS_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_shut_core1_bus(&mut self) -> DCACHE_SHUT_CORE1_BUS_W<1> {
         DCACHE_SHUT_CORE1_BUS_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for DCACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_ctrl1::W](W) writer structure"]
 impl crate::Writable for DCACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_CTRL1 to value 0x03"]
 impl crate::Resettable for DCACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

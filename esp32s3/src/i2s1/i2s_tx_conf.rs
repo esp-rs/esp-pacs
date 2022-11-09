@@ -215,101 +215,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset transmitter"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_reset(&mut self) -> I2S_TX_RESET_W<0> {
         I2S_TX_RESET_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset Tx AFIFO"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_fifo_reset(&mut self) -> I2S_TX_FIFO_RESET_W<1> {
         I2S_TX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to start transmitting data"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_start(&mut self) -> I2S_TX_START_W<2> {
         I2S_TX_START_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable slave transmitter mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_slave_mod(&mut self) -> I2S_TX_SLAVE_MOD_W<3> {
         I2S_TX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable transmitter in mono mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_mono(&mut self) -> I2S_TX_MONO_W<5> {
         I2S_TX_MONO_W::new(self)
     }
     #[doc = "Bit 6 - 1: The value of Left channel data is equal to the value of right channel data in I2S TX mono mode or TDM channel select mode. 0: The invalid channel data is reg_i2s_single_data in I2S TX mono mode or TDM channel select mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_chan_equal(&mut self) -> I2S_TX_CHAN_EQUAL_W<6> {
         I2S_TX_CHAN_EQUAL_W::new(self)
     }
     #[doc = "Bit 7 - I2S Tx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_big_endian(&mut self) -> I2S_TX_BIG_ENDIAN_W<7> {
         I2S_TX_BIG_ENDIAN_W::new(self)
     }
     #[doc = "Bit 8 - Set 1 to update I2S TX registers from APB clock domain to I2S TX clock domain. This bit will be cleared by hardware after update register done."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_update(&mut self) -> I2S_TX_UPDATE_W<8> {
         I2S_TX_UPDATE_W::new(self)
     }
     #[doc = "Bit 9 - 1: The first channel data value is valid in I2S TX mono mode. 0: The second channel data value is valid in I2S TX mono mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_mono_fst_vld(&mut self) -> I2S_TX_MONO_FST_VLD_W<9> {
         I2S_TX_MONO_FST_VLD_W::new(self)
     }
     #[doc = "Bits 10:11 - I2S TX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_pcm_conf(&mut self) -> I2S_TX_PCM_CONF_W<10> {
         I2S_TX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to bypass Compress/Decompress module for transmitted data."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_pcm_bypass(&mut self) -> I2S_TX_PCM_BYPASS_W<12> {
         I2S_TX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to stop disable output BCK signal and WS signal when tx FIFO is emtpy"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_stop_en(&mut self) -> I2S_TX_STOP_EN_W<13> {
         I2S_TX_STOP_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: I2S TX left alignment mode. 0: I2S TX right alignment mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_left_align(&mut self) -> I2S_TX_LEFT_ALIGN_W<15> {
         I2S_TX_LEFT_ALIGN_W::new(self)
     }
     #[doc = "Bit 16 - 1: Sent 32 bits in 24 channel bits mode. 0: Sent 24 bits in 24 channel bits mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_24_fill_en(&mut self) -> I2S_TX_24_FILL_EN_W<16> {
         I2S_TX_24_FILL_EN_W::new(self)
     }
     #[doc = "Bit 17 - 0: WS should be 0 when sending left channel data, and WS is 1in right channel. 1: WS should be 1 when sending left channel data, and WS is 0in right channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_ws_idle_pol(&mut self) -> I2S_TX_WS_IDLE_POL_W<17> {
         I2S_TX_WS_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 18 - I2S Tx bit endian. 1:small endian, the LSB is sent first. 0:big endian, the MSB is sent first."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_bit_order(&mut self) -> I2S_TX_BIT_ORDER_W<18> {
         I2S_TX_BIT_ORDER_W::new(self)
     }
     #[doc = "Bit 19 - 1: Enable I2S TDM Tx mode . 0: Disable."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_tdm_en(&mut self) -> I2S_TX_TDM_EN_W<19> {
         I2S_TX_TDM_EN_W::new(self)
     }
     #[doc = "Bit 20 - 1: Enable I2S PDM Tx mode . 0: Disable."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_pdm_en(&mut self) -> I2S_TX_PDM_EN_W<20> {
         I2S_TX_PDM_EN_W::new(self)
     }
     #[doc = "Bits 24:26 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_chan_mod(&mut self) -> I2S_TX_CHAN_MOD_W<24> {
         I2S_TX_CHAN_MOD_W::new(self)
     }
     #[doc = "Bit 27 - Enable signal loop back mode with transmitter module and receiver module sharing the same WS and BCK signals."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_sig_loopback(&mut self) -> I2S_SIG_LOOPBACK_W<27> {
         I2S_SIG_LOOPBACK_W::new(self)
     }
@@ -332,11 +352,10 @@ impl crate::Readable for I2S_TX_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_tx_conf::W](W) writer structure"]
 impl crate::Writable for I2S_TX_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_TX_CONF to value 0xb200"]
 impl crate::Resettable for I2S_TX_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xb200
-    }
+    const RESET_VALUE: Self::Ux = 0xb200;
 }

@@ -135,6 +135,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_0(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_W<0> {
@@ -142,6 +143,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_1(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_W<2> {
@@ -149,6 +151,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_2(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_W<4> {
@@ -156,6 +159,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_3(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_3_W<6> {
@@ -163,6 +167,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_4(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_4_W<8> {
@@ -170,6 +175,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_5(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_5_W<10> {
@@ -177,6 +183,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_6(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_6_W<12> {
@@ -184,6 +191,7 @@ impl W {
     }
     #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_splitaddr(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_W<14> {
@@ -208,11 +216,10 @@ impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_4::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4 to value 0"]
 impl crate::Resettable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -24,6 +24,7 @@ pub type SET_ONE_BLOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, ONE_BLOCK_
 impl W {
     #[doc = "Bit 0 - Set this bit to show no padding is required."]
     #[inline(always)]
+    #[must_use]
     pub fn set_one_block(&mut self) -> SET_ONE_BLOCK_W<0> {
         SET_ONE_BLOCK_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for ONE_BLOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [one_block::W](W) writer structure"]
 impl crate::Writable for ONE_BLOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ONE_BLOCK to value 0"]
 impl crate::Resettable for ONE_BLOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -179,6 +179,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_1_uart"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_uart(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UART_W<0> {
@@ -186,6 +187,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - core_0_pif_pms_constrain_world_1_g0spi_1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_g0spi_1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_G0SPI_1_W<2> {
@@ -193,6 +195,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_g0spi_0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_g0spi_0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_G0SPI_0_W<4> {
@@ -200,6 +203,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_1_gpio"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_gpio(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_GPIO_W<6> {
@@ -207,6 +211,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - core_0_pif_pms_constrain_world_1_fe2"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_fe2(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_FE2_W<8> {
@@ -214,6 +219,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_1_fe"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_fe(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_FE_W<10> {
@@ -221,6 +227,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - core_0_pif_pms_constrain_world_1_timer"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_timer(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMER_W<12> {
@@ -228,6 +235,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_1_rtc"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_rtc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RTC_W<14> {
@@ -235,6 +243,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_1_io_mux"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_io_mux(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_IO_MUX_W<16> {
@@ -242,6 +251,7 @@ impl W {
     }
     #[doc = "Bits 18:19 - core_0_pif_pms_constrain_world_1_wdg"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_wdg(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WDG_W<18> {
@@ -249,6 +259,7 @@ impl W {
     }
     #[doc = "Bits 24:25 - core_0_pif_pms_constrain_world_1_misc"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_misc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_MISC_W<24> {
@@ -256,6 +267,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_i2c"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_i2c(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_W<26> {
@@ -263,6 +275,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_1_uart1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_uart1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UART1_W<30> {
@@ -287,11 +300,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_5_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_5::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_5 to value 0xcf0f_ffff"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xcf0f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xcf0f_ffff;
 }

@@ -51,11 +51,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_wdt_divcnt_rst."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_divcnt_rst(&mut self) -> WDT_DIVCNT_RST_W<0> {
         WDT_DIVCNT_RST_W::new(self)
     }
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<16> {
         WDT_CLK_PRESCALE_W::new(self)
     }
@@ -78,11 +80,10 @@ impl crate::Readable for WDTCONFIG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig1::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG1 to value 0x0001_0000"]
 impl crate::Resettable for WDTCONFIG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0000;
 }

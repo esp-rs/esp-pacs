@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure thr_h_lim value for unit7."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_h_lim_u7(&mut self) -> CNT_H_LIM_U7_W<0> {
         CNT_H_LIM_U7_W::new(self)
     }
     #[doc = "Bits 16:31 - This register is used to confiugre thr_l_lim value for unit7."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_l_lim_u7(&mut self) -> CNT_L_LIM_U7_W<16> {
         CNT_L_LIM_U7_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for U7_CONF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [u7_conf2::W](W) writer structure"]
 impl crate::Writable for U7_CONF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets U7_CONF2 to value 0"]
 impl crate::Resettable for U7_CONF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

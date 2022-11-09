@@ -104,36 +104,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<0> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<2> {
         ADC2_THRES_MODE_W::new(self)
     }
     #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<3> {
         ADC1_THRES_MODE_W::new(self)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_thres(&mut self) -> ADC2_THRES_W<4> {
         ADC2_THRES_W::new(self)
     }
     #[doc = "Bits 17:29 - ADC1 threshold."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_thres(&mut self) -> ADC1_THRES_W<17> {
         ADC1_THRES_W::new(self)
     }
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<30> {
         ADC2_THRES_EN_W::new(self)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<31> {
         ADC1_THRES_EN_W::new(self)
     }
@@ -156,11 +163,10 @@ impl crate::Readable for THRES_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [thres_ctrl::W](W) writer structure"]
 impl crate::Writable for THRES_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets THRES_CTRL to value 0"]
 impl crate::Resettable for THRES_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

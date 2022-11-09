@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - when input pulse width is lower than this value, the pulse is ignored."]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<0> {
         GLITCH_FILT_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to enable Rx signal filter."]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_filt_en(&mut self) -> GLITCH_FILT_EN_W<8> {
         GLITCH_FILT_EN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for RX_FILT_SPEC {
 #[doc = "`write(|w| ..)` method takes [rx_filt::W](W) writer structure"]
 impl crate::Writable for RX_FILT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RX_FILT to value 0x08"]
 impl crate::Resettable for RX_FILT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

@@ -120,6 +120,7 @@ impl R {
 impl W {
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_opposite(
         &mut self,
     ) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<9> {
@@ -127,26 +128,31 @@ impl W {
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_dram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<10> {
         PRO_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_irom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<11> {
         PRO_CPU_DISABLED_CACHE_IA_IROM0_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_iram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<12> {
         PRO_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_iram0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<13> {
         PRO_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_disabled_cache_ia_drom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<14> {
         PRO_CPU_DISABLED_CACHE_IA_DROM0_W::new(self)
     }
@@ -169,11 +175,10 @@ impl crate::Readable for PRO_DCACHE_DBUG3_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dcache_dbug3::W](W) writer structure"]
 impl crate::Writable for PRO_DCACHE_DBUG3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DCACHE_DBUG3 to value 0"]
 impl crate::Resettable for PRO_DCACHE_DBUG3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

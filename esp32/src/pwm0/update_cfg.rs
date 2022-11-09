@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn global_up_en(&mut self) -> GLOBAL_UP_EN_W<0> {
         GLOBAL_UP_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn global_force_up(&mut self) -> GLOBAL_FORCE_UP_W<1> {
         GLOBAL_FORCE_UP_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn op0_up_en(&mut self) -> OP0_UP_EN_W<2> {
         OP0_UP_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn op0_force_up(&mut self) -> OP0_FORCE_UP_W<3> {
         OP0_FORCE_UP_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn op1_up_en(&mut self) -> OP1_UP_EN_W<4> {
         OP1_UP_EN_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn op1_force_up(&mut self) -> OP1_FORCE_UP_W<5> {
         OP1_FORCE_UP_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn op2_up_en(&mut self) -> OP2_UP_EN_W<6> {
         OP2_UP_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn op2_force_up(&mut self) -> OP2_FORCE_UP_W<7> {
         OP2_FORCE_UP_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for UPDATE_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [update_cfg::W](W) writer structure"]
 impl crate::Writable for UPDATE_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UPDATE_CFG to value 0x55"]
 impl crate::Resettable for UPDATE_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x55
-    }
+    const RESET_VALUE: Self::Ux = 0x55;
 }

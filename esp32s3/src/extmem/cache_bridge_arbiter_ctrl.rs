@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn alloc_wb_hold_arbiter(&mut self) -> ALLOC_WB_HOLD_ARBITER_W<0> {
         ALLOC_WB_HOLD_ARBITER_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_BRIDGE_ARBITER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_bridge_arbiter_ctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_BRIDGE_ARBITER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_BRIDGE_ARBITER_CTRL to value 0"]
 impl crate::Resettable for CACHE_BRIDGE_ARBITER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - efuse operation code"]
     #[inline(always)]
+    #[must_use]
     pub fn op_code(&mut self) -> OP_CODE_W<0> {
         OP_CODE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn force_no_wr_rd_dis(&mut self) -> FORCE_NO_WR_RD_DIS_W<16> {
         FORCE_NO_WR_RD_DIS_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF to value 0x0001_0000"]
 impl crate::Resettable for CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0000;
 }

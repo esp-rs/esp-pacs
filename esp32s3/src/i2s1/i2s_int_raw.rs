@@ -54,8 +54,5 @@ impl crate::Readable for I2S_INT_RAW_SPEC {
 }
 #[doc = "`reset()` method sets I2S_INT_RAW to value 0"]
 impl crate::Resettable for I2S_INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

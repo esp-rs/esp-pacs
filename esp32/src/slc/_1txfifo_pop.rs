@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_txfifo_pop(&mut self) -> SLC1_TXFIFO_POP_W<16> {
         SLC1_TXFIFO_POP_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for _1TXFIFO_POP_SPEC {
 #[doc = "`write(|w| ..)` method takes [_1txfifo_pop::W](W) writer structure"]
 impl crate::Writable for _1TXFIFO_POP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets _1TXFIFO_POP to value 0"]
 impl crate::Resettable for _1TXFIFO_POP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

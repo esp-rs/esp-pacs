@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_sd_in_dm(&mut self) -> I2S_RX_SD_IN_DM_W<0> {
         I2S_RX_SD_IN_DM_W::new(self)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_ws_out_dm(&mut self) -> I2S_RX_WS_OUT_DM_W<16> {
         I2S_RX_WS_OUT_DM_W::new(self)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_bck_out_dm(&mut self) -> I2S_RX_BCK_OUT_DM_W<20> {
         I2S_RX_BCK_OUT_DM_W::new(self)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_ws_in_dm(&mut self) -> I2S_RX_WS_IN_DM_W<24> {
         I2S_RX_WS_IN_DM_W::new(self)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_bck_in_dm(&mut self) -> I2S_RX_BCK_IN_DM_W<28> {
         I2S_RX_BCK_IN_DM_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for I2S_RX_TIMING_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_timing::W](W) writer structure"]
 impl crate::Writable for I2S_RX_TIMING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_TIMING to value 0"]
 impl crate::Resettable for I2S_RX_TIMING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

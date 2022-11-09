@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Stores the Block Number of plaintext or cipertext when the AES Accelerator operates under the DMA-AES working mode. For details, see Section 1.5.4."]
     #[inline(always)]
+    #[must_use]
     pub fn block_num(&mut self) -> BLOCK_NUM_W<0> {
         BLOCK_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BLOCK_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [block_num::W](W) writer structure"]
 impl crate::Writable for BLOCK_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLOCK_NUM to value 0"]
 impl crate::Resettable for BLOCK_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

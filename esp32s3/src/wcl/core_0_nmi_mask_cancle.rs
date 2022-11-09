@@ -25,6 +25,7 @@ pub type CORE_0_NMI_MASK_CANCEL_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:31 - this field is used to cancel NMI mask disable function."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_nmi_mask_cancel(&mut self) -> CORE_0_NMI_MASK_CANCEL_W<0> {
         CORE_0_NMI_MASK_CANCEL_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for CORE_0_NMI_MASK_CANCLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_nmi_mask_cancle::W](W) writer structure"]
 impl crate::Writable for CORE_0_NMI_MASK_CANCLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_0_NMI_MASK_CANCLE to value 0"]
 impl crate::Resettable for CORE_0_NMI_MASK_CANCLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

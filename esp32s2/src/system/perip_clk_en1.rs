@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set this bit to enable clock of cryptography AES."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<1> {
         CRYPTO_AES_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable clock of cryptography SHA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<2> {
         CRYPTO_SHA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable clock of cryptography RSA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<3> {
         CRYPTO_RSA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable clock of cryptography Digital Signature."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<4> {
         CRYPTO_DS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable clock of cryptography HMAC."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<5> {
         CRYPTO_HMAC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable clock of cryptography DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_dma_clk_en(&mut self) -> CRYPTO_DMA_CLK_EN_W<6> {
         CRYPTO_DMA_CLK_EN_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for PERIP_CLK_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN1 to value 0"]
 impl crate::Resettable for PERIP_CLK_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

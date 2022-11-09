@@ -159,51 +159,61 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mode(&mut self) -> APP_CACHE_MODE_W<2> {
         APP_CACHE_MODE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_enable(&mut self) -> APP_CACHE_ENABLE_W<3> {
         APP_CACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_flush_ena(&mut self) -> APP_CACHE_FLUSH_ENA_W<4> {
         APP_CACHE_FLUSH_ENA_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_lock_0_en(&mut self) -> APP_CACHE_LOCK_0_EN_W<6> {
         APP_CACHE_LOCK_0_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_lock_1_en(&mut self) -> APP_CACHE_LOCK_1_EN_W<7> {
         APP_CACHE_LOCK_1_EN_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_lock_2_en(&mut self) -> APP_CACHE_LOCK_2_EN_W<8> {
         APP_CACHE_LOCK_2_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_lock_3_en(&mut self) -> APP_CACHE_LOCK_3_EN_W<9> {
         APP_CACHE_LOCK_3_EN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn app_single_iram_ena(&mut self) -> APP_SINGLE_IRAM_ENA_W<10> {
         APP_SINGLE_IRAM_ENA_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn app_dram_split(&mut self) -> APP_DRAM_SPLIT_W<11> {
         APP_DRAM_SPLIT_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn app_dram_hl(&mut self) -> APP_DRAM_HL_W<14> {
         APP_DRAM_HL_W::new(self)
     }
@@ -226,11 +236,10 @@ impl crate::Readable for APP_CACHE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_cache_ctrl::W](W) writer structure"]
 impl crate::Writable for APP_CACHE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_CACHE_CTRL to value 0x10"]
 impl crate::Resettable for APP_CACHE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

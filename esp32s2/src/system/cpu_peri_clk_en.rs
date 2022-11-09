@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 7 - Set this bit to enable clock of DEDICATED GPIO module."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en_dedicated_gpio(&mut self) -> CLK_EN_DEDICATED_GPIO_W<7> {
         CLK_EN_DEDICATED_GPIO_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CPU_PERI_CLK_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_peri_clk_en::W](W) writer structure"]
 impl crate::Writable for CPU_PERI_CLK_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_PERI_CLK_EN to value 0"]
 impl crate::Resettable for CPU_PERI_CLK_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -78,26 +78,31 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn cap1_en(&mut self) -> CAP1_EN_W<0> {
         CAP1_EN_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
+    #[must_use]
     pub fn cap1_mode(&mut self) -> CAP1_MODE_W<1> {
         CAP1_MODE_W::new(self)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
+    #[must_use]
     pub fn cap1_prescale(&mut self) -> CAP1_PRESCALE_W<3> {
         CAP1_PRESCALE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn cap1_in_invert(&mut self) -> CAP1_IN_INVERT_W<11> {
         CAP1_IN_INVERT_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn cap1_sw(&mut self) -> CAP1_SW_W<12> {
         CAP1_SW_W::new(self)
     }
@@ -120,11 +125,10 @@ impl crate::Readable for CAP_CH1_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cap_ch1_cfg::W](W) writer structure"]
 impl crate::Writable for CAP_CH1_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAP_CH1_CFG to value 0"]
 impl crate::Resettable for CAP_CH1_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

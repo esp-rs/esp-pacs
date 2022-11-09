@@ -214,96 +214,115 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<0> {
         RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<1> {
         TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - This is the enable bit for parity_err_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn parity_err_int_ena(&mut self) -> PARITY_ERR_INT_ENA_W<2> {
         PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - This is the enable bit for frm_err_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn frm_err_int_ena(&mut self) -> FRM_ERR_INT_ENA_W<3> {
         FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - This is the enable bit for rxfifo_ovf_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<4> {
         RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - This is the enable bit for dsr_chg_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn dsr_chg_int_ena(&mut self) -> DSR_CHG_INT_ENA_W<5> {
         DSR_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - This is the enable bit for cts_chg_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn cts_chg_int_ena(&mut self) -> CTS_CHG_INT_ENA_W<6> {
         CTS_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - This is the enable bit for brk_det_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn brk_det_int_ena(&mut self) -> BRK_DET_INT_ENA_W<7> {
         BRK_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - This is the enable bit for rxfifo_tout_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_tout_int_ena(&mut self) -> RXFIFO_TOUT_INT_ENA_W<8> {
         RXFIFO_TOUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - This is the enable bit for sw_xon_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_xon_int_ena(&mut self) -> SW_XON_INT_ENA_W<9> {
         SW_XON_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - This is the enable bit for sw_xoff_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_xoff_int_ena(&mut self) -> SW_XOFF_INT_ENA_W<10> {
         SW_XOFF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - This is the enable bit for glitch_det_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W<11> {
         GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - This is the enable bit for tx_brk_done_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_brk_done_int_ena(&mut self) -> TX_BRK_DONE_INT_ENA_W<12> {
         TX_BRK_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - This is the enable bit for tx_brk_idle_done_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_brk_idle_done_int_ena(&mut self) -> TX_BRK_IDLE_DONE_INT_ENA_W<13> {
         TX_BRK_IDLE_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - This is the enable bit for tx_done_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W<14> {
         TX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - This is the enable bit for rs485_parity_err_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_parity_err_int_ena(&mut self) -> RS485_PARITY_ERR_INT_ENA_W<15> {
         RS485_PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - This is the enable bit for rs485_parity_err_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_frm_err_int_ena(&mut self) -> RS485_FRM_ERR_INT_ENA_W<16> {
         RS485_FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17 - This is the enable bit for rs485_clash_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_clash_int_ena(&mut self) -> RS485_CLASH_INT_ENA_W<17> {
         RS485_CLASH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18 - This is the enable bit for at_cmd_char_det_int_st register."]
     #[inline(always)]
+    #[must_use]
     pub fn at_cmd_char_det_int_ena(&mut self) -> AT_CMD_CHAR_DET_INT_ENA_W<18> {
         AT_CMD_CHAR_DET_INT_ENA_W::new(self)
     }
@@ -326,11 +345,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

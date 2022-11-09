@@ -89,8 +89,5 @@ impl crate::Readable for DOUT_MODE_SPEC {
 }
 #[doc = "`reset()` method sets DOUT_MODE to value 0"]
 impl crate::Resettable for DOUT_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

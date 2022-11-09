@@ -115,36 +115,43 @@ impl R {
 impl W {
     #[doc = "Bit 3 - rtc control pwdet enable"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_cal_en(&mut self) -> SAR2_PWDET_CAL_EN_W<3> {
         SAR2_PWDET_CAL_EN_W::new(self)
     }
     #[doc = "Bit 4 - rtc control pkdet enable"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pkdet_cal_en(&mut self) -> SAR2_PKDET_CAL_EN_W<4> {
         SAR2_PKDET_CAL_EN_W::new(self)
     }
     #[doc = "Bit 5 - SAR2_EN_TEST"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<5> {
         SAR2_EN_TEST_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W<6> {
         SAR2_RSTB_FORCE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_standby_wait(&mut self) -> SAR2_STANDBY_WAIT_W<8> {
         SAR2_STANDBY_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W<16> {
         SAR2_RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<24> {
         SAR2_XPD_WAIT_W::new(self)
     }
@@ -167,11 +174,10 @@ impl crate::Readable for SAR_MEAS2_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_meas2_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS2_CTRL1 to value 0x0702_0200"]
 impl crate::Resettable for SAR_MEAS2_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0702_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0702_0200;
 }

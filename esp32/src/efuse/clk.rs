@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - efuse timing configure"]
     #[inline(always)]
+    #[must_use]
     pub fn sel0(&mut self) -> SEL0_W<0> {
         SEL0_W::new(self)
     }
     #[doc = "Bits 8:15 - efuse timing configure"]
     #[inline(always)]
+    #[must_use]
     pub fn sel1(&mut self) -> SEL1_W<8> {
         SEL1_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<16> {
         EN_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for CLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk::W](W) writer structure"]
 impl crate::Writable for CLK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK to value 0x4052"]
 impl crate::Resettable for CLK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4052
-    }
+    const RESET_VALUE: Self::Ux = 0x4052;
 }

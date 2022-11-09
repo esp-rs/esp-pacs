@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
+    #[must_use]
     pub fn tz0_clr_ost(&mut self) -> TZ0_CLR_OST_W<0> {
         TZ0_CLR_OST_W::new(self)
     }
     #[doc = "Bits 1:2 - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
     #[inline(always)]
+    #[must_use]
     pub fn tz0_cbcpulse(&mut self) -> TZ0_CBCPULSE_W<1> {
         TZ0_CBCPULSE_W::new(self)
     }
     #[doc = "Bit 3 - a toggle trigger a cycle-by-cycle mode action"]
     #[inline(always)]
+    #[must_use]
     pub fn tz0_force_cbc(&mut self) -> TZ0_FORCE_CBC_W<3> {
         TZ0_FORCE_CBC_W::new(self)
     }
     #[doc = "Bit 4 - a toggle (software negate its value) triggers a one-shot mode action"]
     #[inline(always)]
+    #[must_use]
     pub fn tz0_force_ost(&mut self) -> TZ0_FORCE_OST_W<4> {
         TZ0_FORCE_OST_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for TZ0_CFG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [tz0_cfg1::W](W) writer structure"]
 impl crate::Writable for TZ0_CFG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TZ0_CFG1 to value 0"]
 impl crate::Resettable for TZ0_CFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

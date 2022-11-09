@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - select the digital pad hold value."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W<0> {
         DIG_PAD_HOLD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DIG_PAD_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_pad_hold::W](W) writer structure"]
 impl crate::Writable for DIG_PAD_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_PAD_HOLD to value 0"]
 impl crate::Resettable for DIG_PAD_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

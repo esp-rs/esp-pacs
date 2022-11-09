@@ -124,46 +124,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - The water mark threshold of RX FIFO in non-FIFO mode. When I2C_FIFO_PRT_EN is 1 and RX FIFO counter is bigger than I2C_RXFIFO_WM_THRHD\\[4:0\\], I2C_RXFIFO_WM_INT_RAW bit will be valid."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<0> {
         RXFIFO_WM_THRHD_W::new(self)
     }
     #[doc = "Bits 5:9 - The water mark threshold of TX FIFO in non-FIFO mode. When I2C_FIFO_PRT_EN is 1 and TX FIFO counter is smaller than I2C_TXFIFO_WM_THRHD\\[4:0\\], I2C_TXFIFO_WM_INT_RAW bit will be valid."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<5> {
         TXFIFO_WM_THRHD_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable APB non-FIFO mode."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<10> {
         NONFIFO_EN_W::new(self)
     }
     #[doc = "Bit 11 - When this bit is set to 1, the byte received after the I2C address byte represents the offset address in the I2C Slave RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<11> {
         FIFO_ADDR_CFG_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to reset RX FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<12> {
         RX_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to reset TX FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<13> {
         TX_FIFO_RST_W::new(self)
     }
     #[doc = "Bits 14:19 - When I2C receives more than I2C_NONFIFO_RX_THRES bytes of data, it will generate an I2C_RXFIFO_UDF_INT interrupt and update the current offset address of the received data."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<14> {
         NONFIFO_RX_THRES_W::new(self)
     }
     #[doc = "Bits 20:25 - When I2C sends more than I2C_NONFIFO_TX_THRES bytes of data, it will generate an I2C_TXFIFO_OVF_INT interrupt and update the current offset address of the sent data."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<20> {
         NONFIFO_TX_THRES_W::new(self)
     }
     #[doc = "Bit 26 - The control enable bit of FIFO pointer in non-FIFO mode. This bit controls the valid bits and the interrupts of TX/RX FIFO overflow, underflow, full and empty."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<26> {
         FIFO_PRT_EN_W::new(self)
     }
@@ -186,11 +195,10 @@ impl crate::Readable for FIFO_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_CONF to value 0x0555_408b"]
 impl crate::Resettable for FIFO_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0555_408b
-    }
+    const RESET_VALUE: Self::Ux = 0x0555_408b;
 }

@@ -55,7 +55,7 @@ impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]
     pub fn h_xfersize5(&self) -> H_XFERSIZE5_R {
-        H_XFERSIZE5_R::new((self.bits & 0x0007_ffff) as u32)
+        H_XFERSIZE5_R::new(self.bits & 0x0007_ffff)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:18"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xfersize5(&mut self) -> H_XFERSIZE5_W<0> {
         H_XFERSIZE5_W::new(self)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
+    #[must_use]
     pub fn h_pktcnt5(&mut self) -> H_PKTCNT5_W<19> {
         H_PKTCNT5_W::new(self)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
+    #[must_use]
     pub fn h_pid5(&mut self) -> H_PID5_W<29> {
         H_PID5_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn h_dopng5(&mut self) -> H_DOPNG5_W<31> {
         H_DOPNG5_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for HCTSIZ5_SPEC {
 #[doc = "`write(|w| ..)` method takes [hctsiz5::W](W) writer structure"]
 impl crate::Writable for HCTSIZ5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCTSIZ5 to value 0"]
 impl crate::Resettable for HCTSIZ5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

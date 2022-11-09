@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_icache_usage(&mut self) -> INTERNAL_SRAM_ICACHE_USAGE_W<0> {
         INTERNAL_SRAM_ICACHE_USAGE_W::new(self)
     }
     #[doc = "Bits 2:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_dcache_usage(&mut self) -> INTERNAL_SRAM_DCACHE_USAGE_W<2> {
         INTERNAL_SRAM_DCACHE_USAGE_W::new(self)
     }
     #[doc = "Bits 4:10 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_cpu_usage(&mut self) -> INTERNAL_SRAM_CPU_USAGE_W<4> {
         INTERNAL_SRAM_CPU_USAGE_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for INTERNAL_SRAM_USAGE_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [internal_sram_usage_1::W](W) writer structure"]
 impl crate::Writable for INTERNAL_SRAM_USAGE_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERNAL_SRAM_USAGE_1 to value 0x07ff"]
 impl crate::Resettable for INTERNAL_SRAM_USAGE_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07ff
-    }
+    const RESET_VALUE: Self::Ux = 0x07ff;
 }

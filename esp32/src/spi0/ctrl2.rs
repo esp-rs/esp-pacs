@@ -130,51 +130,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
     #[inline(always)]
+    #[must_use]
     pub fn setup_time(&mut self) -> SETUP_TIME_W<0> {
         SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 4:7 - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
     #[inline(always)]
+    #[must_use]
     pub fn hold_time(&mut self) -> HOLD_TIME_W<4> {
         HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 8:11 - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_low_mode(&mut self) -> CK_OUT_LOW_MODE_W<8> {
         CK_OUT_LOW_MODE_W::new(self)
     }
     #[doc = "Bits 12:15 - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_high_mode(&mut self) -> CK_OUT_HIGH_MODE_W<12> {
         CK_OUT_HIGH_MODE_W::new(self)
     }
     #[doc = "Bits 16:17 - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn miso_delay_mode(&mut self) -> MISO_DELAY_MODE_W<16> {
         MISO_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 18:20 - MISO signals are delayed by system clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn miso_delay_num(&mut self) -> MISO_DELAY_NUM_W<18> {
         MISO_DELAY_NUM_W::new(self)
     }
     #[doc = "Bits 21:22 - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn mosi_delay_mode(&mut self) -> MOSI_DELAY_MODE_W<21> {
         MOSI_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 23:25 - MOSI signals are delayed by system clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn mosi_delay_num(&mut self) -> MOSI_DELAY_NUM_W<23> {
         MOSI_DELAY_NUM_W::new(self)
     }
     #[doc = "Bits 26:27 - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn cs_delay_mode(&mut self) -> CS_DELAY_MODE_W<26> {
         CS_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 28:31 - spi_cs signal is delayed by system clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn cs_delay_num(&mut self) -> CS_DELAY_NUM_W<28> {
         CS_DELAY_NUM_W::new(self)
     }
@@ -197,11 +207,10 @@ impl crate::Readable for CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl2::W](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0x11"]
 impl crate::Resettable for CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x11
-    }
+    const RESET_VALUE: Self::Ux = 0x11;
 }

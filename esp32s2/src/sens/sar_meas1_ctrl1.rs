@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bit 22 - SAR ADC software reset."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_saradc_reset(&mut self) -> RTC_SARADC_RESET_W<22> {
         RTC_SARADC_RESET_W::new(self)
     }
     #[doc = "Bit 23 - Enable bit of SAR ADC clock gate."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_saradc_clkgate_en(&mut self) -> RTC_SARADC_CLKGATE_EN_W<23> {
         RTC_SARADC_CLKGATE_EN_W::new(self)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W<24> {
         FORCE_XPD_AMP_W::new(self)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_rst_fb_force(&mut self) -> AMP_RST_FB_FORCE_W<26> {
         AMP_RST_FB_FORCE_W::new(self)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_force(&mut self) -> AMP_SHORT_REF_FORCE_W<28> {
         AMP_SHORT_REF_FORCE_W::new(self)
     }
     #[doc = "Bits 30:31"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_gnd_force(&mut self) -> AMP_SHORT_REF_GND_FORCE_W<30> {
         AMP_SHORT_REF_GND_FORCE_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for SAR_MEAS1_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_meas1_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS1_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS1_CTRL1 to value 0"]
 impl crate::Resettable for SAR_MEAS1_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

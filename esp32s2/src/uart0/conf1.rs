@@ -86,26 +86,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - An UART_RXFIFO_FULL_INT interrupt is generated when the receiver receives more data than this register’s value."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<0> {
         RXFIFO_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 9:17 - An UART_TXFIFO_EMPTY_INT interrupt is generated when the number of data bytes in TX FIFO is less than this register's value."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<9> {
         TXFIFO_EMPTY_THRHD_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<29> {
         RX_TOUT_FLOW_DIS_W::new(self)
     }
     #[doc = "Bit 30 - This is the flow enable bit for UART receiver. 1: Choose software flow control with configuring sw_rts signal. 0: Disable software flow control."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<30> {
         RX_FLOW_EN_W::new(self)
     }
     #[doc = "Bit 31 - This is the enable bit for UART receiver's timeout function."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<31> {
         RX_TOUT_EN_W::new(self)
     }
@@ -128,11 +133,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0xc060"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xc060
-    }
+    const RESET_VALUE: Self::Ux = 0xc060;
 }

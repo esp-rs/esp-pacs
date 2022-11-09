@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn rom_power_up(&mut self) -> ROM_POWER_UP_W<0> {
         ROM_POWER_UP_W::new(self)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn sram_power_up(&mut self) -> SRAM_POWER_UP_W<3> {
         SRAM_POWER_UP_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for MEM_POWER_UP_SPEC {
 #[doc = "`write(|w| ..)` method takes [mem_power_up::W](W) writer structure"]
 impl crate::Writable for MEM_POWER_UP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MEM_POWER_UP to value 0x3fff"]
 impl crate::Resettable for MEM_POWER_UP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3fff
-    }
+    const RESET_VALUE: Self::Ux = 0x3fff;
 }

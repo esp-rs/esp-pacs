@@ -183,76 +183,91 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn filter_thres_u0(&mut self) -> FILTER_THRES_U0_W<0> {
         FILTER_THRES_U0_W::new(self)
     }
     #[doc = "Bit 10 - This is the enable bit for unit %s's input filter."]
     #[inline(always)]
+    #[must_use]
     pub fn filter_en_u0(&mut self) -> FILTER_EN_U0_W<10> {
         FILTER_EN_U0_W::new(self)
     }
     #[doc = "Bit 11 - This is the enable bit for unit %s's zero comparator."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_zero_en_u0(&mut self) -> THR_ZERO_EN_U0_W<11> {
         THR_ZERO_EN_U0_W::new(self)
     }
     #[doc = "Bit 12 - This is the enable bit for unit %s's thr_h_lim comparator."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_h_lim_en_u0(&mut self) -> THR_H_LIM_EN_U0_W<12> {
         THR_H_LIM_EN_U0_W::new(self)
     }
     #[doc = "Bit 13 - This is the enable bit for unit %s's thr_l_lim comparator."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_l_lim_en_u0(&mut self) -> THR_L_LIM_EN_U0_W<13> {
         THR_L_LIM_EN_U0_W::new(self)
     }
     #[doc = "Bit 14 - This is the enable bit for unit %s's thres0 comparator."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_thres0_en_u0(&mut self) -> THR_THRES0_EN_U0_W<14> {
         THR_THRES0_EN_U0_W::new(self)
     }
     #[doc = "Bit 15 - This is the enable bit for unit %s's thres1 comparator."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_thres1_en_u0(&mut self) -> THR_THRES1_EN_U0_W<15> {
         THR_THRES1_EN_U0_W::new(self)
     }
     #[doc = "Bits 16:17 - This register sets the behavior when the signal input of channel 0 detects a negative edge. 1: Increase the counter. 2: Decrease the counter. 0, 3: No effect on counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_neg_mode_u0(&mut self) -> CH0_NEG_MODE_U0_W<16> {
         CH0_NEG_MODE_U0_W::new(self)
     }
     #[doc = "Bits 18:19 - This register sets the behavior when the signal input of channel 0 detects a positive edge. 1: Increase the counter. 2: Decrease the counter. 0, 3: No effect on counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_pos_mode_u0(&mut self) -> CH0_POS_MODE_U0_W<18> {
         CH0_POS_MODE_U0_W::new(self)
     }
     #[doc = "Bits 20:21 - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_hctrl_mode_u0(&mut self) -> CH0_HCTRL_MODE_U0_W<20> {
         CH0_HCTRL_MODE_U0_W::new(self)
     }
     #[doc = "Bits 22:23 - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_lctrl_mode_u0(&mut self) -> CH0_LCTRL_MODE_U0_W<22> {
         CH0_LCTRL_MODE_U0_W::new(self)
     }
     #[doc = "Bits 24:25 - This register sets the behavior when the signal input of channel 1 detects a negative edge. 1: Increment the counter. 2: Decrement the counter. 0, 3: No effect on counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_neg_mode_u0(&mut self) -> CH1_NEG_MODE_U0_W<24> {
         CH1_NEG_MODE_U0_W::new(self)
     }
     #[doc = "Bits 26:27 - This register sets the behavior when the signal input of channel 1 detects a positive edge. 1: Increment the counter. 2: Decrement the counter. 0, 3: No effect on counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_pos_mode_u0(&mut self) -> CH1_POS_MODE_U0_W<26> {
         CH1_POS_MODE_U0_W::new(self)
     }
     #[doc = "Bits 28:29 - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_hctrl_mode_u0(&mut self) -> CH1_HCTRL_MODE_U0_W<28> {
         CH1_HCTRL_MODE_U0_W::new(self)
     }
     #[doc = "Bits 30:31 - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_lctrl_mode_u0(&mut self) -> CH1_LCTRL_MODE_U0_W<30> {
         CH1_LCTRL_MODE_U0_W::new(self)
     }
@@ -275,11 +290,10 @@ impl crate::Readable for U_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [u_conf0::W](W) writer structure"]
 impl crate::Writable for U_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets U%s_CONF0 to value 0x3c10"]
 impl crate::Resettable for U_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3c10
-    }
+    const RESET_VALUE: Self::Ux = 0x3c10;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_access_grant_config(&mut self) -> SPI2_ACCESS_GRANT_CONFIG_W<0> {
         SPI2_ACCESS_GRANT_CONFIG_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AHBLITE_MPU_TABLE_SPI2_SPEC {
 #[doc = "`write(|w| ..)` method takes [ahblite_mpu_table_spi2::W](W) writer structure"]
 impl crate::Writable for AHBLITE_MPU_TABLE_SPI2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHBLITE_MPU_TABLE_SPI2 to value 0"]
 impl crate::Resettable for AHBLITE_MPU_TABLE_SPI2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

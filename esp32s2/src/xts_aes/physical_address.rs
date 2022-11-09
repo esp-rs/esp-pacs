@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:29 - Physical address."]
     #[inline(always)]
     pub fn physical_address(&self) -> PHYSICAL_ADDRESS_R {
-        PHYSICAL_ADDRESS_R::new((self.bits & 0x3fff_ffff) as u32)
+        PHYSICAL_ADDRESS_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - Physical address."]
     #[inline(always)]
+    #[must_use]
     pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<0> {
         PHYSICAL_ADDRESS_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PHYSICAL_ADDRESS_SPEC {
 #[doc = "`write(|w| ..)` method takes [physical_address::W](W) writer structure"]
 impl crate::Writable for PHYSICAL_ADDRESS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PHYSICAL_ADDRESS to value 0"]
 impl crate::Resettable for PHYSICAL_ADDRESS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

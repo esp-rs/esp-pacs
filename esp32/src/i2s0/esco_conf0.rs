@@ -122,46 +122,55 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn esco_en(&mut self) -> ESCO_EN_W<0> {
         ESCO_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn esco_chan_mod(&mut self) -> ESCO_CHAN_MOD_W<1> {
         ESCO_CHAN_MOD_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn esco_cvsd_dec_pack_err(&mut self) -> ESCO_CVSD_DEC_PACK_ERR_W<2> {
         ESCO_CVSD_DEC_PACK_ERR_W::new(self)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
+    #[must_use]
     pub fn esco_cvsd_pack_len_8k(&mut self) -> ESCO_CVSD_PACK_LEN_8K_W<3> {
         ESCO_CVSD_PACK_LEN_8K_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn esco_cvsd_inf_en(&mut self) -> ESCO_CVSD_INF_EN_W<8> {
         ESCO_CVSD_INF_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_dec_start(&mut self) -> CVSD_DEC_START_W<9> {
         CVSD_DEC_START_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_dec_reset(&mut self) -> CVSD_DEC_RESET_W<10> {
         CVSD_DEC_RESET_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn plc_en(&mut self) -> PLC_EN_W<11> {
         PLC_EN_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn plc2dma_en(&mut self) -> PLC2DMA_EN_W<12> {
         PLC2DMA_EN_W::new(self)
     }
@@ -184,11 +193,10 @@ impl crate::Readable for ESCO_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [esco_conf0::W](W) writer structure"]
 impl crate::Writable for ESCO_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ESCO_CONF0 to value 0"]
 impl crate::Resettable for ESCO_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

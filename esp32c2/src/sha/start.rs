@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 1:31 - Reserved."]
     #[inline(always)]
     pub fn start(&self) -> START_R {
-        START_R::new(((self.bits >> 1) & 0x7fff_ffff) as u32)
+        START_R::new((self.bits >> 1) & 0x7fff_ffff)
     }
 }
 #[doc = "Typical SHA configuration register 0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [start](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for START_SPEC {
 }
 #[doc = "`reset()` method sets START to value 0"]
 impl crate::Resettable for START_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

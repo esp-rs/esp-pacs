@@ -33,8 +33,5 @@ impl crate::Readable for GHWCFG1_SPEC {
 }
 #[doc = "`reset()` method sets GHWCFG1 to value 0"]
 impl crate::Resettable for GHWCFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

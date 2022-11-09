@@ -46,17 +46,19 @@ impl R {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
     pub fn ext_wakeup1_sel(&self) -> EXT_WAKEUP1_SEL_R {
-        EXT_WAKEUP1_SEL_R::new((self.bits & 0x003f_ffff) as u32)
+        EXT_WAKEUP1_SEL_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_wakeup1_sel(&mut self) -> EXT_WAKEUP1_SEL_W<0> {
         EXT_WAKEUP1_SEL_W::new(self)
     }
     #[doc = "Bit 22 - clear ext wakeup1 status"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_wakeup1_status_clr(&mut self) -> EXT_WAKEUP1_STATUS_CLR_W<22> {
         EXT_WAKEUP1_STATUS_CLR_W::new(self)
     }
@@ -79,11 +81,10 @@ impl crate::Readable for EXT_WAKEUP1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_wakeup1::W](W) writer structure"]
 impl crate::Writable for EXT_WAKEUP1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_WAKEUP1 to value 0"]
 impl crate::Resettable for EXT_WAKEUP1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

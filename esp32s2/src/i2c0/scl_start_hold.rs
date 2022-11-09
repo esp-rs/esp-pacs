@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure interval between pulling SDA low and pulling SCL low when the master generates a START condition, in I2C module clock cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn time(&mut self) -> TIME_W<0> {
         TIME_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_START_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_start_hold::W](W) writer structure"]
 impl crate::Writable for SCL_START_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_START_HOLD to value 0x08"]
 impl crate::Resettable for SCL_START_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

@@ -149,56 +149,67 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_pid_conf(&mut self) -> RTC_MEM_PID_CONF_W<0> {
         RTC_MEM_PID_CONF_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<8> {
         RTC_MEM_CRC_START_W::new(self)
     }
     #[doc = "Bits 9:19"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<9> {
         RTC_MEM_CRC_ADDR_W::new(self)
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
+    #[must_use]
     pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<14> {
         CLOSE_FLASH_ENA_W::new(self)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
+    #[must_use]
     pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<15> {
         PD_RF_ENA_W::new(self)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn rst_wait(&mut self) -> RST_WAIT_W<16> {
         RST_WAIT_W::new(self)
     }
     #[doc = "Bits 20:30"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<20> {
         RTC_MEM_CRC_LEN_W::new(self)
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
+    #[must_use]
     pub fn rst_ena(&mut self) -> RST_ENA_W<26> {
         RST_ENA_W::new(self)
     }
     #[doc = "Bits 27:29 - brown out threshold"]
     #[inline(always)]
+    #[must_use]
     pub fn dbrown_out_thres(&mut self) -> DBROWN_OUT_THRES_W<27> {
         DBROWN_OUT_THRES_W::new(self)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
+    #[must_use]
     pub fn ena(&mut self) -> ENA_W<30> {
         ENA_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_finish(&mut self) -> RTC_MEM_CRC_FINISH_W<31> {
         RTC_MEM_CRC_FINISH_W::new(self)
     }
@@ -221,11 +232,10 @@ impl crate::Readable for BROWN_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [brown_out::W](W) writer structure"]
 impl crate::Writable for BROWN_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BROWN_OUT to value 0x13ff_0000"]
 impl crate::Resettable for BROWN_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x13ff_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x13ff_0000;
 }

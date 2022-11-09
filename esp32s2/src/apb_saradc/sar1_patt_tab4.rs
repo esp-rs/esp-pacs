@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Item 12 ~ 15 for pattern table 1 (each item one byte)"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_patt_tab4(&mut self) -> SAR1_PATT_TAB4_W<0> {
         SAR1_PATT_TAB4_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SAR1_PATT_TAB4_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar1_patt_tab4::W](W) writer structure"]
 impl crate::Writable for SAR1_PATT_TAB4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR1_PATT_TAB4 to value 0x0f0f_0f0f"]
 impl crate::Resettable for SAR1_PATT_TAB4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f0f_0f0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f0f_0f0f;
 }

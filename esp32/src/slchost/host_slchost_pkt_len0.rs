@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn host_hostslc0_len0(&self) -> HOST_HOSTSLC0_LEN0_R {
-        HOST_HOSTSLC0_LEN0_R::new((self.bits & 0x000f_ffff) as u32)
+        HOST_HOSTSLC0_LEN0_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slchost_pkt_len0](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for HOST_SLCHOST_PKT_LEN0_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_PKT_LEN0 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_PKT_LEN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

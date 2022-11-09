@@ -25,6 +25,7 @@ pub type SHA384_CONTINUE_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-384 operation with subsequent blocks."]
     #[inline(always)]
+    #[must_use]
     pub fn sha384_continue(&mut self) -> SHA384_CONTINUE_W<0> {
         SHA384_CONTINUE_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SHA384_CONTINUE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sha384_continue::W](W) writer structure"]
 impl crate::Writable for SHA384_CONTINUE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHA384_CONTINUE to value 0"]
 impl crate::Resettable for SHA384_CONTINUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

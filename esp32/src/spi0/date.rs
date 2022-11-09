@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:27 - SPI register version."]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
-        DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [date](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for DATE_SPEC {
 }
 #[doc = "`reset()` method sets DATE to value 0x0160_4270"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0160_4270
-    }
+    const RESET_VALUE: Self::Ux = 0x0160_4270;
 }

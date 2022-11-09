@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_core_0_rcd_recorden"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_rcd_recorden(&mut self) -> CORE_0_RCD_RECORDEN_W<0> {
         CORE_0_RCD_RECORDEN_W::new(self)
     }
     #[doc = "Bit 1 - reg_core_0_rcd_pdebugen"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_rcd_pdebugen(&mut self) -> CORE_0_RCD_PDEBUGEN_W<1> {
         CORE_0_RCD_PDEBUGEN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CORE_0_RCD_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_rcd_en::W](W) writer structure"]
 impl crate::Writable for CORE_0_RCD_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_RCD_EN to value 0"]
 impl crate::Resettable for CORE_0_RCD_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_thres1_low_int_ena(&mut self) -> APB_SARADC_THRES1_LOW_INT_ENA_W<26> {
         APB_SARADC_THRES1_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_thres0_low_int_ena(&mut self) -> APB_SARADC_THRES0_LOW_INT_ENA_W<27> {
         APB_SARADC_THRES0_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_thres1_high_int_ena(&mut self) -> APB_SARADC_THRES1_HIGH_INT_ENA_W<28> {
         APB_SARADC_THRES1_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_thres0_high_int_ena(&mut self) -> APB_SARADC_THRES0_HIGH_INT_ENA_W<29> {
         APB_SARADC_THRES0_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W<30> {
         APB_SARADC2_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W<31> {
         APB_SARADC1_DONE_INT_ENA_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

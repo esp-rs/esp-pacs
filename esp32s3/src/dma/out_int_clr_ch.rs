@@ -42,41 +42,49 @@ pub type OUTFIFO_UDF_L3_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_done(&mut self) -> OUT_DONE_W<0> {
         OUT_DONE_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<1> {
         OUT_EOF_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<2> {
         OUT_DSCR_ERR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<3> {
         OUT_TOTAL_EOF_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_ovf_l1(&mut self) -> OUTFIFO_OVF_L1_W<4> {
         OUTFIFO_OVF_L1_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_udf_l1(&mut self) -> OUTFIFO_UDF_L1_W<5> {
         OUTFIFO_UDF_L1_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear the OUTFIFO_OVF_L3_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_ovf_l3(&mut self) -> OUTFIFO_OVF_L3_W<6> {
         OUTFIFO_OVF_L3_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear the OUTFIFO_UDF_L3_CH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_udf_l3(&mut self) -> OUTFIFO_UDF_L3_W<7> {
         OUTFIFO_UDF_L3_W::new(self)
     }
@@ -95,11 +103,10 @@ impl crate::RegisterSpec for OUT_INT_CLR_CH_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_int_clr_ch::W](W) writer structure"]
 impl crate::Writable for OUT_INT_CLR_CH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_INT_CLR_CH%s to value 0"]
 impl crate::Resettable for OUT_INT_CLR_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_subtimer_prediv(&mut self) -> ULP_CP_SUBTIMER_PREDIV_W<0> {
         ULP_CP_SUBTIMER_PREDIV_W::new(self)
     }
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
+    #[must_use]
     pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<8> {
         MIN_SLP_VAL_W::new(self)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
+    #[must_use]
     pub fn rtcmem_wait_timer(&mut self) -> RTCMEM_WAIT_TIMER_W<16> {
         RTCMEM_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
+    #[must_use]
     pub fn rtcmem_powerup_timer(&mut self) -> RTCMEM_POWERUP_TIMER_W<25> {
         RTCMEM_POWERUP_TIMER_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for TIMER5_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer5::W](W) writer structure"]
 impl crate::Writable for TIMER5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER5 to value 0x1214_8001"]
 impl crate::Resettable for TIMER5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1214_8001
-    }
+    const RESET_VALUE: Self::Ux = 0x1214_8001;
 }

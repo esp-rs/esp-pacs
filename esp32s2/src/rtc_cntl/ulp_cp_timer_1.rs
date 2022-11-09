@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 8:31 - Set sleep cycles for ULP coprocessor timer"]
     #[inline(always)]
     pub fn ulp_cp_timer_slp_cycle(&self) -> ULP_CP_TIMER_SLP_CYCLE_R {
-        ULP_CP_TIMER_SLP_CYCLE_R::new(((self.bits >> 8) & 0x00ff_ffff) as u32)
+        ULP_CP_TIMER_SLP_CYCLE_R::new((self.bits >> 8) & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 8:31 - Set sleep cycles for ULP coprocessor timer"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_timer_slp_cycle(&mut self) -> ULP_CP_TIMER_SLP_CYCLE_W<8> {
         ULP_CP_TIMER_SLP_CYCLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ULP_CP_TIMER_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ulp_cp_timer_1::W](W) writer structure"]
 impl crate::Writable for ULP_CP_TIMER_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_TIMER_1 to value 0xc800"]
 impl crate::Resettable for ULP_CP_TIMER_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xc800
-    }
+    const RESET_VALUE: Self::Ux = 0xc800;
 }

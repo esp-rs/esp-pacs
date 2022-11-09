@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_value0_high(&mut self) -> TIMER_VALUE0_HIGH_W<0> {
         TIMER_VALUE0_HIGH_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIME_HIGH0_SPEC {
 #[doc = "`write(|w| ..)` method takes [time_high0::W](W) writer structure"]
 impl crate::Writable for TIME_HIGH0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIME_HIGH0 to value 0"]
 impl crate::Resettable for TIME_HIGH0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

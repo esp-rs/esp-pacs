@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
+    #[must_use]
     pub fn attr1(&mut self) -> ATTR1_W<0> {
         ATTR1_W::new(self)
     }
     #[doc = "Bits 2:3 - This field is used to configure the permission of LCD/CAM accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
+    #[must_use]
     pub fn attr2(&mut self) -> ATTR2_W<2> {
         ATTR2_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for EDMA_PMS_LCD_CAM_SPEC {
 #[doc = "`write(|w| ..)` method takes [edma_pms_lcd_cam::W](W) writer structure"]
 impl crate::Writable for EDMA_PMS_LCD_CAM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EDMA_PMS_LCD_CAM to value 0x0f"]
 impl crate::Resettable for EDMA_PMS_LCD_CAM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

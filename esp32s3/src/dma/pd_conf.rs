@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 4 - Set this bit to force power down DMA internal memory."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<4> {
         DMA_RAM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to force power up DMA internal memory"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<5> {
         DMA_RAM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<6> {
         DMA_RAM_CLK_FO_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for PD_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [pd_conf::W](W) writer structure"]
 impl crate::Writable for PD_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PD_CONF to value 0x20"]
 impl crate::Resettable for PD_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

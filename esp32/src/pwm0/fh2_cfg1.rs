@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn fh2_clr_ost(&mut self) -> FH2_CLR_OST_W<0> {
         FH2_CLR_OST_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
+    #[must_use]
     pub fn fh2_cbcpulse(&mut self) -> FH2_CBCPULSE_W<1> {
         FH2_CBCPULSE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn fh2_force_cbc(&mut self) -> FH2_FORCE_CBC_W<3> {
         FH2_FORCE_CBC_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn fh2_force_ost(&mut self) -> FH2_FORCE_OST_W<4> {
         FH2_FORCE_OST_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for FH2_CFG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [fh2_cfg1::W](W) writer structure"]
 impl crate::Writable for FH2_CFG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FH2_CFG1 to value 0"]
 impl crate::Resettable for FH2_CFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -183,76 +183,91 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to filter pluse whose width is smaller than this value for unit2."]
     #[inline(always)]
+    #[must_use]
     pub fn filter_thres_u2(&mut self) -> FILTER_THRES_U2_W<0> {
         FILTER_THRES_U2_W::new(self)
     }
     #[doc = "Bit 10 - This is the enable bit for filtering input signals for unit2."]
     #[inline(always)]
+    #[must_use]
     pub fn filter_en_u2(&mut self) -> FILTER_EN_U2_W<10> {
         FILTER_EN_U2_W::new(self)
     }
     #[doc = "Bit 11 - This is the enable bit for comparing unit2's count with 0 value."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_zero_en_u2(&mut self) -> THR_ZERO_EN_U2_W<11> {
         THR_ZERO_EN_U2_W::new(self)
     }
     #[doc = "Bit 12 - This is the enable bit for comparing unit2's count with thr_h_lim value."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_h_lim_en_u2(&mut self) -> THR_H_LIM_EN_U2_W<12> {
         THR_H_LIM_EN_U2_W::new(self)
     }
     #[doc = "Bit 13 - This is the enable bit for comparing unit2's count with thr_l_lim value."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_l_lim_en_u2(&mut self) -> THR_L_LIM_EN_U2_W<13> {
         THR_L_LIM_EN_U2_W::new(self)
     }
     #[doc = "Bit 14 - This is the enable bit for comparing unit2's count with thres0 value."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_thres0_en_u2(&mut self) -> THR_THRES0_EN_U2_W<14> {
         THR_THRES0_EN_U2_W::new(self)
     }
     #[doc = "Bit 15 - This is the enable bit for comparing unit2's count with thres1 value ."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_thres1_en_u2(&mut self) -> THR_THRES1_EN_U2_W<15> {
         THR_THRES1_EN_U2_W::new(self)
     }
     #[doc = "Bits 16:17 - This register is used to control the mode of channel0's input negedge signal for unit2. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_neg_mode_u2(&mut self) -> CH0_NEG_MODE_U2_W<16> {
         CH0_NEG_MODE_U2_W::new(self)
     }
     #[doc = "Bits 18:19 - This register is used to control the mode of channel0's input posedge signal for unit2. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_pos_mode_u2(&mut self) -> CH0_POS_MODE_U2_W<18> {
         CH0_POS_MODE_U2_W::new(self)
     }
     #[doc = "Bits 20:21 - This register is used to control the mode of channel0's high control signal for unit2. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_hctrl_mode_u2(&mut self) -> CH0_HCTRL_MODE_U2_W<20> {
         CH0_HCTRL_MODE_U2_W::new(self)
     }
     #[doc = "Bits 22:23 - This register is used to control the mode of channel0's low control signal for unit2. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch0_lctrl_mode_u2(&mut self) -> CH0_LCTRL_MODE_U2_W<22> {
         CH0_LCTRL_MODE_U2_W::new(self)
     }
     #[doc = "Bits 24:25 - This register is used to control the mode of channel1's input negedge signal for unit2. 2'd1: increase at the negedge of input signal 2'd2:decrease at the negedge of input signal others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_neg_mode_u2(&mut self) -> CH1_NEG_MODE_U2_W<24> {
         CH1_NEG_MODE_U2_W::new(self)
     }
     #[doc = "Bits 26:27 - This register is used to control the mode of channel1's input posedge signal for unit2. 2'd1: increase at the posedge of input signal 2'd2:decrease at the posedge of input signal others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_pos_mode_u2(&mut self) -> CH1_POS_MODE_U2_W<26> {
         CH1_POS_MODE_U2_W::new(self)
     }
     #[doc = "Bits 28:29 - This register is used to control the mode of channel1's high control signal for unit2. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_hctrl_mode_u2(&mut self) -> CH1_HCTRL_MODE_U2_W<28> {
         CH1_HCTRL_MODE_U2_W::new(self)
     }
     #[doc = "Bits 30:31 - This register is used to control the mode of channel1's low control signal for unit2. 2'd0:increase when control signal is low 2'd1: decrease when control signal is high others:forbidden"]
     #[inline(always)]
+    #[must_use]
     pub fn ch1_lctrl_mode_u2(&mut self) -> CH1_LCTRL_MODE_U2_W<30> {
         CH1_LCTRL_MODE_U2_W::new(self)
     }
@@ -275,11 +290,10 @@ impl crate::Readable for U2_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [u2_conf0::W](W) writer structure"]
 impl crate::Writable for U2_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets U2_CONF0 to value 0x3c10"]
 impl crate::Resettable for U2_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3c10
-    }
+    const RESET_VALUE: Self::Ux = 0x3c10;
 }

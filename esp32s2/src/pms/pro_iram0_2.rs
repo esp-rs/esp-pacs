@@ -73,7 +73,7 @@ impl R {
     #[doc = "Bits 0:16 - Configure the split address of SRAM Block 4-21 for IBUS access."]
     #[inline(always)]
     pub fn pro_iram0_sram_4_spltaddr(&self) -> PRO_IRAM0_SRAM_4_SPLTADDR_R {
-        PRO_IRAM0_SRAM_4_SPLTADDR_R::new((self.bits & 0x0001_ffff) as u32)
+        PRO_IRAM0_SRAM_4_SPLTADDR_R::new(self.bits & 0x0001_ffff)
     }
     #[doc = "Bit 17 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
     #[inline(always)]
@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:16 - Configure the split address of SRAM Block 4-21 for IBUS access."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_spltaddr(&mut self) -> PRO_IRAM0_SRAM_4_SPLTADDR_W<0> {
         PRO_IRAM0_SRAM_4_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 17 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_l_f(&mut self) -> PRO_IRAM0_SRAM_4_L_F_W<17> {
         PRO_IRAM0_SRAM_4_L_F_W::new(self)
     }
     #[doc = "Bit 18 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_l_r(&mut self) -> PRO_IRAM0_SRAM_4_L_R_W<18> {
         PRO_IRAM0_SRAM_4_L_R_W::new(self)
     }
     #[doc = "Bit 19 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_l_w(&mut self) -> PRO_IRAM0_SRAM_4_L_W_W<19> {
         PRO_IRAM0_SRAM_4_L_W_W::new(self)
     }
     #[doc = "Bit 20 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_h_f(&mut self) -> PRO_IRAM0_SRAM_4_H_F_W<20> {
         PRO_IRAM0_SRAM_4_H_F_W::new(self)
     }
     #[doc = "Bit 21 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_h_r(&mut self) -> PRO_IRAM0_SRAM_4_H_R_W<21> {
         PRO_IRAM0_SRAM_4_H_R_W::new(self)
     }
     #[doc = "Bit 22 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_sram_4_h_w(&mut self) -> PRO_IRAM0_SRAM_4_H_W_W<22> {
         PRO_IRAM0_SRAM_4_H_W_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for PRO_IRAM0_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_iram0_2::W](W) writer structure"]
 impl crate::Writable for PRO_IRAM0_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_IRAM0_2 to value 0x007e_0000"]
 impl crate::Resettable for PRO_IRAM0_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x007e_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x007e_0000;
 }

@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_record_enable(&mut self) -> PRO_CPU_RECORD_ENABLE_W<0> {
         PRO_CPU_RECORD_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_record_disable(&mut self) -> PRO_CPU_RECORD_DISABLE_W<4> {
         PRO_CPU_RECORD_DISABLE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cpu_pdebug_enable(&mut self) -> PRO_CPU_PDEBUG_ENABLE_W<8> {
         PRO_CPU_PDEBUG_ENABLE_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for PRO_CPU_RECORD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cpu_record_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_CTRL to value 0x0100"]
 impl crate::Resettable for PRO_CPU_RECORD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

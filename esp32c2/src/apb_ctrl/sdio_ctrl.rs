@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_sdio_win_access_en"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_win_access_en(&mut self) -> SDIO_WIN_ACCESS_EN_W<0> {
         SDIO_WIN_ACCESS_EN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SDIO_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdio_ctrl::W](W) writer structure"]
 impl crate::Writable for SDIO_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDIO_CTRL to value 0"]
 impl crate::Resettable for SDIO_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

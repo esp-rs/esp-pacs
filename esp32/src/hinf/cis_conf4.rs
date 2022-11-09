@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn cis_conf_w4(&mut self) -> CIS_CONF_W4_W<0> {
         CIS_CONF_W4_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CIS_CONF4_SPEC {
 #[doc = "`write(|w| ..)` method takes [cis_conf4::W](W) writer structure"]
 impl crate::Writable for CIS_CONF4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CIS_CONF4 to value 0xffff_ffff"]
 impl crate::Resettable for CIS_CONF4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

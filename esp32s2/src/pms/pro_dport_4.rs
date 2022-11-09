@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]
     pub fn pro_dport_reserve_fifo_2(&self) -> PRO_DPORT_RESERVE_FIFO_2_R {
-        PRO_DPORT_RESERVE_FIFO_2_R::new((self.bits & 0x0003_ffff) as u32)
+        PRO_DPORT_RESERVE_FIFO_2_R::new(self.bits & 0x0003_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dport_reserve_fifo_2(&mut self) -> PRO_DPORT_RESERVE_FIFO_2_W<0> {
         PRO_DPORT_RESERVE_FIFO_2_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_DPORT_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dport_4::W](W) writer structure"]
 impl crate::Writable for PRO_DPORT_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DPORT_4 to value 0"]
 impl crate::Resettable for PRO_DPORT_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

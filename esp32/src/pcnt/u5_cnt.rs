@@ -33,8 +33,5 @@ impl crate::Readable for U5_CNT_SPEC {
 }
 #[doc = "`reset()` method sets U5_CNT to value 0"]
 impl crate::Resettable for U5_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

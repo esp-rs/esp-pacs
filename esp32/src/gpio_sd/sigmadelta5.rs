@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn sd5_in(&mut self) -> SD5_IN_W<0> {
         SD5_IN_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn sd5_prescale(&mut self) -> SD5_PRESCALE_W<8> {
         SD5_PRESCALE_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SIGMADELTA5_SPEC {
 #[doc = "`write(|w| ..)` method takes [sigmadelta5::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA5 to value 0xff00"]
 impl crate::Resettable for SIGMADELTA5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff00
-    }
+    const RESET_VALUE: Self::Ux = 0xff00;
 }

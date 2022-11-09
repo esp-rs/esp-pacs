@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This register stores %sth 32-bit piece of plaintext."]
     #[inline(always)]
+    #[must_use]
     pub fn plain_0(&mut self) -> PLAIN_0_W<0> {
         PLAIN_0_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PLAIN__SPEC {
 #[doc = "`write(|w| ..)` method takes [plain_::W](W) writer structure"]
 impl crate::Writable for PLAIN__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLAIN_%s to value 0"]
 impl crate::Resettable for PLAIN__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

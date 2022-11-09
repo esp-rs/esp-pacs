@@ -125,51 +125,61 @@ impl R {
 impl W {
     #[doc = "Bits 1:5 - The awfull threshold number of lcd_afifo."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_afifo_threshold_num(&mut self) -> LCD_AFIFO_THRESHOLD_NUM_W<1> {
         LCD_AFIFO_THRESHOLD_NUM_W::new(self)
     }
     #[doc = "Bits 6:11 - The setup cycle length minus 1 in LCD non-RGB mode."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vfk_cyclelen(&mut self) -> LCD_VFK_CYCLELEN_W<6> {
         LCD_VFK_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 12:24 - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vbk_cyclelen(&mut self) -> LCD_VBK_CYCLELEN_W<12> {
         LCD_VBK_CYCLELEN_W::new(self)
     }
     #[doc = "Bit 25 - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_next_frame_en(&mut self) -> LCD_NEXT_FRAME_EN_W<25> {
         LCD_NEXT_FRAME_EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: Enable blank region when LCD sends data out. 0: No blank region."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_bk_en(&mut self) -> LCD_BK_EN_W<26> {
         LCD_BK_EN_W::new(self)
     }
     #[doc = "Bit 27 - LCD AFIFO reset signal."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_afifo_reset(&mut self) -> LCD_AFIFO_RESET_W<27> {
         LCD_AFIFO_RESET_W::new(self)
     }
     #[doc = "Bit 28 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cd_data_set(&mut self) -> LCD_CD_DATA_SET_W<28> {
         LCD_CD_DATA_SET_W::new(self)
     }
     #[doc = "Bit 29 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cd_dummy_set(&mut self) -> LCD_CD_DUMMY_SET_W<29> {
         LCD_CD_DUMMY_SET_W::new(self)
     }
     #[doc = "Bit 30 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cd_cmd_set(&mut self) -> LCD_CD_CMD_SET_W<30> {
         LCD_CD_CMD_SET_W::new(self)
     }
     #[doc = "Bit 31 - The default value of LCD_CD."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cd_idle_edge(&mut self) -> LCD_CD_IDLE_EDGE_W<31> {
         LCD_CD_IDLE_EDGE_W::new(self)
     }
@@ -192,11 +202,10 @@ impl crate::Readable for LCD_MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_misc::W](W) writer structure"]
 impl crate::Writable for LCD_MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_MISC to value 0xd6"]
 impl crate::Resettable for LCD_MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xd6
-    }
+    const RESET_VALUE: Self::Ux = 0xd6;
 }

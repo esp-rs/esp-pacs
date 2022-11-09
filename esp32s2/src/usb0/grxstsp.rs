@@ -61,8 +61,5 @@ impl crate::Readable for GRXSTSP_SPEC {
 }
 #[doc = "`reset()` method sets GRXSTSP to value 0"]
 impl crate::Resettable for GRXSTSP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

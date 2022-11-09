@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn nonisothren(&mut self) -> NONISOTHREN_W<0> {
         NONISOTHREN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn isothren(&mut self) -> ISOTHREN_W<1> {
         ISOTHREN_W::new(self)
     }
     #[doc = "Bits 2:10"]
     #[inline(always)]
+    #[must_use]
     pub fn txthrlen(&mut self) -> TXTHRLEN_W<2> {
         TXTHRLEN_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
+    #[must_use]
     pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<11> {
         AHBTHRRATIO_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn rxthren(&mut self) -> RXTHREN_W<16> {
         RXTHREN_W::new(self)
     }
     #[doc = "Bits 17:25"]
     #[inline(always)]
+    #[must_use]
     pub fn rxthrlen(&mut self) -> RXTHRLEN_W<17> {
         RXTHRLEN_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn arbprken(&mut self) -> ARBPRKEN_W<27> {
         ARBPRKEN_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for DTHRCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dthrctl::W](W) writer structure"]
 impl crate::Writable for DTHRCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DTHRCTL to value 0x0802_0020"]
 impl crate::Resettable for DTHRCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0802_0020
-    }
+    const RESET_VALUE: Self::Ux = 0x0802_0020;
 }

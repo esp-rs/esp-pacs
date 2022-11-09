@@ -229,106 +229,127 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - vdd_spi drv's software value"]
     #[inline(always)]
+    #[must_use]
     pub fn vdd_spi_pwr_drv(&mut self) -> VDD_SPI_PWR_DRV_W<0> {
         VDD_SPI_PWR_DRV_W::new(self)
     }
     #[doc = "Bit 2 - vdd_spi drv use software value"]
     #[inline(always)]
+    #[must_use]
     pub fn vdd_spi_pwr_force(&mut self) -> VDD_SPI_PWR_FORCE_W<2> {
         VDD_SPI_PWR_FORCE_W::new(self)
     }
     #[doc = "Bit 3 - memories in digital core force PD in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<3> {
         LSLP_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - memories in digital core force PU in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<4> {
         LSLP_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 11 - bt force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_force_pd(&mut self) -> BT_FORCE_PD_W<11> {
         BT_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 12 - bt force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_force_pu(&mut self) -> BT_FORCE_PU_W<12> {
         BT_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 13 - digital peri force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_force_pd(&mut self) -> DG_PERI_FORCE_PD_W<13> {
         DG_PERI_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 14 - digital peri force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_force_pu(&mut self) -> DG_PERI_FORCE_PU_W<14> {
         DG_PERI_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 15 - fastmemory retention mode in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<15> {
         FASTMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 16 - fastmemory donlt entry retention mode in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<16> {
         FASTMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_pd(&mut self) -> WIFI_FORCE_PD_W<17> {
         WIFI_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 18 - wifi force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_pu(&mut self) -> WIFI_FORCE_PU_W<18> {
         WIFI_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<19> {
         DG_WRAP_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<20> {
         DG_WRAP_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 21 - cpu core force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_force_pd(&mut self) -> CPU_TOP_FORCE_PD_W<21> {
         CPU_TOP_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 22 - cpu force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_force_pu(&mut self) -> CPU_TOP_FORCE_PU_W<22> {
         CPU_TOP_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 27 - enable power down bt in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_pd_en(&mut self) -> BT_PD_EN_W<27> {
         BT_PD_EN_W::new(self)
     }
     #[doc = "Bit 28 - enable power down digital peri in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_pd_en(&mut self) -> DG_PERI_PD_EN_W<28> {
         DG_PERI_PD_EN_W::new(self)
     }
     #[doc = "Bit 29 - enable power down cpu in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_pd_en(&mut self) -> CPU_TOP_PD_EN_W<29> {
         CPU_TOP_PD_EN_W::new(self)
     }
     #[doc = "Bit 30 - enable power down wifi in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_pd_en(&mut self) -> WIFI_PD_EN_W<30> {
         WIFI_PD_EN_W::new(self)
     }
     #[doc = "Bit 31 - enable power down digital wrap in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<31> {
         DG_WRAP_PD_EN_W::new(self)
     }
@@ -351,11 +372,10 @@ impl crate::Readable for DIG_PWC_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_pwc::W](W) writer structure"]
 impl crate::Writable for DIG_PWC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_PWC to value 0x0055_5010"]
 impl crate::Resettable for DIG_PWC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0055_5010
-    }
+    const RESET_VALUE: Self::Ux = 0x0055_5010;
 }

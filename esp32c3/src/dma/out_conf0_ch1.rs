@@ -96,31 +96,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<0> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<1> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<2> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<3> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<4> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<5> {
         OUT_DATA_BURST_EN_W::new(self)
     }
@@ -143,11 +149,10 @@ impl crate::Readable for OUT_CONF0_CH1_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_conf0_ch1::W](W) writer structure"]
 impl crate::Writable for OUT_CONF0_CH1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_CONF0_CH1 to value 0x08"]
 impl crate::Resettable for OUT_CONF0_CH1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

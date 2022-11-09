@@ -98,26 +98,31 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn stoppclk(&mut self) -> STOPPCLK_W<0> {
         STOPPCLK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn gatehclk(&mut self) -> GATEHCLK_W<1> {
         GATEHCLK_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pwrclmp(&mut self) -> PWRCLMP_W<2> {
         PWRCLMP_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<3> {
         RSTPDWNMODULE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<8> {
         RESETAFTERSUSP_W::new(self)
     }
@@ -140,11 +145,10 @@ impl crate::Readable for PCGCCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pcgcctl::W](W) writer structure"]
 impl crate::Writable for PCGCCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PCGCCTL to value 0"]
 impl crate::Resettable for PCGCCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

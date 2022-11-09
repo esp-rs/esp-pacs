@@ -88,26 +88,31 @@ impl R {
 impl W {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
+    #[must_use]
     pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W<26> {
         POWER_GLITCH_DSENSE_W::new(self)
     }
     #[doc = "Bit 28 - force disable power glitch"]
     #[inline(always)]
+    #[must_use]
     pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W<28> {
         POWER_GLITCH_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - force enable power glitch"]
     #[inline(always)]
+    #[must_use]
     pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W<29> {
         POWER_GLITCH_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - use efuse value control power glitch enable"]
     #[inline(always)]
+    #[must_use]
     pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W<30> {
         POWER_GLITCH_EFUSE_SEL_W::new(self)
     }
     #[doc = "Bit 31 - enable power glitch"]
     #[inline(always)]
+    #[must_use]
     pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W<31> {
         POWER_GLITCH_EN_W::new(self)
     }
@@ -130,11 +135,10 @@ impl crate::Readable for PG_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pg_ctrl::W](W) writer structure"]
 impl crate::Writable for PG_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PG_CTRL to value 0"]
 impl crate::Resettable for PG_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

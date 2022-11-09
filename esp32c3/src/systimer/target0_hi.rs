@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - timer taget0 high 32 bit"]
     #[inline(always)]
     pub fn timer_target0_hi(&self) -> TIMER_TARGET0_HI_R {
-        TIMER_TARGET0_HI_R::new((self.bits & 0x000f_ffff) as u32)
+        TIMER_TARGET0_HI_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - timer taget0 high 32 bit"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_target0_hi(&mut self) -> TIMER_TARGET0_HI_W<0> {
         TIMER_TARGET0_HI_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TARGET0_HI_SPEC {
 #[doc = "`write(|w| ..)` method takes [target0_hi::W](W) writer structure"]
 impl crate::Writable for TARGET0_HI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TARGET0_HI to value 0"]
 impl crate::Resettable for TARGET0_HI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,46 +49,55 @@ pub type HOST_SLC0HOST_LEN_WR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc0host_token0_dec(&mut self) -> HOST_SLC0HOST_TOKEN0_DEC_W<0> {
         HOST_SLC0HOST_TOKEN0_DEC_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc0host_token1_dec(&mut self) -> HOST_SLC0HOST_TOKEN1_DEC_W<1> {
         HOST_SLC0HOST_TOKEN1_DEC_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc0host_token0_wr(&mut self) -> HOST_SLC0HOST_TOKEN0_WR_W<2> {
         HOST_SLC0HOST_TOKEN0_WR_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc0host_token1_wr(&mut self) -> HOST_SLC0HOST_TOKEN1_WR_W<3> {
         HOST_SLC0HOST_TOKEN1_WR_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token0_dec(&mut self) -> HOST_SLC1HOST_TOKEN0_DEC_W<4> {
         HOST_SLC1HOST_TOKEN0_DEC_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token1_dec(&mut self) -> HOST_SLC1HOST_TOKEN1_DEC_W<5> {
         HOST_SLC1HOST_TOKEN1_DEC_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token0_wr(&mut self) -> HOST_SLC1HOST_TOKEN0_WR_W<6> {
         HOST_SLC1HOST_TOKEN0_WR_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token1_wr(&mut self) -> HOST_SLC1HOST_TOKEN1_WR_W<7> {
         HOST_SLC1HOST_TOKEN1_WR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc0host_len_wr(&mut self) -> HOST_SLC0HOST_LEN_WR_W<8> {
         HOST_SLC0HOST_LEN_WR_W::new(self)
     }
@@ -107,11 +116,10 @@ impl crate::RegisterSpec for HOST_SLCHOST_TOKEN_CON_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_token_con::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_TOKEN_CON_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_TOKEN_CON to value 0"]
 impl crate::Resettable for HOST_SLCHOST_TOKEN_CON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

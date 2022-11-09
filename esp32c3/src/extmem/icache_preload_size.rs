@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_preload_size(&mut self) -> ICACHE_PRELOAD_SIZE_W<0> {
         ICACHE_PRELOAD_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ICACHE_PRELOAD_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_preload_size::W](W) writer structure"]
 impl crate::Writable for ICACHE_PRELOAD_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_PRELOAD_SIZE to value 0"]
 impl crate::Resettable for ICACHE_PRELOAD_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

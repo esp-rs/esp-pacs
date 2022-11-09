@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp B's shadow register"]
     #[inline(always)]
+    #[must_use]
     pub fn cmpr0_b(&mut self) -> CMPR0_B_W<0> {
         CMPR0_B_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CMPR0_VALUE1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmpr0_value1::W](W) writer structure"]
 impl crate::Writable for CMPR0_VALUE1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMPR0_VALUE1 to value 0"]
 impl crate::Resettable for CMPR0_VALUE1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

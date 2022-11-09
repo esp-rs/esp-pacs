@@ -183,81 +183,97 @@ impl R {
 impl W {
     #[doc = "Bit 3 - 0: In the dummy phase, the FSPI bus signals are not output. 1: In the dummy phase, the FSPI bus signals are output. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dummy_out(&mut self) -> DUMMY_OUT_W<3> {
         DUMMY_OUT_W::new(self)
     }
     #[doc = "Bit 5 - Apply 2 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<5> {
         FADDR_DUAL_W::new(self)
     }
     #[doc = "Bit 6 - Apply 4 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<6> {
         FADDR_QUAD_W::new(self)
     }
     #[doc = "Bit 7 - Apply 8 signals during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn faddr_oct(&mut self) -> FADDR_OCT_W<7> {
         FADDR_OCT_W::new(self)
     }
     #[doc = "Bit 8 - Apply 2 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<8> {
         FCMD_DUAL_W::new(self)
     }
     #[doc = "Bit 9 - Apply 4 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<9> {
         FCMD_QUAD_W::new(self)
     }
     #[doc = "Bit 10 - Apply 8 signals during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<10> {
         FCMD_OCT_W::new(self)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<14> {
         FREAD_DUAL_W::new(self)
     }
     #[doc = "Bit 15 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fread_quad(&mut self) -> FREAD_QUAD_W<15> {
         FREAD_QUAD_W::new(self)
     }
     #[doc = "Bit 16 - In the read operations read-data phase apply 8 signals. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fread_oct(&mut self) -> FREAD_OCT_W<16> {
         FREAD_OCT_W::new(self)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn q_pol(&mut self) -> Q_POL_W<18> {
         Q_POL_W::new(self)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_pol(&mut self) -> D_POL_W<19> {
         D_POL_W::new(self)
     }
     #[doc = "Bit 20 - SPI_HOLD output value when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn hold_pol(&mut self) -> HOLD_POL_W<20> {
         HOLD_POL_W::new(self)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn wp_pol(&mut self) -> WP_POL_W<21> {
         WP_POL_W::new(self)
     }
     #[doc = "Bits 23:24 - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<23> {
         RD_BIT_ORDER_W::new(self)
     }
     #[doc = "Bits 25:26 - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<25> {
         WR_BIT_ORDER_W::new(self)
     }
@@ -280,11 +296,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x003c_0000"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x003c_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x003c_0000;
 }

@@ -78,26 +78,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When set, capture on channel 2 is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn cap2_en(&mut self) -> CAP2_EN_W<0> {
         CAP2_EN_W::new(self)
     }
     #[doc = "Bits 1:2 - Edge of capture on channel 2 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
     #[inline(always)]
+    #[must_use]
     pub fn cap2_mode(&mut self) -> CAP2_MODE_W<1> {
         CAP2_MODE_W::new(self)
     }
     #[doc = "Bits 3:10 - Value of prescaling on possitive edge of CAP2. Prescale value = PWM_CAP2_PRESCALE + 1"]
     #[inline(always)]
+    #[must_use]
     pub fn cap2_prescale(&mut self) -> CAP2_PRESCALE_W<3> {
         CAP2_PRESCALE_W::new(self)
     }
     #[doc = "Bit 11 - when set, CAP2 form GPIO matrix is inverted before prescale"]
     #[inline(always)]
+    #[must_use]
     pub fn cap2_in_invert(&mut self) -> CAP2_IN_INVERT_W<11> {
         CAP2_IN_INVERT_W::new(self)
     }
     #[doc = "Bit 12 - Write 1 will trigger a software forced capture on channel 2"]
     #[inline(always)]
+    #[must_use]
     pub fn cap2_sw(&mut self) -> CAP2_SW_W<12> {
         CAP2_SW_W::new(self)
     }
@@ -120,11 +125,10 @@ impl crate::Readable for CAP_CH2_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cap_ch2_cfg::W](W) writer structure"]
 impl crate::Writable for CAP_CH2_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAP_CH2_CFG to value 0"]
 impl crate::Resettable for CAP_CH2_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

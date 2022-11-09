@@ -24,6 +24,7 @@ pub type CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONTINUE_SPEC, 
 impl W {
     #[doc = "Bit 0 - Set this bit to continue GCM operation."]
     #[inline(always)]
+    #[must_use]
     pub fn continue_(&mut self) -> CONTINUE_W<0> {
         CONTINUE_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for CONTINUE_SPEC {
 #[doc = "`write(|w| ..)` method takes [continue_::W](W) writer structure"]
 impl crate::Writable for CONTINUE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONTINUE to value 0"]
 impl crate::Resettable for CONTINUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

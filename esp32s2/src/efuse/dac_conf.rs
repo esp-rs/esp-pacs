@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<0> {
         DAC_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 8 - Don't care."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<8> {
         DAC_CLK_PAD_SEL_W::new(self)
     }
     #[doc = "Bits 9:16 - Controls the rising period of the programming voltage."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_num(&mut self) -> DAC_NUM_W<9> {
         DAC_NUM_W::new(self)
     }
     #[doc = "Bit 17 - Reduces the power supply of the programming voltage."]
     #[inline(always)]
+    #[must_use]
     pub fn oe_clr(&mut self) -> OE_CLR_W<17> {
         OE_CLR_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for DAC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [dac_conf::W](W) writer structure"]
 impl crate::Writable for DAC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DAC_CONF to value 0x0001_fe1c"]
 impl crate::Resettable for DAC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_fe1c
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_fe1c;
 }

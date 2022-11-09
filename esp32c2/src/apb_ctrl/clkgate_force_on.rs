@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Set the bit to 1 to force rom always have clock, for low power can clear to 0 then only when have access the rom have clock"]
     #[inline(always)]
+    #[must_use]
     pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<0> {
         ROM_CLKGATE_FORCE_ON_W::new(self)
     }
     #[doc = "Bits 3:6 - Set the bit to 1 to force sram always have clock, for low power can clear to 0 then only when have access the sram have clock"]
     #[inline(always)]
+    #[must_use]
     pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<3> {
         SRAM_CLKGATE_FORCE_ON_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CLKGATE_FORCE_ON_SPEC {
 #[doc = "`write(|w| ..)` method takes [clkgate_force_on::W](W) writer structure"]
 impl crate::Writable for CLKGATE_FORCE_ON_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLKGATE_FORCE_ON to value 0x7f"]
 impl crate::Resettable for CLKGATE_FORCE_ON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7f
-    }
+    const RESET_VALUE: Self::Ux = 0x7f;
 }

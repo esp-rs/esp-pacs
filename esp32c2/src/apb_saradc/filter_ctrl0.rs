@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 18:21 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<18> {
         FILTER_CHANNEL1_W::new(self)
     }
     #[doc = "Bits 22:25 - apb_adc1_filter_factor"]
     #[inline(always)]
+    #[must_use]
     pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<22> {
         FILTER_CHANNEL0_W::new(self)
     }
     #[doc = "Bit 31 - enable apb_adc1_filter"]
     #[inline(always)]
+    #[must_use]
     pub fn filter_reset(&mut self) -> FILTER_RESET_W<31> {
         FILTER_RESET_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for FILTER_CTRL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [filter_ctrl0::W](W) writer structure"]
 impl crate::Writable for FILTER_CTRL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FILTER_CTRL0 to value 0x0374_0000"]
 impl crate::Resettable for FILTER_CTRL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0374_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0374_0000;
 }

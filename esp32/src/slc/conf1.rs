@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W<0> {
         SLC0_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W<1> {
         SLC0_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W<2> {
         SLC0_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W<3> {
         CMD_HOLD_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W<4> {
         SLC0_LEN_AUTO_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W<5> {
         SLC0_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W<6> {
         SLC0_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W<16> {
         SLC1_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W<17> {
         SLC1_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W<18> {
         SLC1_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W<19> {
         HOST_INT_LEVEL_SEL_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W<20> {
         SLC1_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W<21> {
         SLC1_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<22> {
         CLK_EN_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0x0030_0078"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0030_0078
-    }
+    const RESET_VALUE: Self::Ux = 0x0030_0078;
 }

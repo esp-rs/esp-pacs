@@ -33,8 +33,5 @@ impl crate::Readable for DIAG1_SPEC {
 }
 #[doc = "`reset()` method sets DIAG1 to value 0"]
 impl crate::Resettable for DIAG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

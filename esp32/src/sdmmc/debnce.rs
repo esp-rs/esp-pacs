@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
     pub fn debounce_count(&self) -> DEBOUNCE_COUNT_R {
-        DEBOUNCE_COUNT_R::new((self.bits & 0x00ff_ffff) as u32)
+        DEBOUNCE_COUNT_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
+    #[must_use]
     pub fn debounce_count(&mut self) -> DEBOUNCE_COUNT_W<0> {
         DEBOUNCE_COUNT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DEBNCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [debnce::W](W) writer structure"]
 impl crate::Writable for DEBNCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DEBNCE to value 0"]
 impl crate::Resettable for DEBNCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

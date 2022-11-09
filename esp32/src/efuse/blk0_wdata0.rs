@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - program for efuse_wr_disable"]
     #[inline(always)]
+    #[must_use]
     pub fn wr_dis(&mut self) -> WR_DIS_W<0> {
         WR_DIS_W::new(self)
     }
     #[doc = "Bits 16:19 - program for efuse_rd_disable"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_dis(&mut self) -> RD_DIS_W<16> {
         RD_DIS_W::new(self)
     }
     #[doc = "Bits 20:26 - program for flash_crypt_cnt"]
     #[inline(always)]
+    #[must_use]
     pub fn flash_crypt_cnt(&mut self) -> FLASH_CRYPT_CNT_W<20> {
         FLASH_CRYPT_CNT_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for BLK0_WDATA0_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_wdata0::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_WDATA0 to value 0"]
 impl crate::Resettable for BLK0_WDATA0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

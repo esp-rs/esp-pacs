@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_rom_fo(&mut self) -> PRO_ROM_FO_W<0> {
         PRO_ROM_FO_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn app_rom_fo(&mut self) -> APP_ROM_FO_W<1> {
         APP_ROM_FO_W::new(self)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
+    #[must_use]
     pub fn share_rom_fo(&mut self) -> SHARE_ROM_FO_W<2> {
         SHARE_ROM_FO_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for ROM_FO_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_fo_ctrl::W](W) writer structure"]
 impl crate::Writable for ROM_FO_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_FO_CTRL to value 0x03"]
 impl crate::Resettable for ROM_FO_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

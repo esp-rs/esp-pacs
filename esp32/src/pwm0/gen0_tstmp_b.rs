@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b(&mut self) -> GEN0_B_W<0> {
         GEN0_B_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for GEN0_TSTMP_B_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen0_tstmp_b::W](W) writer structure"]
 impl crate::Writable for GEN0_TSTMP_B_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN0_TSTMP_B to value 0"]
 impl crate::Resettable for GEN0_TSTMP_B_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

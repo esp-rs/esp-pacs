@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - PWM timer1 start and stop control. 0: if PWM timer1 starts, then stops at TEZ, 1: if timer1 starts, then stops at TEP, 2: PWM timer1 starts and runs on, 3: timer1 starts and stops at the next TEZ, 4: timer1 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_start(&mut self) -> TIMER1_START_W<0> {
         TIMER1_START_W::new(self)
     }
     #[doc = "Bits 3:4 - PWM timer1 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_mod(&mut self) -> TIMER1_MOD_W<3> {
         TIMER1_MOD_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for TIMER1_CFG1_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer1_cfg1::W](W) writer structure"]
 impl crate::Writable for TIMER1_CFG1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER1_CFG1 to value 0"]
 impl crate::Resettable for TIMER1_CFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

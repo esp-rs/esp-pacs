@@ -33,8 +33,5 @@ impl crate::Readable for APP_DCACHE_DBUG1_SPEC {
 }
 #[doc = "`reset()` method sets APP_DCACHE_DBUG1 to value 0"]
 impl crate::Resettable for APP_DCACHE_DBUG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

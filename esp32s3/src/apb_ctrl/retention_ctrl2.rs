@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 4:11 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_icache_size(&mut self) -> RET_ICACHE_SIZE_W<4> {
         RET_ICACHE_SIZE_W::new(self)
     }
     #[doc = "Bits 13:20 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_icache_vld_size(&mut self) -> RET_ICACHE_VLD_SIZE_W<13> {
         RET_ICACHE_VLD_SIZE_W::new(self)
     }
     #[doc = "Bits 22:29 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_icache_start_point(&mut self) -> RET_ICACHE_START_POINT_W<22> {
         RET_ICACHE_START_POINT_W::new(self)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_icache_enable(&mut self) -> RET_ICACHE_ENABLE_W<31> {
         RET_ICACHE_ENABLE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for RETENTION_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [retention_ctrl2::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RETENTION_CTRL2 to value 0x001f_eff0"]
 impl crate::Resettable for RETENTION_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x001f_eff0
-    }
+    const RESET_VALUE: Self::Ux = 0x001f_eff0;
 }

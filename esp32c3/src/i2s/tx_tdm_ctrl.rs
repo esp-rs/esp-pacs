@@ -203,91 +203,109 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan0_en(&mut self) -> TX_TDM_CHAN0_EN_W<0> {
         TX_TDM_CHAN0_EN_W::new(self)
     }
     #[doc = "Bit 1 - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan1_en(&mut self) -> TX_TDM_CHAN1_EN_W<1> {
         TX_TDM_CHAN1_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan2_en(&mut self) -> TX_TDM_CHAN2_EN_W<2> {
         TX_TDM_CHAN2_EN_W::new(self)
     }
     #[doc = "Bit 3 - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan3_en(&mut self) -> TX_TDM_CHAN3_EN_W<3> {
         TX_TDM_CHAN3_EN_W::new(self)
     }
     #[doc = "Bit 4 - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan4_en(&mut self) -> TX_TDM_CHAN4_EN_W<4> {
         TX_TDM_CHAN4_EN_W::new(self)
     }
     #[doc = "Bit 5 - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan5_en(&mut self) -> TX_TDM_CHAN5_EN_W<5> {
         TX_TDM_CHAN5_EN_W::new(self)
     }
     #[doc = "Bit 6 - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan6_en(&mut self) -> TX_TDM_CHAN6_EN_W<6> {
         TX_TDM_CHAN6_EN_W::new(self)
     }
     #[doc = "Bit 7 - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan7_en(&mut self) -> TX_TDM_CHAN7_EN_W<7> {
         TX_TDM_CHAN7_EN_W::new(self)
     }
     #[doc = "Bit 8 - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan8_en(&mut self) -> TX_TDM_CHAN8_EN_W<8> {
         TX_TDM_CHAN8_EN_W::new(self)
     }
     #[doc = "Bit 9 - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan9_en(&mut self) -> TX_TDM_CHAN9_EN_W<9> {
         TX_TDM_CHAN9_EN_W::new(self)
     }
     #[doc = "Bit 10 - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan10_en(&mut self) -> TX_TDM_CHAN10_EN_W<10> {
         TX_TDM_CHAN10_EN_W::new(self)
     }
     #[doc = "Bit 11 - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan11_en(&mut self) -> TX_TDM_CHAN11_EN_W<11> {
         TX_TDM_CHAN11_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan12_en(&mut self) -> TX_TDM_CHAN12_EN_W<12> {
         TX_TDM_CHAN12_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan13_en(&mut self) -> TX_TDM_CHAN13_EN_W<13> {
         TX_TDM_CHAN13_EN_W::new(self)
     }
     #[doc = "Bit 14 - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan14_en(&mut self) -> TX_TDM_CHAN14_EN_W<14> {
         TX_TDM_CHAN14_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_chan15_en(&mut self) -> TX_TDM_CHAN15_EN_W<15> {
         TX_TDM_CHAN15_EN_W::new(self)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_tot_chan_num(&mut self) -> TX_TDM_TOT_CHAN_NUM_W<16> {
         TX_TDM_TOT_CHAN_NUM_W::new(self)
     }
     #[doc = "Bit 20 - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_tdm_skip_msk_en(&mut self) -> TX_TDM_SKIP_MSK_EN_W<20> {
         TX_TDM_SKIP_MSK_EN_W::new(self)
     }
@@ -310,11 +328,10 @@ impl crate::Readable for TX_TDM_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_tdm_ctrl::W](W) writer structure"]
 impl crate::Writable for TX_TDM_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_TDM_CTRL to value 0xffff"]
 impl crate::Resettable for TX_TDM_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff;
 }

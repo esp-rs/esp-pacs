@@ -459,51 +459,61 @@ impl R {
 impl W {
     #[doc = "Bit 14 - When set flash boot protection is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<14> {
         WDT_FLASHBOOT_MOD_EN_W::new(self)
     }
     #[doc = "Bits 15:17 - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<15> {
         WDT_SYS_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bits 18:20 - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<18> {
         WDT_CPU_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bit 21 - When set level type interrupt generation is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<21> {
         WDT_LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 22 - When set edge type interrupt generation is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<22> {
         WDT_EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 23:24 - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W<23> {
         WDT_STG3_W::new(self)
     }
     #[doc = "Bits 25:26 - Stage 2 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W<25> {
         WDT_STG2_W::new(self)
     }
     #[doc = "Bits 27:28 - Stage 1 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W<27> {
         WDT_STG1_W::new(self)
     }
     #[doc = "Bits 29:30 - Stage 0 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W<29> {
         WDT_STG0_W::new(self)
     }
     #[doc = "Bit 31 - When set SWDT is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_en(&mut self) -> WDT_EN_W<31> {
         WDT_EN_W::new(self)
     }
@@ -526,11 +536,10 @@ impl crate::Readable for WDTCONFIG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG0 to value 0x0004_c000"]
 impl crate::Resettable for WDTCONFIG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0004_c000
-    }
+    const RESET_VALUE: Self::Ux = 0x0004_c000;
 }

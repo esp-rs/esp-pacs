@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:16 - apb saradc2 sample data"]
     #[inline(always)]
     pub fn apb_saradc2_data(&self) -> APB_SARADC2_DATA_R {
-        APB_SARADC2_DATA_R::new((self.bits & 0x0001_ffff) as u32)
+        APB_SARADC2_DATA_R::new(self.bits & 0x0001_ffff)
     }
 }
 #[doc = "get apb saradc2 sample data\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apb_saradc2_data_status](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for APB_SARADC2_DATA_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets APB_SARADC2_DATA_STATUS to value 0"]
 impl crate::Resettable for APB_SARADC2_DATA_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

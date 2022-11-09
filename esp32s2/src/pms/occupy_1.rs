@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 0-3 is used as cache memory."]
     #[inline(always)]
+    #[must_use]
     pub fn occupy_cache(&mut self) -> OCCUPY_CACHE_W<0> {
         OCCUPY_CACHE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for OCCUPY_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [occupy_1::W](W) writer structure"]
 impl crate::Writable for OCCUPY_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OCCUPY_1 to value 0"]
 impl crate::Resettable for OCCUPY_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

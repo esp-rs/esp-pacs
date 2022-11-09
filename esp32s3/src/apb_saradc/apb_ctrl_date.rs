@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - version"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_ctrl_date(&mut self) -> APB_CTRL_DATE_W<0> {
         APB_CTRL_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APB_CTRL_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_ctrl_date::W](W) writer structure"]
 impl crate::Writable for APB_CTRL_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_CTRL_DATE to value 0x0210_1180"]
 impl crate::Resettable for APB_CTRL_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0210_1180
-    }
+    const RESET_VALUE: Self::Ux = 0x0210_1180;
 }

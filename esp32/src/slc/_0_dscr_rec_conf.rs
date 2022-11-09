@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_dscr_rec_lim(&mut self) -> SLC0_RX_DSCR_REC_LIM_W<0> {
         SLC0_RX_DSCR_REC_LIM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for _0_DSCR_REC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [_0_dscr_rec_conf::W](W) writer structure"]
 impl crate::Writable for _0_DSCR_REC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets _0_DSCR_REC_CONF to value 0x03ff"]
 impl crate::Resettable for _0_DSCR_REC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03ff
-    }
+    const RESET_VALUE: Self::Ux = 0x03ff;
 }

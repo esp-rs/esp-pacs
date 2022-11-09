@@ -62,16 +62,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - reg_comb_path_len_lvt"]
     #[inline(always)]
+    #[must_use]
     pub fn comb_path_len_lvt(&mut self) -> COMB_PATH_LEN_LVT_W<0> {
         COMB_PATH_LEN_LVT_W::new(self)
     }
     #[doc = "Bit 6 - reg_comb_err_cnt_clr_lvt"]
     #[inline(always)]
+    #[must_use]
     pub fn comb_err_cnt_clr_lvt(&mut self) -> COMB_ERR_CNT_CLR_LVT_W<6> {
         COMB_ERR_CNT_CLR_LVT_W::new(self)
     }
     #[doc = "Bit 7 - reg_comb_pvt_monitor_en_lvt"]
     #[inline(always)]
+    #[must_use]
     pub fn comb_pvt_monitor_en_lvt(&mut self) -> COMB_PVT_MONITOR_EN_LVT_W<7> {
         COMB_PVT_MONITOR_EN_LVT_W::new(self)
     }
@@ -94,11 +97,10 @@ impl crate::Readable for COMB_PVT_LVT_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [comb_pvt_lvt_conf::W](W) writer structure"]
 impl crate::Writable for COMB_PVT_LVT_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets COMB_PVT_LVT_CONF to value 0x03"]
 impl crate::Resettable for COMB_PVT_LVT_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

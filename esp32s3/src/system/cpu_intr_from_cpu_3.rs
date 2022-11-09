@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to generate cpu interrupt 3"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_intr_from_cpu_3(&mut self) -> CPU_INTR_FROM_CPU_3_W<0> {
         CPU_INTR_FROM_CPU_3_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CPU_INTR_FROM_CPU_3_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_intr_from_cpu_3::W](W) writer structure"]
 impl crate::Writable for CPU_INTR_FROM_CPU_3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_INTR_FROM_CPU_3 to value 0"]
 impl crate::Resettable for CPU_INTR_FROM_CPU_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

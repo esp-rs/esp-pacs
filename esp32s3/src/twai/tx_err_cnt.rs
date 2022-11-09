@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The TX error counter register, reflects value changes under transmission status."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_err_cnt(&mut self) -> TX_ERR_CNT_W<0> {
         TX_ERR_CNT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TX_ERR_CNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_err_cnt::W](W) writer structure"]
 impl crate::Writable for TX_ERR_CNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_ERR_CNT to value 0"]
 impl crate::Resettable for TX_ERR_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

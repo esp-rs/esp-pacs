@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
     #[inline(always)]
     pub fn rx_gap_tout(&self) -> RX_GAP_TOUT_R {
-        RX_GAP_TOUT_R::new((self.bits & 0x00ff_ffff) as u32)
+        RX_GAP_TOUT_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_gap_tout(&mut self) -> RX_GAP_TOUT_W<0> {
         RX_GAP_TOUT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AT_CMD_GAPTOUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [at_cmd_gaptout::W](W) writer structure"]
 impl crate::Writable for AT_CMD_GAPTOUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_GAPTOUT to value 0x1e00"]
 impl crate::Resettable for AT_CMD_GAPTOUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1e00
-    }
+    const RESET_VALUE: Self::Ux = 0x1e00;
 }

@@ -97,31 +97,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<0> {
         TXFIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 8:10 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<8> {
         TXFIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 11 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<11> {
         TXFIFO_TIMEOUT_ENA_W::new(self)
     }
     #[doc = "Bits 12:19 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<12> {
         RXFIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 20:22 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<20> {
         RXFIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 23 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<23> {
         RXFIFO_TIMEOUT_ENA_W::new(self)
     }
@@ -144,11 +150,10 @@ impl crate::Readable for HUNG_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [hung_conf::W](W) writer structure"]
 impl crate::Writable for HUNG_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HUNG_CONF to value 0x0081_0810"]
 impl crate::Resettable for HUNG_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0081_0810
-    }
+    const RESET_VALUE: Self::Ux = 0x0081_0810;
 }

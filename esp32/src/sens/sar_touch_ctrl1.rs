@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<0> {
         TOUCH_MEAS_DELAY_W::new(self)
     }
     #[doc = "Bits 16:23 - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<16> {
         TOUCH_XPD_WAIT_W::new(self)
     }
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
+    #[must_use]
     pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<24> {
         TOUCH_OUT_SEL_W::new(self)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
     #[inline(always)]
+    #[must_use]
     pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<25> {
         TOUCH_OUT_1EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<26> {
         XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
+    #[must_use]
     pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<27> {
         HALL_PHASE_FORCE_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for SAR_TOUCH_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_touch_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_CTRL1 to value 0x0204_1000"]
 impl crate::Resettable for SAR_TOUCH_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0204_1000
-    }
+    const RESET_VALUE: Self::Ux = 0x0204_1000;
 }

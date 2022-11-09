@@ -40,8 +40,5 @@ impl crate::Readable for FH0_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets FH0_STATUS to value 0"]
 impl crate::Resettable for FH0_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

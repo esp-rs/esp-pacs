@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn h_fslspclksel(&mut self) -> H_FSLSPCLKSEL_W<0> {
         H_FSLSPCLKSEL_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn h_fslssupp(&mut self) -> H_FSLSSUPP_W<2> {
         H_FSLSSUPP_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ena32khzs(&mut self) -> H_ENA32KHZS_W<7> {
         H_ENA32KHZS_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn h_descdma(&mut self) -> H_DESCDMA_W<23> {
         H_DESCDMA_W::new(self)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
+    #[must_use]
     pub fn h_frlisten(&mut self) -> H_FRLISTEN_W<24> {
         H_FRLISTEN_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn h_perschedena(&mut self) -> H_PERSCHEDENA_W<26> {
         H_PERSCHEDENA_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn h_modechtimen(&mut self) -> H_MODECHTIMEN_W<31> {
         H_MODECHTIMEN_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for HCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcfg::W](W) writer structure"]
 impl crate::Writable for HCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCFG to value 0"]
 impl crate::Resettable for HCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

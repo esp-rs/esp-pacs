@@ -28,11 +28,13 @@ pub type PERI_BACKUP_ERR_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - reg_peri_backup_done_int_clr"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_done_int_clr(&mut self) -> PERI_BACKUP_DONE_INT_CLR_W<0> {
         PERI_BACKUP_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_clr"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_err_int_clr(&mut self) -> PERI_BACKUP_ERR_INT_CLR_W<1> {
         PERI_BACKUP_ERR_INT_CLR_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for PERI_BACKUP_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [peri_backup_int_clr::W](W) writer structure"]
 impl crate::Writable for PERI_BACKUP_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERI_BACKUP_INT_CLR to value 0"]
 impl crate::Resettable for PERI_BACKUP_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

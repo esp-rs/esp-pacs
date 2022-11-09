@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<27> {
         RTC_I2C_CLK_EN_W::new(self)
     }
     #[doc = "Bit 29 - enable tsens clock"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<29> {
         TSENS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 30 - enbale saradc clock"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<30> {
         SARADC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - enable io_mux clock"]
     #[inline(always)]
+    #[must_use]
     pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<31> {
         IOMUX_CLK_EN_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SAR_PERI_CLK_GATE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_peri_clk_gate_conf::W](W) writer structure"]
 impl crate::Writable for SAR_PERI_CLK_GATE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_PERI_CLK_GATE_CONF to value 0"]
 impl crate::Resettable for SAR_PERI_CLK_GATE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

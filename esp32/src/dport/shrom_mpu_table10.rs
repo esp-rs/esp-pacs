@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn shrom_mpu_table10(&mut self) -> SHROM_MPU_TABLE10_W<0> {
         SHROM_MPU_TABLE10_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SHROM_MPU_TABLE10_SPEC {
 #[doc = "`write(|w| ..)` method takes [shrom_mpu_table10::W](W) writer structure"]
 impl crate::Writable for SHROM_MPU_TABLE10_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHROM_MPU_TABLE10 to value 0x01"]
 impl crate::Resettable for SHROM_MPU_TABLE10_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

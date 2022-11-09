@@ -24,6 +24,7 @@ pub type MODMULT_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODMULT_ST
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to start the modular multiplication"]
     #[inline(always)]
+    #[must_use]
     pub fn modmult_start(&mut self) -> MODMULT_START_W<0> {
         MODMULT_START_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for MODMULT_START_SPEC {
 #[doc = "`write(|w| ..)` method takes [modmult_start::W](W) writer structure"]
 impl crate::Writable for MODMULT_START_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MODMULT_START to value 0"]
 impl crate::Resettable for MODMULT_START_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

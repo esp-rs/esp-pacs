@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - reg_rmt_rx_lim_ch2."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lim(&mut self) -> RX_LIM_W<0> {
         RX_LIM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CH_RX_LIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_rx_lim::W](W) writer structure"]
 impl crate::Writable for CH_RX_LIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_RX_LIM to value 0x80"]
 impl crate::Resettable for CH_RX_LIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

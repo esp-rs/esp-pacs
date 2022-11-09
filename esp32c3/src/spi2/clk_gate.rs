@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<0> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to power on the SPI module clock."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_clk_active(&mut self) -> MST_CLK_ACTIVE_W<1> {
         MST_CLK_ACTIVE_W::new(self)
     }
     #[doc = "Bit 2 - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_clk_sel(&mut self) -> MST_CLK_SEL_W<2> {
         MST_CLK_SEL_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for CLK_GATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_gate::W](W) writer structure"]
 impl crate::Writable for CLK_GATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_GATE to value 0"]
 impl crate::Resettable for CLK_GATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

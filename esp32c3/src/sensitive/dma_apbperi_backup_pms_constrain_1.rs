@@ -135,6 +135,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - dma_apbperi_backup_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<0> {
@@ -142,6 +143,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - dma_apbperi_backup_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<2> {
@@ -149,6 +151,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - dma_apbperi_backup_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<4> {
@@ -156,6 +159,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - dma_apbperi_backup_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<6> {
@@ -163,6 +167,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - dma_apbperi_backup_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_1_pms_0(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<12> {
@@ -170,6 +175,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - dma_apbperi_backup_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_1_pms_1(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<14> {
@@ -177,6 +183,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - dma_apbperi_backup_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_1_pms_2(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<16> {
@@ -184,6 +191,7 @@ impl W {
     }
     #[doc = "Bits 18:19 - dma_apbperi_backup_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_backup_pms_constrain_sram_world_1_pms_3(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<18> {
@@ -208,11 +216,10 @@ impl crate::Readable for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_apbperi_backup_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 to value 0x000f_f0ff"]
 impl crate::Resettable for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_f0ff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_f0ff;
 }

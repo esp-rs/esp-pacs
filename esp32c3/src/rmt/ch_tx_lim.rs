@@ -69,21 +69,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - reg_rmt_tx_lim_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lim(&mut self) -> TX_LIM_W<0> {
         TX_LIM_W::new(self)
     }
     #[doc = "Bits 9:18 - reg_rmt_tx_loop_num_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_loop_num(&mut self) -> TX_LOOP_NUM_W<9> {
         TX_LOOP_NUM_W::new(self)
     }
     #[doc = "Bit 19 - reg_rmt_tx_loop_cnt_en_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_loop_cnt_en(&mut self) -> TX_LOOP_CNT_EN_W<19> {
         TX_LOOP_CNT_EN_W::new(self)
     }
     #[doc = "Bit 20 - reg_loop_count_reset_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn loop_count_reset(&mut self) -> LOOP_COUNT_RESET_W<20> {
         LOOP_COUNT_RESET_W::new(self)
     }
@@ -106,11 +110,10 @@ impl crate::Readable for CH_TX_LIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_tx_lim::W](W) writer structure"]
 impl crate::Writable for CH_TX_LIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_TX_LIM to value 0x80"]
 impl crate::Resettable for CH_TX_LIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

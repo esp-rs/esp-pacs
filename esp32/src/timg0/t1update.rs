@@ -24,6 +24,7 @@ pub type UPDATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T1UPDATE_SPEC, 
 impl W {
     #[doc = "Bits 0:31 - Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)"]
     #[inline(always)]
+    #[must_use]
     pub fn update(&mut self) -> UPDATE_W<0> {
         UPDATE_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for T1UPDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [t1update::W](W) writer structure"]
 impl crate::Writable for T1UPDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T1UPDATE to value 0"]
 impl crate::Resettable for T1UPDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

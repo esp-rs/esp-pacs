@@ -24,6 +24,7 @@ pub type WDATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_MESSAGE__SPEC
 impl W {
     #[doc = "Bits 0:31 - Store the %sth 32-bit of message."]
     #[inline(always)]
+    #[must_use]
     pub fn wdata(&mut self) -> WDATA_W<0> {
         WDATA_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for WR_MESSAGE__SPEC {
 #[doc = "`write(|w| ..)` method takes [wr_message_::W](W) writer structure"]
 impl crate::Writable for WR_MESSAGE__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WR_MESSAGE_%s to value 0"]
 impl crate::Resettable for WR_MESSAGE__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

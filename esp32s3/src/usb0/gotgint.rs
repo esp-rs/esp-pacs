@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn sesenddet(&mut self) -> SESENDDET_W<2> {
         SESENDDET_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<8> {
         SESREQSUCSTSCHNG_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<9> {
         HSTNEGSUCSTSCHNG_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn hstnegdet(&mut self) -> HSTNEGDET_W<17> {
         HSTNEGDET_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<18> {
         ADEVTOUTCHG_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn dbncedone(&mut self) -> DBNCEDONE_W<19> {
         DBNCEDONE_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for GOTGINT_SPEC {
 #[doc = "`write(|w| ..)` method takes [gotgint::W](W) writer structure"]
 impl crate::Writable for GOTGINT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GOTGINT to value 0"]
 impl crate::Resettable for GOTGINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

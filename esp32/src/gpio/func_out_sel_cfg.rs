@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
+    #[must_use]
     pub fn out_sel(&mut self) -> OUT_SEL_W<0> {
         OUT_SEL_W::new(self)
     }
     #[doc = "Bit 9 - invert the output value if you want to revert the output value setting the value to 1"]
     #[inline(always)]
+    #[must_use]
     pub fn inv_sel(&mut self) -> INV_SEL_W<9> {
         INV_SEL_W::new(self)
     }
     #[doc = "Bit 10 - weather using the logical oen signal or not using the value setting by the register"]
     #[inline(always)]
+    #[must_use]
     pub fn oen_sel(&mut self) -> OEN_SEL_W<10> {
         OEN_SEL_W::new(self)
     }
     #[doc = "Bit 11 - invert the output enable value if you want to revert the output enable value setting the value to 1"]
     #[inline(always)]
+    #[must_use]
     pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<11> {
         OEN_INV_SEL_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [func_out_sel_cfg::W](W) writer structure"]
 impl crate::Writable for FUNC_OUT_SEL_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FUNC%s_OUT_SEL_CFG to value 0"]
 impl crate::Resettable for FUNC_OUT_SEL_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

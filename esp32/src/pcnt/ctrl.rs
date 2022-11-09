@@ -192,86 +192,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear unit0's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u0(&mut self) -> PLUS_CNT_RST_U0_W<0> {
         PLUS_CNT_RST_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to pause unit0's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U0_W<1> {
         CNT_PAUSE_U0_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear unit1's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u1(&mut self) -> PLUS_CNT_RST_U1_W<2> {
         PLUS_CNT_RST_U1_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to pause unit1's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U1_W<3> {
         CNT_PAUSE_U1_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear unit2's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u2(&mut self) -> PLUS_CNT_RST_U2_W<4> {
         PLUS_CNT_RST_U2_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to pause unit2's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U2_W<5> {
         CNT_PAUSE_U2_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear unit3's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u3(&mut self) -> PLUS_CNT_RST_U3_W<6> {
         PLUS_CNT_RST_U3_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to pause unit3's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U3_W<7> {
         CNT_PAUSE_U3_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear unit4's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u4(&mut self) -> PLUS_CNT_RST_U4_W<8> {
         PLUS_CNT_RST_U4_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to pause unit4's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u4(&mut self) -> CNT_PAUSE_U4_W<9> {
         CNT_PAUSE_U4_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to clear unit5's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u5(&mut self) -> PLUS_CNT_RST_U5_W<10> {
         PLUS_CNT_RST_U5_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to pause unit5's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u5(&mut self) -> CNT_PAUSE_U5_W<11> {
         CNT_PAUSE_U5_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to clear unit6's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u6(&mut self) -> PLUS_CNT_RST_U6_W<12> {
         PLUS_CNT_RST_U6_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to pause unit6's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u6(&mut self) -> CNT_PAUSE_U6_W<13> {
         CNT_PAUSE_U6_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to clear unit7's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn plus_cnt_rst_u7(&mut self) -> PLUS_CNT_RST_U7_W<14> {
         PLUS_CNT_RST_U7_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to pause unit7's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u7(&mut self) -> CNT_PAUSE_U7_W<15> {
         CNT_PAUSE_U7_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<16> {
         CLK_EN_W::new(self)
     }
@@ -294,11 +311,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x5555"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x5555
-    }
+    const RESET_VALUE: Self::Ux = 0x5555;
 }

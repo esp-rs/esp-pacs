@@ -112,41 +112,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn vdd_spi_pwr_drv(&mut self) -> VDD_SPI_PWR_DRV_W<0> {
         VDD_SPI_PWR_DRV_W::new(self)
     }
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn vdd_spi_pwr_force(&mut self) -> VDD_SPI_PWR_FORCE_W<2> {
         VDD_SPI_PWR_FORCE_W::new(self)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn vdd_spi_pd_en(&mut self) -> VDD_SPI_PD_EN_W<3> {
         VDD_SPI_PD_EN_W::new(self)
     }
     #[doc = "Bit 4 - memories in digital core force PD in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<4> {
         LSLP_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 5 - memories in digital core force no PD in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<5> {
         LSLP_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<19> {
         DG_WRAP_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<20> {
         DG_WRAP_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<31> {
         DG_WRAP_PD_EN_W::new(self)
     }
@@ -169,11 +177,10 @@ impl crate::Readable for DIG_PWC_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_pwc::W](W) writer structure"]
 impl crate::Writable for DIG_PWC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_PWC to value 0x0010_0020"]
 impl crate::Resettable for DIG_PWC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0010_0020
-    }
+    const RESET_VALUE: Self::Ux = 0x0010_0020;
 }

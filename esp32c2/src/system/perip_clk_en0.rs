@@ -144,56 +144,67 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set 1 to enable SPI01 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<1> {
         SPI01_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable UART clock"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<2> {
         UART_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set 1 to enable UART1 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<5> {
         UART1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to enable SPI2 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<6> {
         SPI2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to enable I2C_EXT0 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<7> {
         I2C_EXT0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 11 - Set 1 to enable LEDC clock"]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<11> {
         LEDC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set 1 to enable TIMERGROUP clock"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<13> {
         TIMERGROUP_CLK_EN_W::new(self)
     }
     #[doc = "Bit 24 - Set 1 to enable UART_MEM clock"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<24> {
         UART_MEM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 28 - Set 1 to enable APB_SARADC clock"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<28> {
         APB_SARADC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 29 - Set 1 to enable SYSTEMTIMER clock"]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<29> {
         SYSTIMER_CLK_EN_W::new(self)
     }
     #[doc = "Bit 30 - Set 1 to enable ADC2_ARB clock"]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<30> {
         ADC2_ARB_CLK_EN_W::new(self)
     }
@@ -216,11 +227,10 @@ impl crate::Readable for PERIP_CLK_EN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN0 to value 0x7100_2066"]
 impl crate::Resettable for PERIP_CLK_EN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7100_2066
-    }
+    const RESET_VALUE: Self::Ux = 0x7100_2066;
 }

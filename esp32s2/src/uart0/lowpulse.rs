@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - This register stores the value of the minimum duration time of the low level pulse. It is used in baud rate detection."]
     #[inline(always)]
     pub fn min_cnt(&self) -> MIN_CNT_R {
-        MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        MIN_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "Autobaud minimum low pulse duration register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lowpulse](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for LOWPULSE_SPEC {
 }
 #[doc = "`reset()` method sets LOWPULSE to value 0x000f_ffff"]
 impl crate::Resettable for LOWPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_ffff;
 }

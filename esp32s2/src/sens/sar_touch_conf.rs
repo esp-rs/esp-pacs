@@ -106,31 +106,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - Enable touch controller output."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<0> {
         TOUCH_OUTEN_W::new(self)
     }
     #[doc = "Bit 15 - Clear all touch active status."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<15> {
         TOUCH_STATUS_CLR_W::new(self)
     }
     #[doc = "Bits 16:17 - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<16> {
         TOUCH_DATA_SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - Indicate which pad is selected as proximity pad2"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_approach_pad2(&mut self) -> TOUCH_APPROACH_PAD2_W<20> {
         TOUCH_APPROACH_PAD2_W::new(self)
     }
     #[doc = "Bits 24:27 - Indicate which pad is selected as proximity pad1"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_approach_pad1(&mut self) -> TOUCH_APPROACH_PAD1_W<24> {
         TOUCH_APPROACH_PAD1_W::new(self)
     }
     #[doc = "Bits 28:31 - Indicate which pad is selected as proximity pad0"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_approach_pad0(&mut self) -> TOUCH_APPROACH_PAD0_W<28> {
         TOUCH_APPROACH_PAD0_W::new(self)
     }
@@ -153,11 +159,10 @@ impl crate::Readable for SAR_TOUCH_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_touch_conf::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_CONF to value 0xfff0_7fff"]
 impl crate::Resettable for SAR_TOUCH_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xfff0_7fff
-    }
+    const RESET_VALUE: Self::Ux = 0xfff0_7fff;
 }

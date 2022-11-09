@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
+    #[must_use]
     pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<0> {
         ROM_FORCE_PD_W::new(self)
     }
     #[doc = "Bits 2:3 - This field is used to power up internal ROM."]
     #[inline(always)]
+    #[must_use]
     pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<2> {
         ROM_FORCE_PU_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for ROM_CTRL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_ctrl_1::W](W) writer structure"]
 impl crate::Writable for ROM_CTRL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_CTRL_1 to value 0x0c"]
 impl crate::Resettable for ROM_CTRL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0c
-    }
+    const RESET_VALUE: Self::Ux = 0x0c;
 }

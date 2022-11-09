@@ -174,76 +174,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
+    #[must_use]
     pub fn phy_sel(&mut self) -> PHY_SEL_W<0> {
         PHY_SEL_W::new(self)
     }
     #[doc = "Bit 1 - Enable software control USB D+ D- exchange"]
     #[inline(always)]
+    #[must_use]
     pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<1> {
         EXCHG_PINS_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 2 - USB D+ D- exchange"]
     #[inline(always)]
+    #[must_use]
     pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<2> {
         EXCHG_PINS_W::new(self)
     }
     #[doc = "Bits 3:4 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
+    #[must_use]
     pub fn vrefh(&mut self) -> VREFH_W<3> {
         VREFH_W::new(self)
     }
     #[doc = "Bits 5:6 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
+    #[must_use]
     pub fn vrefl(&mut self) -> VREFL_W<5> {
         VREFL_W::new(self)
     }
     #[doc = "Bit 7 - Enable software control input threshold"]
     #[inline(always)]
+    #[must_use]
     pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<7> {
         VREF_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 8 - Enable software control USB D+ D- pullup pulldown"]
     #[inline(always)]
+    #[must_use]
     pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<8> {
         PAD_PULL_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 9 - Control USB D+ pull up."]
     #[inline(always)]
+    #[must_use]
     pub fn dp_pullup(&mut self) -> DP_PULLUP_W<9> {
         DP_PULLUP_W::new(self)
     }
     #[doc = "Bit 10 - Control USB D+ pull down."]
     #[inline(always)]
+    #[must_use]
     pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<10> {
         DP_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 11 - Control USB D- pull up."]
     #[inline(always)]
+    #[must_use]
     pub fn dm_pullup(&mut self) -> DM_PULLUP_W<11> {
         DM_PULLUP_W::new(self)
     }
     #[doc = "Bit 12 - Control USB D- pull down."]
     #[inline(always)]
+    #[must_use]
     pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<12> {
         DM_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 13 - Control pull up value."]
     #[inline(always)]
+    #[must_use]
     pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<13> {
         PULLUP_VALUE_W::new(self)
     }
     #[doc = "Bit 14 - Enable USB pad function."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<14> {
         USB_PAD_ENABLE_W::new(self)
     }
     #[doc = "Bit 15 - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
     #[inline(always)]
+    #[must_use]
     pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<15> {
         PHY_TX_EDGE_SEL_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_jtag_bridge_en(&mut self) -> USB_JTAG_BRIDGE_EN_W<16> {
         USB_JTAG_BRIDGE_EN_W::new(self)
     }
@@ -266,11 +281,10 @@ impl crate::Readable for CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF0 to value 0x4200"]
 impl crate::Resettable for CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4200
-    }
+    const RESET_VALUE: Self::Ux = 0x4200;
 }

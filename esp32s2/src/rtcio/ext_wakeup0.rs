@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 27:31 - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
     #[inline(always)]
+    #[must_use]
     pub fn sel(&mut self) -> SEL_W<27> {
         SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for EXT_WAKEUP0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_wakeup0::W](W) writer structure"]
 impl crate::Writable for EXT_WAKEUP0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_WAKEUP0 to value 0"]
 impl crate::Resettable for EXT_WAKEUP0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

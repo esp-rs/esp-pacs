@@ -38,41 +38,49 @@ pub type GPIO7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_CLR_S
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the DEDIC_GPIO0_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio0_int_clr(&mut self) -> GPIO0_INT_CLR_W<0> {
         GPIO0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the DEDIC_GPIO1_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio1_int_clr(&mut self) -> GPIO1_INT_CLR_W<1> {
         GPIO1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the DEDIC_GPIO2_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio2_int_clr(&mut self) -> GPIO2_INT_CLR_W<2> {
         GPIO2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the DEDIC_GPIO3_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio3_int_clr(&mut self) -> GPIO3_INT_CLR_W<3> {
         GPIO3_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear the DEDIC_GPIO4_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio4_int_clr(&mut self) -> GPIO4_INT_CLR_W<4> {
         GPIO4_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear the DEDIC_GPIO5_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio5_int_clr(&mut self) -> GPIO5_INT_CLR_W<5> {
         GPIO5_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear the DEDIC_GPIO6_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio6_int_clr(&mut self) -> GPIO6_INT_CLR_W<6> {
         GPIO6_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear the DEDIC_GPIO7_INT_RAW interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio7_int_clr(&mut self) -> GPIO7_INT_CLR_W<7> {
         GPIO7_INT_CLR_W::new(self)
     }
@@ -91,11 +99,10 @@ impl crate::RegisterSpec for INTR_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr_clr::W](W) writer structure"]
 impl crate::Writable for INTR_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTR_CLR to value 0"]
 impl crate::Resettable for INTR_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

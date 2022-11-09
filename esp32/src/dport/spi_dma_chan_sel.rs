@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn spi1_dma_chan_sel(&mut self) -> SPI1_DMA_CHAN_SEL_W<0> {
         SPI1_DMA_CHAN_SEL_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_dma_chan_sel(&mut self) -> SPI2_DMA_CHAN_SEL_W<2> {
         SPI2_DMA_CHAN_SEL_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_dma_chan_sel(&mut self) -> SPI3_DMA_CHAN_SEL_W<4> {
         SPI3_DMA_CHAN_SEL_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SPI_DMA_CHAN_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_dma_chan_sel::W](W) writer structure"]
 impl crate::Writable for SPI_DMA_CHAN_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_DMA_CHAN_SEL to value 0"]
 impl crate::Resettable for SPI_DMA_CHAN_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
+    #[must_use]
     pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<24> {
         MIN_TIME_CK8M_OFF_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIMER2_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer2::W](W) writer structure"]
 impl crate::Writable for TIMER2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER2 to value 0x0100_0000"]
 impl crate::Resettable for TIMER2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0000;
 }

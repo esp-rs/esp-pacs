@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - It is the horizontal blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<0> {
         LCD_HB_FRONT_W::new(self)
     }
     #[doc = "Bits 11:20 - It is the vertical active height of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<11> {
         LCD_VA_HEIGHT_W::new(self)
     }
     #[doc = "Bits 21:30 - It is the vertical total height of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<21> {
         LCD_VT_HEIGHT_W::new(self)
     }
     #[doc = "Bit 31 - 1: Enable LCD mode output vsync, hsync, de. 0: Disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_mode_en(&mut self) -> LCD_MODE_EN_W<31> {
         LCD_MODE_EN_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for LCD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_ctrl::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_CTRL to value 0"]
 impl crate::Resettable for LCD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

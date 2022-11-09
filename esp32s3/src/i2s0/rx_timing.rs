@@ -117,41 +117,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sd_in_dm(&mut self) -> RX_SD_IN_DM_W<0> {
         RX_SD_IN_DM_W::new(self)
     }
     #[doc = "Bits 4:5 - The delay mode of I2S Rx SD1 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sd1_in_dm(&mut self) -> RX_SD1_IN_DM_W<4> {
         RX_SD1_IN_DM_W::new(self)
     }
     #[doc = "Bits 8:9 - The delay mode of I2S Rx SD2 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sd2_in_dm(&mut self) -> RX_SD2_IN_DM_W<8> {
         RX_SD2_IN_DM_W::new(self)
     }
     #[doc = "Bits 12:13 - The delay mode of I2S Rx SD3 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sd3_in_dm(&mut self) -> RX_SD3_IN_DM_W<12> {
         RX_SD3_IN_DM_W::new(self)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_ws_out_dm(&mut self) -> RX_WS_OUT_DM_W<16> {
         RX_WS_OUT_DM_W::new(self)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bck_out_dm(&mut self) -> RX_BCK_OUT_DM_W<20> {
         RX_BCK_OUT_DM_W::new(self)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_ws_in_dm(&mut self) -> RX_WS_IN_DM_W<24> {
         RX_WS_IN_DM_W::new(self)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bck_in_dm(&mut self) -> RX_BCK_IN_DM_W<28> {
         RX_BCK_IN_DM_W::new(self)
     }
@@ -174,11 +182,10 @@ impl crate::Readable for RX_TIMING_SPEC {
 #[doc = "`write(|w| ..)` method takes [rx_timing::W](W) writer structure"]
 impl crate::Writable for RX_TIMING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RX_TIMING to value 0"]
 impl crate::Resettable for RX_TIMING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

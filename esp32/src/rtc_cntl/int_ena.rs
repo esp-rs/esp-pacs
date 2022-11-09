@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_ena(&mut self) -> SLP_WAKEUP_INT_ENA_W<0> {
         SLP_WAKEUP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_ena(&mut self) -> SLP_REJECT_INT_ENA_W<1> {
         SLP_REJECT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - enable SDIO idle interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_idle_int_ena(&mut self) -> SDIO_IDLE_INT_ENA_W<2> {
         SDIO_IDLE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<3> {
         WDT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - enable RTC time valid interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn time_valid_int_ena(&mut self) -> TIME_VALID_INT_ENA_W<4> {
         TIME_VALID_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - enable ULP-coprocessor interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_int_ena(&mut self) -> ULP_CP_INT_ENA_W<5> {
         ULP_CP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - enable touch interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_int_ena(&mut self) -> TOUCH_INT_ENA_W<6> {
         TOUCH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - enable brown out interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_ena(&mut self) -> BROWN_OUT_INT_ENA_W<7> {
         BROWN_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - enable RTC main timer interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_ena(&mut self) -> MAIN_TIMER_INT_ENA_W<8> {
         MAIN_TIMER_INT_ENA_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

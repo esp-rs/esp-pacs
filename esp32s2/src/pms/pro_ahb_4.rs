@@ -33,8 +33,5 @@ impl crate::Readable for PRO_AHB_4_SPEC {
 }
 #[doc = "`reset()` method sets PRO_AHB_4 to value 0"]
 impl crate::Resettable for PRO_AHB_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

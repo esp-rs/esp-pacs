@@ -75,16 +75,19 @@ impl R {
 impl W {
     #[doc = "Bit 13 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_in_inv(&mut self) -> REG_TSENS_IN_INV_W<13> {
         REG_TSENS_IN_INV_W::new(self)
     }
     #[doc = "Bits 14:21 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_clk_div(&mut self) -> REG_TSENS_CLK_DIV_W<14> {
         REG_TSENS_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_pu(&mut self) -> REG_TSENS_PU_W<22> {
         REG_TSENS_PU_W::new(self)
     }
@@ -107,11 +110,10 @@ impl crate::Readable for APB_TSENS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_tsens_ctrl::W](W) writer structure"]
 impl crate::Writable for APB_TSENS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_TSENS_CTRL to value 0x0001_8000"]
 impl crate::Resettable for APB_TSENS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_8000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_8000;
 }

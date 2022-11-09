@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:26 - Store the bit \\[3:29\\] of ido configuration parameters."]
     #[inline(always)]
     pub fn ldo_vol_bias_config_high(&self) -> LDO_VOL_BIAS_CONFIG_HIGH_R {
-        LDO_VOL_BIAS_CONFIG_HIGH_R::new((self.bits & 0x07ff_ffff) as u32)
+        LDO_VOL_BIAS_CONFIG_HIGH_R::new(self.bits & 0x07ff_ffff)
     }
     #[doc = "Bits 27:31 - Store the bit \\[0:4\\] of pvt."]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for RD_BLK2_DATA2_SPEC {
 }
 #[doc = "`reset()` method sets RD_BLK2_DATA2 to value 0"]
 impl crate::Resettable for RD_BLK2_DATA2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

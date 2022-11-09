@@ -205,66 +205,79 @@ impl R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sesreq(&mut self) -> SESREQ_W<1> {
         SESREQ_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<2> {
         VBVALIDOVEN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<3> {
         VBVALIDOVVAL_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn avalidoven(&mut self) -> AVALIDOVEN_W<4> {
         AVALIDOVEN_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<5> {
         AVALIDOVVAL_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<6> {
         BVALIDOVEN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<7> {
         BVALIDOVVAL_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn hnpreq(&mut self) -> HNPREQ_W<9> {
         HNPREQ_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<10> {
         HSTSETHNPEN_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn devhnpen(&mut self) -> DEVHNPEN_W<11> {
         DEVHNPEN_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn ehen(&mut self) -> EHEN_W<12> {
         EHEN_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<15> {
         DBNCEFLTRBYPASS_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn otgver(&mut self) -> OTGVER_W<20> {
         OTGVER_W::new(self)
     }
@@ -287,11 +300,10 @@ impl crate::Readable for GOTGCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [gotgctl::W](W) writer structure"]
 impl crate::Writable for GOTGCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GOTGCTL to value 0"]
 impl crate::Resettable for GOTGCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

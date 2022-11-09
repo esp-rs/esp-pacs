@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_ena_w1ts(&mut self) -> SLP_WAKEUP_INT_ENA_W1TS_W<0> {
         SLP_WAKEUP_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_ena_w1ts(&mut self) -> SLP_REJECT_INT_ENA_W1TS_W<1> {
         SLP_REJECT_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_ena_w1ts(&mut self) -> WDT_INT_ENA_W1TS_W<3> {
         WDT_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_ena_w1ts(&mut self) -> BROWN_OUT_INT_ENA_W1TS_W<9> {
         BROWN_OUT_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_ena_w1ts(&mut self) -> MAIN_TIMER_INT_ENA_W1TS_W<10> {
         MAIN_TIMER_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn swd_int_ena_w1ts(&mut self) -> SWD_INT_ENA_W1TS_W<15> {
         SWD_INT_ENA_W1TS_W::new(self)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn bbpll_cal_int_ena_w1ts(&mut self) -> BBPLL_CAL_INT_ENA_W1TS_W<20> {
         BBPLL_CAL_INT_ENA_W1TS_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for INT_ENA_RTC_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena_rtc_w1ts::W](W) writer structure"]
 impl crate::Writable for INT_ENA_RTC_W1TS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA_RTC_W1TS to value 0"]
 impl crate::Resettable for INT_ENA_RTC_W1TS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

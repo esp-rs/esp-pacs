@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
+    #[must_use]
     pub fn halfstartbit(&mut self) -> HALFSTARTBIT_W<0> {
         HALFSTARTBIT_W::new(self)
     }
     #[doc = "Bit 31 - Set 1 to enable HS400 mode."]
     #[inline(always)]
+    #[must_use]
     pub fn hs400_mode(&mut self) -> HS400_MODE_W<31> {
         HS400_MODE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for EMMCDDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [emmcddr::W](W) writer structure"]
 impl crate::Writable for EMMCDDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EMMCDDR to value 0"]
 impl crate::Resettable for EMMCDDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

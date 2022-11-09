@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<0> {
         SARADC_RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<8> {
         SARADC_STANDBY_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W<16> {
         SARADC_START_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W<24> {
         SARADC_SAMPLE_CYCLE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for APB_SARADC_FSM_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_saradc_fsm::W](W) writer structure"]
 impl crate::Writable for APB_SARADC_FSM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_SARADC_FSM to value 0x0208_ff08"]
 impl crate::Resettable for APB_SARADC_FSM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0208_ff08
-    }
+    const RESET_VALUE: Self::Ux = 0x0208_ff08;
 }

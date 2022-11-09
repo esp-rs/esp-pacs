@@ -139,76 +139,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_tx_start_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<0> {
         TX_START_W::new(self)
     }
     #[doc = "Bit 1 - reg_mem_rd_rst_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<1> {
         MEM_RD_RST_W::new(self)
     }
     #[doc = "Bit 2 - reg_apb_mem_rst_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<2> {
         APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 3 - reg_tx_conti_mode_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<3> {
         TX_CONTI_MODE_W::new(self)
     }
     #[doc = "Bit 4 - reg_mem_tx_wrap_en_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<4> {
         MEM_TX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 5 - reg_idle_out_lv_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<5> {
         IDLE_OUT_LV_W::new(self)
     }
     #[doc = "Bit 6 - reg_idle_out_en_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<6> {
         IDLE_OUT_EN_W::new(self)
     }
     #[doc = "Bit 7 - reg_tx_stop_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_stop(&mut self) -> TX_STOP_W<7> {
         TX_STOP_W::new(self)
     }
     #[doc = "Bits 8:15 - reg_div_cnt_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn div_cnt(&mut self) -> DIV_CNT_W<8> {
         DIV_CNT_W::new(self)
     }
     #[doc = "Bits 16:18 - reg_mem_size_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_size(&mut self) -> MEM_SIZE_W<16> {
         MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 20 - reg_carrier_eff_en_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<20> {
         CARRIER_EFF_EN_W::new(self)
     }
     #[doc = "Bit 21 - reg_carrier_en_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W<21> {
         CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 22 - reg_carrier_out_lv_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<22> {
         CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Bit 23 - reg_afifo_rst_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn afifo_rst(&mut self) -> AFIFO_RST_W<23> {
         AFIFO_RST_W::new(self)
     }
     #[doc = "Bit 24 - reg_reg_conf_update_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn conf_update(&mut self) -> CONF_UPDATE_W<24> {
         CONF_UPDATE_W::new(self)
     }
@@ -231,11 +246,10 @@ impl crate::Readable for CH_TX_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_tx_conf0::W](W) writer structure"]
 impl crate::Writable for CH_TX_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_TX_CONF0 to value 0x0071_0200"]
 impl crate::Resettable for CH_TX_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0071_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0071_0200;
 }

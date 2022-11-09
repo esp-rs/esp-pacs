@@ -88,36 +88,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - reg_timer_sel_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sel(&mut self) -> TIMER_SEL_W<0> {
         TIMER_SEL_W::new(self)
     }
     #[doc = "Bit 2 - reg_sig_out_en_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<2> {
         SIG_OUT_EN_W::new(self)
     }
     #[doc = "Bit 3 - reg_idle_lv_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_lv(&mut self) -> IDLE_LV_W<3> {
         IDLE_LV_W::new(self)
     }
     #[doc = "Bit 4 - reg_para_up_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<4> {
         PARA_UP_W::new(self)
     }
     #[doc = "Bits 5:14 - reg_ovf_num_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_num(&mut self) -> OVF_NUM_W<5> {
         OVF_NUM_W::new(self)
     }
     #[doc = "Bit 15 - reg_ovf_cnt_en_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<15> {
         OVF_CNT_EN_W::new(self)
     }
     #[doc = "Bit 16 - reg_ovf_cnt_reset_lsch0."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<16> {
         OVF_CNT_RESET_W::new(self)
     }
@@ -140,11 +147,10 @@ impl crate::Readable for CH_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_conf0::W](W) writer structure"]
 impl crate::Writable for CH_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_CONF0 to value 0"]
 impl crate::Resettable for CH_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

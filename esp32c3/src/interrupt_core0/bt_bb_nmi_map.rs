@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_bt_bb_nmi_map"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_bb_nmi_map(&mut self) -> BT_BB_NMI_MAP_W<0> {
         BT_BB_NMI_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BT_BB_NMI_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [bt_bb_nmi_map::W](W) writer structure"]
 impl crate::Writable for BT_BB_NMI_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BT_BB_NMI_MAP to value 0"]
 impl crate::Resettable for BT_BB_NMI_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

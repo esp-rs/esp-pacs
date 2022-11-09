@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 26:28 - apb saradc factor1"]
     #[inline(always)]
+    #[must_use]
     pub fn filter_factor1(&mut self) -> FILTER_FACTOR1_W<26> {
         FILTER_FACTOR1_W::new(self)
     }
     #[doc = "Bits 29:31 - apb saradc factor0"]
     #[inline(always)]
+    #[must_use]
     pub fn filter_factor0(&mut self) -> FILTER_FACTOR0_W<29> {
         FILTER_FACTOR0_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for FILTER_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [filter_ctrl1::W](W) writer structure"]
 impl crate::Writable for FILTER_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FILTER_CTRL1 to value 0"]
 impl crate::Resettable for FILTER_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

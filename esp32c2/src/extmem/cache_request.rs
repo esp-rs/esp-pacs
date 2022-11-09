@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable request recording which could cause performance issue"]
     #[inline(always)]
+    #[must_use]
     pub fn bypass(&mut self) -> BYPASS_W<0> {
         BYPASS_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CACHE_REQUEST_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_request::W](W) writer structure"]
 impl crate::Writable for CACHE_REQUEST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_REQUEST to value 0"]
 impl crate::Resettable for CACHE_REQUEST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

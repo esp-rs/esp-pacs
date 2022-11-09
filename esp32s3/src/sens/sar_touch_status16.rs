@@ -54,8 +54,5 @@ impl crate::Readable for SAR_TOUCH_STATUS16_SPEC {
 }
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS16 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS16_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

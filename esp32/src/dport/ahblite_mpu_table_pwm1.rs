@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm1_access_grant_config(&mut self) -> PWM1_ACCESS_GRANT_CONFIG_W<0> {
         PWM1_ACCESS_GRANT_CONFIG_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AHBLITE_MPU_TABLE_PWM1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ahblite_mpu_table_pwm1::W](W) writer structure"]
 impl crate::Writable for AHBLITE_MPU_TABLE_PWM1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHBLITE_MPU_TABLE_PWM1 to value 0"]
 impl crate::Resettable for AHBLITE_MPU_TABLE_PWM1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

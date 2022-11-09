@@ -46,7 +46,7 @@ impl R {
     #[doc = "Bits 0:19 - The register value is the integer part of the frequency divider's factor."]
     #[inline(always)]
     pub fn clkdiv(&self) -> CLKDIV_R {
-        CLKDIV_R::new((self.bits & 0x000f_ffff) as u32)
+        CLKDIV_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bits 20:23 - The register value is the decimal part of the frequency divider's factor."]
     #[inline(always)]
@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - The register value is the integer part of the frequency divider's factor."]
     #[inline(always)]
+    #[must_use]
     pub fn clkdiv(&mut self) -> CLKDIV_W<0> {
         CLKDIV_W::new(self)
     }
     #[doc = "Bits 20:23 - The register value is the decimal part of the frequency divider's factor."]
     #[inline(always)]
+    #[must_use]
     pub fn frag(&mut self) -> FRAG_W<20> {
         FRAG_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CLKDIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [clkdiv::W](W) writer structure"]
 impl crate::Writable for CLKDIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLKDIV to value 0x02b6"]
 impl crate::Resettable for CLKDIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02b6
-    }
+    const RESET_VALUE: Self::Ux = 0x02b6;
 }

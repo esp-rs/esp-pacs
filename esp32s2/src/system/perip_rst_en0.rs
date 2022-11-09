@@ -328,161 +328,193 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset timers."]
     #[inline(always)]
+    #[must_use]
     pub fn timers_rst(&mut self) -> TIMERS_RST_W<0> {
         TIMERS_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset SPI0 and SPI1."]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W<1> {
         SPI01_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset UART0."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rst(&mut self) -> UART_RST_W<2> {
         UART_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset WDG."]
     #[inline(always)]
+    #[must_use]
     pub fn wdg_rst(&mut self) -> WDG_RST_W<3> {
         WDG_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to reset I2S0."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s0_rst(&mut self) -> I2S0_RST_W<4> {
         I2S0_RST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to reset UART1."]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_rst(&mut self) -> UART1_RST_W<5> {
         UART1_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to reset SPI2."]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W<6> {
         SPI2_RST_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to reset I2C EXT0."]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<7> {
         I2C_EXT0_RST_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to reset UHCI0."]
     #[inline(always)]
+    #[must_use]
     pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<8> {
         UHCI0_RST_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to reset remote controller."]
     #[inline(always)]
+    #[must_use]
     pub fn rmt_rst(&mut self) -> RMT_RST_W<9> {
         RMT_RST_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to reset pulse count."]
     #[inline(always)]
+    #[must_use]
     pub fn pcnt_rst(&mut self) -> PCNT_RST_W<10> {
         PCNT_RST_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to reset LED PWM."]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W<11> {
         LEDC_RST_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to reset UHCI1."]
     #[inline(always)]
+    #[must_use]
     pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<12> {
         UHCI1_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to reset timer group0."]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<13> {
         TIMERGROUP_RST_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to reset eFuse."]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_rst(&mut self) -> EFUSE_RST_W<14> {
         EFUSE_RST_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to reset timer group1."]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<15> {
         TIMERGROUP1_RST_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to reset SPI3."]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_rst(&mut self) -> SPI3_RST_W<16> {
         SPI3_RST_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to reset PWM0."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm0_rst(&mut self) -> PWM0_RST_W<17> {
         PWM0_RST_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to reset I2C EXT1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<18> {
         I2C_EXT1_RST_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to reset CAN."]
     #[inline(always)]
+    #[must_use]
     pub fn can_rst(&mut self) -> CAN_RST_W<19> {
         CAN_RST_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to reset PWM1."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm1_rst(&mut self) -> PWM1_RST_W<20> {
         PWM1_RST_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to reset I2S1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s1_rst(&mut self) -> I2S1_RST_W<21> {
         I2S1_RST_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to reset SPI2 DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<22> {
         SPI2_DMA_RST_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to reset USB."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_rst(&mut self) -> USB_RST_W<23> {
         USB_RST_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to reset UART memory."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<24> {
         UART_MEM_RST_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to reset PWM2."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm2_rst(&mut self) -> PWM2_RST_W<25> {
         PWM2_RST_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to reset PWM3."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm3_rst(&mut self) -> PWM3_RST_W<26> {
         PWM3_RST_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to reset SPI3 DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<27> {
         SPI3_DMA_RST_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to reset SAR ADC."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<28> {
         APB_SARADC_RST_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to reset system timer."]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<29> {
         SYSTIMER_RST_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to reset aribiter of ADC2."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<30> {
         ADC2_ARB_RST_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to reset SPI4."]
     #[inline(always)]
+    #[must_use]
     pub fn spi4_rst(&mut self) -> SPI4_RST_W<31> {
         SPI4_RST_W::new(self)
     }
@@ -505,11 +537,10 @@ impl crate::Readable for PERIP_RST_EN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN0 to value 0"]
 impl crate::Resettable for PERIP_RST_EN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

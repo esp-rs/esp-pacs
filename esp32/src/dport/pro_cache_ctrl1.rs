@@ -148,56 +148,67 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_iram0(&mut self) -> PRO_CACHE_MASK_IRAM0_W<0> {
         PRO_CACHE_MASK_IRAM0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_iram1(&mut self) -> PRO_CACHE_MASK_IRAM1_W<1> {
         PRO_CACHE_MASK_IRAM1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_irom0(&mut self) -> PRO_CACHE_MASK_IROM0_W<2> {
         PRO_CACHE_MASK_IROM0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_dram1(&mut self) -> PRO_CACHE_MASK_DRAM1_W<3> {
         PRO_CACHE_MASK_DRAM1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_drom0(&mut self) -> PRO_CACHE_MASK_DROM0_W<4> {
         PRO_CACHE_MASK_DROM0_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mask_opsdram(&mut self) -> PRO_CACHE_MASK_OPSDRAM_W<5> {
         PRO_CACHE_MASK_OPSDRAM_W::new(self)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cmmu_sram_page_mode(&mut self) -> PRO_CMMU_SRAM_PAGE_MODE_W<6> {
         PRO_CMMU_SRAM_PAGE_MODE_W::new(self)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cmmu_flash_page_mode(&mut self) -> PRO_CMMU_FLASH_PAGE_MODE_W<9> {
         PRO_CMMU_FLASH_PAGE_MODE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cmmu_force_on(&mut self) -> PRO_CMMU_FORCE_ON_W<11> {
         PRO_CMMU_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cmmu_pd(&mut self) -> PRO_CMMU_PD_W<12> {
         PRO_CMMU_PD_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mmu_ia_clr(&mut self) -> PRO_CACHE_MMU_IA_CLR_W<13> {
         PRO_CACHE_MMU_IA_CLR_W::new(self)
     }
@@ -220,11 +231,10 @@ impl crate::Readable for PRO_CACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cache_ctrl1::W](W) writer structure"]
 impl crate::Writable for PRO_CACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_CTRL1 to value 0x08ff"]
 impl crate::Resettable for PRO_CACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08ff
-    }
+    const RESET_VALUE: Self::Ux = 0x08ff;
 }

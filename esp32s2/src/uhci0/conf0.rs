@@ -237,111 +237,133 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset in DMA FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset out DMA FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset AHB interface cmdFIFO of DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset AHB interface of DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<4> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<5> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable automatic outlink writeback when all the data in TX FIFO has been transmitted."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8 - This register is used to specify the generation mode of UHCI_OUT_EOF_INT interrupt. 1: When DMA has popped all data from FIFO. 0: When AHB has pushed all data to FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to link up UHCI and UART0."]
     #[inline(always)]
+    #[must_use]
     pub fn uart0_ce(&mut self) -> UART0_CE_W<9> {
         UART0_CE_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to link up UHCI and UART1."]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_ce(&mut self) -> UART1_CE_W<10> {
         UART1_CE_W::new(self)
     }
     #[doc = "Bit 12 - This register is used to specify DMA transmit descriptor transfer mode. 1: burst mode. 0: byte mode."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<12> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 13 - This register is used to specify DMA receive descriptor transfer mode. 1: burst mode. 0: byte mode."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<13> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: UHCI transmitted data would be write back into DMA INFIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<15> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to separate the data frame using a special character."]
     #[inline(always)]
+    #[must_use]
     pub fn seper_en(&mut self) -> SEPER_EN_W<16> {
         SEPER_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to encode the data packet with a formatting header."]
     #[inline(always)]
+    #[must_use]
     pub fn head_en(&mut self) -> HEAD_EN_W<17> {
         HEAD_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable UHCI to receive the 16 bit CRC."]
     #[inline(always)]
+    #[must_use]
     pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<18> {
         CRC_REC_EN_W::new(self)
     }
     #[doc = "Bit 19 - If this bit is set to 1, UHCI will end the payload receiving process when UART has been in idle state."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<19> {
         UART_IDLE_EOF_EN_W::new(self)
     }
     #[doc = "Bit 20 - If this bit is set to 1, UHCI decoder stops receiving payload data when the number of received data bytes has reached the specified value. The value is payload length indicated by UCHI packet header when UHCI_HEAD_EN is 1 or the value is a configuration value when UHCI_HEAD_EN is 0. If this bit is set to 0, UHCI decoder stops receiving payload data upon receiving 0xC0."]
     #[inline(always)]
+    #[must_use]
     pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<20> {
         LEN_EOF_EN_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable data integrity checking by appending a 16 bit CCITT-CRC to the end of the payload."]
     #[inline(always)]
+    #[must_use]
     pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<21> {
         ENCODE_CRC_EN_W::new(self)
     }
     #[doc = "Bit 22 - 1: Force clock on for registers. 0: Support clock only when application writes registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<22> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - If this bit is set to 1, UHCI stops receiving payload data when a NULL frame is received by UART."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<23> {
         UART_RX_BRK_EOF_EN_W::new(self)
     }
@@ -364,11 +386,10 @@ impl crate::Readable for CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF0 to value 0x0037_0100"]
 impl crate::Resettable for CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0037_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0037_0100;
 }

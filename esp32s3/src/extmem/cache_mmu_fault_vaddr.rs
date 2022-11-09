@@ -33,8 +33,5 @@ impl crate::Readable for CACHE_MMU_FAULT_VADDR_SPEC {
 }
 #[doc = "`reset()` method sets CACHE_MMU_FAULT_VADDR to value 0"]
 impl crate::Resettable for CACHE_MMU_FAULT_VADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

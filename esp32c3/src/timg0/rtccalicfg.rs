@@ -85,21 +85,25 @@ impl R {
 impl W {
     #[doc = "Bit 12 - reg_rtc_cali_start_cycling."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<12> {
         RTC_CALI_START_CYCLING_W::new(self)
     }
     #[doc = "Bits 13:14 - reg_rtc_cali_clk_sel.0:rtcslowclock.1:clk_80m.2:xtal_32k"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<13> {
         RTC_CALI_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 16:30 - reg_rtc_cali_max."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<16> {
         RTC_CALI_MAX_W::new(self)
     }
     #[doc = "Bit 31 - reg_rtc_cali_start."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<31> {
         RTC_CALI_START_W::new(self)
     }
@@ -122,11 +126,10 @@ impl crate::Readable for RTCCALICFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtccalicfg::W](W) writer structure"]
 impl crate::Writable for RTCCALICFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTCCALICFG to value 0x0001_3000"]
 impl crate::Resettable for RTCCALICFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_3000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_3000;
 }

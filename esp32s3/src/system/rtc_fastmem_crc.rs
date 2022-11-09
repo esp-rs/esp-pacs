@@ -33,8 +33,5 @@ impl crate::Readable for RTC_FASTMEM_CRC_SPEC {
 }
 #[doc = "`reset()` method sets RTC_FASTMEM_CRC to value 0"]
 impl crate::Resettable for RTC_FASTMEM_CRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - When channel0 sends more than reg_rmt_tx_lim_ch0 datas then channel0 produce the relative interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lim(&mut self) -> TX_LIM_W<0> {
         TX_LIM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CH_TX_LIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_tx_lim::W](W) writer structure"]
 impl crate::Writable for CH_TX_LIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_TX_LIM to value 0x80"]
 impl crate::Resettable for CH_TX_LIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

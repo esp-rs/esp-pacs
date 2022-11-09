@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad_worken(&mut self) -> TOUCH_PAD_WORKEN_W<0> {
         TOUCH_PAD_WORKEN_W::new(self)
     }
     #[doc = "Bits 10:19 - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad_outen2(&mut self) -> TOUCH_PAD_OUTEN2_W<10> {
         TOUCH_PAD_OUTEN2_W::new(self)
     }
     #[doc = "Bits 20:29 - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad_outen1(&mut self) -> TOUCH_PAD_OUTEN1_W<20> {
         TOUCH_PAD_OUTEN1_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SAR_TOUCH_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_touch_enable::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_ENABLE to value 0x3fff_ffff"]
 impl crate::Resettable for SAR_TOUCH_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3fff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x3fff_ffff;
 }

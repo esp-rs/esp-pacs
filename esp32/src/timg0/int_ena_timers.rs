@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
+    #[must_use]
     pub fn t0_int_ena(&mut self) -> T0_INT_ENA_W<0> {
         T0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - interrupt when timer1 alarm"]
     #[inline(always)]
+    #[must_use]
     pub fn t1_int_ena(&mut self) -> T1_INT_ENA_W<1> {
         T1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt when an interrupt stage timeout"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_ena(&mut self) -> WDT_INT_ENA_W<2> {
         WDT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn lact_int_ena(&mut self) -> LACT_INT_ENA_W<3> {
         LACT_INT_ENA_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for INT_ENA_TIMERS_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena_timers::W](W) writer structure"]
 impl crate::Writable for INT_ENA_TIMERS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA_TIMERS to value 0"]
 impl crate::Resettable for INT_ENA_TIMERS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

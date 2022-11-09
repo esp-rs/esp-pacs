@@ -33,8 +33,5 @@ impl crate::Readable for REAL_TARGET0_LO_SPEC {
 }
 #[doc = "`reset()` method sets REAL_TARGET0_LO to value 0"]
 impl crate::Resettable for REAL_TARGET0_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

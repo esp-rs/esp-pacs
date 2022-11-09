@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W<0> {
         CVSD_SEG_MOD_W::new(self)
     }
     #[doc = "Bits 2:6"]
     #[inline(always)]
+    #[must_use]
     pub fn min_period(&mut self) -> MIN_PERIOD_W<2> {
         MIN_PERIOD_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for PLC_CONF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [plc_conf2::W](W) writer structure"]
 impl crate::Writable for PLC_CONF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLC_CONF2 to value 0x28"]
 impl crate::Resettable for PLC_CONF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x28
-    }
+    const RESET_VALUE: Self::Ux = 0x28;
 }

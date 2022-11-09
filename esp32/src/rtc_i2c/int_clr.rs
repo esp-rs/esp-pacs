@@ -81,26 +81,31 @@ impl R {
 impl W {
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_trans_complete_int_clr(&mut self) -> SLAVE_TRANS_COMPLETE_INT_CLR_W<4> {
         SLAVE_TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_lost_int_clr(&mut self) -> ARBITRATION_LOST_INT_CLR_W<5> {
         ARBITRATION_LOST_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn master_trans_complete_int_clr(&mut self) -> MASTER_TRANS_COMPLETE_INT_CLR_W<6> {
         MASTER_TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_complete_int_clr(&mut self) -> TRANS_COMPLETE_INT_CLR_W<7> {
         TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_int_clr(&mut self) -> TIME_OUT_INT_CLR_W<8> {
         TIME_OUT_INT_CLR_W::new(self)
     }
@@ -123,11 +128,10 @@ impl crate::Readable for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

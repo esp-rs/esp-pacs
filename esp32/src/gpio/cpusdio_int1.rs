@@ -95,26 +95,31 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<2> {
         PIN_PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W<7> {
         PIN_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W<10> {
         PIN_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_config(&mut self) -> PIN_CONFIG_W<11> {
         PIN_CONFIG_W::new(self)
     }
     #[doc = "Bits 13:17"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_int_ena(&mut self) -> PIN_INT_ENA_W<13> {
         PIN_INT_ENA_W::new(self)
     }
@@ -137,11 +142,10 @@ impl crate::Readable for CPUSDIO_INT1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpusdio_int1::W](W) writer structure"]
 impl crate::Writable for CPUSDIO_INT1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPUSDIO_INT1 to value 0"]
 impl crate::Resettable for CPUSDIO_INT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

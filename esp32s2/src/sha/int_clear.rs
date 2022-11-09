@@ -24,6 +24,7 @@ pub type CLEAR_INTERRUPT_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLEA
 impl W {
     #[doc = "Bit 0 - Clears DMA-SHA interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<0> {
         CLEAR_INTERRUPT_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for INT_CLEAR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clear::W](W) writer structure"]
 impl crate::Writable for INT_CLEAR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLEAR to value 0"]
 impl crate::Resettable for INT_CLEAR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

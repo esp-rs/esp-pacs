@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<0> {
         I2S_RX_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bit 26 - I2S Rx module clock enable signal."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clk_active(&mut self) -> I2S_RX_CLK_ACTIVE_W<26> {
         I2S_RX_CLK_ACTIVE_W::new(self)
     }
     #[doc = "Bits 27:28 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clk_sel(&mut self) -> I2S_RX_CLK_SEL_W<27> {
         I2S_RX_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 29 - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<29> {
         I2S_MCLK_SEL_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for I2S_RX_CLKM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_clkm_conf::W](W) writer structure"]
 impl crate::Writable for I2S_RX_CLKM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_CLKM_CONF to value 0x02"]
 impl crate::Resettable for I2S_RX_CLKM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

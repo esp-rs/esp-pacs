@@ -54,11 +54,10 @@ impl crate::Readable for FIFO_START_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_start_addr::W](W) writer structure"]
 impl crate::Writable for FIFO_START_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_START_ADDR to value 0"]
 impl crate::Resettable for FIFO_START_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

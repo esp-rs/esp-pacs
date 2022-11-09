@@ -149,56 +149,67 @@ impl R {
 impl W {
     #[doc = "Bit 7 - bypass neg noise thres"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_bypass_neg_noise_thres(&mut self) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<7> {
         TOUCH_BYPASS_NEG_NOISE_THRES_W::new(self)
     }
     #[doc = "Bit 8 - bypaas noise thres"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_bypass_noise_thres(&mut self) -> TOUCH_BYPASS_NOISE_THRES_W<8> {
         TOUCH_BYPASS_NOISE_THRES_W::new(self)
     }
     #[doc = "Bits 9:10 - smooth filter factor"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<9> {
         TOUCH_SMOOTH_LVL_W::new(self)
     }
     #[doc = "Bits 11:14 - touch jitter step"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<11> {
         TOUCH_JITTER_STEP_W::new(self)
     }
     #[doc = "Bits 15:18 - negative threshold counter limit"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<15> {
         TOUCH_NEG_NOISE_LIMIT_W::new(self)
     }
     #[doc = "Bits 19:20 - neg noise thres"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<19> {
         TOUCH_NEG_NOISE_THRES_W::new(self)
     }
     #[doc = "Bits 21:22 - noise thres"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<21> {
         TOUCH_NOISE_THRES_W::new(self)
     }
     #[doc = "Bits 23:24 - hysteresis"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<23> {
         TOUCH_HYSTERESIS_W::new(self)
     }
     #[doc = "Bits 25:27 - debounce counter"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<25> {
         TOUCH_DEBOUNCE_W::new(self)
     }
     #[doc = "Bits 28:30 - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<28> {
         TOUCH_FILTER_MODE_W::new(self)
     }
     #[doc = "Bit 31 - touch filter enable"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<31> {
         TOUCH_FILTER_EN_W::new(self)
     }
@@ -221,11 +232,10 @@ impl crate::Readable for TOUCH_FILTER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_filter_ctrl::W](W) writer structure"]
 impl crate::Writable for TOUCH_FILTER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_FILTER_CTRL to value 0x96aa_8800"]
 impl crate::Resettable for TOUCH_FILTER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x96aa_8800
-    }
+    const RESET_VALUE: Self::Ux = 0x96aa_8800;
 }

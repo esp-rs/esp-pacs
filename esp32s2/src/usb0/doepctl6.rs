@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn snp6(&mut self) -> SNP6_W<20> {
         SNP6_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn stall6(&mut self) -> STALL6_W<21> {
         STALL6_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn cnak6(&mut self) -> CNAK6_W<26> {
         CNAK6_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn do_snak6(&mut self) -> DO_SNAK6_W<27> {
         DO_SNAK6_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn do_setd0pid6(&mut self) -> DO_SETD0PID6_W<28> {
         DO_SETD0PID6_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn do_setd1pid6(&mut self) -> DO_SETD1PID6_W<29> {
         DO_SETD1PID6_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn epena6(&mut self) -> EPENA6_W<31> {
         EPENA6_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for DOEPCTL6_SPEC {
 #[doc = "`write(|w| ..)` method takes [doepctl6::W](W) writer structure"]
 impl crate::Writable for DOEPCTL6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPCTL6 to value 0x8000"]
 impl crate::Resettable for DOEPCTL6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

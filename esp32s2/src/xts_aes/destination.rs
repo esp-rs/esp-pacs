@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn destination(&mut self) -> DESTINATION_W<0> {
         DESTINATION_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DESTINATION_SPEC {
 #[doc = "`write(|w| ..)` method takes [destination::W](W) writer structure"]
 impl crate::Writable for DESTINATION_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DESTINATION to value 0"]
 impl crate::Resettable for DESTINATION_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

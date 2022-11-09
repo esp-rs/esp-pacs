@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
     #[inline(always)]
+    #[must_use]
     pub fn waiti_en(&mut self) -> WAITI_EN_W<0> {
         WAITI_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
+    #[must_use]
     pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<1> {
         WAITI_DUMMY_W::new(self)
     }
     #[doc = "Bits 2:9 - The command value of auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
+    #[must_use]
     pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<2> {
         WAITI_CMD_W::new(self)
     }
     #[doc = "Bits 10:15 - The dummy cycle length when wait flash idle(RDSR)."]
     #[inline(always)]
+    #[must_use]
     pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<10> {
         WAITI_DUMMY_CYCLELEN_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for FLASH_WAITI_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [flash_waiti_ctrl::W](W) writer structure"]
 impl crate::Writable for FLASH_WAITI_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASH_WAITI_CTRL to value 0x14"]
 impl crate::Resettable for FLASH_WAITI_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x14
-    }
+    const RESET_VALUE: Self::Ux = 0x14;
 }

@@ -261,121 +261,145 @@ impl R {
 impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<2> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<3> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 4 - Reset spi dma ahb master fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<4> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 5 - Reset spi dma ahb master."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<5> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<6> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<7> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 8 - when the bit is set, DMA continue to use the next inlink node when the length of inlink is 0."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<8> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<9> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<10> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<11> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<12> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: Internal memory data transfer enable bit. Send SPI DMA RX buffer data to SPI DMA TX buffer. 0: Disable this function."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<13> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<14> {
         DMA_RX_STOP_W::new(self)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<15> {
         DMA_TX_STOP_W::new(self)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<16> {
         DMA_CONTINUE_W::new(self)
     }
     #[doc = "Bit 17 - 1: Clear spi_slv_seg_frt_pop_mask. 0 : others"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_last_seg_pop_clr(&mut self) -> SLV_LAST_SEG_POP_CLR_W<17> {
         SLV_LAST_SEG_POP_CLR_W::new(self)
     }
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_slv_seg_trans_en(&mut self) -> DMA_SLV_SEG_TRANS_EN_W<18> {
         DMA_SLV_SEG_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 19 - 1: spi_dma_infifo_full_vld is cleared by spi slave CMD5. 0: spi_dma_infifo_full_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rx_seg_trans_clr_en(&mut self) -> SLV_RX_SEG_TRANS_CLR_EN_W<19> {
         SLV_RX_SEG_TRANS_CLR_EN_W::new(self)
     }
     #[doc = "Bit 20 - 1: spi_dma_outfifo_empty_vld is cleared by spi slave CMD6. 0: spi_dma_outfifo_empty_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W<20> {
         SLV_TX_SEG_TRANS_CLR_EN_W::new(self)
     }
     #[doc = "Bit 21 - 1: SPI_IN_SUC_EOF_INT_RAW is set when the number of dma pushed data bytes is equal to the value of SPI_SLV_DMA_RD_BYTELEN\\[19:0\\]/ SPI_MST_DMA_RD_BYTELEN\\[19:0\\] in spi dma transition. 0: SPI_IN_SUC_EOF_INT_RAW is set by SPI_TRANS_DONE in non-seg-trans or SPI_DMA_SEG_TRANS_DONE in seg-trans."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W<21> {
         RX_EOF_EN_W::new(self)
     }
     #[doc = "Bit 22 - 1:Clear spi_dma_infifo_full_vld. 0: Do not control it."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_infifo_full_clr(&mut self) -> DMA_INFIFO_FULL_CLR_W<22> {
         DMA_INFIFO_FULL_CLR_W::new(self)
     }
     #[doc = "Bit 23 - 1:Clear spi_dma_outfifo_empty_vld. 0: Do not control it."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_outfifo_empty_clr(&mut self) -> DMA_OUTFIFO_EMPTY_CLR_W<23> {
         DMA_OUTFIFO_EMPTY_CLR_W::new(self)
     }
     #[doc = "Bits 26:27 - Select the external memory block size."]
     #[inline(always)]
+    #[must_use]
     pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<26> {
         EXT_MEM_BK_SIZE_W::new(self)
     }
     #[doc = "Bit 28 - 1: End slave seg-trans, which acts as 0x05 command. 2 or more end seg-trans signals will induce error in DMA RX. 0: others. Will be cleared in 1 APB CLK cycles by hardware.."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_seg_trans_clr(&mut self) -> DMA_SEG_TRANS_CLR_W<28> {
         DMA_SEG_TRANS_CLR_W::new(self)
     }
@@ -398,11 +422,10 @@ impl crate::Readable for DMA_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_conf::W](W) writer structure"]
 impl crate::Writable for DMA_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_CONF to value 0x0200"]
 impl crate::Resettable for DMA_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

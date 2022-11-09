@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23 - Stores the bits \\[64:87\\] of system data."]
     #[inline(always)]
     pub fn system_data2(&self) -> SYSTEM_DATA2_R {
-        SYSTEM_DATA2_R::new((self.bits & 0x00ff_ffff) as u32)
+        SYSTEM_DATA2_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "BLOCK1 data register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk1_data2](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for RD_BLK1_DATA2_SPEC {
 }
 #[doc = "`reset()` method sets RD_BLK1_DATA2 to value 0"]
 impl crate::Resettable for RD_BLK1_DATA2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 7"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_from_world_7(&mut self) -> CORE_0_FROM_WORLD_7_W<0> {
         CORE_0_FROM_WORLD_7_W::new(self)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 7"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_from_entry_7(&mut self) -> CORE_0_FROM_ENTRY_7_W<1> {
         CORE_0_FROM_ENTRY_7_W::new(self)
     }
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 7"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_current_7(&mut self) -> CORE_0_CURRENT_7_W<5> {
         CORE_0_CURRENT_7_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for CORE_0_STATUSTABLE7_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_statustable7::W](W) writer structure"]
 impl crate::Writable for CORE_0_STATUSTABLE7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_0_STATUSTABLE7 to value 0"]
 impl crate::Resettable for CORE_0_STATUSTABLE7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

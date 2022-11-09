@@ -142,56 +142,67 @@ impl R {
 impl W {
     #[doc = "Bit 10 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<10> {
         BIAS_BUF_IDLE_W::new(self)
     }
     #[doc = "Bit 11 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<11> {
         BIAS_BUF_WAKE_W::new(self)
     }
     #[doc = "Bit 12 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<12> {
         BIAS_BUF_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 13 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<13> {
         BIAS_BUF_MONITOR_W::new(self)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
+    #[must_use]
     pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<14> {
         PD_CUR_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
+    #[must_use]
     pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<15> {
         PD_CUR_MONITOR_W::new(self)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<16> {
         BIAS_SLEEP_DEEP_SLP_W::new(self)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
+    #[must_use]
     pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<17> {
         BIAS_SLEEP_MONITOR_W::new(self)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
+    #[must_use]
     pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<18> {
         DBG_ATTEN_DEEP_SLP_W::new(self)
     }
     #[doc = "Bits 22:25 - DBG_ATTEN when rtc in monitor state"]
     #[inline(always)]
+    #[must_use]
     pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<22> {
         DBG_ATTEN_MONITOR_W::new(self)
     }
     #[doc = "Bits 26:29 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn dbg_atten_wakeup(&mut self) -> DBG_ATTEN_WAKEUP_W<26> {
         DBG_ATTEN_WAKEUP_W::new(self)
     }
@@ -214,11 +225,10 @@ impl crate::Readable for BIAS_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [bias_conf::W](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BIAS_CONF to value 0x0001_0800"]
 impl crate::Resettable for BIAS_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0800
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0800;
 }

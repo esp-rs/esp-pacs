@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:16"]
     #[inline(always)]
     pub fn mpu_ia_int_en(&self) -> MPU_IA_INT_EN_R {
-        MPU_IA_INT_EN_R::new((self.bits & 0x0001_ffff) as u32)
+        MPU_IA_INT_EN_R::new(self.bits & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:16"]
     #[inline(always)]
+    #[must_use]
     pub fn mpu_ia_int_en(&mut self) -> MPU_IA_INT_EN_W<0> {
         MPU_IA_INT_EN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MPU_IA_INT_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [mpu_ia_int_en::W](W) writer structure"]
 impl crate::Writable for MPU_IA_INT_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MPU_IA_INT_EN to value 0"]
 impl crate::Resettable for MPU_IA_INT_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

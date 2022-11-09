@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<0> {
         RTC_DEBUG_SEL0_W::new(self)
     }
     #[doc = "Bits 5:9 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<5> {
         RTC_DEBUG_SEL1_W::new(self)
     }
     #[doc = "Bits 10:14 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<10> {
         RTC_DEBUG_SEL2_W::new(self)
     }
     #[doc = "Bits 15:19 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<15> {
         RTC_DEBUG_SEL3_W::new(self)
     }
     #[doc = "Bits 20:24 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<20> {
         RTC_DEBUG_SEL4_W::new(self)
     }
     #[doc = "Bit 25 - configure rtc debug"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<25> {
         RTC_DEBUG_12M_NO_GATING_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for RTC_DEBUG_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_debug_sel::W](W) writer structure"]
 impl crate::Writable for RTC_DEBUG_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_DEBUG_SEL to value 0"]
 impl crate::Resettable for RTC_DEBUG_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

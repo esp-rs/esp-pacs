@@ -33,8 +33,5 @@ impl crate::Readable for DBUS_ACS_FLASH_MISS_CNT_SPEC {
 }
 #[doc = "`reset()` method sets DBUS_ACS_FLASH_MISS_CNT to value 0"]
 impl crate::Resettable for DBUS_ACS_FLASH_MISS_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

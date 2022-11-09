@@ -142,56 +142,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - systimer clock force on"]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_clk_fo(&mut self) -> SYSTIMER_CLK_FO_W<0> {
         SYSTIMER_CLK_FO_W::new(self)
     }
     #[doc = "Bit 22 - target2 work enable"]
     #[inline(always)]
+    #[must_use]
     pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<22> {
         TARGET2_WORK_EN_W::new(self)
     }
     #[doc = "Bit 23 - target1 work enable"]
     #[inline(always)]
+    #[must_use]
     pub fn target1_work_en(&mut self) -> TARGET1_WORK_EN_W<23> {
         TARGET1_WORK_EN_W::new(self)
     }
     #[doc = "Bit 24 - target0 work enable"]
     #[inline(always)]
+    #[must_use]
     pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<24> {
         TARGET0_WORK_EN_W::new(self)
     }
     #[doc = "Bit 25 - If timer unit1 is stalled when core1 stalled"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT1_CORE1_STALL_EN_W<25> {
         TIMER_UNIT1_CORE1_STALL_EN_W::new(self)
     }
     #[doc = "Bit 26 - If timer unit1 is stalled when core0 stalled"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT1_CORE0_STALL_EN_W<26> {
         TIMER_UNIT1_CORE0_STALL_EN_W::new(self)
     }
     #[doc = "Bit 27 - If timer unit0 is stalled when core1 stalled"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT0_CORE1_STALL_EN_W<27> {
         TIMER_UNIT0_CORE1_STALL_EN_W::new(self)
     }
     #[doc = "Bit 28 - If timer unit0 is stalled when core0 stalled"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT0_CORE0_STALL_EN_W<28> {
         TIMER_UNIT0_CORE0_STALL_EN_W::new(self)
     }
     #[doc = "Bit 29 - timer unit1 work enable"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT1_WORK_EN_W<29> {
         TIMER_UNIT1_WORK_EN_W::new(self)
     }
     #[doc = "Bit 30 - timer unit0 work enable"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT0_WORK_EN_W<30> {
         TIMER_UNIT0_WORK_EN_W::new(self)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -214,11 +225,10 @@ impl crate::Readable for CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF to value 0x4600_0000"]
 impl crate::Resettable for CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4600_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4600_0000;
 }

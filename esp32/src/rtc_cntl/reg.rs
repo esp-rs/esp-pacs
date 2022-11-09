@@ -129,51 +129,61 @@ impl R {
 impl W {
     #[doc = "Bit 7 - N/A"]
     #[inline(always)]
+    #[must_use]
     pub fn sck_dcap_force(&mut self) -> SCK_DCAP_FORCE_W<7> {
         SCK_DCAP_FORCE_W::new(self)
     }
     #[doc = "Bits 8:10 - DIG_REG_DBIAS during sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn dig_dbias_slp(&mut self) -> DIG_DBIAS_SLP_W<8> {
         DIG_DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 11:13 - DIG_REG_DBIAS during wakeup"]
     #[inline(always)]
+    #[must_use]
     pub fn dig_dbias_wak(&mut self) -> DIG_DBIAS_WAK_W<11> {
         DIG_DBIAS_WAK_W::new(self)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
+    #[must_use]
     pub fn sck_dcap(&mut self) -> SCK_DCAP_W<14> {
         SCK_DCAP_W::new(self)
     }
     #[doc = "Bits 22:24 - RTC_DBIAS during sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<22> {
         DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 25:27 - RTC_DBIAS during wakeup"]
     #[inline(always)]
+    #[must_use]
     pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<25> {
         DBIAS_WAK_W::new(self)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<28> {
         DBOOST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<29> {
         DBOOST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
+    #[must_use]
     pub fn force_pd(&mut self) -> FORCE_PD_W<30> {
         FORCE_PD_W::new(self)
     }
     #[doc = "Bit 31 - RTC_REG force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn force_pu(&mut self) -> FORCE_PU_W<31> {
         FORCE_PU_W::new(self)
     }
@@ -196,11 +206,10 @@ impl crate::Readable for REG_SPEC {
 #[doc = "`write(|w| ..)` method takes [reg::W](W) writer structure"]
 impl crate::Writable for REG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REG to value 0x2900_2400"]
 impl crate::Resettable for REG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2900_2400
-    }
+    const RESET_VALUE: Self::Ux = 0x2900_2400;
 }

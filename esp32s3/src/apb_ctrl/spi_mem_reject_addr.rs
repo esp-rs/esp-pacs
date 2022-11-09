@@ -33,8 +33,5 @@ impl crate::Readable for SPI_MEM_REJECT_ADDR_SPEC {
 }
 #[doc = "`reset()` method sets SPI_MEM_REJECT_ADDR to value 0"]
 impl crate::Resettable for SPI_MEM_REJECT_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

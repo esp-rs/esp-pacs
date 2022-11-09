@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
+    #[must_use]
     pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W<0> {
         CONTROL_CORE_1_MESSAGE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_1_CONTROL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_control_1::W](W) writer structure"]
 impl crate::Writable for CORE_1_CONTROL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_CONTROL_1 to value 0"]
 impl crate::Resettable for CORE_1_CONTROL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
     #[inline(always)]
     pub fn gpio_out_data(&self) -> GPIO_OUT_DATA_R {
-        GPIO_OUT_DATA_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        GPIO_OUT_DATA_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<10> {
         GPIO_OUT_DATA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for RTC_GPIO_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_gpio_out::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_GPIO_OUT to value 0"]
 impl crate::Resettable for RTC_GPIO_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

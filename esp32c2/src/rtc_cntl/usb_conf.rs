@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 18 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<18> {
         IO_MUX_RESET_DISABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for USB_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_conf::W](W) writer structure"]
 impl crate::Writable for USB_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_CONF to value 0"]
 impl crate::Resettable for USB_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

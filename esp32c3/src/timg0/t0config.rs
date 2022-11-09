@@ -95,36 +95,43 @@ impl R {
 impl W {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
+    #[must_use]
     pub fn use_xtal(&mut self) -> USE_XTAL_W<9> {
         USE_XTAL_W::new(self)
     }
     #[doc = "Bit 10 - reg_t0_alarm_en."]
     #[inline(always)]
+    #[must_use]
     pub fn alarm_en(&mut self) -> ALARM_EN_W<10> {
         ALARM_EN_W::new(self)
     }
     #[doc = "Bit 12 - reg_t0_divcnt_rst."]
     #[inline(always)]
+    #[must_use]
     pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<12> {
         DIVCNT_RST_W::new(self)
     }
     #[doc = "Bits 13:28 - reg_t0_divider."]
     #[inline(always)]
+    #[must_use]
     pub fn divider(&mut self) -> DIVIDER_W<13> {
         DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - reg_t0_autoreload."]
     #[inline(always)]
+    #[must_use]
     pub fn autoreload(&mut self) -> AUTORELOAD_W<29> {
         AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - reg_t0_increase."]
     #[inline(always)]
+    #[must_use]
     pub fn increase(&mut self) -> INCREASE_W<30> {
         INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - reg_t0_en."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<31> {
         EN_W::new(self)
     }
@@ -147,11 +154,10 @@ impl crate::Readable for T0CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [t0config::W](W) writer structure"]
 impl crate::Writable for T0CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T0CONFIG to value 0x6000_2000"]
 impl crate::Resettable for T0CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6000_2000
-    }
+    const RESET_VALUE: Self::Ux = 0x6000_2000;
 }

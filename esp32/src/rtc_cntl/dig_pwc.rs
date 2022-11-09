@@ -273,131 +273,157 @@ impl R {
 impl W {
     #[doc = "Bit 3 - memories in digital core force PD in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<3> {
         LSLP_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - memories in digital core force no PD in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<4> {
         LSLP_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 5 - ROM force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn rom0_force_pd(&mut self) -> ROM0_FORCE_PD_W<5> {
         ROM0_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 6 - ROM force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn rom0_force_pu(&mut self) -> ROM0_FORCE_PU_W<6> {
         ROM0_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 7 - internal SRAM 0 force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram0_force_pd(&mut self) -> INTER_RAM0_FORCE_PD_W<7> {
         INTER_RAM0_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 8 - internal SRAM 0 force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram0_force_pu(&mut self) -> INTER_RAM0_FORCE_PU_W<8> {
         INTER_RAM0_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 9 - internal SRAM 1 force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram1_force_pd(&mut self) -> INTER_RAM1_FORCE_PD_W<9> {
         INTER_RAM1_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 10 - internal SRAM 1 force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram1_force_pu(&mut self) -> INTER_RAM1_FORCE_PU_W<10> {
         INTER_RAM1_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 11 - internal SRAM 2 force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram2_force_pd(&mut self) -> INTER_RAM2_FORCE_PD_W<11> {
         INTER_RAM2_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 12 - internal SRAM 2 force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram2_force_pu(&mut self) -> INTER_RAM2_FORCE_PU_W<12> {
         INTER_RAM2_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 13 - internal SRAM 3 force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram3_force_pd(&mut self) -> INTER_RAM3_FORCE_PD_W<13> {
         INTER_RAM3_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 14 - internal SRAM 3 force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram3_force_pu(&mut self) -> INTER_RAM3_FORCE_PU_W<14> {
         INTER_RAM3_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 15 - internal SRAM 4 force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram4_force_pd(&mut self) -> INTER_RAM4_FORCE_PD_W<15> {
         INTER_RAM4_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 16 - internal SRAM 4 force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram4_force_pu(&mut self) -> INTER_RAM4_FORCE_PU_W<16> {
         INTER_RAM4_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_pd(&mut self) -> WIFI_FORCE_PD_W<17> {
         WIFI_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 18 - wifi force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_pu(&mut self) -> WIFI_FORCE_PU_W<18> {
         WIFI_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<19> {
         DG_WRAP_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<20> {
         DG_WRAP_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 24 - enable power down ROM in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn rom0_pd_en(&mut self) -> ROM0_PD_EN_W<24> {
         ROM0_PD_EN_W::new(self)
     }
     #[doc = "Bit 25 - enable power down internal SRAM 0 in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram0_pd_en(&mut self) -> INTER_RAM0_PD_EN_W<25> {
         INTER_RAM0_PD_EN_W::new(self)
     }
     #[doc = "Bit 26 - enable power down internal SRAM 1 in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram1_pd_en(&mut self) -> INTER_RAM1_PD_EN_W<26> {
         INTER_RAM1_PD_EN_W::new(self)
     }
     #[doc = "Bit 27 - enable power down internal SRAM 2 in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram2_pd_en(&mut self) -> INTER_RAM2_PD_EN_W<27> {
         INTER_RAM2_PD_EN_W::new(self)
     }
     #[doc = "Bit 28 - enable power down internal SRAM 3 in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram3_pd_en(&mut self) -> INTER_RAM3_PD_EN_W<28> {
         INTER_RAM3_PD_EN_W::new(self)
     }
     #[doc = "Bit 29 - enable power down internal SRAM 4 in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram4_pd_en(&mut self) -> INTER_RAM4_PD_EN_W<29> {
         INTER_RAM4_PD_EN_W::new(self)
     }
     #[doc = "Bit 30 - enable power down wifi in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_pd_en(&mut self) -> WIFI_PD_EN_W<30> {
         WIFI_PD_EN_W::new(self)
     }
     #[doc = "Bit 31 - enable power down digital core in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<31> {
         DG_WRAP_PD_EN_W::new(self)
     }
@@ -420,11 +446,10 @@ impl crate::Readable for DIG_PWC_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_pwc::W](W) writer structure"]
 impl crate::Writable for DIG_PWC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_PWC to value 0x0015_5550"]
 impl crate::Resettable for DIG_PWC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0015_5550
-    }
+    const RESET_VALUE: Self::Ux = 0x0015_5550;
 }

@@ -40,8 +40,5 @@ impl crate::Readable for QUERY_CHECK_SPEC {
 }
 #[doc = "`reset()` method sets QUERY_CHECK to value 0"]
 impl crate::Resettable for QUERY_CHECK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

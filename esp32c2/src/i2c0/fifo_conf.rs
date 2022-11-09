@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - The water mark threshold of rx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[3:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<0> {
         RXFIFO_WM_THRHD_W::new(self)
     }
     #[doc = "Bits 5:8 - The water mark threshold of tx FIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd\\[3:0\\], reg_txfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<5> {
         TXFIFO_WM_THRHD_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable APB nonfifo access."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<10> {
         NONFIFO_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to reset rx-fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<12> {
         RX_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to reset tx-fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<13> {
         TX_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 14 - The control enable bit of FIFO pointer in non-fifo access mode. This bit controls the valid bits and the interrupts of tx/rx_fifo overflow, underflow, full and empty."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<14> {
         FIFO_PRT_EN_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for FIFO_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_CONF to value 0x4046"]
 impl crate::Resettable for FIFO_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4046
-    }
+    const RESET_VALUE: Self::Ux = 0x4046;
 }

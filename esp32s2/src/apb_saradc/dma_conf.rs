@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_adc_eof_num(&mut self) -> APB_ADC_EOF_NUM_W<0> {
         APB_ADC_EOF_NUM_W::new(self)
     }
     #[doc = "Bit 30 - Reset DIG ADC CTRL status."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_adc_reset_fsm(&mut self) -> APB_ADC_RESET_FSM_W<30> {
         APB_ADC_RESET_FSM_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit, DIG ADC CTRL uses SPI DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_adc_trans(&mut self) -> APB_ADC_TRANS_W<31> {
         APB_ADC_TRANS_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for DMA_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_conf::W](W) writer structure"]
 impl crate::Writable for DMA_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_CONF to value 0xff"]
 impl crate::Resettable for DMA_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

@@ -24,6 +24,7 @@ pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TLOAD_SPEC, u32, 
 impl W {
     #[doc = "Bits 0:31 - Write any value to trigger a timer %s time-base counter reload."]
     #[inline(always)]
+    #[must_use]
     pub fn load(&mut self) -> LOAD_W<0> {
         LOAD_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for TLOAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [tload::W](W) writer structure"]
 impl crate::Writable for TLOAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T%sLOAD to value 0"]
 impl crate::Resettable for TLOAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

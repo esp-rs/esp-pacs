@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - unstable period when window change,during this period no check stackpointer"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_sp_unstable(&mut self) -> CORE_1_SP_UNSTABLE_W<0> {
         CORE_1_SP_UNSTABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_1_SP_UNSTABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_sp_unstable::W](W) writer structure"]
 impl crate::Writable for CORE_1_SP_UNSTABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_SP_UNSTABLE to value 0x0b"]
 impl crate::Resettable for CORE_1_SP_UNSTABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0b
-    }
+    const RESET_VALUE: Self::Ux = 0x0b;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Stores the source data when the AES accelerator operates in the Typical AES working mode."]
     #[inline(always)]
+    #[must_use]
     pub fn text_in_0(&mut self) -> TEXT_IN_0_W<0> {
         TEXT_IN_0_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TEXT_IN__SPEC {
 #[doc = "`write(|w| ..)` method takes [text_in_::W](W) writer structure"]
 impl crate::Writable for TEXT_IN__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TEXT_IN_%s to value 0"]
 impl crate::Resettable for TEXT_IN__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

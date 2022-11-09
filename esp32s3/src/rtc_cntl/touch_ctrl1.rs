@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - sleep cycles for timer"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<0> {
         TOUCH_SLEEP_CYCLES_W::new(self)
     }
     #[doc = "Bits 16:31 - the meas length (in 8MHz)"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_meas_num(&mut self) -> TOUCH_MEAS_NUM_W<16> {
         TOUCH_MEAS_NUM_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for TOUCH_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_ctrl1::W](W) writer structure"]
 impl crate::Writable for TOUCH_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_CTRL1 to value 0x1000_0100"]
 impl crate::Resettable for TOUCH_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1000_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x1000_0100;
 }

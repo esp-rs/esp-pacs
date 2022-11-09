@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_onetime_atten(&mut self) -> SARADC_ONETIME_ATTEN_W<23> {
         SARADC_ONETIME_ATTEN_W::new(self)
     }
     #[doc = "Bits 25:28 - configure onetime channel"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_onetime_channel(&mut self) -> SARADC_ONETIME_CHANNEL_W<25> {
         SARADC_ONETIME_CHANNEL_W::new(self)
     }
     #[doc = "Bit 29 - trigger adc onetime sample"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_onetime_start(&mut self) -> SARADC_ONETIME_START_W<29> {
         SARADC_ONETIME_START_W::new(self)
     }
     #[doc = "Bit 30 - enable adc2 onetime sample"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W<30> {
         SARADC2_ONETIME_SAMPLE_W::new(self)
     }
     #[doc = "Bit 31 - enable adc1 onetime sample"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W<31> {
         SARADC1_ONETIME_SAMPLE_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for ONETIME_SAMPLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [onetime_sample::W](W) writer structure"]
 impl crate::Writable for ONETIME_SAMPLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ONETIME_SAMPLE to value 0x1a00_0000"]
 impl crate::Resettable for ONETIME_SAMPLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1a00_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x1a00_0000;
 }

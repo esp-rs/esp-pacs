@@ -146,61 +146,73 @@ impl R {
 impl W {
     #[doc = "Bit 12 - reg_wdt_appcpu_reset_en."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<12> {
         WDT_APPCPU_RESET_EN_W::new(self)
     }
     #[doc = "Bit 13 - reg_wdt_procpu_reset_en."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<13> {
         WDT_PROCPU_RESET_EN_W::new(self)
     }
     #[doc = "Bit 14 - reg_wdt_flashboot_mod_en."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<14> {
         WDT_FLASHBOOT_MOD_EN_W::new(self)
     }
     #[doc = "Bits 15:17 - reg_wdt_sys_reset_length."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<15> {
         WDT_SYS_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bits 18:20 - reg_wdt_cpu_reset_length."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<18> {
         WDT_CPU_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bit 21 - reg_wdt_use_xtal."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_use_xtal(&mut self) -> WDT_USE_XTAL_W<21> {
         WDT_USE_XTAL_W::new(self)
     }
     #[doc = "Bit 22 - reg_wdt_conf_update_en."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_conf_update_en(&mut self) -> WDT_CONF_UPDATE_EN_W<22> {
         WDT_CONF_UPDATE_EN_W::new(self)
     }
     #[doc = "Bits 23:24 - reg_wdt_stg3."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W<23> {
         WDT_STG3_W::new(self)
     }
     #[doc = "Bits 25:26 - reg_wdt_stg2."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W<25> {
         WDT_STG2_W::new(self)
     }
     #[doc = "Bits 27:28 - reg_wdt_stg1."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W<27> {
         WDT_STG1_W::new(self)
     }
     #[doc = "Bits 29:30 - reg_wdt_stg0."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W<29> {
         WDT_STG0_W::new(self)
     }
     #[doc = "Bit 31 - reg_wdt_en."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_en(&mut self) -> WDT_EN_W<31> {
         WDT_EN_W::new(self)
     }
@@ -223,11 +235,10 @@ impl crate::Readable for WDTCONFIG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG0 to value 0x0004_c000"]
 impl crate::Resettable for WDTCONFIG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0004_c000
-    }
+    const RESET_VALUE: Self::Ux = 0x0004_c000;
 }

@@ -135,7 +135,7 @@ impl R {
     #[doc = "Bits 8:24 - Configure the split address of SRAM Block 4-21 for RX Copy DMA access."]
     #[inline(always)]
     pub fn dma_rx_i_sram_4_spltaddr(&self) -> DMA_RX_I_SRAM_4_SPLTADDR_R {
-        DMA_RX_I_SRAM_4_SPLTADDR_R::new(((self.bits >> 8) & 0x0001_ffff) as u32)
+        DMA_RX_I_SRAM_4_SPLTADDR_R::new((self.bits >> 8) & 0x0001_ffff)
     }
     #[doc = "Bit 25 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
@@ -161,66 +161,79 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 0."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_0_r(&mut self) -> DMA_RX_I_SRAM_0_R_W<0> {
         DMA_RX_I_SRAM_0_R_W::new(self)
     }
     #[doc = "Bit 1 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 0."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_0_w(&mut self) -> DMA_RX_I_SRAM_0_W_W<1> {
         DMA_RX_I_SRAM_0_W_W::new(self)
     }
     #[doc = "Bit 2 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 1."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_1_r(&mut self) -> DMA_RX_I_SRAM_1_R_W<2> {
         DMA_RX_I_SRAM_1_R_W::new(self)
     }
     #[doc = "Bit 3 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 1."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_1_w(&mut self) -> DMA_RX_I_SRAM_1_W_W<3> {
         DMA_RX_I_SRAM_1_W_W::new(self)
     }
     #[doc = "Bit 4 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 2."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_2_r(&mut self) -> DMA_RX_I_SRAM_2_R_W<4> {
         DMA_RX_I_SRAM_2_R_W::new(self)
     }
     #[doc = "Bit 5 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 2."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_2_w(&mut self) -> DMA_RX_I_SRAM_2_W_W<5> {
         DMA_RX_I_SRAM_2_W_W::new(self)
     }
     #[doc = "Bit 6 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 3."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_3_r(&mut self) -> DMA_RX_I_SRAM_3_R_W<6> {
         DMA_RX_I_SRAM_3_R_W::new(self)
     }
     #[doc = "Bit 7 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 3."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_3_w(&mut self) -> DMA_RX_I_SRAM_3_W_W<7> {
         DMA_RX_I_SRAM_3_W_W::new(self)
     }
     #[doc = "Bits 8:24 - Configure the split address of SRAM Block 4-21 for RX Copy DMA access."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_4_spltaddr(&mut self) -> DMA_RX_I_SRAM_4_SPLTADDR_W<8> {
         DMA_RX_I_SRAM_4_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 25 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_4_l_r(&mut self) -> DMA_RX_I_SRAM_4_L_R_W<25> {
         DMA_RX_I_SRAM_4_L_R_W::new(self)
     }
     #[doc = "Bit 26 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_4_l_w(&mut self) -> DMA_RX_I_SRAM_4_L_W_W<26> {
         DMA_RX_I_SRAM_4_L_W_W::new(self)
     }
     #[doc = "Bit 27 - Setting to 1 grants RX Copy DMA permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_4_h_r(&mut self) -> DMA_RX_I_SRAM_4_H_R_W<27> {
         DMA_RX_I_SRAM_4_H_R_W::new(self)
     }
     #[doc = "Bit 28 - Setting to 1 grants RX Copy DMA permission to write SRAM Block 4~21 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_i_sram_4_h_w(&mut self) -> DMA_RX_I_SRAM_4_H_W_W<28> {
         DMA_RX_I_SRAM_4_H_W_W::new(self)
     }
@@ -243,11 +256,10 @@ impl crate::Readable for DMA_RX_I_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_rx_i_1::W](W) writer structure"]
 impl crate::Writable for DMA_RX_I_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_RX_I_1 to value 0x1e00_00ff"]
 impl crate::Resettable for DMA_RX_I_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1e00_00ff
-    }
+    const RESET_VALUE: Self::Ux = 0x1e00_00ff;
 }

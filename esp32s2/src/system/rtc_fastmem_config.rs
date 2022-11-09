@@ -76,16 +76,19 @@ impl R {
 impl W {
     #[doc = "Bit 8 - Set this bit to start the CRC of RTC memory."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<8> {
         RTC_MEM_CRC_START_W::new(self)
     }
     #[doc = "Bits 9:19 - This field is used to set address of RTC memory for CRC."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<9> {
         RTC_MEM_CRC_ADDR_W::new(self)
     }
     #[doc = "Bits 20:30 - This field is used to set length of RTC memory for CRC based on start address."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<20> {
         RTC_MEM_CRC_LEN_W::new(self)
     }
@@ -108,11 +111,10 @@ impl crate::Readable for RTC_FASTMEM_CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_fastmem_config::W](W) writer structure"]
 impl crate::Writable for RTC_FASTMEM_CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_FASTMEM_CONFIG to value 0x7ff0_0000"]
 impl crate::Resettable for RTC_FASTMEM_CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7ff0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x7ff0_0000;
 }

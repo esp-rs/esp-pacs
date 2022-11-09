@@ -24,46 +24,55 @@ pub type CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, boo
 impl W {
     #[doc = "This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub unsafe fn ch<const O: u8>(&mut self) -> CH_W<O> {
         CH_W::new(self)
     }
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chtx_ref_cnt_rst_ch0(&mut self) -> CH_W<0> {
         CH_W::new(self)
     }
     #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chtx_ref_cnt_rst_ch1(&mut self) -> CH_W<1> {
         CH_W::new(self)
     }
     #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chtx_ref_cnt_rst_ch2(&mut self) -> CH_W<2> {
         CH_W::new(self)
     }
     #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chtx_ref_cnt_rst_ch3(&mut self) -> CH_W<3> {
         CH_W::new(self)
     }
     #[doc = "Bit 4 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chrx_ref_cnt_rst_ch4(&mut self) -> CH_W<4> {
         CH_W::new(self)
     }
     #[doc = "Bit 5 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chrx_ref_cnt_rst_ch5(&mut self) -> CH_W<5> {
         CH_W::new(self)
     }
     #[doc = "Bit 6 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chrx_ref_cnt_rst_ch6(&mut self) -> CH_W<6> {
         CH_W::new(self)
     }
     #[doc = "Bit 7 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn chrx_ref_cnt_rst_ch7(&mut self) -> CH_W<7> {
         CH_W::new(self)
     }
@@ -82,11 +91,10 @@ impl crate::RegisterSpec for REF_CNT_RST_SPEC {
 #[doc = "`write(|w| ..)` method takes [ref_cnt_rst::W](W) writer structure"]
 impl crate::Writable for REF_CNT_RST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REF_CNT_RST to value 0"]
 impl crate::Resettable for REF_CNT_RST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

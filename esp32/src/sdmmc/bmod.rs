@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Software Reset. When set, the DMA Controller resets all its internal registers. It is automatically cleared after one clock cycle."]
     #[inline(always)]
+    #[must_use]
     pub fn swr(&mut self) -> SWR_W<0> {
         SWR_W::new(self)
     }
     #[doc = "Bit 1 - Fixed Burst. Controls whether the AHB Master interface performs fixed burst transfers or not. When set, the AHB will use only SINGLE, INCR4, INCR8 or INCR16 during start of normal burst transfers. When reset, the AHB will use SINGLE and INCR burst transfer operations."]
     #[inline(always)]
+    #[must_use]
     pub fn fb(&mut self) -> FB_W<1> {
         FB_W::new(self)
     }
     #[doc = "Bit 7 - IDMAC Enable. When set, the IDMAC is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn de(&mut self) -> DE_W<7> {
         DE_W::new(self)
     }
     #[doc = "Bits 8:10 - Programmable Burst Length. These bits indicate the maximum number of beats to be performed in one IDMAC???Internal DMA Control???transaction. The IDMAC will always attempt to burst as specified in PBL each time it starts a burst transfer on the host bus. The permissible values are 1, 4, 8, 16, 32, 64, 128 and 256. This value is the mirror of MSIZE of FIFOTH register. In order to change this value, write the required value to FIFOTH register. This is an encode value as follows: 000: 1-byte transfer; 001: 4-byte transfer; 010: 8-byte transfer; 011: 16-byte transfer; 100: 32-byte transfer; 101: 64-byte transfer; 110: 128-byte transfer; 111: 256-byte transfer. PBL is a read-only value and is applicable only for data access, it does not apply to descriptor access."]
     #[inline(always)]
+    #[must_use]
     pub fn pbl(&mut self) -> PBL_W<8> {
         PBL_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for BMOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [bmod::W](W) writer structure"]
 impl crate::Writable for BMOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BMOD to value 0"]
 impl crate::Resettable for BMOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

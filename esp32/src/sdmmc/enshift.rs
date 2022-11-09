@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Control for the amount of phase shift provided on the default enables in the design.Two bits assigned for each card. 2'b00-Default phase shift. 2'b01-Enables shifted to next immediate positive edge. 2'b10-Enables shifted to next immediate negative edge. 2'b11-Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn enable_shift(&mut self) -> ENABLE_SHIFT_W<0> {
         ENABLE_SHIFT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ENSHIFT_SPEC {
 #[doc = "`write(|w| ..)` method takes [enshift::W](W) writer structure"]
 impl crate::Writable for ENSHIFT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ENSHIFT to value 0"]
 impl crate::Resettable for ENSHIFT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

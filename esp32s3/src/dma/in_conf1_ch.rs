@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<0> {
         DMA_INFIFO_FULL_THRS_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<12> {
         IN_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bits 13:14 - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn in_ext_mem_bk_size(&mut self) -> IN_EXT_MEM_BK_SIZE_W<13> {
         IN_EXT_MEM_BK_SIZE_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for IN_CONF1_CH_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_conf1_ch::W](W) writer structure"]
 impl crate::Writable for IN_CONF1_CH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_CONF1_CH%s to value 0x0c"]
 impl crate::Resettable for IN_CONF1_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0c
-    }
+    const RESET_VALUE: Self::Ux = 0x0c;
 }

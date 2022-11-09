@@ -210,96 +210,115 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_reset(&mut self) -> TX_RESET_W<0> {
         TX_RESET_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_reset(&mut self) -> RX_RESET_W<1> {
         RX_RESET_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<2> {
         TX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<3> {
         RX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<4> {
         TX_START_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_start(&mut self) -> RX_START_W<5> {
         RX_START_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<6> {
         TX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<7> {
         RX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<8> {
         TX_RIGHT_FIRST_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<9> {
         RX_RIGHT_FIRST_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<10> {
         TX_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<11> {
         RX_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<12> {
         TX_SHORT_SYNC_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<13> {
         RX_SHORT_SYNC_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_mono(&mut self) -> TX_MONO_W<14> {
         TX_MONO_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_mono(&mut self) -> RX_MONO_W<15> {
         RX_MONO_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<16> {
         TX_MSB_RIGHT_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<17> {
         RX_MSB_RIGHT_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<18> {
         SIG_LOOPBACK_W::new(self)
     }
@@ -322,11 +341,10 @@ impl crate::Readable for CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF to value 0x0003_0300"]
 impl crate::Resettable for CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0003_0300
-    }
+    const RESET_VALUE: Self::Ux = 0x0003_0300;
 }

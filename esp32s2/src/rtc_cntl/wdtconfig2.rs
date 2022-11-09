@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Configures the hold time of RTC watchdog at level 2."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg1_hold(&mut self) -> WDT_STG1_HOLD_W<0> {
         WDT_STG1_HOLD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for WDTCONFIG2_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig2::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG2 to value 0x0001_3880"]
 impl crate::Resettable for WDTCONFIG2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_3880
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_3880;
 }

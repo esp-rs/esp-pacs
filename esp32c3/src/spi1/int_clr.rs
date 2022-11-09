@@ -32,26 +32,31 @@ pub type MST_ST_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_C
 impl W {
     #[doc = "Bit 0 - The clear bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W<0> {
         PER_END_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The clear bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W<1> {
         PES_END_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - The clear bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn wpe_end_int_clr(&mut self) -> WPE_END_INT_CLR_W<2> {
         WPE_END_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_st_end_int_clr(&mut self) -> SLV_ST_END_INT_CLR_W<3> {
         SLV_ST_END_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_st_end_int_clr(&mut self) -> MST_ST_END_INT_CLR_W<4> {
         MST_ST_END_INT_CLR_W::new(self)
     }
@@ -70,11 +75,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

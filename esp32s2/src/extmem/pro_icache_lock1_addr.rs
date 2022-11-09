@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the second start virtual address of data locking, which is combined with PRO_ICACHE_LOCK1_SIZE_REG"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_lock1_addr(&mut self) -> PRO_ICACHE_LOCK1_ADDR_W<0> {
         PRO_ICACHE_LOCK1_ADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_ICACHE_LOCK1_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_icache_lock1_addr::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_LOCK1_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_ICACHE_LOCK1_ADDR to value 0"]
 impl crate::Resettable for PRO_ICACHE_LOCK1_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

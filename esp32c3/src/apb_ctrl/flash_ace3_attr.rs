@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - reg_flash_ace3_attr"]
     #[inline(always)]
+    #[must_use]
     pub fn flash_ace3_attr(&mut self) -> FLASH_ACE3_ATTR_W<0> {
         FLASH_ACE3_ATTR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for FLASH_ACE3_ATTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [flash_ace3_attr::W](W) writer structure"]
 impl crate::Writable for FLASH_ACE3_ATTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASH_ACE3_ATTR to value 0x03"]
 impl crate::Resettable for FLASH_ACE3_ATTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

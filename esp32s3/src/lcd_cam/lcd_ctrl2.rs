@@ -105,36 +105,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<0> {
         LCD_VSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vsync_idle_pol(&mut self) -> LCD_VSYNC_IDLE_POL_W<7> {
         LCD_VSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 8 - It is the idle value of LCD_DE."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_de_idle_pol(&mut self) -> LCD_DE_IDLE_POL_W<8> {
         LCD_DE_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hs_blank_en(&mut self) -> LCD_HS_BLANK_EN_W<9> {
         LCD_HS_BLANK_EN_W::new(self)
     }
     #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<16> {
         LCD_HSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_idle_pol(&mut self) -> LCD_HSYNC_IDLE_POL_W<23> {
         LCD_HSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<24> {
         LCD_HSYNC_POSITION_W::new(self)
     }
@@ -157,11 +164,10 @@ impl crate::Readable for LCD_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_ctrl2::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_CTRL2 to value 0x0001_0001"]
 impl crate::Resettable for LCD_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0001
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0001;
 }

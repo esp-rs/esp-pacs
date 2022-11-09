@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_invalidate_ena(&mut self) -> ICACHE_INVALIDATE_ENA_W<0> {
         ICACHE_INVALIDATE_ENA_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for ICACHE_SYNC_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_sync_ctrl::W](W) writer structure"]
 impl crate::Writable for ICACHE_SYNC_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_SYNC_CTRL to value 0x01"]
 impl crate::Resettable for ICACHE_SYNC_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

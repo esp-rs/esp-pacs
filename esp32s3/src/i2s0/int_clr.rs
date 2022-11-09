@@ -30,21 +30,25 @@ pub type TX_HUNG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the i2s_rx_done_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_done_int_clr(&mut self) -> RX_DONE_INT_CLR_W<0> {
         RX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the i2s_tx_done_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_done_int_clr(&mut self) -> TX_DONE_INT_CLR_W<1> {
         TX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the i2s_rx_hung_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_hung_int_clr(&mut self) -> RX_HUNG_INT_CLR_W<2> {
         RX_HUNG_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the i2s_tx_hung_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_hung_int_clr(&mut self) -> TX_HUNG_INT_CLR_W<3> {
         TX_HUNG_INT_CLR_W::new(self)
     }
@@ -63,11 +67,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for CORE_0_RCD_PDEBUGSTATUS_SPEC {
 }
 #[doc = "`reset()` method sets CORE_0_RCD_PDEBUGSTATUS to value 0"]
 impl crate::Resettable for CORE_0_RCD_PDEBUGSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

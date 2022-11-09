@@ -148,61 +148,73 @@ impl R {
 impl W {
     #[doc = "Bits 3:10 - PDAC2_DAC"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<3> {
         PDAC2_DAC_W::new(self)
     }
     #[doc = "Bit 11 - PDAC2_XPD_DAC"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<11> {
         PDAC2_XPD_DAC_W::new(self)
     }
     #[doc = "Bit 12 - 1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<12> {
         PDAC2_DAC_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<13> {
         PDAC2_FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<14> {
         PDAC2_SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<15> {
         PDAC2_SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<16> {
         PDAC2_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - PDAC1 function sel"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<17> {
         PDAC2_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<19> {
         PDAC2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 27 - PDAC2_RUE"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<27> {
         PDAC2_RUE_W::new(self)
     }
     #[doc = "Bit 28 - PDAC2_RDE"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<28> {
         PDAC2_RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - PDAC2_DRV"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<29> {
         PDAC2_DRV_W::new(self)
     }
@@ -225,11 +237,10 @@ impl crate::Readable for PAD_DAC2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_dac2::W](W) writer structure"]
 impl crate::Writable for PAD_DAC2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_DAC2 to value 0x4000_0000"]
 impl crate::Resettable for PAD_DAC2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4000_0000;
 }

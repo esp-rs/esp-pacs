@@ -33,8 +33,5 @@ impl crate::Readable for HOST_SLC0_HOST_PF_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLC0_HOST_PF to value 0"]
 impl crate::Resettable for HOST_SLC0_HOST_PF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

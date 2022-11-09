@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - reg_core_x_iram0_dram0_limit_cycle_0"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_limit_cycle_0(&self) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R {
-        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R::new((self.bits & 0x000f_ffff) as u32)
+        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - reg_core_x_iram0_dram0_limit_cycle_0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_dram0_limit_cycle_0(&mut self) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<0> {
         CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_exception_monitor_0::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0 to value 0"]
 impl crate::Resettable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

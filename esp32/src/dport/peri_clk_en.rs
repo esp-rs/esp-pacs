@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_clk_en(&mut self) -> PERI_CLK_EN_W<0> {
         PERI_CLK_EN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PERI_CLK_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [peri_clk_en::W](W) writer structure"]
 impl crate::Writable for PERI_CLK_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERI_CLK_EN to value 0"]
 impl crate::Resettable for PERI_CLK_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
     pub fn occupy_pro_trace(&self) -> OCCUPY_PRO_TRACE_R {
-        OCCUPY_PRO_TRACE_R::new((self.bits & 0x0003_ffff) as u32)
+        OCCUPY_PRO_TRACE_R::new(self.bits & 0x0003_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
+    #[must_use]
     pub fn occupy_pro_trace(&mut self) -> OCCUPY_PRO_TRACE_W<0> {
         OCCUPY_PRO_TRACE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for OCCUPY_3_SPEC {
 #[doc = "`write(|w| ..)` method takes [occupy_3::W](W) writer structure"]
 impl crate::Writable for OCCUPY_3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OCCUPY_3 to value 0"]
 impl crate::Resettable for OCCUPY_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

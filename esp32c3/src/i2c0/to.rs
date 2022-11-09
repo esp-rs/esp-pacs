@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_time_out_value"]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<0> {
         TIME_OUT_VALUE_W::new(self)
     }
     #[doc = "Bit 5 - reg_time_out_en"]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<5> {
         TIME_OUT_EN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for TO_SPEC {
 #[doc = "`write(|w| ..)` method takes [to::W](W) writer structure"]
 impl crate::Writable for TO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TO to value 0x10"]
 impl crate::Resettable for TO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

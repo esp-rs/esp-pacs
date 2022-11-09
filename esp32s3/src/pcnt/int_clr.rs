@@ -34,21 +34,25 @@ pub type CNT_THR_EVENT_U3_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u0_int_clr(&mut self) -> CNT_THR_EVENT_U0_INT_CLR_W<0> {
         CNT_THR_EVENT_U0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u1_int_clr(&mut self) -> CNT_THR_EVENT_U1_INT_CLR_W<1> {
         CNT_THR_EVENT_U1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u2_int_clr(&mut self) -> CNT_THR_EVENT_U2_INT_CLR_W<2> {
         CNT_THR_EVENT_U2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u3_int_clr(&mut self) -> CNT_THR_EVENT_U3_INT_CLR_W<3> {
         CNT_THR_EVENT_U3_INT_CLR_W::new(self)
     }
@@ -67,11 +71,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

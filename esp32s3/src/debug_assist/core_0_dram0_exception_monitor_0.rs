@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:21 - The first dram0's addr\\[25:4\\] status when trigger DRAM busy interrupt"]
     #[inline(always)]
     pub fn core_0_dram0_recording_addr_0(&self) -> CORE_0_DRAM0_RECORDING_ADDR_0_R {
-        CORE_0_DRAM0_RECORDING_ADDR_0_R::new((self.bits & 0x003f_ffff) as u32)
+        CORE_0_DRAM0_RECORDING_ADDR_0_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bit 22 - The first dram0's wr status when trigger DRAM busy interrupt"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for CORE_0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
 }
 #[doc = "`reset()` method sets CORE_0_DRAM0_EXCEPTION_MONITOR_0 to value 0"]
 impl crate::Resettable for CORE_0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

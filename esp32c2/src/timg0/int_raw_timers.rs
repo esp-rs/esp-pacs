@@ -40,8 +40,5 @@ impl crate::Readable for INT_RAW_TIMERS_SPEC {
 }
 #[doc = "`reset()` method sets INT_RAW_TIMERS to value 0"]
 impl crate::Resettable for INT_RAW_TIMERS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - RTC I2C slave address 5"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_slave_addr5(&mut self) -> I2C_SLAVE_ADDR5_W<0> {
         I2C_SLAVE_ADDR5_W::new(self)
     }
     #[doc = "Bits 11:21 - RTC I2C slave address 4"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_slave_addr4(&mut self) -> I2C_SLAVE_ADDR4_W<11> {
         I2C_SLAVE_ADDR4_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SAR_SLAVE_ADDR3_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_slave_addr3::W](W) writer structure"]
 impl crate::Writable for SAR_SLAVE_ADDR3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_SLAVE_ADDR3 to value 0"]
 impl crate::Resettable for SAR_SLAVE_ADDR3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

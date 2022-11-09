@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Those bits stores m'"]
     #[inline(always)]
+    #[must_use]
     pub fn m_prime(&mut self) -> M_PRIME_W<0> {
         M_PRIME_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for M_PRIME_SPEC {
 #[doc = "`write(|w| ..)` method takes [m_prime::W](W) writer structure"]
 impl crate::Writable for M_PRIME_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets M_PRIME to value 0"]
 impl crate::Resettable for M_PRIME_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

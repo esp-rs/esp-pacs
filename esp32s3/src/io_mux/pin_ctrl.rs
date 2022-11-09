@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_out1(&mut self) -> CLK_OUT1_W<0> {
         CLK_OUT1_W::new(self)
     }
     #[doc = "Bits 4:7 - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_out2(&mut self) -> CLK_OUT2_W<4> {
         CLK_OUT2_W::new(self)
     }
     #[doc = "Bits 8:11 - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_out3(&mut self) -> CLK_OUT3_W<8> {
         CLK_OUT3_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for PIN_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin_ctrl::W](W) writer structure"]
 impl crate::Writable for PIN_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN_CTRL to value 0x07ff"]
 impl crate::Resettable for PIN_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07ff
-    }
+    const RESET_VALUE: Self::Ux = 0x07ff;
 }

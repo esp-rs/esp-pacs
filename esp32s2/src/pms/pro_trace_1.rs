@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_trace_disable(&mut self) -> PRO_TRACE_DISABLE_W<0> {
         PRO_TRACE_DISABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_TRACE_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_trace_1::W](W) writer structure"]
 impl crate::Writable for PRO_TRACE_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_TRACE_1 to value 0"]
 impl crate::Resettable for PRO_TRACE_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

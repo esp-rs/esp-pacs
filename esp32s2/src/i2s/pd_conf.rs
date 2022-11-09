@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Force FIFO power-down."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_force_pd(&mut self) -> FIFO_FORCE_PD_W<0> {
         FIFO_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1 - Force FIFO power-up."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_force_pu(&mut self) -> FIFO_FORCE_PU_W<1> {
         FIFO_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2 - Force I2S memory power-down."]
     #[inline(always)]
+    #[must_use]
     pub fn plc_mem_force_pd(&mut self) -> PLC_MEM_FORCE_PD_W<2> {
         PLC_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3 - Force I2S memory power-up."]
     #[inline(always)]
+    #[must_use]
     pub fn plc_mem_force_pu(&mut self) -> PLC_MEM_FORCE_PU_W<3> {
         PLC_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 4 - Force DMA FIFO power-down."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_force_pd(&mut self) -> DMA_RAM_FORCE_PD_W<4> {
         DMA_RAM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 5 - Force DMA FIFO power-up."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_force_pu(&mut self) -> DMA_RAM_FORCE_PU_W<5> {
         DMA_RAM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to force on DMA RAM clock."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_ram_clk_fo(&mut self) -> DMA_RAM_CLK_FO_W<6> {
         DMA_RAM_CLK_FO_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for PD_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [pd_conf::W](W) writer structure"]
 impl crate::Writable for PD_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PD_CONF to value 0x2a"]
 impl crate::Resettable for PD_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2a
-    }
+    const RESET_VALUE: Self::Ux = 0x2a;
 }

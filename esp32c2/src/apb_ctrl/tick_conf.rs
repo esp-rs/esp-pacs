@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - reg_xtal_tick_num"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<0> {
         XTAL_TICK_NUM_W::new(self)
     }
     #[doc = "Bits 8:15 - reg_ck8m_tick_num"]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<8> {
         CK8M_TICK_NUM_W::new(self)
     }
     #[doc = "Bit 16 - reg_tick_enable"]
     #[inline(always)]
+    #[must_use]
     pub fn tick_enable(&mut self) -> TICK_ENABLE_W<16> {
         TICK_ENABLE_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for TICK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [tick_conf::W](W) writer structure"]
 impl crate::Writable for TICK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TICK_CONF to value 0x0001_0727"]
 impl crate::Resettable for TICK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0727
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0727;
 }

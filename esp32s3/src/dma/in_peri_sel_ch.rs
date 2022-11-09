@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Rx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
     #[inline(always)]
+    #[must_use]
     pub fn peri_in_sel(&mut self) -> PERI_IN_SEL_W<0> {
         PERI_IN_SEL_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for IN_PERI_SEL_CH_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_peri_sel_ch::W](W) writer structure"]
 impl crate::Writable for IN_PERI_SEL_CH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_PERI_SEL_CH%s to value 0x3f"]
 impl crate::Resettable for IN_PERI_SEL_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3f
-    }
+    const RESET_VALUE: Self::Ux = 0x3f;
 }

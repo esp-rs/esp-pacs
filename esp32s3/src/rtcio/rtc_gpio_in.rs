@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 10:31 - RTC GPIO input data"]
     #[inline(always)]
     pub fn next(&self) -> NEXT_R {
-        NEXT_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        NEXT_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 #[doc = "RTC GPIO input data\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_in](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for RTC_GPIO_IN_SPEC {
 }
 #[doc = "`reset()` method sets RTC_GPIO_IN to value 0"]
 impl crate::Resettable for RTC_GPIO_IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

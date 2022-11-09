@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
+    #[must_use]
     pub fn fsub_pin(&mut self) -> FSUB_PIN_W<7> {
         FSUB_PIN_W::new(self)
     }
     #[doc = "Bit 8 - Ext_RAM is connected to SPI SUBPIN bus."]
     #[inline(always)]
+    #[must_use]
     pub fn ssub_pin(&mut self) -> SSUB_PIN_W<8> {
         SSUB_PIN_W::new(self)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
     #[inline(always)]
+    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<9> {
         CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<10> {
         CS_KEEP_ACTIVE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC to value 0"]
 impl crate::Resettable for MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

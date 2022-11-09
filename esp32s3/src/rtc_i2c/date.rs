@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]
     pub fn i2c_date(&self) -> I2C_DATE_R {
-        I2C_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        I2C_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_date(&mut self) -> I2C_DATE_W<0> {
         I2C_DATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [date::W](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x0190_5310"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0190_5310
-    }
+    const RESET_VALUE: Self::Ux = 0x0190_5310;
 }

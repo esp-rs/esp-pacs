@@ -161,66 +161,79 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<0> {
         RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for txfifo_empty_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<1> {
         TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for rxfifo_ovf_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<2> {
         RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for end_detect_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn end_detect_int_ena(&mut self) -> END_DETECT_INT_ENA_W<3> {
         END_DETECT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for slave_tran_comp_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<4> {
         SLAVE_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for arbitration_lost_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<5> {
         ARBITRATION_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for master_tran_comp_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<6> {
         MASTER_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for trans_complete_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<7> {
         TRANS_COMPLETE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The enable bit for time_out_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<8> {
         TIME_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The enable bit for trans_start_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start_int_ena(&mut self) -> TRANS_START_INT_ENA_W<9> {
         TRANS_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<10> {
         ACK_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_rec_full_int_ena(&mut self) -> RX_REC_FULL_INT_ENA_W<11> {
         RX_REC_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The enable bit for tx_send_empty_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_send_empty_int_ena(&mut self) -> TX_SEND_EMPTY_INT_ENA_W<12> {
         TX_SEND_EMPTY_INT_ENA_W::new(self)
     }
@@ -243,11 +256,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

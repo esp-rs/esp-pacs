@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn appdport_apb_mask1(&mut self) -> APPDPORT_APB_MASK1_W<0> {
         APPDPORT_APB_MASK1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APP_DPORT_APB_MASK1_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_dport_apb_mask1::W](W) writer structure"]
 impl crate::Writable for APP_DPORT_APB_MASK1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_DPORT_APB_MASK1 to value 0"]
 impl crate::Resettable for APP_DPORT_APB_MASK1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

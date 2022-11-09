@@ -129,51 +129,61 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<0> {
         DI_XFERCOMPLMSK_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<1> {
         DI_EPDISBLDMSK_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<2> {
         DI_AHBERMSK_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<3> {
         TIMEOUTMSK_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<4> {
         INTKNTXFEMPMSK_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<5> {
         INTKNEPMISMSK_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<6> {
         INEPNAKEFFMSK_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<8> {
         TXFIFOUNDRNMSK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<9> {
         BNAININTRMSK_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<13> {
         DI_NAKMSK_W::new(self)
     }
@@ -196,11 +206,10 @@ impl crate::Readable for DIEPMSK_SPEC {
 #[doc = "`write(|w| ..)` method takes [diepmsk::W](W) writer structure"]
 impl crate::Writable for DIEPMSK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPMSK to value 0"]
 impl crate::Resettable for DIEPMSK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

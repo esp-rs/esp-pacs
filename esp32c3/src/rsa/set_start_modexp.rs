@@ -25,6 +25,7 @@ pub type SET_START_MODEXP_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - start modular exponentiation"]
     #[inline(always)]
+    #[must_use]
     pub fn set_start_modexp(&mut self) -> SET_START_MODEXP_W<0> {
         SET_START_MODEXP_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SET_START_MODEXP_SPEC {
 #[doc = "`write(|w| ..)` method takes [set_start_modexp::W](W) writer structure"]
 impl crate::Writable for SET_START_MODEXP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SET_START_MODEXP to value 0"]
 impl crate::Resettable for SET_START_MODEXP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

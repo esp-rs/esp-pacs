@@ -33,8 +33,5 @@ impl crate::Readable for STRAP_SPEC {
 }
 #[doc = "`reset()` method sets STRAP to value 0"]
 impl crate::Resettable for STRAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

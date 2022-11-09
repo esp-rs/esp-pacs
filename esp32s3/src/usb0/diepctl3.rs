@@ -113,46 +113,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn di_mps3(&mut self) -> DI_MPS3_W<0> {
         DI_MPS3_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn di_stall3(&mut self) -> DI_STALL3_W<21> {
         DI_STALL3_W::new(self)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
+    #[must_use]
     pub fn di_txfnum3(&mut self) -> DI_TXFNUM3_W<22> {
         DI_TXFNUM3_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn di_cnak3(&mut self) -> DI_CNAK3_W<26> {
         DI_CNAK3_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn di_snak3(&mut self) -> DI_SNAK3_W<27> {
         DI_SNAK3_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn di_setd0pid3(&mut self) -> DI_SETD0PID3_W<28> {
         DI_SETD0PID3_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn di_setd1pid3(&mut self) -> DI_SETD1PID3_W<29> {
         DI_SETD1PID3_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn di_epdis3(&mut self) -> DI_EPDIS3_W<30> {
         DI_EPDIS3_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn di_epena3(&mut self) -> DI_EPENA3_W<31> {
         DI_EPENA3_W::new(self)
     }
@@ -175,11 +184,10 @@ impl crate::Readable for DIEPCTL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [diepctl3::W](W) writer structure"]
 impl crate::Writable for DIEPCTL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPCTL3 to value 0x8000"]
 impl crate::Resettable for DIEPCTL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

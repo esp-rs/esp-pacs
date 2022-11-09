@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles to wait before generating start condition"]
     #[inline(always)]
     pub fn scl_start_period(&self) -> SCL_START_PERIOD_R {
-        SCL_START_PERIOD_R::new((self.bits & 0x000f_ffff) as u32)
+        SCL_START_PERIOD_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles to wait before generating start condition"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_start_period(&mut self) -> SCL_START_PERIOD_W<0> {
         SCL_START_PERIOD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_START_PERIOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_start_period::W](W) writer structure"]
 impl crate::Writable for SCL_START_PERIOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_START_PERIOD to value 0"]
 impl crate::Resettable for SCL_START_PERIOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

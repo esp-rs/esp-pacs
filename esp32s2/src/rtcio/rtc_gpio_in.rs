@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 input value. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. Each bit represents a pad input value, 1 for high level, and 0 for low level."]
     #[inline(always)]
     pub fn gpio_in_next(&self) -> GPIO_IN_NEXT_R {
-        GPIO_IN_NEXT_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        GPIO_IN_NEXT_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 #[doc = "RTC GPIO input register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtc_gpio_in](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for RTC_GPIO_IN_SPEC {
 }
 #[doc = "`reset()` method sets RTC_GPIO_IN to value 0"]
 impl crate::Resettable for RTC_GPIO_IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -25,6 +25,7 @@ pub type SET_INVALIDATE_JTAG_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to clear calculation results in JTAG re-enable function under downstream mode."]
     #[inline(always)]
+    #[must_use]
     pub fn set_invalidate_jtag(&mut self) -> SET_INVALIDATE_JTAG_W<0> {
         SET_INVALIDATE_JTAG_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SET_INVALIDATE_JTAG_SPEC {
 #[doc = "`write(|w| ..)` method takes [set_invalidate_jtag::W](W) writer structure"]
 impl crate::Writable for SET_INVALIDATE_JTAG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SET_INVALIDATE_JTAG to value 0"]
 impl crate::Resettable for SET_INVALIDATE_JTAG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

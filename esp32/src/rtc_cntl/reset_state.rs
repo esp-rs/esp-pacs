@@ -73,11 +73,13 @@ impl R {
 impl W {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
+    #[must_use]
     pub fn appcpu_stat_vector_sel(&mut self) -> APPCPU_STAT_VECTOR_SEL_W<12> {
         APPCPU_STAT_VECTOR_SEL_W::new(self)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
+    #[must_use]
     pub fn procpu_stat_vector_sel(&mut self) -> PROCPU_STAT_VECTOR_SEL_W<13> {
         PROCPU_STAT_VECTOR_SEL_W::new(self)
     }
@@ -100,11 +102,10 @@ impl crate::Readable for RESET_STATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [reset_state::W](W) writer structure"]
 impl crate::Writable for RESET_STATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RESET_STATE to value 0x3000"]
 impl crate::Resettable for RESET_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3000
-    }
+    const RESET_VALUE: Self::Ux = 0x3000;
 }

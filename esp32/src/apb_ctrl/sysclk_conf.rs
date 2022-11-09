@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
+    #[must_use]
     pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<0> {
         PRE_DIV_CNT_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<10> {
         CLK_320M_EN_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<11> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<12> {
         RST_TICK_CNT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn quick_clk_chng(&mut self) -> QUICK_CLK_CHNG_W<13> {
         QUICK_CLK_CHNG_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for SYSCLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sysclk_conf::W](W) writer structure"]
 impl crate::Writable for SYSCLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSCLK_CONF to value 0x2000"]
 impl crate::Resettable for SYSCLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2000
-    }
+    const RESET_VALUE: Self::Ux = 0x2000;
 }

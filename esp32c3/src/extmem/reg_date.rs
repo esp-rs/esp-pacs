@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:27 - version information"]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
-        DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - version information"]
     #[inline(always)]
+    #[must_use]
     pub fn date(&mut self) -> DATE_W<0> {
         DATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for REG_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [reg_date::W](W) writer structure"]
 impl crate::Writable for REG_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REG_DATE to value 0x0200_7160"]
 impl crate::Resettable for REG_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_7160
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_7160;
 }

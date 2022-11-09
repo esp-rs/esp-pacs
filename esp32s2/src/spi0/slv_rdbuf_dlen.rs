@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 0:19 - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
     #[inline(always)]
     pub fn slv_dma_rd_bytelen(&self) -> SLV_DMA_RD_BYTELEN_R {
-        SLV_DMA_RD_BYTELEN_R::new((self.bits & 0x000f_ffff) as u32)
+        SLV_DMA_RD_BYTELEN_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 24 - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_dma_rd_bytelen(&mut self) -> SLV_DMA_RD_BYTELEN_W<0> {
         SLV_DMA_RD_BYTELEN_W::new(self)
     }
     #[doc = "Bit 24 - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<24> {
         SLV_RD_BUF_DONE_W::new(self)
     }
     #[doc = "Bit 25 - 1: The recent magic value in CONF buffer is not right in master DMA seg-trans mode. 0: others."]
     #[inline(always)]
+    #[must_use]
     pub fn seg_magic_err(&mut self) -> SEG_MAGIC_ERR_W<25> {
         SEG_MAGIC_ERR_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for SLV_RDBUF_DLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [slv_rdbuf_dlen::W](W) writer structure"]
 impl crate::Writable for SLV_RDBUF_DLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLV_RDBUF_DLEN to value 0"]
 impl crate::Resettable for SLV_RDBUF_DLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

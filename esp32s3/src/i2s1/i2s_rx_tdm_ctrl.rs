@@ -209,86 +209,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan0_en(&mut self) -> I2S_RX_TDM_PDM_CHAN0_EN_W<0> {
         I2S_RX_TDM_PDM_CHAN0_EN_W::new(self)
     }
     #[doc = "Bit 1 - 1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan1_en(&mut self) -> I2S_RX_TDM_PDM_CHAN1_EN_W<1> {
         I2S_RX_TDM_PDM_CHAN1_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: Enable the valid data input of I2S RX TDM or PDM channel 2. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan2_en(&mut self) -> I2S_RX_TDM_PDM_CHAN2_EN_W<2> {
         I2S_RX_TDM_PDM_CHAN2_EN_W::new(self)
     }
     #[doc = "Bit 3 - 1: Enable the valid data input of I2S RX TDM or PDM channel 3. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan3_en(&mut self) -> I2S_RX_TDM_PDM_CHAN3_EN_W<3> {
         I2S_RX_TDM_PDM_CHAN3_EN_W::new(self)
     }
     #[doc = "Bit 4 - 1: Enable the valid data input of I2S RX TDM or PDM channel 4. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan4_en(&mut self) -> I2S_RX_TDM_PDM_CHAN4_EN_W<4> {
         I2S_RX_TDM_PDM_CHAN4_EN_W::new(self)
     }
     #[doc = "Bit 5 - 1: Enable the valid data input of I2S RX TDM or PDM channel 5. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan5_en(&mut self) -> I2S_RX_TDM_PDM_CHAN5_EN_W<5> {
         I2S_RX_TDM_PDM_CHAN5_EN_W::new(self)
     }
     #[doc = "Bit 6 - 1: Enable the valid data input of I2S RX TDM or PDM channel 6. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan6_en(&mut self) -> I2S_RX_TDM_PDM_CHAN6_EN_W<6> {
         I2S_RX_TDM_PDM_CHAN6_EN_W::new(self)
     }
     #[doc = "Bit 7 - 1: Enable the valid data input of I2S RX TDM or PDM channel 7. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_pdm_chan7_en(&mut self) -> I2S_RX_TDM_PDM_CHAN7_EN_W<7> {
         I2S_RX_TDM_PDM_CHAN7_EN_W::new(self)
     }
     #[doc = "Bit 8 - 1: Enable the valid data input of I2S RX TDM channel 8. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan8_en(&mut self) -> I2S_RX_TDM_CHAN8_EN_W<8> {
         I2S_RX_TDM_CHAN8_EN_W::new(self)
     }
     #[doc = "Bit 9 - 1: Enable the valid data input of I2S RX TDM channel 9. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan9_en(&mut self) -> I2S_RX_TDM_CHAN9_EN_W<9> {
         I2S_RX_TDM_CHAN9_EN_W::new(self)
     }
     #[doc = "Bit 10 - 1: Enable the valid data input of I2S RX TDM channel 10. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan10_en(&mut self) -> I2S_RX_TDM_CHAN10_EN_W<10> {
         I2S_RX_TDM_CHAN10_EN_W::new(self)
     }
     #[doc = "Bit 11 - 1: Enable the valid data input of I2S RX TDM channel 11. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan11_en(&mut self) -> I2S_RX_TDM_CHAN11_EN_W<11> {
         I2S_RX_TDM_CHAN11_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: Enable the valid data input of I2S RX TDM channel 12. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan12_en(&mut self) -> I2S_RX_TDM_CHAN12_EN_W<12> {
         I2S_RX_TDM_CHAN12_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: Enable the valid data input of I2S RX TDM channel 13. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan13_en(&mut self) -> I2S_RX_TDM_CHAN13_EN_W<13> {
         I2S_RX_TDM_CHAN13_EN_W::new(self)
     }
     #[doc = "Bit 14 - 1: Enable the valid data input of I2S RX TDM channel 14. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan14_en(&mut self) -> I2S_RX_TDM_CHAN14_EN_W<14> {
         I2S_RX_TDM_CHAN14_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the valid data input of I2S RX TDM channel 15. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan15_en(&mut self) -> I2S_RX_TDM_CHAN15_EN_W<15> {
         I2S_RX_TDM_CHAN15_EN_W::new(self)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_tot_chan_num(&mut self) -> I2S_RX_TDM_TOT_CHAN_NUM_W<16> {
         I2S_RX_TDM_TOT_CHAN_NUM_W::new(self)
     }
@@ -311,11 +328,10 @@ impl crate::Readable for I2S_RX_TDM_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_tdm_ctrl::W](W) writer structure"]
 impl crate::Writable for I2S_RX_TDM_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_TDM_CTRL to value 0xffff"]
 impl crate::Resettable for I2S_RX_TDM_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff;
 }

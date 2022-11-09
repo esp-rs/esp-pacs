@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Set system timer increment step when using XTAL_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn timer_xtal_step(&mut self) -> TIMER_XTAL_STEP_W<0> {
         TIMER_XTAL_STEP_W::new(self)
     }
     #[doc = "Bits 10:19 - Set system timer increment step when using PLL_CLK"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_pll_step(&mut self) -> TIMER_PLL_STEP_W<10> {
         TIMER_PLL_STEP_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for STEP_SPEC {
 #[doc = "`write(|w| ..)` method takes [step::W](W) writer structure"]
 impl crate::Writable for STEP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STEP to value 0x0450"]
 impl crate::Resettable for STEP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0450
-    }
+    const RESET_VALUE: Self::Ux = 0x0450;
 }

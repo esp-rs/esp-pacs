@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable icache clock"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W<0> {
         ICACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to let icache reset"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_reset(&mut self) -> ICACHE_RESET_W<1> {
         ICACHE_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable dcache clock"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W<2> {
         DCACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to let dcache reset"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_reset(&mut self) -> DCACHE_RESET_W<3> {
         DCACHE_RESET_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CACHE_CONTROL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_control::W](W) writer structure"]
 impl crate::Writable for CACHE_CONTROL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_CONTROL to value 0x05"]
 impl crate::Resettable for CACHE_CONTROL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05
-    }
+    const RESET_VALUE: Self::Ux = 0x05;
 }

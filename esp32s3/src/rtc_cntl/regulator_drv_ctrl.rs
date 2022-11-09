@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_drv_b_monitor(&mut self) -> REGULATOR_DRV_B_MONITOR_W<0> {
         REGULATOR_DRV_B_MONITOR_W::new(self)
     }
     #[doc = "Bits 6:11 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_drv_b_slp(&mut self) -> REGULATOR_DRV_B_SLP_W<6> {
         REGULATOR_DRV_B_SLP_W::new(self)
     }
     #[doc = "Bits 12:19 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_vdd_drv_b_slp(&mut self) -> DG_VDD_DRV_B_SLP_W<12> {
         DG_VDD_DRV_B_SLP_W::new(self)
     }
     #[doc = "Bits 20:27 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_vdd_drv_b_monitor(&mut self) -> DG_VDD_DRV_B_MONITOR_W<20> {
         DG_VDD_DRV_B_MONITOR_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for REGULATOR_DRV_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [regulator_drv_ctrl::W](W) writer structure"]
 impl crate::Writable for REGULATOR_DRV_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REGULATOR_DRV_CTRL to value 0"]
 impl crate::Resettable for REGULATOR_DRV_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

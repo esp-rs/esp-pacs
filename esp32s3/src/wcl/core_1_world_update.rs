@@ -25,6 +25,7 @@ pub type CORE_1_UPDATE_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:31 - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_update(&mut self) -> CORE_1_UPDATE_W<0> {
         CORE_1_UPDATE_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for CORE_1_WORLD_UPDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_world_update::W](W) writer structure"]
 impl crate::Writable for CORE_1_WORLD_UPDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_1_World_UPDATE to value 0"]
 impl crate::Resettable for CORE_1_WORLD_UPDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

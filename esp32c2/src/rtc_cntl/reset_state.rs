@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
+    #[must_use]
     pub fn reset_cause_procpu(&mut self) -> RESET_CAUSE_PROCPU_W<0> {
         RESET_CAUSE_PROCPU_W::new(self)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
+    #[must_use]
     pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<13> {
         STAT_VECTOR_SEL_PROCPU_W::new(self)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
+    #[must_use]
     pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<19> {
         OCD_HALT_ON_RESET_PROCPU_W::new(self)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<20> {
         DRESET_MASK_PROCPU_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for RESET_STATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [reset_state::W](W) writer structure"]
 impl crate::Writable for RESET_STATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RESET_STATE to value 0x2000"]
 impl crate::Resettable for RESET_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2000
-    }
+    const RESET_VALUE: Self::Ux = 0x2000;
 }

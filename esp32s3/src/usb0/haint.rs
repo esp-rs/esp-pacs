@@ -33,8 +33,5 @@ impl crate::Readable for HAINT_SPEC {
 }
 #[doc = "`reset()` method sets HAINT to value 0"]
 impl crate::Resettable for HAINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for IC_PRELOAD_MISS_CNT_SPEC {
 }
 #[doc = "`reset()` method sets IC_PRELOAD_MISS_CNT to value 0"]
 impl crate::Resettable for IC_PRELOAD_MISS_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

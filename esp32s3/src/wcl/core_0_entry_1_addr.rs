@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Core_0 Entry 1 address from WORLD1 to WORLD0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_entry_1_addr(&mut self) -> CORE_0_ENTRY_1_ADDR_W<0> {
         CORE_0_ENTRY_1_ADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_ENTRY_1_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_entry_1_addr::W](W) writer structure"]
 impl crate::Writable for CORE_0_ENTRY_1_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_0_ENTRY_1_ADDR to value 0"]
 impl crate::Resettable for CORE_0_ENTRY_1_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

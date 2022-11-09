@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<29> {
         FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Bit 31 - no public"]
     #[inline(always)]
+    #[must_use]
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W<31> {
         SARCLK_EN_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SAR_POWER_XPD_SAR_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_power_xpd_sar::W](W) writer structure"]
 impl crate::Writable for SAR_POWER_XPD_SAR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_POWER_XPD_SAR to value 0"]
 impl crate::Resettable for SAR_POWER_XPD_SAR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

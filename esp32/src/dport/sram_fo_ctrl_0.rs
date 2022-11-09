@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn sram_fo_0(&mut self) -> SRAM_FO_0_W<0> {
         SRAM_FO_0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRAM_FO_CTRL_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_fo_ctrl_0::W](W) writer structure"]
 impl crate::Writable for SRAM_FO_CTRL_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_FO_CTRL_0 to value 0xffff_ffff"]
 impl crate::Resettable for SRAM_FO_CTRL_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

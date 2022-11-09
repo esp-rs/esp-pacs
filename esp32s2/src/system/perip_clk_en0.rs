@@ -337,161 +337,193 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable clock of timers."]
     #[inline(always)]
+    #[must_use]
     pub fn timers_clk_en(&mut self) -> TIMERS_CLK_EN_W<0> {
         TIMERS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable clock of SPI0 and SPI1."]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<1> {
         SPI01_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable clock of UART0."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<2> {
         UART_CLK_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable clock of WDG."]
     #[inline(always)]
+    #[must_use]
     pub fn wdg_clk_en(&mut self) -> WDG_CLK_EN_W<3> {
         WDG_CLK_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable clock of I2S0."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<4> {
         I2S0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable clock of UART1."]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<5> {
         UART1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable clock of SPI2."]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<6> {
         SPI2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable clock of I2C EXT0."]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<7> {
         I2C_EXT0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to enable clock of UHCI0."]
     #[inline(always)]
+    #[must_use]
     pub fn uhci0_clk_en(&mut self) -> UHCI0_CLK_EN_W<8> {
         UHCI0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to enable clock of remote controller."]
     #[inline(always)]
+    #[must_use]
     pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<9> {
         RMT_CLK_EN_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable clock of pulse count."]
     #[inline(always)]
+    #[must_use]
     pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<10> {
         PCNT_CLK_EN_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to enable clock of LED PWM."]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<11> {
         LEDC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable clock of UHCI1."]
     #[inline(always)]
+    #[must_use]
     pub fn uhci1_clk_en(&mut self) -> UHCI1_CLK_EN_W<12> {
         UHCI1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable clock of timer group0."]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<13> {
         TIMERGROUP_CLK_EN_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable clock of eFuse."]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_clk_en(&mut self) -> EFUSE_CLK_EN_W<14> {
         EFUSE_CLK_EN_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable clock of timer group1."]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup1_clk_en(&mut self) -> TIMERGROUP1_CLK_EN_W<15> {
         TIMERGROUP1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable clock of SPI3."]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_clk_en(&mut self) -> SPI3_CLK_EN_W<16> {
         SPI3_CLK_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable clock of PWM0."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm0_clk_en(&mut self) -> PWM0_CLK_EN_W<17> {
         PWM0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable clock of I2C EXT1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext1_clk_en(&mut self) -> I2C_EXT1_CLK_EN_W<18> {
         I2C_EXT1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable clock of CAN."]
     #[inline(always)]
+    #[must_use]
     pub fn can_clk_en(&mut self) -> CAN_CLK_EN_W<19> {
         CAN_CLK_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to enable clock of PWM1."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm1_clk_en(&mut self) -> PWM1_CLK_EN_W<20> {
         PWM1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable clock of I2S1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s1_clk_en(&mut self) -> I2S1_CLK_EN_W<21> {
         I2S1_CLK_EN_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable clock of SPI2 DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_dma_clk_en(&mut self) -> SPI2_DMA_CLK_EN_W<22> {
         SPI2_DMA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to enable clock of USB."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_clk_en(&mut self) -> USB_CLK_EN_W<23> {
         USB_CLK_EN_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to enable clock of UART memory."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<24> {
         UART_MEM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to enable clock of PWM2."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm2_clk_en(&mut self) -> PWM2_CLK_EN_W<25> {
         PWM2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to enable clock of PWM3."]
     #[inline(always)]
+    #[must_use]
     pub fn pwm3_clk_en(&mut self) -> PWM3_CLK_EN_W<26> {
         PWM3_CLK_EN_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to enable clock of SPI3 DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_dma_clk_en(&mut self) -> SPI3_DMA_CLK_EN_W<27> {
         SPI3_DMA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to enable clock of SAR ADC."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<28> {
         APB_SARADC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable clock of system timer."]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<29> {
         SYSTIMER_CLK_EN_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable clock of aribiter of ADC2."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<30> {
         ADC2_ARB_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable clock of SPI4."]
     #[inline(always)]
+    #[must_use]
     pub fn spi4_clk_en(&mut self) -> SPI4_CLK_EN_W<31> {
         SPI4_CLK_EN_W::new(self)
     }
@@ -514,11 +546,10 @@ impl crate::Readable for PERIP_CLK_EN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN0 to value 0xf9c1_e06f"]
 impl crate::Resettable for PERIP_CLK_EN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xf9c1_e06f
-    }
+    const RESET_VALUE: Self::Ux = 0xf9c1_e06f;
 }

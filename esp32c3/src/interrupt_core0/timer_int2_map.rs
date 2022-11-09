@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_timer_int2_map"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_int2_map(&mut self) -> TIMER_INT2_MAP_W<0> {
         TIMER_INT2_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIMER_INT2_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_int2_map::W](W) writer structure"]
 impl crate::Writable for TIMER_INT2_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER_INT2_MAP to value 0"]
 impl crate::Resettable for TIMER_INT2_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

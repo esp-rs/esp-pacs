@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The enable bit for LCD frame end interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vsync_int_ena(&mut self) -> LCD_VSYNC_INT_ENA_W<0> {
         LCD_VSYNC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for lcd transfer end interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_trans_done_int_ena(&mut self) -> LCD_TRANS_DONE_INT_ENA_W<1> {
         LCD_TRANS_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for Camera frame end interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_vsync_int_ena(&mut self) -> CAM_VSYNC_INT_ENA_W<2> {
         CAM_VSYNC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for Camera line interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_hs_int_ena(&mut self) -> CAM_HS_INT_ENA_W<3> {
         CAM_HS_INT_ENA_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for LC_DMA_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [lc_dma_int_ena::W](W) writer structure"]
 impl crate::Writable for LC_DMA_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LC_DMA_INT_ENA to value 0"]
 impl crate::Resettable for LC_DMA_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

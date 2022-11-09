@@ -46,7 +46,7 @@ impl R {
     #[doc = "Bits 0:27 - x"]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
-        DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        DATE_R::new(self.bits & 0x0fff_ffff)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:27 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn date(&mut self) -> DATE_W<0> {
         DATE_W::new(self)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [date::W](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x0201_2300"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0201_2300
-    }
+    const RESET_VALUE: Self::Ux = 0x0201_2300;
 }

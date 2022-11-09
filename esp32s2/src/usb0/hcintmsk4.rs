@@ -157,66 +157,79 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xfercomplmsk4(&mut self) -> H_XFERCOMPLMSK4_W<0> {
         H_XFERCOMPLMSK4_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn h_chhltdmsk4(&mut self) -> H_CHHLTDMSK4_W<1> {
         H_CHHLTDMSK4_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ahberrmsk4(&mut self) -> H_AHBERRMSK4_W<2> {
         H_AHBERRMSK4_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn h_stallmsk4(&mut self) -> H_STALLMSK4_W<3> {
         H_STALLMSK4_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nakmsk4(&mut self) -> H_NAKMSK4_W<4> {
         H_NAKMSK4_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ackmsk4(&mut self) -> H_ACKMSK4_W<5> {
         H_ACKMSK4_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nyetmsk4(&mut self) -> H_NYETMSK4_W<6> {
         H_NYETMSK4_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xacterrmsk4(&mut self) -> H_XACTERRMSK4_W<7> {
         H_XACTERRMSK4_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bblerrmsk4(&mut self) -> H_BBLERRMSK4_W<8> {
         H_BBLERRMSK4_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn h_frmovrunmsk4(&mut self) -> H_FRMOVRUNMSK4_W<9> {
         H_FRMOVRUNMSK4_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn h_datatglerrmsk4(&mut self) -> H_DATATGLERRMSK4_W<10> {
         H_DATATGLERRMSK4_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bnaintrmsk4(&mut self) -> H_BNAINTRMSK4_W<11> {
         H_BNAINTRMSK4_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn h_desc_lst_rollintrmsk4(&mut self) -> H_DESC_LST_ROLLINTRMSK4_W<13> {
         H_DESC_LST_ROLLINTRMSK4_W::new(self)
     }
@@ -239,11 +252,10 @@ impl crate::Readable for HCINTMSK4_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcintmsk4::W](W) writer structure"]
 impl crate::Writable for HCINTMSK4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCINTMSK4 to value 0"]
 impl crate::Resettable for HCINTMSK4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -78,11 +78,13 @@ impl R {
 impl W {
     #[doc = "Bit 20 - Write 0 or 1 to I2C_RX_UPDATE to update the value of I2C_RXFIFO_END_ADDR and I2C_RXFIFO_START_ADDR."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_update(&mut self) -> RX_UPDATE_W<20> {
         RX_UPDATE_W::new(self)
     }
     #[doc = "Bit 21 - Write 0 or 1 to I2C_TX_UPDATE to update the value of I2C_TXFIFO_END_ADDR and I2C_TXFIFO_START_ADDR."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_update(&mut self) -> TX_UPDATE_W<21> {
         TX_UPDATE_W::new(self)
     }
@@ -105,11 +107,10 @@ impl crate::Readable for FIFO_ST_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_st::W](W) writer structure"]
 impl crate::Writable for FIFO_ST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_ST to value 0"]
 impl crate::Resettable for FIFO_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

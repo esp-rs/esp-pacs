@@ -34,24 +34,21 @@ impl From<crate::W<DBADDR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
-are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+#[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
 pub type DBADDR_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
-are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+#[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
 pub type DBADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBADDR_SPEC, u32, u32, 32, O>;
 impl R {
-    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
-are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
     pub fn dbaddr(&self) -> DBADDR_R {
         DBADDR_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\]
-are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
+    #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
+    #[must_use]
     pub fn dbaddr(&mut self) -> DBADDR_W<0> {
         DBADDR_W::new(self)
     }
@@ -74,11 +71,10 @@ impl crate::Readable for DBADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbaddr::W](W) writer structure"]
 impl crate::Writable for DBADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBADDR to value 0"]
 impl crate::Resettable for DBADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

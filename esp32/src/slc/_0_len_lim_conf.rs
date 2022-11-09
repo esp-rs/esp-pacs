@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc0_len_lim(&self) -> SLC0_LEN_LIM_R {
-        SLC0_LEN_LIM_R::new((self.bits & 0x000f_ffff) as u32)
+        SLC0_LEN_LIM_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_len_lim(&mut self) -> SLC0_LEN_LIM_W<0> {
         SLC0_LEN_LIM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for _0_LEN_LIM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [_0_len_lim_conf::W](W) writer structure"]
 impl crate::Writable for _0_LEN_LIM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets _0_LEN_LIM_CONF to value 0x5400"]
 impl crate::Resettable for _0_LEN_LIM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x5400
-    }
+    const RESET_VALUE: Self::Ux = 0x5400;
 }

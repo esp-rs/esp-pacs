@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This field to used to set world to enter, 2'b01 means WORLD0, 2'b10 means WORLD1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_world_prepare(&mut self) -> CORE_0_WORLD_PREPARE_W<0> {
         CORE_0_WORLD_PREPARE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_WORLD_PREPARE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_world_prepare::W](W) writer structure"]
 impl crate::Writable for CORE_0_WORLD_PREPARE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_0_World_PREPARE to value 0"]
 impl crate::Resettable for CORE_0_WORLD_PREPARE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Update method for PWM generator 1's active register of configuration. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1:"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_cfg_upmethod(&mut self) -> GEN1_CFG_UPMETHOD_W<0> {
         GEN1_CFG_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:6 - Source selection for PWM generator 1 event_t0, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_t0_sel(&mut self) -> GEN1_T0_SEL_W<4> {
         GEN1_T0_SEL_W::new(self)
     }
     #[doc = "Bits 7:9 - Source selection for PWM generator 1 event_t1, take effect immediately, 0: fault_event0, 1: fault_event1, 2: fault_event2, 3: sync_taken, 4: none"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_t1_sel(&mut self) -> GEN1_T1_SEL_W<7> {
         GEN1_T1_SEL_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for GEN1_CFG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen1_cfg0::W](W) writer structure"]
 impl crate::Writable for GEN1_CFG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN1_CFG0 to value 0"]
 impl crate::Resettable for GEN1_CFG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

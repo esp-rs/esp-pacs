@@ -128,46 +128,55 @@ impl R {
 impl W {
     #[doc = "Bit 21 - 1:invert every two 8bits input data. 2. disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_8bits_data_inv(&mut self) -> CAM_CONV_8BITS_DATA_INV_W<21> {
         CAM_CONV_8BITS_DATA_INV_W::new(self)
     }
     #[doc = "Bits 22:23 - 0: to yuv422. 1: to yuv420. 2: to yuv411. 3: disabled. To enable yuv2yuv mode, trans_mode must be set to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_yuv2yuv_mode(&mut self) -> CAM_CONV_YUV2YUV_MODE_W<22> {
         CAM_CONV_YUV2YUV_MODE_W::new(self)
     }
     #[doc = "Bits 24:25 - 0: yuv422. 1: yuv420. 2: yuv411. When in yuv2yuv mode, yuv_mode decides the yuv mode of Data_in"]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_yuv_mode(&mut self) -> CAM_CONV_YUV_MODE_W<24> {
         CAM_CONV_YUV_MODE_W::new(self)
     }
     #[doc = "Bit 26 - 0:BT601. 1:BT709."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_protocol_mode(&mut self) -> CAM_CONV_PROTOCOL_MODE_W<26> {
         CAM_CONV_PROTOCOL_MODE_W::new(self)
     }
     #[doc = "Bit 27 - LIMIT or FULL mode of Data out. 0: limit. 1: full"]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_data_out_mode(&mut self) -> CAM_CONV_DATA_OUT_MODE_W<27> {
         CAM_CONV_DATA_OUT_MODE_W::new(self)
     }
     #[doc = "Bit 28 - LIMIT or FULL mode of Data in. 0: limit. 1: full"]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_data_in_mode(&mut self) -> CAM_CONV_DATA_IN_MODE_W<28> {
         CAM_CONV_DATA_IN_MODE_W::new(self)
     }
     #[doc = "Bit 29 - 0: 16bits mode. 1: 8bits mode."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_mode_8bits_on(&mut self) -> CAM_CONV_MODE_8BITS_ON_W<29> {
         CAM_CONV_MODE_8BITS_ON_W::new(self)
     }
     #[doc = "Bit 30 - 0: YUV to RGB. 1: RGB to YUV."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_trans_mode(&mut self) -> CAM_CONV_TRANS_MODE_W<30> {
         CAM_CONV_TRANS_MODE_W::new(self)
     }
     #[doc = "Bit 31 - 0: Bypass converter. 1: Enable converter."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_conv_bypass(&mut self) -> CAM_CONV_BYPASS_W<31> {
         CAM_CONV_BYPASS_W::new(self)
     }
@@ -190,11 +199,10 @@ impl crate::Readable for CAM_RGB_YUV_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_rgb_yuv::W](W) writer structure"]
 impl crate::Writable for CAM_RGB_YUV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_RGB_YUV to value 0x00c0_0000"]
 impl crate::Resettable for CAM_RGB_YUV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00c0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x00c0_0000;
 }

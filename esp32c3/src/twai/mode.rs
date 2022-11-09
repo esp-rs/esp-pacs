@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is used to configure the operating mode of the TWAI Controller. 1: Reset mode; 0: Operating mode."]
     #[inline(always)]
+    #[must_use]
     pub fn reset_mode(&mut self) -> RESET_MODE_W<0> {
         RESET_MODE_W::new(self)
     }
     #[doc = "Bit 1 - 1: Listen only mode. In this mode the nodes will only receive messages from the bus, without generating the acknowledge signal nor updating the RX error counter."]
     #[inline(always)]
+    #[must_use]
     pub fn listen_only_mode(&mut self) -> LISTEN_ONLY_MODE_W<1> {
         LISTEN_ONLY_MODE_W::new(self)
     }
     #[doc = "Bit 2 - 1: Self test mode. In this mode the TX nodes can perform a successful transmission without receiving the acknowledge signal. This mode is often used to test a single node with the self reception request command."]
     #[inline(always)]
+    #[must_use]
     pub fn self_test_mode(&mut self) -> SELF_TEST_MODE_W<2> {
         SELF_TEST_MODE_W::new(self)
     }
     #[doc = "Bit 3 - This bit is used to configure the filter mode. 0: Dual filter mode; 1: Single filter mode."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_filter_mode(&mut self) -> RX_FILTER_MODE_W<3> {
         RX_FILTER_MODE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [mode::W](W) writer structure"]
 impl crate::Writable for MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MODE to value 0x01"]
 impl crate::Resettable for MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

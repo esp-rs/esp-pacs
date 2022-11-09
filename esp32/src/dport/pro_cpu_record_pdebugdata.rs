@@ -356,156 +356,187 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep_other(&mut self) -> RECORD_PDEBUGDATA_DEP_OTHER_W<0> {
         RECORD_PDEBUGDATA_DEP_OTHER_W::new(self)
     }
     #[doc = "Bits 0:4"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_excvec(&mut self) -> RECORD_PDEBUGDATA_EXCVEC_W<0> {
         RECORD_PDEBUGDATA_EXCVEC_W::new(self)
     }
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_sr(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_SR_W<0> {
         RECORD_PDEBUGDATA_INSNTYPE_SR_W::new(self)
     }
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_rer(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_RER_W<0> {
         RECORD_PDEBUGDATA_INSNTYPE_RER_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_buff(&mut self) -> RECORD_PDEBUGDATA_STALL_BUFF_W<1> {
         RECORD_PDEBUGDATA_STALL_BUFF_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_wer(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_WER_W<1> {
         RECORD_PDEBUGDATA_INSNTYPE_WER_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_buffconfl(&mut self) -> RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<2> {
         RECORD_PDEBUGDATA_STALL_BUFFCONFL_W::new(self)
     }
     #[doc = "Bits 2:13"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_er(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_ER_W<2> {
         RECORD_PDEBUGDATA_INSNTYPE_ER_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_dcm(&mut self) -> RECORD_PDEBUGDATA_STALL_DCM_W<3> {
         RECORD_PDEBUGDATA_STALL_DCM_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_lsu(&mut self) -> RECORD_PDEBUGDATA_STALL_LSU_W<4> {
         RECORD_PDEBUGDATA_STALL_LSU_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_icm(&mut self) -> RECORD_PDEBUGDATA_STALL_ICM_W<6> {
         RECORD_PDEBUGDATA_STALL_ICM_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_irambusy(&mut self) -> RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<7> {
         RECORD_PDEBUGDATA_STALL_IRAMBUSY_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep_lsu(&mut self) -> RECORD_PDEBUGDATA_DEP_LSU_W<8> {
         RECORD_PDEBUGDATA_DEP_LSU_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_ipif(&mut self) -> RECORD_PDEBUGDATA_STALL_IPIF_W<8> {
         RECORD_PDEBUGDATA_STALL_IPIF_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_rsr(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_RSR_W<8> {
         RECORD_PDEBUGDATA_INSNTYPE_RSR_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_tie(&mut self) -> RECORD_PDEBUGDATA_STALL_TIE_W<9> {
         RECORD_PDEBUGDATA_STALL_TIE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_wsr(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_WSR_W<9> {
         RECORD_PDEBUGDATA_INSNTYPE_WSR_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_run(&mut self) -> RECORD_PDEBUGDATA_STALL_RUN_W<10> {
         RECORD_PDEBUGDATA_STALL_RUN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_insntype_xsr(&mut self) -> RECORD_PDEBUGDATA_INSNTYPE_XSR_W<10> {
         RECORD_PDEBUGDATA_INSNTYPE_XSR_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep_str(&mut self) -> RECORD_PDEBUGDATA_DEP_STR_W<11> {
         RECORD_PDEBUGDATA_DEP_STR_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep(&mut self) -> RECORD_PDEBUGDATA_DEP_W<12> {
         RECORD_PDEBUGDATA_DEP_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_bpifetch(&mut self) -> RECORD_PDEBUGDATA_STALL_BPIFETCH_W<12> {
         RECORD_PDEBUGDATA_STALL_BPIFETCH_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_l32r(&mut self) -> RECORD_PDEBUGDATA_STALL_L32R_W<13> {
         RECORD_PDEBUGDATA_STALL_L32R_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_lsproc(&mut self) -> RECORD_PDEBUGDATA_STALL_LSPROC_W<14> {
         RECORD_PDEBUGDATA_STALL_LSPROC_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_bpload(&mut self) -> RECORD_PDEBUGDATA_STALL_BPLOAD_W<15> {
         RECORD_PDEBUGDATA_STALL_BPLOAD_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep_memw(&mut self) -> RECORD_PDEBUGDATA_DEP_MEMW_W<16> {
         RECORD_PDEBUGDATA_DEP_MEMW_W::new(self)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_exccause(&mut self) -> RECORD_PDEBUGDATA_EXCCAUSE_W<16> {
         RECORD_PDEBUGDATA_EXCCAUSE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_bankconfl(&mut self) -> RECORD_PDEBUGDATA_STALL_BANKCONFL_W<16> {
         RECORD_PDEBUGDATA_STALL_BANKCONFL_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_dep_halt(&mut self) -> RECORD_PDEBUGDATA_DEP_HALT_W<17> {
         RECORD_PDEBUGDATA_DEP_HALT_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_itermul(&mut self) -> RECORD_PDEBUGDATA_STALL_ITERMUL_W<18> {
         RECORD_PDEBUGDATA_STALL_ITERMUL_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugdata_stall_iterdiv(&mut self) -> RECORD_PDEBUGDATA_STALL_ITERDIV_W<19> {
         RECORD_PDEBUGDATA_STALL_ITERDIV_W::new(self)
     }
@@ -528,11 +559,10 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebugdata::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGDATA to value 0"]
 impl crate::Resettable for PRO_CPU_RECORD_PDEBUGDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

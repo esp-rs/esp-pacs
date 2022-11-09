@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_tag_object(&mut self) -> ICACHE_TAG_OBJECT_W<0> {
         ICACHE_TAG_OBJECT_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_tag_object(&mut self) -> DCACHE_TAG_OBJECT_W<1> {
         DCACHE_TAG_OBJECT_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CACHE_TAG_OBJECT_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_tag_object_ctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_OBJECT_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_TAG_OBJECT_CTRL to value 0"]
 impl crate::Resettable for CACHE_TAG_OBJECT_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

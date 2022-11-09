@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W<0> {
         XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 8:15 - reset time"]
     #[inline(always)]
+    #[must_use]
     pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<8> {
         RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23 - standby wait"]
     #[inline(always)]
+    #[must_use]
     pub fn standby_wait(&mut self) -> STANDBY_WAIT_W<16> {
         STANDBY_WAIT_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for FSM_WAIT_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsm_wait::W](W) writer structure"]
 impl crate::Writable for FSM_WAIT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSM_WAIT to value 0x00ff_0808"]
 impl crate::Resettable for FSM_WAIT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00ff_0808
-    }
+    const RESET_VALUE: Self::Ux = 0x00ff_0808;
 }

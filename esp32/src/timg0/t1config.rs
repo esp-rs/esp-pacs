@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn alarm_en(&mut self) -> ALARM_EN_W<10> {
         ALARM_EN_W::new(self)
     }
     #[doc = "Bit 11 - When set level type interrupt will be generated during alarm"]
     #[inline(always)]
+    #[must_use]
     pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<11> {
         LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 12 - When set edge type interrupt will be generated during alarm"]
     #[inline(always)]
+    #[must_use]
     pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<12> {
         EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 13:28 - Timer 1 clock (T1_clk) prescale value."]
     #[inline(always)]
+    #[must_use]
     pub fn divider(&mut self) -> DIVIDER_W<13> {
         DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - When set timer 1 auto-reload at alarming is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn autoreload(&mut self) -> AUTORELOAD_W<29> {
         AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - When set timer 1 time-base counter increment. When cleared timer 1 time-base counter decrement."]
     #[inline(always)]
+    #[must_use]
     pub fn increase(&mut self) -> INCREASE_W<30> {
         INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - When set timer 1 time-base counter is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<31> {
         EN_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for T1CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [t1config::W](W) writer structure"]
 impl crate::Writable for T1CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T1CONFIG to value 0x6000_2000"]
 impl crate::Resettable for T1CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6000_2000
-    }
+    const RESET_VALUE: Self::Ux = 0x6000_2000;
 }

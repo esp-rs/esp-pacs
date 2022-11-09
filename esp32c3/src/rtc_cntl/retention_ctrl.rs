@@ -88,26 +88,31 @@ impl R {
 impl W {
     #[doc = "Bit 18 - Retention clk sel"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<18> {
         RETENTION_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 19:21 - Retention done wait time"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<19> {
         RETENTION_DONE_WAIT_W::new(self)
     }
     #[doc = "Bits 22:25 - Retention clkoff wait time"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<22> {
         RETENTION_CLKOFF_WAIT_W::new(self)
     }
     #[doc = "Bit 26 - enable cpu retention when light sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_en(&mut self) -> RETENTION_EN_W<26> {
         RETENTION_EN_W::new(self)
     }
     #[doc = "Bits 27:31 - wait cycles for rention operation"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<27> {
         RETENTION_WAIT_W::new(self)
     }
@@ -130,11 +135,10 @@ impl crate::Readable for RETENTION_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [retention_ctrl::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RETENTION_CTRL to value 0xa0d0_0000"]
 impl crate::Resettable for RETENTION_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa0d0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0xa0d0_0000;
 }

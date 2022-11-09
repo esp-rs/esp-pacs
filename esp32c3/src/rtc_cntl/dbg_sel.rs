@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_12m_no_gating(&mut self) -> DEBUG_12M_NO_GATING_W<1> {
         DEBUG_12M_NO_GATING_W::new(self)
     }
     #[doc = "Bits 2:6 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<2> {
         DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bits 7:11 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_sel0(&mut self) -> DEBUG_SEL0_W<7> {
         DEBUG_SEL0_W::new(self)
     }
     #[doc = "Bits 12:16 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_sel1(&mut self) -> DEBUG_SEL1_W<12> {
         DEBUG_SEL1_W::new(self)
     }
     #[doc = "Bits 17:21 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_sel2(&mut self) -> DEBUG_SEL2_W<17> {
         DEBUG_SEL2_W::new(self)
     }
     #[doc = "Bits 22:26 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_sel3(&mut self) -> DEBUG_SEL3_W<22> {
         DEBUG_SEL3_W::new(self)
     }
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<27> {
         DEBUG_SEL4_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for DBG_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbg_sel::W](W) writer structure"]
 impl crate::Writable for DBG_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBG_SEL to value 0"]
 impl crate::Resettable for DBG_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

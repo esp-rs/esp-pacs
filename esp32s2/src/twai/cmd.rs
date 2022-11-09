@@ -32,26 +32,31 @@ pub type SELF_RX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bo
 impl W {
     #[doc = "Bit 0 - Set the bit to 1 to allow the driving nodes start transmission."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_req(&mut self) -> TX_REQ_W<0> {
         TX_REQ_W::new(self)
     }
     #[doc = "Bit 1 - Set the bit to 1 to cancel a pending transmission request."]
     #[inline(always)]
+    #[must_use]
     pub fn abort_tx(&mut self) -> ABORT_TX_W<1> {
         ABORT_TX_W::new(self)
     }
     #[doc = "Bit 2 - Set the bit to 1 to release the RX buffer."]
     #[inline(always)]
+    #[must_use]
     pub fn release_buf(&mut self) -> RELEASE_BUF_W<2> {
         RELEASE_BUF_W::new(self)
     }
     #[doc = "Bit 3 - Set the bit to 1 to clear the data overrun status bit."]
     #[inline(always)]
+    #[must_use]
     pub fn clr_overrun(&mut self) -> CLR_OVERRUN_W<3> {
         CLR_OVERRUN_W::new(self)
     }
     #[doc = "Bit 4 - Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously."]
     #[inline(always)]
+    #[must_use]
     pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W<4> {
         SELF_RX_REQ_W::new(self)
     }
@@ -70,11 +75,10 @@ impl crate::RegisterSpec for CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0"]
 impl crate::Resettable for CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

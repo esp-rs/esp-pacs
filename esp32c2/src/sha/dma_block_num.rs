@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Dma-sha block number."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_block_num(&mut self) -> DMA_BLOCK_NUM_W<0> {
         DMA_BLOCK_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DMA_BLOCK_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_block_num::W](W) writer structure"]
 impl crate::Writable for DMA_BLOCK_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_BLOCK_NUM to value 0"]
 impl crate::Resettable for DMA_BLOCK_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

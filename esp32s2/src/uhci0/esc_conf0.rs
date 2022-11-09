@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to define separators to encode data packets. The default value is 0xC0."]
     #[inline(always)]
+    #[must_use]
     pub fn seper_char(&mut self) -> SEPER_CHAR_W<0> {
         SEPER_CHAR_W::new(self)
     }
     #[doc = "Bits 8:15 - This register is used to define the first character of SLIP escape sequence. The default value is 0xDB."]
     #[inline(always)]
+    #[must_use]
     pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<8> {
         SEPER_ESC_CHAR0_W::new(self)
     }
     #[doc = "Bits 16:23 - This register is used to define the second character of SLIP escape sequence. The default value is 0xDC."]
     #[inline(always)]
+    #[must_use]
     pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<16> {
         SEPER_ESC_CHAR1_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for ESC_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [esc_conf0::W](W) writer structure"]
 impl crate::Writable for ESC_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ESC_CONF0 to value 0x00dc_dbc0"]
 impl crate::Resettable for ESC_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00dc_dbc0
-    }
+    const RESET_VALUE: Self::Ux = 0x00dc_dbc0;
 }

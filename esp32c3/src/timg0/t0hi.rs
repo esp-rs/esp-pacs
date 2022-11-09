@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - t0_hi"]
     #[inline(always)]
     pub fn hi(&self) -> HI_R {
-        HI_R::new((self.bits & 0x003f_ffff) as u32)
+        HI_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "TIMG_T0HI_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [t0hi](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for T0HI_SPEC {
 }
 #[doc = "`reset()` method sets T0HI to value 0"]
 impl crate::Resettable for T0HI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

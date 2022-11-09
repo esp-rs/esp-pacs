@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Control of DAC. 4’b0010: disable DAC. 4’b0000: power up DAC by FSM. 4’b0011: power up DAC by software."]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<0> {
         SAR1_DAC_XPD_FSM_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<4> {
         XPD_SAR_AMP_FSM_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<8> {
         AMP_RST_FB_FSM_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<12> {
         AMP_SHORT_REF_FSM_W::new(self)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
+    #[must_use]
     pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<16> {
         AMP_SHORT_REF_GND_FSM_W::new(self)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<20> {
         XPD_SAR_FSM_W::new(self)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<24> {
         SAR_RSTB_FSM_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for SAR_AMP_CTRL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_amp_ctrl3::W](W) writer structure"]
 impl crate::Writable for SAR_AMP_CTRL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_AMP_CTRL3 to value 0x0073_38f3"]
 impl crate::Resettable for SAR_AMP_CTRL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0073_38f3
-    }
+    const RESET_VALUE: Self::Ux = 0x0073_38f3;
 }

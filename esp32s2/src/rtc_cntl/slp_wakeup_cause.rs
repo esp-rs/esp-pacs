@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:16 - Stores the wakeup cause."]
     #[inline(always)]
     pub fn wakeup_cause(&self) -> WAKEUP_CAUSE_R {
-        WAKEUP_CAUSE_R::new((self.bits & 0x0001_ffff) as u32)
+        WAKEUP_CAUSE_R::new(self.bits & 0x0001_ffff)
     }
 }
 #[doc = "Stores the sleep-to-wakeup cause.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_wakeup_cause](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for SLP_WAKEUP_CAUSE_SPEC {
 }
 #[doc = "`reset()` method sets SLP_WAKEUP_CAUSE to value 0"]
 impl crate::Resettable for SLP_WAKEUP_CAUSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

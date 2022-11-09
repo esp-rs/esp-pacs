@@ -64,11 +64,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The clear signal for TX Copy DMA access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_tx_i_ilg_clr(&mut self) -> DMA_TX_I_ILG_CLR_W<0> {
         DMA_TX_I_ILG_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The enable signal for TX Copy DMA access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_tx_i_ilg_en(&mut self) -> DMA_TX_I_ILG_EN_W<1> {
         DMA_TX_I_ILG_EN_W::new(self)
     }
@@ -91,11 +93,10 @@ impl crate::Readable for DMA_TX_I_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_tx_i_2::W](W) writer structure"]
 impl crate::Writable for DMA_TX_I_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_TX_I_2 to value 0"]
 impl crate::Resettable for DMA_TX_I_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

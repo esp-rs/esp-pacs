@@ -59,11 +59,9 @@ pub type RD_CHIP_CPU_FREQ_RATED_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` writer - If set, the ESP32's maximum CPU frequency has been rated"]
 pub type RD_CHIP_CPU_FREQ_RATED_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
-#[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+#[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
 pub type RD_BLK3_PART_RESERVE_R = crate::BitReader<bool>;
-#[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+#[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
 pub type RD_BLK3_PART_RESERVE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
 #[doc = "Field `RD_CHIP_VER_REV1` reader - bit is set to 1 for rev1 silicon"]
@@ -111,8 +109,7 @@ impl R {
     pub fn rd_chip_cpu_freq_rated(&self) -> RD_CHIP_CPU_FREQ_RATED_R {
         RD_CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
     pub fn rd_blk3_part_reserve(&self) -> RD_BLK3_PART_RESERVE_R {
         RD_BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 1) != 0)
@@ -126,27 +123,31 @@ is reserved for internal use"]
 impl W {
     #[doc = "Bits 9:11 - least significant bits of chip package"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_chip_ver_pkg(&mut self) -> RD_CHIP_VER_PKG_W<9> {
         RD_CHIP_VER_PKG_W::new(self)
     }
     #[doc = "Bit 12 - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_chip_cpu_freq_low(&mut self) -> RD_CHIP_CPU_FREQ_LOW_W<12> {
         RD_CHIP_CPU_FREQ_LOW_W::new(self)
     }
     #[doc = "Bit 13 - If set, the ESP32's maximum CPU frequency has been rated"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_chip_cpu_freq_rated(&mut self) -> RD_CHIP_CPU_FREQ_RATED_W<13> {
         RD_CHIP_CPU_FREQ_RATED_W::new(self)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_blk3_part_reserve(&mut self) -> RD_BLK3_PART_RESERVE_W<14> {
         RD_BLK3_PART_RESERVE_W::new(self)
     }
     #[doc = "Bit 15 - bit is set to 1 for rev1 silicon"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_chip_ver_rev1(&mut self) -> RD_CHIP_VER_REV1_W<15> {
         RD_CHIP_VER_REV1_W::new(self)
     }
@@ -169,11 +170,10 @@ impl crate::Readable for BLK0_RDATA3_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_rdata3::W](W) writer structure"]
 impl crate::Writable for BLK0_RDATA3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_RDATA3 to value 0"]
 impl crate::Resettable for BLK0_RDATA3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

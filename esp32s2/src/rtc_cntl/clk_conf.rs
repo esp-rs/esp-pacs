@@ -175,76 +175,91 @@ impl R {
 impl W {
     #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_div_sel_vld(&mut self) -> CK8M_DIV_SEL_VLD_W<3> {
         CK8M_DIV_SEL_VLD_W::new(self)
     }
     #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_div(&mut self) -> CK8M_DIV_W<4> {
         CK8M_DIV_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to disable CK8M and CK8M_D256_OUT."]
     #[inline(always)]
+    #[must_use]
     pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<6> {
         ENB_CK8M_W::new(self)
     }
     #[doc = "Bit 7 - Selects the CK8M_D256_OUT. 1: CK8M 0: CK8M divided by 256."]
     #[inline(always)]
+    #[must_use]
     pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<7> {
         ENB_CK8M_DIV_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to enable CK_XTAL_32K clock for the digital core."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<8> {
         DIG_XTAL32K_EN_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to enable CK8M_D256_OUT clock for the digital core."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<9> {
         DIG_CLK8M_D256_EN_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable 8 MHz clock for the digital core."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<10> {
         DIG_CLK8M_EN_W::new(self)
     }
     #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<12> {
         CK8M_DIV_SEL_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<15> {
         XTAL_FORCE_NOGATING_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to disable force gating to 8 MHz crystal during sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<16> {
         CK8M_FORCE_NOGATING_W::new(self)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<17> {
         CK8M_DFREQ_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to FPD the 8 MHz clock."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<25> {
         CK8M_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to FPU the 8 MHz clock."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<26> {
         CK8M_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to select the RTC fast clock. 0: XTAL div 4, 1: CK8M."]
     #[inline(always)]
+    #[must_use]
     pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<29> {
         FAST_CLK_RTC_SEL_W::new(self)
     }
     #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
     #[inline(always)]
+    #[must_use]
     pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<30> {
         ANA_CLK_RTC_SEL_W::new(self)
     }
@@ -267,11 +282,10 @@ impl crate::Readable for CLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_CONF to value 0x0158_3218"]
 impl crate::Resettable for CLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0158_3218
-    }
+    const RESET_VALUE: Self::Ux = 0x0158_3218;
 }

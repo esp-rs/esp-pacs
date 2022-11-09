@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_source_lock(&mut self) -> CACHE_SOURCE_LOCK_W<0> {
         CACHE_SOURCE_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_SOURCE_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_source_0::W](W) writer structure"]
 impl crate::Writable for CACHE_SOURCE_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_SOURCE_0 to value 0"]
 impl crate::Resettable for CACHE_SOURCE_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

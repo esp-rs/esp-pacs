@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit stores the line size parameter. 0: 16Byte, 1: 32Byte."]
     #[inline(always)]
+    #[must_use]
     pub fn linesize(&mut self) -> LINESIZE_W<0> {
         LINESIZE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for LINESIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [linesize::W](W) writer structure"]
 impl crate::Writable for LINESIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LINESIZE to value 0"]
 impl crate::Resettable for LINESIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

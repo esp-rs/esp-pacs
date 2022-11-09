@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to disable retention function and lock disable state."]
     #[inline(always)]
+    #[must_use]
     pub fn retention_disable(&mut self) -> RETENTION_DISABLE_W<0> {
         RETENTION_DISABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for RETENTION_DISABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [retention_disable::W](W) writer structure"]
 impl crate::Writable for RETENTION_DISABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RETENTION_DISABLE to value 0"]
 impl crate::Resettable for RETENTION_DISABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with DCACHE_SYNC_ADDR_REG."]
     #[inline(always)]
     pub fn dcache_sync_size(&self) -> DCACHE_SYNC_SIZE_R {
-        DCACHE_SYNC_SIZE_R::new((self.bits & 0x007f_ffff) as u32)
+        DCACHE_SYNC_SIZE_R::new(self.bits & 0x007f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with DCACHE_SYNC_ADDR_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_sync_size(&mut self) -> DCACHE_SYNC_SIZE_W<0> {
         DCACHE_SYNC_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DCACHE_SYNC_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_sync_size::W](W) writer structure"]
 impl crate::Writable for DCACHE_SYNC_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_SYNC_SIZE to value 0"]
 impl crate::Resettable for DCACHE_SYNC_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

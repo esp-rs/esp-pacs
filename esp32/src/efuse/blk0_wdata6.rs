@@ -134,51 +134,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - program for coding_scheme"]
     #[inline(always)]
+    #[must_use]
     pub fn coding_scheme(&mut self) -> CODING_SCHEME_W<0> {
         CODING_SCHEME_W::new(self)
     }
     #[doc = "Bit 2 - program for console_debug_disable"]
     #[inline(always)]
+    #[must_use]
     pub fn console_debug_disable(&mut self) -> CONSOLE_DEBUG_DISABLE_W<2> {
         CONSOLE_DEBUG_DISABLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn disable_sdio_host(&mut self) -> DISABLE_SDIO_HOST_W<3> {
         DISABLE_SDIO_HOST_W::new(self)
     }
     #[doc = "Bit 4 - program for abstract_done_0"]
     #[inline(always)]
+    #[must_use]
     pub fn abs_done_0(&mut self) -> ABS_DONE_0_W<4> {
         ABS_DONE_0_W::new(self)
     }
     #[doc = "Bit 5 - program for abstract_done_1"]
     #[inline(always)]
+    #[must_use]
     pub fn abs_done_1(&mut self) -> ABS_DONE_1_W<5> {
         ABS_DONE_1_W::new(self)
     }
     #[doc = "Bit 6 - program for JTAG_disable"]
     #[inline(always)]
+    #[must_use]
     pub fn disable_jtag(&mut self) -> DISABLE_JTAG_W<6> {
         DISABLE_JTAG_W::new(self)
     }
     #[doc = "Bit 7 - program for download_dis_encrypt"]
     #[inline(always)]
+    #[must_use]
     pub fn disable_dl_encrypt(&mut self) -> DISABLE_DL_ENCRYPT_W<7> {
         DISABLE_DL_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 8 - program for download_dis_decrypt"]
     #[inline(always)]
+    #[must_use]
     pub fn disable_dl_decrypt(&mut self) -> DISABLE_DL_DECRYPT_W<8> {
         DISABLE_DL_DECRYPT_W::new(self)
     }
     #[doc = "Bit 9 - program for download_dis_cache"]
     #[inline(always)]
+    #[must_use]
     pub fn disable_dl_cache(&mut self) -> DISABLE_DL_CACHE_W<9> {
         DISABLE_DL_CACHE_W::new(self)
     }
     #[doc = "Bit 10 - program for key_status"]
     #[inline(always)]
+    #[must_use]
     pub fn key_status(&mut self) -> KEY_STATUS_W<10> {
         KEY_STATUS_W::new(self)
     }
@@ -201,11 +211,10 @@ impl crate::Readable for BLK0_WDATA6_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_wdata6::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_WDATA6 to value 0"]
 impl crate::Resettable for BLK0_WDATA6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

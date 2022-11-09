@@ -146,56 +146,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable BACKUP clock"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_clk_en(&mut self) -> PERI_BACKUP_CLK_EN_W<0> {
         PERI_BACKUP_CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to enable AES clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<1> {
         CRYPTO_AES_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<2> {
         CRYPTO_SHA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to enable RSA clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<3> {
         CRYPTO_RSA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set 1 to enable DS clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<4> {
         CRYPTO_DS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set 1 to enable HMAC clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<5> {
         CRYPTO_HMAC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<6> {
         DMA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to enable SDIO_HOST clock"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<7> {
         SDIO_HOST_CLK_EN_W::new(self)
     }
     #[doc = "Bit 8 - Set 1 to enable LCD_CAM clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<8> {
         LCD_CAM_CLK_EN_W::new(self)
     }
     #[doc = "Bit 9 - Set 1 to enable UART2 clock"]
     #[inline(always)]
+    #[must_use]
     pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<9> {
         UART2_CLK_EN_W::new(self)
     }
     #[doc = "Bit 10 - Set 1 to enable USB_DEVICE clock"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<10> {
         USB_DEVICE_CLK_EN_W::new(self)
     }
@@ -218,11 +229,10 @@ impl crate::Readable for PERIP_CLK_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN1 to value 0x0600"]
 impl crate::Resettable for PERIP_CLK_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0600
-    }
+    const RESET_VALUE: Self::Ux = 0x0600;
 }

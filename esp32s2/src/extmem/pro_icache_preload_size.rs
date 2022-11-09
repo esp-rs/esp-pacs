@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_preload_size(&mut self) -> PRO_ICACHE_PRELOAD_SIZE_W<0> {
         PRO_ICACHE_PRELOAD_SIZE_W::new(self)
     }
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_preload_order(&mut self) -> PRO_ICACHE_PRELOAD_ORDER_W<10> {
         PRO_ICACHE_PRELOAD_ORDER_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for PRO_ICACHE_PRELOAD_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_icache_preload_size::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_PRELOAD_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_ICACHE_PRELOAD_SIZE to value 0x0200"]
 impl crate::Resettable for PRO_ICACHE_PRELOAD_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

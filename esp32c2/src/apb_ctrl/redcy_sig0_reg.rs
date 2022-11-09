@@ -45,7 +45,7 @@ impl R {
     #[doc = "Bits 0:30 - reg_redcy_sig0"]
     #[inline(always)]
     pub fn redcy_sig0(&self) -> REDCY_SIG0_R {
-        REDCY_SIG0_R::new((self.bits & 0x7fff_ffff) as u32)
+        REDCY_SIG0_R::new(self.bits & 0x7fff_ffff)
     }
     #[doc = "Bit 31 - reg_redcy_andor"]
     #[inline(always)]
@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:30 - reg_redcy_sig0"]
     #[inline(always)]
+    #[must_use]
     pub fn redcy_sig0(&mut self) -> REDCY_SIG0_W<0> {
         REDCY_SIG0_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for REDCY_SIG0_REG_SPEC {
 #[doc = "`write(|w| ..)` method takes [redcy_sig0_reg::W](W) writer structure"]
 impl crate::Writable for REDCY_SIG0_REG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REDCY_SIG0_REG to value 0"]
 impl crate::Resettable for REDCY_SIG0_REG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

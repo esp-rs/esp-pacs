@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - no public"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_tsens_xpd_wait(&mut self) -> SAR_TSENS_XPD_WAIT_W<0> {
         SAR_TSENS_XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 12:13 - no public"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_tsens_xpd_force(&mut self) -> SAR_TSENS_XPD_FORCE_W<12> {
         SAR_TSENS_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 14 - no public"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_tsens_clk_inv(&mut self) -> SAR_TSENS_CLK_INV_W<14> {
         SAR_TSENS_CLK_INV_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SAR_TSENS_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_tsens_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_TSENS_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TSENS_CTRL2 to value 0x4002"]
 impl crate::Resettable for SAR_TSENS_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4002
-    }
+    const RESET_VALUE: Self::Ux = 0x4002;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 15:31 - wakeup enable bitmap"]
     #[inline(always)]
     pub fn wakeup_ena(&self) -> WAKEUP_ENA_R {
-        WAKEUP_ENA_R::new(((self.bits >> 15) & 0x0001_ffff) as u32)
+        WAKEUP_ENA_R::new((self.bits >> 15) & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 15:31 - wakeup enable bitmap"]
     #[inline(always)]
+    #[must_use]
     pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<15> {
         WAKEUP_ENA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for WAKEUP_STATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [wakeup_state::W](W) writer structure"]
 impl crate::Writable for WAKEUP_STATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WAKEUP_STATE to value 0x0006_0000"]
 impl crate::Resettable for WAKEUP_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0006_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0006_0000;
 }

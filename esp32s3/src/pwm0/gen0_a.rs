@@ -147,61 +147,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Action on PWM0A triggered by event TEZ when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn utez(&mut self) -> UTEZ_W<0> {
         UTEZ_W::new(self)
     }
     #[doc = "Bits 2:3 - Action on PWM0A triggered by event TEP when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn utep(&mut self) -> UTEP_W<2> {
         UTEP_W::new(self)
     }
     #[doc = "Bits 4:5 - Action on PWM0A triggered by event TEA when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn utea(&mut self) -> UTEA_W<4> {
         UTEA_W::new(self)
     }
     #[doc = "Bits 6:7 - Action on PWM0A triggered by event TEB when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn uteb(&mut self) -> UTEB_W<6> {
         UTEB_W::new(self)
     }
     #[doc = "Bits 8:9 - Action on PWM0A triggered by event_t0 when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn ut0(&mut self) -> UT0_W<8> {
         UT0_W::new(self)
     }
     #[doc = "Bits 10:11 - Action on PWM0A triggered by event_t1 when timer increasing"]
     #[inline(always)]
+    #[must_use]
     pub fn ut1(&mut self) -> UT1_W<10> {
         UT1_W::new(self)
     }
     #[doc = "Bits 12:13 - Action on PWM0A triggered by event TEZ when timer decreasing"]
     #[inline(always)]
+    #[must_use]
     pub fn dtez(&mut self) -> DTEZ_W<12> {
         DTEZ_W::new(self)
     }
     #[doc = "Bits 14:15 - Action on PWM0A triggered by event TEP when timer decreasing"]
     #[inline(always)]
+    #[must_use]
     pub fn dtep(&mut self) -> DTEP_W<14> {
         DTEP_W::new(self)
     }
     #[doc = "Bits 16:17 - Action on PWM0A triggered by event TEA when timer decreasing"]
     #[inline(always)]
+    #[must_use]
     pub fn dtea(&mut self) -> DTEA_W<16> {
         DTEA_W::new(self)
     }
     #[doc = "Bits 18:19 - Action on PWM0A triggered by event TEB when timer decreasing"]
     #[inline(always)]
+    #[must_use]
     pub fn dteb(&mut self) -> DTEB_W<18> {
         DTEB_W::new(self)
     }
     #[doc = "Bits 20:21 - Action on PWM0A triggered by event_t0 when timer decreasing"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0(&mut self) -> DT0_W<20> {
         DT0_W::new(self)
     }
     #[doc = "Bits 22:23 - Action on PWM0A triggered by event_t1 when timer decreasing. 0: no change, 1: low, 2: high, 3: toggle"]
     #[inline(always)]
+    #[must_use]
     pub fn dt1(&mut self) -> DT1_W<22> {
         DT1_W::new(self)
     }
@@ -224,11 +236,10 @@ impl crate::Readable for GEN0_A_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen0_a::W](W) writer structure"]
 impl crate::Writable for GEN0_A_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN0_A to value 0"]
 impl crate::Resettable for GEN0_A_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

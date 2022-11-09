@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_shut_ibus(&mut self) -> ICACHE_SHUT_IBUS_W<0> {
         ICACHE_SHUT_IBUS_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_shut_dbus(&mut self) -> ICACHE_SHUT_DBUS_W<1> {
         ICACHE_SHUT_DBUS_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for ICACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_ctrl1::W](W) writer structure"]
 impl crate::Writable for ICACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_CTRL1 to value 0x03"]
 impl crate::Resettable for ICACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:21 - The data of touch pad 7, depending on the setting of SENS_TOUCH_DATA_SEL."]
     #[inline(always)]
     pub fn touch_pad7_data(&self) -> TOUCH_PAD7_DATA_R {
-        TOUCH_PAD7_DATA_R::new((self.bits & 0x003f_ffff) as u32)
+        TOUCH_PAD7_DATA_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bits 29:31 - Touch pad 7 debounce value."]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for SAR_TOUCH_STATUS7_SPEC {
 }
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS7 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

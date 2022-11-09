@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<25> {
         SAR_COCPU_RESET_W::new(self)
     }
     #[doc = "Bit 27 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<27> {
         SAR_RTC_I2C_RESET_W::new(self)
     }
     #[doc = "Bit 29 - enbale saradc reset"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<29> {
         SAR_TSENS_RESET_W::new(self)
     }
     #[doc = "Bit 30 - enable io_mux reset"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<30> {
         SAR_SARADC_RESET_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SAR_PERI_RESET_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_peri_reset_conf::W](W) writer structure"]
 impl crate::Writable for SAR_PERI_RESET_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_PERI_RESET_CONF to value 0"]
 impl crate::Resettable for SAR_PERI_RESET_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

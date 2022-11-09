@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 1:8"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_prescaler(&mut self) -> TIMER_PRESCALER_W<1> {
         TIMER_PRESCALER_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIMER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_ctrl::W](W) writer structure"]
 impl crate::Writable for TIMER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER_CTRL to value 0"]
 impl crate::Resettable for TIMER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

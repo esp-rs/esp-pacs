@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 31 - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for REGCLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [regclk::W](W) writer structure"]
 impl crate::Writable for REGCLK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REGCLK to value 0"]
 impl crate::Resettable for REGCLK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

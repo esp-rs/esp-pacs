@@ -24,6 +24,7 @@ pub type SHA1_BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA1_BUSY_SPEC
 impl W {
     #[doc = "Bit 0 - SHA-1 operation status: 1 if the SHA accelerator is processing data, 0 if it is idle."]
     #[inline(always)]
+    #[must_use]
     pub fn sha1_busy(&mut self) -> SHA1_BUSY_W<0> {
         SHA1_BUSY_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for SHA1_BUSY_SPEC {
 #[doc = "`write(|w| ..)` method takes [sha1_busy::W](W) writer structure"]
 impl crate::Writable for SHA1_BUSY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHA1_BUSY to value 0"]
 impl crate::Resettable for SHA1_BUSY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

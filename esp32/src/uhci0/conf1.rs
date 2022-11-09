@@ -130,51 +130,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable decoder to check check_sum in packet header."]
     #[inline(always)]
+    #[must_use]
     pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<0> {
         CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable decoder to check seq num in packet header."]
     #[inline(always)]
+    #[must_use]
     pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<1> {
         CHECK_SEQ_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to disable crc calculation."]
     #[inline(always)]
+    #[must_use]
     pub fn crc_disable(&mut self) -> CRC_DISABLE_W<2> {
         CRC_DISABLE_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to save packet header ."]
     #[inline(always)]
+    #[must_use]
     pub fn save_head(&mut self) -> SAVE_HEAD_W<3> {
         SAVE_HEAD_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable hardware replace check_sum in packet header automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<4> {
         TX_CHECK_SUM_RE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable hardware replace ack num in packet header automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<5> {
         TX_ACK_NUM_RE_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to check the owner bit in link descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn check_owner(&mut self) -> CHECK_OWNER_W<6> {
         CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable software way to add packet header."]
     #[inline(always)]
+    #[must_use]
     pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<7> {
         WAIT_SW_START_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to start inserting the packet header."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_start(&mut self) -> SW_START_W<8> {
         SW_START_W::new(self)
     }
     #[doc = "Bits 9:20 - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<9> {
         DMA_INFIFO_FULL_THRS_W::new(self)
     }
@@ -197,11 +207,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0x33"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x33
-    }
+    const RESET_VALUE: Self::Ux = 0x33;
 }

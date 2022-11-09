@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn s(&mut self) -> S_W<0> {
         S_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SRAM_ACE3_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_ace3_addr::W](W) writer structure"]
 impl crate::Writable for SRAM_ACE3_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_ACE3_ADDR to value 0x3000_0000"]
 impl crate::Resettable for SRAM_ACE3_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x3000_0000;
 }

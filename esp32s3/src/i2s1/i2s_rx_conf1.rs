@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_ws_width(&mut self) -> I2S_RX_TDM_WS_WIDTH_W<0> {
         I2S_RX_TDM_WS_WIDTH_W::new(self)
     }
     #[doc = "Bits 7:12 - Bit clock configuration bits in receiver mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_bck_div_num(&mut self) -> I2S_RX_BCK_DIV_NUM_W<7> {
         I2S_RX_BCK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 13:17 - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_bits_mod(&mut self) -> I2S_RX_BITS_MOD_W<13> {
         I2S_RX_BITS_MOD_W::new(self)
     }
     #[doc = "Bits 18:23 - I2S Rx half sample bits -1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_half_sample_bits(&mut self) -> I2S_RX_HALF_SAMPLE_BITS_W<18> {
         I2S_RX_HALF_SAMPLE_BITS_W::new(self)
     }
     #[doc = "Bits 24:28 - The Rx bit number for each channel minus 1in TDM mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_chan_bits(&mut self) -> I2S_RX_TDM_CHAN_BITS_W<24> {
         I2S_RX_TDM_CHAN_BITS_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable receiver in Phillips standard mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_msb_shift(&mut self) -> I2S_RX_MSB_SHIFT_W<29> {
         I2S_RX_MSB_SHIFT_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for I2S_RX_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_conf1::W](W) writer structure"]
 impl crate::Writable for I2S_RX_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_CONF1 to value 0x2f3d_e300"]
 impl crate::Resettable for I2S_RX_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2f3d_e300
-    }
+    const RESET_VALUE: Self::Ux = 0x2f3d_e300;
 }

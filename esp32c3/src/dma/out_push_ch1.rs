@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<0> {
         OUTFIFO_WDATA_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to push data into DMA FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<9> {
         OUTFIFO_PUSH_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for OUT_PUSH_CH1_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_push_ch1::W](W) writer structure"]
 impl crate::Writable for OUT_PUSH_CH1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_PUSH_CH1 to value 0"]
 impl crate::Resettable for OUT_PUSH_CH1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_rcd_pdebugenable(&mut self) -> CORE_0_RCD_PDEBUGENABLE_W<0> {
         CORE_0_RCD_PDEBUGENABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_RCD_PDEBUGENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_rcd_pdebugenable::W](W) writer structure"]
 impl crate::Writable for CORE_0_RCD_PDEBUGENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_RCD_PDEBUGENABLE to value 0"]
 impl crate::Resettable for CORE_0_RCD_PDEBUGENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

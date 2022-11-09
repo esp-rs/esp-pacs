@@ -122,46 +122,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - For SPI0, Cache access enable, 1: enable, 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<0> {
         CACHE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_usr_addr_4byte(&mut self) -> CACHE_USR_ADDR_4BYTE_W<1> {
         CACHE_USR_ADDR_4BYTE_W::new(self)
     }
     #[doc = "Bit 2 - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<2> {
         CACHE_FLASH_USR_CMD_W::new(self)
     }
     #[doc = "Bit 3 - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
+    #[must_use]
     pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<3> {
         FDIN_DUAL_W::new(self)
     }
     #[doc = "Bit 4 - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
+    #[must_use]
     pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<4> {
         FDOUT_DUAL_W::new(self)
     }
     #[doc = "Bit 5 - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
+    #[must_use]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<5> {
         FADDR_DUAL_W::new(self)
     }
     #[doc = "Bit 6 - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
+    #[must_use]
     pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<6> {
         FDIN_QUAD_W::new(self)
     }
     #[doc = "Bit 7 - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
+    #[must_use]
     pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<7> {
         FDOUT_QUAD_W::new(self)
     }
     #[doc = "Bit 8 - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
+    #[must_use]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<8> {
         FADDR_QUAD_W::new(self)
     }
@@ -184,11 +193,10 @@ impl crate::Readable for CACHE_FCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_fctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_FCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_FCTRL to value 0"]
 impl crate::Resettable for CACHE_FCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for ACPU_INT1_SPEC {
 }
 #[doc = "`reset()` method sets ACPU_INT1 to value 0"]
 impl crate::Resettable for ACPU_INT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

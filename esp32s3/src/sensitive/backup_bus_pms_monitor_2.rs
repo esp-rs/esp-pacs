@@ -60,8 +60,5 @@ impl crate::Readable for BACKUP_BUS_PMS_MONITOR_2_SPEC {
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_MONITOR_2 to value 0"]
 impl crate::Resettable for BACKUP_BUS_PMS_MONITOR_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

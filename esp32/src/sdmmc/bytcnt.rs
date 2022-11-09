@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Number of bytes to be transferred, should be an integral multiple of Block Size for block transfers. For data transfers of undefined byte lengths, byte count should be set to 0. When byte count is set to 0, it is the responsibility of host to explicitly send stop/abort command to terminate data transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn byte_count(&mut self) -> BYTE_COUNT_W<0> {
         BYTE_COUNT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for BYTCNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [bytcnt::W](W) writer structure"]
 impl crate::Writable for BYTCNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BYTCNT to value 0x0200"]
 impl crate::Resettable for BYTCNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

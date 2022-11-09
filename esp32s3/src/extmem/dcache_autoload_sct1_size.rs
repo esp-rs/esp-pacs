@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the second section for autoload operation. It should be combined with dcache_autoload_sct1_ena."]
     #[inline(always)]
     pub fn dcache_autoload_sct1_size(&self) -> DCACHE_AUTOLOAD_SCT1_SIZE_R {
-        DCACHE_AUTOLOAD_SCT1_SIZE_R::new((self.bits & 0x07ff_ffff) as u32)
+        DCACHE_AUTOLOAD_SCT1_SIZE_R::new(self.bits & 0x07ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the second section for autoload operation. It should be combined with dcache_autoload_sct1_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_autoload_sct1_size(&mut self) -> DCACHE_AUTOLOAD_SCT1_SIZE_W<0> {
         DCACHE_AUTOLOAD_SCT1_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DCACHE_AUTOLOAD_SCT1_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_autoload_sct1_size::W](W) writer structure"]
 impl crate::Writable for DCACHE_AUTOLOAD_SCT1_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_AUTOLOAD_SCT1_SIZE to value 0"]
 impl crate::Resettable for DCACHE_AUTOLOAD_SCT1_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Configures the power outage time for VDDQ."]
     #[inline(always)]
+    #[must_use]
     pub fn pwr_off_num(&mut self) -> PWR_OFF_NUM_W<0> {
         PWR_OFF_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for WR_TIM_CONF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [wr_tim_conf2::W](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WR_TIM_CONF2 to value 0x0190"]
 impl crate::Resettable for WR_TIM_CONF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0190
-    }
+    const RESET_VALUE: Self::Ux = 0x0190;
 }

@@ -108,36 +108,43 @@ impl R {
 impl W {
     #[doc = "Bits 10:13 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_tag_mode(&mut self) -> RETENTION_TAG_MODE_W<10> {
         RETENTION_TAG_MODE_W::new(self)
     }
     #[doc = "Bits 14:15 - congfigure retention target cpu and/or tag"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_target(&mut self) -> RETENTION_TARGET_W<14> {
         RETENTION_TARGET_W::new(self)
     }
     #[doc = "Bit 16 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<16> {
         RETENTION_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 17:19 - wait retention done cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<17> {
         RETENTION_DONE_WAIT_W::new(self)
     }
     #[doc = "Bits 20:23 - wait clk off cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<20> {
         RETENTION_CLKOFF_WAIT_W::new(self)
     }
     #[doc = "Bit 24 - enable retention"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_en(&mut self) -> RETENTION_EN_W<24> {
         RETENTION_EN_W::new(self)
     }
     #[doc = "Bits 25:31 - wait cycles for rention operation"]
     #[inline(always)]
+    #[must_use]
     pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<25> {
         RETENTION_WAIT_W::new(self)
     }
@@ -160,11 +167,10 @@ impl crate::Readable for RETENTION_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [retention_ctrl::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RETENTION_CTRL to value 0x2834_0000"]
 impl crate::Resettable for RETENTION_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2834_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x2834_0000;
 }

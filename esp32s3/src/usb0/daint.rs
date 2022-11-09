@@ -124,8 +124,5 @@ impl crate::Readable for DAINT_SPEC {
 }
 #[doc = "`reset()` method sets DAINT to value 0"]
 impl crate::Resettable for DAINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

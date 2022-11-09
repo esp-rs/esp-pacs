@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
     #[inline(always)]
+    #[must_use]
     pub fn wr_done(&mut self) -> WR_DONE_W<0> {
         WR_DONE_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for EP1_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ep1_conf::W](W) writer structure"]
 impl crate::Writable for EP1_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EP1_CONF to value 0x02"]
 impl crate::Resettable for EP1_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

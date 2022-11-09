@@ -24,6 +24,7 @@ pub type TX_BYTE_9_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_9_SPEC,
 impl W {
     #[doc = "Bits 0:7 - Stored the 9th byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_byte_9(&mut self) -> TX_BYTE_9_W<0> {
         TX_BYTE_9_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for DATA_9_SPEC {
 #[doc = "`write(|w| ..)` method takes [data_9::W](W) writer structure"]
 impl crate::Writable for DATA_9_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATA_9 to value 0"]
 impl crate::Resettable for DATA_9_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

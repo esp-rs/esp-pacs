@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk0(&mut self) -> INEPMSK0_W<0> {
         INEPMSK0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk1(&mut self) -> INEPMSK1_W<1> {
         INEPMSK1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk2(&mut self) -> INEPMSK2_W<2> {
         INEPMSK2_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk3(&mut self) -> INEPMSK3_W<3> {
         INEPMSK3_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk4(&mut self) -> INEPMSK4_W<4> {
         INEPMSK4_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk5(&mut self) -> INEPMSK5_W<5> {
         INEPMSK5_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn inepmsk6(&mut self) -> INEPMSK6_W<6> {
         INEPMSK6_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk0(&mut self) -> OUTEPMSK0_W<16> {
         OUTEPMSK0_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk1(&mut self) -> OUTEPMSK1_W<17> {
         OUTEPMSK1_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk2(&mut self) -> OUTEPMSK2_W<18> {
         OUTEPMSK2_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk3(&mut self) -> OUTEPMSK3_W<19> {
         OUTEPMSK3_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk4(&mut self) -> OUTEPMSK4_W<20> {
         OUTEPMSK4_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk5(&mut self) -> OUTEPMSK5_W<21> {
         OUTEPMSK5_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn outepmsk6(&mut self) -> OUTEPMSK6_W<22> {
         OUTEPMSK6_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for DAINTMSK_SPEC {
 #[doc = "`write(|w| ..)` method takes [daintmsk::W](W) writer structure"]
 impl crate::Writable for DAINTMSK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DAINTMSK to value 0"]
 impl crate::Resettable for DAINTMSK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

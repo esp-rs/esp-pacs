@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This register is used as a quick_sent register when mode is specified by UHCI_ALWAYS_SEND_NUM or UHCI_SINGLE_SEND_NUM."]
     #[inline(always)]
+    #[must_use]
     pub fn send_q4_word0(&mut self) -> SEND_Q4_WORD0_W<0> {
         SEND_Q4_WORD0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for Q4_WORD0_SPEC {
 #[doc = "`write(|w| ..)` method takes [q4_word0::W](W) writer structure"]
 impl crate::Writable for Q4_WORD0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Q4_WORD0 to value 0"]
 impl crate::Resettable for Q4_WORD0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

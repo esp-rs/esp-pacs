@@ -282,136 +282,163 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn timers_rst(&mut self) -> TIMERS_RST_W<0> {
         TIMERS_RST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W<1> {
         SPI01_RST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rst(&mut self) -> UART_RST_W<2> {
         UART_RST_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn wdg_rst(&mut self) -> WDG_RST_W<3> {
         WDG_RST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s0_rst(&mut self) -> I2S0_RST_W<4> {
         I2S0_RST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_rst(&mut self) -> UART1_RST_W<5> {
         UART1_RST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W<6> {
         SPI2_RST_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W<7> {
         I2C0_EXT0_RST_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<8> {
         UHCI0_RST_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn rmt_rst(&mut self) -> RMT_RST_W<9> {
         RMT_RST_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn pcnt_rst(&mut self) -> PCNT_RST_W<10> {
         PCNT_RST_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W<11> {
         LEDC_RST_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<12> {
         UHCI1_RST_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<13> {
         TIMERGROUP_RST_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_rst(&mut self) -> EFUSE_RST_W<14> {
         EFUSE_RST_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<15> {
         TIMERGROUP1_RST_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_rst(&mut self) -> SPI3_RST_W<16> {
         SPI3_RST_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm0_rst(&mut self) -> PWM0_RST_W<17> {
         PWM0_RST_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<18> {
         I2C_EXT1_RST_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn twai_rst(&mut self) -> TWAI_RST_W<19> {
         TWAI_RST_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm1_rst(&mut self) -> PWM1_RST_W<20> {
         PWM1_RST_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s1_rst(&mut self) -> I2S1_RST_W<21> {
         I2S1_RST_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_dma_rst(&mut self) -> SPI_DMA_RST_W<22> {
         SPI_DMA_RST_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn uart2_rst(&mut self) -> UART2_RST_W<23> {
         UART2_RST_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<24> {
         UART_MEM_RST_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm2_rst(&mut self) -> PWM2_RST_W<25> {
         PWM2_RST_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm3_rst(&mut self) -> PWM3_RST_W<26> {
         PWM3_RST_W::new(self)
     }
@@ -434,11 +461,10 @@ impl crate::Readable for PERIP_RST_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN to value 0"]
 impl crate::Resettable for PERIP_RST_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

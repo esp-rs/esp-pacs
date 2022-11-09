@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - This register stores the minimal input clock count between two positive edges. It is used in baud rate detection."]
     #[inline(always)]
     pub fn posedge_min_cnt(&self) -> POSEDGE_MIN_CNT_R {
-        POSEDGE_MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        POSEDGE_MIN_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "Autobaud high pulse register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pospulse](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for POSPULSE_SPEC {
 }
 #[doc = "`reset()` method sets POSPULSE to value 0x000f_ffff"]
 impl crate::Resettable for POSPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_ffff;
 }

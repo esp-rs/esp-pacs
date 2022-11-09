@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Cache data array connection configuration."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_dataarray_connect_flatten(&mut self) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<0> {
         CACHE_DATAARRAY_CONNECT_FLATTEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_DATAARRAY_CONNECT_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_dataarray_connect_1::W](W) writer structure"]
 impl crate::Writable for CACHE_DATAARRAY_CONNECT_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_DATAARRAY_CONNECT_1 to value 0xff"]
 impl crate::Resettable for CACHE_DATAARRAY_CONNECT_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

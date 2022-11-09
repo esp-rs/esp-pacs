@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - this bit is used to mask NMI interrupt,it can directly mask NMI interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_nmi_mask(&mut self) -> CORE_1_NMI_MASK_W<0> {
         CORE_1_NMI_MASK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_1_NMI_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_nmi_mask::W](W) writer structure"]
 impl crate::Writable for CORE_1_NMI_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_1_NMI_MASK to value 0"]
 impl crate::Resettable for CORE_1_NMI_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

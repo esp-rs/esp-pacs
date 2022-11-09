@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - backup_bus_pms_constrain_spi_2"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_spi_2(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<0> {
         BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W::new(self)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_apb_ctrl"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_apb_ctrl(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<4> {
         BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W::new(self)
     }
     #[doc = "Bits 10:11 - backup_bus_pms_constrain_can"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_can(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<10> {
         BACKUP_BUS_PMS_CONSTRAIN_CAN_W::new(self)
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_i2s1"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_i2s1(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<14> {
         BACKUP_BUS_PMS_CONSTRAIN_I2S1_W::new(self)
     }
     #[doc = "Bits 22:23 - backup_bus_pms_constrain_rwbt"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_rwbt(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<22> {
         BACKUP_BUS_PMS_CONSTRAIN_RWBT_W::new(self)
     }
     #[doc = "Bits 26:27 - backup_bus_pms_constrain_wifimac"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_wifimac(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<26> {
         BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W::new(self)
     }
     #[doc = "Bits 28:29 - backup_bus_pms_constrain_pwr"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_pwr(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_PWR_W<28> {
         BACKUP_BUS_PMS_CONSTRAIN_PWR_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_3::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_3 to value 0x3cc0_cc33"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3cc0_cc33
-    }
+    const RESET_VALUE: Self::Ux = 0x3cc0_cc33;
 }

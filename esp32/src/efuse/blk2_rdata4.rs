@@ -33,8 +33,5 @@ impl crate::Readable for BLK2_RDATA4_SPEC {
 }
 #[doc = "`reset()` method sets BLK2_RDATA4 to value 0"]
 impl crate::Resettable for BLK2_RDATA4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

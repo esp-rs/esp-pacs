@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This register stores one byte data read by rx fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<0> {
         RXFIFO_RD_BYTE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FIFO_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo::W](W) writer structure"]
 impl crate::Writable for FIFO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO to value 0"]
 impl crate::Resettable for FIFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

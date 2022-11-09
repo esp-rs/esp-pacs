@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad14_dac(&mut self) -> TOUCH_PAD14_DAC_W<17> {
         TOUCH_PAD14_DAC_W::new(self)
     }
     #[doc = "Bits 20:22 - configure touch pad dac13"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad13_dac(&mut self) -> TOUCH_PAD13_DAC_W<20> {
         TOUCH_PAD13_DAC_W::new(self)
     }
     #[doc = "Bits 23:25 - configure touch pad dac12"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad12_dac(&mut self) -> TOUCH_PAD12_DAC_W<23> {
         TOUCH_PAD12_DAC_W::new(self)
     }
     #[doc = "Bits 26:28 - configure touch pad dac11"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad11_dac(&mut self) -> TOUCH_PAD11_DAC_W<26> {
         TOUCH_PAD11_DAC_W::new(self)
     }
     #[doc = "Bits 29:31 - configure touch pad dac10"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad10_dac(&mut self) -> TOUCH_PAD10_DAC_W<29> {
         TOUCH_PAD10_DAC_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for TOUCH_DAC1_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_dac1::W](W) writer structure"]
 impl crate::Writable for TOUCH_DAC1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_DAC1 to value 0"]
 impl crate::Resettable for TOUCH_DAC1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

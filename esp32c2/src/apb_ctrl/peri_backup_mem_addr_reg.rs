@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - reg_backup_mem_start_addr"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_mem_start_addr(&mut self) -> BACKUP_MEM_START_ADDR_W<0> {
         BACKUP_MEM_START_ADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PERI_BACKUP_MEM_ADDR_REG_SPEC {
 #[doc = "`write(|w| ..)` method takes [peri_backup_mem_addr_reg::W](W) writer structure"]
 impl crate::Writable for PERI_BACKUP_MEM_ADDR_REG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERI_BACKUP_MEM_ADDR_REG to value 0"]
 impl crate::Resettable for PERI_BACKUP_MEM_ADDR_REG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

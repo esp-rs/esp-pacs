@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:21 - Denoise measure value from touch sensor 0."]
     #[inline(always)]
     pub fn touch_denoise_data(&self) -> TOUCH_DENOISE_DATA_R {
-        TOUCH_DENOISE_DATA_R::new((self.bits & 0x003f_ffff) as u32)
+        TOUCH_DENOISE_DATA_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bits 22:25 - Current pad in scan status"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for SAR_TOUCH_STATUS0_SPEC {
 }
 #[doc = "`reset()` method sets SAR_TOUCH_STATUS0 to value 0"]
 impl crate::Resettable for SAR_TOUCH_STATUS0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bit 24 - Set this bit to select RTC slow clock as the low power clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<24> {
         LPCLK_SEL_RTC_SLOW_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to select 8m clock as the low power clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<25> {
         LPCLK_SEL_8M_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to select xtal clock as the low power clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<26> {
         LPCLK_SEL_XTAL_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to select xtal32k clock as the low power clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<27> {
         LPCLK_SEL_XTAL32K_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to enable the RTC low power clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<28> {
         LPCLK_RTC_EN_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for BT_LPCK_DIV_FRAC_SPEC {
 #[doc = "`write(|w| ..)` method takes [bt_lpck_div_frac::W](W) writer structure"]
 impl crate::Writable for BT_LPCK_DIV_FRAC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BT_LPCK_DIV_FRAC to value 0x0200_0000"]
 impl crate::Resettable for BT_LPCK_DIV_FRAC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_0000;
 }

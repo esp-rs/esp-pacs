@@ -106,36 +106,43 @@ impl R {
 impl W {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
+    #[must_use]
     pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<24> {
         DBG_ATTEN_W::new(self)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
+    #[must_use]
     pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<26> {
         ENB_SCK_XTAL_W::new(self)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
+    #[must_use]
     pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<27> {
         INC_HEARTBEAT_REFRESH_W::new(self)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
+    #[must_use]
     pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<28> {
         DEC_HEARTBEAT_PERIOD_W::new(self)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
+    #[must_use]
     pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<29> {
         INC_HEARTBEAT_PERIOD_W::new(self)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
+    #[must_use]
     pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<30> {
         DEC_HEARTBEAT_WIDTH_W::new(self)
     }
     #[doc = "Bit 31 - RST_BIAS_I2C"]
     #[inline(always)]
+    #[must_use]
     pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<31> {
         RST_BIAS_I2C_W::new(self)
     }
@@ -158,11 +165,10 @@ impl crate::Readable for BIAS_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [bias_conf::W](W) writer structure"]
 impl crate::Writable for BIAS_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BIAS_CONF to value 0"]
 impl crate::Resettable for BIAS_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

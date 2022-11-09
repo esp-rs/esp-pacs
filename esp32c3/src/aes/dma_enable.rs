@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_enable(&mut self) -> DMA_ENABLE_W<0> {
         DMA_ENABLE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DMA_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_enable::W](W) writer structure"]
 impl crate::Writable for DMA_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_ENABLE to value 0"]
 impl crate::Resettable for DMA_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

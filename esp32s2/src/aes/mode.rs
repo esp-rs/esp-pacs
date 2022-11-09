@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. & 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &"]
     #[inline(always)]
+    #[must_use]
     pub fn mode(&mut self) -> MODE_W<0> {
         MODE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [mode::W](W) writer structure"]
 impl crate::Writable for MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MODE to value 0"]
 impl crate::Resettable for MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map cpu_intr_from_cpu_1 interrupt to one of core0's external interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_intr_from_cpu_1_map(&mut self) -> CPU_INTR_FROM_CPU_1_MAP_W<0> {
         CPU_INTR_FROM_CPU_1_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CPU_INTR_FROM_CPU_1_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_intr_from_cpu_1_map::W](W) writer structure"]
 impl crate::Writable for CPU_INTR_FROM_CPU_1_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_INTR_FROM_CPU_1_MAP to value 0x10"]
 impl crate::Resettable for CPU_INTR_FROM_CPU_1_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

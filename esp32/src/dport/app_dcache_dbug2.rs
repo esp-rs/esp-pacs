@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:26"]
     #[inline(always)]
     pub fn app_cache_vaddr(&self) -> APP_CACHE_VADDR_R {
-        APP_CACHE_VADDR_R::new((self.bits & 0x07ff_ffff) as u32)
+        APP_CACHE_VADDR_R::new(self.bits & 0x07ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug2](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for APP_DCACHE_DBUG2_SPEC {
 }
 #[doc = "`reset()` method sets APP_DCACHE_DBUG2 to value 0"]
 impl crate::Resettable for APP_DCACHE_DBUG2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

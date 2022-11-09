@@ -98,31 +98,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_en(&mut self) -> CHOPPER1_EN_W<0> {
         CHOPPER1_EN_W::new(self)
     }
     #[doc = "Bits 1:4 - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_prescale(&mut self) -> CHOPPER1_PRESCALE_W<1> {
         CHOPPER1_PRESCALE_W::new(self)
     }
     #[doc = "Bits 5:7 - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_duty(&mut self) -> CHOPPER1_DUTY_W<5> {
         CHOPPER1_DUTY_W::new(self)
     }
     #[doc = "Bits 8:11 - width of the fist pulse in number of periods of the carrier"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_oshtwth(&mut self) -> CHOPPER1_OSHTWTH_W<8> {
         CHOPPER1_OSHTWTH_W::new(self)
     }
     #[doc = "Bit 12 - when set, invert the output of PWM1A and PWM1B for this submodule"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_out_invert(&mut self) -> CHOPPER1_OUT_INVERT_W<12> {
         CHOPPER1_OUT_INVERT_W::new(self)
     }
     #[doc = "Bit 13 - when set, invert the input of PWM1A and PWM1B for this submodule"]
     #[inline(always)]
+    #[must_use]
     pub fn chopper1_in_invert(&mut self) -> CHOPPER1_IN_INVERT_W<13> {
         CHOPPER1_IN_INVERT_W::new(self)
     }
@@ -145,11 +151,10 @@ impl crate::Readable for CHOPPER1_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [chopper1_cfg::W](W) writer structure"]
 impl crate::Writable for CHOPPER1_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CHOPPER1_CFG to value 0"]
 impl crate::Resettable for CHOPPER1_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

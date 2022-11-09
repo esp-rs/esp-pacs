@@ -25,6 +25,7 @@ pub type OUT_DATA_W1TC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output value write 1 to clear"]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_w1tc(&mut self) -> OUT_DATA_W1TC_W<14> {
         OUT_DATA_W1TC_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for OUT_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_w1tc::W](W) writer structure"]
 impl crate::Writable for OUT_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_W1TC to value 0"]
 impl crate::Resettable for OUT_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

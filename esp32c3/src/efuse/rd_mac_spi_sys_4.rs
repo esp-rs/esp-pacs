@@ -33,8 +33,5 @@ impl crate::Readable for RD_MAC_SPI_SYS_4_SPEC {
 }
 #[doc = "`reset()` method sets RD_MAC_SPI_SYS_4 to value 0"]
 impl crate::Resettable for RD_MAC_SPI_SYS_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

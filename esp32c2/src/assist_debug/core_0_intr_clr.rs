@@ -28,11 +28,13 @@ pub type CORE_0_AREA_DRAM0_0_WR_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - clr sp underlow monitor interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_rd_clr(&mut self) -> CORE_0_AREA_DRAM0_0_RD_CLR_W<0> {
         CORE_0_AREA_DRAM0_0_RD_CLR_W::new(self)
     }
     #[doc = "Bit 1 - clr sp overflow monitor interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_wr_clr(&mut self) -> CORE_0_AREA_DRAM0_0_WR_CLR_W<1> {
         CORE_0_AREA_DRAM0_0_WR_CLR_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for CORE_0_INTR_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_intr_clr::W](W) writer structure"]
 impl crate::Writable for CORE_0_INTR_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_INTR_CLR to value 0"]
 impl crate::Resettable for CORE_0_INTR_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -37,26 +37,31 @@ pub type CORE1_DBUS_REJECT_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt by cpu access icache while the corresponding ibus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]
+    #[must_use]
     pub fn core1_ibus_acs_msk_ic_int_clr(&mut self) -> CORE1_IBUS_ACS_MSK_IC_INT_CLR_W<0> {
         CORE1_IBUS_ACS_MSK_IC_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear interrupt by ibus trying to write icache"]
     #[inline(always)]
+    #[must_use]
     pub fn core1_ibus_wr_ic_int_clr(&mut self) -> CORE1_IBUS_WR_IC_INT_CLR_W<1> {
         CORE1_IBUS_WR_IC_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to clear interrupt by authentication fail."]
     #[inline(always)]
+    #[must_use]
     pub fn core1_ibus_reject_int_clr(&mut self) -> CORE1_IBUS_REJECT_INT_CLR_W<2> {
         CORE1_IBUS_REJECT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to clear interrupt by cpu access dcache while the corresponding dbus is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
+    #[must_use]
     pub fn core1_dbus_acs_msk_dc_int_clr(&mut self) -> CORE1_DBUS_ACS_MSK_DC_INT_CLR_W<3> {
         CORE1_DBUS_ACS_MSK_DC_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to clear interrupt by authentication fail."]
     #[inline(always)]
+    #[must_use]
     pub fn core1_dbus_reject_int_clr(&mut self) -> CORE1_DBUS_REJECT_INT_CLR_W<4> {
         CORE1_DBUS_REJECT_INT_CLR_W::new(self)
     }
@@ -75,11 +80,10 @@ impl crate::RegisterSpec for CORE1_ACS_CACHE_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [core1_acs_cache_int_clr::W](W) writer structure"]
 impl crate::Writable for CORE1_ACS_CACHE_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE1_ACS_CACHE_INT_CLR to value 0"]
 impl crate::Resettable for CORE1_ACS_CACHE_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

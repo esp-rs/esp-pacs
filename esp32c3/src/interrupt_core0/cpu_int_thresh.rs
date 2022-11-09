@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - reg_core0_cpu_int_thresh"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<0> {
         CPU_INT_THRESH_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CPU_INT_THRESH_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_int_thresh::W](W) writer structure"]
 impl crate::Writable for CPU_INT_THRESH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_INT_THRESH to value 0"]
 impl crate::Resettable for CPU_INT_THRESH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_mode(&mut self) -> PRO_DCACHE_AUTOLOAD_MODE_W<0> {
         PRO_DCACHE_AUTOLOAD_MODE_W::new(self)
     }
     #[doc = "Bits 1:2 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_step(&mut self) -> PRO_DCACHE_AUTOLOAD_STEP_W<1> {
         PRO_DCACHE_AUTOLOAD_STEP_W::new(self)
     }
     #[doc = "Bit 3 - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_order(&mut self) -> PRO_DCACHE_AUTOLOAD_ORDER_W<3> {
         PRO_DCACHE_AUTOLOAD_ORDER_W::new(self)
     }
     #[doc = "Bits 4:5 - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_rqst(&mut self) -> PRO_DCACHE_AUTOLOAD_RQST_W<4> {
         PRO_DCACHE_AUTOLOAD_RQST_W::new(self)
     }
     #[doc = "Bits 6:7 - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_size(&mut self) -> PRO_DCACHE_AUTOLOAD_SIZE_W<6> {
         PRO_DCACHE_AUTOLOAD_SIZE_W::new(self)
     }
     #[doc = "Bit 8 - The bits are used to enable the second section for conditional pre-load operation."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_sct0_ena(&mut self) -> PRO_DCACHE_AUTOLOAD_SCT0_ENA_W<8> {
         PRO_DCACHE_AUTOLOAD_SCT0_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The bits are used to enable the first section for conditional pre-load operation."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_sct1_ena(&mut self) -> PRO_DCACHE_AUTOLOAD_SCT1_ENA_W<9> {
         PRO_DCACHE_AUTOLOAD_SCT1_ENA_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for PRO_DCACHE_AUTOLOAD_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dcache_autoload_cfg::W](W) writer structure"]
 impl crate::Writable for PRO_DCACHE_AUTOLOAD_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DCACHE_AUTOLOAD_CFG to value 0"]
 impl crate::Resettable for PRO_DCACHE_AUTOLOAD_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

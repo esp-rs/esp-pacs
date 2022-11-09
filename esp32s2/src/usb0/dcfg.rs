@@ -129,51 +129,61 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<2> {
         NZSTSOUTHSHK_W::new(self)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]
+    #[must_use]
     pub fn devaddr(&mut self) -> DEVADDR_W<4> {
         DEVADDR_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
+    #[must_use]
     pub fn perfrlint(&mut self) -> PERFRLINT_W<11> {
         PERFRLINT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<13> {
         ENDEVOUTNAK_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn xcvrdly(&mut self) -> XCVRDLY_W<14> {
         XCVRDLY_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<15> {
         ERRATICINTMSK_W::new(self)
     }
     #[doc = "Bits 18:22"]
     #[inline(always)]
+    #[must_use]
     pub fn epmiscnt(&mut self) -> EPMISCNT_W<18> {
         EPMISCNT_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn descdma(&mut self) -> DESCDMA_W<23> {
         DESCDMA_W::new(self)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
+    #[must_use]
     pub fn perschintvl(&mut self) -> PERSCHINTVL_W<24> {
         PERSCHINTVL_W::new(self)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
+    #[must_use]
     pub fn resvalid(&mut self) -> RESVALID_W<26> {
         RESVALID_W::new(self)
     }
@@ -196,11 +206,10 @@ impl crate::Readable for DCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcfg::W](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCFG to value 0x0810_0000"]
 impl crate::Resettable for DCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0810_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0810_0000;
 }

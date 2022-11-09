@@ -86,31 +86,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - rtc software interrupt to main cpu"]
     #[inline(always)]
+    #[must_use]
     pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<0> {
         SW_CPU_INT_W::new(self)
     }
     #[doc = "Bit 1 - clear rtc sleep reject cause"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<1> {
         SLP_REJECT_CAUSE_CLR_W::new(self)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
     #[inline(always)]
+    #[must_use]
     pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<22> {
         APB2RTC_BRIDGE_SEL_W::new(self)
     }
     #[doc = "Bit 29 - leep wakeup bit"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<29> {
         SLP_WAKEUP_W::new(self)
     }
     #[doc = "Bit 30 - leep reject bit"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<30> {
         SLP_REJECT_W::new(self)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_en(&mut self) -> SLEEP_EN_W<31> {
         SLEEP_EN_W::new(self)
     }
@@ -133,11 +139,10 @@ impl crate::Readable for STATE0_SPEC {
 #[doc = "`write(|w| ..)` method takes [state0::W](W) writer structure"]
 impl crate::Writable for STATE0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STATE0 to value 0"]
 impl crate::Resettable for STATE0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

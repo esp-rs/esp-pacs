@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     #[doc = "0x10 - Starts the SHA accelerator for Typical SHA operation"]
     pub start: START,
     #[doc = "0x14 - Continues SHA operation (only effective in Typical SHA mode)"]
-    pub continue_op: CONTINUE_OP,
+    pub continue_: CONTINUE_,
     #[doc = "0x18 - Indicates if SHA Accelerator is busy or not"]
     pub busy: BUSY,
     #[doc = "0x1c - Starts the SHA accelerator for DMA-SHA operation"]
@@ -27,9 +27,9 @@ pub struct RegisterBlock {
     pub date: DATE,
     _reserved12: [u8; 0x10],
     #[doc = "0x40..0x80 - Hash value"]
-    pub h_: [H_; 16],
+    pub h_mem: [H_MEM; 16],
     #[doc = "0x80..0x100 - Message"]
-    pub m_: [M_; 32],
+    pub m_mem: [M_MEM; 32],
 }
 #[doc = "MODE (rw) register accessor: an alias for `Reg<MODE_SPEC>`"]
 pub type MODE = crate::Reg<mode::MODE_SPEC>;
@@ -51,10 +51,10 @@ pub mod dma_block_num;
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "Starts the SHA accelerator for Typical SHA operation"]
 pub mod start;
-#[doc = "CONTINUE_OP (w) register accessor: an alias for `Reg<CONTINUE_OP_SPEC>`"]
-pub type CONTINUE_OP = crate::Reg<continue_op::CONTINUE_OP_SPEC>;
+#[doc = "CONTINUE_ (w) register accessor: an alias for `Reg<CONTINUE__SPEC>`"]
+pub type CONTINUE_ = crate::Reg<continue_::CONTINUE__SPEC>;
 #[doc = "Continues SHA operation (only effective in Typical SHA mode)"]
-pub mod continue_op;
+pub mod continue_;
 #[doc = "BUSY (r) register accessor: an alias for `Reg<BUSY_SPEC>`"]
 pub type BUSY = crate::Reg<busy::BUSY_SPEC>;
 #[doc = "Indicates if SHA Accelerator is busy or not"]
@@ -79,11 +79,11 @@ pub mod int_ena;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
-#[doc = "H_ (rw) register accessor: an alias for `Reg<H__SPEC>`"]
-pub type H_ = crate::Reg<h_::H__SPEC>;
+#[doc = "H_MEM (rw) register accessor: an alias for `Reg<H_MEM_SPEC>`"]
+pub type H_MEM = crate::Reg<h_mem::H_MEM_SPEC>;
 #[doc = "Hash value"]
-pub mod h_;
-#[doc = "M_ (rw) register accessor: an alias for `Reg<M__SPEC>`"]
-pub type M_ = crate::Reg<m_::M__SPEC>;
+pub mod h_mem;
+#[doc = "M_MEM (rw) register accessor: an alias for `Reg<M_MEM_SPEC>`"]
+pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
 #[doc = "Message"]
-pub mod m_;
+pub mod m_mem;

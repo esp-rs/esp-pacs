@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - The threshold value of SCL_FSM state unchanged period."]
     #[inline(always)]
     pub fn scl_st_to(&self) -> SCL_ST_TO_R {
-        SCL_ST_TO_R::new((self.bits & 0x00ff_ffff) as u32)
+        SCL_ST_TO_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - The threshold value of SCL_FSM state unchanged period."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<0> {
         SCL_ST_TO_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_ST_TIME_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_st_time_out::W](W) writer structure"]
 impl crate::Writable for SCL_ST_TIME_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_ST_TIME_OUT to value 0x0100"]
 impl crate::Resettable for SCL_ST_TIME_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

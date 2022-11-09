@@ -59,6 +59,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_l(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<0> {
@@ -66,6 +67,7 @@ impl W {
     }
     #[doc = "Bits 3:5 - BackUp access rtcfast_h permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_h(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<3> {
@@ -90,11 +92,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_6::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_6 to value 0x3f"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3f
-    }
+    const RESET_VALUE: Self::Ux = 0x3f;
 }

@@ -111,31 +111,37 @@ impl R {
 impl W {
     #[doc = "Bit 12 - Enable temperature sensor to send out interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_int_en(&mut self) -> TSENS_INT_EN_W<12> {
         TSENS_INT_EN_W::new(self)
     }
     #[doc = "Bit 13 - Invert temperature sensor data."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<13> {
         TSENS_IN_INV_W::new(self)
     }
     #[doc = "Bits 14:21 - Temperature sensor clock divider."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<14> {
         TSENS_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - Temperature sensor power up."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<22> {
         TSENS_POWER_UP_W::new(self)
     }
     #[doc = "Bit 23 - 1: dump out and power up controlled by software. 0: by FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<23> {
         TSENS_POWER_UP_FORCE_W::new(self)
     }
     #[doc = "Bit 24 - Temperature sensor dump out only active when SENS_TSENS_POWER_UP_FORCE = 1."]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<24> {
         TSENS_DUMP_OUT_W::new(self)
     }
@@ -158,11 +164,10 @@ impl crate::Readable for SAR_TSENS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_tsens_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_TSENS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TSENS_CTRL to value 0x0001_9000"]
 impl crate::Resettable for SAR_TSENS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_9000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_9000;
 }

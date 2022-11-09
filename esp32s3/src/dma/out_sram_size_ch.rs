@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn out_size(&mut self) -> OUT_SIZE_W<0> {
         OUT_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for OUT_SRAM_SIZE_CH_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_sram_size_ch::W](W) writer structure"]
 impl crate::Writable for OUT_SRAM_SIZE_CH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_SRAM_SIZE_CH%s to value 0x0e"]
 impl crate::Resettable for OUT_SRAM_SIZE_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0e
-    }
+    const RESET_VALUE: Self::Ux = 0x0e;
 }

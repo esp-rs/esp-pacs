@@ -147,61 +147,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn utez(&mut self) -> UTEZ_W<0> {
         UTEZ_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn utep(&mut self) -> UTEP_W<2> {
         UTEP_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
+    #[must_use]
     pub fn utea(&mut self) -> UTEA_W<4> {
         UTEA_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
+    #[must_use]
     pub fn uteb(&mut self) -> UTEB_W<6> {
         UTEB_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
+    #[must_use]
     pub fn ut0(&mut self) -> UT0_W<8> {
         UT0_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
+    #[must_use]
     pub fn ut1(&mut self) -> UT1_W<10> {
         UT1_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
+    #[must_use]
     pub fn dtez(&mut self) -> DTEZ_W<12> {
         DTEZ_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
+    #[must_use]
     pub fn dtep(&mut self) -> DTEP_W<14> {
         DTEP_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
+    #[must_use]
     pub fn dtea(&mut self) -> DTEA_W<16> {
         DTEA_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn dteb(&mut self) -> DTEB_W<18> {
         DTEB_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0(&mut self) -> DT0_W<20> {
         DT0_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
+    #[must_use]
     pub fn dt1(&mut self) -> DT1_W<22> {
         DT1_W::new(self)
     }
@@ -224,11 +236,10 @@ impl crate::Readable for GEN2_A_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen2_a::W](W) writer structure"]
 impl crate::Writable for GEN2_A_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN2_A to value 0"]
 impl crate::Resettable for GEN2_A_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

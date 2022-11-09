@@ -33,8 +33,5 @@ impl crate::Readable for TX_CRC_SPEC {
 }
 #[doc = "`reset()` method sets TX_CRC to value 0xffff_ffff"]
 impl crate::Resettable for TX_CRC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

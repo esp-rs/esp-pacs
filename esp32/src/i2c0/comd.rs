@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - This is the content of command0. It consists of three part. op_code is the command 0: RSTART 1: WRITE 2: READ 3: STOP . 4:END. Byte_num represent the number of data need to be send or data need to be received. ack_check_en ack_exp and ack value are used to control the ack bit."]
     #[inline(always)]
+    #[must_use]
     pub fn command(&mut self) -> COMMAND_W<0> {
         COMMAND_W::new(self)
     }
     #[doc = "Bit 31 - When command0 is done in I2C Master mode this bit changes to high level."]
     #[inline(always)]
+    #[must_use]
     pub fn command_done(&mut self) -> COMMAND_DONE_W<31> {
         COMMAND_DONE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for COMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [comd::W](W) writer structure"]
 impl crate::Writable for COMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets COMD%s to value 0"]
 impl crate::Resettable for COMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

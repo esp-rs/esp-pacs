@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Denoise resolution. 0: 12-bit; 1: 10-bit; 2: 8-bit; 3: 4-bit."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_denoise_res(&mut self) -> TOUCH_DENOISE_RES_W<0> {
         TOUCH_DENOISE_RES_W::new(self)
     }
     #[doc = "Bit 2 - Touch pad 0 will be used to denoise."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_denoise_en(&mut self) -> TOUCH_DENOISE_EN_W<2> {
         TOUCH_DENOISE_EN_W::new(self)
     }
     #[doc = "Bit 8 - Inactive touch pads connect to 0: HighZ, 1: GND."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_inactive_connection(&mut self) -> TOUCH_INACTIVE_CONNECTION_W<8> {
         TOUCH_INACTIVE_CONNECTION_W::new(self)
     }
     #[doc = "Bit 9 - Touch pad 14 will be used as shield_pad."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_shield_pad_en(&mut self) -> TOUCH_SHIELD_PAD_EN_W<9> {
         TOUCH_SHIELD_PAD_EN_W::new(self)
     }
     #[doc = "Bits 10:24 - Pad enable map for touch scan mode."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_scan_pad_map(&mut self) -> TOUCH_SCAN_PAD_MAP_W<10> {
         TOUCH_SCAN_PAD_MAP_W::new(self)
     }
     #[doc = "Bits 25:27 - Touch 14 buffer driver strength."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_bufdrv(&mut self) -> TOUCH_BUFDRV_W<25> {
         TOUCH_BUFDRV_W::new(self)
     }
     #[doc = "Bits 28:31 - Select out one pad as guard_ring."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_out_ring(&mut self) -> TOUCH_OUT_RING_W<28> {
         TOUCH_OUT_RING_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for TOUCH_SCAN_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_scan_ctrl::W](W) writer structure"]
 impl crate::Writable for TOUCH_SCAN_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_SCAN_CTRL to value 0xf000_0102"]
 impl crate::Resettable for TOUCH_SCAN_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xf000_0102
-    }
+    const RESET_VALUE: Self::Ux = 0xf000_0102;
 }

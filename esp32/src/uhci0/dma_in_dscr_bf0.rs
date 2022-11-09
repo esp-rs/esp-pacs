@@ -33,8 +33,5 @@ impl crate::Readable for DMA_IN_DSCR_BF0_SPEC {
 }
 #[doc = "`reset()` method sets DMA_IN_DSCR_BF0 to value 0"]
 impl crate::Resettable for DMA_IN_DSCR_BF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

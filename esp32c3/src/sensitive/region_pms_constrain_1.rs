@@ -109,6 +109,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - region_pms_constrain_world_0_area_0"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_0(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<0> {
@@ -116,6 +117,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - region_pms_constrain_world_0_area_1"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_1(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<2> {
@@ -123,6 +125,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - region_pms_constrain_world_0_area_2"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_2(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<4> {
@@ -130,6 +133,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - region_pms_constrain_world_0_area_3"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_3(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<6> {
@@ -137,6 +141,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - region_pms_constrain_world_0_area_4"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_4(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<8> {
@@ -144,6 +149,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - region_pms_constrain_world_0_area_5"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_5(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<10> {
@@ -151,6 +157,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - region_pms_constrain_world_0_area_6"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_world_0_area_6(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W<12> {
@@ -175,11 +182,10 @@ impl crate::Readable for REGION_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [region_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for REGION_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REGION_PMS_CONSTRAIN_1 to value 0x3fff"]
 impl crate::Resettable for REGION_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3fff
-    }
+    const RESET_VALUE: Self::Ux = 0x3fff;
 }

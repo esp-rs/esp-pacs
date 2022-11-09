@@ -117,8 +117,5 @@ impl crate::Readable for INT_ST_CH0_SPEC {
 }
 #[doc = "`reset()` method sets INT_ST_CH0 to value 0"]
 impl crate::Resettable for INT_ST_CH0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

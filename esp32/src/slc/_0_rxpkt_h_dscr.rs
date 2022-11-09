@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_pkt_h_dscr_addr(&mut self) -> SLC0_RX_PKT_H_DSCR_ADDR_W<0> {
         SLC0_RX_PKT_H_DSCR_ADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for _0_RXPKT_H_DSCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [_0_rxpkt_h_dscr::W](W) writer structure"]
 impl crate::Writable for _0_RXPKT_H_DSCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets _0_RXPKT_H_DSCR to value 0"]
 impl crate::Resettable for _0_RXPKT_H_DSCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

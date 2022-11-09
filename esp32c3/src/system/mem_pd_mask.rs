@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_lslp_mem_pd_mask"]
     #[inline(always)]
+    #[must_use]
     pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<0> {
         LSLP_MEM_PD_MASK_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for MEM_PD_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [mem_pd_mask::W](W) writer structure"]
 impl crate::Writable for MEM_PD_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MEM_PD_MASK to value 0x01"]
 impl crate::Resettable for MEM_PD_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

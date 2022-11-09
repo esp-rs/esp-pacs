@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<4> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<5> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<9> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<10> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<11> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn check_owner(&mut self) -> CHECK_OWNER_W<12> {
         CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<13> {
         MEM_TRANS_EN_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for LC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [lc_conf::W](W) writer structure"]
 impl crate::Writable for LC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LC_CONF to value 0x0100"]
 impl crate::Resettable for LC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

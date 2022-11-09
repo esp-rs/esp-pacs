@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_scl_st_to_regno more than 23"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_st_to_i2c(&mut self) -> SCL_ST_TO_I2C_W<0> {
         SCL_ST_TO_I2C_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_ST_TIME_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_st_time_out::W](W) writer structure"]
 impl crate::Writable for SCL_ST_TIME_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_ST_TIME_OUT to value 0x10"]
 impl crate::Resettable for SCL_ST_TIME_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

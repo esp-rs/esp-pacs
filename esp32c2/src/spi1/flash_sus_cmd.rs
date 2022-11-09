@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Program/Erase resume command."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<0> {
         FLASH_PER_COMMAND_W::new(self)
     }
     #[doc = "Bits 8:15 - Program/Erase suspend command."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<8> {
         FLASH_PES_COMMAND_W::new(self)
     }
     #[doc = "Bits 16:31 - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
     #[inline(always)]
+    #[must_use]
     pub fn wait_pesr_command(&mut self) -> WAIT_PESR_COMMAND_W<16> {
         WAIT_PESR_COMMAND_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for FLASH_SUS_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [flash_sus_cmd::W](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASH_SUS_CMD to value 0x0005_757a"]
 impl crate::Resettable for FLASH_SUS_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0005_757a
-    }
+    const RESET_VALUE: Self::Ux = 0x0005_757a;
 }

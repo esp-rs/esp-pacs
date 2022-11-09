@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Timer %s alarm trigger time-base counter value, high 32 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn alarm_hi(&mut self) -> ALARM_HI_W<0> {
         ALARM_HI_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TALARMHI_SPEC {
 #[doc = "`write(|w| ..)` method takes [talarmhi::W](W) writer structure"]
 impl crate::Writable for TALARMHI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T%sALARMHI to value 0"]
 impl crate::Resettable for TALARMHI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

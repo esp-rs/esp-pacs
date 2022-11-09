@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn ms_data_bitlen(&self) -> MS_DATA_BITLEN_R {
-        MS_DATA_BITLEN_R::new((self.bits & 0x0003_ffff) as u32)
+        MS_DATA_BITLEN_R::new(self.bits & 0x0003_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn ms_data_bitlen(&mut self) -> MS_DATA_BITLEN_W<0> {
         MS_DATA_BITLEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MS_DLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [ms_dlen::W](W) writer structure"]
 impl crate::Writable for MS_DLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MS_DLEN to value 0"]
 impl crate::Resettable for MS_DLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -96,26 +96,31 @@ impl R {
 impl W {
     #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<11> {
         TOUCH_START_FSM_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: start touch fsm valid when reg_touch_start_force is set"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<12> {
         TOUCH_START_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<13> {
         TOUCH_START_FORCE_W::new(self)
     }
     #[doc = "Bits 14:29 - sleep cycles for timer"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<14> {
         TOUCH_SLEEP_CYCLES_W::new(self)
     }
     #[doc = "Bit 30 - to clear reg_touch_meas_en"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W<30> {
         TOUCH_MEAS_EN_CLR_W::new(self)
     }
@@ -138,11 +143,10 @@ impl crate::Readable for SAR_TOUCH_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_touch_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_CTRL2 to value 0x0040_0800"]
 impl crate::Resettable for SAR_TOUCH_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0040_0800
-    }
+    const RESET_VALUE: Self::Ux = 0x0040_0800;
 }

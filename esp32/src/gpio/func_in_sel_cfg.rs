@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - select one of the 256 inputs"]
     #[inline(always)]
+    #[must_use]
     pub fn in_sel(&mut self) -> IN_SEL_W<0> {
         IN_SEL_W::new(self)
     }
     #[doc = "Bit 6 - revert the value of the input if you want to revert please set the value to 1"]
     #[inline(always)]
+    #[must_use]
     pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<6> {
         IN_INV_SEL_W::new(self)
     }
     #[doc = "Bit 7 - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sel(&mut self) -> SEL_W<7> {
         SEL_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for FUNC_IN_SEL_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [func_in_sel_cfg::W](W) writer structure"]
 impl crate::Writable for FUNC_IN_SEL_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FUNC%s_IN_SEL_CFG to value 0"]
 impl crate::Resettable for FUNC_IN_SEL_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

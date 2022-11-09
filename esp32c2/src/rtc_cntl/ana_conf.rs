@@ -131,51 +131,61 @@ impl R {
 impl W {
     #[doc = "Bit 18 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_reset_por_force_pd(&mut self) -> I2C_RESET_POR_FORCE_PD_W<18> {
         I2C_RESET_POR_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 19 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_reset_por_force_pu(&mut self) -> I2C_RESET_POR_FORCE_PU_W<19> {
         I2C_RESET_POR_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 22 - PLLA force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_pu(&mut self) -> SAR_I2C_PU_W<22> {
         SAR_I2C_PU_W::new(self)
     }
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W<23> {
         PLLA_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W<24> {
         PLLA_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W<25> {
         BBPLL_CAL_SLP_START_W::new(self)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up"]
     #[inline(always)]
+    #[must_use]
     pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W<27> {
         TXRF_I2C_PU_W::new(self)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up"]
     #[inline(always)]
+    #[must_use]
     pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W<28> {
         RFRX_PBUS_PU_W::new(self)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up"]
     #[inline(always)]
+    #[must_use]
     pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W<30> {
         CKGEN_I2C_PU_W::new(self)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W<31> {
         PLL_I2C_PU_W::new(self)
     }
@@ -198,11 +208,10 @@ impl crate::Readable for ANA_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ana_conf::W](W) writer structure"]
 impl crate::Writable for ANA_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ANA_CONF to value 0x0044_0000"]
 impl crate::Resettable for ANA_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0044_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0044_0000;
 }

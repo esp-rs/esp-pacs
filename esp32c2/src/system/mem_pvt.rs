@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - reg_mem_path_len"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_path_len(&mut self) -> MEM_PATH_LEN_W<0> {
         MEM_PATH_LEN_W::new(self)
     }
     #[doc = "Bit 4 - reg_mem_err_cnt_clr"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_err_cnt_clr(&mut self) -> MEM_ERR_CNT_CLR_W<4> {
         MEM_ERR_CNT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - reg_mem_pvt_monitor_en"]
     #[inline(always)]
+    #[must_use]
     pub fn monitor_en(&mut self) -> MONITOR_EN_W<5> {
         MONITOR_EN_W::new(self)
     }
     #[doc = "Bits 22:23 - reg_mem_vt_sel"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_vt_sel(&mut self) -> MEM_VT_SEL_W<22> {
         MEM_VT_SEL_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for MEM_PVT_SPEC {
 #[doc = "`write(|w| ..)` method takes [mem_pvt::W](W) writer structure"]
 impl crate::Writable for MEM_PVT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MEM_PVT to value 0x03"]
 impl crate::Resettable for MEM_PVT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

@@ -107,36 +107,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<0> {
         GEN0_CNTUFORCE_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<6> {
         GEN0_A_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<8> {
         GEN0_B_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<10> {
         GEN0_A_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<11> {
         GEN0_A_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<13> {
         GEN0_B_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<14> {
         GEN0_B_NCIFORCE_MODE_W::new(self)
     }
@@ -159,11 +166,10 @@ impl crate::Readable for GEN0_FORCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen0_force::W](W) writer structure"]
 impl crate::Writable for GEN0_FORCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN0_FORCE to value 0x20"]
 impl crate::Resettable for GEN0_FORCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

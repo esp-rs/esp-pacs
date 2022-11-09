@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W<0> {
         ECC_ERR_INT_NUM_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W<8> {
         SPI_FMEM_ECC_ERR_INT_EN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for ECC_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ecc_ctrl::W](W) writer structure"]
 impl crate::Writable for ECC_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ECC_CTRL to value 0x0a"]
 impl crate::Resettable for ECC_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0a
-    }
+    const RESET_VALUE: Self::Ux = 0x0a;
 }

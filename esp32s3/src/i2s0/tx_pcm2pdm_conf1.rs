@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<0> {
         TX_PDM_FP_W::new(self)
     }
     #[doc = "Bits 10:19 - I2S TX PDM Fs"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<10> {
         TX_PDM_FS_W::new(self)
     }
     #[doc = "Bits 20:22 - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_iir_hp_mult12_5(&mut self) -> TX_IIR_HP_MULT12_5_W<20> {
         TX_IIR_HP_MULT12_5_W::new(self)
     }
     #[doc = "Bits 23:25 - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_iir_hp_mult12_0(&mut self) -> TX_IIR_HP_MULT12_0_W<23> {
         TX_IIR_HP_MULT12_0_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for TX_PCM2PDM_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_pcm2pdm_conf1::W](W) writer structure"]
 impl crate::Writable for TX_PCM2PDM_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_PCM2PDM_CONF1 to value 0x03f7_83c0"]
 impl crate::Resettable for TX_PCM2PDM_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03f7_83c0
-    }
+    const RESET_VALUE: Self::Ux = 0x03f7_83c0;
 }

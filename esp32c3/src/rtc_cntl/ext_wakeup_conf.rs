@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 31 - enable filter for gpio wakeup event"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<31> {
         GPIO_WAKEUP_FILTER_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for EXT_WAKEUP_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_wakeup_conf::W](W) writer structure"]
 impl crate::Writable for EXT_WAKEUP_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_WAKEUP_CONF to value 0"]
 impl crate::Resettable for EXT_WAKEUP_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

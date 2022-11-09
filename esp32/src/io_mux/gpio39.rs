@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<0> {
         MCU_OE_W::new(self)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pad. Set to 1 to put the pad in sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<1> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bit 2 - Pull-down enable of the pad during sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<2> {
         MCU_WPD_W::new(self)
     }
     #[doc = "Bit 3 - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<3> {
         MCU_WPU_W::new(self)
     }
     #[doc = "Bit 4 - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<4> {
         MCU_IE_W::new(self)
     }
     #[doc = "Bits 5:6 - Select the drive strength of the pad during sleep mode. A higher value corresponds with a higher strength."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_drv(&mut self) -> MCU_DRV_W<5> {
         MCU_DRV_W::new(self)
     }
     #[doc = "Bit 7 - Pull-down enable of the pad. 1: internal pull-down enabled, 0: internal pull-down disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull-down circuitry, therefore, their FUN_WPD is always 0."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<7> {
         FUN_WPD_W::new(self)
     }
     #[doc = "Bit 8 - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull- down circuitry, therefore, their FUN_WPU is always 0."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<8> {
         FUN_WPU_W::new(self)
     }
     #[doc = "Bit 9 - Input enable of the pad. 1: input enabled; 0: input disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<9> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pad. A higher value corresponds with a higher strength. For GPIO34-39, FUN_DRV is always 0. For detailed drive strength, please see note 8 in Table ”Notes on ESP32 Pin Lists”, in ESP32 Datasheet."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<10> {
         FUN_DRV_W::new(self)
     }
     #[doc = "Bits 12:14 - Select the IO_MUX function for this signal. 0 selects Function 0, 1 selects Function 1, etc."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<12> {
         MCU_SEL_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for GPIO39_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio39::W](W) writer structure"]
 impl crate::Writable for GPIO39_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO39 to value 0"]
 impl crate::Resettable for GPIO39_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

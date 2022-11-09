@@ -24,6 +24,7 @@ pub type VLAUE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_DRT_SPEC, u8
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure directive output value of 8-channel dedicated GPIO."]
     #[inline(always)]
+    #[must_use]
     pub fn vlaue(&mut self) -> VLAUE_W<0> {
         VLAUE_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for OUT_DRT_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_drt::W](W) writer structure"]
 impl crate::Writable for OUT_DRT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_DRT to value 0"]
 impl crate::Resettable for OUT_DRT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

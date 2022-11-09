@@ -171,46 +171,55 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<0> {
         SDIO_ENABLE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<1> {
         SDIO_IOREADY1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<2> {
         HIGHSPEED_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<4> {
         SDIO_CD_ENABLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<5> {
         SDIO_IOREADY2_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<6> {
         SDIO_INT_MASK_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W<12> {
         SDIO20_CONF0_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_ver(&mut self) -> SDIO_VER_W<16> {
         SDIO_VER_W::new(self)
     }
     #[doc = "Bits 29:31"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W<29> {
         SDIO20_CONF1_W::new(self)
     }
@@ -233,11 +242,10 @@ impl crate::Readable for CFG_DATA1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_data1::W](W) writer structure"]
 impl crate::Writable for CFG_DATA1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_DATA1 to value 0x0111_0011"]
 impl crate::Resettable for CFG_DATA1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0111_0011
-    }
+    const RESET_VALUE: Self::Ux = 0x0111_0011;
 }

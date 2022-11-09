@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc_func2_int(&mut self) -> HOST_SLC_FUNC2_INT_W<24> {
         HOST_SLC_FUNC2_INT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for HOST_SLCHOST_FUNC2_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_func2_0::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_FUNC2_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_FUNC2_0 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_FUNC2_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

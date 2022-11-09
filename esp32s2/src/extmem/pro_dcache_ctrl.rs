@@ -208,61 +208,73 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_enable(&mut self) -> PRO_DCACHE_ENABLE_W<0> {
         PRO_DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_setsize_mode(&mut self) -> PRO_DCACHE_SETSIZE_MODE_W<2> {
         PRO_DCACHE_SETSIZE_MODE_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_blocksize_mode(&mut self) -> PRO_DCACHE_BLOCKSIZE_MODE_W<3> {
         PRO_DCACHE_BLOCKSIZE_MODE_W::new(self)
     }
     #[doc = "Bit 8 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_invalidate_ena(&mut self) -> PRO_DCACHE_INVALIDATE_ENA_W<8> {
         PRO_DCACHE_INVALIDATE_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_flush_ena(&mut self) -> PRO_DCACHE_FLUSH_ENA_W<10> {
         PRO_DCACHE_FLUSH_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_clean_ena(&mut self) -> PRO_DCACHE_CLEAN_ENA_W<12> {
         PRO_DCACHE_CLEAN_ENA_W::new(self)
     }
     #[doc = "Bit 14 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_lock0_en(&mut self) -> PRO_DCACHE_LOCK0_EN_W<14> {
         PRO_DCACHE_LOCK0_EN_W::new(self)
     }
     #[doc = "Bit 15 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_lock1_en(&mut self) -> PRO_DCACHE_LOCK1_EN_W<15> {
         PRO_DCACHE_LOCK1_EN_W::new(self)
     }
     #[doc = "Bit 18 - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_autoload_ena(&mut self) -> PRO_DCACHE_AUTOLOAD_ENA_W<18> {
         PRO_DCACHE_AUTOLOAD_ENA_W::new(self)
     }
     #[doc = "Bit 20 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_preload_ena(&mut self) -> PRO_DCACHE_PRELOAD_ENA_W<20> {
         PRO_DCACHE_PRELOAD_ENA_W::new(self)
     }
     #[doc = "Bit 22 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_unlock_ena(&mut self) -> PRO_DCACHE_UNLOCK_ENA_W<22> {
         PRO_DCACHE_UNLOCK_ENA_W::new(self)
     }
     #[doc = "Bit 24 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_lock_ena(&mut self) -> PRO_DCACHE_LOCK_ENA_W<24> {
         PRO_DCACHE_LOCK_ENA_W::new(self)
     }
@@ -285,11 +297,10 @@ impl crate::Readable for PRO_DCACHE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dcache_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_DCACHE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DCACHE_CTRL to value 0x0100"]
 impl crate::Resettable for PRO_DCACHE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

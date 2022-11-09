@@ -129,46 +129,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_touch_done_int_ena(&mut self) -> COCPU_TOUCH_DONE_INT_ENA_W<0> {
         COCPU_TOUCH_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - TOUCH_INACTIVE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_touch_inactive_int_ena(&mut self) -> COCPU_TOUCH_INACTIVE_INT_ENA_W<1> {
         COCPU_TOUCH_INACTIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - TOUCH_ACTIVE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_touch_active_int_ena(&mut self) -> COCPU_TOUCH_ACTIVE_INT_ENA_W<2> {
         COCPU_TOUCH_ACTIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - SARADC1_DONE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_saradc1_int_ena(&mut self) -> COCPU_SARADC1_INT_ENA_W<3> {
         COCPU_SARADC1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - SARADC2_DONE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_saradc2_int_ena(&mut self) -> COCPU_SARADC2_INT_ENA_W<4> {
         COCPU_SARADC2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - TSENS_DONE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_tsens_int_ena(&mut self) -> COCPU_TSENS_INT_ENA_W<5> {
         COCPU_TSENS_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - RISCV_START_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_start_int_ena(&mut self) -> COCPU_START_INT_ENA_W<6> {
         COCPU_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - SW_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_sw_int_ena(&mut self) -> COCPU_SW_INT_ENA_W<7> {
         COCPU_SW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - SWD_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_swd_int_ena(&mut self) -> COCPU_SWD_INT_ENA_W<8> {
         COCPU_SWD_INT_ENA_W::new(self)
     }
@@ -191,11 +200,10 @@ impl crate::Readable for SAR_COCPU_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_cocpu_int_ena::W](W) writer structure"]
 impl crate::Writable for SAR_COCPU_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_COCPU_INT_ENA to value 0"]
 impl crate::Resettable for SAR_COCPU_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

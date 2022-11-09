@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:19 - time period that scl =0"]
     #[inline(always)]
     pub fn period(&self) -> PERIOD_R {
-        PERIOD_R::new((self.bits & 0x000f_ffff) as u32)
+        PERIOD_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - time period that scl =0"]
     #[inline(always)]
+    #[must_use]
     pub fn period(&mut self) -> PERIOD_W<0> {
         PERIOD_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SCL_LOW_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_low::W](W) writer structure"]
 impl crate::Writable for SCL_LOW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_LOW to value 0x0100"]
 impl crate::Resettable for SCL_LOW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

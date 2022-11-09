@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:29 - Region 10 end address for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_addr_11(&self) -> CORE_1_REGION_PMS_CONSTRAIN_ADDR_11_R {
-        CORE_1_REGION_PMS_CONSTRAIN_ADDR_11_R::new((self.bits & 0x3fff_ffff) as u32)
+        CORE_1_REGION_PMS_CONSTRAIN_ADDR_11_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:29 - Region 10 end address for core1."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_region_pms_constrain_addr_11(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_ADDR_11_W<0> {
@@ -73,11 +74,10 @@ impl crate::Readable for CORE_1_REGION_PMS_CONSTRAIN_14_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_region_pms_constrain_14::W](W) writer structure"]
 impl crate::Writable for CORE_1_REGION_PMS_CONSTRAIN_14_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_REGION_PMS_CONSTRAIN_14 to value 0"]
 impl crate::Resettable for CORE_1_REGION_PMS_CONSTRAIN_14_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

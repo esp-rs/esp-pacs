@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 22:31 - configure sdio act dnum"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<22> {
         SDIO_ACT_DNUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SDIO_ACT_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdio_act_conf::W](W) writer structure"]
 impl crate::Writable for SDIO_ACT_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDIO_ACT_CONF to value 0"]
 impl crate::Resettable for SDIO_ACT_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_xpd_wait(&mut self) -> REG_TSENS_XPD_WAIT_W<0> {
         REG_TSENS_XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 12:13 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_xpd_force(&mut self) -> REG_TSENS_XPD_FORCE_W<12> {
         REG_TSENS_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 14 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_tsens_clk_inv(&mut self) -> REG_TSENS_CLK_INV_W<14> {
         REG_TSENS_CLK_INV_W::new(self)
     }
     #[doc = "Bit 15 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_sel(&mut self) -> TSENS_CLK_SEL_W<15> {
         TSENS_CLK_SEL_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for APB_TSENS_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_tsens_ctrl2::W](W) writer structure"]
 impl crate::Writable for APB_TSENS_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_TSENS_CTRL2 to value 0x4002"]
 impl crate::Resettable for APB_TSENS_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4002
-    }
+    const RESET_VALUE: Self::Ux = 0x4002;
 }

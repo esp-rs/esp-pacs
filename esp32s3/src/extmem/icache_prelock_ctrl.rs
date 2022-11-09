@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_prelock_sct0_en(&mut self) -> ICACHE_PRELOCK_SCT0_EN_W<0> {
         ICACHE_PRELOCK_SCT0_EN_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_prelock_sct1_en(&mut self) -> ICACHE_PRELOCK_SCT1_EN_W<1> {
         ICACHE_PRELOCK_SCT1_EN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for ICACHE_PRELOCK_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_prelock_ctrl::W](W) writer structure"]
 impl crate::Writable for ICACHE_PRELOCK_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_PRELOCK_CTRL to value 0"]
 impl crate::Resettable for ICACHE_PRELOCK_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<0> {
         INTERRUPT_ENA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IRQ_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [irq_ena::W](W) writer structure"]
 impl crate::Writable for IRQ_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRQ_ENA to value 0"]
 impl crate::Resettable for IRQ_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

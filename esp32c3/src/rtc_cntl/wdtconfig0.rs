@@ -162,66 +162,79 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - chip reset siginal pulse width"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<0> {
         WDT_CHIP_RESET_WIDTH_W::new(self)
     }
     #[doc = "Bit 8 - wdt reset whole chip enable"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<8> {
         WDT_CHIP_RESET_EN_W::new(self)
     }
     #[doc = "Bit 9 - pause WDT in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<9> {
         WDT_PAUSE_IN_SLP_W::new(self)
     }
     #[doc = "Bit 10 - enable WDT reset APP CPU"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<10> {
         WDT_APPCPU_RESET_EN_W::new(self)
     }
     #[doc = "Bit 11 - enable WDT reset PRO CPU"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<11> {
         WDT_PROCPU_RESET_EN_W::new(self)
     }
     #[doc = "Bit 12 - enable WDT in flash boot"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<12> {
         WDT_FLASHBOOT_MOD_EN_W::new(self)
     }
     #[doc = "Bits 13:15 - system reset counter length"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<13> {
         WDT_SYS_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bits 16:18 - CPU reset counter length"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<16> {
         WDT_CPU_RESET_LENGTH_W::new(self)
     }
     #[doc = "Bits 19:21 - 1: interrupt stage en"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W<19> {
         WDT_STG3_W::new(self)
     }
     #[doc = "Bits 22:24 - 1: interrupt stage en"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W<22> {
         WDT_STG2_W::new(self)
     }
     #[doc = "Bits 25:27 - 1: interrupt stage en"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W<25> {
         WDT_STG1_W::new(self)
     }
     #[doc = "Bits 28:30 - 1: interrupt stage en"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W<28> {
         WDT_STG0_W::new(self)
     }
     #[doc = "Bit 31 - enable rtc wdt"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_en(&mut self) -> WDT_EN_W<31> {
         WDT_EN_W::new(self)
     }
@@ -244,11 +257,10 @@ impl crate::Readable for WDTCONFIG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG0 to value 0x0001_3214"]
 impl crate::Resettable for WDTCONFIG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_3214
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_3214;
 }

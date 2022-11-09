@@ -33,8 +33,5 @@ impl crate::Readable for ARB_LOST_CAP_SPEC {
 }
 #[doc = "`reset()` method sets ARB_LOST_CAP to value 0"]
 impl crate::Resettable for ARB_LOST_CAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

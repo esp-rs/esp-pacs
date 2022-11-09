@@ -33,8 +33,5 @@ impl crate::Readable for UNIT0_VALUE_LO_SPEC {
 }
 #[doc = "`reset()` method sets UNIT0_VALUE_LO to value 0"]
 impl crate::Resettable for UNIT0_VALUE_LO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

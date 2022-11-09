@@ -159,56 +159,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_rd_ena(&mut self) -> CORE_0_AREA_DRAM0_0_RD_ENA_W<0> {
         CORE_0_AREA_DRAM0_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 1 - reg_core_0_area_dram0_0_wr_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_wr_ena(&mut self) -> CORE_0_AREA_DRAM0_0_WR_ENA_W<1> {
         CORE_0_AREA_DRAM0_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 2 - reg_core_0_area_dram0_1_rd_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_1_rd_ena(&mut self) -> CORE_0_AREA_DRAM0_1_RD_ENA_W<2> {
         CORE_0_AREA_DRAM0_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 3 - reg_core_0_area_dram0_1_wr_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_1_wr_ena(&mut self) -> CORE_0_AREA_DRAM0_1_WR_ENA_W<3> {
         CORE_0_AREA_DRAM0_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 4 - reg_core_0_area_pif_0_rd_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_0_rd_ena(&mut self) -> CORE_0_AREA_PIF_0_RD_ENA_W<4> {
         CORE_0_AREA_PIF_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 5 - reg_core_0_area_pif_0_wr_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_0_wr_ena(&mut self) -> CORE_0_AREA_PIF_0_WR_ENA_W<5> {
         CORE_0_AREA_PIF_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 6 - reg_core_0_area_pif_1_rd_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_1_rd_ena(&mut self) -> CORE_0_AREA_PIF_1_RD_ENA_W<6> {
         CORE_0_AREA_PIF_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 7 - reg_core_0_area_pif_1_wr_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_1_wr_ena(&mut self) -> CORE_0_AREA_PIF_1_WR_ENA_W<7> {
         CORE_0_AREA_PIF_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 8 - reg_core_0_sp_spill_min_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_sp_spill_min_ena(&mut self) -> CORE_0_SP_SPILL_MIN_ENA_W<8> {
         CORE_0_SP_SPILL_MIN_ENA_W::new(self)
     }
     #[doc = "Bit 9 - reg_core_0_sp_spill_max_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_sp_spill_max_ena(&mut self) -> CORE_0_SP_SPILL_MAX_ENA_W<9> {
         CORE_0_SP_SPILL_MAX_ENA_W::new(self)
     }
     #[doc = "Bit 10 - reg_core_0_iram0_exception_monitor_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_iram0_exception_monitor_ena(
         &mut self,
     ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<10> {
@@ -216,6 +227,7 @@ impl W {
     }
     #[doc = "Bit 11 - reg_core_0_dram0_exception_monitor_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_dram0_exception_monitor_ena(
         &mut self,
     ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<11> {
@@ -240,11 +252,10 @@ impl crate::Readable for C0RE_0_MONTR_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [c0re_0_montr_ena::W](W) writer structure"]
 impl crate::Writable for C0RE_0_MONTR_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets C0RE_0_MONTR_ENA to value 0"]
 impl crate::Resettable for C0RE_0_MONTR_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

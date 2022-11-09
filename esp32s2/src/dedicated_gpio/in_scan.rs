@@ -33,8 +33,5 @@ impl crate::Readable for IN_SCAN_SPEC {
 }
 #[doc = "`reset()` method sets IN_SCAN to value 0"]
 impl crate::Resettable for IN_SCAN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

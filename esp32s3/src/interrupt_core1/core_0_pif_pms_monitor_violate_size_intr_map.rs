@@ -51,6 +51,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map core0_PIF_pms_monitor_violatile_size interrupt to one of core1's external interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_monitor_violate_size_intr_map(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_W<0> {
@@ -75,11 +76,10 @@ impl crate::Readable for CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_monitor_violate_size_intr_map::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP to value 0x10"]
 impl crate::Resettable for CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

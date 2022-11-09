@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - The bit is used to configure the dbus permission control section boundary2"]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_pms_boundary2(&mut self) -> DBUS_PMS_BOUNDARY2_W<0> {
         DBUS_PMS_BOUNDARY2_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DBUS_PMS_TBL_BOUNDARY2_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbus_pms_tbl_boundary2::W](W) writer structure"]
 impl crate::Writable for DBUS_PMS_TBL_BOUNDARY2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBUS_PMS_TBL_BOUNDARY2 to value 0x0800"]
 impl crate::Resettable for DBUS_PMS_TBL_BOUNDARY2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0800
-    }
+    const RESET_VALUE: Self::Ux = 0x0800;
 }

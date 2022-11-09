@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout0_num(&mut self) -> DOUT0_NUM_W<0> {
         DOUT0_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout1_num(&mut self) -> DOUT1_NUM_W<2> {
         DOUT1_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout2_num(&mut self) -> DOUT2_NUM_W<4> {
         DOUT2_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout3_num(&mut self) -> DOUT3_NUM_W<6> {
         DOUT3_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout4_num(&mut self) -> DOUT4_NUM_W<8> {
         DOUT4_NUM_W::new(self)
     }
     #[doc = "Bits 10:11 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout5_num(&mut self) -> DOUT5_NUM_W<10> {
         DOUT5_NUM_W::new(self)
     }
     #[doc = "Bits 12:13 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout6_num(&mut self) -> DOUT6_NUM_W<12> {
         DOUT6_NUM_W::new(self)
     }
     #[doc = "Bits 14:15 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn dout7_num(&mut self) -> DOUT7_NUM_W<14> {
         DOUT7_NUM_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for DOUT_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [dout_num::W](W) writer structure"]
 impl crate::Writable for DOUT_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOUT_NUM to value 0"]
 impl crate::Resettable for DOUT_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

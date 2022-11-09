@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn pulse_cnt_rst_u0(&mut self) -> PULSE_CNT_RST_U0_W<0> {
         PULSE_CNT_RST_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U0_W<1> {
         CNT_PAUSE_U0_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn pulse_cnt_rst_u1(&mut self) -> PULSE_CNT_RST_U1_W<2> {
         PULSE_CNT_RST_U1_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U1_W<3> {
         CNT_PAUSE_U1_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear unit 4's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn pulse_cnt_rst_u2(&mut self) -> PULSE_CNT_RST_U2_W<4> {
         PULSE_CNT_RST_U2_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 5's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U2_W<5> {
         CNT_PAUSE_U2_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear unit 6's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn pulse_cnt_rst_u3(&mut self) -> PULSE_CNT_RST_U3_W<6> {
         PULSE_CNT_RST_U3_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 7's counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U3_W<7> {
         CNT_PAUSE_U3_W::new(self)
     }
     #[doc = "Bit 16 - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<16> {
         CLK_EN_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x55"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x55
-    }
+    const RESET_VALUE: Self::Ux = 0x55;
 }

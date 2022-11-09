@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - reg_log_ena"]
     #[inline(always)]
+    #[must_use]
     pub fn log_ena(&mut self) -> LOG_ENA_W<0> {
         LOG_ENA_W::new(self)
     }
     #[doc = "Bits 3:6 - reg_log_mode"]
     #[inline(always)]
+    #[must_use]
     pub fn log_mode(&mut self) -> LOG_MODE_W<3> {
         LOG_MODE_W::new(self)
     }
     #[doc = "Bit 7 - reg_log_mem_loop_enable"]
     #[inline(always)]
+    #[must_use]
     pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<7> {
         LOG_MEM_LOOP_ENABLE_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for LOG_SETTING_SPEC {
 #[doc = "`write(|w| ..)` method takes [log_setting::W](W) writer structure"]
 impl crate::Writable for LOG_SETTING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOG_SETTING to value 0x80"]
 impl crate::Resettable for LOG_SETTING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

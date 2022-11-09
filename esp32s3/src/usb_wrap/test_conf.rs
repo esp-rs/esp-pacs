@@ -96,21 +96,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
+    #[must_use]
     pub fn test_enable(&mut self) -> TEST_ENABLE_W<0> {
         TEST_ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
+    #[must_use]
     pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<1> {
         TEST_USB_OE_W::new(self)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
+    #[must_use]
     pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<2> {
         TEST_TX_DP_W::new(self)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
+    #[must_use]
     pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<3> {
         TEST_TX_DM_W::new(self)
     }
@@ -133,11 +137,10 @@ impl crate::Readable for TEST_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [test_conf::W](W) writer structure"]
 impl crate::Writable for TEST_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TEST_CONF to value 0"]
 impl crate::Resettable for TEST_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

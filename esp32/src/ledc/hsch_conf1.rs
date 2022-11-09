@@ -87,26 +87,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This register controls the increase or decrease step scale for high speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_scale(&mut self) -> DUTY_SCALE_W<0> {
         DUTY_SCALE_W::new(self)
     }
     #[doc = "Bits 10:19 - This register is used to increase or decrease the duty every reg_duty_cycle_hsch0 cycles for high speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<10> {
         DUTY_CYCLE_W::new(self)
     }
     #[doc = "Bits 20:29 - This register is used to control the num of increased or decreased times for high speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_num(&mut self) -> DUTY_NUM_W<20> {
         DUTY_NUM_W::new(self)
     }
     #[doc = "Bit 30 - This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_inc(&mut self) -> DUTY_INC_W<30> {
         DUTY_INC_W::new(self)
     }
     #[doc = "Bit 31 - When reg_duty_num_hsch0 reg_duty_cycle_hsch0 and reg_duty_scale_hsch0 has been configured. these register won't take effect until set reg_duty_start_hsch0. this bit is automatically cleared by hardware."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_start(&mut self) -> DUTY_START_W<31> {
         DUTY_START_W::new(self)
     }
@@ -129,11 +134,10 @@ impl crate::Readable for HSCH_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [hsch_conf1::W](W) writer structure"]
 impl crate::Writable for HSCH_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HSCH%s_CONF1 to value 0x4000_0000"]
 impl crate::Resettable for HSCH_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4000_0000;
 }

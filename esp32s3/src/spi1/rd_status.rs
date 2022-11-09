@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
     #[inline(always)]
+    #[must_use]
     pub fn status(&mut self) -> STATUS_W<0> {
         STATUS_W::new(self)
     }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
     #[inline(always)]
+    #[must_use]
     pub fn wb_mode(&mut self) -> WB_MODE_W<16> {
         WB_MODE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for RD_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [rd_status::W](W) writer structure"]
 impl crate::Writable for RD_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RD_STATUS to value 0"]
 impl crate::Resettable for RD_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

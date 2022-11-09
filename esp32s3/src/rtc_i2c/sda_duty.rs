@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]
     pub fn num(&self) -> NUM_R {
-        NUM_R::new((self.bits & 0x000f_ffff) as u32)
+        NUM_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]
+    #[must_use]
     pub fn num(&mut self) -> NUM_W<0> {
         NUM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SDA_DUTY_SPEC {
 #[doc = "`write(|w| ..)` method takes [sda_duty::W](W) writer structure"]
 impl crate::Writable for SDA_DUTY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDA_DUTY to value 0x10"]
 impl crate::Resettable for SDA_DUTY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

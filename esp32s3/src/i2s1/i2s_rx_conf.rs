@@ -187,86 +187,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset receiver"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_reset(&mut self) -> I2S_RX_RESET_W<0> {
         I2S_RX_RESET_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset Rx AFIFO"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_fifo_reset(&mut self) -> I2S_RX_FIFO_RESET_W<1> {
         I2S_RX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_start(&mut self) -> I2S_RX_START_W<2> {
         I2S_RX_START_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_slave_mod(&mut self) -> I2S_RX_SLAVE_MOD_W<3> {
         I2S_RX_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable receiver in mono mode"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_mono(&mut self) -> I2S_RX_MONO_W<5> {
         I2S_RX_MONO_W::new(self)
     }
     #[doc = "Bit 7 - I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_big_endian(&mut self) -> I2S_RX_BIG_ENDIAN_W<7> {
         I2S_RX_BIG_ENDIAN_W::new(self)
     }
     #[doc = "Bit 8 - Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_update(&mut self) -> I2S_RX_UPDATE_W<8> {
         I2S_RX_UPDATE_W::new(self)
     }
     #[doc = "Bit 9 - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_mono_fst_vld(&mut self) -> I2S_RX_MONO_FST_VLD_W<9> {
         I2S_RX_MONO_FST_VLD_W::new(self)
     }
     #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_pcm_conf(&mut self) -> I2S_RX_PCM_CONF_W<10> {
         I2S_RX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to bypass Compress/Decompress module for received data."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_pcm_bypass(&mut self) -> I2S_RX_PCM_BYPASS_W<12> {
         I2S_RX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bits 13:14 - 0 : I2S Rx only stop when reg_rx_start is cleared. 1: Stop when reg_rx_start is 0 or in_suc_eof is 1. 2: Stop I2S RX when reg_rx_start is 0 or RX FIFO is full."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_stop_mode(&mut self) -> I2S_RX_STOP_MODE_W<13> {
         I2S_RX_STOP_MODE_W::new(self)
     }
     #[doc = "Bit 15 - 1: I2S RX left alignment mode. 0: I2S RX right alignment mode."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_left_align(&mut self) -> I2S_RX_LEFT_ALIGN_W<15> {
         I2S_RX_LEFT_ALIGN_W::new(self)
     }
     #[doc = "Bit 16 - 1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_24_fill_en(&mut self) -> I2S_RX_24_FILL_EN_W<16> {
         I2S_RX_24_FILL_EN_W::new(self)
     }
     #[doc = "Bit 17 - 0: WS should be 0 when receiving left channel data, and WS is 1in right channel. 1: WS should be 1 when receiving left channel data, and WS is 0in right channel."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_ws_idle_pol(&mut self) -> I2S_RX_WS_IDLE_POL_W<17> {
         I2S_RX_WS_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 18 - I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_bit_order(&mut self) -> I2S_RX_BIT_ORDER_W<18> {
         I2S_RX_BIT_ORDER_W::new(self)
     }
     #[doc = "Bit 19 - 1: Enable I2S TDM Rx mode . 0: Disable."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_tdm_en(&mut self) -> I2S_RX_TDM_EN_W<19> {
         I2S_RX_TDM_EN_W::new(self)
     }
     #[doc = "Bit 20 - 1: Enable I2S PDM Rx mode . 0: Disable."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_pdm_en(&mut self) -> I2S_RX_PDM_EN_W<20> {
         I2S_RX_PDM_EN_W::new(self)
     }
@@ -289,11 +306,10 @@ impl crate::Readable for I2S_RX_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_conf::W](W) writer structure"]
 impl crate::Writable for I2S_RX_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_CONF to value 0x9600"]
 impl crate::Resettable for I2S_RX_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x9600
-    }
+    const RESET_VALUE: Self::Ux = 0x9600;
 }

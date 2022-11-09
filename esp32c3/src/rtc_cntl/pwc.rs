@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
+    #[must_use]
     pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<21> {
         PAD_FORCE_HOLD_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PWC_SPEC {
 #[doc = "`write(|w| ..)` method takes [pwc::W](W) writer structure"]
 impl crate::Writable for PWC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PWC to value 0"]
 impl crate::Resettable for PWC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

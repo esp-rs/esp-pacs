@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - Configure the split address of RTC FAST for DBUS0 access."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram0_rtcfast_spltaddr(&mut self) -> PRO_DRAM0_RTCFAST_SPLTADDR_W<0> {
         PRO_DRAM0_RTCFAST_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 11 - Setting to 1 grants DBUS0 permission to read RTC FAST low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram0_rtcfast_l_r(&mut self) -> PRO_DRAM0_RTCFAST_L_R_W<11> {
         PRO_DRAM0_RTCFAST_L_R_W::new(self)
     }
     #[doc = "Bit 12 - Setting to 1 grants DBUS0 permission to write RTC FAST low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram0_rtcfast_l_w(&mut self) -> PRO_DRAM0_RTCFAST_L_W_W<12> {
         PRO_DRAM0_RTCFAST_L_W_W::new(self)
     }
     #[doc = "Bit 13 - Setting to 1 grants DBUS0 permission to read RTC FAST high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram0_rtcfast_h_r(&mut self) -> PRO_DRAM0_RTCFAST_H_R_W<13> {
         PRO_DRAM0_RTCFAST_H_R_W::new(self)
     }
     #[doc = "Bit 14 - Setting to 1 grants DBUS0 permission to write RTC FAST high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram0_rtcfast_h_w(&mut self) -> PRO_DRAM0_RTCFAST_H_W_W<14> {
         PRO_DRAM0_RTCFAST_H_W_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for PRO_DRAM0_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dram0_2::W](W) writer structure"]
 impl crate::Writable for PRO_DRAM0_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DRAM0_2 to value 0x7800"]
 impl crate::Resettable for PRO_DRAM0_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7800
-    }
+    const RESET_VALUE: Self::Ux = 0x7800;
 }

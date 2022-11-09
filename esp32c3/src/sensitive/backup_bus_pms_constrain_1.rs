@@ -169,66 +169,79 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - backup_bus_pms_constrain_uart"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_uart(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_UART_W<0> {
         BACKUP_BUS_PMS_CONSTRAIN_UART_W::new(self)
     }
     #[doc = "Bits 2:3 - backup_bus_pms_constrain_g0spi_1"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_g0spi_1(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_1_W<2> {
         BACKUP_BUS_PMS_CONSTRAIN_G0SPI_1_W::new(self)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_g0spi_0"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_g0spi_0(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_G0SPI_0_W<4> {
         BACKUP_BUS_PMS_CONSTRAIN_G0SPI_0_W::new(self)
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_gpio"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_gpio(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_GPIO_W<6> {
         BACKUP_BUS_PMS_CONSTRAIN_GPIO_W::new(self)
     }
     #[doc = "Bits 8:9 - backup_bus_pms_constrain_fe2"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_fe2(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_FE2_W<8> {
         BACKUP_BUS_PMS_CONSTRAIN_FE2_W::new(self)
     }
     #[doc = "Bits 10:11 - backup_bus_pms_constrain_fe"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_fe(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_FE_W<10> {
         BACKUP_BUS_PMS_CONSTRAIN_FE_W::new(self)
     }
     #[doc = "Bits 12:13 - backup_bus_pms_constrain_timer"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_timer(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_TIMER_W<12> {
         BACKUP_BUS_PMS_CONSTRAIN_TIMER_W::new(self)
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_rtc"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_rtc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RTC_W<14> {
         BACKUP_BUS_PMS_CONSTRAIN_RTC_W::new(self)
     }
     #[doc = "Bits 16:17 - backup_bus_pms_constrain_io_mux"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_io_mux(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_IO_MUX_W<16> {
         BACKUP_BUS_PMS_CONSTRAIN_IO_MUX_W::new(self)
     }
     #[doc = "Bits 18:19 - backup_bus_pms_constrain_wdg"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_wdg(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_WDG_W<18> {
         BACKUP_BUS_PMS_CONSTRAIN_WDG_W::new(self)
     }
     #[doc = "Bits 24:25 - backup_bus_pms_constrain_misc"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_misc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_MISC_W<24> {
         BACKUP_BUS_PMS_CONSTRAIN_MISC_W::new(self)
     }
     #[doc = "Bits 26:27 - backup_bus_pms_constrain_i2c"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_i2c(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_W<26> {
         BACKUP_BUS_PMS_CONSTRAIN_I2C_W::new(self)
     }
     #[doc = "Bits 30:31 - backup_bus_pms_constrain_uart1"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_uart1(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_UART1_W<30> {
         BACKUP_BUS_PMS_CONSTRAIN_UART1_W::new(self)
     }
@@ -251,11 +264,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_1 to value 0xcf0f_ffff"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xcf0f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xcf0f_ffff;
 }

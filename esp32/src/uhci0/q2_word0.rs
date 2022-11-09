@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the content of short packet's first dword"]
     #[inline(always)]
+    #[must_use]
     pub fn send_q2_word0(&mut self) -> SEND_Q2_WORD0_W<0> {
         SEND_Q2_WORD0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for Q2_WORD0_SPEC {
 #[doc = "`write(|w| ..)` method takes [q2_word0::W](W) writer structure"]
 impl crate::Writable for Q2_WORD0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Q2_WORD0 to value 0"]
 impl crate::Resettable for Q2_WORD0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

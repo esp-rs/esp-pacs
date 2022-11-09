@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<2> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<3> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 4 - reset spi dma ahb master fifo pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<4> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 5 - reset spi dma ahb master."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<5> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<6> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<7> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 8 - when the link is empty jump to next automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<8> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<9> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<10> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<11> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<12> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<14> {
         DMA_RX_STOP_W::new(self)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<15> {
         DMA_TX_STOP_W::new(self)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<16> {
         DMA_CONTINUE_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for DMA_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_conf::W](W) writer structure"]
 impl crate::Writable for DMA_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_CONF to value 0x0200"]
 impl crate::Resettable for DMA_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn slv_rdbuf_dbitlen(&self) -> SLV_RDBUF_DBITLEN_R {
-        SLV_RDBUF_DBITLEN_R::new((self.bits & 0x00ff_ffff) as u32)
+        SLV_RDBUF_DBITLEN_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for read-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rdbuf_dbitlen(&mut self) -> SLV_RDBUF_DBITLEN_W<0> {
         SLV_RDBUF_DBITLEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SLV_RDBUF_DLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [slv_rdbuf_dlen::W](W) writer structure"]
 impl crate::Writable for SLV_RDBUF_DLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLV_RDBUF_DLEN to value 0"]
 impl crate::Resettable for SLV_RDBUF_DLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

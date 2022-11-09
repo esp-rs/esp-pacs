@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:17 - Stores the second part of SPI_PAD_CONF."]
     #[inline(always)]
     pub fn spi_pad_conf_2(&self) -> SPI_PAD_CONF_2_R {
-        SPI_PAD_CONF_2_R::new((self.bits & 0x0003_ffff) as u32)
+        SPI_PAD_CONF_2_R::new(self.bits & 0x0003_ffff)
     }
     #[doc = "Bits 18:31 - Stores the zeroth part of the zeroth part of system data."]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for RD_MAC_SPI_SYS_3_SPEC {
 }
 #[doc = "`reset()` method sets RD_MAC_SPI_SYS_3 to value 0"]
 impl crate::Resettable for RD_MAC_SPI_SYS_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

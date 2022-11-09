@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
+    #[must_use]
     pub fn blk3_din7(&mut self) -> BLK3_DIN7_W<0> {
         BLK3_DIN7_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BLK3_WDATA7_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk3_wdata7::W](W) writer structure"]
 impl crate::Writable for BLK3_WDATA7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK3_WDATA7 to value 0"]
 impl crate::Resettable for BLK3_WDATA7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

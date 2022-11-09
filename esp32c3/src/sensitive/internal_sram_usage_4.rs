@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - internal_sram_usage_log_sram"]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_usage_log_sram(&mut self) -> INTERNAL_SRAM_USAGE_LOG_SRAM_W<0> {
         INTERNAL_SRAM_USAGE_LOG_SRAM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for INTERNAL_SRAM_USAGE_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [internal_sram_usage_4::W](W) writer structure"]
 impl crate::Writable for INTERNAL_SRAM_USAGE_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERNAL_SRAM_USAGE_4 to value 0"]
 impl crate::Resettable for INTERNAL_SRAM_USAGE_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

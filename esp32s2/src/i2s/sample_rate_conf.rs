@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Bit clock configuration bits in transmitter mode."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_bck_div_num(&mut self) -> TX_BCK_DIV_NUM_W<0> {
         TX_BCK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 6:11 - Bit clock configuration bits in receiver mode."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bck_div_num(&mut self) -> RX_BCK_DIV_NUM_W<6> {
         RX_BCK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 12:17 - Set the bits to configure bit length of I2S transmitter channel, the value of which can only be 8, 16, 24 and 32."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<12> {
         TX_BITS_MOD_W::new(self)
     }
     #[doc = "Bits 18:23 - Set the bits to configure bit length of I2S receiver channel, the value of which can only be 8, 16, 24 and 32."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bits_mod(&mut self) -> RX_BITS_MOD_W<18> {
         RX_BITS_MOD_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SAMPLE_RATE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sample_rate_conf::W](W) writer structure"]
 impl crate::Writable for SAMPLE_RATE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAMPLE_RATE_CONF to value 0x0041_0186"]
 impl crate::Resettable for SAMPLE_RATE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0041_0186
-    }
+    const RESET_VALUE: Self::Ux = 0x0041_0186;
 }

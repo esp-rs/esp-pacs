@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
+    #[must_use]
     pub fn endian(&mut self) -> ENDIAN_W<0> {
         ENDIAN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for ENDIAN_SPEC {
 #[doc = "`write(|w| ..)` method takes [endian::W](W) writer structure"]
 impl crate::Writable for ENDIAN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ENDIAN to value 0"]
 impl crate::Resettable for ENDIAN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

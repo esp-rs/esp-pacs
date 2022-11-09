@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
+    #[must_use]
     pub fn gen2_cfg_upmethod(&mut self) -> GEN2_CFG_UPMETHOD_W<0> {
         GEN2_CFG_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
+    #[must_use]
     pub fn gen2_t0_sel(&mut self) -> GEN2_T0_SEL_W<4> {
         GEN2_T0_SEL_W::new(self)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
+    #[must_use]
     pub fn gen2_t1_sel(&mut self) -> GEN2_T1_SEL_W<7> {
         GEN2_T1_SEL_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for GEN2_CFG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen2_cfg0::W](W) writer structure"]
 impl crate::Writable for GEN2_CFG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN2_CFG0 to value 0"]
 impl crate::Resettable for GEN2_CFG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

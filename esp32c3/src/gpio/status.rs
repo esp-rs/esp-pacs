@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:25 - GPIO interrupt status register for GPIO0-25"]
     #[inline(always)]
     pub fn interrupt(&self) -> INTERRUPT_R {
-        INTERRUPT_R::new((self.bits & 0x03ff_ffff) as u32)
+        INTERRUPT_R::new(self.bits & 0x03ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:25 - GPIO interrupt status register for GPIO0-25"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt(&mut self) -> INTERRUPT_W<0> {
         INTERRUPT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [status::W](W) writer structure"]
 impl crate::Writable for STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STATUS to value 0"]
 impl crate::Resettable for STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

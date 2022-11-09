@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<0> {
         CACHE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<1> {
         CACHE_USR_CMD_4BYTE_W::new(self)
     }
     #[doc = "Bit 2 - For SPI0 cache read flash for user define command 1: enable 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<2> {
         CACHE_FLASH_USR_CMD_W::new(self)
     }
     #[doc = "Bit 3 - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W<3> {
         CACHE_FLASH_PES_EN_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for CACHE_FCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_fctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_FCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_FCTRL to value 0"]
 impl crate::Resettable for CACHE_FCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

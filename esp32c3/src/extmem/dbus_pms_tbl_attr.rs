@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_pms_sct1_attr(&mut self) -> DBUS_PMS_SCT1_ATTR_W<0> {
         DBUS_PMS_SCT1_ATTR_W::new(self)
     }
     #[doc = "Bits 2:3 - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_pms_sct2_attr(&mut self) -> DBUS_PMS_SCT2_ATTR_W<2> {
         DBUS_PMS_SCT2_ATTR_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for DBUS_PMS_TBL_ATTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbus_pms_tbl_attr::W](W) writer structure"]
 impl crate::Writable for DBUS_PMS_TBL_ATTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBUS_PMS_TBL_ATTR to value 0x0f"]
 impl crate::Resettable for DBUS_PMS_TBL_ATTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

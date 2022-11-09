@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
+    #[must_use]
     pub fn time_update(&mut self) -> TIME_UPDATE_W<31> {
         TIME_UPDATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TIME_UPDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [time_update::W](W) writer structure"]
 impl crate::Writable for TIME_UPDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIME_UPDATE to value 0"]
 impl crate::Resettable for TIME_UPDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

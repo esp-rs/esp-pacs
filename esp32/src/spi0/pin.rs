@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: spi_cs0 signal is from/to CS0 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn cs0_dis(&mut self) -> CS0_DIS_W<0> {
         CS0_DIS_W::new(self)
     }
     #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: spi_cs1 signal is from/to CS1 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn cs1_dis(&mut self) -> CS1_DIS_W<1> {
         CS1_DIS_W::new(self)
     }
     #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: spi_cs2 signal is from/to CS2 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn cs2_dis(&mut self) -> CS2_DIS_W<2> {
         CS2_DIS_W::new(self)
     }
     #[doc = "Bit 5 - 1: spi clk out disable 0: spi clk out enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ck_dis(&mut self) -> CK_DIS_W<5> {
         CK_DIS_W::new(self)
     }
     #[doc = "Bits 6:8 - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
     #[inline(always)]
+    #[must_use]
     pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<6> {
         MASTER_CS_POL_W::new(self)
     }
     #[doc = "Bits 11:13 - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
     #[inline(always)]
+    #[must_use]
     pub fn master_ck_sel(&mut self) -> MASTER_CK_SEL_W<11> {
         MASTER_CK_SEL_W::new(self)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
+    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<29> {
         CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 30 - spi cs line keep low when the bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<30> {
         CS_KEEP_ACTIVE_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for PIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN to value 0x06"]
 impl crate::Resettable for PIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x06
-    }
+    const RESET_VALUE: Self::Ux = 0x06;
 }

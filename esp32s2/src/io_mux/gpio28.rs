@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<0> {
         MCU_OE_W::new(self)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<1> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bit 2 - Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<2> {
         MCU_WPD_W::new(self)
     }
     #[doc = "Bit 3 - Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<3> {
         MCU_WPU_W::new(self)
     }
     #[doc = "Bit 4 - Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<4> {
         MCU_IE_W::new(self)
     }
     #[doc = "Bit 7 - Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<7> {
         FUN_WPD_W::new(self)
     }
     #[doc = "Bit 8 - Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<8> {
         FUN_WPU_W::new(self)
     }
     #[doc = "Bit 9 - Input enable of the pin. 1: Input enabled. 0: Input disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<9> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<10> {
         FUN_DRV_W::new(self)
     }
     #[doc = "Bits 12:14 - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc."]
     #[inline(always)]
+    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<12> {
         MCU_SEL_W::new(self)
     }
     #[doc = "Bit 15 - Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn filter_en(&mut self) -> FILTER_EN_W<15> {
         FILTER_EN_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for GPIO28_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio28::W](W) writer structure"]
 impl crate::Writable for GPIO28_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO28 to value 0x0b00"]
 impl crate::Resettable for GPIO28_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0b00
-    }
+    const RESET_VALUE: Self::Ux = 0x0b00;
 }

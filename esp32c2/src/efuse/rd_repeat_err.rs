@@ -131,8 +131,5 @@ impl crate::Readable for RD_REPEAT_ERR_SPEC {
 }
 #[doc = "`reset()` method sets RD_REPEAT_ERR to value 0"]
 impl crate::Resettable for RD_REPEAT_ERR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

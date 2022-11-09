@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - the key of super wdt"]
     #[inline(always)]
+    #[must_use]
     pub fn swd_wkey(&mut self) -> SWD_WKEY_W<0> {
         SWD_WKEY_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SWD_WPROTECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [swd_wprotect::W](W) writer structure"]
 impl crate::Writable for SWD_WPROTECT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWD_WPROTECT to value 0"]
 impl crate::Resettable for SWD_WPROTECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

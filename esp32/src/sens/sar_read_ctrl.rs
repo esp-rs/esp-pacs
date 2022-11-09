@@ -106,36 +106,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<0> {
         SAR1_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 8:15 - sample cycles for SAR ADC1"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_sample_cycle(&mut self) -> SAR1_SAMPLE_CYCLE_W<8> {
         SAR1_SAMPLE_CYCLE_W::new(self)
     }
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_sample_bit(&mut self) -> SAR1_SAMPLE_BIT_W<16> {
         SAR1_SAMPLE_BIT_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<18> {
         SAR1_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<19> {
         SAR1_SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bit 27 - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<27> {
         SAR1_DIG_FORCE_W::new(self)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<28> {
         SAR1_DATA_INV_W::new(self)
     }
@@ -158,11 +165,10 @@ impl crate::Readable for SAR_READ_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_read_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_READ_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_READ_CTRL to value 0x0007_0902"]
 impl crate::Resettable for SAR_READ_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0007_0902
-    }
+    const RESET_VALUE: Self::Ux = 0x0007_0902;
 }

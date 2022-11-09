@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:18 - This register stores the current duty of output signal on channel %s."]
     #[inline(always)]
     pub fn duty_r(&self) -> DUTY_R_R {
-        DUTY_R_R::new((self.bits & 0x0007_ffff) as u32)
+        DUTY_R_R::new(self.bits & 0x0007_ffff)
     }
 }
 #[doc = "Current duty cycle for channel %s\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_duty_r](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for CH_DUTY_R_SPEC {
 }
 #[doc = "`reset()` method sets CH%s_DUTY_R to value 0"]
 impl crate::Resettable for CH_DUTY_R_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

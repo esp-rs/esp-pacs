@@ -33,8 +33,5 @@ impl crate::Readable for ECC_ERR_ADDR_SPEC {
 }
 #[doc = "`reset()` method sets ECC_ERR_ADDR to value 0"]
 impl crate::Resettable for ECC_ERR_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch0(&mut self) -> INTR_MODE_CH0_W<0> {
         INTR_MODE_CH0_W::new(self)
     }
     #[doc = "Bits 3:5 - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch1(&mut self) -> INTR_MODE_CH1_W<3> {
         INTR_MODE_CH1_W::new(self)
     }
     #[doc = "Bits 6:8 - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch2(&mut self) -> INTR_MODE_CH2_W<6> {
         INTR_MODE_CH2_W::new(self)
     }
     #[doc = "Bits 9:11 - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch3(&mut self) -> INTR_MODE_CH3_W<9> {
         INTR_MODE_CH3_W::new(self)
     }
     #[doc = "Bits 12:14 - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch4(&mut self) -> INTR_MODE_CH4_W<12> {
         INTR_MODE_CH4_W::new(self)
     }
     #[doc = "Bits 15:17 - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch5(&mut self) -> INTR_MODE_CH5_W<15> {
         INTR_MODE_CH5_W::new(self)
     }
     #[doc = "Bits 18:20 - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch6(&mut self) -> INTR_MODE_CH6_W<18> {
         INTR_MODE_CH6_W::new(self)
     }
     #[doc = "Bits 21:23 - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn intr_mode_ch7(&mut self) -> INTR_MODE_CH7_W<21> {
         INTR_MODE_CH7_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for INTR_RCGN_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr_rcgn::W](W) writer structure"]
 impl crate::Writable for INTR_RCGN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTR_RCGN to value 0"]
 impl crate::Resettable for INTR_RCGN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

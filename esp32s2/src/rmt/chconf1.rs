@@ -145,71 +145,85 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to start sending data on CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<0> {
         TX_START_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_en(&mut self) -> RX_EN_W<1> {
         RX_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<2> {
         MEM_WR_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset read ram address for CHANNEL%s by accessing transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<3> {
         MEM_RD_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<4> {
         APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 5 - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: Transmitter is using the ram."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_owner(&mut self) -> MEM_OWNER_W<5> {
         MEM_OWNER_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<6> {
         TX_CONTI_MODE_W::new(self)
     }
     #[doc = "Bit 7 - This is the receive filter's enable bit for CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<7> {
         RX_FILTER_EN_W::new(self)
     }
     #[doc = "Bits 8:15 - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<8> {
         RX_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable memory loop read mode when carrier modulation is enabled for channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn chk_rx_carrier_en(&mut self) -> CHK_RX_CARRIER_EN_W<16> {
         CHK_RX_CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 17 - This bit is used to select the base clock for CHANNEL%s. 1'h1: clk_apb 1'h0:clk_ref"]
     #[inline(always)]
+    #[must_use]
     pub fn ref_always_on(&mut self) -> REF_ALWAYS_ON_W<17> {
         REF_ALWAYS_ON_W::new(self)
     }
     #[doc = "Bit 18 - This bit configures the level of output signal in CHANNEL%s when the latter is in IDLE state."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<18> {
         IDLE_OUT_LV_W::new(self)
     }
     #[doc = "Bit 19 - This is the output enable-control bit for CHANNEL%s in IDLE state."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<19> {
         IDLE_OUT_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to stop the transmitter of CHANNEL%s sending data out."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_stop(&mut self) -> TX_STOP_W<20> {
         TX_STOP_W::new(self)
     }
@@ -232,11 +246,10 @@ impl crate::Readable for CHCONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [chconf1::W](W) writer structure"]
 impl crate::Writable for CHCONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%sCONF1 to value 0x0f20"]
 impl crate::Resettable for CHCONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f20
-    }
+    const RESET_VALUE: Self::Ux = 0x0f20;
 }

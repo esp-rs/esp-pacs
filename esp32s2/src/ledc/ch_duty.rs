@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:18 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]
     pub fn duty(&self) -> DUTY_R {
-        DUTY_R::new((self.bits & 0x0007_ffff) as u32)
+        DUTY_R::new(self.bits & 0x0007_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:18 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]
+    #[must_use]
     pub fn duty(&mut self) -> DUTY_W<0> {
         DUTY_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CH_DUTY_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_duty::W](W) writer structure"]
 impl crate::Writable for CH_DUTY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_DUTY to value 0"]
 impl crate::Resettable for CH_DUTY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

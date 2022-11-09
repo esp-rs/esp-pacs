@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<0> {
         CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<1> {
         CHECK_SEQ_EN_W::new(self)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn crc_disable(&mut self) -> CRC_DISABLE_W<2> {
         CRC_DISABLE_W::new(self)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn save_head(&mut self) -> SAVE_HEAD_W<3> {
         SAVE_HEAD_W::new(self)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<4> {
         TX_CHECK_SUM_RE_W::new(self)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<5> {
         TX_ACK_NUM_RE_W::new(self)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<7> {
         WAIT_SW_START_W::new(self)
     }
     #[doc = "Bit 8 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn sw_start(&mut self) -> SW_START_W<8> {
         SW_START_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0x33"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x33
-    }
+    const RESET_VALUE: Self::Ux = 0x33;
 }

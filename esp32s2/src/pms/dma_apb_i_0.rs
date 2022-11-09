@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks internal DMA permission control registers."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apb_i_lock(&mut self) -> DMA_APB_I_LOCK_W<0> {
         DMA_APB_I_LOCK_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DMA_APB_I_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_apb_i_0::W](W) writer structure"]
 impl crate::Writable for DMA_APB_I_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_APB_I_0 to value 0"]
 impl crate::Resettable for DMA_APB_I_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

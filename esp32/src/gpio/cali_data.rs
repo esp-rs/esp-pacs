@@ -23,7 +23,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn cali_value_sync2(&self) -> CALI_VALUE_SYNC2_R {
-        CALI_VALUE_SYNC2_R::new((self.bits & 0x000f_ffff) as u32)
+        CALI_VALUE_SYNC2_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
@@ -47,8 +47,5 @@ impl crate::Readable for CALI_DATA_SPEC {
 }
 #[doc = "`reset()` method sets cali_data to value 0"]
 impl crate::Resettable for CALI_DATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

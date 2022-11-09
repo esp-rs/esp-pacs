@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
+    #[must_use]
     pub fn iomux_reset(&mut self) -> IOMUX_RESET_W<30> {
         IOMUX_RESET_W::new(self)
     }
     #[doc = "Bit 31 - IO MUX clock gate enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W<31> {
         IOMUX_CLK_GATE_EN_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SAR_IO_MUX_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_io_mux_conf::W](W) writer structure"]
 impl crate::Writable for SAR_IO_MUX_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_IO_MUX_CONF to value 0"]
 impl crate::Resettable for SAR_IO_MUX_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

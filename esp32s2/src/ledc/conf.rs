@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<0> {
         APB_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 31 - This bit is used to control clock. 1: Force clock on for register. 0: Support clock only when application writes registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF to value 0"]
 impl crate::Resettable for CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -28,11 +28,13 @@ pub type DBUS_ACS_CNT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - The bit is used to clear ibus counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_acs_cnt_clr(&mut self) -> IBUS_ACS_CNT_CLR_W<0> {
         IBUS_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear dbus counter."]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_acs_cnt_clr(&mut self) -> DBUS_ACS_CNT_CLR_W<1> {
         DBUS_ACS_CNT_CLR_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for CACHE_ACS_CNT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_acs_cnt_clr::W](W) writer structure"]
 impl crate::Writable for CACHE_ACS_CNT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_ACS_CNT_CLR to value 0"]
 impl crate::Resettable for CACHE_ACS_CNT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

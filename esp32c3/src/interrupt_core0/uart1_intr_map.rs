@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_uart1_intr_map"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_intr_map(&mut self) -> UART1_INTR_MAP_W<0> {
         UART1_INTR_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for UART1_INTR_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart1_intr_map::W](W) writer structure"]
 impl crate::Writable for UART1_INTR_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART1_INTR_MAP to value 0"]
 impl crate::Resettable for UART1_INTR_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

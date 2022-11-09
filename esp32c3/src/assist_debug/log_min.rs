@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - reg_log_min"]
     #[inline(always)]
+    #[must_use]
     pub fn log_min(&mut self) -> LOG_MIN_W<0> {
         LOG_MIN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for LOG_MIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [log_min::W](W) writer structure"]
 impl crate::Writable for LOG_MIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOG_MIN to value 0"]
 impl crate::Resettable for LOG_MIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

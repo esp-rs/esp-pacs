@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn dvbuspulse(&mut self) -> DVBUSPULSE_W<0> {
         DVBUSPULSE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DVBUSPULSE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dvbuspulse::W](W) writer structure"]
 impl crate::Writable for DVBUSPULSE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DVBUSPULSE to value 0x05b8"]
 impl crate::Resettable for DVBUSPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05b8
-    }
+    const RESET_VALUE: Self::Ux = 0x05b8;
 }

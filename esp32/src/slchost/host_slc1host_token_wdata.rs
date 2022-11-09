@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token0_wd(&mut self) -> HOST_SLC1HOST_TOKEN0_WD_W<0> {
         HOST_SLC1HOST_TOKEN0_WD_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_token1_wd(&mut self) -> HOST_SLC1HOST_TOKEN1_WD_W<16> {
         HOST_SLC1HOST_TOKEN1_WD_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for HOST_SLC1HOST_TOKEN_WDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slc1host_token_wdata::W](W) writer structure"]
 impl crate::Writable for HOST_SLC1HOST_TOKEN_WDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLC1HOST_TOKEN_WDATA to value 0"]
 impl crate::Resettable for HOST_SLC1HOST_TOKEN_WDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

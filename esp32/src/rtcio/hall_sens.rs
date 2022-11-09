@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
+    #[must_use]
     pub fn hall_phase(&mut self) -> HALL_PHASE_W<30> {
         HALL_PHASE_W::new(self)
     }
     #[doc = "Bit 31 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_hall(&mut self) -> XPD_HALL_W<31> {
         XPD_HALL_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for HALL_SENS_SPEC {
 #[doc = "`write(|w| ..)` method takes [hall_sens::W](W) writer structure"]
 impl crate::Writable for HALL_SENS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HALL_SENS to value 0"]
 impl crate::Resettable for HALL_SENS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

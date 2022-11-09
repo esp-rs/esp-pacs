@@ -54,11 +54,10 @@ impl crate::Readable for ACK_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ack_num::W](W) writer structure"]
 impl crate::Writable for ACK_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ACK_NUM to value 0"]
 impl crate::Resettable for ACK_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

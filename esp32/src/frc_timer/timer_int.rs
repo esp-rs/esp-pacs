@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn clr(&mut self) -> CLR_W<0> {
         CLR_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TIMER_INT_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_int::W](W) writer structure"]
 impl crate::Writable for TIMER_INT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER_INT to value 0"]
 impl crate::Resettable for TIMER_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - Number of clock cycles to wait before generating a stop condition."]
     #[inline(always)]
     pub fn scl_stop_period(&self) -> SCL_STOP_PERIOD_R {
-        SCL_STOP_PERIOD_R::new((self.bits & 0x000f_ffff) as u32)
+        SCL_STOP_PERIOD_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - Number of clock cycles to wait before generating a stop condition."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_stop_period(&mut self) -> SCL_STOP_PERIOD_W<0> {
         SCL_STOP_PERIOD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_STOP_PERIOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_stop_period::W](W) writer structure"]
 impl crate::Writable for SCL_STOP_PERIOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_STOP_PERIOD to value 0x08"]
 impl crate::Resettable for SCL_STOP_PERIOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

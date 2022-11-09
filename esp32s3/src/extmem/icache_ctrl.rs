@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<0> {
         ICACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_way_mode(&mut self) -> ICACHE_WAY_MODE_W<1> {
         ICACHE_WAY_MODE_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_size_mode(&mut self) -> ICACHE_SIZE_MODE_W<2> {
         ICACHE_SIZE_MODE_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
+    #[must_use]
     pub fn icache_blocksize_mode(&mut self) -> ICACHE_BLOCKSIZE_MODE_W<3> {
         ICACHE_BLOCKSIZE_MODE_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for ICACHE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_ctrl::W](W) writer structure"]
 impl crate::Writable for ICACHE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_CTRL to value 0"]
 impl crate::Resettable for ICACHE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

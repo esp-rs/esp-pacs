@@ -199,81 +199,97 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The output data bit 0 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<0> {
         DOUT0_MODE_W::new(self)
     }
     #[doc = "Bits 2:3 - The output data bit 2 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<2> {
         DOUT1_MODE_W::new(self)
     }
     #[doc = "Bits 4:5 - The output data bit 4 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<4> {
         DOUT2_MODE_W::new(self)
     }
     #[doc = "Bits 6:7 - The output data bit 6 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<6> {
         DOUT3_MODE_W::new(self)
     }
     #[doc = "Bits 8:9 - The output data bit 8 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<8> {
         DOUT4_MODE_W::new(self)
     }
     #[doc = "Bits 10:11 - The output data bit 10 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<10> {
         DOUT5_MODE_W::new(self)
     }
     #[doc = "Bits 12:13 - The output data bit 12 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<12> {
         DOUT6_MODE_W::new(self)
     }
     #[doc = "Bits 14:15 - The output data bit 14 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<14> {
         DOUT7_MODE_W::new(self)
     }
     #[doc = "Bits 16:17 - The output data bit 16 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout8_mode(&mut self) -> DOUT8_MODE_W<16> {
         DOUT8_MODE_W::new(self)
     }
     #[doc = "Bits 18:19 - The output data bit 18 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout9_mode(&mut self) -> DOUT9_MODE_W<18> {
         DOUT9_MODE_W::new(self)
     }
     #[doc = "Bits 20:21 - The output data bit 20 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout10_mode(&mut self) -> DOUT10_MODE_W<20> {
         DOUT10_MODE_W::new(self)
     }
     #[doc = "Bits 22:23 - The output data bit 22 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout11_mode(&mut self) -> DOUT11_MODE_W<22> {
         DOUT11_MODE_W::new(self)
     }
     #[doc = "Bits 24:25 - The output data bit 24 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout12_mode(&mut self) -> DOUT12_MODE_W<24> {
         DOUT12_MODE_W::new(self)
     }
     #[doc = "Bits 26:27 - The output data bit 26 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout13_mode(&mut self) -> DOUT13_MODE_W<26> {
         DOUT13_MODE_W::new(self)
     }
     #[doc = "Bits 28:29 - The output data bit 28 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout14_mode(&mut self) -> DOUT14_MODE_W<28> {
         DOUT14_MODE_W::new(self)
     }
     #[doc = "Bits 30:31 - The output data bit 30 is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dout15_mode(&mut self) -> DOUT15_MODE_W<30> {
         DOUT15_MODE_W::new(self)
     }
@@ -296,11 +312,10 @@ impl crate::Readable for LCD_DATA_DOUT_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_data_dout_mode::W](W) writer structure"]
 impl crate::Writable for LCD_DATA_DOUT_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_DATA_DOUT_MODE to value 0"]
 impl crate::Resettable for LCD_DATA_DOUT_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_enable(&mut self) -> DCACHE_ENABLE_W<0> {
         DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_size_mode(&mut self) -> DCACHE_SIZE_MODE_W<2> {
         DCACHE_SIZE_MODE_W::new(self)
     }
     #[doc = "Bits 3:4 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_blocksize_mode(&mut self) -> DCACHE_BLOCKSIZE_MODE_W<3> {
         DCACHE_BLOCKSIZE_MODE_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for DCACHE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_ctrl::W](W) writer structure"]
 impl crate::Writable for DCACHE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_CTRL to value 0"]
 impl crate::Resettable for DCACHE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

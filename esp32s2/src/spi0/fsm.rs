@@ -50,12 +50,13 @@ impl R {
     #[doc = "Bits 12:31 - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
     #[inline(always)]
     pub fn mst_dma_rd_bytelen(&self) -> MST_DMA_RD_BYTELEN_R {
-        MST_DMA_RD_BYTELEN_R::new(((self.bits >> 12) & 0x000f_ffff) as u32)
+        MST_DMA_RD_BYTELEN_R::new((self.bits >> 12) & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 12:31 - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_dma_rd_bytelen(&mut self) -> MST_DMA_RD_BYTELEN_W<12> {
         MST_DMA_RD_BYTELEN_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for FSM_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsm::W](W) writer structure"]
 impl crate::Writable for FSM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSM to value 0"]
 impl crate::Resettable for FSM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable receive interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_int_ena(&mut self) -> RX_INT_ENA_W<0> {
         RX_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to 1 to enable transmit interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_int_ena(&mut self) -> TX_INT_ENA_W<1> {
         TX_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable error warning interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn err_warn_int_ena(&mut self) -> ERR_WARN_INT_ENA_W<2> {
         ERR_WARN_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable data overrun interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn overrun_int_ena(&mut self) -> OVERRUN_INT_ENA_W<3> {
         OVERRUN_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable error passive interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn err_passive_int_ena(&mut self) -> ERR_PASSIVE_INT_ENA_W<5> {
         ERR_PASSIVE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to 1 to enable arbitration lost interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn arb_lost_int_ena(&mut self) -> ARB_LOST_INT_ENA_W<6> {
         ARB_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to 1 to enable error interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn bus_err_int_ena(&mut self) -> BUS_ERR_INT_ENA_W<7> {
         BUS_ERR_INT_ENA_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

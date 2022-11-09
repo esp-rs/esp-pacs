@@ -25,6 +25,7 @@ pub type SOFT_JTAG_CTRL_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Turn on JTAG verification."]
     #[inline(always)]
+    #[must_use]
     pub fn soft_jtag_ctrl(&mut self) -> SOFT_JTAG_CTRL_W<0> {
         SOFT_JTAG_CTRL_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SOFT_JTAG_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [soft_jtag_ctrl::W](W) writer structure"]
 impl crate::Writable for SOFT_JTAG_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SOFT_JTAG_CTRL to value 0"]
 impl crate::Resettable for SOFT_JTAG_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

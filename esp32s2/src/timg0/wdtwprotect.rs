@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - If the register contains a different value than its reset value, write protection is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<0> {
         WDT_WKEY_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for WDTWPROTECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtwprotect::W](W) writer structure"]
 impl crate::Writable for WDTWPROTECT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTWPROTECT to value 0x50d8_3aa1"]
 impl crate::Resettable for WDTWPROTECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x50d8_3aa1
-    }
+    const RESET_VALUE: Self::Ux = 0x50d8_3aa1;
 }

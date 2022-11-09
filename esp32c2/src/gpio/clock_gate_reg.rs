@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - set this bit to enable GPIO clock gate"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<0> {
         CLK_EN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CLOCK_GATE_REG_SPEC {
 #[doc = "`write(|w| ..)` method takes [clock_gate_reg::W](W) writer structure"]
 impl crate::Writable for CLOCK_GATE_REG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLOCK_GATE_REG to value 0x01"]
 impl crate::Resettable for CLOCK_GATE_REG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

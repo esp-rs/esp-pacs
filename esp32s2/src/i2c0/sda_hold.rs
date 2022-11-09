@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the interval between changing the SDA output level and the falling edge of SCL, in I2C module clock cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn time(&mut self) -> TIME_W<0> {
         TIME_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SDA_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [sda_hold::W](W) writer structure"]
 impl crate::Writable for SDA_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDA_HOLD to value 0"]
 impl crate::Resettable for SDA_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

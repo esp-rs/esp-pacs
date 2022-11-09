@@ -225,6 +225,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Core0 access usb_device permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_device(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_DEVICE_W<0> {
@@ -232,6 +233,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - Core0 access usb_wrap permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_wrap(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_WRAP_W<2> {
@@ -239,6 +241,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - Core0 access crypto_peri permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_peri(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_PERI_W<4> {
@@ -246,6 +249,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - Core0 access crypto_dma permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_dma(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_DMA_W<6> {
@@ -253,6 +257,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - Core0 access apb_adc permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_apb_adc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_ADC_W<8> {
@@ -260,6 +265,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - Core0 access lcd_cam permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_lcd_cam(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LCD_CAM_W<10> {
@@ -267,6 +273,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - Core0 access bt_pwr permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_bt_pwr(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_PWR_W<12> {
@@ -274,6 +281,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - Core0 access usb permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_W<14> {
@@ -281,6 +289,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - Core0 access system permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_system(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTEM_W<16> {
@@ -288,6 +297,7 @@ impl W {
     }
     #[doc = "Bits 18:19 - Core0 access sensitive permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_sensitive(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SENSITIVE_W<18> {
@@ -295,6 +305,7 @@ impl W {
     }
     #[doc = "Bits 20:21 - Core0 access interrupt permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_interrupt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_INTERRUPT_W<20> {
@@ -302,6 +313,7 @@ impl W {
     }
     #[doc = "Bits 22:23 - Core0 access dma_copy permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dma_copy(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DMA_COPY_W<22> {
@@ -309,6 +321,7 @@ impl W {
     }
     #[doc = "Bits 24:25 - Core0 access cache_config permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_cache_config(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CACHE_CONFIG_W<24> {
@@ -316,6 +329,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - Core0 access ad permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_ad(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_AD_W<26> {
@@ -323,6 +337,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - Core0 access dio permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dio(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DIO_W<28> {
@@ -330,6 +345,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - Core0 access world_controller permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_world_controller(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WORLD_CONTROLLER_W<30> {
@@ -354,11 +370,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_4 to value 0xffff_ffff"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

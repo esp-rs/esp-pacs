@@ -163,66 +163,79 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn d_xfercompl2(&mut self) -> D_XFERCOMPL2_W<0> {
         D_XFERCOMPL2_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn d_epdisbld2(&mut self) -> D_EPDISBLD2_W<1> {
         D_EPDISBLD2_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn d_ahberr2(&mut self) -> D_AHBERR2_W<2> {
         D_AHBERR2_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn d_timeout2(&mut self) -> D_TIMEOUT2_W<3> {
         D_TIMEOUT2_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn d_intkntxfemp2(&mut self) -> D_INTKNTXFEMP2_W<4> {
         D_INTKNTXFEMP2_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn d_intknepmis2(&mut self) -> D_INTKNEPMIS2_W<5> {
         D_INTKNEPMIS2_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn d_inepnakeff2(&mut self) -> D_INEPNAKEFF2_W<6> {
         D_INEPNAKEFF2_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn d_txfifoundrn2(&mut self) -> D_TXFIFOUNDRN2_W<8> {
         D_TXFIFOUNDRN2_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn d_bnaintr2(&mut self) -> D_BNAINTR2_W<9> {
         D_BNAINTR2_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn d_pktdrpsts2(&mut self) -> D_PKTDRPSTS2_W<11> {
         D_PKTDRPSTS2_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn d_bbleerr2(&mut self) -> D_BBLEERR2_W<12> {
         D_BBLEERR2_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn d_nakintrpt2(&mut self) -> D_NAKINTRPT2_W<13> {
         D_NAKINTRPT2_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn d_nyetintrpt2(&mut self) -> D_NYETINTRPT2_W<14> {
         D_NYETINTRPT2_W::new(self)
     }
@@ -245,11 +258,10 @@ impl crate::Readable for DIEPINT2_SPEC {
 #[doc = "`write(|w| ..)` method takes [diepint2::W](W) writer structure"]
 impl crate::Writable for DIEPINT2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPINT2 to value 0"]
 impl crate::Resettable for DIEPINT2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

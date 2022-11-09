@@ -136,61 +136,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_rec_data_bytelen(&mut self) -> CAM_REC_DATA_BYTELEN_W<0> {
         CAM_REC_DATA_BYTELEN_W::new(self)
     }
     #[doc = "Bits 16:21 - The line number minus 1 to generate cam_hs_int."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_line_int_num(&mut self) -> CAM_LINE_INT_NUM_W<16> {
         CAM_LINE_INT_NUM_W::new(self)
     }
     #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_clk_inv(&mut self) -> CAM_CLK_INV_W<22> {
         CAM_CLK_INV_W::new(self)
     }
     #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: bypass."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<23> {
         CAM_VSYNC_FILTER_EN_W::new(self)
     }
     #[doc = "Bit 24 - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_2byte_en(&mut self) -> CAM_2BYTE_EN_W<24> {
         CAM_2BYTE_EN_W::new(self)
     }
     #[doc = "Bit 25 - CAM_DE invert enable signal, valid in high level."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_de_inv(&mut self) -> CAM_DE_INV_W<25> {
         CAM_DE_INV_W::new(self)
     }
     #[doc = "Bit 26 - CAM_HSYNC invert enable signal, valid in high level."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_hsync_inv(&mut self) -> CAM_HSYNC_INV_W<26> {
         CAM_HSYNC_INV_W::new(self)
     }
     #[doc = "Bit 27 - CAM_VSYNC invert enable signal, valid in high level."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_vsync_inv(&mut self) -> CAM_VSYNC_INV_W<27> {
         CAM_VSYNC_INV_W::new(self)
     }
     #[doc = "Bit 28 - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_vh_de_mode_en(&mut self) -> CAM_VH_DE_MODE_EN_W<28> {
         CAM_VH_DE_MODE_EN_W::new(self)
     }
     #[doc = "Bit 29 - Camera module start signal."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_start(&mut self) -> CAM_START_W<29> {
         CAM_START_W::new(self)
     }
     #[doc = "Bit 30 - Camera module reset signal."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_reset(&mut self) -> CAM_RESET_W<30> {
         CAM_RESET_W::new(self)
     }
     #[doc = "Bit 31 - Camera AFIFO reset signal."]
     #[inline(always)]
+    #[must_use]
     pub fn cam_afifo_reset(&mut self) -> CAM_AFIFO_RESET_W<31> {
         CAM_AFIFO_RESET_W::new(self)
     }
@@ -213,11 +225,10 @@ impl crate::Readable for CAM_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cam_ctrl1::W](W) writer structure"]
 impl crate::Writable for CAM_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAM_CTRL1 to value 0"]
 impl crate::Resettable for CAM_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

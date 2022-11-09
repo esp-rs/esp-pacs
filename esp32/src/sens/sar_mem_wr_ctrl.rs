@@ -62,16 +62,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_wr_addr_init(&mut self) -> MEM_WR_ADDR_INIT_W<0> {
         MEM_WR_ADDR_INIT_W::new(self)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_wr_addr_size(&mut self) -> MEM_WR_ADDR_SIZE_W<11> {
         MEM_WR_ADDR_SIZE_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_mem_wr_offst_clr(&mut self) -> RTC_MEM_WR_OFFST_CLR_W<22> {
         RTC_MEM_WR_OFFST_CLR_W::new(self)
     }
@@ -94,11 +97,10 @@ impl crate::Readable for SAR_MEM_WR_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_mem_wr_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_MEM_WR_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEM_WR_CTRL to value 0x0010_0200"]
 impl crate::Resettable for SAR_MEM_WR_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0010_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0010_0200;
 }

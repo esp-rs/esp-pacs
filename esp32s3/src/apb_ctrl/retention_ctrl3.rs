@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<4> {
         RET_DCACHE_SIZE_W::new(self)
     }
     #[doc = "Bits 13:21 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<13> {
         RET_DCACHE_VLD_SIZE_W::new(self)
     }
     #[doc = "Bits 22:30 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<22> {
         RET_DCACHE_START_POINT_W::new(self)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<31> {
         RET_DCACHE_ENABLE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for RETENTION_CTRL3_SPEC {
 #[doc = "`write(|w| ..)` method takes [retention_ctrl3::W](W) writer structure"]
 impl crate::Writable for RETENTION_CTRL3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RETENTION_CTRL3 to value 0x003f_fff0"]
 impl crate::Resettable for RETENTION_CTRL3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x003f_fff0
-    }
+    const RESET_VALUE: Self::Ux = 0x003f_fff0;
 }

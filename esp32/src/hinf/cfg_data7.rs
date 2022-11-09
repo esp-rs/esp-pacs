@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn pin_state(&mut self) -> PIN_STATE_W<0> {
         PIN_STATE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_state(&mut self) -> CHIP_STATE_W<8> {
         CHIP_STATE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_rst(&mut self) -> SDIO_RST_W<16> {
         SDIO_RST_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<17> {
         SDIO_IOREADY0_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CFG_DATA7_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_data7::W](W) writer structure"]
 impl crate::Writable for CFG_DATA7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_DATA7 to value 0x0002_0000"]
 impl crate::Resettable for CFG_DATA7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0002_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0002_0000;
 }

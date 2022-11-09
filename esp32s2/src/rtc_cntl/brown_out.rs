@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables the brown_out2 to initiate a chip reset."]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out2_ena(&mut self) -> BROWN_OUT2_ENA_W<0> {
         BROWN_OUT2_ENA_W::new(self)
     }
     #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn int_wait(&mut self) -> INT_WAIT_W<4> {
         INT_WAIT_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable PD the flash when a brown-out happens."]
     #[inline(always)]
+    #[must_use]
     pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<14> {
         CLOSE_FLASH_ENA_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable PD the RF circuits when a brown-out happens."]
     #[inline(always)]
+    #[must_use]
     pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<15> {
         PD_RF_ENA_W::new(self)
     }
     #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
+    #[must_use]
     pub fn rst_wait(&mut self) -> RST_WAIT_W<16> {
         RST_WAIT_W::new(self)
     }
     #[doc = "Bit 26 - Enables to reset brown-out."]
     #[inline(always)]
+    #[must_use]
     pub fn rst_ena(&mut self) -> RST_ENA_W<26> {
         RST_ENA_W::new(self)
     }
     #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
+    #[must_use]
     pub fn rst_sel(&mut self) -> RST_SEL_W<27> {
         RST_SEL_W::new(self)
     }
     #[doc = "Bit 29 - Clears the brown-out counter."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_clr(&mut self) -> CNT_CLR_W<29> {
         CNT_CLR_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable brown-out detection."]
     #[inline(always)]
+    #[must_use]
     pub fn ena(&mut self) -> ENA_W<30> {
         ENA_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for BROWN_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [brown_out::W](W) writer structure"]
 impl crate::Writable for BROWN_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BROWN_OUT to value 0x03ff_2ff1"]
 impl crate::Resettable for BROWN_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03ff_2ff1
-    }
+    const RESET_VALUE: Self::Ux = 0x03ff_2ff1;
 }

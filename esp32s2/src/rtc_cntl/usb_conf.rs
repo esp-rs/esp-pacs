@@ -195,86 +195,103 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_vrefh(&mut self) -> USB_VREFH_W<0> {
         USB_VREFH_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_vrefl(&mut self) -> USB_VREFL_W<2> {
         USB_VREFL_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_vref_override(&mut self) -> USB_VREF_OVERRIDE_W<4> {
         USB_VREF_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pad_pull_override(&mut self) -> USB_PAD_PULL_OVERRIDE_W<5> {
         USB_PAD_PULL_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_dp_pullup(&mut self) -> USB_DP_PULLUP_W<6> {
         USB_DP_PULLUP_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_dp_pulldown(&mut self) -> USB_DP_PULLDOWN_W<7> {
         USB_DP_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_dm_pullup(&mut self) -> USB_DM_PULLUP_W<8> {
         USB_DM_PULLUP_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_dm_pulldown(&mut self) -> USB_DM_PULLDOWN_W<9> {
         USB_DM_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pullup_value(&mut self) -> USB_PULLUP_VALUE_W<10> {
         USB_PULLUP_VALUE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pad_enable_override(&mut self) -> USB_PAD_ENABLE_OVERRIDE_W<11> {
         USB_PAD_ENABLE_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<12> {
         USB_PAD_ENABLE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_txm(&mut self) -> USB_TXM_W<13> {
         USB_TXM_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_txp(&mut self) -> USB_TXP_W<14> {
         USB_TXP_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_tx_en(&mut self) -> USB_TX_EN_W<15> {
         USB_TX_EN_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_tx_en_override(&mut self) -> USB_TX_EN_OVERRIDE_W<16> {
         USB_TX_EN_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_reset_disable(&mut self) -> USB_RESET_DISABLE_W<17> {
         USB_RESET_DISABLE_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<18> {
         IO_MUX_RESET_DISABLE_W::new(self)
     }
@@ -297,11 +314,10 @@ impl crate::Readable for USB_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_conf::W](W) writer structure"]
 impl crate::Writable for USB_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_CONF to value 0"]
 impl crate::Resettable for USB_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

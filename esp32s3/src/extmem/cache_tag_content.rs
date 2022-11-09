@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_tag_content(&mut self) -> CACHE_TAG_CONTENT_W<0> {
         CACHE_TAG_CONTENT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_TAG_CONTENT_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_tag_content::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_CONTENT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_TAG_CONTENT to value 0"]
 impl crate::Resettable for CACHE_TAG_CONTENT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

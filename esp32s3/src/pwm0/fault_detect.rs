@@ -114,31 +114,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When set, event_f0 generation is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn f0_en(&mut self) -> F0_EN_W<0> {
         F0_EN_W::new(self)
     }
     #[doc = "Bit 1 - When set, event_f1 generation is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn f1_en(&mut self) -> F1_EN_W<1> {
         F1_EN_W::new(self)
     }
     #[doc = "Bit 2 - When set, event_f2 generation is enabled"]
     #[inline(always)]
+    #[must_use]
     pub fn f2_en(&mut self) -> F2_EN_W<2> {
         F2_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
+    #[must_use]
     pub fn f0_pole(&mut self) -> F0_POLE_W<3> {
         F0_POLE_W::new(self)
     }
     #[doc = "Bit 4 - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
+    #[must_use]
     pub fn f1_pole(&mut self) -> F1_POLE_W<4> {
         F1_POLE_W::new(self)
     }
     #[doc = "Bit 5 - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
+    #[must_use]
     pub fn f2_pole(&mut self) -> F2_POLE_W<5> {
         F2_POLE_W::new(self)
     }
@@ -161,11 +167,10 @@ impl crate::Readable for FAULT_DETECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [fault_detect::W](W) writer structure"]
 impl crate::Writable for FAULT_DETECT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FAULT_DETECT to value 0"]
 impl crate::Resettable for FAULT_DETECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

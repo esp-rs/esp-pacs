@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn ti(&mut self) -> TI_W<0> {
         TI_W::new(self)
     }
     #[doc = "Bit 1 - Receive Interrupt Enable. When set with Normal Interrupt Summary Enable, Receive Interrupt is enabled. When reset, Receive Interrupt is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn ri(&mut self) -> RI_W<1> {
         RI_W::new(self)
     }
     #[doc = "Bit 2 - Fatal Bus Error Enable. When set with Abnormal Interrupt Summary Enable, the Fatal Bus Error Interrupt is enabled. When reset, Fatal Bus Error Enable Interrupt is disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn fbe(&mut self) -> FBE_W<2> {
         FBE_W::new(self)
     }
     #[doc = "Bit 4 - Descriptor Unavailable Interrupt. When set along with Abnormal Interrupt Summary Enable, the DU interrupt is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn du(&mut self) -> DU_W<4> {
         DU_W::new(self)
     }
     #[doc = "Bit 5 - Card Error summary Interrupt Enable. When set, it enables the Card Interrupt summary."]
     #[inline(always)]
+    #[must_use]
     pub fn ces(&mut self) -> CES_W<5> {
         CES_W::new(self)
     }
     #[doc = "Bit 8 - Normal Interrupt Summary Enable. When set, a normal interrupt is enabled. When reset, a normal interrupt is disabled. This bit enables the following bits: IDINTEN\\[0\\]: Transmit Interrupt; IDINTEN\\[1\\]: Receive Interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ni(&mut self) -> NI_W<8> {
         NI_W::new(self)
     }
     #[doc = "Bit 9 - Abnormal Interrupt Summary Enable. When set, an abnormal interrupt is enabled. This bit enables the following bits: IDINTEN\\[2\\]: Fatal Bus Error Interrupt; IDINTEN\\[4\\]: DU Interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ai(&mut self) -> AI_W<9> {
         AI_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for IDINTEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [idinten::W](W) writer structure"]
 impl crate::Writable for IDINTEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IDINTEN to value 0"]
 impl crate::Resettable for IDINTEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

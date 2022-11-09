@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel0 has reached reg_hpoint_lsch0\\[19:0\\]"]
     #[inline(always)]
     pub fn hpoint(&self) -> HPOINT_R {
-        HPOINT_R::new((self.bits & 0x000f_ffff) as u32)
+        HPOINT_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel0 has reached reg_hpoint_lsch0\\[19:0\\]"]
     #[inline(always)]
+    #[must_use]
     pub fn hpoint(&mut self) -> HPOINT_W<0> {
         HPOINT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for LSCH_HPOINT_SPEC {
 #[doc = "`write(|w| ..)` method takes [lsch_hpoint::W](W) writer structure"]
 impl crate::Writable for LSCH_HPOINT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LSCH%s_HPOINT to value 0"]
 impl crate::Resettable for LSCH_HPOINT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

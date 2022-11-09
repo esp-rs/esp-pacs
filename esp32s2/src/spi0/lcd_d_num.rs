@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_dqs_num(&mut self) -> D_DQS_NUM_W<0> {
         D_DQS_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_cd_num(&mut self) -> D_CD_NUM_W<2> {
         D_CD_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_de_num(&mut self) -> D_DE_NUM_W<4> {
         D_DE_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_hsync_num(&mut self) -> D_HSYNC_NUM_W<6> {
         D_HSYNC_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_vsync_num(&mut self) -> D_VSYNC_NUM_W<8> {
         D_VSYNC_NUM_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for LCD_D_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_d_num::W](W) writer structure"]
 impl crate::Writable for LCD_D_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_D_NUM to value 0"]
 impl crate::Resettable for LCD_D_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

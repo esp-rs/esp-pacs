@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for high speed channel0."]
     #[inline(always)]
     pub fn duty(&self) -> DUTY_R {
-        DUTY_R::new((self.bits & 0x01ff_ffff) as u32)
+        DUTY_R::new(self.bits & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for high speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn duty(&mut self) -> DUTY_W<0> {
         DUTY_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for HSCH_DUTY_SPEC {
 #[doc = "`write(|w| ..)` method takes [hsch_duty::W](W) writer structure"]
 impl crate::Writable for HSCH_DUTY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HSCH%s_DUTY to value 0"]
 impl crate::Resettable for HSCH_DUTY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - SHA Message block and hash result register."]
     #[inline(always)]
+    #[must_use]
     pub fn text(&mut self) -> TEXT_W<0> {
         TEXT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TEXT__SPEC {
 #[doc = "`write(|w| ..)` method takes [text_::W](W) writer structure"]
 impl crate::Writable for TEXT__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TEXT_%s to value 0"]
 impl crate::Resettable for TEXT__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

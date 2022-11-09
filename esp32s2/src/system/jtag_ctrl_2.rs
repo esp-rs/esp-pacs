@@ -25,6 +25,7 @@ pub type CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:31 - Stores the 64 to 95 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
     #[inline(always)]
+    #[must_use]
     pub fn cancel_efuse_disable_jtag_temporary_2(
         &mut self,
     ) -> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W<0> {
@@ -45,11 +46,10 @@ impl crate::RegisterSpec for JTAG_CTRL_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [jtag_ctrl_2::W](W) writer structure"]
 impl crate::Writable for JTAG_CTRL_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets JTAG_CTRL_2 to value 0"]
 impl crate::Resettable for JTAG_CTRL_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

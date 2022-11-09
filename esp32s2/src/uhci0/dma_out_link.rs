@@ -57,7 +57,7 @@ impl R {
     #[doc = "Bits 0:19 - This register is used to specify the least significant 20 bits of the first transmit descriptor's address."]
     #[inline(always)]
     pub fn outlink_addr(&self) -> OUTLINK_ADDR_R {
-        OUTLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
+        OUTLINK_ADDR_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 28 - Set this bit to stop dealing with the transmit descriptor."]
     #[inline(always)]
@@ -83,21 +83,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - This register is used to specify the least significant 20 bits of the first transmit descriptor's address."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<0> {
         OUTLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to stop dealing with the transmit descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<28> {
         OUTLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to start a new transmit descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_start(&mut self) -> OUTLINK_START_W<29> {
         OUTLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to restart the transmit descriptor from the last address."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<30> {
         OUTLINK_RESTART_W::new(self)
     }
@@ -120,11 +124,10 @@ impl crate::Readable for DMA_OUT_LINK_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_out_link::W](W) writer structure"]
 impl crate::Writable for DMA_OUT_LINK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_OUT_LINK to value 0"]
 impl crate::Resettable for DMA_OUT_LINK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

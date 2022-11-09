@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<0> {
         SCL_RST_SLV_EN_W::new(self)
     }
     #[doc = "Bits 1:5 - reg_scl_rst_slv_num"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<1> {
         SCL_RST_SLV_NUM_W::new(self)
     }
     #[doc = "Bit 6 - reg_scl_pd_en"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<6> {
         SCL_PD_EN_W::new(self)
     }
     #[doc = "Bit 7 - reg_sda_pd_en"]
     #[inline(always)]
+    #[must_use]
     pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<7> {
         SDA_PD_EN_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for SCL_SP_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_sp_conf::W](W) writer structure"]
 impl crate::Writable for SCL_SP_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_SP_CONF to value 0"]
 impl crate::Resettable for SCL_SP_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

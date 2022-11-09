@@ -33,8 +33,5 @@ impl crate::Readable for TX_CHDATA_SPEC {
 }
 #[doc = "`reset()` method sets TX_CH%sDATA to value 0"]
 impl crate::Resettable for TX_CHDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
