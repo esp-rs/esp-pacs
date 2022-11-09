@@ -99,11 +99,13 @@ impl R {
 impl W {
     #[doc = "Bits 2:3 - backup_bus_pms_constrain_usb_wrap"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_usb_wrap(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<2> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W::new(self)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_crypto_peri"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_peri(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<4> {
@@ -111,6 +113,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_crypto_dma"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_dma(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<6> {
@@ -118,16 +121,19 @@ impl W {
     }
     #[doc = "Bits 8:9 - backup_bus_pms_constrain_apb_adc"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_apb_adc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<8> {
         BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W::new(self)
     }
     #[doc = "Bits 12:13 - backup_bus_pms_constrain_bt_pwr"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_bt_pwr(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<12> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W::new(self)
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_usb_device"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_usb_device(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<14> {
@@ -152,11 +158,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_4 to value 0xf3fc"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xf3fc
-    }
+    const RESET_VALUE: Self::Ux = 0xf3fc;
 }

@@ -51,6 +51,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - core_x_iram0_dram0_dma_split_line_constrain_lock"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_dram0_dma_split_line_constrain_lock(
         &mut self,
     ) -> CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_W<0> {
@@ -75,11 +76,10 @@ impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_0::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0 to value 0"]
 impl crate::Resettable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

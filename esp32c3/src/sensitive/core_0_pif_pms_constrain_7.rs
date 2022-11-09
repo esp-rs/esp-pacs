@@ -115,6 +115,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_1_spi_2"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_spi_2(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W<0> {
@@ -122,6 +123,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_apb_ctrl"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_apb_ctrl(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W<4> {
@@ -129,6 +131,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_1_can"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_can(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W<10> {
@@ -136,6 +139,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_1_i2s1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_i2s1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W<14> {
@@ -143,6 +147,7 @@ impl W {
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_1_rwbt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_rwbt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W<22> {
@@ -150,6 +155,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_wifimac"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_wifimac(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W<26> {
@@ -157,6 +163,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_1_pwr"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_pwr(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W<28> {
@@ -181,11 +188,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_7::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_7 to value 0x3cc0_cc33"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3cc0_cc33
-    }
+    const RESET_VALUE: Self::Ux = 0x3cc0_cc33;
 }

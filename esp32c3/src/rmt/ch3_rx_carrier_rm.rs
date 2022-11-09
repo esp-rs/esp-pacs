@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - reg_carrier_low_thres_ch3."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<0> {
         CARRIER_LOW_THRES_W::new(self)
     }
     #[doc = "Bits 16:31 - reg_carrier_high_thres_ch3."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<16> {
         CARRIER_HIGH_THRES_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CH3_RX_CARRIER_RM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch3_rx_carrier_rm::W](W) writer structure"]
 impl crate::Writable for CH3_RX_CARRIER_RM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH3_RX_CARRIER_RM to value 0"]
 impl crate::Resettable for CH3_RX_CARRIER_RM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

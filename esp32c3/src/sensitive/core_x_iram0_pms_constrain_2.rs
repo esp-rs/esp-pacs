@@ -114,6 +114,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - core_x_iram0_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<0> {
@@ -121,6 +122,7 @@ impl W {
     }
     #[doc = "Bits 3:5 - core_x_iram0_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<3> {
@@ -128,6 +130,7 @@ impl W {
     }
     #[doc = "Bits 6:8 - core_x_iram0_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<6> {
@@ -135,6 +138,7 @@ impl W {
     }
     #[doc = "Bits 9:11 - core_x_iram0_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<9> {
@@ -142,6 +146,7 @@ impl W {
     }
     #[doc = "Bits 12:14 - core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<12> {
@@ -149,6 +154,7 @@ impl W {
     }
     #[doc = "Bits 18:20 - core_x_iram0_pms_constrain_rom_world_0_pms"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_rom_world_0_pms(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<18> {
@@ -173,11 +179,10 @@ impl crate::Readable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_PMS_CONSTRAIN_2 to value 0x001c_7fff"]
 impl crate::Resettable for CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x001c_7fff
-    }
+    const RESET_VALUE: Self::Ux = 0x001c_7fff;
 }

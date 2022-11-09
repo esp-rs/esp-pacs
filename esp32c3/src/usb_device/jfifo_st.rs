@@ -99,11 +99,13 @@ impl R {
 impl W {
     #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn in_fifo_reset(&mut self) -> IN_FIFO_RESET_W<8> {
         IN_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn out_fifo_reset(&mut self) -> OUT_FIFO_RESET_W<9> {
         OUT_FIFO_RESET_W::new(self)
     }
@@ -126,11 +128,10 @@ impl crate::Readable for JFIFO_ST_SPEC {
 #[doc = "`write(|w| ..)` method takes [jfifo_st::W](W) writer structure"]
 impl crate::Writable for JFIFO_ST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets JFIFO_ST to value 0x44"]
 impl crate::Resettable for JFIFO_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x44
-    }
+    const RESET_VALUE: Self::Ux = 0x44;
 }

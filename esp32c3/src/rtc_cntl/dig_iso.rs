@@ -201,91 +201,109 @@ impl R {
 impl W {
     #[doc = "Bit 7 - DIG_ISO force off"]
     #[inline(always)]
+    #[must_use]
     pub fn force_off(&mut self) -> FORCE_OFF_W<7> {
         FORCE_OFF_W::new(self)
     }
     #[doc = "Bit 8 - DIG_ISO force on"]
     #[inline(always)]
+    #[must_use]
     pub fn force_on(&mut self) -> FORCE_ON_W<8> {
         FORCE_ON_W::new(self)
     }
     #[doc = "Bit 10 - wtite only register to clear digital pad auto-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn clr_dg_pad_autohold(&mut self) -> CLR_DG_PAD_AUTOHOLD_W<10> {
         CLR_DG_PAD_AUTOHOLD_W::new(self)
     }
     #[doc = "Bit 11 - digital pad enable auto-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_autohold_en(&mut self) -> DG_PAD_AUTOHOLD_EN_W<11> {
         DG_PAD_AUTOHOLD_EN_W::new(self)
     }
     #[doc = "Bit 12 - digital pad force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_noiso(&mut self) -> DG_PAD_FORCE_NOISO_W<12> {
         DG_PAD_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 13 - digital pad force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_iso(&mut self) -> DG_PAD_FORCE_ISO_W<13> {
         DG_PAD_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 14 - digital pad force un-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_unhold(&mut self) -> DG_PAD_FORCE_UNHOLD_W<14> {
         DG_PAD_FORCE_UNHOLD_W::new(self)
     }
     #[doc = "Bit 15 - digital pad force hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_hold(&mut self) -> DG_PAD_FORCE_HOLD_W<15> {
         DG_PAD_FORCE_HOLD_W::new(self)
     }
     #[doc = "Bit 22 - bt force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_force_iso(&mut self) -> BT_FORCE_ISO_W<22> {
         BT_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 23 - bt force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_force_noiso(&mut self) -> BT_FORCE_NOISO_W<23> {
         BT_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 24 - Digital peri force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_force_iso(&mut self) -> DG_PERI_FORCE_ISO_W<24> {
         DG_PERI_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 25 - digital peri force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_force_noiso(&mut self) -> DG_PERI_FORCE_NOISO_W<25> {
         DG_PERI_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 26 - cpu force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_force_iso(&mut self) -> CPU_TOP_FORCE_ISO_W<26> {
         CPU_TOP_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 27 - cpu force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_force_noiso(&mut self) -> CPU_TOP_FORCE_NOISO_W<27> {
         CPU_TOP_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 28 - wifi force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_iso(&mut self) -> WIFI_FORCE_ISO_W<28> {
         WIFI_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 29 - wifi force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_noiso(&mut self) -> WIFI_FORCE_NOISO_W<29> {
         WIFI_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 30 - digital core force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_iso(&mut self) -> DG_WRAP_FORCE_ISO_W<30> {
         DG_WRAP_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 31 - digital core force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_noiso(&mut self) -> DG_WRAP_FORCE_NOISO_W<31> {
         DG_WRAP_FORCE_NOISO_W::new(self)
     }
@@ -308,11 +326,10 @@ impl crate::Readable for DIG_ISO_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_iso::W](W) writer structure"]
 impl crate::Writable for DIG_ISO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_ISO to value 0xaa80_5080"]
 impl crate::Resettable for DIG_ISO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xaa80_5080
-    }
+    const RESET_VALUE: Self::Ux = 0xaa80_5080;
 }

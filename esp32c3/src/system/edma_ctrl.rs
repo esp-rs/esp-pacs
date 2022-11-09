@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_edma_clk_on"]
     #[inline(always)]
+    #[must_use]
     pub fn edma_clk_on(&mut self) -> EDMA_CLK_ON_W<0> {
         EDMA_CLK_ON_W::new(self)
     }
     #[doc = "Bit 1 - reg_edma_reset"]
     #[inline(always)]
+    #[must_use]
     pub fn edma_reset(&mut self) -> EDMA_RESET_W<1> {
         EDMA_RESET_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for EDMA_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [edma_ctrl::W](W) writer structure"]
 impl crate::Writable for EDMA_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EDMA_CTRL to value 0x01"]
 impl crate::Resettable for EDMA_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

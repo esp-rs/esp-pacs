@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<0> {
         RX_IDLE_THRHD_W::new(self)
     }
     #[doc = "Bits 10:19 - This register is used to configure the duration time between transfers."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<10> {
         TX_IDLE_NUM_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for IDLE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [idle_conf::W](W) writer structure"]
 impl crate::Writable for IDLE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IDLE_CONF to value 0x0004_0100"]
 impl crate::Resettable for IDLE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0004_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0004_0100;
 }

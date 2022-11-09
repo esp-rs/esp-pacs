@@ -23,7 +23,7 @@ impl R {
     #[doc = "Bits 0:17 - This register stores the current inlink descriptor's address."]
     #[inline(always)]
     pub fn inlink_dscr_addr(&self) -> INLINK_DSCR_ADDR_R {
-        INLINK_DSCR_ADDR_R::new((self.bits & 0x0003_ffff) as u32)
+        INLINK_DSCR_ADDR_R::new(self.bits & 0x0003_ffff)
     }
     #[doc = "Bits 18:19 - reserved"]
     #[inline(always)]
@@ -47,8 +47,5 @@ impl crate::Readable for IN_STATE_CH0_SPEC {
 }
 #[doc = "`reset()` method sets IN_STATE_CH0 to value 0"]
 impl crate::Resettable for IN_STATE_CH0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

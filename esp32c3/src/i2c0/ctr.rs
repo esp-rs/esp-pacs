@@ -153,76 +153,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_sda_force_out"]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - reg_scl_force_out"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - reg_sample_scl_level"]
     #[inline(always)]
+    #[must_use]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<2> {
         SAMPLE_SCL_LEVEL_W::new(self)
     }
     #[doc = "Bit 3 - reg_rx_full_ack_level"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<3> {
         RX_FULL_ACK_LEVEL_W::new(self)
     }
     #[doc = "Bit 4 - reg_ms_mode"]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<4> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - reg_trans_start"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<5> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - reg_tx_lsb_first"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<6> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - reg_rx_lsb_first"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<7> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 8 - reg_clk_en"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<8> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 9 - reg_arbitration_en"]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<9> {
         ARBITRATION_EN_W::new(self)
     }
     #[doc = "Bit 10 - reg_fsm_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn fsm_rst(&mut self) -> FSM_RST_W<10> {
         FSM_RST_W::new(self)
     }
     #[doc = "Bit 11 - reg_conf_upgate"]
     #[inline(always)]
+    #[must_use]
     pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<11> {
         CONF_UPGATE_W::new(self)
     }
     #[doc = "Bit 12 - reg_slv_tx_auto_start_en"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<12> {
         SLV_TX_AUTO_START_EN_W::new(self)
     }
     #[doc = "Bit 13 - reg_addr_10bit_rw_check_en"]
     #[inline(always)]
+    #[must_use]
     pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<13> {
         ADDR_10BIT_RW_CHECK_EN_W::new(self)
     }
     #[doc = "Bit 14 - reg_addr_broadcasting_en"]
     #[inline(always)]
+    #[must_use]
     pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<14> {
         ADDR_BROADCASTING_EN_W::new(self)
     }
@@ -245,11 +260,10 @@ impl crate::Readable for CTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctr::W](W) writer structure"]
 impl crate::Writable for CTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTR to value 0x020b"]
 impl crate::Resettable for CTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x020b
-    }
+    const RESET_VALUE: Self::Ux = 0x020b;
 }

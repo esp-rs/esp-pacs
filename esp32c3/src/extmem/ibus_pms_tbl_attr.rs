@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_pms_sct1_attr(&mut self) -> IBUS_PMS_SCT1_ATTR_W<0> {
         IBUS_PMS_SCT1_ATTR_W::new(self)
     }
     #[doc = "Bits 4:7 - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_pms_sct2_attr(&mut self) -> IBUS_PMS_SCT2_ATTR_W<4> {
         IBUS_PMS_SCT2_ATTR_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for IBUS_PMS_TBL_ATTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ibus_pms_tbl_attr::W](W) writer structure"]
 impl crate::Writable for IBUS_PMS_TBL_ATTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IBUS_PMS_TBL_ATTR to value 0xff"]
 impl crate::Resettable for IBUS_PMS_TBL_ATTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

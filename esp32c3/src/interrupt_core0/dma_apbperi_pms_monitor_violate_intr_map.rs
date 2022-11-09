@@ -51,6 +51,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_dma_apbperi_pms_monitor_violate_intr_map"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_pms_monitor_violate_intr_map(
         &mut self,
     ) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_W<0> {
@@ -75,11 +76,10 @@ impl crate::Readable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_apbperi_pms_monitor_violate_intr_map::W](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP to value 0"]
 impl crate::Resettable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

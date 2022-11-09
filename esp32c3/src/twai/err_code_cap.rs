@@ -47,8 +47,5 @@ impl crate::Readable for ERR_CODE_CAP_SPEC {
 }
 #[doc = "`reset()` method sets ERR_CODE_CAP to value 0"]
 impl crate::Resettable for ERR_CODE_CAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

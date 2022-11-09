@@ -33,8 +33,5 @@ impl crate::Readable for NEGPULSE_SPEC {
 }
 #[doc = "`reset()` method sets NEGPULSE to value 0x0fff"]
 impl crate::Resettable for NEGPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0fff
-    }
+    const RESET_VALUE: Self::Ux = 0x0fff;
 }

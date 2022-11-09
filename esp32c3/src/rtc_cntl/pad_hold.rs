@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - the hold configure of rtc gpio0"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<0> {
         GPIO_PIN0_HOLD_W::new(self)
     }
     #[doc = "Bit 1 - the hold configure of rtc gpio1"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<1> {
         GPIO_PIN1_HOLD_W::new(self)
     }
     #[doc = "Bit 2 - the hold configure of rtc gpio2"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<2> {
         GPIO_PIN2_HOLD_W::new(self)
     }
     #[doc = "Bit 3 - the hold configure of rtc gpio3"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<3> {
         GPIO_PIN3_HOLD_W::new(self)
     }
     #[doc = "Bit 4 - the hold configure of rtc gpio4"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<4> {
         GPIO_PIN4_HOLD_W::new(self)
     }
     #[doc = "Bit 5 - the hold configure of rtc gpio5"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<5> {
         GPIO_PIN5_HOLD_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for PAD_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_hold::W](W) writer structure"]
 impl crate::Writable for PAD_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_HOLD to value 0"]
 impl crate::Resettable for PAD_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

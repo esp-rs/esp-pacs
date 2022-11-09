@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This bits stores text_in_3 that is a part of source text material."]
     #[inline(always)]
+    #[must_use]
     pub fn text_in_3(&mut self) -> TEXT_IN_3_W<0> {
         TEXT_IN_3_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TEXT_IN_3_SPEC {
 #[doc = "`write(|w| ..)` method takes [text_in_3::W](W) writer structure"]
 impl crate::Writable for TEXT_IN_3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TEXT_IN_3 to value 0"]
 impl crate::Resettable for TEXT_IN_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

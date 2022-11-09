@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 2 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<1> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 2 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<2> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 2 receiving data when accessing internal SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn in_data_burst_en(&mut self) -> IN_DATA_BURST_EN_W<3> {
         IN_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<4> {
         MEM_TRANS_EN_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for IN_CONF0_CH2_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_conf0_ch2::W](W) writer structure"]
 impl crate::Writable for IN_CONF0_CH2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_CONF0_CH2 to value 0"]
 impl crate::Resettable for IN_CONF0_CH2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

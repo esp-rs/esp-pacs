@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 29 - reg_wdt_clk_is_active."]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<29> {
         WDT_CLK_IS_ACTIVE_W::new(self)
     }
     #[doc = "Bit 30 - reg_timer_clk_is_active."]
     #[inline(always)]
+    #[must_use]
     pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<30> {
         TIMER_CLK_IS_ACTIVE_W::new(self)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for REGCLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [regclk::W](W) writer structure"]
 impl crate::Writable for REGCLK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REGCLK to value 0x6000_0000"]
 impl crate::Resettable for REGCLK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x6000_0000;
 }

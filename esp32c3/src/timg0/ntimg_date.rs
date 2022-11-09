@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - reg_ntimers_date."]
     #[inline(always)]
     pub fn ntimgs_date(&self) -> NTIMGS_DATE_R {
-        NTIMGS_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        NTIMGS_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - reg_ntimers_date."]
     #[inline(always)]
+    #[must_use]
     pub fn ntimgs_date(&mut self) -> NTIMGS_DATE_W<0> {
         NTIMGS_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for NTIMG_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [ntimg_date::W](W) writer structure"]
 impl crate::Writable for NTIMG_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NTIMG_DATE to value 0x0200_6191"]
 impl crate::Resettable for NTIMG_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_6191
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_6191;
 }

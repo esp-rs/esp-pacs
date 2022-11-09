@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn din0_mode(&mut self) -> DIN0_MODE_W<0> {
         DIN0_MODE_W::new(self)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn din1_mode(&mut self) -> DIN1_MODE_W<2> {
         DIN1_MODE_W::new(self)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn din2_mode(&mut self) -> DIN2_MODE_W<4> {
         DIN2_MODE_W::new(self)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
+    #[must_use]
     pub fn din3_mode(&mut self) -> DIN3_MODE_W<6> {
         DIN3_MODE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for DIN_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [din_mode::W](W) writer structure"]
 impl crate::Writable for DIN_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIN_MODE to value 0"]
 impl crate::Resettable for DIN_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

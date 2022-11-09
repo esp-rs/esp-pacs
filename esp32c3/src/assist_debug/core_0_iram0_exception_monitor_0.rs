@@ -23,7 +23,7 @@ impl R {
     #[doc = "Bits 0:23 - reg_core_0_iram0_recording_addr_0"]
     #[inline(always)]
     pub fn core_0_iram0_recording_addr_0(&self) -> CORE_0_IRAM0_RECORDING_ADDR_0_R {
-        CORE_0_IRAM0_RECORDING_ADDR_0_R::new((self.bits & 0x00ff_ffff) as u32)
+        CORE_0_IRAM0_RECORDING_ADDR_0_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bit 24 - reg_core_0_iram0_recording_wr_0"]
     #[inline(always)]
@@ -47,8 +47,5 @@ impl crate::Readable for CORE_0_IRAM0_EXCEPTION_MONITOR_0_SPEC {
 }
 #[doc = "`reset()` method sets CORE_0_IRAM0_EXCEPTION_MONITOR_0 to value 0"]
 impl crate::Resettable for CORE_0_IRAM0_EXCEPTION_MONITOR_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

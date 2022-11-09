@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<0> {
         SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - reg_sclk_div_a"]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<8> {
         SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 14:19 - reg_sclk_div_b"]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<14> {
         SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bit 20 - reg_sclk_sel"]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<20> {
         SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 21 - reg_sclk_active"]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<21> {
         SCLK_ACTIVE_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for CLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_CONF to value 0x0020_0000"]
 impl crate::Resettable for CLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0020_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0020_0000;
 }

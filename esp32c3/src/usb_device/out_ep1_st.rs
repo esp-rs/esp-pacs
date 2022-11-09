@@ -54,8 +54,5 @@ impl crate::Readable for OUT_EP1_ST_SPEC {
 }
 #[doc = "`reset()` method sets OUT_EP1_ST to value 0"]
 impl crate::Resettable for OUT_EP1_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -328,161 +328,193 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_timers_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn timers_rst(&mut self) -> TIMERS_RST_W<0> {
         TIMERS_RST_W::new(self)
     }
     #[doc = "Bit 1 - reg_spi01_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W<1> {
         SPI01_RST_W::new(self)
     }
     #[doc = "Bit 2 - reg_uart_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rst(&mut self) -> UART_RST_W<2> {
         UART_RST_W::new(self)
     }
     #[doc = "Bit 3 - reg_wdg_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn wdg_rst(&mut self) -> WDG_RST_W<3> {
         WDG_RST_W::new(self)
     }
     #[doc = "Bit 4 - reg_i2s0_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s0_rst(&mut self) -> I2S0_RST_W<4> {
         I2S0_RST_W::new(self)
     }
     #[doc = "Bit 5 - reg_uart1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_rst(&mut self) -> UART1_RST_W<5> {
         UART1_RST_W::new(self)
     }
     #[doc = "Bit 6 - reg_spi2_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W<6> {
         SPI2_RST_W::new(self)
     }
     #[doc = "Bit 7 - reg_ext0_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<7> {
         I2C_EXT0_RST_W::new(self)
     }
     #[doc = "Bit 8 - reg_uhci0_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<8> {
         UHCI0_RST_W::new(self)
     }
     #[doc = "Bit 9 - reg_rmt_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn rmt_rst(&mut self) -> RMT_RST_W<9> {
         RMT_RST_W::new(self)
     }
     #[doc = "Bit 10 - reg_pcnt_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn pcnt_rst(&mut self) -> PCNT_RST_W<10> {
         PCNT_RST_W::new(self)
     }
     #[doc = "Bit 11 - reg_ledc_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W<11> {
         LEDC_RST_W::new(self)
     }
     #[doc = "Bit 12 - reg_uhci1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<12> {
         UHCI1_RST_W::new(self)
     }
     #[doc = "Bit 13 - reg_timergroup_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<13> {
         TIMERGROUP_RST_W::new(self)
     }
     #[doc = "Bit 14 - reg_efuse_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_rst(&mut self) -> EFUSE_RST_W<14> {
         EFUSE_RST_W::new(self)
     }
     #[doc = "Bit 15 - reg_timergroup1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<15> {
         TIMERGROUP1_RST_W::new(self)
     }
     #[doc = "Bit 16 - reg_spi3_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_rst(&mut self) -> SPI3_RST_W<16> {
         SPI3_RST_W::new(self)
     }
     #[doc = "Bit 17 - reg_pwm0_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm0_rst(&mut self) -> PWM0_RST_W<17> {
         PWM0_RST_W::new(self)
     }
     #[doc = "Bit 18 - reg_ext1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn ext1_rst(&mut self) -> EXT1_RST_W<18> {
         EXT1_RST_W::new(self)
     }
     #[doc = "Bit 19 - reg_can_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn can_rst(&mut self) -> CAN_RST_W<19> {
         CAN_RST_W::new(self)
     }
     #[doc = "Bit 20 - reg_pwm1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm1_rst(&mut self) -> PWM1_RST_W<20> {
         PWM1_RST_W::new(self)
     }
     #[doc = "Bit 21 - reg_i2s1_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s1_rst(&mut self) -> I2S1_RST_W<21> {
         I2S1_RST_W::new(self)
     }
     #[doc = "Bit 22 - reg_spi2_dma_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<22> {
         SPI2_DMA_RST_W::new(self)
     }
     #[doc = "Bit 23 - reg_usb_device_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_device_rst(&mut self) -> USB_DEVICE_RST_W<23> {
         USB_DEVICE_RST_W::new(self)
     }
     #[doc = "Bit 24 - reg_uart_mem_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<24> {
         UART_MEM_RST_W::new(self)
     }
     #[doc = "Bit 25 - reg_pwm2_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm2_rst(&mut self) -> PWM2_RST_W<25> {
         PWM2_RST_W::new(self)
     }
     #[doc = "Bit 26 - reg_pwm3_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn pwm3_rst(&mut self) -> PWM3_RST_W<26> {
         PWM3_RST_W::new(self)
     }
     #[doc = "Bit 27 - reg_spi3_dma_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<27> {
         SPI3_DMA_RST_W::new(self)
     }
     #[doc = "Bit 28 - reg_apb_saradc_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<28> {
         APB_SARADC_RST_W::new(self)
     }
     #[doc = "Bit 29 - reg_systimer_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<29> {
         SYSTIMER_RST_W::new(self)
     }
     #[doc = "Bit 30 - reg_adc2_arb_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<30> {
         ADC2_ARB_RST_W::new(self)
     }
     #[doc = "Bit 31 - reg_spi4_rst"]
     #[inline(always)]
+    #[must_use]
     pub fn spi4_rst(&mut self) -> SPI4_RST_W<31> {
         SPI4_RST_W::new(self)
     }
@@ -505,11 +537,10 @@ impl crate::Readable for PERIP_RST_EN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN0 to value 0"]
 impl crate::Resettable for PERIP_RST_EN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

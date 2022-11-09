@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - reg_bt_lpck_div_num"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_lpck_div_num(&mut self) -> BT_LPCK_DIV_NUM_W<0> {
         BT_LPCK_DIV_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BT_LPCK_DIV_INT_SPEC {
 #[doc = "`write(|w| ..)` method takes [bt_lpck_div_int::W](W) writer structure"]
 impl crate::Writable for BT_LPCK_DIV_INT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BT_LPCK_DIV_INT to value 0xff"]
 impl crate::Resettable for BT_LPCK_DIV_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

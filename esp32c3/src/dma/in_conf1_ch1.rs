@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn in_check_owner(&mut self) -> IN_CHECK_OWNER_W<12> {
         IN_CHECK_OWNER_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for IN_CONF1_CH1_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_conf1_ch1::W](W) writer structure"]
 impl crate::Writable for IN_CONF1_CH1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_CONF1_CH1 to value 0"]
 impl crate::Resettable for IN_CONF1_CH1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

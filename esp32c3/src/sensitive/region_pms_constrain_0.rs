@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - region_pms_constrain_lock"]
     #[inline(always)]
+    #[must_use]
     pub fn region_pms_constrain_lock(&mut self) -> REGION_PMS_CONSTRAIN_LOCK_W<0> {
         REGION_PMS_CONSTRAIN_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for REGION_PMS_CONSTRAIN_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [region_pms_constrain_0::W](W) writer structure"]
 impl crate::Writable for REGION_PMS_CONSTRAIN_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REGION_PMS_CONSTRAIN_0 to value 0"]
 impl crate::Resettable for REGION_PMS_CONSTRAIN_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

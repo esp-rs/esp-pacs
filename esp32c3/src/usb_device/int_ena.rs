@@ -154,61 +154,73 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn jtag_in_flush_int_ena(&mut self) -> JTAG_IN_FLUSH_INT_ENA_W<0> {
         JTAG_IN_FLUSH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the USB_DEVICE_SOF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn sof_int_ena(&mut self) -> SOF_INT_ENA_W<1> {
         SOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn serial_out_recv_pkt_int_ena(&mut self) -> SERIAL_OUT_RECV_PKT_INT_ENA_W<2> {
         SERIAL_OUT_RECV_PKT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn serial_in_empty_int_ena(&mut self) -> SERIAL_IN_EMPTY_INT_ENA_W<3> {
         SERIAL_IN_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the USB_DEVICE_PID_ERR_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn pid_err_int_ena(&mut self) -> PID_ERR_INT_ENA_W<4> {
         PID_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn crc5_err_int_ena(&mut self) -> CRC5_ERR_INT_ENA_W<5> {
         CRC5_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn crc16_err_int_ena(&mut self) -> CRC16_ERR_INT_ENA_W<6> {
         CRC16_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn stuff_err_int_ena(&mut self) -> STUFF_ERR_INT_ENA_W<7> {
         STUFF_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn in_token_rec_in_ep1_int_ena(&mut self) -> IN_TOKEN_REC_IN_EP1_INT_ENA_W<8> {
         IN_TOKEN_REC_IN_EP1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn usb_bus_reset_int_ena(&mut self) -> USB_BUS_RESET_INT_ENA_W<9> {
         USB_BUS_RESET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The interrupt enable bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_ep1_zero_payload_int_ena(&mut self) -> OUT_EP1_ZERO_PAYLOAD_INT_ENA_W<10> {
         OUT_EP1_ZERO_PAYLOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The interrupt enable bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn out_ep2_zero_payload_int_ena(&mut self) -> OUT_EP2_ZERO_PAYLOAD_INT_ENA_W<11> {
         OUT_EP2_ZERO_PAYLOAD_INT_ENA_W::new(self)
     }
@@ -231,11 +243,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

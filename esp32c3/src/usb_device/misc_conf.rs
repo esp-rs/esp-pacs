@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<0> {
         CLK_EN_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for MISC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [misc_conf::W](W) writer structure"]
 impl crate::Writable for MISC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC_CONF to value 0"]
 impl crate::Resettable for MISC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

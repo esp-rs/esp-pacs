@@ -69,6 +69,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable checking mmu entry fault by preload operation."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ignore_preload_mmu_entry_fault(
         &mut self,
     ) -> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<0> {
@@ -76,11 +77,13 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_ignore_sync_mmu_entry_fault(&mut self) -> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<1> {
         CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to enable cache trace function."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<2> {
         CACHE_TRACE_ENA_W::new(self)
     }
@@ -103,11 +106,10 @@ impl crate::Readable for CACHE_CONF_MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_conf_misc::W](W) writer structure"]
 impl crate::Writable for CACHE_CONF_MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_CONF_MISC to value 0x07"]
 impl crate::Resettable for CACHE_CONF_MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

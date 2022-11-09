@@ -211,86 +211,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - xtal 32k watch dog enable"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_wdt_en(&mut self) -> XTAL32K_WDT_EN_W<0> {
         XTAL32K_WDT_EN_W::new(self)
     }
     #[doc = "Bit 1 - xtal 32k watch dog clock force on"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_wdt_clk_fo(&mut self) -> XTAL32K_WDT_CLK_FO_W<1> {
         XTAL32K_WDT_CLK_FO_W::new(self)
     }
     #[doc = "Bit 2 - xtal 32k watch dog sw reset"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_wdt_reset(&mut self) -> XTAL32K_WDT_RESET_W<2> {
         XTAL32K_WDT_RESET_W::new(self)
     }
     #[doc = "Bit 3 - xtal 32k external xtal clock force on"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_ext_clk_fo(&mut self) -> XTAL32K_EXT_CLK_FO_W<3> {
         XTAL32K_EXT_CLK_FO_W::new(self)
     }
     #[doc = "Bit 4 - xtal 32k switch to back up clock when xtal is dead"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_auto_backup(&mut self) -> XTAL32K_AUTO_BACKUP_W<4> {
         XTAL32K_AUTO_BACKUP_W::new(self)
     }
     #[doc = "Bit 5 - xtal 32k restart xtal when xtal is dead"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_auto_restart(&mut self) -> XTAL32K_AUTO_RESTART_W<5> {
         XTAL32K_AUTO_RESTART_W::new(self)
     }
     #[doc = "Bit 6 - xtal 32k switch back xtal when xtal is restarted"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_auto_return(&mut self) -> XTAL32K_AUTO_RETURN_W<6> {
         XTAL32K_AUTO_RETURN_W::new(self)
     }
     #[doc = "Bit 7 - Xtal 32k xpd control by sw or fsm"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_xpd_force(&mut self) -> XTAL32K_XPD_FORCE_W<7> {
         XTAL32K_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 8 - apply an internal clock to help xtal 32k to start"]
     #[inline(always)]
+    #[must_use]
     pub fn enckinit_xtal_32k(&mut self) -> ENCKINIT_XTAL_32K_W<8> {
         ENCKINIT_XTAL_32K_W::new(self)
     }
     #[doc = "Bit 9 - 0: single-end buffer 1: differential buffer"]
     #[inline(always)]
+    #[must_use]
     pub fn dbuf_xtal_32k(&mut self) -> DBUF_XTAL_32K_W<9> {
         DBUF_XTAL_32K_W::new(self)
     }
     #[doc = "Bits 10:12 - xtal_32k gm control"]
     #[inline(always)]
+    #[must_use]
     pub fn dgm_xtal_32k(&mut self) -> DGM_XTAL_32K_W<10> {
         DGM_XTAL_32K_W::new(self)
     }
     #[doc = "Bits 13:15 - DRES_XTAL_32K"]
     #[inline(always)]
+    #[must_use]
     pub fn dres_xtal_32k(&mut self) -> DRES_XTAL_32K_W<13> {
         DRES_XTAL_32K_W::new(self)
     }
     #[doc = "Bit 16 - XPD_XTAL_32K"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_xtal_32k(&mut self) -> XPD_XTAL_32K_W<16> {
         XPD_XTAL_32K_W::new(self)
     }
     #[doc = "Bits 17:19 - DAC_XTAL_32K"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_xtal_32k(&mut self) -> DAC_XTAL_32K_W<17> {
         DAC_XTAL_32K_W::new(self)
     }
     #[doc = "Bit 23 - XTAL_32K sel. 0: external XTAL_32K"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_gpio_sel(&mut self) -> XTAL32K_GPIO_SEL_W<23> {
         XTAL32K_GPIO_SEL_W::new(self)
     }
     #[doc = "Bit 30 - 0: power down XTAL at high level"]
     #[inline(always)]
+    #[must_use]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<30> {
         XTL_EXT_CTR_LV_W::new(self)
     }
     #[doc = "Bit 31 - enable gpio configure xtal power on"]
     #[inline(always)]
+    #[must_use]
     pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<31> {
         XTL_EXT_CTR_EN_W::new(self)
     }
@@ -313,11 +330,10 @@ impl crate::Readable for EXT_XTL_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W](W) writer structure"]
 impl crate::Writable for EXT_XTL_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_XTL_CONF to value 0x0006_6c80"]
 impl crate::Resettable for EXT_XTL_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0006_6c80
-    }
+    const RESET_VALUE: Self::Ux = 0x0006_6c80;
 }

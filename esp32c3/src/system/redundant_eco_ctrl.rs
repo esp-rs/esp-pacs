@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_redundant_eco_drive"]
     #[inline(always)]
+    #[must_use]
     pub fn redundant_eco_drive(&mut self) -> REDUNDANT_ECO_DRIVE_W<0> {
         REDUNDANT_ECO_DRIVE_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for REDUNDANT_ECO_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [redundant_eco_ctrl::W](W) writer structure"]
 impl crate::Writable for REDUNDANT_ECO_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REDUNDANT_ECO_CTRL to value 0"]
 impl crate::Resettable for REDUNDANT_ECO_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

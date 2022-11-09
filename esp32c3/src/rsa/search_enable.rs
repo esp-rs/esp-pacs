@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Configure this bit to 1 for acceleration. 1: with acceleration, 0: without acceleration(default). This option should be used together with RSA_SEARCH_POS."]
     #[inline(always)]
+    #[must_use]
     pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<0> {
         SEARCH_ENABLE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SEARCH_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [search_enable::W](W) writer structure"]
 impl crate::Writable for SEARCH_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SEARCH_ENABLE to value 0"]
 impl crate::Resettable for SEARCH_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,46 +49,55 @@ pub type BBPLL_CAL_INT_ENA_W1TC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - clear sleep wakeup interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_ena_w1tc(&mut self) -> SLP_WAKEUP_INT_ENA_W1TC_W<0> {
         SLP_WAKEUP_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 1 - clear sleep reject interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_ena_w1tc(&mut self) -> SLP_REJECT_INT_ENA_W1TC_W<1> {
         SLP_REJECT_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 3 - clear RTC WDT interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_ena_w1tc(&mut self) -> WDT_INT_ENA_W1TC_W<3> {
         WDT_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 9 - clear brown out interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_ena_w1tc(&mut self) -> BROWN_OUT_INT_ENA_W1TC_W<9> {
         BROWN_OUT_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_ena_w1tc(&mut self) -> MAIN_TIMER_INT_ENA_W1TC_W<10> {
         MAIN_TIMER_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 15 - clear super watch dog interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn swd_int_ena_w1tc(&mut self) -> SWD_INT_ENA_W1TC_W<15> {
         SWD_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 16 - clear xtal32k_dead interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_dead_int_ena_w1tc(&mut self) -> XTAL32K_DEAD_INT_ENA_W1TC_W<16> {
         XTAL32K_DEAD_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 19 - clear gitch det interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_det_int_ena_w1tc(&mut self) -> GLITCH_DET_INT_ENA_W1TC_W<19> {
         GLITCH_DET_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 20 - clear bbpll cal interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn bbpll_cal_int_ena_w1tc(&mut self) -> BBPLL_CAL_INT_ENA_W1TC_W<20> {
         BBPLL_CAL_INT_ENA_W1TC_W::new(self)
     }
@@ -107,11 +116,10 @@ impl crate::RegisterSpec for INT_ENA_RTC_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena_rtc_w1tc::W](W) writer structure"]
 impl crate::Writable for INT_ENA_RTC_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA_RTC_W1TC to value 0"]
 impl crate::Resettable for INT_ENA_RTC_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

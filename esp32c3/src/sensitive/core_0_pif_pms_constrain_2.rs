@@ -139,6 +139,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_0_bt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_bt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_W<0> {
@@ -146,6 +147,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_0_i2c_ext0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_i2c_ext0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT0_W<4> {
@@ -153,6 +155,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_0_uhci0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_uhci0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UHCI0_W<6> {
@@ -160,6 +163,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_0_rmt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_rmt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RMT_W<10> {
@@ -167,6 +171,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_0_ledc"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_ledc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_LEDC_W<16> {
@@ -174,6 +179,7 @@ impl W {
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_0_bb"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_bb(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BB_W<22> {
@@ -181,6 +187,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_0_timergroup"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_timergroup(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP_W<26> {
@@ -188,6 +195,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_0_timergroup1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_timergroup1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_TIMERGROUP1_W<28> {
@@ -195,6 +203,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_0_systimer"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_systimer(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTIMER_W<30> {
@@ -219,11 +228,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_2 to value 0xfcc3_0cf3"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xfcc3_0cf3
-    }
+    const RESET_VALUE: Self::Ux = 0xfcc3_0cf3;
 }

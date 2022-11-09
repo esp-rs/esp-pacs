@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
     #[inline(always)]
+    #[must_use]
     pub fn op_code(&mut self) -> OP_CODE_W<0> {
         OP_CODE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf::W](W) writer structure"]
 impl crate::Writable for CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF to value 0"]
 impl crate::Resettable for CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

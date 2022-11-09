@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
     #[inline(always)]
+    #[must_use]
     pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W<0> {
         PRE_IDLE_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AT_CMD_PRECNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [at_cmd_precnt::W](W) writer structure"]
 impl crate::Writable for AT_CMD_PRECNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_PRECNT to value 0x0901"]
 impl crate::Resettable for AT_CMD_PRECNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0901
-    }
+    const RESET_VALUE: Self::Ux = 0x0901;
 }

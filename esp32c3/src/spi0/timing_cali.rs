@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
+    #[must_use]
     pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<0> {
         TIMING_CLK_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
+    #[must_use]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W<1> {
         TIMING_CALI_W::new(self)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
+    #[must_use]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<2> {
         EXTRA_DUMMY_CYCLELEN_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for TIMING_CALI_SPEC {
 #[doc = "`write(|w| ..)` method takes [timing_cali::W](W) writer structure"]
 impl crate::Writable for TIMING_CALI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMING_CALI to value 0x01"]
 impl crate::Resettable for TIMING_CALI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

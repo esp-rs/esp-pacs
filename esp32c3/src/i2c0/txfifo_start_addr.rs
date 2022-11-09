@@ -33,8 +33,5 @@ impl crate::Readable for TXFIFO_START_ADDR_SPEC {
 }
 #[doc = "`reset()` method sets TXFIFO_START_ADDR to value 0"]
 impl crate::Resettable for TXFIFO_START_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

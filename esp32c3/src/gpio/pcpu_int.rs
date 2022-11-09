@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:25 - GPIO PRO_CPU interrupt status register for GPIO0-25"]
     #[inline(always)]
     pub fn procpu_int(&self) -> PROCPU_INT_R {
-        PROCPU_INT_R::new((self.bits & 0x03ff_ffff) as u32)
+        PROCPU_INT_R::new(self.bits & 0x03ff_ffff)
     }
 }
 #[doc = "GPIO PRO_CPU interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcpu_int](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PCPU_INT_SPEC {
 }
 #[doc = "`reset()` method sets PCPU_INT to value 0"]
 impl crate::Resettable for PCPU_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

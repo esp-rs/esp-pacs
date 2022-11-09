@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_rsa_mem_pd"]
     #[inline(always)]
+    #[must_use]
     pub fn rsa_mem_pd(&mut self) -> RSA_MEM_PD_W<0> {
         RSA_MEM_PD_W::new(self)
     }
     #[doc = "Bit 1 - reg_rsa_mem_force_pu"]
     #[inline(always)]
+    #[must_use]
     pub fn rsa_mem_force_pu(&mut self) -> RSA_MEM_FORCE_PU_W<1> {
         RSA_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2 - reg_rsa_mem_force_pd"]
     #[inline(always)]
+    #[must_use]
     pub fn rsa_mem_force_pd(&mut self) -> RSA_MEM_FORCE_PD_W<2> {
         RSA_MEM_FORCE_PD_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for RSA_PD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rsa_pd_ctrl::W](W) writer structure"]
 impl crate::Writable for RSA_PD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RSA_PD_CTRL to value 0x01"]
 impl crate::Resettable for RSA_PD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

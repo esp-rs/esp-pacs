@@ -195,81 +195,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer0_ovf_int_ena(&mut self) -> LSTIMER0_OVF_INT_ENA_W<0> {
         LSTIMER0_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - reg_lstimer1_ovf_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer1_ovf_int_ena(&mut self) -> LSTIMER1_OVF_INT_ENA_W<1> {
         LSTIMER1_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - reg_lstimer2_ovf_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer2_ovf_int_ena(&mut self) -> LSTIMER2_OVF_INT_ENA_W<2> {
         LSTIMER2_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - reg_lstimer3_ovf_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer3_ovf_int_ena(&mut self) -> LSTIMER3_OVF_INT_ENA_W<3> {
         LSTIMER3_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - reg_duty_chng_end_lsch0_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch0_int_ena(&mut self) -> DUTY_CHNG_END_LSCH0_INT_ENA_W<4> {
         DUTY_CHNG_END_LSCH0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - reg_duty_chng_end_lsch1_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch1_int_ena(&mut self) -> DUTY_CHNG_END_LSCH1_INT_ENA_W<5> {
         DUTY_CHNG_END_LSCH1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - reg_duty_chng_end_lsch2_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch2_int_ena(&mut self) -> DUTY_CHNG_END_LSCH2_INT_ENA_W<6> {
         DUTY_CHNG_END_LSCH2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - reg_duty_chng_end_lsch3_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch3_int_ena(&mut self) -> DUTY_CHNG_END_LSCH3_INT_ENA_W<7> {
         DUTY_CHNG_END_LSCH3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - reg_duty_chng_end_lsch4_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch4_int_ena(&mut self) -> DUTY_CHNG_END_LSCH4_INT_ENA_W<8> {
         DUTY_CHNG_END_LSCH4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - reg_duty_chng_end_lsch5_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch5_int_ena(&mut self) -> DUTY_CHNG_END_LSCH5_INT_ENA_W<9> {
         DUTY_CHNG_END_LSCH5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - reg_ovf_cnt_lsch0_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch0_int_ena(&mut self) -> OVF_CNT_LSCH0_INT_ENA_W<10> {
         OVF_CNT_LSCH0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - reg_ovf_cnt_lsch1_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch1_int_ena(&mut self) -> OVF_CNT_LSCH1_INT_ENA_W<11> {
         OVF_CNT_LSCH1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - reg_ovf_cnt_lsch2_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch2_int_ena(&mut self) -> OVF_CNT_LSCH2_INT_ENA_W<12> {
         OVF_CNT_LSCH2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - reg_ovf_cnt_lsch3_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch3_int_ena(&mut self) -> OVF_CNT_LSCH3_INT_ENA_W<13> {
         OVF_CNT_LSCH3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - reg_ovf_cnt_lsch4_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch4_int_ena(&mut self) -> OVF_CNT_LSCH4_INT_ENA_W<14> {
         OVF_CNT_LSCH4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - reg_ovf_cnt_lsch5_int_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_lsch5_int_ena(&mut self) -> OVF_CNT_LSCH5_INT_ENA_W<15> {
         OVF_CNT_LSCH5_INT_ENA_W::new(self)
     }
@@ -292,11 +308,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

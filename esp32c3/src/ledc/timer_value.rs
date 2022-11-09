@@ -33,8 +33,5 @@ impl crate::Readable for TIMER_VALUE_SPEC {
 }
 #[doc = "`reset()` method sets TIMER%s_VALUE to value 0"]
 impl crate::Resettable for TIMER_VALUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

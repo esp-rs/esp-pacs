@@ -129,51 +129,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<0> {
         SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<6> {
         SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<12> {
         SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 20:21 - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<20> {
         SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable UART Tx/Rx clock."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_en(&mut self) -> SCLK_EN_W<22> {
         SCLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
     #[inline(always)]
+    #[must_use]
     pub fn rst_core(&mut self) -> RST_CORE_W<23> {
         RST_CORE_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_sclk_en(&mut self) -> TX_SCLK_EN_W<24> {
         TX_SCLK_EN_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to enable UART Rx clock."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<25> {
         RX_SCLK_EN_W::new(self)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit, reset UART Tx."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_rst_core(&mut self) -> TX_RST_CORE_W<26> {
         TX_RST_CORE_W::new(self)
     }
     #[doc = "Bit 27 - Write 1 then write 0 to this bit, reset UART Rx."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<27> {
         RX_RST_CORE_W::new(self)
     }
@@ -196,11 +206,10 @@ impl crate::Readable for CLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_conf::W](W) writer structure"]
 impl crate::Writable for CLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_CONF to value 0x0370_1000"]
 impl crate::Resettable for CLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0370_1000
-    }
+    const RESET_VALUE: Self::Ux = 0x0370_1000;
 }

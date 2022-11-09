@@ -33,8 +33,5 @@ impl crate::Readable for FRAM_NUM_SPEC {
 }
 #[doc = "`reset()` method sets FRAM_NUM to value 0"]
 impl crate::Resettable for FRAM_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

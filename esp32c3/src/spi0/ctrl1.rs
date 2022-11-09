@@ -50,11 +50,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_mode(&mut self) -> CLK_MODE_W<0> {
         CLK_MODE_W::new(self)
     }
     #[doc = "Bit 30 - SPI0 RX FIFO reset signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<30> {
         RXFIFO_RST_W::new(self)
     }
@@ -77,11 +79,10 @@ impl crate::Readable for CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl1::W](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
 impl crate::Resettable for CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn data(&mut self) -> DATA_W<0> {
         DATA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CH1DATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch1data::W](W) writer structure"]
 impl crate::Writable for CH1DATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH1DATA to value 0"]
 impl crate::Resettable for CH1DATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

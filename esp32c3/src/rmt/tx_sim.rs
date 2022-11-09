@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_sim_ch0(&mut self) -> TX_SIM_CH0_W<0> {
         TX_SIM_CH0_W::new(self)
     }
     #[doc = "Bit 1 - reg_rmt_tx_sim_ch1."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_sim_ch1(&mut self) -> TX_SIM_CH1_W<1> {
         TX_SIM_CH1_W::new(self)
     }
     #[doc = "Bit 2 - reg_rmt_tx_sim_en."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_sim_en(&mut self) -> TX_SIM_EN_W<2> {
         TX_SIM_EN_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for TX_SIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_sim::W](W) writer structure"]
 impl crate::Writable for TX_SIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_SIM to value 0"]
 impl crate::Resettable for TX_SIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

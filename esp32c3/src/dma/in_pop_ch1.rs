@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bit 12 - Set this bit to pop data from DMA FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn infifo_pop(&mut self) -> INFIFO_POP_W<12> {
         INFIFO_POP_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for IN_POP_CH1_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_pop_ch1::W](W) writer structure"]
 impl crate::Writable for IN_POP_CH1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_POP_CH1 to value 0x0800"]
 impl crate::Resettable for IN_POP_CH1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0800
-    }
+    const RESET_VALUE: Self::Ux = 0x0800;
 }

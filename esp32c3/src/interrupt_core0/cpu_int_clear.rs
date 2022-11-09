@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - reg_core0_cpu_int_clear"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_int_clear(&mut self) -> CPU_INT_CLEAR_W<0> {
         CPU_INT_CLEAR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CPU_INT_CLEAR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_int_clear::W](W) writer structure"]
 impl crate::Writable for CPU_INT_CLEAR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_INT_CLEAR to value 0"]
 impl crate::Resettable for CPU_INT_CLEAR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

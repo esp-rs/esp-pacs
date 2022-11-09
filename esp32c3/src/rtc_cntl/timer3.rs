@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - wifi power domain wakeup time"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<0> {
         WIFI_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 9:15 - wifi power domain power on time"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<9> {
         WIFI_POWERUP_TIMER_W::new(self)
     }
     #[doc = "Bits 16:24 - bt power domain wakeup time"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_wait_timer(&mut self) -> BT_WAIT_TIMER_W<16> {
         BT_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 25:31 - bt power domain power on time"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_powerup_timer(&mut self) -> BT_POWERUP_TIMER_W<25> {
         BT_POWERUP_TIMER_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for TIMER3_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer3::W](W) writer structure"]
 impl crate::Writable for TIMER3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER3 to value 0x0a08_0a08"]
 impl crate::Resettable for TIMER3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0a08_0a08
-    }
+    const RESET_VALUE: Self::Ux = 0x0a08_0a08;
 }

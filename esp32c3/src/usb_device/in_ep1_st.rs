@@ -47,8 +47,5 @@ impl crate::Readable for IN_EP1_ST_SPEC {
 }
 #[doc = "`reset()` method sets IN_EP1_ST to value 0x01"]
 impl crate::Resettable for IN_EP1_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

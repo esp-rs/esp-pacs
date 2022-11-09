@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
     pub fn slv_data_bitlen(&self) -> SLV_DATA_BITLEN_R {
-        SLV_DATA_BITLEN_R::new((self.bits & 0x0003_ffff) as u32)
+        SLV_DATA_BITLEN_R::new(self.bits & 0x0003_ffff)
     }
     #[doc = "Bits 18:25 - In the slave mode it is the value of command."]
     #[inline(always)]
@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<0> {
         SLV_DATA_BITLEN_W::new(self)
     }
     #[doc = "Bits 18:25 - In the slave mode it is the value of command."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<18> {
         SLV_LAST_COMMAND_W::new(self)
     }
     #[doc = "Bits 26:31 - In the slave mode it is the value of address."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<26> {
         SLV_LAST_ADDR_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for SLAVE1_SPEC {
 #[doc = "`write(|w| ..)` method takes [slave1::W](W) writer structure"]
 impl crate::Writable for SLAVE1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLAVE1 to value 0"]
 impl crate::Resettable for SLAVE1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

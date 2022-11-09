@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:25 - GPIO input register for GPIO0-25"]
     #[inline(always)]
     pub fn data_next(&self) -> DATA_NEXT_R {
-        DATA_NEXT_R::new((self.bits & 0x03ff_ffff) as u32)
+        DATA_NEXT_R::new(self.bits & 0x03ff_ffff)
     }
 }
 #[doc = "GPIO input register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for IN_SPEC {
 }
 #[doc = "`reset()` method sets IN to value 0"]
 impl crate::Resettable for IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

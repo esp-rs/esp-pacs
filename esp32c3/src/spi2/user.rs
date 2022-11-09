@@ -210,96 +210,115 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn doutdin(&mut self) -> DOUTDIN_W<0> {
         DOUTDIN_W::new(self)
     }
     #[doc = "Bit 3 - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn qpi_mode(&mut self) -> QPI_MODE_W<3> {
         QPI_MODE_W::new(self)
     }
     #[doc = "Bit 5 - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
     #[inline(always)]
+    #[must_use]
     pub fn tsck_i_edge(&mut self) -> TSCK_I_EDGE_W<5> {
         TSCK_I_EDGE_W::new(self)
     }
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold(&mut self) -> CS_HOLD_W<6> {
         CS_HOLD_W::new(self)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_setup(&mut self) -> CS_SETUP_W<7> {
         CS_SETUP_W::new(self)
     }
     #[doc = "Bit 8 - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
     #[inline(always)]
+    #[must_use]
     pub fn rsck_i_edge(&mut self) -> RSCK_I_EDGE_W<8> {
         RSCK_I_EDGE_W::new(self)
     }
     #[doc = "Bit 9 - the bit combined with spi_mosi_delay_mode bits to set mosi signal delay mode. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<9> {
         CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bit 12 - In the write operations read-data phase apply 2 signals. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<12> {
         FWRITE_DUAL_W::new(self)
     }
     #[doc = "Bit 13 - In the write operations read-data phase apply 4 signals. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<13> {
         FWRITE_QUAD_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_conf_nxt(&mut self) -> USR_CONF_NXT_W<15> {
         USR_CONF_NXT_W::new(self)
     }
     #[doc = "Bit 17 - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn sio(&mut self) -> SIO_W<17> {
         SIO_W::new(self)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<24> {
         USR_MISO_HIGHPART_W::new(self)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<25> {
         USR_MOSI_HIGHPART_W::new(self)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<26> {
         USR_DUMMY_IDLE_W::new(self)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi(&mut self) -> USR_MOSI_W<27> {
         USR_MOSI_W::new(self)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso(&mut self) -> USR_MISO_W<28> {
         USR_MISO_W::new(self)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<29> {
         USR_DUMMY_W::new(self)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_addr(&mut self) -> USR_ADDR_W<30> {
         USR_ADDR_W::new(self)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_command(&mut self) -> USR_COMMAND_W<31> {
         USR_COMMAND_W::new(self)
     }
@@ -322,11 +341,10 @@ impl crate::Readable for USER_SPEC {
 #[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USER to value 0x8000_00c0"]
 impl crate::Resettable for USER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_00c0
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_00c0;
 }

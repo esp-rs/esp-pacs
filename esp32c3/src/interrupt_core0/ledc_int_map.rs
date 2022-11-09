@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_ledc_int_map"]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_int_map(&mut self) -> LEDC_INT_MAP_W<0> {
         LEDC_INT_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LEDC_INT_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [ledc_int_map::W](W) writer structure"]
 impl crate::Writable for LEDC_INT_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LEDC_INT_MAP to value 0"]
 impl crate::Resettable for LEDC_INT_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

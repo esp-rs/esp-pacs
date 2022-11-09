@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - The content of the 1st 32-bit data to be programmed."]
     #[inline(always)]
+    #[must_use]
     pub fn pgm_data_1(&mut self) -> PGM_DATA_1_W<0> {
         PGM_DATA_1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PGM_DATA1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pgm_data1::W](W) writer structure"]
 impl crate::Writable for PGM_DATA1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PGM_DATA1 to value 0"]
 impl crate::Resettable for PGM_DATA1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

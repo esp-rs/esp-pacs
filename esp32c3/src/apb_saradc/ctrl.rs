@@ -115,41 +115,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_start_force(&mut self) -> SARADC_START_FORCE_W<0> {
         SARADC_START_FORCE_W::new(self)
     }
     #[doc = "Bit 1 - software enable saradc sample"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_start(&mut self) -> SARADC_START_W<1> {
         SARADC_START_W::new(self)
     }
     #[doc = "Bit 6 - SAR clock gated"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_clk_gated(&mut self) -> SARADC_SAR_CLK_GATED_W<6> {
         SARADC_SAR_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_clk_div(&mut self) -> SARADC_SAR_CLK_DIV_W<7> {
         SARADC_SAR_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 15:17 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_patt_len(&mut self) -> SARADC_SAR_PATT_LEN_W<15> {
         SARADC_SAR_PATT_LEN_W::new(self)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_patt_p_clear(&mut self) -> SARADC_SAR_PATT_P_CLEAR_W<23> {
         SARADC_SAR_PATT_P_CLEAR_W::new(self)
     }
     #[doc = "Bits 27:28 - force option to xpd sar blocks"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_xpd_sar_force(&mut self) -> SARADC_XPD_SAR_FORCE_W<27> {
         SARADC_XPD_SAR_FORCE_W::new(self)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_wait_arb_cycle(&mut self) -> SARADC_WAIT_ARB_CYCLE_W<30> {
         SARADC_WAIT_ARB_CYCLE_W::new(self)
     }
@@ -172,11 +180,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x4003_8240"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4003_8240
-    }
+    const RESET_VALUE: Self::Ux = 0x4003_8240;
 }

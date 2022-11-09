@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - rom_table_lock"]
     #[inline(always)]
+    #[must_use]
     pub fn rom_table_lock(&mut self) -> ROM_TABLE_LOCK_W<0> {
         ROM_TABLE_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ROM_TABLE_LOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_table_lock::W](W) writer structure"]
 impl crate::Writable for ROM_TABLE_LOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_TABLE_LOCK to value 0"]
 impl crate::Resettable for ROM_TABLE_LOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

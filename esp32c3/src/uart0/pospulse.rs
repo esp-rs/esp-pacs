@@ -33,8 +33,5 @@ impl crate::Readable for POSPULSE_SPEC {
 }
 #[doc = "`reset()` method sets POSPULSE to value 0x0fff"]
 impl crate::Resettable for POSPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0fff
-    }
+    const RESET_VALUE: Self::Ux = 0x0fff;
 }

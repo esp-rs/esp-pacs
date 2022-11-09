@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - a"]
     #[inline(always)]
+    #[must_use]
     pub fn send_q1_word1(&mut self) -> SEND_Q1_WORD1_W<0> {
         SEND_Q1_WORD1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for REG_Q1_WORD1_SPEC {
 #[doc = "`write(|w| ..)` method takes [reg_q1_word1::W](W) writer structure"]
 impl crate::Writable for REG_Q1_WORD1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REG_Q1_WORD1 to value 0"]
 impl crate::Resettable for REG_Q1_WORD1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

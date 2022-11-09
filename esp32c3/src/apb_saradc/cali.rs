@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:16 - saradc cali factor"]
     #[inline(always)]
     pub fn apb_saradc_cali_cfg(&self) -> APB_SARADC_CALI_CFG_R {
-        APB_SARADC_CALI_CFG_R::new((self.bits & 0x0001_ffff) as u32)
+        APB_SARADC_CALI_CFG_R::new(self.bits & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - saradc cali factor"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_cali_cfg(&mut self) -> APB_SARADC_CALI_CFG_W<0> {
         APB_SARADC_CALI_CFG_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CALI_SPEC {
 #[doc = "`write(|w| ..)` method takes [cali::W](W) writer structure"]
 impl crate::Writable for CALI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CALI to value 0x8000"]
 impl crate::Resettable for CALI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - reg_scl_high_period"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<0> {
         SCL_HIGH_PERIOD_W::new(self)
     }
     #[doc = "Bits 9:15 - reg_scl_wait_high_period"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_wait_high_period(&mut self) -> SCL_WAIT_HIGH_PERIOD_W<9> {
         SCL_WAIT_HIGH_PERIOD_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SCL_HIGH_PERIOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_high_period::W](W) writer structure"]
 impl crate::Writable for SCL_HIGH_PERIOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_HIGH_PERIOD to value 0"]
 impl crate::Resettable for SCL_HIGH_PERIOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -87,6 +87,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - core_x_dram0_dma_sram_line_0_category_0"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_0(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_W<0> {
@@ -94,6 +95,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - core_x_dram0_dma_sram_line_0_category_1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_1(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_W<2> {
@@ -101,6 +103,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_x_dram0_dma_sram_line_0_category_2"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_category_2(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_W<4> {
@@ -108,6 +111,7 @@ impl W {
     }
     #[doc = "Bits 14:21 - core_x_dram0_dma_sram_line_0_splitaddr"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_dram0_dma_sram_line_0_splitaddr(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_W<14> {
@@ -132,11 +136,10 @@ impl crate::Readable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_dma_split_line_constrain_4::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4 to value 0"]
 impl crate::Resettable for CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

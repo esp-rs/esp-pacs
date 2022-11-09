@@ -94,31 +94,37 @@ impl R {
 impl W {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_end(&mut self) -> TRANS_END_W<3> {
         TRANS_END_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<4> {
         TRANS_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
+    #[must_use]
     pub fn cspi_st_trans_end(&mut self) -> CSPI_ST_TRANS_END_W<5> {
         CSPI_ST_TRANS_END_W::new(self)
     }
     #[doc = "Bit 6 - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
+    #[must_use]
     pub fn cspi_st_trans_end_int_ena(&mut self) -> CSPI_ST_TRANS_END_INT_ENA_W<6> {
         CSPI_ST_TRANS_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
+    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<9> {
         CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<10> {
         CS_KEEP_ACTIVE_W::new(self)
     }
@@ -141,11 +147,10 @@ impl crate::Readable for MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC to value 0"]
 impl crate::Resettable for MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

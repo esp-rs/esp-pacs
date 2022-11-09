@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to configure the ibus permission control section boundary0"]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_pms_lock(&mut self) -> IBUS_PMS_LOCK_W<0> {
         IBUS_PMS_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for IBUS_PMS_TBL_LOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [ibus_pms_tbl_lock::W](W) writer structure"]
 impl crate::Writable for IBUS_PMS_TBL_LOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IBUS_PMS_TBL_LOCK to value 0"]
 impl crate::Resettable for IBUS_PMS_TBL_LOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:21 - reg_t0_alarm_hi."]
     #[inline(always)]
     pub fn alarm_hi(&self) -> ALARM_HI_R {
-        ALARM_HI_R::new((self.bits & 0x003f_ffff) as u32)
+        ALARM_HI_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - reg_t0_alarm_hi."]
     #[inline(always)]
+    #[must_use]
     pub fn alarm_hi(&mut self) -> ALARM_HI_W<0> {
         ALARM_HI_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for T0ALARMHI_SPEC {
 #[doc = "`write(|w| ..)` method takes [t0alarmhi::W](W) writer structure"]
 impl crate::Writable for T0ALARMHI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T0ALARMHI to value 0"]
 impl crate::Resettable for T0ALARMHI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - cycles to wait to return noral xtal 32k"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_return_wait(&mut self) -> XTAL32K_RETURN_WAIT_W<0> {
         XTAL32K_RETURN_WAIT_W::new(self)
     }
     #[doc = "Bits 4:19 - cycles to wait to repower on xtal 32k"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_restart_wait(&mut self) -> XTAL32K_RESTART_WAIT_W<4> {
         XTAL32K_RESTART_WAIT_W::new(self)
     }
     #[doc = "Bits 20:27 - If no clock detected for this amount of time"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_wdt_timeout(&mut self) -> XTAL32K_WDT_TIMEOUT_W<20> {
         XTAL32K_WDT_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 28:31 - if restarted xtal32k period is smaller than this"]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_stable_thres(&mut self) -> XTAL32K_STABLE_THRES_W<28> {
         XTAL32K_STABLE_THRES_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for XTAL32K_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [xtal32k_conf::W](W) writer structure"]
 impl crate::Writable for XTAL32K_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets XTAL32K_CONF to value 0x0ff0_0000"]
 impl crate::Resettable for XTAL32K_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0ff0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0ff0_0000;
 }

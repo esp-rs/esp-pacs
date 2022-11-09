@@ -68,21 +68,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<0> {
         CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 5:9 - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<5> {
         CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<25> {
         CS_HOLD_DELAY_W::new(self)
     }
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
+    #[must_use]
     pub fn sync_reset(&mut self) -> SYNC_RESET_W<31> {
         SYNC_RESET_W::new(self)
     }
@@ -105,11 +109,10 @@ impl crate::Readable for CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl2::W](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0x21"]
 impl crate::Resettable for CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x21
-    }
+    const RESET_VALUE: Self::Ux = 0x21;
 }

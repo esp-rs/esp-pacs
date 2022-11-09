@@ -203,6 +203,7 @@ impl R {
 impl W {
     #[doc = "Bits 2:3 - core_0_pif_pms_constrain_world_0_usb_wrap"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_wrap(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_WRAP_W<2> {
@@ -210,6 +211,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_0_crypto_peri"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_peri(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_PERI_W<4> {
@@ -217,6 +219,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_0_crypto_dma"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_dma(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_DMA_W<6> {
@@ -224,6 +227,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - core_0_pif_pms_constrain_world_0_apb_adc"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_apb_adc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_ADC_W<8> {
@@ -231,6 +235,7 @@ impl W {
     }
     #[doc = "Bits 12:13 - core_0_pif_pms_constrain_world_0_bt_pwr"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_bt_pwr(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_PWR_W<12> {
@@ -238,6 +243,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_0_usb_device"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_device(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_DEVICE_W<14> {
@@ -245,6 +251,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_0_system"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_system(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTEM_W<16> {
@@ -252,6 +259,7 @@ impl W {
     }
     #[doc = "Bits 18:19 - core_0_pif_pms_constrain_world_0_sensitive"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_sensitive(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SENSITIVE_W<18> {
@@ -259,6 +267,7 @@ impl W {
     }
     #[doc = "Bits 20:21 - core_0_pif_pms_constrain_world_0_interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_interrupt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_INTERRUPT_W<20> {
@@ -266,6 +275,7 @@ impl W {
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_0_dma_copy"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dma_copy(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DMA_COPY_W<22> {
@@ -273,6 +283,7 @@ impl W {
     }
     #[doc = "Bits 24:25 - core_0_pif_pms_constrain_world_0_cache_config"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_cache_config(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CACHE_CONFIG_W<24> {
@@ -280,6 +291,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_0_ad"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_ad(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_AD_W<26> {
@@ -287,6 +299,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_0_dio"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dio(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DIO_W<28> {
@@ -294,6 +307,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_0_world_controller"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_world_controller(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WORLD_CONTROLLER_W<30> {
@@ -318,11 +332,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_4 to value 0xffff_f3fc"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_f3fc
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_f3fc;
 }

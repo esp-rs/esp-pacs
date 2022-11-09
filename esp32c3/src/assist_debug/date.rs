@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - reg_assist_debug_date"]
     #[inline(always)]
     pub fn assist_debug_date(&self) -> ASSIST_DEBUG_DATE_R {
-        ASSIST_DEBUG_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        ASSIST_DEBUG_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - reg_assist_debug_date"]
     #[inline(always)]
+    #[must_use]
     pub fn assist_debug_date(&mut self) -> ASSIST_DEBUG_DATE_W<0> {
         ASSIST_DEBUG_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [date::W](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x0200_8010"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_8010
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_8010;
 }

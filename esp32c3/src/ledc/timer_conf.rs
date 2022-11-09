@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 4:21 - reg_clk_div_lstimer0."]
     #[inline(always)]
     pub fn clk_div(&self) -> CLK_DIV_R {
-        CLK_DIV_R::new(((self.bits >> 4) & 0x0003_ffff) as u32)
+        CLK_DIV_R::new((self.bits >> 4) & 0x0003_ffff)
     }
     #[doc = "Bit 22 - reg_lstimer0_pause."]
     #[inline(always)]
@@ -86,31 +86,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - reg_lstimer0_duty_res."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<0> {
         DUTY_RES_W::new(self)
     }
     #[doc = "Bits 4:21 - reg_clk_div_lstimer0."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_div(&mut self) -> CLK_DIV_W<4> {
         CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - reg_lstimer0_pause."]
     #[inline(always)]
+    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<22> {
         PAUSE_W::new(self)
     }
     #[doc = "Bit 23 - reg_lstimer0_rst."]
     #[inline(always)]
+    #[must_use]
     pub fn rst(&mut self) -> RST_W<23> {
         RST_W::new(self)
     }
     #[doc = "Bit 24 - reg_tick_sel_lstimer0."]
     #[inline(always)]
+    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<24> {
         TICK_SEL_W::new(self)
     }
     #[doc = "Bit 25 - reg_lstimer0_para_up."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<25> {
         PARA_UP_W::new(self)
     }
@@ -133,11 +139,10 @@ impl crate::Readable for TIMER_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_conf::W](W) writer structure"]
 impl crate::Writable for TIMER_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER%s_CONF to value 0x0080_0000"]
 impl crate::Resettable for TIMER_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0080_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0080_0000;
 }

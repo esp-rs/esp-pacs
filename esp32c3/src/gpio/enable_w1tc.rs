@@ -25,6 +25,7 @@ pub type ENABLE_W1TC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:25 - GPIO output enable clear register for GPIO0-25"]
     #[inline(always)]
+    #[must_use]
     pub fn enable_w1tc(&mut self) -> ENABLE_W1TC_W<0> {
         ENABLE_W1TC_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for ENABLE_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [enable_w1tc::W](W) writer structure"]
 impl crate::Writable for ENABLE_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ENABLE_W1TC to value 0"]
 impl crate::Resettable for ENABLE_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

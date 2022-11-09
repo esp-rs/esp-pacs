@@ -74,16 +74,19 @@ impl R {
 impl W {
     #[doc = "Bit 13 - invert temperature sensor data"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<13> {
         TSENS_IN_INV_W::new(self)
     }
     #[doc = "Bits 14:21 - temperature sensor clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<14> {
         TSENS_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - temperature sensor power up"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_pu(&mut self) -> TSENS_PU_W<22> {
         TSENS_PU_W::new(self)
     }
@@ -106,11 +109,10 @@ impl crate::Readable for APB_TSENS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_tsens_ctrl::W](W) writer structure"]
 impl crate::Writable for APB_TSENS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_TSENS_CTRL to value 0x0001_8000"]
 impl crate::Resettable for APB_TSENS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_8000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_8000;
 }

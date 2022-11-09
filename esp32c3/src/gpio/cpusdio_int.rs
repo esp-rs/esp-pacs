@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:25 - GPIO CPUSDIO interrupt status register for GPIO0-25"]
     #[inline(always)]
     pub fn sdio_int(&self) -> SDIO_INT_R {
-        SDIO_INT_R::new((self.bits & 0x03ff_ffff) as u32)
+        SDIO_INT_R::new(self.bits & 0x03ff_ffff)
     }
 }
 #[doc = "GPIO CPUSDIO interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpusdio_int](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for CPUSDIO_INT_SPEC {
 }
 #[doc = "`reset()` method sets CPUSDIO_INT to value 0"]
 impl crate::Resettable for CPUSDIO_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
