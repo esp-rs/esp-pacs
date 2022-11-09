@@ -24,6 +24,7 @@ pub type WR_JTAG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_JTAG_SPEC, 
 impl W {
     #[doc = "Bits 0:31 - 32-bit of key to be compared."]
     #[inline(always)]
+    #[must_use]
     pub fn wr_jtag(&mut self) -> WR_JTAG_W<0> {
         WR_JTAG_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for WR_JTAG_SPEC {
 #[doc = "`write(|w| ..)` method takes [wr_jtag::W](W) writer structure"]
 impl crate::Writable for WR_JTAG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WR_JTAG to value 0"]
 impl crate::Resettable for WR_JTAG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -174,76 +174,91 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
+    #[must_use]
     pub fn sclk_mode(&mut self) -> SCLK_MODE_W<0> {
         SCLK_MODE_W::new(self)
     }
     #[doc = "Bits 2:9 - Mode bits when SPI0 accesses to Ext_RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn swb_mode(&mut self) -> SWB_MODE_W<2> {
         SWB_MODE_W::new(self)
     }
     #[doc = "Bit 10 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdin_dual(&mut self) -> SDIN_DUAL_W<10> {
         SDIN_DUAL_W::new(self)
     }
     #[doc = "Bit 11 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdout_dual(&mut self) -> SDOUT_DUAL_W<11> {
         SDOUT_DUAL_W::new(self)
     }
     #[doc = "Bit 12 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
+    #[must_use]
     pub fn saddr_dual(&mut self) -> SADDR_DUAL_W<12> {
         SADDR_DUAL_W::new(self)
     }
     #[doc = "Bit 13 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
     #[inline(always)]
+    #[must_use]
     pub fn scmd_dual(&mut self) -> SCMD_DUAL_W<13> {
         SCMD_DUAL_W::new(self)
     }
     #[doc = "Bit 14 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdin_quad(&mut self) -> SDIN_QUAD_W<14> {
         SDIN_QUAD_W::new(self)
     }
     #[doc = "Bit 15 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdout_quad(&mut self) -> SDOUT_QUAD_W<15> {
         SDOUT_QUAD_W::new(self)
     }
     #[doc = "Bit 16 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
+    #[must_use]
     pub fn saddr_quad(&mut self) -> SADDR_QUAD_W<16> {
         SADDR_QUAD_W::new(self)
     }
     #[doc = "Bit 17 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
     #[inline(always)]
+    #[must_use]
     pub fn scmd_quad(&mut self) -> SCMD_QUAD_W<17> {
         SCMD_QUAD_W::new(self)
     }
     #[doc = "Bit 18 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdin_oct(&mut self) -> SDIN_OCT_W<18> {
         SDIN_OCT_W::new(self)
     }
     #[doc = "Bit 19 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
     #[inline(always)]
+    #[must_use]
     pub fn sdout_oct(&mut self) -> SDOUT_OCT_W<19> {
         SDOUT_OCT_W::new(self)
     }
     #[doc = "Bit 20 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
     #[inline(always)]
+    #[must_use]
     pub fn saddr_oct(&mut self) -> SADDR_OCT_W<20> {
         SADDR_OCT_W::new(self)
     }
     #[doc = "Bit 21 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
     #[inline(always)]
+    #[must_use]
     pub fn scmd_oct(&mut self) -> SCMD_OCT_W<21> {
         SCMD_OCT_W::new(self)
     }
     #[doc = "Bit 22 - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
+    #[must_use]
     pub fn sdummy_out(&mut self) -> SDUMMY_OUT_W<22> {
         SDUMMY_OUT_W::new(self)
     }
@@ -266,11 +281,10 @@ impl crate::Readable for SRAM_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_CMD to value 0"]
 impl crate::Resettable for SRAM_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

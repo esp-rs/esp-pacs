@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask world, then only world0_value will work."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_vecbase_world_mask(&mut self) -> CORE_0_VECBASE_WORLD_MASK_W<0> {
         CORE_0_VECBASE_WORLD_MASK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_VECBASE_OVERRIDE_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_vecbase_override_0::W](W) writer structure"]
 impl crate::Writable for CORE_0_VECBASE_OVERRIDE_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_VECBASE_OVERRIDE_0 to value 0x01"]
 impl crate::Resettable for CORE_0_VECBASE_OVERRIDE_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

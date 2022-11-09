@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:27 - I2S version control register"]
     #[inline(always)]
     pub fn i2s_date(&self) -> I2S_DATE_R {
-        I2S_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        I2S_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - I2S version control register"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_date(&mut self) -> I2S_DATE_W<0> {
         I2S_DATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for I2S_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_date::W](W) writer structure"]
 impl crate::Writable for I2S_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_DATE to value 0x0200_9070"]
 impl crate::Resettable for I2S_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_9070
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_9070;
 }

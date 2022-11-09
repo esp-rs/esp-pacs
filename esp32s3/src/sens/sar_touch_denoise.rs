@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - configure touch controller"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
-        DATA_R::new((self.bits & 0x003f_ffff) as u32)
+        DATA_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "configure touch controller\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_denoise](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for SAR_TOUCH_DENOISE_SPEC {
 }
 #[doc = "`reset()` method sets SAR_TOUCH_DENOISE to value 0"]
 impl crate::Resettable for SAR_TOUCH_DENOISE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

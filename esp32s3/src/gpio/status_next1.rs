@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - GPIO interrupt source register for GPIO32-53"]
     #[inline(always)]
     pub fn status_interrupt_next1(&self) -> STATUS_INTERRUPT_NEXT1_R {
-        STATUS_INTERRUPT_NEXT1_R::new((self.bits & 0x003f_ffff) as u32)
+        STATUS_INTERRUPT_NEXT1_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "GPIO interrupt source register for GPIO32-53\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status_next1](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for STATUS_NEXT1_SPEC {
 }
 #[doc = "`reset()` method sets STATUS_NEXT1 to value 0"]
 impl crate::Resettable for STATUS_NEXT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

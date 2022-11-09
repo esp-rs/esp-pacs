@@ -159,56 +159,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Core1 dram0 area0 read monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_dram0_0_rd_ena(&mut self) -> CORE_1_AREA_DRAM0_0_RD_ENA_W<0> {
         CORE_1_AREA_DRAM0_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 1 - Core1 dram0 area0 write monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_dram0_0_wr_ena(&mut self) -> CORE_1_AREA_DRAM0_0_WR_ENA_W<1> {
         CORE_1_AREA_DRAM0_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 2 - Core1 dram0 area1 read monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_dram0_1_rd_ena(&mut self) -> CORE_1_AREA_DRAM0_1_RD_ENA_W<2> {
         CORE_1_AREA_DRAM0_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 3 - Core1 dram0 area1 write monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_dram0_1_wr_ena(&mut self) -> CORE_1_AREA_DRAM0_1_WR_ENA_W<3> {
         CORE_1_AREA_DRAM0_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 4 - Core1 PIF area0 read monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_pif_0_rd_ena(&mut self) -> CORE_1_AREA_PIF_0_RD_ENA_W<4> {
         CORE_1_AREA_PIF_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 5 - Core1 PIF area0 write monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_pif_0_wr_ena(&mut self) -> CORE_1_AREA_PIF_0_WR_ENA_W<5> {
         CORE_1_AREA_PIF_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 6 - Core1 PIF area1 read monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_pif_1_rd_ena(&mut self) -> CORE_1_AREA_PIF_1_RD_ENA_W<6> {
         CORE_1_AREA_PIF_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 7 - Core1 PIF area1 write monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_area_pif_1_wr_ena(&mut self) -> CORE_1_AREA_PIF_1_WR_ENA_W<7> {
         CORE_1_AREA_PIF_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 8 - Core1 stackpoint overflow monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_sp_spill_min_ena(&mut self) -> CORE_1_SP_SPILL_MIN_ENA_W<8> {
         CORE_1_SP_SPILL_MIN_ENA_W::new(self)
     }
     #[doc = "Bit 9 - Core1 stackpoint underflow monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_sp_spill_max_ena(&mut self) -> CORE_1_SP_SPILL_MAX_ENA_W<9> {
         CORE_1_SP_SPILL_MAX_ENA_W::new(self)
     }
     #[doc = "Bit 10 - IBUS busy monitor enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_iram0_exception_monitor_ena(
         &mut self,
     ) -> CORE_1_IRAM0_EXCEPTION_MONITOR_ENA_W<10> {
@@ -216,6 +227,7 @@ impl W {
     }
     #[doc = "Bit 11 - DBUS busy monitor enbale"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_dram0_exception_monitor_ena(
         &mut self,
     ) -> CORE_1_DRAM0_EXCEPTION_MONITOR_ENA_W<11> {
@@ -240,11 +252,10 @@ impl crate::Readable for CORE_1_INTERRUPT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_interrupt_ena::W](W) writer structure"]
 impl crate::Writable for CORE_1_INTERRUPT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_INTERRUPT_ENA to value 0"]
 impl crate::Resettable for CORE_1_INTERRUPT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

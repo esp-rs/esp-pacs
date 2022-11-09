@@ -124,8 +124,5 @@ impl crate::Readable for INFIFO_STATUS_CH_SPEC {
 }
 #[doc = "`reset()` method sets INFIFO_STATUS_CH%s to value 0x0f00_003a"]
 impl crate::Resettable for INFIFO_STATUS_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f00_003a
-    }
+    const RESET_VALUE: Self::Ux = 0x0f00_003a;
 }

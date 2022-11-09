@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - This field is used to configure the boundary 0 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
     #[inline(always)]
+    #[must_use]
     pub fn edma_boundary_0(&mut self) -> EDMA_BOUNDARY_0_W<0> {
         EDMA_BOUNDARY_0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for EDMA_BOUNDARY_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [edma_boundary_0::W](W) writer structure"]
 impl crate::Writable for EDMA_BOUNDARY_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EDMA_BOUNDARY_0 to value 0"]
 impl crate::Resettable for EDMA_BOUNDARY_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

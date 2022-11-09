@@ -25,6 +25,7 @@ pub type CORE_1_NMI_MASK_ENABLE_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:31 - this field is used to set NMI mask, it can write any value, when write this register,the hardware start masking NMI interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_nmi_mask_enable(&mut self) -> CORE_1_NMI_MASK_ENABLE_W<0> {
         CORE_1_NMI_MASK_ENABLE_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for CORE_1_NMI_MASK_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_nmi_mask_enable::W](W) writer structure"]
 impl crate::Writable for CORE_1_NMI_MASK_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_1_NMI_MASK_ENABLE to value 0"]
 impl crate::Resettable for CORE_1_NMI_MASK_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

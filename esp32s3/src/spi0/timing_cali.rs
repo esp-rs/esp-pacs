@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
+    #[must_use]
     pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<0> {
         TIMING_CLK_ENA_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
+    #[must_use]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W<1> {
         TIMING_CALI_W::new(self)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<2> {
         EXTRA_DUMMY_CYCLELEN_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for TIMING_CALI_SPEC {
 #[doc = "`write(|w| ..)` method takes [timing_cali::W](W) writer structure"]
 impl crate::Writable for TIMING_CALI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMING_CALI to value 0"]
 impl crate::Resettable for TIMING_CALI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

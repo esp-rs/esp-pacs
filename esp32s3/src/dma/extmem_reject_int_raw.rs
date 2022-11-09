@@ -33,8 +33,5 @@ impl crate::Readable for EXTMEM_REJECT_INT_RAW_SPEC {
 }
 #[doc = "`reset()` method sets EXTMEM_REJECT_INT_RAW to value 0"]
 impl crate::Resettable for EXTMEM_REJECT_INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

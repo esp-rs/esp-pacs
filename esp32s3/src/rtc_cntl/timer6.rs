@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<0> {
         CPU_TOP_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<9> {
         CPU_TOP_POWERUP_TIMER_W::new(self)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<16> {
         DG_PERI_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 25:31 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<25> {
         DG_PERI_POWERUP_TIMER_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for TIMER6_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer6::W](W) writer structure"]
 impl crate::Writable for TIMER6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER6 to value 0x1020_0a08"]
 impl crate::Resettable for TIMER6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1020_0a08
-    }
+    const RESET_VALUE: Self::Ux = 0x1020_0a08;
 }

@@ -69,21 +69,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When set, capture timer incrementing under APB_clk is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<0> {
         CAP_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 1 - When set, capture timer sync is enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<1> {
         CAP_SYNCI_EN_W::new(self)
     }
     #[doc = "Bits 2:4 - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<2> {
         CAP_SYNCI_SEL_W::new(self)
     }
     #[doc = "Bit 5 - Write 1 will force a capture timer sync, capture timer is loaded with value in phase register."]
     #[inline(always)]
+    #[must_use]
     pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<5> {
         CAP_SYNC_SW_W::new(self)
     }
@@ -106,11 +110,10 @@ impl crate::Readable for CAP_TIMER_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cap_timer_cfg::W](W) writer structure"]
 impl crate::Writable for CAP_TIMER_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CAP_TIMER_CFG to value 0"]
 impl crate::Resettable for CAP_TIMER_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn xfercompl6(&mut self) -> XFERCOMPL6_W<0> {
         XFERCOMPL6_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn epdisbld6(&mut self) -> EPDISBLD6_W<1> {
         EPDISBLD6_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn ahberr6(&mut self) -> AHBERR6_W<2> {
         AHBERR6_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn setup6(&mut self) -> SETUP6_W<3> {
         SETUP6_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn outtknepdis6(&mut self) -> OUTTKNEPDIS6_W<4> {
         OUTTKNEPDIS6_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn stsphsercvd6(&mut self) -> STSPHSERCVD6_W<5> {
         STSPHSERCVD6_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn back2backsetup6(&mut self) -> BACK2BACKSETUP6_W<6> {
         BACK2BACKSETUP6_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn outpkterr6(&mut self) -> OUTPKTERR6_W<8> {
         OUTPKTERR6_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn bnaintr6(&mut self) -> BNAINTR6_W<9> {
         BNAINTR6_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn pktdrpsts6(&mut self) -> PKTDRPSTS6_W<11> {
         PKTDRPSTS6_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn bbleerr6(&mut self) -> BBLEERR6_W<12> {
         BBLEERR6_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn nakintrpt6(&mut self) -> NAKINTRPT6_W<13> {
         NAKINTRPT6_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn nyepintrpt6(&mut self) -> NYEPINTRPT6_W<14> {
         NYEPINTRPT6_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn stuppktrcvd6(&mut self) -> STUPPKTRCVD6_W<15> {
         STUPPKTRCVD6_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for DOEPINT6_SPEC {
 #[doc = "`write(|w| ..)` method takes [doepint6::W](W) writer structure"]
 impl crate::Writable for DOEPINT6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPINT6 to value 0"]
 impl crate::Resettable for DOEPINT6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

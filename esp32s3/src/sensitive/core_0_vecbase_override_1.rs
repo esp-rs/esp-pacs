@@ -48,7 +48,7 @@ impl R {
     #[doc = "Bits 0:21 - world0 vecbase_override register, when core0 in world0 use this register to override vecbase register."]
     #[inline(always)]
     pub fn core_0_vecbase_override_world0_value(&self) -> CORE_0_VECBASE_OVERRIDE_WORLD0_VALUE_R {
-        CORE_0_VECBASE_OVERRIDE_WORLD0_VALUE_R::new((self.bits & 0x003f_ffff) as u32)
+        CORE_0_VECBASE_OVERRIDE_WORLD0_VALUE_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
@@ -59,6 +59,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:21 - world0 vecbase_override register, when core0 in world0 use this register to override vecbase register."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_vecbase_override_world0_value(
         &mut self,
     ) -> CORE_0_VECBASE_OVERRIDE_WORLD0_VALUE_W<0> {
@@ -66,6 +67,7 @@ impl W {
     }
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_vecbase_override_sel(&mut self) -> CORE_0_VECBASE_OVERRIDE_SEL_W<22> {
         CORE_0_VECBASE_OVERRIDE_SEL_W::new(self)
     }
@@ -88,11 +90,10 @@ impl crate::Readable for CORE_0_VECBASE_OVERRIDE_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_vecbase_override_1::W](W) writer structure"]
 impl crate::Writable for CORE_0_VECBASE_OVERRIDE_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_VECBASE_OVERRIDE_1 to value 0"]
 impl crate::Resettable for CORE_0_VECBASE_OVERRIDE_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

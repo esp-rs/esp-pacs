@@ -124,46 +124,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1) when reg_clk_equ_sysclk is 0."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clkcnt_n(&mut self) -> LCD_CLKCNT_N_W<0> {
         LCD_CLKCNT_N_W::new(self)
     }
     #[doc = "Bit 6 - 1: f_LCD_PCLK = f_LCD_CLK. 0: f_LCD_PCLK = f_LCD_CLK / (reg_clkcnt_N + 1)."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clk_equ_sysclk(&mut self) -> LCD_CLK_EQU_SYSCLK_W<6> {
         LCD_CLK_EQU_SYSCLK_W::new(self)
     }
     #[doc = "Bit 7 - 1: LCD_PCLK line is high when idle 0: LCD_PCLK line is low when idle."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_ck_idle_edge(&mut self) -> LCD_CK_IDLE_EDGE_W<7> {
         LCD_CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 8 - 1: LCD_PCLK high in first half clock cycle. 0: LCD_PCLK low in first half clock cycle."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_ck_out_edge(&mut self) -> LCD_CK_OUT_EDGE_W<8> {
         LCD_CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bits 9:16 - Integral LCD clock divider value"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clkm_div_num(&mut self) -> LCD_CLKM_DIV_NUM_W<9> {
         LCD_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 17:22 - Fractional clock divider numerator value"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clkm_div_b(&mut self) -> LCD_CLKM_DIV_B_W<17> {
         LCD_CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 23:28 - Fractional clock divider denominator value"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clkm_div_a(&mut self) -> LCD_CLKM_DIV_A_W<23> {
         LCD_CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bits 29:30 - Select LCD module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: no clock."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_clk_sel(&mut self) -> LCD_CLK_SEL_W<29> {
         LCD_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable clk gate"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -186,11 +195,10 @@ impl crate::Readable for LCD_CLOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_clock::W](W) writer structure"]
 impl crate::Writable for LCD_CLOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_CLOCK to value 0x0843"]
 impl crate::Resettable for LCD_CLOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0843
-    }
+    const RESET_VALUE: Self::Ux = 0x0843;
 }

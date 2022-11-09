@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_mode(&mut self) -> CLK_MODE_W<0> {
         CLK_MODE_W::new(self)
     }
     #[doc = "Bits 2:11 - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<2> {
         CS_HOLD_DLY_RES_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl1::W](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0x0ffc"]
 impl crate::Resettable for CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0ffc
-    }
+    const RESET_VALUE: Self::Ux = 0x0ffc;
 }

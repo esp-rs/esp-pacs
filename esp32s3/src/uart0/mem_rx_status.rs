@@ -40,8 +40,5 @@ impl crate::Readable for MEM_RX_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets MEM_RX_STATUS to value 0x0010_0200"]
 impl crate::Resettable for MEM_RX_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0010_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0010_0200;
 }

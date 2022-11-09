@@ -52,11 +52,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - RTC sleep timer high 16 bits"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_val_hi(&mut self) -> SLP_VAL_HI_W<0> {
         SLP_VAL_HI_W::new(self)
     }
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_alarm_en(&mut self) -> MAIN_TIMER_ALARM_EN_W<16> {
         MAIN_TIMER_ALARM_EN_W::new(self)
     }
@@ -79,11 +81,10 @@ impl crate::Readable for SLP_TIMER1_SPEC {
 #[doc = "`write(|w| ..)` method takes [slp_timer1::W](W) writer structure"]
 impl crate::Writable for SLP_TIMER1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLP_TIMER1 to value 0"]
 impl crate::Resettable for SLP_TIMER1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -140,56 +140,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to let BACKUP reset"]
     #[inline(always)]
+    #[must_use]
     pub fn peri_backup_rst(&mut self) -> PERI_BACKUP_RST_W<0> {
         PERI_BACKUP_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to let CRYPTO_AES reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<1> {
         CRYPTO_AES_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to let CRYPTO_SHA reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<2> {
         CRYPTO_SHA_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to let CRYPTO_RSA reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<3> {
         CRYPTO_RSA_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set 1 to let CRYPTO_DS reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<4> {
         CRYPTO_DS_RST_W::new(self)
     }
     #[doc = "Bit 5 - Set 1 to let CRYPTO_HMAC reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<5> {
         CRYPTO_HMAC_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to let DMA reset"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rst(&mut self) -> DMA_RST_W<6> {
         DMA_RST_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to let SDIO_HOST reset"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_host_rst(&mut self) -> SDIO_HOST_RST_W<7> {
         SDIO_HOST_RST_W::new(self)
     }
     #[doc = "Bit 8 - Set 1 to let LCD_CAM reset"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cam_rst(&mut self) -> LCD_CAM_RST_W<8> {
         LCD_CAM_RST_W::new(self)
     }
     #[doc = "Bit 9 - Set 1 to let UART2 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn uart2_rst(&mut self) -> UART2_RST_W<9> {
         UART2_RST_W::new(self)
     }
     #[doc = "Bit 10 - Set 1 to let USB_DEVICE reset"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_device_rst(&mut self) -> USB_DEVICE_RST_W<10> {
         USB_DEVICE_RST_W::new(self)
     }
@@ -212,11 +223,10 @@ impl crate::Readable for PERIP_RST_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN1 to value 0x01fe"]
 impl crate::Resettable for PERIP_RST_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01fe
-    }
+    const RESET_VALUE: Self::Ux = 0x01fe;
 }

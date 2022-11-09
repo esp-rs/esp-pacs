@@ -172,71 +172,85 @@ impl R {
 impl W {
     #[doc = "Bit 0 - enable start saradc by sw"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_start_force(&mut self) -> SARADC_START_FORCE_W<0> {
         SARADC_START_FORCE_W::new(self)
     }
     #[doc = "Bit 1 - start saradc by sw"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_start(&mut self) -> SARADC_START_W<1> {
         SARADC_START_W::new(self)
     }
     #[doc = "Bits 3:4 - 0: single mode, 1: double mode, 2: alternate mode"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_work_mode(&mut self) -> SARADC_WORK_MODE_W<3> {
         SARADC_WORK_MODE_W::new(self)
     }
     #[doc = "Bit 5 - 0: SAR1, 1: SAR2, only work for single SAR mode"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_sel(&mut self) -> SARADC_SAR_SEL_W<5> {
         SARADC_SAR_SEL_W::new(self)
     }
     #[doc = "Bit 6 - enable SAR CLK gate when saradc idle"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_clk_gated(&mut self) -> SARADC_SAR_CLK_GATED_W<6> {
         SARADC_SAR_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar_clk_div(&mut self) -> SARADC_SAR_CLK_DIV_W<7> {
         SARADC_SAR_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 15:18 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar1_patt_len(&mut self) -> SARADC_SAR1_PATT_LEN_W<15> {
         SARADC_SAR1_PATT_LEN_W::new(self)
     }
     #[doc = "Bits 19:22 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar2_patt_len(&mut self) -> SARADC_SAR2_PATT_LEN_W<19> {
         SARADC_SAR2_PATT_LEN_W::new(self)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar1_patt_p_clear(&mut self) -> SARADC_SAR1_PATT_P_CLEAR_W<23> {
         SARADC_SAR1_PATT_P_CLEAR_W::new(self)
     }
     #[doc = "Bit 24 - clear the pointer of pattern table for DIG ADC2 CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar2_patt_p_clear(&mut self) -> SARADC_SAR2_PATT_P_CLEAR_W<24> {
         SARADC_SAR2_PATT_P_CLEAR_W::new(self)
     }
     #[doc = "Bit 25 - 1: sar_sel will be coded by the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_data_sar_sel(&mut self) -> SARADC_DATA_SAR_SEL_W<25> {
         SARADC_DATA_SAR_SEL_W::new(self)
     }
     #[doc = "Bit 26 - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_data_to_i2s(&mut self) -> SARADC_DATA_TO_I2S_W<26> {
         SARADC_DATA_TO_I2S_W::new(self)
     }
     #[doc = "Bits 27:28 - force option to xpd sar blocks"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_xpd_sar_force(&mut self) -> SARADC_XPD_SAR_FORCE_W<27> {
         SARADC_XPD_SAR_FORCE_W::new(self)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_wait_arb_cycle(&mut self) -> SARADC_WAIT_ARB_CYCLE_W<30> {
         SARADC_WAIT_ARB_CYCLE_W::new(self)
     }
@@ -259,11 +273,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x407f_8240"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x407f_8240
-    }
+    const RESET_VALUE: Self::Ux = 0x407f_8240;
 }

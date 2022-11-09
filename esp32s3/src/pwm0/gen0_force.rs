@@ -107,36 +107,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Updating method for continuous software force of PWM generator0. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_cntuforce_upmethod(&mut self) -> GEN0_CNTUFORCE_UPMETHOD_W<0> {
         GEN0_CNTUFORCE_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 6:7 - Continuous software force mode for PWM0A. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_cntuforce_mode(&mut self) -> GEN0_A_CNTUFORCE_MODE_W<6> {
         GEN0_A_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bits 8:9 - Continuous software force mode for PWM0B. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_cntuforce_mode(&mut self) -> GEN0_B_CNTUFORCE_MODE_W<8> {
         GEN0_B_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 10 - Trigger of non-continuous immediate software-force event for PWM0A, a toggle will trigger a force event."]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_nciforce(&mut self) -> GEN0_A_NCIFORCE_W<10> {
         GEN0_A_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 11:12 - non-continuous immediate software force mode for PWM0A, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_a_nciforce_mode(&mut self) -> GEN0_A_NCIFORCE_MODE_W<11> {
         GEN0_A_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 13 - Trigger of non-continuous immediate software-force event for PWM0B, a toggle will trigger a force event."]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_nciforce(&mut self) -> GEN0_B_NCIFORCE_W<13> {
         GEN0_B_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 14:15 - non-continuous immediate software force mode for PWM0B, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
+    #[must_use]
     pub fn gen0_b_nciforce_mode(&mut self) -> GEN0_B_NCIFORCE_MODE_W<14> {
         GEN0_B_NCIFORCE_MODE_W::new(self)
     }
@@ -159,11 +166,10 @@ impl crate::Readable for GEN0_FORCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen0_force::W](W) writer structure"]
 impl crate::Writable for GEN0_FORCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN0_FORCE to value 0x20"]
 impl crate::Resettable for GEN0_FORCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

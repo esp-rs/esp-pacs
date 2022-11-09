@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable the SPI manual encrypt."]
     #[inline(always)]
+    #[must_use]
     pub fn enable_spi_manual_encrypt(&mut self) -> ENABLE_SPI_MANUAL_ENCRYPT_W<0> {
         ENABLE_SPI_MANUAL_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to enable download DB encrypt."]
     #[inline(always)]
+    #[must_use]
     pub fn enable_download_db_encrypt(&mut self) -> ENABLE_DOWNLOAD_DB_ENCRYPT_W<1> {
         ENABLE_DOWNLOAD_DB_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable download G0CB decrypt"]
     #[inline(always)]
+    #[must_use]
     pub fn enable_download_g0cb_decrypt(&mut self) -> ENABLE_DOWNLOAD_G0CB_DECRYPT_W<2> {
         ENABLE_DOWNLOAD_G0CB_DECRYPT_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to enable download manual encrypt"]
     #[inline(always)]
+    #[must_use]
     pub fn enable_download_manual_encrypt(&mut self) -> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<3> {
         ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
 #[doc = "`write(|w| ..)` method takes [external_device_encrypt_decrypt_control::W](W) writer structure"]
 impl crate::Writable for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL to value 0"]
 impl crate::Resettable for EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

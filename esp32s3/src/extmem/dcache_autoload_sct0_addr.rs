@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_autoload_sct0_addr(&mut self) -> DCACHE_AUTOLOAD_SCT0_ADDR_W<0> {
         DCACHE_AUTOLOAD_SCT0_ADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DCACHE_AUTOLOAD_SCT0_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_autoload_sct0_addr::W](W) writer structure"]
 impl crate::Writable for DCACHE_AUTOLOAD_SCT0_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_AUTOLOAD_SCT0_ADDR to value 0"]
 impl crate::Resettable for DCACHE_AUTOLOAD_SCT0_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

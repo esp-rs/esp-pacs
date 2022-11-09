@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map backup_pms_monitor_violatile interrupt to one of core1's external interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn backup_pms_violate_intr_map(&mut self) -> BACKUP_PMS_VIOLATE_INTR_MAP_W<0> {
         BACKUP_PMS_VIOLATE_INTR_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BACKUP_PMS_VIOLATE_INTR_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_pms_violate_intr_map::W](W) writer structure"]
 impl crate::Writable for BACKUP_PMS_VIOLATE_INTR_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_PMS_VIOLATE_INTR_MAP to value 0x10"]
 impl crate::Resettable for BACKUP_PMS_VIOLATE_INTR_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

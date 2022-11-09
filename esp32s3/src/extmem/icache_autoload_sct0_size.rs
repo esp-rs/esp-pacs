@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the first section for autoload operation. It should be combined with icache_autoload_sct0_ena."]
     #[inline(always)]
     pub fn icache_autoload_sct0_size(&self) -> ICACHE_AUTOLOAD_SCT0_SIZE_R {
-        ICACHE_AUTOLOAD_SCT0_SIZE_R::new((self.bits & 0x07ff_ffff) as u32)
+        ICACHE_AUTOLOAD_SCT0_SIZE_R::new(self.bits & 0x07ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the first section for autoload operation. It should be combined with icache_autoload_sct0_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_autoload_sct0_size(&mut self) -> ICACHE_AUTOLOAD_SCT0_SIZE_W<0> {
         ICACHE_AUTOLOAD_SCT0_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ICACHE_AUTOLOAD_SCT0_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_autoload_sct0_size::W](W) writer structure"]
 impl crate::Writable for ICACHE_AUTOLOAD_SCT0_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_AUTOLOAD_SCT0_SIZE to value 0"]
 impl crate::Resettable for ICACHE_AUTOLOAD_SCT0_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

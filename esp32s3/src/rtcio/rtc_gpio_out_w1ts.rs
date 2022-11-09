@@ -25,6 +25,7 @@ pub type RTC_GPIO_OUT_DATA_W1TS_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 output data write 1 to set"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_gpio_out_data_w1ts(&mut self) -> RTC_GPIO_OUT_DATA_W1TS_W<10> {
         RTC_GPIO_OUT_DATA_W1TS_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for RTC_GPIO_OUT_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_gpio_out_w1ts::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_OUT_W1TS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_GPIO_OUT_W1TS to value 0"]
 impl crate::Resettable for RTC_GPIO_OUT_W1TS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

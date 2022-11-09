@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - check data0"]
     #[inline(always)]
+    #[must_use]
     pub fn log_data_0(&mut self) -> LOG_DATA_0_W<0> {
         LOG_DATA_0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LOG_DATA_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [log_data_0::W](W) writer structure"]
 impl crate::Writable for LOG_DATA_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOG_DATA_0 to value 0"]
 impl crate::Resettable for LOG_DATA_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

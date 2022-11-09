@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 1:13 - This filed is used to enable entry address check"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_entry_check(&mut self) -> CORE_0_ENTRY_CHECK_W<1> {
         CORE_0_ENTRY_CHECK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_ENTRY_CHECK_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_entry_check::W](W) writer structure"]
 impl crate::Writable for CORE_0_ENTRY_CHECK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_0_ENTRY_CHECK to value 0x02"]
 impl crate::Resettable for CORE_0_ENTRY_CHECK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

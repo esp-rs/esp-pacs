@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<12> {
         OUT_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<13> {
         OUT_EXT_MEM_BK_SIZE_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for OUT_CONF1_CH_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_conf1_ch::W](W) writer structure"]
 impl crate::Writable for OUT_CONF1_CH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_CONF1_CH%s to value 0"]
 impl crate::Resettable for OUT_CONF1_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

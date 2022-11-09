@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfdep(&mut self) -> RXFDEP_W<0> {
         RXFDEP_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for GRXFSIZ_SPEC {
 #[doc = "`write(|w| ..)` method takes [grxfsiz::W](W) writer structure"]
 impl crate::Writable for GRXFSIZ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GRXFSIZ to value 0x0100"]
 impl crate::Resettable for GRXFSIZ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

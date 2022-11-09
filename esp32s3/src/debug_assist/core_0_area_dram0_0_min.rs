@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Core0 dram0 region0 start addr"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_min(&mut self) -> CORE_0_AREA_DRAM0_0_MIN_W<0> {
         CORE_0_AREA_DRAM0_0_MIN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_AREA_DRAM0_0_MIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_area_dram0_0_min::W](W) writer structure"]
 impl crate::Writable for CORE_0_AREA_DRAM0_0_MIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_AREA_DRAM0_0_MIN to value 0xffff_ffff"]
 impl crate::Resettable for CORE_0_AREA_DRAM0_0_MIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

@@ -58,11 +58,13 @@ pub type SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA_W1TC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Clear int enable of touch done"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_done_int_ena_w1tc(&mut self) -> SAR_COCPU_TOUCH_DONE_INT_ENA_W1TC_W<0> {
         SAR_COCPU_TOUCH_DONE_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 1 - Clear int enable of from touch inactive"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_inactive_int_ena_w1tc(
         &mut self,
     ) -> SAR_COCPU_TOUCH_INACTIVE_INT_ENA_W1TC_W<1> {
@@ -70,6 +72,7 @@ impl W {
     }
     #[doc = "Bit 2 - Clear int enable of touch active"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_active_int_ena_w1tc(
         &mut self,
     ) -> SAR_COCPU_TOUCH_ACTIVE_INT_ENA_W1TC_W<2> {
@@ -77,36 +80,43 @@ impl W {
     }
     #[doc = "Bit 3 - Clear int enable of from saradc1"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_saradc1_int_ena_w1tc(&mut self) -> SAR_COCPU_SARADC1_INT_ENA_W1TC_W<3> {
         SAR_COCPU_SARADC1_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 4 - Clear int enable of from saradc2"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_saradc2_int_ena_w1tc(&mut self) -> SAR_COCPU_SARADC2_INT_ENA_W1TC_W<4> {
         SAR_COCPU_SARADC2_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 5 - Clear int enable of tsens"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_tsens_int_ena_w1tc(&mut self) -> SAR_COCPU_TSENS_INT_ENA_W1TC_W<5> {
         SAR_COCPU_TSENS_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 6 - Clear int enable of start"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_start_int_ena_w1tc(&mut self) -> SAR_COCPU_START_INT_ENA_W1TC_W<6> {
         SAR_COCPU_START_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 7 - Clear int enable of software"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_sw_int_ena_w1tc(&mut self) -> SAR_COCPU_SW_INT_ENA_W1TC_W<7> {
         SAR_COCPU_SW_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 8 - Clear int enable of super watch dog"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_swd_int_ena_w1tc(&mut self) -> SAR_COCPU_SWD_INT_ENA_W1TC_W<8> {
         SAR_COCPU_SWD_INT_ENA_W1TC_W::new(self)
     }
     #[doc = "Bit 9 - Clear int enable of timeout done"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_timeout_int_ena_w1tc(
         &mut self,
     ) -> SAR_COCPU_TOUCH_TIMEOUT_INT_ENA_W1TC_W<9> {
@@ -114,6 +124,7 @@ impl W {
     }
     #[doc = "Bit 10 - Clear int enable of approach loop done"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_approach_loop_done_int_ena_w1tc(
         &mut self,
     ) -> SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W1TC_W<10> {
@@ -121,6 +132,7 @@ impl W {
     }
     #[doc = "Bit 11 - Clear int enable of touch scan done"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_touch_scan_done_int_ena_w1tc(
         &mut self,
     ) -> SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA_W1TC_W<11> {
@@ -141,11 +153,10 @@ impl crate::RegisterSpec for SAR_COCPU_INT_ENA_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_cocpu_int_ena_w1tc::W](W) writer structure"]
 impl crate::Writable for SAR_COCPU_INT_ENA_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_COCPU_INT_ENA_W1TC to value 0"]
 impl crate::Resettable for SAR_COCPU_INT_ENA_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

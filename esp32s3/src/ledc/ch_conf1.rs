@@ -86,26 +86,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the changing step scale of duty on channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_scale(&mut self) -> DUTY_SCALE_W<0> {
         DUTY_SCALE_W::new(self)
     }
     #[doc = "Bits 10:19 - The duty will change every LEDC_DUTY_CYCLE_CH%s on channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<10> {
         DUTY_CYCLE_W::new(self)
     }
     #[doc = "Bits 20:29 - This register is used to control the number of times the duty cycle will be changed."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_num(&mut self) -> DUTY_NUM_W<20> {
         DUTY_NUM_W::new(self)
     }
     #[doc = "Bit 30 - This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase; 0: Decrease."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_inc(&mut self) -> DUTY_INC_W<30> {
         DUTY_INC_W::new(self)
     }
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_start(&mut self) -> DUTY_START_W<31> {
         DUTY_START_W::new(self)
     }
@@ -128,11 +133,10 @@ impl crate::Readable for CH_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_conf1::W](W) writer structure"]
 impl crate::Writable for CH_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_CONF1 to value 0x4000_0000"]
 impl crate::Resettable for CH_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4000_0000;
 }

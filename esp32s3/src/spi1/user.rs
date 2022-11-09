@@ -156,66 +156,79 @@ impl R {
 impl W {
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<9> {
         CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable 2-bm in DOUT phase in SPI1 write operation."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<12> {
         FWRITE_DUAL_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable 4-bm in DOUT phase in SPI1 write operation."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<13> {
         FWRITE_QUAD_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable 2-bm in ADDR and DOUT phase in SPI1 write operation."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<14> {
         FWRITE_DIO_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable 4-bit-mode(4-bm) in ADDR and DOUT phase in SPI1 write operation."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<15> {
         FWRITE_QIO_W::new(self)
     }
     #[doc = "Bit 24 - DIN phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<24> {
         USR_MISO_HIGHPART_W::new(self)
     }
     #[doc = "Bit 25 - DOUT phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<25> {
         USR_MOSI_HIGHPART_W::new(self)
     }
     #[doc = "Bit 26 - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<26> {
         USR_DUMMY_IDLE_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to enable the DOUT phase of an write-data operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi(&mut self) -> USR_MOSI_W<27> {
         USR_MOSI_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to enable enable the DIN phase of a read-data operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso(&mut self) -> USR_MISO_W<28> {
         USR_MISO_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable enable the DUMMY phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<29> {
         USR_DUMMY_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable enable the ADDR phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_addr(&mut self) -> USR_ADDR_W<30> {
         USR_ADDR_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable enable the CMD phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_command(&mut self) -> USR_COMMAND_W<31> {
         USR_COMMAND_W::new(self)
     }
@@ -238,11 +251,10 @@ impl crate::Readable for USER_SPEC {
 #[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USER to value 0x8000_0000"]
 impl crate::Resettable for USER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_0000;
 }

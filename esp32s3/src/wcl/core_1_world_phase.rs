@@ -33,8 +33,5 @@ impl crate::Readable for CORE_1_WORLD_PHASE_SPEC {
 }
 #[doc = "`reset()` method sets Core_1_World_Phase to value 0"]
 impl crate::Resettable for CORE_1_WORLD_PHASE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

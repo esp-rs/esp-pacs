@@ -61,8 +61,5 @@ impl crate::Readable for DSTS_SPEC {
 }
 #[doc = "`reset()` method sets DSTS to value 0x02"]
 impl crate::Resettable for DSTS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

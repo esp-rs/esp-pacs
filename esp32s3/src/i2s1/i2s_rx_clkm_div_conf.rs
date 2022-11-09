@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - For b <= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b)."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clkm_div_z(&mut self) -> I2S_RX_CLKM_DIV_Z_W<0> {
         I2S_RX_CLKM_DIV_Z_W::new(self)
     }
     #[doc = "Bits 9:17 - For b <= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b))."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clkm_div_y(&mut self) -> I2S_RX_CLKM_DIV_Y_W<9> {
         I2S_RX_CLKM_DIV_Y_W::new(self)
     }
     #[doc = "Bits 18:26 - For b <= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clkm_div_x(&mut self) -> I2S_RX_CLKM_DIV_X_W<18> {
         I2S_RX_CLKM_DIV_X_W::new(self)
     }
     #[doc = "Bit 27 - For b <= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_clkm_div_yn1(&mut self) -> I2S_RX_CLKM_DIV_YN1_W<27> {
         I2S_RX_CLKM_DIV_YN1_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for I2S_RX_CLKM_DIV_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_rx_clkm_div_conf::W](W) writer structure"]
 impl crate::Writable for I2S_RX_CLKM_DIV_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_RX_CLKM_DIV_CONF to value 0x0200"]
 impl crate::Resettable for I2S_RX_CLKM_DIV_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

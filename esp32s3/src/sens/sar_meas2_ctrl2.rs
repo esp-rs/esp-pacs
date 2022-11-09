@@ -93,21 +93,25 @@ impl R {
 impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion"]
     #[inline(always)]
+    #[must_use]
     pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<17> {
         MEAS2_START_SAR_W::new(self)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by SW"]
     #[inline(always)]
+    #[must_use]
     pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<18> {
         MEAS2_START_FORCE_W::new(self)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<19> {
         SAR2_EN_PAD_W::new(self)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by SW"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<31> {
         SAR2_EN_PAD_FORCE_W::new(self)
     }
@@ -130,11 +134,10 @@ impl crate::Readable for SAR_MEAS2_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_meas2_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS2_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS2_CTRL2 to value 0"]
 impl crate::Resettable for SAR_MEAS2_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

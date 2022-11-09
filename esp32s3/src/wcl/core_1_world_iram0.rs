@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_world_iram0(&mut self) -> CORE_1_WORLD_IRAM0_W<0> {
         CORE_1_WORLD_IRAM0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_1_WORLD_IRAM0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_world_iram0::W](W) writer structure"]
 impl crate::Writable for CORE_1_WORLD_IRAM0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets Core_1_World_IRam0 to value 0"]
 impl crate::Resettable for CORE_1_WORLD_IRAM0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for HCDMAB4_SPEC {
 }
 #[doc = "`reset()` method sets HCDMAB4 to value 0"]
 impl crate::Resettable for HCDMAB4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

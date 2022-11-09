@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<0> {
         TX_BRK_NUM_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TXBRK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [txbrk_conf::W](W) writer structure"]
 impl crate::Writable for TXBRK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXBRK_CONF to value 0x0a"]
 impl crate::Resettable for TXBRK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0a
-    }
+    const RESET_VALUE: Self::Ux = 0x0a;
 }

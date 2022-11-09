@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_wrap_date(&mut self) -> USB_WRAP_DATE_W<0> {
         USB_WRAP_DATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [date::W](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x0210_2010"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0210_2010
-    }
+    const RESET_VALUE: Self::Ux = 0x0210_2010;
 }

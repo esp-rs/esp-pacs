@@ -61,8 +61,5 @@ impl crate::Readable for SAR_COCPU_DEBUG_SPEC {
 }
 #[doc = "`reset()` method sets SAR_COCPU_DEBUG to value 0"]
 impl crate::Resettable for SAR_COCPU_DEBUG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

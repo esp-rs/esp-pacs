@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core1 iram0 permission monitor register"]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_iram0_pms_monitor_lock(&mut self) -> CORE_1_IRAM0_PMS_MONITOR_LOCK_W<0> {
         CORE_1_IRAM0_PMS_MONITOR_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_1_IRAM0_PMS_MONITOR_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_iram0_pms_monitor_0::W](W) writer structure"]
 impl crate::Writable for CORE_1_IRAM0_PMS_MONITOR_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_IRAM0_PMS_MONITOR_0 to value 0"]
 impl crate::Resettable for CORE_1_IRAM0_PMS_MONITOR_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

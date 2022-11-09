@@ -72,27 +72,31 @@ impl R {
     #[doc = "Bits 5:27 - SPI register version."]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
-        DATE_R::new(((self.bits >> 5) & 0x007f_ffff) as u32)
+        DATE_R::new((self.bits >> 5) & 0x007f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_spiclk_fun_drv(&mut self) -> SPI_SMEM_SPICLK_FUN_DRV_W<0> {
         SPI_SMEM_SPICLK_FUN_DRV_W::new(self)
     }
     #[doc = "Bits 2:3 - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_fmem_spiclk_fun_drv(&mut self) -> SPI_FMEM_SPICLK_FUN_DRV_W<2> {
         SPI_FMEM_SPICLK_FUN_DRV_W::new(self)
     }
     #[doc = "Bit 4 - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_spiclk_pad_drv_ctl_en(&mut self) -> SPI_SPICLK_PAD_DRV_CTL_EN_W<4> {
         SPI_SPICLK_PAD_DRV_CTL_EN_W::new(self)
     }
     #[doc = "Bits 5:27 - SPI register version."]
     #[inline(always)]
+    #[must_use]
     pub fn date(&mut self) -> DATE_W<5> {
         DATE_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [date::W](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x0210_1040"]
 impl crate::Resettable for DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0210_1040
-    }
+    const RESET_VALUE: Self::Ux = 0x0210_1040;
 }

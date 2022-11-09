@@ -152,56 +152,67 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
+    #[must_use]
     pub fn toutcal(&mut self) -> TOUTCAL_W<0> {
         TOUTCAL_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn phyif(&mut self) -> PHYIF_W<3> {
         PHYIF_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn fsintf(&mut self) -> FSINTF_W<5> {
         FSINTF_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn srpcap(&mut self) -> SRPCAP_W<8> {
         SRPCAP_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn hnpcap(&mut self) -> HNPCAP_W<9> {
         HNPCAP_W::new(self)
     }
     #[doc = "Bits 10:13"]
     #[inline(always)]
+    #[must_use]
     pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<10> {
         USBTRDTIM_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<22> {
         TERMSELDLPULSE_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn txenddelay(&mut self) -> TXENDDELAY_W<28> {
         TXENDDELAY_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<29> {
         FORCEHSTMODE_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<30> {
         FORCEDEVMODE_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<31> {
         CORRUPTTXPKT_W::new(self)
     }
@@ -224,11 +235,10 @@ impl crate::Readable for GUSBCFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [gusbcfg::W](W) writer structure"]
 impl crate::Writable for GUSBCFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GUSBCFG to value 0x1440"]
 impl crate::Resettable for GUSBCFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1440
-    }
+    const RESET_VALUE: Self::Ux = 0x1440;
 }

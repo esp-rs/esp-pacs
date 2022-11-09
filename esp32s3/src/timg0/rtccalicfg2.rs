@@ -60,17 +60,19 @@ impl R {
     #[doc = "Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
     #[inline(always)]
     pub fn rtc_cali_timeout_thres(&self) -> RTC_CALI_TIMEOUT_THRES_R {
-        RTC_CALI_TIMEOUT_THRES_R::new(((self.bits >> 7) & 0x01ff_ffff) as u32)
+        RTC_CALI_TIMEOUT_THRES_R::new((self.bits >> 7) & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 3:6 - Cycles that release calibration timeout reset"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_timeout_rst_cnt(&mut self) -> RTC_CALI_TIMEOUT_RST_CNT_W<3> {
         RTC_CALI_TIMEOUT_RST_CNT_W::new(self)
     }
     #[doc = "Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_cali_timeout_thres(&mut self) -> RTC_CALI_TIMEOUT_THRES_W<7> {
         RTC_CALI_TIMEOUT_THRES_W::new(self)
     }
@@ -93,11 +95,10 @@ impl crate::Readable for RTCCALICFG2_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtccalicfg2::W](W) writer structure"]
 impl crate::Writable for RTCCALICFG2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTCCALICFG2 to value 0xffff_ff98"]
 impl crate::Resettable for RTCCALICFG2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ff98
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ff98;
 }

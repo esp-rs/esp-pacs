@@ -77,6 +77,7 @@ impl R {
 impl W {
     #[doc = "Bit 25 - trigger cocpu debug registers"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_cocpu_dbg_trigger(&mut self) -> SAR_COCPU_DBG_TRIGGER_W<25> {
         SAR_COCPU_DBG_TRIGGER_W::new(self)
     }
@@ -99,11 +100,10 @@ impl crate::Readable for SAR_COCPU_STATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_cocpu_state::W](W) writer structure"]
 impl crate::Writable for SAR_COCPU_STATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_COCPU_STATE to value 0"]
 impl crate::Resettable for SAR_COCPU_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

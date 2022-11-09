@@ -139,76 +139,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to start sending data on CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<0> {
         TX_START_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset read ram address for CHANNEL%s by accessing transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<1> {
         MEM_RD_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<2> {
         APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<3> {
         TX_CONTI_MODE_W::new(self)
     }
     #[doc = "Bit 4 - This is the channel %s enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<4> {
         MEM_TX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 5 - This bit configures the level of output signal in CHANNEL%s when the latter is in IDLE state."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<5> {
         IDLE_OUT_LV_W::new(self)
     }
     #[doc = "Bit 6 - This is the output enable-control bit for CHANNEL%s in IDLE state."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<6> {
         IDLE_OUT_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to stop the transmitter of CHANNEL%s sending data out."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_stop(&mut self) -> TX_STOP_W<7> {
         TX_STOP_W::new(self)
     }
     #[doc = "Bits 8:15 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn div_cnt(&mut self) -> DIV_CNT_W<8> {
         DIV_CNT_W::new(self)
     }
     #[doc = "Bits 16:19 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_size(&mut self) -> MEM_SIZE_W<16> {
         MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 20 - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<20> {
         CARRIER_EFF_EN_W::new(self)
     }
     #[doc = "Bit 21 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W<21> {
         CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 22 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<22> {
         CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn afifo_rst(&mut self) -> AFIFO_RST_W<23> {
         AFIFO_RST_W::new(self)
     }
     #[doc = "Bit 24 - synchronization bit for CHANNEL%s"]
     #[inline(always)]
+    #[must_use]
     pub fn conf_update(&mut self) -> CONF_UPDATE_W<24> {
         CONF_UPDATE_W::new(self)
     }
@@ -231,11 +246,10 @@ impl crate::Readable for CH_TX_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_tx_conf0::W](W) writer structure"]
 impl crate::Writable for CH_TX_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_TX_CONF0 to value 0x0071_0200"]
 impl crate::Resettable for CH_TX_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0071_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0071_0200;
 }

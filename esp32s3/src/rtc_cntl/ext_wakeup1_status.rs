@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - ext wakeup1 status"]
     #[inline(always)]
     pub fn ext_wakeup1_status(&self) -> EXT_WAKEUP1_STATUS_R {
-        EXT_WAKEUP1_STATUS_R::new((self.bits & 0x003f_ffff) as u32)
+        EXT_WAKEUP1_STATUS_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "check ext wakeup1 status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext_wakeup1_status](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for EXT_WAKEUP1_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets EXT_WAKEUP1_STATUS to value 0"]
 impl crate::Resettable for EXT_WAKEUP1_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

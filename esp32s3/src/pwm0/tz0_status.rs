@@ -40,8 +40,5 @@ impl crate::Readable for TZ0_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets TZ0_STATUS to value 0"]
 impl crate::Resettable for TZ0_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_eof_num(&mut self) -> RX_EOF_NUM_W<0> {
         RX_EOF_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for RXEOF_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [rxeof_num::W](W) writer structure"]
 impl crate::Writable for RXEOF_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RXEOF_NUM to value 0x40"]
 impl crate::Resettable for RXEOF_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x40
-    }
+    const RESET_VALUE: Self::Ux = 0x40;
 }

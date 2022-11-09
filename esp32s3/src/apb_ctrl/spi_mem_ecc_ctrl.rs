@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W<18> {
         FLASH_PAGE_SIZE_W::new(self)
     }
     #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W<20> {
         SRAM_PAGE_SIZE_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SPI_MEM_ECC_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_mem_ecc_ctrl::W](W) writer structure"]
 impl crate::Writable for SPI_MEM_ECC_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_MEM_ECC_CTRL to value 0x0020_0000"]
 impl crate::Resettable for SPI_MEM_ECC_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0020_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0020_0000;
 }

@@ -25,6 +25,7 @@ pub type PURPOSE_SET_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:3 - Set hmac parameter purpose."]
     #[inline(always)]
+    #[must_use]
     pub fn purpose_set(&mut self) -> PURPOSE_SET_W<0> {
         PURPOSE_SET_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SET_PARA_PURPOSE_SPEC {
 #[doc = "`write(|w| ..)` method takes [set_para_purpose::W](W) writer structure"]
 impl crate::Writable for SET_PARA_PURPOSE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SET_PARA_PURPOSE to value 0"]
 impl crate::Resettable for SET_PARA_PURPOSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

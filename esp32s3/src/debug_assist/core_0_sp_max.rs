@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - stack max value"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_sp_max(&mut self) -> CORE_0_SP_MAX_W<0> {
         CORE_0_SP_MAX_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_0_SP_MAX_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_sp_max::W](W) writer structure"]
 impl crate::Writable for CORE_0_SP_MAX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_SP_MAX to value 0xffff_ffff"]
 impl crate::Resettable for CORE_0_SP_MAX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

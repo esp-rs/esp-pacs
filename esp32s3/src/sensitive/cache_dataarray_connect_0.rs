@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock cache data array registers."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_dataarray_connect_lock(&mut self) -> CACHE_DATAARRAY_CONNECT_LOCK_W<0> {
         CACHE_DATAARRAY_CONNECT_LOCK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_DATAARRAY_CONNECT_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_dataarray_connect_0::W](W) writer structure"]
 impl crate::Writable for CACHE_DATAARRAY_CONNECT_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_DATAARRAY_CONNECT_0 to value 0"]
 impl crate::Resettable for CACHE_DATAARRAY_CONNECT_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

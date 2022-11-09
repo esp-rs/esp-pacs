@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
     pub fn touch_slp_th(&self) -> TOUCH_SLP_TH_R {
-        TOUCH_SLP_TH_R::new((self.bits & 0x003f_ffff) as u32)
+        TOUCH_SLP_TH_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bit 26 - sleep pad approach function enable"]
     #[inline(always)]
@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<0> {
         TOUCH_SLP_TH_W::new(self)
     }
     #[doc = "Bit 26 - sleep pad approach function enable"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<26> {
         TOUCH_SLP_APPROACH_EN_W::new(self)
     }
     #[doc = "Bits 27:31 - configure which pad as slp pad"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<27> {
         TOUCH_SLP_PAD_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for TOUCH_SLP_THRES_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_slp_thres::W](W) writer structure"]
 impl crate::Writable for TOUCH_SLP_THRES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_SLP_THRES to value 0x7800_0000"]
 impl crate::Resettable for TOUCH_SLP_THRES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7800_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x7800_0000;
 }

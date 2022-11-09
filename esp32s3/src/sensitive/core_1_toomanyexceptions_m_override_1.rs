@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask toomanyexception."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_toomanyexceptions_m_override(
         &mut self,
     ) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_W<0> {
@@ -73,11 +74,10 @@ impl crate::Readable for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_toomanyexceptions_m_override_1::W](W) writer structure"]
 impl crate::Writable for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1 to value 0x01"]
 impl crate::Resettable for CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

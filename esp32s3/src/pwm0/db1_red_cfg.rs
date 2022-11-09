@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
+    #[must_use]
     pub fn db1_red(&mut self) -> DB1_RED_W<0> {
         DB1_RED_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DB1_RED_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [db1_red_cfg::W](W) writer structure"]
 impl crate::Writable for DB1_RED_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DB1_RED_CFG to value 0"]
 impl crate::Resettable for DB1_RED_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

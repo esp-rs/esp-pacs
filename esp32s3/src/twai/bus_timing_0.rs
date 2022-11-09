@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
+    #[must_use]
     pub fn baud_presc(&mut self) -> BAUD_PRESC_W<0> {
         BAUD_PRESC_W::new(self)
     }
     #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
+    #[must_use]
     pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<14> {
         SYNC_JUMP_WIDTH_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for BUS_TIMING_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [bus_timing_0::W](W) writer structure"]
 impl crate::Writable for BUS_TIMING_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BUS_TIMING_0 to value 0"]
 impl crate::Resettable for BUS_TIMING_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

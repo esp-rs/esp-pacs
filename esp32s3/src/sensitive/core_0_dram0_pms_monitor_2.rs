@@ -46,7 +46,7 @@ impl R {
     pub fn core_0_dram0_pms_monitor_violate_status_addr(
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R::new(((self.bits >> 4) & 0x003f_ffff) as u32)
+        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R::new((self.bits >> 4) & 0x003f_ffff)
     }
 }
 #[doc = "core0 dram0 permission monitor configuration register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_dram0_pms_monitor_2](index.html) module"]
@@ -60,8 +60,5 @@ impl crate::Readable for CORE_0_DRAM0_PMS_MONITOR_2_SPEC {
 }
 #[doc = "`reset()` method sets CORE_0_DRAM0_PMS_MONITOR_2 to value 0"]
 impl crate::Resettable for CORE_0_DRAM0_PMS_MONITOR_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

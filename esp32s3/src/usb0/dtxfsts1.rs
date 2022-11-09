@@ -33,8 +33,5 @@ impl crate::Readable for DTXFSTS1_SPEC {
 }
 #[doc = "`reset()` method sets DTXFSTS1 to value 0"]
 impl crate::Resettable for DTXFSTS1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

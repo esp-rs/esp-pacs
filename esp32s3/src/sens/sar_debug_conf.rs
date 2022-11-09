@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - no public"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<0> {
         SAR_DEBUG_BIT_SEL_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SAR_DEBUG_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_debug_conf::W](W) writer structure"]
 impl crate::Writable for SAR_DEBUG_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_DEBUG_CONF to value 0"]
 impl crate::Resettable for SAR_DEBUG_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

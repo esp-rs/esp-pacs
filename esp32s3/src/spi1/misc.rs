@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
     #[inline(always)]
+    #[must_use]
     pub fn cs0_dis(&mut self) -> CS0_DIS_W<0> {
         CS0_DIS_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
     #[inline(always)]
+    #[must_use]
     pub fn cs1_dis(&mut self) -> CS1_DIS_W<1> {
         CS1_DIS_W::new(self)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<9> {
         CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<10> {
         CS_KEEP_ACTIVE_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
     #[inline(always)]
+    #[must_use]
     pub fn auto_per(&mut self) -> AUTO_PER_W<11> {
         AUTO_PER_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [misc::W](W) writer structure"]
 impl crate::Writable for MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC to value 0x02"]
 impl crate::Resettable for MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

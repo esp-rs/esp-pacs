@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_tag_way_object(&mut self) -> CACHE_TAG_WAY_OBJECT_W<0> {
         CACHE_TAG_WAY_OBJECT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CACHE_TAG_WAY_OBJECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_tag_way_object::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_WAY_OBJECT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_TAG_WAY_OBJECT to value 0"]
 impl crate::Resettable for CACHE_TAG_WAY_OBJECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

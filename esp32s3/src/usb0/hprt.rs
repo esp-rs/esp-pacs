@@ -148,46 +148,55 @@ impl R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn prtconndet(&mut self) -> PRTCONNDET_W<1> {
         PRTCONNDET_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn prtena(&mut self) -> PRTENA_W<2> {
         PRTENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn prtenchng(&mut self) -> PRTENCHNG_W<3> {
         PRTENCHNG_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn prtovrcurrchng(&mut self) -> PRTOVRCURRCHNG_W<5> {
         PRTOVRCURRCHNG_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn prtres(&mut self) -> PRTRES_W<6> {
         PRTRES_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn prtsusp(&mut self) -> PRTSUSP_W<7> {
         PRTSUSP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn prtrst(&mut self) -> PRTRST_W<8> {
         PRTRST_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn prtpwr(&mut self) -> PRTPWR_W<12> {
         PRTPWR_W::new(self)
     }
     #[doc = "Bits 13:16"]
     #[inline(always)]
+    #[must_use]
     pub fn prttstctl(&mut self) -> PRTTSTCTL_W<13> {
         PRTTSTCTL_W::new(self)
     }
@@ -210,11 +219,10 @@ impl crate::Readable for HPRT_SPEC {
 #[doc = "`write(|w| ..)` method takes [hprt::W](W) writer structure"]
 impl crate::Writable for HPRT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HPRT to value 0"]
 impl crate::Resettable for HPRT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

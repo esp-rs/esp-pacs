@@ -54,8 +54,5 @@ impl crate::Readable for CORE_0_MESSAGE_PHASE_SPEC {
 }
 #[doc = "`reset()` method sets Core_0_MESSAGE_PHASE to value 0"]
 impl crate::Resettable for CORE_0_MESSAGE_PHASE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

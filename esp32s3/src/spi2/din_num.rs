@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din0_num(&mut self) -> DIN0_NUM_W<0> {
         DIN0_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din1_num(&mut self) -> DIN1_NUM_W<2> {
         DIN1_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din2_num(&mut self) -> DIN2_NUM_W<4> {
         DIN2_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din3_num(&mut self) -> DIN3_NUM_W<6> {
         DIN3_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din4_num(&mut self) -> DIN4_NUM_W<8> {
         DIN4_NUM_W::new(self)
     }
     #[doc = "Bits 10:11 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din5_num(&mut self) -> DIN5_NUM_W<10> {
         DIN5_NUM_W::new(self)
     }
     #[doc = "Bits 12:13 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din6_num(&mut self) -> DIN6_NUM_W<12> {
         DIN6_NUM_W::new(self)
     }
     #[doc = "Bits 14:15 - the input signals are delayed by SPI module clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din7_num(&mut self) -> DIN7_NUM_W<14> {
         DIN7_NUM_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for DIN_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [din_num::W](W) writer structure"]
 impl crate::Writable for DIN_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIN_NUM to value 0"]
 impl crate::Resettable for DIN_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

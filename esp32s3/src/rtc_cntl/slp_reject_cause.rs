@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]
     pub fn reject_cause(&self) -> REJECT_CAUSE_R {
-        REJECT_CAUSE_R::new((self.bits & 0x0003_ffff) as u32)
+        REJECT_CAUSE_R::new(self.bits & 0x0003_ffff)
     }
 }
 #[doc = "get reject casue\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_reject_cause](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for SLP_REJECT_CAUSE_SPEC {
 }
 #[doc = "`reset()` method sets SLP_REJECT_CAUSE to value 0"]
 impl crate::Resettable for SLP_REJECT_CAUSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

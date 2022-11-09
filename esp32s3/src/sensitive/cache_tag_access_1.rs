@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable Icache read access tag memory."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_i_tag_rd_acs(&mut self) -> PRO_I_TAG_RD_ACS_W<0> {
         PRO_I_TAG_RD_ACS_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to enable Icache wrtie access tag memory."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_i_tag_wr_acs(&mut self) -> PRO_I_TAG_WR_ACS_W<1> {
         PRO_I_TAG_WR_ACS_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable Dcache read access tag memory."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_d_tag_rd_acs(&mut self) -> PRO_D_TAG_RD_ACS_W<2> {
         PRO_D_TAG_RD_ACS_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to enable Dcache wrtie access tag memory."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_d_tag_wr_acs(&mut self) -> PRO_D_TAG_WR_ACS_W<3> {
         PRO_D_TAG_WR_ACS_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for CACHE_TAG_ACCESS_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_tag_access_1::W](W) writer structure"]
 impl crate::Writable for CACHE_TAG_ACCESS_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_TAG_ACCESS_1 to value 0x0f"]
 impl crate::Resettable for CACHE_TAG_ACCESS_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

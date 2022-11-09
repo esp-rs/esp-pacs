@@ -33,8 +33,5 @@ impl crate::Readable for CORE_0_AREA_SP_SPEC {
 }
 #[doc = "`reset()` method sets CORE_0_AREA_SP to value 0xffff_ffff"]
 impl crate::Resettable for CORE_0_AREA_SP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_cd_mode(&mut self) -> LCD_CD_MODE_W<0> {
         LCD_CD_MODE_W::new(self)
     }
     #[doc = "Bits 2:3 - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_de_mode(&mut self) -> LCD_DE_MODE_W<2> {
         LCD_DE_MODE_W::new(self)
     }
     #[doc = "Bits 4:5 - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_mode(&mut self) -> LCD_HSYNC_MODE_W<4> {
         LCD_HSYNC_MODE_W::new(self)
     }
     #[doc = "Bits 6:7 - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vsync_mode(&mut self) -> LCD_VSYNC_MODE_W<6> {
         LCD_VSYNC_MODE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for LCD_DLY_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_dly_mode::W](W) writer structure"]
 impl crate::Writable for LCD_DLY_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_DLY_MODE to value 0"]
 impl crate::Resettable for LCD_DLY_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

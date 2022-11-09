@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - command6"]
     #[inline(always)]
+    #[must_use]
     pub fn command6(&mut self) -> COMMAND6_W<0> {
         COMMAND6_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for CMD6_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd6::W](W) writer structure"]
 impl crate::Writable for CMD6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD6 to value 0x1901"]
 impl crate::Resettable for CMD6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1901
-    }
+    const RESET_VALUE: Self::Ux = 0x1901;
 }

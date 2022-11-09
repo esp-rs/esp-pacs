@@ -28,11 +28,13 @@ pub type APP_CTRL1_INT_SET_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - This bit is software interrupt trigger source of UHCI_APP_CTRL0_INT."]
     #[inline(always)]
+    #[must_use]
     pub fn app_ctrl0_int_set(&mut self) -> APP_CTRL0_INT_SET_W<0> {
         APP_CTRL0_INT_SET_W::new(self)
     }
     #[doc = "Bit 1 - This bit is software interrupt trigger source of UHCI_APP_CTRL1_INT."]
     #[inline(always)]
+    #[must_use]
     pub fn app_ctrl1_int_set(&mut self) -> APP_CTRL1_INT_SET_W<1> {
         APP_CTRL1_INT_SET_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for APP_INT_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_int_set::W](W) writer structure"]
 impl crate::Writable for APP_INT_SET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_INT_SET to value 0"]
 impl crate::Resettable for APP_INT_SET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

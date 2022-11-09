@@ -177,6 +177,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Core0 access uart permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_uart(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UART_W<0> {
@@ -184,6 +185,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - Core0 access g0spi_1 permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_g0spi_1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_G0SPI_1_W<2> {
@@ -191,6 +193,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - Core0 access g0spi_0 permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_g0spi_0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_G0SPI_0_W<4> {
@@ -198,6 +201,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - Core0 access gpio permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_gpio(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_GPIO_W<6> {
@@ -205,6 +209,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - Core0 access fe2 permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_fe2(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_FE2_W<8> {
@@ -212,6 +217,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - Core0 access fe permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_fe(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_FE_W<10> {
@@ -219,6 +225,7 @@ impl W {
     }
     #[doc = "Bits 14:15 - Core0 access rtc permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_rtc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RTC_W<14> {
@@ -226,6 +233,7 @@ impl W {
     }
     #[doc = "Bits 16:17 - Core0 access io_mux permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_io_mux(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_IO_MUX_W<16> {
@@ -233,6 +241,7 @@ impl W {
     }
     #[doc = "Bits 20:21 - Core0 access hinf permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_hinf(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_HINF_W<20> {
@@ -240,6 +249,7 @@ impl W {
     }
     #[doc = "Bits 24:25 - Core0 access misc permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_misc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_MISC_W<24> {
@@ -247,6 +257,7 @@ impl W {
     }
     #[doc = "Bits 26:27 - Core0 access i2c permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_i2c(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_W<26> {
@@ -254,6 +265,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - Core0 access i2s0 permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_i2s0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2S0_W<28> {
@@ -261,6 +273,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - Core0 access uart1 permission in world0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_uart1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UART1_W<30> {
@@ -285,11 +298,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_1 to value 0xff33_cfff"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff33_cfff
-    }
+    const RESET_VALUE: Self::Ux = 0xff33_cfff;
 }

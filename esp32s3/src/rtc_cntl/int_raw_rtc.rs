@@ -189,6 +189,7 @@ impl R {
 impl W {
     #[doc = "Bit 20 - touch approach mode loop interrupt raw"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_approach_loop_done_int_raw(&mut self) -> TOUCH_APPROACH_LOOP_DONE_INT_RAW_W<20> {
         TOUCH_APPROACH_LOOP_DONE_INT_RAW_W::new(self)
     }
@@ -211,11 +212,10 @@ impl crate::Readable for INT_RAW_RTC_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_raw_rtc::W](W) writer structure"]
 impl crate::Writable for INT_RAW_RTC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_RAW_RTC to value 0"]
 impl crate::Resettable for INT_RAW_RTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

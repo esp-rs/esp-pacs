@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit, then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W<0> {
         AHBM_RST_INTER_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit, then clear this bit to reset the external ahb FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst_exter(&mut self) -> AHBM_RST_EXTER_W<1> {
         AHBM_RST_EXTER_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
+    #[must_use]
     pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<2> {
         ARB_PRI_DIS_W::new(self)
     }
     #[doc = "Bit 4 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<4> {
         CLK_EN_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for MISC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [misc_conf::W](W) writer structure"]
 impl crate::Writable for MISC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC_CONF to value 0"]
 impl crate::Resettable for MISC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

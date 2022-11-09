@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to define a char that need to be encoded, default is 0xdb that used as the first char of slip escape sequence."]
     #[inline(always)]
+    #[must_use]
     pub fn esc_seq0(&mut self) -> ESC_SEQ0_W<0> {
         ESC_SEQ0_W::new(self)
     }
     #[doc = "Bits 8:15 - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdb."]
     #[inline(always)]
+    #[must_use]
     pub fn esc_seq0_char0(&mut self) -> ESC_SEQ0_CHAR0_W<8> {
         ESC_SEQ0_CHAR0_W::new(self)
     }
     #[doc = "Bits 16:23 - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdd."]
     #[inline(always)]
+    #[must_use]
     pub fn esc_seq0_char1(&mut self) -> ESC_SEQ0_CHAR1_W<16> {
         ESC_SEQ0_CHAR1_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for ESC_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [esc_conf1::W](W) writer structure"]
 impl crate::Writable for ESC_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ESC_CONF1 to value 0x00dd_dbdb"]
 impl crate::Resettable for ESC_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00dd_dbdb
-    }
+    const RESET_VALUE: Self::Ux = 0x00dd_dbdb;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with DCACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_prelock_sct1_size(&mut self) -> DCACHE_PRELOCK_SCT1_SIZE_W<0> {
         DCACHE_PRELOCK_SCT1_SIZE_W::new(self)
     }
     #[doc = "Bits 16:31 - The bits are used to configure the first length of data locking, which is combined with DCACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_prelock_sct0_size(&mut self) -> DCACHE_PRELOCK_SCT0_SIZE_W<16> {
         DCACHE_PRELOCK_SCT0_SIZE_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for DCACHE_PRELOCK_SCT_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dcache_prelock_sct_size::W](W) writer structure"]
 impl crate::Writable for DCACHE_PRELOCK_SCT_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCACHE_PRELOCK_SCT_SIZE to value 0"]
 impl crate::Resettable for DCACHE_PRELOCK_SCT_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

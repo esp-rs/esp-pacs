@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bits 0:25 - target1 period"]
     #[inline(always)]
     pub fn target1_period(&self) -> TARGET1_PERIOD_R {
-        TARGET1_PERIOD_R::new((self.bits & 0x03ff_ffff) as u32)
+        TARGET1_PERIOD_R::new(self.bits & 0x03ff_ffff)
     }
     #[doc = "Bit 30 - Set target1 to period mode"]
     #[inline(always)]
@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:25 - target1 period"]
     #[inline(always)]
+    #[must_use]
     pub fn target1_period(&mut self) -> TARGET1_PERIOD_W<0> {
         TARGET1_PERIOD_W::new(self)
     }
     #[doc = "Bit 30 - Set target1 to period mode"]
     #[inline(always)]
+    #[must_use]
     pub fn target1_period_mode(&mut self) -> TARGET1_PERIOD_MODE_W<30> {
         TARGET1_PERIOD_MODE_W::new(self)
     }
     #[doc = "Bit 31 - select which unit to compare"]
     #[inline(always)]
+    #[must_use]
     pub fn target1_timer_unit_sel(&mut self) -> TARGET1_TIMER_UNIT_SEL_W<31> {
         TARGET1_TIMER_UNIT_SEL_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for TARGET1_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [target1_conf::W](W) writer structure"]
 impl crate::Writable for TARGET1_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TARGET1_CONF to value 0"]
 impl crate::Resettable for TARGET1_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -73,11 +73,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Update method for PWM generator 0 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
+    #[must_use]
     pub fn cmpr0_a_upmethod(&mut self) -> CMPR0_A_UPMETHOD_W<0> {
         CMPR0_A_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7 - Update method for PWM generator 0 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
+    #[must_use]
     pub fn cmpr0_b_upmethod(&mut self) -> CMPR0_B_UPMETHOD_W<4> {
         CMPR0_B_UPMETHOD_W::new(self)
     }
@@ -100,11 +102,10 @@ impl crate::Readable for CMPR0_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmpr0_cfg::W](W) writer structure"]
 impl crate::Writable for CMPR0_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMPR0_CFG to value 0"]
 impl crate::Resettable for CMPR0_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

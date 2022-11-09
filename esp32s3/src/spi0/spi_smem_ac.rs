@@ -128,46 +128,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_cs_setup(&mut self) -> SPI_SMEM_CS_SETUP_W<0> {
         SPI_SMEM_CS_SETUP_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_cs_hold(&mut self) -> SPI_SMEM_CS_HOLD_W<1> {
         SPI_SMEM_CS_HOLD_W::new(self)
     }
     #[doc = "Bits 2:6 - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_cs_setup_time(&mut self) -> SPI_SMEM_CS_SETUP_TIME_W<2> {
         SPI_SMEM_CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 7:11 - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_cs_hold_time(&mut self) -> SPI_SMEM_CS_HOLD_TIME_W<7> {
         SPI_SMEM_CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 12:14 - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the MSPI CS hold cycles in ECC mode when accesses to external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_ecc_cs_hold_time(&mut self) -> SPI_SMEM_ECC_CS_HOLD_TIME_W<12> {
         SPI_SMEM_ECC_CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bit 15 - 1: MSPI skips page corner when accesses to external RAM. 0: Not skip page corner when accesses to external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_ecc_skip_page_corner(&mut self) -> SPI_SMEM_ECC_SKIP_PAGE_CORNER_W<15> {
         SPI_SMEM_ECC_SKIP_PAGE_CORNER_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses to external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_ecc_16to18_byte_en(&mut self) -> SPI_SMEM_ECC_16TO18_BYTE_EN_W<16> {
         SPI_SMEM_ECC_16TO18_BYTE_EN_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_ecc_err_int_en(&mut self) -> SPI_SMEM_ECC_ERR_INT_EN_W<24> {
         SPI_SMEM_ECC_ERR_INT_EN_W::new(self)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_cs_hold_delay(&mut self) -> SPI_SMEM_CS_HOLD_DELAY_W<25> {
         SPI_SMEM_CS_HOLD_DELAY_W::new(self)
     }
@@ -190,11 +199,10 @@ impl crate::Readable for SPI_SMEM_AC_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_smem_ac::W](W) writer structure"]
 impl crate::Writable for SPI_SMEM_AC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SMEM_AC to value 0xb084"]
 impl crate::Resettable for SPI_SMEM_AC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xb084
-    }
+    const RESET_VALUE: Self::Ux = 0xb084;
 }

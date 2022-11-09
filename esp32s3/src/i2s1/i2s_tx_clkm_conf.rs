@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_clkm_div_num(&mut self) -> I2S_TX_CLKM_DIV_NUM_W<0> {
         I2S_TX_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bit 26 - I2S Tx module clock enable signal."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_clk_active(&mut self) -> I2S_TX_CLK_ACTIVE_W<26> {
         I2S_TX_CLK_ACTIVE_W::new(self)
     }
     #[doc = "Bits 27:28 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_clk_sel(&mut self) -> I2S_TX_CLK_SEL_W<27> {
         I2S_TX_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to enable clk gate"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<29> {
         I2S_CLK_EN_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for I2S_TX_CLKM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_tx_clkm_conf::W](W) writer structure"]
 impl crate::Writable for I2S_TX_CLKM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_TX_CLKM_CONF to value 0x02"]
 impl crate::Resettable for I2S_TX_CLKM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

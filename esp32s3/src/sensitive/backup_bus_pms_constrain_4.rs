@@ -201,6 +201,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - BackUp access usb_device permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_usb_device(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<0> {
@@ -208,11 +209,13 @@ impl W {
     }
     #[doc = "Bits 2:3 - BackUp access usb_wrap permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_usb_wrap(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<2> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W::new(self)
     }
     #[doc = "Bits 4:5 - BackUp access crypto_peri permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_peri(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<4> {
@@ -220,6 +223,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - BackUp access crypto_dma permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_dma(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<6> {
@@ -227,31 +231,37 @@ impl W {
     }
     #[doc = "Bits 8:9 - BackUp access apb_adc permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_apb_adc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<8> {
         BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W::new(self)
     }
     #[doc = "Bits 10:11 - BackUp access lcd_cam permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_lcd_cam(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_LCD_CAM_W<10> {
         BACKUP_BUS_PMS_CONSTRAIN_LCD_CAM_W::new(self)
     }
     #[doc = "Bits 12:13 - BackUp access bt_pwr permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_bt_pwr(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<12> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W::new(self)
     }
     #[doc = "Bits 14:15 - BackUp access usb permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_usb(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_USB_W<14> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_W::new(self)
     }
     #[doc = "Bits 16:17 - BackUp access system permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_system(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTEM_W<16> {
         BACKUP_BUS_PMS_CONSTRAIN_SYSTEM_W::new(self)
     }
     #[doc = "Bits 18:19 - BackUp access sensitive permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_sensitive(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SENSITIVE_W<18> {
@@ -259,6 +269,7 @@ impl W {
     }
     #[doc = "Bits 20:21 - BackUp access interrupt permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_interrupt(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_INTERRUPT_W<20> {
@@ -266,11 +277,13 @@ impl W {
     }
     #[doc = "Bits 22:23 - BackUp access dma_copy permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_dma_copy(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_DMA_COPY_W<22> {
         BACKUP_BUS_PMS_CONSTRAIN_DMA_COPY_W::new(self)
     }
     #[doc = "Bits 24:25 - BackUp access cache_config permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_cache_config(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CACHE_CONFIG_W<24> {
@@ -278,16 +291,19 @@ impl W {
     }
     #[doc = "Bits 26:27 - BackUp access ad permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_ad(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_AD_W<26> {
         BACKUP_BUS_PMS_CONSTRAIN_AD_W::new(self)
     }
     #[doc = "Bits 28:29 - BackUp access dio permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_dio(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_DIO_W<28> {
         BACKUP_BUS_PMS_CONSTRAIN_DIO_W::new(self)
     }
     #[doc = "Bits 30:31 - BackUp access world_controller permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_world_controller(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_WORLD_CONTROLLER_W<30> {
@@ -312,11 +328,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_4::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_4 to value 0xffff_ffff"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

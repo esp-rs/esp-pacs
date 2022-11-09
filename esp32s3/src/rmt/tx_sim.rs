@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0(&mut self) -> CH0_W<0> {
         CH0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1(&mut self) -> CH1_W<1> {
         CH1_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable CHANNEL2 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
+    #[must_use]
     pub fn ch2(&mut self) -> CH2_W<2> {
         CH2_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable CHANNEL3 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
+    #[must_use]
     pub fn ch3(&mut self) -> CH3_W<3> {
         CH3_W::new(self)
     }
     #[doc = "Bit 4 - This register is used to enable multiple of channels to start sending data synchronously."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<4> {
         EN_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for TX_SIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_sim::W](W) writer structure"]
 impl crate::Writable for TX_SIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_SIM to value 0"]
 impl crate::Resettable for TX_SIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

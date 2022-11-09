@@ -146,56 +146,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable SPI0 read Ext_RAM with 32 bits address. The value of SPI_MEM_SRAM_ADDR_BITLEN should be 31."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_usr_scmd_4byte(&mut self) -> CACHE_USR_SCMD_4BYTE_W<0> {
         CACHE_USR_SCMD_4BYTE_W::new(self)
     }
     #[doc = "Bit 1 - Set the bit to enable 2-bm in all the phases of SPI0 Ext_RAM transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<1> {
         USR_SRAM_DIO_W::new(self)
     }
     #[doc = "Bit 2 - Set the bit to enable QPI mode in all SPI0 Ext_RAM transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<2> {
         USR_SRAM_QIO_W::new(self)
     }
     #[doc = "Bit 3 - When SPI0 accesses to Ext_RAM, set this bit to enable DUMMY phase in write operations."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<3> {
         USR_WR_SRAM_DUMMY_W::new(self)
     }
     #[doc = "Bit 4 - When SPI0 accesses to Ext_RAM, set this bit to enable DUMMY phase in read operations."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<4> {
         USR_RD_SRAM_DUMMY_W::new(self)
     }
     #[doc = "Bit 5 - 1: The command value of SPI0 read Ext_RAM is SPI_MEM_CACHE_SRAM_USR_WR_CMD_VALUE. 0: The value is 0x2."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<5> {
         CACHE_SRAM_USR_RCMD_W::new(self)
     }
     #[doc = "Bits 6:11 - When SPI0 accesses to Ext_RAM, it is the SPI_CLK cycles minus 1 of DUMMY phase in read data transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_rdummy_cyclelen(&mut self) -> SRAM_RDUMMY_CYCLELEN_W<6> {
         SRAM_RDUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 14:19 - When SPI0 accesses to Ext_RAM, it is the length in bits of ADDR phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<14> {
         SRAM_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bit 20 - 1: The command value of SPI0 write Ext_RAM is SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE. 0: The value is 0x3."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<20> {
         CACHE_SRAM_USR_WCMD_W::new(self)
     }
     #[doc = "Bit 21 - Set the bit to enable OPI mode in all SPI0 Ext_RAM transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_oct(&mut self) -> SRAM_OCT_W<21> {
         SRAM_OCT_W::new(self)
     }
     #[doc = "Bits 22:27 - When SPI0 accesses to Ext_RAM, it is the SPI_CLK cycles minus 1 of DUMMY phase in write data transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_wdummy_cyclelen(&mut self) -> SRAM_WDUMMY_CYCLELEN_W<22> {
         SRAM_WDUMMY_CYCLELEN_W::new(self)
     }
@@ -218,11 +229,10 @@ impl crate::Readable for CACHE_SCTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_sctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_SCTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_SCTRL to value 0x0055_c070"]
 impl crate::Resettable for CACHE_SCTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0055_c070
-    }
+    const RESET_VALUE: Self::Ux = 0x0055_c070;
 }

@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<0> {
         SCL_FILTER_THRES_W::new(self)
     }
     #[doc = "Bits 4:7 - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
+    #[must_use]
     pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<4> {
         SDA_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 8 - This is the filter enable bit for SCL."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<8> {
         SCL_FILTER_EN_W::new(self)
     }
     #[doc = "Bit 9 - This is the filter enable bit for SDA."]
     #[inline(always)]
+    #[must_use]
     pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<9> {
         SDA_FILTER_EN_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for FILTER_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [filter_cfg::W](W) writer structure"]
 impl crate::Writable for FILTER_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FILTER_CFG to value 0x0300"]
 impl crate::Resettable for FILTER_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0300
-    }
+    const RESET_VALUE: Self::Ux = 0x0300;
 }

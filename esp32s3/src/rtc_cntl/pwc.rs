@@ -183,81 +183,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Fast RTC memory force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<0> {
         FASTMEM_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 1 - Fast RTC memory force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<1> {
         FASTMEM_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 2 - RTC memory force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<2> {
         SLOWMEM_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 3 - RTC memory force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<3> {
         SLOWMEM_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 4 - rtc_peri force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn force_iso(&mut self) -> FORCE_ISO_W<4> {
         FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 5 - rtc_peri force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn force_noiso(&mut self) -> FORCE_NOISO_W<5> {
         FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 6 - 1: Fast RTC memory PD following CPU, 0: fast RTC memory PD following RTC state machine"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<6> {
         FASTMEM_FOLW_CPU_W::new(self)
     }
     #[doc = "Bit 7 - Fast RTC memory force PD"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<7> {
         FASTMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 8 - Fast RTC memory force no PD"]
     #[inline(always)]
+    #[must_use]
     pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<8> {
         FASTMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 9 - 1: RTC memory PD following CPU, 0: RTC memory PD following RTC state machine"]
     #[inline(always)]
+    #[must_use]
     pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<9> {
         SLOWMEM_FOLW_CPU_W::new(self)
     }
     #[doc = "Bit 10 - RTC memory force PD"]
     #[inline(always)]
+    #[must_use]
     pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<10> {
         SLOWMEM_FORCE_LPD_W::new(self)
     }
     #[doc = "Bit 11 - RTC memory force no PD"]
     #[inline(always)]
+    #[must_use]
     pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<11> {
         SLOWMEM_FORCE_LPU_W::new(self)
     }
     #[doc = "Bit 18 - rtc_peri force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn force_pd(&mut self) -> FORCE_PD_W<18> {
         FORCE_PD_W::new(self)
     }
     #[doc = "Bit 19 - rtc_peri force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn force_pu(&mut self) -> FORCE_PU_W<19> {
         FORCE_PU_W::new(self)
     }
     #[doc = "Bit 20 - enable power down rtc_peri in sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn pd_en(&mut self) -> PD_EN_W<20> {
         PD_EN_W::new(self)
     }
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
+    #[must_use]
     pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<21> {
         PAD_FORCE_HOLD_W::new(self)
     }
@@ -280,11 +296,10 @@ impl crate::Readable for PWC_SPEC {
 #[doc = "`write(|w| ..)` method takes [pwc::W](W) writer structure"]
 impl crate::Writable for PWC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PWC to value 0x0925"]
 impl crate::Resettable for PWC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0925
-    }
+    const RESET_VALUE: Self::Ux = 0x0925;
 }

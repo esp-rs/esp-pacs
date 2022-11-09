@@ -33,8 +33,5 @@ impl crate::Readable for CORE_1_RCD_PDEBUGINST_SPEC {
 }
 #[doc = "`reset()` method sets CORE_1_RCD_PDEBUGINST to value 0"]
 impl crate::Resettable for CORE_1_RCD_PDEBUGINST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

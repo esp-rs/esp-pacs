@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map timer_int1 interrupt to one of core0's external interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_int1_map(&mut self) -> TIMER_INT1_MAP_W<0> {
         TIMER_INT1_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIMER_INT1_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_int1_map::W](W) writer structure"]
 impl crate::Writable for TIMER_INT1_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER_INT1_MAP to value 0x10"]
 impl crate::Resettable for TIMER_INT1_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

@@ -129,46 +129,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din0_num(&mut self) -> SPI_SMEM_DIN0_NUM_W<0> {
         SPI_SMEM_DIN0_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - SPI_Q input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din1_num(&mut self) -> SPI_SMEM_DIN1_NUM_W<2> {
         SPI_SMEM_DIN1_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - SPI_WP input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din2_num(&mut self) -> SPI_SMEM_DIN2_NUM_W<4> {
         SPI_SMEM_DIN2_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - SPI_HD input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din3_num(&mut self) -> SPI_SMEM_DIN3_NUM_W<6> {
         SPI_SMEM_DIN3_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - SPI_IO4 input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din4_num(&mut self) -> SPI_SMEM_DIN4_NUM_W<8> {
         SPI_SMEM_DIN4_NUM_W::new(self)
     }
     #[doc = "Bits 10:11 - SPI_IO5 input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din5_num(&mut self) -> SPI_SMEM_DIN5_NUM_W<10> {
         SPI_SMEM_DIN5_NUM_W::new(self)
     }
     #[doc = "Bits 12:13 - SPI_IO6 input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din6_num(&mut self) -> SPI_SMEM_DIN6_NUM_W<12> {
         SPI_SMEM_DIN6_NUM_W::new(self)
     }
     #[doc = "Bits 14:15 - SPI_IO7 input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_din7_num(&mut self) -> SPI_SMEM_DIN7_NUM_W<14> {
         SPI_SMEM_DIN7_NUM_W::new(self)
     }
     #[doc = "Bits 16:17 - SPI_DQS input delay number."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_smem_dins_num(&mut self) -> SPI_SMEM_DINS_NUM_W<16> {
         SPI_SMEM_DINS_NUM_W::new(self)
     }
@@ -191,11 +200,10 @@ impl crate::Readable for SPI_SMEM_DIN_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_smem_din_num::W](W) writer structure"]
 impl crate::Writable for SPI_SMEM_DIN_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SMEM_DIN_NUM to value 0"]
 impl crate::Resettable for SPI_SMEM_DIN_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

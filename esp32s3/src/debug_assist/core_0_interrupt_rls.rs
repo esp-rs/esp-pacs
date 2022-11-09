@@ -159,56 +159,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Core0 dram0 area0 read monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_rd_rls(&mut self) -> CORE_0_AREA_DRAM0_0_RD_RLS_W<0> {
         CORE_0_AREA_DRAM0_0_RD_RLS_W::new(self)
     }
     #[doc = "Bit 1 - Core0 dram0 area0 write monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_0_wr_rls(&mut self) -> CORE_0_AREA_DRAM0_0_WR_RLS_W<1> {
         CORE_0_AREA_DRAM0_0_WR_RLS_W::new(self)
     }
     #[doc = "Bit 2 - Core0 dram0 area1 read monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_1_rd_rls(&mut self) -> CORE_0_AREA_DRAM0_1_RD_RLS_W<2> {
         CORE_0_AREA_DRAM0_1_RD_RLS_W::new(self)
     }
     #[doc = "Bit 3 - Core0 dram0 area1 write monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_dram0_1_wr_rls(&mut self) -> CORE_0_AREA_DRAM0_1_WR_RLS_W<3> {
         CORE_0_AREA_DRAM0_1_WR_RLS_W::new(self)
     }
     #[doc = "Bit 4 - Core0 PIF area0 read monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_0_rd_rls(&mut self) -> CORE_0_AREA_PIF_0_RD_RLS_W<4> {
         CORE_0_AREA_PIF_0_RD_RLS_W::new(self)
     }
     #[doc = "Bit 5 - Core0 PIF area0 write monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_0_wr_rls(&mut self) -> CORE_0_AREA_PIF_0_WR_RLS_W<5> {
         CORE_0_AREA_PIF_0_WR_RLS_W::new(self)
     }
     #[doc = "Bit 6 - Core0 PIF area1 read monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_1_rd_rls(&mut self) -> CORE_0_AREA_PIF_1_RD_RLS_W<6> {
         CORE_0_AREA_PIF_1_RD_RLS_W::new(self)
     }
     #[doc = "Bit 7 - Core0 PIF area1 write monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_area_pif_1_wr_rls(&mut self) -> CORE_0_AREA_PIF_1_WR_RLS_W<7> {
         CORE_0_AREA_PIF_1_WR_RLS_W::new(self)
     }
     #[doc = "Bit 8 - Core0 stackpoint overflow monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_sp_spill_min_rls(&mut self) -> CORE_0_SP_SPILL_MIN_RLS_W<8> {
         CORE_0_SP_SPILL_MIN_RLS_W::new(self)
     }
     #[doc = "Bit 9 - Core0 stackpoint underflow monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_sp_spill_max_rls(&mut self) -> CORE_0_SP_SPILL_MAX_RLS_W<9> {
         CORE_0_SP_SPILL_MAX_RLS_W::new(self)
     }
     #[doc = "Bit 10 - IBUS busy monitor interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_iram0_exception_monitor_rls(
         &mut self,
     ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_W<10> {
@@ -216,6 +227,7 @@ impl W {
     }
     #[doc = "Bit 11 - DBUS busy monitor interrupt enbale"]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_dram0_exception_monitor_rls(
         &mut self,
     ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_W<11> {
@@ -240,11 +252,10 @@ impl crate::Readable for CORE_0_INTERRUPT_RLS_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_interrupt_rls::W](W) writer structure"]
 impl crate::Writable for CORE_0_INTERRUPT_RLS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_INTERRUPT_RLS to value 0"]
 impl crate::Resettable for CORE_0_INTERRUPT_RLS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

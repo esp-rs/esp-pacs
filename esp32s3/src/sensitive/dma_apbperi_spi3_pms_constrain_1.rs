@@ -115,6 +115,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - spi3's permission(store,load) in data region0 of SRAM"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_pms_0(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_0_W<0> {
@@ -122,6 +123,7 @@ impl W {
     }
     #[doc = "Bits 2:3 - spi3's permission(store,load) in data region1 of SRAM"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_pms_1(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_1_W<2> {
@@ -129,6 +131,7 @@ impl W {
     }
     #[doc = "Bits 4:5 - spi3's permission(store,load) in data region2 of SRAM"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_pms_2(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_2_W<4> {
@@ -136,6 +139,7 @@ impl W {
     }
     #[doc = "Bits 6:7 - spi3's permission(store,load) in data region3 of SRAM"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_pms_3(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_PMS_3_W<6> {
@@ -143,6 +147,7 @@ impl W {
     }
     #[doc = "Bits 8:9 - spi3's permission(store,load) in dcache data sram block0"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_cachedataarray_pms_0(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<8> {
@@ -150,6 +155,7 @@ impl W {
     }
     #[doc = "Bits 10:11 - spi3's permission(store,load) in dcache data sram block1"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_sram_cachedataarray_pms_1(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<10> {
@@ -174,11 +180,10 @@ impl crate::Readable for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_apbperi_spi3_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_APBPERI_SPI3_PMS_CONSTRAIN_1 to value 0x0fff"]
 impl crate::Resettable for DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0fff
-    }
+    const RESET_VALUE: Self::Ux = 0x0fff;
 }

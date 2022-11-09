@@ -87,6 +87,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - RTCSlow_0 memory low region permission in world 0 for core1."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_world_0_l(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L_W<0> {
@@ -94,6 +95,7 @@ impl W {
     }
     #[doc = "Bits 3:5 - RTCSlow_0 memory high region permission in world 0 for core1."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_world_0_h(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H_W<3> {
@@ -101,6 +103,7 @@ impl W {
     }
     #[doc = "Bits 6:8 - RTCSlow_0 memory low region permission in world 1 for core1."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_world_1_l(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L_W<6> {
@@ -108,6 +111,7 @@ impl W {
     }
     #[doc = "Bits 9:11 - RTCSlow_0 memory high region permission in world 1 for core1."]
     #[inline(always)]
+    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_world_1_h(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_W<9> {
@@ -132,11 +136,10 @@ impl crate::Readable for CORE_1_PIF_PMS_CONSTRAIN_12_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_1_pif_pms_constrain_12::W](W) writer structure"]
 impl crate::Writable for CORE_1_PIF_PMS_CONSTRAIN_12_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_1_PIF_PMS_CONSTRAIN_12 to value 0x0fff"]
 impl crate::Resettable for CORE_1_PIF_PMS_CONSTRAIN_12_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0fff
-    }
+    const RESET_VALUE: Self::Ux = 0x0fff;
 }

@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_per(&mut self) -> FLASH_PER_W<0> {
         FLASH_PER_W::new(self)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_pes(&mut self) -> FLASH_PES_W<1> {
         FLASH_PES_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to add delay time after program erase resume(PER) is sent."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<2> {
         FLASH_PER_WAIT_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to add delay time after program erase suspend(PES) command is sent."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<3> {
         FLASH_PES_WAIT_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable PES transfer trigger PES transfer option."]
     #[inline(always)]
+    #[must_use]
     pub fn pes_per_en(&mut self) -> PES_PER_EN_W<4> {
         PES_PER_EN_W::new(self)
     }
     #[doc = "Bit 5 - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
     #[inline(always)]
+    #[must_use]
     pub fn pesr_idle_en(&mut self) -> PESR_IDLE_EN_W<5> {
         PESR_IDLE_EN_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for FLASH_SUS_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [flash_sus_cmd::W](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASH_SUS_CMD to value 0"]
 impl crate::Resettable for FLASH_SUS_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

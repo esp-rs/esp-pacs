@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_mem_reject_clr(&mut self) -> SPI_MEM_REJECT_CLR_W<1> {
         SPI_MEM_REJECT_CLR_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for SPI_MEM_PMS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_mem_pms_ctrl::W](W) writer structure"]
 impl crate::Writable for SPI_MEM_PMS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_MEM_PMS_CTRL to value 0"]
 impl crate::Resettable for SPI_MEM_PMS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

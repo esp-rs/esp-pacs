@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 7 - enable dig regulator cali"]
     #[inline(always)]
+    #[must_use]
     pub fn dig_reg_cal_en(&mut self) -> DIG_REG_CAL_EN_W<7> {
         DIG_REG_CAL_EN_W::new(self)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
+    #[must_use]
     pub fn sck_dcap(&mut self) -> SCK_DCAP_W<14> {
         SCK_DCAP_W::new(self)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<28> {
         DBOOST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<29> {
         DBOOST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<30> {
         REGULATOR_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 31 - RTC_REG force power on (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<31> {
         REGULATOR_FORCE_PU_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for RTC_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc::W](W) writer structure"]
 impl crate::Writable for RTC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC to value 0xa000_0000"]
 impl crate::Resettable for RTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0xa000_0000;
 }

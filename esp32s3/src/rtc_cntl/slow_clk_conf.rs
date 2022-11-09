@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div, then set vld to actually switch the clk"]
     #[inline(always)]
+    #[must_use]
     pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<22> {
         ANA_CLK_DIV_VLD_W::new(self)
     }
     #[doc = "Bits 23:30 - rtc clk div"]
     #[inline(always)]
+    #[must_use]
     pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<23> {
         ANA_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 31 - No public"]
     #[inline(always)]
+    #[must_use]
     pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<31> {
         SLOW_CLK_NEXT_EDGE_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SLOW_CLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [slow_clk_conf::W](W) writer structure"]
 impl crate::Writable for SLOW_CLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLOW_CLK_CONF to value 0x0040_0000"]
 impl crate::Resettable for SLOW_CLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0040_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0040_0000;
 }

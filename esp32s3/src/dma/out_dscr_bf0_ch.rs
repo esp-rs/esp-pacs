@@ -33,8 +33,5 @@ impl crate::Readable for OUT_DSCR_BF0_CH_SPEC {
 }
 #[doc = "`reset()` method sets OUT_DSCR_BF0_CH%s to value 0"]
 impl crate::Resettable for OUT_DSCR_BF0_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

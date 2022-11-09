@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor b"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<0> {
         BT_LPCK_DIV_B_W::new(self)
     }
     #[doc = "Bits 12:23 - This field is lower power clock frequent division factor a"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<12> {
         BT_LPCK_DIV_A_W::new(self)
     }
     #[doc = "Bit 24 - Set 1 to select rtc-slow clock as rtc low power clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<24> {
         LPCLK_SEL_RTC_SLOW_W::new(self)
     }
     #[doc = "Bit 25 - Set 1 to select 8m clock as rtc low power clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<25> {
         LPCLK_SEL_8M_W::new(self)
     }
     #[doc = "Bit 26 - Set 1 to select xtal clock as rtc low power clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<26> {
         LPCLK_SEL_XTAL_W::new(self)
     }
     #[doc = "Bit 27 - Set 1 to select xtal32k clock as low power clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<27> {
         LPCLK_SEL_XTAL32K_W::new(self)
     }
     #[doc = "Bit 28 - Set 1 to enable RTC low power clock"]
     #[inline(always)]
+    #[must_use]
     pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<28> {
         LPCLK_RTC_EN_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for BT_LPCK_DIV_FRAC_SPEC {
 #[doc = "`write(|w| ..)` method takes [bt_lpck_div_frac::W](W) writer structure"]
 impl crate::Writable for BT_LPCK_DIV_FRAC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BT_LPCK_DIV_FRAC to value 0x0200_1001"]
 impl crate::Resettable for BT_LPCK_DIV_FRAC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_1001
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_1001;
 }

@@ -95,36 +95,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer0 1: select timer1 2: select timer2 3: select timer3"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sel(&mut self) -> TIMER_SEL_W<0> {
         TIMER_SEL_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable signal output on channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<2> {
         SIG_OUT_EN_W::new(self)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when channel %s is inactive (when LEDC_SIG_OUT_EN_CH%s is 0)."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_lv(&mut self) -> IDLE_LV_W<3> {
         IDLE_LV_W::new(self)
     }
     #[doc = "Bit 4 - This bit is used to update LEDC_HPOINT_CH%s, LEDC_DUTY_START_CH%s, LEDC_SIG_OUT_EN_CH%s, LEDC_TIMER_SEL_CH%s, LEDC_DUTY_NUM_CH%s, LEDC_DUTY_CYCLE_CH%s, LEDC_DUTY_SCALE_CH%s, LEDC_DUTY_INC_CH%s, and LEDC_OVF_CNT_EN_CH%s fields for channel %s, and will be automatically cleared by hardware."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<4> {
         PARA_UP_W::new(self)
     }
     #[doc = "Bits 5:14 - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_num(&mut self) -> OVF_NUM_W<5> {
         OVF_NUM_W::new(self)
     }
     #[doc = "Bit 15 - This bit is used to enable the ovf_cnt of channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<15> {
         OVF_CNT_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to reset the ovf_cnt of channel %s."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<16> {
         OVF_CNT_RESET_W::new(self)
     }
@@ -147,11 +154,10 @@ impl crate::Readable for CH_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch_conf0::W](W) writer structure"]
 impl crate::Writable for CH_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%s_CONF0 to value 0"]
 impl crate::Resettable for CH_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -82,26 +82,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Configure the period of I2C slave stretching SCL line."]
     #[inline(always)]
+    #[must_use]
     pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<0> {
         STRETCH_PROTECT_NUM_W::new(self)
     }
     #[doc = "Bit 10 - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<10> {
         SLAVE_SCL_STRETCH_EN_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to clear the I2C slave SCL stretch function."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<11> {
         SLAVE_SCL_STRETCH_CLR_W::new(self)
     }
     #[doc = "Bit 12 - The enable bit for slave to control ACK level function."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<12> {
         SLAVE_BYTE_ACK_CTL_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<13> {
         SLAVE_BYTE_ACK_LVL_W::new(self)
     }
@@ -124,11 +129,10 @@ impl crate::Readable for SCL_STRETCH_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_stretch_conf::W](W) writer structure"]
 impl crate::Writable for SCL_STRETCH_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_STRETCH_CONF to value 0"]
 impl crate::Resettable for SCL_STRETCH_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache pre-load done."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_preload_int_ena(&mut self) -> ICACHE_PRELOAD_INT_ENA_W<1> {
         ICACHE_PRELOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache pre-load done."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_preload_int_clr(&mut self) -> ICACHE_PRELOAD_INT_CLR_W<2> {
         ICACHE_PRELOAD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_preload_int_ena(&mut self) -> DCACHE_PRELOAD_INT_ENA_W<4> {
         DCACHE_PRELOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache pre-load done."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_preload_int_clr(&mut self) -> DCACHE_PRELOAD_INT_CLR_W<5> {
         DCACHE_PRELOAD_INT_CLR_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for CACHE_PRELOAD_INT_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_preload_int_ctrl::W](W) writer structure"]
 impl crate::Writable for CACHE_PRELOAD_INT_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_PRELOAD_INT_CTRL to value 0"]
 impl crate::Resettable for CACHE_PRELOAD_INT_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

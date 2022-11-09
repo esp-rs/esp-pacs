@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_done_int_ena(&mut self) -> I2S_RX_DONE_INT_ENA_W<0> {
         I2S_RX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the i2s_tx_done_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_done_int_ena(&mut self) -> I2S_TX_DONE_INT_ENA_W<1> {
         I2S_TX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rx_hung_int_ena(&mut self) -> I2S_RX_HUNG_INT_ENA_W<2> {
         I2S_RX_HUNG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_tx_hung_int_ena(&mut self) -> I2S_TX_HUNG_INT_ENA_W<3> {
         I2S_TX_HUNG_INT_ENA_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for I2S_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2s_int_ena::W](W) writer structure"]
 impl crate::Writable for I2S_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2S_INT_ENA to value 0"]
 impl crate::Resettable for I2S_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 3 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn addr_map_mode(&mut self) -> ADDR_MAP_MODE_W<3> {
         ADDR_MAP_MODE_W::new(self)
     }
     #[doc = "Bits 4:8 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn burst_limit(&mut self) -> BURST_LIMIT_W<4> {
         BURST_LIMIT_W::new(self)
     }
     #[doc = "Bits 9:18 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn tout_thres(&mut self) -> TOUT_THRES_W<9> {
         TOUT_THRES_W::new(self)
     }
     #[doc = "Bits 19:28 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn size(&mut self) -> SIZE_W<19> {
         SIZE_W::new(self)
     }
     #[doc = "Bit 29 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn start(&mut self) -> START_W<29> {
         START_W::new(self)
     }
     #[doc = "Bit 30 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn to_mem(&mut self) -> TO_MEM_W<30> {
         TO_MEM_W::new(self)
     }
     #[doc = "Bit 31 - x"]
     #[inline(always)]
+    #[must_use]
     pub fn ena(&mut self) -> ENA_W<31> {
         ENA_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [config::W](W) writer structure"]
 impl crate::Writable for CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONFIG to value 0x6480"]
 impl crate::Resettable for CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6480
-    }
+    const RESET_VALUE: Self::Ux = 0x6480;
 }

@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The raw bit signal for read_done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn read_done_int_raw(&mut self) -> READ_DONE_INT_RAW_W<0> {
         READ_DONE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 1 - The raw bit signal for pgm_done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn pgm_done_int_raw(&mut self) -> PGM_DONE_INT_RAW_W<1> {
         PGM_DONE_INT_RAW_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for INT_RAW_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_raw::W](W) writer structure"]
 impl crate::Writable for INT_RAW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_RAW to value 0"]
 impl crate::Resettable for INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

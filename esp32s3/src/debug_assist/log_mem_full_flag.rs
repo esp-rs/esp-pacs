@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - when it's 1,show that mem write loop morte than one time."]
     #[inline(always)]
+    #[must_use]
     pub fn log_mem_full_flag(&mut self) -> LOG_MEM_FULL_FLAG_W<0> {
         LOG_MEM_FULL_FLAG_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LOG_MEM_FULL_FLAG_SPEC {
 #[doc = "`write(|w| ..)` method takes [log_mem_full_flag::W](W) writer structure"]
 impl crate::Writable for LOG_MEM_FULL_FLAG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOG_MEM_FULL_FLAG to value 0"]
 impl crate::Resettable for LOG_MEM_FULL_FLAG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

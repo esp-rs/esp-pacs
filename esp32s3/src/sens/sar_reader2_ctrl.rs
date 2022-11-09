@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_clk_div(&mut self) -> SAR_SAR2_CLK_DIV_W<0> {
         SAR_SAR2_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 16:17 - wait arbit stable after sar_done"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_wait_arb_cycle(&mut self) -> SAR_SAR2_WAIT_ARB_CYCLE_W<16> {
         SAR_SAR2_WAIT_ARB_CYCLE_W::new(self)
     }
     #[doc = "Bit 18 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_clk_gated(&mut self) -> SAR_SAR2_CLK_GATED_W<18> {
         SAR_SAR2_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 19:26 - ******* Description ***********"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_sample_num(&mut self) -> SAR_SAR2_SAMPLE_NUM_W<19> {
         SAR_SAR2_SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_data_inv(&mut self) -> SAR_SAR2_DATA_INV_W<29> {
         SAR_SAR2_DATA_INV_W::new(self)
     }
     #[doc = "Bit 30 - enable saradc2 to send out interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sar2_int_en(&mut self) -> SAR_SAR2_INT_EN_W<30> {
         SAR_SAR2_INT_EN_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for SAR_READER2_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_reader2_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_READER2_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_READER2_CTRL to value 0x4005_0002"]
 impl crate::Resettable for SAR_READER2_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4005_0002
-    }
+    const RESET_VALUE: Self::Ux = 0x4005_0002;
 }

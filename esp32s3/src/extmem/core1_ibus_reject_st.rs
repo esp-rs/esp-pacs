@@ -47,8 +47,5 @@ impl crate::Readable for CORE1_IBUS_REJECT_ST_SPEC {
 }
 #[doc = "`reset()` method sets CORE1_IBUS_REJECT_ST to value 0"]
 impl crate::Resettable for CORE1_IBUS_REJECT_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

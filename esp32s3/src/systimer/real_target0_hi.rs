@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - actual target value value high 20bits"]
     #[inline(always)]
     pub fn target0_hi_ro(&self) -> TARGET0_HI_RO_R {
-        TARGET0_HI_RO_R::new((self.bits & 0x000f_ffff) as u32)
+        TARGET0_HI_RO_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "system timer comp0 actual target value high register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [real_target0_hi](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for REAL_TARGET0_HI_SPEC {
 }
 #[doc = "`reset()` method sets REAL_TARGET0_HI to value 0"]
 impl crate::Resettable for REAL_TARGET0_HI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_to_flash_start_vaddr(&mut self) -> IBUS_TO_FLASH_START_VADDR_W<0> {
         IBUS_TO_FLASH_START_VADDR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for IBUS_TO_FLASH_START_VADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ibus_to_flash_start_vaddr::W](W) writer structure"]
 impl crate::Writable for IBUS_TO_FLASH_START_VADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IBUS_TO_FLASH_START_VADDR to value 0x4400_0000"]
 impl crate::Resettable for IBUS_TO_FLASH_START_VADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4400_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4400_0000;
 }

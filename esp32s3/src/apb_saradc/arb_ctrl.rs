@@ -115,41 +115,49 @@ impl R {
 impl W {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_apb_force(&mut self) -> ADC_ARB_APB_FORCE_W<2> {
         ADC_ARB_APB_FORCE_W::new(self)
     }
     #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_rtc_force(&mut self) -> ADC_ARB_RTC_FORCE_W<3> {
         ADC_ARB_RTC_FORCE_W::new(self)
     }
     #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_wifi_force(&mut self) -> ADC_ARB_WIFI_FORCE_W<4> {
         ADC_ARB_WIFI_FORCE_W::new(self)
     }
     #[doc = "Bit 5 - adc2 arbiter force grant"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_grant_force(&mut self) -> ADC_ARB_GRANT_FORCE_W<5> {
         ADC_ARB_GRANT_FORCE_W::new(self)
     }
     #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_apb_priority(&mut self) -> ADC_ARB_APB_PRIORITY_W<6> {
         ADC_ARB_APB_PRIORITY_W::new(self)
     }
     #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_rtc_priority(&mut self) -> ADC_ARB_RTC_PRIORITY_W<8> {
         ADC_ARB_RTC_PRIORITY_W::new(self)
     }
     #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_wifi_priority(&mut self) -> ADC_ARB_WIFI_PRIORITY_W<10> {
         ADC_ARB_WIFI_PRIORITY_W::new(self)
     }
     #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_arb_fix_priority(&mut self) -> ADC_ARB_FIX_PRIORITY_W<12> {
         ADC_ARB_FIX_PRIORITY_W::new(self)
     }
@@ -172,11 +180,10 @@ impl crate::Readable for ARB_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [arb_ctrl::W](W) writer structure"]
 impl crate::Writable for ARB_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ARB_CTRL to value 0x0900"]
 impl crate::Resettable for ARB_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0900
-    }
+    const RESET_VALUE: Self::Ux = 0x0900;
 }

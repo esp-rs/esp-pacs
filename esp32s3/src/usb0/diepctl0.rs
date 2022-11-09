@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn d_mps0(&mut self) -> D_MPS0_W<0> {
         D_MPS0_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn d_stall0(&mut self) -> D_STALL0_W<21> {
         D_STALL0_W::new(self)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
+    #[must_use]
     pub fn d_txfnum0(&mut self) -> D_TXFNUM0_W<22> {
         D_TXFNUM0_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn d_cnak0(&mut self) -> D_CNAK0_W<26> {
         D_CNAK0_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn di_snak0(&mut self) -> DI_SNAK0_W<27> {
         DI_SNAK0_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn d_epdis0(&mut self) -> D_EPDIS0_W<30> {
         D_EPDIS0_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn d_epena0(&mut self) -> D_EPENA0_W<31> {
         D_EPENA0_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for DIEPCTL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [diepctl0::W](W) writer structure"]
 impl crate::Writable for DIEPCTL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPCTL0 to value 0x8000"]
 impl crate::Resettable for DIEPCTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

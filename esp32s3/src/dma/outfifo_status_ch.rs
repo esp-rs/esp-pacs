@@ -117,8 +117,5 @@ impl crate::Readable for OUTFIFO_STATUS_CH_SPEC {
 }
 #[doc = "`reset()` method sets OUTFIFO_STATUS_CH%s to value 0x0780_002a"]
 impl crate::Resettable for OUTFIFO_STATUS_CH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0780_002a
-    }
+    const RESET_VALUE: Self::Ux = 0x0780_002a;
 }

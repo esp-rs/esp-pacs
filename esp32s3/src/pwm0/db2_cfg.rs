@@ -149,61 +149,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_fed_upmethod(&mut self) -> DB2_FED_UPMETHOD_W<0> {
         DB2_FED_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7 - Update method for RED (rising edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_red_upmethod(&mut self) -> DB2_RED_UPMETHOD_W<4> {
         DB2_RED_UPMETHOD_W::new(self)
     }
     #[doc = "Bit 8 - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_deb_mode(&mut self) -> DB2_DEB_MODE_W<8> {
         DB2_DEB_MODE_W::new(self)
     }
     #[doc = "Bit 9 - S6 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_a_outswap(&mut self) -> DB2_A_OUTSWAP_W<9> {
         DB2_A_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 10 - S7 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_b_outswap(&mut self) -> DB2_B_OUTSWAP_W<10> {
         DB2_B_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 11 - S4 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_red_insel(&mut self) -> DB2_RED_INSEL_W<11> {
         DB2_RED_INSEL_W::new(self)
     }
     #[doc = "Bit 12 - S5 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_fed_insel(&mut self) -> DB2_FED_INSEL_W<12> {
         DB2_FED_INSEL_W::new(self)
     }
     #[doc = "Bit 13 - S2 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_red_outinvert(&mut self) -> DB2_RED_OUTINVERT_W<13> {
         DB2_RED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 14 - S3 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_fed_outinvert(&mut self) -> DB2_FED_OUTINVERT_W<14> {
         DB2_FED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 15 - S1 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_a_outbypass(&mut self) -> DB2_A_OUTBYPASS_W<15> {
         DB2_A_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 16 - S0 in documentation"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_b_outbypass(&mut self) -> DB2_B_OUTBYPASS_W<16> {
         DB2_B_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 17 - Dead time generator 2 clock selection. 0: PWM_clk, 1: PT_clk"]
     #[inline(always)]
+    #[must_use]
     pub fn db2_clk_sel(&mut self) -> DB2_CLK_SEL_W<17> {
         DB2_CLK_SEL_W::new(self)
     }
@@ -226,11 +238,10 @@ impl crate::Readable for DB2_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [db2_cfg::W](W) writer structure"]
 impl crate::Writable for DB2_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DB2_CFG to value 0x0001_8000"]
 impl crate::Resettable for DB2_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_8000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_8000;
 }

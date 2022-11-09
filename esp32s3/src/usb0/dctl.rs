@@ -142,66 +142,79 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn rmtwkupsig(&mut self) -> RMTWKUPSIG_W<0> {
         RMTWKUPSIG_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sftdiscon(&mut self) -> SFTDISCON_W<1> {
         SFTDISCON_W::new(self)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
+    #[must_use]
     pub fn tstctl(&mut self) -> TSTCTL_W<4> {
         TSTCTL_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<7> {
         SGNPINNAK_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<8> {
         CGNPINNAK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn sgoutnak(&mut self) -> SGOUTNAK_W<9> {
         SGOUTNAK_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn cgoutnak(&mut self) -> CGOUTNAK_W<10> {
         CGOUTNAK_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn pwronprgdone(&mut self) -> PWRONPRGDONE_W<11> {
         PWRONPRGDONE_W::new(self)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
+    #[must_use]
     pub fn gmc(&mut self) -> GMC_W<13> {
         GMC_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn ignrfrmnum(&mut self) -> IGNRFRMNUM_W<15> {
         IGNRFRMNUM_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn nakonbble(&mut self) -> NAKONBBLE_W<16> {
         NAKONBBLE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn encountonbna(&mut self) -> ENCOUNTONBNA_W<17> {
         ENCOUNTONBNA_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn deepsleepbeslreject(&mut self) -> DEEPSLEEPBESLREJECT_W<18> {
         DEEPSLEEPBESLREJECT_W::new(self)
     }
@@ -224,11 +237,10 @@ impl crate::Readable for DCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dctl::W](W) writer structure"]
 impl crate::Writable for DCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCTL to value 0x2000"]
 impl crate::Resettable for DCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2000
-    }
+    const RESET_VALUE: Self::Ux = 0x2000;
 }

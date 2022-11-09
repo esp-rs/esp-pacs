@@ -48,7 +48,7 @@ impl R {
     #[doc = "Bits 0:21 - configure touch timerout time"]
     #[inline(always)]
     pub fn touch_timeout_num(&self) -> TOUCH_TIMEOUT_NUM_R {
-        TOUCH_TIMEOUT_NUM_R::new((self.bits & 0x003f_ffff) as u32)
+        TOUCH_TIMEOUT_NUM_R::new(self.bits & 0x003f_ffff)
     }
     #[doc = "Bit 22 - enable touch timerout"]
     #[inline(always)]
@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:21 - configure touch timerout time"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_timeout_num(&mut self) -> TOUCH_TIMEOUT_NUM_W<0> {
         TOUCH_TIMEOUT_NUM_W::new(self)
     }
     #[doc = "Bit 22 - enable touch timerout"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_timeout_en(&mut self) -> TOUCH_TIMEOUT_EN_W<22> {
         TOUCH_TIMEOUT_EN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for TOUCH_TIMEOUT_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_timeout_ctrl::W](W) writer structure"]
 impl crate::Writable for TOUCH_TIMEOUT_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_TIMEOUT_CTRL to value 0x007f_ffff"]
 impl crate::Resettable for TOUCH_TIMEOUT_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x007f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x007f_ffff;
 }

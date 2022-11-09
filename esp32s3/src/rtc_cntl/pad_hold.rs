@@ -237,111 +237,133 @@ impl R {
 impl W {
     #[doc = "Bit 0 - hold rtc pad0"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<0> {
         TOUCH_PAD0_HOLD_W::new(self)
     }
     #[doc = "Bit 1 - hold rtc pad-1"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<1> {
         TOUCH_PAD1_HOLD_W::new(self)
     }
     #[doc = "Bit 2 - hold rtc pad-2"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<2> {
         TOUCH_PAD2_HOLD_W::new(self)
     }
     #[doc = "Bit 3 - hold rtc pad-3"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<3> {
         TOUCH_PAD3_HOLD_W::new(self)
     }
     #[doc = "Bit 4 - hold rtc pad-4"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<4> {
         TOUCH_PAD4_HOLD_W::new(self)
     }
     #[doc = "Bit 5 - hold rtc pad-5"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<5> {
         TOUCH_PAD5_HOLD_W::new(self)
     }
     #[doc = "Bit 6 - hold rtc pad-6"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<6> {
         TOUCH_PAD6_HOLD_W::new(self)
     }
     #[doc = "Bit 7 - hold rtc pad-7"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<7> {
         TOUCH_PAD7_HOLD_W::new(self)
     }
     #[doc = "Bit 8 - hold rtc pad-8"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<8> {
         TOUCH_PAD8_HOLD_W::new(self)
     }
     #[doc = "Bit 9 - hold rtc pad-9"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<9> {
         TOUCH_PAD9_HOLD_W::new(self)
     }
     #[doc = "Bit 10 - hold rtc pad-10"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<10> {
         TOUCH_PAD10_HOLD_W::new(self)
     }
     #[doc = "Bit 11 - hold rtc pad-11"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<11> {
         TOUCH_PAD11_HOLD_W::new(self)
     }
     #[doc = "Bit 12 - hold rtc pad-12"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<12> {
         TOUCH_PAD12_HOLD_W::new(self)
     }
     #[doc = "Bit 13 - hold rtc pad-13"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<13> {
         TOUCH_PAD13_HOLD_W::new(self)
     }
     #[doc = "Bit 14 - hold rtc pad-14"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<14> {
         TOUCH_PAD14_HOLD_W::new(self)
     }
     #[doc = "Bit 15 - hold rtc pad-15"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_hold(&mut self) -> X32P_HOLD_W<15> {
         X32P_HOLD_W::new(self)
     }
     #[doc = "Bit 16 - hold rtc pad-16"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_hold(&mut self) -> X32N_HOLD_W<16> {
         X32N_HOLD_W::new(self)
     }
     #[doc = "Bit 17 - hold rtc pad-17"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<17> {
         PDAC1_HOLD_W::new(self)
     }
     #[doc = "Bit 18 - hold rtc pad-18"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<18> {
         PDAC2_HOLD_W::new(self)
     }
     #[doc = "Bit 19 - hold rtc pad-19"]
     #[inline(always)]
+    #[must_use]
     pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<19> {
         PAD19_HOLD_W::new(self)
     }
     #[doc = "Bit 20 - hold rtc pad-20"]
     #[inline(always)]
+    #[must_use]
     pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<20> {
         PAD20_HOLD_W::new(self)
     }
     #[doc = "Bit 21 - hold rtc pad-21"]
     #[inline(always)]
+    #[must_use]
     pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<21> {
         PAD21_HOLD_W::new(self)
     }
@@ -364,11 +386,10 @@ impl crate::Readable for PAD_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_hold::W](W) writer structure"]
 impl crate::Writable for PAD_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_HOLD to value 0"]
 impl crate::Resettable for PAD_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

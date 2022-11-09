@@ -33,8 +33,5 @@ impl crate::Readable for I2S_STATE_SPEC {
 }
 #[doc = "`reset()` method sets I2S_STATE to value 0x01"]
 impl crate::Resettable for I2S_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

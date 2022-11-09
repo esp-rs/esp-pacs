@@ -105,26 +105,31 @@ impl R {
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn snp0(&mut self) -> SNP0_W<20> {
         SNP0_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn stall0(&mut self) -> STALL0_W<21> {
         STALL0_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn cnak0(&mut self) -> CNAK0_W<26> {
         CNAK0_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn do_snak0(&mut self) -> DO_SNAK0_W<27> {
         DO_SNAK0_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn epena0(&mut self) -> EPENA0_W<31> {
         EPENA0_W::new(self)
     }
@@ -147,11 +152,10 @@ impl crate::Readable for DOEPCTL0_SPEC {
 #[doc = "`write(|w| ..)` method takes [doepctl0::W](W) writer structure"]
 impl crate::Writable for DOEPCTL0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPCTL0 to value 0x8000"]
 impl crate::Resettable for DOEPCTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

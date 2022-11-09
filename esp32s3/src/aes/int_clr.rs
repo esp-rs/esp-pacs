@@ -24,6 +24,7 @@ pub type INT_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, 
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to clear AES interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn int_clear(&mut self) -> INT_CLEAR_W<0> {
         INT_CLEAR_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

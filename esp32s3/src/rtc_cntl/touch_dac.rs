@@ -139,51 +139,61 @@ impl R {
 impl W {
     #[doc = "Bits 2:4 - configure touch pad dac9"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad9_dac(&mut self) -> TOUCH_PAD9_DAC_W<2> {
         TOUCH_PAD9_DAC_W::new(self)
     }
     #[doc = "Bits 5:7 - configure touch pad dac8"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad8_dac(&mut self) -> TOUCH_PAD8_DAC_W<5> {
         TOUCH_PAD8_DAC_W::new(self)
     }
     #[doc = "Bits 8:10 - configure touch pad dac7"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad7_dac(&mut self) -> TOUCH_PAD7_DAC_W<8> {
         TOUCH_PAD7_DAC_W::new(self)
     }
     #[doc = "Bits 11:13 - configure touch pad dac6"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad6_dac(&mut self) -> TOUCH_PAD6_DAC_W<11> {
         TOUCH_PAD6_DAC_W::new(self)
     }
     #[doc = "Bits 14:16 - configure touch pad dac5"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad5_dac(&mut self) -> TOUCH_PAD5_DAC_W<14> {
         TOUCH_PAD5_DAC_W::new(self)
     }
     #[doc = "Bits 17:19 - configure touch pad dac4"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad4_dac(&mut self) -> TOUCH_PAD4_DAC_W<17> {
         TOUCH_PAD4_DAC_W::new(self)
     }
     #[doc = "Bits 20:22 - configure touch pad dac3"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad3_dac(&mut self) -> TOUCH_PAD3_DAC_W<20> {
         TOUCH_PAD3_DAC_W::new(self)
     }
     #[doc = "Bits 23:25 - configure touch pad dac2"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad2_dac(&mut self) -> TOUCH_PAD2_DAC_W<23> {
         TOUCH_PAD2_DAC_W::new(self)
     }
     #[doc = "Bits 26:28 - configure touch pad dac1"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad1_dac(&mut self) -> TOUCH_PAD1_DAC_W<26> {
         TOUCH_PAD1_DAC_W::new(self)
     }
     #[doc = "Bits 29:31 - configure touch pad dac0"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_pad0_dac(&mut self) -> TOUCH_PAD0_DAC_W<29> {
         TOUCH_PAD0_DAC_W::new(self)
     }
@@ -206,11 +216,10 @@ impl crate::Readable for TOUCH_DAC_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_dac::W](W) writer structure"]
 impl crate::Writable for TOUCH_DAC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_DAC to value 0"]
 impl crate::Resettable for TOUCH_DAC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

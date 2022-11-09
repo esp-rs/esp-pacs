@@ -136,56 +136,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - cocpu clk force on"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_clk_fo(&mut self) -> COCPU_CLK_FO_W<0> {
         COCPU_CLK_FO_W::new(self)
     }
     #[doc = "Bits 1:6 - time from start cocpu to pull down reset"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_start_2_reset_dis(&mut self) -> COCPU_START_2_RESET_DIS_W<1> {
         COCPU_START_2_RESET_DIS_W::new(self)
     }
     #[doc = "Bits 7:12 - time from start cocpu to give start interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_start_2_intr_en(&mut self) -> COCPU_START_2_INTR_EN_W<7> {
         COCPU_START_2_INTR_EN_W::new(self)
     }
     #[doc = "Bit 13 - to shut cocpu"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_shut(&mut self) -> COCPU_SHUT_W<13> {
         COCPU_SHUT_W::new(self)
     }
     #[doc = "Bits 14:21 - time from shut cocpu to disable clk"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_shut_2_clk_dis(&mut self) -> COCPU_SHUT_2_CLK_DIS_W<14> {
         COCPU_SHUT_2_CLK_DIS_W::new(self)
     }
     #[doc = "Bit 22 - to reset cocpu"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_shut_reset_en(&mut self) -> COCPU_SHUT_RESET_EN_W<22> {
         COCPU_SHUT_RESET_EN_W::new(self)
     }
     #[doc = "Bit 23 - 1: old ULP 0: new riscV"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_sel(&mut self) -> COCPU_SEL_W<23> {
         COCPU_SEL_W::new(self)
     }
     #[doc = "Bit 24 - 1: select riscv done 0: select ulp done"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_done_force(&mut self) -> COCPU_DONE_FORCE_W<24> {
         COCPU_DONE_FORCE_W::new(self)
     }
     #[doc = "Bit 25 - done signal used by riscv to control timer."]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_done(&mut self) -> COCPU_DONE_W<25> {
         COCPU_DONE_W::new(self)
     }
     #[doc = "Bit 26 - trigger cocpu register interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_sw_int_trigger(&mut self) -> COCPU_SW_INT_TRIGGER_W<26> {
         COCPU_SW_INT_TRIGGER_W::new(self)
     }
     #[doc = "Bit 27 - open ulp-riscv clk gate"]
     #[inline(always)]
+    #[must_use]
     pub fn cocpu_clkgate_en(&mut self) -> COCPU_CLKGATE_EN_W<27> {
         COCPU_CLKGATE_EN_W::new(self)
     }
@@ -208,11 +219,10 @@ impl crate::Readable for COCPU_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cocpu_ctrl::W](W) writer structure"]
 impl crate::Writable for COCPU_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets COCPU_CTRL to value 0x008a_0810"]
 impl crate::Resettable for COCPU_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x008a_0810
-    }
+    const RESET_VALUE: Self::Ux = 0x008a_0810;
 }

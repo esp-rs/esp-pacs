@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn block_mode(&mut self) -> BLOCK_MODE_W<0> {
         BLOCK_MODE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for BLOCK_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [block_mode::W](W) writer structure"]
 impl crate::Writable for BLOCK_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLOCK_MODE to value 0"]
 impl crate::Resettable for BLOCK_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

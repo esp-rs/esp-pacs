@@ -33,8 +33,5 @@ impl crate::Readable for COMB_PVT_ERR_HVT_SITE1_SPEC {
 }
 #[doc = "`reset()` method sets COMB_PVT_ERR_HVT_SITE1 to value 0"]
 impl crate::Resettable for COMB_PVT_ERR_HVT_SITE1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

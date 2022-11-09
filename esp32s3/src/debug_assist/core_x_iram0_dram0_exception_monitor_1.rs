@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_limit_cycle_1(&self) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_R {
-        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_R::new((self.bits & 0x000f_ffff) as u32)
+        CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_dram0_limit_cycle_1(&mut self) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_W<0> {
         CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_dram0_exception_monitor_1::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1 to value 0x000f_ffff"]
 impl crate::Resettable for CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_ffff;
 }

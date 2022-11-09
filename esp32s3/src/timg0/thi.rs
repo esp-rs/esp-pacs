@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]
     pub fn hi(&self) -> HI_R {
-        HI_R::new((self.bits & 0x003f_ffff) as u32)
+        HI_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "Timer %s current value, high 22 bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [thi](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for THI_SPEC {
 }
 #[doc = "`reset()` method sets T%sHI to value 0"]
 impl crate::Resettable for THI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

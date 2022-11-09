@@ -129,6 +129,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - core0/core1's permission of instruction region0 of SRAM in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<0> {
@@ -136,6 +137,7 @@ impl W {
     }
     #[doc = "Bits 3:5 - core0/core1's permission of instruction region1 of SRAM in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_1(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<3> {
@@ -143,6 +145,7 @@ impl W {
     }
     #[doc = "Bits 6:8 - core0/core1's permission of instruction region2 of SRAM in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_2(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<6> {
@@ -150,6 +153,7 @@ impl W {
     }
     #[doc = "Bits 9:11 - core0/core1's permission of instruction region3 of SRAM in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_pms_3(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<9> {
@@ -157,6 +161,7 @@ impl W {
     }
     #[doc = "Bits 12:14 - core0/core1's permission of icache data sram block0 in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<12> {
@@ -164,6 +169,7 @@ impl W {
     }
     #[doc = "Bits 15:17 - core0/core1's permission of icache data sram block1 in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_1(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<15> {
@@ -171,6 +177,7 @@ impl W {
     }
     #[doc = "Bits 18:20 - core0/core1's permission of rom in world1"]
     #[inline(always)]
+    #[must_use]
     pub fn core_x_iram0_pms_constrain_rom_world_1_pms(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<18> {
@@ -195,11 +202,10 @@ impl crate::Readable for CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_x_iram0_pms_constrain_1::W](W) writer structure"]
 impl crate::Writable for CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_X_IRAM0_PMS_CONSTRAIN_1 to value 0x001f_ffff"]
 impl crate::Resettable for CORE_X_IRAM0_PMS_CONSTRAIN_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x001f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x001f_ffff;
 }

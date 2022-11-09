@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1=push pull,0=open drain"]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - 1=push pull,0=open drain"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - 1=master,0=slave"]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<2> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 3 - force start"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<3> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 4 - transit lsb first"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<4> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 5 - receive lsb first"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<5> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 29 - configure i2c ctrl clk enable"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ctrl_clk_gate_en(&mut self) -> I2C_CTRL_CLK_GATE_EN_W<29> {
         I2C_CTRL_CLK_GATE_EN_W::new(self)
     }
     #[doc = "Bit 30 - rtc i2c sw reset"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_reset(&mut self) -> I2C_RESET_W<30> {
         I2C_RESET_W::new(self)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
+    #[must_use]
     pub fn i2cclk_en(&mut self) -> I2CCLK_EN_W<31> {
         I2CCLK_EN_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -72,21 +72,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - ULP-coprocessor PC initial address"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<0> {
         ULP_CP_PC_INIT_W::new(self)
     }
     #[doc = "Bit 29 - ULP-coprocessor wakeup by GPIO enable"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<29> {
         ULP_CP_GPIO_WAKEUP_ENA_W::new(self)
     }
     #[doc = "Bit 30 - ULP-coprocessor wakeup by GPIO state clear"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<30> {
         ULP_CP_GPIO_WAKEUP_CLR_W::new(self)
     }
     #[doc = "Bit 31 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<31> {
         ULP_CP_SLP_TIMER_EN_W::new(self)
     }
@@ -109,11 +113,10 @@ impl crate::Readable for ULP_CP_TIMER_SPEC {
 #[doc = "`write(|w| ..)` method takes [ulp_cp_timer::W](W) writer structure"]
 impl crate::Writable for ULP_CP_TIMER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_TIMER to value 0"]
 impl crate::Resettable for ULP_CP_TIMER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

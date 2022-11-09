@@ -33,8 +33,5 @@ impl crate::Readable for HIGHPULSE_SPEC {
 }
 #[doc = "`reset()` method sets HIGHPULSE to value 0x0fff"]
 impl crate::Resettable for HIGHPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0fff
-    }
+    const RESET_VALUE: Self::Ux = 0x0fff;
 }

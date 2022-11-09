@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<0> {
         USR_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bit 16 - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_wfull_err_end_en(&mut self) -> MST_WFULL_ERR_END_EN_W<16> {
         MST_WFULL_ERR_END_EN_W::new(self)
     }
     #[doc = "Bits 17:21 - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<17> {
         CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 22:26 - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<22> {
         CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 27:31 - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<27> {
         USR_ADDR_BITLEN_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for USER1_SPEC {
 #[doc = "`write(|w| ..)` method takes [user1::W](W) writer structure"]
 impl crate::Writable for USER1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USER1 to value 0xb841_0007"]
 impl crate::Resettable for USER1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xb841_0007
-    }
+    const RESET_VALUE: Self::Ux = 0xb841_0007;
 }

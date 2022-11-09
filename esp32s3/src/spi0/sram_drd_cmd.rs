@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - When SPI0 reads Ext_RAM, it is the command value of CMD phase."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_sram_usr_rd_cmd_value(&mut self) -> CACHE_SRAM_USR_RD_CMD_VALUE_W<0> {
         CACHE_SRAM_USR_RD_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 28:31 - When SPI0 reads Ext_RAM, it is the length in bits of CMD phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
+    #[must_use]
     pub fn cache_sram_usr_rd_cmd_bitlen(&mut self) -> CACHE_SRAM_USR_RD_CMD_BITLEN_W<28> {
         CACHE_SRAM_USR_RD_CMD_BITLEN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SRAM_DRD_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_drd_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_DRD_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_DRD_CMD to value 0"]
 impl crate::Resettable for SRAM_DRD_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

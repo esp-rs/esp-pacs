@@ -179,61 +179,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - BackUp access bt permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_bt(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<0> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_W::new(self)
     }
     #[doc = "Bits 4:5 - BackUp access i2c_ext0 permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_i2c_ext0(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<4> {
         BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W::new(self)
     }
     #[doc = "Bits 6:7 - BackUp access uhci0 permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_uhci0(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<6> {
         BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W::new(self)
     }
     #[doc = "Bits 8:9 - BackUp access slchost permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_slchost(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_W<8> {
         BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_W::new(self)
     }
     #[doc = "Bits 10:11 - BackUp access rmt permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_rmt(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<10> {
         BACKUP_BUS_PMS_CONSTRAIN_RMT_W::new(self)
     }
     #[doc = "Bits 12:13 - BackUp access pcnt permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_pcnt(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_PCNT_W<12> {
         BACKUP_BUS_PMS_CONSTRAIN_PCNT_W::new(self)
     }
     #[doc = "Bits 14:15 - BackUp access slc permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_slc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SLC_W<14> {
         BACKUP_BUS_PMS_CONSTRAIN_SLC_W::new(self)
     }
     #[doc = "Bits 16:17 - BackUp access ledc permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_ledc(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<16> {
         BACKUP_BUS_PMS_CONSTRAIN_LEDC_W::new(self)
     }
     #[doc = "Bits 18:19 - BackUp access backup permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_backup(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_BACKUP_W<18> {
         BACKUP_BUS_PMS_CONSTRAIN_BACKUP_W::new(self)
     }
     #[doc = "Bits 22:23 - BackUp access bb permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_bb(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<22> {
         BACKUP_BUS_PMS_CONSTRAIN_BB_W::new(self)
     }
     #[doc = "Bits 24:25 - BackUp access pwm0 permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_pwm0(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_PWM0_W<24> {
         BACKUP_BUS_PMS_CONSTRAIN_PWM0_W::new(self)
     }
     #[doc = "Bits 26:27 - BackUp access timergroup permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_timergroup(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<26> {
@@ -241,6 +253,7 @@ impl W {
     }
     #[doc = "Bits 28:29 - BackUp access timergroup1 permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_timergroup1(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<28> {
@@ -248,6 +261,7 @@ impl W {
     }
     #[doc = "Bits 30:31 - BackUp access systimer permission."]
     #[inline(always)]
+    #[must_use]
     pub fn backup_bus_pms_constrain_systimer(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<30> {
         BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W::new(self)
     }
@@ -270,11 +284,10 @@ impl crate::Readable for BACKUP_BUS_PMS_CONSTRAIN_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [backup_bus_pms_constrain_2::W](W) writer structure"]
 impl crate::Writable for BACKUP_BUS_PMS_CONSTRAIN_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BACKUP_BUS_PMS_CONSTRAIN_2 to value 0xffcf_fff3"]
 impl crate::Resettable for BACKUP_BUS_PMS_CONSTRAIN_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffcf_fff3
-    }
+    const RESET_VALUE: Self::Ux = 0xffcf_fff3;
 }

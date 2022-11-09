@@ -49,46 +49,55 @@ pub type DBUS_CNT_OVF_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt by sync configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_sync_op_fault_int_clr(&mut self) -> ICACHE_SYNC_OP_FAULT_INT_CLR_W<0> {
         ICACHE_SYNC_OP_FAULT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear interrupt by preload configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn icache_preload_op_fault_int_clr(&mut self) -> ICACHE_PRELOAD_OP_FAULT_INT_CLR_W<1> {
         ICACHE_PRELOAD_OP_FAULT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to clear interrupt by sync configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_sync_op_fault_int_clr(&mut self) -> DCACHE_SYNC_OP_FAULT_INT_CLR_W<2> {
         DCACHE_SYNC_OP_FAULT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to clear interrupt by preload configurations fault."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_preload_op_fault_int_clr(&mut self) -> DCACHE_PRELOAD_OP_FAULT_INT_CLR_W<3> {
         DCACHE_PRELOAD_OP_FAULT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to clear interrupt by dcache trying to write flash."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_write_flash_int_clr(&mut self) -> DCACHE_WRITE_FLASH_INT_CLR_W<4> {
         DCACHE_WRITE_FLASH_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to clear interrupt by mmu entry fault."]
     #[inline(always)]
+    #[must_use]
     pub fn mmu_entry_fault_int_clr(&mut self) -> MMU_ENTRY_FAULT_INT_CLR_W<5> {
         MMU_ENTRY_FAULT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - The bit is used to clear interrupt by dcache trying to replace a line whose blocks all have been occupied by occupy-mode."]
     #[inline(always)]
+    #[must_use]
     pub fn dcache_occupy_exc_int_clr(&mut self) -> DCACHE_OCCUPY_EXC_INT_CLR_W<6> {
         DCACHE_OCCUPY_EXC_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - The bit is used to clear interrupt by ibus counter overflow."]
     #[inline(always)]
+    #[must_use]
     pub fn ibus_cnt_ovf_int_clr(&mut self) -> IBUS_CNT_OVF_INT_CLR_W<7> {
         IBUS_CNT_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - The bit is used to clear interrupt by dbus counter overflow."]
     #[inline(always)]
+    #[must_use]
     pub fn dbus_cnt_ovf_int_clr(&mut self) -> DBUS_CNT_OVF_INT_CLR_W<8> {
         DBUS_CNT_OVF_INT_CLR_W::new(self)
     }
@@ -107,11 +116,10 @@ impl crate::RegisterSpec for CACHE_ILG_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_ilg_int_clr::W](W) writer structure"]
 impl crate::Writable for CACHE_ILG_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_ILG_INT_CLR to value 0"]
 impl crate::Resettable for CACHE_ILG_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

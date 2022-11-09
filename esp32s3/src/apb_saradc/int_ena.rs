@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bit 26 - interrupt of thres1 low"]
     #[inline(always)]
+    #[must_use]
     pub fn thres1_low_int_ena(&mut self) -> THRES1_LOW_INT_ENA_W<26> {
         THRES1_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 27 - interrupt of thres0 low"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_low_int_ena(&mut self) -> THRES0_LOW_INT_ENA_W<27> {
         THRES0_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 28 - interrupt of thres1 high"]
     #[inline(always)]
+    #[must_use]
     pub fn thres1_high_int_ena(&mut self) -> THRES1_HIGH_INT_ENA_W<28> {
         THRES1_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 29 - interrupt of thres0 high"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_high_int_ena(&mut self) -> THRES0_HIGH_INT_ENA_W<29> {
         THRES0_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - interrupt of sar2 done"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W<30> {
         APB_SARADC2_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 31 - interrupt of sar1 done"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W<31> {
         APB_SARADC1_DONE_INT_ENA_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

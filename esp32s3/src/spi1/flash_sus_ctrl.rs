@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<0> {
         FLASH_PES_EN_W::new(self)
     }
     #[doc = "Bits 1:8 - Program/Erase resume command value."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<1> {
         FLASH_PER_COMMAND_W::new(self)
     }
     #[doc = "Bits 9:16 - Program/Erase suspend command value."]
     #[inline(always)]
+    #[must_use]
     pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<9> {
         FLASH_PES_COMMAND_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for FLASH_SUS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [flash_sus_ctrl::W](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLASH_SUS_CTRL to value 0xeaf4"]
 impl crate::Resettable for FLASH_SUS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xeaf4
-    }
+    const RESET_VALUE: Self::Ux = 0xeaf4;
 }

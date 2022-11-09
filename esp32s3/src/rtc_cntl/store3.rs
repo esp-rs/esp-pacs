@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Reserved register"]
     #[inline(always)]
+    #[must_use]
     pub fn scratch3(&mut self) -> SCRATCH3_W<0> {
         SCRATCH3_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for STORE3_SPEC {
 #[doc = "`write(|w| ..)` method takes [store3::W](W) writer structure"]
 impl crate::Writable for STORE3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STORE3 to value 0"]
 impl crate::Resettable for STORE3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

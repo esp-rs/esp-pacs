@@ -65,6 +65,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - RTCSlow_1 memory split address in world 0 for core0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_rtcslow_1_spltaddr_world_0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_0_W<0> {
@@ -72,6 +73,7 @@ impl W {
     }
     #[doc = "Bits 11:21 - RTCSlow_1 memory split address in world 1 for core0."]
     #[inline(always)]
+    #[must_use]
     pub fn core_0_pif_pms_constrain_rtcslow_1_spltaddr_world_1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_1_SPLTADDR_WORLD_1_W<11> {
@@ -96,11 +98,10 @@ impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_13_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_0_pif_pms_constrain_13::W](W) writer structure"]
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_13_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_13 to value 0x003f_ffff"]
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_13_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x003f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x003f_ffff;
 }

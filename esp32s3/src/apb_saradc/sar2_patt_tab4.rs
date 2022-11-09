@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
     #[inline(always)]
     pub fn saradc_sar2_patt_tab4(&self) -> SARADC_SAR2_PATT_TAB4_R {
-        SARADC_SAR2_PATT_TAB4_R::new((self.bits & 0x00ff_ffff) as u32)
+        SARADC_SAR2_PATT_TAB4_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_sar2_patt_tab4(&mut self) -> SARADC_SAR2_PATT_TAB4_W<0> {
         SARADC_SAR2_PATT_TAB4_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SAR2_PATT_TAB4_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar2_patt_tab4::W](W) writer structure"]
 impl crate::Writable for SAR2_PATT_TAB4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR2_PATT_TAB4 to value 0"]
 impl crate::Resettable for SAR2_PATT_TAB4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

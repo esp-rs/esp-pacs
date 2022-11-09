@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - mem start addr"]
     #[inline(always)]
+    #[must_use]
     pub fn log_mem_start(&mut self) -> LOG_MEM_START_W<0> {
         LOG_MEM_START_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LOG_MEM_START_SPEC {
 #[doc = "`write(|w| ..)` method takes [log_mem_start::W](W) writer structure"]
 impl crate::Writable for LOG_MEM_START_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOG_MEM_START to value 0"]
 impl crate::Resettable for LOG_MEM_START_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

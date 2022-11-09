@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold(&mut self) -> CS_HOLD_W<6> {
         CS_HOLD_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_setup(&mut self) -> CS_SETUP_W<7> {
         CS_SETUP_W::new(self)
     }
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<9> {
         CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bit 26 - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<26> {
         USR_DUMMY_IDLE_W::new(self)
     }
     #[doc = "Bit 29 - This bit enable the DUMMY phase of an SPI transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<29> {
         USR_DUMMY_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for USER_SPEC {
 #[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USER to value 0"]
 impl crate::Resettable for USER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
