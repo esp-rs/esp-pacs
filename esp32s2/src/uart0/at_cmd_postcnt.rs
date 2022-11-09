@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the last AT_CMD and the next data. It will not take the previous data as AT_CMD character when the duration is less than this register's value."]
     #[inline(always)]
+    #[must_use]
     pub fn post_idle_num(&mut self) -> POST_IDLE_NUM_W<0> {
         POST_IDLE_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AT_CMD_POSTCNT_SPEC {
 #[doc = "`write(|w| ..)` method takes [at_cmd_postcnt::W](W) writer structure"]
 impl crate::Writable for AT_CMD_POSTCNT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_POSTCNT to value 0x0901"]
 impl crate::Resettable for AT_CMD_POSTCNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0901
-    }
+    const RESET_VALUE: Self::Ux = 0x0901;
 }

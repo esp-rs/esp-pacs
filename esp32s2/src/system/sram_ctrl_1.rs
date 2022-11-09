@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:21 - This field is used to power down internal SRAM."]
     #[inline(always)]
     pub fn sram_force_pd(&self) -> SRAM_FORCE_PD_R {
-        SRAM_FORCE_PD_R::new((self.bits & 0x003f_ffff) as u32)
+        SRAM_FORCE_PD_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:21 - This field is used to power down internal SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<0> {
         SRAM_FORCE_PD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SRAM_CTRL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_ctrl_1::W](W) writer structure"]
 impl crate::Writable for SRAM_CTRL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_CTRL_1 to value 0"]
 impl crate::Resettable for SRAM_CTRL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

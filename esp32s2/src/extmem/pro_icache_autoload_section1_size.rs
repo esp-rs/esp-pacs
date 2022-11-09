@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
     #[inline(always)]
     pub fn pro_icache_autoload_sct1_size(&self) -> PRO_ICACHE_AUTOLOAD_SCT1_SIZE_R {
-        PRO_ICACHE_AUTOLOAD_SCT1_SIZE_R::new((self.bits & 0x00ff_ffff) as u32)
+        PRO_ICACHE_AUTOLOAD_SCT1_SIZE_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_autoload_sct1_size(&mut self) -> PRO_ICACHE_AUTOLOAD_SCT1_SIZE_W<0> {
         PRO_ICACHE_AUTOLOAD_SCT1_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_ICACHE_AUTOLOAD_SECTION1_SIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_icache_autoload_section1_size::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_AUTOLOAD_SECTION1_SIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_ICACHE_AUTOLOAD_SECTION1_SIZE to value 0x8000"]
 impl crate::Resettable for PRO_ICACHE_AUTOLOAD_SECTION1_SIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

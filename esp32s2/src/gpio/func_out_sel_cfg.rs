@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
     #[inline(always)]
+    #[must_use]
     pub fn out_sel(&mut self) -> OUT_SEL_W<0> {
         OUT_SEL_W::new(self)
     }
     #[doc = "Bit 9 - 0: Do not invert the output value; 1: Invert the output value."]
     #[inline(always)]
+    #[must_use]
     pub fn inv_sel(&mut self) -> INV_SEL_W<9> {
         INV_SEL_W::new(self)
     }
     #[doc = "Bit 10 - 0: Use output enable signal from peripheral; 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn oen_sel(&mut self) -> OEN_SEL_W<10> {
         OEN_SEL_W::new(self)
     }
     #[doc = "Bit 11 - 0: Do not invert the output enable signal; 1: Invert the output enable signal."]
     #[inline(always)]
+    #[must_use]
     pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<11> {
         OEN_INV_SEL_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for FUNC_OUT_SEL_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [func_out_sel_cfg::W](W) writer structure"]
 impl crate::Writable for FUNC_OUT_SEL_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FUNC%s_OUT_SEL_CFG to value 0x0100"]
 impl crate::Resettable for FUNC_OUT_SEL_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

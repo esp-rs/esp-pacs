@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_hall(&mut self) -> XPD_HALL_W<28> {
         XPD_HALL_W::new(self)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<29> {
         XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
+    #[must_use]
     pub fn hall_phase(&mut self) -> HALL_PHASE_W<30> {
         HALL_PHASE_W::new(self)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
+    #[must_use]
     pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<31> {
         HALL_PHASE_FORCE_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for SAR_HALL_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_hall_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_HALL_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_HALL_CTRL to value 0xa000_0000"]
 impl crate::Resettable for SAR_HALL_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0xa000_0000;
 }

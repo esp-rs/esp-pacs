@@ -71,16 +71,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_force_on_db_encrypt(&mut self) -> CLK_FORCE_ON_DB_ENCRYPT_W<0> {
         CLK_FORCE_ON_DB_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_force_on_g0cb_decrypt(&mut self) -> CLK_FORCE_ON_G0CB_DECRYPT_W<1> {
         CLK_FORCE_ON_G0CB_DECRYPT_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_force_on_automatic_encrypt_decrypt(
         &mut self,
     ) -> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<2> {
@@ -105,11 +108,10 @@ impl crate::Readable for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_encrypt_decrypt_clk_force_on::W](W) writer structure"]
 impl crate::Writable for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON to value 0x07"]
 impl crate::Resettable for CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

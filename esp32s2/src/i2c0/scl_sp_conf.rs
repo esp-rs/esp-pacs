@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - When I2C master is IDLE, set this bit to send out SCL pulses. The number of pulses equals to I2C_SCL_RST_SLV_NUM\\[4:0\\]."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<0> {
         SCL_RST_SLV_EN_W::new(self)
     }
     #[doc = "Bits 1:5 - Configure the pulses of SCL generated in I2C master mode. Valid when I2C_SCL_RST_SLV_EN is 1."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<1> {
         SCL_RST_SLV_NUM_W::new(self)
     }
     #[doc = "Bit 6 - The power down enable bit for the I2C output SCL line. 1: Power down. 0: Not power down. Set I2C_SCL_FORCE_OUT and I2C_SCL_PD_EN to 1 to stretch SCL low."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<6> {
         SCL_PD_EN_W::new(self)
     }
     #[doc = "Bit 7 - The power down enable bit for the I2C output SDA line. 1: Power down. 0: Not power down. Set I2C_SDA_FORCE_OUT and I2C_SDA_PD_EN to 1 to stretch SDA low."]
     #[inline(always)]
+    #[must_use]
     pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<7> {
         SDA_PD_EN_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for SCL_SP_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_sp_conf::W](W) writer structure"]
 impl crate::Writable for SCL_SP_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_SP_CONF to value 0"]
 impl crate::Resettable for SCL_SP_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

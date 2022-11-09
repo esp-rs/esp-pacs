@@ -191,81 +191,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The enable bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_empty_int_ena(&mut self) -> INLINK_DSCR_EMPTY_INT_ENA_W<0> {
         INLINK_DSCR_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for outlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_dscr_error_int_ena(&mut self) -> OUTLINK_DSCR_ERROR_INT_ENA_W<1> {
         OUTLINK_DSCR_ERROR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for inlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_error_int_ena(&mut self) -> INLINK_DSCR_ERROR_INT_ENA_W<2> {
         INLINK_DSCR_ERROR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_done_int_ena(&mut self) -> IN_DONE_INT_ENA_W<3> {
         IN_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for receiving error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_err_eof_int_ena(&mut self) -> IN_ERR_EOF_INT_ENA_W<4> {
         IN_ERR_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for completing receiving all the packets from host. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_suc_eof_int_ena(&mut self) -> IN_SUC_EOF_INT_ENA_W<5> {
         IN_SUC_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for completing usage of a outlink descriptor . Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_done_int_ena(&mut self) -> OUT_DONE_INT_ENA_W<6> {
         OUT_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for sending a packet to host done. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_int_ena(&mut self) -> OUT_EOF_INT_ENA_W<7> {
         OUT_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The enable bit for sending all the packets to host done. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_total_eof_int_ena(&mut self) -> OUT_TOTAL_EOF_INT_ENA_W<8> {
         OUT_TOTAL_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The enable bit for infifo full error interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn infifo_full_err_int_ena(&mut self) -> INFIFO_FULL_ERR_INT_ENA_W<9> {
         INFIFO_FULL_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The enable bit for outfifo empty error interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_empty_err_int_ena(&mut self) -> OUTFIFO_EMPTY_ERR_INT_ENA_W<10> {
         OUTFIFO_EMPTY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The enable bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd6_int_ena(&mut self) -> SLV_CMD6_INT_ENA_W<11> {
         SLV_CMD6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The enable bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd7_int_ena(&mut self) -> SLV_CMD7_INT_ENA_W<12> {
         SLV_CMD7_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - The enable bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd8_int_ena(&mut self) -> SLV_CMD8_INT_ENA_W<13> {
         SLV_CMD8_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - The enable bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd9_int_ena(&mut self) -> SLV_CMD9_INT_ENA_W<14> {
         SLV_CMD9_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - The enable bit for SPI slave CMDA interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmda_int_ena(&mut self) -> SLV_CMDA_INT_ENA_W<15> {
         SLV_CMDA_INT_ENA_W::new(self)
     }
@@ -288,11 +304,10 @@ impl crate::Readable for DMA_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_int_ena::W](W) writer structure"]
 impl crate::Writable for DMA_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_INT_ENA to value 0"]
 impl crate::Resettable for DMA_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

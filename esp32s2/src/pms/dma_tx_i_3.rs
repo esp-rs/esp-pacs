@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:22 - Record the illegitimate information of TX Copy DMA. \\[22:6\\]: store the bits \\[18:2\\] of address. \\[5\\]: if bits \\[31:19\\] of address are 0x7ff, then the bit value is 1, otherwise it is 0. \\[4\\]: 1 means write operation, 0 means read operation. \\[3:0\\]: TX Copy DMA bus byte enables."]
     #[inline(always)]
     pub fn dma_tx_i_ilg_st(&self) -> DMA_TX_I_ILG_ST_R {
-        DMA_TX_I_ILG_ST_R::new((self.bits & 0x007f_ffff) as u32)
+        DMA_TX_I_ILG_ST_R::new(self.bits & 0x007f_ffff)
     }
 }
 #[doc = "TX Copy DMA status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_3](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for DMA_TX_I_3_SPEC {
 }
 #[doc = "`reset()` method sets DMA_TX_I_3 to value 0"]
 impl crate::Resettable for DMA_TX_I_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

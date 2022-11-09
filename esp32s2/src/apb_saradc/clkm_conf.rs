@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Integral DIG_ADC clock divider value"]
     #[inline(always)]
+    #[must_use]
     pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W<0> {
         CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - Fractional clock divider numerator value"]
     #[inline(always)]
+    #[must_use]
     pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W<8> {
         CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 14:19 - Fractional clock divider denominator value"]
     #[inline(always)]
+    #[must_use]
     pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W<14> {
         CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bits 21:22 - 1: select APLL. 2: select APB_CLK. Other values: disable clock."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_sel(&mut self) -> CLK_SEL_W<21> {
         CLK_SEL_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for CLKM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [clkm_conf::W](W) writer structure"]
 impl crate::Writable for CLKM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLKM_CONF to value 0x04"]
 impl crate::Resettable for CLKM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

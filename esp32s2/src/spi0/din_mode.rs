@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din0_mode(&mut self) -> DIN0_MODE_W<0> {
         DIN0_MODE_W::new(self)
     }
     #[doc = "Bits 3:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din1_mode(&mut self) -> DIN1_MODE_W<3> {
         DIN1_MODE_W::new(self)
     }
     #[doc = "Bits 6:8 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din2_mode(&mut self) -> DIN2_MODE_W<6> {
         DIN2_MODE_W::new(self)
     }
     #[doc = "Bits 9:11 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din3_mode(&mut self) -> DIN3_MODE_W<9> {
         DIN3_MODE_W::new(self)
     }
     #[doc = "Bits 12:14 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din4_mode(&mut self) -> DIN4_MODE_W<12> {
         DIN4_MODE_W::new(self)
     }
     #[doc = "Bits 15:17 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din5_mode(&mut self) -> DIN5_MODE_W<15> {
         DIN5_MODE_W::new(self)
     }
     #[doc = "Bits 18:20 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din6_mode(&mut self) -> DIN6_MODE_W<18> {
         DIN6_MODE_W::new(self)
     }
     #[doc = "Bits 21:23 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn din7_mode(&mut self) -> DIN7_MODE_W<21> {
         DIN7_MODE_W::new(self)
     }
     #[doc = "Bit 24 - 1:enable hclk in spi_timing.v. 0: disable it. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<24> {
         TIMING_CLK_ENA_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for DIN_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [din_mode::W](W) writer structure"]
 impl crate::Writable for DIN_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIN_MODE to value 0"]
 impl crate::Resettable for DIN_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

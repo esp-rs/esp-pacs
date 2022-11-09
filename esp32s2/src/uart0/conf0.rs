@@ -282,136 +282,163 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This register is used to configure the parity check mode. 0: even. 1: odd."]
     #[inline(always)]
+    #[must_use]
     pub fn parity(&mut self) -> PARITY_W<0> {
         PARITY_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable UART parity check."]
     #[inline(always)]
+    #[must_use]
     pub fn parity_en(&mut self) -> PARITY_EN_W<1> {
         PARITY_EN_W::new(self)
     }
     #[doc = "Bits 2:3 - This register is used to set the length of data. 0: 5 bits. 1: 6 bits. 2: 7 bits. 3: 8 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn bit_num(&mut self) -> BIT_NUM_W<2> {
         BIT_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - This register is used to set the length of stop bit. 1: 1 bit. 2: 1.5 bits. 3: 2 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<4> {
         STOP_BIT_NUM_W::new(self)
     }
     #[doc = "Bit 6 - This register is used to configure the software RTS signal which is used in software flow control."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_rts(&mut self) -> SW_RTS_W<6> {
         SW_RTS_W::new(self)
     }
     #[doc = "Bit 7 - This register is used to configure the software DTR signal which is used in software flow control."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_dtr(&mut self) -> SW_DTR_W<7> {
         SW_DTR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to enable the transmitter to send NULL characters when the process of sending data is done."]
     #[inline(always)]
+    #[must_use]
     pub fn txd_brk(&mut self) -> TXD_BRK_W<8> {
         TXD_BRK_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to enable IrDA loopback mode."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<9> {
         IRDA_DPLX_W::new(self)
     }
     #[doc = "Bit 10 - This is the start enable bit for IrDA transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<10> {
         IRDA_TX_EN_W::new(self)
     }
     #[doc = "Bit 11 - 1: The IrDA transmitter's 11th bit is the same as 10th bit. 0: Set IrDA transmitter's 11th bit to 0."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<11> {
         IRDA_WCTL_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to invert the level of IrDA transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<12> {
         IRDA_TX_INV_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to invert the level of IrDA receiver."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<13> {
         IRDA_RX_INV_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable UART loopback test mode."]
     #[inline(always)]
+    #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<14> {
         LOOPBACK_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to enable flow control function for the transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<15> {
         TX_FLOW_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable IrDA protocol."]
     #[inline(always)]
+    #[must_use]
     pub fn irda_en(&mut self) -> IRDA_EN_W<16> {
         IRDA_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to reset the UART RX FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<17> {
         RXFIFO_RST_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to reset the UART TX FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<18> {
         TXFIFO_RST_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to invert the level of UART RXD signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rxd_inv(&mut self) -> RXD_INV_W<19> {
         RXD_INV_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to invert the level of UART CTS signal."]
     #[inline(always)]
+    #[must_use]
     pub fn cts_inv(&mut self) -> CTS_INV_W<20> {
         CTS_INV_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to invert the level of UART DSR signal."]
     #[inline(always)]
+    #[must_use]
     pub fn dsr_inv(&mut self) -> DSR_INV_W<21> {
         DSR_INV_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to invert the level of UART TXD signal."]
     #[inline(always)]
+    #[must_use]
     pub fn txd_inv(&mut self) -> TXD_INV_W<22> {
         TXD_INV_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to invert the level of UART RTS signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rts_inv(&mut self) -> RTS_INV_W<23> {
         RTS_INV_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to invert the level of UART DTR signal."]
     #[inline(always)]
+    #[must_use]
     pub fn dtr_inv(&mut self) -> DTR_INV_W<24> {
         DTR_INV_W::new(self)
     }
     #[doc = "Bit 25 - 1: Force clock on for registers. 0: Support clock only when application writes registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<25> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: The receiver stops storing data into FIFO when data is wrong. 0: The receiver stores the data even if the received data is wrong."]
     #[inline(always)]
+    #[must_use]
     pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<26> {
         ERR_WR_MASK_W::new(self)
     }
     #[doc = "Bit 27 - This register is used to select the clock. 1: APB_CLK. 0: REF_TICK."]
     #[inline(always)]
+    #[must_use]
     pub fn tick_ref_always_on(&mut self) -> TICK_REF_ALWAYS_ON_W<27> {
         TICK_REF_ALWAYS_ON_W::new(self)
     }
     #[doc = "Bit 28 - The signal to enable UART RAM clock gating. 1: UART RAM powers on, the data of which can be read and written. 0: UART RAM powers down."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<28> {
         MEM_CLK_EN_W::new(self)
     }
@@ -434,11 +461,10 @@ impl crate::Readable for CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF0 to value 0x1800_001c"]
 impl crate::Resettable for CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1800_001c
-    }
+    const RESET_VALUE: Self::Ux = 0x1800_001c;
 }

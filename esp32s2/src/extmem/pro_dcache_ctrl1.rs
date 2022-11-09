@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable dbus0, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_mask_bus0(&mut self) -> PRO_DCACHE_MASK_BUS0_W<0> {
         PRO_DCACHE_MASK_BUS0_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable dbus1, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_mask_bus1(&mut self) -> PRO_DCACHE_MASK_BUS1_W<1> {
         PRO_DCACHE_MASK_BUS1_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to disable dbus2, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<2> {
         PRO_DCACHE_MASK_BUS2_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for PRO_DCACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_dcache_ctrl1::W](W) writer structure"]
 impl crate::Writable for PRO_DCACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_DCACHE_CTRL1 to value 0x07"]
 impl crate::Resettable for PRO_DCACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

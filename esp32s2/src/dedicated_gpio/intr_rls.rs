@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W<0> {
         GPIO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for DEDIC_GPIO1_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W<1> {
         GPIO1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for DEDIC_GPIO2_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W<2> {
         GPIO2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for DEDIC_GPIO3_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W<3> {
         GPIO3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for DEDIC_GPIO4_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W<4> {
         GPIO4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for DEDIC_GPIO5_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W<5> {
         GPIO5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for DEDIC_GPIO6_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W<6> {
         GPIO6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for DEDIC_GPIO7_INT_ST register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W<7> {
         GPIO7_INT_ENA_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for INTR_RLS_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr_rls::W](W) writer structure"]
 impl crate::Writable for INTR_RLS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTR_RLS to value 0"]
 impl crate::Resettable for INTR_RLS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

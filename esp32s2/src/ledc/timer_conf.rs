@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 4:21 - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
     #[inline(always)]
     pub fn clk_div(&self) -> CLK_DIV_R {
-        CLK_DIV_R::new(((self.bits >> 4) & 0x0003_ffff) as u32)
+        CLK_DIV_R::new((self.bits >> 4) & 0x0003_ffff)
     }
     #[doc = "Bit 22 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
@@ -86,31 +86,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - This register is used to control the range of the counter in timer %s."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<0> {
         DUTY_RES_W::new(self)
     }
     #[doc = "Bits 4:21 - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_div(&mut self) -> CLK_DIV_W<4> {
         CLK_DIV_W::new(self)
     }
     #[doc = "Bit 22 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
+    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<22> {
         PAUSE_W::new(self)
     }
     #[doc = "Bit 23 - This bit is used to reset timer %s. The counter will show 0 after reset."]
     #[inline(always)]
+    #[must_use]
     pub fn rst(&mut self) -> RST_W<23> {
         RST_W::new(self)
     }
     #[doc = "Bit 24 - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 0: LEDC_PWM_CLK. 1: REF_TICK."]
     #[inline(always)]
+    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<24> {
         TICK_SEL_W::new(self)
     }
     #[doc = "Bit 25 - Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<25> {
         PARA_UP_W::new(self)
     }
@@ -133,11 +139,10 @@ impl crate::Readable for TIMER_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer_conf::W](W) writer structure"]
 impl crate::Writable for TIMER_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER%s_CONF to value 0x0080_0000"]
 impl crate::Resettable for TIMER_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0080_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0080_0000;
 }

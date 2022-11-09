@@ -173,71 +173,85 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Number of delay cycles for BCK signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_bck_in_delay(&mut self) -> TX_BCK_IN_DELAY_W<0> {
         TX_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 2:3 - Number of delay cycles for WS signal into the transmitter based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_ws_in_delay(&mut self) -> TX_WS_IN_DELAY_W<2> {
         TX_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 4:5 - Number of delay cycles for BCK signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bck_in_delay(&mut self) -> RX_BCK_IN_DELAY_W<4> {
         RX_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 6:7 - Number of delay cycles for WS signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_ws_in_delay(&mut self) -> RX_WS_IN_DELAY_W<6> {
         RX_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 8:9 - Number of delay cycles for SD signal into the receiver based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_sd_in_delay(&mut self) -> RX_SD_IN_DELAY_W<8> {
         RX_SD_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 10:11 - Number of delay cycles for BCK signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_bck_out_delay(&mut self) -> TX_BCK_OUT_DELAY_W<10> {
         TX_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 12:13 - Number of delay cycles for WS signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_ws_out_delay(&mut self) -> TX_WS_OUT_DELAY_W<12> {
         TX_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 14:15 - Number of delay cycles for SD signal out of the transmitter based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_sd_out_delay(&mut self) -> TX_SD_OUT_DELAY_W<14> {
         TX_SD_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 16:17 - Number of delay cycles for WS signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_ws_out_delay(&mut self) -> RX_WS_OUT_DELAY_W<16> {
         RX_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 18:19 - Number of delay cycles for BCK signal out of the receiver based on I2S0_CLK. 0: delayed by 0 cycle. 1: delayed by 1 cycle. 2: delayed by 2 cycles. 3: delayed by 3 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_bck_out_delay(&mut self) -> RX_BCK_OUT_DELAY_W<18> {
         RX_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to synchronize signals into the transmitter by two flip-flop synchronizer. 0: the signals will be firstly clocked by rising clock edge , then clocked by falling clock edge. 1: the signals will be firstly clocked by falling clock edge, then clocked by rising clock edge."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_dsync_sw(&mut self) -> TX_DSYNC_SW_W<20> {
         TX_DSYNC_SW_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to synchronize signals into the receiver by two flip-flop synchronizer. 0: the signals will be clocked by rising clock edge firstly, then clocked by falling clock edge. 1: the signals will be clocked by falling clock edge firstly, then clocked by rising clock edge."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_dsync_sw(&mut self) -> RX_DSYNC_SW_W<21> {
         RX_DSYNC_SW_W::new(self)
     }
     #[doc = "Bits 22:23 - Number of delay cycles for data valid flag based on I2S0_CLK. 0: delayed by 1.5 cycles. 1: delayed by 2.5 cycles. 2: delayed by 3.5 cycles. 3: delayed by 4.5 cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn data_enable_delay(&mut self) -> DATA_ENABLE_DELAY_W<22> {
         DATA_ENABLE_DELAY_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to invert BCK signal input to the slave transmitter."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_bck_in_inv(&mut self) -> TX_BCK_IN_INV_W<24> {
         TX_BCK_IN_INV_W::new(self)
     }
@@ -260,11 +274,10 @@ impl crate::Readable for TIMING_SPEC {
 #[doc = "`write(|w| ..)` method takes [timing::W](W) writer structure"]
 impl crate::Writable for TIMING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMING to value 0"]
 impl crate::Resettable for TIMING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

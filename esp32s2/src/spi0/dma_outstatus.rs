@@ -29,7 +29,7 @@ impl R {
     #[doc = "Bits 0:17 - SPI dma out descriptor address."]
     #[inline(always)]
     pub fn dma_outdscr_addr(&self) -> DMA_OUTDSCR_ADDR_R {
-        DMA_OUTDSCR_ADDR_R::new((self.bits & 0x0003_ffff) as u32)
+        DMA_OUTDSCR_ADDR_R::new(self.bits & 0x0003_ffff)
     }
     #[doc = "Bits 18:19 - SPI dma out descriptor state."]
     #[inline(always)]
@@ -68,8 +68,5 @@ impl crate::Readable for DMA_OUTSTATUS_SPEC {
 }
 #[doc = "`reset()` method sets DMA_OUTSTATUS to value 0x8000_0000"]
 impl crate::Resettable for DMA_OUTSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_0000;
 }

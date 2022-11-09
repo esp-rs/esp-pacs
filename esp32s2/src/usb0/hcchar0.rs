@@ -129,51 +129,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
+    #[must_use]
     pub fn h_mps0(&mut self) -> H_MPS0_W<0> {
         H_MPS0_W::new(self)
     }
     #[doc = "Bits 11:14"]
     #[inline(always)]
+    #[must_use]
     pub fn h_epnum0(&mut self) -> H_EPNUM0_W<11> {
         H_EPNUM0_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn h_epdir0(&mut self) -> H_EPDIR0_W<15> {
         H_EPDIR0_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn h_lspddev0(&mut self) -> H_LSPDDEV0_W<17> {
         H_LSPDDEV0_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn h_eptype0(&mut self) -> H_EPTYPE0_W<18> {
         H_EPTYPE0_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ec0(&mut self) -> H_EC0_W<21> {
         H_EC0_W::new(self)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
+    #[must_use]
     pub fn h_devaddr0(&mut self) -> H_DEVADDR0_W<22> {
         H_DEVADDR0_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn h_oddfrm0(&mut self) -> H_ODDFRM0_W<29> {
         H_ODDFRM0_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn h_chdis0(&mut self) -> H_CHDIS0_W<30> {
         H_CHDIS0_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn h_chena0(&mut self) -> H_CHENA0_W<31> {
         H_CHENA0_W::new(self)
     }
@@ -196,11 +206,10 @@ impl crate::Readable for HCCHAR0_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcchar0::W](W) writer structure"]
 impl crate::Writable for HCCHAR0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCCHAR0 to value 0"]
 impl crate::Resettable for HCCHAR0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

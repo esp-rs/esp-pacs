@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_low_period(&mut self) -> SCL_LOW_PERIOD_W<0> {
         SCL_LOW_PERIOD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_LOW_PERIOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_low_period::W](W) writer structure"]
 impl crate::Writable for SCL_LOW_PERIOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_LOW_PERIOD to value 0"]
 impl crate::Resettable for SCL_LOW_PERIOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

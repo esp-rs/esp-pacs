@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - When configured as an I2C Slave, this field is used to configure the slave address."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<0> {
         SLAVE_ADDR_W::new(self)
     }
     #[doc = "Bit 31 - This field is used to enable the slave 10-bit addressing mode in master mode."]
     #[inline(always)]
+    #[must_use]
     pub fn addr_10bit_en(&mut self) -> ADDR_10BIT_EN_W<31> {
         ADDR_10BIT_EN_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SLAVE_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [slave_addr::W](W) writer structure"]
 impl crate::Writable for SLAVE_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLAVE_ADDR to value 0"]
 impl crate::Resettable for SLAVE_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

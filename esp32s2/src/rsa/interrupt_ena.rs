@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable the RSA interrupt. This option is enabled by default."]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<0> {
         INTERRUPT_ENA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for INTERRUPT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [interrupt_ena::W](W) writer structure"]
 impl crate::Writable for INTERRUPT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERRUPT_ENA to value 0x01"]
 impl crate::Resettable for INTERRUPT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

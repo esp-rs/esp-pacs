@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
+    #[must_use]
     pub fn ulpcp_touch_start_wait(&mut self) -> ULPCP_TOUCH_START_WAIT_W<15> {
         ULPCP_TOUCH_START_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31 - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
     #[inline(always)]
+    #[must_use]
     pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<24> {
         MIN_TIME_CK8M_OFF_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for TIMER2_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer2::W](W) writer structure"]
 impl crate::Writable for TIMER2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER2 to value 0x0108_0000"]
 impl crate::Resettable for TIMER2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0108_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0108_0000;
 }

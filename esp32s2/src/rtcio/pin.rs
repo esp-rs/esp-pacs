@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
+    #[must_use]
     pub fn pad_driver(&mut self) -> PAD_DRIVER_W<2> {
         PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9 - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin0_int_type(&mut self) -> GPIO_PIN0_INT_TYPE_W<7> {
         GPIO_PIN0_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin0_wakeup_enable(&mut self) -> GPIO_PIN0_WAKEUP_ENABLE_W<10> {
         GPIO_PIN0_WAKEUP_ENABLE_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for PIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN%s to value 0"]
 impl crate::Resettable for PIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

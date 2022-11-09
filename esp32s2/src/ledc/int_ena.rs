@@ -227,101 +227,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the LEDC_TIMER0_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn timer0_ovf_int_ena(&mut self) -> TIMER0_OVF_INT_ENA_W<0> {
         TIMER0_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the LEDC_TIMER1_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_ovf_int_ena(&mut self) -> TIMER1_OVF_INT_ENA_W<1> {
         TIMER1_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the LEDC_TIMER2_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn timer2_ovf_int_ena(&mut self) -> TIMER2_OVF_INT_ENA_W<2> {
         TIMER2_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the LEDC_TIMER3_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn timer3_ovf_int_ena(&mut self) -> TIMER3_OVF_INT_ENA_W<3> {
         TIMER3_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH0_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch0_int_ena(&mut self) -> DUTY_CHNG_END_CH0_INT_ENA_W<4> {
         DUTY_CHNG_END_CH0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH1_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch1_int_ena(&mut self) -> DUTY_CHNG_END_CH1_INT_ENA_W<5> {
         DUTY_CHNG_END_CH1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH2_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch2_int_ena(&mut self) -> DUTY_CHNG_END_CH2_INT_ENA_W<6> {
         DUTY_CHNG_END_CH2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH3_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch3_int_ena(&mut self) -> DUTY_CHNG_END_CH3_INT_ENA_W<7> {
         DUTY_CHNG_END_CH3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH4_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch4_int_ena(&mut self) -> DUTY_CHNG_END_CH4_INT_ENA_W<8> {
         DUTY_CHNG_END_CH4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH5_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch5_int_ena(&mut self) -> DUTY_CHNG_END_CH5_INT_ENA_W<9> {
         DUTY_CHNG_END_CH5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH6_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch6_int_ena(&mut self) -> DUTY_CHNG_END_CH6_INT_ENA_W<10> {
         DUTY_CHNG_END_CH6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The interrupt enable bit for the LEDC_DUTY_CHNG_END_CH7_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_ch7_int_ena(&mut self) -> DUTY_CHNG_END_CH7_INT_ENA_W<11> {
         DUTY_CHNG_END_CH7_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The interrupt enable bit for the LEDC_OVF_CNT_CH0_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch0_int_ena(&mut self) -> OVF_CNT_CH0_INT_ENA_W<12> {
         OVF_CNT_CH0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - The interrupt enable bit for the LEDC_OVF_CNT_CH1_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch1_int_ena(&mut self) -> OVF_CNT_CH1_INT_ENA_W<13> {
         OVF_CNT_CH1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - The interrupt enable bit for the LEDC_OVF_CNT_CH2_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch2_int_ena(&mut self) -> OVF_CNT_CH2_INT_ENA_W<14> {
         OVF_CNT_CH2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - The interrupt enable bit for the LEDC_OVF_CNT_CH3_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch3_int_ena(&mut self) -> OVF_CNT_CH3_INT_ENA_W<15> {
         OVF_CNT_CH3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - The interrupt enable bit for the LEDC_OVF_CNT_CH4_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch4_int_ena(&mut self) -> OVF_CNT_CH4_INT_ENA_W<16> {
         OVF_CNT_CH4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17 - The interrupt enable bit for the LEDC_OVF_CNT_CH5_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch5_int_ena(&mut self) -> OVF_CNT_CH5_INT_ENA_W<17> {
         OVF_CNT_CH5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18 - The interrupt enable bit for the LEDC_OVF_CNT_CH6_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch6_int_ena(&mut self) -> OVF_CNT_CH6_INT_ENA_W<18> {
         OVF_CNT_CH6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19 - The interrupt enable bit for the LEDC_OVF_CNT_CH7_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn ovf_cnt_ch7_int_ena(&mut self) -> OVF_CNT_CH7_INT_ENA_W<19> {
         OVF_CNT_CH7_INT_ENA_W::new(self)
     }
@@ -344,11 +364,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

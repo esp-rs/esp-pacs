@@ -65,11 +65,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The clear signal for IBUS access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_ilg_clr(&mut self) -> PRO_IRAM0_ILG_CLR_W<0> {
         PRO_IRAM0_ILG_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The enable signal for IBUS access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_iram0_ilg_en(&mut self) -> PRO_IRAM0_ILG_EN_W<1> {
         PRO_IRAM0_ILG_EN_W::new(self)
     }
@@ -92,11 +94,10 @@ impl crate::Readable for PRO_IRAM0_4_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_iram0_4::W](W) writer structure"]
 impl crate::Writable for PRO_IRAM0_4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_IRAM0_4 to value 0"]
 impl crate::Resettable for PRO_IRAM0_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Configure GPIO0 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0(&mut self) -> CH0_W<0> {
         CH0_W::new(self)
     }
     #[doc = "Bits 2:3 - Configure GPIO1 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1(&mut self) -> CH1_W<2> {
         CH1_W::new(self)
     }
     #[doc = "Bits 4:5 - Configure GPIO2 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch2(&mut self) -> CH2_W<4> {
         CH2_W::new(self)
     }
     #[doc = "Bits 6:7 - Configure GPIO3 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch3(&mut self) -> CH3_W<6> {
         CH3_W::new(self)
     }
     #[doc = "Bits 8:9 - Configure GPIO4 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch4(&mut self) -> CH4_W<8> {
         CH4_W::new(self)
     }
     #[doc = "Bits 10:11 - Configure GPIO5 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch5(&mut self) -> CH5_W<10> {
         CH5_W::new(self)
     }
     #[doc = "Bits 12:13 - Configure GPIO6 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch6(&mut self) -> CH6_W<12> {
         CH6_W::new(self)
     }
     #[doc = "Bits 14:15 - Configure GPIO7 input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[inline(always)]
+    #[must_use]
     pub fn ch7(&mut self) -> CH7_W<14> {
         CH7_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for IN_DLY_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_dly::W](W) writer structure"]
 impl crate::Writable for IN_DLY_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_DLY to value 0"]
 impl crate::Resettable for IN_DLY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]
+    #[must_use]
     pub fn lpck_div_num(&mut self) -> LPCK_DIV_NUM_W<0> {
         LPCK_DIV_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LPCK_DIV_INT_SPEC {
 #[doc = "`write(|w| ..)` method takes [lpck_div_int::W](W) writer structure"]
 impl crate::Writable for LPCK_DIV_INT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LPCK_DIV_INT to value 0xff"]
 impl crate::Resettable for LPCK_DIV_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

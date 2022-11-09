@@ -124,46 +124,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W<0> {
         SLAVE_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<1> {
         ARBITRATION_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W<2> {
         MASTER_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<3> {
         TRANS_COMPLETE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<4> {
         TIME_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W<5> {
         ACK_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - RTC_I2C_RX_DATA_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_data_int_ena(&mut self) -> RX_DATA_INT_ENA_W<6> {
         RX_DATA_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - RTC_I2C_TX_DATA_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_data_int_ena(&mut self) -> TX_DATA_INT_ENA_W<7> {
         TX_DATA_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - RTC_I2C_DETECT_START_INT interrupt enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn detect_start_int_ena(&mut self) -> DETECT_START_INT_ENA_W<8> {
         DETECT_START_INT_ENA_W::new(self)
     }
@@ -186,11 +195,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

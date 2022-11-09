@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable software flow control. When UART receives flow control characters XON or XOFF, which can be configured by UART_XON_CHAR or UART_XOFF_CHAR respectively, UART_SW_XON_INT or UART_SW_XOFF_INT interrupts can be triggered if enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<0> {
         SW_FLOW_CON_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control characters from the received data."]
     #[inline(always)]
+    #[must_use]
     pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<1> {
         XONOFF_DEL_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to force the transmitter to send data."]
     #[inline(always)]
+    #[must_use]
     pub fn force_xon(&mut self) -> FORCE_XON_W<2> {
         FORCE_XON_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
+    #[must_use]
     pub fn force_xoff(&mut self) -> FORCE_XOFF_W<3> {
         FORCE_XOFF_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to send an XON character. This bit is cleared by hardware automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn send_xon(&mut self) -> SEND_XON_W<4> {
         SEND_XON_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to send an XOFF character. This bit is cleared by hardware automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn send_xoff(&mut self) -> SEND_XOFF_W<5> {
         SEND_XOFF_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for FLOW_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [flow_conf::W](W) writer structure"]
 impl crate::Writable for FLOW_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FLOW_CONF to value 0"]
 impl crate::Resettable for FLOW_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

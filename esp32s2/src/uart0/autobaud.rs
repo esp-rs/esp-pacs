@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit for baud rate detection."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<0> {
         EN_W::new(self)
     }
     #[doc = "Bits 8:15 - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
     #[inline(always)]
+    #[must_use]
     pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<8> {
         GLITCH_FILT_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for AUTOBAUD_SPEC {
 #[doc = "`write(|w| ..)` method takes [autobaud::W](W) writer structure"]
 impl crate::Writable for AUTOBAUD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AUTOBAUD to value 0x1000"]
 impl crate::Resettable for AUTOBAUD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1000
-    }
+    const RESET_VALUE: Self::Ux = 0x1000;
 }

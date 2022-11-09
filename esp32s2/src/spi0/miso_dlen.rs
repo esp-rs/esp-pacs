@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_miso_dbitlen(&self) -> USR_MISO_DBITLEN_R {
-        USR_MISO_DBITLEN_R::new((self.bits & 0x007f_ffff) as u32)
+        USR_MISO_DBITLEN_R::new(self.bits & 0x007f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso_dbitlen(&mut self) -> USR_MISO_DBITLEN_W<0> {
         USR_MISO_DBITLEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MISO_DLEN_SPEC {
 #[doc = "`write(|w| ..)` method takes [miso_dlen::W](W) writer structure"]
 impl crate::Writable for MISO_DLEN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISO_DLEN to value 0"]
 impl crate::Resettable for MISO_DLEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

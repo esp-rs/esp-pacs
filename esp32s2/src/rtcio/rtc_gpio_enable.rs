@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
     #[inline(always)]
     pub fn reg_rtcio_reg_gpio_enable(&self) -> REG_RTCIO_REG_GPIO_ENABLE_R {
-        REG_RTCIO_REG_GPIO_ENABLE_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        REG_RTCIO_REG_GPIO_ENABLE_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
     #[inline(always)]
+    #[must_use]
     pub fn reg_rtcio_reg_gpio_enable(&mut self) -> REG_RTCIO_REG_GPIO_ENABLE_W<10> {
         REG_RTCIO_REG_GPIO_ENABLE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for RTC_GPIO_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_gpio_enable::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_GPIO_ENABLE to value 0"]
 impl crate::Resettable for RTC_GPIO_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

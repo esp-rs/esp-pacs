@@ -99,36 +99,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_mem_addr_init(&mut self) -> ULP_CP_MEM_ADDR_INIT_W<0> {
         ULP_CP_MEM_ADDR_INIT_W::new(self)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_mem_addr_size(&mut self) -> ULP_CP_MEM_ADDR_SIZE_W<11> {
         ULP_CP_MEM_ADDR_SIZE_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_mem_offset_clr(&mut self) -> ULP_CP_MEM_OFFSET_CLR_W<22> {
         ULP_CP_MEM_OFFSET_CLR_W::new(self)
     }
     #[doc = "Bit 28 - ULP-FSM clock force on"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_clk_fo(&mut self) -> ULP_CP_CLK_FO_W<28> {
         ULP_CP_CLK_FO_W::new(self)
     }
     #[doc = "Bit 29 - ULP-FSM clock software reset"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_reset(&mut self) -> ULP_CP_RESET_W<29> {
         ULP_CP_RESET_W::new(self)
     }
     #[doc = "Bit 30 - Write 1 to start ULP-FSM by software"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<30> {
         ULP_CP_FORCE_START_TOP_W::new(self)
     }
     #[doc = "Bit 31 - Write 1 to start ULP-FSM"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<31> {
         ULP_CP_START_TOP_W::new(self)
     }
@@ -151,11 +158,10 @@ impl crate::Readable for ULP_CP_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ulp_cp_ctrl::W](W) writer structure"]
 impl crate::Writable for ULP_CP_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_CTRL to value 0x0010_0200"]
 impl crate::Resettable for ULP_CP_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0010_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0010_0200;
 }

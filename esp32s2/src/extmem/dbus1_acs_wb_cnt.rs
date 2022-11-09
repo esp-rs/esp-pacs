@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - The bits are used to count the number of cache evictions by dbus1 access cache."]
     #[inline(always)]
     pub fn dbus1_acs_wb_cnt(&self) -> DBUS1_ACS_WB_CNT_R {
-        DBUS1_ACS_WB_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        DBUS1_ACS_WB_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbus1_acs_wb_cnt](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for DBUS1_ACS_WB_CNT_SPEC {
 }
 #[doc = "`reset()` method sets DBUS1_ACS_WB_CNT to value 0"]
 impl crate::Resettable for DBUS1_ACS_WB_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT1. 15: disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn pin_clk_out1(&mut self) -> PIN_CLK_OUT1_W<0> {
         PIN_CLK_OUT1_W::new(self)
     }
     #[doc = "Bits 4:7 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT2. 15: disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn pin_clk_out2(&mut self) -> PIN_CLK_OUT2_W<4> {
         PIN_CLK_OUT2_W::new(self)
     }
     #[doc = "Bits 8:11 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT3. 15: disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn pin_clk_out3(&mut self) -> PIN_CLK_OUT3_W<8> {
         PIN_CLK_OUT3_W::new(self)
     }
     #[doc = "Bits 12:14 - IO pin power switch delay, delay unit is one APB clock."]
     #[inline(always)]
+    #[must_use]
     pub fn switch_prt_num(&mut self) -> SWITCH_PRT_NUM_W<12> {
         SWITCH_PRT_NUM_W::new(self)
     }
     #[doc = "Bit 15 - Select power voltage for GPIO33 ~ GPIO37. 1: select VDD_SPI 1.8 V. 0: select VDD3P3_CPU 3.3 V."]
     #[inline(always)]
+    #[must_use]
     pub fn pad_power_ctrl(&mut self) -> PAD_POWER_CTRL_W<15> {
         PAD_POWER_CTRL_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for PIN_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin_ctrl::W](W) writer structure"]
 impl crate::Writable for PIN_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN_CTRL to value 0x27ff"]
 impl crate::Resettable for PIN_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x27ff
-    }
+    const RESET_VALUE: Self::Ux = 0x27ff;
 }

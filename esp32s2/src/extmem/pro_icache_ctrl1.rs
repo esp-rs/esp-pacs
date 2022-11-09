@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable ibus0, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_mask_bus0(&mut self) -> PRO_ICACHE_MASK_BUS0_W<0> {
         PRO_ICACHE_MASK_BUS0_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable ibus1, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_mask_bus1(&mut self) -> PRO_ICACHE_MASK_BUS1_W<1> {
         PRO_ICACHE_MASK_BUS1_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to disable ibus2, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_mask_bus2(&mut self) -> PRO_ICACHE_MASK_BUS2_W<2> {
         PRO_ICACHE_MASK_BUS2_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for PRO_ICACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_icache_ctrl1::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_ICACHE_CTRL1 to value 0x07"]
 impl crate::Resettable for PRO_ICACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07
-    }
+    const RESET_VALUE: Self::Ux = 0x07;
 }

@@ -161,26 +161,31 @@ impl R {
 impl W {
     #[doc = "Bit 11 - The raw bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd6_int_raw(&mut self) -> SLV_CMD6_INT_RAW_W<11> {
         SLV_CMD6_INT_RAW_W::new(self)
     }
     #[doc = "Bit 12 - The raw bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd7_int_raw(&mut self) -> SLV_CMD7_INT_RAW_W<12> {
         SLV_CMD7_INT_RAW_W::new(self)
     }
     #[doc = "Bit 13 - The raw bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd8_int_raw(&mut self) -> SLV_CMD8_INT_RAW_W<13> {
         SLV_CMD8_INT_RAW_W::new(self)
     }
     #[doc = "Bit 14 - The raw bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd9_int_raw(&mut self) -> SLV_CMD9_INT_RAW_W<14> {
         SLV_CMD9_INT_RAW_W::new(self)
     }
     #[doc = "Bit 15 - The raw bit for SPI slave CMDA interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmda_int_raw(&mut self) -> SLV_CMDA_INT_RAW_W<15> {
         SLV_CMDA_INT_RAW_W::new(self)
     }
@@ -203,11 +208,10 @@ impl crate::Readable for DMA_INT_RAW_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_int_raw::W](W) writer structure"]
 impl crate::Writable for DMA_INT_RAW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_INT_RAW to value 0"]
 impl crate::Resettable for DMA_INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

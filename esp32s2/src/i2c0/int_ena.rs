@@ -198,86 +198,103 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit for I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_wm_int_ena(&mut self) -> RXFIFO_WM_INT_ENA_W<0> {
         RXFIFO_WM_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The raw interrupt bit for I2C_TXFIFO_WM_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_wm_int_ena(&mut self) -> TXFIFO_WM_INT_ENA_W<1> {
         TXFIFO_WM_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The raw interrupt bit for I2C_RXFIFO_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<2> {
         RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The raw interrupt bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn end_detect_int_ena(&mut self) -> END_DETECT_INT_ENA_W<3> {
         END_DETECT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The raw interrupt bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn byte_trans_done_int_ena(&mut self) -> BYTE_TRANS_DONE_INT_ENA_W<4> {
         BYTE_TRANS_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The raw interrupt bit for the I2C_ARBITRATION_LOST_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W<5> {
         ARBITRATION_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The raw interrupt bit for I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn mst_txfifo_udf_int_ena(&mut self) -> MST_TXFIFO_UDF_INT_ENA_W<6> {
         MST_TXFIFO_UDF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The raw interrupt bit for the I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W<7> {
         TRANS_COMPLETE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The raw interrupt bit for the I2C_TIME_OUT_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W<8> {
         TIME_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The raw interrupt bit for the I2C_TRANS_START_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start_int_ena(&mut self) -> TRANS_START_INT_ENA_W<9> {
         TRANS_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The raw interrupt bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn nack_int_ena(&mut self) -> NACK_INT_ENA_W<10> {
         NACK_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The raw interrupt bit for I2C_TXFIFO_OVF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_ovf_int_ena(&mut self) -> TXFIFO_OVF_INT_ENA_W<11> {
         TXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The raw interrupt bit for I2C_RXFIFO_UDF_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_udf_int_ena(&mut self) -> RXFIFO_UDF_INT_ENA_W<12> {
         RXFIFO_UDF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - The raw interrupt bit for I2C_SCL_ST_TO_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_st_to_int_ena(&mut self) -> SCL_ST_TO_INT_ENA_W<13> {
         SCL_ST_TO_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - The raw interrupt bit for I2C_SCL_MAIN_ST_TO_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_main_st_to_int_ena(&mut self) -> SCL_MAIN_ST_TO_INT_ENA_W<14> {
         SCL_MAIN_ST_TO_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - The raw interrupt bit for I2C_DET_START_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn det_start_int_ena(&mut self) -> DET_START_INT_ENA_W<15> {
         DET_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - The raw interrupt bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slave_stretch_int_ena(&mut self) -> SLAVE_STRETCH_INT_ENA_W<16> {
         SLAVE_STRETCH_INT_ENA_W::new(self)
     }
@@ -300,11 +317,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

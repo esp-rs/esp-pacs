@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 2, only valid in periodic alarms mode."]
     #[inline(always)]
     pub fn target2_period(&self) -> TARGET2_PERIOD_R {
-        TARGET2_PERIOD_R::new((self.bits & 0x3fff_ffff) as u32)
+        TARGET2_PERIOD_R::new(self.bits & 0x3fff_ffff)
     }
     #[doc = "Bit 30 - Set work mode for system timer target 2. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
     #[inline(always)]
@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 2, only valid in periodic alarms mode."]
     #[inline(always)]
+    #[must_use]
     pub fn target2_period(&mut self) -> TARGET2_PERIOD_W<0> {
         TARGET2_PERIOD_W::new(self)
     }
     #[doc = "Bit 30 - Set work mode for system timer target 2. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
     #[inline(always)]
+    #[must_use]
     pub fn target2_period_mode(&mut self) -> TARGET2_PERIOD_MODE_W<30> {
         TARGET2_PERIOD_MODE_W::new(self)
     }
     #[doc = "Bit 31 - System timer target 2 work enable."]
     #[inline(always)]
+    #[must_use]
     pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<31> {
         TARGET2_WORK_EN_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for TARGET2_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [target2_conf::W](W) writer structure"]
 impl crate::Writable for TARGET2_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TARGET2_CONF to value 0"]
 impl crate::Resettable for TARGET2_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

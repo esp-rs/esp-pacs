@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Defines t_length for calculating the initial Hash value for SHA-512/t."]
     #[inline(always)]
+    #[must_use]
     pub fn t_length(&mut self) -> T_LENGTH_W<0> {
         T_LENGTH_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for T_LENGTH_SPEC {
 #[doc = "`write(|w| ..)` method takes [t_length::W](W) writer structure"]
 impl crate::Writable for T_LENGTH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T_LENGTH to value 0"]
 impl crate::Resettable for T_LENGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

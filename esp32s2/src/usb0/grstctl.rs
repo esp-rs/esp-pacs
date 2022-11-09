@@ -107,31 +107,37 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn csftrst(&mut self) -> CSFTRST_W<0> {
         CSFTRST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<1> {
         PIUFSSFTRST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<2> {
         FRMCNTRRST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfflsh(&mut self) -> RXFFLSH_W<4> {
         RXFFLSH_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn txfflsh(&mut self) -> TXFFLSH_W<5> {
         TXFFLSH_W::new(self)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
+    #[must_use]
     pub fn txfnum(&mut self) -> TXFNUM_W<6> {
         TXFNUM_W::new(self)
     }
@@ -154,11 +160,10 @@ impl crate::Readable for GRSTCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [grstctl::W](W) writer structure"]
 impl crate::Writable for GRSTCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GRSTCTL to value 0"]
 impl crate::Resettable for GRSTCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xfercompl2(&mut self) -> H_XFERCOMPL2_W<0> {
         H_XFERCOMPL2_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn h_chhltd2(&mut self) -> H_CHHLTD2_W<1> {
         H_CHHLTD2_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ahberr2(&mut self) -> H_AHBERR2_W<2> {
         H_AHBERR2_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn h_stall2(&mut self) -> H_STALL2_W<3> {
         H_STALL2_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nack2(&mut self) -> H_NACK2_W<4> {
         H_NACK2_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ack2(&mut self) -> H_ACK2_W<5> {
         H_ACK2_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nyet2(&mut self) -> H_NYET2_W<6> {
         H_NYET2_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xacterr2(&mut self) -> H_XACTERR2_W<7> {
         H_XACTERR2_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bblerr2(&mut self) -> H_BBLERR2_W<8> {
         H_BBLERR2_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn h_frmovrun2(&mut self) -> H_FRMOVRUN2_W<9> {
         H_FRMOVRUN2_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn h_datatglerr2(&mut self) -> H_DATATGLERR2_W<10> {
         H_DATATGLERR2_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bnaintr2(&mut self) -> H_BNAINTR2_W<11> {
         H_BNAINTR2_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xcs_xact_err2(&mut self) -> H_XCS_XACT_ERR2_W<12> {
         H_XCS_XACT_ERR2_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn h_desc_lst_rollintr2(&mut self) -> H_DESC_LST_ROLLINTR2_W<13> {
         H_DESC_LST_ROLLINTR2_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for HCINT2_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcint2::W](W) writer structure"]
 impl crate::Writable for HCINT2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCINT2 to value 0"]
 impl crate::Resettable for HCINT2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

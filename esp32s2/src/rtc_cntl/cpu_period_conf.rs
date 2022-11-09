@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
+    #[must_use]
     pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<29> {
         CPUSEL_CONF_W::new(self)
     }
     #[doc = "Bits 30:31"]
     #[inline(always)]
+    #[must_use]
     pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<30> {
         CPUPERIOD_SEL_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for CPU_PERIOD_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_period_conf::W](W) writer structure"]
 impl crate::Writable for CPU_PERIOD_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_PERIOD_CONF to value 0"]
 impl crate::Resettable for CPU_PERIOD_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

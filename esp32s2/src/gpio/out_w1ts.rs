@@ -24,6 +24,7 @@ pub type OUT_W1TS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_W1TS_SPEC
 impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 output set register. If the value 1 is written to a bit here, the corre- sponding bit in GPIO_OUT_REG will be set to 1. Recommended operation: use this register to set GPIO_OUT_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn out_w1ts(&mut self) -> OUT_W1TS_W<0> {
         OUT_W1TS_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for OUT_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_w1ts::W](W) writer structure"]
 impl crate::Writable for OUT_W1TS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_W1TS to value 0"]
 impl crate::Resettable for OUT_W1TS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

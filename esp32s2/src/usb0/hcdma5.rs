@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn h_dmaaddr5(&mut self) -> H_DMAADDR5_W<0> {
         H_DMAADDR5_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for HCDMA5_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcdma5::W](W) writer structure"]
 impl crate::Writable for HCDMA5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCDMA5 to value 0"]
 impl crate::Resettable for HCDMA5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

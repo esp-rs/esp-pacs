@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 16:23 - sample number"]
     #[inline(always)]
+    #[must_use]
     pub fn sample_num(&mut self) -> SAMPLE_NUM_W<16> {
         SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn sample_cycle(&mut self) -> SAMPLE_CYCLE_W<24> {
         SAMPLE_CYCLE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for FSM_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsm::W](W) writer structure"]
 impl crate::Writable for FSM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSM to value 0x0200_0000"]
 impl crate::Resettable for FSM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0200_0000;
 }

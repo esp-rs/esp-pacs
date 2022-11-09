@@ -139,56 +139,67 @@ impl R {
 impl W {
     #[doc = "Bit 6 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_use_reftick(&mut self) -> LACT_USE_REFTICK_W<6> {
         LACT_USE_REFTICK_W::new(self)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_rtc_only(&mut self) -> LACT_RTC_ONLY_W<7> {
         LACT_RTC_ONLY_W::new(self)
     }
     #[doc = "Bit 8 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_cpst_en(&mut self) -> LACT_CPST_EN_W<8> {
         LACT_CPST_EN_W::new(self)
     }
     #[doc = "Bit 9 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_lac_en(&mut self) -> LACT_LAC_EN_W<9> {
         LACT_LAC_EN_W::new(self)
     }
     #[doc = "Bit 10 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_alarm_en(&mut self) -> LACT_ALARM_EN_W<10> {
         LACT_ALARM_EN_W::new(self)
     }
     #[doc = "Bit 11 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_level_int_en(&mut self) -> LACT_LEVEL_INT_EN_W<11> {
         LACT_LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 12 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_edge_int_en(&mut self) -> LACT_EDGE_INT_EN_W<12> {
         LACT_EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 13:28 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_divider(&mut self) -> LACT_DIVIDER_W<13> {
         LACT_DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_autoreload(&mut self) -> LACT_AUTORELOAD_W<29> {
         LACT_AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_increase(&mut self) -> LACT_INCREASE_W<30> {
         LACT_INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_en(&mut self) -> LACT_EN_W<31> {
         LACT_EN_W::new(self)
     }
@@ -211,11 +222,10 @@ impl crate::Readable for LACTCONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [lactconfig::W](W) writer structure"]
 impl crate::Writable for LACTCONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LACTCONFIG to value 0x6000_2300"]
 impl crate::Resettable for LACTCONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6000_2300
-    }
+    const RESET_VALUE: Self::Ux = 0x6000_2300;
 }

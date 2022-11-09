@@ -24,6 +24,7 @@ pub type TX_BYTE_3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_3_SPEC,
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_byte_3(&mut self) -> TX_BYTE_3_W<0> {
         TX_BYTE_3_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for DATA_3_SPEC {
 #[doc = "`write(|w| ..)` method takes [data_3::W](W) writer structure"]
 impl crate::Writable for DATA_3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DATA_3 to value 0"]
 impl crate::Resettable for DATA_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
     #[inline(always)]
+    #[must_use]
     pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<0> {
         ERR_WARNING_LIMIT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ERR_WARNING_LIMIT_SPEC {
 #[doc = "`write(|w| ..)` method takes [err_warning_limit::W](W) writer structure"]
 impl crate::Writable for ERR_WARNING_LIMIT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ERR_WARNING_LIMIT to value 0x60"]
 impl crate::Resettable for ERR_WARNING_LIMIT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x60
-    }
+    const RESET_VALUE: Self::Ux = 0x60;
 }

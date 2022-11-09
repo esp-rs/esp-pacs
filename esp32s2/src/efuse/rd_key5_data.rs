@@ -33,8 +33,5 @@ impl crate::Readable for RD_KEY5_DATA_SPEC {
 }
 #[doc = "`reset()` method sets RD_KEY5_DATA%s to value 0"]
 impl crate::Resettable for RD_KEY5_DATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

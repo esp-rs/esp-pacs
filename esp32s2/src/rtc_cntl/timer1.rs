@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<0> {
         CPU_STALL_EN_W::new(self)
     }
     #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<1> {
         CPU_STALL_WAIT_W::new(self)
     }
     #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W<6> {
         CK8M_WAIT_W::new(self)
     }
     #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
+    #[must_use]
     pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W<14> {
         XTL_BUF_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
+    #[must_use]
     pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W<24> {
         PLL_BUF_WAIT_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for TIMER1_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer1::W](W) writer structure"]
 impl crate::Writable for TIMER1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER1 to value 0x2814_0403"]
 impl crate::Resettable for TIMER1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2814_0403
-    }
+    const RESET_VALUE: Self::Ux = 0x2814_0403;
 }

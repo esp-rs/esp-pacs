@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
     #[inline(always)]
+    #[must_use]
     pub fn inc_sel(&mut self) -> INC_SEL_W<0> {
         INC_SEL_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for INC_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [inc_sel::W](W) writer structure"]
 impl crate::Writable for INC_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INC_SEL to value 0"]
 impl crate::Resettable for INC_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

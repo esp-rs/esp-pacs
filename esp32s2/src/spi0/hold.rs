@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set, if the other SPI is busy, the SPI will be hold. 1(3): hold at idle phase 2: hold at prepare phase. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn int_hold_ena(&mut self) -> INT_HOLD_ENA_W<0> {
         INT_HOLD_ENA_W::new(self)
     }
     #[doc = "Bit 2 - spi hold output value, which should be used with SPI_HOLD_OUT_EN. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn val(&mut self) -> VAL_W<2> {
         VAL_W::new(self)
     }
     #[doc = "Bit 3 - Enable set spi output hold value to spi_hold_reg. It can be used to hold spi state machine with SPI_EXT_HOLD_EN and other usr hold signals. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_en(&mut self) -> OUT_EN_W<3> {
         OUT_EN_W::new(self)
     }
     #[doc = "Bits 4:6 - set the hold cycles of output spi_hold signal when SPI_HOLD_OUT_EN is enable. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_time(&mut self) -> OUT_TIME_W<4> {
         OUT_TIME_W::new(self)
     }
     #[doc = "Bit 7 - 1: spi master DMA full-duplex/half-duplex seg-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-trans is not ended or not occurred. Can not be changed by CONF_buf."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_seg_trans_done(&mut self) -> DMA_SEG_TRANS_DONE_W<7> {
         DMA_SEG_TRANS_DONE_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [hold::W](W) writer structure"]
 impl crate::Writable for HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOLD to value 0"]
 impl crate::Resettable for HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

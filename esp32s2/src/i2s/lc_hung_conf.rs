@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - I2S_TX_HUNG_INT interrupt or I2S_RX_HUNG_INT interrupt will be triggered when FIFO hung counter is equal to this value."]
     #[inline(always)]
+    #[must_use]
     pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<0> {
         LC_FIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 8:10 - The bits are used to set the tick counter threshold. The tick counter is clocked by APB_CLK. The tick counter threshold is 88000/2^I2S_LC_FIFO_TIMEOUT_SHIFT. The tick counter is reset when it reaches the threshold."]
     #[inline(always)]
+    #[must_use]
     pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<8> {
         LC_FIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 11 - The enable bit for FIFO timeout."]
     #[inline(always)]
+    #[must_use]
     pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<11> {
         LC_FIFO_TIMEOUT_ENA_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for LC_HUNG_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [lc_hung_conf::W](W) writer structure"]
 impl crate::Writable for LC_HUNG_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LC_HUNG_CONF to value 0x0810"]
 impl crate::Resettable for LC_HUNG_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0810
-    }
+    const RESET_VALUE: Self::Ux = 0x0810;
 }

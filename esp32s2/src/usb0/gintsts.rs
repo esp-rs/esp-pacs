@@ -269,86 +269,103 @@ impl R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn modemis(&mut self) -> MODEMIS_W<1> {
         MODEMIS_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn sof(&mut self) -> SOF_W<3> {
         SOF_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn erlysusp(&mut self) -> ERLYSUSP_W<10> {
         ERLYSUSP_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn usbsusp(&mut self) -> USBSUSP_W<11> {
         USBSUSP_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn usbrst(&mut self) -> USBRST_W<12> {
         USBRST_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn enumdone(&mut self) -> ENUMDONE_W<13> {
         ENUMDONE_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn isooutdrop(&mut self) -> ISOOUTDROP_W<14> {
         ISOOUTDROP_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn eopf(&mut self) -> EOPF_W<15> {
         EOPF_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn epmis(&mut self) -> EPMIS_W<17> {
         EPMIS_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn incompisoin(&mut self) -> INCOMPISOIN_W<20> {
         INCOMPISOIN_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn incompip(&mut self) -> INCOMPIP_W<21> {
         INCOMPIP_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn fetsusp(&mut self) -> FETSUSP_W<22> {
         FETSUSP_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn resetdet(&mut self) -> RESETDET_W<23> {
         RESETDET_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn conidstschng(&mut self) -> CONIDSTSCHNG_W<28> {
         CONIDSTSCHNG_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn disconnint(&mut self) -> DISCONNINT_W<29> {
         DISCONNINT_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn sessreqint(&mut self) -> SESSREQINT_W<30> {
         SESSREQINT_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn wkupint(&mut self) -> WKUPINT_W<31> {
         WKUPINT_W::new(self)
     }
@@ -371,11 +388,10 @@ impl crate::Readable for GINTSTS_SPEC {
 #[doc = "`write(|w| ..)` method takes [gintsts::W](W) writer structure"]
 impl crate::Writable for GINTSTS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GINTSTS to value 0"]
 impl crate::Resettable for GINTSTS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

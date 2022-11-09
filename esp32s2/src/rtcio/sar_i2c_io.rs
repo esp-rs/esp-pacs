@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 23:27"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<23> {
         SAR_DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bits 28:29 - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<28> {
         SAR_I2C_SCL_SEL_W::new(self)
     }
     #[doc = "Bits 30:31 - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<30> {
         SAR_I2C_SDA_SEL_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SAR_I2C_IO_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_i2c_io::W](W) writer structure"]
 impl crate::Writable for SAR_I2C_IO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_I2C_IO to value 0"]
 impl crate::Resettable for SAR_I2C_IO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

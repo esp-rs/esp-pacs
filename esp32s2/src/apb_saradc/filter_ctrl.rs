@@ -97,31 +97,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_filter_reset(&mut self) -> ADC2_FILTER_RESET_W<0> {
         ADC2_FILTER_RESET_W::new(self)
     }
     #[doc = "Bit 1 - Reset ADC1 filter."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_filter_reset(&mut self) -> ADC1_FILTER_RESET_W<1> {
         ADC1_FILTER_RESET_W::new(self)
     }
     #[doc = "Bits 16:22 - Set filter factor for DIG ADC2 CRTL."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_filter_factor(&mut self) -> ADC2_FILTER_FACTOR_W<16> {
         ADC2_FILTER_FACTOR_W::new(self)
     }
     #[doc = "Bits 23:29 - Set filter factor for DIG ADC1 CRTL."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_filter_factor(&mut self) -> ADC1_FILTER_FACTOR_W<23> {
         ADC1_FILTER_FACTOR_W::new(self)
     }
     #[doc = "Bit 30 - Enable DIG ADC2 CRTL filter."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_filter_en(&mut self) -> ADC2_FILTER_EN_W<30> {
         ADC2_FILTER_EN_W::new(self)
     }
     #[doc = "Bit 31 - Enable DIG ADC1 CRTL filter."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_filter_en(&mut self) -> ADC1_FILTER_EN_W<31> {
         ADC1_FILTER_EN_W::new(self)
     }
@@ -144,11 +150,10 @@ impl crate::Readable for FILTER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [filter_ctrl::W](W) writer structure"]
 impl crate::Writable for FILTER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FILTER_CTRL to value 0x2040_0000"]
 impl crate::Resettable for FILTER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2040_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x2040_0000;
 }

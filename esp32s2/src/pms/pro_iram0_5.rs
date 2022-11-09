@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - Record the illegitimate information of IBUS. \\[21:2\\]: store the bits \\[21:2\\] of IBUS address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
     #[inline(always)]
     pub fn pro_iram0_ilg_st(&self) -> PRO_IRAM0_ILG_ST_R {
-        PRO_IRAM0_ILG_ST_R::new((self.bits & 0x003f_ffff) as u32)
+        PRO_IRAM0_ILG_ST_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "IBUS status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_iram0_5](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PRO_IRAM0_5_SPEC {
 }
 #[doc = "`reset()` method sets PRO_IRAM0_5 to value 0"]
 impl crate::Resettable for PRO_IRAM0_5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

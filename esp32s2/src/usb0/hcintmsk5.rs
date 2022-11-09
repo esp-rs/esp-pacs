@@ -157,66 +157,79 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xfercomplmsk5(&mut self) -> H_XFERCOMPLMSK5_W<0> {
         H_XFERCOMPLMSK5_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn h_chhltdmsk5(&mut self) -> H_CHHLTDMSK5_W<1> {
         H_CHHLTDMSK5_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ahberrmsk5(&mut self) -> H_AHBERRMSK5_W<2> {
         H_AHBERRMSK5_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn h_stallmsk5(&mut self) -> H_STALLMSK5_W<3> {
         H_STALLMSK5_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nakmsk5(&mut self) -> H_NAKMSK5_W<4> {
         H_NAKMSK5_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn h_ackmsk5(&mut self) -> H_ACKMSK5_W<5> {
         H_ACKMSK5_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn h_nyetmsk5(&mut self) -> H_NYETMSK5_W<6> {
         H_NYETMSK5_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn h_xacterrmsk5(&mut self) -> H_XACTERRMSK5_W<7> {
         H_XACTERRMSK5_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bblerrmsk5(&mut self) -> H_BBLERRMSK5_W<8> {
         H_BBLERRMSK5_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn h_frmovrunmsk5(&mut self) -> H_FRMOVRUNMSK5_W<9> {
         H_FRMOVRUNMSK5_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn h_datatglerrmsk5(&mut self) -> H_DATATGLERRMSK5_W<10> {
         H_DATATGLERRMSK5_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn h_bnaintrmsk5(&mut self) -> H_BNAINTRMSK5_W<11> {
         H_BNAINTRMSK5_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn h_desc_lst_rollintrmsk5(&mut self) -> H_DESC_LST_ROLLINTRMSK5_W<13> {
         H_DESC_LST_ROLLINTRMSK5_W::new(self)
     }
@@ -239,11 +252,10 @@ impl crate::Readable for HCINTMSK5_SPEC {
 #[doc = "`write(|w| ..)` method takes [hcintmsk5::W](W) writer structure"]
 impl crate::Writable for HCINTMSK5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCINTMSK5 to value 0"]
 impl crate::Resettable for HCINTMSK5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -104,36 +104,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_dqs_mode(&mut self) -> D_DQS_MODE_W<0> {
         D_DQS_MODE_W::new(self)
     }
     #[doc = "Bits 3:5 - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_cd_mode(&mut self) -> D_CD_MODE_W<3> {
         D_CD_MODE_W::new(self)
     }
     #[doc = "Bits 6:8 - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_de_mode(&mut self) -> D_DE_MODE_W<6> {
         D_DE_MODE_W::new(self)
     }
     #[doc = "Bits 9:11 - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_hsync_mode(&mut self) -> D_HSYNC_MODE_W<9> {
         D_HSYNC_MODE_W::new(self)
     }
     #[doc = "Bits 12:14 - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn d_vsync_mode(&mut self) -> D_VSYNC_MODE_W<12> {
         D_VSYNC_MODE_W::new(self)
     }
     #[doc = "Bit 15 - It is the idle value of spi_de."]
     #[inline(always)]
+    #[must_use]
     pub fn de_idle_pol(&mut self) -> DE_IDLE_POL_W<15> {
         DE_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 16 - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
     #[inline(always)]
+    #[must_use]
     pub fn hs_blank_en(&mut self) -> HS_BLANK_EN_W<16> {
         HS_BLANK_EN_W::new(self)
     }
@@ -156,11 +163,10 @@ impl crate::Readable for LCD_D_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_d_mode::W](W) writer structure"]
 impl crate::Writable for LCD_D_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_D_MODE to value 0"]
 impl crate::Resettable for LCD_D_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

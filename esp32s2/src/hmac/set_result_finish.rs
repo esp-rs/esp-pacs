@@ -25,6 +25,7 @@ pub type SET_RESULT_END_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to end upstream and clear the calculation result."]
     #[inline(always)]
+    #[must_use]
     pub fn set_result_end(&mut self) -> SET_RESULT_END_W<0> {
         SET_RESULT_END_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for SET_RESULT_FINISH_SPEC {
 #[doc = "`write(|w| ..)` method takes [set_result_finish::W](W) writer structure"]
 impl crate::Writable for SET_RESULT_FINISH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SET_RESULT_FINISH to value 0"]
 impl crate::Resettable for SET_RESULT_FINISH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

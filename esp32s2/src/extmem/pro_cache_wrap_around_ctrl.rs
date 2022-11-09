@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_flash_wrap_around(&mut self) -> PRO_CACHE_FLASH_WRAP_AROUND_W<0> {
         PRO_CACHE_FLASH_WRAP_AROUND_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable wrap around mode when read data from spiram."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_sram_rd_wrap_around(&mut self) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_W<1> {
         PRO_CACHE_SRAM_RD_WRAP_AROUND_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for PRO_CACHE_WRAP_AROUND_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cache_wrap_around_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_CACHE_WRAP_AROUND_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_WRAP_AROUND_CTRL to value 0"]
 impl crate::Resettable for PRO_CACHE_WRAP_AROUND_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

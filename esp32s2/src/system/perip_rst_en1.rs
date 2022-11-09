@@ -94,31 +94,37 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set this bit to reset cryptography AES."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<1> {
         CRYPTO_AES_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset cryptography SHA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<2> {
         CRYPTO_SHA_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset cryptography RSA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<3> {
         CRYPTO_RSA_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to reset cryptography digital signature."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<4> {
         CRYPTO_DS_RST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to reset cryptography HMAC."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<5> {
         CRYPTO_HMAC_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to reset cryptography DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<6> {
         CRYPTO_DMA_RST_W::new(self)
     }
@@ -141,11 +147,10 @@ impl crate::Readable for PERIP_RST_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN1 to value 0x7e"]
 impl crate::Resettable for PERIP_RST_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x7e
-    }
+    const RESET_VALUE: Self::Ux = 0x7e;
 }

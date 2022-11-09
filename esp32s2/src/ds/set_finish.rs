@@ -24,6 +24,7 @@ pub type SET_FINISH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_FINISH_SP
 impl W {
     #[doc = "Bit 0 - Write 1 to this register to end DS operation."]
     #[inline(always)]
+    #[must_use]
     pub fn set_finish(&mut self) -> SET_FINISH_W<0> {
         SET_FINISH_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for SET_FINISH_SPEC {
 #[doc = "`write(|w| ..)` method takes [set_finish::W](W) writer structure"]
 impl crate::Writable for SET_FINISH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SET_FINISH to value 0"]
 impl crate::Resettable for SET_FINISH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

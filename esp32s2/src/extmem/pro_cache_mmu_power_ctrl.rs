@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mmu_mem_force_on(&mut self) -> PRO_CACHE_MMU_MEM_FORCE_ON_W<0> {
         PRO_CACHE_MMU_MEM_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mmu_mem_force_pd(&mut self) -> PRO_CACHE_MMU_MEM_FORCE_PD_W<1> {
         PRO_CACHE_MMU_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mmu_mem_force_pu(&mut self) -> PRO_CACHE_MMU_MEM_FORCE_PU_W<2> {
         PRO_CACHE_MMU_MEM_FORCE_PU_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for PRO_CACHE_MMU_POWER_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cache_mmu_power_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_CACHE_MMU_POWER_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_MMU_POWER_CTRL to value 0x05"]
 impl crate::Resettable for PRO_CACHE_MMU_POWER_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05
-    }
+    const RESET_VALUE: Self::Ux = 0x05;
 }

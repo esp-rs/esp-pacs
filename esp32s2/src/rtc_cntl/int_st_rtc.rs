@@ -166,8 +166,5 @@ impl crate::Readable for INT_ST_RTC_SPEC {
 }
 #[doc = "`reset()` method sets INT_ST_RTC to value 0"]
 impl crate::Resettable for INT_ST_RTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<0> {
         APB_FIFO_MASK_W::new(self)
     }
     #[doc = "Bit 1 - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<1> {
         MEM_TX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<2> {
         MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to power down RMT memory."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<3> {
         MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<4> {
         MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for APB_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_conf::W](W) writer structure"]
 impl crate::Writable for APB_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_CONF to value 0x04"]
 impl crate::Resettable for APB_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04
-    }
+    const RESET_VALUE: Self::Ux = 0x04;
 }

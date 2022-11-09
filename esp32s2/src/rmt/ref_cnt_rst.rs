@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
+    #[must_use]
     pub fn ch0(&mut self) -> CH0_W<0> {
         CH0_W::new(self)
     }
     #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
+    #[must_use]
     pub fn ch1(&mut self) -> CH1_W<1> {
         CH1_W::new(self)
     }
     #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL2."]
     #[inline(always)]
+    #[must_use]
     pub fn ch2(&mut self) -> CH2_W<2> {
         CH2_W::new(self)
     }
     #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL3."]
     #[inline(always)]
+    #[must_use]
     pub fn ch3(&mut self) -> CH3_W<3> {
         CH3_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for REF_CNT_RST_SPEC {
 #[doc = "`write(|w| ..)` method takes [ref_cnt_rst::W](W) writer structure"]
 impl crate::Writable for REF_CNT_RST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REF_CNT_RST to value 0"]
 impl crate::Resettable for REF_CNT_RST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

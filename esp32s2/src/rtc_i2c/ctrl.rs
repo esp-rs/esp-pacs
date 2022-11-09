@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SDA output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - SCL output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to configure RTC I²C as a master."]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<2> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1, RTC I2C starts sending data."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<3> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 4 - This bit is used to control the sending mode. 0: send data from the most significant bit. 1: send data from the least significant bit."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<4> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 5 - This bit is used to control the storage mode for received data. 0: receive data from the most significant bit. 1: receive data from the least significant bit."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<5> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 29 - RTC I²C controller clock gate."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_gate_en(&mut self) -> CLK_GATE_EN_W<29> {
         CLK_GATE_EN_W::new(self)
     }
     #[doc = "Bit 30 - RTC I²C software reset."]
     #[inline(always)]
+    #[must_use]
     pub fn reset(&mut self) -> RESET_W<30> {
         RESET_W::new(self)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

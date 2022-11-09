@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
+    #[must_use]
     pub fn d_xfersize4(&mut self) -> D_XFERSIZE4_W<0> {
         D_XFERSIZE4_W::new(self)
     }
     #[doc = "Bits 19:20"]
     #[inline(always)]
+    #[must_use]
     pub fn d_pktcnt4(&mut self) -> D_PKTCNT4_W<19> {
         D_PKTCNT4_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for DIEPTSIZ4_SPEC {
 #[doc = "`write(|w| ..)` method takes [dieptsiz4::W](W) writer structure"]
 impl crate::Writable for DIEPTSIZ4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPTSIZ4 to value 0"]
 impl crate::Resettable for DIEPTSIZ4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

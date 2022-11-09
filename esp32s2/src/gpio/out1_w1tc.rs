@@ -25,6 +25,7 @@ pub type OUT1_W1TC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 output value clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_OUT1_REG will be cleared. Recommended operation: use this register to clear GPIO_OUT1_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn out1_w1tc(&mut self) -> OUT1_W1TC_W<0> {
         OUT1_W1TC_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for OUT1_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [out1_w1tc::W](W) writer structure"]
 impl crate::Writable for OUT1_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT1_W1TC to value 0"]
 impl crate::Resettable for OUT1_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

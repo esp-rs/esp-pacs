@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - 32 bits data buffer 12, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]
+    #[must_use]
     pub fn buf12(&mut self) -> BUF12_W<0> {
         BUF12_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for W12_SPEC {
 #[doc = "`write(|w| ..)` method takes [w12::W](W) writer structure"]
 impl crate::Writable for W12_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets W12 to value 0"]
 impl crate::Resettable for W12_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -147,61 +147,73 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: direct output. 1: open drain output."]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - 0: direct output. 1: open drain output."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
     #[inline(always)]
+    #[must_use]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<2> {
         SAMPLE_SCL_LEVEL_W::new(self)
     }
     #[doc = "Bit 3 - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<3> {
         RX_FULL_ACK_LEVEL_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as an I2C Master. Clear this bit to configure the module as an I2C Slave."]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<4> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to start sending the data in TX FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<5> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit. 0: send data from the most significant bit."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<6> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit. 0: receive data from the most significant bit."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<7> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 8 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<8> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 9 - This is the enable bit for I2C bus arbitration function."]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<9> {
         ARBITRATION_EN_W::new(self)
     }
     #[doc = "Bit 10 - This register is used to reset the SCL_FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn fsm_rst(&mut self) -> FSM_RST_W<10> {
         FSM_RST_W::new(self)
     }
     #[doc = "Bit 11 - This register is used to control the REF_TICK."]
     #[inline(always)]
+    #[must_use]
     pub fn ref_always_on(&mut self) -> REF_ALWAYS_ON_W<11> {
         REF_ALWAYS_ON_W::new(self)
     }
@@ -224,11 +236,10 @@ impl crate::Readable for CTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctr::W](W) writer structure"]
 impl crate::Writable for CTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTR to value 0x0a0b"]
 impl crate::Resettable for CTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0a0b
-    }
+    const RESET_VALUE: Self::Ux = 0x0a0b;
 }

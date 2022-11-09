@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
     #[inline(always)]
+    #[must_use]
     pub fn sync2_bypass(&mut self) -> SYNC2_BYPASS_W<0> {
         SYNC2_BYPASS_W::new(self)
     }
     #[doc = "Bit 2 - Pad driver selection. 0: normal output; 1: open drain output.."]
     #[inline(always)]
+    #[must_use]
     pub fn pad_driver(&mut self) -> PAD_DRIVER_W<2> {
         PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 3:4 - For the first stage synchronization, GPIO input data can be synchro- nized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
     #[inline(always)]
+    #[must_use]
     pub fn sync1_bypass(&mut self) -> SYNC1_BYPASS_W<3> {
         SYNC1_BYPASS_W::new(self)
     }
     #[doc = "Bits 7:9 - Interrupt type selection. 0: GPIO interrupt disabled; 1: rising edge trigger; 2: falling edge trigger; 3: any edge trigger; 4: low level trigger; 5: high level trigger. (R/W)"]
     #[inline(always)]
+    #[must_use]
     pub fn int_type(&mut self) -> INT_TYPE_W<7> {
         INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - GPIO wake-up enable bit, only wakes up the CPU from Light-sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<10> {
         WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bits 11:12 - Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn config(&mut self) -> CONFIG_W<11> {
         CONFIG_W::new(self)
     }
     #[doc = "Bits 13:17 - Interrupt enable bits. bit13: CPU interrupt enabled; bit14: CPU non-maskable interrupt enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn int_ena(&mut self) -> INT_ENA_W<13> {
         INT_ENA_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for PIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN%s to value 0"]
 impl crate::Resettable for PIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

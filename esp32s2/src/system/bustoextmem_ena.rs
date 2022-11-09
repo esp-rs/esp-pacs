@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable bus to EDMA."]
     #[inline(always)]
+    #[must_use]
     pub fn bustoextmem_ena(&mut self) -> BUSTOEXTMEM_ENA_W<0> {
         BUSTOEXTMEM_ENA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for BUSTOEXTMEM_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [bustoextmem_ena::W](W) writer structure"]
 impl crate::Writable for BUSTOEXTMEM_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BUSTOEXTMEM_ENA to value 0x01"]
 impl crate::Resettable for BUSTOEXTMEM_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

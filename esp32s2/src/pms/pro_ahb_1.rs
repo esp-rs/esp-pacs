@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - Configure the split address of RTCSlow_0 for PeriBus2 access."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_spltaddr(&mut self) -> PRO_AHB_RTCSLOW_0_SPLTADDR_W<0> {
         PRO_AHB_RTCSLOW_0_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 11 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_l_f(&mut self) -> PRO_AHB_RTCSLOW_0_L_F_W<11> {
         PRO_AHB_RTCSLOW_0_L_F_W::new(self)
     }
     #[doc = "Bit 12 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_l_r(&mut self) -> PRO_AHB_RTCSLOW_0_L_R_W<12> {
         PRO_AHB_RTCSLOW_0_L_R_W::new(self)
     }
     #[doc = "Bit 13 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 low address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_l_w(&mut self) -> PRO_AHB_RTCSLOW_0_L_W_W<13> {
         PRO_AHB_RTCSLOW_0_L_W_W::new(self)
     }
     #[doc = "Bit 14 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_h_f(&mut self) -> PRO_AHB_RTCSLOW_0_H_F_W<14> {
         PRO_AHB_RTCSLOW_0_H_F_W::new(self)
     }
     #[doc = "Bit 15 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_h_r(&mut self) -> PRO_AHB_RTCSLOW_0_H_R_W<15> {
         PRO_AHB_RTCSLOW_0_H_R_W::new(self)
     }
     #[doc = "Bit 16 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 high address region."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_ahb_rtcslow_0_h_w(&mut self) -> PRO_AHB_RTCSLOW_0_H_W_W<16> {
         PRO_AHB_RTCSLOW_0_H_W_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for PRO_AHB_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_ahb_1::W](W) writer structure"]
 impl crate::Writable for PRO_AHB_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_AHB_1 to value 0x0001_f800"]
 impl crate::Resettable for PRO_AHB_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_f800
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_f800;
 }

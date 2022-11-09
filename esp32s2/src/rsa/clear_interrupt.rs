@@ -25,6 +25,7 @@ pub type CLEAR_INTERRUPT_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to clear the RSA interrupts."]
     #[inline(always)]
+    #[must_use]
     pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<0> {
         CLEAR_INTERRUPT_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for CLEAR_INTERRUPT_SPEC {
 #[doc = "`write(|w| ..)` method takes [clear_interrupt::W](W) writer structure"]
 impl crate::Writable for CLEAR_INTERRUPT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLEAR_INTERRUPT to value 0"]
 impl crate::Resettable for CLEAR_INTERRUPT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

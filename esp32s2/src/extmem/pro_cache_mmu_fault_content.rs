@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:16 - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
     #[inline(always)]
     pub fn pro_cache_mmu_fault_content(&self) -> PRO_CACHE_MMU_FAULT_CONTENT_R {
-        PRO_CACHE_MMU_FAULT_CONTENT_R::new((self.bits & 0x0001_ffff) as u32)
+        PRO_CACHE_MMU_FAULT_CONTENT_R::new(self.bits & 0x0001_ffff)
     }
     #[doc = "Bits 17:19 - The bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: flush, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
 }
 #[doc = "`reset()` method sets PRO_CACHE_MMU_FAULT_CONTENT to value 0"]
 impl crate::Resettable for PRO_CACHE_MMU_FAULT_CONTENT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

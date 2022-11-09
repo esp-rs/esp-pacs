@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_atten(&mut self) -> SAR1_ATTEN_W<0> {
         SAR1_ATTEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SAR_ATTEN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_atten1::W](W) writer structure"]
 impl crate::Writable for SAR_ATTEN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_ATTEN1 to value 0xffff_ffff"]
 impl crate::Resettable for SAR_ATTEN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
+    #[must_use]
     pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<0> {
         IO_TOUCH_BUFSEL_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<4> {
         IO_TOUCH_BUFMODE_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for RTC_IO_TOUCH_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_io_touch_ctrl::W](W) writer structure"]
 impl crate::Writable for RTC_IO_TOUCH_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_IO_TOUCH_CTRL to value 0"]
 impl crate::Resettable for RTC_IO_TOUCH_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

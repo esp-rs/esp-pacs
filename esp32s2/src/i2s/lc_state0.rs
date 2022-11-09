@@ -29,7 +29,7 @@ impl R {
     #[doc = "Bits 0:17 - I2S DMA out descriptor address."]
     #[inline(always)]
     pub fn outlink_dscr_addr(&self) -> OUTLINK_DSCR_ADDR_R {
-        OUTLINK_DSCR_ADDR_R::new((self.bits & 0x0003_ffff) as u32)
+        OUTLINK_DSCR_ADDR_R::new(self.bits & 0x0003_ffff)
     }
     #[doc = "Bits 18:19 - I2S DMA out descriptor state."]
     #[inline(always)]
@@ -68,8 +68,5 @@ impl crate::Readable for LC_STATE0_SPEC {
 }
 #[doc = "`reset()` method sets LC_STATE0 to value 0"]
 impl crate::Resettable for LC_STATE0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

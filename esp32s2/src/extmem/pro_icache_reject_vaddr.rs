@@ -33,8 +33,5 @@ impl crate::Readable for PRO_ICACHE_REJECT_VADDR_SPEC {
 }
 #[doc = "`reset()` method sets PRO_ICACHE_REJECT_VADDR to value 0"]
 impl crate::Resettable for PRO_ICACHE_REJECT_VADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

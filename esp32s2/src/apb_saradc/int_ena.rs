@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 28 - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_thres_int_ena(&mut self) -> ADC2_THRES_INT_ENA_W<28> {
         ADC2_THRES_INT_ENA_W::new(self)
     }
     #[doc = "Bit 29 - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_thres_int_ena(&mut self) -> ADC1_THRES_INT_ENA_W<29> {
         ADC1_THRES_INT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_done_int_ena(&mut self) -> ADC2_DONE_INT_ENA_W<30> {
         ADC2_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 31 - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_done_int_ena(&mut self) -> ADC1_DONE_INT_ENA_W<31> {
         ADC1_DONE_INT_ENA_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

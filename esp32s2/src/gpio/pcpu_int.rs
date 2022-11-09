@@ -33,8 +33,5 @@ impl crate::Readable for PCPU_INT_SPEC {
 }
 #[doc = "`reset()` method sets PCPU_INT to value 0"]
 impl crate::Resettable for PCPU_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

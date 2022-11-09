@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn record_disable_db_encrypt(&mut self) -> RECORD_DISABLE_DB_ENCRYPT_W<0> {
         RECORD_DISABLE_DB_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn record_disable_g0cb_decrypt(&mut self) -> RECORD_DISABLE_G0CB_DECRYPT_W<1> {
         RECORD_DISABLE_G0CB_DECRYPT_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_encrypt_decrypt_record_disable::W](W) writer structure"]
 impl crate::Writable for CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE to value 0"]
 impl crate::Resettable for CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

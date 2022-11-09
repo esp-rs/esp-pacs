@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to decode character 0xC0 when DMA receives data."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_c0_esc_en(&mut self) -> TX_C0_ESC_EN_W<0> {
         TX_C0_ESC_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to decode character 0xDB when DMA receives data."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_db_esc_en(&mut self) -> TX_DB_ESC_EN_W<1> {
         TX_DB_ESC_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to decode flow control character 0x11 when DMA receives data."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_11_esc_en(&mut self) -> TX_11_ESC_EN_W<2> {
         TX_11_ESC_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to decode flow control character 0x13 when DMA receives data."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_13_esc_en(&mut self) -> TX_13_ESC_EN_W<3> {
         TX_13_ESC_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to replace 0xC0 by special characters when DMA sends data."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_c0_esc_en(&mut self) -> RX_C0_ESC_EN_W<4> {
         RX_C0_ESC_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to replace 0xDB by special characters when DMA sends data."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_db_esc_en(&mut self) -> RX_DB_ESC_EN_W<5> {
         RX_DB_ESC_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to replace flow control character 0x11 by special characters when DMA sends data."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_11_esc_en(&mut self) -> RX_11_ESC_EN_W<6> {
         RX_11_ESC_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to replace flow control character 0x13 by special characters when DMA sends data."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_13_esc_en(&mut self) -> RX_13_ESC_EN_W<7> {
         RX_13_ESC_EN_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for ESCAPE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [escape_conf::W](W) writer structure"]
 impl crate::Writable for ESCAPE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ESCAPE_CONF to value 0x33"]
 impl crate::Resettable for ESCAPE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x33
-    }
+    const RESET_VALUE: Self::Ux = 0x33;
 }

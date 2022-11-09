@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<13> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - Output enable in sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slp_oe(&mut self) -> SLP_OE_W<14> {
         SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - Input enable in sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slp_ie(&mut self) -> SLP_IE_W<15> {
         SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - 1: enable sleep mode. 0: no sleep mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<16> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - Function selection."]
     #[inline(always)]
+    #[must_use]
     pub fn fun_sel(&mut self) -> FUN_SEL_W<17> {
         FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO. 0: use digital GPIO."]
     #[inline(always)]
+    #[must_use]
     pub fn mux_sel(&mut self) -> MUX_SEL_W<19> {
         MUX_SEL_W::new(self)
     }
     #[doc = "Bit 27 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn rue(&mut self) -> RUE_W<27> {
         RUE_W::new(self)
     }
     #[doc = "Bit 28 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn rde(&mut self) -> RDE_W<28> {
         RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
+    #[must_use]
     pub fn drv(&mut self) -> DRV_W<29> {
         DRV_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for RTC_PAD20_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_pad20::W](W) writer structure"]
 impl crate::Writable for RTC_PAD20_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_PAD20 to value 0x5000_0000"]
 impl crate::Resettable for RTC_PAD20_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x5000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x5000_0000;
 }

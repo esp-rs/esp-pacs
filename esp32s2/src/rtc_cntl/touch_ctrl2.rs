@@ -193,81 +193,97 @@ impl R {
 impl W {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<2> {
         TOUCH_DRANGE_W::new(self)
     }
     #[doc = "Bits 4:5 - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<4> {
         TOUCH_DREFL_W::new(self)
     }
     #[doc = "Bits 6:7 - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<6> {
         TOUCH_DREFH_W::new(self)
     }
     #[doc = "Bit 8 - TOUCH BIAS power switch."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<8> {
         TOUCH_XPD_BIAS_W::new(self)
     }
     #[doc = "Bits 9:11 - Touch pad 0 reference capacitance."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_refc(&mut self) -> TOUCH_REFC_W<9> {
         TOUCH_REFC_W::new(self)
     }
     #[doc = "Bit 12 - 0: Use bandgap bias. 1: Use self bias."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_dbias(&mut self) -> TOUCH_DBIAS_W<12> {
         TOUCH_DBIAS_W::new(self)
     }
     #[doc = "Bit 13 - Touch timer enable bit."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<13> {
         TOUCH_SLP_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 14 - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<14> {
         TOUCH_START_FSM_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<15> {
         TOUCH_START_EN_W::new(self)
     }
     #[doc = "Bit 16 - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<16> {
         TOUCH_START_FORCE_W::new(self)
     }
     #[doc = "Bits 17:24 - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<17> {
         TOUCH_XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 25:26 - When a touch pad is active, sleep cycle could be divided by this number."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_cyc_div(&mut self) -> TOUCH_SLP_CYC_DIV_W<25> {
         TOUCH_SLP_CYC_DIV_W::new(self)
     }
     #[doc = "Bits 27:28 - Force touch timer done."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_timer_force_done(&mut self) -> TOUCH_TIMER_FORCE_DONE_W<27> {
         TOUCH_TIMER_FORCE_DONE_W::new(self)
     }
     #[doc = "Bit 29 - Reset TOUCH FSM via software."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_reset(&mut self) -> TOUCH_RESET_W<29> {
         TOUCH_RESET_W::new(self)
     }
     #[doc = "Bit 30 - Touch clock force on."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_clk_fo(&mut self) -> TOUCH_CLK_FO_W<30> {
         TOUCH_CLK_FO_W::new(self)
     }
     #[doc = "Bit 31 - Touch clock enable bit."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_clkgate_en(&mut self) -> TOUCH_CLKGATE_EN_W<31> {
         TOUCH_CLKGATE_EN_W::new(self)
     }
@@ -290,11 +306,10 @@ impl crate::Readable for TOUCH_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_ctrl2::W](W) writer structure"]
 impl crate::Writable for TOUCH_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_CTRL2 to value 0x0008_40cc"]
 impl crate::Resettable for TOUCH_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0008_40cc
-    }
+    const RESET_VALUE: Self::Ux = 0x0008_40cc;
 }

@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 0: select FSM to start SAR ADC. 1: select software to start SAR ADC."]
     #[inline(always)]
+    #[must_use]
     pub fn start_force(&mut self) -> START_FORCE_W<0> {
         START_FORCE_W::new(self)
     }
     #[doc = "Bit 1 - Start SAR ADC by software."]
     #[inline(always)]
+    #[must_use]
     pub fn start(&mut self) -> START_W<1> {
         START_W::new(self)
     }
     #[doc = "Bits 3:4 - 0: single-channel scan mode. 1: double-channel scan mode. 2: alternate-channel scan mode."]
     #[inline(always)]
+    #[must_use]
     pub fn work_mode(&mut self) -> WORK_MODE_W<3> {
         WORK_MODE_W::new(self)
     }
     #[doc = "Bit 5 - 0: select SAR ADC1. 1: select SAR ADC2, only work for single-channel scan mode."]
     #[inline(always)]
+    #[must_use]
     pub fn sar_sel(&mut self) -> SAR_SEL_W<5> {
         SAR_SEL_W::new(self)
     }
     #[doc = "Bit 6 - SAR clock gate enable bit."]
     #[inline(always)]
+    #[must_use]
     pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<6> {
         SAR_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<7> {
         SAR_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 15:18 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_patt_len(&mut self) -> SAR1_PATT_LEN_W<15> {
         SAR1_PATT_LEN_W::new(self)
     }
     #[doc = "Bits 19:22 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_patt_len(&mut self) -> SAR2_PATT_LEN_W<19> {
         SAR2_PATT_LEN_W::new(self)
     }
     #[doc = "Bit 23 - Clear the pointer of pattern table for DIG ADC1 CTRL."]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_patt_p_clear(&mut self) -> SAR1_PATT_P_CLEAR_W<23> {
         SAR1_PATT_P_CLEAR_W::new(self)
     }
     #[doc = "Bit 24 - Clear the pointer of pattern table for DIG ADC2 CTRL."]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_patt_p_clear(&mut self) -> SAR2_PATT_P_CLEAR_W<24> {
         SAR2_PATT_P_CLEAR_W::new(self)
     }
     #[doc = "Bit 25 - 1: sar_sel will be coded to the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn data_sar_sel(&mut self) -> DATA_SAR_SEL_W<25> {
         DATA_SAR_SEL_W::new(self)
     }
     #[doc = "Bit 26 - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
     #[inline(always)]
+    #[must_use]
     pub fn data_to_i2s(&mut self) -> DATA_TO_I2S_W<26> {
         DATA_TO_I2S_W::new(self)
     }
     #[doc = "Bits 27:28 - Force option to xpd sar blocks."]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sar_force(&mut self) -> XPD_SAR_FORCE_W<27> {
         XPD_SAR_FORCE_W::new(self)
     }
     #[doc = "Bits 30:31 - Wait arbit signal stable after sar_done."]
     #[inline(always)]
+    #[must_use]
     pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<30> {
         WAIT_ARB_CYCLE_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x407f_8240"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x407f_8240
-    }
+    const RESET_VALUE: Self::Ux = 0x407f_8240;
 }

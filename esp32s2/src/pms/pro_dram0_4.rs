@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:25 - Record the illegitimate information of DBUS. \\[25:6\\]: store the bits \\[21:2\\] of DBUS address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: 1 means write operation, 0 means read operation. \\[3:0\\]: DBUS0 bus byte enables."]
     #[inline(always)]
     pub fn pro_dram0_ilg_st(&self) -> PRO_DRAM0_ILG_ST_R {
-        PRO_DRAM0_ILG_ST_R::new((self.bits & 0x03ff_ffff) as u32)
+        PRO_DRAM0_ILG_ST_R::new(self.bits & 0x03ff_ffff)
     }
 }
 #[doc = "DBUS status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_dram0_4](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PRO_DRAM0_4_SPEC {
 }
 #[doc = "`reset()` method sets PRO_DRAM0_4 to value 0"]
 impl crate::Resettable for PRO_DRAM0_4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

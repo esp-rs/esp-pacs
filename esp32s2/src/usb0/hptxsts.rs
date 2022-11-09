@@ -47,8 +47,5 @@ impl crate::Readable for HPTXSTS_SPEC {
 }
 #[doc = "`reset()` method sets HPTXSTS to value 0x0008_0100"]
 impl crate::Resettable for HPTXSTS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0008_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0008_0100;
 }

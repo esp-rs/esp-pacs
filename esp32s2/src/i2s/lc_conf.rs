@@ -175,76 +175,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset out-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset AHB interface cmdFIFO of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset AHB interface of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to loop test inlink."]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<4> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to loop test outlink."]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<5> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable outlink-written-back automatically when out buffer is transmitted done."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8 - DMA out EOF flag generation mode. 1: When DMA has popped all data from the FIFO. 0: When AHB has pushed all data to the FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9 - DMA outlink descriptor transfer mode configuration bit. 1: Prepare outlink descriptor with burst mode. 0: Prepare outlink descriptor with byte mode."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<9> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 10 - DMA inlink descriptor transfer mode configuration bit. 1: Prepare inlink descriptor with burst mode. 0: Prepare inlink descriptor with byte mode."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<10> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11 - Transmitter data transfer mode configuration bit. 1: Prepare out data with burst mode. 0: Prepare out data with byte mode."]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<11> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable check owner bit by hardware."]
     #[inline(always)]
+    #[must_use]
     pub fn check_owner(&mut self) -> CHECK_OWNER_W<12> {
         CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 13 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<13> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bits 14:15 - DMA access external memory block size. 0: 16 bytes. 1: 32 bytes. 2: 64 bytes. 3: reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<14> {
         EXT_MEM_BK_SIZE_W::new(self)
     }
@@ -267,11 +282,10 @@ impl crate::Readable for LC_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [lc_conf::W](W) writer structure"]
 impl crate::Writable for LC_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LC_CONF to value 0x0100"]
 impl crate::Resettable for LC_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100;
 }

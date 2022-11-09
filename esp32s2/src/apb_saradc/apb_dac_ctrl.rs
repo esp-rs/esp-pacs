@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Set DAC timer target."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_timer_target(&mut self) -> DAC_TIMER_TARGET_W<0> {
         DAC_TIMER_TARGET_W::new(self)
     }
     #[doc = "Bit 12 - Enable read dac data."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_timer_en(&mut self) -> DAC_TIMER_EN_W<12> {
         DAC_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 13 - Enable DAC alter mode."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_dac_alter_mode(&mut self) -> APB_DAC_ALTER_MODE_W<13> {
         APB_DAC_ALTER_MODE_W::new(self)
     }
     #[doc = "Bit 14 - Enable DMA_DAC."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_dac_trans(&mut self) -> APB_DAC_TRANS_W<14> {
         APB_DAC_TRANS_W::new(self)
     }
     #[doc = "Bit 15 - Reset DIG DAC FIFO."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_reset_fifo(&mut self) -> DAC_RESET_FIFO_W<15> {
         DAC_RESET_FIFO_W::new(self)
     }
     #[doc = "Bit 16 - Reset DIG DAC by software."]
     #[inline(always)]
+    #[must_use]
     pub fn apb_dac_rst(&mut self) -> APB_DAC_RST_W<16> {
         APB_DAC_RST_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for APB_DAC_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_dac_ctrl::W](W) writer structure"]
 impl crate::Writable for APB_DAC_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_DAC_CTRL to value 0x2064"]
 impl crate::Resettable for APB_DAC_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2064
-    }
+    const RESET_VALUE: Self::Ux = 0x2064;
 }

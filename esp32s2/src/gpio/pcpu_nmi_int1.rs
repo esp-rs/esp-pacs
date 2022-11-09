@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 PRO_CPU non-maskable interrupt status. This interrupt status is corresponding to bit in GPIO_STATUS1_REG when assert (high) enable signal (bit 14 of GPIO_PINn_REG)."]
     #[inline(always)]
     pub fn procpu_nmi1_int(&self) -> PROCPU_NMI1_INT_R {
-        PROCPU_NMI1_INT_R::new((self.bits & 0x003f_ffff) as u32)
+        PROCPU_NMI1_INT_R::new(self.bits & 0x003f_ffff)
     }
 }
 #[doc = "GPIO32 ~ 53 PRO_CPU non-maskable interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcpu_nmi_int1](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PCPU_NMI_INT1_SPEC {
 }
 #[doc = "`reset()` method sets PCPU_NMI_INT1 to value 0"]
 impl crate::Resettable for PCPU_NMI_INT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

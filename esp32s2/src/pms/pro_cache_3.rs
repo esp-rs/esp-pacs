@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:16 - Record the illegitimate information of ICache to access memory. \\[16\\]: access enable, active low. \\[15:4\\]: store the bits \\[11:0\\] of address. \\[3:0\\]: Icache bus write byte enables, active low."]
     #[inline(always)]
     pub fn pro_cache_ilg_st_i(&self) -> PRO_CACHE_ILG_ST_I_R {
-        PRO_CACHE_ILG_ST_I_R::new((self.bits & 0x0001_ffff) as u32)
+        PRO_CACHE_ILG_ST_I_R::new(self.bits & 0x0001_ffff)
     }
 }
 #[doc = "Icache status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_3](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PRO_CACHE_3_SPEC {
 }
 #[doc = "`reset()` method sets PRO_CACHE_3 to value 0"]
 impl crate::Resettable for PRO_CACHE_3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

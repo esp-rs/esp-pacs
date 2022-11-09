@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
+    #[must_use]
     pub fn xfersize2(&mut self) -> XFERSIZE2_W<0> {
         XFERSIZE2_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn pktcnt2(&mut self) -> PKTCNT2_W<19> {
         PKTCNT2_W::new(self)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
+    #[must_use]
     pub fn supcnt2(&mut self) -> SUPCNT2_W<29> {
         SUPCNT2_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for DOEPTSIZ2_SPEC {
 #[doc = "`write(|w| ..)` method takes [doeptsiz2::W](W) writer structure"]
 impl crate::Writable for DOEPTSIZ2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPTSIZ2 to value 0"]
 impl crate::Resettable for DOEPTSIZ2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

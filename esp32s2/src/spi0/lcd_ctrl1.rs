@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vb_front(&mut self) -> LCD_VB_FRONT_W<0> {
         LCD_VB_FRONT_W::new(self)
     }
     #[doc = "Bits 8:19 - It is the horizontal active width of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_ha_width(&mut self) -> LCD_HA_WIDTH_W<8> {
         LCD_HA_WIDTH_W::new(self)
     }
     #[doc = "Bits 20:31 - It is the horizontal total width of a frame. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_ht_width(&mut self) -> LCD_HT_WIDTH_W<20> {
         LCD_HT_WIDTH_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for LCD_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_ctrl1::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_CTRL1 to value 0"]
 impl crate::Resettable for LCD_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

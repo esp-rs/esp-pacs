@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel0(&mut self) -> SEL0_W<0> {
         SEL0_W::new(self)
     }
     #[doc = "Bit 1 - Select GPIO out value configured by registers or CPU instructions for channel 1. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel1(&mut self) -> SEL1_W<1> {
         SEL1_W::new(self)
     }
     #[doc = "Bit 2 - Select GPIO out value configured by registers or CPU instructions for channel 2. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel2(&mut self) -> SEL2_W<2> {
         SEL2_W::new(self)
     }
     #[doc = "Bit 3 - Select GPIO out value configured by registers or CPU instructions for channel 3. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel3(&mut self) -> SEL3_W<3> {
         SEL3_W::new(self)
     }
     #[doc = "Bit 4 - Select GPIO out value configured by registers or CPU instructions for channel 4. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel4(&mut self) -> SEL4_W<4> {
         SEL4_W::new(self)
     }
     #[doc = "Bit 5 - Select GPIO out value configured by registers or CPU instructions for channel 5. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel5(&mut self) -> SEL5_W<5> {
         SEL5_W::new(self)
     }
     #[doc = "Bit 6 - Select GPIO out value configured by registers or CPU instructions for channel 6. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel6(&mut self) -> SEL6_W<6> {
         SEL6_W::new(self)
     }
     #[doc = "Bit 7 - Select GPIO out value configured by registers or CPU instructions for channel 7. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
+    #[must_use]
     pub fn sel7(&mut self) -> SEL7_W<7> {
         SEL7_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for OUT_CPU_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_cpu::W](W) writer structure"]
 impl crate::Writable for OUT_CPU_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_CPU to value 0"]
 impl crate::Resettable for OUT_CPU_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

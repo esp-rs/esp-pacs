@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn d_dmaaddr4(&mut self) -> D_DMAADDR4_W<0> {
         D_DMAADDR4_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DIEPDMA4_SPEC {
 #[doc = "`write(|w| ..)` method takes [diepdma4::W](W) writer structure"]
 impl crate::Writable for DIEPDMA4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPDMA4 to value 0"]
 impl crate::Resettable for DIEPDMA4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

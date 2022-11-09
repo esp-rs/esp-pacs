@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
+    #[must_use]
     pub fn load_lo(&mut self) -> LOAD_LO_W<0> {
         LOAD_LO_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TLOADLO_SPEC {
 #[doc = "`write(|w| ..)` method takes [tloadlo::W](W) writer structure"]
 impl crate::Writable for TLOADLO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T%sLOADLO to value 0"]
 impl crate::Resettable for TLOADLO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

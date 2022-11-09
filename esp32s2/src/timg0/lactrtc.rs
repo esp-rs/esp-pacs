@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
     pub fn lact_rtc_step_len(&self) -> LACT_RTC_STEP_LEN_R {
-        LACT_RTC_STEP_LEN_R::new(((self.bits >> 6) & 0x03ff_ffff) as u32)
+        LACT_RTC_STEP_LEN_R::new((self.bits >> 6) & 0x03ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn lact_rtc_step_len(&mut self) -> LACT_RTC_STEP_LEN_W<6> {
         LACT_RTC_STEP_LEN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for LACTRTC_SPEC {
 #[doc = "`write(|w| ..)` method takes [lactrtc::W](W) writer structure"]
 impl crate::Writable for LACTRTC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LACTRTC to value 0"]
 impl crate::Resettable for LACTRTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

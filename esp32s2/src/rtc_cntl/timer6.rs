@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 16:24"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_dcdc_wait_timer(&mut self) -> DG_DCDC_WAIT_TIMER_W<16> {
         DG_DCDC_WAIT_TIMER_W::new(self)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_dcdc_powerup_timer(&mut self) -> DG_DCDC_POWERUP_TIMER_W<25> {
         DG_DCDC_POWERUP_TIMER_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for TIMER6_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer6::W](W) writer structure"]
 impl crate::Writable for TIMER6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER6 to value 0x1020_0000"]
 impl crate::Resettable for TIMER6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1020_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x1020_0000;
 }

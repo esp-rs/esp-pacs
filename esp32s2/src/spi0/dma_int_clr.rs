@@ -191,81 +191,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The clear bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_empty_int_clr(&mut self) -> INLINK_DSCR_EMPTY_INT_CLR_W<0> {
         INLINK_DSCR_EMPTY_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The clear bit for outlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_dscr_error_int_clr(&mut self) -> OUTLINK_DSCR_ERROR_INT_CLR_W<1> {
         OUTLINK_DSCR_ERROR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - The clear bit for inlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_error_int_clr(&mut self) -> INLINK_DSCR_ERROR_INT_CLR_W<2> {
         INLINK_DSCR_ERROR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - The clear bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_done_int_clr(&mut self) -> IN_DONE_INT_CLR_W<3> {
         IN_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The clear bit for receiving error. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_err_eof_int_clr(&mut self) -> IN_ERR_EOF_INT_CLR_W<4> {
         IN_ERR_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - The clear bit for completing receiving all the packets from host. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn in_suc_eof_int_clr(&mut self) -> IN_SUC_EOF_INT_CLR_W<5> {
         IN_SUC_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - The clear bit for completing usage of a outlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_done_int_clr(&mut self) -> OUT_DONE_INT_CLR_W<6> {
         OUT_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - The clear bit for sending a packet to host done. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_int_clr(&mut self) -> OUT_EOF_INT_CLR_W<7> {
         OUT_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - The clear bit for sending all the packets to host done. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn out_total_eof_int_clr(&mut self) -> OUT_TOTAL_EOF_INT_CLR_W<8> {
         OUT_TOTAL_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9 - 1: Clear SPI_INFIFO_FULL_ERR_INT_RAW. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
+    #[must_use]
     pub fn infifo_full_err_int_clr(&mut self) -> INFIFO_FULL_ERR_INT_CLR_W<9> {
         INFIFO_FULL_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10 - 1: Clear SPI_OUTFIFO_EMPTY_ERR_INT_RAW signal. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
+    #[must_use]
     pub fn outfifo_empty_err_int_clr(&mut self) -> OUTFIFO_EMPTY_ERR_INT_CLR_W<10> {
         OUTFIFO_EMPTY_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 11 - The clear bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd6_int_clr(&mut self) -> SLV_CMD6_INT_CLR_W<11> {
         SLV_CMD6_INT_CLR_W::new(self)
     }
     #[doc = "Bit 12 - The clear bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd7_int_clr(&mut self) -> SLV_CMD7_INT_CLR_W<12> {
         SLV_CMD7_INT_CLR_W::new(self)
     }
     #[doc = "Bit 13 - The clear bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd8_int_clr(&mut self) -> SLV_CMD8_INT_CLR_W<13> {
         SLV_CMD8_INT_CLR_W::new(self)
     }
     #[doc = "Bit 14 - The clear bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd9_int_clr(&mut self) -> SLV_CMD9_INT_CLR_W<14> {
         SLV_CMD9_INT_CLR_W::new(self)
     }
     #[doc = "Bit 15 - The clear bit for SPI slave CMDA interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmda_int_clr(&mut self) -> SLV_CMDA_INT_CLR_W<15> {
         SLV_CMDA_INT_CLR_W::new(self)
     }
@@ -288,11 +304,10 @@ impl crate::Readable for DMA_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_int_clr::W](W) writer structure"]
 impl crate::Writable for DMA_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_INT_CLR to value 0"]
 impl crate::Resettable for DMA_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -33,8 +33,5 @@ impl crate::Readable for IBUS2_ABANDON_CNT_SPEC {
 }
 #[doc = "`reset()` method sets IBUS2_ABANDON_CNT to value 0"]
 impl crate::Resettable for IBUS2_ABANDON_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

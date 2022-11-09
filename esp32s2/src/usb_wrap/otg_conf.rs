@@ -238,111 +238,133 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software."]
     #[inline(always)]
+    #[must_use]
     pub fn srp_sessend_override(&mut self) -> SRP_SESSEND_OVERRIDE_W<0> {
         SRP_SESSEND_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 1 - Software over-ride value of srp session end signal."]
     #[inline(always)]
+    #[must_use]
     pub fn srp_sessend_value(&mut self) -> SRP_SESSEND_VALUE_W<1> {
         SRP_SESSEND_VALUE_W::new(self)
     }
     #[doc = "Bit 2 - Select internal external PHY. 1'b0: Select internal PHY. 1'b1: Select external PHY."]
     #[inline(always)]
+    #[must_use]
     pub fn phy_sel(&mut self) -> PHY_SEL_W<2> {
         PHY_SEL_W::new(self)
     }
     #[doc = "Bit 3 - Force the dfifo to go into low power mode. The data in dfifo will not lost."]
     #[inline(always)]
+    #[must_use]
     pub fn dfifo_force_pd(&mut self) -> DFIFO_FORCE_PD_W<3> {
         DFIFO_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - Bypass Debounce filters for avalid,bvalid,vbusvalid,session end, id signals"]
     #[inline(always)]
+    #[must_use]
     pub fn dbnce_fltr_bypass(&mut self) -> DBNCE_FLTR_BYPASS_W<4> {
         DBNCE_FLTR_BYPASS_W::new(self)
     }
     #[doc = "Bit 5 - Enable software controlle USB D+ D- exchange"]
     #[inline(always)]
+    #[must_use]
     pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<5> {
         EXCHG_PINS_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 6 - USB D+ D- exchange. 1'b0: don't change. 1'b1: exchange D+ D-"]
     #[inline(always)]
+    #[must_use]
     pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<6> {
         EXCHG_PINS_W::new(self)
     }
     #[doc = "Bits 7:8 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
+    #[must_use]
     pub fn vrefh(&mut self) -> VREFH_W<7> {
         VREFH_W::new(self)
     }
     #[doc = "Bits 9:10 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
+    #[must_use]
     pub fn vrefl(&mut self) -> VREFL_W<9> {
         VREFL_W::new(self)
     }
     #[doc = "Bit 11 - Enable software controlle input threshold"]
     #[inline(always)]
+    #[must_use]
     pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<11> {
         VREF_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 12 - Enable software controlle USB D+ D- pullup pulldown"]
     #[inline(always)]
+    #[must_use]
     pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<12> {
         PAD_PULL_OVERRIDE_W::new(self)
     }
     #[doc = "Bit 13 - Controlle USB D+ pullup"]
     #[inline(always)]
+    #[must_use]
     pub fn dp_pullup(&mut self) -> DP_PULLUP_W<13> {
         DP_PULLUP_W::new(self)
     }
     #[doc = "Bit 14 - Controlle USB D+ pulldown"]
     #[inline(always)]
+    #[must_use]
     pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<14> {
         DP_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 15 - Controlle USB D+ pullup"]
     #[inline(always)]
+    #[must_use]
     pub fn dm_pullup(&mut self) -> DM_PULLUP_W<15> {
         DM_PULLUP_W::new(self)
     }
     #[doc = "Bit 16 - Controlle USB D+ pulldown"]
     #[inline(always)]
+    #[must_use]
     pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<16> {
         DM_PULLDOWN_W::new(self)
     }
     #[doc = "Bit 17 - Controlle pullup value. 1'b0: typical value is 2.4K. 1'b1: typical value is 1.2K."]
     #[inline(always)]
+    #[must_use]
     pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<17> {
         PULLUP_VALUE_W::new(self)
     }
     #[doc = "Bit 18 - Enable USB pad function"]
     #[inline(always)]
+    #[must_use]
     pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<18> {
         USB_PAD_ENABLE_W::new(self)
     }
     #[doc = "Bit 19 - Force ahb clock always on"]
     #[inline(always)]
+    #[must_use]
     pub fn ahb_clk_force_on(&mut self) -> AHB_CLK_FORCE_ON_W<19> {
         AHB_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 20 - Force phy clock always on"]
     #[inline(always)]
+    #[must_use]
     pub fn phy_clk_force_on(&mut self) -> PHY_CLK_FORCE_ON_W<20> {
         PHY_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 21 - Select phy tx signal output clock edge. 1'b0: negedge. 1'b1: posedge."]
     #[inline(always)]
+    #[must_use]
     pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<21> {
         PHY_TX_EDGE_SEL_W::new(self)
     }
     #[doc = "Bit 22 - Disable the dfifo to go into low power mode. The data in dfifo will not lost."]
     #[inline(always)]
+    #[must_use]
     pub fn dfifo_force_pu(&mut self) -> DFIFO_FORCE_PU_W<22> {
         DFIFO_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 31 - Disable auto clock gating of CSR registers"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -365,11 +387,10 @@ impl crate::Readable for OTG_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [otg_conf::W](W) writer structure"]
 impl crate::Writable for OTG_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OTG_CONF to value 0x001c_0000"]
 impl crate::Resettable for OTG_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x001c_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x001c_0000;
 }

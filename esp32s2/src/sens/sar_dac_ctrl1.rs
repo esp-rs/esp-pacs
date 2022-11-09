@@ -124,46 +124,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Frequency step for CW generator can be used to adjust the frequency."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_fstep(&mut self) -> SW_FSTEP_W<0> {
         SW_FSTEP_W::new(self)
     }
     #[doc = "Bit 16 - 0: disable CW generator. 1: enable CW generator."]
     #[inline(always)]
+    #[must_use]
     pub fn sw_tone_en(&mut self) -> SW_TONE_EN_W<16> {
         SW_TONE_EN_W::new(self)
     }
     #[doc = "Bits 17:21"]
     #[inline(always)]
+    #[must_use]
     pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<17> {
         DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bit 22 - 0: DAC1 and DAC2 do not use DMA. 1: DAC1 and DAC2 use DMA."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<22> {
         DAC_DIG_FORCE_W::new(self)
     }
     #[doc = "Bit 23 - 1: force PDAC_CLK to low"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clk_force_low(&mut self) -> DAC_CLK_FORCE_LOW_W<23> {
         DAC_CLK_FORCE_LOW_W::new(self)
     }
     #[doc = "Bit 24 - 1: force PDAC_CLK to high"]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clk_force_high(&mut self) -> DAC_CLK_FORCE_HIGH_W<24> {
         DAC_CLK_FORCE_HIGH_W::new(self)
     }
     #[doc = "Bit 25 - 1: invert PDAC_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clk_inv(&mut self) -> DAC_CLK_INV_W<25> {
         DAC_CLK_INV_W::new(self)
     }
     #[doc = "Bit 26 - Reset DAC by software."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_reset(&mut self) -> DAC_RESET_W<26> {
         DAC_RESET_W::new(self)
     }
     #[doc = "Bit 27 - DAC clock gate enable bit."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_clkgate_en(&mut self) -> DAC_CLKGATE_EN_W<27> {
         DAC_CLKGATE_EN_W::new(self)
     }
@@ -186,11 +195,10 @@ impl crate::Readable for SAR_DAC_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_dac_ctrl1::W](W) writer structure"]
 impl crate::Writable for SAR_DAC_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_DAC_CTRL1 to value 0"]
 impl crate::Resettable for SAR_DAC_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:18 - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
     #[inline(always)]
     pub fn pro_icache_memsync_size(&self) -> PRO_ICACHE_MEMSYNC_SIZE_R {
-        PRO_ICACHE_MEMSYNC_SIZE_R::new((self.bits & 0x0007_ffff) as u32)
+        PRO_ICACHE_MEMSYNC_SIZE_R::new(self.bits & 0x0007_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:18 - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
     #[inline(always)]
+    #[must_use]
     pub fn pro_icache_memsync_size(&mut self) -> PRO_ICACHE_MEMSYNC_SIZE_W<0> {
         PRO_ICACHE_MEMSYNC_SIZE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_ICACHE_MEM_SYNC1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_icache_mem_sync1::W](W) writer structure"]
 impl crate::Writable for PRO_ICACHE_MEM_SYNC1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_ICACHE_MEM_SYNC1 to value 0"]
 impl crate::Resettable for PRO_ICACHE_MEM_SYNC1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

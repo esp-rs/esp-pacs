@@ -33,8 +33,5 @@ impl crate::Readable for TIME_HIGH1_SPEC {
 }
 #[doc = "`reset()` method sets TIME_HIGH1 to value 0"]
 impl crate::Resettable for TIME_HIGH1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

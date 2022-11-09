@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn inep3txfstaddr(&mut self) -> INEP3TXFSTADDR_W<0> {
         INEP3TXFSTADDR_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn inep3txfdep(&mut self) -> INEP3TXFDEP_W<16> {
         INEP3TXFDEP_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for DIEPTXF3_SPEC {
 #[doc = "`write(|w| ..)` method takes [dieptxf3::W](W) writer structure"]
 impl crate::Writable for DIEPTXF3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPTXF3 to value 0x1000_0200"]
 impl crate::Resettable for DIEPTXF3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1000_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x1000_0200;
 }

@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
+    #[must_use]
     pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W<30> {
         FUNCTION_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_swap(&mut self) -> SPI_SWAP_W<31> {
         SPI_SWAP_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SIGMADELTA_MISC_SPEC {
 #[doc = "`write(|w| ..)` method takes [sigmadelta_misc::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA_MISC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA_MISC to value 0"]
 impl crate::Resettable for SIGMADELTA_MISC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

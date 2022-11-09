@@ -87,26 +87,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W<0> {
         LCD_VSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 7 - It is the idle value of spi_vsync. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn vsync_idle_pol(&mut self) -> VSYNC_IDLE_POL_W<7> {
         VSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bits 16:22 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W<16> {
         LCD_HSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 23 - It is the idle value of spi_hsync. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn hsync_idle_pol(&mut self) -> HSYNC_IDLE_POL_W<23> {
         HSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bits 24:31 - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W<24> {
         LCD_HSYNC_POSITION_W::new(self)
     }
@@ -129,11 +134,10 @@ impl crate::Readable for LCD_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [lcd_ctrl2::W](W) writer structure"]
 impl crate::Writable for LCD_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LCD_CTRL2 to value 0x0001_0001"]
 impl crate::Resettable for LCD_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0001
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0001;
 }

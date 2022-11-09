@@ -24,6 +24,7 @@ pub type TIMER_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOAD_SPEC, bo
 impl W {
     #[doc = "Bit 31 - Set this bit to 1, the value stored in SYSTIMER_TIMER_LOAD_HI and in SYSTIMER_TIMER_LOAD_LO will be loaded to system timer"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_load(&mut self) -> TIMER_LOAD_W<31> {
         TIMER_LOAD_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for LOAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [load::W](W) writer structure"]
 impl crate::Writable for LOAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOAD to value 0"]
 impl crate::Resettable for LOAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
     #[inline(always)]
+    #[must_use]
     pub fn linesize(&mut self) -> LINESIZE_W<0> {
         LINESIZE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for LINESIZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [linesize::W](W) writer structure"]
 impl crate::Writable for LINESIZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LINESIZE to value 0"]
 impl crate::Resettable for LINESIZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

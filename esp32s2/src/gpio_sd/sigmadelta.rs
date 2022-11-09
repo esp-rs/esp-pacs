@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This field is used to configure the duty cycle of sigma delta modulation output."]
     #[inline(always)]
+    #[must_use]
     pub fn sd0_in(&mut self) -> SD0_IN_W<0> {
         SD0_IN_W::new(self)
     }
     #[doc = "Bits 8:15 - This field is used to set a divider value to divide APB clock."]
     #[inline(always)]
+    #[must_use]
     pub fn sd0_prescale(&mut self) -> SD0_PRESCALE_W<8> {
         SD0_PRESCALE_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SIGMADELTA_SPEC {
 #[doc = "`write(|w| ..)` method takes [sigmadelta::W](W) writer structure"]
 impl crate::Writable for SIGMADELTA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SIGMADELTA%s to value 0xff00"]
 impl crate::Resettable for SIGMADELTA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff00
-    }
+    const RESET_VALUE: Self::Ux = 0xff00;
 }

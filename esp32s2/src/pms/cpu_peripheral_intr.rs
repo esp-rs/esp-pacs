@@ -66,11 +66,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The clear signal for CPU peripheral access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_peri_byte_error_clr(&mut self) -> CPU_PERI_BYTE_ERROR_CLR_W<0> {
         CPU_PERI_BYTE_ERROR_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The enable signal for CPU peripheral access interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn cpu_peri_byte_error_en(&mut self) -> CPU_PERI_BYTE_ERROR_EN_W<1> {
         CPU_PERI_BYTE_ERROR_EN_W::new(self)
     }
@@ -93,11 +95,10 @@ impl crate::Readable for CPU_PERIPHERAL_INTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [cpu_peripheral_intr::W](W) writer structure"]
 impl crate::Writable for CPU_PERIPHERAL_INTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CPU_PERIPHERAL_INTR to value 0"]
 impl crate::Resettable for CPU_PERIPHERAL_INTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

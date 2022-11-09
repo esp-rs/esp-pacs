@@ -26,11 +26,13 @@ pub type OUT_MSK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_MSK_SPEC, 
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure updated output value of 8-channel dedicated GPIO."]
     #[inline(always)]
+    #[must_use]
     pub fn out_value(&mut self) -> OUT_VALUE_W<0> {
         OUT_VALUE_W::new(self)
     }
     #[doc = "Bits 8:15 - This register is used to configure channels which would be updated. 1: corresponding channel's output would be updated."]
     #[inline(always)]
+    #[must_use]
     pub fn out_msk(&mut self) -> OUT_MSK_W<8> {
         OUT_MSK_W::new(self)
     }
@@ -49,11 +51,10 @@ impl crate::RegisterSpec for OUT_MSK_SPEC {
 #[doc = "`write(|w| ..)` method takes [out_msk::W](W) writer structure"]
 impl crate::Writable for OUT_MSK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT_MSK to value 0"]
 impl crate::Resettable for OUT_MSK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

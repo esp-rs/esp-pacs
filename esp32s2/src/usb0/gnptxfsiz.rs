@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn nptxfstaddr(&mut self) -> NPTXFSTADDR_W<0> {
         NPTXFSTADDR_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn nptxfdep(&mut self) -> NPTXFDEP_W<16> {
         NPTXFDEP_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for GNPTXFSIZ_SPEC {
 #[doc = "`write(|w| ..)` method takes [gnptxfsiz::W](W) writer structure"]
 impl crate::Writable for GNPTXFSIZ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GNPTXFSIZ to value 0x0100_0100"]
 impl crate::Resettable for GNPTXFSIZ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0100;
 }

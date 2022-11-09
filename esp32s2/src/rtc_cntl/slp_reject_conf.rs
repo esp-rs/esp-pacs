@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bits 13:29 - Set this bit to enable reject-to-sleep."]
     #[inline(always)]
     pub fn sleep_reject_ena(&self) -> SLEEP_REJECT_ENA_R {
-        SLEEP_REJECT_ENA_R::new(((self.bits >> 13) & 0x0001_ffff) as u32)
+        SLEEP_REJECT_ENA_R::new((self.bits >> 13) & 0x0001_ffff)
     }
     #[doc = "Bit 30 - Set this bit to enable reject-to-light-sleep."]
     #[inline(always)]
@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 13:29 - Set this bit to enable reject-to-sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<13> {
         SLEEP_REJECT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to enable reject-to-light-sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<30> {
         LIGHT_SLP_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable reject-to-deep-sleep."]
     #[inline(always)]
+    #[must_use]
     pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<31> {
         DEEP_SLP_REJECT_EN_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for SLP_REJECT_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [slp_reject_conf::W](W) writer structure"]
 impl crate::Writable for SLP_REJECT_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLP_REJECT_CONF to value 0"]
 impl crate::Resettable for SLP_REJECT_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

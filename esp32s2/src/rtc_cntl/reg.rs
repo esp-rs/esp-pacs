@@ -120,46 +120,55 @@ impl R {
 impl W {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_reg_dbias_slp(&mut self) -> DIG_REG_DBIAS_SLP_W<8> {
         DIG_REG_DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
+    #[must_use]
     pub fn dig_reg_dbias_wak(&mut self) -> DIG_REG_DBIAS_WAK_W<11> {
         DIG_REG_DBIAS_WAK_W::new(self)
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
+    #[must_use]
     pub fn sck_dcap(&mut self) -> SCK_DCAP_W<14> {
         SCK_DCAP_W::new(self)
     }
     #[doc = "Bits 22:24 - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
+    #[must_use]
     pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<22> {
         DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 25:27 - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
     #[inline(always)]
+    #[must_use]
     pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<25> {
         DBIAS_WAK_W::new(self)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<28> {
         DBOOST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
+    #[must_use]
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<29> {
         DBOOST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<30> {
         REGULATOR_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
+    #[must_use]
     pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<31> {
         REGULATOR_FORCE_PU_W::new(self)
     }
@@ -182,11 +191,10 @@ impl crate::Readable for REG_SPEC {
 #[doc = "`write(|w| ..)` method takes [reg::W](W) writer structure"]
 impl crate::Writable for REG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REG to value 0xa900_2400"]
 impl crate::Resettable for REG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xa900_2400
-    }
+    const RESET_VALUE: Self::Ux = 0xa900_2400;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
+    #[must_use]
     pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<0> {
         AAD_BLOCK_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AAD_BLOCK_NUM_SPEC {
 #[doc = "`write(|w| ..)` method takes [aad_block_num::W](W) writer structure"]
 impl crate::Writable for AAD_BLOCK_NUM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AAD_BLOCK_NUM to value 0"]
 impl crate::Resettable for AAD_BLOCK_NUM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

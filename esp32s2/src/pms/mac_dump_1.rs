@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
+    #[must_use]
     pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<0> {
         MAC_DUMP_CONNECT_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MAC_DUMP_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [mac_dump_1::W](W) writer structure"]
 impl crate::Writable for MAC_DUMP_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAC_DUMP_1 to value 0xe4"]
 impl crate::Resettable for MAC_DUMP_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xe4
-    }
+    const RESET_VALUE: Self::Ux = 0xe4;
 }

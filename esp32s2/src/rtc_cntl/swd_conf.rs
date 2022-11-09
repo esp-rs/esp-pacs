@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 18:27 - Adjusts the signal width sent to the super watchdog."]
     #[inline(always)]
+    #[must_use]
     pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<18> {
         SWD_SIGNAL_WIDTH_W::new(self)
     }
     #[doc = "Bit 28 - Set to reset the super watchdog reset flag."]
     #[inline(always)]
+    #[must_use]
     pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<28> {
         SWD_RST_FLAG_CLR_W::new(self)
     }
     #[doc = "Bit 29 - Set to feed the super watchdog via SW."]
     #[inline(always)]
+    #[must_use]
     pub fn swd_feed(&mut self) -> SWD_FEED_W<29> {
         SWD_FEED_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to disable super watchdog."]
     #[inline(always)]
+    #[must_use]
     pub fn swd_disable(&mut self) -> SWD_DISABLE_W<30> {
         SWD_DISABLE_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable automatic watchdog feeding upon interrupts."]
     #[inline(always)]
+    #[must_use]
     pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<31> {
         SWD_AUTO_FEED_EN_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for SWD_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [swd_conf::W](W) writer structure"]
 impl crate::Writable for SWD_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWD_CONF to value 0x04b0_0000"]
 impl crate::Resettable for SWD_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x04b0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x04b0_0000;
 }

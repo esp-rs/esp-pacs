@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit J0"]
     #[inline(always)]
+    #[must_use]
     pub fn j0_0(&mut self) -> J0_0_W<0> {
         J0_0_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for J0__SPEC {
 #[doc = "`write(|w| ..)` method takes [j0_::W](W) writer structure"]
 impl crate::Writable for J0__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets J0_%s to value 0"]
 impl crate::Resettable for J0__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

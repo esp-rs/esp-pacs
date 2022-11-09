@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Configures the divider factor for the 32 kHz crystal oscillator."]
     #[inline(always)]
+    #[must_use]
     pub fn xtal32k_clk_factor(&mut self) -> XTAL32K_CLK_FACTOR_W<0> {
         XTAL32K_CLK_FACTOR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for XTAL32K_CLK_FACTOR_SPEC {
 #[doc = "`write(|w| ..)` method takes [xtal32k_clk_factor::W](W) writer structure"]
 impl crate::Writable for XTAL32K_CLK_FACTOR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets XTAL32K_CLK_FACTOR to value 0"]
 impl crate::Resettable for XTAL32K_CLK_FACTOR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

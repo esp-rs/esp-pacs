@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
+    #[must_use]
     pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W<0> {
         OCCUPY_MAC_DUMP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for OCCUPY_2_SPEC {
 #[doc = "`write(|w| ..)` method takes [occupy_2::W](W) writer structure"]
 impl crate::Writable for OCCUPY_2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OCCUPY_2 to value 0"]
 impl crate::Resettable for OCCUPY_2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

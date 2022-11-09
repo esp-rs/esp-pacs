@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
     pub fn timers_date(&self) -> TIMERS_DATE_R {
-        TIMERS_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        TIMERS_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
+    #[must_use]
     pub fn timers_date(&mut self) -> TIMERS_DATE_W<0> {
         TIMERS_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TIMERS_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [timers_date::W](W) writer structure"]
 impl crate::Writable for TIMERS_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMERS_DATE to value 0x0190_7261"]
 impl crate::Resettable for TIMERS_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0190_7261
-    }
+    const RESET_VALUE: Self::Ux = 0x0190_7261;
 }

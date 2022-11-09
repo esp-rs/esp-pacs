@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Configures the setup time of programming operation."]
     #[inline(always)]
+    #[must_use]
     pub fn tsup_a(&mut self) -> TSUP_A_W<0> {
         TSUP_A_W::new(self)
     }
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
+    #[must_use]
     pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<8> {
         PWR_ON_NUM_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for WR_TIM_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [wr_tim_conf1::W](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WR_TIM_CONF1 to value 0x0028_8001"]
 impl crate::Resettable for WR_TIM_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0028_8001
-    }
+    const RESET_VALUE: Self::Ux = 0x0028_8001;
 }

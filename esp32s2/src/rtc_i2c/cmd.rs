@@ -55,6 +55,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
     #[inline(always)]
+    #[must_use]
     pub fn command(&mut self) -> COMMAND_W<0> {
         COMMAND_W::new(self)
     }
@@ -77,11 +78,10 @@ impl crate::Readable for CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD%s to value 0x0903"]
 impl crate::Resettable for CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0903
-    }
+    const RESET_VALUE: Self::Ux = 0x0903;
 }

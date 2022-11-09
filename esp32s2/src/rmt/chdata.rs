@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]
+    #[must_use]
     pub fn ch_data(&mut self) -> CH_DATA_W<0> {
         CH_DATA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CHDATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [chdata::W](W) writer structure"]
 impl crate::Writable for CHDATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%sDATA to value 0"]
 impl crate::Resettable for CHDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

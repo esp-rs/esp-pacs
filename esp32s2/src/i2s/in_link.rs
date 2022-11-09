@@ -57,7 +57,7 @@ impl R {
     #[doc = "Bits 0:19 - The address of first inlink descriptor."]
     #[inline(always)]
     pub fn inlink_addr(&self) -> INLINK_ADDR_R {
-        INLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
+        INLINK_ADDR_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 28 - Set this bit to stop inlink descriptor."]
     #[inline(always)]
@@ -83,21 +83,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - The address of first inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<0> {
         INLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to stop inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_stop(&mut self) -> INLINK_STOP_W<28> {
         INLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to start inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_start(&mut self) -> INLINK_START_W<29> {
         INLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to restart inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<30> {
         INLINK_RESTART_W::new(self)
     }
@@ -120,11 +124,10 @@ impl crate::Readable for IN_LINK_SPEC {
 #[doc = "`write(|w| ..)` method takes [in_link::W](W) writer structure"]
 impl crate::Writable for IN_LINK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IN_LINK to value 0"]
 impl crate::Resettable for IN_LINK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
