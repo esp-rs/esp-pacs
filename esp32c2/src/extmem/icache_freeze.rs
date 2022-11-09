@@ -64,11 +64,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable icache freeze mode"]
     #[inline(always)]
+    #[must_use]
     pub fn ena(&mut self) -> ENA_W<0> {
         ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
     #[inline(always)]
+    #[must_use]
     pub fn mode(&mut self) -> MODE_W<1> {
         MODE_W::new(self)
     }
@@ -91,11 +93,10 @@ impl crate::Readable for ICACHE_FREEZE_SPEC {
 #[doc = "`write(|w| ..)` method takes [icache_freeze::W](W) writer structure"]
 impl crate::Writable for ICACHE_FREEZE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ICACHE_FREEZE to value 0"]
 impl crate::Resettable for ICACHE_FREEZE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

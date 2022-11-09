@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 30 - 0: power down XTAL at high level"]
     #[inline(always)]
+    #[must_use]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<30> {
         XTL_EXT_CTR_LV_W::new(self)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<31> {
         XTL_EXT_CTR_EN_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for EXT_XTL_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_xtl_conf::W](W) writer structure"]
 impl crate::Writable for EXT_XTL_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_XTL_CONF to value 0"]
 impl crate::Resettable for EXT_XTL_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

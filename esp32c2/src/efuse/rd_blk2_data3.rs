@@ -26,7 +26,7 @@ impl R {
     #[doc = "Bits 10:31 - Store the bit \\[0:21\\] of ADC calibration data."]
     #[inline(always)]
     pub fn adc_calibration_0(&self) -> ADC_CALIBRATION_0_R {
-        ADC_CALIBRATION_0_R::new(((self.bits >> 10) & 0x003f_ffff) as u32)
+        ADC_CALIBRATION_0_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
 #[doc = "Register 3 of BLOCK2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk2_data3](index.html) module"]
@@ -40,8 +40,5 @@ impl crate::Readable for RD_BLK2_DATA3_SPEC {
 }
 #[doc = "`reset()` method sets RD_BLK2_DATA3 to value 0"]
 impl crate::Resettable for RD_BLK2_DATA3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

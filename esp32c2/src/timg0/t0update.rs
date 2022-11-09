@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
     #[inline(always)]
+    #[must_use]
     pub fn t0_update(&mut self) -> T0_UPDATE_W<31> {
         T0_UPDATE_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for T0UPDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [t0update::W](W) writer structure"]
 impl crate::Writable for T0UPDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T0UPDATE to value 0"]
 impl crate::Resettable for T0UPDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

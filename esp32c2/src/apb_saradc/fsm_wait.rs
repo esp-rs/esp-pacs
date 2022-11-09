@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_xpd_wait(&mut self) -> SARADC_XPD_WAIT_W<0> {
         SARADC_XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 8:15 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<8> {
         SARADC_RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<16> {
         SARADC_STANDBY_WAIT_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for FSM_WAIT_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsm_wait::W](W) writer structure"]
 impl crate::Writable for FSM_WAIT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSM_WAIT to value 0x00ff_0808"]
 impl crate::Resettable for FSM_WAIT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00ff_0808
-    }
+    const RESET_VALUE: Self::Ux = 0x00ff_0808;
 }

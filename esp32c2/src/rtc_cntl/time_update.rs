@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 27 - Enable to record system stall time"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<27> {
         TIMER_SYS_STALL_W::new(self)
     }
     #[doc = "Bit 28 - Enable to record 40M XTAL OFF time"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<28> {
         TIMER_XTL_OFF_W::new(self)
     }
     #[doc = "Bit 29 - enable to record system reset time"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<29> {
         TIMER_SYS_RST_W::new(self)
     }
     #[doc = "Bit 31 - Set 1: to update register with RTC timer"]
     #[inline(always)]
+    #[must_use]
     pub fn time_update(&mut self) -> TIME_UPDATE_W<31> {
         TIME_UPDATE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for TIME_UPDATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [time_update::W](W) writer structure"]
 impl crate::Writable for TIME_UPDATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIME_UPDATE to value 0"]
 impl crate::Resettable for TIME_UPDATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

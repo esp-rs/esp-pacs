@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]
     pub fn sensitive_reg_date(&self) -> SENSITIVE_REG_DATE_R {
-        SENSITIVE_REG_DATE_R::new((self.bits & 0x0fff_ffff) as u32)
+        SENSITIVE_REG_DATE_R::new(self.bits & 0x0fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn sensitive_reg_date(&mut self) -> SENSITIVE_REG_DATE_W<0> {
         SENSITIVE_REG_DATE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SENSITIVE_REG_DATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sensitive_reg_date::W](W) writer structure"]
 impl crate::Writable for SENSITIVE_REG_DATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SENSITIVE_REG_DATE to value 0x0210_6301"]
 impl crate::Resettable for SENSITIVE_REG_DATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0210_6301
-    }
+    const RESET_VALUE: Self::Ux = 0x0210_6301;
 }

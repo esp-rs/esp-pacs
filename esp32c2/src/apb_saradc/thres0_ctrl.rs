@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_channel(&mut self) -> THRES0_CHANNEL_W<0> {
         THRES0_CHANNEL_W::new(self)
     }
     #[doc = "Bits 5:17 - saradc1's thres0 monitor thres"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_high(&mut self) -> THRES0_HIGH_W<5> {
         THRES0_HIGH_W::new(self)
     }
     #[doc = "Bits 18:30 - saradc1's thres0 monitor thres"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_low(&mut self) -> THRES0_LOW_W<18> {
         THRES0_LOW_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for THRES0_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [thres0_ctrl::W](W) writer structure"]
 impl crate::Writable for THRES0_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets THRES0_CTRL to value 0x0003_ffed"]
 impl crate::Resettable for THRES0_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0003_ffed
-    }
+    const RESET_VALUE: Self::Ux = 0x0003_ffed;
 }

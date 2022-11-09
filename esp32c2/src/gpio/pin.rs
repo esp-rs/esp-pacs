@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - set GPIO input_sync2 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
     #[inline(always)]
+    #[must_use]
     pub fn sync2_bypass(&mut self) -> SYNC2_BYPASS_W<0> {
         SYNC2_BYPASS_W::new(self)
     }
     #[doc = "Bit 2 - set this bit to select pad driver. 1:open-drain. 0:normal."]
     #[inline(always)]
+    #[must_use]
     pub fn pad_driver(&mut self) -> PAD_DRIVER_W<2> {
         PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 3:4 - set GPIO input_sync1 signal mode. 0:disable. 1:trigger at negedge. 2or3:trigger at posedge."]
     #[inline(always)]
+    #[must_use]
     pub fn sync1_bypass(&mut self) -> SYNC1_BYPASS_W<3> {
         SYNC1_BYPASS_W::new(self)
     }
     #[doc = "Bits 7:9 - set this value to choose interrupt mode. 0:disable GPIO interrupt. 1:trigger at posedge. 2:trigger at negedge. 3:trigger at any edge. 4:valid at low level. 5:valid at high level"]
     #[inline(always)]
+    #[must_use]
     pub fn int_type(&mut self) -> INT_TYPE_W<7> {
         INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - set this bit to enable GPIO wakeup.(can only wakeup CPU from Light-sleep Mode)"]
     #[inline(always)]
+    #[must_use]
     pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<10> {
         WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bits 11:12 - reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn config(&mut self) -> CONFIG_W<11> {
         CONFIG_W::new(self)
     }
     #[doc = "Bits 13:17 - set bit 13 to enable CPU interrupt. set bit 14 to enable CPU(not shielded) interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn int_ena(&mut self) -> INT_ENA_W<13> {
         INT_ENA_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for PIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin::W](W) writer structure"]
 impl crate::Writable for PIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN%s to value 0"]
 impl crate::Resettable for PIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

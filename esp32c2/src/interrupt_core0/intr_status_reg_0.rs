@@ -33,8 +33,5 @@ impl crate::Readable for INTR_STATUS_REG_0_SPEC {
 }
 #[doc = "`reset()` method sets INTR_STATUS_REG_0 to value 0"]
 impl crate::Resettable for INTR_STATUS_REG_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

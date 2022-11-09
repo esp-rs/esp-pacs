@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_size(&mut self) -> RX_SIZE_W<1> {
         RX_SIZE_W::new(self)
     }
     #[doc = "Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_size(&mut self) -> TX_SIZE_W<4> {
         TX_SIZE_W::new(self)
     }
     #[doc = "Bits 7:15 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<7> {
         RX_FLOW_THRHD_W::new(self)
     }
     #[doc = "Bits 16:25 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<16> {
         RX_TOUT_THRHD_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to force power down UART memory."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<26> {
         MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 27 - Set this bit to force power up UART memory."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<27> {
         MEM_FORCE_PU_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for MEM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MEM_CONF to value 0x000a_0012"]
 impl crate::Resettable for MEM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000a_0012
-    }
+    const RESET_VALUE: Self::Ux = 0x000a_0012;
 }

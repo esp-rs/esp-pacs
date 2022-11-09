@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
     pub fn apb_saradc1_data(&self) -> APB_SARADC1_DATA_R {
-        APB_SARADC1_DATA_R::new((self.bits & 0x0001_ffff) as u32)
+        APB_SARADC1_DATA_R::new(self.bits & 0x0001_ffff)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar1data_status](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for SAR1DATA_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets SAR1DATA_STATUS to value 0"]
 impl crate::Resettable for SAR1DATA_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

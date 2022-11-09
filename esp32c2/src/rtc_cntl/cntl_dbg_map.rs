@@ -159,61 +159,73 @@ impl R {
 impl W {
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<2> {
         GPIO_PIN5_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<3> {
         GPIO_PIN4_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 4 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<4> {
         GPIO_PIN3_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 5 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<5> {
         GPIO_PIN2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 6 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<6> {
         GPIO_PIN1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 7 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<7> {
         GPIO_PIN0_MUX_SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<8> {
         GPIO_PIN5_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 12:15 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<12> {
         GPIO_PIN4_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 16:19 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<16> {
         GPIO_PIN3_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<20> {
         GPIO_PIN2_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 24:27 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<24> {
         GPIO_PIN1_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 28:31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<28> {
         GPIO_PIN0_FUN_SEL_W::new(self)
     }
@@ -236,11 +248,10 @@ impl crate::Readable for CNTL_DBG_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [cntl_dbg_map::W](W) writer structure"]
 impl crate::Writable for CNTL_DBG_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CNTL_DBG_MAP to value 0"]
 impl crate::Resettable for CNTL_DBG_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

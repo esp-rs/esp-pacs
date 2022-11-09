@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
+    #[must_use]
     pub fn read_cmd(&mut self) -> READ_CMD_W<0> {
         READ_CMD_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to send programming command."]
     #[inline(always)]
+    #[must_use]
     pub fn pgm_cmd(&mut self) -> PGM_CMD_W<1> {
         PGM_CMD_W::new(self)
     }
     #[doc = "Bits 2:3 - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
     #[inline(always)]
+    #[must_use]
     pub fn blk_num(&mut self) -> BLK_NUM_W<2> {
         BLK_NUM_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0"]
 impl crate::Resettable for CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

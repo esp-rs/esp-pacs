@@ -89,8 +89,5 @@ impl crate::Readable for DIN_MODE_SPEC {
 }
 #[doc = "`reset()` method sets DIN_MODE to value 0"]
 impl crate::Resettable for DIN_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

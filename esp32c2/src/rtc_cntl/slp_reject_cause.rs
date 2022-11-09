@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]
     pub fn reject_cause(&self) -> REJECT_CAUSE_R {
-        REJECT_CAUSE_R::new((self.bits & 0x0003_ffff) as u32)
+        REJECT_CAUSE_R::new(self.bits & 0x0003_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]
+    #[must_use]
     pub fn reject_cause(&mut self) -> REJECT_CAUSE_W<0> {
         REJECT_CAUSE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SLP_REJECT_CAUSE_SPEC {
 #[doc = "`write(|w| ..)` method takes [slp_reject_cause::W](W) writer structure"]
 impl crate::Writable for SLP_REJECT_CAUSE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLP_REJECT_CAUSE to value 0"]
 impl crate::Resettable for SLP_REJECT_CAUSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

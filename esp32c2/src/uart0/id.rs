@@ -50,7 +50,7 @@ impl R {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
     pub fn id(&self) -> ID_R {
-        ID_R::new((self.bits & 0x3fff_ffff) as u32)
+        ID_R::new(self.bits & 0x3fff_ffff)
     }
     #[doc = "Bit 30 - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
     #[inline(always)]
@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
+    #[must_use]
     pub fn id(&mut self) -> ID_W<0> {
         ID_W::new(self)
     }
     #[doc = "Bit 30 - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
     #[inline(always)]
+    #[must_use]
     pub fn high_speed(&mut self) -> HIGH_SPEED_W<30> {
         HIGH_SPEED_W::new(self)
     }
     #[doc = "Bit 31 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
+    #[must_use]
     pub fn reg_update(&mut self) -> REG_UPDATE_W<31> {
         REG_UPDATE_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for ID_SPEC {
 #[doc = "`write(|w| ..)` method takes [id::W](W) writer structure"]
 impl crate::Writable for ID_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ID to value 0x4000_0500"]
 impl crate::Resettable for ID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4000_0500
-    }
+    const RESET_VALUE: Self::Ux = 0x4000_0500;
 }

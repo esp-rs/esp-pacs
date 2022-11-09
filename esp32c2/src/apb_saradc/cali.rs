@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
     pub fn cfg(&self) -> CFG_R {
-        CFG_R::new((self.bits & 0x0001_ffff) as u32)
+        CFG_R::new(self.bits & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn cfg(&mut self) -> CFG_W<0> {
         CFG_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CALI_SPEC {
 #[doc = "`write(|w| ..)` method takes [cali::W](W) writer structure"]
 impl crate::Writable for CALI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CALI to value 0x8000"]
 impl crate::Resettable for CALI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000;
 }

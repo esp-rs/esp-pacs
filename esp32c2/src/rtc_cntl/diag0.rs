@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<0> {
         LOW_POWER_DIAG1_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DIAG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [diag0::W](W) writer structure"]
 impl crate::Writable for DIAG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIAG0 to value 0"]
 impl crate::Resettable for DIAG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

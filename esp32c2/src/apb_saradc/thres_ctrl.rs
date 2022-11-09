@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bit 27 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres_all_en(&mut self) -> THRES_ALL_EN_W<27> {
         THRES_ALL_EN_W::new(self)
     }
     #[doc = "Bit 28 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres3_en(&mut self) -> THRES3_EN_W<28> {
         THRES3_EN_W::new(self)
     }
     #[doc = "Bit 29 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres2_en(&mut self) -> THRES2_EN_W<29> {
         THRES2_EN_W::new(self)
     }
     #[doc = "Bit 30 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres1_en(&mut self) -> THRES1_EN_W<30> {
         THRES1_EN_W::new(self)
     }
     #[doc = "Bit 31 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn thres0_en(&mut self) -> THRES0_EN_W<31> {
         THRES0_EN_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for THRES_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [thres_ctrl::W](W) writer structure"]
 impl crate::Writable for THRES_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets THRES_CTRL to value 0"]
 impl crate::Resettable for THRES_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

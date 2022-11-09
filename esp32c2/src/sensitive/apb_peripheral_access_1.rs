@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_peripheral_access_split_burst(&mut self) -> APB_PERIPHERAL_ACCESS_SPLIT_BURST_W<0> {
         APB_PERIPHERAL_ACCESS_SPLIT_BURST_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APB_PERIPHERAL_ACCESS_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [apb_peripheral_access_1::W](W) writer structure"]
 impl crate::Writable for APB_PERIPHERAL_ACCESS_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB_PERIPHERAL_ACCESS_1 to value 0x01"]
 impl crate::Resettable for APB_PERIPHERAL_ACCESS_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

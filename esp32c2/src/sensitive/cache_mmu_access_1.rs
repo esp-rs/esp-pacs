@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_mmu_rd_acs(&mut self) -> PRO_MMU_RD_ACS_W<0> {
         PRO_MMU_RD_ACS_W::new(self)
     }
     #[doc = "Bit 1 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_mmu_wr_acs(&mut self) -> PRO_MMU_WR_ACS_W<1> {
         PRO_MMU_WR_ACS_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CACHE_MMU_ACCESS_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [cache_mmu_access_1::W](W) writer structure"]
 impl crate::Writable for CACHE_MMU_ACCESS_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CACHE_MMU_ACCESS_1 to value 0x03"]
 impl crate::Resettable for CACHE_MMU_ACCESS_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

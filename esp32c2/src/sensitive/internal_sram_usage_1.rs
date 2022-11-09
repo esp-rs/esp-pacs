@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_usage_cpu_cache(&mut self) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<0> {
         INTERNAL_SRAM_USAGE_CPU_CACHE_W::new(self)
     }
     #[doc = "Bits 1:3 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_usage_cpu_sram(&mut self) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<1> {
         INTERNAL_SRAM_USAGE_CPU_SRAM_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for INTERNAL_SRAM_USAGE_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [internal_sram_usage_1::W](W) writer structure"]
 impl crate::Writable for INTERNAL_SRAM_USAGE_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERNAL_SRAM_USAGE_1 to value 0x0f"]
 impl crate::Resettable for INTERNAL_SRAM_USAGE_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

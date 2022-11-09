@@ -63,6 +63,7 @@ impl R {
 impl W {
     #[doc = "Bits 7:11 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
+    #[must_use]
     pub fn cspi_lock_delay_time(&mut self) -> CSPI_LOCK_DELAY_TIME_W<7> {
         CSPI_LOCK_DELAY_TIME_W::new(self)
     }
@@ -85,11 +86,10 @@ impl crate::Readable for FSM_SPEC {
 #[doc = "`write(|w| ..)` method takes [fsm::W](W) writer structure"]
 impl crate::Writable for FSM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSM to value 0x0200"]
 impl crate::Resettable for FSM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

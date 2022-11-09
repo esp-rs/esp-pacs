@@ -73,11 +73,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - This field is used to set the count of prescaler of XTAL_CLK."]
     #[inline(always)]
+    #[must_use]
     pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<0> {
         PRE_DIV_CNT_W::new(self)
     }
     #[doc = "Bits 10:11 - This field is used to select soc clock."]
     #[inline(always)]
+    #[must_use]
     pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<10> {
         SOC_CLK_SEL_W::new(self)
     }
@@ -100,11 +102,10 @@ impl crate::Readable for SYSCLK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sysclk_conf::W](W) writer structure"]
 impl crate::Writable for SYSCLK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSCLK_CONF to value 0x01"]
 impl crate::Resettable for SYSCLK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

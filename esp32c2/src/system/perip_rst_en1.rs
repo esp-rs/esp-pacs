@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set 1 to let CRYPTO_ECC reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ecc_rst(&mut self) -> CRYPTO_ECC_RST_W<1> {
         CRYPTO_ECC_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to let CRYPTO_SHA reset"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<2> {
         CRYPTO_SHA_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to let DMA reset"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_rst(&mut self) -> DMA_RST_W<6> {
         DMA_RST_W::new(self)
     }
     #[doc = "Bit 10 - Set 1 to let TSENS reset"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_rst(&mut self) -> TSENS_RST_W<10> {
         TSENS_RST_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for PERIP_RST_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN1 to value 0x46"]
 impl crate::Resettable for PERIP_RST_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x46
-    }
+    const RESET_VALUE: Self::Ux = 0x46;
 }

@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set 1 to enable ECC clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<1> {
         CRYPTO_ECC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
+    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<2> {
         CRYPTO_SHA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
+    #[must_use]
     pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<6> {
         DMA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 10 - Set 1 to enable TSENS clock"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<10> {
         TSENS_CLK_EN_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for PERIP_CLK_EN1_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_clk_en1::W](W) writer structure"]
 impl crate::Writable for PERIP_CLK_EN1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_CLK_EN1 to value 0"]
 impl crate::Resettable for PERIP_CLK_EN1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

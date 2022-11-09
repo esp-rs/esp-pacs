@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 0 - reg_clk20_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk20_oen(&mut self) -> CLK20_OEN_W<0> {
         CLK20_OEN_W::new(self)
     }
     #[doc = "Bit 1 - reg_clk22_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk22_oen(&mut self) -> CLK22_OEN_W<1> {
         CLK22_OEN_W::new(self)
     }
     #[doc = "Bit 2 - reg_clk44_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk44_oen(&mut self) -> CLK44_OEN_W<2> {
         CLK44_OEN_W::new(self)
     }
     #[doc = "Bit 3 - reg_clk_bb_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_bb_oen(&mut self) -> CLK_BB_OEN_W<3> {
         CLK_BB_OEN_W::new(self)
     }
     #[doc = "Bit 4 - reg_clk80_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk80_oen(&mut self) -> CLK80_OEN_W<4> {
         CLK80_OEN_W::new(self)
     }
     #[doc = "Bit 5 - reg_clk160_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk160_oen(&mut self) -> CLK160_OEN_W<5> {
         CLK160_OEN_W::new(self)
     }
     #[doc = "Bit 6 - reg_clk_320m_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_320m_oen(&mut self) -> CLK_320M_OEN_W<6> {
         CLK_320M_OEN_W::new(self)
     }
     #[doc = "Bit 7 - reg_clk_adc_inf_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W<7> {
         CLK_ADC_INF_OEN_W::new(self)
     }
     #[doc = "Bit 8 - reg_clk_dac_cpu_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_dac_cpu_oen(&mut self) -> CLK_DAC_CPU_OEN_W<8> {
         CLK_DAC_CPU_OEN_W::new(self)
     }
     #[doc = "Bit 9 - reg_clk40x_bb_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk40x_bb_oen(&mut self) -> CLK40X_BB_OEN_W<9> {
         CLK40X_BB_OEN_W::new(self)
     }
     #[doc = "Bit 10 - reg_clk_xtal_oen"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W<10> {
         CLK_XTAL_OEN_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for CLK_OUT_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_out_en::W](W) writer structure"]
 impl crate::Writable for CLK_OUT_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_OUT_EN to value 0x07ff"]
 impl crate::Resettable for CLK_OUT_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x07ff
-    }
+    const RESET_VALUE: Self::Ux = 0x07ff;
 }

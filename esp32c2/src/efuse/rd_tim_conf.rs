@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse read."]
     #[inline(always)]
+    #[must_use]
     pub fn thr_a(&mut self) -> THR_A_W<0> {
         THR_A_W::new(self)
     }
     #[doc = "Bits 8:15 - Configures pulse time for efuse read."]
     #[inline(always)]
+    #[must_use]
     pub fn trd(&mut self) -> TRD_W<8> {
         TRD_W::new(self)
     }
     #[doc = "Bits 16:23 - Configures setup time for efuse read."]
     #[inline(always)]
+    #[must_use]
     pub fn tsur_a(&mut self) -> TSUR_A_W<16> {
         TSUR_A_W::new(self)
     }
     #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
     #[inline(always)]
+    #[must_use]
     pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<24> {
         READ_INIT_NUM_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for RD_TIM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [rd_tim_conf::W](W) writer structure"]
 impl crate::Writable for RD_TIM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RD_TIM_CONF to value 0x1201_0201"]
 impl crate::Resettable for RD_TIM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1201_0201
-    }
+    const RESET_VALUE: Self::Ux = 0x1201_0201;
 }

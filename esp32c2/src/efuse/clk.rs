@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W<0> {
         EFUSE_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit and force to activate clock signal of eFuse SRAM."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<1> {
         MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to force eFuse SRAM into working mode."]
     #[inline(always)]
+    #[must_use]
     pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W<2> {
         EFUSE_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit and force to enable clock signal of eFuse memory."]
     #[inline(always)]
+    #[must_use]
     pub fn en(&mut self) -> EN_W<16> {
         EN_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for CLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk::W](W) writer structure"]
 impl crate::Writable for CLK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK to value 0x02"]
 impl crate::Resettable for CLK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

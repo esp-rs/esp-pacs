@@ -24,6 +24,7 @@ pub type DMA_CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONTINU
 impl W {
     #[doc = "Bit 0 - Continue dma-sha."]
     #[inline(always)]
+    #[must_use]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<0> {
         DMA_CONTINUE_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for DMA_CONTINUE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_continue::W](W) writer structure"]
 impl crate::Writable for DMA_CONTINUE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_CONTINUE to value 0"]
 impl crate::Resettable for DMA_CONTINUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -24,6 +24,7 @@ pub type TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bo
 impl W {
     #[doc = "Bit 0 - Set this bit to start manual encryption calculation"]
     #[inline(always)]
+    #[must_use]
     pub fn trigger(&mut self) -> TRIGGER_W<0> {
         TRIGGER_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for TRIGGER_SPEC {
 #[doc = "`write(|w| ..)` method takes [trigger::W](W) writer structure"]
 impl crate::Writable for TRIGGER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TRIGGER to value 0"]
 impl crate::Resettable for TRIGGER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

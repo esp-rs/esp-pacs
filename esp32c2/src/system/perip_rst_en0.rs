@@ -138,56 +138,67 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Set 1 to let SPI01 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W<1> {
         SPI01_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to let UART reset"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rst(&mut self) -> UART_RST_W<2> {
         UART_RST_W::new(self)
     }
     #[doc = "Bit 5 - Set 1 to let UART1 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_rst(&mut self) -> UART1_RST_W<5> {
         UART1_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set 1 to let SPI2 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W<6> {
         SPI2_RST_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to let I2C_EXT0 reset"]
     #[inline(always)]
+    #[must_use]
     pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<7> {
         I2C_EXT0_RST_W::new(self)
     }
     #[doc = "Bit 11 - Set 1 to let LEDC reset"]
     #[inline(always)]
+    #[must_use]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W<11> {
         LEDC_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set 1 to let TIMERGROUP reset"]
     #[inline(always)]
+    #[must_use]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<13> {
         TIMERGROUP_RST_W::new(self)
     }
     #[doc = "Bit 24 - Set 1 to let UART_MEM reset"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<24> {
         UART_MEM_RST_W::new(self)
     }
     #[doc = "Bit 28 - Set 1 to let APB_SARADC reset"]
     #[inline(always)]
+    #[must_use]
     pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<28> {
         APB_SARADC_RST_W::new(self)
     }
     #[doc = "Bit 29 - Set 1 to let SYSTIMER reset"]
     #[inline(always)]
+    #[must_use]
     pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<29> {
         SYSTIMER_RST_W::new(self)
     }
     #[doc = "Bit 30 - Set 1 to let ADC2_ARB reset"]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<30> {
         ADC2_ARB_RST_W::new(self)
     }
@@ -210,11 +221,10 @@ impl crate::Readable for PERIP_RST_EN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perip_rst_en0::W](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN0 to value 0"]
 impl crate::Resettable for PERIP_RST_EN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

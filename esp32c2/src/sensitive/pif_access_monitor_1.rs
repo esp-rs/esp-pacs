@@ -61,6 +61,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn pif_access_monitor_nonword_violate_clr(
         &mut self,
     ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<0> {
@@ -68,6 +69,7 @@ impl W {
     }
     #[doc = "Bit 1 - Need add description"]
     #[inline(always)]
+    #[must_use]
     pub fn pif_access_monitor_nonword_violate_en(
         &mut self,
     ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<1> {
@@ -92,11 +94,10 @@ impl crate::Readable for PIF_ACCESS_MONITOR_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [pif_access_monitor_1::W](W) writer structure"]
 impl crate::Writable for PIF_ACCESS_MONITOR_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIF_ACCESS_MONITOR_1 to value 0x03"]
 impl crate::Resettable for PIF_ACCESS_MONITOR_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

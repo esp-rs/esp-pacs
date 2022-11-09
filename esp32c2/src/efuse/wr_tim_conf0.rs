@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse program."]
     #[inline(always)]
+    #[must_use]
     pub fn thp_a(&mut self) -> THP_A_W<0> {
         THP_A_W::new(self)
     }
     #[doc = "Bits 8:15 - Configures pulse time for burning '0' bit."]
     #[inline(always)]
+    #[must_use]
     pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<8> {
         TPGM_INACTIVE_W::new(self)
     }
     #[doc = "Bits 16:31 - Configures pulse time for burning '1' bit."]
     #[inline(always)]
+    #[must_use]
     pub fn tpgm(&mut self) -> TPGM_W<16> {
         TPGM_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for WR_TIM_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [wr_tim_conf0::W](W) writer structure"]
 impl crate::Writable for WR_TIM_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WR_TIM_CONF0 to value 0x00c8_0101"]
 impl crate::Resettable for WR_TIM_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x00c8_0101
-    }
+    const RESET_VALUE: Self::Ux = 0x00c8_0101;
 }

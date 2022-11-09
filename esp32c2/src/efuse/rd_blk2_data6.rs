@@ -26,7 +26,7 @@ impl R {
     #[doc = "Bits 11:31 - Store the bit \\[0:20\\] of block2 reserved data."]
     #[inline(always)]
     pub fn blk2_reserved_data_0(&self) -> BLK2_RESERVED_DATA_0_R {
-        BLK2_RESERVED_DATA_0_R::new(((self.bits >> 11) & 0x001f_ffff) as u32)
+        BLK2_RESERVED_DATA_0_R::new((self.bits >> 11) & 0x001f_ffff)
     }
 }
 #[doc = "Register 6 of BLOCK2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk2_data6](index.html) module"]
@@ -40,8 +40,5 @@ impl crate::Readable for RD_BLK2_DATA6_SPEC {
 }
 #[doc = "`reset()` method sets RD_BLK2_DATA6 to value 0"]
 impl crate::Resettable for RD_BLK2_DATA6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset receiver"]
     #[inline(always)]
+    #[must_use]
     pub fn start(&mut self) -> START_W<0> {
         START_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset Rx AFIFO"]
     #[inline(always)]
+    #[must_use]
     pub fn reset(&mut self) -> RESET_W<1> {
         RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
+    #[must_use]
     pub fn key_length(&mut self) -> KEY_LENGTH_W<2> {
         KEY_LENGTH_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
+    #[must_use]
     pub fn security_mode(&mut self) -> SECURITY_MODE_W<3> {
         SECURITY_MODE_W::new(self)
     }
     #[doc = "Bit 4 - clk gate"]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<4> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bits 5:7 - Reserved"]
     #[inline(always)]
+    #[must_use]
     pub fn work_mode(&mut self) -> WORK_MODE_W<5> {
         WORK_MODE_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for MULT_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [mult_conf::W](W) writer structure"]
 impl crate::Writable for MULT_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MULT_CONF to value 0"]
 impl crate::Resettable for MULT_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:16 - sleep wakeup cause"]
     #[inline(always)]
     pub fn wakeup_cause(&self) -> WAKEUP_CAUSE_R {
-        WAKEUP_CAUSE_R::new((self.bits & 0x0001_ffff) as u32)
+        WAKEUP_CAUSE_R::new(self.bits & 0x0001_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:16 - sleep wakeup cause"]
     #[inline(always)]
+    #[must_use]
     pub fn wakeup_cause(&mut self) -> WAKEUP_CAUSE_W<0> {
         WAKEUP_CAUSE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SLP_WAKEUP_CAUSE_SPEC {
 #[doc = "`write(|w| ..)` method takes [slp_wakeup_cause::W](W) writer structure"]
 impl crate::Writable for SLP_WAKEUP_CAUSE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLP_WAKEUP_CAUSE to value 0"]
 impl crate::Resettable for SLP_WAKEUP_CAUSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

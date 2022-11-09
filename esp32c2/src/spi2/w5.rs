@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
+    #[must_use]
     pub fn buf5(&mut self) -> BUF5_W<0> {
         BUF5_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for W5_SPEC {
 #[doc = "`write(|w| ..)` method takes [w5::W](W) writer structure"]
 impl crate::Writable for W5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets W5 to value 0"]
 impl crate::Resettable for W5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

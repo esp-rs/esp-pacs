@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_st(&mut self) -> SLP_WAKEUP_INT_ST_W<0> {
         SLP_WAKEUP_INT_ST_W::new(self)
     }
     #[doc = "Bit 1 - sleep reject interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_st(&mut self) -> SLP_REJECT_INT_ST_W<1> {
         SLP_REJECT_INT_ST_W::new(self)
     }
     #[doc = "Bit 3 - RTC WDT interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_st(&mut self) -> WDT_INT_ST_W<3> {
         WDT_INT_ST_W::new(self)
     }
     #[doc = "Bit 9 - brown out interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_st(&mut self) -> BROWN_OUT_INT_ST_W<9> {
         BROWN_OUT_INT_ST_W::new(self)
     }
     #[doc = "Bit 10 - RTC main timer interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_st(&mut self) -> MAIN_TIMER_INT_ST_W<10> {
         MAIN_TIMER_INT_ST_W::new(self)
     }
     #[doc = "Bit 15 - super watch dog interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn swd_int_st(&mut self) -> SWD_INT_ST_W<15> {
         SWD_INT_ST_W::new(self)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
+    #[must_use]
     pub fn bbpll_cal_int_st(&mut self) -> BBPLL_CAL_INT_ST_W<20> {
         BBPLL_CAL_INT_ST_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for INT_ST_RTC_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_st_rtc::W](W) writer structure"]
 impl crate::Writable for INT_ST_RTC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ST_RTC to value 0"]
 impl crate::Resettable for INT_ST_RTC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
