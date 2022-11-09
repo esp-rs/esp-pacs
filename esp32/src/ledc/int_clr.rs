@@ -86,121 +86,145 @@ pub type DUTY_CHNG_END_LSCH7_INT_CLR_W<'a, const O: u8> =
 impl W {
     #[doc = "Bit 0 - Set this bit to clear high speed channel0 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn hstimer0_ovf_int_clr(&mut self) -> HSTIMER0_OVF_INT_CLR_W<0> {
         HSTIMER0_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear high speed channel1 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn hstimer1_ovf_int_clr(&mut self) -> HSTIMER1_OVF_INT_CLR_W<1> {
         HSTIMER1_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear high speed channel2 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn hstimer2_ovf_int_clr(&mut self) -> HSTIMER2_OVF_INT_CLR_W<2> {
         HSTIMER2_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear high speed channel3 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn hstimer3_ovf_int_clr(&mut self) -> HSTIMER3_OVF_INT_CLR_W<3> {
         HSTIMER3_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear low speed channel0 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer0_ovf_int_clr(&mut self) -> LSTIMER0_OVF_INT_CLR_W<4> {
         LSTIMER0_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear low speed channel1 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer1_ovf_int_clr(&mut self) -> LSTIMER1_OVF_INT_CLR_W<5> {
         LSTIMER1_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear low speed channel2 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer2_ovf_int_clr(&mut self) -> LSTIMER2_OVF_INT_CLR_W<6> {
         LSTIMER2_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear low speed channel3 counter overflow interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn lstimer3_ovf_int_clr(&mut self) -> LSTIMER3_OVF_INT_CLR_W<7> {
         LSTIMER3_OVF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear high speed channel 0 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch0_int_clr(&mut self) -> DUTY_CHNG_END_HSCH0_INT_CLR_W<8> {
         DUTY_CHNG_END_HSCH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to clear high speed channel 1 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch1_int_clr(&mut self) -> DUTY_CHNG_END_HSCH1_INT_CLR_W<9> {
         DUTY_CHNG_END_HSCH1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to clear high speed channel 2 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch2_int_clr(&mut self) -> DUTY_CHNG_END_HSCH2_INT_CLR_W<10> {
         DUTY_CHNG_END_HSCH2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to clear high speed channel 3 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch3_int_clr(&mut self) -> DUTY_CHNG_END_HSCH3_INT_CLR_W<11> {
         DUTY_CHNG_END_HSCH3_INT_CLR_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to clear high speed channel 4 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch4_int_clr(&mut self) -> DUTY_CHNG_END_HSCH4_INT_CLR_W<12> {
         DUTY_CHNG_END_HSCH4_INT_CLR_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to clear high speed channel 5 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch5_int_clr(&mut self) -> DUTY_CHNG_END_HSCH5_INT_CLR_W<13> {
         DUTY_CHNG_END_HSCH5_INT_CLR_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to clear high speed channel 6 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch6_int_clr(&mut self) -> DUTY_CHNG_END_HSCH6_INT_CLR_W<14> {
         DUTY_CHNG_END_HSCH6_INT_CLR_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to clear high speed channel 7 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_hsch7_int_clr(&mut self) -> DUTY_CHNG_END_HSCH7_INT_CLR_W<15> {
         DUTY_CHNG_END_HSCH7_INT_CLR_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to clear low speed channel 0 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch0_int_clr(&mut self) -> DUTY_CHNG_END_LSCH0_INT_CLR_W<16> {
         DUTY_CHNG_END_LSCH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to clear low speed channel 1 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch1_int_clr(&mut self) -> DUTY_CHNG_END_LSCH1_INT_CLR_W<17> {
         DUTY_CHNG_END_LSCH1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to clear low speed channel 2 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch2_int_clr(&mut self) -> DUTY_CHNG_END_LSCH2_INT_CLR_W<18> {
         DUTY_CHNG_END_LSCH2_INT_CLR_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to clear low speed channel 3 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch3_int_clr(&mut self) -> DUTY_CHNG_END_LSCH3_INT_CLR_W<19> {
         DUTY_CHNG_END_LSCH3_INT_CLR_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to clear low speed channel 4 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch4_int_clr(&mut self) -> DUTY_CHNG_END_LSCH4_INT_CLR_W<20> {
         DUTY_CHNG_END_LSCH4_INT_CLR_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to clear low speed channel 5 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch5_int_clr(&mut self) -> DUTY_CHNG_END_LSCH5_INT_CLR_W<21> {
         DUTY_CHNG_END_LSCH5_INT_CLR_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to clear low speed channel 6 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch6_int_clr(&mut self) -> DUTY_CHNG_END_LSCH6_INT_CLR_W<22> {
         DUTY_CHNG_END_LSCH6_INT_CLR_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to clear low speed channel 7 duty change done interrupt."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_chng_end_lsch7_int_clr(&mut self) -> DUTY_CHNG_END_LSCH7_INT_CLR_W<23> {
         DUTY_CHNG_END_LSCH7_INT_CLR_W::new(self)
     }
@@ -219,11 +243,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

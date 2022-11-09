@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
     #[inline(always)]
+    #[must_use]
     pub fn int_hold_ena(&mut self) -> INT_HOLD_ENA_W<0> {
         INT_HOLD_ENA_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for EXT3_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext3::W](W) writer structure"]
 impl crate::Writable for EXT3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT3 to value 0"]
 impl crate::Resettable for EXT3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

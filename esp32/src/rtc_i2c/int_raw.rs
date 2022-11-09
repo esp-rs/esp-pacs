@@ -86,21 +86,25 @@ impl R {
 impl W {
     #[doc = "Bit 3 - Slave accepted 1 byte and address matched"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_trans_complete_int_raw(&mut self) -> SLAVE_TRANS_COMPLETE_INT_RAW_W<3> {
         SLAVE_TRANS_COMPLETE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 4 - Master lost arbitration"]
     #[inline(always)]
+    #[must_use]
     pub fn arbitration_lost_int_raw(&mut self) -> ARBITRATION_LOST_INT_RAW_W<4> {
         ARBITRATION_LOST_INT_RAW_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn master_trans_complete_int_raw(&mut self) -> MASTER_TRANS_COMPLETE_INT_RAW_W<5> {
         MASTER_TRANS_COMPLETE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 6 - Stop condition has been detected interrupt raw status"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_complete_int_raw(&mut self) -> TRANS_COMPLETE_INT_RAW_W<6> {
         TRANS_COMPLETE_INT_RAW_W::new(self)
     }
@@ -123,11 +127,10 @@ impl crate::Readable for INT_RAW_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_raw::W](W) writer structure"]
 impl crate::Writable for INT_RAW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_RAW to value 0"]
 impl crate::Resettable for INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

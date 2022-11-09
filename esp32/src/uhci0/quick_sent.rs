@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - The bits are used to choose which short packet"]
     #[inline(always)]
+    #[must_use]
     pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<0> {
         SINGLE_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable send a short packet"]
     #[inline(always)]
+    #[must_use]
     pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<3> {
         SINGLE_SEND_EN_W::new(self)
     }
     #[doc = "Bits 4:6 - The bits are used to choose which short packet"]
     #[inline(always)]
+    #[must_use]
     pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<4> {
         ALWAYS_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable continuously send the same short packet"]
     #[inline(always)]
+    #[must_use]
     pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<7> {
         ALWAYS_SEND_EN_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for QUICK_SENT_SPEC {
 #[doc = "`write(|w| ..)` method takes [quick_sent::W](W) writer structure"]
 impl crate::Writable for QUICK_SENT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets QUICK_SENT to value 0"]
 impl crate::Resettable for QUICK_SENT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

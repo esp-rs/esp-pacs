@@ -33,8 +33,5 @@ impl crate::Readable for HOST_SLCHOST_CHECK_SUM0_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_CHECK_SUM0 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_CHECK_SUM0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

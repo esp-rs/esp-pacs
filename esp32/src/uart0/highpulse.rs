@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - This register stores the value of the maxinum duration time for the high level pulse. it is used in baudrate-detect process."]
     #[inline(always)]
     pub fn min_cnt(&self) -> MIN_CNT_R {
-        MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        MIN_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [highpulse](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for HIGHPULSE_SPEC {
 }
 #[doc = "`reset()` method sets HIGHPULSE to value 0x000f_ffff"]
 impl crate::Resettable for HIGHPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_ffff;
 }

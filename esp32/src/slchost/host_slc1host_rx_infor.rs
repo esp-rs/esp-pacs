@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn host_slc1host_rx_infor(&self) -> HOST_SLC1HOST_RX_INFOR_R {
-        HOST_SLC1HOST_RX_INFOR_R::new((self.bits & 0x000f_ffff) as u32)
+        HOST_SLC1HOST_RX_INFOR_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc1host_rx_infor(&mut self) -> HOST_SLC1HOST_RX_INFOR_W<0> {
         HOST_SLC1HOST_RX_INFOR_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for HOST_SLC1HOST_RX_INFOR_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slc1host_rx_infor::W](W) writer structure"]
 impl crate::Writable for HOST_SLC1HOST_RX_INFOR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLC1HOST_RX_INFOR to value 0"]
 impl crate::Resettable for HOST_SLC1HOST_RX_INFOR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -66,11 +66,13 @@ impl R {
 impl W {
     #[doc = "Bits 11:21 - wakeup enable bitmap"]
     #[inline(always)]
+    #[must_use]
     pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<11> {
         WAKEUP_ENA_W::new(self)
     }
     #[doc = "Bit 22 - enable filter for gpio wakeup event"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<22> {
         GPIO_WAKEUP_FILTER_W::new(self)
     }
@@ -93,11 +95,10 @@ impl crate::Readable for WAKEUP_STATE_SPEC {
 #[doc = "`write(|w| ..)` method takes [wakeup_state::W](W) writer structure"]
 impl crate::Writable for WAKEUP_STATE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WAKEUP_STATE to value 0x6000"]
 impl crate::Resettable for WAKEUP_STATE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6000
-    }
+    const RESET_VALUE: Self::Ux = 0x6000;
 }

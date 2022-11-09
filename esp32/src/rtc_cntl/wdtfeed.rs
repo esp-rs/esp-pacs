@@ -24,6 +24,7 @@ pub type WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, b
 impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_feed(&mut self) -> WDT_FEED_W<31> {
         WDT_FEED_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for WDTFEED_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtfeed::W](W) writer structure"]
 impl crate::Writable for WDTFEED_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTFEED to value 0"]
 impl crate::Resettable for WDTFEED_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

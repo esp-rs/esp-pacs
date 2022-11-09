@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn operator0_timersel(&mut self) -> OPERATOR0_TIMERSEL_W<0> {
         OPERATOR0_TIMERSEL_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn operator1_timersel(&mut self) -> OPERATOR1_TIMERSEL_W<2> {
         OPERATOR1_TIMERSEL_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
+    #[must_use]
     pub fn operator2_timersel(&mut self) -> OPERATOR2_TIMERSEL_W<4> {
         OPERATOR2_TIMERSEL_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for OPERATOR_TIMERSEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [operator_timersel::W](W) writer structure"]
 impl crate::Writable for OPERATOR_TIMERSEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OPERATOR_TIMERSEL to value 0"]
 impl crate::Resettable for OPERATOR_TIMERSEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

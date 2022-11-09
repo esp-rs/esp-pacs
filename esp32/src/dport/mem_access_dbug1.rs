@@ -68,8 +68,5 @@ impl crate::Readable for MEM_ACCESS_DBUG1_SPEC {
 }
 #[doc = "`reset()` method sets MEM_ACCESS_DBUG1 to value 0"]
 impl crate::Resettable for MEM_ACCESS_DBUG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

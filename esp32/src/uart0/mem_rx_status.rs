@@ -23,7 +23,7 @@ impl R {
     #[doc = "Bits 0:23 - This register stores the current uart rx mem read address and rx mem write address"]
     #[inline(always)]
     pub fn mem_rx_status(&self) -> MEM_RX_STATUS_R {
-        MEM_RX_STATUS_R::new((self.bits & 0x00ff_ffff) as u32)
+        MEM_RX_STATUS_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bits 2:12 - This register stores the rx mem read address"]
     #[inline(always)]
@@ -47,8 +47,5 @@ impl crate::Readable for MEM_RX_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets MEM_RX_STATUS to value 0"]
 impl crate::Resettable for MEM_RX_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

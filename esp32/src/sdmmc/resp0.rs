@@ -13,12 +13,10 @@ impl From<crate::R<RESP0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RESPONSE0` reader - Bit\\[31:0\\]
-of response."]
+#[doc = "Field `RESPONSE0` reader - Bit\\[31:0\\] of response."]
 pub type RESPONSE0_R = crate::FieldReader<u32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Bit\\[31:0\\]
-of response."]
+    #[doc = "Bits 0:31 - Bit\\[31:0\\] of response."]
     #[inline(always)]
     pub fn response0(&self) -> RESPONSE0_R {
         RESPONSE0_R::new(self.bits)
@@ -35,8 +33,5 @@ impl crate::Readable for RESP0_SPEC {
 }
 #[doc = "`reset()` method sets RESP0 to value 0"]
 impl crate::Resettable for RESP0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

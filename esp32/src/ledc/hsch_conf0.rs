@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - There are four high speed timers the two bits are used to select one of them for high speed channel0. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sel(&mut self) -> TIMER_SEL_W<0> {
         TIMER_SEL_W::new(self)
     }
     #[doc = "Bit 2 - This is the output enable control bit for high speed channel0"]
     #[inline(always)]
+    #[must_use]
     pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<2> {
         SIG_OUT_EN_W::new(self)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when high speed channel0 is off."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_lv(&mut self) -> IDLE_LV_W<3> {
         IDLE_LV_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for HSCH_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [hsch_conf0::W](W) writer structure"]
 impl crate::Writable for HSCH_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HSCH%s_CONF0 to value 0"]
 impl crate::Resettable for HSCH_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

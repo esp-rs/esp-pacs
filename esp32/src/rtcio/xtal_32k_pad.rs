@@ -260,121 +260,145 @@ impl R {
 impl W {
     #[doc = "Bits 1:2 - 32K XTAL self-bias reference control."]
     #[inline(always)]
+    #[must_use]
     pub fn dbias_xtal_32k(&mut self) -> DBIAS_XTAL_32K_W<1> {
         DBIAS_XTAL_32K_W::new(self)
     }
     #[doc = "Bits 3:4 - 32K XTAL resistor bias control."]
     #[inline(always)]
+    #[must_use]
     pub fn dres_xtal_32k(&mut self) -> DRES_XTAL_32K_W<3> {
         DRES_XTAL_32K_W::new(self)
     }
     #[doc = "Bit 5 - the input enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_fun_ie(&mut self) -> X32P_FUN_IE_W<5> {
         X32P_FUN_IE_W::new(self)
     }
     #[doc = "Bit 6 - the output enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_slp_oe(&mut self) -> X32P_SLP_OE_W<6> {
         X32P_SLP_OE_W::new(self)
     }
     #[doc = "Bit 7 - the input enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_slp_ie(&mut self) -> X32P_SLP_IE_W<7> {
         X32P_SLP_IE_W::new(self)
     }
     #[doc = "Bit 8 - the sleep status selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_slp_sel(&mut self) -> X32P_SLP_SEL_W<8> {
         X32P_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 9:10 - the functional selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_fun_sel(&mut self) -> X32P_FUN_SEL_W<9> {
         X32P_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_fun_ie(&mut self) -> X32N_FUN_IE_W<11> {
         X32N_FUN_IE_W::new(self)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_slp_oe(&mut self) -> X32N_SLP_OE_W<12> {
         X32N_SLP_OE_W::new(self)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_slp_ie(&mut self) -> X32N_SLP_IE_W<13> {
         X32N_SLP_IE_W::new(self)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_slp_sel(&mut self) -> X32N_SLP_SEL_W<14> {
         X32N_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_fun_sel(&mut self) -> X32N_FUN_SEL_W<15> {
         X32N_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_mux_sel(&mut self) -> X32P_MUX_SEL_W<17> {
         X32P_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 18 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_mux_sel(&mut self) -> X32N_MUX_SEL_W<18> {
         X32N_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 19 - Power up 32kHz crystal oscillator"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_xtal_32k(&mut self) -> XPD_XTAL_32K_W<19> {
         XPD_XTAL_32K_W::new(self)
     }
     #[doc = "Bits 20:21 - 32K XTAL bias current DAC."]
     #[inline(always)]
+    #[must_use]
     pub fn dac_xtal_32k(&mut self) -> DAC_XTAL_32K_W<20> {
         DAC_XTAL_32K_W::new(self)
     }
     #[doc = "Bit 22 - the pull up enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_rue(&mut self) -> X32P_RUE_W<22> {
         X32P_RUE_W::new(self)
     }
     #[doc = "Bit 23 - the pull down enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_rde(&mut self) -> X32P_RDE_W<23> {
         X32P_RDE_W::new(self)
     }
     #[doc = "Bit 24 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_hold(&mut self) -> X32P_HOLD_W<24> {
         X32P_HOLD_W::new(self)
     }
     #[doc = "Bits 25:26 - the driver strength of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32p_drv(&mut self) -> X32P_DRV_W<25> {
         X32P_DRV_W::new(self)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_rue(&mut self) -> X32N_RUE_W<27> {
         X32N_RUE_W::new(self)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_rde(&mut self) -> X32N_RDE_W<28> {
         X32N_RDE_W::new(self)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_hold(&mut self) -> X32N_HOLD_W<29> {
         X32N_HOLD_W::new(self)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn x32n_drv(&mut self) -> X32N_DRV_W<30> {
         X32N_DRV_W::new(self)
     }
@@ -397,11 +421,10 @@ impl crate::Readable for XTAL_32K_PAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [xtal_32k_pad::W](W) writer structure"]
 impl crate::Writable for XTAL_32K_PAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets XTAL_32K_PAD to value 0x8410_0010"]
 impl crate::Resettable for XTAL_32K_PAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8410_0010
-    }
+    const RESET_VALUE: Self::Ux = 0x8410_0010;
 }

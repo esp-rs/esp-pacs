@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn app_iram0addr_ia(&self) -> APP_IRAM0ADDR_IA_R {
-        APP_IRAM0ADDR_IA_R::new((self.bits & 0x000f_ffff) as u32)
+        APP_IRAM0ADDR_IA_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug6](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for APP_DCACHE_DBUG6_SPEC {
 }
 #[doc = "`reset()` method sets APP_DCACHE_DBUG6 to value 0"]
 impl crate::Resettable for APP_DCACHE_DBUG6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

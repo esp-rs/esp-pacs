@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Stage 3 timeout value in SWDT clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_stg3_hold(&mut self) -> WDT_STG3_HOLD_W<0> {
         WDT_STG3_HOLD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for WDTCONFIG5_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdtconfig5::W](W) writer structure"]
 impl crate::Writable for WDTCONFIG5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG5 to value 0x000f_ffff"]
 impl crate::Resettable for WDTCONFIG5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000f_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x000f_ffff;
 }

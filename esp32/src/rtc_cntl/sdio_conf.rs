@@ -109,36 +109,43 @@ impl R {
 impl W {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W<21> {
         SDIO_PD_EN_W::new(self)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG 0: use state machine"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_force(&mut self) -> SDIO_FORCE_W<22> {
         SDIO_FORCE_W::new(self)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<23> {
         SDIO_TIEH_W::new(self)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<25> {
         DREFL_SDIO_W::new(self)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<27> {
         DREFM_SDIO_W::new(self)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<29> {
         DREFH_SDIO_W::new(self)
     }
     #[doc = "Bit 31 - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<31> {
         XPD_SDIO_W::new(self)
     }
@@ -161,11 +168,10 @@ impl crate::Readable for SDIO_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [sdio_conf::W](W) writer structure"]
 impl crate::Writable for SDIO_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SDIO_CONF to value 0x02a0_0000"]
 impl crate::Resettable for SDIO_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02a0_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x02a0_0000;
 }

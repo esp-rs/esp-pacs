@@ -145,56 +145,67 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W<0> {
         SAR1_BIT_WIDTH_W::new(self)
     }
     #[doc = "Bits 2:3 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W<2> {
         SAR2_BIT_WIDTH_W::new(self)
     }
     #[doc = "Bit 4 - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<4> {
         SAR2_EN_TEST_W::new(self)
     }
     #[doc = "Bits 5:7 - SAR2_PWDET_CCT PA power detector capacitance tuning."]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<5> {
         SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 8 - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<8> {
         ULP_CP_FORCE_START_TOP_W::new(self)
     }
     #[doc = "Bit 9 - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<9> {
         ULP_CP_START_TOP_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W<10> {
         SARCLK_EN_W::new(self)
     }
     #[doc = "Bits 11:21 - initialized PC for ULP-coprocessor"]
     #[inline(always)]
+    #[must_use]
     pub fn pc_init(&mut self) -> PC_INIT_W<11> {
         PC_INIT_W::new(self)
     }
     #[doc = "Bit 22 - stop SAR ADC2 conversion"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_stop(&mut self) -> SAR2_STOP_W<22> {
         SAR2_STOP_W::new(self)
     }
     #[doc = "Bit 23 - stop SAR ADC1 conversion"]
     #[inline(always)]
+    #[must_use]
     pub fn sar1_stop(&mut self) -> SAR1_STOP_W<23> {
         SAR1_STOP_W::new(self)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W<24> {
         SAR2_PWDET_EN_W::new(self)
     }
@@ -217,11 +228,10 @@ impl crate::Readable for SAR_START_FORCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_start_force::W](W) writer structure"]
 impl crate::Writable for SAR_START_FORCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_START_FORCE to value 0x0f"]
 impl crate::Resettable for SAR_START_FORCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0f
-    }
+    const RESET_VALUE: Self::Ux = 0x0f;
 }

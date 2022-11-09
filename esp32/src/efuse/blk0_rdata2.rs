@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23 - read for high 24bit WIFI_MAC_Address"]
     #[inline(always)]
     pub fn rd_wifi_mac_crc_high(&self) -> RD_WIFI_MAC_CRC_HIGH_R {
-        RD_WIFI_MAC_CRC_HIGH_R::new((self.bits & 0x00ff_ffff) as u32)
+        RD_WIFI_MAC_CRC_HIGH_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata2](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for BLK0_RDATA2_SPEC {
 }
 #[doc = "`reset()` method sets BLK0_RDATA2 to value 0"]
 impl crate::Resettable for BLK0_RDATA2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

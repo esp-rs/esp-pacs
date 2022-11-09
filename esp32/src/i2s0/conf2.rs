@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn camera_en(&mut self) -> CAMERA_EN_W<0> {
         CAMERA_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<1> {
         LCD_TX_WRX2_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<2> {
         LCD_TX_SDX2_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<3> {
         DATA_ENABLE_TEST_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn data_enable(&mut self) -> DATA_ENABLE_W<4> {
         DATA_ENABLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn lcd_en(&mut self) -> LCD_EN_W<5> {
         LCD_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<6> {
         EXT_ADC_START_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<7> {
         INTER_VALID_EN_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for CONF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf2::W](W) writer structure"]
 impl crate::Writable for CONF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF2 to value 0"]
 impl crate::Resettable for CONF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

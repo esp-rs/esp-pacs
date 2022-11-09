@@ -146,51 +146,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_type(&mut self) -> RECORD_PDEBUGLS0STAT_TYPE_W<0> {
         RECORD_PDEBUGLS0STAT_TYPE_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_sz(&mut self) -> RECORD_PDEBUGLS0STAT_SZ_W<4> {
         RECORD_PDEBUGLS0STAT_SZ_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_dtlbm(&mut self) -> RECORD_PDEBUGLS0STAT_DTLBM_W<8> {
         RECORD_PDEBUGLS0STAT_DTLBM_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_dcm(&mut self) -> RECORD_PDEBUGLS0STAT_DCM_W<9> {
         RECORD_PDEBUGLS0STAT_DCM_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_dch(&mut self) -> RECORD_PDEBUGLS0STAT_DCH_W<10> {
         RECORD_PDEBUGLS0STAT_DCH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_uc(&mut self) -> RECORD_PDEBUGLS0STAT_UC_W<12> {
         RECORD_PDEBUGLS0STAT_UC_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_wb(&mut self) -> RECORD_PDEBUGLS0STAT_WB_W<13> {
         RECORD_PDEBUGLS0STAT_WB_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_coh(&mut self) -> RECORD_PDEBUGLS0STAT_COH_W<16> {
         RECORD_PDEBUGLS0STAT_COH_W::new(self)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_stcoh(&mut self) -> RECORD_PDEBUGLS0STAT_STCOH_W<17> {
         RECORD_PDEBUGLS0STAT_STCOH_W::new(self)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugls0stat_tgt(&mut self) -> RECORD_PDEBUGLS0STAT_TGT_W<20> {
         RECORD_PDEBUGLS0STAT_TGT_W::new(self)
     }
@@ -213,11 +223,10 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebugls0stat::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGLS0STAT to value 0"]
 impl crate::Resettable for PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

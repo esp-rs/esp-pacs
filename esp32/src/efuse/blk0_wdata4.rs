@@ -114,41 +114,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn ck8m_freq(&mut self) -> CK8M_FREQ_W<0> {
         CK8M_FREQ_W::new(self)
     }
     #[doc = "Bits 8:12 - True ADC reference voltage"]
     #[inline(always)]
+    #[must_use]
     pub fn adc_vref(&mut self) -> ADC_VREF_W<8> {
         ADC_VREF_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_drefh(&mut self) -> SDIO_DREFH_W<8> {
         SDIO_DREFH_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_drefm(&mut self) -> SDIO_DREFM_W<10> {
         SDIO_DREFM_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_drefl(&mut self) -> SDIO_DREFL_W<12> {
         SDIO_DREFL_W::new(self)
     }
     #[doc = "Bit 14 - program for XPD_SDIO_REG"]
     #[inline(always)]
+    #[must_use]
     pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<14> {
         XPD_SDIO_W::new(self)
     }
     #[doc = "Bit 15 - program for SDIO_TIEH"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<15> {
         SDIO_TIEH_W::new(self)
     }
     #[doc = "Bit 16 - program for sdio_force"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_force(&mut self) -> SDIO_FORCE_W<16> {
         SDIO_FORCE_W::new(self)
     }
@@ -171,11 +179,10 @@ impl crate::Readable for BLK0_WDATA4_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_wdata4::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_WDATA4 to value 0"]
 impl crate::Resettable for BLK0_WDATA4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

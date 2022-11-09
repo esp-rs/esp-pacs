@@ -35,23 +35,23 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x80 - "]
     #[inline(always)]
-    pub fn sha1_continue(&self) -> &SHA1_CONTINUE {
-        unsafe { &*(((self as *const Self) as *const u8).add(128usize) as *const SHA1_CONTINUE) }
+    pub const fn sha1_continue(&self) -> &SHA1_CONTINUE {
+        unsafe { &*(self as *const Self).cast::<u8>().add(128usize).cast() }
     }
     #[doc = "0x80 - "]
     #[inline(always)]
-    pub fn sha1_start(&self) -> &SHA1_START {
-        unsafe { &*(((self as *const Self) as *const u8).add(128usize) as *const SHA1_START) }
+    pub const fn sha1_start(&self) -> &SHA1_START {
+        unsafe { &*(self as *const Self).cast::<u8>().add(128usize).cast() }
     }
     #[doc = "0x90 - "]
     #[inline(always)]
-    pub fn sha256_load(&self) -> &SHA256_LOAD {
-        unsafe { &*(((self as *const Self) as *const u8).add(144usize) as *const SHA256_LOAD) }
+    pub const fn sha256_load(&self) -> &SHA256_LOAD {
+        unsafe { &*(self as *const Self).cast::<u8>().add(144usize).cast() }
     }
     #[doc = "0x90 - "]
     #[inline(always)]
-    pub fn sha256_start(&self) -> &SHA256_START {
-        unsafe { &*(((self as *const Self) as *const u8).add(144usize) as *const SHA256_START) }
+    pub const fn sha256_start(&self) -> &SHA256_START {
+        unsafe { &*(self as *const Self).cast::<u8>().add(144usize).cast() }
     }
 }
 #[doc = "TEXT_ (rw) register accessor: an alias for `Reg<TEXT__SPEC>`"]

@@ -33,8 +33,5 @@ impl crate::Readable for HOST_SLC_APBWIN_RDATA_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLC_APBWIN_RDATA to value 0"]
 impl crate::Resettable for HOST_SLC_APBWIN_RDATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

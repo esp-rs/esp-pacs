@@ -34,11 +34,9 @@ impl From<crate::W<LSTIMER_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\]
-the max bit width for counter is 20."]
+#[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
 pub type DUTY_RES_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\]
-the max bit width for counter is 20."]
+#[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
 pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LSTIMER_CONF_SPEC, u8, u8, 5, O>;
 #[doc = "Field `DIV_NUM` reader - This register is used to configure parameter for divider in low speed timer0 the least significant eight bits represent the decimal part."]
 pub type DIV_NUM_R = crate::FieldReader<u32, u32>;
@@ -66,8 +64,7 @@ pub type LIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LIM` writer - "]
 pub type LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LSTIMER_CONF_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\]
-the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
     pub fn duty_res(&self) -> DUTY_RES_R {
         DUTY_RES_R::new((self.bits & 0x1f) as u8)
@@ -75,7 +72,7 @@ the max bit width for counter is 20."]
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in low speed timer0 the least significant eight bits represent the decimal part."]
     #[inline(always)]
     pub fn div_num(&self) -> DIV_NUM_R {
-        DIV_NUM_R::new(((self.bits >> 5) & 0x0003_ffff) as u32)
+        DIV_NUM_R::new((self.bits >> 5) & 0x0003_ffff)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in low speed timer0."]
     #[inline(always)]
@@ -104,39 +101,45 @@ the max bit width for counter is 20."]
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\]
-the max bit width for counter is 20."]
+    #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
+    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<0> {
         DUTY_RES_W::new(self)
     }
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in low speed timer0 the least significant eight bits represent the decimal part."]
     #[inline(always)]
+    #[must_use]
     pub fn div_num(&mut self) -> DIV_NUM_W<5> {
         DIV_NUM_W::new(self)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in low speed timer0."]
     #[inline(always)]
+    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<23> {
         PAUSE_W::new(self)
     }
     #[doc = "Bit 24 - This bit is used to reset low speed timer0 the counter will be 0 after reset."]
     #[inline(always)]
+    #[must_use]
     pub fn rst(&mut self) -> RST_W<24> {
         RST_W::new(self)
     }
     #[doc = "Bit 25 - This bit is used to choose slow_clk or ref_tick for low speed timer0. 1'b1:slow_clk 0:ref_tick"]
     #[inline(always)]
+    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<25> {
         TICK_SEL_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to update reg_div_num_lstime0 and reg_lstimer0_lim."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<26> {
         PARA_UP_W::new(self)
     }
     #[doc = "Bits 31:35"]
     #[inline(always)]
+    #[must_use]
     pub fn lim(&mut self) -> LIM_W<31> {
         LIM_W::new(self)
     }
@@ -159,11 +162,10 @@ impl crate::Readable for LSTIMER_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [lstimer_conf::W](W) writer structure"]
 impl crate::Writable for LSTIMER_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LSTIMER%s_CONF to value 0x0100_0000"]
 impl crate::Resettable for LSTIMER_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0100_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0100_0000;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure thres0 value for unit6."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thres0_u6(&mut self) -> CNT_THRES0_U6_W<0> {
         CNT_THRES0_U6_W::new(self)
     }
     #[doc = "Bits 16:31 - This register is used to configure thres1 value for unit6."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thres1_u6(&mut self) -> CNT_THRES1_U6_W<16> {
         CNT_THRES1_U6_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for U6_CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [u6_conf1::W](W) writer structure"]
 impl crate::Writable for U6_CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets U6_CONF1 to value 0"]
 impl crate::Resettable for U6_CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn ahb_access_grant_0(&mut self) -> AHB_ACCESS_GRANT_0_W<0> {
         AHB_ACCESS_GRANT_0_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for AHB_MPU_TABLE_0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ahb_mpu_table_0::W](W) writer structure"]
 impl crate::Writable for AHB_MPU_TABLE_0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHB_MPU_TABLE_0 to value 0xffff_ffff"]
 impl crate::Resettable for AHB_MPU_TABLE_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ffff;
 }

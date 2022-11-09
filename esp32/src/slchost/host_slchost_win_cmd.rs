@@ -54,11 +54,10 @@ impl crate::Readable for HOST_SLCHOST_WIN_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_win_cmd::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_WIN_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_WIN_CMD to value 0"]
 impl crate::Resettable for HOST_SLCHOST_WIN_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -24,6 +24,7 @@ pub type SHA1_CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA1_CONTI
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-1 operation with subsequent blocks."]
     #[inline(always)]
+    #[must_use]
     pub fn sha1_continue(&mut self) -> SHA1_CONTINUE_W<0> {
         SHA1_CONTINUE_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for SHA1_CONTINUE_SPEC {
 #[doc = "`write(|w| ..)` method takes [sha1_continue::W](W) writer structure"]
 impl crate::Writable for SHA1_CONTINUE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHA1_CONTINUE to value 0"]
 impl crate::Resettable for SHA1_CONTINUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

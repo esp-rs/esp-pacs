@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - software can read this register to get the current counter value in low speed timer0."]
     #[inline(always)]
     pub fn cnt(&self) -> CNT_R {
-        CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lstimer_value](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for LSTIMER_VALUE_SPEC {
 }
 #[doc = "`reset()` method sets LSTIMER%s_VALUE to value 0"]
 impl crate::Resettable for LSTIMER_VALUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

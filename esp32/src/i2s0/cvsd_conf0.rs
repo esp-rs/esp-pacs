@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_y_max(&mut self) -> CVSD_Y_MAX_W<0> {
         CVSD_Y_MAX_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_y_min(&mut self) -> CVSD_Y_MIN_W<16> {
         CVSD_Y_MIN_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CVSD_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [cvsd_conf0::W](W) writer structure"]
 impl crate::Writable for CVSD_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CVSD_CONF0 to value 0x8000_7fff"]
 impl crate::Resettable for CVSD_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_7fff
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_7fff;
 }

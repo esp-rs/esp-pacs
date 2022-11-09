@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn internal_sram_immu_ena(&mut self) -> INTERNAL_SRAM_IMMU_ENA_W<0> {
         INTERNAL_SRAM_IMMU_ENA_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
+    #[must_use]
     pub fn immu_page_mode(&mut self) -> IMMU_PAGE_MODE_W<1> {
         IMMU_PAGE_MODE_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for IMMU_PAGE_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [immu_page_mode::W](W) writer structure"]
 impl crate::Writable for IMMU_PAGE_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMMU_PAGE_MODE to value 0"]
 impl crate::Resettable for IMMU_PAGE_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

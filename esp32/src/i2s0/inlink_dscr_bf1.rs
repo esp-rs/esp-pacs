@@ -33,8 +33,5 @@ impl crate::Readable for INLINK_DSCR_BF1_SPEC {
 }
 #[doc = "`reset()` method sets INLINK_DSCR_BF1 to value 0"]
 impl crate::Resettable for INLINK_DSCR_BF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

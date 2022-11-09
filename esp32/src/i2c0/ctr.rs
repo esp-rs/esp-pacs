@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
     #[inline(always)]
+    #[must_use]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<2> {
         SAMPLE_SCL_LEVEL_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<4> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to start sending data in txfifo."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<5> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<6> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<7> {
         RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 8 - This is the clock gating control bit for reading or writing registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<8> {
         CLK_EN_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for CTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctr::W](W) writer structure"]
 impl crate::Writable for CTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTR to value 0x03"]
 impl crate::Resettable for CTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

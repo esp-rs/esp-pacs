@@ -183,81 +183,97 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_sw_cbc(&mut self) -> FH0_SW_CBC_W<0> {
         FH0_SW_CBC_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f2_cbc(&mut self) -> FH0_F2_CBC_W<1> {
         FH0_F2_CBC_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f1_cbc(&mut self) -> FH0_F1_CBC_W<2> {
         FH0_F1_CBC_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f0_cbc(&mut self) -> FH0_F0_CBC_W<3> {
         FH0_F0_CBC_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_sw_ost(&mut self) -> FH0_SW_OST_W<4> {
         FH0_SW_OST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f2_ost(&mut self) -> FH0_F2_OST_W<5> {
         FH0_F2_OST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f1_ost(&mut self) -> FH0_F1_OST_W<6> {
         FH0_F1_OST_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_f0_ost(&mut self) -> FH0_F0_OST_W<7> {
         FH0_F0_OST_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_a_cbc_d(&mut self) -> FH0_A_CBC_D_W<8> {
         FH0_A_CBC_D_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_a_cbc_u(&mut self) -> FH0_A_CBC_U_W<10> {
         FH0_A_CBC_U_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_a_ost_d(&mut self) -> FH0_A_OST_D_W<12> {
         FH0_A_OST_D_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_a_ost_u(&mut self) -> FH0_A_OST_U_W<14> {
         FH0_A_OST_U_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_b_cbc_d(&mut self) -> FH0_B_CBC_D_W<16> {
         FH0_B_CBC_D_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_b_cbc_u(&mut self) -> FH0_B_CBC_U_W<18> {
         FH0_B_CBC_U_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_b_ost_d(&mut self) -> FH0_B_OST_D_W<20> {
         FH0_B_OST_D_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
+    #[must_use]
     pub fn fh0_b_ost_u(&mut self) -> FH0_B_OST_U_W<22> {
         FH0_B_OST_U_W::new(self)
     }
@@ -280,11 +296,10 @@ impl crate::Readable for FH0_CFG0_SPEC {
 #[doc = "`write(|w| ..)` method takes [fh0_cfg0::W](W) writer structure"]
 impl crate::Writable for FH0_CFG0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FH0_CFG0 to value 0"]
 impl crate::Resettable for FH0_CFG0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

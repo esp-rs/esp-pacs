@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_st(&mut self) -> SLV_WR_ST_W<0> {
         SLV_WR_ST_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SLV_WR_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [slv_wr_status::W](W) writer structure"]
 impl crate::Writable for SLV_WR_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLV_WR_STATUS to value 0"]
 impl crate::Resettable for SLV_WR_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

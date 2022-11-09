@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bit 0 - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_dio(&mut self) -> SRAM_DIO_W<0> {
         SRAM_DIO_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
+    #[must_use]
     pub fn sram_qio(&mut self) -> SRAM_QIO_W<1> {
         SRAM_QIO_W::new(self)
     }
     #[doc = "Bit 4 - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
     #[inline(always)]
+    #[must_use]
     pub fn sram_rstio(&mut self) -> SRAM_RSTIO_W<4> {
         SRAM_RSTIO_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for SRAM_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_cmd::W](W) writer structure"]
 impl crate::Writable for SRAM_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_CMD to value 0"]
 impl crate::Resettable for SRAM_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

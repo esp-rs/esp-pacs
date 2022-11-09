@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc0_len(&self) -> SLC0_LEN_R {
-        SLC0_LEN_R::new((self.bits & 0x000f_ffff) as u32)
+        SLC0_LEN_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0_length](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for _0_LENGTH_SPEC {
 }
 #[doc = "`reset()` method sets _0_LENGTH to value 0"]
 impl crate::Resettable for _0_LENGTH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

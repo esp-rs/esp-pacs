@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 29 - ENT_RTC"]
     #[inline(always)]
+    #[must_use]
     pub fn ent_rtc(&mut self) -> ENT_RTC_W<29> {
         ENT_RTC_W::new(self)
     }
     #[doc = "Bits 30:31 - DTEST_RTC"]
     #[inline(always)]
+    #[must_use]
     pub fn dtest_rtc(&mut self) -> DTEST_RTC_W<30> {
         DTEST_RTC_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for TEST_MUX_SPEC {
 #[doc = "`write(|w| ..)` method takes [test_mux::W](W) writer structure"]
 impl crate::Writable for TEST_MUX_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TEST_MUX to value 0"]
 impl crate::Resettable for TEST_MUX_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

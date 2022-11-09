@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn pro_drom0addr0_ia(&self) -> PRO_DROM0ADDR0_IA_R {
-        PRO_DROM0ADDR0_IA_R::new((self.bits & 0x000f_ffff) as u32)
+        PRO_DROM0ADDR0_IA_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_dcache_dbug5](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for PRO_DCACHE_DBUG5_SPEC {
 }
 #[doc = "`reset()` method sets PRO_DCACHE_DBUG5 to value 0"]
 impl crate::Resettable for PRO_DCACHE_DBUG5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_conf28(&mut self) -> HOST_SLCHOST_CONF28_W<0> {
         HOST_SLCHOST_CONF28_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_conf29(&mut self) -> HOST_SLCHOST_CONF29_W<8> {
         HOST_SLCHOST_CONF29_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_conf30(&mut self) -> HOST_SLCHOST_CONF30_W<16> {
         HOST_SLCHOST_CONF30_W::new(self)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_conf31(&mut self) -> HOST_SLCHOST_CONF31_W<24> {
         HOST_SLCHOST_CONF31_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for HOST_SLCHOST_CONF_W7_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_conf_w7::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_W7_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_CONF_W7 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_CONF_W7_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -282,136 +282,163 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn doutdin(&mut self) -> DOUTDIN_W<0> {
         DOUTDIN_W::new(self)
     }
     #[doc = "Bit 4 - spi cs keep low when spi is in ¡°done¡± phase. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_hold(&mut self) -> CS_HOLD_W<4> {
         CS_HOLD_W::new(self)
     }
     #[doc = "Bit 5 - spi cs is enable when spi is in ¡°prepare¡± phase. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_setup(&mut self) -> CS_SETUP_W<5> {
         CS_SETUP_W::new(self)
     }
     #[doc = "Bit 6 - In the slave mode the bit is same as spi_ck_out_edge in master mode. It is combined with spi_miso_delay_mode bits."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_i_edge(&mut self) -> CK_I_EDGE_W<6> {
         CK_I_EDGE_W::new(self)
     }
     #[doc = "Bit 7 - the bit combined with spi_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
+    #[must_use]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<7> {
         CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - In read-data (MISO) phase 1: big-endian 0: little_endian"]
     #[inline(always)]
+    #[must_use]
     pub fn rd_byte_order(&mut self) -> RD_BYTE_ORDER_W<10> {
         RD_BYTE_ORDER_W::new(self)
     }
     #[doc = "Bit 11 - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian"]
     #[inline(always)]
+    #[must_use]
     pub fn wr_byte_order(&mut self) -> WR_BYTE_ORDER_W<11> {
         WR_BYTE_ORDER_W::new(self)
     }
     #[doc = "Bit 12 - In the write operations read-data phase apply 2 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<12> {
         FWRITE_DUAL_W::new(self)
     }
     #[doc = "Bit 13 - In the write operations read-data phase apply 4 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<13> {
         FWRITE_QUAD_W::new(self)
     }
     #[doc = "Bit 14 - In the write operations address phase and read-data phase apply 2 signals."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_dio(&mut self) -> FWRITE_DIO_W<14> {
         FWRITE_DIO_W::new(self)
     }
     #[doc = "Bit 15 - In the write operations address phase and read-data phase apply 4 signals."]
     #[inline(always)]
+    #[must_use]
     pub fn fwrite_qio(&mut self) -> FWRITE_QIO_W<15> {
         FWRITE_QIO_W::new(self)
     }
     #[doc = "Bit 16 - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn sio(&mut self) -> SIO_W<16> {
         SIO_W::new(self)
     }
     #[doc = "Bit 17 - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low"]
     #[inline(always)]
+    #[must_use]
     pub fn usr_hold_pol(&mut self) -> USR_HOLD_POL_W<17> {
         USR_HOLD_POL_W::new(self)
     }
     #[doc = "Bit 18 - spi is hold at data out state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dout_hold(&mut self) -> USR_DOUT_HOLD_W<18> {
         USR_DOUT_HOLD_W::new(self)
     }
     #[doc = "Bit 19 - spi is hold at data in state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_din_hold(&mut self) -> USR_DIN_HOLD_W<19> {
         USR_DIN_HOLD_W::new(self)
     }
     #[doc = "Bit 20 - spi is hold at dummy state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_hold(&mut self) -> USR_DUMMY_HOLD_W<20> {
         USR_DUMMY_HOLD_W::new(self)
     }
     #[doc = "Bit 21 - spi is hold at address state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_addr_hold(&mut self) -> USR_ADDR_HOLD_W<21> {
         USR_ADDR_HOLD_W::new(self)
     }
     #[doc = "Bit 22 - spi is hold at command state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_cmd_hold(&mut self) -> USR_CMD_HOLD_W<22> {
         USR_CMD_HOLD_W::new(self)
     }
     #[doc = "Bit 23 - spi is hold at prepare state the bit combined with spi_usr_hold_pol bit."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_prep_hold(&mut self) -> USR_PREP_HOLD_W<23> {
         USR_PREP_HOLD_W::new(self)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<24> {
         USR_MISO_HIGHPART_W::new(self)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<25> {
         USR_MOSI_HIGHPART_W::new(self)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<26> {
         USR_DUMMY_IDLE_W::new(self)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_mosi(&mut self) -> USR_MOSI_W<27> {
         USR_MOSI_W::new(self)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_miso(&mut self) -> USR_MISO_W<28> {
         USR_MISO_W::new(self)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<29> {
         USR_DUMMY_W::new(self)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_addr(&mut self) -> USR_ADDR_W<30> {
         USR_ADDR_W::new(self)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation."]
     #[inline(always)]
+    #[must_use]
     pub fn usr_command(&mut self) -> USR_COMMAND_W<31> {
         USR_COMMAND_W::new(self)
     }
@@ -434,11 +461,10 @@ impl crate::Readable for USER_SPEC {
 #[doc = "`write(|w| ..)` method takes [user::W](W) writer structure"]
 impl crate::Writable for USER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USER to value 0x8000_0040"]
 impl crate::Resettable for USER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_0040
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_0040;
 }

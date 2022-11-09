@@ -157,66 +157,79 @@ impl R {
 impl W {
     #[doc = "Bit 10 - Power on DAC2. Usually we need to tristate PDAC2 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<10> {
         PDAC2_DAC_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<11> {
         PDAC2_FUN_IE_W::new(self)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<12> {
         PDAC2_SLP_OE_W::new(self)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<13> {
         PDAC2_SLP_IE_W::new(self)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<14> {
         PDAC2_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<15> {
         PDAC2_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<17> {
         PDAC2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 18 - Power on DAC2. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<18> {
         PDAC2_XPD_DAC_W::new(self)
     }
     #[doc = "Bits 19:26 - PAD DAC2 control code."]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<19> {
         PDAC2_DAC_W::new(self)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<27> {
         PDAC2_RUE_W::new(self)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<28> {
         PDAC2_RDE_W::new(self)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<29> {
         PDAC2_HOLD_W::new(self)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<30> {
         PDAC2_DRV_W::new(self)
     }
@@ -239,11 +252,10 @@ impl crate::Readable for PAD_DAC2_SPEC {
 #[doc = "`write(|w| ..)` method takes [pad_dac2::W](W) writer structure"]
 impl crate::Writable for PAD_DAC2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PAD_DAC2 to value 0x8000_0000"]
 impl crate::Resettable for PAD_DAC2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x8000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x8000_0000;
 }

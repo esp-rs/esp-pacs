@@ -260,121 +260,145 @@ impl R {
 impl W {
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn force_off(&mut self) -> FORCE_OFF_W<7> {
         FORCE_OFF_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn force_on(&mut self) -> FORCE_ON_W<8> {
         FORCE_ON_W::new(self)
     }
     #[doc = "Bit 10 - wtite only register to clear digital pad auto-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn clr_dg_pad_autohold(&mut self) -> CLR_DG_PAD_AUTOHOLD_W<10> {
         CLR_DG_PAD_AUTOHOLD_W::new(self)
     }
     #[doc = "Bit 11 - digital pad enable auto-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_autohold_en(&mut self) -> DG_PAD_AUTOHOLD_EN_W<11> {
         DG_PAD_AUTOHOLD_EN_W::new(self)
     }
     #[doc = "Bit 12 - digital pad force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_noiso(&mut self) -> DG_PAD_FORCE_NOISO_W<12> {
         DG_PAD_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 13 - digital pad force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_iso(&mut self) -> DG_PAD_FORCE_ISO_W<13> {
         DG_PAD_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 14 - digital pad force un-hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_unhold(&mut self) -> DG_PAD_FORCE_UNHOLD_W<14> {
         DG_PAD_FORCE_UNHOLD_W::new(self)
     }
     #[doc = "Bit 15 - digital pad force hold"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_pad_force_hold(&mut self) -> DG_PAD_FORCE_HOLD_W<15> {
         DG_PAD_FORCE_HOLD_W::new(self)
     }
     #[doc = "Bit 16 - ROM force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn rom0_force_iso(&mut self) -> ROM0_FORCE_ISO_W<16> {
         ROM0_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 17 - ROM force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn rom0_force_noiso(&mut self) -> ROM0_FORCE_NOISO_W<17> {
         ROM0_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 18 - internal SRAM 0 force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram0_force_iso(&mut self) -> INTER_RAM0_FORCE_ISO_W<18> {
         INTER_RAM0_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 19 - internal SRAM 0 force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram0_force_noiso(&mut self) -> INTER_RAM0_FORCE_NOISO_W<19> {
         INTER_RAM0_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 20 - internal SRAM 1 force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram1_force_iso(&mut self) -> INTER_RAM1_FORCE_ISO_W<20> {
         INTER_RAM1_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 21 - internal SRAM 1 force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram1_force_noiso(&mut self) -> INTER_RAM1_FORCE_NOISO_W<21> {
         INTER_RAM1_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 22 - internal SRAM 2 force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram2_force_iso(&mut self) -> INTER_RAM2_FORCE_ISO_W<22> {
         INTER_RAM2_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 23 - internal SRAM 2 force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram2_force_noiso(&mut self) -> INTER_RAM2_FORCE_NOISO_W<23> {
         INTER_RAM2_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 24 - internal SRAM 3 force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram3_force_iso(&mut self) -> INTER_RAM3_FORCE_ISO_W<24> {
         INTER_RAM3_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 25 - internal SRAM 3 force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram3_force_noiso(&mut self) -> INTER_RAM3_FORCE_NOISO_W<25> {
         INTER_RAM3_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 26 - internal SRAM 4 force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram4_force_iso(&mut self) -> INTER_RAM4_FORCE_ISO_W<26> {
         INTER_RAM4_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 27 - internal SRAM 4 force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn inter_ram4_force_noiso(&mut self) -> INTER_RAM4_FORCE_NOISO_W<27> {
         INTER_RAM4_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 28 - wifi force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_iso(&mut self) -> WIFI_FORCE_ISO_W<28> {
         WIFI_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 29 - wifi force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn wifi_force_noiso(&mut self) -> WIFI_FORCE_NOISO_W<29> {
         WIFI_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 30 - digital core force ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_iso(&mut self) -> DG_WRAP_FORCE_ISO_W<30> {
         DG_WRAP_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 31 - digital core force no ISO"]
     #[inline(always)]
+    #[must_use]
     pub fn dg_wrap_force_noiso(&mut self) -> DG_WRAP_FORCE_NOISO_W<31> {
         DG_WRAP_FORCE_NOISO_W::new(self)
     }
@@ -397,11 +421,10 @@ impl crate::Readable for DIG_ISO_SPEC {
 #[doc = "`write(|w| ..)` method takes [dig_iso::W](W) writer structure"]
 impl crate::Writable for DIG_ISO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIG_ISO to value 0xaaaa_5000"]
 impl crate::Resettable for DIG_ISO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xaaaa_5000
-    }
+    const RESET_VALUE: Self::Ux = 0xaaaa_5000;
 }

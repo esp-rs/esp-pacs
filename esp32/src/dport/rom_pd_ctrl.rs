@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_rom_pd(&mut self) -> PRO_ROM_PD_W<0> {
         PRO_ROM_PD_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn app_rom_pd(&mut self) -> APP_ROM_PD_W<1> {
         APP_ROM_PD_W::new(self)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
+    #[must_use]
     pub fn share_rom_pd(&mut self) -> SHARE_ROM_PD_W<2> {
         SHARE_ROM_PD_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for ROM_PD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_pd_ctrl::W](W) writer structure"]
 impl crate::Writable for ROM_PD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_PD_CTRL to value 0"]
 impl crate::Resettable for ROM_PD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

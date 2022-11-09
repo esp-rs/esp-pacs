@@ -33,8 +33,5 @@ impl crate::Readable for PRO_INTRUSION_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets PRO_INTRUSION_STATUS to value 0"]
 impl crate::Resettable for PRO_INTRUSION_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

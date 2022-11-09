@@ -40,46 +40,55 @@ pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_C
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup_int_clr(&mut self) -> SLP_WAKEUP_INT_CLR_W<0> {
         SLP_WAKEUP_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject_int_clr(&mut self) -> SLP_REJECT_INT_CLR_W<1> {
         SLP_REJECT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Clear SDIO idle interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_idle_int_clr(&mut self) -> SDIO_IDLE_INT_CLR_W<2> {
         SDIO_IDLE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<3> {
         WDT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - Clear RTC time valid interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn time_valid_int_clr(&mut self) -> TIME_VALID_INT_CLR_W<4> {
         TIME_VALID_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Clear ULP-coprocessor interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_int_clr(&mut self) -> SAR_INT_CLR_W<5> {
         SAR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Clear touch interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_int_clr(&mut self) -> TOUCH_INT_CLR_W<6> {
         TOUCH_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Clear brown out interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<7> {
         BROWN_OUT_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Clear RTC main timer interrupt state"]
     #[inline(always)]
+    #[must_use]
     pub fn main_timer_int_clr(&mut self) -> MAIN_TIMER_INT_CLR_W<8> {
         MAIN_TIMER_INT_CLR_W::new(self)
     }
@@ -98,11 +107,10 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_clr::W](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

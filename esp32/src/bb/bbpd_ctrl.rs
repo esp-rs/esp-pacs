@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W<0> {
         DC_EST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W<1> {
         DC_EST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W<2> {
         FFT_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W<3> {
         FFT_FORCE_PU_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for BBPD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [bbpd_ctrl::W](W) writer structure"]
 impl crate::Writable for BBPD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BBPD_CTRL to value 0"]
 impl crate::Resettable for BBPD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

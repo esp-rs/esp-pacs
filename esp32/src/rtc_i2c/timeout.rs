@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
-        TIMEOUT_R::new((self.bits & 0x000f_ffff) as u32)
+        TIMEOUT_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
+    #[must_use]
     pub fn timeout(&mut self) -> TIMEOUT_W<0> {
         TIMEOUT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TIMEOUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [timeout::W](W) writer structure"]
 impl crate::Writable for TIMEOUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMEOUT to value 0"]
 impl crate::Resettable for TIMEOUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

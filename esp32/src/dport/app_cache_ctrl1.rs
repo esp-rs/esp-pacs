@@ -148,56 +148,67 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_iram0(&mut self) -> APP_CACHE_MASK_IRAM0_W<0> {
         APP_CACHE_MASK_IRAM0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_iram1(&mut self) -> APP_CACHE_MASK_IRAM1_W<1> {
         APP_CACHE_MASK_IRAM1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_irom0(&mut self) -> APP_CACHE_MASK_IROM0_W<2> {
         APP_CACHE_MASK_IROM0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_dram1(&mut self) -> APP_CACHE_MASK_DRAM1_W<3> {
         APP_CACHE_MASK_DRAM1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_drom0(&mut self) -> APP_CACHE_MASK_DROM0_W<4> {
         APP_CACHE_MASK_DROM0_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mask_opsdram(&mut self) -> APP_CACHE_MASK_OPSDRAM_W<5> {
         APP_CACHE_MASK_OPSDRAM_W::new(self)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cmmu_sram_page_mode(&mut self) -> APP_CMMU_SRAM_PAGE_MODE_W<6> {
         APP_CMMU_SRAM_PAGE_MODE_W::new(self)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cmmu_flash_page_mode(&mut self) -> APP_CMMU_FLASH_PAGE_MODE_W<9> {
         APP_CMMU_FLASH_PAGE_MODE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cmmu_force_on(&mut self) -> APP_CMMU_FORCE_ON_W<11> {
         APP_CMMU_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cmmu_pd(&mut self) -> APP_CMMU_PD_W<12> {
         APP_CMMU_PD_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_mmu_ia_clr(&mut self) -> APP_CACHE_MMU_IA_CLR_W<13> {
         APP_CACHE_MMU_IA_CLR_W::new(self)
     }
@@ -220,11 +231,10 @@ impl crate::Readable for APP_CACHE_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_cache_ctrl1::W](W) writer structure"]
 impl crate::Writable for APP_CACHE_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_CACHE_CTRL1 to value 0x08ff"]
 impl crate::Resettable for APP_CACHE_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08ff
-    }
+    const RESET_VALUE: Self::Ux = 0x08ff;
 }

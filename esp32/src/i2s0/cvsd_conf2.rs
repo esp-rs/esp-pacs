@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_k(&mut self) -> CVSD_K_W<0> {
         CVSD_K_W::new(self)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_j(&mut self) -> CVSD_J_W<3> {
         CVSD_J_W::new(self)
     }
     #[doc = "Bits 6:15"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_beta(&mut self) -> CVSD_BETA_W<6> {
         CVSD_BETA_W::new(self)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_h(&mut self) -> CVSD_H_W<16> {
         CVSD_H_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for CVSD_CONF2_SPEC {
 #[doc = "`write(|w| ..)` method takes [cvsd_conf2::W](W) writer structure"]
 impl crate::Writable for CVSD_CONF2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CVSD_CONF2 to value 0x0005_02a4"]
 impl crate::Resettable for CVSD_CONF2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0005_02a4
-    }
+    const RESET_VALUE: Self::Ux = 0x0005_02a4;
 }

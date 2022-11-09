@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_intrusion_record_reset_n(&mut self) -> PRO_INTRUSION_RECORD_RESET_N_W<0> {
         PRO_INTRUSION_RECORD_RESET_N_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_INTRUSION_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_intrusion_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_INTRUSION_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_INTRUSION_CTRL to value 0x01"]
 impl crate::Resettable for PRO_INTRUSION_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

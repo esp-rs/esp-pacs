@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - program for SPI_pad_config_clk"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pad_config_clk(&mut self) -> SPI_PAD_CONFIG_CLK_W<0> {
         SPI_PAD_CONFIG_CLK_W::new(self)
     }
     #[doc = "Bits 5:9 - program for SPI_pad_config_q"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pad_config_q(&mut self) -> SPI_PAD_CONFIG_Q_W<5> {
         SPI_PAD_CONFIG_Q_W::new(self)
     }
     #[doc = "Bits 10:14 - program for SPI_pad_config_d"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pad_config_d(&mut self) -> SPI_PAD_CONFIG_D_W<10> {
         SPI_PAD_CONFIG_D_W::new(self)
     }
     #[doc = "Bits 15:19 - program for SPI_pad_config_cs0"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pad_config_cs0(&mut self) -> SPI_PAD_CONFIG_CS0_W<15> {
         SPI_PAD_CONFIG_CS0_W::new(self)
     }
     #[doc = "Bits 20:27"]
     #[inline(always)]
+    #[must_use]
     pub fn inst_config(&mut self) -> INST_CONFIG_W<20> {
         INST_CONFIG_W::new(self)
     }
     #[doc = "Bits 22:23 - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)"]
     #[inline(always)]
+    #[must_use]
     pub fn vol_level_hp_inv(&mut self) -> VOL_LEVEL_HP_INV_W<22> {
         VOL_LEVEL_HP_INV_W::new(self)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
+    #[must_use]
     pub fn dig_vol_l6(&mut self) -> DIG_VOL_L6_W<24> {
         DIG_VOL_L6_W::new(self)
     }
     #[doc = "Bits 28:31 - program for flash_crypt_config"]
     #[inline(always)]
+    #[must_use]
     pub fn flash_crypt_config(&mut self) -> FLASH_CRYPT_CONFIG_W<28> {
         FLASH_CRYPT_CONFIG_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for BLK0_WDATA5_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_wdata5::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA5_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_WDATA5 to value 0"]
 impl crate::Resettable for BLK0_WDATA5_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

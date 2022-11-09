@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This is the interrupt enable bit for channel0 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u0_int_ena(&mut self) -> CNT_THR_EVENT_U0_INT_ENA_W<0> {
         CNT_THR_EVENT_U0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - This is the interrupt enable bit for channel1 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u1_int_ena(&mut self) -> CNT_THR_EVENT_U1_INT_ENA_W<1> {
         CNT_THR_EVENT_U1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - This is the interrupt enable bit for channel2 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u2_int_ena(&mut self) -> CNT_THR_EVENT_U2_INT_ENA_W<2> {
         CNT_THR_EVENT_U2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - This is the interrupt enable bit for channel3 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u3_int_ena(&mut self) -> CNT_THR_EVENT_U3_INT_ENA_W<3> {
         CNT_THR_EVENT_U3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - This is the interrupt enable bit for channel4 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u4_int_ena(&mut self) -> CNT_THR_EVENT_U4_INT_ENA_W<4> {
         CNT_THR_EVENT_U4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - This is the interrupt enable bit for channel5 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u5_int_ena(&mut self) -> CNT_THR_EVENT_U5_INT_ENA_W<5> {
         CNT_THR_EVENT_U5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - This is the interrupt enable bit for channel6 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u6_int_ena(&mut self) -> CNT_THR_EVENT_U6_INT_ENA_W<6> {
         CNT_THR_EVENT_U6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - This is the interrupt enable bit for channel7 event."]
     #[inline(always)]
+    #[must_use]
     pub fn cnt_thr_event_u7_int_ena(&mut self) -> CNT_THR_EVENT_U7_INT_ENA_W<7> {
         CNT_THR_EVENT_U7_INT_ENA_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

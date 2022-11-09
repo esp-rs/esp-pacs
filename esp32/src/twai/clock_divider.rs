@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
+    #[must_use]
     pub fn cd(&mut self) -> CD_W<0> {
         CD_W::new(self)
     }
     #[doc = "Bit 8 - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
     #[inline(always)]
+    #[must_use]
     pub fn clock_off(&mut self) -> CLOCK_OFF_W<8> {
         CLOCK_OFF_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CLOCK_DIVIDER_SPEC {
 #[doc = "`write(|w| ..)` method takes [clock_divider::W](W) writer structure"]
 impl crate::Writable for CLOCK_DIVIDER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLOCK_DIVIDER to value 0"]
 impl crate::Resettable for CLOCK_DIVIDER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

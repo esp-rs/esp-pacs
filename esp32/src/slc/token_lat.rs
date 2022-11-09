@@ -40,8 +40,5 @@ impl crate::Readable for TOKEN_LAT_SPEC {
 }
 #[doc = "`reset()` method sets TOKEN_LAT to value 0"]
 impl crate::Resettable for TOKEN_LAT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

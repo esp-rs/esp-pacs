@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
+    #[must_use]
     pub fn blk3_din3(&mut self) -> BLK3_DIN3_W<0> {
         BLK3_DIN3_W::new(self)
     }
     #[doc = "Bits 0:6 - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_tp_low(&mut self) -> ADC1_TP_LOW_W<0> {
         ADC1_TP_LOW_W::new(self)
     }
     #[doc = "Bits 7:15 - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
+    #[must_use]
     pub fn adc1_tp_high(&mut self) -> ADC1_TP_HIGH_W<7> {
         ADC1_TP_HIGH_W::new(self)
     }
     #[doc = "Bits 16:22 - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_tp_low(&mut self) -> ADC2_TP_LOW_W<16> {
         ADC2_TP_LOW_W::new(self)
     }
     #[doc = "Bits 23:31 - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
+    #[must_use]
     pub fn adc2_tp_high(&mut self) -> ADC2_TP_HIGH_W<23> {
         ADC2_TP_HIGH_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for BLK3_WDATA3_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk3_wdata3::W](W) writer structure"]
 impl crate::Writable for BLK3_WDATA3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK3_WDATA3 to value 0"]
 impl crate::Resettable for BLK3_WDATA3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

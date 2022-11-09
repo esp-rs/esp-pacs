@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
+    #[must_use]
     pub fn time_seg1(&mut self) -> TIME_SEG1_W<0> {
         TIME_SEG1_W::new(self)
     }
     #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
+    #[must_use]
     pub fn time_seg2(&mut self) -> TIME_SEG2_W<4> {
         TIME_SEG2_W::new(self)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
+    #[must_use]
     pub fn time_samp(&mut self) -> TIME_SAMP_W<7> {
         TIME_SAMP_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for BUS_TIMING_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [bus_timing_1::W](W) writer structure"]
 impl crate::Writable for BUS_TIMING_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BUS_TIMING_1 to value 0"]
 impl crate::Resettable for BUS_TIMING_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

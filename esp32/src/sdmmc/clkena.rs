@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cclk_enable(&mut self) -> CCLK_ENABLE_W<0> {
         CCLK_ENABLE_W::new(self)
     }
     #[doc = "Bits 16:17 - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn lp_enable(&mut self) -> LP_ENABLE_W<16> {
         LP_ENABLE_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for CLKENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [clkena::W](W) writer structure"]
 impl crate::Writable for CLKENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLKENA to value 0"]
 impl crate::Resettable for CLKENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

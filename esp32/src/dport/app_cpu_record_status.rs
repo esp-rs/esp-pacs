@@ -33,8 +33,5 @@ impl crate::Readable for APP_CPU_RECORD_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets APP_CPU_RECORD_STATUS to value 0"]
 impl crate::Resettable for APP_CPU_RECORD_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

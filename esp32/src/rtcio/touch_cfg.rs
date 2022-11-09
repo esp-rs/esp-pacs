@@ -85,26 +85,31 @@ impl R {
 impl W {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_dcur(&mut self) -> TOUCH_DCUR_W<23> {
         TOUCH_DCUR_W::new(self)
     }
     #[doc = "Bits 25:26 - touch sensor saw wave voltage range."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<25> {
         TOUCH_DRANGE_W::new(self)
     }
     #[doc = "Bits 27:28 - touch sensor saw wave bottom voltage."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<27> {
         TOUCH_DREFL_W::new(self)
     }
     #[doc = "Bits 29:30 - touch sensor saw wave top voltage."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<29> {
         TOUCH_DREFH_W::new(self)
     }
     #[doc = "Bit 31 - touch sensor bias power on."]
     #[inline(always)]
+    #[must_use]
     pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<31> {
         TOUCH_XPD_BIAS_W::new(self)
     }
@@ -127,11 +132,10 @@ impl crate::Readable for TOUCH_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_cfg::W](W) writer structure"]
 impl crate::Writable for TOUCH_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_CFG to value 0x6600_0000"]
 impl crate::Resettable for TOUCH_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6600_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x6600_0000;
 }

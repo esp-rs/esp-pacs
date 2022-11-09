@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 30 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W<30> {
         EXT_WAKEUP0_LV_W::new(self)
     }
     #[doc = "Bit 31 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
+    #[must_use]
     pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W<31> {
         EXT_WAKEUP1_LV_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for EXT_WAKEUP_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext_wakeup_conf::W](W) writer structure"]
 impl crate::Writable for EXT_WAKEUP_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT_WAKEUP_CONF to value 0"]
 impl crate::Resettable for EXT_WAKEUP_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

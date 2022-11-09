@@ -33,8 +33,5 @@ impl crate::Readable for IN_SUC_EOF_DES_ADDR_SPEC {
 }
 #[doc = "`reset()` method sets IN_SUC_EOF_DES_ADDR to value 0"]
 impl crate::Resettable for IN_SUC_EOF_DES_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

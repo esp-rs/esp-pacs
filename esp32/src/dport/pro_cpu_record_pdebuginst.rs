@@ -96,26 +96,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebuginst_sz(&mut self) -> RECORD_PDEBUGINST_SZ_W<0> {
         RECORD_PDEBUGINST_SZ_W::new(self)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebuginst_isrc(&mut self) -> RECORD_PDEBUGINST_ISRC_W<12> {
         RECORD_PDEBUGINST_ISRC_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebuginst_loop_rep(&mut self) -> RECORD_PDEBUGINST_LOOP_REP_W<20> {
         RECORD_PDEBUGINST_LOOP_REP_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebuginst_loop(&mut self) -> RECORD_PDEBUGINST_LOOP_W<21> {
         RECORD_PDEBUGINST_LOOP_W::new(self)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebuginst_cintl(&mut self) -> RECORD_PDEBUGINST_CINTL_W<24> {
         RECORD_PDEBUGINST_CINTL_W::new(self)
     }
@@ -138,11 +143,10 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebuginst::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGINST to value 0"]
 impl crate::Resettable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

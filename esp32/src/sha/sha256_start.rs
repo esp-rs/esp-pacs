@@ -24,6 +24,7 @@ pub type SHA256_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA256_STAR
 impl W {
     #[doc = "Bit 0 - Write 1 to start an SHA-256 operation on the first message block."]
     #[inline(always)]
+    #[must_use]
     pub fn sha256_start(&mut self) -> SHA256_START_W<0> {
         SHA256_START_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for SHA256_START_SPEC {
 #[doc = "`write(|w| ..)` method takes [sha256_start::W](W) writer structure"]
 impl crate::Writable for SHA256_START_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHA256_START to value 0"]
 impl crate::Resettable for SHA256_START_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

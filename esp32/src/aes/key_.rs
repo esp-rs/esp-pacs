@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - AES key material register."]
     #[inline(always)]
+    #[must_use]
     pub fn key(&mut self) -> KEY_W<0> {
         KEY_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for KEY__SPEC {
 #[doc = "`write(|w| ..)` method takes [key_::W](W) writer structure"]
 impl crate::Writable for KEY__SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets KEY_%s to value 0"]
 impl crate::Resettable for KEY__SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

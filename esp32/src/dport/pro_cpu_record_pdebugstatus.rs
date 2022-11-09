@@ -66,11 +66,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugstatus_bbcause(&mut self) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<0> {
         RECORD_PDEBUGSTATUS_BBCAUSE_W::new(self)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn record_pdebugstatus_insntype(&mut self) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<0> {
         RECORD_PDEBUGSTATUS_INSNTYPE_W::new(self)
     }
@@ -93,11 +95,10 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGSTATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cpu_record_pdebugstatus::W](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGSTATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGSTATUS to value 0"]
 impl crate::Resettable for PRO_CPU_RECORD_PDEBUGSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

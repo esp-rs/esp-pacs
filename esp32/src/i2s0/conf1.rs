@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<0> {
         TX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<3> {
         TX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<4> {
         RX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<7> {
         RX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<8> {
         TX_STOP_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_zeros_rm_en(&mut self) -> TX_ZEROS_RM_EN_W<9> {
         TX_ZEROS_RM_EN_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0x89"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x89
-    }
+    const RESET_VALUE: Self::Ux = 0x89;
 }

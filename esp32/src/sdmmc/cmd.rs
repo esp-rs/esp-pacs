@@ -66,11 +66,9 @@ pub type TRANSFER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, 
 pub type SEND_AUTO_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `SEND_AUTO_STOP` writer - 0: No stop command is sent at the end of data transfer; 1: Send stop command at the end of data transfer."]
 pub type SEND_AUTO_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
-#[doc = "Field `WAIT_PRVDATA_COMPLETE` reader - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\]
-= 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
+#[doc = "Field `WAIT_PRVDATA_COMPLETE` reader - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\] = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
 pub type WAIT_PRVDATA_COMPLETE_R = crate::BitReader<bool>;
-#[doc = "Field `WAIT_PRVDATA_COMPLETE` writer - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\]
-= 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
+#[doc = "Field `WAIT_PRVDATA_COMPLETE` writer - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\] = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
 pub type WAIT_PRVDATA_COMPLETE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 #[doc = "Field `STOP_ABORT_CMD` reader - 0: Neither stop nor abort command can stop current data transfer. If abort is sent to function-number currently selected or not in data-transfer mode, then bit should be set to 0; 1: Stop or abort command intended to stop current data transfer in progress. When open-ended or predefined data transfer is in progress, and host issues stop or abort command to stop data transfer, bit should be set so that command/data state-machines of CIU can return correctly to idle state."]
 pub type STOP_ABORT_CMD_R = crate::BitReader<bool>;
@@ -146,8 +144,7 @@ impl R {
     pub fn send_auto_stop(&self) -> SEND_AUTO_STOP_R {
         SEND_AUTO_STOP_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\]
-= 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
+    #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\] = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
     #[inline(always)]
     pub fn wait_prvdata_complete(&self) -> WAIT_PRVDATA_COMPLETE_R {
         WAIT_PRVDATA_COMPLETE_R::new(((self.bits >> 13) & 1) != 0)
@@ -196,87 +193,103 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Command index."]
     #[inline(always)]
+    #[must_use]
     pub fn index(&mut self) -> INDEX_W<0> {
         INDEX_W::new(self)
     }
     #[doc = "Bit 6 - 0: No response expected from card; 1: Response expected from card."]
     #[inline(always)]
+    #[must_use]
     pub fn response_expect(&mut self) -> RESPONSE_EXPECT_W<6> {
         RESPONSE_EXPECT_W::new(self)
     }
     #[doc = "Bit 7 - 0: Short response expected from card; 1: Long response expected from card."]
     #[inline(always)]
+    #[must_use]
     pub fn response_length(&mut self) -> RESPONSE_LENGTH_W<7> {
         RESPONSE_LENGTH_W::new(self)
     }
     #[doc = "Bit 8 - 0: Do not check; 1: Check response CRC. Some of command responses do not return valid CRC bits. Software should disable CRC checks for those commands in order to disable CRC checking by controller."]
     #[inline(always)]
+    #[must_use]
     pub fn check_response_crc(&mut self) -> CHECK_RESPONSE_CRC_W<8> {
         CHECK_RESPONSE_CRC_W::new(self)
     }
     #[doc = "Bit 9 - 0: No data transfer expected; 1: Data transfer expected."]
     #[inline(always)]
+    #[must_use]
     pub fn data_expected(&mut self) -> DATA_EXPECTED_W<9> {
         DATA_EXPECTED_W::new(self)
     }
     #[doc = "Bit 10 - 0: Read from card; 1: Write to card. Don't care if no data is expected from card."]
     #[inline(always)]
+    #[must_use]
     pub fn read_write(&mut self) -> READ_WRITE_W<10> {
         READ_WRITE_W::new(self)
     }
     #[doc = "Bit 11 - Block data transfer command; 1: Stream data transfer command. Don't care if no data expected."]
     #[inline(always)]
+    #[must_use]
     pub fn transfer_mode(&mut self) -> TRANSFER_MODE_W<11> {
         TRANSFER_MODE_W::new(self)
     }
     #[doc = "Bit 12 - 0: No stop command is sent at the end of data transfer; 1: Send stop command at the end of data transfer."]
     #[inline(always)]
+    #[must_use]
     pub fn send_auto_stop(&mut self) -> SEND_AUTO_STOP_W<12> {
         SEND_AUTO_STOP_W::new(self)
     }
-    #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\]
-= 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
+    #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE\\] = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
     #[inline(always)]
+    #[must_use]
     pub fn wait_prvdata_complete(&mut self) -> WAIT_PRVDATA_COMPLETE_W<13> {
         WAIT_PRVDATA_COMPLETE_W::new(self)
     }
     #[doc = "Bit 14 - 0: Neither stop nor abort command can stop current data transfer. If abort is sent to function-number currently selected or not in data-transfer mode, then bit should be set to 0; 1: Stop or abort command intended to stop current data transfer in progress. When open-ended or predefined data transfer is in progress, and host issues stop or abort command to stop data transfer, bit should be set so that command/data state-machines of CIU can return correctly to idle state."]
     #[inline(always)]
+    #[must_use]
     pub fn stop_abort_cmd(&mut self) -> STOP_ABORT_CMD_W<14> {
         STOP_ABORT_CMD_W::new(self)
     }
     #[doc = "Bit 15 - 0: Do not send initialization sequence (80 clocks of 1) before sending this command; 1: Send initialization sequence before sending this command. After powered on, 80 clocks must be sent to card for initialization before sending any commands to card. Bit should be set while sending first command to card so that controller will initialize clocks before sending command to card."]
     #[inline(always)]
+    #[must_use]
     pub fn send_initialization(&mut self) -> SEND_INITIALIZATION_W<15> {
         SEND_INITIALIZATION_W::new(self)
     }
     #[doc = "Bits 16:20 - Card number in use. Represents physical slot number of card being accessed. In SD-only mode, up to two cards are supported."]
     #[inline(always)]
+    #[must_use]
     pub fn card_number(&mut self) -> CARD_NUMBER_W<16> {
         CARD_NUMBER_W::new(self)
     }
     #[doc = "Bit 21 - 0: Normal command sequence; 1: Do not send commands, just update clock register value into card clock domain. Following register values are transferred into card clock domain: CLKDIV, CLRSRC, and CLKENA. Changes card clocks (change frequency, truncate off or on, and set low-frequency mode). This is provided in order to change clock frequency or stop clock without having to send command to cards. During normal command sequence, when sdhost_update_clock_registers_only = 0, following control registers are transferred from BIU to CIU: CMD, CMDARG, TMOUT, CTYPE, BLKSIZ, and BYTCNT. CIU uses new register values for new command sequence to card(s). When bit is set, there are no Command Done interrupts because no command is sent to SD_MMC_CEATA cards."]
     #[inline(always)]
+    #[must_use]
     pub fn update_clock_registers_only(&mut self) -> UPDATE_CLOCK_REGISTERS_ONLY_W<21> {
         UPDATE_CLOCK_REGISTERS_ONLY_W::new(self)
     }
     #[doc = "Bit 22 - Read access flag. 0: Host is not performing read access (RW_REG or RW_BLK)towards CE-ATA device; 1: Host is performing read access (RW_REG or RW_BLK) towards CE-ATA device. Software should set this bit to indicate that CE-ATA device is being accessed for read transfer. This bit is used to disable read data timeout indication while performing CE-ATA read transfers. Maximum value of I/O transmission delay can be no less than 10 seconds. SD/MMC should not indicate read data timeout while waiting for data from CE-ATA device."]
     #[inline(always)]
+    #[must_use]
     pub fn read_ceata_device(&mut self) -> READ_CEATA_DEVICE_W<22> {
         READ_CEATA_DEVICE_W::new(self)
     }
     #[doc = "Bit 23 - Expected Command Completion Signal (CCS) configuration. 0: Interrupts are not enabled in CE-ATA device (nIEN = 1 in ATA control register), or command does not expect CCS from device; 1: Interrupts are enabled in CE-ATA device (nIEN = 0), and RW_BLK command expects command completion signal from CE-ATA device. If the command expects Command Completion Signal (CCS) from the CE-ATA device, the software should set this control bit. SD/MMC sets Data Transfer Over (DTO) bit in RINTSTS register and generates interrupt to host if Data Transfer Over interrupt is not masked."]
     #[inline(always)]
+    #[must_use]
     pub fn ccs_expected(&mut self) -> CCS_EXPECTED_W<23> {
         CCS_EXPECTED_W::new(self)
     }
     #[doc = "Bit 29 - Use Hold Register. 0: CMD and DATA sent to card bypassing HOLD Register; 1: CMD and DATA sent to card through the HOLD Register."]
     #[inline(always)]
+    #[must_use]
     pub fn use_hole(&mut self) -> USE_HOLE_W<29> {
         USE_HOLE_W::new(self)
     }
     #[doc = "Bit 31 - Start command. Once command is served by the CIU, this bit is automatically cleared. When this bit is set, host should not attempt to write to any command registers. If a write is attempted, hardware lock error is set in raw interrupt register. Once command is sent and a response is received from SD_MMC_CEATA cards, Command Done bit is set in the raw interrupt Register."]
     #[inline(always)]
+    #[must_use]
     pub fn start_cmd(&mut self) -> START_CMD_W<31> {
         START_CMD_W::new(self)
     }
@@ -299,11 +312,10 @@ impl crate::Readable for CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmd::W](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0x2000_0000"]
 impl crate::Resettable for CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x2000_0000;
 }

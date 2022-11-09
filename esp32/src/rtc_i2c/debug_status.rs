@@ -123,46 +123,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
+    #[must_use]
     pub fn ack_val(&mut self) -> ACK_VAL_W<0> {
         ACK_VAL_W::new(self)
     }
     #[doc = "Bit 1 - When working as a slave, the value of R/W bit received"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_rw(&mut self) -> SLAVE_RW_W<1> {
         SLAVE_RW_W::new(self)
     }
     #[doc = "Bit 2 - Transfer has timed out"]
     #[inline(always)]
+    #[must_use]
     pub fn timed_out(&mut self) -> TIMED_OUT_W<2> {
         TIMED_OUT_W::new(self)
     }
     #[doc = "Bit 3 - When working as a master, lost control of I2C bus"]
     #[inline(always)]
+    #[must_use]
     pub fn arb_lost(&mut self) -> ARB_LOST_W<3> {
         ARB_LOST_W::new(self)
     }
     #[doc = "Bit 4 - operation is in progress"]
     #[inline(always)]
+    #[must_use]
     pub fn bus_busy(&mut self) -> BUS_BUSY_W<4> {
         BUS_BUSY_W::new(self)
     }
     #[doc = "Bit 5 - When working as a slave, whether address was matched"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_addr_match(&mut self) -> SLAVE_ADDR_MATCH_W<5> {
         SLAVE_ADDR_MATCH_W::new(self)
     }
     #[doc = "Bit 6 - 8 bit transmit done"]
     #[inline(always)]
+    #[must_use]
     pub fn byte_trans(&mut self) -> BYTE_TRANS_W<6> {
         BYTE_TRANS_W::new(self)
     }
     #[doc = "Bits 25:27 - state of the main state machine"]
     #[inline(always)]
+    #[must_use]
     pub fn main_state(&mut self) -> MAIN_STATE_W<25> {
         MAIN_STATE_W::new(self)
     }
     #[doc = "Bits 28:30 - state of SCL state machine"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_state(&mut self) -> SCL_STATE_W<28> {
         SCL_STATE_W::new(self)
     }
@@ -185,11 +194,10 @@ impl crate::Readable for DEBUG_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [debug_status::W](W) writer structure"]
 impl crate::Writable for DEBUG_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DEBUG_STATUS to value 0"]
 impl crate::Resettable for DEBUG_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

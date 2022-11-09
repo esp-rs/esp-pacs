@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:12 - when the amount of packet payload is greater than this value the process of receiving data is done."]
     #[inline(always)]
+    #[must_use]
     pub fn pkt_thrs(&mut self) -> PKT_THRS_W<0> {
         PKT_THRS_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for PKT_THRES_SPEC {
 #[doc = "`write(|w| ..)` method takes [pkt_thres::W](W) writer structure"]
 impl crate::Writable for PKT_THRES_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PKT_THRES to value 0x80"]
 impl crate::Resettable for PKT_THRES_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

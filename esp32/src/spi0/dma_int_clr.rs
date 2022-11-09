@@ -126,46 +126,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The clear bit for lack of enough inlink descriptors."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_empty_int_clr(&mut self) -> INLINK_DSCR_EMPTY_INT_CLR_W<0> {
         INLINK_DSCR_EMPTY_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The clear bit for outlink descriptor error."]
     #[inline(always)]
+    #[must_use]
     pub fn outlink_dscr_error_int_clr(&mut self) -> OUTLINK_DSCR_ERROR_INT_CLR_W<1> {
         OUTLINK_DSCR_ERROR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - The clear bit for inlink descriptor error."]
     #[inline(always)]
+    #[must_use]
     pub fn inlink_dscr_error_int_clr(&mut self) -> INLINK_DSCR_ERROR_INT_CLR_W<2> {
         INLINK_DSCR_ERROR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - The clear bit for completing usage of a inlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn in_done_int_clr(&mut self) -> IN_DONE_INT_CLR_W<3> {
         IN_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The clear bit for receiving error."]
     #[inline(always)]
+    #[must_use]
     pub fn in_err_eof_int_clr(&mut self) -> IN_ERR_EOF_INT_CLR_W<4> {
         IN_ERR_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - The clear bit for completing receiving all the packets from host."]
     #[inline(always)]
+    #[must_use]
     pub fn in_suc_eof_int_clr(&mut self) -> IN_SUC_EOF_INT_CLR_W<5> {
         IN_SUC_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - The clear bit for completing usage of a outlink descriptor."]
     #[inline(always)]
+    #[must_use]
     pub fn out_done_int_clr(&mut self) -> OUT_DONE_INT_CLR_W<6> {
         OUT_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - The clear bit for sending a packet to host done."]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_int_clr(&mut self) -> OUT_EOF_INT_CLR_W<7> {
         OUT_EOF_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - The clear bit for sending all the packets to host done."]
     #[inline(always)]
+    #[must_use]
     pub fn out_total_eof_int_clr(&mut self) -> OUT_TOTAL_EOF_INT_CLR_W<8> {
         OUT_TOTAL_EOF_INT_CLR_W::new(self)
     }
@@ -188,11 +197,10 @@ impl crate::Readable for DMA_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dma_int_clr::W](W) writer structure"]
 impl crate::Writable for DMA_INT_CLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_INT_CLR to value 0"]
 impl crate::Resettable for DMA_INT_CLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

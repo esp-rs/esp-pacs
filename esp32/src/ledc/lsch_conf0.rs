@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
+    #[must_use]
     pub fn timer_sel(&mut self) -> TIMER_SEL_W<0> {
         TIMER_SEL_W::new(self)
     }
     #[doc = "Bit 2 - This is the output enable control bit for low speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<2> {
         SIG_OUT_EN_W::new(self)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when low speed channel0 is off."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_lv(&mut self) -> IDLE_LV_W<3> {
         IDLE_LV_W::new(self)
     }
     #[doc = "Bit 4 - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<4> {
         PARA_UP_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for LSCH_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [lsch_conf0::W](W) writer structure"]
 impl crate::Writable for LSCH_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LSCH%s_CONF0 to value 0"]
 impl crate::Resettable for LSCH_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

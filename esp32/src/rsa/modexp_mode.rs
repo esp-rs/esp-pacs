@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
+    #[must_use]
     pub fn modexp_mode(&mut self) -> MODEXP_MODE_W<0> {
         MODEXP_MODE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for MODEXP_MODE_SPEC {
 #[doc = "`write(|w| ..)` method takes [modexp_mode::W](W) writer structure"]
 impl crate::Writable for MODEXP_MODE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MODEXP_MODE to value 0"]
 impl crate::Resettable for MODEXP_MODE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

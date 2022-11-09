@@ -54,11 +54,10 @@ impl crate::Readable for INT_ST_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_st::W](W) writer structure"]
 impl crate::Writable for INT_ST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ST to value 0"]
 impl crate::Resettable for INT_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

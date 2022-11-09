@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - User identification register, value set by user. Can also be used as a scratchpad register by user."]
     #[inline(always)]
+    #[must_use]
     pub fn usrid(&mut self) -> USRID_W<0> {
         USRID_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for USRID_SPEC {
 #[doc = "`write(|w| ..)` method takes [usrid::W](W) writer structure"]
 impl crate::Writable for USRID_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USRID to value 0"]
 impl crate::Resettable for USRID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

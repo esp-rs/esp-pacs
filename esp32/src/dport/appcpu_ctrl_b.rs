@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn appcpu_clkgate_en(&mut self) -> APPCPU_CLKGATE_EN_W<0> {
         APPCPU_CLKGATE_EN_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APPCPU_CTRL_B_SPEC {
 #[doc = "`write(|w| ..)` method takes [appcpu_ctrl_b::W](W) writer structure"]
 impl crate::Writable for APPCPU_CTRL_B_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APPCPU_CTRL_B to value 0"]
 impl crate::Resettable for APPCPU_CTRL_B_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

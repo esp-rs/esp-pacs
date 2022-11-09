@@ -94,31 +94,37 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro(&mut self) -> PRO_W<0> {
         PRO_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn app(&mut self) -> APP_W<4> {
         APP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio(&mut self) -> SDIO_W<8> {
         SDIO_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn prodport(&mut self) -> PRODPORT_W<9> {
         PRODPORT_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn appdport(&mut self) -> APPDPORT_W<10> {
         APPDPORT_W::new(self)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
+    #[must_use]
     pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W<11> {
         AHB_LITE_SDHOST_PID_W::new(self)
     }
@@ -141,11 +147,10 @@ impl crate::Readable for AHB_LITE_MASK_SPEC {
 #[doc = "`write(|w| ..)` method takes [ahb_lite_mask::W](W) writer structure"]
 impl crate::Writable for AHB_LITE_MASK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHB_LITE_MASK to value 0"]
 impl crate::Resettable for AHB_LITE_MASK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

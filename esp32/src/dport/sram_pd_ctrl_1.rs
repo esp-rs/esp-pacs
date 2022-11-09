@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sram_pd_1(&mut self) -> SRAM_PD_1_W<0> {
         SRAM_PD_1_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SRAM_PD_CTRL_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [sram_pd_ctrl_1::W](W) writer structure"]
 impl crate::Writable for SRAM_PD_CTRL_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SRAM_PD_CTRL_1 to value 0"]
 impl crate::Resettable for SRAM_PD_CTRL_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

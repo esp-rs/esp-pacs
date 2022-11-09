@@ -34,168 +34,51 @@ impl From<crate::W<PIN_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLK1` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK1` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK1_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CLK1` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK1` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CLK2` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK2` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK2_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CLK2` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK2` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 4, O>;
-#[doc = "Field `CLK3` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK3` reader - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK3_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CLK3` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+#[doc = "Field `CLK3` writer - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
 pub type CLK3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 4, O>;
 impl R {
-    #[doc = "Bits 0:3 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 0:3 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
     pub fn clk1(&self) -> CLK1_R {
         CLK1_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 4:7 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 4:7 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
     pub fn clk2(&self) -> CLK2_R {
         CLK2_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bits 8:11 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 8:11 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
     pub fn clk3(&self) -> CLK3_R {
         CLK3_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 0:3 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
+    #[must_use]
     pub fn clk1(&mut self) -> CLK1_W<0> {
         CLK1_W::new(self)
     }
-    #[doc = "Bits 4:7 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 4:7 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
+    #[must_use]
     pub fn clk2(&mut self) -> CLK2_W<4> {
         CLK2_W::new(self)
     }
-    #[doc = "Bits 8:11 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0x0 and PIN_CTRL\\[11:8\\]
-= 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\]
-= 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[7:4\\]
-= 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\]
-= 0xF and PIN_CTRL\\[11:8\\]
-= 0x0."]
+    #[doc = "Bits 8:11 - If you want to output clock for I2S0 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0x0; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0x0 and PIN_CTRL\\[11:8\\] = 0x0. If you want to output clock for I2S1 to: CLK_OUT1, then set PIN_CTRL\\[3:0\\] = 0xF; CLK_OUT2, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[7:4\\] = 0x0; CLK_OUT3, then set PIN_CTRL\\[3:0\\] = 0xF and PIN_CTRL\\[11:8\\] = 0x0."]
     #[inline(always)]
+    #[must_use]
     pub fn clk3(&mut self) -> CLK3_W<8> {
         CLK3_W::new(self)
     }
@@ -218,11 +101,10 @@ impl crate::Readable for PIN_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pin_ctrl::W](W) writer structure"]
 impl crate::Writable for PIN_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PIN_CTRL to value 0"]
 impl crate::Resettable for PIN_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

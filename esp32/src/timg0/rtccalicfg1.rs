@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 7:31"]
     #[inline(always)]
     pub fn rtc_cali_value(&self) -> RTC_CALI_VALUE_R {
-        RTC_CALI_VALUE_R::new(((self.bits >> 7) & 0x01ff_ffff) as u32)
+        RTC_CALI_VALUE_R::new((self.bits >> 7) & 0x01ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtccalicfg1](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for RTCCALICFG1_SPEC {
 }
 #[doc = "`reset()` method sets RTCCALICFG1 to value 0"]
 impl crate::Resettable for RTCCALICFG1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

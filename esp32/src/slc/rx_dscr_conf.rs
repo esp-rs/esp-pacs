@@ -157,61 +157,73 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_token_no_replace(&mut self) -> SLC0_TOKEN_NO_REPLACE_W<0> {
         SLC0_TOKEN_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_infor_no_replace(&mut self) -> SLC0_INFOR_NO_REPLACE_W<1> {
         SLC0_INFOR_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_fill_mode(&mut self) -> SLC0_RX_FILL_MODE_W<2> {
         SLC0_RX_FILL_MODE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_eof_mode(&mut self) -> SLC0_RX_EOF_MODE_W<3> {
         SLC0_RX_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rx_fill_en(&mut self) -> SLC0_RX_FILL_EN_W<4> {
         SLC0_RX_FILL_EN_W::new(self)
     }
     #[doc = "Bits 5:15"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_rd_retry_threshold(&mut self) -> SLC0_RD_RETRY_THRESHOLD_W<5> {
         SLC0_RD_RETRY_THRESHOLD_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_token_no_replace(&mut self) -> SLC1_TOKEN_NO_REPLACE_W<16> {
         SLC1_TOKEN_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_infor_no_replace(&mut self) -> SLC1_INFOR_NO_REPLACE_W<17> {
         SLC1_INFOR_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rx_fill_mode(&mut self) -> SLC1_RX_FILL_MODE_W<18> {
         SLC1_RX_FILL_MODE_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rx_eof_mode(&mut self) -> SLC1_RX_EOF_MODE_W<19> {
         SLC1_RX_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rx_fill_en(&mut self) -> SLC1_RX_FILL_EN_W<20> {
         SLC1_RX_FILL_EN_W::new(self)
     }
     #[doc = "Bits 21:31"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_rd_retry_threshold(&mut self) -> SLC1_RD_RETRY_THRESHOLD_W<21> {
         SLC1_RD_RETRY_THRESHOLD_W::new(self)
     }
@@ -234,11 +246,10 @@ impl crate::Readable for RX_DSCR_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [rx_dscr_conf::W](W) writer structure"]
 impl crate::Writable for RX_DSCR_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RX_DSCR_CONF to value 0x101b_101a"]
 impl crate::Resettable for RX_DSCR_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x101b_101a
-    }
+    const RESET_VALUE: Self::Ux = 0x101b_101a;
 }

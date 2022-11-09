@@ -104,36 +104,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<0> {
         RX_DATA_NUM_W::new(self)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<6> {
         TX_DATA_NUM_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn dscr_en(&mut self) -> DSCR_EN_W<12> {
         DSCR_EN_W::new(self)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<13> {
         TX_FIFO_MOD_W::new(self)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<16> {
         RX_FIFO_MOD_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<19> {
         TX_FIFO_MOD_FORCE_EN_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<20> {
         RX_FIFO_MOD_FORCE_EN_W::new(self)
     }
@@ -156,11 +163,10 @@ impl crate::Readable for FIFO_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_CONF to value 0x1820"]
 impl crate::Resettable for FIFO_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1820
-    }
+    const RESET_VALUE: Self::Ux = 0x1820;
 }

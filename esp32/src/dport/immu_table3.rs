@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
+    #[must_use]
     pub fn immu_table3(&mut self) -> IMMU_TABLE3_W<0> {
         IMMU_TABLE3_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for IMMU_TABLE3_SPEC {
 #[doc = "`write(|w| ..)` method takes [immu_table3::W](W) writer structure"]
 impl crate::Writable for IMMU_TABLE3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMMU_TABLE3 to value 0x03"]
 impl crate::Resettable for IMMU_TABLE3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

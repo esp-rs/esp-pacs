@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_id(&mut self) -> HOST_SLCHOST_ID_W<0> {
         HOST_SLCHOST_ID_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for HOST_SLCHOSTID_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchostid::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOSTID_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOSTID to value 0x0600"]
 impl crate::Resettable for HOST_SLCHOSTID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0600
-    }
+    const RESET_VALUE: Self::Ux = 0x0600;
 }

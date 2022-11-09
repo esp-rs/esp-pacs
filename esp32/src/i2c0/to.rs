@@ -42,12 +42,13 @@ impl R {
     #[doc = "Bits 0:19 - This register is used to configure the max clock number of receiving a data."]
     #[inline(always)]
     pub fn time_out(&self) -> TIME_OUT_R {
-        TIME_OUT_R::new((self.bits & 0x000f_ffff) as u32)
+        TIME_OUT_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - This register is used to configure the max clock number of receiving a data."]
     #[inline(always)]
+    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<0> {
         TIME_OUT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for TO_SPEC {
 #[doc = "`write(|w| ..)` method takes [to::W](W) writer structure"]
 impl crate::Writable for TO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TO to value 0"]
 impl crate::Resettable for TO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

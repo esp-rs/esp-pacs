@@ -52,17 +52,19 @@ impl R {
     #[doc = "Bits 8:31 - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
     #[inline(always)]
     pub fn data_timeout(&self) -> DATA_TIMEOUT_R {
-        DATA_TIMEOUT_R::new(((self.bits >> 8) & 0x00ff_ffff) as u32)
+        DATA_TIMEOUT_R::new((self.bits >> 8) & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
     #[inline(always)]
+    #[must_use]
     pub fn response_timeout(&mut self) -> RESPONSE_TIMEOUT_W<0> {
         RESPONSE_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 8:31 - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
     #[inline(always)]
+    #[must_use]
     pub fn data_timeout(&mut self) -> DATA_TIMEOUT_W<8> {
         DATA_TIMEOUT_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for TMOUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [tmout::W](W) writer structure"]
 impl crate::Writable for TMOUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TMOUT to value 0xffff_ff40"]
 impl crate::Resettable for TMOUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff_ff40
-    }
+    const RESET_VALUE: Self::Ux = 0xffff_ff40;
 }

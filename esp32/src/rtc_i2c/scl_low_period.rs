@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:24 - number of cycles that scl == 0"]
     #[inline(always)]
     pub fn scl_low_period(&self) -> SCL_LOW_PERIOD_R {
-        SCL_LOW_PERIOD_R::new((self.bits & 0x01ff_ffff) as u32)
+        SCL_LOW_PERIOD_R::new(self.bits & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:24 - number of cycles that scl == 0"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_low_period(&mut self) -> SCL_LOW_PERIOD_W<0> {
         SCL_LOW_PERIOD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SCL_LOW_PERIOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_low_period::W](W) writer structure"]
 impl crate::Writable for SCL_LOW_PERIOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_LOW_PERIOD to value 0"]
 impl crate::Resettable for SCL_LOW_PERIOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

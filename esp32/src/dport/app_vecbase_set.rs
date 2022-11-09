@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]
     pub fn app_out_vecbase(&self) -> APP_OUT_VECBASE_R {
-        APP_OUT_VECBASE_R::new((self.bits & 0x003f_ffff) as u32)
+        APP_OUT_VECBASE_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
+    #[must_use]
     pub fn app_out_vecbase(&mut self) -> APP_OUT_VECBASE_W<0> {
         APP_OUT_VECBASE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APP_VECBASE_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_vecbase_set::W](W) writer structure"]
 impl crate::Writable for APP_VECBASE_SET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_VECBASE_SET to value 0"]
 impl crate::Resettable for APP_VECBASE_SET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

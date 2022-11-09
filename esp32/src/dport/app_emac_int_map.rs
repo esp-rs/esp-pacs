@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
+    #[must_use]
     pub fn app_emac_int_map(&mut self) -> APP_EMAC_INT_MAP_W<0> {
         APP_EMAC_INT_MAP_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APP_EMAC_INT_MAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [app_emac_int_map::W](W) writer structure"]
 impl crate::Writable for APP_EMAC_INT_MAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APP_EMAC_INT_MAP to value 0x10"]
 impl crate::Resettable for APP_EMAC_INT_MAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

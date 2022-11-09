@@ -168,61 +168,73 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt raw bit for the completion of read-buffer operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<0> {
         SLV_RD_BUF_DONE_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt raw bit for the completion of write-buffer operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<1> {
         SLV_WR_BUF_DONE_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt raw bit for the completion of read-status operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_sta_done(&mut self) -> SLV_RD_STA_DONE_W<2> {
         SLV_RD_STA_DONE_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt raw bit for the completion of write-status operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_sta_done(&mut self) -> SLV_WR_STA_DONE_W<3> {
         SLV_WR_STA_DONE_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn trans_done(&mut self) -> TRANS_DONE_W<4> {
         TRANS_DONE_W::new(self)
     }
     #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
     #[inline(always)]
+    #[must_use]
     pub fn int_en(&mut self) -> INT_EN_W<5> {
         INT_EN_W::new(self)
     }
     #[doc = "Bits 10:11 - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
     #[inline(always)]
+    #[must_use]
     pub fn cs_i_mode(&mut self) -> CS_I_MODE_W<10> {
         CS_I_MODE_W::new(self)
     }
     #[doc = "Bit 27 - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as: 1: write-status 2: write-buffer and 3: read-buffer."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd_define(&mut self) -> SLV_CMD_DEFINE_W<27> {
         SLV_CMD_DEFINE_W::new(self)
     }
     #[doc = "Bit 28 - write and read status enable in the slave mode"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_rd_sta_en(&mut self) -> SLV_WR_RD_STA_EN_W<28> {
         SLV_WR_RD_STA_EN_W::new(self)
     }
     #[doc = "Bit 29 - write and read buffer enable in the slave mode"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_rd_buf_en(&mut self) -> SLV_WR_RD_BUF_EN_W<29> {
         SLV_WR_RD_BUF_EN_W::new(self)
     }
     #[doc = "Bit 30 - 1: slave mode 0: master mode."]
     #[inline(always)]
+    #[must_use]
     pub fn mode(&mut self) -> MODE_W<30> {
         MODE_W::new(self)
     }
     #[doc = "Bit 31 - Software reset enable, reset the spi clock line cs line and data lines."]
     #[inline(always)]
+    #[must_use]
     pub fn sync_reset(&mut self) -> SYNC_RESET_W<31> {
         SYNC_RESET_W::new(self)
     }
@@ -245,11 +257,10 @@ impl crate::Readable for SLAVE_SPEC {
 #[doc = "`write(|w| ..)` method takes [slave::W](W) writer structure"]
 impl crate::Writable for SLAVE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLAVE to value 0x20"]
 impl crate::Resettable for SLAVE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x20
-    }
+    const RESET_VALUE: Self::Ux = 0x20;
 }

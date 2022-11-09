@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - the threshold for touch pad 3"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_out_th3(&mut self) -> TOUCH_OUT_TH3_W<0> {
         TOUCH_OUT_TH3_W::new(self)
     }
     #[doc = "Bits 16:31 - the threshold for touch pad 2"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_out_th2(&mut self) -> TOUCH_OUT_TH2_W<16> {
         TOUCH_OUT_TH2_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SAR_TOUCH_THRES2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_touch_thres2::W](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_THRES2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_THRES2 to value 0"]
 impl crate::Resettable for SAR_TOUCH_THRES2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

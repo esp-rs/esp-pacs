@@ -154,61 +154,73 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_en(&mut self) -> TX_PDM_EN_W<0> {
         TX_PDM_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_pdm_en(&mut self) -> RX_PDM_EN_W<1> {
         RX_PDM_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W<2> {
         PCM2PDM_CONV_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn pdm2pcm_conv_en(&mut self) -> PDM2PCM_CONV_EN_W<3> {
         PDM2PCM_CONV_EN_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_sinc_osr2(&mut self) -> TX_PDM_SINC_OSR2_W<4> {
         TX_PDM_SINC_OSR2_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_prescale(&mut self) -> TX_PDM_PRESCALE_W<8> {
         TX_PDM_PRESCALE_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_hp_in_shift(&mut self) -> TX_PDM_HP_IN_SHIFT_W<16> {
         TX_PDM_HP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_lp_in_shift(&mut self) -> TX_PDM_LP_IN_SHIFT_W<18> {
         TX_PDM_LP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_sinc_in_shift(&mut self) -> TX_PDM_SINC_IN_SHIFT_W<20> {
         TX_PDM_SINC_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_sigmadelta_in_shift(&mut self) -> TX_PDM_SIGMADELTA_IN_SHIFT_W<22> {
         TX_PDM_SIGMADELTA_IN_SHIFT_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_pdm_sinc_dsr_16_en(&mut self) -> RX_PDM_SINC_DSR_16_EN_W<24> {
         RX_PDM_SINC_DSR_16_EN_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_pdm_hp_bypass(&mut self) -> TX_PDM_HP_BYPASS_W<25> {
         TX_PDM_HP_BYPASS_W::new(self)
     }
@@ -231,11 +243,10 @@ impl crate::Readable for PDM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [pdm_conf::W](W) writer structure"]
 impl crate::Writable for PDM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PDM_CONF to value 0x0155_0020"]
 impl crate::Resettable for PDM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0155_0020
-    }
+    const RESET_VALUE: Self::Ux = 0x0155_0020;
 }

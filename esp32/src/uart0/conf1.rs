@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - When receiver receives more data than its threshold value.receiver will produce rxfifo_full_int_raw interrupt.the threshold value is (rx_flow_thrhd_h3 rxfifo_full_thrhd)."]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<0> {
         RXFIFO_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 8:14 - when the data amount in transmitter fifo is less than its threshold value. it will produce txfifo_empty_int_raw interrupt. the threshold value is (tx_mem_empty_thrhd txfifo_empty_thrhd)"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<8> {
         TXFIFO_EMPTY_THRHD_W::new(self)
     }
     #[doc = "Bits 16:22 - when receiver receives more data than its threshold value. receiver produce signal to tell the transmitter stop transferring data. the threshold value is (rx_flow_thrhd_h3 rx_flow_thrhd)."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<16> {
         RX_FLOW_THRHD_W::new(self)
     }
     #[doc = "Bit 23 - This is the flow enable bit for uart receiver. 1:choose software flow control with configuring sw_rts signal"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<23> {
         RX_FLOW_EN_W::new(self)
     }
     #[doc = "Bits 24:30 - This register is used to configure the timeout value for uart receiver receiving a byte."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<24> {
         RX_TOUT_THRHD_W::new(self)
     }
     #[doc = "Bit 31 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<31> {
         RX_TOUT_EN_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for CONF1_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf1::W](W) writer structure"]
 impl crate::Writable for CONF1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF1 to value 0x6060"]
 impl crate::Resettable for CONF1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x6060
-    }
+    const RESET_VALUE: Self::Ux = 0x6060;
 }

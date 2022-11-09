@@ -21,7 +21,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn host_hostslc0_len(&self) -> HOST_HOSTSLC0_LEN_R {
-        HOST_HOSTSLC0_LEN_R::new((self.bits & 0x000f_ffff) as u32)
+        HOST_HOSTSLC0_LEN_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bits 20:31"]
     #[inline(always)]
@@ -40,8 +40,5 @@ impl crate::Readable for HOST_SLCHOST_PKT_LEN_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_PKT_LEN to value 0"]
 impl crate::Resettable for HOST_SLCHOST_PKT_LEN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

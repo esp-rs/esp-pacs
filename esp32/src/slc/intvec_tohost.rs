@@ -28,11 +28,13 @@ pub type SLC1_TOHOST_INTVEC_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tohost_intvec(&mut self) -> SLC0_TOHOST_INTVEC_W<0> {
         SLC0_TOHOST_INTVEC_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_tohost_intvec(&mut self) -> SLC1_TOHOST_INTVEC_W<16> {
         SLC1_TOHOST_INTVEC_W::new(self)
     }
@@ -51,11 +53,10 @@ impl crate::RegisterSpec for INTVEC_TOHOST_SPEC {
 #[doc = "`write(|w| ..)` method takes [intvec_tohost::W](W) writer structure"]
 impl crate::Writable for INTVEC_TOHOST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTVEC_TOHOST to value 0"]
 impl crate::Resettable for INTVEC_TOHOST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

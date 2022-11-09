@@ -98,31 +98,37 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_en(&mut self) -> CARRIER2_EN_W<0> {
         CARRIER2_EN_W::new(self)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_prescale(&mut self) -> CARRIER2_PRESCALE_W<1> {
         CARRIER2_PRESCALE_W::new(self)
     }
     #[doc = "Bits 5:7"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_duty(&mut self) -> CARRIER2_DUTY_W<5> {
         CARRIER2_DUTY_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_oshtwth(&mut self) -> CARRIER2_OSHTWTH_W<8> {
         CARRIER2_OSHTWTH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_out_invert(&mut self) -> CARRIER2_OUT_INVERT_W<12> {
         CARRIER2_OUT_INVERT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn carrier2_in_invert(&mut self) -> CARRIER2_IN_INVERT_W<13> {
         CARRIER2_IN_INVERT_W::new(self)
     }
@@ -145,11 +151,10 @@ impl crate::Readable for CARRIER2_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [carrier2_cfg::W](W) writer structure"]
 impl crate::Writable for CARRIER2_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CARRIER2_CFG to value 0"]
 impl crate::Resettable for CARRIER2_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

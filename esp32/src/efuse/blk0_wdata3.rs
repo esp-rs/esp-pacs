@@ -70,11 +70,9 @@ pub type CHIP_CPU_FREQ_RATED_R = crate::BitReader<bool>;
 #[doc = "Field `CHIP_CPU_FREQ_RATED` writer - If set, the ESP32's maximum CPU frequency has been rated"]
 pub type CHIP_CPU_FREQ_RATED_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_WDATA3_SPEC, bool, O>;
-#[doc = "Field `BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+#[doc = "Field `BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
 pub type BLK3_PART_RESERVE_R = crate::BitReader<bool>;
-#[doc = "Field `BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+#[doc = "Field `BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
 pub type BLK3_PART_RESERVE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, BLK0_WDATA3_SPEC, bool, O>;
 #[doc = "Field `CHIP_VER_REV1` reader - "]
@@ -122,8 +120,7 @@ impl R {
     pub fn chip_cpu_freq_rated(&self) -> CHIP_CPU_FREQ_RATED_R {
         CHIP_CPU_FREQ_RATED_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
     pub fn blk3_part_reserve(&self) -> BLK3_PART_RESERVE_R {
         BLK3_PART_RESERVE_R::new(((self.bits >> 14) & 1) != 0)
@@ -137,47 +134,55 @@ is reserved for internal use"]
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_ver_dis_app_cpu(&mut self) -> CHIP_VER_DIS_APP_CPU_W<0> {
         CHIP_VER_DIS_APP_CPU_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_ver_dis_bt(&mut self) -> CHIP_VER_DIS_BT_W<1> {
         CHIP_VER_DIS_BT_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_ver_dis_cache(&mut self) -> CHIP_VER_DIS_CACHE_W<3> {
         CHIP_VER_DIS_CACHE_W::new(self)
     }
     #[doc = "Bits 4:8 - program for SPI_pad_config_hd"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pad_config_hd(&mut self) -> SPI_PAD_CONFIG_HD_W<4> {
         SPI_PAD_CONFIG_HD_W::new(self)
     }
     #[doc = "Bits 9:11 - least significant bits of chip package"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_ver_pkg(&mut self) -> CHIP_VER_PKG_W<9> {
         CHIP_VER_PKG_W::new(self)
     }
     #[doc = "Bit 12 - If set alongside EFUSE_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<12> {
         CHIP_CPU_FREQ_LOW_W::new(self)
     }
     #[doc = "Bit 13 - If set, the ESP32's maximum CPU frequency has been rated"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<13> {
         CHIP_CPU_FREQ_RATED_W::new(self)
     }
-    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\]
-is reserved for internal use"]
+    #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
+    #[must_use]
     pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<14> {
         BLK3_PART_RESERVE_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<15> {
         CHIP_VER_REV1_W::new(self)
     }
@@ -200,11 +205,10 @@ impl crate::Readable for BLK0_WDATA3_SPEC {
 #[doc = "`write(|w| ..)` method takes [blk0_wdata3::W](W) writer structure"]
 impl crate::Writable for BLK0_WDATA3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BLK0_WDATA3 to value 0"]
 impl crate::Resettable for BLK0_WDATA3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

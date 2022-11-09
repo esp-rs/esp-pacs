@@ -24,6 +24,7 @@ pub type SHA384_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA384_LOAD_
 impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-384 operation to calculate the final message hash."]
     #[inline(always)]
+    #[must_use]
     pub fn sha384_load(&mut self) -> SHA384_LOAD_W<0> {
         SHA384_LOAD_W::new(self)
     }
@@ -42,11 +43,10 @@ impl crate::RegisterSpec for SHA384_LOAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [sha384_load::W](W) writer structure"]
 impl crate::Writable for SHA384_LOAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHA384_LOAD to value 0"]
 impl crate::Resettable for SHA384_LOAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

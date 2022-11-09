@@ -97,31 +97,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn txeof_ena(&mut self) -> TXEOF_ENA_W<0> {
         TXEOF_ENA_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_map_ena(&mut self) -> FIFO_MAP_ENA_W<8> {
         FIFO_MAP_ENA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn slc0_tx_dummy_mode(&mut self) -> SLC0_TX_DUMMY_MODE_W<12> {
         SLC0_TX_DUMMY_MODE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn hda_map_128k(&mut self) -> HDA_MAP_128K_W<13> {
         HDA_MAP_128K_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn slc1_tx_dummy_mode(&mut self) -> SLC1_TX_DUMMY_MODE_W<14> {
         SLC1_TX_DUMMY_MODE_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_push_idle_num(&mut self) -> TX_PUSH_IDLE_NUM_W<16> {
         TX_PUSH_IDLE_NUM_W::new(self)
     }
@@ -144,11 +150,10 @@ impl crate::Readable for BRIDGE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [bridge_conf::W](W) writer structure"]
 impl crate::Writable for BRIDGE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BRIDGE_CONF to value 0x000a_7720"]
 impl crate::Resettable for BRIDGE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x000a_7720
-    }
+    const RESET_VALUE: Self::Ux = 0x000a_7720;
 }

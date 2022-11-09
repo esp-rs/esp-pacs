@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn pll_tick_num(&mut self) -> PLL_TICK_NUM_W<0> {
         PLL_TICK_NUM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PLL_TICK_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [pll_tick_conf::W](W) writer structure"]
 impl crate::Writable for PLL_TICK_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLL_TICK_CONF to value 0x4f"]
 impl crate::Resettable for PLL_TICK_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4f
-    }
+    const RESET_VALUE: Self::Ux = 0x4f;
 }

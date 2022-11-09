@@ -33,8 +33,5 @@ impl crate::Readable for DONE_SPEC {
 }
 #[doc = "`reset()` method sets DONE to value 0"]
 impl crate::Resettable for DONE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

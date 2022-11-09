@@ -255,121 +255,145 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset in link operations."]
     #[inline(always)]
+    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<0> {
         IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset out link operations."]
     #[inline(always)]
+    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<1> {
         OUT_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset dma ahb fifo."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<2> {
         AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset dma ahb interface."]
     #[inline(always)]
+    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<3> {
         AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable loop test for in links."]
     #[inline(always)]
+    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<4> {
         IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable loop test for out links."]
     #[inline(always)]
+    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<5> {
         OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6 - when in link's length is 0 go on to use the next in link automatically."]
     #[inline(always)]
+    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<6> {
         OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7 - don't use"]
     #[inline(always)]
+    #[must_use]
     pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<7> {
         OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
     #[inline(always)]
+    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<8> {
         OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to use UART to transmit or receive data."]
     #[inline(always)]
+    #[must_use]
     pub fn uart0_ce(&mut self) -> UART0_CE_W<9> {
         UART0_CE_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to use UART1 to transmit or receive data."]
     #[inline(always)]
+    #[must_use]
     pub fn uart1_ce(&mut self) -> UART1_CE_W<10> {
         UART1_CE_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to use UART2 to transmit or receive data."]
     #[inline(always)]
+    #[must_use]
     pub fn uart2_ce(&mut self) -> UART2_CE_W<11> {
         UART2_CE_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable DMA in links to use burst mode."]
     #[inline(always)]
+    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<12> {
         OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable DMA out links to use burst mode."]
     #[inline(always)]
+    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<13> {
         INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable DMA burst MODE"]
     #[inline(always)]
+    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<14> {
         OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<15> {
         MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to use special char to separate the data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn seper_en(&mut self) -> SEPER_EN_W<16> {
         SEPER_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable to use head packet before the data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn head_en(&mut self) -> HEAD_EN_W<17> {
         HEAD_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
     #[inline(always)]
+    #[must_use]
     pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<18> {
         CRC_REC_EN_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<19> {
         UART_IDLE_EOF_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<20> {
         LEN_EOF_EN_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
     #[inline(always)]
+    #[must_use]
     pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<21> {
         ENCODE_CRC_EN_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable clock-gating for read or write registers."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<22> {
         CLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to enable to use brk char as the end of a data frame."]
     #[inline(always)]
+    #[must_use]
     pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<23> {
         UART_RX_BRK_EOF_EN_W::new(self)
     }
@@ -392,11 +416,10 @@ impl crate::Readable for CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
 impl crate::Writable for CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONF0 to value 0x0037_0100"]
 impl crate::Resettable for CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0037_0100
-    }
+    const RESET_VALUE: Self::Ux = 0x0037_0100;
 }

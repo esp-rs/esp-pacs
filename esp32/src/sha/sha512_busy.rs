@@ -33,8 +33,5 @@ impl crate::Readable for SHA512_BUSY_SPEC {
 }
 #[doc = "`reset()` method sets SHA512_BUSY to value 0"]
 impl crate::Resettable for SHA512_BUSY_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

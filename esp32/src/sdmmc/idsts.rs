@@ -46,37 +46,25 @@ pub type RI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
 pub type FBE_R = crate::BitReader<bool>;
 #[doc = "Field `FBE` writer - Fatal Bus Error Interrupt. Indicates that a Bus Error occurred (IDSTS\\[12:10\\]) . When this bit is set, the DMA disables all its bus accesses. Writing 1 clears this bit."]
 pub type FBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
-#[doc = "Field `DU` reader - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\]
-= 0). Writing 1 clears this bit."]
+#[doc = "Field `DU` reader - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\] = 0). Writing 1 clears this bit."]
 pub type DU_R = crate::BitReader<bool>;
-#[doc = "Field `DU` writer - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\]
-= 0). Writing 1 clears this bit."]
+#[doc = "Field `DU` writer - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\] = 0). Writing 1 clears this bit."]
 pub type DU_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
 #[doc = "Field `CES` reader - Card Error Summary. Indicates the status of the transaction to/from the card, also present in RINTSTS. Indicates the logical OR of the following bits: EBE : End Bit Error; RTO : Response Timeout/Boot Ack Timeout; RCRC : Response CRC; SBE : Start Bit Error; DRTO : Data Read Timeout/BDS timeout; DCRC : Data CRC for Receive; RE : Response Error. Writing 1 clears this bit. The abort condition of the IDMAC depends on the setting of this CES bit. If the CES bit is enabled, then the IDMAC aborts on a response error."]
 pub type CES_R = crate::BitReader<bool>;
 #[doc = "Field `CES` writer - Card Error Summary. Indicates the status of the transaction to/from the card, also present in RINTSTS. Indicates the logical OR of the following bits: EBE : End Bit Error; RTO : Response Timeout/Boot Ack Timeout; RCRC : Response CRC; SBE : Start Bit Error; DRTO : Data Read Timeout/BDS timeout; DCRC : Data CRC for Receive; RE : Response Error. Writing 1 clears this bit. The abort condition of the IDMAC depends on the setting of this CES bit. If the CES bit is enabled, then the IDMAC aborts on a response error."]
 pub type CES_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
-#[doc = "Field `NIS` reader - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\]
-: Transmit Interrupt, IDSTS\\[1\\]
-: Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
+#[doc = "Field `NIS` reader - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\] : Transmit Interrupt, IDSTS\\[1\\] : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
 pub type NIS_R = crate::BitReader<bool>;
-#[doc = "Field `NIS` writer - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\]
-: Transmit Interrupt, IDSTS\\[1\\]
-: Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
+#[doc = "Field `NIS` writer - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\] : Transmit Interrupt, IDSTS\\[1\\] : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
 pub type NIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
-#[doc = "Field `AIS` reader - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\]
-: Fatal Bus Interrupt, IDSTS\\[4\\]
-: DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
+#[doc = "Field `AIS` reader - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\] : Fatal Bus Interrupt, IDSTS\\[4\\] : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
 pub type AIS_R = crate::BitReader<bool>;
-#[doc = "Field `AIS` writer - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\]
-: Fatal Bus Interrupt, IDSTS\\[4\\]
-: DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
+#[doc = "Field `AIS` writer - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\] : Fatal Bus Interrupt, IDSTS\\[4\\] : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
 pub type AIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDSTS_SPEC, bool, O>;
-#[doc = "Field `FBE_CODE` reader - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\]
-is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
+#[doc = "Field `FBE_CODE` reader - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\] is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
 pub type FBE_CODE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `FBE_CODE` writer - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\]
-is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
+#[doc = "Field `FBE_CODE` writer - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\] is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
 pub type FBE_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IDSTS_SPEC, u8, u8, 3, O>;
 #[doc = "Field `FSM` reader - DMAC FSM present state. 0: DMA_IDLE (idle state); 1: DMA_SUSPEND (suspend state); 2: DESC_RD (descriptor reading state); 3: DESC_CHK (descriptor checking state); 4: DMA_RD_REQ_WAIT (read-data request waiting state); 5: DMA_WR_REQ_WAIT (write-data request waiting state); 6: DMA_RD (data-read state); 7: DMA_WR (data-write state); 8: DESC_CLOSE (descriptor close state)."]
 pub type FSM_R = crate::FieldReader<u8, u8>;
@@ -98,8 +86,7 @@ impl R {
     pub fn fbe(&self) -> FBE_R {
         FBE_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\]
-= 0). Writing 1 clears this bit."]
+    #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\] = 0). Writing 1 clears this bit."]
     #[inline(always)]
     pub fn du(&self) -> DU_R {
         DU_R::new(((self.bits >> 4) & 1) != 0)
@@ -109,22 +96,17 @@ impl R {
     pub fn ces(&self) -> CES_R {
         CES_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\]
-: Transmit Interrupt, IDSTS\\[1\\]
-: Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
+    #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\] : Transmit Interrupt, IDSTS\\[1\\] : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn nis(&self) -> NIS_R {
         NIS_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\]
-: Fatal Bus Interrupt, IDSTS\\[4\\]
-: DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
+    #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\] : Fatal Bus Interrupt, IDSTS\\[4\\] : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
     pub fn ais(&self) -> AIS_R {
         AIS_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\]
-is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
+    #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\] is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
     #[inline(always)]
     pub fn fbe_code(&self) -> FBE_CODE_R {
         FBE_CODE_R::new(((self.bits >> 10) & 7) as u8)
@@ -138,52 +120,55 @@ is set. This field does not generate an interrupt. 001: Host Abort received duri
 impl W {
     #[doc = "Bit 0 - Transmit Interrupt. Indicates that data transmission is finished for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn ti(&mut self) -> TI_W<0> {
         TI_W::new(self)
     }
     #[doc = "Bit 1 - Receive Interrupt. Indicates the completion of data reception for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn ri(&mut self) -> RI_W<1> {
         RI_W::new(self)
     }
     #[doc = "Bit 2 - Fatal Bus Error Interrupt. Indicates that a Bus Error occurred (IDSTS\\[12:10\\]) . When this bit is set, the DMA disables all its bus accesses. Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn fbe(&mut self) -> FBE_W<2> {
         FBE_W::new(self)
     }
-    #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\]
-= 0). Writing 1 clears this bit."]
+    #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\] = 0). Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn du(&mut self) -> DU_W<4> {
         DU_W::new(self)
     }
     #[doc = "Bit 5 - Card Error Summary. Indicates the status of the transaction to/from the card, also present in RINTSTS. Indicates the logical OR of the following bits: EBE : End Bit Error; RTO : Response Timeout/Boot Ack Timeout; RCRC : Response CRC; SBE : Start Bit Error; DRTO : Data Read Timeout/BDS timeout; DCRC : Data CRC for Receive; RE : Response Error. Writing 1 clears this bit. The abort condition of the IDMAC depends on the setting of this CES bit. If the CES bit is enabled, then the IDMAC aborts on a response error."]
     #[inline(always)]
+    #[must_use]
     pub fn ces(&mut self) -> CES_W<5> {
         CES_W::new(self)
     }
-    #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\]
-: Transmit Interrupt, IDSTS\\[1\\]
-: Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
+    #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\] : Transmit Interrupt, IDSTS\\[1\\] : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn nis(&mut self) -> NIS_W<8> {
         NIS_W::new(self)
     }
-    #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\]
-: Fatal Bus Interrupt, IDSTS\\[4\\]
-: DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
+    #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\] : Fatal Bus Interrupt, IDSTS\\[4\\] : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
+    #[must_use]
     pub fn ais(&mut self) -> AIS_W<9> {
         AIS_W::new(self)
     }
-    #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\]
-is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
+    #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\] is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
     #[inline(always)]
+    #[must_use]
     pub fn fbe_code(&mut self) -> FBE_CODE_W<10> {
         FBE_CODE_W::new(self)
     }
     #[doc = "Bits 13:16 - DMAC FSM present state. 0: DMA_IDLE (idle state); 1: DMA_SUSPEND (suspend state); 2: DESC_RD (descriptor reading state); 3: DESC_CHK (descriptor checking state); 4: DMA_RD_REQ_WAIT (read-data request waiting state); 5: DMA_WR_REQ_WAIT (write-data request waiting state); 6: DMA_RD (data-read state); 7: DMA_WR (data-write state); 8: DESC_CLOSE (descriptor close state)."]
     #[inline(always)]
+    #[must_use]
     pub fn fsm(&mut self) -> FSM_W<13> {
         FSM_W::new(self)
     }
@@ -206,11 +191,10 @@ impl crate::Readable for IDSTS_SPEC {
 #[doc = "`write(|w| ..)` method takes [idsts::W](W) writer structure"]
 impl crate::Writable for IDSTS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IDSTS to value 0"]
 impl crate::Resettable for IDSTS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn appcpu_runstall(&mut self) -> APPCPU_RUNSTALL_W<0> {
         APPCPU_RUNSTALL_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for APPCPU_CTRL_C_SPEC {
 #[doc = "`write(|w| ..)` method takes [appcpu_ctrl_c::W](W) writer structure"]
 impl crate::Writable for APPCPU_CTRL_C_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APPCPU_CTRL_C to value 0"]
 impl crate::Resettable for APPCPU_CTRL_C_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_slc1_bit7_clraddr(&mut self) -> HOST_SLCHOST_SLC1_BIT7_CLRADDR_W<0> {
         HOST_SLCHOST_SLC1_BIT7_CLRADDR_W::new(self)
     }
     #[doc = "Bits 9:17"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slchost_slc1_bit6_clraddr(&mut self) -> HOST_SLCHOST_SLC1_BIT6_CLRADDR_W<9> {
         HOST_SLCHOST_SLC1_BIT6_CLRADDR_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for HOST_SLCHOST_RDCLR1_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_rdclr1::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_RDCLR1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_RDCLR1 to value 0x0003_c1e0"]
 impl crate::Resettable for HOST_SLCHOST_RDCLR1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0003_c1e0
-    }
+    const RESET_VALUE: Self::Ux = 0x0003_c1e0;
 }

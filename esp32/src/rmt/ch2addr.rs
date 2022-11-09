@@ -33,8 +33,5 @@ impl crate::Readable for CH2ADDR_SPEC {
 }
 #[doc = "`reset()` method sets CH2ADDR to value 0"]
 impl crate::Resettable for CH2ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<0> {
         AGC_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<1> {
         AGC_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<2> {
         PBUS_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<3> {
         PBUS_MEM_FORCE_PD_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for FRONT_END_MEM_PD_SPEC {
 #[doc = "`write(|w| ..)` method takes [front_end_mem_pd::W](W) writer structure"]
 impl crate::Writable for FRONT_END_MEM_PD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRONT_END_MEM_PD to value 0x05"]
 impl crate::Resettable for FRONT_END_MEM_PD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05
-    }
+    const RESET_VALUE: Self::Ux = 0x05;
 }

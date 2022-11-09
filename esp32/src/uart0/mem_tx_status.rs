@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]
     pub fn mem_tx_status(&self) -> MEM_TX_STATUS_R {
-        MEM_TX_STATUS_R::new((self.bits & 0x00ff_ffff) as u32)
+        MEM_TX_STATUS_R::new(self.bits & 0x00ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_tx_status](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for MEM_TX_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets MEM_TX_STATUS to value 0"]
 impl crate::Resettable for MEM_TX_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

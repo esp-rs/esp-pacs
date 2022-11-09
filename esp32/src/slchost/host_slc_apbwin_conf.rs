@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bits 0:27"]
     #[inline(always)]
     pub fn host_slc_apbwin_addr(&self) -> HOST_SLC_APBWIN_ADDR_R {
-        HOST_SLC_APBWIN_ADDR_R::new((self.bits & 0x0fff_ffff) as u32)
+        HOST_SLC_APBWIN_ADDR_R::new(self.bits & 0x0fff_ffff)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:27"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc_apbwin_addr(&mut self) -> HOST_SLC_APBWIN_ADDR_W<0> {
         HOST_SLC_APBWIN_ADDR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc_apbwin_wr(&mut self) -> HOST_SLC_APBWIN_WR_W<28> {
         HOST_SLC_APBWIN_WR_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn host_slc_apbwin_start(&mut self) -> HOST_SLC_APBWIN_START_W<29> {
         HOST_SLC_APBWIN_START_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for HOST_SLC_APBWIN_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slc_apbwin_conf::W](W) writer structure"]
 impl crate::Writable for HOST_SLC_APBWIN_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLC_APBWIN_CONF to value 0"]
 impl crate::Resettable for HOST_SLC_APBWIN_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

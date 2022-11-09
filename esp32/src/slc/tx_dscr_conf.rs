@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
+    #[must_use]
     pub fn wr_retry_threshold(&mut self) -> WR_RETRY_THRESHOLD_W<0> {
         WR_RETRY_THRESHOLD_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for TX_DSCR_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [tx_dscr_conf::W](W) writer structure"]
 impl crate::Writable for TX_DSCR_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TX_DSCR_CONF to value 0x80"]
 impl crate::Resettable for TX_DSCR_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x80
-    }
+    const RESET_VALUE: Self::Ux = 0x80;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn rom_mpu_table3(&mut self) -> ROM_MPU_TABLE3_W<0> {
         ROM_MPU_TABLE3_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ROM_MPU_TABLE3_SPEC {
 #[doc = "`write(|w| ..)` method takes [rom_mpu_table3::W](W) writer structure"]
 impl crate::Writable for ROM_MPU_TABLE3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ROM_MPU_TABLE3 to value 0x01"]
 impl crate::Resettable for ROM_MPU_TABLE3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

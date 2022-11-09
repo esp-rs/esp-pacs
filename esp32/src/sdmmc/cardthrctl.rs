@@ -76,21 +76,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cardrdthren(&mut self) -> CARDRDTHREN_W<0> {
         CARDRDTHREN_W::new(self)
     }
     #[doc = "Bit 1 - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cardclrinten(&mut self) -> CARDCLRINTEN_W<1> {
         CARDCLRINTEN_W::new(self)
     }
     #[doc = "Bit 2 - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
     #[inline(always)]
+    #[must_use]
     pub fn cardwrthren(&mut self) -> CARDWRTHREN_W<2> {
         CARDWRTHREN_W::new(self)
     }
     #[doc = "Bits 16:31 - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
     #[inline(always)]
+    #[must_use]
     pub fn cardthreshold(&mut self) -> CARDTHRESHOLD_W<16> {
         CARDTHRESHOLD_W::new(self)
     }
@@ -113,11 +117,10 @@ impl crate::Readable for CARDTHRCTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [cardthrctl::W](W) writer structure"]
 impl crate::Writable for CARDTHRCTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CARDTHRCTL to value 0"]
 impl crate::Resettable for CARDTHRCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -52,7 +52,7 @@ impl R {
     #[doc = "Bits 0:27 - I2C control data only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
     pub fn sar_i2c_ctrl(&self) -> SAR_I2C_CTRL_R {
-        SAR_I2C_CTRL_R::new((self.bits & 0x0fff_ffff) as u32)
+        SAR_I2C_CTRL_R::new(self.bits & 0x0fff_ffff)
     }
     #[doc = "Bit 28 - start I2C only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
@@ -68,16 +68,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:27 - I2C control data only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_ctrl(&mut self) -> SAR_I2C_CTRL_W<0> {
         SAR_I2C_CTRL_W::new(self)
     }
     #[doc = "Bit 28 - start I2C only active when reg_sar_i2c_start_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_start(&mut self) -> SAR_I2C_START_W<28> {
         SAR_I2C_START_W::new(self)
     }
     #[doc = "Bit 29 - 1: I2C started by SW 0: I2C started by FSM"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_i2c_start_force(&mut self) -> SAR_I2C_START_FORCE_W<29> {
         SAR_I2C_START_FORCE_W::new(self)
     }
@@ -100,11 +103,10 @@ impl crate::Readable for SAR_I2C_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_i2c_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_I2C_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_I2C_CTRL to value 0"]
 impl crate::Resettable for SAR_I2C_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

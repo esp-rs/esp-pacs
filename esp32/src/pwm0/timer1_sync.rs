@@ -87,26 +87,31 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_synci_en(&mut self) -> TIMER1_SYNCI_EN_W<0> {
         TIMER1_SYNCI_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sw(&mut self) -> SW_W<1> {
         SW_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_synco_sel(&mut self) -> TIMER1_SYNCO_SEL_W<2> {
         TIMER1_SYNCO_SEL_W::new(self)
     }
     #[doc = "Bits 4:19"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_phase(&mut self) -> TIMER1_PHASE_W<4> {
         TIMER1_PHASE_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn timer1_phase_direction(&mut self) -> TIMER1_PHASE_DIRECTION_W<20> {
         TIMER1_PHASE_DIRECTION_W::new(self)
     }
@@ -129,11 +134,10 @@ impl crate::Readable for TIMER1_SYNC_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer1_sync::W](W) writer structure"]
 impl crate::Writable for TIMER1_SYNC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER1_SYNC to value 0"]
 impl crate::Resettable for TIMER1_SYNC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

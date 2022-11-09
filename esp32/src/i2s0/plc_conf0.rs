@@ -95,31 +95,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn good_pack_max(&mut self) -> GOOD_PACK_MAX_W<0> {
         GOOD_PACK_MAX_W::new(self)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
+    #[must_use]
     pub fn n_err_seg(&mut self) -> N_ERR_SEG_W<6> {
         N_ERR_SEG_W::new(self)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
+    #[must_use]
     pub fn shift_rate(&mut self) -> SHIFT_RATE_W<9> {
         SHIFT_RATE_W::new(self)
     }
     #[doc = "Bits 12:19"]
     #[inline(always)]
+    #[must_use]
     pub fn max_slide_sample(&mut self) -> MAX_SLIDE_SAMPLE_W<12> {
         MAX_SLIDE_SAMPLE_W::new(self)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
+    #[must_use]
     pub fn pack_len_8k(&mut self) -> PACK_LEN_8K_W<20> {
         PACK_LEN_8K_W::new(self)
     }
     #[doc = "Bits 25:27"]
     #[inline(always)]
+    #[must_use]
     pub fn n_min_err(&mut self) -> N_MIN_ERR_W<25> {
         N_MIN_ERR_W::new(self)
     }
@@ -142,11 +148,10 @@ impl crate::Readable for PLC_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [plc_conf0::W](W) writer structure"]
 impl crate::Writable for PLC_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLC_CONF0 to value 0x08a8_0339"]
 impl crate::Resettable for PLC_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08a8_0339
-    }
+    const RESET_VALUE: Self::Ux = 0x08a8_0339;
 }

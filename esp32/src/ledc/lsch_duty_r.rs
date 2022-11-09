@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:24 - This register represents the current duty cycle of the output signal for low-speed channel %s"]
     #[inline(always)]
     pub fn duty_r(&self) -> DUTY_R_R {
-        DUTY_R_R::new((self.bits & 0x01ff_ffff) as u32)
+        DUTY_R_R::new(self.bits & 0x01ff_ffff)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lsch_duty_r](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for LSCH_DUTY_R_SPEC {
 }
 #[doc = "`reset()` method sets LSCH%s_DUTY_R to value 0"]
 impl crate::Resettable for LSCH_DUTY_R_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

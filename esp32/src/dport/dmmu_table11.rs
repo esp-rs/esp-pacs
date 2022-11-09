@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
+    #[must_use]
     pub fn dmmu_table11(&mut self) -> DMMU_TABLE11_W<0> {
         DMMU_TABLE11_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DMMU_TABLE11_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmmu_table11::W](W) writer structure"]
 impl crate::Writable for DMMU_TABLE11_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMMU_TABLE11 to value 0x0b"]
 impl crate::Resettable for DMMU_TABLE11_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0b
-    }
+    const RESET_VALUE: Self::Ux = 0x0b;
 }

@@ -115,41 +115,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<0> {
         RXFIFO_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 5:9 - Config txfifo empty threhd value when using apb fifo access"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<5> {
         TXFIFO_EMPTY_THRHD_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enble apb nonfifo access."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<10> {
         NONFIFO_EN_W::new(self)
     }
     #[doc = "Bit 11 - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
     #[inline(always)]
+    #[must_use]
     pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<11> {
         FIFO_ADDR_CFG_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to reset rx fifo when using apb fifo access."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<12> {
         RX_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to reset tx fifo when using apb fifo access."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<13> {
         TX_FIFO_RST_W::new(self)
     }
     #[doc = "Bits 14:19 - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<14> {
         NONFIFO_RX_THRES_W::new(self)
     }
     #[doc = "Bits 20:25 - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
     #[inline(always)]
+    #[must_use]
     pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<20> {
         NONFIFO_TX_THRES_W::new(self)
     }
@@ -172,11 +180,10 @@ impl crate::Readable for FIFO_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_conf::W](W) writer structure"]
 impl crate::Writable for FIFO_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_CONF to value 0x0155_408b"]
 impl crate::Resettable for FIFO_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0155_408b
-    }
+    const RESET_VALUE: Self::Ux = 0x0155_408b;
 }

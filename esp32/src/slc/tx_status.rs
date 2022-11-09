@@ -54,8 +54,5 @@ impl crate::Readable for TX_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets TX_STATUS to value 0x0002_0002"]
 impl crate::Resettable for TX_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0002_0002
-    }
+    const RESET_VALUE: Self::Ux = 0x0002_0002;
 }

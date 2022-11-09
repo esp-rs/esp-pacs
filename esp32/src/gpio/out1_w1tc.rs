@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output value write 1 to clear"]
     #[inline(always)]
+    #[must_use]
     pub fn out1_data_w1tc(&mut self) -> OUT1_DATA_W1TC_W<0> {
         OUT1_DATA_W1TC_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for OUT1_W1TC_SPEC {
 #[doc = "`write(|w| ..)` method takes [out1_w1tc::W](W) writer structure"]
 impl crate::Writable for OUT1_W1TC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OUT1_W1TC to value 0"]
 impl crate::Resettable for OUT1_W1TC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

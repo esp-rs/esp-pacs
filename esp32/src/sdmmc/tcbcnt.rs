@@ -33,8 +33,5 @@ impl crate::Readable for TCBCNT_SPEC {
 }
 #[doc = "`reset()` method sets TCBCNT to value 0"]
 impl crate::Resettable for TCBCNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

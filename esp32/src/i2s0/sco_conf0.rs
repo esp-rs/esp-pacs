@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W<0> {
         SCO_WITH_I2S_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W<1> {
         SCO_NO_I2S_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W<2> {
         CVSD_ENC_START_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W<3> {
         CVSD_ENC_RESET_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for SCO_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [sco_conf0::W](W) writer structure"]
 impl crate::Writable for SCO_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCO_CONF0 to value 0"]
 impl crate::Resettable for SCO_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

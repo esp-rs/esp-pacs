@@ -173,51 +173,61 @@ impl R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_mode(&mut self) -> PRO_CACHE_MODE_W<2> {
         PRO_CACHE_MODE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_enable(&mut self) -> PRO_CACHE_ENABLE_W<3> {
         PRO_CACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_flush_ena(&mut self) -> PRO_CACHE_FLUSH_ENA_W<4> {
         PRO_CACHE_FLUSH_ENA_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_lock_0_en(&mut self) -> PRO_CACHE_LOCK_0_EN_W<6> {
         PRO_CACHE_LOCK_0_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_lock_1_en(&mut self) -> PRO_CACHE_LOCK_1_EN_W<7> {
         PRO_CACHE_LOCK_1_EN_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_lock_2_en(&mut self) -> PRO_CACHE_LOCK_2_EN_W<8> {
         PRO_CACHE_LOCK_2_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_lock_3_en(&mut self) -> PRO_CACHE_LOCK_3_EN_W<9> {
         PRO_CACHE_LOCK_3_EN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_single_iram_ena(&mut self) -> PRO_SINGLE_IRAM_ENA_W<10> {
         PRO_SINGLE_IRAM_ENA_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram_split(&mut self) -> PRO_DRAM_SPLIT_W<11> {
         PRO_DRAM_SPLIT_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_dram_hl(&mut self) -> PRO_DRAM_HL_W<16> {
         PRO_DRAM_HL_W::new(self)
     }
@@ -240,11 +250,10 @@ impl crate::Readable for PRO_CACHE_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_cache_ctrl::W](W) writer structure"]
 impl crate::Writable for PRO_CACHE_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_CTRL to value 0x10"]
 impl crate::Resettable for PRO_CACHE_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

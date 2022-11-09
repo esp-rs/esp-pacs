@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn sw_bootloader_sel(&mut self) -> SW_BOOTLOADER_SEL_W<0> {
         SW_BOOTLOADER_SEL_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SECURE_BOOT_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [secure_boot_ctrl::W](W) writer structure"]
 impl crate::Writable for SECURE_BOOT_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SECURE_BOOT_CTRL to value 0"]
 impl crate::Resettable for SECURE_BOOT_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

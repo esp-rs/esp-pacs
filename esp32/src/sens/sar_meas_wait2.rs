@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_sar_sw(&mut self) -> FORCE_XPD_SAR_SW_W<0> {
         FORCE_XPD_SAR_SW_W::new(self)
     }
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W<0> {
         SAR_AMP_WAIT3_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W<16> {
         FORCE_XPD_AMP_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<18> {
         FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Bits 20:27"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W<20> {
         SAR2_RSTB_WAIT_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for SAR_MEAS_WAIT2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_meas_wait2::W](W) writer structure"]
 impl crate::Writable for SAR_MEAS_WAIT2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS_WAIT2 to value 0x0020_000a"]
 impl crate::Resettable for SAR_MEAS_WAIT2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0020_000a
-    }
+    const RESET_VALUE: Self::Ux = 0x0020_000a;
 }

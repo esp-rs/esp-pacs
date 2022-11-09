@@ -93,31 +93,37 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
+    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<0> {
         SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - SCL is push-pull (1) or open-drain (0)"]
     #[inline(always)]
+    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<1> {
         SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 4 - Master (1) or slave (0)"]
     #[inline(always)]
+    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<4> {
         MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - Force to generate start condition"]
     #[inline(always)]
+    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<5> {
         TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - Send LSB first"]
     #[inline(always)]
+    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<6> {
         TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - Receive LSB first"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<7> {
         RX_LSB_FIRST_W::new(self)
     }
@@ -140,11 +146,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

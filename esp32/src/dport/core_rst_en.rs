@@ -147,61 +147,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn core_rst(&mut self) -> CORE_RST_W<0> {
         CORE_RST_W::new(self)
     }
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn bb_rst(&mut self) -> BB_RST_W<0> {
         BB_RST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn fe_rst(&mut self) -> FE_RST_W<1> {
         FE_RST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn mac_rst(&mut self) -> MAC_RST_W<2> {
         MAC_RST_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn bt_rst(&mut self) -> BT_RST_W<3> {
         BT_RST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn btmac_rst(&mut self) -> BTMAC_RST_W<4> {
         BTMAC_RST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_rst(&mut self) -> SDIO_RST_W<5> {
         SDIO_RST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_host_rst(&mut self) -> SDIO_HOST_RST_W<6> {
         SDIO_HOST_RST_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn emac_rst(&mut self) -> EMAC_RST_W<7> {
         EMAC_RST_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn macpwr_rst(&mut self) -> MACPWR_RST_W<8> {
         MACPWR_RST_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn rw_btmac_rst(&mut self) -> RW_BTMAC_RST_W<9> {
         RW_BTMAC_RST_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn rw_btlp_rst(&mut self) -> RW_BTLP_RST_W<10> {
         RW_BTLP_RST_W::new(self)
     }
@@ -224,11 +236,10 @@ impl crate::Readable for CORE_RST_EN_SPEC {
 #[doc = "`write(|w| ..)` method takes [core_rst_en::W](W) writer structure"]
 impl crate::Writable for CORE_RST_EN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CORE_RST_EN to value 0"]
 impl crate::Resettable for CORE_RST_EN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

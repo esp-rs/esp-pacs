@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]
     pub fn pro_out_vecbase(&self) -> PRO_OUT_VECBASE_R {
-        PRO_OUT_VECBASE_R::new((self.bits & 0x003f_ffff) as u32)
+        PRO_OUT_VECBASE_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_out_vecbase(&mut self) -> PRO_OUT_VECBASE_W<0> {
         PRO_OUT_VECBASE_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for PRO_VECBASE_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [pro_vecbase_set::W](W) writer structure"]
 impl crate::Writable for PRO_VECBASE_SET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRO_VECBASE_SET to value 0"]
 impl crate::Resettable for PRO_VECBASE_SET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

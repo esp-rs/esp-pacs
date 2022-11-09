@@ -103,36 +103,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to choose rs485 mode."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_en(&mut self) -> RS485_EN_W<0> {
         RS485_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
+    #[must_use]
     pub fn dl0_en(&mut self) -> DL0_EN_W<1> {
         DL0_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
+    #[must_use]
     pub fn dl1_en(&mut self) -> DL1_EN_W<2> {
         DL1_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable loopback transmitter's output data signal to receiver's input data signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<3> {
         RS485TX_RX_EN_W::new(self)
     }
     #[doc = "Bit 4 - 1: enable rs485's transmitter to send data when rs485's receiver is busy. 0:rs485's transmitter should not send data when its receiver is busy."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<4> {
         RS485RXBY_TX_EN_W::new(self)
     }
     #[doc = "Bit 5 - This register is used to delay the receiver's internal data signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<5> {
         RS485_RX_DLY_NUM_W::new(self)
     }
     #[doc = "Bits 6:9 - This register is used to delay the transmitter's internal data signal."]
     #[inline(always)]
+    #[must_use]
     pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<6> {
         RS485_TX_DLY_NUM_W::new(self)
     }
@@ -155,11 +162,10 @@ impl crate::Readable for RS485_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [rs485_conf::W](W) writer structure"]
 impl crate::Writable for RS485_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RS485_CONF to value 0"]
 impl crate::Resettable for RS485_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

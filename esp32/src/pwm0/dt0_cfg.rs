@@ -149,61 +149,73 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_fed_upmethod(&mut self) -> DT0_FED_UPMETHOD_W<0> {
         DT0_FED_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_red_upmethod(&mut self) -> DT0_RED_UPMETHOD_W<4> {
         DT0_RED_UPMETHOD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_deb_mode(&mut self) -> DT0_DEB_MODE_W<8> {
         DT0_DEB_MODE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_a_outswap(&mut self) -> DT0_A_OUTSWAP_W<9> {
         DT0_A_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_b_outswap(&mut self) -> DT0_B_OUTSWAP_W<10> {
         DT0_B_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_red_insel(&mut self) -> DT0_RED_INSEL_W<11> {
         DT0_RED_INSEL_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_fed_insel(&mut self) -> DT0_FED_INSEL_W<12> {
         DT0_FED_INSEL_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_red_outinvert(&mut self) -> DT0_RED_OUTINVERT_W<13> {
         DT0_RED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_fed_outinvert(&mut self) -> DT0_FED_OUTINVERT_W<14> {
         DT0_FED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_a_outbypass(&mut self) -> DT0_A_OUTBYPASS_W<15> {
         DT0_A_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_b_outbypass(&mut self) -> DT0_B_OUTBYPASS_W<16> {
         DT0_B_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn dt0_clk_sel(&mut self) -> DT0_CLK_SEL_W<17> {
         DT0_CLK_SEL_W::new(self)
     }
@@ -226,11 +238,10 @@ impl crate::Readable for DT0_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [dt0_cfg::W](W) writer structure"]
 impl crate::Writable for DT0_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DT0_CFG to value 0x0001_8000"]
 impl crate::Resettable for DT0_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_8000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_8000;
 }

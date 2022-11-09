@@ -111,41 +111,49 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn demap_force_pd(&mut self) -> DEMAP_FORCE_PD_W<0> {
         DEMAP_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn demap_force_pu(&mut self) -> DEMAP_FORCE_PU_W<1> {
         DEMAP_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn vit_force_pd(&mut self) -> VIT_FORCE_PD_W<2> {
         VIT_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn vit_force_pu(&mut self) -> VIT_FORCE_PU_W<3> {
         VIT_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_rot_force_pd(&mut self) -> RX_ROT_FORCE_PD_W<4> {
         RX_ROT_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn rx_rot_force_pu(&mut self) -> RX_ROT_FORCE_PU_W<5> {
         RX_ROT_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn chan_est_force_pd(&mut self) -> CHAN_EST_FORCE_PD_W<6> {
         CHAN_EST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn chan_est_force_pu(&mut self) -> CHAN_EST_FORCE_PU_W<7> {
         CHAN_EST_FORCE_PU_W::new(self)
     }
@@ -168,11 +176,10 @@ impl crate::Readable for NRXPD_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [nrxpd_ctrl::W](W) writer structure"]
 impl crate::Writable for NRXPD_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NRXPD_CTRL to value 0"]
 impl crate::Resettable for NRXPD_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

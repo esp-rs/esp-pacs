@@ -33,8 +33,5 @@ impl crate::Readable for WRTPRT_SPEC {
 }
 #[doc = "`reset()` method sets WRTPRT to value 0"]
 impl crate::Resettable for WRTPRT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

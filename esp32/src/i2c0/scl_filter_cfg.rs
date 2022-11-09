@@ -58,11 +58,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<0> {
         SCL_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 3 - This is the filter enable bit for SCL."]
     #[inline(always)]
+    #[must_use]
     pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<3> {
         SCL_FILTER_EN_W::new(self)
     }
@@ -85,11 +87,10 @@ impl crate::Readable for SCL_FILTER_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [scl_filter_cfg::W](W) writer structure"]
 impl crate::Writable for SCL_FILTER_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SCL_FILTER_CFG to value 0x08"]
 impl crate::Resettable for SCL_FILTER_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x08
-    }
+    const RESET_VALUE: Self::Ux = 0x08;
 }

@@ -86,21 +86,25 @@ impl R {
 impl W {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W<24> {
         GPIO_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 25 - enable SDIO reject"]
     #[inline(always)]
+    #[must_use]
     pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W<25> {
         SDIO_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 26 - enable reject for light sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<26> {
         LIGHT_SLP_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 27 - enable reject for deep sleep"]
     #[inline(always)]
+    #[must_use]
     pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<27> {
         DEEP_SLP_REJECT_EN_W::new(self)
     }
@@ -123,11 +127,10 @@ impl crate::Readable for SLP_REJECT_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [slp_reject_conf::W](W) writer structure"]
 impl crate::Writable for SLP_REJECT_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLP_REJECT_CONF to value 0"]
 impl crate::Resettable for SLP_REJECT_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

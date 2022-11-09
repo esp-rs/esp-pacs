@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_spi_mask_pro(&mut self) -> SLAVE_SPI_MASK_PRO_W<0> {
         SLAVE_SPI_MASK_PRO_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slave_spi_mask_app(&mut self) -> SLAVE_SPI_MASK_APP_W<4> {
         SLAVE_SPI_MASK_APP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_encrypt_enable(&mut self) -> SPI_ENCRYPT_ENABLE_W<8> {
         SPI_ENCRYPT_ENABLE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_decrypt_enable(&mut self) -> SPI_DECRYPT_ENABLE_W<12> {
         SPI_DECRYPT_ENABLE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SLAVE_SPI_CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [slave_spi_config::W](W) writer structure"]
 impl crate::Writable for SLAVE_SPI_CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLAVE_SPI_CONFIG to value 0"]
 impl crate::Resettable for SLAVE_SPI_CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

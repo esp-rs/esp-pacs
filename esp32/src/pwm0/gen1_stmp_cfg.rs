@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_a_upmethod(&mut self) -> GEN1_A_UPMETHOD_W<0> {
         GEN1_A_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_b_upmethod(&mut self) -> GEN1_B_UPMETHOD_W<4> {
         GEN1_B_UPMETHOD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_a_shdw_full(&mut self) -> GEN1_A_SHDW_FULL_W<8> {
         GEN1_A_SHDW_FULL_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn gen1_b_shdw_full(&mut self) -> GEN1_B_SHDW_FULL_W<9> {
         GEN1_B_SHDW_FULL_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for GEN1_STMP_CFG_SPEC {
 #[doc = "`write(|w| ..)` method takes [gen1_stmp_cfg::W](W) writer structure"]
 impl crate::Writable for GEN1_STMP_CFG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GEN1_STMP_CFG to value 0"]
 impl crate::Resettable for GEN1_STMP_CFG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

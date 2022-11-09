@@ -127,46 +127,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<0> {
         TSENS_XPD_WAIT_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<12> {
         TSENS_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<13> {
         TSENS_CLK_INV_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_gated(&mut self) -> TSENS_CLK_GATED_W<14> {
         TSENS_CLK_GATED_W::new(self)
     }
     #[doc = "Bit 15 - invert temperature sensor data"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<15> {
         TSENS_IN_INV_W::new(self)
     }
     #[doc = "Bits 16:23 - temperature sensor clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<16> {
         TSENS_CLK_DIV_W::new(self)
     }
     #[doc = "Bit 24 - temperature sensor power up"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<24> {
         TSENS_POWER_UP_W::new(self)
     }
     #[doc = "Bit 25 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<25> {
         TSENS_POWER_UP_FORCE_W::new(self)
     }
     #[doc = "Bit 26 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
+    #[must_use]
     pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<26> {
         TSENS_DUMP_OUT_W::new(self)
     }
@@ -189,11 +198,10 @@ impl crate::Readable for SAR_TSENS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_tsens_ctrl::W](W) writer structure"]
 impl crate::Writable for SAR_TSENS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_TSENS_CTRL to value 0x0006_6002"]
 impl crate::Resettable for SAR_TSENS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0006_6002
-    }
+    const RESET_VALUE: Self::Ux = 0x0006_6002;
 }

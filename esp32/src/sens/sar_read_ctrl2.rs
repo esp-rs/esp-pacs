@@ -118,41 +118,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<0> {
         SAR2_CLK_DIV_W::new(self)
     }
     #[doc = "Bits 8:15 - sample cycles for SAR ADC2"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_sample_cycle(&mut self) -> SAR2_SAMPLE_CYCLE_W<8> {
         SAR2_SAMPLE_CYCLE_W::new(self)
     }
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_sample_bit(&mut self) -> SAR2_SAMPLE_BIT_W<16> {
         SAR2_SAMPLE_BIT_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<18> {
         SAR2_CLK_GATED_W::new(self)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<19> {
         SAR2_SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_pwdet_force(&mut self) -> SAR2_PWDET_FORCE_W<27> {
         SAR2_PWDET_FORCE_W::new(self)
     }
     #[doc = "Bit 28 - 1: SAR ADC2 controlled by DIG ADC2 CTRL or PWDET CTRL 0: SAR ADC2 controlled by RTC ADC2 CTRL"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_dig_force(&mut self) -> SAR2_DIG_FORCE_W<28> {
         SAR2_DIG_FORCE_W::new(self)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
+    #[must_use]
     pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<29> {
         SAR2_DATA_INV_W::new(self)
     }
@@ -175,11 +183,10 @@ impl crate::Readable for SAR_READ_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [sar_read_ctrl2::W](W) writer structure"]
 impl crate::Writable for SAR_READ_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SAR_READ_CTRL2 to value 0x0007_0902"]
 impl crate::Resettable for SAR_READ_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0007_0902
-    }
+    const RESET_VALUE: Self::Ux = 0x0007_0902;
 }

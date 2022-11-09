@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
+    #[must_use]
     pub fn user_id_fn2(&mut self) -> USER_ID_FN2_W<0> {
         USER_ID_FN2_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn device_id_fn2(&mut self) -> DEVICE_ID_FN2_W<16> {
         DEVICE_ID_FN2_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for CFG_DATA16_SPEC {
 #[doc = "`write(|w| ..)` method takes [cfg_data16::W](W) writer structure"]
 impl crate::Writable for CFG_DATA16_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG_DATA16 to value 0x3333_6666"]
 impl crate::Resettable for CFG_DATA16_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3333_6666
-    }
+    const RESET_VALUE: Self::Ux = 0x3333_6666;
 }

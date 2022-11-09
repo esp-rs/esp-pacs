@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
     #[inline(always)]
+    #[must_use]
     pub fn cmdarg(&mut self) -> CMDARG_W<0> {
         CMDARG_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for CMDARG_SPEC {
 #[doc = "`write(|w| ..)` method takes [cmdarg::W](W) writer structure"]
 impl crate::Writable for CMDARG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMDARG to value 0"]
 impl crate::Resettable for CMDARG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

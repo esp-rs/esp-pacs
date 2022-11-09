@@ -126,46 +126,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_pd(&mut self) -> MEM_PD_W<0> {
         MEM_PD_W::new(self)
     }
     #[doc = "Bits 3:6 - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_size(&mut self) -> RX_SIZE_W<3> {
         RX_SIZE_W::new(self)
     }
     #[doc = "Bits 7:10 - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_size(&mut self) -> TX_SIZE_W<7> {
         TX_SIZE_W::new(self)
     }
     #[doc = "Bits 15:17 - refer to the rx_flow_thrhd's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_flow_thrhd_h3(&mut self) -> RX_FLOW_THRHD_H3_W<15> {
         RX_FLOW_THRHD_H3_W::new(self)
     }
     #[doc = "Bits 18:20 - refer to the rx_tout_thrhd's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_tout_thrhd_h3(&mut self) -> RX_TOUT_THRHD_H3_W<18> {
         RX_TOUT_THRHD_H3_W::new(self)
     }
     #[doc = "Bits 21:22 - refer to the uart_xon_threshold's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn xon_threshold_h2(&mut self) -> XON_THRESHOLD_H2_W<21> {
         XON_THRESHOLD_H2_W::new(self)
     }
     #[doc = "Bits 23:24 - refer to the uart_xoff_threshold's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn xoff_threshold_h2(&mut self) -> XOFF_THRESHOLD_H2_W<23> {
         XOFF_THRESHOLD_H2_W::new(self)
     }
     #[doc = "Bits 25:27 - refer to the rxfifo_full_thrhd's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn rx_mem_full_thrhd(&mut self) -> RX_MEM_FULL_THRHD_W<25> {
         RX_MEM_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 28:30 - refer to txfifo_empty_thrhd 's describtion."]
     #[inline(always)]
+    #[must_use]
     pub fn tx_mem_empty_thrhd(&mut self) -> TX_MEM_EMPTY_THRHD_W<28> {
         TX_MEM_EMPTY_THRHD_W::new(self)
     }
@@ -188,11 +197,10 @@ impl crate::Readable for MEM_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [mem_conf::W](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MEM_CONF to value 0x88"]
 impl crate::Resettable for MEM_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x88
-    }
+    const RESET_VALUE: Self::Ux = 0x88;
 }

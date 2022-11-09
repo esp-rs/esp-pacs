@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn div_cnt(&mut self) -> DIV_CNT_W<0> {
         DIV_CNT_W::new(self)
     }
     #[doc = "Bits 8:23 - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
     #[inline(always)]
+    #[must_use]
     pub fn idle_thres(&mut self) -> IDLE_THRES_W<8> {
         IDLE_THRES_W::new(self)
     }
     #[doc = "Bits 24:27 - This register is used to configure the the amount of memory blocks allocated to channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_size(&mut self) -> MEM_SIZE_W<24> {
         MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable control bit for channel0."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W<28> {
         CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 29 - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
     #[inline(always)]
+    #[must_use]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<29> {
         CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Bit 30 - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
     #[inline(always)]
+    #[must_use]
     pub fn mem_pd(&mut self) -> MEM_PD_W<30> {
         MEM_PD_W::new(self)
     }
     #[doc = "Bit 31 - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
     #[inline(always)]
+    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<31> {
         CLK_EN_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for CHCONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [chconf0::W](W) writer structure"]
 impl crate::Writable for CHCONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CH%sCONF0 to value 0x3110_0002"]
 impl crate::Resettable for CHCONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x3110_0002
-    }
+    const RESET_VALUE: Self::Ux = 0x3110_0002;
 }

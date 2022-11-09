@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_cycles_s3(&mut self) -> SLEEP_CYCLES_S3_W<0> {
         SLEEP_CYCLES_S3_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for ULP_CP_SLEEP_CYC3_SPEC {
 #[doc = "`write(|w| ..)` method takes [ulp_cp_sleep_cyc3::W](W) writer structure"]
 impl crate::Writable for ULP_CP_SLEEP_CYC3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_SLEEP_CYC3 to value 0x28"]
 impl crate::Resettable for ULP_CP_SLEEP_CYC3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x28
-    }
+    const RESET_VALUE: Self::Ux = 0x28;
 }

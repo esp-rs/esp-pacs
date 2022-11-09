@@ -101,31 +101,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn status_cnt_mode(&mut self) -> STATUS_CNT_MODE_W<0> {
         STATUS_CNT_MODE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn status_thres1(&mut self) -> STATUS_THRES1_W<2> {
         STATUS_THRES1_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn status_thres0(&mut self) -> STATUS_THRES0_W<3> {
         STATUS_THRES0_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn status_l_lim(&mut self) -> STATUS_L_LIM_W<4> {
         STATUS_L_LIM_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn status_h_lim(&mut self) -> STATUS_H_LIM_W<5> {
         STATUS_H_LIM_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn status_zero(&mut self) -> STATUS_ZERO_W<6> {
         STATUS_ZERO_W::new(self)
     }
@@ -148,11 +154,10 @@ impl crate::Readable for U0_STATUS_SPEC {
 #[doc = "`write(|w| ..)` method takes [u0_status::W](W) writer structure"]
 impl crate::Writable for U0_STATUS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets U0_STATUS to value 0"]
 impl crate::Resettable for U0_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

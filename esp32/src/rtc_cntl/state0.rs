@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bit 20 - touch controller force wake up"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_wakeup_force_en(&mut self) -> TOUCH_WAKEUP_FORCE_EN_W<20> {
         TOUCH_WAKEUP_FORCE_EN_W::new(self)
     }
     #[doc = "Bit 21 - ULP-coprocessor force wake up"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_wakeup_force_en(&mut self) -> ULP_CP_WAKEUP_FORCE_EN_W<21> {
         ULP_CP_WAKEUP_FORCE_EN_W::new(self)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge 0: APB to RTC using sync"]
     #[inline(always)]
+    #[must_use]
     pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<22> {
         APB2RTC_BRIDGE_SEL_W::new(self)
     }
     #[doc = "Bit 23 - touch timer enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<23> {
         TOUCH_SLP_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 24 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<24> {
         ULP_CP_SLP_TIMER_EN_W::new(self)
     }
     #[doc = "Bit 29 - sleep wakeup bit"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<29> {
         SLP_WAKEUP_W::new(self)
     }
     #[doc = "Bit 30 - sleep reject bit"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<30> {
         SLP_REJECT_W::new(self)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_en(&mut self) -> SLEEP_EN_W<31> {
         SLEEP_EN_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for STATE0_SPEC {
 #[doc = "`write(|w| ..)` method takes [state0::W](W) writer structure"]
 impl crate::Writable for STATE0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STATE0 to value 0x0030_0000"]
 impl crate::Resettable for STATE0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0030_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0030_0000;
 }

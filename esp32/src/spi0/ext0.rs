@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - page program delay time by system clock."]
     #[inline(always)]
+    #[must_use]
     pub fn t_pp_time(&mut self) -> T_PP_TIME_W<0> {
         T_PP_TIME_W::new(self)
     }
     #[doc = "Bits 16:19 - page program delay time shift ."]
     #[inline(always)]
+    #[must_use]
     pub fn t_pp_shift(&mut self) -> T_PP_SHIFT_W<16> {
         T_PP_SHIFT_W::new(self)
     }
     #[doc = "Bit 31 - page program delay enable."]
     #[inline(always)]
+    #[must_use]
     pub fn t_pp_ena(&mut self) -> T_PP_ENA_W<31> {
         T_PP_ENA_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for EXT0_SPEC {
 #[doc = "`write(|w| ..)` method takes [ext0::W](W) writer structure"]
 impl crate::Writable for EXT0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT0 to value 0x800a_0050"]
 impl crate::Resettable for EXT0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x800a_0050
-    }
+    const RESET_VALUE: Self::Ux = 0x800a_0050;
 }

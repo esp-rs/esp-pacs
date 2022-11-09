@@ -33,8 +33,5 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGPC_SPEC {
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGPC to value 0"]
 impl crate::Resettable for PRO_CPU_RECORD_PDEBUGPC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

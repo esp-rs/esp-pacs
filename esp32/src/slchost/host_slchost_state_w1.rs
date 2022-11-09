@@ -54,8 +54,5 @@ impl crate::Readable for HOST_SLCHOST_STATE_W1_SPEC {
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_STATE_W1 to value 0"]
 impl crate::Resettable for HOST_SLCHOST_STATE_W1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

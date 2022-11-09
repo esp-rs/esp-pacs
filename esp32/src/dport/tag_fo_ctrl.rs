@@ -77,21 +77,25 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_tag_force_on(&mut self) -> PRO_CACHE_TAG_FORCE_ON_W<0> {
         PRO_CACHE_TAG_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn pro_cache_tag_pd(&mut self) -> PRO_CACHE_TAG_PD_W<1> {
         PRO_CACHE_TAG_PD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_tag_force_on(&mut self) -> APP_CACHE_TAG_FORCE_ON_W<8> {
         APP_CACHE_TAG_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn app_cache_tag_pd(&mut self) -> APP_CACHE_TAG_PD_W<9> {
         APP_CACHE_TAG_PD_W::new(self)
     }
@@ -114,11 +118,10 @@ impl crate::Readable for TAG_FO_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [tag_fo_ctrl::W](W) writer structure"]
 impl crate::Writable for TAG_FO_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TAG_FO_CTRL to value 0x0101"]
 impl crate::Resettable for TAG_FO_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0101
-    }
+    const RESET_VALUE: Self::Ux = 0x0101;
 }

@@ -119,41 +119,49 @@ impl R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
+    #[must_use]
     pub fn host_frc_sdio11(&mut self) -> HOST_FRC_SDIO11_W<0> {
         HOST_FRC_SDIO11_W::new(self)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
+    #[must_use]
     pub fn host_frc_sdio20(&mut self) -> HOST_FRC_SDIO20_W<5> {
         HOST_FRC_SDIO20_W::new(self)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
+    #[must_use]
     pub fn host_frc_neg_samp(&mut self) -> HOST_FRC_NEG_SAMP_W<10> {
         HOST_FRC_NEG_SAMP_W::new(self)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
+    #[must_use]
     pub fn host_frc_pos_samp(&mut self) -> HOST_FRC_POS_SAMP_W<15> {
         HOST_FRC_POS_SAMP_W::new(self)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
+    #[must_use]
     pub fn host_frc_quick_in(&mut self) -> HOST_FRC_QUICK_IN_W<20> {
         HOST_FRC_QUICK_IN_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
+    #[must_use]
     pub fn host_sdio20_int_delay(&mut self) -> HOST_SDIO20_INT_DELAY_W<25> {
         HOST_SDIO20_INT_DELAY_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn host_sdio_pad_pullup(&mut self) -> HOST_SDIO_PAD_PULLUP_W<26> {
         HOST_SDIO_PAD_PULLUP_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn host_hspeed_con_en(&mut self) -> HOST_HSPEED_CON_EN_W<27> {
         HOST_HSPEED_CON_EN_W::new(self)
     }
@@ -176,11 +184,10 @@ impl crate::Readable for HOST_SLCHOST_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [host_slchost_conf::W](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_CONF to value 0"]
 impl crate::Resettable for HOST_SLCHOST_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

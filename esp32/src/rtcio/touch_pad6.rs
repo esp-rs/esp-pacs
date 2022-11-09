@@ -174,76 +174,91 @@ impl R {
 impl W {
     #[doc = "Bit 12 - connect the rtc pad input to digital pad input Ó0Ó is availbale.MTMS"]
     #[inline(always)]
+    #[must_use]
     pub fn to_gpio(&mut self) -> TO_GPIO_W<12> {
         TO_GPIO_W::new(self)
     }
     #[doc = "Bit 13 - the input enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<13> {
         FUN_IE_W::new(self)
     }
     #[doc = "Bit 14 - the output enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_oe(&mut self) -> SLP_OE_W<14> {
         SLP_OE_W::new(self)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_ie(&mut self) -> SLP_IE_W<15> {
         SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<16> {
         SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn fun_sel(&mut self) -> FUN_SEL_W<17> {
         FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
+    #[must_use]
     pub fn mux_sel(&mut self) -> MUX_SEL_W<19> {
         MUX_SEL_W::new(self)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
+    #[must_use]
     pub fn xpd(&mut self) -> XPD_W<20> {
         XPD_W::new(self)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
+    #[must_use]
     pub fn tie_opt(&mut self) -> TIE_OPT_W<21> {
         TIE_OPT_W::new(self)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
+    #[must_use]
     pub fn start(&mut self) -> START_W<22> {
         START_W::new(self)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
+    #[must_use]
     pub fn dac(&mut self) -> DAC_W<23> {
         DAC_W::new(self)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn rue(&mut self) -> RUE_W<27> {
         RUE_W::new(self)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn rde(&mut self) -> RDE_W<28> {
         RDE_W::new(self)
     }
     #[doc = "Bits 29:30 - the driver strength of the pad"]
     #[inline(always)]
+    #[must_use]
     pub fn drv(&mut self) -> DRV_W<29> {
         DRV_W::new(self)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
+    #[must_use]
     pub fn hold(&mut self) -> HOLD_W<31> {
         HOLD_W::new(self)
     }
@@ -266,11 +281,10 @@ impl crate::Readable for TOUCH_PAD6_SPEC {
 #[doc = "`write(|w| ..)` method takes [touch_pad6::W](W) writer structure"]
 impl crate::Writable for TOUCH_PAD6_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOUCH_PAD6 to value 0x4a00_0000"]
 impl crate::Resettable for TOUCH_PAD6_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x4a00_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x4a00_0000;
 }

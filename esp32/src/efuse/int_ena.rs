@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 0 - read done interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn read_done_int_ena(&mut self) -> READ_DONE_INT_ENA_W<0> {
         READ_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - program done interrupt enable"]
     #[inline(always)]
+    #[must_use]
     pub fn pgm_done_int_ena(&mut self) -> PGM_DONE_INT_ENA_W<1> {
         PGM_DONE_INT_ENA_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [int_ena::W](W) writer structure"]
 impl crate::Writable for INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_ENA to value 0"]
 impl crate::Resettable for INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

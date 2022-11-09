@@ -126,46 +126,55 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
+    #[must_use]
     pub fn cclkin_edge_drv_sel(&mut self) -> CCLKIN_EDGE_DRV_SEL_W<0> {
         CCLKIN_EDGE_DRV_SEL_W::new(self)
     }
     #[doc = "Bits 3:5 - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
+    #[must_use]
     pub fn cclkin_edge_sam_sel(&mut self) -> CCLKIN_EDGE_SAM_SEL_W<3> {
         CCLKIN_EDGE_SAM_SEL_W::new(self)
     }
     #[doc = "Bits 6:8 - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
+    #[must_use]
     pub fn cclkin_edge_slf_sel(&mut self) -> CCLKIN_EDGE_SLF_SEL_W<6> {
         CCLKIN_EDGE_SLF_SEL_W::new(self)
     }
     #[doc = "Bits 9:12 - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
     #[inline(always)]
+    #[must_use]
     pub fn ccllkin_edge_h(&mut self) -> CCLLKIN_EDGE_H_W<9> {
         CCLLKIN_EDGE_H_W::new(self)
     }
     #[doc = "Bits 13:16 - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
     #[inline(always)]
+    #[must_use]
     pub fn ccllkin_edge_l(&mut self) -> CCLLKIN_EDGE_L_W<13> {
         CCLLKIN_EDGE_L_W::new(self)
     }
     #[doc = "Bits 17:20 - The value should be equal to CCLKIN_EDGE_L."]
     #[inline(always)]
+    #[must_use]
     pub fn ccllkin_edge_n(&mut self) -> CCLLKIN_EDGE_N_W<17> {
         CCLLKIN_EDGE_N_W::new(self)
     }
     #[doc = "Bit 21 - Enable esdio mode."]
     #[inline(always)]
+    #[must_use]
     pub fn esdio_mode(&mut self) -> ESDIO_MODE_W<21> {
         ESDIO_MODE_W::new(self)
     }
     #[doc = "Bit 22 - Enable esd mode."]
     #[inline(always)]
+    #[must_use]
     pub fn esd_mode(&mut self) -> ESD_MODE_W<22> {
         ESD_MODE_W::new(self)
     }
     #[doc = "Bit 23 - Sdio clock enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cclk_en(&mut self) -> CCLK_EN_W<23> {
         CCLK_EN_W::new(self)
     }
@@ -188,11 +197,10 @@ impl crate::Readable for CLK_EDGE_SEL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_edge_sel::W](W) writer structure"]
 impl crate::Writable for CLK_EDGE_SEL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_EDGE_SEL to value 0x0082_0200"]
 impl crate::Resettable for CLK_EDGE_SEL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0082_0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0082_0200;
 }

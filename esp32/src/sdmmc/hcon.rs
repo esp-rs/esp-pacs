@@ -89,8 +89,5 @@ impl crate::Readable for HCON_SPEC {
 }
 #[doc = "`reset()` method sets HCON to value 0x0344_4cc3"]
 impl crate::Resettable for HCON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0344_4cc3
-    }
+    const RESET_VALUE: Self::Ux = 0x0344_4cc3;
 }

@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - higher 32 bits of the value that will load into timer 1 time-base counter"]
     #[inline(always)]
+    #[must_use]
     pub fn load_hi(&mut self) -> LOAD_HI_W<0> {
         LOAD_HI_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for T1LOADHI_SPEC {
 #[doc = "`write(|w| ..)` method takes [t1loadhi::W](W) writer structure"]
 impl crate::Writable for T1LOADHI_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets T1LOADHI to value 0"]
 impl crate::Resettable for T1LOADHI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

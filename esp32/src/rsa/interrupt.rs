@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RSA interrupt status register. Will read 1 once an operation has completed."]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt(&mut self) -> INTERRUPT_W<0> {
         INTERRUPT_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for INTERRUPT_SPEC {
 #[doc = "`write(|w| ..)` method takes [interrupt::W](W) writer structure"]
 impl crate::Writable for INTERRUPT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERRUPT to value 0"]
 impl crate::Resettable for INTERRUPT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

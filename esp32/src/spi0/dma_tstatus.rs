@@ -33,8 +33,5 @@ impl crate::Readable for DMA_TSTATUS_SPEC {
 }
 #[doc = "`reset()` method sets DMA_TSTATUS to value 0"]
 impl crate::Resettable for DMA_TSTATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
