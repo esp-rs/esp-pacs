@@ -26,3 +26,8 @@ SENS:
     _strip: "SAR_"
   "SAR_ATTEN1":
     _strip: "SAR_"
+
+I2S1:
+  _strip: "I2S_"
+  "*":
+    _strip: "I2S_"
