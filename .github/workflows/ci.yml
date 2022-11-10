@@ -19,7 +19,7 @@ jobs:
       matrix:
         chip: [esp32c2, esp32c3, esp32c6]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -27,7 +27,7 @@ jobs:
           toolchain: nightly
           default: true
           components: rust-src
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/cargo@v1
         with:
           command: run
@@ -41,13 +41,13 @@ jobs:
       matrix:
         chip: [esp32, esp32s2, esp32s3, esp8266]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: esp-rs/xtensa-toolchain@v1.2
         with:
           default: true
           ldproxy: false
           buildtargets: ${{ matrix.chip }}
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/cargo@v1
         with:
           command: run
@@ -61,7 +61,7 @@ jobs:
       matrix:
         chip: [esp32c2, esp32c3, esp32c6]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -74,7 +74,7 @@ jobs:
           target: riscv32imc-unknown-none-elf
           toolchain: "1.60.0"
           components: rust-src
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/cargo@v1
         with:
           command: run
@@ -90,14 +90,14 @@ jobs:
       matrix:
         chip: [esp32, esp32s2, esp32s3, esp8266]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: esp-rs/xtensa-toolchain@v1.2
         with:
           default: true
           ldproxy: false
           buildtargets: ${{ matrix.chip }}
           version: "1.60.0"
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/cargo@v1
         with:
           command: run
