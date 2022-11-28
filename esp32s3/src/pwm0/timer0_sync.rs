@@ -48,10 +48,15 @@ pub type TIMER0_SYNCO_SEL_R = crate::FieldReader<u8, u8>;
 pub type TIMER0_SYNCO_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, TIMER0_SYNC_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TIMER0_PHASE` reader - phase for timer reload on sync event"]
-pub type TIMER0_PHASE_R = crate::FieldReader<u32, u32>;
+pub type TIMER0_PHASE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER0_PHASE` writer - phase for timer reload on sync event"]
 pub type TIMER0_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER0_SYNC_SPEC, u32, u32, 17, O>;
+    crate::FieldWriter<'a, u32, TIMER0_SYNC_SPEC, u16, u16, 16, O>;
+#[doc = "Field `TIMER0_PHASE_DIRECTION` reader - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
+pub type TIMER0_PHASE_DIRECTION_R = crate::BitReader<bool>;
+#[doc = "Field `TIMER0_PHASE_DIRECTION` writer - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
+pub type TIMER0_PHASE_DIRECTION_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, TIMER0_SYNC_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
@@ -68,10 +73,15 @@ impl R {
     pub fn timer0_synco_sel(&self) -> TIMER0_SYNCO_SEL_R {
         TIMER0_SYNCO_SEL_R::new(((self.bits >> 2) & 3) as u8)
     }
-    #[doc = "Bits 4:20 - phase for timer reload on sync event"]
+    #[doc = "Bits 4:19 - phase for timer reload on sync event"]
     #[inline(always)]
     pub fn timer0_phase(&self) -> TIMER0_PHASE_R {
-        TIMER0_PHASE_R::new((self.bits >> 4) & 0x0001_ffff)
+        TIMER0_PHASE_R::new(((self.bits >> 4) & 0xffff) as u16)
+    }
+    #[doc = "Bit 20 - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
+    #[inline(always)]
+    pub fn timer0_phase_direction(&self) -> TIMER0_PHASE_DIRECTION_R {
+        TIMER0_PHASE_DIRECTION_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
@@ -93,11 +103,17 @@ impl W {
     pub fn timer0_synco_sel(&mut self) -> TIMER0_SYNCO_SEL_W<2> {
         TIMER0_SYNCO_SEL_W::new(self)
     }
-    #[doc = "Bits 4:20 - phase for timer reload on sync event"]
+    #[doc = "Bits 4:19 - phase for timer reload on sync event"]
     #[inline(always)]
     #[must_use]
     pub fn timer0_phase(&mut self) -> TIMER0_PHASE_W<4> {
         TIMER0_PHASE_W::new(self)
+    }
+    #[doc = "Bit 20 - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
+    #[inline(always)]
+    #[must_use]
+    pub fn timer0_phase_direction(&mut self) -> TIMER0_PHASE_DIRECTION_W<20> {
+        TIMER0_PHASE_DIRECTION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
