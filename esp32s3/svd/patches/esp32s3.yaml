@@ -44,3 +44,9 @@ PWM0:
         bitOffset: 20
         bitWidth: 1
         access: read-write
+
+TWAI:
+  DATA_*:
+    _modify:
+      TX_BYTE_*:
+        access: read-write
