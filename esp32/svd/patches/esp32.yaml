@@ -18,3 +18,9 @@ SHA:
     _modify:
       TEXT:
         bitWidth: 32
+
+TWAI:
+  DATA_*:
+    _modify:
+      TX_BYTE_*:
+        access: read-write
