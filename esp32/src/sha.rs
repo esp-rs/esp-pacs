@@ -2,17 +2,21 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00..0x80 - "]
-    pub text_: [TEXT_; 32],
-    _reserved_1_sha1: [u8; 0x04],
-    _reserved2: [u8; 0x04],
+    pub text: [TEXT; 32],
+    #[doc = "0x80 - "]
+    pub sha1_start: SHA1_START,
+    #[doc = "0x84 - "]
+    pub sha1_continue: SHA1_CONTINUE,
     #[doc = "0x88 - "]
     pub sha1_load: SHA1_LOAD,
     #[doc = "0x8c - "]
     pub sha1_busy: SHA1_BUSY,
-    _reserved_4_sha256: [u8; 0x04],
+    #[doc = "0x90 - "]
+    pub sha256_start: SHA256_START,
     #[doc = "0x94 - "]
     pub sha256_continue: SHA256_CONTINUE,
-    _reserved6: [u8; 0x04],
+    #[doc = "0x98 - "]
+    pub sha256_load: SHA256_LOAD,
     #[doc = "0x9c - "]
     pub sha256_busy: SHA256_BUSY,
     #[doc = "0xa0 - "]
@@ -32,32 +36,10 @@ pub struct RegisterBlock {
     #[doc = "0xbc - "]
     pub sha512_busy: SHA512_BUSY,
 }
-impl RegisterBlock {
-    #[doc = "0x80 - "]
-    #[inline(always)]
-    pub const fn sha1_continue(&self) -> &SHA1_CONTINUE {
-        unsafe { &*(self as *const Self).cast::<u8>().add(128usize).cast() }
-    }
-    #[doc = "0x80 - "]
-    #[inline(always)]
-    pub const fn sha1_start(&self) -> &SHA1_START {
-        unsafe { &*(self as *const Self).cast::<u8>().add(128usize).cast() }
-    }
-    #[doc = "0x90 - "]
-    #[inline(always)]
-    pub const fn sha256_load(&self) -> &SHA256_LOAD {
-        unsafe { &*(self as *const Self).cast::<u8>().add(144usize).cast() }
-    }
-    #[doc = "0x90 - "]
-    #[inline(always)]
-    pub const fn sha256_start(&self) -> &SHA256_START {
-        unsafe { &*(self as *const Self).cast::<u8>().add(144usize).cast() }
-    }
-}
-#[doc = "TEXT_ (rw) register accessor: an alias for `Reg<TEXT__SPEC>`"]
-pub type TEXT_ = crate::Reg<text_::TEXT__SPEC>;
+#[doc = "TEXT (rw) register accessor: an alias for `Reg<TEXT_SPEC>`"]
+pub type TEXT = crate::Reg<text::TEXT_SPEC>;
 #[doc = ""]
-pub mod text_;
+pub mod text;
 #[doc = "SHA1_START (w) register accessor: an alias for `Reg<SHA1_START_SPEC>`"]
 pub type SHA1_START = crate::Reg<sha1_start::SHA1_START_SPEC>;
 #[doc = ""]
@@ -70,7 +52,7 @@ pub mod sha1_continue;
 pub type SHA1_LOAD = crate::Reg<sha1_load::SHA1_LOAD_SPEC>;
 #[doc = ""]
 pub mod sha1_load;
-#[doc = "SHA1_BUSY (w) register accessor: an alias for `Reg<SHA1_BUSY_SPEC>`"]
+#[doc = "SHA1_BUSY (r) register accessor: an alias for `Reg<SHA1_BUSY_SPEC>`"]
 pub type SHA1_BUSY = crate::Reg<sha1_busy::SHA1_BUSY_SPEC>;
 #[doc = ""]
 pub mod sha1_busy;
