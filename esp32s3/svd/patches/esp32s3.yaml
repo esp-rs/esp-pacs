@@ -31,3 +31,22 @@ I2S1:
   _strip: "I2S_"
   "*":
     _strip: "I2S_"
+
+PWM0:
+  TIMER0_SYNC:
+    _modify:
+      TIMER0_PHASE:
+        bitWidth: 16
+
+    _add:
+      TIMER0_PHASE_DIRECTION:
+        description: "Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+
+TWAI:
+  DATA_*:
+    _modify:
+      TX_BYTE_*:
+        access: read-write

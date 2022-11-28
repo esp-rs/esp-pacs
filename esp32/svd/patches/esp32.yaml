@@ -1,1 +1,26 @@
 _svd: ../esp32.base.svd
+
+SHA:
+  SHA1_BUSY:
+    _modify:
+      SHA*_BUSY:
+        access: read-only
+
+  _modify:
+    SHA1_CONTINUE:
+      addressOffset: 0x84
+    SHA256_LOAD:
+      addressOffset: 0x98
+    "TEXT_%s":
+      name: "TEXT%s"
+
+  "TEXT%s":
+    _modify:
+      TEXT:
+        bitWidth: 32
+
+TWAI:
+  DATA_*:
+    _modify:
+      TX_BYTE_*:
+        access: read-write
