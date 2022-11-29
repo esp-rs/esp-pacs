@@ -18,7 +18,7 @@ Please note that in order to build the PACs for Xtensa devices (**ESP32**, **ESP
 
 The **M**inimum **S**upported **R**ust **V**ersions are:
 
-- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**)
+- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**, **ESP32-H2**)
 - `1.60.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork. The [esp-rs/rust-build] repository has pre-compiled release artifacts for most common platforms, and provides installation scripts to aid you in the process.
@@ -39,18 +39,15 @@ We ask that you please using the YAML patching format rather than directly modif
 We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. Currently there is only a single task which generates a Peripheral Access Crate (PAC) for the specified chip(s). We've opted not to use the `cargo xtask` alias, as this requires a workspace which can cause problems when using different toolchains and targets like we are.
 
 ```text
-xtask
+Usage: xtask [OPTIONS] [CHIPS]...
 
-USAGE:
-    xtask [OPTIONS] [CHIPS]...
+Arguments:
+  [CHIPS]...  Chip(s) to target [possible values: esp32, esp32c2, esp32c3, esp32c6, esp32h2, esp32s2, esp32s3, esp8266]
 
-ARGS:
-    <CHIPS>...    Chip(s) to target [possible values: esp32, esp32c2, esp32c3, esp32c6, esp32s2, esp32s3, esp8266]
-
-OPTIONS:
-        --generate-only    Patch the SVD and generate the PAC, but do not build it
-    -h, --help             Print help information
-        --patch-only       Only patch the SVD, do not generate or build the PAC
+Options:
+      --patch-only     Only patch the SVD, do not generate or build the PAC
+      --generate-only  Patch the SVD and generate the PAC, but do not build it
+  -h, --help           Print help information
 ```
 
 For example, to generate a PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
