@@ -63,3 +63,19 @@ _svd: ../esp32s2.base.svd
     _modify:
       PULSE_CNT_U0:
         name: PULSE_CNT_U
+
+SYSTEM:
+  PERIP_CLK_EN0:
+    _modify:
+      CAN_CLK_EN:
+        name: TWAI_CLK_EN
+  PERIP_RST_EN0:
+    _modify:
+      CAN_RST:
+        name: TWAI_RST
+
+TWAI:
+  "DATA_*":
+    _modify:
+      "*":
+        access: read-write
