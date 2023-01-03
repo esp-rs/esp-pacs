@@ -60,7 +60,7 @@ impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc_rxlink_addr(&self) -> SLC_RXLINK_ADDR_R {
-        SLC_RXLINK_ADDR_R::new((self.bits & 0x000f_ffff) as u32)
+        SLC_RXLINK_ADDR_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
@@ -86,26 +86,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_addr(&mut self) -> SLC_RXLINK_ADDR_W<0> {
         SLC_RXLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_stop(&mut self) -> SLC_RXLINK_STOP_W<28> {
         SLC_RXLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_start(&mut self) -> SLC_RXLINK_START_W<29> {
         SLC_RXLINK_START_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_restart(&mut self) -> SLC_RXLINK_RESTART_W<30> {
         SLC_RXLINK_RESTART_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_park(&mut self) -> SLC_RXLINK_PARK_W<31> {
         SLC_RXLINK_PARK_W::new(self)
     }
@@ -128,11 +133,10 @@ impl crate::Readable for SLC_RX_LINK_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_rx_link::W](W) writer structure"]
 impl crate::Writable for SLC_RX_LINK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_RX_LINK to value 0"]
 impl crate::Resettable for SLC_RX_LINK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -53,7 +53,7 @@ impl R {
     #[doc = "Bits 0:19 - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
     #[inline(always)]
     pub fn rtc_calib_value(&self) -> RTC_CALIB_VALUE_R {
-        RTC_CALIB_VALUE_R::new((self.bits & 0x000f_ffff) as u32)
+        RTC_CALIB_VALUE_R::new(self.bits & 0x000f_ffff)
     }
     #[doc = "Bit 30 - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
     #[inline(always)]
@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_calib_value(&mut self) -> RTC_CALIB_VALUE_W<0> {
         RTC_CALIB_VALUE_W::new(self)
     }
     #[doc = "Bit 30 - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_calib_rdy_real(&mut self) -> RTC_CALIB_RDY_REAL_W<30> {
         RTC_CALIB_RDY_REAL_W::new(self)
     }
     #[doc = "Bit 31 - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_calib_rdy(&mut self) -> RTC_CALIB_RDY_W<31> {
         RTC_CALIB_RDY_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for GPIO_RTC_CALIB_VALUE_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_rtc_calib_value::W](W) writer structure"]
 impl crate::Writable for GPIO_RTC_CALIB_VALUE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_RTC_CALIB_VALUE to value 0"]
 impl crate::Resettable for GPIO_RTC_CALIB_VALUE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

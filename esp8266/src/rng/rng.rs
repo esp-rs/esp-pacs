@@ -24,8 +24,5 @@ impl crate::Readable for RNG_SPEC {
 }
 #[doc = "`reset()` method sets rng to value 0"]
 impl crate::Resettable for RNG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

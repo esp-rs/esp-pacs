@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_txeof_ena(&mut self) -> SLC_TXEOF_ENA_W<0> {
         SLC_TXEOF_ENA_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_fifo_map_ena(&mut self) -> SLC_FIFO_MAP_ENA_W<8> {
         SLC_FIFO_MAP_ENA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_dummy_mode(&mut self) -> SLC_TX_DUMMY_MODE_W<12> {
         SLC_TX_DUMMY_MODE_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_push_idle_num(&mut self) -> SLC_TX_PUSH_IDLE_NUM_W<16> {
         SLC_TX_PUSH_IDLE_NUM_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SLC_BRIDGE_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_bridge_conf::W](W) writer structure"]
 impl crate::Writable for SLC_BRIDGE_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_BRIDGE_CONF to value 0"]
 impl crate::Resettable for SLC_BRIDGE_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

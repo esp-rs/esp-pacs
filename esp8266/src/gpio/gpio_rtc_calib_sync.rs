@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - The cycle number of RTC-clock during RTC-clock-calibration"]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_period_num(&mut self) -> RTC_PERIOD_NUM_W<0> {
         RTC_PERIOD_NUM_W::new(self)
     }
     #[doc = "Bit 31 - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
     #[inline(always)]
+    #[must_use]
     pub fn rtc_calib_start(&mut self) -> RTC_CALIB_START_W<31> {
         RTC_CALIB_START_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for GPIO_RTC_CALIB_SYNC_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_rtc_calib_sync::W](W) writer structure"]
 impl crate::Writable for GPIO_RTC_CALIB_SYNC_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_RTC_CALIB_SYNC to value 0"]
 impl crate::Resettable for GPIO_RTC_CALIB_SYNC_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

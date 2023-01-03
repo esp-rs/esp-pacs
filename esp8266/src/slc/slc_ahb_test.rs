@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_ahb_testmode(&mut self) -> SLC_AHB_TESTMODE_W<0> {
         SLC_AHB_TESTMODE_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_ahb_testaddr(&mut self) -> SLC_AHB_TESTADDR_W<4> {
         SLC_AHB_TESTADDR_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SLC_AHB_TEST_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_ahb_test::W](W) writer structure"]
 impl crate::Writable for SLC_AHB_TEST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_AHB_TEST to value 0"]
 impl crate::Resettable for SLC_AHB_TEST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

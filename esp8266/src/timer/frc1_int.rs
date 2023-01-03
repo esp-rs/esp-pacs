@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bit 0 - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
     #[inline(always)]
+    #[must_use]
     pub fn frc1_int_clr_mask(&mut self) -> FRC1_INT_CLR_MASK_W<0> {
         FRC1_INT_CLR_MASK_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for FRC1_INT_SPEC {
 #[doc = "`write(|w| ..)` method takes [frc1_int::W](W) writer structure"]
 impl crate::Writable for FRC1_INT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRC1_INT to value 0"]
 impl crate::Resettable for FRC1_INT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

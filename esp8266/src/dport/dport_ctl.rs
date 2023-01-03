@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn dport_ctl_double_clk(&mut self) -> DPORT_CTL_DOUBLE_CLK_W<0> {
         DPORT_CTL_DOUBLE_CLK_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for DPORT_CTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [dport_ctl::W](W) writer structure"]
 impl crate::Writable for DPORT_CTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DPORT_CTL to value 0"]
 impl crate::Resettable for DPORT_CTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

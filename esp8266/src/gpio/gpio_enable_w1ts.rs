@@ -25,6 +25,7 @@ pub type GPIO_ENABLE_DATA_W1TS_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:15 - Writing 1 into a bit in this register will set the related bit in GPIO_ENABLE_DATA"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_enable_data_w1ts(&mut self) -> GPIO_ENABLE_DATA_W1TS_W<0> {
         GPIO_ENABLE_DATA_W1TS_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for GPIO_ENABLE_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_enable_w1ts::W](W) writer structure"]
 impl crate::Writable for GPIO_ENABLE_W1TS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_ENABLE_W1TS to value 0"]
 impl crate::Resettable for GPIO_ENABLE_W1TS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

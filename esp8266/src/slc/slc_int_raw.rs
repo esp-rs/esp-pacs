@@ -259,111 +259,133 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit0_int_raw(&mut self) -> SLC_FRHOST_BIT0_INT_RAW_W<0> {
         SLC_FRHOST_BIT0_INT_RAW_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit1_int_raw(&mut self) -> SLC_FRHOST_BIT1_INT_RAW_W<1> {
         SLC_FRHOST_BIT1_INT_RAW_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit2_int_raw(&mut self) -> SLC_FRHOST_BIT2_INT_RAW_W<2> {
         SLC_FRHOST_BIT2_INT_RAW_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit3_int_raw(&mut self) -> SLC_FRHOST_BIT3_INT_RAW_W<3> {
         SLC_FRHOST_BIT3_INT_RAW_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit4_int_raw(&mut self) -> SLC_FRHOST_BIT4_INT_RAW_W<4> {
         SLC_FRHOST_BIT4_INT_RAW_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit5_int_raw(&mut self) -> SLC_FRHOST_BIT5_INT_RAW_W<5> {
         SLC_FRHOST_BIT5_INT_RAW_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit6_int_raw(&mut self) -> SLC_FRHOST_BIT6_INT_RAW_W<6> {
         SLC_FRHOST_BIT6_INT_RAW_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_frhost_bit7_int_raw(&mut self) -> SLC_FRHOST_BIT7_INT_RAW_W<7> {
         SLC_FRHOST_BIT7_INT_RAW_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_start_int_raw(&mut self) -> SLC_RX_START_INT_RAW_W<8> {
         SLC_RX_START_INT_RAW_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_start_int_raw(&mut self) -> SLC_TX_START_INT_RAW_W<9> {
         SLC_TX_START_INT_RAW_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_udf_int_raw(&mut self) -> SLC_RX_UDF_INT_RAW_W<10> {
         SLC_RX_UDF_INT_RAW_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_ovf_int_raw(&mut self) -> SLC_TX_OVF_INT_RAW_W<11> {
         SLC_TX_OVF_INT_RAW_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0_1to0_int_raw(&mut self) -> SLC_TOKEN0_1TO0_INT_RAW_W<12> {
         SLC_TOKEN0_1TO0_INT_RAW_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token1_1to0_int_raw(&mut self) -> SLC_TOKEN1_1TO0_INT_RAW_W<13> {
         SLC_TOKEN1_1TO0_INT_RAW_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_done_int_raw(&mut self) -> SLC_TX_DONE_INT_RAW_W<14> {
         SLC_TX_DONE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_eof_int_raw(&mut self) -> SLC_TX_EOF_INT_RAW_W<15> {
         SLC_TX_EOF_INT_RAW_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_done_int_raw(&mut self) -> SLC_RX_DONE_INT_RAW_W<16> {
         SLC_RX_DONE_INT_RAW_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_eof_int_raw(&mut self) -> SLC_RX_EOF_INT_RAW_W<17> {
         SLC_RX_EOF_INT_RAW_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tohost_int_raw(&mut self) -> SLC_TOHOST_INT_RAW_W<18> {
         SLC_TOHOST_INT_RAW_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_dscr_err_int_raw(&mut self) -> SLC_TX_DSCR_ERR_INT_RAW_W<19> {
         SLC_TX_DSCR_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_dscr_err_int_raw(&mut self) -> SLC_RX_DSCR_ERR_INT_RAW_W<20> {
         SLC_RX_DSCR_ERR_INT_RAW_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_dscr_empty_int_raw(&mut self) -> SLC_TX_DSCR_EMPTY_INT_RAW_W<21> {
         SLC_TX_DSCR_EMPTY_INT_RAW_W::new(self)
     }
@@ -386,11 +408,10 @@ impl crate::Readable for SLC_INT_RAW_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_int_raw::W](W) writer structure"]
 impl crate::Writable for SLC_INT_RAW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_INT_RAW to value 0"]
 impl crate::Resettable for SLC_INT_RAW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tohost_intvec(&mut self) -> SLC_TOHOST_INTVEC_W<0> {
         SLC_TOHOST_INTVEC_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for SLC_INTVEC_TOHOST_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_intvec_tohost::W](W) writer structure"]
 impl crate::Writable for SLC_INTVEC_TOHOST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_INTVEC_TOHOST to value 0"]
 impl crate::Resettable for SLC_INTVEC_TOHOST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

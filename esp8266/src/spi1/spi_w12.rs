@@ -48,6 +48,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - the data inside the buffer of the SPI module, word 12"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_w12(&mut self) -> SPI_W12_W<0> {
         SPI_W12_W::new(self)
     }
@@ -70,11 +71,10 @@ impl crate::Readable for SPI_W12_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_w12::W](W) writer structure"]
 impl crate::Writable for SPI_W12_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_W12 to value 0"]
 impl crate::Resettable for SPI_W12_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

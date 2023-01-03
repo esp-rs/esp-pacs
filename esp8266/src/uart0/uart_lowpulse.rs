@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - used in baudrate detect"]
     #[inline(always)]
     pub fn lowpulse_min_cnt(&self) -> LOWPULSE_MIN_CNT_R {
-        LOWPULSE_MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        LOWPULSE_MIN_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "UART_LOWPULSE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_lowpulse](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for UART_LOWPULSE_SPEC {
 }
 #[doc = "`reset()` method sets UART_LOWPULSE to value 0"]
 impl crate::Resettable for UART_LOWPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

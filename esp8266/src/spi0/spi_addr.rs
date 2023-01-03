@@ -56,7 +56,7 @@ impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]
     pub fn address(&self) -> ADDRESS_R {
-        ADDRESS_R::new((self.bits & 0x00ff_ffff) as u32)
+        ADDRESS_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - In the master mode, it is the value of address in \"address\" phase."]
     #[inline(always)]
+    #[must_use]
     pub fn iodata_start_addr(&mut self) -> IODATA_START_ADDR_W<0> {
         IODATA_START_ADDR_W::new(self)
     }
     #[doc = "Bits 0:23"]
     #[inline(always)]
+    #[must_use]
     pub fn address(&mut self) -> ADDRESS_W<0> {
         ADDRESS_W::new(self)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
+    #[must_use]
     pub fn size(&mut self) -> SIZE_W<24> {
         SIZE_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for SPI_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_addr::W](W) writer structure"]
 impl crate::Writable for SPI_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_ADDR to value 0"]
 impl crate::Resettable for SPI_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

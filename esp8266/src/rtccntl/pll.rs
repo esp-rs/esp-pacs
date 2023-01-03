@@ -84,26 +84,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
+    #[must_use]
     pub fn block(&mut self) -> BLOCK_W<0> {
         BLOCK_W::new(self)
     }
     #[doc = "Bits 8:15 - Address"]
     #[inline(always)]
+    #[must_use]
     pub fn addr(&mut self) -> ADDR_W<8> {
         ADDR_W::new(self)
     }
     #[doc = "Bits 16:23 - Data"]
     #[inline(always)]
+    #[must_use]
     pub fn data(&mut self) -> DATA_W<16> {
         DATA_W::new(self)
     }
     #[doc = "Bit 24 - Write"]
     #[inline(always)]
+    #[must_use]
     pub fn write(&mut self) -> WRITE_W<24> {
         WRITE_W::new(self)
     }
     #[doc = "Bit 25 - Ready"]
     #[inline(always)]
+    #[must_use]
     pub fn busy(&mut self) -> BUSY_W<25> {
         BUSY_W::new(self)
     }
@@ -126,11 +131,10 @@ impl crate::Readable for PLL_SPEC {
 #[doc = "`write(|w| ..)` method takes [pll::W](W) writer structure"]
 impl crate::Writable for PLL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PLL to value 0"]
 impl crate::Resettable for PLL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

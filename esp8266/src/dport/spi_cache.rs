@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_flush_start(&mut self) -> CACHE_FLUSH_START_W<0> {
         CACHE_FLUSH_START_W::new(self)
     }
     #[doc = "Bit 1 - Cache is empty"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_empty(&mut self) -> CACHE_EMPTY_W<1> {
         CACHE_EMPTY_W::new(self)
     }
     #[doc = "Bit 8 - Cache enable"]
     #[inline(always)]
+    #[must_use]
     pub fn cache_enable(&mut self) -> CACHE_ENABLE_W<8> {
         CACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 9 - SPI busy"]
     #[inline(always)]
+    #[must_use]
     pub fn busy(&mut self) -> BUSY_W<9> {
         BUSY_W::new(self)
     }
     #[doc = "Bits 16:18 - Flash memory block to map, in 2mb blocks"]
     #[inline(always)]
+    #[must_use]
     pub fn block(&mut self) -> BLOCK_W<16> {
         BLOCK_W::new(self)
     }
     #[doc = "Bits 24:25 - Offset within block to map, in megabytes"]
     #[inline(always)]
+    #[must_use]
     pub fn offset(&mut self) -> OFFSET_W<24> {
         OFFSET_W::new(self)
     }
     #[doc = "Bit 26 - Controls where the spi flash is mapped (unconfirmed)"]
     #[inline(always)]
+    #[must_use]
     pub fn target(&mut self) -> TARGET_W<26> {
         TARGET_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for SPI_CACHE_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_cache::W](W) writer structure"]
 impl crate::Writable for SPI_CACHE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CACHE to value 0"]
 impl crate::Resettable for SPI_CACHE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

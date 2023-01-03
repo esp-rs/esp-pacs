@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token_no_replace(&mut self) -> SLC_TOKEN_NO_REPLACE_W<8> {
         SLC_TOKEN_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_infor_no_replace(&mut self) -> SLC_INFOR_NO_REPLACE_W<9> {
         SLC_INFOR_NO_REPLACE_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SLC_RX_DSCR_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_rx_dscr_conf::W](W) writer structure"]
 impl crate::Writable for SLC_RX_DSCR_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_RX_DSCR_CONF to value 0"]
 impl crate::Resettable for SLC_RX_DSCR_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

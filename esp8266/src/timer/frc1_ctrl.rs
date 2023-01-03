@@ -200,26 +200,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
     #[inline(always)]
+    #[must_use]
     pub fn frc1_ctrl(&mut self) -> FRC1_CTRL_W<0> {
         FRC1_CTRL_W::new(self)
     }
     #[doc = "Bit 0 - Configure the interrupt type"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_type(&mut self) -> INTERRUPT_TYPE_W<0> {
         INTERRUPT_TYPE_W::new(self)
     }
     #[doc = "Bits 2:3 - Pre-scale divider for the timer"]
     #[inline(always)]
+    #[must_use]
     pub fn prescale_divider(&mut self) -> PRESCALE_DIVIDER_W<2> {
         PRESCALE_DIVIDER_W::new(self)
     }
     #[doc = "Bit 6 - Automatically reload when the counter hits zero"]
     #[inline(always)]
+    #[must_use]
     pub fn rollover(&mut self) -> ROLLOVER_W<6> {
         ROLLOVER_W::new(self)
     }
     #[doc = "Bit 7 - Enable or disable the timer"]
     #[inline(always)]
+    #[must_use]
     pub fn timer_enable(&mut self) -> TIMER_ENABLE_W<7> {
         TIMER_ENABLE_W::new(self)
     }
@@ -242,11 +247,10 @@ impl crate::Readable for FRC1_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [frc1_ctrl::W](W) writer structure"]
 impl crate::Writable for FRC1_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRC1_CTRL to value 0"]
 impl crate::Resettable for FRC1_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

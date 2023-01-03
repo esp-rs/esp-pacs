@@ -57,11 +57,13 @@ impl R {
 impl W {
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn target1(&mut self) -> TARGET1_W<3> {
         TARGET1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn target2(&mut self) -> TARGET2_W<4> {
         TARGET2_W::new(self)
     }
@@ -84,11 +86,10 @@ impl crate::Readable for SPI_CACHE_TARGET_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_cache_target::W](W) writer structure"]
 impl crate::Writable for SPI_CACHE_TARGET_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CACHE_TARGET to value 0"]
 impl crate::Resettable for SPI_CACHE_TARGET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

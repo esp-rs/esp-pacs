@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn pp_time(&mut self) -> PP_TIME_W<0> {
         PP_TIME_W::new(self)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
+    #[must_use]
     pub fn pp_shift(&mut self) -> PP_SHIFT_W<16> {
         PP_SHIFT_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn pp_enable(&mut self) -> PP_ENABLE_W<31> {
         PP_ENABLE_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for SPI_EXT0_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_ext0::W](W) writer structure"]
 impl crate::Writable for SPI_EXT0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_EXT0 to value 0"]
 impl crate::Resettable for SPI_EXT0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

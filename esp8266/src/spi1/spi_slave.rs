@@ -195,81 +195,97 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt raw bit for the completement of \"read-buffer\" operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<0> {
         SLV_RD_BUF_DONE_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt raw bit for the completement of \"write-buffer\" operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<1> {
         SLV_WR_BUF_DONE_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt raw bit for the completement of \"read-status\" operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_sta_done(&mut self) -> SLV_RD_STA_DONE_W<2> {
         SLV_RD_STA_DONE_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt raw bit for the completement of \"write-status\" operation in the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_sta_done(&mut self) -> SLV_WR_STA_DONE_W<3> {
         SLV_WR_STA_DONE_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt raw bit for the completement of any operation in both the master mode and the slave mode."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_trans_done(&mut self) -> SPI_TRANS_DONE_W<4> {
         SPI_TRANS_DONE_W::new(self)
     }
     #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_int_en(&mut self) -> SPI_INT_EN_W<5> {
         SPI_INT_EN_W::new(self)
     }
     #[doc = "Bit 5 - Enable buffer read interrupts"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_rb_enable(&mut self) -> INTERRUPT_RB_ENABLE_W<5> {
         INTERRUPT_RB_ENABLE_W::new(self)
     }
     #[doc = "Bit 6 - Enable buffer write interrupts"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_wb_enable(&mut self) -> INTERRUPT_WB_ENABLE_W<6> {
         INTERRUPT_WB_ENABLE_W::new(self)
     }
     #[doc = "Bit 7 - Enable status read interrupts"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_rs_enable(&mut self) -> INTERRUPT_RS_ENABLE_W<7> {
         INTERRUPT_RS_ENABLE_W::new(self)
     }
     #[doc = "Bit 8 - Enable status write interrupts"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_ws_enable(&mut self) -> INTERRUPT_WS_ENABLE_W<8> {
         INTERRUPT_WS_ENABLE_W::new(self)
     }
     #[doc = "Bit 9 - Enable TRANS interrupts"]
     #[inline(always)]
+    #[must_use]
     pub fn interrupt_trans_enable(&mut self) -> INTERRUPT_TRANS_ENABLE_W<9> {
         INTERRUPT_TRANS_ENABLE_W::new(self)
     }
     #[doc = "Bit 27 - 1: slave mode commands are defined in SPI_SLAVE3. 0: slave mode commands are fixed as 1: \"write-status\"; 4: \"read-status\"; 2: \"write-buffer\" and 3: \"read-buffer\"."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_cmd_define(&mut self) -> SLV_CMD_DEFINE_W<27> {
         SLV_CMD_DEFINE_W::new(self)
     }
     #[doc = "Bit 28 - Enable read/write buffer"]
     #[inline(always)]
+    #[must_use]
     pub fn sta_enable(&mut self) -> STA_ENABLE_W<28> {
         STA_ENABLE_W::new(self)
     }
     #[doc = "Bit 29 - Enable read/write buffer"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_buffer_enable(&mut self) -> SPI_BUFFER_ENABLE_W<29> {
         SPI_BUFFER_ENABLE_W::new(self)
     }
     #[doc = "Bit 30 - 1: slave mode, 0: master mode."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_slave_mode(&mut self) -> SPI_SLAVE_MODE_W<30> {
         SPI_SLAVE_MODE_W::new(self)
     }
     #[doc = "Bit 31 - It is the synchronous reset signal of the module. This bit is self-cleared by hardware."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_sync_reset(&mut self) -> SPI_SYNC_RESET_W<31> {
         SPI_SYNC_RESET_W::new(self)
     }
@@ -292,11 +308,10 @@ impl crate::Readable for SPI_SLAVE_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_slave::W](W) writer structure"]
 impl crate::Writable for SPI_SLAVE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SLAVE to value 0"]
 impl crate::Resettable for SPI_SLAVE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

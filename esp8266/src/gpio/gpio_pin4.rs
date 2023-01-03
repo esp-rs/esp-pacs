@@ -271,21 +271,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_source(&mut self) -> GPIO_PIN4_SOURCE_W<0> {
         GPIO_PIN4_SOURCE_W::new(self)
     }
     #[doc = "Bit 2 - 1: open drain; 0: normal"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_driver(&mut self) -> GPIO_PIN4_DRIVER_W<2> {
         GPIO_PIN4_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9 - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_int_type(&mut self) -> GPIO_PIN4_INT_TYPE_W<7> {
         GPIO_PIN4_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_pin4_wakeup_enable(&mut self) -> GPIO_PIN4_WAKEUP_ENABLE_W<10> {
         GPIO_PIN4_WAKEUP_ENABLE_W::new(self)
     }
@@ -308,11 +312,10 @@ impl crate::Readable for GPIO_PIN4_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_pin4::W](W) writer structure"]
 impl crate::Writable for GPIO_PIN4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_PIN4 to value 0"]
 impl crate::Resettable for GPIO_PIN4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

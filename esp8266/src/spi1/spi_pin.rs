@@ -75,21 +75,25 @@ impl R {
 impl W {
     #[doc = "Bit 0 - 1: disable CS0; 0: spi_cs signal is from/to CS0 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_cs0_dis(&mut self) -> SPI_CS0_DIS_W<0> {
         SPI_CS0_DIS_W::new(self)
     }
     #[doc = "Bit 1 - 1: disable CS1; 0: spi_cs signal is from/to CS1 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_cs1_dis(&mut self) -> SPI_CS1_DIS_W<1> {
         SPI_CS1_DIS_W::new(self)
     }
     #[doc = "Bit 2 - 1: disable CS2; 0: spi_cs signal is from/to CS2 pin"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_cs2_dis(&mut self) -> SPI_CS2_DIS_W<2> {
         SPI_CS2_DIS_W::new(self)
     }
     #[doc = "Bit 29 - In the master mode, 1: high when idle; 0: low when idle"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_idle_edge(&mut self) -> SPI_IDLE_EDGE_W<29> {
         SPI_IDLE_EDGE_W::new(self)
     }
@@ -112,11 +116,10 @@ impl crate::Readable for SPI_PIN_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_pin::W](W) writer structure"]
 impl crate::Writable for SPI_PIN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_PIN to value 0"]
 impl crate::Resettable for SPI_PIN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

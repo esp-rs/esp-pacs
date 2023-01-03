@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The output enable register."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_enable_data(&mut self) -> GPIO_ENABLE_DATA_W<0> {
         GPIO_ENABLE_DATA_W::new(self)
     }
     #[doc = "Bits 16:21 - SDIO-dis selection register"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_sdio_sel(&mut self) -> GPIO_SDIO_SEL_W<16> {
         GPIO_SDIO_SEL_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for GPIO_ENABLE_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_enable::W](W) writer structure"]
 impl crate::Writable for GPIO_ENABLE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_ENABLE to value 0"]
 impl crate::Resettable for GPIO_ENABLE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

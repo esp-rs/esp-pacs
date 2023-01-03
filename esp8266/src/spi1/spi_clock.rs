@@ -88,26 +88,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_clkcnt_l(&mut self) -> SPI_CLKCNT_L_W<0> {
         SPI_CLKCNT_L_W::new(self)
     }
     #[doc = "Bits 6:11 - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_clkcnt_h(&mut self) -> SPI_CLKCNT_H_W<6> {
         SPI_CLKCNT_H_W::new(self)
     }
     #[doc = "Bits 12:17 - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_clkcnt_n(&mut self) -> SPI_CLKCNT_N_W<12> {
         SPI_CLKCNT_N_W::new(self)
     }
     #[doc = "Bits 18:30 - In the master mode, it is pre-divider of spi_clk."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_clkdiv_pre(&mut self) -> SPI_CLKDIV_PRE_W<18> {
         SPI_CLKDIV_PRE_W::new(self)
     }
     #[doc = "Bit 31 - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
     #[inline(always)]
+    #[must_use]
     pub fn spi_clk_equ_sysclk(&mut self) -> SPI_CLK_EQU_SYSCLK_W<31> {
         SPI_CLK_EQU_SYSCLK_W::new(self)
     }
@@ -130,11 +135,10 @@ impl crate::Readable for SPI_CLOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_clock::W](W) writer structure"]
 impl crate::Writable for SPI_CLOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CLOCK to value 0"]
 impl crate::Resettable for SPI_CLOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

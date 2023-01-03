@@ -43,12 +43,13 @@ impl R {
     #[doc = "Bits 0:19 - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
     #[inline(always)]
     pub fn uart_clkdiv(&self) -> UART_CLKDIV_R {
-        UART_CLKDIV_R::new((self.bits & 0x000f_ffff) as u32)
+        UART_CLKDIV_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
     #[inline(always)]
+    #[must_use]
     pub fn uart_clkdiv(&mut self) -> UART_CLKDIV_W<0> {
         UART_CLKDIV_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for UART_CLKDIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_clkdiv::W](W) writer structure"]
 impl crate::Writable for UART_CLKDIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART_CLKDIV to value 0"]
 impl crate::Resettable for UART_CLKDIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

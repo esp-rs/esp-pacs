@@ -139,56 +139,67 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_txlink_rst(&mut self) -> SLC_TXLINK_RST_W<0> {
         SLC_TXLINK_RST_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxlink_rst(&mut self) -> SLC_RXLINK_RST_W<1> {
         SLC_RXLINK_RST_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_ahbm_fifo_rst(&mut self) -> SLC_AHBM_FIFO_RST_W<2> {
         SLC_AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_ahbm_rst(&mut self) -> SLC_AHBM_RST_W<3> {
         SLC_AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_tx_loop_test(&mut self) -> SLC_TX_LOOP_TEST_W<4> {
         SLC_TX_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_loop_test(&mut self) -> SLC_RX_LOOP_TEST_W<5> {
         SLC_RX_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_auto_wrback(&mut self) -> SLC_RX_AUTO_WRBACK_W<6> {
         SLC_RX_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rx_no_restart_clr(&mut self) -> SLC_RX_NO_RESTART_CLR_W<7> {
         SLC_RX_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_dscr_burst_en(&mut self) -> SLC_DSCR_BURST_EN_W<8> {
         SLC_DSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_data_burst_en(&mut self) -> SLC_DATA_BURST_EN_W<9> {
         SLC_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_mode(&mut self) -> SLC_MODE_W<12> {
         SLC_MODE_W::new(self)
     }
@@ -211,11 +222,10 @@ impl crate::Readable for SLC_CONF0_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_conf0::W](W) writer structure"]
 impl crate::Writable for SLC_CONF0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_CONF0 to value 0"]
 impl crate::Resettable for SLC_CONF0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

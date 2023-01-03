@@ -125,46 +125,55 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for rx fifo full event"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W<0> {
         RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for tx fifo empty event"]
     #[inline(always)]
+    #[must_use]
     pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W<1> {
         TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for parity error"]
     #[inline(always)]
+    #[must_use]
     pub fn parity_err_int_ena(&mut self) -> PARITY_ERR_INT_ENA_W<2> {
         PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for other rx error"]
     #[inline(always)]
+    #[must_use]
     pub fn frm_err_int_ena(&mut self) -> FRM_ERR_INT_ENA_W<3> {
         FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for rx fifo overflow"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W<4> {
         RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for DSR changing level"]
     #[inline(always)]
+    #[must_use]
     pub fn dsr_chg_int_ena(&mut self) -> DSR_CHG_INT_ENA_W<5> {
         DSR_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for CTS changing level"]
     #[inline(always)]
+    #[must_use]
     pub fn cts_chg_int_ena(&mut self) -> CTS_CHG_INT_ENA_W<6> {
         CTS_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for rx byte start error"]
     #[inline(always)]
+    #[must_use]
     pub fn brk_det_int_ena(&mut self) -> BRK_DET_INT_ENA_W<7> {
         BRK_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The interrupt enable bit for rx time-out interrupt"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_tout_int_ena(&mut self) -> RXFIFO_TOUT_INT_ENA_W<8> {
         RXFIFO_TOUT_INT_ENA_W::new(self)
     }
@@ -187,11 +196,10 @@ impl crate::Readable for UART_INT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_int_ena::W](W) writer structure"]
 impl crate::Writable for UART_INT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART_INT_ENA to value 0"]
 impl crate::Resettable for UART_INT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

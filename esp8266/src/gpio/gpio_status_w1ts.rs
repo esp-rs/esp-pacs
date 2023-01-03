@@ -25,6 +25,7 @@ pub type GPIO_STATUS_INTERRUPT_W1TS_W<'a, const O: u8> =
 impl W {
     #[doc = "Bits 0:15 - Writing 1 into a bit in this register will set the related bit in GPIO_STATUS_INTERRUPT"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_status_interrupt_w1ts(&mut self) -> GPIO_STATUS_INTERRUPT_W1TS_W<0> {
         GPIO_STATUS_INTERRUPT_W1TS_W::new(self)
     }
@@ -43,11 +44,10 @@ impl crate::RegisterSpec for GPIO_STATUS_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_status_w1ts::W](W) writer structure"]
 impl crate::Writable for GPIO_STATUS_W1TS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_STATUS_W1TS to value 0"]
 impl crate::Resettable for GPIO_STATUS_W1TS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

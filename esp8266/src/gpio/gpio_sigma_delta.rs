@@ -69,16 +69,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - target level of the sigma-delta. It is a signed byte."]
     #[inline(always)]
+    #[must_use]
     pub fn sigma_delta_target(&mut self) -> SIGMA_DELTA_TARGET_W<0> {
         SIGMA_DELTA_TARGET_W::new(self)
     }
     #[doc = "Bits 8:15 - Clock pre-divider for sigma-delta."]
     #[inline(always)]
+    #[must_use]
     pub fn sigma_delta_prescalar(&mut self) -> SIGMA_DELTA_PRESCALAR_W<8> {
         SIGMA_DELTA_PRESCALAR_W::new(self)
     }
     #[doc = "Bit 16 - 1: enable sigma-delta; 0: disable"]
     #[inline(always)]
+    #[must_use]
     pub fn sigma_delta_enable(&mut self) -> SIGMA_DELTA_ENABLE_W<16> {
         SIGMA_DELTA_ENABLE_W::new(self)
     }
@@ -101,11 +104,10 @@ impl crate::Readable for GPIO_SIGMA_DELTA_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_sigma_delta::W](W) writer structure"]
 impl crate::Writable for GPIO_SIGMA_DELTA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_SIGMA_DELTA to value 0"]
 impl crate::Resettable for GPIO_SIGMA_DELTA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

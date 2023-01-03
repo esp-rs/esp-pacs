@@ -47,8 +47,5 @@ impl crate::Readable for SPI_INTERRUPT_TYPE_SPEC {
 }
 #[doc = "`reset()` method sets SPI_INTERRUPT_TYPE to value 0"]
 impl crate::Resettable for SPI_INTERRUPT_TYPE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -78,21 +78,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_cmd_st(&mut self) -> SLC_CMD_ST_W<0> {
         SLC_CMD_ST_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_func_st(&mut self) -> SLC_FUNC_ST_W<4> {
         SLC_FUNC_ST_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_sdio_wakeup(&mut self) -> SLC_SDIO_WAKEUP_W<8> {
         SLC_SDIO_WAKEUP_W::new(self)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_bus_st(&mut self) -> SLC_BUS_ST_W<12> {
         SLC_BUS_ST_W::new(self)
     }
@@ -115,11 +119,10 @@ impl crate::Readable for SLC_SDIO_ST_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_sdio_st::W](W) writer structure"]
 impl crate::Writable for SLC_SDIO_ST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_SDIO_ST to value 0"]
 impl crate::Resettable for SLC_SDIO_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

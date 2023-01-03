@@ -56,6 +56,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - R/W share the same address"]
     #[inline(always)]
+    #[must_use]
     pub fn rxfifo_write_byte(&mut self) -> RXFIFO_WRITE_BYTE_W<0> {
         RXFIFO_WRITE_BYTE_W::new(self)
     }
@@ -78,11 +79,10 @@ impl crate::Readable for UART_FIFO_SPEC {
 #[doc = "`write(|w| ..)` method takes [uart_fifo::W](W) writer structure"]
 impl crate::Writable for UART_FIFO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UART_FIFO to value 0"]
 impl crate::Resettable for UART_FIFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

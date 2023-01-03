@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<0> {
         GPIO_OUT_DATA_W::new(self)
     }
     #[doc = "Bits 16:31 - BT-Coexist Selection register"]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_bt_sel(&mut self) -> GPIO_BT_SEL_W<16> {
         GPIO_BT_SEL_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for GPIO_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_out::W](W) writer structure"]
 impl crate::Writable for GPIO_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_OUT to value 0"]
 impl crate::Resettable for GPIO_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
