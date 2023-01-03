@@ -107,55 +107,55 @@ pub mod rx_err_cnt;
 pub type TX_ERR_CNT = crate::Reg<tx_err_cnt::TX_ERR_CNT_SPEC>;
 #[doc = "Transmit Error Counter Register"]
 pub mod tx_err_cnt;
-#[doc = "DATA_0 (w) register accessor: an alias for `Reg<DATA_0_SPEC>`"]
+#[doc = "DATA_0 (rw) register accessor: an alias for `Reg<DATA_0_SPEC>`"]
 pub type DATA_0 = crate::Reg<data_0::DATA_0_SPEC>;
 #[doc = "Data register 0"]
 pub mod data_0;
-#[doc = "DATA_1 (w) register accessor: an alias for `Reg<DATA_1_SPEC>`"]
+#[doc = "DATA_1 (rw) register accessor: an alias for `Reg<DATA_1_SPEC>`"]
 pub type DATA_1 = crate::Reg<data_1::DATA_1_SPEC>;
 #[doc = "Data register 1"]
 pub mod data_1;
-#[doc = "DATA_2 (w) register accessor: an alias for `Reg<DATA_2_SPEC>`"]
+#[doc = "DATA_2 (rw) register accessor: an alias for `Reg<DATA_2_SPEC>`"]
 pub type DATA_2 = crate::Reg<data_2::DATA_2_SPEC>;
 #[doc = "Data register 2"]
 pub mod data_2;
-#[doc = "DATA_3 (w) register accessor: an alias for `Reg<DATA_3_SPEC>`"]
+#[doc = "DATA_3 (rw) register accessor: an alias for `Reg<DATA_3_SPEC>`"]
 pub type DATA_3 = crate::Reg<data_3::DATA_3_SPEC>;
 #[doc = "Data register 3"]
 pub mod data_3;
-#[doc = "DATA_4 (w) register accessor: an alias for `Reg<DATA_4_SPEC>`"]
+#[doc = "DATA_4 (rw) register accessor: an alias for `Reg<DATA_4_SPEC>`"]
 pub type DATA_4 = crate::Reg<data_4::DATA_4_SPEC>;
 #[doc = "Data register 4"]
 pub mod data_4;
-#[doc = "DATA_5 (w) register accessor: an alias for `Reg<DATA_5_SPEC>`"]
+#[doc = "DATA_5 (rw) register accessor: an alias for `Reg<DATA_5_SPEC>`"]
 pub type DATA_5 = crate::Reg<data_5::DATA_5_SPEC>;
 #[doc = "Data register 5"]
 pub mod data_5;
-#[doc = "DATA_6 (w) register accessor: an alias for `Reg<DATA_6_SPEC>`"]
+#[doc = "DATA_6 (rw) register accessor: an alias for `Reg<DATA_6_SPEC>`"]
 pub type DATA_6 = crate::Reg<data_6::DATA_6_SPEC>;
 #[doc = "Data register 6"]
 pub mod data_6;
-#[doc = "DATA_7 (w) register accessor: an alias for `Reg<DATA_7_SPEC>`"]
+#[doc = "DATA_7 (rw) register accessor: an alias for `Reg<DATA_7_SPEC>`"]
 pub type DATA_7 = crate::Reg<data_7::DATA_7_SPEC>;
 #[doc = "Data register 7"]
 pub mod data_7;
-#[doc = "DATA_8 (w) register accessor: an alias for `Reg<DATA_8_SPEC>`"]
+#[doc = "DATA_8 (rw) register accessor: an alias for `Reg<DATA_8_SPEC>`"]
 pub type DATA_8 = crate::Reg<data_8::DATA_8_SPEC>;
 #[doc = "Data register 8"]
 pub mod data_8;
-#[doc = "DATA_9 (w) register accessor: an alias for `Reg<DATA_9_SPEC>`"]
+#[doc = "DATA_9 (rw) register accessor: an alias for `Reg<DATA_9_SPEC>`"]
 pub type DATA_9 = crate::Reg<data_9::DATA_9_SPEC>;
 #[doc = "Data register 9"]
 pub mod data_9;
-#[doc = "DATA_10 (w) register accessor: an alias for `Reg<DATA_10_SPEC>`"]
+#[doc = "DATA_10 (rw) register accessor: an alias for `Reg<DATA_10_SPEC>`"]
 pub type DATA_10 = crate::Reg<data_10::DATA_10_SPEC>;
 #[doc = "Data register 10"]
 pub mod data_10;
-#[doc = "DATA_11 (w) register accessor: an alias for `Reg<DATA_11_SPEC>`"]
+#[doc = "DATA_11 (rw) register accessor: an alias for `Reg<DATA_11_SPEC>`"]
 pub type DATA_11 = crate::Reg<data_11::DATA_11_SPEC>;
 #[doc = "Data register 11"]
 pub mod data_11;
-#[doc = "DATA_12 (w) register accessor: an alias for `Reg<DATA_12_SPEC>`"]
+#[doc = "DATA_12 (rw) register accessor: an alias for `Reg<DATA_12_SPEC>`"]
 pub type DATA_12 = crate::Reg<data_12::DATA_12_SPEC>;
 #[doc = "Data register 12"]
 pub mod data_12;
