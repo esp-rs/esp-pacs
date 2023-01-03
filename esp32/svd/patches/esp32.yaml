@@ -1,5 +1,30 @@
 _svd: ../esp32.base.svd
 
+PCNT:
+  _array:
+    "U*_CNT":
+      name: "CNT%s"
+    "U*_CONF0":
+      name: "CONF0%s"
+    "U*_CONF1":
+      name: "CONF1%s"
+    "U*_CONF2":
+      name: "CONF2%s"
+    "U*_STATUS":
+      name: "STATUS%s"
+
+  "*":
+    _strip_end: "_U0"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+
 SHA:
   SHA1_BUSY:
     _modify:

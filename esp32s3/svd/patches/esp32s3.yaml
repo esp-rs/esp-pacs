@@ -74,3 +74,28 @@ TWAI:
     _modify:
       TX_BYTE_*:
         access: read-write
+
+PCNT:
+  _modify:
+    "U%s_CNT":
+      name: "CNT%s"
+    "U%s_CONF0":
+      name: "CONF0%s"
+    "U%s_CONF1":
+      name: "CONF1%s"
+    "U%s_CONF2":
+      name: "CONF2%s"
+    "U%s_STATUS":
+      name: "STATUS%s"
+
+  "*":
+    _strip_end: "_U"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
