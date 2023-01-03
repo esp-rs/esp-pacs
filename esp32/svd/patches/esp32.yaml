@@ -24,3 +24,35 @@ TWAI:
     _modify:
       TX_BYTE_*:
         access: read-write
+
+PCNT:
+  _array:
+    "U?_CNT":
+      name: "U%s_CNT"
+      _modify:
+        "PLUS_CNT_U*":
+          name: "CNT"
+    "U?_CONF0":
+      name: "U%s_CONF0"
+      _strip_end: "_U0"
+    "U?_CONF1":
+      name: "U%s_CONF1"
+      _strip_end: "_U0"
+    "U?_CONF2":
+      name: "U%s_CONF2"
+      _strip_end: "_U0"
+    "U?_STATUS":
+      name: "U%s_STATUS"
+      _strip: "STATUS_"
+
+  CTRL:
+    _strip: "PLUS_"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_CLR:
+    _strip_end: "_INT_CLR"

@@ -13,13 +13,13 @@ impl From<crate::R<U_CNT_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `PULSE_CNT_U` reader - This register stores the current pulse count value for unit %s."]
-pub type PULSE_CNT_U_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `CNT` reader - This register stores the current pulse count value for unit %s."]
+pub type CNT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register stores the current pulse count value for unit %s."]
     #[inline(always)]
-    pub fn pulse_cnt_u(&self) -> PULSE_CNT_U_R {
-        PULSE_CNT_U_R::new((self.bits & 0xffff) as u16)
+    pub fn cnt(&self) -> CNT_R {
+        CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
 #[doc = "Counter value for unit %s\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_cnt](index.html) module"]

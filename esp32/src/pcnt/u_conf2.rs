@@ -34,34 +34,34 @@ impl From<crate::W<U_CONF2_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CNT_H_LIM` reader - This register is used to configure the thr_h_lim value for unit %s."]
+#[doc = "Field `CNT_H_LIM` reader - This register is used to configure thr_h_lim value for unit0."]
 pub type CNT_H_LIM_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `CNT_H_LIM` writer - This register is used to configure the thr_h_lim value for unit %s."]
+#[doc = "Field `CNT_H_LIM` writer - This register is used to configure thr_h_lim value for unit0."]
 pub type CNT_H_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF2_SPEC, u16, u16, 16, O>;
-#[doc = "Field `CNT_L_LIM` reader - This register is used to configure the thr_l_lim value for unit %s."]
+#[doc = "Field `CNT_L_LIM` reader - This register is used to confiugre thr_l_lim value for unit0."]
 pub type CNT_L_LIM_R = crate::FieldReader<u16, u16>;
-#[doc = "Field `CNT_L_LIM` writer - This register is used to configure the thr_l_lim value for unit %s."]
+#[doc = "Field `CNT_L_LIM` writer - This register is used to confiugre thr_l_lim value for unit0."]
 pub type CNT_L_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF2_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 0:15 - This register is used to configure the thr_h_lim value for unit %s."]
+    #[doc = "Bits 0:15 - This register is used to configure thr_h_lim value for unit0."]
     #[inline(always)]
     pub fn cnt_h_lim(&self) -> CNT_H_LIM_R {
         CNT_H_LIM_R::new((self.bits & 0xffff) as u16)
     }
-    #[doc = "Bits 16:31 - This register is used to configure the thr_l_lim value for unit %s."]
+    #[doc = "Bits 16:31 - This register is used to confiugre thr_l_lim value for unit0."]
     #[inline(always)]
     pub fn cnt_l_lim(&self) -> CNT_L_LIM_R {
         CNT_L_LIM_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - This register is used to configure the thr_h_lim value for unit %s."]
+    #[doc = "Bits 0:15 - This register is used to configure thr_h_lim value for unit0."]
     #[inline(always)]
     #[must_use]
     pub fn cnt_h_lim(&mut self) -> CNT_H_LIM_W<0> {
         CNT_H_LIM_W::new(self)
     }
-    #[doc = "Bits 16:31 - This register is used to configure the thr_l_lim value for unit %s."]
+    #[doc = "Bits 16:31 - This register is used to confiugre thr_l_lim value for unit0."]
     #[inline(always)]
     #[must_use]
     pub fn cnt_l_lim(&mut self) -> CNT_L_LIM_W<16> {
@@ -74,7 +74,7 @@ impl W {
         self
     }
 }
-#[doc = "Configuration register 2 for unit %s\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_conf2](index.html) module"]
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u_conf2](index.html) module"]
 pub struct U_CONF2_SPEC;
 impl crate::RegisterSpec for U_CONF2_SPEC {
     type Ux = u32;

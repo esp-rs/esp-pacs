@@ -15,51 +15,24 @@ _svd: ../esp32s2.base.svd
         name: H_MEM 
 
 "PCNT":
-  U%s_CONF0:
-    _modify:
-      FILTER_THRES_U0:
-        name: FILTER_THRES_U
-      FILTER_EN_U0:
-        name: FILTER_EN_U
-      THR_ZERO_EN_U0:
-        name: THR_ZERO_EN_U
-      THR_H_LIM_EN_U0:
-        name: THR_H_LIM_EN_U
-      THR_L_LIM_EN_U0:
-        name: THR_L_LIM_EN_U
-      THR_THRES0_EN_U0:
-        name: THR_THRES0_EN_U
-      THR_THRES1_EN_U0:
-        name: THR_THRES1_EN_U
-      CH0_NEG_MODE_U0:
-        name: CH0_NEG_MODE_U
-      CH0_POS_MODE_U0:
-        name: CH0_POS_MODE_U
-      CH0_HCTRL_MODE_U0:
-        name: CH0_HCTRL_MODE_U
-      CH0_LCTRL_MODE_U0:
-        name: CH0_LCTRL_MODE_U
-      CH1_NEG_MODE_U0:
-        name: CH1_NEG_MODE_U
-      CH1_POS_MODE_U0:
-        name: CH1_POS_MODE_U
-      CH1_HCTRL_MODE_U0:
-        name: CH1_HCTRL_MODE_U
-      CH1_LCTRL_MODE_U0:
-        name: CH1_LCTRL_MODE_U
-  U%s_CONF1:
-    _modify:
-      CNT_THRES0_U0:
-        name: CNT_THRES0_U
-      CNT_THRES1_U0:
-        name: CNT_THRES1_U
-  U%s_CONF2:
-    _modify:
-      CNT_H_LIM_U0:
-        name: CNT_H_LIM_U
-      CNT_L_LIM_U0:
-        name: CNT_L_LIM_U
-  U%s_CNT:
+  "U%s_CONF0":
+    name: "U%s_CONF0"
+    _strip_end: "_U0"
+  "U%s_CONF1":
+    _strip_end: "_U0"
+  "U%s_CONF2":
+    _strip_end: "_U0"
+  "U%s_CNT":
     _modify:
       PULSE_CNT_U0:
-        name: PULSE_CNT_U
+        name: CNT
+  CTRL:
+    _strip: "PULSE_"
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
