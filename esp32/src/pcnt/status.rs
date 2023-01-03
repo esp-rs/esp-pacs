@@ -1,22 +1,22 @@
-#[doc = "Register `U0_STATUS` reader"]
-pub struct R(crate::R<U0_STATUS_SPEC>);
+#[doc = "Register `STATUS%s` reader"]
+pub struct R(crate::R<STATUS_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<U0_STATUS_SPEC>;
+    type Target = crate::R<STATUS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<U0_STATUS_SPEC>> for R {
+impl From<crate::R<STATUS_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<U0_STATUS_SPEC>) -> Self {
+    fn from(reader: crate::R<STATUS_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `U0_STATUS` writer"]
-pub struct W(crate::W<U0_STATUS_SPEC>);
+#[doc = "Register `STATUS%s` writer"]
+pub struct W(crate::W<STATUS_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<U0_STATUS_SPEC>;
+    type Target = crate::W<STATUS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,44 +28,44 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<U0_STATUS_SPEC>> for W {
+impl From<crate::W<STATUS_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<U0_STATUS_SPEC>) -> Self {
+    fn from(writer: crate::W<STATUS_SPEC>) -> Self {
         W(writer)
     }
 }
-#[doc = "Field `CORE_STATUS_U0` reader - "]
-pub type CORE_STATUS_U0_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `CORE_STATUS` reader - "]
+pub type CORE_STATUS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `STATUS_CNT_MODE` reader - "]
 pub type STATUS_CNT_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STATUS_CNT_MODE` writer - "]
 pub type STATUS_CNT_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U0_STATUS_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, u32, STATUS_SPEC, u8, u8, 2, O>;
 #[doc = "Field `STATUS_THRES1` reader - "]
 pub type STATUS_THRES1_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_THRES1` writer - "]
-pub type STATUS_THRES1_W<'a, const O: u8> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, O>;
+pub type STATUS_THRES1_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `STATUS_THRES0` reader - "]
 pub type STATUS_THRES0_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_THRES0` writer - "]
-pub type STATUS_THRES0_W<'a, const O: u8> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, O>;
+pub type STATUS_THRES0_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `STATUS_L_LIM` reader - "]
 pub type STATUS_L_LIM_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_L_LIM` writer - "]
-pub type STATUS_L_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, O>;
+pub type STATUS_L_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `STATUS_H_LIM` reader - "]
 pub type STATUS_H_LIM_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_H_LIM` writer - "]
-pub type STATUS_H_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, O>;
+pub type STATUS_H_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 #[doc = "Field `STATUS_ZERO` reader - "]
 pub type STATUS_ZERO_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_ZERO` writer - "]
-pub type STATUS_ZERO_W<'a, const O: u8> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, O>;
+pub type STATUS_ZERO_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATUS_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn core_status_u0(&self) -> CORE_STATUS_U0_R {
-        CORE_STATUS_U0_R::new(self.bits)
+    pub fn core_status(&self) -> CORE_STATUS_R {
+        CORE_STATUS_R::new(self.bits)
     }
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -142,22 +142,22 @@ impl W {
         self
     }
 }
-#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [u0_status](index.html) module"]
-pub struct U0_STATUS_SPEC;
-impl crate::RegisterSpec for U0_STATUS_SPEC {
+#[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]
+pub struct STATUS_SPEC;
+impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [u0_status::R](R) reader structure"]
-impl crate::Readable for U0_STATUS_SPEC {
+#[doc = "`read()` method returns [status::R](R) reader structure"]
+impl crate::Readable for STATUS_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [u0_status::W](W) writer structure"]
-impl crate::Writable for U0_STATUS_SPEC {
+#[doc = "`write(|w| ..)` method takes [status::W](W) writer structure"]
+impl crate::Writable for STATUS_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets U0_STATUS to value 0"]
-impl crate::Resettable for U0_STATUS_SPEC {
+#[doc = "`reset()` method sets STATUS%s to value 0"]
+impl crate::Resettable for STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

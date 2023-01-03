@@ -19,78 +19,70 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CNT_THR_EVENT_U0_INT_CLR` writer - Set this bit to clear channel0 event interrupt."]
-pub type CNT_THR_EVENT_U0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U1_INT_CLR` writer - Set this bit to clear channel1 event interrupt."]
-pub type CNT_THR_EVENT_U1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U2_INT_CLR` writer - Set this bit to clear channel2 event interrupt."]
-pub type CNT_THR_EVENT_U2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U3_INT_CLR` writer - Set this bit to clear channel3 event interrupt."]
-pub type CNT_THR_EVENT_U3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U4_INT_CLR` writer - Set this bit to clear channel4 event interrupt."]
-pub type CNT_THR_EVENT_U4_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U5_INT_CLR` writer - Set this bit to clear channel5 event interrupt."]
-pub type CNT_THR_EVENT_U5_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U6_INT_CLR` writer - Set this bit to clear channel6 event interrupt."]
-pub type CNT_THR_EVENT_U6_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U7_INT_CLR` writer - Set this bit to clear channel7 event interrupt."]
-pub type CNT_THR_EVENT_U7_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U0` writer - Set this bit to clear channel0 event interrupt."]
+pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U1` writer - Set this bit to clear channel1 event interrupt."]
+pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U2` writer - Set this bit to clear channel2 event interrupt."]
+pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U3` writer - Set this bit to clear channel3 event interrupt."]
+pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U4` writer - Set this bit to clear channel4 event interrupt."]
+pub type CNT_THR_EVENT_U4_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U5` writer - Set this bit to clear channel5 event interrupt."]
+pub type CNT_THR_EVENT_U5_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U6` writer - Set this bit to clear channel6 event interrupt."]
+pub type CNT_THR_EVENT_U6_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U7` writer - Set this bit to clear channel7 event interrupt."]
+pub type CNT_THR_EVENT_U7_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Set this bit to clear channel0 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u0_int_clr(&mut self) -> CNT_THR_EVENT_U0_INT_CLR_W<0> {
-        CNT_THR_EVENT_U0_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U0_W<0> {
+        CNT_THR_EVENT_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear channel1 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u1_int_clr(&mut self) -> CNT_THR_EVENT_U1_INT_CLR_W<1> {
-        CNT_THR_EVENT_U1_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U1_W<1> {
+        CNT_THR_EVENT_U1_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear channel2 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u2_int_clr(&mut self) -> CNT_THR_EVENT_U2_INT_CLR_W<2> {
-        CNT_THR_EVENT_U2_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U2_W<2> {
+        CNT_THR_EVENT_U2_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear channel3 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u3_int_clr(&mut self) -> CNT_THR_EVENT_U3_INT_CLR_W<3> {
-        CNT_THR_EVENT_U3_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U3_W<3> {
+        CNT_THR_EVENT_U3_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear channel4 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u4_int_clr(&mut self) -> CNT_THR_EVENT_U4_INT_CLR_W<4> {
-        CNT_THR_EVENT_U4_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u4(&mut self) -> CNT_THR_EVENT_U4_W<4> {
+        CNT_THR_EVENT_U4_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear channel5 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u5_int_clr(&mut self) -> CNT_THR_EVENT_U5_INT_CLR_W<5> {
-        CNT_THR_EVENT_U5_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u5(&mut self) -> CNT_THR_EVENT_U5_W<5> {
+        CNT_THR_EVENT_U5_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear channel6 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u6_int_clr(&mut self) -> CNT_THR_EVENT_U6_INT_CLR_W<6> {
-        CNT_THR_EVENT_U6_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u6(&mut self) -> CNT_THR_EVENT_U6_W<6> {
+        CNT_THR_EVENT_U6_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear channel7 event interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u7_int_clr(&mut self) -> CNT_THR_EVENT_U7_INT_CLR_W<7> {
-        CNT_THR_EVENT_U7_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u7(&mut self) -> CNT_THR_EVENT_U7_W<7> {
+        CNT_THR_EVENT_U7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
