@@ -111,10 +111,10 @@ pub type PWM0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_S
 pub type I2C_EXT1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_EXT1_RST` writer - Set 1 to let I2C_EXT1 reset"]
 pub type I2C_EXT1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
-#[doc = "Field `CAN_RST` reader - Set 1 to let CAN reset"]
-pub type CAN_RST_R = crate::BitReader<bool>;
-#[doc = "Field `CAN_RST` writer - Set 1 to let CAN reset"]
-pub type CAN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+#[doc = "Field `TWAI_RST` reader - Set 1 to let CAN reset"]
+pub type TWAI_RST_R = crate::BitReader<bool>;
+#[doc = "Field `TWAI_RST` writer - Set 1 to let CAN reset"]
+pub type TWAI_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
 #[doc = "Field `PWM1_RST` reader - Set 1 to let PWM1 reset"]
 pub type PWM1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `PWM1_RST` writer - Set 1 to let PWM1 reset"]
@@ -261,8 +261,8 @@ impl R {
     }
     #[doc = "Bit 19 - Set 1 to let CAN reset"]
     #[inline(always)]
-    pub fn can_rst(&self) -> CAN_RST_R {
-        CAN_RST_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn twai_rst(&self) -> TWAI_RST_R {
+        TWAI_RST_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set 1 to let PWM1 reset"]
     #[inline(always)]
@@ -443,8 +443,8 @@ impl W {
     #[doc = "Bit 19 - Set 1 to let CAN reset"]
     #[inline(always)]
     #[must_use]
-    pub fn can_rst(&mut self) -> CAN_RST_W<19> {
-        CAN_RST_W::new(self)
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<19> {
+        TWAI_RST_W::new(self)
     }
     #[doc = "Bit 20 - Set 1 to let PWM1 reset"]
     #[inline(always)]
