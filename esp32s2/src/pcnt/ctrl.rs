@@ -34,34 +34,34 @@ impl From<crate::W<CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PULSE_CNT_RST_U0` reader - Set this bit to clear unit 0's counter."]
-pub type PULSE_CNT_RST_U0_R = crate::BitReader<bool>;
-#[doc = "Field `PULSE_CNT_RST_U0` writer - Set this bit to clear unit 0's counter."]
-pub type PULSE_CNT_RST_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `CNT_RST_U0` reader - Set this bit to clear unit 0's counter."]
+pub type CNT_RST_U0_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_RST_U0` writer - Set this bit to clear unit 0's counter."]
+pub type CNT_RST_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `CNT_PAUSE_U0` reader - Set this bit to freeze unit 1's counter."]
 pub type CNT_PAUSE_U0_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U0` writer - Set this bit to freeze unit 1's counter."]
 pub type CNT_PAUSE_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
-#[doc = "Field `PULSE_CNT_RST_U1` reader - Set this bit to clear unit 2's counter."]
-pub type PULSE_CNT_RST_U1_R = crate::BitReader<bool>;
-#[doc = "Field `PULSE_CNT_RST_U1` writer - Set this bit to clear unit 2's counter."]
-pub type PULSE_CNT_RST_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `CNT_RST_U1` reader - Set this bit to clear unit 2's counter."]
+pub type CNT_RST_U1_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_RST_U1` writer - Set this bit to clear unit 2's counter."]
+pub type CNT_RST_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `CNT_PAUSE_U1` reader - Set this bit to freeze unit 3's counter."]
 pub type CNT_PAUSE_U1_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U1` writer - Set this bit to freeze unit 3's counter."]
 pub type CNT_PAUSE_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
-#[doc = "Field `PULSE_CNT_RST_U2` reader - Set this bit to clear unit 4's counter."]
-pub type PULSE_CNT_RST_U2_R = crate::BitReader<bool>;
-#[doc = "Field `PULSE_CNT_RST_U2` writer - Set this bit to clear unit 4's counter."]
-pub type PULSE_CNT_RST_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `CNT_RST_U2` reader - Set this bit to clear unit 4's counter."]
+pub type CNT_RST_U2_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_RST_U2` writer - Set this bit to clear unit 4's counter."]
+pub type CNT_RST_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `CNT_PAUSE_U2` reader - Set this bit to freeze unit 5's counter."]
 pub type CNT_PAUSE_U2_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U2` writer - Set this bit to freeze unit 5's counter."]
 pub type CNT_PAUSE_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
-#[doc = "Field `PULSE_CNT_RST_U3` reader - Set this bit to clear unit 6's counter."]
-pub type PULSE_CNT_RST_U3_R = crate::BitReader<bool>;
-#[doc = "Field `PULSE_CNT_RST_U3` writer - Set this bit to clear unit 6's counter."]
-pub type PULSE_CNT_RST_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `CNT_RST_U3` reader - Set this bit to clear unit 6's counter."]
+pub type CNT_RST_U3_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_RST_U3` writer - Set this bit to clear unit 6's counter."]
+pub type CNT_RST_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `CNT_PAUSE_U3` reader - Set this bit to freeze unit 7's counter."]
 pub type CNT_PAUSE_U3_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U3` writer - Set this bit to freeze unit 7's counter."]
@@ -73,8 +73,8 @@ pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 
 impl R {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
-    pub fn pulse_cnt_rst_u0(&self) -> PULSE_CNT_RST_U0_R {
-        PULSE_CNT_RST_U0_R::new((self.bits & 1) != 0)
+    pub fn cnt_rst_u0(&self) -> CNT_RST_U0_R {
+        CNT_RST_U0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
@@ -83,8 +83,8 @@ impl R {
     }
     #[doc = "Bit 2 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
-    pub fn pulse_cnt_rst_u1(&self) -> PULSE_CNT_RST_U1_R {
-        PULSE_CNT_RST_U1_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cnt_rst_u1(&self) -> CNT_RST_U1_R {
+        CNT_RST_U1_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
@@ -93,8 +93,8 @@ impl R {
     }
     #[doc = "Bit 4 - Set this bit to clear unit 4's counter."]
     #[inline(always)]
-    pub fn pulse_cnt_rst_u2(&self) -> PULSE_CNT_RST_U2_R {
-        PULSE_CNT_RST_U2_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cnt_rst_u2(&self) -> CNT_RST_U2_R {
+        CNT_RST_U2_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 5's counter."]
     #[inline(always)]
@@ -103,8 +103,8 @@ impl R {
     }
     #[doc = "Bit 6 - Set this bit to clear unit 6's counter."]
     #[inline(always)]
-    pub fn pulse_cnt_rst_u3(&self) -> PULSE_CNT_RST_U3_R {
-        PULSE_CNT_RST_U3_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cnt_rst_u3(&self) -> CNT_RST_U3_R {
+        CNT_RST_U3_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 7's counter."]
     #[inline(always)]
@@ -121,8 +121,8 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn pulse_cnt_rst_u0(&mut self) -> PULSE_CNT_RST_U0_W<0> {
-        PULSE_CNT_RST_U0_W::new(self)
+    pub fn cnt_rst_u0(&mut self) -> CNT_RST_U0_W<0> {
+        CNT_RST_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
@@ -133,8 +133,8 @@ impl W {
     #[doc = "Bit 2 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn pulse_cnt_rst_u1(&mut self) -> PULSE_CNT_RST_U1_W<2> {
-        PULSE_CNT_RST_U1_W::new(self)
+    pub fn cnt_rst_u1(&mut self) -> CNT_RST_U1_W<2> {
+        CNT_RST_U1_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
@@ -145,8 +145,8 @@ impl W {
     #[doc = "Bit 4 - Set this bit to clear unit 4's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn pulse_cnt_rst_u2(&mut self) -> PULSE_CNT_RST_U2_W<4> {
-        PULSE_CNT_RST_U2_W::new(self)
+    pub fn cnt_rst_u2(&mut self) -> CNT_RST_U2_W<4> {
+        CNT_RST_U2_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 5's counter."]
     #[inline(always)]
@@ -157,8 +157,8 @@ impl W {
     #[doc = "Bit 6 - Set this bit to clear unit 6's counter."]
     #[inline(always)]
     #[must_use]
-    pub fn pulse_cnt_rst_u3(&mut self) -> PULSE_CNT_RST_U3_W<6> {
-        PULSE_CNT_RST_U3_W::new(self)
+    pub fn cnt_rst_u3(&mut self) -> CNT_RST_U3_W<6> {
+        CNT_RST_U3_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 7's counter."]
     #[inline(always)]

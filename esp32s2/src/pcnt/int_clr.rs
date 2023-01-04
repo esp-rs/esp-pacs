@@ -19,42 +19,38 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CNT_THR_EVENT_U0_INT_CLR` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
-pub type CNT_THR_EVENT_U0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U1_INT_CLR` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
-pub type CNT_THR_EVENT_U1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U2_INT_CLR` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
-pub type CNT_THR_EVENT_U2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U3_INT_CLR` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
-pub type CNT_THR_EVENT_U3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U0` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
+pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U1` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
+pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U2` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
+pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U3` writer - Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
+pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u0_int_clr(&mut self) -> CNT_THR_EVENT_U0_INT_CLR_W<0> {
-        CNT_THR_EVENT_U0_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U0_W<0> {
+        CNT_THR_EVENT_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u1_int_clr(&mut self) -> CNT_THR_EVENT_U1_INT_CLR_W<1> {
-        CNT_THR_EVENT_U1_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U1_W<1> {
+        CNT_THR_EVENT_U1_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u2_int_clr(&mut self) -> CNT_THR_EVENT_U2_INT_CLR_W<2> {
-        CNT_THR_EVENT_U2_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U2_W<2> {
+        CNT_THR_EVENT_U2_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u3_int_clr(&mut self) -> CNT_THR_EVENT_U3_INT_CLR_W<3> {
-        CNT_THR_EVENT_U3_INT_CLR_W::new(self)
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U3_W<3> {
+        CNT_THR_EVENT_U3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
