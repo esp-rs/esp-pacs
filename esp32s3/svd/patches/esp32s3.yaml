@@ -69,6 +69,16 @@ PWM0:
         bitWidth: 1
         access: read-write
 
+SYSTEM:
+  PERIP_CLK_EN0:
+    _modify:
+      CAN_CLK_EN:
+        name: TWAI_CLK_EN
+  PERIP_RST_EN0:
+    _modify:
+      CAN_RST:
+        name: TWAI_RST
+
 TWAI:
   DATA_*:
     _modify:

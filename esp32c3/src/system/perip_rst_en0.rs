@@ -111,10 +111,10 @@ pub type PWM0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_S
 pub type EXT1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `EXT1_RST` writer - reg_ext1_rst"]
 pub type EXT1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
-#[doc = "Field `CAN_RST` reader - reg_can_rst"]
-pub type CAN_RST_R = crate::BitReader<bool>;
-#[doc = "Field `CAN_RST` writer - reg_can_rst"]
-pub type CAN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+#[doc = "Field `TWAI_RST` reader - reg_can_rst"]
+pub type TWAI_RST_R = crate::BitReader<bool>;
+#[doc = "Field `TWAI_RST` writer - reg_can_rst"]
+pub type TWAI_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
 #[doc = "Field `PWM1_RST` reader - reg_pwm1_rst"]
 pub type PWM1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `PWM1_RST` writer - reg_pwm1_rst"]
@@ -261,8 +261,8 @@ impl R {
     }
     #[doc = "Bit 19 - reg_can_rst"]
     #[inline(always)]
-    pub fn can_rst(&self) -> CAN_RST_R {
-        CAN_RST_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn twai_rst(&self) -> TWAI_RST_R {
+        TWAI_RST_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - reg_pwm1_rst"]
     #[inline(always)]
@@ -443,8 +443,8 @@ impl W {
     #[doc = "Bit 19 - reg_can_rst"]
     #[inline(always)]
     #[must_use]
-    pub fn can_rst(&mut self) -> CAN_RST_W<19> {
-        CAN_RST_W::new(self)
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<19> {
+        TWAI_RST_W::new(self)
     }
     #[doc = "Bit 20 - reg_pwm1_rst"]
     #[inline(always)]

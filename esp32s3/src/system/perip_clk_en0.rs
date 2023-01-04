@@ -114,10 +114,10 @@ pub type I2C_EXT1_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_EXT1_CLK_EN` writer - Set 1 to enable I2C_EXT1 clock"]
 pub type I2C_EXT1_CLK_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, PERIP_CLK_EN0_SPEC, bool, O>;
-#[doc = "Field `CAN_CLK_EN` reader - Set 1 to enable CAN clock"]
-pub type CAN_CLK_EN_R = crate::BitReader<bool>;
-#[doc = "Field `CAN_CLK_EN` writer - Set 1 to enable CAN clock"]
-pub type CAN_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN0_SPEC, bool, O>;
+#[doc = "Field `TWAI_CLK_EN` reader - Set 1 to enable CAN clock"]
+pub type TWAI_CLK_EN_R = crate::BitReader<bool>;
+#[doc = "Field `TWAI_CLK_EN` writer - Set 1 to enable CAN clock"]
+pub type TWAI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN0_SPEC, bool, O>;
 #[doc = "Field `PWM1_CLK_EN` reader - Set 1 to enable PWM1 clock"]
 pub type PWM1_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PWM1_CLK_EN` writer - Set 1 to enable PWM1 clock"]
@@ -270,8 +270,8 @@ impl R {
     }
     #[doc = "Bit 19 - Set 1 to enable CAN clock"]
     #[inline(always)]
-    pub fn can_clk_en(&self) -> CAN_CLK_EN_R {
-        CAN_CLK_EN_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn twai_clk_en(&self) -> TWAI_CLK_EN_R {
+        TWAI_CLK_EN_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - Set 1 to enable PWM1 clock"]
     #[inline(always)]
@@ -452,8 +452,8 @@ impl W {
     #[doc = "Bit 19 - Set 1 to enable CAN clock"]
     #[inline(always)]
     #[must_use]
-    pub fn can_clk_en(&mut self) -> CAN_CLK_EN_W<19> {
-        CAN_CLK_EN_W::new(self)
+    pub fn twai_clk_en(&mut self) -> TWAI_CLK_EN_W<19> {
+        TWAI_CLK_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set 1 to enable PWM1 clock"]
     #[inline(always)]
