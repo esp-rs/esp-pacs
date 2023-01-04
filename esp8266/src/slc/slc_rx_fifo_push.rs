@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxfifo_wdata(&mut self) -> SLC_RXFIFO_WDATA_W<0> {
         SLC_RXFIFO_WDATA_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_rxfifo_push(&mut self) -> SLC_RXFIFO_PUSH_W<16> {
         SLC_RXFIFO_PUSH_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for SLC_RX_FIFO_PUSH_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_rx_fifo_push::W](W) writer structure"]
 impl crate::Writable for SLC_RX_FIFO_PUSH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_RX_FIFO_PUSH to value 0"]
 impl crate::Resettable for SLC_RX_FIFO_PUSH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

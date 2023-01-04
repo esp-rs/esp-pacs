@@ -89,26 +89,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0_local_wdata(&mut self) -> SLC_TOKEN0_LOCAL_WDATA_W<0> {
         SLC_TOKEN0_LOCAL_WDATA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0_local_wr(&mut self) -> SLC_TOKEN0_LOCAL_WR_W<12> {
         SLC_TOKEN0_LOCAL_WR_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0_local_inc(&mut self) -> SLC_TOKEN0_LOCAL_INC_W<13> {
         SLC_TOKEN0_LOCAL_INC_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0_local_inc_more(&mut self) -> SLC_TOKEN0_LOCAL_INC_MORE_W<14> {
         SLC_TOKEN0_LOCAL_INC_MORE_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
+    #[must_use]
     pub fn slc_token0(&mut self) -> SLC_TOKEN0_W<16> {
         SLC_TOKEN0_W::new(self)
     }
@@ -131,11 +136,10 @@ impl crate::Readable for SLC_TOKEN0_SPEC {
 #[doc = "`write(|w| ..)` method takes [slc_token0::W](W) writer structure"]
 impl crate::Writable for SLC_TOKEN0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLC_TOKEN0 to value 0"]
 impl crate::Resettable for SLC_TOKEN0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

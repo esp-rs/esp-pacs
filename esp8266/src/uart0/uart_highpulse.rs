@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:19 - used in baudrate detect"]
     #[inline(always)]
     pub fn highpulse_min_cnt(&self) -> HIGHPULSE_MIN_CNT_R {
-        HIGHPULSE_MIN_CNT_R::new((self.bits & 0x000f_ffff) as u32)
+        HIGHPULSE_MIN_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
 #[doc = "UART_HIGHPULSE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_highpulse](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for UART_HIGHPULSE_SPEC {
 }
 #[doc = "`reset()` method sets UART_HIGHPULSE to value 0"]
 impl crate::Resettable for UART_HIGHPULSE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

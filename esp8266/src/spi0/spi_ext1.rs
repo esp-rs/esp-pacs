@@ -67,16 +67,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
+    #[must_use]
     pub fn erase_time(&mut self) -> ERASE_TIME_W<0> {
         ERASE_TIME_W::new(self)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
+    #[must_use]
     pub fn erase_shift(&mut self) -> ERASE_SHIFT_W<16> {
         ERASE_SHIFT_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn erase_enable(&mut self) -> ERASE_ENABLE_W<31> {
         ERASE_ENABLE_W::new(self)
     }
@@ -99,11 +102,10 @@ impl crate::Readable for SPI_EXT1_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_ext1::W](W) writer structure"]
 impl crate::Writable for SPI_EXT1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_EXT1 to value 0"]
 impl crate::Resettable for SPI_EXT1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

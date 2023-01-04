@@ -54,11 +54,10 @@ impl crate::Readable for RTC_GPIO_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [rtc_gpio_out::W](W) writer structure"]
 impl crate::Writable for RTC_GPIO_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RTC_GPIO_OUT to value 0"]
 impl crate::Resettable for RTC_GPIO_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -66,16 +66,19 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - In the slave mode, it is the status for master to read out."]
     #[inline(always)]
+    #[must_use]
     pub fn status(&mut self) -> STATUS_W<0> {
         STATUS_W::new(self)
     }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
     #[inline(always)]
+    #[must_use]
     pub fn wb_mode(&mut self) -> WB_MODE_W<16> {
         WB_MODE_W::new(self)
     }
     #[doc = "Bits 24:31 - In the slave mode,it is the status for master to read out."]
     #[inline(always)]
+    #[must_use]
     pub fn status_ext(&mut self) -> STATUS_EXT_W<24> {
         STATUS_EXT_W::new(self)
     }
@@ -98,11 +101,10 @@ impl crate::Readable for SPI_CTRL1_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_ctrl1::W](W) writer structure"]
 impl crate::Writable for SPI_CTRL1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CTRL1 to value 0"]
 impl crate::Resettable for SPI_CTRL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

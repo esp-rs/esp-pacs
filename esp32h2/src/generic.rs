@@ -44,7 +44,7 @@ pub trait RegisterSpec {
 }
 #[doc = " Trait implemented by readable registers to enable the `read` method."]
 #[doc = ""]
-#[doc = " Registers marked with `Writable` can be also `modify`'ed."]
+#[doc = " Registers marked with `Writable` can be also be `modify`'ed."]
 pub trait Readable: RegisterSpec {
     #[doc = " Result from a call to `read` and argument to `modify`."]
     type Reader: From<R<Self>> + core::ops::Deref<Target = R<Self>>;
@@ -53,7 +53,7 @@ pub trait Readable: RegisterSpec {
 #[doc = ""]
 #[doc = " This enables the  `write`, `write_with_zero` and `reset` methods."]
 #[doc = ""]
-#[doc = " Registers marked with `Readable` can be also `modify`'ed."]
+#[doc = " Registers marked with `Readable` can be also be `modify`'ed."]
 pub trait Writable: RegisterSpec {
     #[doc = " Writer type argument to `write`, et al."]
     type Writer: From<W<Self>> + core::ops::DerefMut<Target = W<Self>>;

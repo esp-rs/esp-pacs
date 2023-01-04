@@ -33,8 +33,5 @@ impl crate::Readable for FRC2_COUNT_SPEC {
 }
 #[doc = "`reset()` method sets FRC2_COUNT to value 0"]
 impl crate::Resettable for FRC2_COUNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

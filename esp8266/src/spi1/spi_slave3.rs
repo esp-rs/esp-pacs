@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - In slave mode, it is the value of \"read-buffer\" command"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rdbuf_cmd_value(&mut self) -> SLV_RDBUF_CMD_VALUE_W<0> {
         SLV_RDBUF_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 8:15 - In slave mode, it is the value of \"write-buffer\" command"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wrbuf_cmd_value(&mut self) -> SLV_WRBUF_CMD_VALUE_W<8> {
         SLV_WRBUF_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 16:23 - In slave mode, it is the value of \"read-status\" command"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rdsta_cmd_value(&mut self) -> SLV_RDSTA_CMD_VALUE_W<16> {
         SLV_RDSTA_CMD_VALUE_W::new(self)
     }
     #[doc = "Bits 24:31 - In slave mode, it is the value of \"write-status\" command"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wrsta_cmd_value(&mut self) -> SLV_WRSTA_CMD_VALUE_W<24> {
         SLV_WRSTA_CMD_VALUE_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SPI_SLAVE3_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_slave3::W](W) writer structure"]
 impl crate::Writable for SPI_SLAVE3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SLAVE3 to value 0"]
 impl crate::Resettable for SPI_SLAVE3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

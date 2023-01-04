@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bits 16:17 - MISO signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_miso_delay_mode(&mut self) -> SPI_MISO_DELAY_MODE_W<16> {
         SPI_MISO_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 18:20 - MISO signals are delayed by 80MHz clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_miso_delay_num(&mut self) -> SPI_MISO_DELAY_NUM_W<18> {
         SPI_MISO_DELAY_NUM_W::new(self)
     }
     #[doc = "Bits 21:22 - MOSI signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_mosi_delay_mode(&mut self) -> SPI_MOSI_DELAY_MODE_W<21> {
         SPI_MOSI_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 23:25 - MOSI signals are delayed by 80MHz clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_mosi_delay_num(&mut self) -> SPI_MOSI_DELAY_NUM_W<23> {
         SPI_MOSI_DELAY_NUM_W::new(self)
     }
     #[doc = "Bits 26:27 - spi_cs signal is delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_cs_delay_mode(&mut self) -> SPI_CS_DELAY_MODE_W<26> {
         SPI_CS_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 28:31 - spi_cs signal is delayed by 80MHz clock cycles"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_cs_delay_num(&mut self) -> SPI_CS_DELAY_NUM_W<28> {
         SPI_CS_DELAY_NUM_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for SPI_CTRL2_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_ctrl2::W](W) writer structure"]
 impl crate::Writable for SPI_CTRL2_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CTRL2 to value 0"]
 impl crate::Resettable for SPI_CTRL2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

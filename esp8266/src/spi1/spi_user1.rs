@@ -79,21 +79,25 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_usr_dummy_cyclelen(&mut self) -> REG_USR_DUMMY_CYCLELEN_W<0> {
         REG_USR_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 8:16 - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_usr_miso_bitlen(&mut self) -> REG_USR_MISO_BITLEN_W<8> {
         REG_USR_MISO_BITLEN_W::new(self)
     }
     #[doc = "Bits 17:25 - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_usr_mosi_bitlen(&mut self) -> REG_USR_MOSI_BITLEN_W<17> {
         REG_USR_MOSI_BITLEN_W::new(self)
     }
     #[doc = "Bits 26:31 - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn reg_usr_addr_bitlen(&mut self) -> REG_USR_ADDR_BITLEN_W<26> {
         REG_USR_ADDR_BITLEN_W::new(self)
     }
@@ -116,11 +120,10 @@ impl crate::Readable for SPI_USER1_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_user1::W](W) writer structure"]
 impl crate::Writable for SPI_USER1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_USER1 to value 0"]
 impl crate::Resettable for SPI_USER1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

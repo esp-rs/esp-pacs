@@ -19,7 +19,7 @@ impl R {
     #[doc = "Bits 0:22 - the current value of the counter. It is a decreasingcounter."]
     #[inline(always)]
     pub fn frc1_count(&self) -> FRC1_COUNT_R {
-        FRC1_COUNT_R::new((self.bits & 0x007f_ffff) as u32)
+        FRC1_COUNT_R::new(self.bits & 0x007f_ffff)
     }
 }
 #[doc = "the current value of the counter. It is a decreasingcounter.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [frc1_count](index.html) module"]
@@ -33,8 +33,5 @@ impl crate::Readable for FRC1_COUNT_SPEC {
 }
 #[doc = "`reset()` method sets FRC1_COUNT to value 0"]
 impl crate::Resettable for FRC1_COUNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - The values of the GPIO pins when the GPIO pin is set as input."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_in_data(&mut self) -> GPIO_IN_DATA_W<0> {
         GPIO_IN_DATA_W::new(self)
     }
     #[doc = "Bits 16:31 - The values of the strapping pins."]
     #[inline(always)]
+    #[must_use]
     pub fn gpio_strapping(&mut self) -> GPIO_STRAPPING_W<16> {
         GPIO_STRAPPING_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for GPIO_IN_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_in::W](W) writer structure"]
 impl crate::Writable for GPIO_IN_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_IN to value 0"]
 impl crate::Resettable for GPIO_IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

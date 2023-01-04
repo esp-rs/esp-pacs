@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 18 - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_usr(&mut self) -> SPI_USR_W<18> {
         SPI_USR_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_hpm(&mut self) -> SPI_HPM_W<19> {
         SPI_HPM_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_res(&mut self) -> SPI_RES_W<20> {
         SPI_RES_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_dp(&mut self) -> SPI_DP_W<21> {
         SPI_DP_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_ce(&mut self) -> SPI_CE_W<22> {
         SPI_CE_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_be(&mut self) -> SPI_BE_W<23> {
         SPI_BE_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_se(&mut self) -> SPI_SE_W<24> {
         SPI_SE_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_pp(&mut self) -> SPI_PP_W<25> {
         SPI_PP_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_write_sr(&mut self) -> SPI_WRITE_SR_W<26> {
         SPI_WRITE_SR_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_read_sr(&mut self) -> SPI_READ_SR_W<27> {
         SPI_READ_SR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_read_id(&mut self) -> SPI_READ_ID_W<28> {
         SPI_READ_ID_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_write_disable(&mut self) -> SPI_WRITE_DISABLE_W<29> {
         SPI_WRITE_DISABLE_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_write_enable(&mut self) -> SPI_WRITE_ENABLE_W<30> {
         SPI_WRITE_ENABLE_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_read(&mut self) -> SPI_READ_W<31> {
         SPI_READ_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for SPI_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_cmd::W](W) writer structure"]
 impl crate::Writable for SPI_CMD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CMD to value 0"]
 impl crate::Resettable for SPI_CMD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

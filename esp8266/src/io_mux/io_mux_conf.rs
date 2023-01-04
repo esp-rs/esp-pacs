@@ -59,11 +59,13 @@ impl R {
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn spi0_clk_equ_sys_clk(&mut self) -> SPI0_CLK_EQU_SYS_CLK_W<8> {
         SPI0_CLK_EQU_SYS_CLK_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn spi1_clk_equ_sys_clk(&mut self) -> SPI1_CLK_EQU_SYS_CLK_W<9> {
         SPI1_CLK_EQU_SYS_CLK_W::new(self)
     }
@@ -86,11 +88,10 @@ impl crate::Readable for IO_MUX_CONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [io_mux_conf::W](W) writer structure"]
 impl crate::Writable for IO_MUX_CONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IO_MUX_CONF to value 0"]
 impl crate::Resettable for IO_MUX_CONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

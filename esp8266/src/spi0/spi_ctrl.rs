@@ -165,71 +165,85 @@ impl R {
 impl W {
     #[doc = "Bit 13 - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_fastrd_mode(&mut self) -> SPI_FASTRD_MODE_W<13> {
         SPI_FASTRD_MODE_W::new(self)
     }
     #[doc = "Bit 14 - In the read operations, \"read-data\" phase apply 2 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_dout_mode(&mut self) -> SPI_DOUT_MODE_W<14> {
         SPI_DOUT_MODE_W::new(self)
     }
     #[doc = "Bit 15 - 'Res and res'?"]
     #[inline(always)]
+    #[must_use]
     pub fn res_and_res(&mut self) -> RES_AND_RES_W<15> {
         RES_AND_RES_W::new(self)
     }
     #[doc = "Bit 16 - SST_AAI?"]
     #[inline(always)]
+    #[must_use]
     pub fn sst_aai(&mut self) -> SST_AAI_W<16> {
         SST_AAI_W::new(self)
     }
     #[doc = "Bit 17 - Enable AHB"]
     #[inline(always)]
+    #[must_use]
     pub fn enable_ahb(&mut self) -> ENABLE_AHB_W<17> {
         ENABLE_AHB_W::new(self)
     }
     #[doc = "Bit 18 - Hold mode"]
     #[inline(always)]
+    #[must_use]
     pub fn hold_mode(&mut self) -> HOLD_MODE_W<18> {
         HOLD_MODE_W::new(self)
     }
     #[doc = "Bit 19 - Share bus"]
     #[inline(always)]
+    #[must_use]
     pub fn share_but(&mut self) -> SHARE_BUT_W<19> {
         SHARE_BUT_W::new(self)
     }
     #[doc = "Bit 20 - In the read operations, \"read-data\" phase apply 4 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_qout_mode(&mut self) -> SPI_QOUT_MODE_W<20> {
         SPI_QOUT_MODE_W::new(self)
     }
     #[doc = "Bit 21 - Write protect?"]
     #[inline(always)]
+    #[must_use]
     pub fn wp_reg(&mut self) -> WP_REG_W<21> {
         WP_REG_W::new(self)
     }
     #[doc = "Bit 22 - Enable two byte status"]
     #[inline(always)]
+    #[must_use]
     pub fn two_byte_status(&mut self) -> TWO_BYTE_STATUS_W<22> {
         TWO_BYTE_STATUS_W::new(self)
     }
     #[doc = "Bit 23 - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_dio_mode(&mut self) -> SPI_DIO_MODE_W<23> {
         SPI_DIO_MODE_W::new(self)
     }
     #[doc = "Bit 24 - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_qio_mode(&mut self) -> SPI_QIO_MODE_W<24> {
         SPI_QIO_MODE_W::new(self)
     }
     #[doc = "Bit 25 - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_rd_bit_order(&mut self) -> SPI_RD_BIT_ORDER_W<25> {
         SPI_RD_BIT_ORDER_W::new(self)
     }
     #[doc = "Bit 26 - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_wr_bit_order(&mut self) -> SPI_WR_BIT_ORDER_W<26> {
         SPI_WR_BIT_ORDER_W::new(self)
     }
@@ -252,11 +266,10 @@ impl crate::Readable for SPI_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_ctrl::W](W) writer structure"]
 impl crate::Writable for SPI_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_CTRL to value 0"]
 impl crate::Resettable for SPI_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

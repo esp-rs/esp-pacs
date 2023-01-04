@@ -167,66 +167,79 @@ impl R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_bck_in_delay(&mut self) -> I2S_TRANS_BCK_IN_DELAY_W<0> {
         I2S_TRANS_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_ws_in_delay(&mut self) -> I2S_TRANS_WS_IN_DELAY_W<2> {
         I2S_TRANS_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_bck_in_delay(&mut self) -> I2S_RECE_BCK_IN_DELAY_W<4> {
         I2S_RECE_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_ws_in_delay(&mut self) -> I2S_RECE_WS_IN_DELAY_W<6> {
         I2S_RECE_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_sd_in_delay(&mut self) -> I2S_RECE_SD_IN_DELAY_W<8> {
         I2S_RECE_SD_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_bck_out_delay(&mut self) -> I2S_TRANS_BCK_OUT_DELAY_W<10> {
         I2S_TRANS_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_ws_out_delay(&mut self) -> I2S_TRANS_WS_OUT_DELAY_W<12> {
         I2S_TRANS_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_sd_out_delay(&mut self) -> I2S_TRANS_SD_OUT_DELAY_W<14> {
         I2S_TRANS_SD_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_ws_out_delay(&mut self) -> I2S_RECE_WS_OUT_DELAY_W<16> {
         I2S_RECE_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_bck_out_delay(&mut self) -> I2S_RECE_BCK_OUT_DELAY_W<18> {
         I2S_RECE_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_dsync_sw(&mut self) -> I2S_TRANS_DSYNC_SW_W<20> {
         I2S_TRANS_DSYNC_SW_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_dsync_sw(&mut self) -> I2S_RECE_DSYNC_SW_W<21> {
         I2S_RECE_DSYNC_SW_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_bck_in_inv(&mut self) -> I2S_TRANS_BCK_IN_INV_W<22> {
         I2S_TRANS_BCK_IN_INV_W::new(self)
     }
@@ -249,11 +262,10 @@ impl crate::Readable for I2STIMING_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2stiming::W](W) writer structure"]
 impl crate::Writable for I2STIMING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2STIMING to value 0"]
 impl crate::Resettable for I2STIMING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

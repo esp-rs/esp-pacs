@@ -138,51 +138,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-buffer\" operations."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W<0> {
         SLV_RDBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 1 - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-buffer\" operations."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W<1> {
         SLV_WRBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 2 - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-status\" operations."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W<2> {
         SLV_RDSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 3 - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-status\" operations."]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W<3> {
         SLV_WRSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bits 4:9 - In the slave mode, it is the address length in bits for \"write-buffer\" operation. The register value shall be(bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W<4> {
         SLV_WR_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bits 10:15 - In the slave mode, it is the address length in bits for \"read-buffer\" operation. The register value shall be(bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W<10> {
         SLV_RD_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bits 16:24 - In the slave mode, it is the length in bits for \"write-buffer\" and \"read-buffer\" operations. The register value shallbe (bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_buf_bitlen(&mut self) -> SLV_BUF_BITLEN_W<16> {
         SLV_BUF_BITLEN_W::new(self)
     }
     #[doc = "Bit 25 - Enable spi slave status"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_status_read(&mut self) -> SPI_STATUS_READ_W<25> {
         SPI_STATUS_READ_W::new(self)
     }
     #[doc = "Bit 26 - Enable fast spi slave status"]
     #[inline(always)]
+    #[must_use]
     pub fn spi_status_fast_enable(&mut self) -> SPI_STATUS_FAST_ENABLE_W<26> {
         SPI_STATUS_FAST_ENABLE_W::new(self)
     }
     #[doc = "Bits 27:31 - In the slave mode, it is the length in bits for \"write-status\" and \"read-status\" operations. The register valueshall be (bit_num-1)"]
     #[inline(always)]
+    #[must_use]
     pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W<27> {
         SLV_STATUS_BITLEN_W::new(self)
     }
@@ -205,11 +215,10 @@ impl crate::Readable for SPI_SLAVE1_SPEC {
 #[doc = "`write(|w| ..)` method takes [spi_slave1::W](W) writer structure"]
 impl crate::Writable for SPI_SLAVE1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPI_SLAVE1 to value 0"]
 impl crate::Resettable for SPI_SLAVE1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

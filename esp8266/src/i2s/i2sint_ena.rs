@@ -99,31 +99,37 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_take_data_int_ena(&mut self) -> I2S_I2S_RX_TAKE_DATA_INT_ENA_W<0> {
         I2S_I2S_RX_TAKE_DATA_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_put_data_int_ena(&mut self) -> I2S_I2S_TX_PUT_DATA_INT_ENA_W<1> {
         I2S_I2S_TX_PUT_DATA_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_wfull_int_ena(&mut self) -> I2S_I2S_RX_WFULL_INT_ENA_W<2> {
         I2S_I2S_RX_WFULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_rempty_int_ena(&mut self) -> I2S_I2S_RX_REMPTY_INT_ENA_W<3> {
         I2S_I2S_RX_REMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_wfull_int_ena(&mut self) -> I2S_I2S_TX_WFULL_INT_ENA_W<4> {
         I2S_I2S_TX_WFULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_rempty_int_ena(&mut self) -> I2S_I2S_TX_REMPTY_INT_ENA_W<5> {
         I2S_I2S_TX_REMPTY_INT_ENA_W::new(self)
     }
@@ -146,11 +152,10 @@ impl crate::Readable for I2SINT_ENA_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2sint_ena::W](W) writer structure"]
 impl crate::Writable for I2SINT_ENA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2SINT_ENA to value 0"]
 impl crate::Resettable for I2SINT_ENA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

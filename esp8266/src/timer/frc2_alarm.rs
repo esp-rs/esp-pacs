@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - the alarm value for the counter"]
     #[inline(always)]
+    #[must_use]
     pub fn frc2_alarm(&mut self) -> FRC2_ALARM_W<0> {
         FRC2_ALARM_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for FRC2_ALARM_SPEC {
 #[doc = "`write(|w| ..)` method takes [frc2_alarm::W](W) writer structure"]
 impl crate::Writable for FRC2_ALARM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRC2_ALARM to value 0"]
 impl crate::Resettable for FRC2_ALARM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

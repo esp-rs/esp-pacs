@@ -178,76 +178,91 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_reset(&mut self) -> I2S_I2S_TX_RESET_W<0> {
         I2S_I2S_TX_RESET_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_reset(&mut self) -> I2S_I2S_RX_RESET_W<1> {
         I2S_I2S_RX_RESET_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_fifo_reset(&mut self) -> I2S_I2S_TX_FIFO_RESET_W<2> {
         I2S_I2S_TX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_fifo_reset(&mut self) -> I2S_I2S_RX_FIFO_RESET_W<3> {
         I2S_I2S_RX_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_slave_mod(&mut self) -> I2S_TRANS_SLAVE_MOD_W<4> {
         I2S_TRANS_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_slave_mod(&mut self) -> I2S_RECE_SLAVE_MOD_W<5> {
         I2S_RECE_SLAVE_MOD_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_right_first(&mut self) -> I2S_RIGHT_FIRST_W<6> {
         I2S_RIGHT_FIRST_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_msb_right(&mut self) -> I2S_MSB_RIGHT_W<7> {
         I2S_MSB_RIGHT_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_tx_start(&mut self) -> I2S_I2S_TX_START_W<8> {
         I2S_I2S_TX_START_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_rx_start(&mut self) -> I2S_I2S_RX_START_W<9> {
         I2S_I2S_RX_START_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_trans_msb_shift(&mut self) -> I2S_TRANS_MSB_SHIFT_W<10> {
         I2S_TRANS_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_rece_msb_shift(&mut self) -> I2S_RECE_MSB_SHIFT_W<11> {
         I2S_RECE_MSB_SHIFT_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_bits_mod(&mut self) -> I2S_BITS_MOD_W<12> {
         I2S_BITS_MOD_W::new(self)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_clkm_div_num(&mut self) -> I2S_CLKM_DIV_NUM_W<16> {
         I2S_CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 22:27"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_bck_div_num(&mut self) -> I2S_BCK_DIV_NUM_W<22> {
         I2S_BCK_DIV_NUM_W::new(self)
     }
@@ -270,11 +285,10 @@ impl crate::Readable for I2SCONF_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2sconf::W](W) writer structure"]
 impl crate::Writable for I2SCONF_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2SCONF to value 0"]
 impl crate::Resettable for I2SCONF_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

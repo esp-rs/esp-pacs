@@ -96,31 +96,37 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn register(&mut self) -> REGISTER_W<0> {
         REGISTER_W::new(self)
     }
     #[doc = "Bit 0 - configures output enable during sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_enable(&mut self) -> SLEEP_ENABLE_W<0> {
         SLEEP_ENABLE_W::new(self)
     }
     #[doc = "Bit 3 - configures pull up during sleep mode"]
     #[inline(always)]
+    #[must_use]
     pub fn sleep_pullup(&mut self) -> SLEEP_PULLUP_W<3> {
         SLEEP_PULLUP_W::new(self)
     }
     #[doc = "Bits 4:5 - configures IO_MUX function, bottom 2 bits"]
     #[inline(always)]
+    #[must_use]
     pub fn function_select_low_bits(&mut self) -> FUNCTION_SELECT_LOW_BITS_W<4> {
         FUNCTION_SELECT_LOW_BITS_W::new(self)
     }
     #[doc = "Bit 7 - configures pull up"]
     #[inline(always)]
+    #[must_use]
     pub fn pullup(&mut self) -> PULLUP_W<7> {
         PULLUP_W::new(self)
     }
     #[doc = "Bit 8 - configures IO_MUX function, upper bit"]
     #[inline(always)]
+    #[must_use]
     pub fn function_select_high_bit(&mut self) -> FUNCTION_SELECT_HIGH_BIT_W<8> {
         FUNCTION_SELECT_HIGH_BIT_W::new(self)
     }
@@ -143,11 +149,10 @@ impl crate::Readable for IO_MUX_SD_DATA0_SPEC {
 #[doc = "`write(|w| ..)` method takes [io_mux_sd_data0::W](W) writer structure"]
 impl crate::Writable for IO_MUX_SD_DATA0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IO_MUX_SD_DATA0 to value 0"]
 impl crate::Resettable for IO_MUX_SD_DATA0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

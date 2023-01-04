@@ -49,6 +49,7 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn i2s_i2s_sigle_data(&mut self) -> I2S_I2S_SIGLE_DATA_W<0> {
         I2S_I2S_SIGLE_DATA_W::new(self)
     }
@@ -71,11 +72,10 @@ impl crate::Readable for I2SCONF_SIGLE_DATA_SPEC {
 #[doc = "`write(|w| ..)` method takes [i2sconf_sigle_data::W](W) writer structure"]
 impl crate::Writable for I2SCONF_SIGLE_DATA_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2SCONF_SIGLE_DATA to value 0"]
 impl crate::Resettable for I2SCONF_SIGLE_DATA_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

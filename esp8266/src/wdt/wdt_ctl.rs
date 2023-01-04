@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
+    #[must_use]
     pub fn register(&mut self) -> REGISTER_W<0> {
         REGISTER_W::new(self)
     }
     #[doc = "Bit 0 - Enable the watchdog timer."]
     #[inline(always)]
+    #[must_use]
     pub fn enable(&mut self) -> ENABLE_W<0> {
         ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
     #[inline(always)]
+    #[must_use]
     pub fn stage_1_no_reset(&mut self) -> STAGE_1_NO_RESET_W<1> {
         STAGE_1_NO_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set to 1 to disable the stage 1 of the watchdog timer"]
     #[inline(always)]
+    #[must_use]
     pub fn stage_1_disable(&mut self) -> STAGE_1_DISABLE_W<2> {
         STAGE_1_DISABLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
+    #[must_use]
     pub fn unknown_3(&mut self) -> UNKNOWN_3_W<3> {
         UNKNOWN_3_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
+    #[must_use]
     pub fn unknown_4(&mut self) -> UNKNOWN_4_W<4> {
         UNKNOWN_4_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
+    #[must_use]
     pub fn unknown_5(&mut self) -> UNKNOWN_5_W<5> {
         UNKNOWN_5_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for WDT_CTL_SPEC {
 #[doc = "`write(|w| ..)` method takes [wdt_ctl::W](W) writer structure"]
 impl crate::Writable for WDT_CTL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WDT_CTL to value 0"]
 impl crate::Resettable for WDT_CTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

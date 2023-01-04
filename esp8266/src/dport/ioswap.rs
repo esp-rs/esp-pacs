@@ -102,36 +102,43 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
+    #[must_use]
     pub fn uart(&mut self) -> UART_W<0> {
         UART_W::new(self)
     }
     #[doc = "Bit 1 - Swap SPI"]
     #[inline(always)]
+    #[must_use]
     pub fn spi(&mut self) -> SPI_W<1> {
         SPI_W::new(self)
     }
     #[doc = "Bit 2 - Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"]
     #[inline(always)]
+    #[must_use]
     pub fn uart0(&mut self) -> UART0_W<2> {
         UART0_W::new(self)
     }
     #[doc = "Bit 3 - Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"]
     #[inline(always)]
+    #[must_use]
     pub fn uart1(&mut self) -> UART1_W<3> {
         UART1_W::new(self)
     }
     #[doc = "Bit 5 - Set HSPI with higher priority"]
     #[inline(always)]
+    #[must_use]
     pub fn hspi(&mut self) -> HSPI_W<5> {
         HSPI_W::new(self)
     }
     #[doc = "Bit 6 - Set two SPI masters on HSPI"]
     #[inline(always)]
+    #[must_use]
     pub fn double_hspi(&mut self) -> DOUBLE_HSPI_W<6> {
         DOUBLE_HSPI_W::new(self)
     }
     #[doc = "Bit 7 - Set two SPI masters on CSPI"]
     #[inline(always)]
+    #[must_use]
     pub fn double_cspi(&mut self) -> DOUBLE_CSPI_W<7> {
         DOUBLE_CSPI_W::new(self)
     }
@@ -154,11 +161,10 @@ impl crate::Readable for IOSWAP_SPEC {
 #[doc = "`write(|w| ..)` method takes [ioswap::W](W) writer structure"]
 impl crate::Writable for IOSWAP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IOSWAP to value 0"]
 impl crate::Resettable for IOSWAP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

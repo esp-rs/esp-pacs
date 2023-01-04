@@ -54,11 +54,10 @@ impl crate::Readable for RESET_STAGE_SPEC {
 #[doc = "`write(|w| ..)` method takes [reset_stage::W](W) writer structure"]
 impl crate::Writable for RESET_STAGE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets reset_stage to value 0"]
 impl crate::Resettable for RESET_STAGE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

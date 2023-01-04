@@ -33,8 +33,5 @@ impl crate::Readable for UART_RXD_CNT_SPEC {
 }
 #[doc = "`reset()` method sets UART_RXD_CNT to value 0"]
 impl crate::Resettable for UART_RXD_CNT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
