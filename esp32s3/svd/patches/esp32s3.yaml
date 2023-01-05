@@ -99,6 +99,12 @@ TWAI:
         name: CNT
   CTRL:
     _strip: "PULSE_"
+  "U%s_STATUS":
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT_U"
+    _modify:
+      ZERO_MODE_U:
+        name: ZERO_MODE
   INT_RAW:
     _strip_end: "_INT_RAW"
   INT_ST:

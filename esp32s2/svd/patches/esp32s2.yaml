@@ -28,6 +28,12 @@ _svd: ../esp32s2.base.svd
         name: CNT
   CTRL:
     _strip: "PULSE_"
+  "U%s_STATUS":
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT_U0"
+    _modify:
+      ZERO_MODE_U0:
+        name: ZERO_MODE
   INT_RAW:
     _strip_end: "_INT_RAW"
   INT_ST:
