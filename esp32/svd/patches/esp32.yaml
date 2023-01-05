@@ -44,6 +44,9 @@ PCNT:
     "U?_STATUS":
       name: "U%s_STATUS"
       _strip: "STATUS_"
+      _modify:
+        CNT_MODE:
+          name: ZERO_MODE
 
   CTRL:
     _strip: "PLUS_"

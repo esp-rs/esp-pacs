@@ -36,10 +36,10 @@ impl From<crate::W<U_STATUS_SPEC>> for W {
 }
 #[doc = "Field `CORE_STATUS_U0` reader - "]
 pub type CORE_STATUS_U0_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `CNT_MODE` reader - "]
-pub type CNT_MODE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `CNT_MODE` writer - "]
-pub type CNT_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_STATUS_SPEC, u8, u8, 2, O>;
+#[doc = "Field `ZERO_MODE` reader - "]
+pub type ZERO_MODE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ZERO_MODE` writer - "]
+pub type ZERO_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_STATUS_SPEC, u8, u8, 2, O>;
 #[doc = "Field `THRES1` reader - "]
 pub type THRES1_R = crate::BitReader<bool>;
 #[doc = "Field `THRES1` writer - "]
@@ -68,8 +68,8 @@ impl R {
     }
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn cnt_mode(&self) -> CNT_MODE_R {
-        CNT_MODE_R::new((self.bits & 3) as u8)
+    pub fn zero_mode(&self) -> ZERO_MODE_R {
+        ZERO_MODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -101,8 +101,8 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_mode(&mut self) -> CNT_MODE_W<0> {
-        CNT_MODE_W::new(self)
+    pub fn zero_mode(&mut self) -> ZERO_MODE_W<0> {
+        ZERO_MODE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
