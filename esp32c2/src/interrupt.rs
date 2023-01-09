@@ -2,8 +2,30 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
-    #[doc = "11 - I2C_MST"]
-    I2C_MST = 11,
+    #[doc = "0 - WIFI_MAC"]
+    WIFI_MAC = 0,
+    #[doc = "1 - WIFI_MAC_NMI"]
+    WIFI_MAC_NMI = 1,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - LP_TIMER"]
+    LP_TIMER = 7,
+    #[doc = "8 - COEX"]
+    COEX = 8,
+    #[doc = "9 - BLE_TIMER"]
+    BLE_TIMER = 9,
+    #[doc = "10 - BLE_SEC"]
+    BLE_SEC = 10,
+    #[doc = "11 - CACHE_IA"]
+    CACHE_IA = 11,
     #[doc = "12 - APB_CTRL"]
     APB_CTRL = 12,
     #[doc = "13 - GPIO"]
@@ -38,12 +60,30 @@ pub enum Interrupt {
     SYSTIMER_TARGET2 = 28,
     #[doc = "29 - SPI_MEM_REJECT_CACHE"]
     SPI_MEM_REJECT_CACHE = 29,
+    #[doc = "30 - ICACHE_PRELOAD0"]
+    ICACHE_PRELOAD0 = 30,
+    #[doc = "31 - ICACHE_SYNC0"]
+    ICACHE_SYNC0 = 31,
     #[doc = "32 - APB_ADC"]
     APB_ADC = 32,
     #[doc = "33 - DMA_CH0"]
     DMA_CH0 = 33,
     #[doc = "34 - SHA"]
     SHA = 34,
+    #[doc = "35 - ECC"]
+    ECC = 35,
+    #[doc = "36 - SW_INTR_0"]
+    SW_INTR_0 = 36,
+    #[doc = "37 - SW_INTR_1"]
+    SW_INTR_1 = 37,
+    #[doc = "38 - SW_INTR_2"]
+    SW_INTR_2 = 38,
+    #[doc = "39 - SW_INTR_3"]
+    SW_INTR_3 = 39,
+    #[doc = "40 - ASSIST_DEBUG_INTR"]
+    ASSIST_DEBUG_INTR = 40,
+    #[doc = "41 - PERI_VIO_SIZE_INTR"]
+    PERI_VIO_SIZE_INTR = 41,
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
@@ -53,7 +93,18 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
-            11 => Ok(Interrupt::I2C_MST),
+            0 => Ok(Interrupt::WIFI_MAC),
+            1 => Ok(Interrupt::WIFI_MAC_NMI),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::LP_TIMER),
+            8 => Ok(Interrupt::COEX),
+            9 => Ok(Interrupt::BLE_TIMER),
+            10 => Ok(Interrupt::BLE_SEC),
+            11 => Ok(Interrupt::CACHE_IA),
             12 => Ok(Interrupt::APB_CTRL),
             13 => Ok(Interrupt::GPIO),
             14 => Ok(Interrupt::GPIO_NMI),
@@ -71,9 +122,18 @@ impl Interrupt {
             27 => Ok(Interrupt::SYSTIMER_TARGET1),
             28 => Ok(Interrupt::SYSTIMER_TARGET2),
             29 => Ok(Interrupt::SPI_MEM_REJECT_CACHE),
+            30 => Ok(Interrupt::ICACHE_PRELOAD0),
+            31 => Ok(Interrupt::ICACHE_SYNC0),
             32 => Ok(Interrupt::APB_ADC),
             33 => Ok(Interrupt::DMA_CH0),
             34 => Ok(Interrupt::SHA),
+            35 => Ok(Interrupt::ECC),
+            36 => Ok(Interrupt::SW_INTR_0),
+            37 => Ok(Interrupt::SW_INTR_1),
+            38 => Ok(Interrupt::SW_INTR_2),
+            39 => Ok(Interrupt::SW_INTR_3),
+            40 => Ok(Interrupt::ASSIST_DEBUG_INTR),
+            41 => Ok(Interrupt::PERI_VIO_SIZE_INTR),
             _ => Err(TryFromInterruptError(())),
         }
     }

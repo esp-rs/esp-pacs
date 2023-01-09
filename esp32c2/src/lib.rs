@@ -26,7 +26,18 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn I2C_MST();
+    fn WIFI_MAC();
+    fn WIFI_MAC_NMI();
+    fn WIFI_PWR();
+    fn WIFI_BB();
+    fn BT_MAC();
+    fn BT_BB();
+    fn BT_BB_NMI();
+    fn LP_TIMER();
+    fn COEX();
+    fn BLE_TIMER();
+    fn BLE_SEC();
+    fn CACHE_IA();
     fn APB_CTRL();
     fn GPIO();
     fn GPIO_NMI();
@@ -44,9 +55,18 @@ extern "C" {
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
     fn SPI_MEM_REJECT_CACHE();
+    fn ICACHE_PRELOAD0();
+    fn ICACHE_SYNC0();
     fn APB_ADC();
     fn DMA_CH0();
     fn SHA();
+    fn ECC();
+    fn SW_INTR_0();
+    fn SW_INTR_1();
+    fn SW_INTR_2();
+    fn SW_INTR_3();
+    fn ASSIST_DEBUG_INTR();
+    fn PERI_VIO_SIZE_INTR();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -56,19 +76,25 @@ pub union Vector {
 #[cfg(feature = "rt")]
 #[doc(hidden)]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 35] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: I2C_MST },
+pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
+    Vector { _handler: WIFI_MAC },
+    Vector {
+        _handler: WIFI_MAC_NMI,
+    },
+    Vector { _handler: WIFI_PWR },
+    Vector { _handler: WIFI_BB },
+    Vector { _handler: BT_MAC },
+    Vector { _handler: BT_BB },
+    Vector {
+        _handler: BT_BB_NMI,
+    },
+    Vector { _handler: LP_TIMER },
+    Vector { _handler: COEX },
+    Vector {
+        _handler: BLE_TIMER,
+    },
+    Vector { _handler: BLE_SEC },
+    Vector { _handler: CACHE_IA },
     Vector { _handler: APB_CTRL },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
@@ -103,11 +129,34 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 35] = [
     Vector {
         _handler: SPI_MEM_REJECT_CACHE,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: ICACHE_PRELOAD0,
+    },
+    Vector {
+        _handler: ICACHE_SYNC0,
+    },
     Vector { _handler: APB_ADC },
     Vector { _handler: DMA_CH0 },
     Vector { _handler: SHA },
+    Vector { _handler: ECC },
+    Vector {
+        _handler: SW_INTR_0,
+    },
+    Vector {
+        _handler: SW_INTR_1,
+    },
+    Vector {
+        _handler: SW_INTR_2,
+    },
+    Vector {
+        _handler: SW_INTR_3,
+    },
+    Vector {
+        _handler: ASSIST_DEBUG_INTR,
+    },
+    Vector {
+        _handler: PERI_VIO_SIZE_INTR,
+    },
 ];
 #[doc(hidden)]
 pub mod interrupt;
