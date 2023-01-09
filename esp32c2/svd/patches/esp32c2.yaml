@@ -7,3 +7,53 @@ LEDC:
     _strip_end:
       - "_CH0"
       - "_TIMER0"
+
+INTERRUPT_CORE0:
+  _add:
+    _interrupts:
+      WIFI_MAC:
+        value: 0
+      WIFI_MAC_NMI:
+        value: 1
+      WIFI_PWR:
+        value: 2
+      WIFI_BB:
+        value: 3
+      BT_MAC:
+        value: 4
+      BT_BB:
+        value: 5
+      BT_BB_NMI:
+        value: 6
+      LP_TIMER:
+        value: 7
+      COEX:
+        value: 8
+      BLE_TIMER:
+        value: 9
+      BLE_SEC:
+        value: 10
+      CACHE_IA:
+        value: 11
+      ICACHE_PRELOAD0:
+        value: 30
+      ICACHE_SYNC0:
+        value: 31
+      ECC:
+        value: 35
+      SW_INTR_0:
+        value: 36
+      SW_INTR_1:
+        value: 37
+      SW_INTR_2:
+        value: 38
+      SW_INTR_3:
+        value: 39
+      PERI_VIO_SIZE_INTR:
+        value: 41
+
+ASSIST_DEBUG:
+  _add:
+    _interrupts:
+      ASSIST_DEBUG_INTR:
+        value: 40
