@@ -3,11 +3,11 @@
   <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
-  <series>ESP32-S2</series>
-  <version>11</version>
+  <series>ESP32 S-Series</series>
+  <version>12</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
-    Copyright 2022 Espressif Systems (Shanghai) PTE LTD
+    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16641,7 +16641,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
           <resetValue>0x00003C10</resetValue>
           <fields>
             <field>
-              <name>FILTER_THRES_U0</name>
+              <name>FILTER_THRES</name>
               <description>This sets the maximum threshold, in APB_CLK cycles, for the filter.
 Any pulses with width less than this will be ignored when the filter is enabled.</description>
               <bitOffset>0</bitOffset>
@@ -16649,49 +16649,49 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>FILTER_EN_U0</name>
+              <name>FILTER_EN</name>
               <description>This is the enable bit for unit %s's input filter.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_ZERO_EN_U0</name>
+              <name>THR_ZERO_EN</name>
               <description>This is the enable bit for unit %s's zero comparator.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_H_LIM_EN_U0</name>
+              <name>THR_H_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_h_lim comparator.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_L_LIM_EN_U0</name>
+              <name>THR_L_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_l_lim comparator.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES0_EN_U0</name>
+              <name>THR_THRES0_EN</name>
               <description>This is the enable bit for unit %s's thres0 comparator.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES1_EN_U0</name>
+              <name>THR_THRES1_EN</name>
               <description>This is the enable bit for unit %s's thres1 comparator.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_NEG_MODE_U0</name>
+              <name>CH0_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a negative edge.
 1: Increase the counter. 2: Decrease the counter. 0, 3: No effect on counter.</description>
               <bitOffset>16</bitOffset>
@@ -16699,7 +16699,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_POS_MODE_U0</name>
+              <name>CH0_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a positive edge.
 1: Increase the counter. 2: Decrease the counter. 0, 3: No effect on counter.</description>
               <bitOffset>18</bitOffset>
@@ -16707,7 +16707,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_HCTRL_MODE_U0</name>
+              <name>CH0_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification.</description>
               <bitOffset>20</bitOffset>
@@ -16715,7 +16715,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_LCTRL_MODE_U0</name>
+              <name>CH0_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification.</description>
               <bitOffset>22</bitOffset>
@@ -16723,7 +16723,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_NEG_MODE_U0</name>
+              <name>CH1_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a negative edge.
 1: Increment the counter. 2: Decrement the counter. 0, 3: No effect on counter.</description>
               <bitOffset>24</bitOffset>
@@ -16731,7 +16731,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_POS_MODE_U0</name>
+              <name>CH1_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a positive edge.
 1: Increment the counter. 2: Decrement the counter. 0, 3: No effect on counter.</description>
               <bitOffset>26</bitOffset>
@@ -16739,7 +16739,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_HCTRL_MODE_U0</name>
+              <name>CH1_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification.</description>
               <bitOffset>28</bitOffset>
@@ -16747,7 +16747,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_LCTRL_MODE_U0</name>
+              <name>CH1_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 0: No modification. 1: Invert behavior (increase -> decrease, decrease -> increase). 2, 3: Inhibit counter modification.</description>
               <bitOffset>30</bitOffset>
@@ -16765,14 +16765,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THRES0_U0</name>
+              <name>CNT_THRES0</name>
               <description>This register is used to configure the thres0 value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THRES1_U0</name>
+              <name>CNT_THRES1</name>
               <description>This register is used to configure the thres1 value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -16789,14 +16789,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_H_LIM_U0</name>
+              <name>CNT_H_LIM</name>
               <description>This register is used to configure the thr_h_lim value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_L_LIM_U0</name>
+              <name>CNT_L_LIM</name>
               <description>This register is used to configure the thr_l_lim value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -16813,7 +16813,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>PULSE_CNT_U0</name>
+              <name>CNT</name>
               <description>This register stores the current pulse count value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -16828,28 +16828,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_RAW</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_RAW</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_RAW</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_RAW</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16864,28 +16864,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ST</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ST</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ST</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ST</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16900,28 +16900,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ENA</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ENA</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ENA</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ENA</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16936,28 +16936,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_CLR</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_CLR</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_CLR</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_CLR</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16974,42 +16974,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_ZERO_MODE_U0</name>
+              <name>ZERO_MODE</name>
               <description>The pulse counter status of PCNT_U%s corresponding to 0. 0: pulse counter decreases from positive to 0. 1: pulse counter increases from negative to 0. 2: pulse counter is negative. 3: pulse counter is positive.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES1_LAT_U0</name>
+              <name>THRES1</name>
               <description>The latched value of thres1 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres1 and thres1 event is valid. 0: others.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES0_LAT_U0</name>
+              <name>THRES0</name>
               <description>The latched value of thres0 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres0 and thres0 event is valid. 0: others.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_L_LIM_LAT_U0</name>
+              <name>L_LIM</name>
               <description>The latched value of low limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_l_lim and low limit event is valid. 0: others.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_H_LIM_LAT_U0</name>
+              <name>H_LIM</name>
               <description>The latched value of high limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_h_lim and high limit event is valid. 0: others.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_ZERO_LAT_U0</name>
+              <name>ZERO</name>
               <description>The latched value of zero threshold event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to 0 and zero threshold event is valid. 0: others.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17025,7 +17025,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00000055</resetValue>
           <fields>
             <field>
-              <name>PULSE_CNT_RST_U0</name>
+              <name>CNT_RST_U0</name>
               <description>Set this bit to clear unit 0's counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17039,7 +17039,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U1</name>
+              <name>CNT_RST_U1</name>
               <description>Set this bit to clear unit 2's counter.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17053,7 +17053,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U2</name>
+              <name>CNT_RST_U2</name>
               <description>Set this bit to clear unit 4's counter.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -17067,7 +17067,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U3</name>
+              <name>CNT_RST_U3</name>
               <description>Set this bit to clear unit 6's counter.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -18962,7 +18962,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           </fields>
         </register>
         <register>
-          <name>CLOCK_GATE_REG</name>
+          <name>CLOCK_GATE</name>
           <description>Clock gate register of permission control.</description>
           <addressOffset>0x104</addressOffset>
           <size>0x20</size>
@@ -28001,7 +28001,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
           </fields>
         </register>
         <register>
-          <name>CONTINUE_OP</name>
+          <name>CONTINUE_</name>
           <description>Continues SHA operation (only effective in Typical SHA mode)</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
@@ -28111,7 +28111,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
         <register>
           <dim>16</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>H_%s</name>
+          <name>H_MEM%s</name>
           <description>Hash value</description>
           <addressOffset>0x40</addressOffset>
           <size>0x20</size>
@@ -28128,7 +28128,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
         <register>
           <dim>32</dim>
           <dimIncrement>0x4</dimIncrement>
-          <name>M_%s</name>
+          <name>M_MEM%s</name>
           <description>Message</description>
           <addressOffset>0x80</addressOffset>
           <size>0x20</size>
@@ -31463,7 +31463,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_CLK_EN</name>
+              <name>TWAI_CLK_EN</name>
               <description>Set this bit to enable clock of CAN.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -31745,7 +31745,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_RST</name>
+              <name>TWAI_RST</name>
               <description>Set this bit to reset CAN.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -34147,7 +34147,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34162,7 +34162,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34177,7 +34177,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34192,7 +34192,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34207,7 +34207,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, it stores the 4th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34222,7 +34222,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, it stores the 5th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34237,7 +34237,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance mask register 2 with R/W Permission. In operation mode, it stores the 6th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34252,7 +34252,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>In reset mode, it is acceptance mask register 3 with R/W Permission. In operation mode, it stores the 7th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34267,7 +34267,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>Stored the 8th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34282,7 +34282,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>Stored the 9th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34297,7 +34297,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>Stored the 10th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34312,7 +34312,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>Stored the 11th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -34327,7 +34327,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
               <description>Stored the 12th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
