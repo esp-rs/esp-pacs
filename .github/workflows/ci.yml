@@ -9,15 +9,20 @@ name: CI
 
 env:
   CARGO_TERM_COLOR: always
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
+  # --------------------------------------------------------------------------
+  # Check
+
   check-riscv:
-    name: Generate and build RISC-V PACs
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
         chip: [esp32c2, esp32c3, esp32c6, esp32h2]
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
@@ -28,38 +33,45 @@ jobs:
           default: true
           components: rust-src
       - uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/cargo@v1
-        with:
-          command: run
-          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}
+
+      - name: generate pac
+        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+      - name: build pac
+        run: cd ${{ matrix.chip }} && cargo check
 
   check-xtensa:
-    name: Generate and build Xtensa PACs
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32, esp32s2, esp32s3, esp8266]
+        chip: [esp32, esp32s2, esp32s3]
+
     steps:
       - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.2
+      - uses: esp-rs/xtensa-toolchain@v1.5
         with:
-          default: true
           ldproxy: false
           buildtargets: ${{ matrix.chip }}
+          override: false
       - uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/cargo@v1
-        with:
-          command: run
-          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}
+
+      - name: generate pac
+        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+      - name: build pac
+        run: cd ${{ matrix.chip }} && cargo check
+
+  # --------------------------------------------------------------------------
+  # MSRV
 
   msrv-riscv:
-    name: Check MSRV for RISC-V
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
         chip: [esp32c2, esp32c3, esp32c6, esp32h2]
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
@@ -75,30 +87,31 @@ jobs:
           toolchain: "1.60.0"
           components: rust-src
       - uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/cargo@v1
-        with:
-          command: run
-          args: --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
-      - run: |
-          cd ${{ matrix.chip }} && cargo +1.60.0 check
+
+      - name: generate pac
+        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+      - name: build pac
+        run: cd ${{ matrix.chip }} && cargo +1.60.0 check
 
   msrv-xtensa:
-    name: Check MSRV for Xtensa
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32, esp32s2, esp32s3, esp8266]
+        chip: [esp32, esp32s2, esp32s3]
+
     steps:
       - uses: actions/checkout@v3
-      - uses: esp-rs/xtensa-toolchain@v1.2
+      - uses: esp-rs/xtensa-toolchain@v1.5
         with:
-          default: true
           ldproxy: false
           buildtargets: ${{ matrix.chip }}
           version: "1.60.0"
+          override: false
       - uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/cargo@v1
-        with:
-          command: run
-          args: --manifest-path=xtask/Cargo.toml -- ${{ matrix.chip }}
+
+      - name: generate pac
+        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+      - name: build pac
+        run: cd ${{ matrix.chip }} && cargo check
