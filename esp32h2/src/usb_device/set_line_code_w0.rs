@@ -13,13 +13,13 @@ impl From<crate::R<SET_LINE_CODE_W0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
-pub type USB_SERIAL_JTAG_DW_DTE_RATE_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
+pub type DW_DTE_RATE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The value of dwDTERate set by host through SET_LINE_CODING command."]
     #[inline(always)]
-    pub fn usb_serial_jtag_dw_dte_rate(&self) -> USB_SERIAL_JTAG_DW_DTE_RATE_R {
-        USB_SERIAL_JTAG_DW_DTE_RATE_R::new(self.bits)
+    pub fn dw_dte_rate(&self) -> DW_DTE_RATE_R {
+        DW_DTE_RATE_R::new(self.bits)
     }
 }
 #[doc = "W0 of SET_LINE_CODING command.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [set_line_code_w0](index.html) module"]

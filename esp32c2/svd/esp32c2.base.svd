@@ -3,11 +3,11 @@
   <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C2</name>
-  <series>ESP32-C2</series>
-  <version>4</version>
+  <series>ESP32 C-Series</series>
+  <version>5</version>
   <description>32-bit RISC-V MCU</description>
   <licenseText>
-    Copyright 2022 Espressif Systems (Shanghai) PTE LTD
+    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -545,7 +545,7 @@
           </fields>
         </register>
         <register>
-          <name>REDCY_SIG0_REG</name>
+          <name>REDCY_SIG0</name>
           <description>APB_CTRL_REDCY_SIG0_REG_REG</description>
           <addressOffset>0x94</addressOffset>
           <size>0x20</size>
@@ -567,7 +567,7 @@
           </fields>
         </register>
         <register>
-          <name>REDCY_SIG1_REG</name>
+          <name>REDCY_SIG1</name>
           <description>APB_CTRL_REDCY_SIG1_REG_REG</description>
           <addressOffset>0x98</addressOffset>
           <size>0x20</size>
@@ -760,7 +760,7 @@
           </fields>
         </register>
         <register>
-          <name>PERI_BACKUP_CONFIG_REG</name>
+          <name>PERI_BACKUP_CONFIG</name>
           <description>APB_CTRL_PERI_BACKUP_CONFIG_REG_REG</description>
           <addressOffset>0xB4</addressOffset>
           <size>0x20</size>
@@ -818,7 +818,7 @@
           </fields>
         </register>
         <register>
-          <name>PERI_BACKUP_APB_ADDR_REG</name>
+          <name>PERI_BACKUP_APB_ADDR</name>
           <description>APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG</description>
           <addressOffset>0xB8</addressOffset>
           <size>0x20</size>
@@ -833,7 +833,7 @@
           </fields>
         </register>
         <register>
-          <name>PERI_BACKUP_MEM_ADDR_REG</name>
+          <name>PERI_BACKUP_MEM_ADDR</name>
           <description>APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG</description>
           <addressOffset>0xBC</addressOffset>
           <size>0x20</size>
@@ -1862,6 +1862,10 @@
         <size>0x38</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>ASSIST_DEBUG_INTR</name>
+        <value>40</value>
+      </interrupt>
       <registers>
         <register>
           <name>CORE_0_INTR_ENA</name>
@@ -5957,7 +5961,7 @@
           </fields>
         </register>
         <register>
-          <name>CLOCK_GATE_REG</name>
+          <name>CLOCK_GATE</name>
           <description>GPIO clock gate register</description>
           <addressOffset>0x62C</addressOffset>
           <size>0x20</size>
@@ -5973,7 +5977,7 @@
           </fields>
         </register>
         <register>
-          <name>REG_DATE_REG</name>
+          <name>REG_DATE</name>
           <description>GPIO version register</description>
           <addressOffset>0x6FC</addressOffset>
           <size>0x20</size>
@@ -6000,10 +6004,6 @@
         <size>0x88</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>I2C_MST</name>
-        <value>11</value>
-      </interrupt>
       <interrupt>
         <name>I2C_EXT0</name>
         <value>22</value>
@@ -7161,6 +7161,86 @@ level.</description>
         <size>0x150</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>WIFI_MAC</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_MAC_NMI</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_PWR</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_BB</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_MAC</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB_NMI</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_TIMER</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>COEX</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_TIMER</name>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_SEC</name>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_IA</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_PRELOAD0</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_SYNC0</name>
+        <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>ECC</name>
+        <value>35</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_0</name>
+        <value>36</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_1</name>
+        <value>37</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_2</name>
+        <value>38</value>
+      </interrupt>
+      <interrupt>
+        <name>SW_INTR_3</name>
+        <value>39</value>
+      </interrupt>
+      <interrupt>
+        <name>PERI_VIO_SIZE_INTR</name>
+        <value>41</value>
+      </interrupt>
       <registers>
         <register>
           <name>MAC_INTR_MAP</name>

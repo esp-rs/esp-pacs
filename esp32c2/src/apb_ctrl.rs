@@ -52,9 +52,9 @@ pub struct RegisterBlock {
     #[doc = "0x90 - APB_CTRL_SDIO_CTRL_REG"]
     pub sdio_ctrl: SDIO_CTRL,
     #[doc = "0x94 - APB_CTRL_REDCY_SIG0_REG_REG"]
-    pub redcy_sig0_reg: REDCY_SIG0_REG,
+    pub redcy_sig0: REDCY_SIG0,
     #[doc = "0x98 - APB_CTRL_REDCY_SIG1_REG_REG"]
-    pub redcy_sig1_reg: REDCY_SIG1_REG,
+    pub redcy_sig1: REDCY_SIG1,
     #[doc = "0x9c - APB_CTRL_FRONT_END_MEM_PD_REG"]
     pub front_end_mem_pd: FRONT_END_MEM_PD,
     #[doc = "0xa0 - APB_CTRL_RETENTION_CTRL_REG"]
@@ -68,11 +68,11 @@ pub struct RegisterBlock {
     #[doc = "0xb0 - APB_CTRL_RND_DATA_REG"]
     pub rnd_data: RND_DATA,
     #[doc = "0xb4 - APB_CTRL_PERI_BACKUP_CONFIG_REG_REG"]
-    pub peri_backup_config_reg: PERI_BACKUP_CONFIG_REG,
+    pub peri_backup_config: PERI_BACKUP_CONFIG,
     #[doc = "0xb8 - APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG"]
-    pub peri_backup_apb_addr_reg: PERI_BACKUP_APB_ADDR_REG,
+    pub peri_backup_apb_addr: PERI_BACKUP_APB_ADDR,
     #[doc = "0xbc - APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG"]
-    pub peri_backup_mem_addr_reg: PERI_BACKUP_MEM_ADDR_REG,
+    pub peri_backup_mem_addr: PERI_BACKUP_MEM_ADDR,
     #[doc = "0xc0 - APB_CTRL_PERI_BACKUP_INT_RAW_REG"]
     pub peri_backup_int_raw: PERI_BACKUP_INT_RAW,
     #[doc = "0xc4 - APB_CTRL_PERI_BACKUP_INT_ST_REG"]
@@ -182,14 +182,14 @@ pub mod spi_mem_reject_addr;
 pub type SDIO_CTRL = crate::Reg<sdio_ctrl::SDIO_CTRL_SPEC>;
 #[doc = "APB_CTRL_SDIO_CTRL_REG"]
 pub mod sdio_ctrl;
-#[doc = "REDCY_SIG0_REG (rw) register accessor: an alias for `Reg<REDCY_SIG0_REG_SPEC>`"]
-pub type REDCY_SIG0_REG = crate::Reg<redcy_sig0_reg::REDCY_SIG0_REG_SPEC>;
+#[doc = "REDCY_SIG0 (rw) register accessor: an alias for `Reg<REDCY_SIG0_SPEC>`"]
+pub type REDCY_SIG0 = crate::Reg<redcy_sig0::REDCY_SIG0_SPEC>;
 #[doc = "APB_CTRL_REDCY_SIG0_REG_REG"]
-pub mod redcy_sig0_reg;
-#[doc = "REDCY_SIG1_REG (rw) register accessor: an alias for `Reg<REDCY_SIG1_REG_SPEC>`"]
-pub type REDCY_SIG1_REG = crate::Reg<redcy_sig1_reg::REDCY_SIG1_REG_SPEC>;
+pub mod redcy_sig0;
+#[doc = "REDCY_SIG1 (rw) register accessor: an alias for `Reg<REDCY_SIG1_SPEC>`"]
+pub type REDCY_SIG1 = crate::Reg<redcy_sig1::REDCY_SIG1_SPEC>;
 #[doc = "APB_CTRL_REDCY_SIG1_REG_REG"]
-pub mod redcy_sig1_reg;
+pub mod redcy_sig1;
 #[doc = "FRONT_END_MEM_PD (rw) register accessor: an alias for `Reg<FRONT_END_MEM_PD_SPEC>`"]
 pub type FRONT_END_MEM_PD = crate::Reg<front_end_mem_pd::FRONT_END_MEM_PD_SPEC>;
 #[doc = "APB_CTRL_FRONT_END_MEM_PD_REG"]
@@ -214,20 +214,18 @@ pub mod mem_power_up;
 pub type RND_DATA = crate::Reg<rnd_data::RND_DATA_SPEC>;
 #[doc = "APB_CTRL_RND_DATA_REG"]
 pub mod rnd_data;
-#[doc = "PERI_BACKUP_CONFIG_REG (rw) register accessor: an alias for `Reg<PERI_BACKUP_CONFIG_REG_SPEC>`"]
-pub type PERI_BACKUP_CONFIG_REG = crate::Reg<peri_backup_config_reg::PERI_BACKUP_CONFIG_REG_SPEC>;
+#[doc = "PERI_BACKUP_CONFIG (rw) register accessor: an alias for `Reg<PERI_BACKUP_CONFIG_SPEC>`"]
+pub type PERI_BACKUP_CONFIG = crate::Reg<peri_backup_config::PERI_BACKUP_CONFIG_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_CONFIG_REG_REG"]
-pub mod peri_backup_config_reg;
-#[doc = "PERI_BACKUP_APB_ADDR_REG (rw) register accessor: an alias for `Reg<PERI_BACKUP_APB_ADDR_REG_SPEC>`"]
-pub type PERI_BACKUP_APB_ADDR_REG =
-    crate::Reg<peri_backup_apb_addr_reg::PERI_BACKUP_APB_ADDR_REG_SPEC>;
+pub mod peri_backup_config;
+#[doc = "PERI_BACKUP_APB_ADDR (rw) register accessor: an alias for `Reg<PERI_BACKUP_APB_ADDR_SPEC>`"]
+pub type PERI_BACKUP_APB_ADDR = crate::Reg<peri_backup_apb_addr::PERI_BACKUP_APB_ADDR_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG"]
-pub mod peri_backup_apb_addr_reg;
-#[doc = "PERI_BACKUP_MEM_ADDR_REG (rw) register accessor: an alias for `Reg<PERI_BACKUP_MEM_ADDR_REG_SPEC>`"]
-pub type PERI_BACKUP_MEM_ADDR_REG =
-    crate::Reg<peri_backup_mem_addr_reg::PERI_BACKUP_MEM_ADDR_REG_SPEC>;
+pub mod peri_backup_apb_addr;
+#[doc = "PERI_BACKUP_MEM_ADDR (rw) register accessor: an alias for `Reg<PERI_BACKUP_MEM_ADDR_SPEC>`"]
+pub type PERI_BACKUP_MEM_ADDR = crate::Reg<peri_backup_mem_addr::PERI_BACKUP_MEM_ADDR_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG"]
-pub mod peri_backup_mem_addr_reg;
+pub mod peri_backup_mem_addr;
 #[doc = "PERI_BACKUP_INT_RAW (r) register accessor: an alias for `Reg<PERI_BACKUP_INT_RAW_SPEC>`"]
 pub type PERI_BACKUP_INT_RAW = crate::Reg<peri_backup_int_raw::PERI_BACKUP_INT_RAW_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_INT_RAW_REG"]

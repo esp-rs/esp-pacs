@@ -51,10 +51,10 @@ pub struct RegisterBlock {
     pub func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 25],
     _reserved20: [u8; 0x74],
     #[doc = "0x62c - GPIO clock gate register"]
-    pub clock_gate_reg: CLOCK_GATE_REG,
+    pub clock_gate: CLOCK_GATE,
     _reserved21: [u8; 0xcc],
     #[doc = "0x6fc - GPIO version register"]
-    pub reg_date_reg: REG_DATE_REG,
+    pub reg_date: REG_DATE,
 }
 #[doc = "BT_SELECT (rw) register accessor: an alias for `Reg<BT_SELECT_SPEC>`"]
 pub type BT_SELECT = crate::Reg<bt_select::BT_SELECT_SPEC>;
@@ -136,11 +136,11 @@ pub mod func_in_sel_cfg;
 pub type FUNC_OUT_SEL_CFG = crate::Reg<func_out_sel_cfg::FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "GPIO output function select register"]
 pub mod func_out_sel_cfg;
-#[doc = "CLOCK_GATE_REG (rw) register accessor: an alias for `Reg<CLOCK_GATE_REG_SPEC>`"]
-pub type CLOCK_GATE_REG = crate::Reg<clock_gate_reg::CLOCK_GATE_REG_SPEC>;
+#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gate register"]
-pub mod clock_gate_reg;
-#[doc = "REG_DATE_REG (rw) register accessor: an alias for `Reg<REG_DATE_REG_SPEC>`"]
-pub type REG_DATE_REG = crate::Reg<reg_date_reg::REG_DATE_REG_SPEC>;
+pub mod clock_gate;
+#[doc = "REG_DATE (rw) register accessor: an alias for `Reg<REG_DATE_SPEC>`"]
+pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
 #[doc = "GPIO version register"]
-pub mod reg_date_reg;
+pub mod reg_date;

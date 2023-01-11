@@ -132,7 +132,7 @@ pub struct RegisterBlock {
     #[doc = "0x100 - PeribBus1 peripheral access status register."]
     pub cpu_peripheral_status: CPU_PERIPHERAL_STATUS,
     #[doc = "0x104 - Clock gate register of permission control."]
-    pub clock_gate_reg: CLOCK_GATE_REG,
+    pub clock_gate: CLOCK_GATE,
     _reserved66: [u8; 0x0ef4],
     #[doc = "0xffc - Version control register."]
     pub date: DATE,
@@ -397,10 +397,10 @@ pub mod cpu_peripheral_intr;
 pub type CPU_PERIPHERAL_STATUS = crate::Reg<cpu_peripheral_status::CPU_PERIPHERAL_STATUS_SPEC>;
 #[doc = "PeribBus1 peripheral access status register."]
 pub mod cpu_peripheral_status;
-#[doc = "CLOCK_GATE_REG (rw) register accessor: an alias for `Reg<CLOCK_GATE_REG_SPEC>`"]
-pub type CLOCK_GATE_REG = crate::Reg<clock_gate_reg::CLOCK_GATE_REG_SPEC>;
+#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Clock gate register of permission control."]
-pub mod clock_gate_reg;
+pub mod clock_gate;
 #[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register."]

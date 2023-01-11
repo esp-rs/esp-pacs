@@ -34,24 +34,23 @@ impl From<crate::W<EP1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_RDWR_BYTE` reader - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
-pub type USB_SERIAL_JTAG_RDWR_BYTE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `USB_SERIAL_JTAG_RDWR_BYTE` writer - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
-pub type USB_SERIAL_JTAG_RDWR_BYTE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EP1_SPEC, u8, u8, 8, O>;
+#[doc = "Field `RDWR_BYTE` reader - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
+pub type RDWR_BYTE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RDWR_BYTE` writer - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
+pub type RDWR_BYTE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP1_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
     #[inline(always)]
-    pub fn usb_serial_jtag_rdwr_byte(&self) -> USB_SERIAL_JTAG_RDWR_BYTE_R {
-        USB_SERIAL_JTAG_RDWR_BYTE_R::new((self.bits & 0xff) as u8)
+    pub fn rdwr_byte(&self) -> RDWR_BYTE_R {
+        RDWR_BYTE_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - Write and read byte data to/from UART Tx/Rx FIFO through this field. When USB_DEVICE_SERIAL_IN_EMPTY_INT is set, then user can write data (up to 64 bytes) into UART Tx FIFO. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is set, user can check USB_DEVICE_OUT_EP1_WR_ADDR USB_DEVICE_OUT_EP0_RD_ADDR to know how many data is received, then read data from UART Rx FIFO."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_rdwr_byte(&mut self) -> USB_SERIAL_JTAG_RDWR_BYTE_W<0> {
-        USB_SERIAL_JTAG_RDWR_BYTE_W::new(self)
+    pub fn rdwr_byte(&mut self) -> RDWR_BYTE_W<0> {
+        RDWR_BYTE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

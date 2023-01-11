@@ -3,11 +3,11 @@
   <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
-  <series>ESP32-S3</series>
-  <version>12</version>
+  <series>ESP32 S-Series</series>
+  <version>13</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
-    Copyright 2022 Espressif Systems (Shanghai) PTE LTD
+    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1800,7 +1800,7 @@
           </fields>
         </register>
         <register>
-          <name>APB_ADC_ARB_CTRL</name>
+          <name>ARB_CTRL</name>
           <description>configure apb saradc arbit</description>
           <addressOffset>0x38</addressOffset>
           <size>0x20</size>
@@ -2243,7 +2243,7 @@
           </fields>
         </register>
         <register>
-          <name>APB_ADC_CLKM_CONF</name>
+          <name>CLKM_CONF</name>
           <description>configure apb saradc clock</description>
           <addressOffset>0x70</addressOffset>
           <size>0x20</size>
@@ -15204,34 +15204,34 @@ level.</description>
       </interrupt>
       <registers>
         <register>
-          <name>I2S_INT_RAW</name>
+          <name>INT_RAW</name>
           <description>I2S interrupt raw register, valid in level.</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_RX_DONE_INT_RAW</name>
+              <name>RX_DONE_INT_RAW</name>
               <description>The raw interrupt status bit  for the i2s_rx_done_int interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_TX_DONE_INT_RAW</name>
+              <name>TX_DONE_INT_RAW</name>
               <description>The raw interrupt status bit  for the i2s_tx_done_int interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_RX_HUNG_INT_RAW</name>
+              <name>RX_HUNG_INT_RAW</name>
               <description>The raw interrupt status bit  for the i2s_rx_hung_int interrupt</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_TX_HUNG_INT_RAW</name>
+              <name>TX_HUNG_INT_RAW</name>
               <description>The raw interrupt status bit  for the i2s_tx_hung_int interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15240,34 +15240,34 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_INT_ST</name>
+          <name>INT_ST</name>
           <description>I2S interrupt status register.</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_RX_DONE_INT_ST</name>
+              <name>RX_DONE_INT_ST</name>
               <description>The masked interrupt status bit  for the i2s_rx_done_int interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_TX_DONE_INT_ST</name>
+              <name>TX_DONE_INT_ST</name>
               <description>The masked interrupt status bit  for the i2s_tx_done_int interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_RX_HUNG_INT_ST</name>
+              <name>RX_HUNG_INT_ST</name>
               <description>The masked interrupt status bit  for the i2s_rx_hung_int interrupt</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>I2S_TX_HUNG_INT_ST</name>
+              <name>TX_HUNG_INT_ST</name>
               <description>The masked interrupt status bit  for the i2s_tx_hung_int interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15276,34 +15276,34 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_INT_ENA</name>
+          <name>INT_ENA</name>
           <description>I2S interrupt enable register.</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_RX_DONE_INT_ENA</name>
+              <name>RX_DONE_INT_ENA</name>
               <description>The interrupt enable bit  for the i2s_rx_done_int interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_DONE_INT_ENA</name>
+              <name>TX_DONE_INT_ENA</name>
               <description>The interrupt enable bit  for the i2s_tx_done_int interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_HUNG_INT_ENA</name>
+              <name>RX_HUNG_INT_ENA</name>
               <description>The interrupt enable bit  for the i2s_rx_hung_int interrupt</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_HUNG_INT_ENA</name>
+              <name>TX_HUNG_INT_ENA</name>
               <description>The interrupt enable bit  for the i2s_tx_hung_int interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15312,34 +15312,34 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_INT_CLR</name>
+          <name>INT_CLR</name>
           <description>I2S interrupt clear register.</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_RX_DONE_INT_CLR</name>
+              <name>RX_DONE_INT_CLR</name>
               <description>Set this bit to clear the i2s_rx_done_int interrupt</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_TX_DONE_INT_CLR</name>
+              <name>TX_DONE_INT_CLR</name>
               <description>Set this bit to clear the i2s_tx_done_int interrupt</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_RX_HUNG_INT_CLR</name>
+              <name>RX_HUNG_INT_CLR</name>
               <description>Set this bit to clear the i2s_rx_hung_int interrupt</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_TX_HUNG_INT_CLR</name>
+              <name>TX_HUNG_INT_CLR</name>
               <description>Set this bit to clear the i2s_tx_hung_int interrupt</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15348,126 +15348,126 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_CONF</name>
+          <name>RX_CONF</name>
           <description>I2S RX configure register</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
           <resetValue>0x00009600</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_RESET</name>
+              <name>RX_RESET</name>
               <description>Set this bit to reset receiver</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_RX_FIFO_RESET</name>
+              <name>RX_FIFO_RESET</name>
               <description>Set this bit to reset Rx AFIFO</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_RX_START</name>
+              <name>RX_START</name>
               <description>Set this bit to start receiving data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_SLAVE_MOD</name>
+              <name>RX_SLAVE_MOD</name>
               <description>Set this bit to enable slave receiver mode</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_MONO</name>
+              <name>RX_MONO</name>
               <description>Set this bit to enable receiver  in mono mode</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BIG_ENDIAN</name>
+              <name>RX_BIG_ENDIAN</name>
               <description>I2S Rx byte endian, 1: low addr value to high addr. 0: low addr with low addr value.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_UPDATE</name>
+              <name>RX_UPDATE</name>
               <description>Set 1 to update I2S RX registers from APB clock domain to I2S RX clock domain. This bit will be cleared by hardware after update register done.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_MONO_FST_VLD</name>
+              <name>RX_MONO_FST_VLD</name>
               <description>1: The first channel data value is valid in I2S RX mono mode.   0: The second channel data value is valid in I2S RX mono mode.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_PCM_CONF</name>
+              <name>RX_PCM_CONF</name>
               <description>I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_PCM_BYPASS</name>
+              <name>RX_PCM_BYPASS</name>
               <description>Set this bit to bypass Compress/Decompress module for received data.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_STOP_MODE</name>
+              <name>RX_STOP_MODE</name>
               <description>0  : I2S Rx only stop when reg_rx_start is cleared.   1: Stop when reg_rx_start is 0 or in_suc_eof is 1.   2:  Stop I2S RX when reg_rx_start is 0 or RX FIFO is full.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_LEFT_ALIGN</name>
+              <name>RX_LEFT_ALIGN</name>
               <description>1: I2S RX left alignment mode. 0: I2S RX right alignment mode.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_24_FILL_EN</name>
+              <name>RX_24_FILL_EN</name>
               <description>1: store 24 channel bits to 32 bits. 0:store 24 channel bits to 24 bits.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_WS_IDLE_POL</name>
+              <name>RX_WS_IDLE_POL</name>
               <description>0: WS should be 0 when receiving left channel data, and WS is 1in right channel.  1: WS should be 1 when receiving left channel data, and WS is 0in right channel.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BIT_ORDER</name>
+              <name>RX_BIT_ORDER</name>
               <description>I2S Rx bit endian. 1:small endian, the LSB is received first. 0:big endian, the MSB is received first.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_EN</name>
+              <name>RX_TDM_EN</name>
               <description>1: Enable I2S TDM Rx mode . 0: Disable.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_PDM_EN</name>
+              <name>RX_PDM_EN</name>
               <description>1: Enable I2S PDM Rx mode . 0: Disable.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15476,147 +15476,147 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_CONF</name>
+          <name>TX_CONF</name>
           <description>I2S TX configure register</description>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000B200</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_RESET</name>
+              <name>TX_RESET</name>
               <description>Set this bit to reset transmitter</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_TX_FIFO_RESET</name>
+              <name>TX_FIFO_RESET</name>
               <description>Set this bit to reset Tx AFIFO</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>I2S_TX_START</name>
+              <name>TX_START</name>
               <description>Set this bit to start transmitting data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_SLAVE_MOD</name>
+              <name>TX_SLAVE_MOD</name>
               <description>Set this bit to enable slave transmitter mode</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_MONO</name>
+              <name>TX_MONO</name>
               <description>Set this bit to enable transmitter in mono mode</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CHAN_EQUAL</name>
+              <name>TX_CHAN_EQUAL</name>
               <description>1: The value of Left channel data is equal to the value of right channel data in I2S TX mono mode or TDM channel select mode. 0: The invalid channel data is reg_i2s_single_data in I2S TX mono mode or TDM channel select mode.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BIG_ENDIAN</name>
+              <name>TX_BIG_ENDIAN</name>
               <description>I2S Tx byte endian, 1: low addr value to high addr.  0: low addr with low addr value.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_UPDATE</name>
+              <name>TX_UPDATE</name>
               <description>Set 1 to update I2S TX registers from APB clock domain to I2S TX clock domain. This bit will be cleared by hardware after update register done.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_MONO_FST_VLD</name>
+              <name>TX_MONO_FST_VLD</name>
               <description>1: The first channel data value is valid in I2S TX mono mode.   0: The second channel data value is valid in I2S TX mono mode.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_PCM_CONF</name>
+              <name>TX_PCM_CONF</name>
               <description>I2S TX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;</description>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_PCM_BYPASS</name>
+              <name>TX_PCM_BYPASS</name>
               <description>Set this bit to bypass  Compress/Decompress module for transmitted data.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_STOP_EN</name>
+              <name>TX_STOP_EN</name>
               <description>Set this bit to stop disable output BCK signal and WS signal when tx FIFO is emtpy</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_LEFT_ALIGN</name>
+              <name>TX_LEFT_ALIGN</name>
               <description>1: I2S TX left alignment mode. 0: I2S TX right alignment mode.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_24_FILL_EN</name>
+              <name>TX_24_FILL_EN</name>
               <description>1: Sent 32 bits in 24 channel bits mode. 0: Sent 24 bits in 24 channel bits mode</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_WS_IDLE_POL</name>
+              <name>TX_WS_IDLE_POL</name>
               <description>0: WS should be 0 when sending left channel data, and WS is 1in right channel.  1: WS should be 1 when sending left channel data, and WS is 0in right channel.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BIT_ORDER</name>
+              <name>TX_BIT_ORDER</name>
               <description>I2S Tx bit endian. 1:small endian, the LSB is sent first. 0:big endian, the MSB is sent first.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_EN</name>
+              <name>TX_TDM_EN</name>
               <description>1: Enable I2S TDM Tx mode . 0: Disable.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_PDM_EN</name>
+              <name>TX_PDM_EN</name>
               <description>1: Enable I2S PDM Tx mode . 0: Disable.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CHAN_MOD</name>
+              <name>TX_CHAN_MOD</name>
               <description>I2S transmitter channel mode configuration bits.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_SIG_LOOPBACK</name>
+              <name>SIG_LOOPBACK</name>
               <description>Enable signal loop back mode with transmitter module and receiver module sharing the same WS and BCK signals.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15625,49 +15625,49 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_CONF1</name>
+          <name>RX_CONF1</name>
           <description>I2S RX configure register 1</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
           <resetValue>0x2F3DE300</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_TDM_WS_WIDTH</name>
+              <name>RX_TDM_WS_WIDTH</name>
               <description>The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH[6:0] +1) * T_bck</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BCK_DIV_NUM</name>
+              <name>RX_BCK_DIV_NUM</name>
               <description>Bit clock configuration bits in receiver mode.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BITS_MOD</name>
+              <name>RX_BITS_MOD</name>
               <description>Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_HALF_SAMPLE_BITS</name>
+              <name>RX_HALF_SAMPLE_BITS</name>
               <description>I2S Rx half sample bits -1.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN_BITS</name>
+              <name>RX_TDM_CHAN_BITS</name>
               <description>The Rx bit number for each channel minus 1in TDM mode.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_MSB_SHIFT</name>
+              <name>RX_MSB_SHIFT</name>
               <description>Set this bit to enable receiver in Phillips standard mode</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15676,56 +15676,56 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_CONF1</name>
+          <name>TX_CONF1</name>
           <description>I2S TX configure register 1</description>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
           <resetValue>0x6F3DE300</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_TDM_WS_WIDTH</name>
+              <name>TX_TDM_WS_WIDTH</name>
               <description>The width of tx_ws_out in TDM mode is (I2S_TX_TDM_WS_WIDTH[6:0] +1) * T_bck</description>
               <bitOffset>0</bitOffset>
               <bitWidth>7</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BCK_DIV_NUM</name>
+              <name>TX_BCK_DIV_NUM</name>
               <description>Bit clock configuration bits in transmitter mode.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BITS_MOD</name>
+              <name>TX_BITS_MOD</name>
               <description>Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_HALF_SAMPLE_BITS</name>
+              <name>TX_HALF_SAMPLE_BITS</name>
               <description>I2S Tx half sample bits -1.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN_BITS</name>
+              <name>TX_TDM_CHAN_BITS</name>
               <description>The Tx bit number for each channel minus 1in TDM mode.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>5</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_MSB_SHIFT</name>
+              <name>TX_MSB_SHIFT</name>
               <description>Set this bit to enable transmitter in Phillips standard mode</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BCK_NO_DLY</name>
+              <name>TX_BCK_NO_DLY</name>
               <description>1: BCK is not delayed to generate pos/neg edge in master mode. 0: BCK is delayed to generate pos/neg edge in master mode.</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15734,35 +15734,35 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_CLKM_CONF</name>
+          <name>RX_CLKM_CONF</name>
           <description>I2S RX clock configure register</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_CLKM_DIV_NUM</name>
+              <name>RX_CLKM_DIV_NUM</name>
               <description>Integral I2S clock divider value</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_CLK_ACTIVE</name>
+              <name>RX_CLK_ACTIVE</name>
               <description>I2S Rx module clock enable signal.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_CLK_SEL</name>
+              <name>RX_CLK_SEL</name>
               <description>Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_MCLK_SEL</name>
+              <name>MCLK_SEL</name>
               <description>0: UseI2S Tx module clock as I2S_MCLK_OUT.  1: UseI2S Rx module clock as I2S_MCLK_OUT.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15771,35 +15771,35 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_CLKM_CONF</name>
+          <name>TX_CLKM_CONF</name>
           <description>I2S TX clock configure register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_CLKM_DIV_NUM</name>
+              <name>TX_CLKM_DIV_NUM</name>
               <description>Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div.  So the average combination will be:  for b &lt;= a/2, z * [x * n-div + (n+1)-div] + y * n-div. For b > a/2, z * [n-div + x * (n+1)-div] + y * (n+1)-div.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CLK_ACTIVE</name>
+              <name>TX_CLK_ACTIVE</name>
               <description>I2S Tx module clock enable signal.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CLK_SEL</name>
+              <name>TX_CLK_SEL</name>
               <description>Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_CLK_EN</name>
+              <name>CLK_EN</name>
               <description>Set this bit to enable clk gate</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15808,35 +15808,35 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_CLKM_DIV_CONF</name>
+          <name>RX_CLKM_DIV_CONF</name>
           <description>I2S RX module clock divider configure register</description>
           <addressOffset>0x38</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000200</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_CLKM_DIV_Z</name>
+              <name>RX_CLKM_DIV_Z</name>
               <description>For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_RX_CLKM_DIV_Z is (a-b).</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_CLKM_DIV_Y</name>
+              <name>RX_CLKM_DIV_Y</name>
               <description>For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_RX_CLKM_DIV_Y is (a%(a-b)).</description>
               <bitOffset>9</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_CLKM_DIV_X</name>
+              <name>RX_CLKM_DIV_X</name>
               <description>For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_RX_CLKM_DIV_X is (a/(a-b)) - 1.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_CLKM_DIV_YN1</name>
+              <name>RX_CLKM_DIV_YN1</name>
               <description>For b &lt;= a/2, the value of I2S_RX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_RX_CLKM_DIV_YN1 is 1.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15845,35 +15845,35 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_CLKM_DIV_CONF</name>
+          <name>TX_CLKM_DIV_CONF</name>
           <description>I2S TX module clock divider configure register</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000200</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_CLKM_DIV_Z</name>
+              <name>TX_CLKM_DIV_Z</name>
               <description>For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b).</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CLKM_DIV_Y</name>
+              <name>TX_CLKM_DIV_Y</name>
               <description>For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b)).</description>
               <bitOffset>9</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CLKM_DIV_X</name>
+              <name>TX_CLKM_DIV_X</name>
               <description>For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_CLKM_DIV_YN1</name>
+              <name>TX_CLKM_DIV_YN1</name>
               <description>For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -15882,126 +15882,126 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_TDM_CTRL</name>
+          <name>RX_TDM_CTRL</name>
           <description>I2S TX TDM mode control register</description>
           <addressOffset>0x50</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000FFFF</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN0_EN</name>
+              <name>RX_TDM_PDM_CHAN0_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN1_EN</name>
+              <name>RX_TDM_PDM_CHAN1_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN2_EN</name>
+              <name>RX_TDM_PDM_CHAN2_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 2. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN3_EN</name>
+              <name>RX_TDM_PDM_CHAN3_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 3. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN4_EN</name>
+              <name>RX_TDM_PDM_CHAN4_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 4. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN5_EN</name>
+              <name>RX_TDM_PDM_CHAN5_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 5. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN6_EN</name>
+              <name>RX_TDM_PDM_CHAN6_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 6. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_PDM_CHAN7_EN</name>
+              <name>RX_TDM_PDM_CHAN7_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM or PDM channel 7. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN8_EN</name>
+              <name>RX_TDM_CHAN8_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 8. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN9_EN</name>
+              <name>RX_TDM_CHAN9_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 9. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN10_EN</name>
+              <name>RX_TDM_CHAN10_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 10. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN11_EN</name>
+              <name>RX_TDM_CHAN11_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 11. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN12_EN</name>
+              <name>RX_TDM_CHAN12_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 12. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN13_EN</name>
+              <name>RX_TDM_CHAN13_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 13. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN14_EN</name>
+              <name>RX_TDM_CHAN14_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 14. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_CHAN15_EN</name>
+              <name>RX_TDM_CHAN15_EN</name>
               <description>1: Enable the valid data input of I2S RX TDM channel 15. 0:  Disable, just input 0 in this channel.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_TDM_TOT_CHAN_NUM</name>
+              <name>RX_TDM_TOT_CHAN_NUM</name>
               <description>The total channel number of I2S TX TDM mode.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
@@ -16010,133 +16010,133 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_TDM_CTRL</name>
+          <name>TX_TDM_CTRL</name>
           <description>I2S TX TDM mode control register</description>
           <addressOffset>0x54</addressOffset>
           <size>0x20</size>
           <resetValue>0x0000FFFF</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_TDM_CHAN0_EN</name>
+              <name>TX_TDM_CHAN0_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 0. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN1_EN</name>
+              <name>TX_TDM_CHAN1_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 1. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN2_EN</name>
+              <name>TX_TDM_CHAN2_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 2. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN3_EN</name>
+              <name>TX_TDM_CHAN3_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 3. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN4_EN</name>
+              <name>TX_TDM_CHAN4_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 4. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN5_EN</name>
+              <name>TX_TDM_CHAN5_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 5. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN6_EN</name>
+              <name>TX_TDM_CHAN6_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 6. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN7_EN</name>
+              <name>TX_TDM_CHAN7_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 7. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN8_EN</name>
+              <name>TX_TDM_CHAN8_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 8. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN9_EN</name>
+              <name>TX_TDM_CHAN9_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 9. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN10_EN</name>
+              <name>TX_TDM_CHAN10_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 10. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN11_EN</name>
+              <name>TX_TDM_CHAN11_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 11. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN12_EN</name>
+              <name>TX_TDM_CHAN12_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 12. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN13_EN</name>
+              <name>TX_TDM_CHAN13_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 13. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN14_EN</name>
+              <name>TX_TDM_CHAN14_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 14. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_CHAN15_EN</name>
+              <name>TX_TDM_CHAN15_EN</name>
               <description>1: Enable the valid data output of I2S TX TDM channel 15. 0:  Disable, just output 0 in this channel.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_TOT_CHAN_NUM</name>
+              <name>TX_TDM_TOT_CHAN_NUM</name>
               <description>The total channel number of I2S TX TDM mode.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_TDM_SKIP_MSK_EN</name>
+              <name>TX_TDM_SKIP_MSK_EN</name>
               <description>When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1)  channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16145,41 +16145,41 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RX_TIMING</name>
+          <name>RX_TIMING</name>
           <description>I2S RX timing control register</description>
           <addressOffset>0x58</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_RX_SD_IN_DM</name>
+              <name>RX_SD_IN_DM</name>
               <description>The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_WS_OUT_DM</name>
+              <name>RX_WS_OUT_DM</name>
               <description>The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BCK_OUT_DM</name>
+              <name>RX_BCK_OUT_DM</name>
               <description>The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_WS_IN_DM</name>
+              <name>RX_WS_IN_DM</name>
               <description>The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_RX_BCK_IN_DM</name>
+              <name>RX_BCK_IN_DM</name>
               <description>The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
@@ -16188,48 +16188,48 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_TX_TIMING</name>
+          <name>TX_TIMING</name>
           <description>I2S TX timing control register</description>
           <addressOffset>0x5C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_TX_SD_OUT_DM</name>
+              <name>TX_SD_OUT_DM</name>
               <description>The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_SD1_OUT_DM</name>
+              <name>TX_SD1_OUT_DM</name>
               <description>The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_WS_OUT_DM</name>
+              <name>TX_WS_OUT_DM</name>
               <description>The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BCK_OUT_DM</name>
+              <name>TX_BCK_OUT_DM</name>
               <description>The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_WS_IN_DM</name>
+              <name>TX_WS_IN_DM</name>
               <description>The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_TX_BCK_IN_DM</name>
+              <name>TX_BCK_IN_DM</name>
               <description>The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge.  2: delay by neg edge. 3: not used.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
@@ -16238,28 +16238,28 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_LC_HUNG_CONF</name>
+          <name>LC_HUNG_CONF</name>
           <description>I2S HUNG configure register.</description>
           <addressOffset>0x60</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000810</resetValue>
           <fields>
             <field>
-              <name>I2S_LC_FIFO_TIMEOUT</name>
+              <name>LC_FIFO_TIMEOUT</name>
               <description>the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_LC_FIFO_TIMEOUT_SHIFT</name>
+              <name>LC_FIFO_TIMEOUT_SHIFT</name>
               <description>The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift</description>
               <bitOffset>8</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>I2S_LC_FIFO_TIMEOUT_ENA</name>
+              <name>LC_FIFO_TIMEOUT_ENA</name>
               <description>The enable bit for FIFO timeout</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16268,14 +16268,14 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_RXEOF_NUM</name>
+          <name>RXEOF_NUM</name>
           <description>I2S RX data number control register.</description>
           <addressOffset>0x64</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000040</resetValue>
           <fields>
             <field>
-              <name>I2S_RX_EOF_NUM</name>
+              <name>RX_EOF_NUM</name>
               <description>The receive data bit length is (I2S_RX_BITS_MOD[4:0] + 1) * (REG_RX_EOF_NUM[11:0] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
@@ -16284,13 +16284,13 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_CONF_SIGLE_DATA</name>
+          <name>CONF_SIGLE_DATA</name>
           <description>I2S signal data register</description>
           <addressOffset>0x68</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>I2S_SINGLE_DATA</name>
+              <name>SINGLE_DATA</name>
               <description>The configured constant channel data to be sent out.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -16299,14 +16299,14 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_STATE</name>
+          <name>STATE</name>
           <description>I2S TX status register</description>
           <addressOffset>0x6C</addressOffset>
           <size>0x20</size>
           <resetValue>0x00000001</resetValue>
           <fields>
             <field>
-              <name>I2S_TX_IDLE</name>
+              <name>TX_IDLE</name>
               <description>1: i2s_tx is idle state. 0: i2s_tx is working.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -16315,14 +16315,14 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>I2S_DATE</name>
+          <name>DATE</name>
           <description>Version control register</description>
           <addressOffset>0x80</addressOffset>
           <size>0x20</size>
           <resetValue>0x02009070</resetValue>
           <fields>
             <field>
-              <name>I2S_DATE</name>
+              <name>DATE</name>
               <description>I2S version control register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
@@ -21916,7 +21916,7 @@ The least significant eight bits represent the fractional part.</description>
           <resetValue>0x00003C10</resetValue>
           <fields>
             <field>
-              <name>FILTER_THRES_U</name>
+              <name>FILTER_THRES</name>
               <description>This sets the maximum threshold, in APB_CLK cycles, for the filter.
 
 Any pulses with width less than this will be ignored when the filter is enabled.</description>
@@ -21925,49 +21925,49 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>FILTER_EN_U</name>
+              <name>FILTER_EN</name>
               <description>This is the enable bit for unit %s's input filter.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_ZERO_EN_U</name>
+              <name>THR_ZERO_EN</name>
               <description>This is the enable bit for unit %s's zero comparator.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_H_LIM_EN_U</name>
+              <name>THR_H_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_h_lim comparator.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_L_LIM_EN_U</name>
+              <name>THR_L_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_l_lim comparator.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES0_EN_U</name>
+              <name>THR_THRES0_EN</name>
               <description>This is the enable bit for unit %s's thres0 comparator.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES1_EN_U</name>
+              <name>THR_THRES1_EN</name>
               <description>This is the enable bit for unit %s's thres1 comparator.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_NEG_MODE_U</name>
+              <name>CH0_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a negative edge.
 
 1: Increase the counter;2: Decrease the counter;0, 3: No effect on counter</description>
@@ -21976,7 +21976,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_POS_MODE_U</name>
+              <name>CH0_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a positive edge.
 
 1: Increase the counter;2: Decrease the counter;0, 3: No effect on counter</description>
@@ -21985,7 +21985,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_HCTRL_MODE_U</name>
+              <name>CH0_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 
 0: No modification;1: Invert behavior (increase -> decrease, decrease -> increase);2, 3: Inhibit counter modification</description>
@@ -21994,7 +21994,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_LCTRL_MODE_U</name>
+              <name>CH0_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 
 0: No modification;1: Invert behavior (increase -> decrease, decrease -> increase);2, 3: Inhibit counter modification</description>
@@ -22003,7 +22003,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_NEG_MODE_U</name>
+              <name>CH1_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a negative edge.
 
 1: Increment the counter;2: Decrement the counter;0, 3: No effect on counter</description>
@@ -22012,7 +22012,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_POS_MODE_U</name>
+              <name>CH1_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a positive edge.
 
 1: Increment the counter;2: Decrement the counter;0, 3: No effect on counter</description>
@@ -22021,7 +22021,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_HCTRL_MODE_U</name>
+              <name>CH1_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 
 0: No modification;1: Invert behavior (increase -> decrease, decrease -> increase);2, 3: Inhibit counter modification</description>
@@ -22030,7 +22030,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_LCTRL_MODE_U</name>
+              <name>CH1_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 
 0: No modification;1: Invert behavior (increase -> decrease, decrease -> increase);2, 3: Inhibit counter modification</description>
@@ -22049,14 +22049,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THRES0_U</name>
+              <name>CNT_THRES0</name>
               <description>This register is used to configure the thres0 value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THRES1_U</name>
+              <name>CNT_THRES1</name>
               <description>This register is used to configure the thres1 value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -22073,14 +22073,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_H_LIM_U</name>
+              <name>CNT_H_LIM</name>
               <description>This register is used to configure the thr_h_lim value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_L_LIM_U</name>
+              <name>CNT_L_LIM</name>
               <description>This register is used to configure the thr_l_lim value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -22097,7 +22097,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>PULSE_CNT_U</name>
+              <name>CNT</name>
               <description>This register stores the current pulse count value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -22112,28 +22112,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_RAW</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_RAW</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_RAW</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_RAW</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22148,28 +22148,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ST</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ST</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ST</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ST</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22184,28 +22184,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ENA</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ENA</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ENA</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ENA</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22220,28 +22220,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_CLR</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_CLR</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_CLR</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_CLR</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22258,42 +22258,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_ZERO_MODE_U</name>
+              <name>ZERO_MODE</name>
               <description>The pulse counter status of PCNT_U%s corresponding to 0. 0: pulse counter decreases from positive to 0. 1: pulse counter increases from negative to 0. 2: pulse counter is negative. 3: pulse counter is positive.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES1_LAT_U</name>
+              <name>THRES1</name>
               <description>The latched value of thres1 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres1 and thres1 event is valid. 0: others</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES0_LAT_U</name>
+              <name>THRES0</name>
               <description>The latched value of thres0 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres0 and thres0 event is valid. 0: others</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_L_LIM_LAT_U</name>
+              <name>L_LIM</name>
               <description>The latched value of low limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_l_lim and low limit event is valid. 0: others</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_H_LIM_LAT_U</name>
+              <name>H_LIM</name>
               <description>The latched value of high limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_h_lim and high limit event is valid. 0: others</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_ZERO_LAT_U</name>
+              <name>ZERO</name>
               <description>The latched value of zero threshold event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to 0 and zero threshold event is valid. 0: others</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22309,7 +22309,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00000001</resetValue>
           <fields>
             <field>
-              <name>PULSE_CNT_RST_U0</name>
+              <name>CNT_RST_U0</name>
               <description>Set this bit to clear unit 0's counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22323,7 +22323,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U1</name>
+              <name>CNT_RST_U1</name>
               <description>Set this bit to clear unit 1's counter.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22337,7 +22337,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U2</name>
+              <name>CNT_RST_U2</name>
               <description>Set this bit to clear unit 2's counter.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22351,7 +22351,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U3</name>
+              <name>CNT_RST_U3</name>
               <description>Set this bit to clear unit 3's counter.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -22787,7 +22787,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <name>TIMER0_PHASE</name>
               <description>phase for timer reload on sync event</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>17</bitWidth>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER0_PHASE_DIRECTION</name>
+              <description>Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -22897,7 +22904,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <name>TIMER1_PHASE</name>
               <description>phase for timer reload on sync event</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>17</bitWidth>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER1_PHASE_DIRECTION</name>
+              <description>Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -23007,7 +23021,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <name>TIMER2_PHASE</name>
               <description>phase for timer reload on sync event</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>17</bitWidth>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TIMER2_PHASE_DIRECTION</name>
+              <description>Configure the PWM timer2's direction when timer2 mode is up-down mode. 0: increase; 1: decrease.</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -35994,28 +36015,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_FORCE_XPD_AMP</name>
+              <name>FORCE_XPD_AMP</name>
               <description>no public</description>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_RST_FB_FORCE</name>
+              <name>AMP_RST_FB_FORCE</name>
               <description>no public</description>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_SHORT_REF_FORCE</name>
+              <name>AMP_SHORT_REF_FORCE</name>
               <description>no public</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_SHORT_REF_GND_FORCE</name>
+              <name>AMP_SHORT_REF_GND_FORCE</name>
               <description>no public</description>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
@@ -36030,42 +36051,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_MEAS1_DATA_SAR</name>
+              <name>MEAS1_DATA_SAR</name>
               <description>SAR ADC1 data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>SAR_MEAS1_DONE_SAR</name>
+              <name>MEAS1_DONE_SAR</name>
               <description>SAR ADC1 conversion done indication</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>SAR_MEAS1_START_SAR</name>
+              <name>MEAS1_START_SAR</name>
               <description>SAR ADC1 controller (in RTC) starts conversion</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_MEAS1_START_FORCE</name>
+              <name>MEAS1_START_FORCE</name>
               <description>1: SAR ADC1 controller (in RTC) is started by SW</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SAR1_EN_PAD</name>
+              <name>SAR1_EN_PAD</name>
               <description>SAR ADC1 pad enable bitmap</description>
               <bitOffset>19</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SAR1_EN_PAD_FORCE</name>
+              <name>SAR1_EN_PAD_FORCE</name>
               <description>1: SAR ADC1 pad enable bitmap is controlled by SW</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -36080,7 +36101,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_SAR1_DIG_FORCE</name>
+              <name>SAR1_DIG_FORCE</name>
               <description>1: SAR ADC1 controlled by DIG ADC1 CTRL</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -36096,7 +36117,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0xFFFFFFFF</resetValue>
           <fields>
             <field>
-              <name>SAR_SAR1_ATTEN</name>
+              <name>SAR1_ATTEN</name>
               <description>2-bit attenuation for each pad</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -36200,49 +36221,49 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x007338F3</resetValue>
           <fields>
             <field>
-              <name>SAR_SAR1_DAC_XPD_FSM</name>
+              <name>SAR1_DAC_XPD_FSM</name>
               <description>no public</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_XPD_SAR_AMP_FSM</name>
+              <name>XPD_SAR_AMP_FSM</name>
               <description>no public</description>
               <bitOffset>4</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_RST_FB_FSM</name>
+              <name>AMP_RST_FB_FSM</name>
               <description>no public</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_SHORT_REF_FSM</name>
+              <name>AMP_SHORT_REF_FSM</name>
               <description>no public</description>
               <bitOffset>12</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_AMP_SHORT_REF_GND_FSM</name>
+              <name>AMP_SHORT_REF_GND_FSM</name>
               <description>no public</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_XPD_SAR_FSM</name>
+              <name>XPD_SAR_FSM</name>
               <description>no public</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_RSTB_FSM</name>
+              <name>RSTB_FSM</name>
               <description>no public</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
@@ -36388,42 +36409,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_MEAS2_DATA_SAR</name>
+              <name>MEAS2_DATA_SAR</name>
               <description>SAR ADC2 data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>SAR_MEAS2_DONE_SAR</name>
+              <name>MEAS2_DONE_SAR</name>
               <description>SAR ADC2 conversion done indication</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>SAR_MEAS2_START_SAR</name>
+              <name>MEAS2_START_SAR</name>
               <description>SAR ADC2 controller (in RTC) starts conversion</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_MEAS2_START_FORCE</name>
+              <name>MEAS2_START_FORCE</name>
               <description>1: SAR ADC2 controller (in RTC) is started by SW</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SAR2_EN_PAD</name>
+              <name>SAR2_EN_PAD</name>
               <description>SAR ADC2 pad enable bitmap</description>
               <bitOffset>19</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SAR2_EN_PAD_FORCE</name>
+              <name>SAR2_EN_PAD_FORCE</name>
               <description>1: SAR ADC2 pad enable bitmap is controlled by SW</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -36438,14 +36459,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_SAR2_PWDET_CCT</name>
+              <name>SAR2_PWDET_CCT</name>
               <description>SAR2_PWDET_CCT</description>
               <bitOffset>28</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SAR2_RTC_FORCE</name>
+              <name>SAR2_RTC_FORCE</name>
               <description>in sleep, force to use rtc to control ADC</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -36461,7 +36482,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0xFFFFFFFF</resetValue>
           <fields>
             <field>
-              <name>SAR_SAR2_ATTEN</name>
+              <name>SAR2_ATTEN</name>
               <description>2-bit attenuation for each pad</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -36476,14 +36497,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_FORCE_XPD_SAR</name>
+              <name>FORCE_XPD_SAR</name>
               <description>force power on/off saradc</description>
               <bitOffset>29</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SARCLK_EN</name>
+              <name>SARCLK_EN</name>
               <description>no public</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -37879,28 +37900,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0xA0000000</resetValue>
           <fields>
             <field>
-              <name>SAR_XPD_HALL</name>
+              <name>XPD_HALL</name>
               <description>Power on hall sensor and connect to VP and VN</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_XPD_HALL_FORCE</name>
+              <name>XPD_HALL_FORCE</name>
               <description>1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_HALL_PHASE</name>
+              <name>HALL_PHASE</name>
               <description>Reverse phase of hall sensor</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_HALL_PHASE_FORCE</name>
+              <name>HALL_PHASE_FORCE</name>
               <description>1: HALL PHASE is controlled by SW  0: HALL PHASE is controlled by FSM in ULP-coprocessor</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -37930,28 +37951,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>SAR_RTC_I2C_CLK_EN</name>
+              <name>RTC_I2C_CLK_EN</name>
               <description>enable rtc i2c clock</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_TSENS_CLK_EN</name>
+              <name>TSENS_CLK_EN</name>
               <description>enable tsens clock</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_SARADC_CLK_EN</name>
+              <name>SARADC_CLK_EN</name>
               <description>enbale saradc clock</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>SAR_IOMUX_CLK_EN</name>
+              <name>IOMUX_CLK_EN</name>
               <description>enable io_mux clock</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -44861,7 +44882,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           </fields>
         </register>
         <register>
-          <name>CLOCK_GATE_REG</name>
+          <name>CLOCK_GATE</name>
           <description>Sensitive module clock gate configuration register.</description>
           <addressOffset>0x308</addressOffset>
           <size>0x20</size>
@@ -50751,7 +50772,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_CLK_EN</name>
+              <name>TWAI_CLK_EN</name>
               <description>Set 1 to enable CAN clock</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -51069,7 +51090,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_RST</name>
+              <name>TWAI_RST</name>
               <description>Set 1 to let CAN reset</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -53826,7 +53847,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, it stores the 0th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53841,7 +53862,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, it stores the 1st byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53856,7 +53877,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, it stores the 2nd byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53871,7 +53892,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53886,7 +53907,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, it stores the 4th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53901,7 +53922,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, it stores the 5th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53916,7 +53937,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance mask register 2 with R/W Permission. In operation mode, it stores the 6th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53931,7 +53952,7 @@ protection is enabled.</description>
               <description>In reset mode, it is acceptance mask register 3 with R/W Permission. In operation mode, it stores the 7th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53946,7 +53967,7 @@ protection is enabled.</description>
               <description>Stored the 8th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53961,7 +53982,7 @@ protection is enabled.</description>
               <description>Stored the 9th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53976,7 +53997,7 @@ protection is enabled.</description>
               <description>Stored the 10th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -53991,7 +54012,7 @@ protection is enabled.</description>
               <description>Stored the 11th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -54006,7 +54027,7 @@ protection is enabled.</description>
               <description>Stored the 12th byte information of the data to be transmitted under operating mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>write-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>

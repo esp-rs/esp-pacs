@@ -3,11 +3,11 @@
   <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
-  <series>ESP32-C3</series>
-  <version>10</version>
+  <series>ESP32 C-Series</series>
+  <version>11</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
-    Copyright 2022 Espressif Systems (Shanghai) PTE LTD
+    Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -29221,7 +29221,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_CLK_EN</name>
+              <name>TWAI_CLK_EN</name>
               <description>reg_can_clk_en</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
@@ -29532,7 +29532,7 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>CAN_RST</name>
+              <name>TWAI_RST</name>
               <description>reg_can_rst</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>

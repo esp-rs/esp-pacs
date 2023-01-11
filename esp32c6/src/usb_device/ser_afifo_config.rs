@@ -34,104 +34,86 @@ impl From<crate::W<SER_AFIFO_CONFIG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_R = crate::BitReader<bool>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_W<'a, const O: u8> =
+#[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
+pub type SERIAL_IN_AFIFO_RESET_WR_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
+pub type SERIAL_IN_AFIFO_RESET_WR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_R = crate::BitReader<bool>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_W<'a, const O: u8> =
+#[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
+pub type SERIAL_IN_AFIFO_RESET_RD_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
+pub type SERIAL_IN_AFIFO_RESET_RD_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_R = crate::BitReader<bool>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_W<'a, const O: u8> =
+#[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
+pub type SERIAL_OUT_AFIFO_RESET_WR_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
+pub type SERIAL_OUT_AFIFO_RESET_WR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_R = crate::BitReader<bool>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_W<'a, const O: u8> =
+#[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
+pub type SERIAL_OUT_AFIFO_RESET_RD_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
+pub type SERIAL_OUT_AFIFO_RESET_RD_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_REMPTY` reader - CDC_ACM OUTOUT async FIFO empty signal in read clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_REMPTY_R = crate::BitReader<bool>;
-#[doc = "Field `USB_SERIAL_JTAG_SERIAL_IN_AFIFO_WFULL` reader - CDC_ACM OUT IN async FIFO empty signal in write clock domain."]
-pub type USB_SERIAL_JTAG_SERIAL_IN_AFIFO_WFULL_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_OUT_AFIFO_REMPTY` reader - CDC_ACM OUTOUT async FIFO empty signal in read clock domain."]
+pub type SERIAL_OUT_AFIFO_REMPTY_R = crate::BitReader<bool>;
+#[doc = "Field `SERIAL_IN_AFIFO_WFULL` reader - CDC_ACM OUT IN async FIFO empty signal in write clock domain."]
+pub type SERIAL_IN_AFIFO_WFULL_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_in_afifo_reset_wr(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_R {
-        USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_R::new((self.bits & 1) != 0)
+    pub fn serial_in_afifo_reset_wr(&self) -> SERIAL_IN_AFIFO_RESET_WR_R {
+        SERIAL_IN_AFIFO_RESET_WR_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_in_afifo_reset_rd(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_R {
-        USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn serial_in_afifo_reset_rd(&self) -> SERIAL_IN_AFIFO_RESET_RD_R {
+        SERIAL_IN_AFIFO_RESET_RD_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_out_afifo_reset_wr(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_R {
-        USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn serial_out_afifo_reset_wr(&self) -> SERIAL_OUT_AFIFO_RESET_WR_R {
+        SERIAL_OUT_AFIFO_RESET_WR_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_out_afifo_reset_rd(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_R {
-        USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn serial_out_afifo_reset_rd(&self) -> SERIAL_OUT_AFIFO_RESET_RD_R {
+        SERIAL_OUT_AFIFO_RESET_RD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - CDC_ACM OUTOUT async FIFO empty signal in read clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_out_afifo_rempty(
-        &self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_REMPTY_R {
-        USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_REMPTY_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn serial_out_afifo_rempty(&self) -> SERIAL_OUT_AFIFO_REMPTY_R {
+        SERIAL_OUT_AFIFO_REMPTY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - CDC_ACM OUT IN async FIFO empty signal in write clock domain."]
     #[inline(always)]
-    pub fn usb_serial_jtag_serial_in_afifo_wfull(&self) -> USB_SERIAL_JTAG_SERIAL_IN_AFIFO_WFULL_R {
-        USB_SERIAL_JTAG_SERIAL_IN_AFIFO_WFULL_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn serial_in_afifo_wfull(&self) -> SERIAL_IN_AFIFO_WFULL_R {
+        SERIAL_IN_AFIFO_WFULL_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_serial_in_afifo_reset_wr(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_W<0> {
-        USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_WR_W::new(self)
+    pub fn serial_in_afifo_reset_wr(&mut self) -> SERIAL_IN_AFIFO_RESET_WR_W<0> {
+        SERIAL_IN_AFIFO_RESET_WR_W::new(self)
     }
     #[doc = "Bit 1 - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_serial_in_afifo_reset_rd(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_W<1> {
-        USB_SERIAL_JTAG_SERIAL_IN_AFIFO_RESET_RD_W::new(self)
+    pub fn serial_in_afifo_reset_rd(&mut self) -> SERIAL_IN_AFIFO_RESET_RD_W<1> {
+        SERIAL_IN_AFIFO_RESET_RD_W::new(self)
     }
     #[doc = "Bit 2 - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_serial_out_afifo_reset_wr(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_W<2> {
-        USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_WR_W::new(self)
+    pub fn serial_out_afifo_reset_wr(&mut self) -> SERIAL_OUT_AFIFO_RESET_WR_W<2> {
+        SERIAL_OUT_AFIFO_RESET_WR_W::new(self)
     }
     #[doc = "Bit 3 - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_serial_out_afifo_reset_rd(
-        &mut self,
-    ) -> USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_W<3> {
-        USB_SERIAL_JTAG_SERIAL_OUT_AFIFO_RESET_RD_W::new(self)
+    pub fn serial_out_afifo_reset_rd(&mut self) -> SERIAL_OUT_AFIFO_RESET_RD_W<3> {
+        SERIAL_OUT_AFIFO_RESET_RD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
