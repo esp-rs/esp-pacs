@@ -13,27 +13,27 @@ impl From<crate::R<IN_EP1_ST_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP1_STATE` reader - State of IN Endpoint 1."]
-pub type USB_SERIAL_JTAG_IN_EP1_STATE_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP1_WR_ADDR` reader - Write data address of IN endpoint 1."]
-pub type USB_SERIAL_JTAG_IN_EP1_WR_ADDR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `USB_SERIAL_JTAG_IN_EP1_RD_ADDR` reader - Read data address of IN endpoint 1."]
-pub type USB_SERIAL_JTAG_IN_EP1_RD_ADDR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IN_EP1_STATE` reader - State of IN Endpoint 1."]
+pub type IN_EP1_STATE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IN_EP1_WR_ADDR` reader - Write data address of IN endpoint 1."]
+pub type IN_EP1_WR_ADDR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IN_EP1_RD_ADDR` reader - Read data address of IN endpoint 1."]
+pub type IN_EP1_RD_ADDR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - State of IN Endpoint 1."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep1_state(&self) -> USB_SERIAL_JTAG_IN_EP1_STATE_R {
-        USB_SERIAL_JTAG_IN_EP1_STATE_R::new((self.bits & 3) as u8)
+    pub fn in_ep1_state(&self) -> IN_EP1_STATE_R {
+        IN_EP1_STATE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:8 - Write data address of IN endpoint 1."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep1_wr_addr(&self) -> USB_SERIAL_JTAG_IN_EP1_WR_ADDR_R {
-        USB_SERIAL_JTAG_IN_EP1_WR_ADDR_R::new(((self.bits >> 2) & 0x7f) as u8)
+    pub fn in_ep1_wr_addr(&self) -> IN_EP1_WR_ADDR_R {
+        IN_EP1_WR_ADDR_R::new(((self.bits >> 2) & 0x7f) as u8)
     }
     #[doc = "Bits 9:15 - Read data address of IN endpoint 1."]
     #[inline(always)]
-    pub fn usb_serial_jtag_in_ep1_rd_addr(&self) -> USB_SERIAL_JTAG_IN_EP1_RD_ADDR_R {
-        USB_SERIAL_JTAG_IN_EP1_RD_ADDR_R::new(((self.bits >> 9) & 0x7f) as u8)
+    pub fn in_ep1_rd_addr(&self) -> IN_EP1_RD_ADDR_R {
+        IN_EP1_RD_ADDR_R::new(((self.bits >> 9) & 0x7f) as u8)
     }
 }
 #[doc = "CDC-ACM IN endpoint status information.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_ep1_st](index.html) module"]

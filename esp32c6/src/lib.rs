@@ -26,13 +26,34 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
+    fn WIFI_MAC();
+    fn WIFI_MAC_NMI();
+    fn WIFI_PWR();
+    fn WIFI_BB();
+    fn BT_MAC();
+    fn BT_BB();
+    fn BT_BB_NMI();
+    fn LP_TIMER();
+    fn COEX();
+    fn BLE_TIMER();
+    fn BLE_SEC();
     fn PMU();
     fn EFUSE();
+    fn LP_UART();
+    fn LP_I2C();
+    fn LP_PERI_TIMEOUT();
+    fn LP_APM_M0();
+    fn LP_APM_M1();
     fn ASSIST_DEBUG();
     fn TRACE();
     fn GPIO_PRO();
     fn GPIO_PRO_NMI();
     fn PAU();
+    fn HP_APM_M0();
+    fn HP_APM_M1();
+    fn HP_APM_M2();
+    fn HP_APM_M3();
+    fn LP_APM0();
     fn I2S1();
     fn UHCI0();
     fn UART0();
@@ -53,6 +74,7 @@ extern "C" {
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
     fn APB_SARADC();
+    fn PWM();
     fn PCNT();
     fn PARL_IO();
     fn DMA_IN_CH0();
@@ -76,28 +98,40 @@ pub union Vector {
 #[doc(hidden)]
 #[no_mangle]
 pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: WIFI_MAC },
+    Vector {
+        _handler: WIFI_MAC_NMI,
+    },
+    Vector { _handler: WIFI_PWR },
+    Vector { _handler: WIFI_BB },
+    Vector { _handler: BT_MAC },
+    Vector { _handler: BT_BB },
+    Vector {
+        _handler: BT_BB_NMI,
+    },
+    Vector { _handler: LP_TIMER },
+    Vector { _handler: COEX },
+    Vector {
+        _handler: BLE_TIMER,
+    },
+    Vector { _handler: BLE_SEC },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: PMU },
     Vector { _handler: EFUSE },
     Vector { _reserved: 0 },
+    Vector { _handler: LP_UART },
+    Vector { _handler: LP_I2C },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: LP_PERI_TIMEOUT,
+    },
+    Vector {
+        _handler: LP_APM_M0,
+    },
+    Vector {
+        _handler: LP_APM_M1,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -115,11 +149,19 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: HP_APM_M0,
+    },
+    Vector {
+        _handler: HP_APM_M1,
+    },
+    Vector {
+        _handler: HP_APM_M2,
+    },
+    Vector {
+        _handler: HP_APM_M3,
+    },
+    Vector { _handler: LP_APM0 },
     Vector { _reserved: 0 },
     Vector { _handler: I2S1 },
     Vector { _handler: UHCI0 },
@@ -149,7 +191,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector {
         _handler: APB_SARADC,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: PWM },
     Vector { _handler: PCNT },
     Vector { _handler: PARL_IO },
     Vector { _reserved: 0 },
@@ -265,7 +307,7 @@ impl core::fmt::Debug for ASSIST_DEBUG {
 }
 #[doc = "Debug Assist"]
 pub mod assist_debug;
-#[doc = "Peripheral ATOMIC"]
+#[doc = "Atomic Locker"]
 pub struct ATOMIC {
     _marker: PhantomData<*const ()>,
 }
@@ -291,7 +333,7 @@ impl core::fmt::Debug for ATOMIC {
         f.debug_struct("ATOMIC").finish()
     }
 }
-#[doc = "Peripheral ATOMIC"]
+#[doc = "Atomic Locker"]
 pub mod atomic;
 #[doc = "DMA (Direct Memory Access) Controller"]
 pub struct DMA {
@@ -349,7 +391,7 @@ impl core::fmt::Debug for DS {
 }
 #[doc = "Digital Signature"]
 pub mod ds;
-#[doc = "Peripheral ECC"]
+#[doc = "ECC (ECC Hardware Accelerator)"]
 pub struct ECC {
     _marker: PhantomData<*const ()>,
 }
@@ -375,7 +417,7 @@ impl core::fmt::Debug for ECC {
         f.debug_struct("ECC").finish()
     }
 }
-#[doc = "Peripheral ECC"]
+#[doc = "ECC (ECC Hardware Accelerator)"]
 pub mod ecc;
 #[doc = "eFuse Controller"]
 pub struct EFUSE {
@@ -573,7 +615,7 @@ impl core::fmt::Debug for HP_APM {
 }
 #[doc = "Peripheral HP_APM"]
 pub mod hp_apm;
-#[doc = "Peripheral HP_SYS"]
+#[doc = "High-Power System"]
 pub struct HP_SYS {
     _marker: PhantomData<*const ()>,
 }
@@ -599,7 +641,7 @@ impl core::fmt::Debug for HP_SYS {
         f.debug_struct("HP_SYS").finish()
     }
 }
-#[doc = "Peripheral HP_SYS"]
+#[doc = "High-Power System"]
 pub mod hp_sys;
 #[doc = "I2C (Inter-Integrated Circuit) Controller"]
 pub struct I2C0 {
@@ -658,33 +700,33 @@ impl core::fmt::Debug for I2S0 {
 #[doc = "I2S (Inter-IC Sound) Controller"]
 pub mod i2s0;
 #[doc = "Interrupt Core"]
-pub struct INTMTX_CORE0 {
+pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for INTMTX_CORE0 {}
-impl INTMTX_CORE0 {
+unsafe impl Send for INTERRUPT_CORE0 {}
+impl INTERRUPT_CORE0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const intmtx_core0::RegisterBlock = 0x6001_0000 as *const _;
+    pub const PTR: *const interrupt_core0::RegisterBlock = 0x6001_0000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const intmtx_core0::RegisterBlock {
+    pub const fn ptr() -> *const interrupt_core0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for INTMTX_CORE0 {
-    type Target = intmtx_core0::RegisterBlock;
+impl Deref for INTERRUPT_CORE0 {
+    type Target = interrupt_core0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for INTMTX_CORE0 {
+impl core::fmt::Debug for INTERRUPT_CORE0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("INTMTX_CORE0").finish()
+        f.debug_struct("INTERRUPT_CORE0").finish()
     }
 }
 #[doc = "Interrupt Core"]
-pub mod intmtx_core0;
+pub mod interrupt_core0;
 #[doc = "Peripheral INTPRI"]
 pub struct INTPRI {
     _marker: PhantomData<*const ()>,
@@ -769,34 +811,34 @@ impl core::fmt::Debug for LEDC {
 }
 #[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub mod ledc;
-#[doc = "Peripheral LPPERI"]
-pub struct LPPERI {
+#[doc = "Peripheral LP_PERI"]
+pub struct LP_PERI {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LPPERI {}
-impl LPPERI {
+unsafe impl Send for LP_PERI {}
+impl LP_PERI {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lpperi::RegisterBlock = 0x600b_2800 as *const _;
+    pub const PTR: *const lp_peri::RegisterBlock = 0x600b_2800 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lpperi::RegisterBlock {
+    pub const fn ptr() -> *const lp_peri::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for LPPERI {
-    type Target = lpperi::RegisterBlock;
+impl Deref for LP_PERI {
+    type Target = lp_peri::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LPPERI {
+impl core::fmt::Debug for LP_PERI {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LPPERI").finish()
+        f.debug_struct("LP_PERI").finish()
     }
 }
-#[doc = "Peripheral LPPERI"]
-pub mod lpperi;
+#[doc = "Peripheral LP_PERI"]
+pub mod lp_peri;
 #[doc = "Peripheral LP_ANA"]
 pub struct LP_ANA {
     _marker: PhantomData<*const ()>,
@@ -1133,7 +1175,7 @@ impl core::fmt::Debug for LP_WDT {
 }
 #[doc = "Peripheral LP_WDT"]
 pub mod lp_wdt;
-#[doc = "Peripheral MCPWM"]
+#[doc = "Motor Control Pulse-Width Modulation"]
 pub struct MCPWM {
     _marker: PhantomData<*const ()>,
 }
@@ -1159,7 +1201,7 @@ impl core::fmt::Debug for MCPWM {
         f.debug_struct("MCPWM").finish()
     }
 }
-#[doc = "Peripheral MCPWM"]
+#[doc = "Motor Control Pulse-Width Modulation"]
 pub mod mcpwm;
 #[doc = "Peripheral MEM_MONITOR"]
 pub struct MEM_MONITOR {
@@ -1956,16 +1998,16 @@ pub struct Peripherals {
     pub I2C0: I2C0,
     #[doc = "I2S0"]
     pub I2S0: I2S0,
-    #[doc = "INTMTX_CORE0"]
-    pub INTMTX_CORE0: INTMTX_CORE0,
+    #[doc = "INTERRUPT_CORE0"]
+    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
     pub INTPRI: INTPRI,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "LEDC"]
     pub LEDC: LEDC,
-    #[doc = "LPPERI"]
-    pub LPPERI: LPPERI,
+    #[doc = "LP_PERI"]
+    pub LP_PERI: LP_PERI,
     #[doc = "LP_ANA"]
     pub LP_ANA: LP_ANA,
     #[doc = "LP_AON"]
@@ -2119,7 +2161,7 @@ impl Peripherals {
             I2S0: I2S0 {
                 _marker: PhantomData,
             },
-            INTMTX_CORE0: INTMTX_CORE0 {
+            INTERRUPT_CORE0: INTERRUPT_CORE0 {
                 _marker: PhantomData,
             },
             INTPRI: INTPRI {
@@ -2131,7 +2173,7 @@ impl Peripherals {
             LEDC: LEDC {
                 _marker: PhantomData,
             },
-            LPPERI: LPPERI {
+            LP_PERI: LP_PERI {
                 _marker: PhantomData,
             },
             LP_ANA: LP_ANA {

@@ -13,13 +13,13 @@ impl From<crate::R<BUS_RESET_ST_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_USB_BUS_RESET_ST` reader - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
-pub type USB_SERIAL_JTAG_USB_BUS_RESET_ST_R = crate::BitReader<bool>;
+#[doc = "Field `USB_BUS_RESET_ST` reader - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
+pub type USB_BUS_RESET_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - USB bus reset status. 0: USB-Serial-JTAG is in usb bus reset status. 1: USB bus reset is released."]
     #[inline(always)]
-    pub fn usb_serial_jtag_usb_bus_reset_st(&self) -> USB_SERIAL_JTAG_USB_BUS_RESET_ST_R {
-        USB_SERIAL_JTAG_USB_BUS_RESET_ST_R::new((self.bits & 1) != 0)
+    pub fn usb_bus_reset_st(&self) -> USB_BUS_RESET_ST_R {
+        USB_BUS_RESET_ST_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "USB Bus reset status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_reset_st](index.html) module"]

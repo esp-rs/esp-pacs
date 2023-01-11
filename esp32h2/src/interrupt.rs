@@ -2,6 +2,28 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
+    #[doc = "0 - WIFI_MAC"]
+    WIFI_MAC = 0,
+    #[doc = "1 - WIFI_NMI"]
+    WIFI_NMI = 1,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - RWBT"]
+    RWBT = 7,
+    #[doc = "8 - RWBLE"]
+    RWBLE = 8,
+    #[doc = "9 - RWBT_NMI"]
+    RWBT_NMI = 9,
+    #[doc = "10 - RWBLE_NMI"]
+    RWBLE_NMI = 10,
     #[doc = "11 - I2C"]
     I2C = 11,
     #[doc = "15 - UHCI0"]
@@ -32,6 +54,10 @@ pub enum Interrupt {
     RMT = 28,
     #[doc = "29 - I2C_EXT0"]
     I2C_EXT0 = 29,
+    #[doc = "30 - TIMER1"]
+    TIMER1 = 30,
+    #[doc = "31 - TIMER2"]
+    TIMER2 = 31,
     #[doc = "32 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 32,
     #[doc = "33 - TG0_WDT_LEVEL"]
@@ -69,6 +95,17 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
+            0 => Ok(Interrupt::WIFI_MAC),
+            1 => Ok(Interrupt::WIFI_NMI),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::RWBT),
+            8 => Ok(Interrupt::RWBLE),
+            9 => Ok(Interrupt::RWBT_NMI),
+            10 => Ok(Interrupt::RWBLE_NMI),
             11 => Ok(Interrupt::I2C),
             15 => Ok(Interrupt::UHCI0),
             16 => Ok(Interrupt::GPIO),
@@ -84,6 +121,8 @@ impl Interrupt {
             26 => Ok(Interrupt::USB),
             28 => Ok(Interrupt::RMT),
             29 => Ok(Interrupt::I2C_EXT0),
+            30 => Ok(Interrupt::TIMER1),
+            31 => Ok(Interrupt::TIMER2),
             32 => Ok(Interrupt::TG0_T0_LEVEL),
             33 => Ok(Interrupt::TG0_WDT_LEVEL),
             34 => Ok(Interrupt::TG1_T0_LEVEL),

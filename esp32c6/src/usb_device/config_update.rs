@@ -19,15 +19,14 @@ impl From<crate::W<CONFIG_UPDATE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_CONFIG_UPDATE` writer - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
-pub type USB_SERIAL_JTAG_CONFIG_UPDATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CONFIG_UPDATE_SPEC, bool, O>;
+#[doc = "Field `CONFIG_UPDATE` writer - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
+pub type CONFIG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_UPDATE_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
     #[inline(always)]
     #[must_use]
-    pub fn usb_serial_jtag_config_update(&mut self) -> USB_SERIAL_JTAG_CONFIG_UPDATE_W<0> {
-        USB_SERIAL_JTAG_CONFIG_UPDATE_W::new(self)
+    pub fn config_update(&mut self) -> CONFIG_UPDATE_W<0> {
+        CONFIG_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

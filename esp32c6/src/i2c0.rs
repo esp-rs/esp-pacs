@@ -44,22 +44,8 @@ pub struct RegisterBlock {
     pub filter_cfg: FILTER_CFG,
     #[doc = "0x54 - I2C CLK configuration register"]
     pub clk_conf: CLK_CONF,
-    #[doc = "0x58 - I2C command register 0"]
-    pub comd0: COMD0,
-    #[doc = "0x5c - I2C command register 1"]
-    pub comd1: COMD1,
-    #[doc = "0x60 - I2C command register 2"]
-    pub comd2: COMD2,
-    #[doc = "0x64 - I2C command register 3"]
-    pub comd3: COMD3,
-    #[doc = "0x68 - I2C command register 4"]
-    pub comd4: COMD4,
-    #[doc = "0x6c - I2C command register 5"]
-    pub comd5: COMD5,
-    #[doc = "0x70 - I2C command register 6"]
-    pub comd6: COMD6,
-    #[doc = "0x74 - I2C command register 7"]
-    pub comd7: COMD7,
+    #[doc = "0x58..0x78 - I2C command register %s"]
+    pub comd: [COMD; 8],
     #[doc = "0x78 - SCL status time out register"]
     pub scl_st_time_out: SCL_ST_TIME_OUT,
     #[doc = "0x7c - SCL main status time out register"]
@@ -68,13 +54,13 @@ pub struct RegisterBlock {
     pub scl_sp_conf: SCL_SP_CONF,
     #[doc = "0x84 - Set SCL stretch of I2C slave"]
     pub scl_stretch_conf: SCL_STRETCH_CONF,
-    _reserved33: [u8; 0x70],
+    _reserved26: [u8; 0x70],
     #[doc = "0xf8 - Version register"]
     pub date: DATE,
-    _reserved34: [u8; 0x04],
+    _reserved27: [u8; 0x04],
     #[doc = "0x100 - I2C TXFIFO base address register"]
     pub txfifo_start_addr: TXFIFO_START_ADDR,
-    _reserved35: [u8; 0x7c],
+    _reserved28: [u8; 0x7c],
     #[doc = "0x180 - I2C RXFIFO base address register"]
     pub rxfifo_start_addr: RXFIFO_START_ADDR,
 }
@@ -162,38 +148,10 @@ pub mod filter_cfg;
 pub type CLK_CONF = crate::Reg<clk_conf::CLK_CONF_SPEC>;
 #[doc = "I2C CLK configuration register"]
 pub mod clk_conf;
-#[doc = "COMD0 (rw) register accessor: an alias for `Reg<COMD0_SPEC>`"]
-pub type COMD0 = crate::Reg<comd0::COMD0_SPEC>;
-#[doc = "I2C command register 0"]
-pub mod comd0;
-#[doc = "COMD1 (rw) register accessor: an alias for `Reg<COMD1_SPEC>`"]
-pub type COMD1 = crate::Reg<comd1::COMD1_SPEC>;
-#[doc = "I2C command register 1"]
-pub mod comd1;
-#[doc = "COMD2 (rw) register accessor: an alias for `Reg<COMD2_SPEC>`"]
-pub type COMD2 = crate::Reg<comd2::COMD2_SPEC>;
-#[doc = "I2C command register 2"]
-pub mod comd2;
-#[doc = "COMD3 (rw) register accessor: an alias for `Reg<COMD3_SPEC>`"]
-pub type COMD3 = crate::Reg<comd3::COMD3_SPEC>;
-#[doc = "I2C command register 3"]
-pub mod comd3;
-#[doc = "COMD4 (rw) register accessor: an alias for `Reg<COMD4_SPEC>`"]
-pub type COMD4 = crate::Reg<comd4::COMD4_SPEC>;
-#[doc = "I2C command register 4"]
-pub mod comd4;
-#[doc = "COMD5 (rw) register accessor: an alias for `Reg<COMD5_SPEC>`"]
-pub type COMD5 = crate::Reg<comd5::COMD5_SPEC>;
-#[doc = "I2C command register 5"]
-pub mod comd5;
-#[doc = "COMD6 (rw) register accessor: an alias for `Reg<COMD6_SPEC>`"]
-pub type COMD6 = crate::Reg<comd6::COMD6_SPEC>;
-#[doc = "I2C command register 6"]
-pub mod comd6;
-#[doc = "COMD7 (rw) register accessor: an alias for `Reg<COMD7_SPEC>`"]
-pub type COMD7 = crate::Reg<comd7::COMD7_SPEC>;
-#[doc = "I2C command register 7"]
-pub mod comd7;
+#[doc = "COMD (rw) register accessor: an alias for `Reg<COMD_SPEC>`"]
+pub type COMD = crate::Reg<comd::COMD_SPEC>;
+#[doc = "I2C command register %s"]
+pub mod comd;
 #[doc = "SCL_ST_TIME_OUT (rw) register accessor: an alias for `Reg<SCL_ST_TIME_OUT_SPEC>`"]
 pub type SCL_ST_TIME_OUT = crate::Reg<scl_st_time_out::SCL_ST_TIME_OUT_SPEC>;
 #[doc = "SCL status time out register"]

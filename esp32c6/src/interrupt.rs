@@ -2,10 +2,42 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
+    #[doc = "0 - WIFI_MAC"]
+    WIFI_MAC = 0,
+    #[doc = "1 - WIFI_MAC_NMI"]
+    WIFI_MAC_NMI = 1,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - LP_TIMER"]
+    LP_TIMER = 7,
+    #[doc = "8 - COEX"]
+    COEX = 8,
+    #[doc = "9 - BLE_TIMER"]
+    BLE_TIMER = 9,
+    #[doc = "10 - BLE_SEC"]
+    BLE_SEC = 10,
     #[doc = "13 - PMU"]
     PMU = 13,
     #[doc = "14 - EFUSE"]
     EFUSE = 14,
+    #[doc = "16 - LP_UART"]
+    LP_UART = 16,
+    #[doc = "17 - LP_I2C"]
+    LP_I2C = 17,
+    #[doc = "19 - LP_PERI_TIMEOUT"]
+    LP_PERI_TIMEOUT = 19,
+    #[doc = "20 - LP_APM_M0"]
+    LP_APM_M0 = 20,
+    #[doc = "21 - LP_APM_M1"]
+    LP_APM_M1 = 21,
     #[doc = "26 - ASSIST_DEBUG"]
     ASSIST_DEBUG = 26,
     #[doc = "27 - TRACE"]
@@ -16,6 +48,16 @@ pub enum Interrupt {
     GPIO_PRO_NMI = 31,
     #[doc = "32 - PAU"]
     PAU = 32,
+    #[doc = "35 - HP_APM_M0"]
+    HP_APM_M0 = 35,
+    #[doc = "36 - HP_APM_M1"]
+    HP_APM_M1 = 36,
+    #[doc = "37 - HP_APM_M2"]
+    HP_APM_M2 = 37,
+    #[doc = "38 - HP_APM_M3"]
+    HP_APM_M3 = 38,
+    #[doc = "39 - LP_APM0"]
+    LP_APM0 = 39,
     #[doc = "41 - I2S1"]
     I2S1 = 41,
     #[doc = "42 - UHCI0"]
@@ -56,6 +98,8 @@ pub enum Interrupt {
     SYSTIMER_TARGET2 = 59,
     #[doc = "60 - APB_SARADC"]
     APB_SARADC = 60,
+    #[doc = "61 - PWM"]
+    PWM = 61,
     #[doc = "62 - PCNT"]
     PCNT = 62,
     #[doc = "63 - PARL_IO"]
@@ -91,13 +135,34 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
+            0 => Ok(Interrupt::WIFI_MAC),
+            1 => Ok(Interrupt::WIFI_MAC_NMI),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::LP_TIMER),
+            8 => Ok(Interrupt::COEX),
+            9 => Ok(Interrupt::BLE_TIMER),
+            10 => Ok(Interrupt::BLE_SEC),
             13 => Ok(Interrupt::PMU),
             14 => Ok(Interrupt::EFUSE),
+            16 => Ok(Interrupt::LP_UART),
+            17 => Ok(Interrupt::LP_I2C),
+            19 => Ok(Interrupt::LP_PERI_TIMEOUT),
+            20 => Ok(Interrupt::LP_APM_M0),
+            21 => Ok(Interrupt::LP_APM_M1),
             26 => Ok(Interrupt::ASSIST_DEBUG),
             27 => Ok(Interrupt::TRACE),
             30 => Ok(Interrupt::GPIO_PRO),
             31 => Ok(Interrupt::GPIO_PRO_NMI),
             32 => Ok(Interrupt::PAU),
+            35 => Ok(Interrupt::HP_APM_M0),
+            36 => Ok(Interrupt::HP_APM_M1),
+            37 => Ok(Interrupt::HP_APM_M2),
+            38 => Ok(Interrupt::HP_APM_M3),
+            39 => Ok(Interrupt::LP_APM0),
             41 => Ok(Interrupt::I2S1),
             42 => Ok(Interrupt::UHCI0),
             43 => Ok(Interrupt::UART0),
@@ -118,6 +183,7 @@ impl Interrupt {
             58 => Ok(Interrupt::SYSTIMER_TARGET1),
             59 => Ok(Interrupt::SYSTIMER_TARGET2),
             60 => Ok(Interrupt::APB_SARADC),
+            61 => Ok(Interrupt::PWM),
             62 => Ok(Interrupt::PCNT),
             63 => Ok(Interrupt::PARL_IO),
             66 => Ok(Interrupt::DMA_IN_CH0),

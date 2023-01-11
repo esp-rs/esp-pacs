@@ -13,13 +13,13 @@ impl From<crate::R<FRAM_NUM_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `USB_SERIAL_JTAG_SOF_FRAME_INDEX` reader - Frame index of received SOF frame."]
-pub type USB_SERIAL_JTAG_SOF_FRAME_INDEX_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `SOF_FRAME_INDEX` reader - Frame index of received SOF frame."]
+pub type SOF_FRAME_INDEX_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:10 - Frame index of received SOF frame."]
     #[inline(always)]
-    pub fn usb_serial_jtag_sof_frame_index(&self) -> USB_SERIAL_JTAG_SOF_FRAME_INDEX_R {
-        USB_SERIAL_JTAG_SOF_FRAME_INDEX_R::new((self.bits & 0x07ff) as u16)
+    pub fn sof_frame_index(&self) -> SOF_FRAME_INDEX_R {
+        SOF_FRAME_INDEX_R::new((self.bits & 0x07ff) as u16)
     }
 }
 #[doc = "Last received SOF frame index register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fram_num](index.html) module"]

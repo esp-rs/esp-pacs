@@ -396,7 +396,7 @@ pub struct RegisterBlock {
     #[doc = "0x304 - EDMA-RMT permission control register."]
     pub edma_pms_rmt: EDMA_PMS_RMT,
     #[doc = "0x308 - Sensitive module clock gate configuration register."]
-    pub clock_gate_reg: CLOCK_GATE_REG,
+    pub clock_gate: CLOCK_GATE,
     #[doc = "0x30c - RTC coprocessor permission register."]
     pub rtc_pms: RTC_PMS,
     _reserved196: [u8; 0x0cec],
@@ -1333,10 +1333,10 @@ pub mod edma_pms_rmt_lock;
 pub type EDMA_PMS_RMT = crate::Reg<edma_pms_rmt::EDMA_PMS_RMT_SPEC>;
 #[doc = "EDMA-RMT permission control register."]
 pub mod edma_pms_rmt;
-#[doc = "CLOCK_GATE_REG (rw) register accessor: an alias for `Reg<CLOCK_GATE_REG_SPEC>`"]
-pub type CLOCK_GATE_REG = crate::Reg<clock_gate_reg::CLOCK_GATE_REG_SPEC>;
+#[doc = "CLOCK_GATE (rw) register accessor: an alias for `Reg<CLOCK_GATE_SPEC>`"]
+pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Sensitive module clock gate configuration register."]
-pub mod clock_gate_reg;
+pub mod clock_gate;
 #[doc = "RTC_PMS (rw) register accessor: an alias for `Reg<RTC_PMS_SPEC>`"]
 pub type RTC_PMS = crate::Reg<rtc_pms::RTC_PMS_SPEC>;
 #[doc = "RTC coprocessor permission register."]
