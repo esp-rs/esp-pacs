@@ -1,22 +1,22 @@
-#[doc = "Register `AT_CMD_POSTCNT_SYNC` reader"]
-pub struct R(crate::R<AT_CMD_POSTCNT_SYNC_SPEC>);
+#[doc = "Register `AT_CMD_POSTCNT` reader"]
+pub struct R(crate::R<AT_CMD_POSTCNT_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<AT_CMD_POSTCNT_SYNC_SPEC>;
+    type Target = crate::R<AT_CMD_POSTCNT_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<AT_CMD_POSTCNT_SYNC_SPEC>> for R {
+impl From<crate::R<AT_CMD_POSTCNT_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<AT_CMD_POSTCNT_SYNC_SPEC>) -> Self {
+    fn from(reader: crate::R<AT_CMD_POSTCNT_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `AT_CMD_POSTCNT_SYNC` writer"]
-pub struct W(crate::W<AT_CMD_POSTCNT_SYNC_SPEC>);
+#[doc = "Register `AT_CMD_POSTCNT` writer"]
+pub struct W(crate::W<AT_CMD_POSTCNT_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<AT_CMD_POSTCNT_SYNC_SPEC>;
+    type Target = crate::W<AT_CMD_POSTCNT_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<AT_CMD_POSTCNT_SYNC_SPEC>> for W {
+impl From<crate::W<AT_CMD_POSTCNT_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<AT_CMD_POSTCNT_SYNC_SPEC>) -> Self {
+    fn from(writer: crate::W<AT_CMD_POSTCNT_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -38,7 +38,7 @@ impl From<crate::W<AT_CMD_POSTCNT_SYNC_SPEC>> for W {
 pub type POST_IDLE_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `POST_IDLE_NUM` writer - This register is used to configure the duration time between the last at_cmd and the next data."]
 pub type POST_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AT_CMD_POSTCNT_SYNC_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, u32, AT_CMD_POSTCNT_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the last at_cmd and the next data."]
     #[inline(always)]
@@ -60,22 +60,22 @@ impl W {
         self
     }
 }
-#[doc = "Post-sequence timing configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [at_cmd_postcnt_sync](index.html) module"]
-pub struct AT_CMD_POSTCNT_SYNC_SPEC;
-impl crate::RegisterSpec for AT_CMD_POSTCNT_SYNC_SPEC {
+#[doc = "Post-sequence timing configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [at_cmd_postcnt](index.html) module"]
+pub struct AT_CMD_POSTCNT_SPEC;
+impl crate::RegisterSpec for AT_CMD_POSTCNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [at_cmd_postcnt_sync::R](R) reader structure"]
-impl crate::Readable for AT_CMD_POSTCNT_SYNC_SPEC {
+#[doc = "`read()` method returns [at_cmd_postcnt::R](R) reader structure"]
+impl crate::Readable for AT_CMD_POSTCNT_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [at_cmd_postcnt_sync::W](W) writer structure"]
-impl crate::Writable for AT_CMD_POSTCNT_SYNC_SPEC {
+#[doc = "`write(|w| ..)` method takes [at_cmd_postcnt::W](W) writer structure"]
+impl crate::Writable for AT_CMD_POSTCNT_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets AT_CMD_POSTCNT_SYNC to value 0x0901"]
-impl crate::Resettable for AT_CMD_POSTCNT_SYNC_SPEC {
+#[doc = "`reset()` method sets AT_CMD_POSTCNT to value 0x0901"]
+impl crate::Resettable for AT_CMD_POSTCNT_SPEC {
     const RESET_VALUE: Self::Ux = 0x0901;
 }
