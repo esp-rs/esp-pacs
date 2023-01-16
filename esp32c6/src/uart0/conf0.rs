@@ -1,22 +1,22 @@
-#[doc = "Register `CONF0_SYNC` reader"]
-pub struct R(crate::R<CONF0_SYNC_SPEC>);
+#[doc = "Register `CONF0` reader"]
+pub struct R(crate::R<CONF0_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CONF0_SYNC_SPEC>;
+    type Target = crate::R<CONF0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CONF0_SYNC_SPEC>> for R {
+impl From<crate::R<CONF0_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CONF0_SYNC_SPEC>) -> Self {
+    fn from(reader: crate::R<CONF0_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CONF0_SYNC` writer"]
-pub struct W(crate::W<CONF0_SYNC_SPEC>);
+#[doc = "Register `CONF0` writer"]
+pub struct W(crate::W<CONF0_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CONF0_SYNC_SPEC>;
+    type Target = crate::W<CONF0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,101 +28,100 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CONF0_SYNC_SPEC>> for W {
+impl From<crate::W<CONF0_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CONF0_SYNC_SPEC>) -> Self {
+    fn from(writer: crate::W<CONF0_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `PARITY` reader - This register is used to configure the parity check mode."]
 pub type PARITY_R = crate::BitReader<bool>;
 #[doc = "Field `PARITY` writer - This register is used to configure the parity check mode."]
-pub type PARITY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type PARITY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `PARITY_EN` reader - Set this bit to enable uart parity check."]
 pub type PARITY_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PARITY_EN` writer - Set this bit to enable uart parity check."]
-pub type PARITY_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type PARITY_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `BIT_NUM` reader - This register is used to set the length of data."]
 pub type BIT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BIT_NUM` writer - This register is used to set the length of data."]
-pub type BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SYNC_SPEC, u8, u8, 2, O>;
+pub type BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `STOP_BIT_NUM` reader - This register is used to set the length of stop bit."]
 pub type STOP_BIT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STOP_BIT_NUM` writer - This register is used to set the length of stop bit."]
-pub type STOP_BIT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONF0_SYNC_SPEC, u8, u8, 2, O>;
+pub type STOP_BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
 #[doc = "Field `TXD_BRK` reader - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
 pub type TXD_BRK_R = crate::BitReader<bool>;
 #[doc = "Field `TXD_BRK` writer - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
-pub type TXD_BRK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type TXD_BRK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_DPLX` reader - Set this bit to enable IrDA loopback mode."]
 pub type IRDA_DPLX_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_DPLX` writer - Set this bit to enable IrDA loopback mode."]
-pub type IRDA_DPLX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_DPLX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_TX_EN` reader - This is the start enable bit for IrDA transmitter."]
 pub type IRDA_TX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_TX_EN` writer - This is the start enable bit for IrDA transmitter."]
-pub type IRDA_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_WCTL` reader - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
 pub type IRDA_WCTL_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_WCTL` writer - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
-pub type IRDA_WCTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_WCTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_TX_INV` reader - Set this bit to invert the level of IrDA transmitter."]
 pub type IRDA_TX_INV_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_TX_INV` writer - Set this bit to invert the level of IrDA transmitter."]
-pub type IRDA_TX_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_TX_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_RX_INV` reader - Set this bit to invert the level of IrDA receiver."]
 pub type IRDA_RX_INV_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_RX_INV` writer - Set this bit to invert the level of IrDA receiver."]
-pub type IRDA_RX_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_RX_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `LOOPBACK` reader - Set this bit to enable uart loopback test mode."]
 pub type LOOPBACK_R = crate::BitReader<bool>;
 #[doc = "Field `LOOPBACK` writer - Set this bit to enable uart loopback test mode."]
-pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `TX_FLOW_EN` reader - Set this bit to enable flow control function for transmitter."]
 pub type TX_FLOW_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_FLOW_EN` writer - Set this bit to enable flow control function for transmitter."]
-pub type TX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type TX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `IRDA_EN` reader - Set this bit to enable IrDA protocol."]
 pub type IRDA_EN_R = crate::BitReader<bool>;
 #[doc = "Field `IRDA_EN` writer - Set this bit to enable IrDA protocol."]
-pub type IRDA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type IRDA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `RXD_INV` reader - Set this bit to inverse the level value of uart rxd signal."]
 pub type RXD_INV_R = crate::BitReader<bool>;
 #[doc = "Field `RXD_INV` writer - Set this bit to inverse the level value of uart rxd signal."]
-pub type RXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type RXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `TXD_INV` reader - Set this bit to inverse the level value of uart txd signal."]
 pub type TXD_INV_R = crate::BitReader<bool>;
 #[doc = "Field `TXD_INV` writer - Set this bit to inverse the level value of uart txd signal."]
-pub type TXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type TXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `DIS_RX_DAT_OVF` reader - Disable UART Rx data overflow detect."]
 pub type DIS_RX_DAT_OVF_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_RX_DAT_OVF` writer - Disable UART Rx data overflow detect."]
-pub type DIS_RX_DAT_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type DIS_RX_DAT_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `ERR_WR_MASK` reader - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
 pub type ERR_WR_MASK_R = crate::BitReader<bool>;
 #[doc = "Field `ERR_WR_MASK` writer - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
-pub type ERR_WR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type ERR_WR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `AUTOBAUD_EN` reader - This is the enable bit for detecting baudrate."]
 pub type AUTOBAUD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `AUTOBAUD_EN` writer - This is the enable bit for detecting baudrate."]
-pub type AUTOBAUD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type AUTOBAUD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `MEM_CLK_EN` reader - UART memory clock gate enable signal."]
 pub type MEM_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_CLK_EN` writer - UART memory clock gate enable signal."]
-pub type MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `SW_RTS` reader - This register is used to configure the software rts signal which is used in software flow control."]
 pub type SW_RTS_R = crate::BitReader<bool>;
 #[doc = "Field `SW_RTS` writer - This register is used to configure the software rts signal which is used in software flow control."]
-pub type SW_RTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type SW_RTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `RXFIFO_RST` reader - Set this bit to reset the uart receive-FIFO."]
 pub type RXFIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_RST` writer - Set this bit to reset the uart receive-FIFO."]
-pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 #[doc = "Field `TXFIFO_RST` reader - Set this bit to reset the uart transmit-FIFO."]
 pub type TXFIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFO_RST` writer - Set this bit to reset the uart transmit-FIFO."]
-pub type TXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SYNC_SPEC, bool, O>;
+pub type TXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - This register is used to configure the parity check mode."]
     #[inline(always)]
@@ -375,22 +374,22 @@ impl W {
         self
     }
 }
-#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0_sync](index.html) module"]
-pub struct CONF0_SYNC_SPEC;
-impl crate::RegisterSpec for CONF0_SYNC_SPEC {
+#[doc = "a\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf0](index.html) module"]
+pub struct CONF0_SPEC;
+impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [conf0_sync::R](R) reader structure"]
-impl crate::Readable for CONF0_SYNC_SPEC {
+#[doc = "`read()` method returns [conf0::R](R) reader structure"]
+impl crate::Readable for CONF0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [conf0_sync::W](W) writer structure"]
-impl crate::Writable for CONF0_SYNC_SPEC {
+#[doc = "`write(|w| ..)` method takes [conf0::W](W) writer structure"]
+impl crate::Writable for CONF0_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CONF0_SYNC to value 0x0010_001c"]
-impl crate::Resettable for CONF0_SYNC_SPEC {
+#[doc = "`reset()` method sets CONF0 to value 0x0010_001c"]
+impl crate::Resettable for CONF0_SPEC {
     const RESET_VALUE: Self::Ux = 0x0010_001c;
 }

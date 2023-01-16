@@ -1,22 +1,22 @@
-#[doc = "Register `TOUT_CONF_SYNC` reader"]
-pub struct R(crate::R<TOUT_CONF_SYNC_SPEC>);
+#[doc = "Register `TOUT_CONF` reader"]
+pub struct R(crate::R<TOUT_CONF_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<TOUT_CONF_SYNC_SPEC>;
+    type Target = crate::R<TOUT_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<TOUT_CONF_SYNC_SPEC>> for R {
+impl From<crate::R<TOUT_CONF_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<TOUT_CONF_SYNC_SPEC>) -> Self {
+    fn from(reader: crate::R<TOUT_CONF_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `TOUT_CONF_SYNC` writer"]
-pub struct W(crate::W<TOUT_CONF_SYNC_SPEC>);
+#[doc = "Register `TOUT_CONF` writer"]
+pub struct W(crate::W<TOUT_CONF_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<TOUT_CONF_SYNC_SPEC>;
+    type Target = crate::W<TOUT_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,26 +28,25 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<TOUT_CONF_SYNC_SPEC>> for W {
+impl From<crate::W<TOUT_CONF_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<TOUT_CONF_SYNC_SPEC>) -> Self {
+    fn from(writer: crate::W<TOUT_CONF_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `RX_TOUT_EN` reader - This is the enble bit for uart receiver's timeout function."]
 pub type RX_TOUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RX_TOUT_EN` writer - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUT_CONF_SYNC_SPEC, bool, O>;
+pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUT_CONF_SPEC, bool, O>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
 pub type RX_TOUT_FLOW_DIS_R = crate::BitReader<bool>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub type RX_TOUT_FLOW_DIS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUT_CONF_SYNC_SPEC, bool, O>;
+pub type RX_TOUT_FLOW_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUT_CONF_SPEC, bool, O>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
 pub type RX_TOUT_THRHD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
 pub type RX_TOUT_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUT_CONF_SYNC_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, u32, TOUT_CONF_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bit 0 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
@@ -91,22 +90,22 @@ impl W {
         self
     }
 }
-#[doc = "UART threshold and allocation configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tout_conf_sync](index.html) module"]
-pub struct TOUT_CONF_SYNC_SPEC;
-impl crate::RegisterSpec for TOUT_CONF_SYNC_SPEC {
+#[doc = "UART threshold and allocation configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tout_conf](index.html) module"]
+pub struct TOUT_CONF_SPEC;
+impl crate::RegisterSpec for TOUT_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tout_conf_sync::R](R) reader structure"]
-impl crate::Readable for TOUT_CONF_SYNC_SPEC {
+#[doc = "`read()` method returns [tout_conf::R](R) reader structure"]
+impl crate::Readable for TOUT_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [tout_conf_sync::W](W) writer structure"]
-impl crate::Writable for TOUT_CONF_SYNC_SPEC {
+#[doc = "`write(|w| ..)` method takes [tout_conf::W](W) writer structure"]
+impl crate::Writable for TOUT_CONF_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets TOUT_CONF_SYNC to value 0x28"]
-impl crate::Resettable for TOUT_CONF_SYNC_SPEC {
+#[doc = "`reset()` method sets TOUT_CONF to value 0x28"]
+impl crate::Resettable for TOUT_CONF_SPEC {
     const RESET_VALUE: Self::Ux = 0x28;
 }

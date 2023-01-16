@@ -423,7 +423,7 @@ pub mod lp_sleep_lp_ck_power;
 pub type LP_SLEEP_BIAS = crate::Reg<lp_sleep_bias::LP_SLEEP_BIAS_SPEC>;
 #[doc = "need_des"]
 pub mod lp_sleep_bias;
-#[doc = "IMM_HP_CK_POWER (w) register accessor: an alias for `Reg<IMM_HP_CK_POWER_SPEC>`"]
+#[doc = "IMM_HP_CK_POWER (rw) register accessor: an alias for `Reg<IMM_HP_CK_POWER_SPEC>`"]
 pub type IMM_HP_CK_POWER = crate::Reg<imm_hp_ck_power::IMM_HP_CK_POWER_SPEC>;
 #[doc = "need_des"]
 pub mod imm_hp_ck_power;

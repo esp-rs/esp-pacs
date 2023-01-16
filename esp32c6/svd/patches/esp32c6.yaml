@@ -1,1 +1,22 @@
 _svd: "../esp32c6.base.svd"
+
+TIMG0:
+  "*":
+    _strip: "T_"
+
+PMU:
+  _modify:
+    _registers:
+      IMM_HP_CK_POWER:
+        access: read-write
+
+"*UART*":
+  _strip_end: "_SYNC"
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
