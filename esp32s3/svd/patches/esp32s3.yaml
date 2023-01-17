@@ -1,1 +1,7 @@
 _svd: ../esp32s3.base.svd
+
+USB0:
+  _add:
+    _interrupts:
+      USB:
+        value: 38
