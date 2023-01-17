@@ -57,6 +57,7 @@ extern "C" {
     fn LEDC();
     fn EFUSE();
     fn TWAI();
+    fn USB();
     fn RTC_CORE();
     fn RMT();
     fn PCNT();
@@ -162,7 +163,7 @@ pub static __INTERRUPTS: [Vector; 90] = [
     Vector { _handler: LEDC },
     Vector { _handler: EFUSE },
     Vector { _handler: TWAI },
-    Vector { _reserved: 0 },
+    Vector { _handler: USB },
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
     Vector { _handler: PCNT },
@@ -293,6 +294,8 @@ pub enum Interrupt {
     EFUSE = 46,
     #[doc = "47 - TWAI"]
     TWAI = 47,
+    #[doc = "48 - USB"]
+    USB = 48,
     #[doc = "49 - RTC_CORE"]
     RTC_CORE = 49,
     #[doc = "50 - RMT"]
@@ -387,6 +390,7 @@ impl Interrupt {
             45 => Ok(Interrupt::LEDC),
             46 => Ok(Interrupt::EFUSE),
             47 => Ok(Interrupt::TWAI),
+            48 => Ok(Interrupt::USB),
             49 => Ok(Interrupt::RTC_CORE),
             50 => Ok(Interrupt::RMT),
             51 => Ok(Interrupt::PCNT),
