@@ -156,9 +156,9 @@ pub struct RegisterBlock {
     #[doc = "0x130 - register description"]
     pub ecc_intr_map: ECC_INTR_MAP,
     #[doc = "0x134 - register description"]
-    pub int_status_reg_0: INT_STATUS_REG_0,
+    pub intr_status_reg_0: INTR_STATUS_REG_0,
     #[doc = "0x138 - register description"]
-    pub int_status_reg_1: INT_STATUS_REG_1,
+    pub intr_status_reg_1: INTR_STATUS_REG_1,
     #[doc = "0x13c - register description"]
     pub int_status_reg_2: INT_STATUS_REG_2,
     #[doc = "0x140 - register description"]
@@ -487,14 +487,14 @@ pub mod rsa_intr_map;
 pub type ECC_INTR_MAP = crate::Reg<ecc_intr_map::ECC_INTR_MAP_SPEC>;
 #[doc = "register description"]
 pub mod ecc_intr_map;
-#[doc = "INT_STATUS_REG_0 (r) register accessor: an alias for `Reg<INT_STATUS_REG_0_SPEC>`"]
-pub type INT_STATUS_REG_0 = crate::Reg<int_status_reg_0::INT_STATUS_REG_0_SPEC>;
+#[doc = "INTR_STATUS_REG_0 (r) register accessor: an alias for `Reg<INTR_STATUS_REG_0_SPEC>`"]
+pub type INTR_STATUS_REG_0 = crate::Reg<intr_status_reg_0::INTR_STATUS_REG_0_SPEC>;
 #[doc = "register description"]
-pub mod int_status_reg_0;
-#[doc = "INT_STATUS_REG_1 (r) register accessor: an alias for `Reg<INT_STATUS_REG_1_SPEC>`"]
-pub type INT_STATUS_REG_1 = crate::Reg<int_status_reg_1::INT_STATUS_REG_1_SPEC>;
+pub mod intr_status_reg_0;
+#[doc = "INTR_STATUS_REG_1 (r) register accessor: an alias for `Reg<INTR_STATUS_REG_1_SPEC>`"]
+pub type INTR_STATUS_REG_1 = crate::Reg<intr_status_reg_1::INTR_STATUS_REG_1_SPEC>;
 #[doc = "register description"]
-pub mod int_status_reg_1;
+pub mod intr_status_reg_1;
 #[doc = "INT_STATUS_REG_2 (r) register accessor: an alias for `Reg<INT_STATUS_REG_2_SPEC>`"]
 pub type INT_STATUS_REG_2 = crate::Reg<int_status_reg_2::INT_STATUS_REG_2_SPEC>;
 #[doc = "register description"]
