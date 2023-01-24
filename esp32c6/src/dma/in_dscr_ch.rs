@@ -13,13 +13,13 @@ impl From<crate::R<IN_DSCR_CH_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `INLINK_DSCR_CH` reader - The address of the current inlink descriptor x."]
-pub type INLINK_DSCR_CH_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `INLINK_DSCR` reader - The address of the current inlink descriptor x."]
+pub type INLINK_DSCR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the current inlink descriptor x."]
     #[inline(always)]
-    pub fn inlink_dscr_ch(&self) -> INLINK_DSCR_CH_R {
-        INLINK_DSCR_CH_R::new(self.bits)
+    pub fn inlink_dscr(&self) -> INLINK_DSCR_R {
+        INLINK_DSCR_R::new(self.bits)
     }
 }
 #[doc = "Current inlink descriptor address of Rx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_dscr_ch](index.html) module"]

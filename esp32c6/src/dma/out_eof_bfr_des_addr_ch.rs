@@ -13,13 +13,13 @@ impl From<crate::R<OUT_EOF_BFR_DES_ADDR_CH_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `OUT_EOF_BFR_DES_ADDR_CH` reader - This register stores the address of the outlink descriptor before the last outlink descriptor."]
-pub type OUT_EOF_BFR_DES_ADDR_CH_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `OUT_EOF_BFR_DES_ADDR` reader - This register stores the address of the outlink descriptor before the last outlink descriptor."]
+pub type OUT_EOF_BFR_DES_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor before the last outlink descriptor."]
     #[inline(always)]
-    pub fn out_eof_bfr_des_addr_ch(&self) -> OUT_EOF_BFR_DES_ADDR_CH_R {
-        OUT_EOF_BFR_DES_ADDR_CH_R::new(self.bits)
+    pub fn out_eof_bfr_des_addr(&self) -> OUT_EOF_BFR_DES_ADDR_R {
+        OUT_EOF_BFR_DES_ADDR_R::new(self.bits)
     }
 }
 #[doc = "The last outlink descriptor address when EOF occurs of Tx channel 0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [out_eof_bfr_des_addr_ch](index.html) module"]
