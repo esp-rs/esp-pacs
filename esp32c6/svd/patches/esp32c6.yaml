@@ -41,3 +41,45 @@ INTPRI:
   "*":
     _strip: "CORE0_"
   _strip: "CORE0_"
+
+DMA:
+  "*":
+    _strip_end: "_CH"
+  _strip_end: "_CH"
+  "IN_INT_RAW_CH%s":
+    _strip_end: "_CH_INT_RAW"
+  "IN_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "OUT_INT_CLR_CH%s":
+    _strip_end: "_CH_INT_CLR"
+  "OUT_INT_RAW_CH%s":
+    _strip_end: "_CH_INT_RAW"
+
+SPI2:
+  "*":
+    _strip: "SPI_"
+  _strip: "SPI_"
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+I2C0:
+  "COMD%s":
+    _modify:
+      COMMAND0:
+        name: COMMAND
+      COMMAND0_DONE:
+        name: COMMAND_DONE
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+
+LP_I2C0:
+  _modify:
+    _registers:
+      I2C_FIFO_CONF:
+        name: FIFO_CONF
+  FIFO_CONF:
+    _strip: "I2C_"

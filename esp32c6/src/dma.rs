@@ -215,6 +215,9 @@ pub struct RegisterBlock {
     pub out_pri_ch2: OUT_PRI_CH,
     #[doc = "0x280 - Peripheral selection of Tx channel 0"]
     pub out_peri_sel_ch2: OUT_PERI_SEL_CH,
+    _reserved104: [u8; 0x8c],
+    #[doc = "0x310 - Configure 0 register of Tx channel 1"]
+    pub out_conf0_ch2: OUT_CONF0_CH,
 }
 #[doc = "IN_INT_RAW_CH (r) register accessor: an alias for `Reg<IN_INT_RAW_CH_SPEC>`"]
 pub type IN_INT_RAW_CH = crate::Reg<in_int_raw_ch::IN_INT_RAW_CH_SPEC>;

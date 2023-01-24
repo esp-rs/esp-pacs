@@ -92,7 +92,7 @@ pub mod fifo_st;
 pub type FIFO_CONF = crate::Reg<fifo_conf::FIFO_CONF_SPEC>;
 #[doc = "FIFO configuration register."]
 pub mod fifo_conf;
-#[doc = "DATA (r) register accessor: an alias for `Reg<DATA_SPEC>`"]
+#[doc = "DATA (rw) register accessor: an alias for `Reg<DATA_SPEC>`"]
 pub type DATA = crate::Reg<data::DATA_SPEC>;
 #[doc = "Rx FIFO read data."]
 pub mod data;

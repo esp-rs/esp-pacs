@@ -13,7 +13,7 @@ pub struct RegisterBlock {
     #[doc = "0x14 - FIFO status register."]
     pub i2c_fifo_st: I2C_FIFO_ST,
     #[doc = "0x18 - FIFO configuration register."]
-    pub i2c_fifo_conf: I2C_FIFO_CONF,
+    pub fifo_conf: FIFO_CONF,
     #[doc = "0x1c - Rx FIFO read data."]
     pub i2c_data: I2C_DATA,
     #[doc = "0x20 - Raw interrupt status"]
@@ -95,10 +95,10 @@ pub mod i2c_to;
 pub type I2C_FIFO_ST = crate::Reg<i2c_fifo_st::I2C_FIFO_ST_SPEC>;
 #[doc = "FIFO status register."]
 pub mod i2c_fifo_st;
-#[doc = "I2C_FIFO_CONF (rw) register accessor: an alias for `Reg<I2C_FIFO_CONF_SPEC>`"]
-pub type I2C_FIFO_CONF = crate::Reg<i2c_fifo_conf::I2C_FIFO_CONF_SPEC>;
+#[doc = "FIFO_CONF (rw) register accessor: an alias for `Reg<FIFO_CONF_SPEC>`"]
+pub type FIFO_CONF = crate::Reg<fifo_conf::FIFO_CONF_SPEC>;
 #[doc = "FIFO configuration register."]
-pub mod i2c_fifo_conf;
+pub mod fifo_conf;
 #[doc = "I2C_DATA (r) register accessor: an alias for `Reg<I2C_DATA_SPEC>`"]
 pub type I2C_DATA = crate::Reg<i2c_data::I2C_DATA_SPEC>;
 #[doc = "Rx FIFO read data."]
