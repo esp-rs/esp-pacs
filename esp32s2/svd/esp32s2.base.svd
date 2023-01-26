@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32 S-Series</series>
-  <version>12</version>
+  <version>13</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -6212,6 +6212,14 @@ alternate-channel scan mode.</description>
         <name>GPIO_NMI</name>
         <value>24</value>
       </interrupt>
+      <interrupt>
+        <name>GPIO_INTR_2</name>
+        <value>25</value>
+      </interrupt>
+      <interrupt>
+        <name>GPIO_NMI_2</name>
+        <value>26</value>
+      </interrupt>
       <registers>
         <register>
           <name>BT_SELECT</name>
@@ -10289,9 +10297,9 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
       </registers>
     </peripheral>
     <peripheral>
-      <name>INTERRUPT</name>
+      <name>INTERRUPT_CORE0</name>
       <description>Interrupt</description>
-      <groupName>INTERRUPT</groupName>
+      <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x3F4C2000</baseAddress>
       <addressBlock>
         <offset>0x0</offset>
@@ -10303,7 +10311,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
         <value>0</value>
       </interrupt>
       <interrupt>
-        <name>WIFI_MAC_NMI</name>
+        <name>WIFI_NMI</name>
         <value>1</value>
       </interrupt>
       <interrupt>
@@ -10341,6 +10349,50 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
       <interrupt>
         <name>RWBLE_NMI</name>
         <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
+        <value>28</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR1</name>
+        <value>29</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR2</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR3</name>
+        <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_IA</name>
+        <value>70</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_PRELOAD</name>
+        <value>87</value>
+      </interrupt>
+      <interrupt>
+        <name>DCACHE_PRELOAD</name>
+        <value>88</value>
+      </interrupt>
+      <interrupt>
+        <name>CPU_PERI_ERR</name>
+        <value>91</value>
+      </interrupt>
+      <interrupt>
+        <name>APB_PERI_ERR</name>
+        <value>92</value>
+      </interrupt>
+      <interrupt>
+        <name>DCACHE_SYNC</name>
+        <value>93</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_SYNC</name>
+        <value>94</value>
       </interrupt>
       <registers>
         <register>
@@ -17117,6 +17169,38 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <size>0x10C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PMS_PRO_IRAM0_ILG</name>
+        <value>75</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_PRO_DRAM0_ILG</name>
+        <value>76</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_PRO_DPORT_ILG</name>
+        <value>77</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_PRO_AHB_ILG</name>
+        <value>78</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_PRO_CACHE_ILG</name>
+        <value>79</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_DMA_APB_I_ILG</name>
+        <value>80</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_DMA_RX_I_ILG</name>
+        <value>81</value>
+      </interrupt>
+      <interrupt>
+        <name>PMS_DMA_TX_I_ILG</name>
+        <value>82</value>
+      </interrupt>
       <registers>
         <register>
           <name>SDIO_0</name>
@@ -28154,6 +28238,10 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
         <size>0x108</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>SPI0_REJECT_CACHE</name>
+        <value>83</value>
+      </interrupt>
       <registers>
         <register>
           <name>CMD</name>
@@ -31036,6 +31124,14 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
       <name>SPI4</name>
       <description>SPI (Serial Peripheral Interface) Controller</description>
       <baseAddress>0x3F437000</baseAddress>
+      <interrupt>
+        <name>SPI4_DMA</name>
+        <value>85</value>
+      </interrupt>
+      <interrupt>
+        <name>SPI4</name>
+        <value>86</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
@@ -35866,6 +35962,10 @@ The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes mor
         <name>UART1</name>
         <value>38</value>
       </interrupt>
+      <interrupt>
+        <name>UART2</name>
+        <value>39</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
@@ -35880,6 +35980,10 @@ The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes mor
       <interrupt>
         <name>UHCI0</name>
         <value>13</value>
+      </interrupt>
+      <interrupt>
+        <name>UHCI1</name>
+        <value>14</value>
       </interrupt>
       <registers>
         <register>

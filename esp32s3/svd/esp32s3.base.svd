@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
   <series>ESP32 S-Series</series>
-  <version>13</version>
+  <version>14</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -45,10 +45,6 @@
         <size>0xB8</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>AES</name>
-        <value>77</value>
-      </interrupt>
       <registers>
         <register>
           <dim>8</dim>
@@ -4427,8 +4423,12 @@
         <value>75</value>
       </interrupt>
       <interrupt>
-        <name>APB_PMS_MONITOR_VIOLATE</name>
+        <name>DMA_APBPERI_PMS</name>
         <value>84</value>
+      </interrupt>
+      <interrupt>
+        <name>BACKUP_PMS_VIOLATE</name>
+        <value>93</value>
       </interrupt>
       <interrupt>
         <name>DMA_EXTMEM_REJECT</name>
@@ -11531,6 +11531,14 @@
         <name>GPIO_NMI</name>
         <value>17</value>
       </interrupt>
+      <interrupt>
+        <name>GPIO_INTR_2</name>
+        <value>18</value>
+      </interrupt>
+      <interrupt>
+        <name>GPIO_NMI_2</name>
+        <value>19</value>
+      </interrupt>
       <registers>
         <register>
           <name>BT_SELECT</name>
@@ -12548,7 +12556,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2C_MST</name>
+        <name>I2C_MASTER</name>
         <value>11</value>
       </interrupt>
       <interrupt>
@@ -16351,51 +16359,91 @@ level.</description>
         <value>1</value>
       </interrupt>
       <interrupt>
-        <name>WIFI_BB</name>
+        <name>WIFI_PWR</name>
         <value>2</value>
       </interrupt>
       <interrupt>
-        <name>BT_MAC</name>
+        <name>WIFI_BB</name>
         <value>3</value>
       </interrupt>
       <interrupt>
-        <name>BT_BB</name>
+        <name>BT_MAC</name>
         <value>4</value>
       </interrupt>
       <interrupt>
-        <name>BT_BB_NMI</name>
+        <name>BT_BB</name>
         <value>5</value>
       </interrupt>
       <interrupt>
-        <name>RWBT</name>
+        <name>BT_BB_NMI</name>
         <value>6</value>
       </interrupt>
       <interrupt>
-        <name>RWBLE</name>
+        <name>RWBT</name>
         <value>7</value>
       </interrupt>
       <interrupt>
-        <name>RWBT_NMI</name>
+        <name>RWBLE</name>
         <value>8</value>
       </interrupt>
       <interrupt>
-        <name>RWBLE_NMI</name>
+        <name>RWBT_NMI</name>
         <value>9</value>
       </interrupt>
       <interrupt>
-        <name>CORE_0_IRAM0_PMS_MONITOR_VIOLATE</name>
+        <name>RWBLE_NMI</name>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_IA</name>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>DCACHE_PRELOAD0</name>
+        <value>61</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_PRELOAD0</name>
+        <value>62</value>
+      </interrupt>
+      <interrupt>
+        <name>DCACHE_SYNC0</name>
+        <value>63</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_SYNC0</name>
+        <value>64</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
+        <value>79</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR1</name>
+        <value>80</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR2</name>
+        <value>81</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR3</name>
+        <value>82</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE0_IRAM0_PMS</name>
         <value>85</value>
       </interrupt>
       <interrupt>
-        <name>CORE_0_DRAM0_PMS_MONITOR_VIOLATE</name>
+        <name>CORE0_DRAM0_PMS</name>
         <value>86</value>
       </interrupt>
       <interrupt>
-        <name>CORE_0_PIF_PMS_MONITOR_VIOLATE</name>
+        <name>CORE0_PIF_PMS</name>
         <value>87</value>
       </interrupt>
       <interrupt>
-        <name>CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE</name>
+        <name>CORE0_PIF_PMS_SIZE</name>
         <value>88</value>
       </interrupt>
       <interrupt>
@@ -18092,19 +18140,19 @@ level.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>CORE_1_IRAM0_PMS_MONITOR_VIOLATE</name>
+        <name>CORE1_IRAM0_PMS</name>
         <value>89</value>
       </interrupt>
       <interrupt>
-        <name>CORE_1_DRAM0_PMS_MONITOR_VIOLATE</name>
+        <name>CORE1_DRAM0_PMS</name>
         <value>90</value>
       </interrupt>
       <interrupt>
-        <name>CORE_1_PIF_PMS_MONITOR_VIOLATE</name>
+        <name>CORE1_PIF_PMS</name>
         <value>91</value>
       </interrupt>
       <interrupt>
-        <name>CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE</name>
+        <name>CORE1_PIF_PMS_SIZE</name>
         <value>92</value>
       </interrupt>
       <interrupt>
@@ -19947,6 +19995,10 @@ level.</description>
         <size>0x48</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LCD_CAM</name>
+        <value>24</value>
+      </interrupt>
       <registers>
         <register>
           <name>LCD_CLOCK</name>
@@ -21004,6 +21056,14 @@ level.</description>
       <interrupt>
         <name>LEDC</name>
         <value>35</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1</name>
+        <value>48</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER2</name>
+        <value>49</value>
       </interrupt>
       <registers>
         <register>
@@ -44942,7 +45002,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>SHA</name>
-        <value>78</value>
+        <value>77</value>
       </interrupt>
       <registers>
         <register>
@@ -45155,7 +45215,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SPI_MEM_REJECT</name>
+        <name>SPI_MEM_REJECT_CACHE</name>
         <value>60</value>
       </interrupt>
       <registers>
@@ -48416,6 +48476,10 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <name>SPI2</name>
         <value>21</value>
       </interrupt>
+      <interrupt>
+        <name>SPI2_DMA</name>
+        <value>44</value>
+      </interrupt>
       <registers>
         <register>
           <name>CMD</name>
@@ -50475,6 +50539,10 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       <interrupt>
         <name>SPI3</name>
         <value>22</value>
+      </interrupt>
+      <interrupt>
+        <name>SPI3_DMA</name>
+        <value>45</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -53427,7 +53495,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>TWAI</name>
-        <value>45</value>
+        <value>37</value>
       </interrupt>
       <registers>
         <register>
@@ -56755,6 +56823,10 @@ protection is enabled.</description>
       <name>UHCI1</name>
       <description>Universal Host Controller Interface</description>
       <baseAddress>0x6000C000</baseAddress>
+      <interrupt>
+        <name>UHCI1</name>
+        <value>15</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>USB0</name>
