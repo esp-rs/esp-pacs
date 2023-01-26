@@ -1,6 +1,6 @@
 [package]
 name = "esp32c3"
-version = "0.9.1"
+version = "0.10.0"
 authors = [
     "Samir Shetty <samirshetty23@gmail.com>",
     "Jesse Braham <jesse@beta7.io>",
