@@ -4,8 +4,8 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C2</name>
   <series>ESP32 C-Series</series>
-  <version>5</version>
-  <description>32-bit RISC-V MCU</description>
+  <version>6</version>
+  <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
@@ -1863,7 +1863,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>ASSIST_DEBUG_INTR</name>
+        <name>ETS_ASSIST_DEBUG</name>
         <value>40</value>
       </interrupt>
       <registers>
@@ -6005,6 +6005,10 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
+        <name>I2C_MST</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
         <name>I2C_EXT0</name>
         <value>22</value>
       </interrupt>
@@ -7207,7 +7211,7 @@ level.</description>
       </interrupt>
       <interrupt>
         <name>CACHE_IA</name>
-        <value>11</value>
+        <value>25</value>
       </interrupt>
       <interrupt>
         <name>ICACHE_PRELOAD0</name>
@@ -7222,23 +7226,23 @@ level.</description>
         <value>35</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_0</name>
+        <name>ETS_FROM_CPU_INTR0</name>
         <value>36</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_1</name>
+        <name>ETS_FROM_CPU_INTR1</name>
         <value>37</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_2</name>
+        <name>ETS_FROM_CPU_INTR2</name>
         <value>38</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_3</name>
+        <name>ETS_FROM_CPU_INTR3</name>
         <value>39</value>
       </interrupt>
       <interrupt>
-        <name>PERI_VIO_SIZE_INTR</name>
+        <name>ETS_CORE0_PIF_PMS_SIZE</name>
         <value>41</value>
       </interrupt>
       <registers>

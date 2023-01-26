@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32 C-Series</series>
-  <version>11</version>
+  <version>12</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -560,6 +560,10 @@
         <size>0xA0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>APB_CTRL</name>
+        <value>14</value>
+      </interrupt>
       <registers>
         <register>
           <name>SYSCLK_CONF</name>
@@ -3376,6 +3380,10 @@
       <interrupt>
         <name>DMA_CH2</name>
         <value>46</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_APBPERI_PMS</name>
+        <value>55</value>
       </interrupt>
       <registers>
         <register>
@@ -11739,6 +11747,10 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
+        <name>I2C_MASTER</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
         <name>I2C_EXT0</name>
         <value>29</value>
       </interrupt>
@@ -14359,20 +14371,56 @@
         <value>10</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_0</name>
+        <name>CACHE_IA</name>
+        <value>36</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_PRELOAD0</name>
+        <value>41</value>
+      </interrupt>
+      <interrupt>
+        <name>ICACHE_SYNC0</name>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
         <value>50</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_1</name>
+        <name>FROM_CPU_INTR1</name>
         <value>51</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_2</name>
+        <name>FROM_CPU_INTR2</name>
         <value>52</value>
       </interrupt>
       <interrupt>
-        <name>SW_INTR_3</name>
+        <name>FROM_CPU_INTR3</name>
         <value>53</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE0_IRAM0_PMS</name>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE0_DRAM0_PMS</name>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE0_PIF_PMS</name>
+        <value>58</value>
+      </interrupt>
+      <interrupt>
+        <name>CORE0_PIF_PMS_SIZE</name>
+        <value>59</value>
+      </interrupt>
+      <interrupt>
+        <name>BAK_PMS_VIOLATE</name>
+        <value>60</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_CORE0_ACS</name>
+        <value>61</value>
       </interrupt>
       <registers>
         <register>
@@ -16084,6 +16132,14 @@
       <interrupt>
         <name>LEDC</name>
         <value>23</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER2</name>
+        <value>31</value>
       </interrupt>
       <registers>
         <register>
@@ -25283,6 +25339,10 @@
         <size>0x48</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>SPI_MEM_REJECT_CACHE</name>
+        <value>40</value>
+      </interrupt>
       <registers>
         <register>
           <name>CTRL</name>
@@ -25918,6 +25978,10 @@
         <size>0xA8</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>SPI1</name>
+        <value>18</value>
+      </interrupt>
       <registers>
         <register>
           <name>CMD</name>

@@ -37,7 +37,7 @@ extern "C" {
     fn COEX();
     fn BLE_TIMER();
     fn BLE_SEC();
-    fn CACHE_IA();
+    fn I2C_MST();
     fn APB_CTRL();
     fn GPIO();
     fn GPIO_NMI();
@@ -51,6 +51,7 @@ extern "C" {
     fn I2C_EXT0();
     fn TG0_T0_LEVEL();
     fn TG0_WDT_LEVEL();
+    fn CACHE_IA();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
@@ -61,12 +62,12 @@ extern "C" {
     fn DMA_CH0();
     fn SHA();
     fn ECC();
-    fn SW_INTR_0();
-    fn SW_INTR_1();
-    fn SW_INTR_2();
-    fn SW_INTR_3();
-    fn ASSIST_DEBUG_INTR();
-    fn PERI_VIO_SIZE_INTR();
+    fn ETS_FROM_CPU_INTR0();
+    fn ETS_FROM_CPU_INTR1();
+    fn ETS_FROM_CPU_INTR2();
+    fn ETS_FROM_CPU_INTR3();
+    fn ETS_ASSIST_DEBUG();
+    fn ETS_CORE0_PIF_PMS_SIZE();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -94,7 +95,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
         _handler: BLE_TIMER,
     },
     Vector { _handler: BLE_SEC },
-    Vector { _handler: CACHE_IA },
+    Vector { _handler: I2C_MST },
     Vector { _handler: APB_CTRL },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
@@ -116,7 +117,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
     Vector {
         _handler: TG0_WDT_LEVEL,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: CACHE_IA },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -140,22 +141,22 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
     Vector { _handler: SHA },
     Vector { _handler: ECC },
     Vector {
-        _handler: SW_INTR_0,
+        _handler: ETS_FROM_CPU_INTR0,
     },
     Vector {
-        _handler: SW_INTR_1,
+        _handler: ETS_FROM_CPU_INTR1,
     },
     Vector {
-        _handler: SW_INTR_2,
+        _handler: ETS_FROM_CPU_INTR2,
     },
     Vector {
-        _handler: SW_INTR_3,
+        _handler: ETS_FROM_CPU_INTR3,
     },
     Vector {
-        _handler: ASSIST_DEBUG_INTR,
+        _handler: ETS_ASSIST_DEBUG,
     },
     Vector {
-        _handler: PERI_VIO_SIZE_INTR,
+        _handler: ETS_CORE0_PIF_PMS_SIZE,
     },
 ];
 #[doc(hidden)]
