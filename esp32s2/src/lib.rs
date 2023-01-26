@@ -27,7 +27,7 @@ pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
     fn WIFI_MAC();
-    fn WIFI_MAC_NMI();
+    fn WIFI_NMI();
     fn WIFI_PWR();
     fn WIFI_BB();
     fn BT_MAC();
@@ -38,6 +38,7 @@ extern "C" {
     fn RWBT_NMI();
     fn RWBLE_NMI();
     fn UHCI0();
+    fn UHCI1();
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
@@ -48,12 +49,19 @@ extern "C" {
     fn TG1_LACT_LEVEL();
     fn GPIO();
     fn GPIO_NMI();
+    fn GPIO_INTR_2();
+    fn GPIO_NMI_2();
     fn DEDICATED_GPIO();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn SPI1();
     fn SPI2();
     fn SPI3();
     fn UART0();
     fn UART1();
+    fn UART2();
     fn LEDC();
     fn EFUSE();
     fn TWAI();
@@ -78,10 +86,28 @@ extern "C" {
     fn TG1_T1_EDGE();
     fn TG1_WDT_EDGE();
     fn TG1_LACT_EDGE();
+    fn CACHE_IA();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
+    fn PMS_PRO_IRAM0_ILG();
+    fn PMS_PRO_DRAM0_ILG();
+    fn PMS_PRO_DPORT_ILG();
+    fn PMS_PRO_AHB_ILG();
+    fn PMS_PRO_CACHE_ILG();
+    fn PMS_DMA_APB_I_ILG();
+    fn PMS_DMA_RX_I_ILG();
+    fn PMS_DMA_TX_I_ILG();
+    fn SPI0_REJECT_CACHE();
+    fn SPI4_DMA();
+    fn SPI4();
+    fn ICACHE_PRELOAD();
+    fn DCACHE_PRELOAD();
     fn APB_ADC();
+    fn CPU_PERI_ERR();
+    fn APB_PERI_ERR();
+    fn DCACHE_SYNC();
+    fn ICACHE_SYNC();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -90,11 +116,9 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-pub static __INTERRUPTS: [Vector; 90] = [
+pub static __INTERRUPTS: [Vector; 95] = [
     Vector { _handler: WIFI_MAC },
-    Vector {
-        _handler: WIFI_MAC_NMI,
-    },
+    Vector { _handler: WIFI_NMI },
     Vector { _handler: WIFI_PWR },
     Vector { _handler: WIFI_BB },
     Vector { _handler: BT_MAC },
@@ -111,7 +135,7 @@ pub static __INTERRUPTS: [Vector; 90] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: UHCI0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: UHCI1 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -138,15 +162,27 @@ pub static __INTERRUPTS: [Vector; 90] = [
     },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: GPIO_INTR_2,
+    },
+    Vector {
+        _handler: GPIO_NMI_2,
+    },
     Vector {
         _handler: DEDICATED_GPIO,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector { _handler: SPI1 },
     Vector { _handler: SPI2 },
     Vector { _handler: SPI3 },
@@ -154,7 +190,7 @@ pub static __INTERRUPTS: [Vector; 90] = [
     Vector { _reserved: 0 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
-    Vector { _reserved: 0 },
+    Vector { _handler: UART2 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -201,7 +237,7 @@ pub static __INTERRUPTS: [Vector; 90] = [
     Vector {
         _handler: TG1_LACT_EDGE,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: CACHE_IA },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -212,21 +248,56 @@ pub static __INTERRUPTS: [Vector; 90] = [
         _handler: SYSTIMER_TARGET2,
     },
     Vector { _reserved: 0 },
+    Vector {
+        _handler: PMS_PRO_IRAM0_ILG,
+    },
+    Vector {
+        _handler: PMS_PRO_DRAM0_ILG,
+    },
+    Vector {
+        _handler: PMS_PRO_DPORT_ILG,
+    },
+    Vector {
+        _handler: PMS_PRO_AHB_ILG,
+    },
+    Vector {
+        _handler: PMS_PRO_CACHE_ILG,
+    },
+    Vector {
+        _handler: PMS_DMA_APB_I_ILG,
+    },
+    Vector {
+        _handler: PMS_DMA_RX_I_ILG,
+    },
+    Vector {
+        _handler: PMS_DMA_TX_I_ILG,
+    },
+    Vector {
+        _handler: SPI0_REJECT_CACHE,
+    },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SPI4_DMA },
+    Vector { _handler: SPI4 },
+    Vector {
+        _handler: ICACHE_PRELOAD,
+    },
+    Vector {
+        _handler: DCACHE_PRELOAD,
+    },
     Vector { _handler: APB_ADC },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: CPU_PERI_ERR,
+    },
+    Vector {
+        _handler: APB_PERI_ERR,
+    },
+    Vector {
+        _handler: DCACHE_SYNC,
+    },
+    Vector {
+        _handler: ICACHE_SYNC,
+    },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -234,8 +305,8 @@ pub static __INTERRUPTS: [Vector; 90] = [
 pub enum Interrupt {
     #[doc = "0 - WIFI_MAC"]
     WIFI_MAC = 0,
-    #[doc = "1 - WIFI_MAC_NMI"]
-    WIFI_MAC_NMI = 1,
+    #[doc = "1 - WIFI_NMI"]
+    WIFI_NMI = 1,
     #[doc = "2 - WIFI_PWR"]
     WIFI_PWR = 2,
     #[doc = "3 - WIFI_BB"]
@@ -256,6 +327,8 @@ pub enum Interrupt {
     RWBLE_NMI = 10,
     #[doc = "13 - UHCI0"]
     UHCI0 = 13,
+    #[doc = "14 - UHCI1"]
+    UHCI1 = 14,
     #[doc = "15 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 15,
     #[doc = "16 - TG0_T1_LEVEL"]
@@ -276,8 +349,20 @@ pub enum Interrupt {
     GPIO = 23,
     #[doc = "24 - GPIO_NMI"]
     GPIO_NMI = 24,
+    #[doc = "25 - GPIO_INTR_2"]
+    GPIO_INTR_2 = 25,
+    #[doc = "26 - GPIO_NMI_2"]
+    GPIO_NMI_2 = 26,
     #[doc = "27 - DEDICATED_GPIO"]
     DEDICATED_GPIO = 27,
+    #[doc = "28 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 28,
+    #[doc = "29 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 29,
+    #[doc = "30 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 30,
+    #[doc = "31 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 31,
     #[doc = "32 - SPI1"]
     SPI1 = 32,
     #[doc = "33 - SPI2"]
@@ -288,6 +373,8 @@ pub enum Interrupt {
     UART0 = 37,
     #[doc = "38 - UART1"]
     UART1 = 38,
+    #[doc = "39 - UART2"]
+    UART2 = 39,
     #[doc = "45 - LEDC"]
     LEDC = 45,
     #[doc = "46 - EFUSE"]
@@ -336,14 +423,50 @@ pub enum Interrupt {
     TG1_WDT_EDGE = 68,
     #[doc = "69 - TG1_LACT_EDGE"]
     TG1_LACT_EDGE = 69,
+    #[doc = "70 - CACHE_IA"]
+    CACHE_IA = 70,
     #[doc = "71 - SYSTIMER_TARGET0"]
     SYSTIMER_TARGET0 = 71,
     #[doc = "72 - SYSTIMER_TARGET1"]
     SYSTIMER_TARGET1 = 72,
     #[doc = "73 - SYSTIMER_TARGET2"]
     SYSTIMER_TARGET2 = 73,
+    #[doc = "75 - PMS_PRO_IRAM0_ILG"]
+    PMS_PRO_IRAM0_ILG = 75,
+    #[doc = "76 - PMS_PRO_DRAM0_ILG"]
+    PMS_PRO_DRAM0_ILG = 76,
+    #[doc = "77 - PMS_PRO_DPORT_ILG"]
+    PMS_PRO_DPORT_ILG = 77,
+    #[doc = "78 - PMS_PRO_AHB_ILG"]
+    PMS_PRO_AHB_ILG = 78,
+    #[doc = "79 - PMS_PRO_CACHE_ILG"]
+    PMS_PRO_CACHE_ILG = 79,
+    #[doc = "80 - PMS_DMA_APB_I_ILG"]
+    PMS_DMA_APB_I_ILG = 80,
+    #[doc = "81 - PMS_DMA_RX_I_ILG"]
+    PMS_DMA_RX_I_ILG = 81,
+    #[doc = "82 - PMS_DMA_TX_I_ILG"]
+    PMS_DMA_TX_I_ILG = 82,
+    #[doc = "83 - SPI0_REJECT_CACHE"]
+    SPI0_REJECT_CACHE = 83,
+    #[doc = "85 - SPI4_DMA"]
+    SPI4_DMA = 85,
+    #[doc = "86 - SPI4"]
+    SPI4 = 86,
+    #[doc = "87 - ICACHE_PRELOAD"]
+    ICACHE_PRELOAD = 87,
+    #[doc = "88 - DCACHE_PRELOAD"]
+    DCACHE_PRELOAD = 88,
     #[doc = "89 - APB_ADC"]
     APB_ADC = 89,
+    #[doc = "91 - CPU_PERI_ERR"]
+    CPU_PERI_ERR = 91,
+    #[doc = "92 - APB_PERI_ERR"]
+    APB_PERI_ERR = 92,
+    #[doc = "93 - DCACHE_SYNC"]
+    DCACHE_SYNC = 93,
+    #[doc = "94 - ICACHE_SYNC"]
+    ICACHE_SYNC = 94,
 }
 unsafe impl xtensa_lx::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
@@ -360,7 +483,7 @@ impl Interrupt {
     pub fn try_from(value: u16) -> Result<Self, TryFromInterruptError> {
         match value {
             0 => Ok(Interrupt::WIFI_MAC),
-            1 => Ok(Interrupt::WIFI_MAC_NMI),
+            1 => Ok(Interrupt::WIFI_NMI),
             2 => Ok(Interrupt::WIFI_PWR),
             3 => Ok(Interrupt::WIFI_BB),
             4 => Ok(Interrupt::BT_MAC),
@@ -371,6 +494,7 @@ impl Interrupt {
             9 => Ok(Interrupt::RWBT_NMI),
             10 => Ok(Interrupt::RWBLE_NMI),
             13 => Ok(Interrupt::UHCI0),
+            14 => Ok(Interrupt::UHCI1),
             15 => Ok(Interrupt::TG0_T0_LEVEL),
             16 => Ok(Interrupt::TG0_T1_LEVEL),
             17 => Ok(Interrupt::TG0_WDT_LEVEL),
@@ -381,12 +505,19 @@ impl Interrupt {
             22 => Ok(Interrupt::TG1_LACT_LEVEL),
             23 => Ok(Interrupt::GPIO),
             24 => Ok(Interrupt::GPIO_NMI),
+            25 => Ok(Interrupt::GPIO_INTR_2),
+            26 => Ok(Interrupt::GPIO_NMI_2),
             27 => Ok(Interrupt::DEDICATED_GPIO),
+            28 => Ok(Interrupt::FROM_CPU_INTR0),
+            29 => Ok(Interrupt::FROM_CPU_INTR1),
+            30 => Ok(Interrupt::FROM_CPU_INTR2),
+            31 => Ok(Interrupt::FROM_CPU_INTR3),
             32 => Ok(Interrupt::SPI1),
             33 => Ok(Interrupt::SPI2),
             34 => Ok(Interrupt::SPI3),
             37 => Ok(Interrupt::UART0),
             38 => Ok(Interrupt::UART1),
+            39 => Ok(Interrupt::UART2),
             45 => Ok(Interrupt::LEDC),
             46 => Ok(Interrupt::EFUSE),
             47 => Ok(Interrupt::TWAI),
@@ -411,10 +542,28 @@ impl Interrupt {
             67 => Ok(Interrupt::TG1_T1_EDGE),
             68 => Ok(Interrupt::TG1_WDT_EDGE),
             69 => Ok(Interrupt::TG1_LACT_EDGE),
+            70 => Ok(Interrupt::CACHE_IA),
             71 => Ok(Interrupt::SYSTIMER_TARGET0),
             72 => Ok(Interrupt::SYSTIMER_TARGET1),
             73 => Ok(Interrupt::SYSTIMER_TARGET2),
+            75 => Ok(Interrupt::PMS_PRO_IRAM0_ILG),
+            76 => Ok(Interrupt::PMS_PRO_DRAM0_ILG),
+            77 => Ok(Interrupt::PMS_PRO_DPORT_ILG),
+            78 => Ok(Interrupt::PMS_PRO_AHB_ILG),
+            79 => Ok(Interrupt::PMS_PRO_CACHE_ILG),
+            80 => Ok(Interrupt::PMS_DMA_APB_I_ILG),
+            81 => Ok(Interrupt::PMS_DMA_RX_I_ILG),
+            82 => Ok(Interrupt::PMS_DMA_TX_I_ILG),
+            83 => Ok(Interrupt::SPI0_REJECT_CACHE),
+            85 => Ok(Interrupt::SPI4_DMA),
+            86 => Ok(Interrupt::SPI4),
+            87 => Ok(Interrupt::ICACHE_PRELOAD),
+            88 => Ok(Interrupt::DCACHE_PRELOAD),
             89 => Ok(Interrupt::APB_ADC),
+            91 => Ok(Interrupt::CPU_PERI_ERR),
+            92 => Ok(Interrupt::APB_PERI_ERR),
+            93 => Ok(Interrupt::DCACHE_SYNC),
+            94 => Ok(Interrupt::ICACHE_SYNC),
             _ => Err(TryFromInterruptError(())),
         }
     }
@@ -756,33 +905,33 @@ impl core::fmt::Debug for I2S {
 #[doc = "I2S (Inter-IC Sound) Controller"]
 pub mod i2s;
 #[doc = "Interrupt"]
-pub struct INTERRUPT {
+pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for INTERRUPT {}
-impl INTERRUPT {
+unsafe impl Send for INTERRUPT_CORE0 {}
+impl INTERRUPT_CORE0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const interrupt::RegisterBlock = 0x3f4c_2000 as *const _;
+    pub const PTR: *const interrupt_core0::RegisterBlock = 0x3f4c_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const interrupt::RegisterBlock {
+    pub const fn ptr() -> *const interrupt_core0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for INTERRUPT {
-    type Target = interrupt::RegisterBlock;
+impl Deref for INTERRUPT_CORE0 {
+    type Target = interrupt_core0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for INTERRUPT {
+impl core::fmt::Debug for INTERRUPT_CORE0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("INTERRUPT").finish()
+        f.debug_struct("INTERRUPT_CORE0").finish()
     }
 }
 #[doc = "Interrupt"]
-pub mod interrupt;
+pub mod interrupt_core0;
 #[doc = "Input/Output Multiplexer"]
 pub struct IO_MUX {
     _marker: PhantomData<*const ()>,
@@ -1596,8 +1745,8 @@ pub struct Peripherals {
     pub I2C1: I2C1,
     #[doc = "I2S"]
     pub I2S: I2S,
-    #[doc = "INTERRUPT"]
-    pub INTERRUPT: INTERRUPT,
+    #[doc = "INTERRUPT_CORE0"]
+    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "LEDC"]
@@ -1712,7 +1861,7 @@ impl Peripherals {
             I2S: I2S {
                 _marker: PhantomData,
             },
-            INTERRUPT: INTERRUPT {
+            INTERRUPT_CORE0: INTERRUPT_CORE0 {
                 _marker: PhantomData,
             },
             IO_MUX: IO_MUX {

@@ -24,8 +24,8 @@ pub enum Interrupt {
     BLE_TIMER = 9,
     #[doc = "10 - BLE_SEC"]
     BLE_SEC = 10,
-    #[doc = "11 - CACHE_IA"]
-    CACHE_IA = 11,
+    #[doc = "11 - I2C_MST"]
+    I2C_MST = 11,
     #[doc = "12 - APB_CTRL"]
     APB_CTRL = 12,
     #[doc = "13 - GPIO"]
@@ -52,6 +52,8 @@ pub enum Interrupt {
     TG0_T0_LEVEL = 23,
     #[doc = "24 - TG0_WDT_LEVEL"]
     TG0_WDT_LEVEL = 24,
+    #[doc = "25 - CACHE_IA"]
+    CACHE_IA = 25,
     #[doc = "26 - SYSTIMER_TARGET0"]
     SYSTIMER_TARGET0 = 26,
     #[doc = "27 - SYSTIMER_TARGET1"]
@@ -72,18 +74,18 @@ pub enum Interrupt {
     SHA = 34,
     #[doc = "35 - ECC"]
     ECC = 35,
-    #[doc = "36 - SW_INTR_0"]
-    SW_INTR_0 = 36,
-    #[doc = "37 - SW_INTR_1"]
-    SW_INTR_1 = 37,
-    #[doc = "38 - SW_INTR_2"]
-    SW_INTR_2 = 38,
-    #[doc = "39 - SW_INTR_3"]
-    SW_INTR_3 = 39,
-    #[doc = "40 - ASSIST_DEBUG_INTR"]
-    ASSIST_DEBUG_INTR = 40,
-    #[doc = "41 - PERI_VIO_SIZE_INTR"]
-    PERI_VIO_SIZE_INTR = 41,
+    #[doc = "36 - ETS_FROM_CPU_INTR0"]
+    ETS_FROM_CPU_INTR0 = 36,
+    #[doc = "37 - ETS_FROM_CPU_INTR1"]
+    ETS_FROM_CPU_INTR1 = 37,
+    #[doc = "38 - ETS_FROM_CPU_INTR2"]
+    ETS_FROM_CPU_INTR2 = 38,
+    #[doc = "39 - ETS_FROM_CPU_INTR3"]
+    ETS_FROM_CPU_INTR3 = 39,
+    #[doc = "40 - ETS_ASSIST_DEBUG"]
+    ETS_ASSIST_DEBUG = 40,
+    #[doc = "41 - ETS_CORE0_PIF_PMS_SIZE"]
+    ETS_CORE0_PIF_PMS_SIZE = 41,
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
@@ -104,7 +106,7 @@ impl Interrupt {
             8 => Ok(Interrupt::COEX),
             9 => Ok(Interrupt::BLE_TIMER),
             10 => Ok(Interrupt::BLE_SEC),
-            11 => Ok(Interrupt::CACHE_IA),
+            11 => Ok(Interrupt::I2C_MST),
             12 => Ok(Interrupt::APB_CTRL),
             13 => Ok(Interrupt::GPIO),
             14 => Ok(Interrupt::GPIO_NMI),
@@ -118,6 +120,7 @@ impl Interrupt {
             22 => Ok(Interrupt::I2C_EXT0),
             23 => Ok(Interrupt::TG0_T0_LEVEL),
             24 => Ok(Interrupt::TG0_WDT_LEVEL),
+            25 => Ok(Interrupt::CACHE_IA),
             26 => Ok(Interrupt::SYSTIMER_TARGET0),
             27 => Ok(Interrupt::SYSTIMER_TARGET1),
             28 => Ok(Interrupt::SYSTIMER_TARGET2),
@@ -128,12 +131,12 @@ impl Interrupt {
             33 => Ok(Interrupt::DMA_CH0),
             34 => Ok(Interrupt::SHA),
             35 => Ok(Interrupt::ECC),
-            36 => Ok(Interrupt::SW_INTR_0),
-            37 => Ok(Interrupt::SW_INTR_1),
-            38 => Ok(Interrupt::SW_INTR_2),
-            39 => Ok(Interrupt::SW_INTR_3),
-            40 => Ok(Interrupt::ASSIST_DEBUG_INTR),
-            41 => Ok(Interrupt::PERI_VIO_SIZE_INTR),
+            36 => Ok(Interrupt::ETS_FROM_CPU_INTR0),
+            37 => Ok(Interrupt::ETS_FROM_CPU_INTR1),
+            38 => Ok(Interrupt::ETS_FROM_CPU_INTR2),
+            39 => Ok(Interrupt::ETS_FROM_CPU_INTR3),
+            40 => Ok(Interrupt::ETS_ASSIST_DEBUG),
+            41 => Ok(Interrupt::ETS_CORE0_PIF_PMS_SIZE),
             _ => Err(TryFromInterruptError(())),
         }
     }

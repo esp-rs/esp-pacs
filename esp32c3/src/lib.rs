@@ -37,9 +37,12 @@ extern "C" {
     fn RWBLE();
     fn RWBT_NMI();
     fn RWBLE_NMI();
+    fn I2C_MASTER();
+    fn APB_CTRL();
     fn UHCI0();
     fn GPIO();
     fn GPIO_NMI();
+    fn SPI1();
     fn SPI2();
     fn I2S();
     fn UART0();
@@ -51,13 +54,19 @@ extern "C" {
     fn RTC_CORE();
     fn RMT();
     fn I2C_EXT0();
+    fn TIMER1();
+    fn TIMER2();
     fn TG0_T0_LEVEL();
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
     fn TG1_WDT_LEVEL();
+    fn CACHE_IA();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
+    fn SPI_MEM_REJECT_CACHE();
+    fn ICACHE_PRELOAD0();
+    fn ICACHE_SYNC0();
     fn APB_ADC();
     fn DMA_CH0();
     fn DMA_CH1();
@@ -65,11 +74,18 @@ extern "C" {
     fn RSA();
     fn AES();
     fn SHA();
-    fn SW_INTR_0();
-    fn SW_INTR_1();
-    fn SW_INTR_2();
-    fn SW_INTR_3();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn ASSIST_DEBUG();
+    fn DMA_APBPERI_PMS();
+    fn CORE0_IRAM0_PMS();
+    fn CORE0_DRAM0_PMS();
+    fn CORE0_PIF_PMS();
+    fn CORE0_PIF_PMS_SIZE();
+    fn BAK_PMS_VIOLATE();
+    fn CACHE_CORE0_ACS();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -79,7 +95,7 @@ pub union Vector {
 #[cfg(feature = "rt")]
 #[doc(hidden)]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 62] = [
     Vector { _handler: WIFI_MAC },
     Vector {
         _handler: WIFI_MAC_NMI,
@@ -97,14 +113,16 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector {
         _handler: RWBLE_NMI,
     },
+    Vector {
+        _handler: I2C_MASTER,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: APB_CTRL },
     Vector { _handler: UHCI0 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _reserved: 0 },
+    Vector { _handler: SPI1 },
     Vector { _handler: SPI2 },
     Vector { _handler: I2S },
     Vector { _handler: UART0 },
@@ -118,8 +136,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: TIMER1 },
+    Vector { _handler: TIMER2 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -132,7 +150,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector {
         _handler: TG1_WDT_LEVEL,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: CACHE_IA },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -142,9 +160,15 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector {
         _handler: SYSTIMER_TARGET2,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SPI_MEM_REJECT_CACHE,
+    },
+    Vector {
+        _handler: ICACHE_PRELOAD0,
+    },
+    Vector {
+        _handler: ICACHE_SYNC0,
+    },
     Vector { _handler: APB_ADC },
     Vector { _handler: DMA_CH0 },
     Vector { _handler: DMA_CH1 },
@@ -153,19 +177,40 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 55] = [
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector {
-        _handler: SW_INTR_0,
+        _handler: FROM_CPU_INTR0,
     },
     Vector {
-        _handler: SW_INTR_1,
+        _handler: FROM_CPU_INTR1,
     },
     Vector {
-        _handler: SW_INTR_2,
+        _handler: FROM_CPU_INTR2,
     },
     Vector {
-        _handler: SW_INTR_3,
+        _handler: FROM_CPU_INTR3,
     },
     Vector {
         _handler: ASSIST_DEBUG,
+    },
+    Vector {
+        _handler: DMA_APBPERI_PMS,
+    },
+    Vector {
+        _handler: CORE0_IRAM0_PMS,
+    },
+    Vector {
+        _handler: CORE0_DRAM0_PMS,
+    },
+    Vector {
+        _handler: CORE0_PIF_PMS,
+    },
+    Vector {
+        _handler: CORE0_PIF_PMS_SIZE,
+    },
+    Vector {
+        _handler: BAK_PMS_VIOLATE,
+    },
+    Vector {
+        _handler: CACHE_CORE0_ACS,
     },
 ];
 #[doc(hidden)]

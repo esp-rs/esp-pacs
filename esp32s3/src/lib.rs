@@ -28,6 +28,7 @@ pub mod generic;
 extern "C" {
     fn WIFI_MAC();
     fn WIFI_NMI();
+    fn WIFI_PWR();
     fn WIFI_BB();
     fn BT_MAC();
     fn BT_BB();
@@ -36,13 +37,17 @@ extern "C" {
     fn RWBLE();
     fn RWBT_NMI();
     fn RWBLE_NMI();
-    fn I2C_MST();
+    fn I2C_MASTER();
     fn UHCI0();
+    fn UHCI1();
     fn GPIO();
     fn GPIO_NMI();
+    fn GPIO_INTR_2();
+    fn GPIO_NMI_2();
     fn SPI1();
     fn SPI2();
     fn SPI3();
+    fn LCD_CAM();
     fn I2S0();
     fn I2S1();
     fn UART0();
@@ -52,23 +57,32 @@ extern "C" {
     fn PWM1();
     fn LEDC();
     fn EFUSE();
+    fn TWAI();
     fn USB();
     fn RTC_CORE();
     fn RMT();
     fn PCNT();
     fn I2C_EXT0();
     fn I2C_EXT1();
-    fn TWAI();
+    fn SPI2_DMA();
+    fn SPI3_DMA();
+    fn TIMER1();
+    fn TIMER2();
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
     fn TG1_T1_LEVEL();
     fn TG1_WDT_LEVEL();
+    fn CACHE_IA();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
-    fn SPI_MEM_REJECT();
+    fn SPI_MEM_REJECT_CACHE();
+    fn DCACHE_PRELOAD0();
+    fn ICACHE_PRELOAD0();
+    fn DCACHE_SYNC0();
+    fn ICACHE_SYNC0();
     fn APB_ADC();
     fn DMA_IN_CH0();
     fn DMA_IN_CH1();
@@ -81,18 +95,22 @@ extern "C" {
     fn DMA_OUT_CH3();
     fn DMA_OUT_CH4();
     fn RSA();
-    fn AES();
     fn SHA();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn ASSIST_DEBUG();
-    fn APB_PMS_MONITOR_VIOLATE();
-    fn CORE_0_IRAM0_PMS_MONITOR_VIOLATE();
-    fn CORE_0_DRAM0_PMS_MONITOR_VIOLATE();
-    fn CORE_0_PIF_PMS_MONITOR_VIOLATE();
-    fn CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE();
-    fn CORE_1_IRAM0_PMS_MONITOR_VIOLATE();
-    fn CORE_1_DRAM0_PMS_MONITOR_VIOLATE();
-    fn CORE_1_PIF_PMS_MONITOR_VIOLATE();
-    fn CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE();
+    fn DMA_APBPERI_PMS();
+    fn CORE0_IRAM0_PMS();
+    fn CORE0_DRAM0_PMS();
+    fn CORE0_PIF_PMS();
+    fn CORE0_PIF_PMS_SIZE();
+    fn CORE1_IRAM0_PMS();
+    fn CORE1_DRAM0_PMS();
+    fn CORE1_PIF_PMS();
+    fn CORE1_PIF_PMS_SIZE();
+    fn BACKUP_PMS_VIOLATE();
     fn CACHE_CORE0_ACS();
     fn CACHE_CORE1_ACS();
     fn USB_DEVICE();
@@ -109,6 +127,7 @@ pub union Vector {
 pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: WIFI_MAC },
     Vector { _handler: WIFI_NMI },
+    Vector { _handler: WIFI_PWR },
     Vector { _handler: WIFI_BB },
     Vector { _handler: BT_MAC },
     Vector { _handler: BT_BB },
@@ -121,21 +140,26 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector {
         _handler: RWBLE_NMI,
     },
-    Vector { _reserved: 0 },
-    Vector { _handler: I2C_MST },
+    Vector {
+        _handler: I2C_MASTER,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: UHCI0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: UHCI1 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: GPIO_INTR_2,
+    },
+    Vector {
+        _handler: GPIO_NMI_2,
+    },
     Vector { _handler: SPI1 },
     Vector { _handler: SPI2 },
     Vector { _handler: SPI3 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: LCD_CAM },
     Vector { _handler: I2S0 },
     Vector { _handler: I2S1 },
     Vector { _handler: UART0 },
@@ -148,19 +172,19 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _reserved: 0 },
     Vector { _handler: LEDC },
     Vector { _handler: EFUSE },
-    Vector { _reserved: 0 },
+    Vector { _handler: TWAI },
     Vector { _handler: USB },
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
     Vector { _handler: PCNT },
     Vector { _handler: I2C_EXT0 },
     Vector { _handler: I2C_EXT1 },
-    Vector { _reserved: 0 },
-    Vector { _handler: TWAI },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SPI2_DMA },
+    Vector { _handler: SPI3_DMA },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
+    Vector { _handler: TIMER1 },
+    Vector { _handler: TIMER2 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -179,7 +203,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector {
         _handler: TG1_WDT_LEVEL,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: CACHE_IA },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -190,12 +214,20 @@ pub static __INTERRUPTS: [Vector; 99] = [
         _handler: SYSTIMER_TARGET2,
     },
     Vector {
-        _handler: SPI_MEM_REJECT,
+        _handler: SPI_MEM_REJECT_CACHE,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: DCACHE_PRELOAD0,
+    },
+    Vector {
+        _handler: ICACHE_PRELOAD0,
+    },
+    Vector {
+        _handler: DCACHE_SYNC0,
+    },
+    Vector {
+        _handler: ICACHE_SYNC0,
+    },
     Vector { _handler: APB_ADC },
     Vector {
         _handler: DMA_IN_CH0,
@@ -228,43 +260,53 @@ pub static __INTERRUPTS: [Vector; 99] = [
         _handler: DMA_OUT_CH4,
     },
     Vector { _handler: RSA },
-    Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector {
         _handler: ASSIST_DEBUG,
     },
     Vector {
-        _handler: APB_PMS_MONITOR_VIOLATE,
+        _handler: DMA_APBPERI_PMS,
     },
     Vector {
-        _handler: CORE_0_IRAM0_PMS_MONITOR_VIOLATE,
+        _handler: CORE0_IRAM0_PMS,
     },
     Vector {
-        _handler: CORE_0_DRAM0_PMS_MONITOR_VIOLATE,
+        _handler: CORE0_DRAM0_PMS,
     },
     Vector {
-        _handler: CORE_0_PIF_PMS_MONITOR_VIOLATE,
+        _handler: CORE0_PIF_PMS,
     },
     Vector {
-        _handler: CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE,
+        _handler: CORE0_PIF_PMS_SIZE,
     },
     Vector {
-        _handler: CORE_1_IRAM0_PMS_MONITOR_VIOLATE,
+        _handler: CORE1_IRAM0_PMS,
     },
     Vector {
-        _handler: CORE_1_DRAM0_PMS_MONITOR_VIOLATE,
+        _handler: CORE1_DRAM0_PMS,
     },
     Vector {
-        _handler: CORE_1_PIF_PMS_MONITOR_VIOLATE,
+        _handler: CORE1_PIF_PMS,
     },
     Vector {
-        _handler: CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE,
+        _handler: CORE1_PIF_PMS_SIZE,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: BACKUP_PMS_VIOLATE,
+    },
     Vector {
         _handler: CACHE_CORE0_ACS,
     },
@@ -289,36 +331,46 @@ pub enum Interrupt {
     WIFI_MAC = 0,
     #[doc = "1 - WIFI_NMI"]
     WIFI_NMI = 1,
-    #[doc = "2 - WIFI_BB"]
-    WIFI_BB = 2,
-    #[doc = "3 - BT_MAC"]
-    BT_MAC = 3,
-    #[doc = "4 - BT_BB"]
-    BT_BB = 4,
-    #[doc = "5 - BT_BB_NMI"]
-    BT_BB_NMI = 5,
-    #[doc = "6 - RWBT"]
-    RWBT = 6,
-    #[doc = "7 - RWBLE"]
-    RWBLE = 7,
-    #[doc = "8 - RWBT_NMI"]
-    RWBT_NMI = 8,
-    #[doc = "9 - RWBLE_NMI"]
-    RWBLE_NMI = 9,
-    #[doc = "11 - I2C_MST"]
-    I2C_MST = 11,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - RWBT"]
+    RWBT = 7,
+    #[doc = "8 - RWBLE"]
+    RWBLE = 8,
+    #[doc = "9 - RWBT_NMI"]
+    RWBT_NMI = 9,
+    #[doc = "10 - RWBLE_NMI"]
+    RWBLE_NMI = 10,
+    #[doc = "11 - I2C_MASTER"]
+    I2C_MASTER = 11,
     #[doc = "14 - UHCI0"]
     UHCI0 = 14,
+    #[doc = "15 - UHCI1"]
+    UHCI1 = 15,
     #[doc = "16 - GPIO"]
     GPIO = 16,
     #[doc = "17 - GPIO_NMI"]
     GPIO_NMI = 17,
+    #[doc = "18 - GPIO_INTR_2"]
+    GPIO_INTR_2 = 18,
+    #[doc = "19 - GPIO_NMI_2"]
+    GPIO_NMI_2 = 19,
     #[doc = "20 - SPI1"]
     SPI1 = 20,
     #[doc = "21 - SPI2"]
     SPI2 = 21,
     #[doc = "22 - SPI3"]
     SPI3 = 22,
+    #[doc = "24 - LCD_CAM"]
+    LCD_CAM = 24,
     #[doc = "25 - I2S0"]
     I2S0 = 25,
     #[doc = "26 - I2S1"]
@@ -337,6 +389,8 @@ pub enum Interrupt {
     LEDC = 35,
     #[doc = "36 - EFUSE"]
     EFUSE = 36,
+    #[doc = "37 - TWAI"]
+    TWAI = 37,
     #[doc = "38 - USB"]
     USB = 38,
     #[doc = "39 - RTC_CORE"]
@@ -349,8 +403,14 @@ pub enum Interrupt {
     I2C_EXT0 = 42,
     #[doc = "43 - I2C_EXT1"]
     I2C_EXT1 = 43,
-    #[doc = "45 - TWAI"]
-    TWAI = 45,
+    #[doc = "44 - SPI2_DMA"]
+    SPI2_DMA = 44,
+    #[doc = "45 - SPI3_DMA"]
+    SPI3_DMA = 45,
+    #[doc = "48 - TIMER1"]
+    TIMER1 = 48,
+    #[doc = "49 - TIMER2"]
+    TIMER2 = 49,
     #[doc = "50 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 50,
     #[doc = "51 - TG0_T1_LEVEL"]
@@ -363,14 +423,24 @@ pub enum Interrupt {
     TG1_T1_LEVEL = 54,
     #[doc = "55 - TG1_WDT_LEVEL"]
     TG1_WDT_LEVEL = 55,
+    #[doc = "56 - CACHE_IA"]
+    CACHE_IA = 56,
     #[doc = "57 - SYSTIMER_TARGET0"]
     SYSTIMER_TARGET0 = 57,
     #[doc = "58 - SYSTIMER_TARGET1"]
     SYSTIMER_TARGET1 = 58,
     #[doc = "59 - SYSTIMER_TARGET2"]
     SYSTIMER_TARGET2 = 59,
-    #[doc = "60 - SPI_MEM_REJECT"]
-    SPI_MEM_REJECT = 60,
+    #[doc = "60 - SPI_MEM_REJECT_CACHE"]
+    SPI_MEM_REJECT_CACHE = 60,
+    #[doc = "61 - DCACHE_PRELOAD0"]
+    DCACHE_PRELOAD0 = 61,
+    #[doc = "62 - ICACHE_PRELOAD0"]
+    ICACHE_PRELOAD0 = 62,
+    #[doc = "63 - DCACHE_SYNC0"]
+    DCACHE_SYNC0 = 63,
+    #[doc = "64 - ICACHE_SYNC0"]
+    ICACHE_SYNC0 = 64,
     #[doc = "65 - APB_ADC"]
     APB_ADC = 65,
     #[doc = "66 - DMA_IN_CH0"]
@@ -395,30 +465,38 @@ pub enum Interrupt {
     DMA_OUT_CH4 = 75,
     #[doc = "76 - RSA"]
     RSA = 76,
-    #[doc = "77 - AES"]
-    AES = 77,
-    #[doc = "78 - SHA"]
-    SHA = 78,
+    #[doc = "77 - SHA"]
+    SHA = 77,
+    #[doc = "79 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 79,
+    #[doc = "80 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 80,
+    #[doc = "81 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 81,
+    #[doc = "82 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 82,
     #[doc = "83 - ASSIST_DEBUG"]
     ASSIST_DEBUG = 83,
-    #[doc = "84 - APB_PMS_MONITOR_VIOLATE"]
-    APB_PMS_MONITOR_VIOLATE = 84,
-    #[doc = "85 - CORE_0_IRAM0_PMS_MONITOR_VIOLATE"]
-    CORE_0_IRAM0_PMS_MONITOR_VIOLATE = 85,
-    #[doc = "86 - CORE_0_DRAM0_PMS_MONITOR_VIOLATE"]
-    CORE_0_DRAM0_PMS_MONITOR_VIOLATE = 86,
-    #[doc = "87 - CORE_0_PIF_PMS_MONITOR_VIOLATE"]
-    CORE_0_PIF_PMS_MONITOR_VIOLATE = 87,
-    #[doc = "88 - CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE"]
-    CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE = 88,
-    #[doc = "89 - CORE_1_IRAM0_PMS_MONITOR_VIOLATE"]
-    CORE_1_IRAM0_PMS_MONITOR_VIOLATE = 89,
-    #[doc = "90 - CORE_1_DRAM0_PMS_MONITOR_VIOLATE"]
-    CORE_1_DRAM0_PMS_MONITOR_VIOLATE = 90,
-    #[doc = "91 - CORE_1_PIF_PMS_MONITOR_VIOLATE"]
-    CORE_1_PIF_PMS_MONITOR_VIOLATE = 91,
-    #[doc = "92 - CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE"]
-    CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE = 92,
+    #[doc = "84 - DMA_APBPERI_PMS"]
+    DMA_APBPERI_PMS = 84,
+    #[doc = "85 - CORE0_IRAM0_PMS"]
+    CORE0_IRAM0_PMS = 85,
+    #[doc = "86 - CORE0_DRAM0_PMS"]
+    CORE0_DRAM0_PMS = 86,
+    #[doc = "87 - CORE0_PIF_PMS"]
+    CORE0_PIF_PMS = 87,
+    #[doc = "88 - CORE0_PIF_PMS_SIZE"]
+    CORE0_PIF_PMS_SIZE = 88,
+    #[doc = "89 - CORE1_IRAM0_PMS"]
+    CORE1_IRAM0_PMS = 89,
+    #[doc = "90 - CORE1_DRAM0_PMS"]
+    CORE1_DRAM0_PMS = 90,
+    #[doc = "91 - CORE1_PIF_PMS"]
+    CORE1_PIF_PMS = 91,
+    #[doc = "92 - CORE1_PIF_PMS_SIZE"]
+    CORE1_PIF_PMS_SIZE = 92,
+    #[doc = "93 - BACKUP_PMS_VIOLATE"]
+    BACKUP_PMS_VIOLATE = 93,
     #[doc = "94 - CACHE_CORE0_ACS"]
     CACHE_CORE0_ACS = 94,
     #[doc = "95 - CACHE_CORE1_ACS"]
@@ -446,21 +524,26 @@ impl Interrupt {
         match value {
             0 => Ok(Interrupt::WIFI_MAC),
             1 => Ok(Interrupt::WIFI_NMI),
-            2 => Ok(Interrupt::WIFI_BB),
-            3 => Ok(Interrupt::BT_MAC),
-            4 => Ok(Interrupt::BT_BB),
-            5 => Ok(Interrupt::BT_BB_NMI),
-            6 => Ok(Interrupt::RWBT),
-            7 => Ok(Interrupt::RWBLE),
-            8 => Ok(Interrupt::RWBT_NMI),
-            9 => Ok(Interrupt::RWBLE_NMI),
-            11 => Ok(Interrupt::I2C_MST),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::RWBT),
+            8 => Ok(Interrupt::RWBLE),
+            9 => Ok(Interrupt::RWBT_NMI),
+            10 => Ok(Interrupt::RWBLE_NMI),
+            11 => Ok(Interrupt::I2C_MASTER),
             14 => Ok(Interrupt::UHCI0),
+            15 => Ok(Interrupt::UHCI1),
             16 => Ok(Interrupt::GPIO),
             17 => Ok(Interrupt::GPIO_NMI),
+            18 => Ok(Interrupt::GPIO_INTR_2),
+            19 => Ok(Interrupt::GPIO_NMI_2),
             20 => Ok(Interrupt::SPI1),
             21 => Ok(Interrupt::SPI2),
             22 => Ok(Interrupt::SPI3),
+            24 => Ok(Interrupt::LCD_CAM),
             25 => Ok(Interrupt::I2S0),
             26 => Ok(Interrupt::I2S1),
             27 => Ok(Interrupt::UART0),
@@ -470,23 +553,32 @@ impl Interrupt {
             32 => Ok(Interrupt::PWM1),
             35 => Ok(Interrupt::LEDC),
             36 => Ok(Interrupt::EFUSE),
+            37 => Ok(Interrupt::TWAI),
             38 => Ok(Interrupt::USB),
             39 => Ok(Interrupt::RTC_CORE),
             40 => Ok(Interrupt::RMT),
             41 => Ok(Interrupt::PCNT),
             42 => Ok(Interrupt::I2C_EXT0),
             43 => Ok(Interrupt::I2C_EXT1),
-            45 => Ok(Interrupt::TWAI),
+            44 => Ok(Interrupt::SPI2_DMA),
+            45 => Ok(Interrupt::SPI3_DMA),
+            48 => Ok(Interrupt::TIMER1),
+            49 => Ok(Interrupt::TIMER2),
             50 => Ok(Interrupt::TG0_T0_LEVEL),
             51 => Ok(Interrupt::TG0_T1_LEVEL),
             52 => Ok(Interrupt::TG0_WDT_LEVEL),
             53 => Ok(Interrupt::TG1_T0_LEVEL),
             54 => Ok(Interrupt::TG1_T1_LEVEL),
             55 => Ok(Interrupt::TG1_WDT_LEVEL),
+            56 => Ok(Interrupt::CACHE_IA),
             57 => Ok(Interrupt::SYSTIMER_TARGET0),
             58 => Ok(Interrupt::SYSTIMER_TARGET1),
             59 => Ok(Interrupt::SYSTIMER_TARGET2),
-            60 => Ok(Interrupt::SPI_MEM_REJECT),
+            60 => Ok(Interrupt::SPI_MEM_REJECT_CACHE),
+            61 => Ok(Interrupt::DCACHE_PRELOAD0),
+            62 => Ok(Interrupt::ICACHE_PRELOAD0),
+            63 => Ok(Interrupt::DCACHE_SYNC0),
+            64 => Ok(Interrupt::ICACHE_SYNC0),
             65 => Ok(Interrupt::APB_ADC),
             66 => Ok(Interrupt::DMA_IN_CH0),
             67 => Ok(Interrupt::DMA_IN_CH1),
@@ -499,18 +591,22 @@ impl Interrupt {
             74 => Ok(Interrupt::DMA_OUT_CH3),
             75 => Ok(Interrupt::DMA_OUT_CH4),
             76 => Ok(Interrupt::RSA),
-            77 => Ok(Interrupt::AES),
-            78 => Ok(Interrupt::SHA),
+            77 => Ok(Interrupt::SHA),
+            79 => Ok(Interrupt::FROM_CPU_INTR0),
+            80 => Ok(Interrupt::FROM_CPU_INTR1),
+            81 => Ok(Interrupt::FROM_CPU_INTR2),
+            82 => Ok(Interrupt::FROM_CPU_INTR3),
             83 => Ok(Interrupt::ASSIST_DEBUG),
-            84 => Ok(Interrupt::APB_PMS_MONITOR_VIOLATE),
-            85 => Ok(Interrupt::CORE_0_IRAM0_PMS_MONITOR_VIOLATE),
-            86 => Ok(Interrupt::CORE_0_DRAM0_PMS_MONITOR_VIOLATE),
-            87 => Ok(Interrupt::CORE_0_PIF_PMS_MONITOR_VIOLATE),
-            88 => Ok(Interrupt::CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE),
-            89 => Ok(Interrupt::CORE_1_IRAM0_PMS_MONITOR_VIOLATE),
-            90 => Ok(Interrupt::CORE_1_DRAM0_PMS_MONITOR_VIOLATE),
-            91 => Ok(Interrupt::CORE_1_PIF_PMS_MONITOR_VIOLATE),
-            92 => Ok(Interrupt::CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE),
+            84 => Ok(Interrupt::DMA_APBPERI_PMS),
+            85 => Ok(Interrupt::CORE0_IRAM0_PMS),
+            86 => Ok(Interrupt::CORE0_DRAM0_PMS),
+            87 => Ok(Interrupt::CORE0_PIF_PMS),
+            88 => Ok(Interrupt::CORE0_PIF_PMS_SIZE),
+            89 => Ok(Interrupt::CORE1_IRAM0_PMS),
+            90 => Ok(Interrupt::CORE1_DRAM0_PMS),
+            91 => Ok(Interrupt::CORE1_PIF_PMS),
+            92 => Ok(Interrupt::CORE1_PIF_PMS_SIZE),
+            93 => Ok(Interrupt::BACKUP_PMS_VIOLATE),
             94 => Ok(Interrupt::CACHE_CORE0_ACS),
             95 => Ok(Interrupt::CACHE_CORE1_ACS),
             96 => Ok(Interrupt::USB_DEVICE),
