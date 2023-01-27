@@ -25,12 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
+      - uses: dtolnay/rust-toolchain@nightly
         with:
-          profile: minimal
-          target: riscv32imc-unknown-none-elf
-          toolchain: nightly
-          default: true
+          targets: riscv32imc-unknown-none-elf
           components: rust-src
       - uses: Swatinem/rust-cache@v2
 
@@ -74,22 +71,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
+      - uses: dtolnay/rust-toolchain@nightly
         with:
-          profile: minimal
-          target: riscv32imc-unknown-none-elf
-          toolchain: nightly
-          default: true
-      - uses: actions-rs/toolchain@v1
+          targets: riscv32imc-unknown-none-elf
+          components: rust-src
+      - uses: dtolnay/rust-toolchain@1.60.0
         with:
-          profile: minimal
-          target: riscv32imc-unknown-none-elf
-          toolchain: "1.60.0"
+          targets: riscv32imc-unknown-none-elf
           components: rust-src
       - uses: Swatinem/rust-cache@v2
 
       - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+        run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
       - name: build pac
         run: cd ${{ matrix.chip }} && cargo +1.60.0 check
 
