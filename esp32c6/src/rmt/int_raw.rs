@@ -13,104 +13,118 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `CH0_TX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL0. Triggered when transmission done."]
-pub type CH0_TX_END_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH1_TX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL1. Triggered when transmission done."]
-pub type CH1_TX_END_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH2_RX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL2. Triggered when reception done."]
-pub type CH2_RX_END_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH3_RX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL3. Triggered when reception done."]
-pub type CH3_RX_END_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `TX_CH0_ERR_INT_RAW` reader - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
-pub type TX_CH0_ERR_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `TX_CH1_ERR_INT_RAW` reader - The interrupt raw bit for CHANNEL5. Triggered when error occurs."]
-pub type TX_CH1_ERR_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `TX_CH2_ERR_INT_RAW` reader - The interrupt raw bit for CHANNEL6. Triggered when error occurs."]
-pub type TX_CH2_ERR_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `TX_CH3_ERR_INT_RAW` reader - The interrupt raw bit for CHANNEL7. Triggered when error occurs."]
-pub type TX_CH3_ERR_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH0_TX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL0. Triggered when transmitter sent more data than configured value."]
-pub type CH0_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH1_TX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL1. Triggered when transmitter sent more data than configured value."]
-pub type CH1_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH2_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value."]
-pub type CH2_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH3_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL3. Triggered when receiver receive more data than configured value."]
-pub type CH3_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH0_TX_LOOP_INT_RAW` reader - The interrupt raw bit for CHANNEL0. Triggered when the loop count reaches the configured threshold value."]
-pub type CH0_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CH1_TX_LOOP_INT_RAW` reader - The interrupt raw bit for CHANNEL1. Triggered when the loop count reaches the configured threshold value."]
-pub type CH1_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_TX_END_INT_RAW[0-1]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmission done."]
+pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_RX_END_INT_RAW[2-3]` reader - The interrupt raw bit for CHANNEL2. Triggered when reception done."]
+pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_TX_ERR_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
+pub type CH_TX_ERR_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-1]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_RX_THR_EVENT_INT_RAW[2-3]` reader - The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value."]
+pub type CH_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CH_TX_LOOP_INT_RAW[0-1]` reader - The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value."]
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
 impl R {
+    #[doc = "The interrupt raw bit for CHANNEL[0-1]. Triggered when transmission done."]
+    #[inline(always)]
+    pub unsafe fn ch_tx_end_int_raw(&self, n: u8) -> CH_TX_END_INT_RAW_R {
+        CH_TX_END_INT_RAW_R::new(((self.bits >> n) & 1) != 0)
+    }
     #[doc = "Bit 0 - The interrupt raw bit for CHANNEL0. Triggered when transmission done."]
     #[inline(always)]
-    pub fn ch0_tx_end_int_raw(&self) -> CH0_TX_END_INT_RAW_R {
-        CH0_TX_END_INT_RAW_R::new((self.bits & 1) != 0)
+    pub fn ch0_tx_end_int_raw(&self) -> CH_TX_END_INT_RAW_R {
+        CH_TX_END_INT_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt raw bit for CHANNEL1. Triggered when transmission done."]
     #[inline(always)]
-    pub fn ch1_tx_end_int_raw(&self) -> CH1_TX_END_INT_RAW_R {
-        CH1_TX_END_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ch1_tx_end_int_raw(&self) -> CH_TX_END_INT_RAW_R {
+        CH_TX_END_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "The interrupt raw bit for CHANNEL2. Triggered when reception done."]
+    #[inline(always)]
+    pub unsafe fn ch_rx_end_int_raw(&self, n: u8) -> CH_RX_END_INT_RAW_R {
+        CH_RX_END_INT_RAW_R::new(((self.bits >> (n - 2 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt raw bit for CHANNEL2. Triggered when reception done."]
     #[inline(always)]
-    pub fn ch2_rx_end_int_raw(&self) -> CH2_RX_END_INT_RAW_R {
-        CH2_RX_END_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ch2_rx_end_int_raw(&self) -> CH_RX_END_INT_RAW_R {
+        CH_RX_END_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - The interrupt raw bit for CHANNEL3. Triggered when reception done."]
+    #[doc = "Bit 3 - The interrupt raw bit for CHANNEL2. Triggered when reception done."]
     #[inline(always)]
-    pub fn ch3_rx_end_int_raw(&self) -> CH3_RX_END_INT_RAW_R {
-        CH3_RX_END_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn ch3_rx_end_int_raw(&self) -> CH_RX_END_INT_RAW_R {
+        CH_RX_END_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
+    #[inline(always)]
+    pub unsafe fn ch_tx_err_int_raw(&self, n: u8) -> CH_TX_ERR_INT_RAW_R {
+        CH_TX_ERR_INT_RAW_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
     #[doc = "Bit 4 - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
     #[inline(always)]
-    pub fn tx_ch0_err_int_raw(&self) -> TX_CH0_ERR_INT_RAW_R {
-        TX_CH0_ERR_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ch0_tx_err_int_raw(&self) -> CH_TX_ERR_INT_RAW_R {
+        CH_TX_ERR_INT_RAW_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - The interrupt raw bit for CHANNEL5. Triggered when error occurs."]
+    #[doc = "Bit 5 - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
     #[inline(always)]
-    pub fn tx_ch1_err_int_raw(&self) -> TX_CH1_ERR_INT_RAW_R {
-        TX_CH1_ERR_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ch1_tx_err_int_raw(&self) -> CH_TX_ERR_INT_RAW_R {
+        CH_TX_ERR_INT_RAW_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - The interrupt raw bit for CHANNEL6. Triggered when error occurs."]
+    #[doc = "Bit 6 - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
     #[inline(always)]
-    pub fn tx_ch2_err_int_raw(&self) -> TX_CH2_ERR_INT_RAW_R {
-        TX_CH2_ERR_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn ch2_tx_err_int_raw(&self) -> CH_TX_ERR_INT_RAW_R {
+        CH_TX_ERR_INT_RAW_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - The interrupt raw bit for CHANNEL7. Triggered when error occurs."]
+    #[doc = "Bit 7 - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
     #[inline(always)]
-    pub fn tx_ch3_err_int_raw(&self) -> TX_CH3_ERR_INT_RAW_R {
-        TX_CH3_ERR_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ch3_tx_err_int_raw(&self) -> CH_TX_ERR_INT_RAW_R {
+        CH_TX_ERR_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "The interrupt raw bit for CHANNEL[0-1]. Triggered when transmitter sent more data than configured value."]
+    #[inline(always)]
+    pub unsafe fn ch_tx_thr_event_int_raw(&self, n: u8) -> CH_TX_THR_EVENT_INT_RAW_R {
+        CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Bit 8 - The interrupt raw bit for CHANNEL0. Triggered when transmitter sent more data than configured value."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event_int_raw(&self) -> CH0_TX_THR_EVENT_INT_RAW_R {
-        CH0_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn ch0_tx_thr_event_int_raw(&self) -> CH_TX_THR_EVENT_INT_RAW_R {
+        CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - The interrupt raw bit for CHANNEL1. Triggered when transmitter sent more data than configured value."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event_int_raw(&self) -> CH1_TX_THR_EVENT_INT_RAW_R {
-        CH1_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn ch1_tx_thr_event_int_raw(&self) -> CH_TX_THR_EVENT_INT_RAW_R {
+        CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value."]
+    #[inline(always)]
+    pub unsafe fn ch_rx_thr_event_int_raw(&self, n: u8) -> CH_RX_THR_EVENT_INT_RAW_R {
+        CH_RX_THR_EVENT_INT_RAW_R::new(((self.bits >> (n - 2 + 10)) & 1) != 0)
     }
     #[doc = "Bit 10 - The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value."]
     #[inline(always)]
-    pub fn ch2_rx_thr_event_int_raw(&self) -> CH2_RX_THR_EVENT_INT_RAW_R {
-        CH2_RX_THR_EVENT_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn ch2_rx_thr_event_int_raw(&self) -> CH_RX_THR_EVENT_INT_RAW_R {
+        CH_RX_THR_EVENT_INT_RAW_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - The interrupt raw bit for CHANNEL3. Triggered when receiver receive more data than configured value."]
+    #[doc = "Bit 11 - The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value."]
     #[inline(always)]
-    pub fn ch3_rx_thr_event_int_raw(&self) -> CH3_RX_THR_EVENT_INT_RAW_R {
-        CH3_RX_THR_EVENT_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn ch3_rx_thr_event_int_raw(&self) -> CH_RX_THR_EVENT_INT_RAW_R {
+        CH_RX_THR_EVENT_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "The interrupt raw bit for CHANNEL[0-1]. Triggered when the loop count reaches the configured threshold value."]
+    #[inline(always)]
+    pub unsafe fn ch_tx_loop_int_raw(&self, n: u8) -> CH_TX_LOOP_INT_RAW_R {
+        CH_TX_LOOP_INT_RAW_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - The interrupt raw bit for CHANNEL0. Triggered when the loop count reaches the configured threshold value."]
     #[inline(always)]
-    pub fn ch0_tx_loop_int_raw(&self) -> CH0_TX_LOOP_INT_RAW_R {
-        CH0_TX_LOOP_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn ch0_tx_loop_int_raw(&self) -> CH_TX_LOOP_INT_RAW_R {
+        CH_TX_LOOP_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - The interrupt raw bit for CHANNEL1. Triggered when the loop count reaches the configured threshold value."]
     #[inline(always)]
-    pub fn ch1_tx_loop_int_raw(&self) -> CH1_TX_LOOP_INT_RAW_R {
-        CH1_TX_LOOP_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ch1_tx_loop_int_raw(&self) -> CH_TX_LOOP_INT_RAW_R {
+        CH_TX_LOOP_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
