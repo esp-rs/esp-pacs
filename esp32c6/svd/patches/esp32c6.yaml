@@ -96,10 +96,6 @@ I2C0:
       FIFO_RDATA:
         access: read-write
 
-_modify:
-  I2S0:
-    name: I2S
-
 LP_I2C0:
   _modify:
     _registers:

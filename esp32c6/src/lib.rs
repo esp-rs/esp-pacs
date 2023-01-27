@@ -680,33 +680,33 @@ impl core::fmt::Debug for I2C0 {
 #[doc = "I2C (Inter-Integrated Circuit) Controller"]
 pub mod i2c0;
 #[doc = "I2S (Inter-IC Sound) Controller"]
-pub struct I2S {
+pub struct I2S0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for I2S {}
-impl I2S {
+unsafe impl Send for I2S0 {}
+impl I2S0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i2s::RegisterBlock = 0x6000_c000 as *const _;
+    pub const PTR: *const i2s0::RegisterBlock = 0x6000_c000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i2s::RegisterBlock {
+    pub const fn ptr() -> *const i2s0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for I2S {
-    type Target = i2s::RegisterBlock;
+impl Deref for I2S0 {
+    type Target = i2s0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for I2S {
+impl core::fmt::Debug for I2S0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2S").finish()
+        f.debug_struct("I2S0").finish()
     }
 }
 #[doc = "I2S (Inter-IC Sound) Controller"]
-pub mod i2s;
+pub mod i2s0;
 #[doc = "Interrupt Core"]
 pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
@@ -2004,8 +2004,8 @@ pub struct Peripherals {
     pub HP_SYS: HP_SYS,
     #[doc = "I2C0"]
     pub I2C0: I2C0,
-    #[doc = "I2S"]
-    pub I2S: I2S,
+    #[doc = "I2S0"]
+    pub I2S0: I2S0,
     #[doc = "INTERRUPT_CORE0"]
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
@@ -2166,7 +2166,7 @@ impl Peripherals {
             I2C0: I2C0 {
                 _marker: PhantomData,
             },
-            I2S: I2S {
+            I2S0: I2S0 {
                 _marker: PhantomData,
             },
             INTERRUPT_CORE0: INTERRUPT_CORE0 {
