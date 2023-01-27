@@ -46,8 +46,8 @@ extern "C" {
     fn LP_APM_M1();
     fn ASSIST_DEBUG();
     fn TRACE();
-    fn GPIO_PRO();
-    fn GPIO_PRO_NMI();
+    fn GPIO();
+    fn GPIO_NMI();
     fn PAU();
     fn HP_APM_M0();
     fn HP_APM_M1();
@@ -64,11 +64,11 @@ extern "C" {
     fn USB();
     fn RMT();
     fn I2C_EXT0();
-    fn TG0_T0();
-    fn TG0_T1();
-    fn TG0_WDT();
-    fn TG1_T0();
-    fn TG1_T1();
+    fn TG0_T0_LEVEL();
+    fn TG0_T1_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_T1_LEVEL();
     fn TG1_WDT();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
@@ -142,10 +142,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: TRACE },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: GPIO_PRO },
-    Vector {
-        _handler: GPIO_PRO_NMI,
-    },
+    Vector { _handler: GPIO },
+    Vector { _handler: GPIO_NMI },
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -173,11 +171,21 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: USB },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
-    Vector { _handler: TG0_T0 },
-    Vector { _handler: TG0_T1 },
-    Vector { _handler: TG0_WDT },
-    Vector { _handler: TG1_T0 },
-    Vector { _handler: TG1_T1 },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T1_LEVEL,
+    },
     Vector { _handler: TG1_WDT },
     Vector {
         _handler: SYSTIMER_TARGET0,

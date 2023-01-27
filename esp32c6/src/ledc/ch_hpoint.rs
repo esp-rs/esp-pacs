@@ -34,24 +34,23 @@ impl From<crate::W<CH_HPOINT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `HPOINT_CH` reader - The output value changes to high when the selected timers has reached the value specified by this register."]
-pub type HPOINT_CH_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `HPOINT_CH` writer - The output value changes to high when the selected timers has reached the value specified by this register."]
-pub type HPOINT_CH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_HPOINT_SPEC, u32, u32, 20, O>;
+#[doc = "Field `HPOINT` reader - The output value changes to high when the selected timers has reached the value specified by this register."]
+pub type HPOINT_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `HPOINT` writer - The output value changes to high when the selected timers has reached the value specified by this register."]
+pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_HPOINT_SPEC, u32, u32, 20, O>;
 impl R {
     #[doc = "Bits 0:19 - The output value changes to high when the selected timers has reached the value specified by this register."]
     #[inline(always)]
-    pub fn hpoint_ch(&self) -> HPOINT_CH_R {
-        HPOINT_CH_R::new(self.bits & 0x000f_ffff)
+    pub fn hpoint(&self) -> HPOINT_R {
+        HPOINT_R::new(self.bits & 0x000f_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:19 - The output value changes to high when the selected timers has reached the value specified by this register."]
     #[inline(always)]
     #[must_use]
-    pub fn hpoint_ch(&mut self) -> HPOINT_CH_W<0> {
-        HPOINT_CH_W::new(self)
+    pub fn hpoint(&mut self) -> HPOINT_W<0> {
+        HPOINT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

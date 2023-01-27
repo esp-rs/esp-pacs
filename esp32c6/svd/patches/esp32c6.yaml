@@ -3,6 +3,26 @@ _svd: "../esp32c6.base.svd"
 TIMG0:
   "*":
     _strip: "T_"
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_T1:
+        name: TG0_T1_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+TIMG1:
+  "*":
+    _strip: "T_"
+  _modify:
+    _interrupts:
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_T1:
+        name: TG1_T1_LEVEL
+      TG0_WDT:
+        name: TG1_WDT_LEVEL
 
 PMU:
   _modify:
@@ -83,3 +103,70 @@ LP_I2C0:
         name: FIFO_CONF
   FIFO_CONF:
     _strip: "I2C_"
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_PRO:
+        name: GPIO
+      GPIO_PRO_NMI:
+        name: GPIO_NMI
+
+LEDC:
+  "*":
+    _strip_end: "_CH"
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+    _modify:
+      TICK_SEL_TIMER:
+        name: TICK_SEL
+      CLK_DIV_TIMER:
+        name: CLK_DIV
+
+RMT:
+  "*":
+    _strip_end: "_CH%s"
+  SYS_CONF:
+    _strip: "RMT_"
+  _modify:
+    _registers:
+      "TX_CH%sCONF0":
+        name: "CH%s_TX_CONF0"
+  "CH%s_TX_CONF0":
+    _strip_end: "_CH0"
+  "CH%s_TX_LIM":
+    _strip_end: "_CH0"
+
+  INT_CLR:
+    _modify:
+      RX_CH0_ERR_INT_CLR:
+        name: CH0_TX_ERR_INT_CLR
+      RX_CH1_ERR_INT_CLR:
+        name: CH1_TX_ERR_INT_CLR
+      RX_CH2_ERR_INT_CLR:
+        name: CH0_RX_ERR_INT_CLR
+      RX_CH3_ERR_INT_CLR:
+        name: CH1_RX_ERR_INT_CLR
+    _array:
+      "CH?_TX_THR_EVENT_INT_CLR":
+        name: "CH%s_TX_THR_EVENT_INT_CLR"
+      "CH?_RX_THR_EVENT_INT_CLR":
+        name: "CH%s_RX_THR_EVENT_INT_CLR"
+      "CH?_TX_END_INT_CLR":
+        name: "CH%s_TX_END_INT_CLR"
+      "CH?_RX_END_INT_CLR":
+        name: "CH%s_RX_END_INT_CLR"
+  INT_RAW:
+    _array:
+      "TX_CH?_ERR_INT_RAW":
+        name: "CH%s_TX_ERR_INT_RAW"
+      "CH?_TX_END_INT_RAW":
+        name: "CH%s_TX_END_INT_RAW"
+      "CH?_RX_END_INT_RAW":
+        name: "CH%s_RX_END_INT_RAW"
+      "CH?_TX_THR_EVENT_INT_RAW":
+        name: "CH%s_TX_THR_EVENT_INT_RAW"
+      "CH?_RX_THR_EVENT_INT_RAW":
+        name: "CH%s_RX_THR_EVENT_INT_RAW"
+      "CH?_TX_LOOP_INT_RAW":
+        name: "CH%s_TX_LOOP_INT_RAW"

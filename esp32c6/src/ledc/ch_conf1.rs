@@ -34,23 +34,23 @@ impl From<crate::W<CH_CONF1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DUTY_START_CH` reader - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_CH_R = crate::BitReader<bool>;
-#[doc = "Field `DUTY_START_CH` writer - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+#[doc = "Field `DUTY_START` reader - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
+pub type DUTY_START_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_START` writer - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
+pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
-    pub fn duty_start_ch(&self) -> DUTY_START_CH_R {
-        DUTY_START_CH_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn duty_start(&self) -> DUTY_START_R {
+        DUTY_START_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_start_ch(&mut self) -> DUTY_START_CH_W<31> {
-        DUTY_START_CH_W::new(self)
+    pub fn duty_start(&mut self) -> DUTY_START_W<31> {
+        DUTY_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
