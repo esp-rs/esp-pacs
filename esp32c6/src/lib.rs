@@ -46,8 +46,8 @@ extern "C" {
     fn LP_APM_M1();
     fn ASSIST_DEBUG();
     fn TRACE();
-    fn GPIO_PRO();
-    fn GPIO_PRO_NMI();
+    fn GPIO();
+    fn GPIO_NMI();
     fn PAU();
     fn HP_APM_M0();
     fn HP_APM_M1();
@@ -64,11 +64,11 @@ extern "C" {
     fn USB();
     fn RMT();
     fn I2C_EXT0();
-    fn TG0_T0();
-    fn TG0_T1();
-    fn TG0_WDT();
-    fn TG1_T0();
-    fn TG1_T1();
+    fn TG0_T0_LEVEL();
+    fn TG0_T1_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_T1_LEVEL();
     fn TG1_WDT();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
@@ -142,10 +142,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: TRACE },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: GPIO_PRO },
-    Vector {
-        _handler: GPIO_PRO_NMI,
-    },
+    Vector { _handler: GPIO },
+    Vector { _handler: GPIO_NMI },
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -173,11 +171,21 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: USB },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
-    Vector { _handler: TG0_T0 },
-    Vector { _handler: TG0_T1 },
-    Vector { _handler: TG0_WDT },
-    Vector { _handler: TG1_T0 },
-    Vector { _handler: TG1_T1 },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T1_LEVEL,
+    },
     Vector { _handler: TG1_WDT },
     Vector {
         _handler: SYSTIMER_TARGET0,
@@ -672,33 +680,33 @@ impl core::fmt::Debug for I2C0 {
 #[doc = "I2C (Inter-Integrated Circuit) Controller"]
 pub mod i2c0;
 #[doc = "I2S (Inter-IC Sound) Controller"]
-pub struct I2S0 {
+pub struct I2S {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for I2S0 {}
-impl I2S0 {
+unsafe impl Send for I2S {}
+impl I2S {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i2s0::RegisterBlock = 0x6000_c000 as *const _;
+    pub const PTR: *const i2s::RegisterBlock = 0x6000_c000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i2s0::RegisterBlock {
+    pub const fn ptr() -> *const i2s::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for I2S0 {
-    type Target = i2s0::RegisterBlock;
+impl Deref for I2S {
+    type Target = i2s::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for I2S0 {
+impl core::fmt::Debug for I2S {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2S0").finish()
+        f.debug_struct("I2S").finish()
     }
 }
 #[doc = "I2S (Inter-IC Sound) Controller"]
-pub mod i2s0;
+pub mod i2s;
 #[doc = "Interrupt Core"]
 pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
@@ -1996,8 +2004,8 @@ pub struct Peripherals {
     pub HP_SYS: HP_SYS,
     #[doc = "I2C0"]
     pub I2C0: I2C0,
-    #[doc = "I2S0"]
-    pub I2S0: I2S0,
+    #[doc = "I2S"]
+    pub I2S: I2S,
     #[doc = "INTERRUPT_CORE0"]
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
@@ -2158,7 +2166,7 @@ impl Peripherals {
             I2C0: I2C0 {
                 _marker: PhantomData,
             },
-            I2S0: I2S0 {
+            I2S: I2S {
                 _marker: PhantomData,
             },
             INTERRUPT_CORE0: INTERRUPT_CORE0 {
