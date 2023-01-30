@@ -7,22 +7,15 @@ use std::{
 };
 
 use anyhow::{Error, Result};
-use clap::Parser;
+use clap::{Parser, ValueEnum};
 use form::util::create_directory_structure;
 use log::{info, warn, LevelFilter};
-use strum::{Display, EnumIter, EnumString, EnumVariantNames, IntoEnumIterator, VariantNames};
+use strum::{Display, EnumIter, EnumString, IntoEnumIterator};
 use svd2rust::{generate::device::render, load_from, util::build_rs, Config, Target};
 use svdtools::patch::process_file;
 use toml::Value;
 
-macro_rules! clap_enum_variants {
-    ($e: ty) => {{
-        use clap::builder::{PossibleValuesParser, TypedValueParser};
-        PossibleValuesParser::new(<$e>::VARIANTS).map(|s| s.parse::<$e>().unwrap())
-    }};
-}
-
-#[derive(Debug, Clone, Display, EnumIter, EnumString, EnumVariantNames)]
+#[derive(Debug, Clone, Display, EnumIter, EnumString, ValueEnum)]
 #[strum(serialize_all = "lowercase")]
 enum Chip {
     Esp32,
@@ -36,15 +29,15 @@ enum Chip {
 }
 
 #[derive(Debug, Parser)]
-struct Opts {
+struct Cli {
     /// Chip(s) to target
-    #[clap(value_parser = clap_enum_variants!(Chip))]
+    #[clap(value_enum)]
     chips: Vec<Chip>,
     /// Only patch the SVD, do not generate or build the PAC
-    #[clap(long, conflicts_with = "generate_only")]
+    #[clap(short, long, conflicts_with = "generate_only")]
     patch_only: bool,
     /// Patch the SVD and generate the PAC, but do not build it
-    #[clap(long, conflicts_with = "patch_only")]
+    #[clap(short, long, conflicts_with = "patch_only")]
     generate_only: bool,
 }
 
@@ -53,7 +46,7 @@ fn main() -> Result<()> {
         .filter_module("xtask", LevelFilter::Info)
         .init();
 
-    let opts = Opts::parse();
+    let args = Cli::parse();
 
     // The directory containing the cargo manifest for the 'xtask' package is a
     // subdirectory within the cargo workspace.
@@ -62,8 +55,8 @@ fn main() -> Result<()> {
 
     // One or more chips can be specified as command-line arguments. If none are
     // provided then the task will be run for all chips.
-    let chips = if !opts.chips.is_empty() {
-        opts.chips.iter().map(|c| c.to_string()).collect::<Vec<_>>()
+    let chips = if !args.chips.is_empty() {
+        args.chips.iter().map(|c| c.to_string()).collect::<Vec<_>>()
     } else {
         Chip::iter().map(|c| c.to_string()).collect::<Vec<_>>()
     };
@@ -76,7 +69,8 @@ fn main() -> Result<()> {
         // additionally generate and format the PAC. If '--generate-only' has NOT been
         // set, clean and build the PAC crate.
         patch_svd(&chip, &path)?;
-        if !opts.patch_only {
+
+        if !args.patch_only {
             // Remove the src/ directory before we generate. If this fails we will assume
             // it's because the directory does not exist.
             if fs::remove_dir_all(&path.join("src")).is_err() {
@@ -85,7 +79,8 @@ fn main() -> Result<()> {
 
             generate_pac(&chip, &path)?;
             format(&path)?;
-            if !opts.generate_only {
+
+            if !args.generate_only {
                 clean(&path)?;
                 build(&path)?;
             }
@@ -99,13 +94,11 @@ fn main() -> Result<()> {
 
 fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
     let svd_path = path.join("svd");
-
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
     process_file(&yaml_file)?;
 
     let from = svd_path.join(format!("{chip}.base.svd.patched"));
     let to = svd_path.join(format!("{chip}.svd"));
-
     info!("applying patches to SVD file");
     fs::rename(from, to)?;
 
@@ -117,7 +110,11 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     info!("generating PAC from '{}'", svd_file.display());
 
     let config = Config {
-        target: get_svd2rust_target(path)?,
+        target: if get_build_target(path)?.contains("riscv") {
+            Target::RISCV
+        } else {
+            Target::XtensaLX
+        },
         output_dir: path.clone(),
         const_generic: true,
 
@@ -130,6 +127,12 @@ fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
     let mut device_x = String::new();
     let items = render(&device, &config, &mut device_x)?;
     let data = items.to_string();
+
+    // Here we will sneakily patch in our own logo for the documentation :)
+    let data = data.replace(
+        "# ! [no_std]",
+        "# ! [doc(html_logo_url = \"https://avatars.githubusercontent.com/u/46717278\")]\n# ! [no_std]",
+    );
 
     let mut file = File::create(path.join("lib.rs"))?;
     file.write_all(data.as_ref())?;
@@ -170,8 +173,8 @@ fn clean(path: &PathBuf) -> Result<()> {
 fn build(path: &PathBuf) -> Result<()> {
     let channel = get_release_channel(path)?;
     let target = get_build_target(path)?;
-    info!("building PAC using '{channel}' channel and targeting '{target}'");
 
+    info!("building PAC using '{channel}' channel and targeting '{target}'");
     Command::new("cargo")
         .args(&[
             &format!("+{channel}"),
@@ -201,14 +204,6 @@ fn get_build_target(path: &PathBuf) -> Result<String> {
     let target = extract_toml_value(&config_file, &["build", "target"])?;
 
     Ok(target)
-}
-
-fn get_svd2rust_target(path: &PathBuf) -> Result<Target> {
-    if get_build_target(path)?.contains("riscv") {
-        Ok(Target::RISCV)
-    } else {
-        Ok(Target::XtensaLX)
-    }
 }
 
 fn extract_toml_value(path: &PathBuf, keys: &[&str]) -> Result<String> {

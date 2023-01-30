@@ -44,9 +44,9 @@ Arguments:
   [CHIPS]...  Chip(s) to target [possible values: esp32, esp32c2, esp32c3, esp32c6, esp32h2, esp32s2, esp32s3, esp8266]
 
 Options:
-      --patch-only     Only patch the SVD, do not generate or build the PAC
-      --generate-only  Patch the SVD and generate the PAC, but do not build it
-  -h, --help           Print help information
+  -p, --patch-only     Only patch the SVD, do not generate or build the PAC
+  -g, --generate-only  Patch the SVD and generate the PAC, but do not build it
+  -h, --help           Print help
 ```
 
 For example, to generate a PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
