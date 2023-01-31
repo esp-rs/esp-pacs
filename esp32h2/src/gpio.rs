@@ -47,9 +47,9 @@ pub struct RegisterBlock {
     #[doc = "0x154..0x354 - GPIO input function configuration register"]
     pub func_in_sel_cfg: [FUNC_IN_SEL_CFG; 128],
     _reserved19: [u8; 0x0200],
-    #[doc = "0x554..0x5d4 - GPIO output function select register"]
-    pub func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 32],
-    _reserved20: [u8; 0x58],
+    #[doc = "0x554..0x5cc - GPIO output function select register"]
+    pub func_out_sel_cfg: [FUNC_OUT_SEL_CFG; 30],
+    _reserved20: [u8; 0x60],
     #[doc = "0x62c - GPIO clock gate register"]
     pub clock_gate: CLOCK_GATE,
     _reserved21: [u8; 0xcc],

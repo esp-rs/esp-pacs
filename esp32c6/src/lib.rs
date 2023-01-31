@@ -15,6 +15,7 @@
 #![deny(while_true)]
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![doc(html_logo_url = "https://avatars.githubusercontent.com/u/46717278")]
 #![no_std]
 use core::marker::PhantomData;
 use core::ops::Deref;
@@ -37,6 +38,7 @@ extern "C" {
     fn COEX();
     fn BLE_TIMER();
     fn BLE_SEC();
+    fn I2C_MASTER();
     fn PMU();
     fn EFUSE();
     fn LP_UART();
@@ -44,9 +46,15 @@ extern "C" {
     fn LP_PERI_TIMEOUT();
     fn LP_APM_M0();
     fn LP_APM_M1();
+    fn CPU_FROM_CPU_0();
+    fn CPU_FROM_CPU_1();
+    fn CPU_FROM_CPU_2();
+    fn CPU_FROM_CPU_3();
     fn ASSIST_DEBUG();
     fn TRACE();
-    fn GPIO();
+    fn CACHE();
+    fn CPU_PERI_TIMEOUT();
+    fn GPI();
     fn GPIO_NMI();
     fn PAU();
     fn HP_APM_M0();
@@ -54,6 +62,7 @@ extern "C" {
     fn HP_APM_M2();
     fn HP_APM_M3();
     fn LP_APM0();
+    fn MSPI();
     fn I2S1();
     fn UHCI0();
     fn UART0();
@@ -69,7 +78,7 @@ extern "C" {
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
     fn TG1_T1_LEVEL();
-    fn TG1_WDT();
+    fn TG1_WDT_LEVEL();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
@@ -77,6 +86,8 @@ extern "C" {
     fn PWM();
     fn PCNT();
     fn PARL_IO();
+    fn SLC0();
+    fn SLC1();
     fn DMA_IN_CH0();
     fn DMA_IN_CH1();
     fn DMA_IN_CH2();
@@ -115,7 +126,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
         _handler: BLE_TIMER,
     },
     Vector { _handler: BLE_SEC },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: I2C_MASTER,
+    },
     Vector { _reserved: 0 },
     Vector { _handler: PMU },
     Vector { _handler: EFUSE },
@@ -132,17 +145,27 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector {
         _handler: LP_APM_M1,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: CPU_FROM_CPU_0,
+    },
+    Vector {
+        _handler: CPU_FROM_CPU_1,
+    },
+    Vector {
+        _handler: CPU_FROM_CPU_2,
+    },
+    Vector {
+        _handler: CPU_FROM_CPU_3,
+    },
     Vector {
         _handler: ASSIST_DEBUG,
     },
     Vector { _handler: TRACE },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: GPIO },
+    Vector { _handler: CACHE },
+    Vector {
+        _handler: CPU_PERI_TIMEOUT,
+    },
+    Vector { _handler: GPI },
     Vector { _handler: GPIO_NMI },
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
@@ -160,7 +183,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
         _handler: HP_APM_M3,
     },
     Vector { _handler: LP_APM0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: MSPI },
     Vector { _handler: I2S1 },
     Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
@@ -186,7 +209,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector {
         _handler: TG1_T1_LEVEL,
     },
-    Vector { _handler: TG1_WDT },
+    Vector {
+        _handler: TG1_WDT_LEVEL,
+    },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },
@@ -202,8 +227,8 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _handler: PWM },
     Vector { _handler: PCNT },
     Vector { _handler: PARL_IO },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SLC0 },
+    Vector { _handler: SLC1 },
     Vector {
         _handler: DMA_IN_CH0,
     },

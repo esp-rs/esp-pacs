@@ -12,18 +12,18 @@ pub struct RegisterBlock {
     #[doc = "0x10 - Interrupt clear bits"]
     pub int_clr: INT_CLR,
     #[doc = "0x14 - Clock divider configuration"]
-    pub clkdiv_sync: CLKDIV_SYNC,
+    pub clkdiv: CLKDIV,
     #[doc = "0x18 - Rx Filter configuration"]
     pub rx_filt: RX_FILT,
     #[doc = "0x1c - UART status register"]
     pub status: STATUS,
     #[doc = "0x20 - a"]
-    pub conf0_sync: CONF0_SYNC,
+    pub conf0: CONF0,
     #[doc = "0x24 - Configuration register 1"]
     pub conf1: CONF1,
     _reserved10: [u8; 0x04],
     #[doc = "0x2c - Hardware flow-control configuration"]
-    pub hwfc_conf_sync: HWFC_CONF_SYNC,
+    pub hwfc_conf: HWFC_CONF,
     #[doc = "0x30 - UART sleep configure register 0"]
     pub sleep_conf0: SLEEP_CONF0,
     #[doc = "0x34 - UART sleep configure register 1"]
@@ -31,27 +31,27 @@ pub struct RegisterBlock {
     #[doc = "0x38 - UART sleep configure register 2"]
     pub sleep_conf2: SLEEP_CONF2,
     #[doc = "0x3c - Software flow-control character configuration"]
-    pub swfc_conf0_sync: SWFC_CONF0_SYNC,
+    pub swfc_conf0: SWFC_CONF0,
     #[doc = "0x40 - Software flow-control character configuration"]
     pub swfc_conf1: SWFC_CONF1,
     #[doc = "0x44 - Tx Break character configuration"]
-    pub txbrk_conf_sync: TXBRK_CONF_SYNC,
+    pub txbrk_conf: TXBRK_CONF,
     #[doc = "0x48 - Frame-end idle configuration"]
-    pub idle_conf_sync: IDLE_CONF_SYNC,
+    pub idle_conf: IDLE_CONF,
     #[doc = "0x4c - RS485 mode configuration"]
-    pub rs485_conf_sync: RS485_CONF_SYNC,
+    pub rs485_conf: RS485_CONF,
     #[doc = "0x50 - Pre-sequence timing configuration"]
-    pub at_cmd_precnt_sync: AT_CMD_PRECNT_SYNC,
+    pub at_cmd_precnt: AT_CMD_PRECNT,
     #[doc = "0x54 - Post-sequence timing configuration"]
-    pub at_cmd_postcnt_sync: AT_CMD_POSTCNT_SYNC,
+    pub at_cmd_postcnt: AT_CMD_POSTCNT,
     #[doc = "0x58 - Timeout configuration"]
-    pub at_cmd_gaptout_sync: AT_CMD_GAPTOUT_SYNC,
+    pub at_cmd_gaptout: AT_CMD_GAPTOUT,
     #[doc = "0x5c - AT escape sequence detection configuration"]
-    pub at_cmd_char_sync: AT_CMD_CHAR_SYNC,
+    pub at_cmd_char: AT_CMD_CHAR,
     #[doc = "0x60 - UART memory power configuration"]
     pub mem_conf: MEM_CONF,
     #[doc = "0x64 - UART threshold and allocation configuration"]
-    pub tout_conf_sync: TOUT_CONF_SYNC,
+    pub tout_conf: TOUT_CONF,
     #[doc = "0x68 - Tx-SRAM write and read offset address."]
     pub mem_tx_status: MEM_TX_STATUS,
     #[doc = "0x6c - Rx-SRAM write and read offset address."]
@@ -80,7 +80,7 @@ pub struct RegisterBlock {
     #[doc = "0x9c - UART ID register"]
     pub id: ID,
 }
-#[doc = "FIFO (r) register accessor: an alias for `Reg<FIFO_SPEC>`"]
+#[doc = "FIFO (rw) register accessor: an alias for `Reg<FIFO_SPEC>`"]
 pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
 #[doc = "FIFO data register"]
 pub mod fifo;
@@ -100,10 +100,10 @@ pub mod int_ena;
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
 pub mod int_clr;
-#[doc = "CLKDIV_SYNC (rw) register accessor: an alias for `Reg<CLKDIV_SYNC_SPEC>`"]
-pub type CLKDIV_SYNC = crate::Reg<clkdiv_sync::CLKDIV_SYNC_SPEC>;
+#[doc = "CLKDIV (rw) register accessor: an alias for `Reg<CLKDIV_SPEC>`"]
+pub type CLKDIV = crate::Reg<clkdiv::CLKDIV_SPEC>;
 #[doc = "Clock divider configuration"]
-pub mod clkdiv_sync;
+pub mod clkdiv;
 #[doc = "RX_FILT (rw) register accessor: an alias for `Reg<RX_FILT_SPEC>`"]
 pub type RX_FILT = crate::Reg<rx_filt::RX_FILT_SPEC>;
 #[doc = "Rx Filter configuration"]
@@ -112,18 +112,18 @@ pub mod rx_filt;
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "UART status register"]
 pub mod status;
-#[doc = "CONF0_SYNC (rw) register accessor: an alias for `Reg<CONF0_SYNC_SPEC>`"]
-pub type CONF0_SYNC = crate::Reg<conf0_sync::CONF0_SYNC_SPEC>;
+#[doc = "CONF0 (rw) register accessor: an alias for `Reg<CONF0_SPEC>`"]
+pub type CONF0 = crate::Reg<conf0::CONF0_SPEC>;
 #[doc = "a"]
-pub mod conf0_sync;
+pub mod conf0;
 #[doc = "CONF1 (rw) register accessor: an alias for `Reg<CONF1_SPEC>`"]
 pub type CONF1 = crate::Reg<conf1::CONF1_SPEC>;
 #[doc = "Configuration register 1"]
 pub mod conf1;
-#[doc = "HWFC_CONF_SYNC (rw) register accessor: an alias for `Reg<HWFC_CONF_SYNC_SPEC>`"]
-pub type HWFC_CONF_SYNC = crate::Reg<hwfc_conf_sync::HWFC_CONF_SYNC_SPEC>;
+#[doc = "HWFC_CONF (rw) register accessor: an alias for `Reg<HWFC_CONF_SPEC>`"]
+pub type HWFC_CONF = crate::Reg<hwfc_conf::HWFC_CONF_SPEC>;
 #[doc = "Hardware flow-control configuration"]
-pub mod hwfc_conf_sync;
+pub mod hwfc_conf;
 #[doc = "SLEEP_CONF0 (rw) register accessor: an alias for `Reg<SLEEP_CONF0_SPEC>`"]
 pub type SLEEP_CONF0 = crate::Reg<sleep_conf0::SLEEP_CONF0_SPEC>;
 #[doc = "UART sleep configure register 0"]
@@ -136,50 +136,50 @@ pub mod sleep_conf1;
 pub type SLEEP_CONF2 = crate::Reg<sleep_conf2::SLEEP_CONF2_SPEC>;
 #[doc = "UART sleep configure register 2"]
 pub mod sleep_conf2;
-#[doc = "SWFC_CONF0_SYNC (rw) register accessor: an alias for `Reg<SWFC_CONF0_SYNC_SPEC>`"]
-pub type SWFC_CONF0_SYNC = crate::Reg<swfc_conf0_sync::SWFC_CONF0_SYNC_SPEC>;
+#[doc = "SWFC_CONF0 (rw) register accessor: an alias for `Reg<SWFC_CONF0_SPEC>`"]
+pub type SWFC_CONF0 = crate::Reg<swfc_conf0::SWFC_CONF0_SPEC>;
 #[doc = "Software flow-control character configuration"]
-pub mod swfc_conf0_sync;
+pub mod swfc_conf0;
 #[doc = "SWFC_CONF1 (rw) register accessor: an alias for `Reg<SWFC_CONF1_SPEC>`"]
 pub type SWFC_CONF1 = crate::Reg<swfc_conf1::SWFC_CONF1_SPEC>;
 #[doc = "Software flow-control character configuration"]
 pub mod swfc_conf1;
-#[doc = "TXBRK_CONF_SYNC (rw) register accessor: an alias for `Reg<TXBRK_CONF_SYNC_SPEC>`"]
-pub type TXBRK_CONF_SYNC = crate::Reg<txbrk_conf_sync::TXBRK_CONF_SYNC_SPEC>;
+#[doc = "TXBRK_CONF (rw) register accessor: an alias for `Reg<TXBRK_CONF_SPEC>`"]
+pub type TXBRK_CONF = crate::Reg<txbrk_conf::TXBRK_CONF_SPEC>;
 #[doc = "Tx Break character configuration"]
-pub mod txbrk_conf_sync;
-#[doc = "IDLE_CONF_SYNC (rw) register accessor: an alias for `Reg<IDLE_CONF_SYNC_SPEC>`"]
-pub type IDLE_CONF_SYNC = crate::Reg<idle_conf_sync::IDLE_CONF_SYNC_SPEC>;
+pub mod txbrk_conf;
+#[doc = "IDLE_CONF (rw) register accessor: an alias for `Reg<IDLE_CONF_SPEC>`"]
+pub type IDLE_CONF = crate::Reg<idle_conf::IDLE_CONF_SPEC>;
 #[doc = "Frame-end idle configuration"]
-pub mod idle_conf_sync;
-#[doc = "RS485_CONF_SYNC (rw) register accessor: an alias for `Reg<RS485_CONF_SYNC_SPEC>`"]
-pub type RS485_CONF_SYNC = crate::Reg<rs485_conf_sync::RS485_CONF_SYNC_SPEC>;
+pub mod idle_conf;
+#[doc = "RS485_CONF (rw) register accessor: an alias for `Reg<RS485_CONF_SPEC>`"]
+pub type RS485_CONF = crate::Reg<rs485_conf::RS485_CONF_SPEC>;
 #[doc = "RS485 mode configuration"]
-pub mod rs485_conf_sync;
-#[doc = "AT_CMD_PRECNT_SYNC (rw) register accessor: an alias for `Reg<AT_CMD_PRECNT_SYNC_SPEC>`"]
-pub type AT_CMD_PRECNT_SYNC = crate::Reg<at_cmd_precnt_sync::AT_CMD_PRECNT_SYNC_SPEC>;
+pub mod rs485_conf;
+#[doc = "AT_CMD_PRECNT (rw) register accessor: an alias for `Reg<AT_CMD_PRECNT_SPEC>`"]
+pub type AT_CMD_PRECNT = crate::Reg<at_cmd_precnt::AT_CMD_PRECNT_SPEC>;
 #[doc = "Pre-sequence timing configuration"]
-pub mod at_cmd_precnt_sync;
-#[doc = "AT_CMD_POSTCNT_SYNC (rw) register accessor: an alias for `Reg<AT_CMD_POSTCNT_SYNC_SPEC>`"]
-pub type AT_CMD_POSTCNT_SYNC = crate::Reg<at_cmd_postcnt_sync::AT_CMD_POSTCNT_SYNC_SPEC>;
+pub mod at_cmd_precnt;
+#[doc = "AT_CMD_POSTCNT (rw) register accessor: an alias for `Reg<AT_CMD_POSTCNT_SPEC>`"]
+pub type AT_CMD_POSTCNT = crate::Reg<at_cmd_postcnt::AT_CMD_POSTCNT_SPEC>;
 #[doc = "Post-sequence timing configuration"]
-pub mod at_cmd_postcnt_sync;
-#[doc = "AT_CMD_GAPTOUT_SYNC (rw) register accessor: an alias for `Reg<AT_CMD_GAPTOUT_SYNC_SPEC>`"]
-pub type AT_CMD_GAPTOUT_SYNC = crate::Reg<at_cmd_gaptout_sync::AT_CMD_GAPTOUT_SYNC_SPEC>;
+pub mod at_cmd_postcnt;
+#[doc = "AT_CMD_GAPTOUT (rw) register accessor: an alias for `Reg<AT_CMD_GAPTOUT_SPEC>`"]
+pub type AT_CMD_GAPTOUT = crate::Reg<at_cmd_gaptout::AT_CMD_GAPTOUT_SPEC>;
 #[doc = "Timeout configuration"]
-pub mod at_cmd_gaptout_sync;
-#[doc = "AT_CMD_CHAR_SYNC (rw) register accessor: an alias for `Reg<AT_CMD_CHAR_SYNC_SPEC>`"]
-pub type AT_CMD_CHAR_SYNC = crate::Reg<at_cmd_char_sync::AT_CMD_CHAR_SYNC_SPEC>;
+pub mod at_cmd_gaptout;
+#[doc = "AT_CMD_CHAR (rw) register accessor: an alias for `Reg<AT_CMD_CHAR_SPEC>`"]
+pub type AT_CMD_CHAR = crate::Reg<at_cmd_char::AT_CMD_CHAR_SPEC>;
 #[doc = "AT escape sequence detection configuration"]
-pub mod at_cmd_char_sync;
+pub mod at_cmd_char;
 #[doc = "MEM_CONF (rw) register accessor: an alias for `Reg<MEM_CONF_SPEC>`"]
 pub type MEM_CONF = crate::Reg<mem_conf::MEM_CONF_SPEC>;
 #[doc = "UART memory power configuration"]
 pub mod mem_conf;
-#[doc = "TOUT_CONF_SYNC (rw) register accessor: an alias for `Reg<TOUT_CONF_SYNC_SPEC>`"]
-pub type TOUT_CONF_SYNC = crate::Reg<tout_conf_sync::TOUT_CONF_SYNC_SPEC>;
+#[doc = "TOUT_CONF (rw) register accessor: an alias for `Reg<TOUT_CONF_SPEC>`"]
+pub type TOUT_CONF = crate::Reg<tout_conf::TOUT_CONF_SPEC>;
 #[doc = "UART threshold and allocation configuration"]
-pub mod tout_conf_sync;
+pub mod tout_conf;
 #[doc = "MEM_TX_STATUS (r) register accessor: an alias for `Reg<MEM_TX_STATUS_SPEC>`"]
 pub type MEM_TX_STATUS = crate::Reg<mem_tx_status::MEM_TX_STATUS_SPEC>;
 #[doc = "Tx-SRAM write and read offset address."]
