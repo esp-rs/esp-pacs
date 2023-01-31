@@ -4,8 +4,8 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-H2</name>
   <series>ESP32 H-Series</series>
-  <version>2</version>
-  <description>32-bit RISC-V MCU &amp; IEEE 802.15.4 &amp; Bluetooth 5 (LE)</description>
+  <version>3</version>
+  <description>32-bit RISC-V MCU &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
 
@@ -47,7 +47,7 @@
       </addressBlock>
       <interrupt>
         <name>AES</name>
-        <value>48</value>
+        <value>60</value>
       </interrupt>
       <registers>
         <register>
@@ -562,7 +562,7 @@
       </addressBlock>
       <interrupt>
         <name>APB_ADC</name>
-        <value>43</value>
+        <value>48</value>
       </interrupt>
       <registers>
         <register>
@@ -1549,6 +1549,10 @@
         <size>0x80</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>ASSIST_DEBUG</name>
+        <value>11</value>
+      </interrupt>
       <registers>
         <register>
           <name>C0RE_0_INTR_ENA</name>
@@ -2428,12 +2432,28 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>DMA_CH0</name>
-        <value>44</value>
+        <name>DMA_IN_CH0</name>
+        <value>53</value>
       </interrupt>
       <interrupt>
-        <name>DMA_CH1</name>
-        <value>45</value>
+        <name>DMA_IN_CH1</name>
+        <value>54</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_IN_CH2</name>
+        <value>55</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH0</name>
+        <value>56</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH1</name>
+        <value>57</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA_OUT_CH2</name>
+        <value>58</value>
       </interrupt>
       <registers>
         <register>
@@ -2445,49 +2465,49 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH_INT_RAW</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH_INT_RAW</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0 the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH_INT_RAW</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals this raw interrupt is reserved.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH_INT_RAW</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting inlink descriptor error including owner error and the second and third word error of inlink descriptor for Rx channel 0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH_INT_RAW</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed but there is no more inlink for Rx channel 0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH_INT_RAW</name>
+              <name>INFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH_INT_RAW</name>
+              <name>INFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2622,49 +2642,49 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH_INT_CLR</name>
+              <name>IN_DONE</name>
               <description>Set this bit to clear the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH_INT_CLR</name>
+              <name>IN_SUC_EOF</name>
               <description>Set this bit to clear the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH_INT_CLR</name>
+              <name>IN_ERR_EOF</name>
               <description>Set this bit to clear the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH_INT_CLR</name>
+              <name>IN_DSCR_ERR</name>
               <description>Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH_INT_CLR</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH_INT_CLR</name>
+              <name>INFIFO_OVF</name>
               <description>Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH_INT_CLR</name>
+              <name>INFIFO_UDF</name>
               <description>Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2681,42 +2701,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_DONE_CH_INT_RAW</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH_INT_RAW</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH_INT_RAW</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting outlink descriptor error including owner error and the second and third word error of outlink descriptor for Tx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH_INT_RAW</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH_INT_RAW</name>
+              <name>OUTFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH_INT_RAW</name>
+              <name>OUTFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2837,42 +2857,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_DONE_CH_INT_CLR</name>
+              <name>OUT_DONE</name>
               <description>Set this bit to clear the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH_INT_CLR</name>
+              <name>OUT_EOF</name>
               <description>Set this bit to clear the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH_INT_CLR</name>
+              <name>OUT_DSCR_ERR</name>
               <description>Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH_INT_CLR</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH_INT_CLR</name>
+              <name>OUTFIFO_OVF</name>
               <description>Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH_INT_CLR</name>
+              <name>OUTFIFO_UDF</name>
               <description>Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2956,42 +2976,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_RST_CH</name>
+              <name>IN_RST</name>
               <description>This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_LOOP_TEST_CH</name>
+              <name>IN_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INDSCR_BURST_EN_CH</name>
+              <name>INDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DATA_BURST_EN_CH</name>
+              <name>IN_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>MEM_TRANS_EN_CH</name>
+              <name>MEM_TRANS_EN</name>
               <description>Set this bit 1 to enable automatic transmitting data from memory to memory via DMA.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ETM_EN_CH</name>
+              <name>IN_ETM_EN</name>
               <description>Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3008,7 +3028,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_CHECK_OWNER_CH</name>
+              <name>IN_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3026,56 +3046,56 @@
           <resetValue>0x07800003</resetValue>
           <fields>
             <field>
-              <name>INFIFO_FULL_CH</name>
+              <name>INFIFO_FULL</name>
               <description>L1 Rx FIFO full signal for Rx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_EMPTY_CH</name>
+              <name>INFIFO_EMPTY</name>
               <description>L1 Rx FIFO empty signal for Rx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_CNT_CH</name>
+              <name>INFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Rx FIFO for Rx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_1B_CH</name>
+              <name>IN_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_2B_CH</name>
+              <name>IN_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_3B_CH</name>
+              <name>IN_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_REMAIN_UNDER_4B_CH</name>
+              <name>IN_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_BUF_HUNGRY_CH</name>
+              <name>IN_BUF_HUNGRY</name>
               <description>reserved</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3093,14 +3113,14 @@
           <resetValue>0x00000800</resetValue>
           <fields>
             <field>
-              <name>INFIFO_RDATA_CH</name>
+              <name>INFIFO_RDATA</name>
               <description>This register stores the data popping from DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>12</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_POP_CH</name>
+              <name>INFIFO_POP</name>
               <description>Set this bit to pop data from DMA FIFO.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3118,42 +3138,42 @@
           <resetValue>0x01100000</resetValue>
           <fields>
             <field>
-              <name>INLINK_ADDR_CH</name>
+              <name>INLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_AUTO_RET_CH</name>
+              <name>INLINK_AUTO_RET</name>
               <description>Set this bit to return to current inlink descriptor's address when there are some errors in current receiving data.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INLINK_STOP_CH</name>
+              <name>INLINK_STOP</name>
               <description>Set this bit to stop dealing with the inlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INLINK_START_CH</name>
+              <name>INLINK_START</name>
               <description>Set this bit to start dealing with the inlink descriptors.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INLINK_RESTART_CH</name>
+              <name>INLINK_RESTART</name>
               <description>Set this bit to mount a new inlink descriptor.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>INLINK_PARK_CH</name>
+              <name>INLINK_PARK</name>
               <description>1: the inlink descriptor's FSM is in idle state.  0: the inlink descriptor's FSM is working.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3170,21 +3190,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_ADDR_CH</name>
+              <name>INLINK_DSCR_ADDR</name>
               <description>This register stores the current inlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_STATE_CH</name>
+              <name>IN_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_STATE_CH</name>
+              <name>IN_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -3201,7 +3221,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_SUC_EOF_DES_ADDR_CH</name>
+              <name>IN_SUC_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3218,7 +3238,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_ERR_EOF_DES_ADDR_CH</name>
+              <name>IN_ERR_EOF_DES_ADDR</name>
               <description>This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3235,7 +3255,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_CH</name>
+              <name>INLINK_DSCR</name>
               <description>The address of the current inlink descriptor x.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3252,7 +3272,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF0_CH</name>
+              <name>INLINK_DSCR_BF0</name>
               <description>The address of the last inlink descriptor x-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3269,7 +3289,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>INLINK_DSCR_BF1_CH</name>
+              <name>INLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3286,7 +3306,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>RX_PRI_CH</name>
+              <name>RX_PRI</name>
               <description>The priority of Rx channel 0. The larger of the value the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -3304,7 +3324,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_IN_SEL_CH</name>
+              <name>PERI_IN_SEL</name>
               <description>This register is used to select peripheral for Rx channel 0. 0:SPI2. 1: Dummy. 2: UHCI0. 3: I2S0. 4: Dummy. 5: Dummy. 6: AES. 7: SHA. 8: ADC_DAC. 9: Parallel_IO. 10~15: Dummy</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -3321,7 +3341,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_CHECK_OWNER_CH</name>
+              <name>OUT_CHECK_OWNER</name>
               <description>Set this bit to enable checking the owner attribute of the link descriptor.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3339,49 +3359,49 @@
           <resetValue>0x07800002</resetValue>
           <fields>
             <field>
-              <name>OUTFIFO_FULL_CH</name>
+              <name>OUTFIFO_FULL</name>
               <description>L1 Tx FIFO full signal for Tx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_EMPTY_CH</name>
+              <name>OUTFIFO_EMPTY</name>
               <description>L1 Tx FIFO empty signal for Tx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_CNT_CH</name>
+              <name>OUTFIFO_CNT</name>
               <description>The register stores the byte number of the data in L1 Tx FIFO for Tx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_1B_CH</name>
+              <name>OUT_REMAIN_UNDER_1B</name>
               <description>reserved</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_2B_CH</name>
+              <name>OUT_REMAIN_UNDER_2B</name>
               <description>reserved</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_3B_CH</name>
+              <name>OUT_REMAIN_UNDER_3B</name>
               <description>reserved</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_REMAIN_UNDER_4B_CH</name>
+              <name>OUT_REMAIN_UNDER_4B</name>
               <description>reserved</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3398,14 +3418,14 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTFIFO_WDATA_CH</name>
+              <name>OUTFIFO_WDATA</name>
               <description>This register stores the data that need to be pushed into DMA FIFO.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_PUSH_CH</name>
+              <name>OUTFIFO_PUSH</name>
               <description>Set this bit to push data into DMA FIFO.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3423,35 +3443,35 @@
           <resetValue>0x00800000</resetValue>
           <fields>
             <field>
-              <name>OUTLINK_ADDR_CH</name>
+              <name>OUTLINK_ADDR</name>
               <description>This register stores the 20 least significant bits of the first outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>20</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTLINK_STOP_CH</name>
+              <name>OUTLINK_STOP</name>
               <description>Set this bit to stop dealing with the outlink descriptors.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTLINK_START_CH</name>
+              <name>OUTLINK_START</name>
               <description>Set this bit to start dealing with the outlink descriptors.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTLINK_RESTART_CH</name>
+              <name>OUTLINK_RESTART</name>
               <description>Set this bit to restart a new outlink from the last address.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>OUTLINK_PARK_CH</name>
+              <name>OUTLINK_PARK</name>
               <description>1: the outlink descriptor's FSM is in idle state.  0: the outlink descriptor's FSM is working.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3468,21 +3488,21 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_ADDR_CH</name>
+              <name>OUTLINK_DSCR_ADDR</name>
               <description>This register stores the current outlink descriptor's address.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>18</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_STATE_CH</name>
+              <name>OUT_DSCR_STATE</name>
               <description>reserved</description>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_STATE_CH</name>
+              <name>OUT_STATE</name>
               <description>reserved</description>
               <bitOffset>20</bitOffset>
               <bitWidth>3</bitWidth>
@@ -3499,7 +3519,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_DES_ADDR_CH</name>
+              <name>OUT_EOF_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3516,7 +3536,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_EOF_BFR_DES_ADDR_CH</name>
+              <name>OUT_EOF_BFR_DES_ADDR</name>
               <description>This register stores the address of the outlink descriptor before the last outlink descriptor.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3533,7 +3553,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_CH</name>
+              <name>OUTLINK_DSCR</name>
               <description>The address of the current outlink descriptor y.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3550,7 +3570,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF0_CH</name>
+              <name>OUTLINK_DSCR_BF0</name>
               <description>The address of the last outlink descriptor y-1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3567,7 +3587,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUTLINK_DSCR_BF1_CH</name>
+              <name>OUTLINK_DSCR_BF1</name>
               <description>The address of the second-to-last inlink descriptor x-2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -3584,7 +3604,7 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_PRI_CH</name>
+              <name>TX_PRI</name>
               <description>The priority of Tx channel 0. The larger of the value the higher of the priority.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
@@ -3602,7 +3622,7 @@
           <resetValue>0x0000003F</resetValue>
           <fields>
             <field>
-              <name>PERI_OUT_SEL_CH</name>
+              <name>PERI_OUT_SEL</name>
               <description>This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: Dummy. 2: UHCI0. 3: I2S0. 4: Dummy. 5: Dummy. 6: AES. 7: SHA. 8: ADC_DAC. 9: Parallel_IO. 10~15: Dummy</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
@@ -3611,7 +3631,7 @@
           </fields>
         </register>
         <register>
-          <dim>2</dim>
+          <dim>3</dim>
           <dimIncrement>0xC0</dimIncrement>
           <name>OUT_CONF0_CH%s</name>
           <description>Configure 0 register of Tx channel 1</description>
@@ -3620,49 +3640,49 @@
           <resetValue>0x00000008</resetValue>
           <fields>
             <field>
-              <name>OUT_RST_CH</name>
+              <name>OUT_RST</name>
               <description>This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_LOOP_TEST_CH</name>
+              <name>OUT_LOOP_TEST</name>
               <description>reserved</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_AUTO_WRBACK_CH</name>
+              <name>OUT_AUTO_WRBACK</name>
               <description>Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_MODE_CH</name>
+              <name>OUT_EOF_MODE</name>
               <description>EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTDSCR_BURST_EN_CH</name>
+              <name>OUTDSCR_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DATA_BURST_EN_CH</name>
+              <name>OUT_DATA_BURST_EN</name>
               <description>Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_ETM_EN_CH</name>
+              <name>OUT_ETM_EN</name>
               <description>Set this bit to 1 to enable etm control mode, dma Tx channel 1 is triggered by etm task.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -3864,6 +3884,10 @@
         <size>0x78</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>ECC</name>
+        <value>63</value>
+      </interrupt>
       <registers>
         <register>
           <name>MULT_INT_RAW</name>
@@ -4051,7 +4075,7 @@
       </addressBlock>
       <interrupt>
         <name>EFUSE</name>
-        <value>24</value>
+        <value>1</value>
       </interrupt>
       <registers>
         <register>
@@ -6845,11 +6869,11 @@
       </addressBlock>
       <interrupt>
         <name>GPIO</name>
-        <value>16</value>
+        <value>22</value>
       </interrupt>
       <interrupt>
         <name>GPIO_NMI</name>
-        <value>17</value>
+        <value>23</value>
       </interrupt>
       <registers>
         <register>
@@ -7200,7 +7224,7 @@
           </fields>
         </register>
         <register>
-          <dim>32</dim>
+          <dim>30</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>FUNC%s_OUT_SEL_CFG</name>
           <description>GPIO output function select register</description>
@@ -10008,12 +10032,8 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2C</name>
-        <value>11</value>
-      </interrupt>
-      <interrupt>
         <name>I2C_EXT0</name>
-        <value>29</value>
+        <value>39</value>
       </interrupt>
       <registers>
         <register>
@@ -10393,7 +10413,7 @@ clock cycles.</description>
               <description>The value of rx FIFO read data.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -11179,7 +11199,7 @@ in I2C module clock cycles, the I2C controller will ignore that pulse.</descript
           <size>0x20</size>
           <fields>
             <field>
-              <name>COMMAND0</name>
+              <name>COMMAND</name>
               <description>This is the content of command 0. It consists of three parts: 
 op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END.
 Byte_num represents the number of bytes that need to be sent or received.
@@ -11190,7 +11210,7 @@ Information.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>COMMAND0_DONE</name>
+              <name>COMMAND_DONE</name>
               <description>When command 0 is done in I2C Master mode, this bit changes to high
 level.</description>
               <bitOffset>31</bitOffset>
@@ -11362,6 +11382,10 @@ level.</description>
       <name>I2C1</name>
       <description>I2C (Inter-Integrated Circuit) Controller</description>
       <baseAddress>0x60005000</baseAddress>
+      <interrupt>
+        <name>I2C_EXT1</name>
+        <value>40</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>I2S0</name>
@@ -11375,7 +11399,7 @@ level.</description>
       </addressBlock>
       <interrupt>
         <name>I2S1</name>
-        <value>20</value>
+        <value>31</value>
       </interrupt>
       <registers>
         <register>
@@ -12671,48 +12695,24 @@ level.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>WIFI_MAC</name>
-        <value>0</value>
-      </interrupt>
-      <interrupt>
-        <name>WIFI_NMI</name>
-        <value>1</value>
-      </interrupt>
-      <interrupt>
-        <name>WIFI_PWR</name>
-        <value>2</value>
-      </interrupt>
-      <interrupt>
-        <name>WIFI_BB</name>
-        <value>3</value>
+        <name>CPU_PERI_TIMEOUT</name>
+        <value>14</value>
       </interrupt>
       <interrupt>
         <name>BT_MAC</name>
-        <value>4</value>
+        <value>15</value>
       </interrupt>
       <interrupt>
         <name>BT_BB</name>
-        <value>5</value>
+        <value>16</value>
       </interrupt>
       <interrupt>
         <name>BT_BB_NMI</name>
-        <value>6</value>
+        <value>17</value>
       </interrupt>
       <interrupt>
-        <name>RWBT</name>
-        <value>7</value>
-      </interrupt>
-      <interrupt>
-        <name>RWBLE</name>
-        <value>8</value>
-      </interrupt>
-      <interrupt>
-        <name>RWBT_NMI</name>
-        <value>9</value>
-      </interrupt>
-      <interrupt>
-        <name>RWBLE_NMI</name>
-        <value>10</value>
+        <name>COEX</name>
+        <value>18</value>
       </interrupt>
       <registers>
         <register>
@@ -13691,13 +13691,13 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INT_STATUS_REG_0</name>
+          <name>INTR_STATUS_REG_0</name>
           <description>register description</description>
           <addressOffset>0x104</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>INT_STATUS_0</name>
+              <name>INTR_STATUS_0</name>
               <description>Status register for interrupt sources 0~31 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -13706,13 +13706,13 @@ level.</description>
           </fields>
         </register>
         <register>
-          <name>INT_STATUS_REG_1</name>
+          <name>INTR_STATUS_REG_1</name>
           <description>register description</description>
           <addressOffset>0x108</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
-              <name>INT_STATUS_1</name>
+              <name>INTR_STATUS_1</name>
               <description>Status register for interrupt sources 32~63 mapping register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -13763,6 +13763,719 @@ level.</description>
               <description>Version control register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>INTPRI</name>
+      <description>Peripheral INTPRI</description>
+      <groupName>INTPRI</groupName>
+      <baseAddress>0x600C5000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0xB8</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CPU_INT_ENABLE</name>
+          <description>register description</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INT_ENABLE</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_TYPE</name>
+          <description>register description</description>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INT_TYPE</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_EIP_STATUS</name>
+          <description>register description</description>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INT_EIP_STATUS</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_0</name>
+          <description>register description</description>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_0_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_1</name>
+          <description>register description</description>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_1_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_2</name>
+          <description>register description</description>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_2_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_3</name>
+          <description>register description</description>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_3_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_4</name>
+          <description>register description</description>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_4_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_5</name>
+          <description>register description</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_5_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_6</name>
+          <description>register description</description>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_6_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_7</name>
+          <description>register description</description>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_7_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_8</name>
+          <description>register description</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_8_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_9</name>
+          <description>register description</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_9_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_10</name>
+          <description>register description</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_10_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_11</name>
+          <description>register description</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_11_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_12</name>
+          <description>register description</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_12_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_13</name>
+          <description>register description</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_13_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_14</name>
+          <description>register description</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_14_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_15</name>
+          <description>register description</description>
+          <addressOffset>0x48</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_15_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_16</name>
+          <description>register description</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_16_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_17</name>
+          <description>register description</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_17_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_18</name>
+          <description>register description</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_18_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_19</name>
+          <description>register description</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_19_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_20</name>
+          <description>register description</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_20_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_21</name>
+          <description>register description</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_21_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_22</name>
+          <description>register description</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_22_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_23</name>
+          <description>register description</description>
+          <addressOffset>0x68</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_23_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_24</name>
+          <description>register description</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_24_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_25</name>
+          <description>register description</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_25_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_26</name>
+          <description>register description</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_26_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_27</name>
+          <description>register description</description>
+          <addressOffset>0x78</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_27_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_28</name>
+          <description>register description</description>
+          <addressOffset>0x7C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_28_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_29</name>
+          <description>register description</description>
+          <addressOffset>0x80</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_29_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_30</name>
+          <description>register description</description>
+          <addressOffset>0x84</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_30_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_PRI_31</name>
+          <description>register description</description>
+          <addressOffset>0x88</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_PRI_31_MAP</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_THRESH</name>
+          <description>register description</description>
+          <addressOffset>0x8C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INT_THRESH</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_0</name>
+          <description>register description</description>
+          <addressOffset>0x90</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_0</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_1</name>
+          <description>register description</description>
+          <addressOffset>0x94</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_1</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_2</name>
+          <description>register description</description>
+          <addressOffset>0x98</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_2</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_3</name>
+          <description>register description</description>
+          <addressOffset>0x9C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_3</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <description>register description</description>
+          <addressOffset>0xA0</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x02201090</resetValue>
+          <fields>
+            <field>
+              <name>DATE</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLOCK_GATE</name>
+          <description>register description</description>
+          <addressOffset>0xA4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000001</resetValue>
+          <fields>
+            <field>
+              <name>CLK_EN</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INT_CLEAR</name>
+          <description>register description</description>
+          <addressOffset>0xA8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CPU_INT_CLEAR</name>
+              <description>Need add description</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RND_ECO</name>
+          <description>redcy eco register.</description>
+          <addressOffset>0xAC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>REDCY_ENA</name>
+              <description>Only reserved for ECO.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>REDCY_RESULT</name>
+              <description>Only reserved for ECO.</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RND_ECO_LOW</name>
+          <description>redcy eco low register.</description>
+          <addressOffset>0xB0</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>REDCY_LOW</name>
+              <description>Only reserved for ECO.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RND_ECO_HIGH</name>
+          <description>redcy eco high register.</description>
+          <addressOffset>0x3FC</addressOffset>
+          <size>0x20</size>
+          <resetValue>0xFFFFFFFF</resetValue>
+          <fields>
+            <field>
+              <name>REDCY_HIGH</name>
+              <description>Only reserved for ECO.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -13964,15 +14677,7 @@ level.</description>
       </addressBlock>
       <interrupt>
         <name>LEDC</name>
-        <value>23</value>
-      </interrupt>
-      <interrupt>
-        <name>TIMER1</name>
-        <value>30</value>
-      </interrupt>
-      <interrupt>
-        <name>TIMER2</name>
-        <value>31</value>
+        <value>35</value>
       </interrupt>
       <registers>
         <register>
@@ -15454,6 +16159,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x30</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_PERI_TIMEOUT</name>
+        <value>5</value>
+      </interrupt>
       <registers>
         <register>
           <name>CLK_EN</name>
@@ -16886,6 +17595,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x3C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_APM_M0</name>
+        <value>6</value>
+      </interrupt>
       <registers>
         <register>
           <name>REGION_FILTER_EN</name>
@@ -17726,6 +18439,14 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x34</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_RTC_TIMER</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_BLE_TIMER</name>
+        <value>3</value>
+      </interrupt>
       <registers>
         <register>
           <name>TAR0_LOW</name>
@@ -17998,6 +18719,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x3C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_WDT</name>
+        <value>4</value>
+      </interrupt>
       <registers>
         <register>
           <name>CONFIG0</name>
@@ -24803,6 +25528,14 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x54</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PARL_IO_TX</name>
+        <value>51</value>
+      </interrupt>
+      <interrupt>
+        <name>PARL_IO_RX</name>
+        <value>52</value>
+      </interrupt>
       <registers>
         <register>
           <name>RX_MODE_CFG</name>
@@ -25335,6 +26068,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x4C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PAU</name>
+        <value>24</value>
+      </interrupt>
       <registers>
         <register>
           <name>REGDMA_CONF</name>
@@ -25748,6 +26485,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x68</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PCNT</name>
+        <value>50</value>
+      </interrupt>
       <registers>
         <register>
           <dim>4</dim>
@@ -28603,7 +29344,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>_32K_SEL</name>
+              <name>CLK_32K_SEL</name>
               <description>This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
@@ -28873,6 +29614,10 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <size>0x1AC</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>PMU</name>
+        <value>0</value>
+      </interrupt>
       <registers>
         <register>
           <name>HP_ACTIVE_DIG_POWER</name>
@@ -30609,6 +31354,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>need_des</description>
           <addressOffset>0xCC</addressOffset>
           <size>0x20</size>
+          <access>read-write</access>
           <fields>
             <field>
               <name>TIE_LOW_GLOBAL_BBPLL_ICG</name>
@@ -32687,7 +33433,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>RMT</name>
-        <value>28</value>
+        <value>38</value>
       </interrupt>
       <registers>
         <register>
@@ -33781,6 +34527,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Random number data</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
@@ -33796,7 +34543,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </addressBlock>
       <interrupt>
         <name>RSA</name>
-        <value>47</value>
+        <value>62</value>
       </interrupt>
       <registers>
         <register>
@@ -34084,7 +34831,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
       </addressBlock>
       <interrupt>
         <name>SHA</name>
-        <value>49</value>
+        <value>61</value>
       </interrupt>
       <registers>
         <register>
@@ -36938,10 +37685,6 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <size>0x138</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SPI_MEM_REJECT_CACHE</name>
-        <value>40</value>
-      </interrupt>
       <registers>
         <register>
           <name>SPI_MEM_CMD</name>
@@ -39599,10 +40342,6 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <size>0xAC</size>
         <usage>registers</usage>
       </addressBlock>
-      <interrupt>
-        <name>SPI1</name>
-        <value>18</value>
-      </interrupt>
       <registers>
         <register>
           <name>SPI_MEM_CMD</name>
@@ -41131,8 +41870,8 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SPI2</name>
-        <value>19</value>
+        <name>GPSPI2</name>
+        <value>59</value>
       </interrupt>
       <registers>
         <register>
@@ -43204,16 +43943,16 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>SYSTIMER_TARGET0_EDGE</name>
-        <value>37</value>
+        <name>SYSTIMER_TARGET0</name>
+        <value>45</value>
       </interrupt>
       <interrupt>
-        <name>SYSTIMER_TARGET1_EDGE</name>
-        <value>38</value>
+        <name>SYSTIMER_TARGET1</name>
+        <value>46</value>
       </interrupt>
       <interrupt>
-        <name>SYSTIMER_TARGET2_EDGE</name>
-        <value>39</value>
+        <name>SYSTIMER_TARGET2</name>
+        <value>47</value>
       </interrupt>
       <registers>
         <register>
@@ -44515,12 +45254,12 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TG0_T0_LEVEL</name>
-        <value>32</value>
+        <name>TG0_T0</name>
+        <value>41</value>
       </interrupt>
       <interrupt>
-        <name>TG0_WDT_LEVEL</name>
-        <value>33</value>
+        <name>TG0_WDT</name>
+        <value>42</value>
       </interrupt>
       <registers>
         <register>
@@ -44531,14 +45270,14 @@ This option should be used together with RSA_SEARCH_POS.</description>
           <resetValue>0x60002000</resetValue>
           <fields>
             <field>
-              <name>T_USE_XTAL</name>
+              <name>USE_XTAL</name>
               <description>1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T_ALARM_EN</name>
+              <name>ALARM_EN</name>
               <description>When set, the alarm is enabled. This bit is automatically cleared once an
 alarm occurs.</description>
               <bitOffset>10</bitOffset>
@@ -44546,28 +45285,28 @@ alarm occurs.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>T_DIVCNT_RST</name>
+              <name>DIVCNT_RST</name>
               <description>When set, Timer %s 's clock divider counter will be reset.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>T_DIVIDER</name>
+              <name>DIVIDER</name>
               <description>Timer %s clock (T%s_clk) prescaler value.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T_AUTORELOAD</name>
+              <name>AUTORELOAD</name>
               <description>When set, timer %s auto-reload at alarm is enabled.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>T_INCREASE</name>
+              <name>INCREASE</name>
               <description>When set, the timer %s time-base counter will increment every clock tick. When
 cleared, the timer %s time-base counter will decrement.</description>
               <bitOffset>30</bitOffset>
@@ -44575,7 +45314,7 @@ cleared, the timer %s time-base counter will decrement.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>T_EN</name>
+              <name>EN</name>
               <description>When set, the timer %s time-base counter is enabled.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -44590,7 +45329,7 @@ cleared, the timer %s time-base counter will decrement.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_LO</name>
+              <name>LO</name>
               <description>After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter
 of timer %s can be read here.</description>
               <bitOffset>0</bitOffset>
@@ -44606,7 +45345,7 @@ of timer %s can be read here.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_HI</name>
+              <name>HI</name>
               <description>After writing to TIMG_T%sUPDATE_REG, the high 22 bits of the time-base counter
 of timer %s can be read here.</description>
               <bitOffset>0</bitOffset>
@@ -44622,7 +45361,7 @@ of timer %s can be read here.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_UPDATE</name>
+              <name>UPDATE</name>
               <description>After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched.</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -44637,7 +45376,7 @@ of timer %s can be read here.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_ALARM_LO</name>
+              <name>ALARM_LO</name>
               <description>Timer %s alarm trigger time-base counter value, low 32 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
@@ -44652,7 +45391,7 @@ of timer %s can be read here.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_ALARM_HI</name>
+              <name>ALARM_HI</name>
               <description>Timer %s alarm trigger time-base counter value, high 22 bits.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>22</bitWidth>
@@ -44667,7 +45406,7 @@ of timer %s can be read here.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_LOAD_LO</name>
+              <name>LOAD_LO</name>
               <description>Low 32 bits of the value that a reload will load onto timer %s time-base
 Counter.</description>
               <bitOffset>0</bitOffset>
@@ -44683,7 +45422,7 @@ Counter.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_LOAD_HI</name>
+              <name>LOAD_HI</name>
               <description>High 22 bits of the value that a reload will load onto timer %s time-base
 counter.</description>
               <bitOffset>0</bitOffset>
@@ -44699,7 +45438,7 @@ counter.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>T_LOAD</name>
+              <name>LOAD</name>
               <description>
 Write any value to trigger a timer %s time-base counter reload.</description>
               <bitOffset>0</bitOffset>
@@ -45171,12 +45910,12 @@ protection is enabled.</description>
       <description>Timer Group</description>
       <baseAddress>0x6000A000</baseAddress>
       <interrupt>
-        <name>TG1_T0_LEVEL</name>
-        <value>34</value>
+        <name>TG1_T0</name>
+        <value>43</value>
       </interrupt>
       <interrupt>
-        <name>TG1_WDT_LEVEL</name>
-        <value>35</value>
+        <name>TG1_WDT</name>
+        <value>44</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -45189,6 +45928,10 @@ protection is enabled.</description>
         <size>0x30</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>TRACE</name>
+        <value>12</value>
+      </interrupt>
       <registers>
         <register>
           <name>MEM_START_ADDR</name>
@@ -45445,8 +46188,8 @@ protection is enabled.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TWAI</name>
-        <value>25</value>
+        <name>TWAI0</name>
+        <value>36</value>
       </interrupt>
       <registers>
         <register>
@@ -46208,7 +46951,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>UART0</name>
-        <value>21</value>
+        <value>33</value>
       </interrupt>
       <registers>
         <register>
@@ -46222,7 +46965,7 @@ protection is enabled.</description>
               <description>UART 0 accesses FIFO via this register.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -46820,7 +47563,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>CLKDIV_SYNC</name>
+          <name>CLKDIV</name>
           <description>Clock divider configuration</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
@@ -46834,7 +47577,7 @@ protection is enabled.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>CLKDIV_FRAG</name>
+              <name>FRAG</name>
               <description>The decimal part of the frequency divider factor.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
@@ -46931,7 +47674,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>CONF0_SYNC</name>
+          <name>CONF0</name>
           <description>a</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>
@@ -47159,7 +47902,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>HWFC_CONF_SYNC</name>
+          <name>HWFC_CONF</name>
           <description>Hardware flow-control configuration</description>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
@@ -47276,7 +48019,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>SWFC_CONF0_SYNC</name>
+          <name>SWFC_CONF0</name>
           <description>Software flow-control character configuration</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
@@ -47371,7 +48114,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>TXBRK_CONF_SYNC</name>
+          <name>TXBRK_CONF</name>
           <description>Tx Break character configuration</description>
           <addressOffset>0x44</addressOffset>
           <size>0x20</size>
@@ -47387,7 +48130,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>IDLE_CONF_SYNC</name>
+          <name>IDLE_CONF</name>
           <description>Frame-end idle configuration</description>
           <addressOffset>0x48</addressOffset>
           <size>0x20</size>
@@ -47410,7 +48153,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>RS485_CONF_SYNC</name>
+          <name>RS485_CONF</name>
           <description>RS485 mode configuration</description>
           <addressOffset>0x4C</addressOffset>
           <size>0x20</size>
@@ -47467,7 +48210,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>AT_CMD_PRECNT_SYNC</name>
+          <name>AT_CMD_PRECNT</name>
           <description>Pre-sequence timing configuration</description>
           <addressOffset>0x50</addressOffset>
           <size>0x20</size>
@@ -47483,7 +48226,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>AT_CMD_POSTCNT_SYNC</name>
+          <name>AT_CMD_POSTCNT</name>
           <description>Post-sequence timing configuration</description>
           <addressOffset>0x54</addressOffset>
           <size>0x20</size>
@@ -47499,7 +48242,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>AT_CMD_GAPTOUT_SYNC</name>
+          <name>AT_CMD_GAPTOUT</name>
           <description>Timeout configuration</description>
           <addressOffset>0x58</addressOffset>
           <size>0x20</size>
@@ -47515,7 +48258,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>AT_CMD_CHAR_SYNC</name>
+          <name>AT_CMD_CHAR</name>
           <description>AT escape sequence detection configuration</description>
           <addressOffset>0x5C</addressOffset>
           <size>0x20</size>
@@ -47560,7 +48303,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>TOUT_CONF_SYNC</name>
+          <name>TOUT_CONF</name>
           <description>UART threshold and allocation configuration</description>
           <addressOffset>0x64</addressOffset>
           <size>0x20</size>
@@ -47864,7 +48607,7 @@ protection is enabled.</description>
       <baseAddress>0x60001000</baseAddress>
       <interrupt>
         <name>UART1</name>
-        <value>22</value>
+        <value>34</value>
       </interrupt>
     </peripheral>
     <peripheral>
@@ -47879,7 +48622,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>UHCI0</name>
-        <value>15</value>
+        <value>32</value>
       </interrupt>
       <registers>
         <register>
@@ -48926,7 +49669,7 @@ protection is enabled.</description>
       </addressBlock>
       <interrupt>
         <name>USB</name>
-        <value>26</value>
+        <value>37</value>
       </interrupt>
       <registers>
         <register>

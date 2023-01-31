@@ -34,100 +34,98 @@ impl From<crate::W<IN_CONF0_CH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IN_RST_CH` reader - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub type IN_RST_CH_R = crate::BitReader<bool>;
-#[doc = "Field `IN_RST_CH` writer - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub type IN_RST_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
-#[doc = "Field `IN_LOOP_TEST_CH` reader - reserved"]
-pub type IN_LOOP_TEST_CH_R = crate::BitReader<bool>;
-#[doc = "Field `IN_LOOP_TEST_CH` writer - reserved"]
-pub type IN_LOOP_TEST_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
-#[doc = "Field `INDSCR_BURST_EN_CH` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type INDSCR_BURST_EN_CH_R = crate::BitReader<bool>;
-#[doc = "Field `INDSCR_BURST_EN_CH` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type INDSCR_BURST_EN_CH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
-#[doc = "Field `IN_DATA_BURST_EN_CH` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub type IN_DATA_BURST_EN_CH_R = crate::BitReader<bool>;
-#[doc = "Field `IN_DATA_BURST_EN_CH` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub type IN_DATA_BURST_EN_CH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
-#[doc = "Field `MEM_TRANS_EN_CH` reader - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub type MEM_TRANS_EN_CH_R = crate::BitReader<bool>;
-#[doc = "Field `MEM_TRANS_EN_CH` writer - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub type MEM_TRANS_EN_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
-#[doc = "Field `IN_ETM_EN_CH` reader - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
-pub type IN_ETM_EN_CH_R = crate::BitReader<bool>;
-#[doc = "Field `IN_ETM_EN_CH` writer - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
-pub type IN_ETM_EN_CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `IN_RST` reader - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
+pub type IN_RST_R = crate::BitReader<bool>;
+#[doc = "Field `IN_RST` writer - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
+pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `IN_LOOP_TEST` reader - reserved"]
+pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
+#[doc = "Field `IN_LOOP_TEST` writer - reserved"]
+pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `INDSCR_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
+pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
+#[doc = "Field `INDSCR_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
+pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `IN_DATA_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
+pub type IN_DATA_BURST_EN_R = crate::BitReader<bool>;
+#[doc = "Field `IN_DATA_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
+pub type IN_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `MEM_TRANS_EN` reader - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
+pub type MEM_TRANS_EN_R = crate::BitReader<bool>;
+#[doc = "Field `MEM_TRANS_EN` writer - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
+pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+#[doc = "Field `IN_ETM_EN` reader - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
+pub type IN_ETM_EN_R = crate::BitReader<bool>;
+#[doc = "Field `IN_ETM_EN` writer - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
+pub type IN_ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
-    pub fn in_rst_ch(&self) -> IN_RST_CH_R {
-        IN_RST_CH_R::new((self.bits & 1) != 0)
+    pub fn in_rst(&self) -> IN_RST_R {
+        IN_RST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    pub fn in_loop_test_ch(&self) -> IN_LOOP_TEST_CH_R {
-        IN_LOOP_TEST_CH_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn in_loop_test(&self) -> IN_LOOP_TEST_R {
+        IN_LOOP_TEST_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    pub fn indscr_burst_en_ch(&self) -> INDSCR_BURST_EN_CH_R {
-        INDSCR_BURST_EN_CH_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn indscr_burst_en(&self) -> INDSCR_BURST_EN_R {
+        INDSCR_BURST_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
     #[inline(always)]
-    pub fn in_data_burst_en_ch(&self) -> IN_DATA_BURST_EN_CH_R {
-        IN_DATA_BURST_EN_CH_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn in_data_burst_en(&self) -> IN_DATA_BURST_EN_R {
+        IN_DATA_BURST_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
-    pub fn mem_trans_en_ch(&self) -> MEM_TRANS_EN_CH_R {
-        MEM_TRANS_EN_CH_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn mem_trans_en(&self) -> MEM_TRANS_EN_R {
+        MEM_TRANS_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
     #[inline(always)]
-    pub fn in_etm_en_ch(&self) -> IN_ETM_EN_CH_R {
-        IN_ETM_EN_CH_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn in_etm_en(&self) -> IN_ETM_EN_R {
+        IN_ETM_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
     #[must_use]
-    pub fn in_rst_ch(&mut self) -> IN_RST_CH_W<0> {
-        IN_RST_CH_W::new(self)
+    pub fn in_rst(&mut self) -> IN_RST_W<0> {
+        IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
     #[must_use]
-    pub fn in_loop_test_ch(&mut self) -> IN_LOOP_TEST_CH_W<1> {
-        IN_LOOP_TEST_CH_W::new(self)
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<1> {
+        IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn indscr_burst_en_ch(&mut self) -> INDSCR_BURST_EN_CH_W<2> {
-        INDSCR_BURST_EN_CH_W::new(self)
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<2> {
+        INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn in_data_burst_en_ch(&mut self) -> IN_DATA_BURST_EN_CH_W<3> {
-        IN_DATA_BURST_EN_CH_W::new(self)
+    pub fn in_data_burst_en(&mut self) -> IN_DATA_BURST_EN_W<3> {
+        IN_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_trans_en_ch(&mut self) -> MEM_TRANS_EN_CH_W<4> {
-        MEM_TRANS_EN_CH_W::new(self)
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<4> {
+        MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
     #[inline(always)]
     #[must_use]
-    pub fn in_etm_en_ch(&mut self) -> IN_ETM_EN_CH_W<5> {
-        IN_ETM_EN_CH_W::new(self)
+    pub fn in_etm_en(&mut self) -> IN_ETM_EN_W<5> {
+        IN_ETM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

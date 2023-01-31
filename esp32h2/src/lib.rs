@@ -15,6 +15,7 @@
 #![deny(while_true)]
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![doc(html_logo_url = "https://avatars.githubusercontent.com/u/46717278")]
 #![no_std]
 use core::marker::PhantomData;
 use core::ops::Deref;
@@ -26,48 +27,55 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
-    fn WIFI_MAC();
-    fn WIFI_NMI();
-    fn WIFI_PWR();
-    fn WIFI_BB();
+    fn PMU();
+    fn EFUSE();
+    fn LP_RTC_TIMER();
+    fn LP_BLE_TIMER();
+    fn LP_WDT();
+    fn LP_PERI_TIMEOUT();
+    fn LP_APM_M0();
+    fn ASSIST_DEBUG();
+    fn TRACE();
+    fn CPU_PERI_TIMEOUT();
     fn BT_MAC();
     fn BT_BB();
     fn BT_BB_NMI();
-    fn RWBT();
-    fn RWBLE();
-    fn RWBT_NMI();
-    fn RWBLE_NMI();
-    fn I2C();
-    fn UHCI0();
+    fn COEX();
     fn GPIO();
     fn GPIO_NMI();
-    fn SPI1();
-    fn SPI2();
+    fn PAU();
     fn I2S1();
+    fn UHCI0();
     fn UART0();
     fn UART1();
     fn LEDC();
-    fn EFUSE();
-    fn TWAI();
+    fn TWAI0();
     fn USB();
     fn RMT();
     fn I2C_EXT0();
-    fn TIMER1();
-    fn TIMER2();
-    fn TG0_T0_LEVEL();
-    fn TG0_WDT_LEVEL();
-    fn TG1_T0_LEVEL();
-    fn TG1_WDT_LEVEL();
-    fn SYSTIMER_TARGET0_EDGE();
-    fn SYSTIMER_TARGET1_EDGE();
-    fn SYSTIMER_TARGET2_EDGE();
-    fn SPI_MEM_REJECT_CACHE();
+    fn I2C_EXT1();
+    fn TG0_T0();
+    fn TG0_WDT();
+    fn TG1_T0();
+    fn TG1_WDT();
+    fn SYSTIMER_TARGET0();
+    fn SYSTIMER_TARGET1();
+    fn SYSTIMER_TARGET2();
     fn APB_ADC();
-    fn DMA_CH0();
-    fn DMA_CH1();
-    fn RSA();
+    fn PCNT();
+    fn PARL_IO_TX();
+    fn PARL_IO_RX();
+    fn DMA_IN_CH0();
+    fn DMA_IN_CH1();
+    fn DMA_IN_CH2();
+    fn DMA_OUT_CH0();
+    fn DMA_OUT_CH1();
+    fn DMA_OUT_CH2();
+    fn GPSPI2();
     fn AES();
     fn SHA();
+    fn RSA();
+    fn ECC();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -77,77 +85,107 @@ pub union Vector {
 #[cfg(feature = "rt")]
 #[doc(hidden)]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 50] = [
-    Vector { _handler: WIFI_MAC },
-    Vector { _handler: WIFI_NMI },
-    Vector { _handler: WIFI_PWR },
-    Vector { _handler: WIFI_BB },
+pub static __EXTERNAL_INTERRUPTS: [Vector; 64] = [
+    Vector { _handler: PMU },
+    Vector { _handler: EFUSE },
+    Vector {
+        _handler: LP_RTC_TIMER,
+    },
+    Vector {
+        _handler: LP_BLE_TIMER,
+    },
+    Vector { _handler: LP_WDT },
+    Vector {
+        _handler: LP_PERI_TIMEOUT,
+    },
+    Vector {
+        _handler: LP_APM_M0,
+    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: ASSIST_DEBUG,
+    },
+    Vector { _handler: TRACE },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: CPU_PERI_TIMEOUT,
+    },
     Vector { _handler: BT_MAC },
     Vector { _handler: BT_BB },
     Vector {
         _handler: BT_BB_NMI,
     },
-    Vector { _handler: RWBT },
-    Vector { _handler: RWBLE },
-    Vector { _handler: RWBT_NMI },
-    Vector {
-        _handler: RWBLE_NMI,
-    },
-    Vector { _handler: I2C },
+    Vector { _handler: COEX },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _handler: UHCI0 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _handler: SPI1 },
-    Vector { _handler: SPI2 },
+    Vector { _handler: PAU },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
     Vector { _handler: I2S1 },
+    Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: LEDC },
-    Vector { _handler: EFUSE },
-    Vector { _handler: TWAI },
+    Vector { _handler: TWAI0 },
     Vector { _handler: USB },
-    Vector { _reserved: 0 },
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
-    Vector { _handler: TIMER1 },
-    Vector { _handler: TIMER2 },
+    Vector { _handler: I2C_EXT1 },
+    Vector { _handler: TG0_T0 },
+    Vector { _handler: TG0_WDT },
+    Vector { _handler: TG1_T0 },
+    Vector { _handler: TG1_WDT },
     Vector {
-        _handler: TG0_T0_LEVEL,
+        _handler: SYSTIMER_TARGET0,
     },
     Vector {
-        _handler: TG0_WDT_LEVEL,
+        _handler: SYSTIMER_TARGET1,
     },
     Vector {
-        _handler: TG1_T0_LEVEL,
+        _handler: SYSTIMER_TARGET2,
     },
-    Vector {
-        _handler: TG1_WDT_LEVEL,
-    },
-    Vector { _reserved: 0 },
-    Vector {
-        _handler: SYSTIMER_TARGET0_EDGE,
-    },
-    Vector {
-        _handler: SYSTIMER_TARGET1_EDGE,
-    },
-    Vector {
-        _handler: SYSTIMER_TARGET2_EDGE,
-    },
-    Vector {
-        _handler: SPI_MEM_REJECT_CACHE,
-    },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
     Vector { _handler: APB_ADC },
-    Vector { _handler: DMA_CH0 },
-    Vector { _handler: DMA_CH1 },
     Vector { _reserved: 0 },
-    Vector { _handler: RSA },
+    Vector { _handler: PCNT },
+    Vector {
+        _handler: PARL_IO_TX,
+    },
+    Vector {
+        _handler: PARL_IO_RX,
+    },
+    Vector {
+        _handler: DMA_IN_CH0,
+    },
+    Vector {
+        _handler: DMA_IN_CH1,
+    },
+    Vector {
+        _handler: DMA_IN_CH2,
+    },
+    Vector {
+        _handler: DMA_OUT_CH0,
+    },
+    Vector {
+        _handler: DMA_OUT_CH1,
+    },
+    Vector {
+        _handler: DMA_OUT_CH2,
+    },
+    Vector { _handler: GPSPI2 },
     Vector { _handler: AES },
     Vector { _handler: SHA },
+    Vector { _handler: RSA },
+    Vector { _handler: ECC },
 ];
 #[doc(hidden)]
 pub mod interrupt;
@@ -572,6 +610,34 @@ impl core::fmt::Debug for INTERRUPT_CORE0 {
 }
 #[doc = "Peripheral INTERRUPT_CORE0"]
 pub mod interrupt_core0;
+#[doc = "Peripheral INTPRI"]
+pub struct INTPRI {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for INTPRI {}
+impl INTPRI {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const intpri::RegisterBlock = 0x600c_5000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const intpri::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for INTPRI {
+    type Target = intpri::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for INTPRI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTPRI").finish()
+    }
+}
+#[doc = "Peripheral INTPRI"]
+pub mod intpri;
 #[doc = "Input/Output Multiplexer"]
 pub struct IO_MUX {
     _marker: PhantomData<*const ()>,
@@ -1587,6 +1653,8 @@ pub struct Peripherals {
     pub I2S0: I2S0,
     #[doc = "INTERRUPT_CORE0"]
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
+    #[doc = "INTPRI"]
+    pub INTPRI: INTPRI,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
     #[doc = "LEDC"]
@@ -1722,6 +1790,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             INTERRUPT_CORE0: INTERRUPT_CORE0 {
+                _marker: PhantomData,
+            },
+            INTPRI: INTPRI {
                 _marker: PhantomData,
             },
             IO_MUX: IO_MUX {

@@ -1,22 +1,22 @@
-#[doc = "Register `RS485_CONF_SYNC` reader"]
-pub struct R(crate::R<RS485_CONF_SYNC_SPEC>);
+#[doc = "Register `RS485_CONF` reader"]
+pub struct R(crate::R<RS485_CONF_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<RS485_CONF_SYNC_SPEC>;
+    type Target = crate::R<RS485_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<RS485_CONF_SYNC_SPEC>> for R {
+impl From<crate::R<RS485_CONF_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<RS485_CONF_SYNC_SPEC>) -> Self {
+    fn from(reader: crate::R<RS485_CONF_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `RS485_CONF_SYNC` writer"]
-pub struct W(crate::W<RS485_CONF_SYNC_SPEC>);
+#[doc = "Register `RS485_CONF` writer"]
+pub struct W(crate::W<RS485_CONF_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<RS485_CONF_SYNC_SPEC>;
+    type Target = crate::W<RS485_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,44 +28,41 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<RS485_CONF_SYNC_SPEC>> for W {
+impl From<crate::W<RS485_CONF_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<RS485_CONF_SYNC_SPEC>) -> Self {
+    fn from(writer: crate::W<RS485_CONF_SPEC>) -> Self {
         W(writer)
     }
 }
 #[doc = "Field `RS485_EN` reader - Set this bit to choose the rs485 mode."]
 pub type RS485_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_EN` writer - Set this bit to choose the rs485 mode."]
-pub type RS485_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type RS485_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DL0_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type DL0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
 pub type DL1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DL1_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type DL1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `RS485TX_RX_EN` reader - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
 pub type RS485TX_RX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485TX_RX_EN` writer - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
-pub type RS485TX_RX_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type RS485TX_RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `RS485RXBY_TX_EN` reader - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
 pub type RS485RXBY_TX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485RXBY_TX_EN` writer - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
-pub type RS485RXBY_TX_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type RS485RXBY_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `RS485_RX_DLY_NUM` reader - This register is used to delay the receiver's internal data signal."]
 pub type RS485_RX_DLY_NUM_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_RX_DLY_NUM` writer - This register is used to delay the receiver's internal data signal."]
-pub type RS485_RX_DLY_NUM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RS485_CONF_SYNC_SPEC, bool, O>;
+pub type RS485_RX_DLY_NUM_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
 #[doc = "Field `RS485_TX_DLY_NUM` reader - This register is used to delay the transmitter's internal data signal."]
 pub type RS485_TX_DLY_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RS485_TX_DLY_NUM` writer - This register is used to delay the transmitter's internal data signal."]
 pub type RS485_TX_DLY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RS485_CONF_SYNC_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, u32, RS485_CONF_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to choose the rs485 mode."]
     #[inline(always)]
@@ -153,22 +150,22 @@ impl W {
         self
     }
 }
-#[doc = "RS485 mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rs485_conf_sync](index.html) module"]
-pub struct RS485_CONF_SYNC_SPEC;
-impl crate::RegisterSpec for RS485_CONF_SYNC_SPEC {
+#[doc = "RS485 mode configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rs485_conf](index.html) module"]
+pub struct RS485_CONF_SPEC;
+impl crate::RegisterSpec for RS485_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rs485_conf_sync::R](R) reader structure"]
-impl crate::Readable for RS485_CONF_SYNC_SPEC {
+#[doc = "`read()` method returns [rs485_conf::R](R) reader structure"]
+impl crate::Readable for RS485_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [rs485_conf_sync::W](W) writer structure"]
-impl crate::Writable for RS485_CONF_SYNC_SPEC {
+#[doc = "`write(|w| ..)` method takes [rs485_conf::W](W) writer structure"]
+impl crate::Writable for RS485_CONF_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets RS485_CONF_SYNC to value 0"]
-impl crate::Resettable for RS485_CONF_SYNC_SPEC {
+#[doc = "`reset()` method sets RS485_CONF to value 0"]
+impl crate::Resettable for RS485_CONF_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

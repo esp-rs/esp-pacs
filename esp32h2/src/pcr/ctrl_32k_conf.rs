@@ -34,10 +34,10 @@ impl From<crate::W<CTRL_32K_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `_32K_SEL` reader - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type _32K_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `_32K_SEL` writer - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type _32K_SEL_W<'a, const O: u8> =
+#[doc = "Field `CLK_32K_SEL` reader - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
+pub type CLK_32K_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CLK_32K_SEL` writer - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
+pub type CLK_32K_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, CTRL_32K_CONF_SPEC, u8, u8, 2, O>;
 #[doc = "Field `_32K_MODEM_SEL` reader - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
 pub type _32K_MODEM_SEL_R = crate::FieldReader<u8, u8>;
@@ -47,8 +47,8 @@ pub type _32K_MODEM_SEL_W<'a, const O: u8> =
 impl R {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
-    pub fn _32k_sel(&self) -> _32K_SEL_R {
-        _32K_SEL_R::new((self.bits & 3) as u8)
+    pub fn clk_32k_sel(&self) -> CLK_32K_SEL_R {
+        CLK_32K_SEL_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
@@ -60,8 +60,8 @@ impl W {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
     #[must_use]
-    pub fn _32k_sel(&mut self) -> _32K_SEL_W<0> {
-        _32K_SEL_W::new(self)
+    pub fn clk_32k_sel(&mut self) -> CLK_32K_SEL_W<0> {
+        CLK_32K_SEL_W::new(self)
     }
     #[doc = "Bits 2:3 - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]

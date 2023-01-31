@@ -19,14 +19,14 @@ impl From<crate::W<T0LOAD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `T_LOAD` writer - Write any value to trigger a timer %s time-base counter reload."]
-pub type T_LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0LOAD_SPEC, u32, u32, 32, O>;
+#[doc = "Field `LOAD` writer - Write any value to trigger a timer %s time-base counter reload."]
+pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0LOAD_SPEC, u32, u32, 32, O>;
 impl W {
     #[doc = "Bits 0:31 - Write any value to trigger a timer %s time-base counter reload."]
     #[inline(always)]
     #[must_use]
-    pub fn t_load(&mut self) -> T_LOAD_W<0> {
-        T_LOAD_W::new(self)
+    pub fn load(&mut self) -> LOAD_W<0> {
+        LOAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
