@@ -56,8 +56,8 @@ pub enum Interrupt {
     CACHE = 28,
     #[doc = "29 - CPU_PERI_TIMEOUT"]
     CPU_PERI_TIMEOUT = 29,
-    #[doc = "30 - GPI"]
-    GPI = 30,
+    #[doc = "30 - GPIO"]
+    GPIO = 30,
     #[doc = "31 - GPIO_NMI"]
     GPIO_NMI = 31,
     #[doc = "32 - PAU"]
@@ -182,7 +182,7 @@ impl Interrupt {
             27 => Ok(Interrupt::TRACE),
             28 => Ok(Interrupt::CACHE),
             29 => Ok(Interrupt::CPU_PERI_TIMEOUT),
-            30 => Ok(Interrupt::GPI),
+            30 => Ok(Interrupt::GPIO),
             31 => Ok(Interrupt::GPIO_NMI),
             32 => Ok(Interrupt::PAU),
             35 => Ok(Interrupt::HP_APM_M0),

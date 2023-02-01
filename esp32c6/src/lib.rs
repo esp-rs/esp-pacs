@@ -54,7 +54,7 @@ extern "C" {
     fn TRACE();
     fn CACHE();
     fn CPU_PERI_TIMEOUT();
-    fn GPI();
+    fn GPIO();
     fn GPIO_NMI();
     fn PAU();
     fn HP_APM_M0();
@@ -165,7 +165,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector {
         _handler: CPU_PERI_TIMEOUT,
     },
-    Vector { _handler: GPI },
+    Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
