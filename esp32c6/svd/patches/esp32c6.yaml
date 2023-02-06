@@ -5,3 +5,25 @@ GPIO:
     _interrupts:
       GPI:
         name: GPIO
+PCR:
+  RMT_SCLK_CONF:
+    _strip: "RMT_"
+
+PCNT:
+  "*":
+    _strip_end: "_U"
+  "CTRL":
+    _strip: "PULSE_"
+  "U%s_STATUS":
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT"
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+  "U%s_CNT":
+    _strip: "PULSE_"
