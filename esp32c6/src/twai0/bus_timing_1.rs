@@ -34,55 +34,55 @@ impl From<crate::W<BUS_TIMING_1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TIME_SEGMENT1` reader - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEGMENT1_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `TIME_SEGMENT1` writer - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEGMENT1_W<'a, const O: u8> =
+#[doc = "Field `TIME_SEG1` reader - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SEG1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TIME_SEG1` writer - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SEG1_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 4, O>;
-#[doc = "Field `TIME_SEGMENT2` reader - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEGMENT2_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `TIME_SEGMENT2` writer - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEGMENT2_W<'a, const O: u8> =
+#[doc = "Field `TIME_SEG2` reader - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SEG2_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TIME_SEG2` writer - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SEG2_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 3, O>;
-#[doc = "Field `TIME_SAMPLING` reader - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SAMPLING_R = crate::BitReader<bool>;
-#[doc = "Field `TIME_SAMPLING` writer - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SAMPLING_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_TIMING_1_SPEC, bool, O>;
+#[doc = "Field `TIME_SAMP` reader - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SAMP_R = crate::BitReader<bool>;
+#[doc = "Field `TIME_SAMP` writer - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
+pub type TIME_SAMP_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_TIMING_1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:3 - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn time_segment1(&self) -> TIME_SEGMENT1_R {
-        TIME_SEGMENT1_R::new((self.bits & 0x0f) as u8)
+    pub fn time_seg1(&self) -> TIME_SEG1_R {
+        TIME_SEG1_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:6 - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn time_segment2(&self) -> TIME_SEGMENT2_R {
-        TIME_SEGMENT2_R::new(((self.bits >> 4) & 7) as u8)
+    pub fn time_seg2(&self) -> TIME_SEG2_R {
+        TIME_SEG2_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Bit 7 - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn time_sampling(&self) -> TIME_SAMPLING_R {
-        TIME_SAMPLING_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn time_samp(&self) -> TIME_SAMP_R {
+        TIME_SAMP_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     #[must_use]
-    pub fn time_segment1(&mut self) -> TIME_SEGMENT1_W<0> {
-        TIME_SEGMENT1_W::new(self)
+    pub fn time_seg1(&mut self) -> TIME_SEG1_W<0> {
+        TIME_SEG1_W::new(self)
     }
     #[doc = "Bits 4:6 - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     #[must_use]
-    pub fn time_segment2(&mut self) -> TIME_SEGMENT2_W<4> {
-        TIME_SEGMENT2_W::new(self)
+    pub fn time_seg2(&mut self) -> TIME_SEG2_W<4> {
+        TIME_SEG2_W::new(self)
     }
     #[doc = "Bit 7 - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     #[must_use]
-    pub fn time_sampling(&mut self) -> TIME_SAMPLING_W<7> {
-        TIME_SAMPLING_W::new(self)
+    pub fn time_samp(&mut self) -> TIME_SAMP_W<7> {
+        TIME_SAMP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -13,12 +13,12 @@ impl From<crate::R<STATUS_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RECEIVE_BUFFER` reader - 1: full, one or more complete messages are available in the RXFIFO. 0: empty, no message is available"]
-pub type RECEIVE_BUFFER_R = crate::BitReader<bool>;
+#[doc = "Field `RX_BUF_ST` reader - 1: full, one or more complete messages are available in the RXFIFO. 0: empty, no message is available"]
+pub type RX_BUF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVERRUN` reader - 1: overrun, a message was lost because there was not enough space for that message in the RXFIFO. 0: absent, no data overrun has occurred since the last clear data overrun command was given"]
 pub type OVERRUN_R = crate::BitReader<bool>;
-#[doc = "Field `TRANSMIT_BUFFER` reader - 1: released, the CPU may write a message into the transmit buffer. 0: locked, the CPU cannot access the transmit buffer, a message is either waiting for transmission or is in the process of being transmitted"]
-pub type TRANSMIT_BUFFER_R = crate::BitReader<bool>;
+#[doc = "Field `TX_BUF_ST` reader - 1: released, the CPU may write a message into the transmit buffer. 0: locked, the CPU cannot access the transmit buffer, a message is either waiting for transmission or is in the process of being transmitted"]
+pub type TX_BUF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TRANSMISSION_COMPLETE` reader - 1: complete, last requested transmission has been successfully completed. 0: incomplete, previously requested transmission is not yet completed"]
 pub type TRANSMISSION_COMPLETE_R = crate::BitReader<bool>;
 #[doc = "Field `RECEIVE` reader - 1: receive, the TWAI controller is receiving a message. 0: idle"]
@@ -27,15 +27,15 @@ pub type RECEIVE_R = crate::BitReader<bool>;
 pub type TRANSMIT_R = crate::BitReader<bool>;
 #[doc = "Field `ERR` reader - 1: error, at least one of the error counters has reached or exceeded the CPU warning limit defined by the Error Warning Limit Register (EWLR). 0: ok, both error counters are below the warning limit"]
 pub type ERR_R = crate::BitReader<bool>;
-#[doc = "Field `NODE_BUS_OFF` reader - 1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities"]
-pub type NODE_BUS_OFF_R = crate::BitReader<bool>;
-#[doc = "Field `MISS` reader - 1: current message is destroyed because of FIFO overflow."]
-pub type MISS_R = crate::BitReader<bool>;
+#[doc = "Field `BUS_OFF_ST` reader - 1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities"]
+pub type BUS_OFF_ST_R = crate::BitReader<bool>;
+#[doc = "Field `MISS_ST` reader - 1: current message is destroyed because of FIFO overflow."]
+pub type MISS_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1: full, one or more complete messages are available in the RXFIFO. 0: empty, no message is available"]
     #[inline(always)]
-    pub fn receive_buffer(&self) -> RECEIVE_BUFFER_R {
-        RECEIVE_BUFFER_R::new((self.bits & 1) != 0)
+    pub fn rx_buf_st(&self) -> RX_BUF_ST_R {
+        RX_BUF_ST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - 1: overrun, a message was lost because there was not enough space for that message in the RXFIFO. 0: absent, no data overrun has occurred since the last clear data overrun command was given"]
     #[inline(always)]
@@ -44,8 +44,8 @@ impl R {
     }
     #[doc = "Bit 2 - 1: released, the CPU may write a message into the transmit buffer. 0: locked, the CPU cannot access the transmit buffer, a message is either waiting for transmission or is in the process of being transmitted"]
     #[inline(always)]
-    pub fn transmit_buffer(&self) -> TRANSMIT_BUFFER_R {
-        TRANSMIT_BUFFER_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn tx_buf_st(&self) -> TX_BUF_ST_R {
+        TX_BUF_ST_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: complete, last requested transmission has been successfully completed. 0: incomplete, previously requested transmission is not yet completed"]
     #[inline(always)]
@@ -69,13 +69,13 @@ impl R {
     }
     #[doc = "Bit 7 - 1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities"]
     #[inline(always)]
-    pub fn node_bus_off(&self) -> NODE_BUS_OFF_R {
-        NODE_BUS_OFF_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn bus_off_st(&self) -> BUS_OFF_ST_R {
+        BUS_OFF_ST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - 1: current message is destroyed because of FIFO overflow."]
     #[inline(always)]
-    pub fn miss(&self) -> MISS_R {
-        MISS_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn miss_st(&self) -> MISS_ST_R {
+        MISS_ST_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 #[doc = "TWAI status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]

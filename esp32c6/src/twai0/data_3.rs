@@ -34,23 +34,23 @@ impl From<crate::W<DATA_3_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATA_3` reader - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
-pub type DATA_3_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DATA_3` writer - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
-pub type DATA_3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_3_SPEC, u8, u8, 8, O>;
+#[doc = "Field `TX_BYTE_3` reader - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
+pub type TX_BYTE_3_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_BYTE_3` writer - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
+pub type TX_BYTE_3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_3_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
     #[inline(always)]
-    pub fn data_3(&self) -> DATA_3_R {
-        DATA_3_R::new((self.bits & 0xff) as u8)
+    pub fn tx_byte_3(&self) -> TX_BYTE_3_R {
+        TX_BYTE_3_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
     #[inline(always)]
     #[must_use]
-    pub fn data_3(&mut self) -> DATA_3_W<0> {
-        DATA_3_W::new(self)
+    pub fn tx_byte_3(&mut self) -> TX_BYTE_3_W<0> {
+        TX_BYTE_3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
