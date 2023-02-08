@@ -34,23 +34,23 @@ impl From<crate::W<DATA_10_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATA_10` reader - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
-pub type DATA_10_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DATA_10` writer - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
-pub type DATA_10_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_10_SPEC, u8, u8, 8, O>;
+#[doc = "Field `TX_BYTE_10` reader - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
+pub type TX_BYTE_10_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_BYTE_10` writer - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
+pub type TX_BYTE_10_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_10_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
     #[inline(always)]
-    pub fn data_10(&self) -> DATA_10_R {
-        DATA_10_R::new((self.bits & 0xff) as u8)
+    pub fn tx_byte_10(&self) -> TX_BYTE_10_R {
+        TX_BYTE_10_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
     #[inline(always)]
     #[must_use]
-    pub fn data_10(&mut self) -> DATA_10_W<0> {
-        DATA_10_W::new(self)
+    pub fn tx_byte_10(&mut self) -> TX_BYTE_10_W<0> {
+        TX_BYTE_10_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

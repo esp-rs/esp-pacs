@@ -19,12 +19,12 @@ impl From<crate::W<CMD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TX_REQUEST` writer - 1: present, a message shall be transmitted. 0: absent"]
-pub type TX_REQUEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+#[doc = "Field `TX_REQ` writer - 1: present, a message shall be transmitted. 0: absent"]
+pub type TX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 #[doc = "Field `ABORT_TX` writer - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
 pub type ABORT_TX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
-#[doc = "Field `RELEASE_BUFFER` writer - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
-pub type RELEASE_BUFFER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+#[doc = "Field `RELEASE_BUF` writer - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
+pub type RELEASE_BUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 #[doc = "Field `CLEAR_DATA_OVERRUN` writer - 1: clear, the data overrun status bit is cleared. 0: no action."]
 pub type CLEAR_DATA_OVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
 #[doc = "Field `SELF_RX_REQUEST` writer - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
@@ -33,8 +33,8 @@ impl W {
     #[doc = "Bit 0 - 1: present, a message shall be transmitted. 0: absent"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_request(&mut self) -> TX_REQUEST_W<0> {
-        TX_REQUEST_W::new(self)
+    pub fn tx_req(&mut self) -> TX_REQ_W<0> {
+        TX_REQ_W::new(self)
     }
     #[doc = "Bit 1 - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
     #[inline(always)]
@@ -45,8 +45,8 @@ impl W {
     #[doc = "Bit 2 - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
     #[inline(always)]
     #[must_use]
-    pub fn release_buffer(&mut self) -> RELEASE_BUFFER_W<2> {
-        RELEASE_BUFFER_W::new(self)
+    pub fn release_buf(&mut self) -> RELEASE_BUF_W<2> {
+        RELEASE_BUF_W::new(self)
     }
     #[doc = "Bit 3 - 1: clear, the data overrun status bit is cleared. 0: no action."]
     #[inline(always)]

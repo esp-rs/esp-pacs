@@ -34,23 +34,23 @@ impl From<crate::W<DATA_5_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DATA_5` reader - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
-pub type DATA_5_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DATA_5` writer - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
-pub type DATA_5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_5_SPEC, u8, u8, 8, O>;
+#[doc = "Field `TX_BYTE_5` reader - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
+pub type TX_BYTE_5_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TX_BYTE_5` writer - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
+pub type TX_BYTE_5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_5_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
     #[inline(always)]
-    pub fn data_5(&self) -> DATA_5_R {
-        DATA_5_R::new((self.bits & 0xff) as u8)
+    pub fn tx_byte_5(&self) -> TX_BYTE_5_R {
+        TX_BYTE_5_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
     #[inline(always)]
     #[must_use]
-    pub fn data_5(&mut self) -> DATA_5_W<0> {
-        DATA_5_W::new(self)
+    pub fn tx_byte_5(&mut self) -> TX_BYTE_5_W<0> {
+        TX_BYTE_5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

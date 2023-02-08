@@ -54,7 +54,7 @@ pub struct RegisterBlock {
     #[doc = "0x70 - Data register 12."]
     pub data_12: DATA_12,
     #[doc = "0x74 - Received message counter register."]
-    pub rx_message_counter: RX_MESSAGE_COUNTER,
+    pub rx_message_cnt: RX_MESSAGE_CNT,
     _reserved26: [u8; 0x04],
     #[doc = "0x7c - Clock divider register."]
     pub clock_divider: CLOCK_DIVIDER,
@@ -169,10 +169,10 @@ pub mod data_11;
 pub type DATA_12 = crate::Reg<data_12::DATA_12_SPEC>;
 #[doc = "Data register 12."]
 pub mod data_12;
-#[doc = "RX_MESSAGE_COUNTER (r) register accessor: an alias for `Reg<RX_MESSAGE_COUNTER_SPEC>`"]
-pub type RX_MESSAGE_COUNTER = crate::Reg<rx_message_counter::RX_MESSAGE_COUNTER_SPEC>;
+#[doc = "RX_MESSAGE_CNT (r) register accessor: an alias for `Reg<RX_MESSAGE_CNT_SPEC>`"]
+pub type RX_MESSAGE_CNT = crate::Reg<rx_message_cnt::RX_MESSAGE_CNT_SPEC>;
 #[doc = "Received message counter register."]
-pub mod rx_message_counter;
+pub mod rx_message_cnt;
 #[doc = "CLOCK_DIVIDER (rw) register accessor: an alias for `Reg<CLOCK_DIVIDER_SPEC>`"]
 pub type CLOCK_DIVIDER = crate::Reg<clock_divider::CLOCK_DIVIDER_SPEC>;
 #[doc = "Clock divider register."]
