@@ -2,7 +2,7 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - need_des"]
-    pub config0: CONFIG0,
+    pub wdtconfig0: WDTCONFIG0,
     #[doc = "0x04 - need_des"]
     pub config1: CONFIG1,
     #[doc = "0x08 - need_des"]
@@ -12,29 +12,29 @@ pub struct RegisterBlock {
     #[doc = "0x10 - need_des"]
     pub config4: CONFIG4,
     #[doc = "0x14 - need_des"]
-    pub feed: FEED,
+    pub wdtfeed: WDTFEED,
     #[doc = "0x18 - need_des"]
-    pub wprotect: WPROTECT,
+    pub wdtwprotect: WDTWPROTECT,
     #[doc = "0x1c - need_des"]
-    pub swd_config: SWD_CONFIG,
+    pub swd_conf: SWD_CONF,
     #[doc = "0x20 - need_des"]
     pub swd_wprotect: SWD_WPROTECT,
     #[doc = "0x24 - need_des"]
     pub int_raw: INT_RAW,
     #[doc = "0x28 - need_des"]
-    pub int_st: INT_ST,
+    pub int_st_rtc: INT_ST_RTC,
     #[doc = "0x2c - need_des"]
-    pub int_ena: INT_ENA,
+    pub int_ena_rtc: INT_ENA_RTC,
     #[doc = "0x30 - need_des"]
-    pub int_clr: INT_CLR,
+    pub int_clr_rtc: INT_CLR_RTC,
     _reserved13: [u8; 0x03c8],
     #[doc = "0x3fc - need_des"]
     pub date: DATE,
 }
-#[doc = "CONFIG0 (rw) register accessor: an alias for `Reg<CONFIG0_SPEC>`"]
-pub type CONFIG0 = crate::Reg<config0::CONFIG0_SPEC>;
+#[doc = "WDTCONFIG0 (rw) register accessor: an alias for `Reg<WDTCONFIG0_SPEC>`"]
+pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "need_des"]
-pub mod config0;
+pub mod wdtconfig0;
 #[doc = "CONFIG1 (rw) register accessor: an alias for `Reg<CONFIG1_SPEC>`"]
 pub type CONFIG1 = crate::Reg<config1::CONFIG1_SPEC>;
 #[doc = "need_des"]
@@ -51,18 +51,18 @@ pub mod config3;
 pub type CONFIG4 = crate::Reg<config4::CONFIG4_SPEC>;
 #[doc = "need_des"]
 pub mod config4;
-#[doc = "FEED (w) register accessor: an alias for `Reg<FEED_SPEC>`"]
-pub type FEED = crate::Reg<feed::FEED_SPEC>;
+#[doc = "WDTFEED (w) register accessor: an alias for `Reg<WDTFEED_SPEC>`"]
+pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "need_des"]
-pub mod feed;
-#[doc = "WPROTECT (rw) register accessor: an alias for `Reg<WPROTECT_SPEC>`"]
-pub type WPROTECT = crate::Reg<wprotect::WPROTECT_SPEC>;
+pub mod wdtfeed;
+#[doc = "WDTWPROTECT (rw) register accessor: an alias for `Reg<WDTWPROTECT_SPEC>`"]
+pub type WDTWPROTECT = crate::Reg<wdtwprotect::WDTWPROTECT_SPEC>;
 #[doc = "need_des"]
-pub mod wprotect;
-#[doc = "SWD_CONFIG (rw) register accessor: an alias for `Reg<SWD_CONFIG_SPEC>`"]
-pub type SWD_CONFIG = crate::Reg<swd_config::SWD_CONFIG_SPEC>;
+pub mod wdtwprotect;
+#[doc = "SWD_CONF (rw) register accessor: an alias for `Reg<SWD_CONF_SPEC>`"]
+pub type SWD_CONF = crate::Reg<swd_conf::SWD_CONF_SPEC>;
 #[doc = "need_des"]
-pub mod swd_config;
+pub mod swd_conf;
 #[doc = "SWD_WPROTECT (rw) register accessor: an alias for `Reg<SWD_WPROTECT_SPEC>`"]
 pub type SWD_WPROTECT = crate::Reg<swd_wprotect::SWD_WPROTECT_SPEC>;
 #[doc = "need_des"]
@@ -71,18 +71,18 @@ pub mod swd_wprotect;
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "need_des"]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: an alias for `Reg<INT_ST_SPEC>`"]
-pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
+#[doc = "INT_ST_RTC (r) register accessor: an alias for `Reg<INT_ST_RTC_SPEC>`"]
+pub type INT_ST_RTC = crate::Reg<int_st_rtc::INT_ST_RTC_SPEC>;
 #[doc = "need_des"]
-pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: an alias for `Reg<INT_ENA_SPEC>`"]
-pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
+pub mod int_st_rtc;
+#[doc = "INT_ENA_RTC (rw) register accessor: an alias for `Reg<INT_ENA_RTC_SPEC>`"]
+pub type INT_ENA_RTC = crate::Reg<int_ena_rtc::INT_ENA_RTC_SPEC>;
 #[doc = "need_des"]
-pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: an alias for `Reg<INT_CLR_SPEC>`"]
-pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
+pub mod int_ena_rtc;
+#[doc = "INT_CLR_RTC (w) register accessor: an alias for `Reg<INT_CLR_RTC_SPEC>`"]
+pub type INT_CLR_RTC = crate::Reg<int_clr_rtc::INT_CLR_RTC_SPEC>;
 #[doc = "need_des"]
-pub mod int_clr;
+pub mod int_clr_rtc;
 #[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "need_des"]
