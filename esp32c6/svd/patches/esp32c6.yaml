@@ -129,3 +129,32 @@ TWAI[01]:
   _modify:
     RX_MESSAGE_COUNTER:
       name: RX_MESSAGE_CNT
+
+LP_WDT:
+  _modify:
+    "CONFIG0":
+      name: "WDTCONFIG0"
+    "INT_ENA":
+      name: "INT_ENA_RTC"
+    "INT_CLR":
+      name: "INT_CLR_RTC"
+    "INT_ST":
+      name: "INT_ST_RTC"
+    "WPROTECT":
+      name: "WDTWPROTECT"
+    "SWD_CONFIG":
+      name: "SWD_CONF"
+    "FEED":
+      name: "WDTFEED"
+  "INT_ENA_RTC":
+    _modify:
+      "LP_WDT_INT_ENA":
+        name: "WDT_INT_ENA"
+  "INT_CLR_RTC":
+    _modify:
+      "LP_WDT_INT_CLR":
+        name: "WDT_INT_CLR"
+  "INT_ST_RTC":
+    _modify:
+      "LP_WDT_INT_ST":
+        name: "WDT_INT_ST"

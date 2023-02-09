@@ -1,22 +1,22 @@
-#[doc = "Register `CONFIG0` reader"]
-pub struct R(crate::R<CONFIG0_SPEC>);
+#[doc = "Register `WDTCONFIG0` reader"]
+pub struct R(crate::R<WDTCONFIG0_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CONFIG0_SPEC>;
+    type Target = crate::R<WDTCONFIG0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CONFIG0_SPEC>> for R {
+impl From<crate::R<WDTCONFIG0_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CONFIG0_SPEC>) -> Self {
+    fn from(reader: crate::R<WDTCONFIG0_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CONFIG0` writer"]
-pub struct W(crate::W<CONFIG0_SPEC>);
+#[doc = "Register `WDTCONFIG0` writer"]
+pub struct W(crate::W<WDTCONFIG0_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CONFIG0_SPEC>;
+    type Target = crate::W<WDTCONFIG0_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CONFIG0_SPEC>> for W {
+impl From<crate::W<WDTCONFIG0_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CONFIG0_SPEC>) -> Self {
+    fn from(writer: crate::W<WDTCONFIG0_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -38,57 +38,60 @@ impl From<crate::W<CONFIG0_SPEC>> for W {
 pub type WDT_CHIP_RESET_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_CHIP_RESET_WIDTH` writer - need_des"]
 pub type WDT_CHIP_RESET_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 8, O>;
 #[doc = "Field `WDT_CHIP_RESET_EN` reader - need_des"]
 pub type WDT_CHIP_RESET_EN_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_CHIP_RESET_EN` writer - need_des"]
-pub type WDT_CHIP_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_CHIP_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 #[doc = "Field `WDT_PAUSE_IN_SLP` reader - need_des"]
 pub type WDT_PAUSE_IN_SLP_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_PAUSE_IN_SLP` writer - need_des"]
-pub type WDT_PAUSE_IN_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_PAUSE_IN_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 #[doc = "Field `WDT_APPCPU_RESET_EN` reader - need_des"]
 pub type WDT_APPCPU_RESET_EN_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_APPCPU_RESET_EN` writer - need_des"]
-pub type WDT_APPCPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_APPCPU_RESET_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 #[doc = "Field `WDT_PROCPU_RESET_EN` reader - need_des"]
 pub type WDT_PROCPU_RESET_EN_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_PROCPU_RESET_EN` writer - need_des"]
-pub type WDT_PROCPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_PROCPU_RESET_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - need_des"]
 pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - need_des"]
-pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - need_des"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - need_des"]
 pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - need_des"]
 pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - need_des"]
 pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_STG3` reader - need_des"]
 pub type WDT_STG3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_STG3` writer - need_des"]
-pub type WDT_STG3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_STG3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_STG2` reader - need_des"]
 pub type WDT_STG2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_STG2` writer - need_des"]
-pub type WDT_STG2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_STG2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_STG1` reader - need_des"]
 pub type WDT_STG1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_STG1` writer - need_des"]
-pub type WDT_STG1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_STG1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_STG0` reader - need_des"]
 pub type WDT_STG0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_STG0` writer - need_des"]
-pub type WDT_STG0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_STG0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
 #[doc = "Field `WDT_EN` reader - need_des"]
 pub type WDT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_EN` writer - need_des"]
-pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG0_SPEC, bool, O>;
+pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -242,22 +245,22 @@ impl W {
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [config0](index.html) module"]
-pub struct CONFIG0_SPEC;
-impl crate::RegisterSpec for CONFIG0_SPEC {
+#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wdtconfig0](index.html) module"]
+pub struct WDTCONFIG0_SPEC;
+impl crate::RegisterSpec for WDTCONFIG0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [config0::R](R) reader structure"]
-impl crate::Readable for CONFIG0_SPEC {
+#[doc = "`read()` method returns [wdtconfig0::R](R) reader structure"]
+impl crate::Readable for WDTCONFIG0_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [config0::W](W) writer structure"]
-impl crate::Writable for CONFIG0_SPEC {
+#[doc = "`write(|w| ..)` method takes [wdtconfig0::W](W) writer structure"]
+impl crate::Writable for WDTCONFIG0_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CONFIG0 to value 0x0001_3214"]
-impl crate::Resettable for CONFIG0_SPEC {
+#[doc = "`reset()` method sets WDTCONFIG0 to value 0x0001_3214"]
+impl crate::Resettable for WDTCONFIG0_SPEC {
     const RESET_VALUE: Self::Ux = 0x0001_3214;
 }

@@ -1,22 +1,22 @@
-#[doc = "Register `SWD_CONFIG` reader"]
-pub struct R(crate::R<SWD_CONFIG_SPEC>);
+#[doc = "Register `SWD_CONF` reader"]
+pub struct R(crate::R<SWD_CONF_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<SWD_CONFIG_SPEC>;
+    type Target = crate::R<SWD_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<SWD_CONFIG_SPEC>> for R {
+impl From<crate::R<SWD_CONF_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<SWD_CONFIG_SPEC>) -> Self {
+    fn from(reader: crate::R<SWD_CONF_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `SWD_CONFIG` writer"]
-pub struct W(crate::W<SWD_CONFIG_SPEC>);
+#[doc = "Register `SWD_CONF` writer"]
+pub struct W(crate::W<SWD_CONF_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<SWD_CONFIG_SPEC>;
+    type Target = crate::W<SWD_CONF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<SWD_CONFIG_SPEC>> for W {
+impl From<crate::W<SWD_CONF_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<SWD_CONFIG_SPEC>) -> Self {
+    fn from(writer: crate::W<SWD_CONF_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -39,20 +39,20 @@ pub type SWD_RESET_FLAG_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_AUTO_FEED_EN` reader - need_des"]
 pub type SWD_AUTO_FEED_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_AUTO_FEED_EN` writer - need_des"]
-pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONFIG_SPEC, bool, O>;
+pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - need_des"]
-pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONFIG_SPEC, bool, O>;
+pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - need_des"]
 pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - need_des"]
 pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWD_CONFIG_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, u32, SWD_CONF_SPEC, u16, u16, 10, O>;
 #[doc = "Field `SWD_DISABLE` reader - need_des"]
 pub type SWD_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_DISABLE` writer - need_des"]
-pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONFIG_SPEC, bool, O>;
+pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
 #[doc = "Field `SWD_FEED` writer - need_des"]
-pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONFIG_SPEC, bool, O>;
+pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -113,22 +113,22 @@ impl W {
         self
     }
 }
-#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swd_config](index.html) module"]
-pub struct SWD_CONFIG_SPEC;
-impl crate::RegisterSpec for SWD_CONFIG_SPEC {
+#[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swd_conf](index.html) module"]
+pub struct SWD_CONF_SPEC;
+impl crate::RegisterSpec for SWD_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [swd_config::R](R) reader structure"]
-impl crate::Readable for SWD_CONFIG_SPEC {
+#[doc = "`read()` method returns [swd_conf::R](R) reader structure"]
+impl crate::Readable for SWD_CONF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [swd_config::W](W) writer structure"]
-impl crate::Writable for SWD_CONFIG_SPEC {
+#[doc = "`write(|w| ..)` method takes [swd_conf::W](W) writer structure"]
+impl crate::Writable for SWD_CONF_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets SWD_CONFIG to value 0x12c0_0000"]
-impl crate::Resettable for SWD_CONFIG_SPEC {
+#[doc = "`reset()` method sets SWD_CONF to value 0x12c0_0000"]
+impl crate::Resettable for SWD_CONF_SPEC {
     const RESET_VALUE: Self::Ux = 0x12c0_0000;
 }
