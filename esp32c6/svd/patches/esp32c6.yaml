@@ -131,6 +131,12 @@ TWAI[01]:
       name: RX_MESSAGE_CNT
 
 LP_WDT:
+  _add:
+    _interrupts:
+      LP_WDT:
+        name: LP_WDT
+        value: 18
+
   _modify:
     "CONFIG0":
       name: "WDTCONFIG0"

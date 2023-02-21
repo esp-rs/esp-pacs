@@ -34,6 +34,8 @@ pub enum Interrupt {
     LP_UART = 16,
     #[doc = "17 - LP_I2C"]
     LP_I2C = 17,
+    #[doc = "18 - LP_WDT"]
+    LP_WDT = 18,
     #[doc = "19 - LP_PERI_TIMEOUT"]
     LP_PERI_TIMEOUT = 19,
     #[doc = "20 - LP_APM_M0"]
@@ -171,6 +173,7 @@ impl Interrupt {
             14 => Ok(Interrupt::EFUSE),
             16 => Ok(Interrupt::LP_UART),
             17 => Ok(Interrupt::LP_I2C),
+            18 => Ok(Interrupt::LP_WDT),
             19 => Ok(Interrupt::LP_PERI_TIMEOUT),
             20 => Ok(Interrupt::LP_APM_M0),
             21 => Ok(Interrupt::LP_APM_M1),
