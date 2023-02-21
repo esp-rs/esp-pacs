@@ -43,6 +43,7 @@ extern "C" {
     fn EFUSE();
     fn LP_UART();
     fn LP_I2C();
+    fn LP_WDT();
     fn LP_PERI_TIMEOUT();
     fn LP_APM_M0();
     fn LP_APM_M1();
@@ -135,7 +136,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _reserved: 0 },
     Vector { _handler: LP_UART },
     Vector { _handler: LP_I2C },
-    Vector { _reserved: 0 },
+    Vector { _handler: LP_WDT },
     Vector {
         _handler: LP_PERI_TIMEOUT,
     },
