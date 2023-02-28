@@ -1,1 +1,16 @@
 _svd: "../esp32h2.base.svd"
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 384
+      access: read-write
+    "Z_MEM*":
+      dim: 384
+      access: read-write
+    "Y_MEM*":
+      dim: 384
+      access: read-write
+    "X_MEM*":
+      dim: 384
+      access: read-write
