@@ -15,6 +15,7 @@
 #![deny(while_true)]
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![doc(html_logo_url = "https://avatars.githubusercontent.com/u/46717278")]
 #![no_std]
 use core::marker::PhantomData;
 use core::ops::Deref;

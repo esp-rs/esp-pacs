@@ -1,18 +1,18 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00..0x10 - Represents M"]
-    pub m_mem: [M_MEM; 16],
-    _reserved1: [u8; 0x01f0],
-    #[doc = "0x200..0x210 - Represents Z"]
-    pub z_mem: [Z_MEM; 16],
-    _reserved2: [u8; 0x01f0],
-    #[doc = "0x400..0x410 - Represents Y"]
-    pub y_mem: [Y_MEM; 16],
-    _reserved3: [u8; 0x01f0],
-    #[doc = "0x600..0x610 - Represents X"]
-    pub x_mem: [X_MEM; 16],
-    _reserved4: [u8; 0x01f0],
+    #[doc = "0x00..0x180 - Represents M"]
+    pub m_mem: [M_MEM; 384],
+    _reserved1: [u8; 0x80],
+    #[doc = "0x200..0x380 - Represents Z"]
+    pub z_mem: [Z_MEM; 384],
+    _reserved2: [u8; 0x80],
+    #[doc = "0x400..0x580 - Represents Y"]
+    pub y_mem: [Y_MEM; 384],
+    _reserved3: [u8; 0x80],
+    #[doc = "0x600..0x780 - Represents X"]
+    pub x_mem: [X_MEM; 384],
+    _reserved4: [u8; 0x80],
     #[doc = "0x800 - Represents M’"]
     pub m_prime: M_PRIME,
     #[doc = "0x804 - Configures RSA length"]

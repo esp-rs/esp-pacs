@@ -1,5 +1,16 @@
 _svd: ../esp32s3.base.svd
 
+RSA:
+  _modify:
+    "M_MEM*":
+      access: write-only
+    "Z_MEM*":
+      access: read-write
+    "Y_MEM*":
+      access: write-only
+    "X_MEM*":
+      access: write-only
+
 USB0:
   _add:
     _interrupts:

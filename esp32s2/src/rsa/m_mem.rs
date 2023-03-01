@@ -27,7 +27,7 @@ impl W {
         self
     }
 }
-#[doc = "Memory M\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [m_mem](index.html) module"]
+#[doc = "Represents M\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [m_mem](index.html) module"]
 pub struct M_MEM_SPEC;
 impl crate::RegisterSpec for M_MEM_SPEC {
     type Ux = u8;
