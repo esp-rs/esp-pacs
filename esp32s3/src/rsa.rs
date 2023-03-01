@@ -36,7 +36,7 @@ pub struct RegisterBlock {
     #[doc = "0x830 - RSA version control register"]
     pub date: DATE,
 }
-#[doc = "M_MEM (rw) register accessor: an alias for `Reg<M_MEM_SPEC>`"]
+#[doc = "M_MEM (w) register accessor: an alias for `Reg<M_MEM_SPEC>`"]
 pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
 #[doc = "Memory M"]
 pub mod m_mem;
@@ -44,11 +44,11 @@ pub mod m_mem;
 pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
 #[doc = "Memory Z"]
 pub mod z_mem;
-#[doc = "Y_MEM (rw) register accessor: an alias for `Reg<Y_MEM_SPEC>`"]
+#[doc = "Y_MEM (w) register accessor: an alias for `Reg<Y_MEM_SPEC>`"]
 pub type Y_MEM = crate::Reg<y_mem::Y_MEM_SPEC>;
 #[doc = "Memory Y"]
 pub mod y_mem;
-#[doc = "X_MEM (rw) register accessor: an alias for `Reg<X_MEM_SPEC>`"]
+#[doc = "X_MEM (w) register accessor: an alias for `Reg<X_MEM_SPEC>`"]
 pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
 #[doc = "Memory X"]
 pub mod x_mem;

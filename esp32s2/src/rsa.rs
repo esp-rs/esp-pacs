@@ -1,7 +1,14 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    _reserved0: [u8; 0x0800],
+    #[doc = "0x00..0x200 - Represents M"]
+    pub m_mem: [M_MEM; 512],
+    #[doc = "0x200..0x400 - Represents Z"]
+    pub z_mem: [Z_MEM; 512],
+    #[doc = "0x400..0x600 - Represents Y"]
+    pub y_mem: [Y_MEM; 512],
+    #[doc = "0x600..0x800 - Represents X"]
+    pub x_mem: [X_MEM; 512],
     #[doc = "0x800 - Register to store M'"]
     pub m_prime: M_PRIME,
     #[doc = "0x804 - RSA length mode"]
@@ -81,3 +88,19 @@ pub mod interrupt_ena;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
+#[doc = "M_MEM (w) register accessor: an alias for `Reg<M_MEM_SPEC>`"]
+pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
+#[doc = "Represents M"]
+pub mod m_mem;
+#[doc = "Z_MEM (rw) register accessor: an alias for `Reg<Z_MEM_SPEC>`"]
+pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
+#[doc = "Represents Z"]
+pub mod z_mem;
+#[doc = "Y_MEM (w) register accessor: an alias for `Reg<Y_MEM_SPEC>`"]
+pub type Y_MEM = crate::Reg<y_mem::Y_MEM_SPEC>;
+#[doc = "Represents Y"]
+pub mod y_mem;
+#[doc = "X_MEM (w) register accessor: an alias for `Reg<X_MEM_SPEC>`"]
+pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
+#[doc = "Represents X"]
+pub mod x_mem;

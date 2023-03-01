@@ -1,18 +1,18 @@
 #[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00..0x10 - The memory that stores M"]
-    pub m_mem: [M_MEM; 16],
-    _reserved1: [u8; 0x01f0],
-    #[doc = "0x200..0x210 - The memory that stores Z"]
-    pub z_mem: [Z_MEM; 16],
-    _reserved2: [u8; 0x01f0],
-    #[doc = "0x400..0x410 - The memory that stores Y"]
-    pub y_mem: [Y_MEM; 16],
-    _reserved3: [u8; 0x01f0],
-    #[doc = "0x600..0x610 - The memory that stores X"]
-    pub x_mem: [X_MEM; 16],
-    _reserved4: [u8; 0x01f0],
+    #[doc = "0x00..0x180 - The memory that stores M"]
+    pub m_mem: [M_MEM; 384],
+    _reserved1: [u8; 0x80],
+    #[doc = "0x200..0x380 - The memory that stores Z"]
+    pub z_mem: [Z_MEM; 384],
+    _reserved2: [u8; 0x80],
+    #[doc = "0x400..0x580 - The memory that stores Y"]
+    pub y_mem: [Y_MEM; 384],
+    _reserved3: [u8; 0x80],
+    #[doc = "0x600..0x780 - The memory that stores X"]
+    pub x_mem: [X_MEM; 384],
+    _reserved4: [u8; 0x80],
     #[doc = "0x800 - RSA M_prime register"]
     pub m_prime: M_PRIME,
     #[doc = "0x804 - RSA mode register"]
