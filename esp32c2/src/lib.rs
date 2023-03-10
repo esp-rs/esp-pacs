@@ -15,6 +15,7 @@
 #![deny(while_true)]
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#![doc(html_logo_url = "https://avatars.githubusercontent.com/u/46717278")]
 #![no_std]
 use core::marker::PhantomData;
 use core::ops::Deref;
@@ -62,10 +63,10 @@ extern "C" {
     fn DMA_CH0();
     fn SHA();
     fn ECC();
-    fn ETS_FROM_CPU_INTR0();
-    fn ETS_FROM_CPU_INTR1();
-    fn ETS_FROM_CPU_INTR2();
-    fn ETS_FROM_CPU_INTR3();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn ETS_ASSIST_DEBUG();
     fn ETS_CORE0_PIF_PMS_SIZE();
 }
@@ -141,16 +142,16 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
     Vector { _handler: SHA },
     Vector { _handler: ECC },
     Vector {
-        _handler: ETS_FROM_CPU_INTR0,
+        _handler: FROM_CPU_INTR0,
     },
     Vector {
-        _handler: ETS_FROM_CPU_INTR1,
+        _handler: FROM_CPU_INTR1,
     },
     Vector {
-        _handler: ETS_FROM_CPU_INTR2,
+        _handler: FROM_CPU_INTR2,
     },
     Vector {
-        _handler: ETS_FROM_CPU_INTR3,
+        _handler: FROM_CPU_INTR3,
     },
     Vector {
         _handler: ETS_ASSIST_DEBUG,
@@ -162,7 +163,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
-#[doc = "Advanced Peripheral Bus Controller"]
+#[doc = "APB (Advanced Peripheral Bus) Controller"]
 pub struct APB_CTRL {
     _marker: PhantomData<*const ()>,
 }
@@ -188,9 +189,9 @@ impl core::fmt::Debug for APB_CTRL {
         f.debug_struct("APB_CTRL").finish()
     }
 }
-#[doc = "Advanced Peripheral Bus Controller"]
+#[doc = "APB (Advanced Peripheral Bus) Controller"]
 pub mod apb_ctrl;
-#[doc = "Successive Approximation Register Analog to Digital Converter"]
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub struct APB_SARADC {
     _marker: PhantomData<*const ()>,
 }
@@ -216,7 +217,7 @@ impl core::fmt::Debug for APB_SARADC {
         f.debug_struct("APB_SARADC").finish()
     }
 }
-#[doc = "Successive Approximation Register Analog to Digital Converter"]
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub mod apb_saradc;
 #[doc = "Debug Assist"]
 pub struct ASSIST_DEBUG {
@@ -386,7 +387,7 @@ impl core::fmt::Debug for GPIO {
 }
 #[doc = "General Purpose Input/Output"]
 pub mod gpio;
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
 pub struct I2C0 {
     _marker: PhantomData<*const ()>,
 }
@@ -412,9 +413,9 @@ impl core::fmt::Debug for I2C0 {
         f.debug_struct("I2C0").finish()
     }
 }
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
 pub mod i2c0;
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 0)"]
 pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
 }
@@ -440,7 +441,7 @@ impl core::fmt::Debug for INTERRUPT_CORE0 {
         f.debug_struct("INTERRUPT_CORE0").finish()
     }
 }
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 0)"]
 pub mod interrupt_core0;
 #[doc = "Input/Output Multiplexer"]
 pub struct IO_MUX {
@@ -470,7 +471,7 @@ impl core::fmt::Debug for IO_MUX {
 }
 #[doc = "Input/Output Multiplexer"]
 pub mod io_mux;
-#[doc = "LED PWM (Pulse Width Modulation) Controller"]
+#[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub struct LEDC {
     _marker: PhantomData<*const ()>,
 }
@@ -496,9 +497,9 @@ impl core::fmt::Debug for LEDC {
         f.debug_struct("LEDC").finish()
     }
 }
-#[doc = "LED PWM (Pulse Width Modulation) Controller"]
+#[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub mod ledc;
-#[doc = "Hardware random number generator"]
+#[doc = "Hardware Random Number Generator"]
 pub struct RNG {
     _marker: PhantomData<*const ()>,
 }
@@ -524,9 +525,9 @@ impl core::fmt::Debug for RNG {
         f.debug_struct("RNG").finish()
     }
 }
-#[doc = "Hardware random number generator"]
+#[doc = "Hardware Random Number Generator"]
 pub mod rng;
-#[doc = "Real Time Controller"]
+#[doc = "Real-Time Clock Control"]
 pub struct RTC_CNTL {
     _marker: PhantomData<*const ()>,
 }
@@ -552,9 +553,9 @@ impl core::fmt::Debug for RTC_CNTL {
         f.debug_struct("RTC_CNTL").finish()
     }
 }
-#[doc = "Real Time Controller"]
+#[doc = "Real-Time Clock Control"]
 pub mod rtc_cntl;
-#[doc = "Sensitive"]
+#[doc = "SENSITIVE Peripheral"]
 pub struct SENSITIVE {
     _marker: PhantomData<*const ()>,
 }
@@ -580,7 +581,7 @@ impl core::fmt::Debug for SENSITIVE {
         f.debug_struct("SENSITIVE").finish()
     }
 }
-#[doc = "Sensitive"]
+#[doc = "SENSITIVE Peripheral"]
 pub mod sensitive;
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub struct SHA {
@@ -610,7 +611,7 @@ impl core::fmt::Debug for SHA {
 }
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub mod sha;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
 pub struct SPI0 {
     _marker: PhantomData<*const ()>,
 }
@@ -636,9 +637,9 @@ impl core::fmt::Debug for SPI0 {
         f.debug_struct("SPI0").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
 pub mod spi0;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub struct SPI1 {
     _marker: PhantomData<*const ()>,
 }
@@ -664,9 +665,9 @@ impl core::fmt::Debug for SPI1 {
         f.debug_struct("SPI1").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub mod spi1;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub struct SPI2 {
     _marker: PhantomData<*const ()>,
 }
@@ -692,9 +693,9 @@ impl core::fmt::Debug for SPI2 {
         f.debug_struct("SPI2").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub mod spi2;
-#[doc = "System"]
+#[doc = "System Configuration Registers"]
 pub struct SYSTEM {
     _marker: PhantomData<*const ()>,
 }
@@ -720,7 +721,7 @@ impl core::fmt::Debug for SYSTEM {
         f.debug_struct("SYSTEM").finish()
     }
 }
-#[doc = "System"]
+#[doc = "System Configuration Registers"]
 pub mod system;
 #[doc = "System Timer"]
 pub struct SYSTIMER {
@@ -750,7 +751,7 @@ impl core::fmt::Debug for SYSTIMER {
 }
 #[doc = "System Timer"]
 pub mod systimer;
-#[doc = "Timer Group"]
+#[doc = "Timer Group 0"]
 pub struct TIMG0 {
     _marker: PhantomData<*const ()>,
 }
@@ -776,9 +777,9 @@ impl core::fmt::Debug for TIMG0 {
         f.debug_struct("TIMG0").finish()
     }
 }
-#[doc = "Timer Group"]
+#[doc = "Timer Group 0"]
 pub mod timg0;
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 0"]
 pub struct UART0 {
     _marker: PhantomData<*const ()>,
 }
@@ -804,9 +805,9 @@ impl core::fmt::Debug for UART0 {
         f.debug_struct("UART0").finish()
     }
 }
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 0"]
 pub mod uart0;
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
 pub struct UART1 {
     _marker: PhantomData<*const ()>,
 }
@@ -832,7 +833,7 @@ impl core::fmt::Debug for UART1 {
         f.debug_struct("UART1").finish()
     }
 }
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
 pub use self::uart0 as uart1;
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub struct XTS_AES {

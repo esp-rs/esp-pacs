@@ -16,10 +16,20 @@ pub enum Interrupt {
     LP_PERI_TIMEOUT = 5,
     #[doc = "6 - LP_APM_M0"]
     LP_APM_M0 = 6,
+    #[doc = "7 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 7,
+    #[doc = "8 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 8,
+    #[doc = "9 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 9,
+    #[doc = "10 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 10,
     #[doc = "11 - ASSIST_DEBUG"]
     ASSIST_DEBUG = 11,
     #[doc = "12 - TRACE"]
     TRACE = 12,
+    #[doc = "13 - CACHE"]
+    CACHE = 13,
     #[doc = "14 - CPU_PERI_TIMEOUT"]
     CPU_PERI_TIMEOUT = 14,
     #[doc = "15 - BT_MAC"]
@@ -30,12 +40,30 @@ pub enum Interrupt {
     BT_BB_NMI = 17,
     #[doc = "18 - COEX"]
     COEX = 18,
+    #[doc = "19 - BLE_TIMER"]
+    BLE_TIMER = 19,
+    #[doc = "20 - BLE_SEC"]
+    BLE_SEC = 20,
+    #[doc = "21 - ZB_MAC"]
+    ZB_MAC = 21,
     #[doc = "22 - GPIO"]
     GPIO = 22,
     #[doc = "23 - GPIO_NMI"]
     GPIO_NMI = 23,
     #[doc = "24 - PAU"]
     PAU = 24,
+    #[doc = "25 - HP_PERI_TIMEOUT"]
+    HP_PERI_TIMEOUT = 25,
+    #[doc = "26 - HP_APM_M0"]
+    HP_APM_M0 = 26,
+    #[doc = "27 - HP_APM_M1"]
+    HP_APM_M1 = 27,
+    #[doc = "28 - HP_APM_M2"]
+    HP_APM_M2 = 28,
+    #[doc = "29 - HP_APM_M3"]
+    HP_APM_M3 = 29,
+    #[doc = "30 - MSPI"]
+    MSPI = 30,
     #[doc = "31 - I2S1"]
     I2S1 = 31,
     #[doc = "32 - UHCI0"]
@@ -72,6 +100,8 @@ pub enum Interrupt {
     SYSTIMER_TARGET2 = 47,
     #[doc = "48 - APB_ADC"]
     APB_ADC = 48,
+    #[doc = "49 - MCPWM0"]
+    MCPWM0 = 49,
     #[doc = "50 - PCNT"]
     PCNT = 50,
     #[doc = "51 - PARL_IO_TX"]
@@ -100,6 +130,8 @@ pub enum Interrupt {
     RSA = 62,
     #[doc = "63 - ECC"]
     ECC = 63,
+    #[doc = "64 - ECDSA"]
+    ECDSA = 64,
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
@@ -116,16 +148,30 @@ impl Interrupt {
             4 => Ok(Interrupt::LP_WDT),
             5 => Ok(Interrupt::LP_PERI_TIMEOUT),
             6 => Ok(Interrupt::LP_APM_M0),
+            7 => Ok(Interrupt::FROM_CPU_INTR0),
+            8 => Ok(Interrupt::FROM_CPU_INTR1),
+            9 => Ok(Interrupt::FROM_CPU_INTR2),
+            10 => Ok(Interrupt::FROM_CPU_INTR3),
             11 => Ok(Interrupt::ASSIST_DEBUG),
             12 => Ok(Interrupt::TRACE),
+            13 => Ok(Interrupt::CACHE),
             14 => Ok(Interrupt::CPU_PERI_TIMEOUT),
             15 => Ok(Interrupt::BT_MAC),
             16 => Ok(Interrupt::BT_BB),
             17 => Ok(Interrupt::BT_BB_NMI),
             18 => Ok(Interrupt::COEX),
+            19 => Ok(Interrupt::BLE_TIMER),
+            20 => Ok(Interrupt::BLE_SEC),
+            21 => Ok(Interrupt::ZB_MAC),
             22 => Ok(Interrupt::GPIO),
             23 => Ok(Interrupt::GPIO_NMI),
             24 => Ok(Interrupt::PAU),
+            25 => Ok(Interrupt::HP_PERI_TIMEOUT),
+            26 => Ok(Interrupt::HP_APM_M0),
+            27 => Ok(Interrupt::HP_APM_M1),
+            28 => Ok(Interrupt::HP_APM_M2),
+            29 => Ok(Interrupt::HP_APM_M3),
+            30 => Ok(Interrupt::MSPI),
             31 => Ok(Interrupt::I2S1),
             32 => Ok(Interrupt::UHCI0),
             33 => Ok(Interrupt::UART0),
@@ -144,6 +190,7 @@ impl Interrupt {
             46 => Ok(Interrupt::SYSTIMER_TARGET1),
             47 => Ok(Interrupt::SYSTIMER_TARGET2),
             48 => Ok(Interrupt::APB_ADC),
+            49 => Ok(Interrupt::MCPWM0),
             50 => Ok(Interrupt::PCNT),
             51 => Ok(Interrupt::PARL_IO_TX),
             52 => Ok(Interrupt::PARL_IO_RX),
@@ -158,6 +205,7 @@ impl Interrupt {
             61 => Ok(Interrupt::SHA),
             62 => Ok(Interrupt::RSA),
             63 => Ok(Interrupt::ECC),
+            64 => Ok(Interrupt::ECDSA),
             _ => Err(TryFromInterruptError(())),
         }
     }
