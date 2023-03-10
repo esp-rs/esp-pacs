@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S3</name>
   <series>ESP32 S-Series</series>
-  <version>14</version>
+  <version>15</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -344,7 +344,7 @@
     </peripheral>
     <peripheral>
       <name>APB_CTRL</name>
-      <description>Advanced Peripheral Bus Controller</description>
+      <description>APB (Advanced Peripheral Bus) Controller</description>
       <groupName>APB_CTRL</groupName>
       <baseAddress>0x60026000</baseAddress>
       <addressBlock>
@@ -1415,7 +1415,7 @@
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x60040000</baseAddress>
       <addressBlock>
@@ -2316,7 +2316,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>DEBUG_ASSIST</name>
+      <name>ASSIST_DEBUG</name>
       <description>Debug Assist</description>
       <groupName>DEBUG_ASSIST</groupName>
       <baseAddress>0x600CE000</baseAddress>
@@ -12170,7 +12170,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>GPIOSD</name>
+      <name>GPIO_SD</name>
       <description>Sigma-Delta Modulation</description>
       <groupName>GPIOSD</groupName>
       <baseAddress>0x60004F00</baseAddress>
@@ -12547,7 +12547,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -13880,7 +13880,7 @@ level.</description>
     </peripheral>
     <peripheral derivedFrom="I2C0">
       <name>I2C1</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 1</description>
       <baseAddress>0x60027000</baseAddress>
       <interrupt>
         <name>I2C_EXT1</name>
@@ -13889,7 +13889,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>I2S0</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x6000F000</baseAddress>
       <addressBlock>
@@ -15198,7 +15198,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>I2S1</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 1</description>
       <groupName>I2S1</groupName>
       <baseAddress>0x6002D000</baseAddress>
       <addressBlock>
@@ -16342,7 +16342,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Interrupt Core</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x600C2000</baseAddress>
       <addressBlock>
@@ -16393,6 +16393,22 @@ level.</description>
       <interrupt>
         <name>RWBLE_NMI</name>
         <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>SLC0</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>SLC1</name>
+        <value>13</value>
+      </interrupt>
+      <interrupt>
+        <name>SDIO_HOST</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>WDT</name>
+        <value>47</value>
       </interrupt>
       <interrupt>
         <name>CACHE_IA</name>
@@ -18131,7 +18147,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE1</name>
-      <description>Interrupt Core</description>
+      <description>Interrupt Controller (Core 1)</description>
       <groupName>INTERRUPT_CORE1</groupName>
       <baseAddress>0x600C2800</baseAddress>
       <addressBlock>
@@ -19987,7 +20003,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>LCD_CAM</name>
-      <description>Peripheral LCD_CAM</description>
+      <description>LCD_CAM Peripheral</description>
       <groupName>LCD_CAM</groupName>
       <baseAddress>0x60041000</baseAddress>
       <addressBlock>
@@ -21045,7 +21061,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>LEDC</name>
-      <description>LED PWM (Pulse Width Modulation) Controller</description>
+      <description>LED Control PWM (Pulse Width Modulation)</description>
       <groupName>LEDC</groupName>
       <baseAddress>0x60019000</baseAddress>
       <addressBlock>
@@ -22453,7 +22469,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>PERI_BACKUP</name>
-      <description>Peripheral PERI_BACKUP</description>
+      <description>PERI_BACKUP Peripheral</description>
       <groupName>PERI_BACKUP</groupName>
       <baseAddress>0x6002A000</baseAddress>
       <addressBlock>
@@ -22735,8 +22751,8 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </registers>
     </peripheral>
     <peripheral>
-      <name>PWM0</name>
-      <description>Peripheral PWM0</description>
+      <name>MCPWM0</name>
+      <description>Motor Control Pulse-Width Modulation 0</description>
       <groupName>PWM</groupName>
       <baseAddress>0x6001E000</baseAddress>
       <addressBlock>
@@ -22745,7 +22761,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>PWM0</name>
+        <name>MCPWM0</name>
         <value>31</value>
       </interrupt>
       <registers>
@@ -26553,17 +26569,18 @@ Any pulses with width less than this will be ignored when the filter is enabled.
         </register>
       </registers>
     </peripheral>
-    <peripheral derivedFrom="PWM0">
-      <name>PWM1</name>
+    <peripheral derivedFrom="MCPWM0">
+      <name>MCPWM1</name>
+      <description>Motor Control Pulse-Width Modulation 1</description>
       <baseAddress>0x6002C000</baseAddress>
       <interrupt>
-        <name>PWM1</name>
+        <name>MCPWM1</name>
         <value>32</value>
       </interrupt>
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote control</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x60016000</baseAddress>
       <addressBlock>
@@ -27669,7 +27686,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x60034F6C</baseAddress>
       <addressBlock>
@@ -27683,6 +27700,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Random number data</description>
           <addressOffset>0x110</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
@@ -27708,6 +27726,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Memory M</description>
           <addressOffset>0x0</addressOffset>
           <size>0x8</size>
+          <access>write-only</access>
         </register>
         <register>
           <dim>512</dim>
@@ -27716,6 +27735,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Memory Z</description>
           <addressOffset>0x200</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
           <dim>512</dim>
@@ -27724,6 +27744,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Memory Y</description>
           <addressOffset>0x400</addressOffset>
           <size>0x8</size>
+          <access>write-only</access>
         </register>
         <register>
           <dim>512</dim>
@@ -27732,6 +27753,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Memory X</description>
           <addressOffset>0x600</addressOffset>
           <size>0x8</size>
+          <access>write-only</access>
         </register>
         <register>
           <name>M_PRIME</name>
@@ -27934,7 +27956,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_CNTL</name>
-      <description>Real Time Controller</description>
+      <description>Real-Time Clock Control</description>
       <groupName>RTC_CNTL</groupName>
       <baseAddress>0x60008000</baseAddress>
       <addressBlock>
@@ -32742,7 +32764,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>Peripheral RTC_I2C</description>
+      <description>RTC_I2C Peripheral</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x60008C00</baseAddress>
       <addressBlock>
@@ -33716,8 +33738,8 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </registers>
     </peripheral>
     <peripheral>
-      <name>RTCIO</name>
-      <description>Peripheral RTC_IO</description>
+      <name>RTC_IO</name>
+      <description>RTC_IO Peripheral</description>
       <groupName>RTC_IO</groupName>
       <baseAddress>0x60008400</baseAddress>
       <addressBlock>
@@ -36000,7 +36022,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SENS</name>
-      <description>Peripheral SENS</description>
+      <description>SENS Peripheral</description>
       <groupName>SENS</groupName>
       <baseAddress>0x60008800</baseAddress>
       <addressBlock>
@@ -38295,7 +38317,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SENSITIVE</name>
-      <description>Peripheral SENSITIVE</description>
+      <description>SENSITIVE Peripheral</description>
       <groupName>SENSITIVE</groupName>
       <baseAddress>0x600C1000</baseAddress>
       <addressBlock>
@@ -45206,7 +45228,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI0</groupName>
       <baseAddress>0x60003000</baseAddress>
       <addressBlock>
@@ -47031,7 +47053,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <groupName>SPI1</groupName>
       <baseAddress>0x60002000</baseAddress>
       <addressBlock>
@@ -48464,7 +48486,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <groupName>SPI2</groupName>
       <baseAddress>0x60024000</baseAddress>
       <addressBlock>
@@ -50534,7 +50556,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral derivedFrom="SPI2">
       <name>SPI3</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 3</description>
       <baseAddress>0x60025000</baseAddress>
       <interrupt>
         <name>SPI3</name>
@@ -50547,7 +50569,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
-      <description>System</description>
+      <description>System Configuration Registers</description>
       <groupName>SYSTEM</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -52806,7 +52828,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x6001F000</baseAddress>
       <addressBlock>
@@ -53468,7 +53490,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x60020000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -53484,7 +53506,7 @@ protection is enabled.</description>
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>TWAI</name>
+      <name>TWAI0</name>
       <description>Two-Wire Automotive Interface</description>
       <groupName>TWAI</groupName>
       <baseAddress>0x6002B000</baseAddress>
@@ -53494,7 +53516,7 @@ protection is enabled.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TWAI</name>
+        <name>TWAI0</name>
         <value>37</value>
       </interrupt>
       <registers>
@@ -54140,7 +54162,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x60000000</baseAddress>
       <addressBlock>
@@ -55726,7 +55748,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x60010000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -55735,7 +55757,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART2</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 2</description>
       <baseAddress>0x6002E000</baseAddress>
       <interrupt>
         <name>UART2</name>
@@ -55744,7 +55766,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x60014000</baseAddress>
       <addressBlock>
@@ -56821,7 +56843,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UHCI0">
       <name>UHCI1</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 1</description>
       <baseAddress>0x6000C000</baseAddress>
       <interrupt>
         <name>UHCI1</name>
@@ -56838,6 +56860,10 @@ protection is enabled.</description>
         <size>0x2A0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>USB</name>
+        <value>38</value>
+      </interrupt>
       <registers>
         <register>
           <name>GOTGCTL</name>
@@ -64571,7 +64597,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>USB_DEVICE</name>
-      <description>Peripheral USB_DEVICE</description>
+      <description>Full-speed USB Serial/JTAG Controller</description>
       <groupName>USB_DEVICE</groupName>
       <baseAddress>0x60038000</baseAddress>
       <addressBlock>
@@ -65521,7 +65547,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>USB_WRAP</name>
-      <description>Peripheral USB_WRAP</description>
+      <description>USB_WRAP Peripheral</description>
       <groupName>USB_WRAP</groupName>
       <baseAddress>0x60039000</baseAddress>
       <addressBlock>
@@ -65770,7 +65796,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>WCL</name>
-      <description>Peripheral WCL</description>
+      <description>WCL Peripheral</description>
       <groupName>WCL</groupName>
       <baseAddress>0x600D0000</baseAddress>
       <addressBlock>

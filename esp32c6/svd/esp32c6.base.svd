@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6</name>
   <series>ESP32 C-Series</series>
-  <version>3</version>
+  <version>4</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi 6 &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -22,7 +22,7 @@
     limitations under the License.
 </licenseText>
   <cpu>
-    <name>RV32IMC</name>
+    <name>RV32IMAC</name>
     <revision>r0p0</revision>
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
@@ -552,7 +552,7 @@
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x6000E000</baseAddress>
       <addressBlock>
@@ -2612,49 +2612,49 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH_INT_ST</name>
+              <name>IN_DONE</name>
               <description>The raw interrupt status bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH_INT_ST</name>
+              <name>IN_SUC_EOF</name>
               <description>The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH_INT_ST</name>
+              <name>IN_ERR_EOF</name>
               <description>The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH_INT_ST</name>
+              <name>IN_DSCR_ERR</name>
               <description>The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH_INT_ST</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH_INT_ST</name>
+              <name>INFIFO_OVF</name>
               <description>The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH_INT_ST</name>
+              <name>INFIFO_UDF</name>
               <description>The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2671,49 +2671,49 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>IN_DONE_CH_INT_ENA</name>
+              <name>IN_DONE</name>
               <description>The interrupt enable bit for the IN_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_SUC_EOF_CH_INT_ENA</name>
+              <name>IN_SUC_EOF</name>
               <description>The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_ERR_EOF_CH_INT_ENA</name>
+              <name>IN_ERR_EOF</name>
               <description>The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_ERR_CH_INT_ENA</name>
+              <name>IN_DSCR_ERR</name>
               <description>The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>IN_DSCR_EMPTY_CH_INT_ENA</name>
+              <name>IN_DSCR_EMPTY</name>
               <description>The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_OVF_CH_INT_ENA</name>
+              <name>INFIFO_OVF</name>
               <description>The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>INFIFO_UDF_CH_INT_ENA</name>
+              <name>INFIFO_UDF</name>
               <description>The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2841,42 +2841,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_DONE_CH_INT_ST</name>
+              <name>OUT_DONE</name>
               <description>The raw interrupt status bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_EOF_CH_INT_ST</name>
+              <name>OUT_EOF</name>
               <description>The raw interrupt status bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH_INT_ST</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH_INT_ST</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH_INT_ST</name>
+              <name>OUTFIFO_OVF</name>
               <description>The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH_INT_ST</name>
+              <name>OUTFIFO_UDF</name>
               <description>The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -2893,42 +2893,42 @@
           <size>0x20</size>
           <fields>
             <field>
-              <name>OUT_DONE_CH_INT_ENA</name>
+              <name>OUT_DONE</name>
               <description>The interrupt enable bit for the OUT_DONE_CH_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_EOF_CH_INT_ENA</name>
+              <name>OUT_EOF</name>
               <description>The interrupt enable bit for the OUT_EOF_CH_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_DSCR_ERR_CH_INT_ENA</name>
+              <name>OUT_DSCR_ERR</name>
               <description>The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUT_TOTAL_EOF_CH_INT_ENA</name>
+              <name>OUT_TOTAL_EOF</name>
               <description>The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_OVF_CH_INT_ENA</name>
+              <name>OUTFIFO_OVF</name>
               <description>The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>OUTFIFO_UDF_CH_INT_ENA</name>
+              <name>OUTFIFO_UDF</name>
               <description>The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
@@ -13526,7 +13526,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>GPI</name>
+        <name>GPIO</name>
         <value>30</value>
       </interrupt>
       <interrupt>
@@ -14165,7 +14165,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>GPIOSD</name>
+      <name>GPIO_SD</name>
       <description>Sigma-Delta Modulation</description>
       <groupName>GPIOSD</groupName>
       <baseAddress>0x60004F00</baseAddress>
@@ -14817,7 +14817,7 @@
     </peripheral>
     <peripheral>
       <name>HINF</name>
-      <description>Peripheral HINF</description>
+      <description>HINF Peripheral</description>
       <groupName>HINF</groupName>
       <baseAddress>0x60016000</baseAddress>
       <addressBlock>
@@ -15821,7 +15821,7 @@
     </peripheral>
     <peripheral>
       <name>HP_APM</name>
-      <description>Peripheral HP_APM</description>
+      <description>HP_APM Peripheral</description>
       <groupName>HP_APM</groupName>
       <baseAddress>0x60099000</baseAddress>
       <addressBlock>
@@ -17907,6 +17907,14 @@
         <size>0x5C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>HP_PERI_TIMEOUT</name>
+        <value>33</value>
+      </interrupt>
+      <interrupt>
+        <name>MODEM_PERI_TIMEOUT</name>
+        <value>34</value>
+      </interrupt>
       <registers>
         <register>
           <name>EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL</name>
@@ -18376,7 +18384,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60004000</baseAddress>
       <addressBlock>
@@ -19737,7 +19745,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>I2S0</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x6000C000</baseAddress>
       <addressBlock>
@@ -21034,7 +21042,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Interrupt Core</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTMTX_CORE0</groupName>
       <baseAddress>0x60010000</baseAddress>
       <addressBlock>
@@ -21087,19 +21095,23 @@ level.</description>
         <value>10</value>
       </interrupt>
       <interrupt>
-        <name>CPU_FROM_CPU_0</name>
+        <name>ZB_MAC</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
         <value>22</value>
       </interrupt>
       <interrupt>
-        <name>CPU_FROM_CPU_1</name>
+        <name>FROM_CPU_INTR1</name>
         <value>23</value>
       </interrupt>
       <interrupt>
-        <name>CPU_FROM_CPU_2</name>
+        <name>FROM_CPU_INTR2</name>
         <value>24</value>
       </interrupt>
       <interrupt>
-        <name>CPU_FROM_CPU_3</name>
+        <name>FROM_CPU_INTR3</name>
         <value>25</value>
       </interrupt>
       <interrupt>
@@ -22347,7 +22359,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTPRI</name>
-      <description>Peripheral INTPRI</description>
+      <description>INTPRI Peripheral</description>
       <groupName>INTPRI</groupName>
       <baseAddress>0x600C5000</baseAddress>
       <addressBlock>
@@ -24713,7 +24725,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_PERI</name>
-      <description>Peripheral LP_PERI</description>
+      <description>LP_PERI Peripheral</description>
       <groupName>LPPERI</groupName>
       <baseAddress>0x600B2800</baseAddress>
       <addressBlock>
@@ -25032,7 +25044,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_ANA</name>
-      <description>Peripheral LP_ANA</description>
+      <description>LP_ANA Peripheral</description>
       <groupName>LP_ANA</groupName>
       <baseAddress>0x600B2C00</baseAddress>
       <addressBlock>
@@ -25299,7 +25311,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_AON</name>
-      <description>Peripheral LP_AON</description>
+      <description>LP_AON Peripheral</description>
       <groupName>LP_AON</groupName>
       <baseAddress>0x600B1000</baseAddress>
       <addressBlock>
@@ -25787,7 +25799,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_APM</name>
-      <description>Peripheral LP_APM</description>
+      <description>LP_APM Peripheral</description>
       <groupName>LP_APM</groupName>
       <baseAddress>0x600B3800</baseAddress>
       <addressBlock>
@@ -26461,7 +26473,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_APM0</name>
-      <description>Peripheral LP_APM0</description>
+      <description>LP_APM0 Peripheral</description>
       <groupName>LP_APM0</groupName>
       <baseAddress>0x60099800</baseAddress>
       <addressBlock>
@@ -27035,7 +27047,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_CLKRST</name>
-      <description>Peripheral LP_CLKRST</description>
+      <description>LP_CLKRST Peripheral</description>
       <groupName>LP_CLKRST</groupName>
       <baseAddress>0x600B0400</baseAddress>
       <addressBlock>
@@ -27462,7 +27474,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_I2C0</name>
-      <description>Peripheral LP_I2C0</description>
+      <description>LP_I2C0 Peripheral</description>
       <groupName>LP_I2C0</groupName>
       <baseAddress>0x600B1800</baseAddress>
       <addressBlock>
@@ -28787,7 +28799,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_I2C_ANA_MST</name>
-      <description>Peripheral LP_I2C_ANA_MST</description>
+      <description>LP_I2C_ANA_MST Peripheral</description>
       <groupName>LP_I2C_ANA_MST</groupName>
       <baseAddress>0x600B2400</baseAddress>
       <addressBlock>
@@ -28943,7 +28955,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_IO</name>
-      <description>Peripheral LP_IO</description>
+      <description>LP_IO Peripheral</description>
       <groupName>LP_IO</groupName>
       <baseAddress>0x600B2000</baseAddress>
       <addressBlock>
@@ -30298,7 +30310,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_TEE</name>
-      <description>Peripheral LP_TEE</description>
+      <description>LP_TEE Peripheral</description>
       <groupName>LP_TEE</groupName>
       <baseAddress>0x600B3400</baseAddress>
       <addressBlock>
@@ -30374,7 +30386,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_TIMER</name>
-      <description>Peripheral LP_TIMER</description>
+      <description>LP_TIMER Peripheral</description>
       <groupName>LP_TIMER</groupName>
       <baseAddress>0x600B0C00</baseAddress>
       <addressBlock>
@@ -30382,6 +30394,10 @@ Information.</description>
         <size>0x4C</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_RTC_TIMER</name>
+        <value>15</value>
+      </interrupt>
       <registers>
         <register>
           <name>TAR0_LOW</name>
@@ -30771,7 +30787,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_UART</name>
-      <description>Peripheral LP_UART</description>
+      <description>LP_UART Peripheral</description>
       <groupName>LP_UART</groupName>
       <baseAddress>0x600B1400</baseAddress>
       <addressBlock>
@@ -32228,7 +32244,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>LP_WDT</name>
-      <description>Peripheral LP_WDT</description>
+      <description>LP_WDT Peripheral</description>
       <groupName>LP_WDT</groupName>
       <baseAddress>0x600B1C00</baseAddress>
       <addressBlock>
@@ -32236,9 +32252,13 @@ Information.</description>
         <size>0x38</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>LP_WDT</name>
+        <value>18</value>
+      </interrupt>
       <registers>
         <register>
-          <name>CONFIG0</name>
+          <name>WDTCONFIG0</name>
           <description>need_des</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -32402,7 +32422,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>FEED</name>
+          <name>WDTFEED</name>
           <description>need_des</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
@@ -32417,7 +32437,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>WPROTECT</name>
+          <name>WDTWPROTECT</name>
           <description>need_des</description>
           <addressOffset>0x18</addressOffset>
           <size>0x20</size>
@@ -32432,7 +32452,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>SWD_CONFIG</name>
+          <name>SWD_CONF</name>
           <description>need_des</description>
           <addressOffset>0x1C</addressOffset>
           <size>0x20</size>
@@ -32520,7 +32540,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>INT_ST</name>
+          <name>INT_ST_RTC</name>
           <description>need_des</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
@@ -32533,7 +32553,7 @@ Information.</description>
               <access>read-only</access>
             </field>
             <field>
-              <name>LP_WDT_INT_ST</name>
+              <name>WDT_INT_ST</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32542,7 +32562,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>INT_ENA</name>
+          <name>INT_ENA_RTC</name>
           <description>need_des</description>
           <addressOffset>0x2C</addressOffset>
           <size>0x20</size>
@@ -32555,7 +32575,7 @@ Information.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>LP_WDT_INT_ENA</name>
+              <name>WDT_INT_ENA</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32564,7 +32584,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>INT_CLR</name>
+          <name>INT_CLR_RTC</name>
           <description>need_des</description>
           <addressOffset>0x30</addressOffset>
           <size>0x20</size>
@@ -32577,7 +32597,7 @@ Information.</description>
               <access>write-only</access>
             </field>
             <field>
-              <name>LP_WDT_INT_CLR</name>
+              <name>WDT_INT_CLR</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
@@ -32611,8 +32631,8 @@ Information.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>MCPWM</name>
-      <description>Motor Control Pulse-Width Modulation</description>
+      <name>MCPWM0</name>
+      <description>Motor Control Pulse-Width Modulation 0</description>
       <groupName>MCPWM</groupName>
       <baseAddress>0x60014000</baseAddress>
       <addressBlock>
@@ -32621,7 +32641,7 @@ Information.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>PWM</name>
+        <name>MCPWM0</name>
         <value>61</value>
       </interrupt>
       <registers>
@@ -36811,7 +36831,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>MEM_MONITOR</name>
-      <description>Peripheral MEM_MONITOR</description>
+      <description>MEM_MONITOR Peripheral</description>
       <groupName>MEM_MONITOR</groupName>
       <baseAddress>0x60092000</baseAddress>
       <addressBlock>
@@ -37027,7 +37047,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>OTP_DEBUG</name>
-      <description>Peripheral OTP_DEBUG</description>
+      <description>OTP_DEBUG Peripheral</description>
       <groupName>OTP_DEBUG</groupName>
       <baseAddress>0x600B3C00</baseAddress>
       <addressBlock>
@@ -39021,7 +39041,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>PARL_IO</name>
-      <description>Peripheral PARL_IO</description>
+      <description>PARL_IO Peripheral</description>
       <groupName>PARL_IO</groupName>
       <baseAddress>0x60015000</baseAddress>
       <addressBlock>
@@ -39426,7 +39446,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>PAU</name>
-      <description>Peripheral PAU</description>
+      <description>PAU Peripheral</description>
       <groupName>PAU</groupName>
       <baseAddress>0x60093000</baseAddress>
       <addressBlock>
@@ -39843,7 +39863,7 @@ Information.</description>
     </peripheral>
     <peripheral>
       <name>PCNT</name>
-      <description>Pulse Counter</description>
+      <description>Pulse Count Controller</description>
       <groupName>PCNT</groupName>
       <baseAddress>0x60012000</baseAddress>
       <addressBlock>
@@ -39866,7 +39886,7 @@ Information.</description>
           <resetValue>0x00003C10</resetValue>
           <fields>
             <field>
-              <name>FILTER_THRES_U</name>
+              <name>FILTER_THRES</name>
               <description>This sets the maximum threshold, in APB_CLK cycles, for the filter.
 
 Any pulses with width less than this will be ignored when the filter is enabled.</description>
@@ -39875,49 +39895,49 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>FILTER_EN_U</name>
+              <name>FILTER_EN</name>
               <description>This is the enable bit for unit %s's input filter.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_ZERO_EN_U</name>
+              <name>THR_ZERO_EN</name>
               <description>This is the enable bit for unit %s's zero comparator.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_H_LIM_EN_U</name>
+              <name>THR_H_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_h_lim comparator.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_L_LIM_EN_U</name>
+              <name>THR_L_LIM_EN</name>
               <description>This is the enable bit for unit %s's thr_l_lim comparator.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES0_EN_U</name>
+              <name>THR_THRES0_EN</name>
               <description>This is the enable bit for unit %s's thres0 comparator.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>THR_THRES1_EN_U</name>
+              <name>THR_THRES1_EN</name>
               <description>This is the enable bit for unit %s's thres1 comparator.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_NEG_MODE_U</name>
+              <name>CH0_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a negative edge.
 
 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter</description>
@@ -39926,7 +39946,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_POS_MODE_U</name>
+              <name>CH0_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 0 detects a positive edge.
 
 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter</description>
@@ -39935,7 +39955,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_HCTRL_MODE_U</name>
+              <name>CH0_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 
 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification</description>
@@ -39944,7 +39964,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH0_LCTRL_MODE_U</name>
+              <name>CH0_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 
 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification</description>
@@ -39953,7 +39973,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_NEG_MODE_U</name>
+              <name>CH1_NEG_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a negative edge.
 
 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter</description>
@@ -39962,7 +39982,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_POS_MODE_U</name>
+              <name>CH1_POS_MODE</name>
               <description>This register sets the behavior when the signal input of channel 1 detects a positive edge.
 
 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter</description>
@@ -39971,7 +39991,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_HCTRL_MODE_U</name>
+              <name>CH1_HCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high.
 
 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification</description>
@@ -39980,7 +40000,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>CH1_LCTRL_MODE_U</name>
+              <name>CH1_LCTRL_MODE</name>
               <description>This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low.
 
 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification</description>
@@ -39999,14 +40019,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THRES0_U</name>
+              <name>CNT_THRES0</name>
               <description>This register is used to configure the thres0 value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THRES1_U</name>
+              <name>CNT_THRES1</name>
               <description>This register is used to configure the thres1 value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -40023,14 +40043,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_H_LIM_U</name>
+              <name>CNT_H_LIM</name>
               <description>This register is used to configure the thr_h_lim value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_L_LIM_U</name>
+              <name>CNT_L_LIM</name>
               <description>This register is used to configure the thr_l_lim value for unit %s.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
@@ -40047,7 +40067,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>PULSE_CNT_U</name>
+              <name>CNT</name>
               <description>This register stores the current pulse count value for unit %s.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
@@ -40062,28 +40082,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_RAW</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_RAW</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_RAW</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_RAW</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40098,28 +40118,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ST</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ST</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ST</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ST</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The masked interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40134,28 +40154,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_ENA</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_ENA</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_ENA</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_ENA</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40170,28 +40190,28 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_EVENT_U0_INT_CLR</name>
+              <name>CNT_THR_EVENT_U0</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U0_INT interrupt.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U1_INT_CLR</name>
+              <name>CNT_THR_EVENT_U1</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U1_INT interrupt.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U2_INT_CLR</name>
+              <name>CNT_THR_EVENT_U2</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U2_INT interrupt.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
-              <name>CNT_THR_EVENT_U3_INT_CLR</name>
+              <name>CNT_THR_EVENT_U3</name>
               <description>Set this bit to clear the PCNT_CNT_THR_EVENT_U3_INT interrupt.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40208,42 +40228,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <size>0x20</size>
           <fields>
             <field>
-              <name>CNT_THR_ZERO_MODE_U</name>
+              <name>ZERO_MODE</name>
               <description>The pulse counter status of PCNT_U%s corresponding to 0. 0: pulse counter decreases from positive to 0. 1: pulse counter increases from negative to 0. 2: pulse counter is negative. 3: pulse counter is positive.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES1_LAT_U</name>
+              <name>THRES1</name>
               <description>The latched value of thres1 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres1 and thres1 event is valid. 0: others</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_THRES0_LAT_U</name>
+              <name>THRES0</name>
               <description>The latched value of thres0 event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thres0 and thres0 event is valid. 0: others</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_L_LIM_LAT_U</name>
+              <name>L_LIM</name>
               <description>The latched value of low limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_l_lim and low limit event is valid. 0: others</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_H_LIM_LAT_U</name>
+              <name>H_LIM</name>
               <description>The latched value of high limit event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to thr_h_lim and high limit event is valid. 0: others</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>CNT_THR_ZERO_LAT_U</name>
+              <name>ZERO</name>
               <description>The latched value of zero threshold event of PCNT_U%s when threshold event interrupt is valid. 1: the current pulse counter equals to 0 and zero threshold event is valid. 0: others</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40259,7 +40279,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00000001</resetValue>
           <fields>
             <field>
-              <name>PULSE_CNT_RST_U0</name>
+              <name>CNT_RST_U0</name>
               <description>Set this bit to clear unit 0's counter.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40273,7 +40293,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U1</name>
+              <name>CNT_RST_U1</name>
               <description>Set this bit to clear unit 1's counter.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40287,7 +40307,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U2</name>
+              <name>CNT_RST_U2</name>
               <description>Set this bit to clear unit 2's counter.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40301,7 +40321,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <access>read-write</access>
             </field>
             <field>
-              <name>PULSE_CNT_RST_U3</name>
+              <name>CNT_RST_U3</name>
               <description>Set this bit to clear unit 3's counter.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
@@ -40343,7 +40363,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>PCR</name>
-      <description>Peripheral PCR</description>
+      <description>PCR Peripheral</description>
       <groupName>PCR</groupName>
       <baseAddress>0x60096000</baseAddress>
       <addressBlock>
@@ -40706,35 +40726,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <resetValue>0x00501000</resetValue>
           <fields>
             <field>
-              <name>RMT_SCLK_DIV_A</name>
+              <name>SCLK_DIV_A</name>
               <description>The  denominator of the frequency divider factor of the rmt function clock.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RMT_SCLK_DIV_B</name>
+              <name>SCLK_DIV_B</name>
               <description>The numerator of the frequency divider factor of the rmt function clock.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>6</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RMT_SCLK_DIV_NUM</name>
+              <name>SCLK_DIV_NUM</name>
               <description>The integral part of the frequency divider factor of the rmt function clock.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RMT_SCLK_SEL</name>
+              <name>SCLK_SEL</name>
               <description>set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>RMT_SCLK_EN</name>
+              <name>SCLK_EN</name>
               <description>Set 1 to enable rmt function clock</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
@@ -42664,7 +42684,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>PMU</name>
-      <description>Peripheral PMU</description>
+      <description>PMU Peripheral</description>
       <groupName>PMU</groupName>
       <baseAddress>0x600B0000</baseAddress>
       <addressBlock>
@@ -46407,7 +46427,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote Control Peripheral</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x60006000</baseAddress>
       <addressBlock>
@@ -47443,7 +47463,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x600B2800</baseAddress>
       <addressBlock>
@@ -47477,36 +47497,40 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </interrupt>
       <registers>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>The memory that stores M</description>
           <addressOffset>0x0</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>The memory that stores Z</description>
           <addressOffset>0x200</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>The memory that stores Y</description>
           <addressOffset>0x400</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>The memory that stores X</description>
           <addressOffset>0x600</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
           <name>M_PRIME</name>
@@ -47923,7 +47947,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SLCHOST</name>
-      <description>Peripheral SLCHOST</description>
+      <description>SLCHOST Peripheral</description>
       <groupName>SLCHOST</groupName>
       <baseAddress>0x60017000</baseAddress>
       <addressBlock>
@@ -52014,7 +52038,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SOC_ETM</name>
-      <description>Peripheral SOC_ETM</description>
+      <description>SOC_ETM Peripheral</description>
       <groupName>SOC_ETM</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -54656,7 +54680,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI0</groupName>
       <baseAddress>0x60002000</baseAddress>
       <addressBlock>
@@ -57313,7 +57337,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <groupName>SPI1</groupName>
       <baseAddress>0x60003000</baseAddress>
       <addressBlock>
@@ -58840,7 +58864,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <groupName>SPI2</groupName>
       <baseAddress>0x60081000</baseAddress>
       <addressBlock>
@@ -61673,7 +61697,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>TEE</name>
-      <description>Peripheral TEE</description>
+      <description>TEE Peripheral</description>
       <groupName>TEE</groupName>
       <baseAddress>0x60098000</baseAddress>
       <addressBlock>
@@ -62228,7 +62252,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x60008000</baseAddress>
       <addressBlock>
@@ -62894,7 +62918,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x60009000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -62911,7 +62935,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>TRACE</name>
-      <description>Peripheral TRACE</description>
+      <description>TRACE Peripheral</description>
       <groupName>TRACE</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -63212,7 +63236,7 @@ protection is enabled.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>ACCEPTANCE_FILTER_MODE</name>
+              <name>RX_FILTER_MODE</name>
               <description>1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active).</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63227,7 +63251,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TX_REQUEST</name>
+              <name>TX_REQ</name>
               <description>1: present, a message shall be transmitted. 0: absent</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63241,7 +63265,7 @@ protection is enabled.</description>
               <access>write-only</access>
             </field>
             <field>
-              <name>RELEASE_BUFFER</name>
+              <name>RELEASE_BUF</name>
               <description>1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63270,7 +63294,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>RECEIVE_BUFFER</name>
+              <name>RX_BUF_ST</name>
               <description>1: full, one or more complete messages are available in the RXFIFO. 0: empty, no message is available</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63284,7 +63308,7 @@ protection is enabled.</description>
               <access>read-only</access>
             </field>
             <field>
-              <name>TRANSMIT_BUFFER</name>
+              <name>TX_BUF_ST</name>
               <description>1: released, the CPU may write a message into the transmit buffer. 0: locked, the CPU cannot access the transmit buffer, a message is either waiting for transmission or is in the process of being transmitted</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63319,14 +63343,14 @@ protection is enabled.</description>
               <access>read-only</access>
             </field>
             <field>
-              <name>NODE_BUS_OFF</name>
+              <name>BUS_OFF_ST</name>
               <description>1: bus-off, the TWAI controller is not involved in bus activities. 0: bus-on, the TWAI controller is involved in bus activities</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
             </field>
             <field>
-              <name>MISS</name>
+              <name>MISS_ST</name>
               <description>1: current message is destroyed because of FIFO overflow.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63491,21 +63515,21 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>TIME_SEGMENT1</name>
+              <name>TIME_SEG1</name>
               <description>The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TIME_SEGMENT2</name>
+              <name>TIME_SEG2</name>
               <description>The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
             </field>
             <field>
-              <name>TIME_SAMPLING</name>
+              <name>TIME_SAMP</name>
               <description>1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
@@ -63610,7 +63634,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_0</name>
+              <name>TX_BYTE_0</name>
               <description>In reset mode, it is acceptance code register 0 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 0 and when software initiate read operation, it is rx data register 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63625,7 +63649,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_1</name>
+              <name>TX_BYTE_1</name>
               <description>In reset mode, it is acceptance code register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 1 and when software initiate read operation, it is rx data register 1.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63640,7 +63664,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_2</name>
+              <name>TX_BYTE_2</name>
               <description>In reset mode, it is acceptance code register 2 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 2 and when software initiate read operation, it is rx data register 2.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63655,7 +63679,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_3</name>
+              <name>TX_BYTE_3</name>
               <description>In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63670,7 +63694,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_4</name>
+              <name>TX_BYTE_4</name>
               <description>In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 4 and when software initiate read operation, it is rx data register 4.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63685,7 +63709,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_5</name>
+              <name>TX_BYTE_5</name>
               <description>In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63700,7 +63724,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_6</name>
+              <name>TX_BYTE_6</name>
               <description>In reset mode, it is acceptance mask register 2 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 6 and when software initiate read operation, it is rx data register 6.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63715,7 +63739,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_7</name>
+              <name>TX_BYTE_7</name>
               <description>In reset mode, it is acceptance mask register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 7 and when software initiate read operation, it is rx data register 7.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63730,7 +63754,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_8</name>
+              <name>TX_BYTE_8</name>
               <description>In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 8 and when software initiate read operation, it is rx data register 8.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63760,7 +63784,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_10</name>
+              <name>TX_BYTE_10</name>
               <description>In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63775,7 +63799,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_11</name>
+              <name>TX_BYTE_11</name>
               <description>In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 11 and when software initiate read operation, it is rx data register 11.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63790,7 +63814,7 @@ protection is enabled.</description>
           <size>0x20</size>
           <fields>
             <field>
-              <name>DATA_12</name>
+              <name>TX_BYTE_12</name>
               <description>In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 12 and when software initiate read operation, it is rx data register 12.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
@@ -63799,7 +63823,7 @@ protection is enabled.</description>
           </fields>
         </register>
         <register>
-          <name>RX_MESSAGE_COUNTER</name>
+          <name>RX_MESSAGE_CNT</name>
           <description>Received message counter register.</description>
           <addressOffset>0x74</addressOffset>
           <size>0x20</size>
@@ -63941,7 +63965,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x60000000</baseAddress>
       <addressBlock>
@@ -65645,7 +65669,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x60001000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -65654,7 +65678,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x60005000</baseAddress>
       <addressBlock>

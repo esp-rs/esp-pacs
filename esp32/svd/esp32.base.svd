@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>9</version>
+  <version>10</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -138,7 +138,7 @@
     </peripheral>
     <peripheral>
       <name>APB_CTRL</name>
-      <description>Advanced Peripheral Bus Controller</description>
+      <description>APB (Advanced Peripheral Bus) Controller</description>
       <groupName>APB_CTRL</groupName>
       <baseAddress>0x3FF66000</baseAddress>
       <addressBlock>
@@ -543,7 +543,7 @@
     </peripheral>
     <peripheral>
       <name>BB</name>
-      <description>Peripheral BB</description>
+      <description>BB Peripheral</description>
       <groupName>BB</groupName>
       <baseAddress>0x3FF5D000</baseAddress>
       <addressBlock>
@@ -588,7 +588,7 @@
     </peripheral>
     <peripheral>
       <name>DPORT</name>
-      <description>Peripheral DPORT</description>
+      <description>DPORT Peripheral</description>
       <groupName>DPORT</groupName>
       <baseAddress>0x3FF00000</baseAddress>
       <addressBlock>
@@ -2206,72 +2206,6 @@
               <name>CORE_RST</name>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BB_RST</name>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FE_RST</name>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MAC_RST</name>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BT_RST</name>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BTMAC_RST</name>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SDIO_RST</name>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SDIO_HOST_RST</name>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>EMAC_RST</name>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MACPWR_RST</name>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RW_BTMAC_RST</name>
-              <bitOffset>9</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RW_BTLP_RST</name>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
           </fields>
@@ -8938,7 +8872,7 @@
     </peripheral>
     <peripheral>
       <name>FLASH_ENCRYPTION</name>
-      <description>Flash Encryption Peripheral</description>
+      <description>FLASH_ENCRYPTION Peripheral</description>
       <groupName>FLASH_ENCRYPTION</groupName>
       <baseAddress>0x3FF46000</baseAddress>
       <addressBlock>
@@ -9009,7 +8943,7 @@
     </peripheral>
     <peripheral>
       <name>FRC_TIMER</name>
-      <description>Peripheral FRC_TIMER</description>
+      <description>FRC_TIMER Peripheral</description>
       <groupName>FRC</groupName>
       <baseAddress>0x3FF47000</baseAddress>
       <addressBlock>
@@ -9971,7 +9905,7 @@
     </peripheral>
     <peripheral>
       <name>HINF</name>
-      <description>Peripheral HINF</description>
+      <description>HINF Peripheral</description>
       <groupName>HINF</groupName>
       <baseAddress>0x3FF4B000</baseAddress>
       <addressBlock>
@@ -10286,7 +10220,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x3FF53000</baseAddress>
       <addressBlock>
@@ -11191,7 +11125,7 @@
     </peripheral>
     <peripheral derivedFrom="I2C0">
       <name>I2C1</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 1</description>
       <baseAddress>0x3FF67000</baseAddress>
       <interrupt>
         <name>I2C_EXT1</name>
@@ -11200,7 +11134,7 @@
     </peripheral>
     <peripheral>
       <name>I2S0</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x3FF4F000</baseAddress>
       <addressBlock>
@@ -12961,7 +12895,7 @@
     </peripheral>
     <peripheral derivedFrom="I2S0">
       <name>I2S1</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 1</description>
       <baseAddress>0x3FF6D000</baseAddress>
       <interrupt>
         <name>I2S1</name>
@@ -17197,8 +17131,8 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>PWM0</name>
-      <description>Motor Control Pulse-Width Modulation</description>
+      <name>MCPWM0</name>
+      <description>Motor Control Pulse-Width Modulation 0</description>
       <groupName>MCPWM</groupName>
       <baseAddress>0x3FF5E000</baseAddress>
       <addressBlock>
@@ -17207,8 +17141,20 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>PWM0</name>
+        <name>MCPWM0</name>
         <value>39</value>
+      </interrupt>
+      <interrupt>
+        <name>MCPWM1</name>
+        <value>40</value>
+      </interrupt>
+      <interrupt>
+        <name>MCPWM2</name>
+        <value>41</value>
+      </interrupt>
+      <interrupt>
+        <name>MCPWM3</name>
+        <value>42</value>
       </interrupt>
       <registers>
         <register>
@@ -20484,18 +20430,14 @@
         </register>
       </registers>
     </peripheral>
-    <peripheral derivedFrom="PWM0">
-      <name>PWM1</name>
-      <description>Motor Control Pulse-Width Modulation</description>
+    <peripheral derivedFrom="MCPWM0">
+      <name>MCPWM1</name>
+      <description>Motor Control Pulse-Width Modulation 1</description>
       <baseAddress>0x3FF6C000</baseAddress>
-      <interrupt>
-        <name>PWM1</name>
-        <value>40</value>
-      </interrupt>
     </peripheral>
     <peripheral>
       <name>NRX</name>
-      <description>Peripheral NRX</description>
+      <description>NRX Peripheral</description>
       <groupName>NRX</groupName>
       <baseAddress>0x3FF5CC00</baseAddress>
       <addressBlock>
@@ -21206,7 +21148,7 @@
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote Control Peripheral</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x3FF56000</baseAddress>
       <addressBlock>
@@ -22515,7 +22457,7 @@
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x60035000</baseAddress>
       <addressBlock>
@@ -22529,6 +22471,7 @@
           <description>Random number data</description>
           <addressOffset>0x144</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
@@ -22549,7 +22492,7 @@
       <registers>
         <register>
           <name>M_PRIME</name>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x800</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22563,7 +22506,7 @@
         </register>
         <register>
           <name>MODEXP_MODE</name>
-          <addressOffset>0x4</addressOffset>
+          <addressOffset>0x804</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22577,7 +22520,7 @@
         </register>
         <register>
           <name>MODEXP_START</name>
-          <addressOffset>0x8</addressOffset>
+          <addressOffset>0x808</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22591,7 +22534,7 @@
         </register>
         <register>
           <name>MULT_MODE</name>
-          <addressOffset>0xC</addressOffset>
+          <addressOffset>0x80C</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22605,7 +22548,7 @@
         </register>
         <register>
           <name>MULT_START</name>
-          <addressOffset>0x10</addressOffset>
+          <addressOffset>0x810</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22619,7 +22562,7 @@
         </register>
         <register>
           <name>INTERRUPT</name>
-          <addressOffset>0x14</addressOffset>
+          <addressOffset>0x814</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22633,7 +22576,7 @@
         </register>
         <register>
           <name>CLEAN</name>
-          <addressOffset>0x18</addressOffset>
+          <addressOffset>0x818</addressOffset>
           <size>0x20</size>
           <fields>
             <field>
@@ -22644,6 +22587,42 @@
               <access>read-only</access>
             </field>
           </fields>
+        </register>
+        <register>
+          <dim>128</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>M_MEM[%s]</name>
+          <description>Represents M</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>128</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>Z_MEM[%s]</name>
+          <description>Represents Z</description>
+          <addressOffset>0x200</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>128</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>Y_MEM[%s]</name>
+          <description>Represents Y</description>
+          <addressOffset>0x400</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>128</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>X_MEM[%s]</name>
+          <description>Represents X</description>
+          <addressOffset>0x600</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
         </register>
       </registers>
     </peripheral>
@@ -25279,8 +25258,8 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>RTCIO</name>
-      <description>Peripheral RTCIO</description>
+      <name>RTC_IO</name>
+      <description>RTC_IO Peripheral</description>
       <groupName>RTC_GPIO</groupName>
       <baseAddress>0x3FF48400</baseAddress>
       <addressBlock>
@@ -27284,7 +27263,7 @@
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>Peripheral RTC_I2C</description>
+      <description>RTC_I2C Peripheral</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x3FF48C00</baseAddress>
       <addressBlock>
@@ -29007,7 +28986,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>SENS</name>
-      <description>Peripheral SENS</description>
+      <description>SENS Peripheral</description>
       <groupName>SENS</groupName>
       <baseAddress>0x3FF48800</baseAddress>
       <addressBlock>
@@ -30609,7 +30588,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>SLC</name>
-      <description>Peripheral SLC</description>
+      <description>SLC Peripheral</description>
       <groupName>SLC</groupName>
       <baseAddress>0x3FF58000</baseAddress>
       <addressBlock>
@@ -34270,7 +34249,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>SLCHOST</name>
-      <description>Peripheral SLCHOST</description>
+      <description>SLCHOST Peripheral</description>
       <groupName>SLCHOST</groupName>
       <baseAddress>0x3FF55000</baseAddress>
       <addressBlock>
@@ -37734,7 +37713,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI</groupName>
       <baseAddress>0x3FF43000</baseAddress>
       <addressBlock>
@@ -39955,7 +39934,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <baseAddress>0x3FF42000</baseAddress>
       <interrupt>
         <name>SPI1</name>
@@ -39968,7 +39947,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <baseAddress>0x3FF64000</baseAddress>
       <interrupt>
         <name>SPI2</name>
@@ -39981,7 +39960,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI3</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 3</description>
       <baseAddress>0x3FF65000</baseAddress>
       <interrupt>
         <name>SPI3</name>
@@ -39994,7 +39973,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x3FF5F000</baseAddress>
       <addressBlock>
@@ -41075,7 +41054,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x3FF60000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -41111,7 +41090,7 @@ IDINTEN[4]: DU Interrupt.</description>
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>TWAI</name>
+      <name>TWAI0</name>
       <description>Two-Wire Automotive Interface</description>
       <groupName>TWAI</groupName>
       <baseAddress>0x3FF6B000</baseAddress>
@@ -41121,7 +41100,7 @@ IDINTEN[4]: DU Interrupt.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TWAI</name>
+        <name>TWAI0</name>
         <value>45</value>
       </interrupt>
       <registers>
@@ -41767,7 +41746,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x3FF40000</baseAddress>
       <addressBlock>
@@ -43206,7 +43185,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x3FF50000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -43215,7 +43194,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART2</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 2</description>
       <baseAddress>0x3FF6E000</baseAddress>
       <interrupt>
         <name>UART2</name>
@@ -43224,7 +43203,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x3FF54000</baseAddress>
       <addressBlock>
@@ -44826,7 +44805,7 @@ IDINTEN[4]: DU Interrupt.</description>
     </peripheral>
     <peripheral derivedFrom="UHCI0">
       <name>UHCI1</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 1</description>
       <baseAddress>0x3FF4C000</baseAddress>
       <interrupt>
         <name>UHCI1</name>
