@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C3</name>
   <series>ESP32 C-Series</series>
-  <version>12</version>
+  <version>13</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -552,7 +552,7 @@
     </peripheral>
     <peripheral>
       <name>APB_CTRL</name>
-      <description>Advanced Peripheral Bus Controller</description>
+      <description>APB (Advanced Peripheral Bus) Controller</description>
       <groupName>APB_CTRL</groupName>
       <baseAddress>0x60026000</baseAddress>
       <addressBlock>
@@ -1455,7 +1455,7 @@
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x60040000</baseAddress>
       <addressBlock>
@@ -11377,7 +11377,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>GPIOSD</name>
+      <name>GPIO_SD</name>
       <description>Sigma-Delta Modulation</description>
       <groupName>GPIOSD</groupName>
       <baseAddress>0x60004F00</baseAddress>
@@ -11738,7 +11738,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -13043,8 +13043,8 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2S</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <name>I2S0</name>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x6002D000</baseAddress>
       <addressBlock>
@@ -13053,7 +13053,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>I2S</name>
+        <name>I2S0</name>
         <value>20</value>
       </interrupt>
       <registers>
@@ -14318,7 +14318,7 @@
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Interrupt Core</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x600C2000</baseAddress>
       <addressBlock>
@@ -14369,6 +14369,14 @@
       <interrupt>
         <name>RWBLE_NMI</name>
         <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>SLC0</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>SLC1</name>
+        <value>13</value>
       </interrupt>
       <interrupt>
         <name>CACHE_IA</name>
@@ -16897,7 +16905,7 @@
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote Control Peripheral</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x60016000</baseAddress>
       <addressBlock>
@@ -18133,7 +18141,7 @@
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x60026000</baseAddress>
       <addressBlock>
@@ -18147,6 +18155,7 @@
           <description>Random number data</description>
           <addressOffset>0xB0</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
@@ -18166,36 +18175,40 @@
       </interrupt>
       <registers>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>The memory that stores M</description>
           <addressOffset>0x0</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>The memory that stores Z</description>
           <addressOffset>0x200</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>The memory that stores Y</description>
           <addressOffset>0x400</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>The memory that stores X</description>
           <addressOffset>0x600</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
           <name>M_PRIME</name>
@@ -21876,7 +21889,7 @@
     </peripheral>
     <peripheral>
       <name>SENSITIVE</name>
-      <description>Sensitive</description>
+      <description>SENSITIVE Peripheral</description>
       <groupName>SENSITIVE</groupName>
       <baseAddress>0x600C1000</baseAddress>
       <addressBlock>
@@ -25331,7 +25344,7 @@
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI0</groupName>
       <baseAddress>0x60003000</baseAddress>
       <addressBlock>
@@ -25970,7 +25983,7 @@
     </peripheral>
     <peripheral>
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <groupName>SPI1</groupName>
       <baseAddress>0x60002000</baseAddress>
       <addressBlock>
@@ -27302,7 +27315,7 @@
     </peripheral>
     <peripheral>
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <groupName>SPI2</groupName>
       <baseAddress>0x60024000</baseAddress>
       <addressBlock>
@@ -29037,7 +29050,7 @@
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
-      <description>System</description>
+      <description>System Configuration Registers</description>
       <groupName>SYSTEM</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -31147,7 +31160,7 @@
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x6001F000</baseAddress>
       <addressBlock>
@@ -31787,7 +31800,7 @@
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x60020000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -31799,7 +31812,7 @@
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>TWAI</name>
+      <name>TWAI0</name>
       <description>Two-Wire Automotive Interface</description>
       <groupName>TWAI</groupName>
       <baseAddress>0x6002B000</baseAddress>
@@ -31809,7 +31822,7 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TWAI</name>
+        <name>TWAI0</name>
         <value>25</value>
       </interrupt>
       <registers>
@@ -32455,7 +32468,7 @@
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x60000000</baseAddress>
       <addressBlock>
@@ -34041,7 +34054,7 @@
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x60010000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -34050,7 +34063,7 @@
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x60014000</baseAddress>
       <addressBlock>
@@ -35098,7 +35111,7 @@
     </peripheral>
     <peripheral derivedFrom="UHCI0">
       <name>UHCI1</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 1</description>
       <baseAddress>0x6000C000</baseAddress>
     </peripheral>
     <peripheral>

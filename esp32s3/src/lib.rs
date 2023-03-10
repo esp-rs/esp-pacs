@@ -39,6 +39,8 @@ extern "C" {
     fn RWBT_NMI();
     fn RWBLE_NMI();
     fn I2C_MASTER();
+    fn SLC0();
+    fn SLC1();
     fn UHCI0();
     fn UHCI1();
     fn GPIO();
@@ -54,11 +56,12 @@ extern "C" {
     fn UART0();
     fn UART1();
     fn UART2();
-    fn PWM0();
-    fn PWM1();
+    fn SDIO_HOST();
+    fn MCPWM0();
+    fn MCPWM1();
     fn LEDC();
     fn EFUSE();
-    fn TWAI();
+    fn TWAI0();
     fn USB();
     fn RTC_CORE();
     fn RMT();
@@ -67,6 +70,7 @@ extern "C" {
     fn I2C_EXT1();
     fn SPI2_DMA();
     fn SPI3_DMA();
+    fn WDT();
     fn TIMER1();
     fn TIMER2();
     fn TG0_T0_LEVEL();
@@ -144,8 +148,8 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector {
         _handler: I2C_MASTER,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SLC0 },
+    Vector { _handler: SLC1 },
     Vector { _handler: UHCI0 },
     Vector { _handler: UHCI1 },
     Vector { _handler: GPIO },
@@ -166,14 +170,16 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: UART2 },
-    Vector { _reserved: 0 },
-    Vector { _handler: PWM0 },
-    Vector { _handler: PWM1 },
+    Vector {
+        _handler: SDIO_HOST,
+    },
+    Vector { _handler: MCPWM0 },
+    Vector { _handler: MCPWM1 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: LEDC },
     Vector { _handler: EFUSE },
-    Vector { _handler: TWAI },
+    Vector { _handler: TWAI0 },
     Vector { _handler: USB },
     Vector { _handler: RTC_CORE },
     Vector { _handler: RMT },
@@ -183,7 +189,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: SPI2_DMA },
     Vector { _handler: SPI3_DMA },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: WDT },
     Vector { _handler: TIMER1 },
     Vector { _handler: TIMER2 },
     Vector {
@@ -352,6 +358,10 @@ pub enum Interrupt {
     RWBLE_NMI = 10,
     #[doc = "11 - I2C_MASTER"]
     I2C_MASTER = 11,
+    #[doc = "12 - SLC0"]
+    SLC0 = 12,
+    #[doc = "13 - SLC1"]
+    SLC1 = 13,
     #[doc = "14 - UHCI0"]
     UHCI0 = 14,
     #[doc = "15 - UHCI1"]
@@ -382,16 +392,18 @@ pub enum Interrupt {
     UART1 = 28,
     #[doc = "29 - UART2"]
     UART2 = 29,
-    #[doc = "31 - PWM0"]
-    PWM0 = 31,
-    #[doc = "32 - PWM1"]
-    PWM1 = 32,
+    #[doc = "30 - SDIO_HOST"]
+    SDIO_HOST = 30,
+    #[doc = "31 - MCPWM0"]
+    MCPWM0 = 31,
+    #[doc = "32 - MCPWM1"]
+    MCPWM1 = 32,
     #[doc = "35 - LEDC"]
     LEDC = 35,
     #[doc = "36 - EFUSE"]
     EFUSE = 36,
-    #[doc = "37 - TWAI"]
-    TWAI = 37,
+    #[doc = "37 - TWAI0"]
+    TWAI0 = 37,
     #[doc = "38 - USB"]
     USB = 38,
     #[doc = "39 - RTC_CORE"]
@@ -408,6 +420,8 @@ pub enum Interrupt {
     SPI2_DMA = 44,
     #[doc = "45 - SPI3_DMA"]
     SPI3_DMA = 45,
+    #[doc = "47 - WDT"]
+    WDT = 47,
     #[doc = "48 - TIMER1"]
     TIMER1 = 48,
     #[doc = "49 - TIMER2"]
@@ -535,6 +549,8 @@ impl Interrupt {
             9 => Ok(Interrupt::RWBT_NMI),
             10 => Ok(Interrupt::RWBLE_NMI),
             11 => Ok(Interrupt::I2C_MASTER),
+            12 => Ok(Interrupt::SLC0),
+            13 => Ok(Interrupt::SLC1),
             14 => Ok(Interrupt::UHCI0),
             15 => Ok(Interrupt::UHCI1),
             16 => Ok(Interrupt::GPIO),
@@ -550,11 +566,12 @@ impl Interrupt {
             27 => Ok(Interrupt::UART0),
             28 => Ok(Interrupt::UART1),
             29 => Ok(Interrupt::UART2),
-            31 => Ok(Interrupt::PWM0),
-            32 => Ok(Interrupt::PWM1),
+            30 => Ok(Interrupt::SDIO_HOST),
+            31 => Ok(Interrupt::MCPWM0),
+            32 => Ok(Interrupt::MCPWM1),
             35 => Ok(Interrupt::LEDC),
             36 => Ok(Interrupt::EFUSE),
-            37 => Ok(Interrupt::TWAI),
+            37 => Ok(Interrupt::TWAI0),
             38 => Ok(Interrupt::USB),
             39 => Ok(Interrupt::RTC_CORE),
             40 => Ok(Interrupt::RMT),
@@ -563,6 +580,7 @@ impl Interrupt {
             43 => Ok(Interrupt::I2C_EXT1),
             44 => Ok(Interrupt::SPI2_DMA),
             45 => Ok(Interrupt::SPI3_DMA),
+            47 => Ok(Interrupt::WDT),
             48 => Ok(Interrupt::TIMER1),
             49 => Ok(Interrupt::TIMER2),
             50 => Ok(Interrupt::TG0_T0_LEVEL),
@@ -645,7 +663,7 @@ impl core::fmt::Debug for AES {
 }
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub mod aes;
-#[doc = "Advanced Peripheral Bus Controller"]
+#[doc = "APB (Advanced Peripheral Bus) Controller"]
 pub struct APB_CTRL {
     _marker: PhantomData<*const ()>,
 }
@@ -671,9 +689,9 @@ impl core::fmt::Debug for APB_CTRL {
         f.debug_struct("APB_CTRL").finish()
     }
 }
-#[doc = "Advanced Peripheral Bus Controller"]
+#[doc = "APB (Advanced Peripheral Bus) Controller"]
 pub mod apb_ctrl;
-#[doc = "Successive Approximation Register Analog to Digital Converter"]
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub struct APB_SARADC {
     _marker: PhantomData<*const ()>,
 }
@@ -699,36 +717,36 @@ impl core::fmt::Debug for APB_SARADC {
         f.debug_struct("APB_SARADC").finish()
     }
 }
-#[doc = "Successive Approximation Register Analog to Digital Converter"]
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub mod apb_saradc;
 #[doc = "Debug Assist"]
-pub struct DEBUG_ASSIST {
+pub struct ASSIST_DEBUG {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for DEBUG_ASSIST {}
-impl DEBUG_ASSIST {
+unsafe impl Send for ASSIST_DEBUG {}
+impl ASSIST_DEBUG {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const debug_assist::RegisterBlock = 0x600c_e000 as *const _;
+    pub const PTR: *const assist_debug::RegisterBlock = 0x600c_e000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const debug_assist::RegisterBlock {
+    pub const fn ptr() -> *const assist_debug::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for DEBUG_ASSIST {
-    type Target = debug_assist::RegisterBlock;
+impl Deref for ASSIST_DEBUG {
+    type Target = assist_debug::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for DEBUG_ASSIST {
+impl core::fmt::Debug for ASSIST_DEBUG {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("DEBUG_ASSIST").finish()
+        f.debug_struct("ASSIST_DEBUG").finish()
     }
 }
 #[doc = "Debug Assist"]
-pub mod debug_assist;
+pub mod assist_debug;
 #[doc = "DMA (Direct Memory Access) Controller"]
 pub struct DMA {
     _marker: PhantomData<*const ()>,
@@ -870,33 +888,33 @@ impl core::fmt::Debug for GPIO {
 #[doc = "General Purpose Input/Output"]
 pub mod gpio;
 #[doc = "Sigma-Delta Modulation"]
-pub struct GPIOSD {
+pub struct GPIO_SD {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for GPIOSD {}
-impl GPIOSD {
+unsafe impl Send for GPIO_SD {}
+impl GPIO_SD {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpiosd::RegisterBlock = 0x6000_4f00 as *const _;
+    pub const PTR: *const gpio_sd::RegisterBlock = 0x6000_4f00 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpiosd::RegisterBlock {
+    pub const fn ptr() -> *const gpio_sd::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for GPIOSD {
-    type Target = gpiosd::RegisterBlock;
+impl Deref for GPIO_SD {
+    type Target = gpio_sd::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for GPIOSD {
+impl core::fmt::Debug for GPIO_SD {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("GPIOSD").finish()
+        f.debug_struct("GPIO_SD").finish()
     }
 }
 #[doc = "Sigma-Delta Modulation"]
-pub mod gpiosd;
+pub mod gpio_sd;
 #[doc = "HMAC (Hash-based Message Authentication Code) Accelerator"]
 pub struct HMAC {
     _marker: PhantomData<*const ()>,
@@ -925,7 +943,7 @@ impl core::fmt::Debug for HMAC {
 }
 #[doc = "HMAC (Hash-based Message Authentication Code) Accelerator"]
 pub mod hmac;
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
 pub struct I2C0 {
     _marker: PhantomData<*const ()>,
 }
@@ -951,9 +969,9 @@ impl core::fmt::Debug for I2C0 {
         f.debug_struct("I2C0").finish()
     }
 }
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
 pub mod i2c0;
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
 pub struct I2C1 {
     _marker: PhantomData<*const ()>,
 }
@@ -979,9 +997,9 @@ impl core::fmt::Debug for I2C1 {
         f.debug_struct("I2C1").finish()
     }
 }
-#[doc = "I2C (Inter-Integrated Circuit) Controller"]
+#[doc = "I2C (Inter-Integrated Circuit) Controller 1"]
 pub use self::i2c0 as i2c1;
-#[doc = "I2S (Inter-IC Sound) Controller"]
+#[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub struct I2S0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1007,9 +1025,9 @@ impl core::fmt::Debug for I2S0 {
         f.debug_struct("I2S0").finish()
     }
 }
-#[doc = "I2S (Inter-IC Sound) Controller"]
+#[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub mod i2s0;
-#[doc = "I2S (Inter-IC Sound) Controller"]
+#[doc = "I2S (Inter-IC Sound) Controller 1"]
 pub struct I2S1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1035,9 +1053,9 @@ impl core::fmt::Debug for I2S1 {
         f.debug_struct("I2S1").finish()
     }
 }
-#[doc = "I2S (Inter-IC Sound) Controller"]
+#[doc = "I2S (Inter-IC Sound) Controller 1"]
 pub mod i2s1;
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 0)"]
 pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1063,9 +1081,9 @@ impl core::fmt::Debug for INTERRUPT_CORE0 {
         f.debug_struct("INTERRUPT_CORE0").finish()
     }
 }
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 0)"]
 pub mod interrupt_core0;
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 1)"]
 pub struct INTERRUPT_CORE1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1091,7 +1109,7 @@ impl core::fmt::Debug for INTERRUPT_CORE1 {
         f.debug_struct("INTERRUPT_CORE1").finish()
     }
 }
-#[doc = "Interrupt Core"]
+#[doc = "Interrupt Controller (Core 1)"]
 pub mod interrupt_core1;
 #[doc = "Input/Output Multiplexer"]
 pub struct IO_MUX {
@@ -1121,7 +1139,7 @@ impl core::fmt::Debug for IO_MUX {
 }
 #[doc = "Input/Output Multiplexer"]
 pub mod io_mux;
-#[doc = "Peripheral LCD_CAM"]
+#[doc = "LCD_CAM Peripheral"]
 pub struct LCD_CAM {
     _marker: PhantomData<*const ()>,
 }
@@ -1147,9 +1165,9 @@ impl core::fmt::Debug for LCD_CAM {
         f.debug_struct("LCD_CAM").finish()
     }
 }
-#[doc = "Peripheral LCD_CAM"]
+#[doc = "LCD_CAM Peripheral"]
 pub mod lcd_cam;
-#[doc = "LED PWM (Pulse Width Modulation) Controller"]
+#[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub struct LEDC {
     _marker: PhantomData<*const ()>,
 }
@@ -1175,7 +1193,7 @@ impl core::fmt::Debug for LEDC {
         f.debug_struct("LEDC").finish()
     }
 }
-#[doc = "LED PWM (Pulse Width Modulation) Controller"]
+#[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub mod ledc;
 #[doc = "Pulse Count Controller"]
 pub struct PCNT {
@@ -1205,7 +1223,7 @@ impl core::fmt::Debug for PCNT {
 }
 #[doc = "Pulse Count Controller"]
 pub mod pcnt;
-#[doc = "Peripheral PERI_BACKUP"]
+#[doc = "PERI_BACKUP Peripheral"]
 pub struct PERI_BACKUP {
     _marker: PhantomData<*const ()>,
 }
@@ -1231,65 +1249,65 @@ impl core::fmt::Debug for PERI_BACKUP {
         f.debug_struct("PERI_BACKUP").finish()
     }
 }
-#[doc = "Peripheral PERI_BACKUP"]
+#[doc = "PERI_BACKUP Peripheral"]
 pub mod peri_backup;
-#[doc = "Peripheral PWM0"]
-pub struct PWM0 {
+#[doc = "Motor Control Pulse-Width Modulation 0"]
+pub struct MCPWM0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for PWM0 {}
-impl PWM0 {
+unsafe impl Send for MCPWM0 {}
+impl MCPWM0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm0::RegisterBlock = 0x6001_e000 as *const _;
+    pub const PTR: *const mcpwm0::RegisterBlock = 0x6001_e000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm0::RegisterBlock {
+    pub const fn ptr() -> *const mcpwm0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for PWM0 {
-    type Target = pwm0::RegisterBlock;
+impl Deref for MCPWM0 {
+    type Target = mcpwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for PWM0 {
+impl core::fmt::Debug for MCPWM0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PWM0").finish()
+        f.debug_struct("MCPWM0").finish()
     }
 }
-#[doc = "Peripheral PWM0"]
-pub mod pwm0;
-#[doc = "Peripheral PWM0"]
-pub struct PWM1 {
+#[doc = "Motor Control Pulse-Width Modulation 0"]
+pub mod mcpwm0;
+#[doc = "Motor Control Pulse-Width Modulation 1"]
+pub struct MCPWM1 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for PWM1 {}
-impl PWM1 {
+unsafe impl Send for MCPWM1 {}
+impl MCPWM1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm0::RegisterBlock = 0x6002_c000 as *const _;
+    pub const PTR: *const mcpwm0::RegisterBlock = 0x6002_c000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm0::RegisterBlock {
+    pub const fn ptr() -> *const mcpwm0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for PWM1 {
-    type Target = pwm0::RegisterBlock;
+impl Deref for MCPWM1 {
+    type Target = mcpwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for PWM1 {
+impl core::fmt::Debug for MCPWM1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PWM1").finish()
+        f.debug_struct("MCPWM1").finish()
     }
 }
-#[doc = "Peripheral PWM0"]
-pub use self::pwm0 as pwm1;
-#[doc = "Remote control"]
+#[doc = "Motor Control Pulse-Width Modulation 1"]
+pub use self::mcpwm0 as mcpwm1;
+#[doc = "Remote Control"]
 pub struct RMT {
     _marker: PhantomData<*const ()>,
 }
@@ -1315,9 +1333,9 @@ impl core::fmt::Debug for RMT {
         f.debug_struct("RMT").finish()
     }
 }
-#[doc = "Remote control"]
+#[doc = "Remote Control"]
 pub mod rmt;
-#[doc = "Hardware random number generator"]
+#[doc = "Hardware Random Number Generator"]
 pub struct RNG {
     _marker: PhantomData<*const ()>,
 }
@@ -1343,7 +1361,7 @@ impl core::fmt::Debug for RNG {
         f.debug_struct("RNG").finish()
     }
 }
-#[doc = "Hardware random number generator"]
+#[doc = "Hardware Random Number Generator"]
 pub mod rng;
 #[doc = "RSA (Rivest Shamir Adleman) Accelerator"]
 pub struct RSA {
@@ -1373,7 +1391,7 @@ impl core::fmt::Debug for RSA {
 }
 #[doc = "RSA (Rivest Shamir Adleman) Accelerator"]
 pub mod rsa;
-#[doc = "Real Time Controller"]
+#[doc = "Real-Time Clock Control"]
 pub struct RTC_CNTL {
     _marker: PhantomData<*const ()>,
 }
@@ -1399,9 +1417,9 @@ impl core::fmt::Debug for RTC_CNTL {
         f.debug_struct("RTC_CNTL").finish()
     }
 }
-#[doc = "Real Time Controller"]
+#[doc = "Real-Time Clock Control"]
 pub mod rtc_cntl;
-#[doc = "Peripheral RTC_I2C"]
+#[doc = "RTC_I2C Peripheral"]
 pub struct RTC_I2C {
     _marker: PhantomData<*const ()>,
 }
@@ -1427,37 +1445,37 @@ impl core::fmt::Debug for RTC_I2C {
         f.debug_struct("RTC_I2C").finish()
     }
 }
-#[doc = "Peripheral RTC_I2C"]
+#[doc = "RTC_I2C Peripheral"]
 pub mod rtc_i2c;
-#[doc = "Peripheral RTC_IO"]
-pub struct RTCIO {
+#[doc = "RTC_IO Peripheral"]
+pub struct RTC_IO {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for RTCIO {}
-impl RTCIO {
+unsafe impl Send for RTC_IO {}
+impl RTC_IO {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rtcio::RegisterBlock = 0x6000_8400 as *const _;
+    pub const PTR: *const rtc_io::RegisterBlock = 0x6000_8400 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const rtcio::RegisterBlock {
+    pub const fn ptr() -> *const rtc_io::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for RTCIO {
-    type Target = rtcio::RegisterBlock;
+impl Deref for RTC_IO {
+    type Target = rtc_io::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for RTCIO {
+impl core::fmt::Debug for RTC_IO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RTCIO").finish()
+        f.debug_struct("RTC_IO").finish()
     }
 }
-#[doc = "Peripheral RTC_IO"]
-pub mod rtcio;
-#[doc = "Peripheral SENS"]
+#[doc = "RTC_IO Peripheral"]
+pub mod rtc_io;
+#[doc = "SENS Peripheral"]
 pub struct SENS {
     _marker: PhantomData<*const ()>,
 }
@@ -1483,9 +1501,9 @@ impl core::fmt::Debug for SENS {
         f.debug_struct("SENS").finish()
     }
 }
-#[doc = "Peripheral SENS"]
+#[doc = "SENS Peripheral"]
 pub mod sens;
-#[doc = "Peripheral SENSITIVE"]
+#[doc = "SENSITIVE Peripheral"]
 pub struct SENSITIVE {
     _marker: PhantomData<*const ()>,
 }
@@ -1511,7 +1529,7 @@ impl core::fmt::Debug for SENSITIVE {
         f.debug_struct("SENSITIVE").finish()
     }
 }
-#[doc = "Peripheral SENSITIVE"]
+#[doc = "SENSITIVE Peripheral"]
 pub mod sensitive;
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub struct SHA {
@@ -1541,7 +1559,7 @@ impl core::fmt::Debug for SHA {
 }
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub mod sha;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
 pub struct SPI0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1567,9 +1585,9 @@ impl core::fmt::Debug for SPI0 {
         f.debug_struct("SPI0").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
 pub mod spi0;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub struct SPI1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1595,9 +1613,9 @@ impl core::fmt::Debug for SPI1 {
         f.debug_struct("SPI1").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub mod spi1;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub struct SPI2 {
     _marker: PhantomData<*const ()>,
 }
@@ -1623,9 +1641,9 @@ impl core::fmt::Debug for SPI2 {
         f.debug_struct("SPI2").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
 pub mod spi2;
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 3"]
 pub struct SPI3 {
     _marker: PhantomData<*const ()>,
 }
@@ -1651,9 +1669,9 @@ impl core::fmt::Debug for SPI3 {
         f.debug_struct("SPI3").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller"]
+#[doc = "SPI (Serial Peripheral Interface) Controller 3"]
 pub use self::spi2 as spi3;
-#[doc = "System"]
+#[doc = "System Configuration Registers"]
 pub struct SYSTEM {
     _marker: PhantomData<*const ()>,
 }
@@ -1679,7 +1697,7 @@ impl core::fmt::Debug for SYSTEM {
         f.debug_struct("SYSTEM").finish()
     }
 }
-#[doc = "System"]
+#[doc = "System Configuration Registers"]
 pub mod system;
 #[doc = "System Timer"]
 pub struct SYSTIMER {
@@ -1709,7 +1727,7 @@ impl core::fmt::Debug for SYSTIMER {
 }
 #[doc = "System Timer"]
 pub mod systimer;
-#[doc = "Timer Group"]
+#[doc = "Timer Group 0"]
 pub struct TIMG0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1735,9 +1753,9 @@ impl core::fmt::Debug for TIMG0 {
         f.debug_struct("TIMG0").finish()
     }
 }
-#[doc = "Timer Group"]
+#[doc = "Timer Group 0"]
 pub mod timg0;
-#[doc = "Timer Group"]
+#[doc = "Timer Group 1"]
 pub struct TIMG1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1763,37 +1781,37 @@ impl core::fmt::Debug for TIMG1 {
         f.debug_struct("TIMG1").finish()
     }
 }
-#[doc = "Timer Group"]
+#[doc = "Timer Group 1"]
 pub use self::timg0 as timg1;
 #[doc = "Two-Wire Automotive Interface"]
-pub struct TWAI {
+pub struct TWAI0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TWAI {}
-impl TWAI {
+unsafe impl Send for TWAI0 {}
+impl TWAI0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const twai::RegisterBlock = 0x6002_b000 as *const _;
+    pub const PTR: *const twai0::RegisterBlock = 0x6002_b000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const twai::RegisterBlock {
+    pub const fn ptr() -> *const twai0::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for TWAI {
-    type Target = twai::RegisterBlock;
+impl Deref for TWAI0 {
+    type Target = twai0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TWAI {
+impl core::fmt::Debug for TWAI0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TWAI").finish()
+        f.debug_struct("TWAI0").finish()
     }
 }
 #[doc = "Two-Wire Automotive Interface"]
-pub mod twai;
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+pub mod twai0;
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 0"]
 pub struct UART0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1819,9 +1837,9 @@ impl core::fmt::Debug for UART0 {
         f.debug_struct("UART0").finish()
     }
 }
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 0"]
 pub mod uart0;
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
 pub struct UART1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1847,9 +1865,9 @@ impl core::fmt::Debug for UART1 {
         f.debug_struct("UART1").finish()
     }
 }
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
 pub use self::uart0 as uart1;
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
 pub struct UART2 {
     _marker: PhantomData<*const ()>,
 }
@@ -1875,9 +1893,9 @@ impl core::fmt::Debug for UART2 {
         f.debug_struct("UART2").finish()
     }
 }
-#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
+#[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 2"]
 pub use self::uart0 as uart2;
-#[doc = "Universal Host Controller Interface"]
+#[doc = "Universal Host Controller Interface 0"]
 pub struct UHCI0 {
     _marker: PhantomData<*const ()>,
 }
@@ -1903,9 +1921,9 @@ impl core::fmt::Debug for UHCI0 {
         f.debug_struct("UHCI0").finish()
     }
 }
-#[doc = "Universal Host Controller Interface"]
+#[doc = "Universal Host Controller Interface 0"]
 pub mod uhci0;
-#[doc = "Universal Host Controller Interface"]
+#[doc = "Universal Host Controller Interface 1"]
 pub struct UHCI1 {
     _marker: PhantomData<*const ()>,
 }
@@ -1931,7 +1949,7 @@ impl core::fmt::Debug for UHCI1 {
         f.debug_struct("UHCI1").finish()
     }
 }
-#[doc = "Universal Host Controller Interface"]
+#[doc = "Universal Host Controller Interface 1"]
 pub use self::uhci0 as uhci1;
 #[doc = "USB OTG (On-The-Go)"]
 pub struct USB0 {
@@ -1961,7 +1979,7 @@ impl core::fmt::Debug for USB0 {
 }
 #[doc = "USB OTG (On-The-Go)"]
 pub mod usb0;
-#[doc = "Peripheral USB_DEVICE"]
+#[doc = "Full-speed USB Serial/JTAG Controller"]
 pub struct USB_DEVICE {
     _marker: PhantomData<*const ()>,
 }
@@ -1987,9 +2005,9 @@ impl core::fmt::Debug for USB_DEVICE {
         f.debug_struct("USB_DEVICE").finish()
     }
 }
-#[doc = "Peripheral USB_DEVICE"]
+#[doc = "Full-speed USB Serial/JTAG Controller"]
 pub mod usb_device;
-#[doc = "Peripheral USB_WRAP"]
+#[doc = "USB_WRAP Peripheral"]
 pub struct USB_WRAP {
     _marker: PhantomData<*const ()>,
 }
@@ -2015,9 +2033,9 @@ impl core::fmt::Debug for USB_WRAP {
         f.debug_struct("USB_WRAP").finish()
     }
 }
-#[doc = "Peripheral USB_WRAP"]
+#[doc = "USB_WRAP Peripheral"]
 pub mod usb_wrap;
-#[doc = "Peripheral WCL"]
+#[doc = "WCL Peripheral"]
 pub struct WCL {
     _marker: PhantomData<*const ()>,
 }
@@ -2043,7 +2061,7 @@ impl core::fmt::Debug for WCL {
         f.debug_struct("WCL").finish()
     }
 }
-#[doc = "Peripheral WCL"]
+#[doc = "WCL Peripheral"]
 pub mod wcl;
 #[doc = "XTS-AES-128 Flash Encryption"]
 pub struct XTS_AES {
@@ -2084,8 +2102,8 @@ pub struct Peripherals {
     pub APB_CTRL: APB_CTRL,
     #[doc = "APB_SARADC"]
     pub APB_SARADC: APB_SARADC,
-    #[doc = "DEBUG_ASSIST"]
-    pub DEBUG_ASSIST: DEBUG_ASSIST,
+    #[doc = "ASSIST_DEBUG"]
+    pub ASSIST_DEBUG: ASSIST_DEBUG,
     #[doc = "DMA"]
     pub DMA: DMA,
     #[doc = "DS"]
@@ -2096,8 +2114,8 @@ pub struct Peripherals {
     pub EXTMEM: EXTMEM,
     #[doc = "GPIO"]
     pub GPIO: GPIO,
-    #[doc = "GPIOSD"]
-    pub GPIOSD: GPIOSD,
+    #[doc = "GPIO_SD"]
+    pub GPIO_SD: GPIO_SD,
     #[doc = "HMAC"]
     pub HMAC: HMAC,
     #[doc = "I2C0"]
@@ -2122,10 +2140,10 @@ pub struct Peripherals {
     pub PCNT: PCNT,
     #[doc = "PERI_BACKUP"]
     pub PERI_BACKUP: PERI_BACKUP,
-    #[doc = "PWM0"]
-    pub PWM0: PWM0,
-    #[doc = "PWM1"]
-    pub PWM1: PWM1,
+    #[doc = "MCPWM0"]
+    pub MCPWM0: MCPWM0,
+    #[doc = "MCPWM1"]
+    pub MCPWM1: MCPWM1,
     #[doc = "RMT"]
     pub RMT: RMT,
     #[doc = "RNG"]
@@ -2136,8 +2154,8 @@ pub struct Peripherals {
     pub RTC_CNTL: RTC_CNTL,
     #[doc = "RTC_I2C"]
     pub RTC_I2C: RTC_I2C,
-    #[doc = "RTCIO"]
-    pub RTCIO: RTCIO,
+    #[doc = "RTC_IO"]
+    pub RTC_IO: RTC_IO,
     #[doc = "SENS"]
     pub SENS: SENS,
     #[doc = "SENSITIVE"]
@@ -2160,8 +2178,8 @@ pub struct Peripherals {
     pub TIMG0: TIMG0,
     #[doc = "TIMG1"]
     pub TIMG1: TIMG1,
-    #[doc = "TWAI"]
-    pub TWAI: TWAI,
+    #[doc = "TWAI0"]
+    pub TWAI0: TWAI0,
     #[doc = "UART0"]
     pub UART0: UART0,
     #[doc = "UART1"]
@@ -2213,7 +2231,7 @@ impl Peripherals {
             APB_SARADC: APB_SARADC {
                 _marker: PhantomData,
             },
-            DEBUG_ASSIST: DEBUG_ASSIST {
+            ASSIST_DEBUG: ASSIST_DEBUG {
                 _marker: PhantomData,
             },
             DMA: DMA {
@@ -2231,7 +2249,7 @@ impl Peripherals {
             GPIO: GPIO {
                 _marker: PhantomData,
             },
-            GPIOSD: GPIOSD {
+            GPIO_SD: GPIO_SD {
                 _marker: PhantomData,
             },
             HMAC: HMAC {
@@ -2270,10 +2288,10 @@ impl Peripherals {
             PERI_BACKUP: PERI_BACKUP {
                 _marker: PhantomData,
             },
-            PWM0: PWM0 {
+            MCPWM0: MCPWM0 {
                 _marker: PhantomData,
             },
-            PWM1: PWM1 {
+            MCPWM1: MCPWM1 {
                 _marker: PhantomData,
             },
             RMT: RMT {
@@ -2291,7 +2309,7 @@ impl Peripherals {
             RTC_I2C: RTC_I2C {
                 _marker: PhantomData,
             },
-            RTCIO: RTCIO {
+            RTC_IO: RTC_IO {
                 _marker: PhantomData,
             },
             SENS: SENS {
@@ -2327,7 +2345,7 @@ impl Peripherals {
             TIMG1: TIMG1 {
                 _marker: PhantomData,
             },
-            TWAI: TWAI {
+            TWAI0: TWAI0 {
                 _marker: PhantomData,
             },
             UART0: UART0 {

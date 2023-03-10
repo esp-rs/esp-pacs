@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-H2</name>
   <series>ESP32 H-Series</series>
-  <version>3</version>
+  <version>4</version>
   <description>32-bit RISC-V MCU &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -22,7 +22,7 @@
     limitations under the License.
 </licenseText>
   <cpu>
-    <name>RV32IMC</name>
+    <name>RV32IMAC</name>
     <revision>r0p0</revision>
     <endian>little</endian>
     <mpuPresent>false</mpuPresent>
@@ -552,7 +552,7 @@
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x6000E000</baseAddress>
       <addressBlock>
@@ -2423,7 +2423,7 @@
     </peripheral>
     <peripheral>
       <name>GDMA</name>
-      <description>DMA (Direct Memory Access) Controller</description>
+      <description>GDMA Peripheral</description>
       <groupName>DMA</groupName>
       <baseAddress>0x60080000</baseAddress>
       <addressBlock>
@@ -7583,7 +7583,7 @@
     </peripheral>
     <peripheral>
       <name>HP_APM</name>
-      <description>Peripheral HP_APM</description>
+      <description>HP_APM Peripheral</description>
       <groupName>HP_APM</groupName>
       <baseAddress>0x60099000</baseAddress>
       <addressBlock>
@@ -7591,6 +7591,22 @@
         <size>0x114</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>HP_APM_M0</name>
+        <value>26</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M1</name>
+        <value>27</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M2</name>
+        <value>28</value>
+      </interrupt>
+      <interrupt>
+        <name>HP_APM_M3</name>
+        <value>29</value>
+      </interrupt>
       <registers>
         <register>
           <name>REGION_FILTER_EN</name>
@@ -9645,7 +9661,7 @@
     </peripheral>
     <peripheral>
       <name>HP_SYS</name>
-      <description>Peripheral HP_SYS</description>
+      <description>High-Power System</description>
       <groupName>HP_SYS</groupName>
       <baseAddress>0x60095000</baseAddress>
       <addressBlock>
@@ -9653,6 +9669,10 @@
         <size>0x44</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>HP_PERI_TIMEOUT</name>
+        <value>25</value>
+      </interrupt>
       <registers>
         <register>
           <name>EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL</name>
@@ -10023,7 +10043,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60004000</baseAddress>
       <addressBlock>
@@ -11380,7 +11400,7 @@ level.</description>
     </peripheral>
     <peripheral derivedFrom="I2C0">
       <name>I2C1</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 1</description>
       <baseAddress>0x60005000</baseAddress>
       <interrupt>
         <name>I2C_EXT1</name>
@@ -11389,7 +11409,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>I2S0</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x6000D000</baseAddress>
       <addressBlock>
@@ -12686,7 +12706,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Peripheral INTERRUPT_CORE0</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTMTX_CORE0</groupName>
       <baseAddress>0x60010000</baseAddress>
       <addressBlock>
@@ -12694,6 +12714,26 @@ level.</description>
         <size>0x118</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR1</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR2</name>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR3</name>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE</name>
+        <value>13</value>
+      </interrupt>
       <interrupt>
         <name>CPU_PERI_TIMEOUT</name>
         <value>14</value>
@@ -12713,6 +12753,22 @@ level.</description>
       <interrupt>
         <name>COEX</name>
         <value>18</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_TIMER</name>
+        <value>19</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_SEC</name>
+        <value>20</value>
+      </interrupt>
+      <interrupt>
+        <name>ZB_MAC</name>
+        <value>21</value>
+      </interrupt>
+      <interrupt>
+        <name>ECDSA</name>
+        <value>64</value>
       </interrupt>
       <registers>
         <register>
@@ -13771,7 +13827,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTPRI</name>
-      <description>Peripheral INTPRI</description>
+      <description>INTPRI Peripheral</description>
       <groupName>INTPRI</groupName>
       <baseAddress>0x600C5000</baseAddress>
       <addressBlock>
@@ -16151,7 +16207,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_PERI</name>
-      <description>Peripheral LP_PERI</description>
+      <description>LP_PERI Peripheral</description>
       <groupName>LPPERI</groupName>
       <baseAddress>0x600B2800</baseAddress>
       <addressBlock>
@@ -16528,7 +16584,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_ANA</name>
-      <description>Peripheral LP_ANA</description>
+      <description>LP_ANA Peripheral</description>
       <groupName>LP_ANA</groupName>
       <baseAddress>0x600B2C00</baseAddress>
       <addressBlock>
@@ -17047,7 +17103,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_AON</name>
-      <description>Peripheral LP_AON</description>
+      <description>LP_AON Peripheral</description>
       <groupName>LP_AON</groupName>
       <baseAddress>0x600B1000</baseAddress>
       <addressBlock>
@@ -17587,7 +17643,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_APM</name>
-      <description>Peripheral LP_APM</description>
+      <description>LP_APM Peripheral</description>
       <groupName>LP_APM</groupName>
       <baseAddress>0x600B3800</baseAddress>
       <addressBlock>
@@ -17961,7 +18017,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_CLKRST</name>
-      <description>Peripheral LP_CLKRST</description>
+      <description>LP_CLKRST Peripheral</description>
       <groupName>LP_CLKRST</groupName>
       <baseAddress>0x600B0400</baseAddress>
       <addressBlock>
@@ -18431,7 +18487,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_TIMER</name>
-      <description>Peripheral LP_TIMER</description>
+      <description>LP_TIMER Peripheral</description>
       <groupName>LP_TIMER</groupName>
       <baseAddress>0x600B0C00</baseAddress>
       <addressBlock>
@@ -18711,7 +18767,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>LP_WDT</name>
-      <description>Peripheral LP_WDT</description>
+      <description>LP_WDT Peripheral</description>
       <groupName>LP_WDT</groupName>
       <baseAddress>0x600B1C00</baseAddress>
       <addressBlock>
@@ -19114,8 +19170,8 @@ The least significant eight bits represent the fractional part.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>MCPWM</name>
-      <description>Motor Control Pulse-Width Modulation</description>
+      <name>MCPWM0</name>
+      <description>Motor Control Pulse-Width Modulation 0</description>
       <groupName>MCPWM</groupName>
       <baseAddress>0x60014000</baseAddress>
       <addressBlock>
@@ -19123,6 +19179,10 @@ The least significant eight bits represent the fractional part.</description>
         <size>0x130</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>MCPWM0</name>
+        <value>49</value>
+      </interrupt>
       <registers>
         <register>
           <name>CLK_CFG</name>
@@ -23310,7 +23370,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>MEM_MONITOR</name>
-      <description>Peripheral MEM_MONITOR</description>
+      <description>MEM_MONITOR Peripheral</description>
       <groupName>MEM_MONITOR</groupName>
       <baseAddress>0x60092000</baseAddress>
       <addressBlock>
@@ -23526,7 +23586,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>OTP_DEBUG</name>
-      <description>Peripheral OTP_DEBUG</description>
+      <description>OTP_DEBUG Peripheral</description>
       <groupName>OTP_DEBUG</groupName>
       <baseAddress>0x600B3C00</baseAddress>
       <addressBlock>
@@ -25520,7 +25580,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>PARL_IO</name>
-      <description>Peripheral PARL_IO</description>
+      <description>PARL_IO Peripheral</description>
       <groupName>PARL_IO</groupName>
       <baseAddress>0x60015000</baseAddress>
       <addressBlock>
@@ -26060,7 +26120,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>PAU</name>
-      <description>Peripheral PAU</description>
+      <description>PAU Peripheral</description>
       <groupName>PAU</groupName>
       <baseAddress>0x60093000</baseAddress>
       <addressBlock>
@@ -26477,7 +26537,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>PCNT</name>
-      <description>Pulse Counter</description>
+      <description>Pulse Count Controller</description>
       <groupName>PCNT</groupName>
       <baseAddress>0x60012000</baseAddress>
       <addressBlock>
@@ -26977,7 +27037,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>PCR</name>
-      <description>Peripheral PCR</description>
+      <description>PCR Peripheral</description>
       <groupName>PCR</groupName>
       <baseAddress>0x60096000</baseAddress>
       <addressBlock>
@@ -29606,7 +29666,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>PMU</name>
-      <description>Peripheral PMU</description>
+      <description>PMU Peripheral</description>
       <groupName>PMU</groupName>
       <baseAddress>0x600B0000</baseAddress>
       <addressBlock>
@@ -33423,7 +33483,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote Control Peripheral</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x60007000</baseAddress>
       <addressBlock>
@@ -34513,7 +34573,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x600260B0</baseAddress>
       <addressBlock>
@@ -34547,36 +34607,40 @@ Any pulses with width less than this will be ignored when the filter is enabled.
       </interrupt>
       <registers>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>M_MEM[%s]</name>
           <description>Represents M</description>
           <addressOffset>0x0</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Z_MEM[%s]</name>
           <description>Represents Z</description>
           <addressOffset>0x200</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>Y_MEM[%s]</name>
           <description>Represents Y</description>
           <addressOffset>0x400</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
-          <dim>16</dim>
+          <dim>384</dim>
           <dimIncrement>0x1</dimIncrement>
           <name>X_MEM[%s]</name>
           <description>Represents X</description>
           <addressOffset>0x600</addressOffset>
           <size>0x8</size>
+          <access>read-write</access>
         </register>
         <register>
           <name>M_PRIME</name>
@@ -35035,7 +35099,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>SOC_ETM</name>
-      <description>Peripheral SOC_ETM</description>
+      <description>SOC_ETM Peripheral</description>
       <groupName>SOC_ETM</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -37677,7 +37741,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI0</groupName>
       <baseAddress>0x60002000</baseAddress>
       <addressBlock>
@@ -40334,7 +40398,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <groupName>SPI1</groupName>
       <baseAddress>0x60003000</baseAddress>
       <addressBlock>
@@ -41861,7 +41925,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <groupName>SPI2</groupName>
       <baseAddress>0x60081000</baseAddress>
       <addressBlock>
@@ -41869,6 +41933,10 @@ This option should be used together with RSA_SEARCH_POS.</description>
         <size>0x98</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>MSPI</name>
+        <value>30</value>
+      </interrupt>
       <interrupt>
         <name>GPSPI2</name>
         <value>59</value>
@@ -44690,7 +44758,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>TEE</name>
-      <description>Peripheral TEE</description>
+      <description>TEE Peripheral</description>
       <groupName>TEE</groupName>
       <baseAddress>0x60098000</baseAddress>
       <addressBlock>
@@ -45245,7 +45313,7 @@ This option should be used together with RSA_SEARCH_POS.</description>
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x60009000</baseAddress>
       <addressBlock>
@@ -45907,7 +45975,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x6000A000</baseAddress>
       <interrupt>
         <name>TG1_T0</name>
@@ -45920,7 +45988,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>TRACE</name>
-      <description>Peripheral TRACE</description>
+      <description>TRACE Peripheral</description>
       <groupName>TRACE</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -46178,7 +46246,7 @@ protection is enabled.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>TWAI</name>
+      <name>TWAI0</name>
       <description>Two-Wire Automotive Interface</description>
       <groupName>TWAI</groupName>
       <baseAddress>0x6000C000</baseAddress>
@@ -46941,7 +47009,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x60000000</baseAddress>
       <addressBlock>
@@ -48603,7 +48671,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x60001000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -48612,7 +48680,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x60006000</baseAddress>
       <addressBlock>

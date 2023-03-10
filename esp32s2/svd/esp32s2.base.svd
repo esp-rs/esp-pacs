@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-S2</name>
   <series>ESP32 S-Series</series>
-  <version>13</version>
+  <version>14</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -425,7 +425,7 @@ For DMA-AES; 0 = idle; 1 = busy; 2 = calculation_done.</description>
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x3F440000</baseAddress>
       <addressBlock>
@@ -1292,7 +1292,7 @@ alternate-channel scan mode.</description>
     </peripheral>
     <peripheral>
       <name>DEDICATED_GPIO</name>
-      <description>Dedicated GPIO</description>
+      <description>DEDICATED_GPIO Peripheral</description>
       <groupName>DEDIC_GPIO</groupName>
       <baseAddress>0x3F4CF000</baseAddress>
       <addressBlock>
@@ -7227,7 +7227,7 @@ alternate-channel scan mode.</description>
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x3F413000</baseAddress>
       <addressBlock>
@@ -8462,7 +8462,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
     </peripheral>
     <peripheral derivedFrom="I2C0">
       <name>I2C1</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 1</description>
       <baseAddress>0x3F427000</baseAddress>
       <interrupt>
         <name>I2C_EXT1</name>
@@ -8470,8 +8470,8 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>I2S</name>
-      <description>I2S (Inter-IC Sound) Controller</description>
+      <name>I2S0</name>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x3F40F000</baseAddress>
       <addressBlock>
@@ -8479,6 +8479,14 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
         <size>0x88</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>I2S0</name>
+        <value>35</value>
+      </interrupt>
+      <interrupt>
+        <name>I2S1</name>
+        <value>36</value>
+      </interrupt>
       <registers>
         <register>
           <name>CONF</name>
@@ -10298,7 +10306,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Interrupt</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x3F4C2000</baseAddress>
       <addressBlock>
@@ -10351,6 +10359,14 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
         <value>10</value>
       </interrupt>
       <interrupt>
+        <name>SLC0</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>SLC1</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
         <name>FROM_CPU_INTR0</name>
         <value>28</value>
       </interrupt>
@@ -10365,6 +10381,14 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
       <interrupt>
         <name>FROM_CPU_INTR3</name>
         <value>31</value>
+      </interrupt>
+      <interrupt>
+        <name>SDIO_HOST</name>
+        <value>40</value>
+      </interrupt>
+      <interrupt>
+        <name>WDT</name>
+        <value>59</value>
       </interrupt>
       <interrupt>
         <name>CACHE_IA</name>
@@ -15774,7 +15798,7 @@ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd struc
     </peripheral>
     <peripheral>
       <name>LEDC</name>
-      <description>LED PWM (Pulse Width Modulation) Controller</description>
+      <description>LED Control PWM (Pulse Width Modulation)</description>
       <groupName>LEDC</groupName>
       <baseAddress>0x3F419000</baseAddress>
       <addressBlock>
@@ -19081,7 +19105,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RMT</name>
-      <description>Remote Control Peripheral</description>
+      <description>Remote Control</description>
       <groupName>RMT</groupName>
       <baseAddress>0x3F416000</baseAddress>
       <addressBlock>
@@ -19843,7 +19867,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x60035000</baseAddress>
       <addressBlock>
@@ -19857,6 +19881,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
           <description>Random number data</description>
           <addressOffset>0x110</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
@@ -20073,11 +20098,47 @@ Any pulses with width less than this will be ignored when the filter is enabled.
             </field>
           </fields>
         </register>
+        <register>
+          <dim>512</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>M_MEM[%s]</name>
+          <description>Represents M</description>
+          <addressOffset>0x0</addressOffset>
+          <size>0x8</size>
+          <access>write-only</access>
+        </register>
+        <register>
+          <dim>512</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>Z_MEM[%s]</name>
+          <description>Represents Z</description>
+          <addressOffset>0x200</addressOffset>
+          <size>0x8</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <dim>512</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>Y_MEM[%s]</name>
+          <description>Represents Y</description>
+          <addressOffset>0x400</addressOffset>
+          <size>0x8</size>
+          <access>write-only</access>
+        </register>
+        <register>
+          <dim>512</dim>
+          <dimIncrement>0x1</dimIncrement>
+          <name>X_MEM[%s]</name>
+          <description>Represents X</description>
+          <addressOffset>0x600</addressOffset>
+          <size>0x8</size>
+          <access>write-only</access>
+        </register>
       </registers>
     </peripheral>
     <peripheral>
-      <name>RTCIO</name>
-      <description>Peripheral RTCIO</description>
+      <name>RTC_IO</name>
+      <description>RTC_IO Peripheral</description>
       <groupName>RTCIO</groupName>
       <baseAddress>0x3F408400</baseAddress>
       <addressBlock>
@@ -21058,7 +21119,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
     </peripheral>
     <peripheral>
       <name>RTC_CNTL</name>
-      <description>Real Time Controller</description>
+      <description>Real-Time Clock Control</description>
       <groupName>RTC_CNTL</groupName>
       <baseAddress>0x3F408000</baseAddress>
       <addressBlock>
@@ -25270,7 +25331,7 @@ proximity mode. Range: 0 – 255.</description>
     </peripheral>
     <peripheral>
       <name>RTC_I2C</name>
-      <description>Peripheral RTC_I2C</description>
+      <description>RTC_I2C Peripheral</description>
       <groupName>RTC_I2C</groupName>
       <baseAddress>0x3F408C00</baseAddress>
       <addressBlock>
@@ -25914,7 +25975,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral>
       <name>SENS</name>
-      <description>Peripheral SENS</description>
+      <description>SENS Peripheral</description>
       <groupName>SENS</groupName>
       <baseAddress>0x3F408800</baseAddress>
       <addressBlock>
@@ -28230,7 +28291,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI</groupName>
       <baseAddress>0x3F403000</baseAddress>
       <addressBlock>
@@ -31087,7 +31148,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <baseAddress>0x3F402000</baseAddress>
       <interrupt>
         <name>SPI1</name>
@@ -31096,7 +31157,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <baseAddress>0x3F424000</baseAddress>
       <interrupt>
         <name>SPI2</name>
@@ -31109,7 +31170,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI3</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 3</description>
       <baseAddress>0x3F425000</baseAddress>
       <interrupt>
         <name>SPI3</name>
@@ -31122,7 +31183,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral derivedFrom="SPI0">
       <name>SPI4</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 4</description>
       <baseAddress>0x3F437000</baseAddress>
       <interrupt>
         <name>SPI4_DMA</name>
@@ -31135,7 +31196,7 @@ I2C_COMD0_REG in Chapter I²C Controller</description>
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
-      <description>System</description>
+      <description>System Configuration Registers</description>
       <groupName>SYSTEM</groupName>
       <baseAddress>0x3F4C0000</baseAddress>
       <addressBlock>
@@ -32831,7 +32892,7 @@ ready to read timer value from registers; 1: Ready to read timer value from regi
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x3F41F000</baseAddress>
       <addressBlock>
@@ -33776,7 +33837,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
     </peripheral>
     <peripheral derivedFrom="TIMG0">
       <name>TIMG1</name>
-      <description>Timer Group</description>
+      <description>Timer Group 1</description>
       <baseAddress>0x3F420000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -33812,7 +33873,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>TWAI</name>
+      <name>TWAI0</name>
       <description>Two-Wire Automotive Interface</description>
       <groupName>TWAI</groupName>
       <baseAddress>0x3F42B000</baseAddress>
@@ -33822,7 +33883,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>TWAI</name>
+        <name>TWAI0</name>
         <value>47</value>
       </interrupt>
       <registers>
@@ -34468,7 +34529,7 @@ Timer %s alarm trigger time-base counter value, high 32 bits.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x3F400000</baseAddress>
       <addressBlock>
@@ -35956,7 +36017,7 @@ The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes mor
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x3F410000</baseAddress>
       <interrupt>
         <name>UART1</name>
@@ -35969,7 +36030,7 @@ The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes mor
     </peripheral>
     <peripheral>
       <name>UHCI0</name>
-      <description>Universal Host Controller Interface</description>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x3F414000</baseAddress>
       <addressBlock>
@@ -37712,6 +37773,10 @@ If this bit is set to 0, UHCI decoder stops receiving payload data  upon receivi
         <size>0x2A0</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>USB</name>
+        <value>48</value>
+      </interrupt>
       <registers>
         <register>
           <name>GOTGCTL</name>
@@ -45445,7 +45510,7 @@ If this bit is set to 0, UHCI decoder stops receiving payload data  upon receivi
     </peripheral>
     <peripheral>
       <name>USB_WRAP</name>
-      <description>Peripheral USB_WRAP</description>
+      <description>USB_WRAP Peripheral</description>
       <groupName>USB_WRAP</groupName>
       <baseAddress>0x3F439000</baseAddress>
       <addressBlock>

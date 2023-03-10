@@ -34,10 +34,10 @@ PROVIDE(APB_ADC = DefaultHandler);
 PROVIDE(DMA_CH0 = DefaultHandler);
 PROVIDE(SHA = DefaultHandler);
 PROVIDE(ECC = DefaultHandler);
-PROVIDE(ETS_FROM_CPU_INTR0 = DefaultHandler);
-PROVIDE(ETS_FROM_CPU_INTR1 = DefaultHandler);
-PROVIDE(ETS_FROM_CPU_INTR2 = DefaultHandler);
-PROVIDE(ETS_FROM_CPU_INTR3 = DefaultHandler);
+PROVIDE(FROM_CPU_INTR0 = DefaultHandler);
+PROVIDE(FROM_CPU_INTR1 = DefaultHandler);
+PROVIDE(FROM_CPU_INTR2 = DefaultHandler);
+PROVIDE(FROM_CPU_INTR3 = DefaultHandler);
 PROVIDE(ETS_ASSIST_DEBUG = DefaultHandler);
 PROVIDE(ETS_CORE0_PIF_PMS_SIZE = DefaultHandler);
 

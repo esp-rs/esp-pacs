@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C2</name>
   <series>ESP32 C-Series</series>
-  <version>6</version>
+  <version>7</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth 5 (LE)</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -37,7 +37,7 @@
   <peripherals>
     <peripheral>
       <name>APB_CTRL</name>
-      <description>Advanced Peripheral Bus Controller</description>
+      <description>APB (Advanced Peripheral Bus) Controller</description>
       <groupName>APB_CTRL</groupName>
       <baseAddress>0x60026000</baseAddress>
       <addressBlock>
@@ -955,7 +955,7 @@
     </peripheral>
     <peripheral>
       <name>APB_SARADC</name>
-      <description>Successive Approximation Register Analog to Digital Converter</description>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
       <groupName>APB_SARADC</groupName>
       <baseAddress>0x60040000</baseAddress>
       <addressBlock>
@@ -5996,7 +5996,7 @@
     </peripheral>
     <peripheral>
       <name>I2C0</name>
-      <description>I2C (Inter-Integrated Circuit) Controller</description>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60013000</baseAddress>
       <addressBlock>
@@ -7157,7 +7157,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>INTERRUPT_CORE0</name>
-      <description>Interrupt Core</description>
+      <description>Interrupt Controller (Core 0)</description>
       <groupName>INTERRUPT_CORE0</groupName>
       <baseAddress>0x600C2000</baseAddress>
       <addressBlock>
@@ -7226,19 +7226,19 @@ level.</description>
         <value>35</value>
       </interrupt>
       <interrupt>
-        <name>ETS_FROM_CPU_INTR0</name>
+        <name>FROM_CPU_INTR0</name>
         <value>36</value>
       </interrupt>
       <interrupt>
-        <name>ETS_FROM_CPU_INTR1</name>
+        <name>FROM_CPU_INTR1</name>
         <value>37</value>
       </interrupt>
       <interrupt>
-        <name>ETS_FROM_CPU_INTR2</name>
+        <name>FROM_CPU_INTR2</name>
         <value>38</value>
       </interrupt>
       <interrupt>
-        <name>ETS_FROM_CPU_INTR3</name>
+        <name>FROM_CPU_INTR3</name>
         <value>39</value>
       </interrupt>
       <interrupt>
@@ -8659,7 +8659,7 @@ level.</description>
     </peripheral>
     <peripheral>
       <name>LEDC</name>
-      <description>LED PWM (Pulse Width Modulation) Controller</description>
+      <description>LED Control PWM (Pulse Width Modulation)</description>
       <groupName>LEDC</groupName>
       <baseAddress>0x60019000</baseAddress>
       <addressBlock>
@@ -9434,7 +9434,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>RNG</name>
-      <description>Hardware random number generator</description>
+      <description>Hardware Random Number Generator</description>
       <groupName>RNG</groupName>
       <baseAddress>0x60026000</baseAddress>
       <addressBlock>
@@ -9448,12 +9448,13 @@ The least significant eight bits represent the fractional part.</description>
           <description>Random number data</description>
           <addressOffset>0xB0</addressOffset>
           <size>0x20</size>
+          <access>read-only</access>
         </register>
       </registers>
     </peripheral>
     <peripheral>
       <name>RTC_CNTL</name>
-      <description>Real Time Controller</description>
+      <description>Real-Time Clock Control</description>
       <groupName>RTC_CNTL</groupName>
       <baseAddress>0x60008000</baseAddress>
       <addressBlock>
@@ -12084,7 +12085,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>SENSITIVE</name>
-      <description>Sensitive</description>
+      <description>SENSITIVE Peripheral</description>
       <groupName>SENSITIVE</groupName>
       <baseAddress>0x600C1000</baseAddress>
       <addressBlock>
@@ -12644,7 +12645,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>SPI0</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 0</description>
       <groupName>SPI0</groupName>
       <baseAddress>0x60003000</baseAddress>
       <addressBlock>
@@ -13282,7 +13283,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>SPI1</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 1</description>
       <groupName>SPI1</groupName>
       <baseAddress>0x60002000</baseAddress>
       <addressBlock>
@@ -14638,7 +14639,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>SPI2</name>
-      <description>SPI (Serial Peripheral Interface) Controller</description>
+      <description>SPI (Serial Peripheral Interface) Controller 2</description>
       <groupName>SPI2</groupName>
       <baseAddress>0x60024000</baseAddress>
       <addressBlock>
@@ -16708,7 +16709,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>SYSTEM</name>
-      <description>System</description>
+      <description>System Configuration Registers</description>
       <groupName>SYSTEM</groupName>
       <baseAddress>0x600C0000</baseAddress>
       <addressBlock>
@@ -18439,7 +18440,7 @@ The least significant eight bits represent the fractional part.</description>
     </peripheral>
     <peripheral>
       <name>TIMG0</name>
-      <description>Timer Group</description>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x6001F000</baseAddress>
       <addressBlock>
@@ -19094,7 +19095,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral>
       <name>UART0</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 0</description>
       <groupName>UART</groupName>
       <baseAddress>0x60000000</baseAddress>
       <addressBlock>
@@ -20680,7 +20681,7 @@ protection is enabled.</description>
     </peripheral>
     <peripheral derivedFrom="UART0">
       <name>UART1</name>
-      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller</description>
+      <description>UART (Universal Asynchronous Receiver-Transmitter) Controller 1</description>
       <baseAddress>0x60010000</baseAddress>
       <interrupt>
         <name>UART1</name>
