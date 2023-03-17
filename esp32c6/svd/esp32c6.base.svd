@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6</name>
   <series>ESP32 C-Series</series>
-  <version>4</version>
+  <version>5</version>
   <description>32-bit RISC-V MCU &amp; 2.4 GHz Wi-Fi 6 &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -1130,49 +1130,49 @@
               <description>saradc tsens  interrupt raw</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC_THRES1_LOW_INT_RAW</name>
               <description>saradc thres1 low  interrupt raw</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC_THRES0_LOW_INT_RAW</name>
               <description>saradc thres0 low interrupt raw</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC_THRES1_HIGH_INT_RAW</name>
               <description>saradc thres1 high interrupt raw</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC_THRES0_HIGH_INT_RAW</name>
               <description>saradc thres0 high interrupt raw</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC2_DONE_INT_RAW</name>
               <description>saradc2 done interrupt raw</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APB_SARADC1_DONE_INT_RAW</name>
               <description>saradc1 done interrupt raw</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -2557,49 +2557,49 @@
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>IN_SUC_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received for Rx channel 0. For UHCI0 the raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>IN_ERR_EOF</name>
               <description>The raw interrupt bit turns to high level when data error is detected only in the case that the peripheral is UHCI0 for Rx channel 0. For other peripherals this raw interrupt is reserved.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>IN_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting inlink descriptor error including owner error and the second and third word error of inlink descriptor for Rx channel 0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>IN_DSCR_EMPTY</name>
               <description>The raw interrupt bit turns to high level when Rx buffer pointed by inlink is full and receiving data is not completed but there is no more inlink for Rx channel 0.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>INFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is overflow.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>INFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Rx channel 0 is underflow.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -2793,42 +2793,42 @@
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_EOF</name>
               <description>The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_DSCR_ERR</name>
               <description>The raw interrupt bit turns to high level when detecting outlink descriptor error including owner error and the second and third word error of outlink descriptor for Tx channel 0.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_TOTAL_EOF</name>
               <description>The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUTFIFO_OVF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUTFIFO_UDF</name>
               <description>This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -9690,56 +9690,56 @@
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache0 due to bus0 accesses L1-ICache0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_IBUS1_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache1 due to bus1 accesses L1-ICache1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_IBUS2_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache2 due to bus2 accesses L1-ICache2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_IBUS3_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-ICache3 due to bus3 accesses L1-ICache3.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_BUS0_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus0 accesses L1-DCache.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_BUS1_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus1 accesses L1-DCache.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_DBUS2_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus2 accesses L1-DCache.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_DBUS3_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L1-DCache due to bus3 accesses L1-DCache.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -9904,35 +9904,35 @@
               <description>The raw bit of the interrupt of access fail that occurs in L1-ICache0.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE1_FAIL_INT_RAW</name>
               <description>The raw bit of the interrupt of access fail that occurs in L1-ICache1.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE2_FAIL_INT_RAW</name>
               <description>The raw bit of the interrupt of access fail that occurs in L1-ICache2.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE3_FAIL_INT_RAW</name>
               <description>The raw bit of the interrupt of access fail that occurs in L1-ICache3.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_CACHE_FAIL_INT_RAW</name>
               <description>The raw bit of the interrupt of access fail that occurs in L1-DCache.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -10959,84 +10959,84 @@
               <description>The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation is done.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE1_PLD_DONE_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE2_PLD_DONE_INT_RAW</name>
               <description>Reserved</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE3_PLD_DONE_INT_RAW</name>
               <description>Reserved</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_CACHE_PLD_DONE_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CACHE_SYNC_DONE_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when Cache sync-operation is done.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE0_PLD_ERR_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE1_PLD_ERR_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE2_PLD_ERR_INT_RAW</name>
               <description>Reserved</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_ICACHE3_PLD_ERR_INT_RAW</name>
               <description>Reserved</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L1_CACHE_PLD_ERR_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CACHE_SYNC_ERR_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when Cache sync-operation error occurs.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -12307,56 +12307,56 @@
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_IBUS1_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_IBUS2_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_IBUS3_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_DBUS0_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_DBUS1_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_DBUS2_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_DBUS3_OVF_INT_RAW</name>
               <description>The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -12465,7 +12465,7 @@
               <description>The raw bit of the interrupt of access fail that occurs in L2-Cache.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -13176,14 +13176,14 @@
               <description>The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>L2_CACHE_PLD_ERR_INT_RAW</name>
               <description>The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -23472,112 +23472,112 @@ The least significant eight bits represent the fractional part.</description>
               <description>Triggered when the timer0 has reached its maximum counter value.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER1_OVF_INT_RAW</name>
               <description>Triggered when the timer1 has reached its maximum counter value.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER2_OVF_INT_RAW</name>
               <description>Triggered when the timer2 has reached its maximum counter value.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER3_OVF_INT_RAW</name>
               <description>Triggered when the timer3 has reached its maximum counter value.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH0_INT_RAW</name>
               <description>Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH1_INT_RAW</name>
               <description>Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH2_INT_RAW</name>
               <description>Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH3_INT_RAW</name>
               <description>Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH4_INT_RAW</name>
               <description>Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DUTY_CHNG_END_CH5_INT_RAW</name>
               <description>Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH0_INT_RAW</name>
               <description>Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH1_INT_RAW</name>
               <description>Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH2_INT_RAW</name>
               <description>Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH3_INT_RAW</name>
               <description>Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH4_INT_RAW</name>
               <description>Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OVF_CNT_CH5_INT_RAW</name>
               <description>Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -24977,7 +24977,7 @@ The least significant eight bits represent the fractional part.</description>
               <description>need_des</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>UART_WAKEUP_EN</name>
@@ -25175,7 +25175,7 @@ The least significant eight bits represent the fractional part.</description>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -25235,7 +25235,7 @@ The least significant eight bits represent the fractional part.</description>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -25746,7 +25746,7 @@ The least significant eight bits represent the fractional part.</description>
               <description>need_des</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DISABLE</name>
@@ -30595,14 +30595,14 @@ Information.</description>
               <description>need_des</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SOC_WAKEUP_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -30683,14 +30683,14 @@ Information.</description>
               <description>need_des</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MAIN_TIMER_LP_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -30827,119 +30827,119 @@ Information.</description>
               <description>This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TXFIFO_EMPTY_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies .</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>PARITY_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a parity error in the data.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FRM_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a data frame error .</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RXFIFO_OVF_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DSR_CHG_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CTS_CHG_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>BRK_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RXFIFO_TOUT_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SW_XON_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SW_XOFF_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>GLITCH_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_BRK_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter completes  sending  NULL characters after all data in Tx-FIFO are sent.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_BRK_IDLE_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the  last data.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter has send out all data in FIFO.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>AT_CMD_CHAR_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the configured at_cmd char.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>WAKEUP_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -32528,14 +32528,14 @@ Information.</description>
               <description>need_des</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>LP_WDT_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -35773,210 +35773,210 @@ Information.</description>
               <description>The raw status bit for the interrupt triggered when the timer 0 stops.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER1_STOP_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when the timer 1 stops.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER2_STOP_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when the timer 2 stops.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER0_TEZ_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 0 TEZ event.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER1_TEZ_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 1 TEZ event.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER2_TEZ_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 2 TEZ event.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER0_TEP_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 0 TEP event.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER1_TEP_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 1 TEP event.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TIMER2_TEP_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM timer 2 TEP event.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT0_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f0 starts.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT1_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f1 starts.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT2_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f2 starts.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT0_CLR_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f0 ends.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT1_CLR_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f1 ends.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FAULT2_CLR_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered when event_f2 ends.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR0_TEA_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 0 TEA event</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR1_TEA_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 1 TEA event</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR2_TEA_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 2 TEA event</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR0_TEB_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 0 TEB event</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR1_TEB_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 1 TEB event</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CMPR2_TEB_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a PWM operator 2 TEB event</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ0_CBC_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a cycle-by-cycle mode action on PWM0.</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ1_CBC_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a cycle-by-cycle mode action on PWM1.</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ2_CBC_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a cycle-by-cycle mode action on PWM2.</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ0_OST_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a one-shot mode action on PWM0.</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ1_OST_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a one-shot mode action on PWM1.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TZ2_OST_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by a one-shot mode action on PWM2.</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CAP0_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by capture on channel 0.</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CAP1_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by capture on channel 1.</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CAP2_INT_RAW</name>
               <description>The raw status bit for the interrupt triggered by capture on channel 2.</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -37037,6 +37037,1109 @@ Information.</description>
             <field>
               <name>DATE</name>
               <description>version register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>MODEM_LPCON</name>
+      <description>MODEM_LPCON Peripheral</description>
+      <groupName>MODEM_LPCON</groupName>
+      <baseAddress>0x600AF000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x30</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>TEST_CONF</name>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_EN</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_DEBUG_ENA</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_TIMER_CONF</name>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_LP_TIMER_SEL_OSC_SLOW</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_SEL_OSC_FAST</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_SEL_XTAL</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_SEL_XTAL32K</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_DIV_NUM</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COEX_LP_CLK_CONF</name>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_COEX_LP_SEL_OSC_SLOW</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_LP_SEL_OSC_FAST</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_LP_SEL_XTAL</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_LP_SEL_XTAL32K</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_LP_DIV_NUM</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WIFI_LP_CLK_CONF</name>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIPWR_LP_SEL_OSC_SLOW</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIPWR_LP_SEL_OSC_FAST</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIPWR_LP_SEL_XTAL</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIPWR_LP_SEL_XTAL32K</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIPWR_LP_DIV_NUM</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_MST_CLK_CONF</name>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_I2C_MST_SEL_160M</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MODEM_32K_CLK_CONF</name>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_MODEM_32K_SEL</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF</name>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIPWR_EN</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_EN</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_I2C_MST_EN</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_EN</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF_FORCE_ON</name>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIPWR_FO</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_FO</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_I2C_MST_FO</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_TIMER_FO</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BCMEM_FO</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_I2C_MST_MEM_FO</name>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_CHAN_FREQ_MEM_FO</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_PBUS_MEM_FO</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_AGC_MEM_FO</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_DC_MEM_FO</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF_POWER_ST</name>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIPWR_ST_MAP</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_COEX_ST_MAP</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_I2C_MST_ST_MAP</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_LP_APB_ST_MAP</name>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RST_CONF</name>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RST_WIFIPWR</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>RST_COEX</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>RST_I2C_MST</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>RST_LP_TIMER</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MEM_CONF</name>
+          <addressOffset>0x28</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00020015</resetValue>
+          <fields>
+            <field>
+              <name>DC_MEM_FORCE_PU</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DC_MEM_FORCE_PD</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AGC_MEM_FORCE_PU</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AGC_MEM_FORCE_PD</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PBUS_MEM_FORCE_PU</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PBUS_MEM_FORCE_PD</name>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BC_MEM_FORCE_PU</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BC_MEM_FORCE_PD</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_MST_MEM_FORCE_PU</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>I2C_MST_MEM_FORCE_PD</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHAN_FREQ_MEM_FORCE_PU</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CHAN_FREQ_MEM_FORCE_PD</name>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODEM_PWR_MEM_WP</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODEM_PWR_MEM_WA</name>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODEM_PWR_MEM_RA</name>
+              <bitOffset>18</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x02206240</resetValue>
+          <fields>
+            <field>
+              <name>DATE</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>MODEM_SYSCON</name>
+      <description>MODEM_SYSCON Peripheral</description>
+      <groupName>MODEM_SYSCON</groupName>
+      <baseAddress>0x600A9800</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x28</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>TEST_CONF</name>
+          <addressOffset>0x0</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_EN</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF</name>
+          <addressOffset>0x4</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00200000</resetValue>
+          <fields>
+            <field>
+              <name>CLK_DATA_DUMP_MUX</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_ETM_EN</name>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_ZB_APB_EN</name>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_ZB_MAC_EN</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_ECB_EN</name>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_CCM_EN</name>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_BAH_EN</name>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_APB_EN</name>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_EN</name>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BLE_TIMER_EN</name>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_DATA_DUMP_EN</name>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF_FORCE_ON</name>
+          <addressOffset>0x8</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_ETM_FO</name>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_ZB_APB_FO</name>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_ZB_MAC_FO</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_ECB_FO</name>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_CCM_FO</name>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_BAH_FO</name>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_APB_FO</name>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_SEC_FO</name>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BLE_TIMER_FO</name>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_DATA_DUMP_FO</name>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF_POWER_ST</name>
+          <addressOffset>0xC</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_ZB_ST_MAP</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ST_MAP</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BT_ST_MAP</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFI_ST_MAP</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_PERI_ST_MAP</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_MODEM_APB_ST_MAP</name>
+              <bitOffset>28</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MODEM_RST_CONF</name>
+          <addressOffset>0x10</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>RST_WIFIBB</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_WIFIMAC</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_FE</name>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_BTMAC_APB</name>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_BTMAC</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_BTBB_APB</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_BTBB</name>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_ETM</name>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_ZBMAC</name>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_MODEM_ECB</name>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_MODEM_CCM</name>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_MODEM_BAH</name>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_MODEM_SEC</name>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_BLE_TIMER</name>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RST_DATA_DUMP</name>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF1</name>
+          <addressOffset>0x14</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIBB_22M_EN</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40M_EN</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_44M_EN</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80M_EN</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40X_EN</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80X_EN</name>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40X1_EN</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80X1_EN</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_160X1_EN</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIMAC_EN</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFI_APB_EN</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_20M_EN</name>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_40M_EN</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_80M_EN</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_160M_EN</name>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_CAL_160M_EN</name>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_APB_EN</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BT_APB_EN</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BT_EN</name>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_480M_EN</name>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_480M_EN</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_40M_EN</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_80M_EN</name>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_160M_EN</name>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLK_CONF1_FORCE_ON</name>
+          <addressOffset>0x18</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>CLK_WIFIBB_22M_FO</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40M_FO</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_44M_FO</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80M_FO</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40X_FO</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80X_FO</name>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_40X1_FO</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_80X1_FO</name>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_160X1_FO</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIMAC_FO</name>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFI_APB_FO</name>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_20M_FO</name>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_40M_FO</name>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_80M_FO</name>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_160M_FO</name>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_CAL_160M_FO</name>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_APB_FO</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BT_APB_FO</name>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_BT_FO</name>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_WIFIBB_480M_FO</name>
+              <bitOffset>19</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_480M_FO</name>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_40M_FO</name>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_80M_FO</name>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_FE_ANAMODE_160M_FO</name>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WIFI_BB_CFG</name>
+          <addressOffset>0x1C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>WIFI_BB_CFG</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MEM_CONF</name>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x00000020</resetValue>
+          <fields>
+            <field>
+              <name>MODEM_MEM_WP</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODEM_MEM_WA</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MODEM_MEM_RA</name>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATE</name>
+          <addressOffset>0x24</addressOffset>
+          <size>0x20</size>
+          <resetValue>0x02206300</resetValue>
+          <fields>
+            <field>
+              <name>DATE</name>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
               <access>read-write</access>
@@ -39335,21 +40438,21 @@ Information.</description>
               <description>The raw interrupt status of TX_FIFO_REMPTY_INTR.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RX_FIFO_WFULL_INT_RAW</name>
               <description>The raw interrupt status of RX_FIFO_WFULL_INTR.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_EOF_INT_RAW</name>
               <description>The raw interrupt status of TX_EOF_INTR.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -39788,14 +40891,14 @@ Information.</description>
               <description>backup done flag</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>ERROR_INT_RAW</name>
               <description>error flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -45505,35 +46608,35 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>need_des</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SDIO_IDLE_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SW_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SOC_SLEEP_REJECT_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SOC_WAKEUP_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -45677,84 +46780,84 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>need_des</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MODEM_SWITCH_ACTIVE_END_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLEEP_SWITCH_ACTIVE_END_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLEEP_SWITCH_MODEM_END_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MODEM_SWITCH_SLEEP_END_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>ACTIVE_SWITCH_SLEEP_END_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MODEM_SWITCH_ACTIVE_START_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>26</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLEEP_SWITCH_ACTIVE_START_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>27</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLEEP_SWITCH_MODEM_START_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MODEM_SWITCH_SLEEP_START_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>ACTIVE_SWITCH_SLEEP_START_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>HP_SW_TRIGGER_INT_RAW</name>
               <description>need_des</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -46830,7 +47933,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL%s. Triggered when transmission done.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <dim>2</dim>
@@ -46840,7 +47943,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL2. Triggered when reception done.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <dim>4</dim>
@@ -46850,7 +47953,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL4. Triggered when error occurs.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <dim>2</dim>
@@ -46860,7 +47963,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <dim>2</dim>
@@ -46870,7 +47973,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL2. Triggered when receiver receive more data than configured value.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <dim>2</dim>
@@ -46880,7 +47983,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -47817,7 +48920,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>Reserved.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>31</bitWidth>
-              <access>read-only</access>
+              <access>write-only</access>
             </field>
           </fields>
         </register>
@@ -47832,7 +48935,7 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>Reserved.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>31</bitWidth>
-              <access>read-only</access>
+              <access>write-only</access>
             </field>
           </fields>
         </register>
@@ -48147,182 +49250,182 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>*******Description***********</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT2_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT3_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT4_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT5_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT6_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOHOST_BIT7_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOKEN0_1TO0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOKEN1_1TO0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOKEN0_0TO1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TOKEN1_0TO1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0HOST_RX_SOF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0HOST_RX_EOF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0HOST_RX_START_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0HOST_TX_START_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_RX_UDF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_TX_OVF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_RX_PF_VALID_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_EXT_BIT0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_EXT_BIT1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_EXT_BIT2_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_EXT_BIT3_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_RX_NEW_PACKET_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC0_HOST_RD_RETRY_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>GPIO_SDIO_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -48337,182 +49440,182 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>*******Description***********</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT2_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT3_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT4_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT5_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT6_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOHOST_BIT7_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOKEN0_1TO0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOKEN1_1TO0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOKEN0_0TO1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TOKEN1_0TO1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1HOST_RX_SOF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1HOST_RX_EOF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1HOST_RX_START_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1HOST_TX_START_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_RX_UDF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_TX_OVF_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_RX_PF_VALID_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_EXT_BIT0_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_EXT_BIT1_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_EXT_BIT2_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_EXT_BIT3_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_WIFI_RX_NEW_PACKET_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_HOST_RD_RETRY_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>24</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLC1_BT_RX_NEW_PACKET_INT_RAW</name>
               <description>*******Description***********</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -55738,14 +56841,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_MST_ST_END_INT_RAW</name>
               <description>The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi0_mst_st is changed from non idle state to idle state. 0: Others.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_ECC_ERR_INT_RAW</name>
@@ -55759,14 +56862,14 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The raw bit for SPI_MEM_PMS_REJECT_INT interrupt. 1: Triggered when SPI1 access is rejected. 0: Others.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_AXI_RADDR_ERR_INT_RAW</name>
               <description>The raw bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt. 1: Triggered when AXI read address is invalid by compared to MMU configuration. 0: Others.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_AXI_WR_FLASH_ERR_INT_RAW</name>
@@ -58610,42 +59713,42 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_PES_END_INT_RAW</name>
               <description>The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_WPE_END_INT_RAW</name>
               <description>The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_SLV_ST_END_INT_RAW</name>
               <description>The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_MST_ST_END_INT_RAW</name>
               <description>The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SPI_MEM_BROWN_OUT_INT_RAW</name>
               <description>The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -60076,147 +61179,147 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data.  0: Others.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DMA_OUTFIFO_EMPTY_ERR_INT_RAW</name>
               <description>1: The current data rate of DMA TX is smaller than that of SPI. SPI will stop in master mode and send out all 0 in slave mode.  0: Others.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_EX_QPI_INT_RAW</name>
               <description>The raw bit for SPI slave Ex_QPI interrupt. 1: SPI slave mode Ex_QPI transmission is ended. 0: Others.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_EN_QPI_INT_RAW</name>
               <description>The raw bit for SPI slave En_QPI interrupt. 1: SPI slave mode En_QPI transmission is ended. 0: Others.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_CMD7_INT_RAW</name>
               <description>The raw bit for SPI slave CMD7 interrupt. 1: SPI slave mode CMD7 transmission is ended. 0: Others.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_CMD8_INT_RAW</name>
               <description>The raw bit for SPI slave CMD8 interrupt. 1: SPI slave mode CMD8 transmission is ended. 0: Others.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_CMD9_INT_RAW</name>
               <description>The raw bit for SPI slave CMD9 interrupt. 1: SPI slave mode CMD9 transmission is ended. 0: Others.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_CMDA_INT_RAW</name>
               <description>The raw bit for SPI slave CMDA interrupt. 1: SPI slave mode CMDA transmission is ended. 0: Others.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_RD_DMA_DONE_INT_RAW</name>
               <description>The raw bit for SPI_SLV_RD_DMA_DONE_INT interrupt. 1: SPI slave mode Rd_DMA transmission is ended. 0: Others.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_WR_DMA_DONE_INT_RAW</name>
               <description>The raw bit for SPI_SLV_WR_DMA_DONE_INT interrupt. 1: SPI slave mode Wr_DMA transmission is ended. 0: Others.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_RD_BUF_DONE_INT_RAW</name>
               <description>The raw bit for SPI_SLV_RD_BUF_DONE_INT interrupt. 1: SPI slave mode Rd_BUF transmission is ended. 0: Others.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_WR_BUF_DONE_INT_RAW</name>
               <description>The raw bit for SPI_SLV_WR_BUF_DONE_INT interrupt. 1: SPI slave mode Wr_BUF transmission is ended. 0: Others.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TRANS_DONE_INT_RAW</name>
               <description>The raw bit for SPI_TRANS_DONE_INT interrupt. 1: SPI master mode transmission is ended. 0: others.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DMA_SEG_TRANS_DONE_INT_RAW</name>
               <description>The raw bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt. 1:  spi master DMA full-duplex/half-duplex seg-conf-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory.  0:  seg-conf-trans or seg-trans is not ended or not occurred.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SEG_MAGIC_ERR_INT_RAW</name>
               <description>The raw bit for SPI_SEG_MAGIC_ERR_INT interrupt. 1: The magic value in CONF buffer is error in the DMA seg-conf-trans. 0: others.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_BUF_ADDR_ERR_INT_RAW</name>
               <description>The raw bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt. 1: The accessing data address of the current SPI slave mode CPU controlled FD, Wr_BUF or Rd_BUF transmission is bigger than 63. 0: Others.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SLV_CMD_ERR_INT_RAW</name>
               <description>The raw bit for SPI_SLV_CMD_ERR_INT interrupt. 1: The slave command value in the current SPI slave HD mode transmission is not supported. 0: Others.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MST_RX_AFIFO_WFULL_ERR_INT_RAW</name>
               <description>The raw bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt. 1: There is a RX AFIFO write-full error when SPI inputs data in master mode. 0: Others.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>MST_TX_AFIFO_REMPTY_ERR_INT_RAW</name>
               <description>The raw bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt. 1: There is a TX BUF AFIFO read-empty error when SPI outputs data in master mode. 0: Others.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APP2_INT_RAW</name>
               <description>The raw bit for SPI_APP2_INT interrupt. The value is only controlled by software.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APP1_INT_RAW</name>
               <description>The raw bit for SPI_APP1_INT interrupt. The value is only controlled by software.</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -61511,21 +62614,21 @@ Any pulses with width less than this will be ignored when the filter is enabled.
               <description>interupt0 raw</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TARGET1_INT_RAW</name>
               <description>interupt1 raw</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TARGET2_INT_RAW</name>
               <description>interupt2 raw</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -64005,140 +65108,140 @@ protection is enabled.</description>
               <description>This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TXFIFO_EMPTY_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies .</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>PARITY_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a parity error in the data.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>FRM_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a data frame error .</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RXFIFO_OVF_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DSR_CHG_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CTS_CHG_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>BRK_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RXFIFO_TOUT_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SW_XON_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SW_XOFF_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>GLITCH_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_BRK_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter completes  sending  NULL characters after all data in Tx-FIFO are sent.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_BRK_IDLE_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the  last data.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_DONE_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when transmitter has send out all data in FIFO.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RS485_PARITY_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a parity error from the echo of transmitter in rs485 mode.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RS485_FRM_ERR_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects a data frame error from the echo of transmitter in rs485 mode.</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RS485_CLASH_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when detects a clash between transmitter and receiver in rs485 mode.</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>AT_CMD_CHAR_DET_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when receiver detects the configured at_cmd char.</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>WAKEUP_INT_RAW</name>
               <description>This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode.</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -65795,49 +66898,49 @@ protection is enabled.</description>
               <description>Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_START_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RX_HUNG_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data  exceeds the configuration value.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>TX_HUNG_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data  exceeds the configuration value.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SEND_S_REG_Q_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SEND_A_REG_Q_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_EOF_INT_RAW</name>
               <description>Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>APP_CTRL0_INT_RAW</name>
@@ -66795,112 +67898,112 @@ protection is enabled.</description>
               <description>The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SOF_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when SOF frame is received.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SERIAL_OUT_RECV_PKT_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when Serial Port OUT Endpoint received one packet.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SERIAL_IN_EMPTY_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when Serial Port IN Endpoint is empty.</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>PID_ERR_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when pid error is detected.</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CRC5_ERR_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when CRC5 error is detected.</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>CRC16_ERR_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when CRC16 error is detected.</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>STUFF_ERR_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when stuff error is detected.</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>IN_TOKEN_REC_IN_EP1_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when IN token for IN endpoint 1 is received.</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>USB_BUS_RESET_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when usb bus reset is detected.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_EP1_ZERO_PAYLOAD_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when OUT endpoint 1 received packet with zero palyload.</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>OUT_EP2_ZERO_PAYLOAD_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when OUT endpoint 2 received packet with zero palyload.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>RTS_CHG_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when level of RTS from usb serial channel is changed.</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>DTR_CHG_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when level of DTR from usb serial channel is changed.</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>GET_LINE_CODE_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when level of GET LINE CODING request is received.</description>
               <bitOffset>14</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
               <name>SET_LINE_CODE_INT_RAW</name>
               <description>The raw interrupt bit turns to high level when level of SET LINE CODING request is received.</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
           </fields>
         </register>

@@ -4,7 +4,7 @@
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32</name>
   <series>ESP32 Series</series>
-  <version>10</version>
+  <version>11</version>
   <description>32-bit MCU &amp; 2.4 GHz Wi-Fi &amp; Bluetooth/Bluetooth LE</description>
   <licenseText>
     Copyright 2023 Espressif Systems (Shanghai) PTE LTD
@@ -635,6 +635,46 @@
       <interrupt>
         <name>RWBLE_NMI</name>
         <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
+        <value>24</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR1</name>
+        <value>25</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR2</name>
+        <value>26</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR3</name>
+        <value>27</value>
+      </interrupt>
+      <interrupt>
+        <name>SDIO_HOST</name>
+        <value>37</value>
+      </interrupt>
+      <interrupt>
+        <name>ETH_MAC</name>
+        <value>38</value>
+      </interrupt>
+      <interrupt>
+        <name>WDT</name>
+        <value>55</value>
+      </interrupt>
+      <interrupt>
+        <name>MMU_IA</name>
+        <value>66</value>
+      </interrupt>
+      <interrupt>
+        <name>MPU_IA</name>
+        <value>67</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE_IA</name>
+        <value>68</value>
       </interrupt>
       <registers>
         <register>
