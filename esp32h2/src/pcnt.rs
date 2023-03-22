@@ -59,7 +59,7 @@ pub mod u_conf2;
 pub type U_CNT = crate::Reg<u_cnt::U_CNT_SPEC>;
 #[doc = "Counter value for unit %s"]
 pub mod u_cnt;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Interrupt raw status register"]
 pub mod int_raw;

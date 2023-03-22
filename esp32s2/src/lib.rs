@@ -651,6 +651,34 @@ impl core::fmt::Debug for APB_SARADC {
 }
 #[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub mod apb_saradc;
+#[doc = "BB Peripheral"]
+pub struct BB {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for BB {}
+impl BB {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const bb::RegisterBlock = 0x3f41_d000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const bb::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for BB {
+    type Target = bb::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for BB {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BB").finish()
+    }
+}
+#[doc = "BB Peripheral"]
+pub mod bb;
 #[doc = "DEDICATED_GPIO Peripheral"]
 pub struct DEDICATED_GPIO {
     _marker: PhantomData<*const ()>,
@@ -1435,6 +1463,34 @@ impl core::fmt::Debug for SPI4 {
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 4"]
 pub use self::spi0 as spi4;
+#[doc = "SYSCON Peripheral"]
+pub struct SYSCON {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SYSCON {}
+impl SYSCON {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const syscon::RegisterBlock = 0x3f42_6000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const syscon::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for SYSCON {
+    type Target = syscon::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for SYSCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYSCON").finish()
+    }
+}
+#[doc = "SYSCON Peripheral"]
+pub mod syscon;
 #[doc = "System Configuration Registers"]
 pub struct SYSTEM {
     _marker: PhantomData<*const ()>,
@@ -1752,6 +1808,8 @@ pub struct Peripherals {
     pub AES: AES,
     #[doc = "APB_SARADC"]
     pub APB_SARADC: APB_SARADC,
+    #[doc = "BB"]
+    pub BB: BB,
     #[doc = "DEDICATED_GPIO"]
     pub DEDICATED_GPIO: DEDICATED_GPIO,
     #[doc = "DS"]
@@ -1808,6 +1866,8 @@ pub struct Peripherals {
     pub SPI3: SPI3,
     #[doc = "SPI4"]
     pub SPI4: SPI4,
+    #[doc = "SYSCON"]
+    pub SYSCON: SYSCON,
     #[doc = "SYSTEM"]
     pub SYSTEM: SYSTEM,
     #[doc = "SYSTIMER"]
@@ -1856,6 +1916,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             APB_SARADC: APB_SARADC {
+                _marker: PhantomData,
+            },
+            BB: BB {
                 _marker: PhantomData,
             },
             DEDICATED_GPIO: DEDICATED_GPIO {
@@ -1940,6 +2003,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             SPI4: SPI4 {
+                _marker: PhantomData,
+            },
+            SYSCON: SYSCON {
                 _marker: PhantomData,
             },
             SYSTEM: SYSTEM {

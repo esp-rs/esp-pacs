@@ -38,6 +38,8 @@ impl From<crate::W<LPCORE_SPEC>> for W {
 pub type ETM_WAKEUP_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPCORE_SPEC, bool, O>;
 #[doc = "Field `ETM_WAKEUP_FLAG` reader - need_des"]
 pub type ETM_WAKEUP_FLAG_R = crate::BitReader<bool>;
+#[doc = "Field `ETM_WAKEUP_FLAG` writer - need_des"]
+pub type ETM_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPCORE_SPEC, bool, O>;
 #[doc = "Field `DISABLE` reader - need_des"]
 pub type DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `DISABLE` writer - need_des"]
@@ -60,6 +62,12 @@ impl W {
     #[must_use]
     pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<0> {
         ETM_WAKEUP_FLAG_CLR_W::new(self)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    #[must_use]
+    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<1> {
+        ETM_WAKEUP_FLAG_W::new(self)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]

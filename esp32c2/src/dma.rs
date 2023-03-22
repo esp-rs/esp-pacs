@@ -71,7 +71,7 @@ pub struct RegisterBlock {
     #[doc = "0x100 - DMA_OUT_PERI_SEL_CH0_REG."]
     pub out_peri_sel_ch0: OUT_PERI_SEL_CH0,
 }
-#[doc = "INT_RAW_CH0 (r) register accessor: an alias for `Reg<INT_RAW_CH0_SPEC>`"]
+#[doc = "INT_RAW_CH0 (rw) register accessor: an alias for `Reg<INT_RAW_CH0_SPEC>`"]
 pub type INT_RAW_CH0 = crate::Reg<int_raw_ch0::INT_RAW_CH0_SPEC>;
 #[doc = "DMA_INT_RAW_CH0_REG."]
 pub mod int_raw_ch0;

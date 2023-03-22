@@ -12,7 +12,7 @@ pub struct RegisterBlock {
     #[doc = "0x10 - Starts the SHA accelerator for Typical SHA operation"]
     pub start: START,
     #[doc = "0x14 - Continues SHA operation (only effective in Typical SHA mode)"]
-    pub continue_: CONTINUE_,
+    pub continue_: CONTINUE,
     #[doc = "0x18 - Indicates if SHA Accelerator is busy or not"]
     pub busy: BUSY,
     #[doc = "0x1c - Starts the SHA accelerator for DMA-SHA operation"]
@@ -51,8 +51,8 @@ pub mod dma_block_num;
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "Starts the SHA accelerator for Typical SHA operation"]
 pub mod start;
-#[doc = "CONTINUE_ (w) register accessor: an alias for `Reg<CONTINUE__SPEC>`"]
-pub type CONTINUE_ = crate::Reg<continue_::CONTINUE__SPEC>;
+#[doc = "CONTINUE (w) register accessor: an alias for `Reg<CONTINUE_SPEC>`"]
+pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "Continues SHA operation (only effective in Typical SHA mode)"]
 pub mod continue_;
 #[doc = "BUSY (r) register accessor: an alias for `Reg<BUSY_SPEC>`"]

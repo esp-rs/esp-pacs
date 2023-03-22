@@ -67,7 +67,7 @@ pub mod ep1;
 pub type EP1_CONF = crate::Reg<ep1_conf::EP1_CONF_SPEC>;
 #[doc = "Configuration and control registers for the CDC-ACM FIFOs."]
 pub mod ep1_conf;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Interrupt raw status register."]
 pub mod int_raw;

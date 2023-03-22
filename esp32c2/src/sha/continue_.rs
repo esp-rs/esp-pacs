@@ -1,35 +1,50 @@
-#[doc = "Register `CONTINUE` reader"]
-pub struct R(crate::R<CONTINUE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CONTINUE_SPEC>;
+#[doc = "Register `CONTINUE` writer"]
+pub struct W(crate::W<CONTINUE_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CONTINUE_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CONTINUE_SPEC>> for R {
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    fn from(reader: crate::R<CONTINUE_SPEC>) -> Self {
-        R(reader)
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Field `CONTINUE` reader - Reserved."]
-pub type CONTINUE_R = crate::FieldReader<u32, u32>;
-impl R {
+impl From<crate::W<CONTINUE_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CONTINUE_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `CONTINUE` writer - Reserved."]
+pub type CONTINUE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONTINUE_SPEC, u32, u32, 31, O>;
+impl W {
     #[doc = "Bits 1:31 - Reserved."]
     #[inline(always)]
-    pub fn continue_(&self) -> CONTINUE_R {
-        CONTINUE_R::new((self.bits >> 1) & 0x7fff_ffff)
+    #[must_use]
+    pub fn continue_(&mut self) -> CONTINUE_W<1> {
+        CONTINUE_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
     }
 }
-#[doc = "Typical SHA configuration register 1.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [continue_](index.html) module"]
+#[doc = "Typical SHA configuration register 1.\n\nThis register you can [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [continue_](index.html) module"]
 pub struct CONTINUE_SPEC;
 impl crate::RegisterSpec for CONTINUE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [continue_::R](R) reader structure"]
-impl crate::Readable for CONTINUE_SPEC {
-    type Reader = R;
+#[doc = "`write(|w| ..)` method takes [continue_::W](W) writer structure"]
+impl crate::Writable for CONTINUE_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CONTINUE to value 0"]
 impl crate::Resettable for CONTINUE_SPEC {

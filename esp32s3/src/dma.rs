@@ -430,7 +430,7 @@ pub mod in_conf0_ch;
 pub type IN_CONF1_CH = crate::Reg<in_conf1_ch::IN_CONF1_CH_SPEC>;
 #[doc = "Configure 1 register of Rx channel 0"]
 pub mod in_conf1_ch;
-#[doc = "IN_INT_RAW_CH (r) register accessor: an alias for `Reg<IN_INT_RAW_CH_SPEC>`"]
+#[doc = "IN_INT_RAW_CH (rw) register accessor: an alias for `Reg<IN_INT_RAW_CH_SPEC>`"]
 pub type IN_INT_RAW_CH = crate::Reg<in_int_raw_ch::IN_INT_RAW_CH_SPEC>;
 #[doc = "Raw status interrupt of Rx channel 0"]
 pub mod in_int_raw_ch;
@@ -502,7 +502,7 @@ pub mod out_conf0_ch;
 pub type OUT_CONF1_CH = crate::Reg<out_conf1_ch::OUT_CONF1_CH_SPEC>;
 #[doc = "Configure 1 register of Tx channel 0"]
 pub mod out_conf1_ch;
-#[doc = "OUT_INT_RAW_CH (r) register accessor: an alias for `Reg<OUT_INT_RAW_CH_SPEC>`"]
+#[doc = "OUT_INT_RAW_CH (rw) register accessor: an alias for `Reg<OUT_INT_RAW_CH_SPEC>`"]
 pub type OUT_INT_RAW_CH = crate::Reg<out_int_raw_ch::OUT_INT_RAW_CH_SPEC>;
 #[doc = "Raw status interrupt of Tx channel 0"]
 pub mod out_int_raw_ch;
@@ -595,7 +595,7 @@ pub mod extmem_reject_addr;
 pub type EXTMEM_REJECT_ST = crate::Reg<extmem_reject_st::EXTMEM_REJECT_ST_SPEC>;
 #[doc = "Reject status accessing external RAM"]
 pub mod extmem_reject_st;
-#[doc = "EXTMEM_REJECT_INT_RAW (r) register accessor: an alias for `Reg<EXTMEM_REJECT_INT_RAW_SPEC>`"]
+#[doc = "EXTMEM_REJECT_INT_RAW (rw) register accessor: an alias for `Reg<EXTMEM_REJECT_INT_RAW_SPEC>`"]
 pub type EXTMEM_REJECT_INT_RAW = crate::Reg<extmem_reject_int_raw::EXTMEM_REJECT_INT_RAW_SPEC>;
 #[doc = "Raw interrupt status of external RAM permission"]
 pub mod extmem_reject_int_raw;

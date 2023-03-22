@@ -177,11 +177,11 @@ pub mod slc0_host_pf;
 pub type SLC1_HOST_PF = crate::Reg<slc1_host_pf::SLC1_HOST_PF_SPEC>;
 #[doc = "*******Description***********"]
 pub mod slc1_host_pf;
-#[doc = "SLC0HOST_INT_RAW (r) register accessor: an alias for `Reg<SLC0HOST_INT_RAW_SPEC>`"]
+#[doc = "SLC0HOST_INT_RAW (rw) register accessor: an alias for `Reg<SLC0HOST_INT_RAW_SPEC>`"]
 pub type SLC0HOST_INT_RAW = crate::Reg<slc0host_int_raw::SLC0HOST_INT_RAW_SPEC>;
 #[doc = "*******Description***********"]
 pub mod slc0host_int_raw;
-#[doc = "SLC1HOST_INT_RAW (r) register accessor: an alias for `Reg<SLC1HOST_INT_RAW_SPEC>`"]
+#[doc = "SLC1HOST_INT_RAW (rw) register accessor: an alias for `Reg<SLC1HOST_INT_RAW_SPEC>`"]
 pub type SLC1HOST_INT_RAW = crate::Reg<slc1host_int_raw::SLC1HOST_INT_RAW_SPEC>;
 #[doc = "*******Description***********"]
 pub mod slc1host_int_raw;

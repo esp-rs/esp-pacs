@@ -36,18 +36,32 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
 }
 #[doc = "Field `RX_START_INT_RAW` reader - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
 pub type RX_START_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `RX_START_INT_RAW` writer - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
+pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `TX_START_INT_RAW` reader - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
 pub type TX_START_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TX_START_INT_RAW` writer - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
+pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
 pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `RX_HUNG_INT_RAW` writer - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
+pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
 pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TX_HUNG_INT_RAW` writer - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
+pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` reader - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
 pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SEND_S_REG_Q_INT_RAW` writer - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
+pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` reader - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
 pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SEND_A_REG_Q_INT_RAW` writer - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
+pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
 pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_EOF_INT_RAW` writer - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
+pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `APP_CTRL0_INT_RAW` reader - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
 pub type APP_CTRL0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CTRL0_INT_RAW` writer - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
@@ -104,6 +118,48 @@ impl R {
     }
 }
 impl W {
+    #[doc = "Bit 0 - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<0> {
+        RX_START_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 1 - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<1> {
+        TX_START_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 2 - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<2> {
+        RX_HUNG_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 3 - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<3> {
+        TX_HUNG_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 4 - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
+    #[inline(always)]
+    #[must_use]
+    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<4> {
+        SEND_S_REG_Q_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 5 - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
+    #[inline(always)]
+    #[must_use]
+    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<5> {
+        SEND_A_REG_Q_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 6 - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
+    #[inline(always)]
+    #[must_use]
+    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<6> {
+        OUT_EOF_INT_RAW_W::new(self)
+    }
     #[doc = "Bit 7 - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
     #[inline(always)]
     #[must_use]

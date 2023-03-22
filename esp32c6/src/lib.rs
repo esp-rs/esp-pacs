@@ -1275,6 +1275,62 @@ impl core::fmt::Debug for MEM_MONITOR {
 }
 #[doc = "MEM_MONITOR Peripheral"]
 pub mod mem_monitor;
+#[doc = "MODEM_LPCON Peripheral"]
+pub struct MODEM_LPCON {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for MODEM_LPCON {}
+impl MODEM_LPCON {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const modem_lpcon::RegisterBlock = 0x600a_f000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const modem_lpcon::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for MODEM_LPCON {
+    type Target = modem_lpcon::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for MODEM_LPCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_LPCON").finish()
+    }
+}
+#[doc = "MODEM_LPCON Peripheral"]
+pub mod modem_lpcon;
+#[doc = "MODEM_SYSCON Peripheral"]
+pub struct MODEM_SYSCON {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for MODEM_SYSCON {}
+impl MODEM_SYSCON {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const modem_syscon::RegisterBlock = 0x600a_9800 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const modem_syscon::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for MODEM_SYSCON {
+    type Target = modem_syscon::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for MODEM_SYSCON {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_SYSCON").finish()
+    }
+}
+#[doc = "MODEM_SYSCON Peripheral"]
+pub mod modem_syscon;
 #[doc = "OTP_DEBUG Peripheral"]
 pub struct OTP_DEBUG {
     _marker: PhantomData<*const ()>,
@@ -2080,6 +2136,10 @@ pub struct Peripherals {
     pub MCPWM0: MCPWM0,
     #[doc = "MEM_MONITOR"]
     pub MEM_MONITOR: MEM_MONITOR,
+    #[doc = "MODEM_LPCON"]
+    pub MODEM_LPCON: MODEM_LPCON,
+    #[doc = "MODEM_SYSCON"]
+    pub MODEM_SYSCON: MODEM_SYSCON,
     #[doc = "OTP_DEBUG"]
     pub OTP_DEBUG: OTP_DEBUG,
     #[doc = "PARL_IO"]
@@ -2260,6 +2320,12 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             MEM_MONITOR: MEM_MONITOR {
+                _marker: PhantomData,
+            },
+            MODEM_LPCON: MODEM_LPCON {
+                _marker: PhantomData,
+            },
+            MODEM_SYSCON: MODEM_SYSCON {
                 _marker: PhantomData,
             },
             OTP_DEBUG: OTP_DEBUG {

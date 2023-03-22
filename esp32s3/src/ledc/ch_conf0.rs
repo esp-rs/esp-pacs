@@ -60,6 +60,8 @@ pub type OVF_CNT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC
 pub type OVF_CNT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_RESET_ST` reader - This is the status bit of LEDC_OVF_CNT_RESET_CH%s."]
 pub type OVF_CNT_RESET_ST_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_RESET_ST` writer - This is the status bit of LEDC_OVF_CNT_RESET_CH%s."]
+pub type OVF_CNT_RESET_ST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer0 1: select timer1 2: select timer2 3: select timer3"]
     #[inline(always)]
@@ -134,6 +136,12 @@ impl W {
     #[must_use]
     pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<16> {
         OVF_CNT_RESET_W::new(self)
+    }
+    #[doc = "Bit 17 - This is the status bit of LEDC_OVF_CNT_RESET_CH%s."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_reset_st(&mut self) -> OVF_CNT_RESET_ST_W<17> {
+        OVF_CNT_RESET_ST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

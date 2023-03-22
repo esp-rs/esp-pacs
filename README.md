@@ -15,8 +15,8 @@ If you discover any errors in an SVD file, please report the issue(s) upstream i
 
 The **M**inimum **S**upported **R**ust **V**ersions are:
 
-- `1.60.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**, **ESP32-H2**)
-- `1.60.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
+- `1.65.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**, **ESP32-H2**)
+- `1.65.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork, which can be installed using [esp-rs/espup].
 

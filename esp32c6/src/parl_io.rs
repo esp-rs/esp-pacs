@@ -50,7 +50,7 @@ pub mod st;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Parallel IO interrupt enable singal configuration register."]
 pub mod int_ena;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Parallel IO interrupt raw singal status register."]
 pub mod int_raw;
