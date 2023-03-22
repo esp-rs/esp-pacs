@@ -75,7 +75,7 @@ jobs:
         with:
           targets: riscv32imc-unknown-none-elf
           components: rust-src
-      - uses: dtolnay/rust-toolchain@1.60.0
+      - uses: dtolnay/rust-toolchain@1.65.0
         with:
           targets: riscv32imc-unknown-none-elf
           components: rust-src
@@ -84,7 +84,7 @@ jobs:
       - name: generate pac
         run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
       - name: build pac
-        run: cd ${{ matrix.chip }} && cargo +1.60.0 check
+        run: cd ${{ matrix.chip }} && cargo +1.65.0 check
 
   msrv-xtensa:
     runs-on: ubuntu-latest
@@ -100,7 +100,7 @@ jobs:
         with:
           ldproxy: false
           buildtargets: ${{ matrix.chip }}
-          version: "1.60.0"
+          version: "1.65.0"
           override: false
       - uses: Swatinem/rust-cache@v2
 
