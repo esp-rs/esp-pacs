@@ -219,7 +219,7 @@ pub struct RegisterBlock {
     #[doc = "0x310 - Configure 0 register of Tx channel 1"]
     pub out_conf0_ch2: OUT_CONF0_CH,
 }
-#[doc = "IN_INT_RAW_CH (r) register accessor: an alias for `Reg<IN_INT_RAW_CH_SPEC>`"]
+#[doc = "IN_INT_RAW_CH (rw) register accessor: an alias for `Reg<IN_INT_RAW_CH_SPEC>`"]
 pub type IN_INT_RAW_CH = crate::Reg<in_int_raw_ch::IN_INT_RAW_CH_SPEC>;
 #[doc = "Raw status interrupt of channel 0"]
 pub mod in_int_raw_ch;
@@ -235,7 +235,7 @@ pub mod in_int_ena_ch;
 pub type IN_INT_CLR_CH = crate::Reg<in_int_clr_ch::IN_INT_CLR_CH_SPEC>;
 #[doc = "Interrupt clear bits of channel 0"]
 pub mod in_int_clr_ch;
-#[doc = "OUT_INT_RAW_CH (r) register accessor: an alias for `Reg<OUT_INT_RAW_CH_SPEC>`"]
+#[doc = "OUT_INT_RAW_CH (rw) register accessor: an alias for `Reg<OUT_INT_RAW_CH_SPEC>`"]
 pub type OUT_INT_RAW_CH = crate::Reg<out_int_raw_ch::OUT_INT_RAW_CH_SPEC>;
 #[doc = "Raw status interrupt of channel 0"]
 pub mod out_int_raw_ch;

@@ -47,11 +47,11 @@ pub mod t_length;
 pub type DMA_BLOCK_NUM = crate::Reg<dma_block_num::DMA_BLOCK_NUM_SPEC>;
 #[doc = "DMA configuration register 0."]
 pub mod dma_block_num;
-#[doc = "START (r) register accessor: an alias for `Reg<START_SPEC>`"]
+#[doc = "START (w) register accessor: an alias for `Reg<START_SPEC>`"]
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "Typical SHA configuration register 0."]
 pub mod start;
-#[doc = "CONTINUE (r) register accessor: an alias for `Reg<CONTINUE_SPEC>`"]
+#[doc = "CONTINUE (w) register accessor: an alias for `Reg<CONTINUE_SPEC>`"]
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "Typical SHA configuration register 1."]
 pub mod continue_;

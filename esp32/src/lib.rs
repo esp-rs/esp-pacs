@@ -49,6 +49,10 @@ extern "C" {
     fn TG1_LACT_LEVEL();
     fn GPIO();
     fn GPIO_NMI();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn SPI0();
     fn SPI1();
     fn SPI2();
@@ -58,6 +62,8 @@ extern "C" {
     fn UART0();
     fn UART1();
     fn UART2();
+    fn SDIO_HOST();
+    fn ETH_MAC();
     fn MCPWM0();
     fn MCPWM1();
     fn MCPWM2();
@@ -74,6 +80,7 @@ extern "C" {
     fn SPI1_DMA();
     fn SPI2_DMA();
     fn SPI3_DMA();
+    fn WDT();
     fn TIMER1();
     fn TIMER2();
     fn TG0_T0_EDGE();
@@ -84,6 +91,9 @@ extern "C" {
     fn TG1_T1_EDGE();
     fn TG1_WDT_EDGE();
     fn TG1_LACT_EDGE();
+    fn MMU_IA();
+    fn MPU_IA();
+    fn CACHE_IA();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -92,7 +102,7 @@ pub union Vector {
 }
 #[cfg(feature = "rt")]
 #[doc(hidden)]
-pub static __INTERRUPTS: [Vector; 66] = [
+pub static __INTERRUPTS: [Vector; 69] = [
     Vector { _handler: WIFI_MAC },
     Vector { _handler: WIFI_NMI },
     Vector { _handler: WIFI_BB },
@@ -137,10 +147,18 @@ pub static __INTERRUPTS: [Vector; 66] = [
     },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector { _handler: SPI0 },
     Vector { _handler: SPI1 },
     Vector { _handler: SPI2 },
@@ -150,8 +168,10 @@ pub static __INTERRUPTS: [Vector; 66] = [
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: UART2 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: SDIO_HOST,
+    },
+    Vector { _handler: ETH_MAC },
     Vector { _handler: MCPWM0 },
     Vector { _handler: MCPWM1 },
     Vector { _handler: MCPWM2 },
@@ -168,7 +188,7 @@ pub static __INTERRUPTS: [Vector; 66] = [
     Vector { _handler: SPI1_DMA },
     Vector { _handler: SPI2_DMA },
     Vector { _handler: SPI3_DMA },
-    Vector { _reserved: 0 },
+    Vector { _handler: WDT },
     Vector { _handler: TIMER1 },
     Vector { _handler: TIMER2 },
     Vector {
@@ -195,6 +215,9 @@ pub static __INTERRUPTS: [Vector; 66] = [
     Vector {
         _handler: TG1_LACT_EDGE,
     },
+    Vector { _handler: MMU_IA },
+    Vector { _handler: MPU_IA },
+    Vector { _handler: CACHE_IA },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -244,6 +267,14 @@ pub enum Interrupt {
     GPIO = 22,
     #[doc = "23 - GPIO_NMI"]
     GPIO_NMI = 23,
+    #[doc = "24 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 24,
+    #[doc = "25 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 25,
+    #[doc = "26 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 26,
+    #[doc = "27 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 27,
     #[doc = "28 - SPI0"]
     SPI0 = 28,
     #[doc = "29 - SPI1"]
@@ -262,6 +293,10 @@ pub enum Interrupt {
     UART1 = 35,
     #[doc = "36 - UART2"]
     UART2 = 36,
+    #[doc = "37 - SDIO_HOST"]
+    SDIO_HOST = 37,
+    #[doc = "38 - ETH_MAC"]
+    ETH_MAC = 38,
     #[doc = "39 - MCPWM0"]
     MCPWM0 = 39,
     #[doc = "40 - MCPWM1"]
@@ -294,6 +329,8 @@ pub enum Interrupt {
     SPI2_DMA = 53,
     #[doc = "54 - SPI3_DMA"]
     SPI3_DMA = 54,
+    #[doc = "55 - WDT"]
+    WDT = 55,
     #[doc = "56 - TIMER1"]
     TIMER1 = 56,
     #[doc = "57 - TIMER2"]
@@ -314,6 +351,12 @@ pub enum Interrupt {
     TG1_WDT_EDGE = 64,
     #[doc = "65 - TG1_LACT_EDGE"]
     TG1_LACT_EDGE = 65,
+    #[doc = "66 - MMU_IA"]
+    MMU_IA = 66,
+    #[doc = "67 - MPU_IA"]
+    MPU_IA = 67,
+    #[doc = "68 - CACHE_IA"]
+    CACHE_IA = 68,
 }
 unsafe impl xtensa_lx::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
@@ -351,6 +394,10 @@ impl Interrupt {
             21 => Ok(Interrupt::TG1_LACT_LEVEL),
             22 => Ok(Interrupt::GPIO),
             23 => Ok(Interrupt::GPIO_NMI),
+            24 => Ok(Interrupt::FROM_CPU_INTR0),
+            25 => Ok(Interrupt::FROM_CPU_INTR1),
+            26 => Ok(Interrupt::FROM_CPU_INTR2),
+            27 => Ok(Interrupt::FROM_CPU_INTR3),
             28 => Ok(Interrupt::SPI0),
             29 => Ok(Interrupt::SPI1),
             30 => Ok(Interrupt::SPI2),
@@ -360,6 +407,8 @@ impl Interrupt {
             34 => Ok(Interrupt::UART0),
             35 => Ok(Interrupt::UART1),
             36 => Ok(Interrupt::UART2),
+            37 => Ok(Interrupt::SDIO_HOST),
+            38 => Ok(Interrupt::ETH_MAC),
             39 => Ok(Interrupt::MCPWM0),
             40 => Ok(Interrupt::MCPWM1),
             41 => Ok(Interrupt::MCPWM2),
@@ -376,6 +425,7 @@ impl Interrupt {
             52 => Ok(Interrupt::SPI1_DMA),
             53 => Ok(Interrupt::SPI2_DMA),
             54 => Ok(Interrupt::SPI3_DMA),
+            55 => Ok(Interrupt::WDT),
             56 => Ok(Interrupt::TIMER1),
             57 => Ok(Interrupt::TIMER2),
             58 => Ok(Interrupt::TG0_T0_EDGE),
@@ -386,6 +436,9 @@ impl Interrupt {
             63 => Ok(Interrupt::TG1_T1_EDGE),
             64 => Ok(Interrupt::TG1_WDT_EDGE),
             65 => Ok(Interrupt::TG1_LACT_EDGE),
+            66 => Ok(Interrupt::MMU_IA),
+            67 => Ok(Interrupt::MPU_IA),
+            68 => Ok(Interrupt::CACHE_IA),
             _ => Err(TryFromInterruptError(())),
         }
     }

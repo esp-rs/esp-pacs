@@ -36,18 +36,32 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
 }
 #[doc = "Field `RX_START_INT_RAW` reader - a"]
 pub type RX_START_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `RX_START_INT_RAW` writer - a"]
+pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `TX_START_INT_RAW` reader - a"]
 pub type TX_START_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TX_START_INT_RAW` writer - a"]
+pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - a"]
 pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `RX_HUNG_INT_RAW` writer - a"]
+pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - a"]
 pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `TX_HUNG_INT_RAW` writer - a"]
+pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` reader - a"]
 pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SEND_S_REG_Q_INT_RAW` writer - a"]
+pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` reader - a"]
 pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `SEND_A_REG_Q_INT_RAW` writer - a"]
+pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
 pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OUT_EOF_INT_RAW` writer - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
+pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `APP_CTRL0_INT_RAW` reader - Soft control int raw bit."]
 pub type APP_CTRL0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CTRL0_INT_RAW` writer - Soft control int raw bit."]
@@ -104,6 +118,48 @@ impl R {
     }
 }
 impl W {
+    #[doc = "Bit 0 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_start_int_raw(&mut self) -> RX_START_INT_RAW_W<0> {
+        RX_START_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 1 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_start_int_raw(&mut self) -> TX_START_INT_RAW_W<1> {
+        TX_START_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 2 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rx_hung_int_raw(&mut self) -> RX_HUNG_INT_RAW_W<2> {
+        RX_HUNG_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 3 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tx_hung_int_raw(&mut self) -> TX_HUNG_INT_RAW_W<3> {
+        TX_HUNG_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 4 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn send_s_reg_q_int_raw(&mut self) -> SEND_S_REG_Q_INT_RAW_W<4> {
+        SEND_S_REG_Q_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 5 - a"]
+    #[inline(always)]
+    #[must_use]
+    pub fn send_a_reg_q_int_raw(&mut self) -> SEND_A_REG_Q_INT_RAW_W<5> {
+        SEND_A_REG_Q_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 6 - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
+    #[inline(always)]
+    #[must_use]
+    pub fn out_eof_int_raw(&mut self) -> OUT_EOF_INT_RAW_W<6> {
+        OUT_EOF_INT_RAW_W::new(self)
+    }
     #[doc = "Bit 7 - Soft control int raw bit."]
     #[inline(always)]
     #[must_use]

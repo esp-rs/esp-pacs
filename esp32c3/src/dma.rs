@@ -195,7 +195,7 @@ pub struct RegisterBlock {
     #[doc = "0x280 - DMA_OUT_PERI_SEL_CH2_REG."]
     pub out_peri_sel_ch2: OUT_PERI_SEL_CH2,
 }
-#[doc = "INT_RAW_CH0 (r) register accessor: an alias for `Reg<INT_RAW_CH0_SPEC>`"]
+#[doc = "INT_RAW_CH0 (rw) register accessor: an alias for `Reg<INT_RAW_CH0_SPEC>`"]
 pub type INT_RAW_CH0 = crate::Reg<int_raw_ch0::INT_RAW_CH0_SPEC>;
 #[doc = "DMA_INT_RAW_CH0_REG."]
 pub mod int_raw_ch0;
@@ -211,7 +211,7 @@ pub mod int_ena_ch0;
 pub type INT_CLR_CH0 = crate::Reg<int_clr_ch0::INT_CLR_CH0_SPEC>;
 #[doc = "DMA_INT_CLR_CH0_REG."]
 pub mod int_clr_ch0;
-#[doc = "INT_RAW_CH1 (r) register accessor: an alias for `Reg<INT_RAW_CH1_SPEC>`"]
+#[doc = "INT_RAW_CH1 (rw) register accessor: an alias for `Reg<INT_RAW_CH1_SPEC>`"]
 pub type INT_RAW_CH1 = crate::Reg<int_raw_ch1::INT_RAW_CH1_SPEC>;
 #[doc = "DMA_INT_RAW_CH1_REG."]
 pub mod int_raw_ch1;
@@ -227,7 +227,7 @@ pub mod int_ena_ch1;
 pub type INT_CLR_CH1 = crate::Reg<int_clr_ch1::INT_CLR_CH1_SPEC>;
 #[doc = "DMA_INT_CLR_CH1_REG."]
 pub mod int_clr_ch1;
-#[doc = "INT_RAW_CH2 (r) register accessor: an alias for `Reg<INT_RAW_CH2_SPEC>`"]
+#[doc = "INT_RAW_CH2 (rw) register accessor: an alias for `Reg<INT_RAW_CH2_SPEC>`"]
 pub type INT_RAW_CH2 = crate::Reg<int_raw_ch2::INT_RAW_CH2_SPEC>;
 #[doc = "DMA_INT_RAW_CH2_REG."]
 pub mod int_raw_ch2;

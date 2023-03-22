@@ -153,7 +153,7 @@ pub mod rtccalicfg1;
 pub type INT_ENA_TIMERS = crate::Reg<int_ena_timers::INT_ENA_TIMERS_SPEC>;
 #[doc = "Interrupt enable bits"]
 pub mod int_ena_timers;
-#[doc = "INT_RAW_TIMERS (r) register accessor: an alias for `Reg<INT_RAW_TIMERS_SPEC>`"]
+#[doc = "INT_RAW_TIMERS (rw) register accessor: an alias for `Reg<INT_RAW_TIMERS_SPEC>`"]
 pub type INT_RAW_TIMERS = crate::Reg<int_raw_timers::INT_RAW_TIMERS_SPEC>;
 #[doc = "Raw interrupt status"]
 pub mod int_raw_timers;

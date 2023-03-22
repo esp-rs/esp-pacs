@@ -117,7 +117,7 @@ pub mod ch2status;
 pub type CH3STATUS = crate::Reg<ch3status::CH3STATUS_SPEC>;
 #[doc = "RMT_CH3STATUS_REG."]
 pub mod ch3status;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "RMT_INT_RAW_REG."]
 pub mod int_raw;

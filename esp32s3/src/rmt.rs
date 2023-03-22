@@ -80,7 +80,7 @@ pub mod ch_tx_status;
 pub type CH_RX_STATUS = crate::Reg<ch_rx_status::CH_RX_STATUS_SPEC>;
 #[doc = "Channel %s status register"]
 pub mod ch_rx_status;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]
 pub mod int_raw;

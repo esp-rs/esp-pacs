@@ -120,7 +120,7 @@ pub mod timer_conf;
 pub type TIMER_VALUE = crate::Reg<timer_value::TIMER_VALUE_SPEC>;
 #[doc = "Timer %s current counter value"]
 pub mod timer_value;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]
 pub mod int_raw;

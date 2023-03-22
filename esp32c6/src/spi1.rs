@@ -244,7 +244,7 @@ pub mod spi_mem_int_ena;
 pub type SPI_MEM_INT_CLR = crate::Reg<spi_mem_int_clr::SPI_MEM_INT_CLR_SPEC>;
 #[doc = "SPI1 interrupt clear register"]
 pub mod spi_mem_int_clr;
-#[doc = "SPI_MEM_INT_RAW (r) register accessor: an alias for `Reg<SPI_MEM_INT_RAW_SPEC>`"]
+#[doc = "SPI_MEM_INT_RAW (rw) register accessor: an alias for `Reg<SPI_MEM_INT_RAW_SPEC>`"]
 pub type SPI_MEM_INT_RAW = crate::Reg<spi_mem_int_raw::SPI_MEM_INT_RAW_SPEC>;
 #[doc = "SPI1 interrupt raw register"]
 pub mod spi_mem_int_raw;

@@ -141,7 +141,7 @@ pub mod spi_dma_int_ena;
 pub type SPI_DMA_INT_CLR = crate::Reg<spi_dma_int_clr::SPI_DMA_INT_CLR_SPEC>;
 #[doc = "SPI interrupt clear register"]
 pub mod spi_dma_int_clr;
-#[doc = "SPI_DMA_INT_RAW (r) register accessor: an alias for `Reg<SPI_DMA_INT_RAW_SPEC>`"]
+#[doc = "SPI_DMA_INT_RAW (rw) register accessor: an alias for `Reg<SPI_DMA_INT_RAW_SPEC>`"]
 pub type SPI_DMA_INT_RAW = crate::Reg<spi_dma_int_raw::SPI_DMA_INT_RAW_SPEC>;
 #[doc = "SPI interrupt raw register"]
 pub mod spi_dma_int_raw;

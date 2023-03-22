@@ -51,7 +51,7 @@ pub mod ep1;
 pub type EP1_CONF = crate::Reg<ep1_conf::EP1_CONF_SPEC>;
 #[doc = "Endpoint 1 configure and status register"]
 pub mod ep1_conf;
-#[doc = "INT_RAW (r) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
+#[doc = "INT_RAW (rw) register accessor: an alias for `Reg<INT_RAW_SPEC>`"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw status interrupt"]
 pub mod int_raw;

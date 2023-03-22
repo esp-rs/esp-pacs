@@ -13,38 +13,103 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Register `INT_RAW` writer"]
+pub struct W(crate::W<INT_RAW_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<INT_RAW_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<INT_RAW_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<INT_RAW_SPEC>) -> Self {
+        W(writer)
+    }
+}
 #[doc = "Field `LSTIMER0_OVF_INT_RAW` reader - reg_lstimer0_ovf_int_raw."]
 pub type LSTIMER0_OVF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `LSTIMER0_OVF_INT_RAW` writer - reg_lstimer0_ovf_int_raw."]
+pub type LSTIMER0_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `LSTIMER1_OVF_INT_RAW` reader - reg_lstimer1_ovf_int_raw."]
 pub type LSTIMER1_OVF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `LSTIMER1_OVF_INT_RAW` writer - reg_lstimer1_ovf_int_raw."]
+pub type LSTIMER1_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `LSTIMER2_OVF_INT_RAW` reader - reg_lstimer2_ovf_int_raw."]
 pub type LSTIMER2_OVF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `LSTIMER2_OVF_INT_RAW` writer - reg_lstimer2_ovf_int_raw."]
+pub type LSTIMER2_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `LSTIMER3_OVF_INT_RAW` reader - reg_lstimer3_ovf_int_raw."]
 pub type LSTIMER3_OVF_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `LSTIMER3_OVF_INT_RAW` writer - reg_lstimer3_ovf_int_raw."]
+pub type LSTIMER3_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_RAW` reader - reg_duty_chng_end_lsch0_int_raw."]
 pub type DUTY_CHNG_END_LSCH0_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH0_INT_RAW` writer - reg_duty_chng_end_lsch0_int_raw."]
+pub type DUTY_CHNG_END_LSCH0_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_RAW` reader - reg_duty_chng_end_lsch1_int_raw."]
 pub type DUTY_CHNG_END_LSCH1_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH1_INT_RAW` writer - reg_duty_chng_end_lsch1_int_raw."]
+pub type DUTY_CHNG_END_LSCH1_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_RAW` reader - reg_duty_chng_end_lsch2_int_raw."]
 pub type DUTY_CHNG_END_LSCH2_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH2_INT_RAW` writer - reg_duty_chng_end_lsch2_int_raw."]
+pub type DUTY_CHNG_END_LSCH2_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_RAW` reader - reg_duty_chng_end_lsch3_int_raw."]
 pub type DUTY_CHNG_END_LSCH3_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH3_INT_RAW` writer - reg_duty_chng_end_lsch3_int_raw."]
+pub type DUTY_CHNG_END_LSCH3_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_RAW` reader - reg_duty_chng_end_lsch4_int_raw."]
 pub type DUTY_CHNG_END_LSCH4_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH4_INT_RAW` writer - reg_duty_chng_end_lsch4_int_raw."]
+pub type DUTY_CHNG_END_LSCH4_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_RAW` reader - reg_duty_chng_end_lsch5_int_raw."]
 pub type DUTY_CHNG_END_LSCH5_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `DUTY_CHNG_END_LSCH5_INT_RAW` writer - reg_duty_chng_end_lsch5_int_raw."]
+pub type DUTY_CHNG_END_LSCH5_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH0_INT_RAW` reader - reg_ovf_cnt_lsch0_int_raw."]
 pub type OVF_CNT_LSCH0_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH0_INT_RAW` writer - reg_ovf_cnt_lsch0_int_raw."]
+pub type OVF_CNT_LSCH0_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH1_INT_RAW` reader - reg_ovf_cnt_lsch1_int_raw."]
 pub type OVF_CNT_LSCH1_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH1_INT_RAW` writer - reg_ovf_cnt_lsch1_int_raw."]
+pub type OVF_CNT_LSCH1_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH2_INT_RAW` reader - reg_ovf_cnt_lsch2_int_raw."]
 pub type OVF_CNT_LSCH2_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH2_INT_RAW` writer - reg_ovf_cnt_lsch2_int_raw."]
+pub type OVF_CNT_LSCH2_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH3_INT_RAW` reader - reg_ovf_cnt_lsch3_int_raw."]
 pub type OVF_CNT_LSCH3_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH3_INT_RAW` writer - reg_ovf_cnt_lsch3_int_raw."]
+pub type OVF_CNT_LSCH3_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH4_INT_RAW` reader - reg_ovf_cnt_lsch4_int_raw."]
 pub type OVF_CNT_LSCH4_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH4_INT_RAW` writer - reg_ovf_cnt_lsch4_int_raw."]
+pub type OVF_CNT_LSCH4_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 #[doc = "Field `OVF_CNT_LSCH5_INT_RAW` reader - reg_ovf_cnt_lsch5_int_raw."]
 pub type OVF_CNT_LSCH5_INT_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `OVF_CNT_LSCH5_INT_RAW` writer - reg_ovf_cnt_lsch5_int_raw."]
+pub type OVF_CNT_LSCH5_INT_RAW_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_raw."]
     #[inline(always)]
@@ -127,7 +192,111 @@ impl R {
         OVF_CNT_LSCH5_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
-#[doc = "LEDC_INT_RAW.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
+impl W {
+    #[doc = "Bit 0 - reg_lstimer0_ovf_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn lstimer0_ovf_int_raw(&mut self) -> LSTIMER0_OVF_INT_RAW_W<0> {
+        LSTIMER0_OVF_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 1 - reg_lstimer1_ovf_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn lstimer1_ovf_int_raw(&mut self) -> LSTIMER1_OVF_INT_RAW_W<1> {
+        LSTIMER1_OVF_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 2 - reg_lstimer2_ovf_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn lstimer2_ovf_int_raw(&mut self) -> LSTIMER2_OVF_INT_RAW_W<2> {
+        LSTIMER2_OVF_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 3 - reg_lstimer3_ovf_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn lstimer3_ovf_int_raw(&mut self) -> LSTIMER3_OVF_INT_RAW_W<3> {
+        LSTIMER3_OVF_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 4 - reg_duty_chng_end_lsch0_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch0_int_raw(&mut self) -> DUTY_CHNG_END_LSCH0_INT_RAW_W<4> {
+        DUTY_CHNG_END_LSCH0_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 5 - reg_duty_chng_end_lsch1_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch1_int_raw(&mut self) -> DUTY_CHNG_END_LSCH1_INT_RAW_W<5> {
+        DUTY_CHNG_END_LSCH1_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 6 - reg_duty_chng_end_lsch2_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch2_int_raw(&mut self) -> DUTY_CHNG_END_LSCH2_INT_RAW_W<6> {
+        DUTY_CHNG_END_LSCH2_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 7 - reg_duty_chng_end_lsch3_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch3_int_raw(&mut self) -> DUTY_CHNG_END_LSCH3_INT_RAW_W<7> {
+        DUTY_CHNG_END_LSCH3_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 8 - reg_duty_chng_end_lsch4_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch4_int_raw(&mut self) -> DUTY_CHNG_END_LSCH4_INT_RAW_W<8> {
+        DUTY_CHNG_END_LSCH4_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 9 - reg_duty_chng_end_lsch5_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn duty_chng_end_lsch5_int_raw(&mut self) -> DUTY_CHNG_END_LSCH5_INT_RAW_W<9> {
+        DUTY_CHNG_END_LSCH5_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 10 - reg_ovf_cnt_lsch0_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch0_int_raw(&mut self) -> OVF_CNT_LSCH0_INT_RAW_W<10> {
+        OVF_CNT_LSCH0_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 11 - reg_ovf_cnt_lsch1_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch1_int_raw(&mut self) -> OVF_CNT_LSCH1_INT_RAW_W<11> {
+        OVF_CNT_LSCH1_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 12 - reg_ovf_cnt_lsch2_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch2_int_raw(&mut self) -> OVF_CNT_LSCH2_INT_RAW_W<12> {
+        OVF_CNT_LSCH2_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 13 - reg_ovf_cnt_lsch3_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch3_int_raw(&mut self) -> OVF_CNT_LSCH3_INT_RAW_W<13> {
+        OVF_CNT_LSCH3_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 14 - reg_ovf_cnt_lsch4_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch4_int_raw(&mut self) -> OVF_CNT_LSCH4_INT_RAW_W<14> {
+        OVF_CNT_LSCH4_INT_RAW_W::new(self)
+    }
+    #[doc = "Bit 15 - reg_ovf_cnt_lsch5_int_raw."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ovf_cnt_lsch5_int_raw(&mut self) -> OVF_CNT_LSCH5_INT_RAW_W<15> {
+        OVF_CNT_LSCH5_INT_RAW_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "LEDC_INT_RAW.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
@@ -135,6 +304,12 @@ impl crate::RegisterSpec for INT_RAW_SPEC {
 #[doc = "`read()` method returns [int_raw::R](R) reader structure"]
 impl crate::Readable for INT_RAW_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [int_raw::W](W) writer structure"]
+impl crate::Writable for INT_RAW_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INT_RAW to value 0"]
 impl crate::Resettable for INT_RAW_SPEC {

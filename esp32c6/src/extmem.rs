@@ -909,7 +909,7 @@ pub type L1_CACHE_ACS_CNT_INT_CLR =
     crate::Reg<l1_cache_acs_cnt_int_clr::L1_CACHE_ACS_CNT_INT_CLR_SPEC>;
 #[doc = "Cache Access Counter Interrupt clear register"]
 pub mod l1_cache_acs_cnt_int_clr;
-#[doc = "L1_CACHE_ACS_CNT_INT_RAW (r) register accessor: an alias for `Reg<L1_CACHE_ACS_CNT_INT_RAW_SPEC>`"]
+#[doc = "L1_CACHE_ACS_CNT_INT_RAW (rw) register accessor: an alias for `Reg<L1_CACHE_ACS_CNT_INT_RAW_SPEC>`"]
 pub type L1_CACHE_ACS_CNT_INT_RAW =
     crate::Reg<l1_cache_acs_cnt_int_raw::L1_CACHE_ACS_CNT_INT_RAW_SPEC>;
 #[doc = "Cache Access Counter Interrupt raw register"]
@@ -929,7 +929,7 @@ pub type L1_CACHE_ACS_FAIL_INT_CLR =
     crate::Reg<l1_cache_acs_fail_int_clr::L1_CACHE_ACS_FAIL_INT_CLR_SPEC>;
 #[doc = "L1-Cache Access Fail Interrupt clear register"]
 pub mod l1_cache_acs_fail_int_clr;
-#[doc = "L1_CACHE_ACS_FAIL_INT_RAW (r) register accessor: an alias for `Reg<L1_CACHE_ACS_FAIL_INT_RAW_SPEC>`"]
+#[doc = "L1_CACHE_ACS_FAIL_INT_RAW (rw) register accessor: an alias for `Reg<L1_CACHE_ACS_FAIL_INT_RAW_SPEC>`"]
 pub type L1_CACHE_ACS_FAIL_INT_RAW =
     crate::Reg<l1_cache_acs_fail_int_raw::L1_CACHE_ACS_FAIL_INT_RAW_SPEC>;
 #[doc = "Cache Access Fail Interrupt raw register"]
@@ -1145,7 +1145,7 @@ pub type L1_CACHE_SYNC_PRELOAD_INT_CLR =
     crate::Reg<l1_cache_sync_preload_int_clr::L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC>;
 #[doc = "Sync Preload operation Interrupt clear register"]
 pub mod l1_cache_sync_preload_int_clr;
-#[doc = "L1_CACHE_SYNC_PRELOAD_INT_RAW (r) register accessor: an alias for `Reg<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>`"]
+#[doc = "L1_CACHE_SYNC_PRELOAD_INT_RAW (rw) register accessor: an alias for `Reg<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>`"]
 pub type L1_CACHE_SYNC_PRELOAD_INT_RAW =
     crate::Reg<l1_cache_sync_preload_int_raw::L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>;
 #[doc = "Sync Preload operation Interrupt raw register"]
@@ -1331,7 +1331,7 @@ pub type L2_CACHE_ACS_CNT_INT_CLR =
     crate::Reg<l2_cache_acs_cnt_int_clr::L2_CACHE_ACS_CNT_INT_CLR_SPEC>;
 #[doc = "Cache Access Counter Interrupt clear register"]
 pub mod l2_cache_acs_cnt_int_clr;
-#[doc = "L2_CACHE_ACS_CNT_INT_RAW (r) register accessor: an alias for `Reg<L2_CACHE_ACS_CNT_INT_RAW_SPEC>`"]
+#[doc = "L2_CACHE_ACS_CNT_INT_RAW (rw) register accessor: an alias for `Reg<L2_CACHE_ACS_CNT_INT_RAW_SPEC>`"]
 pub type L2_CACHE_ACS_CNT_INT_RAW =
     crate::Reg<l2_cache_acs_cnt_int_raw::L2_CACHE_ACS_CNT_INT_RAW_SPEC>;
 #[doc = "Cache Access Counter Interrupt raw register"]
@@ -1351,7 +1351,7 @@ pub type L2_CACHE_ACS_FAIL_INT_CLR =
     crate::Reg<l2_cache_acs_fail_int_clr::L2_CACHE_ACS_FAIL_INT_CLR_SPEC>;
 #[doc = "L1-Cache Access Fail Interrupt clear register"]
 pub mod l2_cache_acs_fail_int_clr;
-#[doc = "L2_CACHE_ACS_FAIL_INT_RAW (r) register accessor: an alias for `Reg<L2_CACHE_ACS_FAIL_INT_RAW_SPEC>`"]
+#[doc = "L2_CACHE_ACS_FAIL_INT_RAW (rw) register accessor: an alias for `Reg<L2_CACHE_ACS_FAIL_INT_RAW_SPEC>`"]
 pub type L2_CACHE_ACS_FAIL_INT_RAW =
     crate::Reg<l2_cache_acs_fail_int_raw::L2_CACHE_ACS_FAIL_INT_RAW_SPEC>;
 #[doc = "Cache Access Fail Interrupt raw register"]
@@ -1528,7 +1528,7 @@ pub type L2_CACHE_SYNC_PRELOAD_INT_CLR =
     crate::Reg<l2_cache_sync_preload_int_clr::L2_CACHE_SYNC_PRELOAD_INT_CLR_SPEC>;
 #[doc = "Sync Preload operation Interrupt clear register"]
 pub mod l2_cache_sync_preload_int_clr;
-#[doc = "L2_CACHE_SYNC_PRELOAD_INT_RAW (r) register accessor: an alias for `Reg<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>`"]
+#[doc = "L2_CACHE_SYNC_PRELOAD_INT_RAW (rw) register accessor: an alias for `Reg<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>`"]
 pub type L2_CACHE_SYNC_PRELOAD_INT_RAW =
     crate::Reg<l2_cache_sync_preload_int_raw::L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>;
 #[doc = "Sync Preload operation Interrupt raw register"]

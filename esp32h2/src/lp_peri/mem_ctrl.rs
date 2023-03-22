@@ -39,6 +39,8 @@ pub type UART_WAKEUP_FLAG_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
 #[doc = "Field `UART_WAKEUP_FLAG` reader - need_des"]
 pub type UART_WAKEUP_FLAG_R = crate::BitReader<bool>;
+#[doc = "Field `UART_WAKEUP_FLAG` writer - need_des"]
+pub type UART_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
 #[doc = "Field `UART_WAKEUP_EN` reader - need_des"]
 pub type UART_WAKEUP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `UART_WAKEUP_EN` writer - need_des"]
@@ -79,6 +81,12 @@ impl W {
     #[must_use]
     pub fn uart_wakeup_flag_clr(&mut self) -> UART_WAKEUP_FLAG_CLR_W<0> {
         UART_WAKEUP_FLAG_CLR_W::new(self)
+    }
+    #[doc = "Bit 1 - need_des"]
+    #[inline(always)]
+    #[must_use]
+    pub fn uart_wakeup_flag(&mut self) -> UART_WAKEUP_FLAG_W<1> {
+        UART_WAKEUP_FLAG_W::new(self)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
