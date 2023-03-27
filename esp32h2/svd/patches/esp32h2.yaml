@@ -1,1 +1,34 @@
 _svd: "../esp32h2.base.svd"
+
+LP_WDT:
+  _modify:
+    CONFIG0:
+      name: WDTCONFIG0
+
+    FEED:
+      name: WDTFEED
+
+    INT_ST:
+      name: INT_ST_RTC
+    INT_ENA:
+      name: INT_ENA_RTC
+    INT_CLR:
+      name: INT_CLR_RTC
+
+    SWD_CONFIG:
+      name: SWD_CONF
+
+  INT_ST_RTC:
+    _modify:
+      LP_WDT_INT_ST:
+        name: WDT_INT_ST
+
+  INT_ENA_RTC:
+    _modify:
+      LP_WDT_INT_ENA:
+        name: WDT_INT_ENA
+
+  INT_CLR_RTC:
+    _modify:
+      LP_WDT_INT_CLR:
+        name: WDT_INT_CLR
