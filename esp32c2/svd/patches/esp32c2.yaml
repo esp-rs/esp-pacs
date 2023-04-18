@@ -1,1 +1,22 @@
 _svd: ../esp32c2.base.svd
+
+ECC:
+  _add:
+    "K_MEM[%s]":
+      dim: 32
+      dimIncrement: 0x1
+      description: The memory that stores k.
+      addressOffset: 0x100
+      size: 0x8
+    "PX_MEM[%s]":
+      dim: 32
+      dimIncrement: 0x1
+      description: The memory that stores Px.
+      addressOffset: 0x120
+      size: 0x8
+    "PY_MEM[%s]":
+      dim: 32
+      dimIncrement: 0x1
+      description: The memory that stores Py.
+      addressOffset: 0x140
+      size: 0x8
