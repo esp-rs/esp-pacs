@@ -15,6 +15,12 @@ pub struct RegisterBlock {
     _reserved5: [u8; 0xdc],
     #[doc = "0xfc - Version control register"]
     pub mult_date: MULT_DATE,
+    #[doc = "0x100..0x120 - The memory that stores k."]
+    pub k_mem: [K_MEM; 32],
+    #[doc = "0x120..0x140 - The memory that stores Px."]
+    pub px_mem: [PX_MEM; 32],
+    #[doc = "0x140..0x160 - The memory that stores Py."]
+    pub py_mem: [PY_MEM; 32],
 }
 #[doc = "MULT_INT_RAW (r) register accessor: an alias for `Reg<MULT_INT_RAW_SPEC>`"]
 pub type MULT_INT_RAW = crate::Reg<mult_int_raw::MULT_INT_RAW_SPEC>;
@@ -40,3 +46,15 @@ pub mod mult_conf;
 pub type MULT_DATE = crate::Reg<mult_date::MULT_DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod mult_date;
+#[doc = "K_MEM (rw) register accessor: an alias for `Reg<K_MEM_SPEC>`"]
+pub type K_MEM = crate::Reg<k_mem::K_MEM_SPEC>;
+#[doc = "The memory that stores k."]
+pub mod k_mem;
+#[doc = "PX_MEM (rw) register accessor: an alias for `Reg<PX_MEM_SPEC>`"]
+pub type PX_MEM = crate::Reg<px_mem::PX_MEM_SPEC>;
+#[doc = "The memory that stores Px."]
+pub mod px_mem;
+#[doc = "PY_MEM (rw) register accessor: an alias for `Reg<PY_MEM_SPEC>`"]
+pub type PY_MEM = crate::Reg<py_mem::PY_MEM_SPEC>;
+#[doc = "The memory that stores Py."]
+pub mod py_mem;
