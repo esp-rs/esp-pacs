@@ -1,11 +1,4 @@
-[target.xtensa-esp8266-none-elf]
-runner = "xtensa-lx106-elf-gdb"
-
 [build]
-rustflags = [
-  "-C", "link-arg=-nostartfiles",
-  "-C", "link-arg=-Wl,-Tlink.x",
-]
 target = "xtensa-esp8266-none-elf"
 
 [unstable]

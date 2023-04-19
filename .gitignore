@@ -1,3 +1,5 @@
+.vscode/
+
 esp*/**/Cargo.lock
 
 *.svd

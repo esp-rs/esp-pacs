@@ -1,3 +1,5 @@
+name: CI
+
 on:
   pull_request:
     branches:
@@ -5,11 +7,17 @@ on:
   push:
   workflow_dispatch:
 
-name: CI
-
 env:
   CARGO_TERM_COLOR: always
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# Cancel any currently running workflows from the same PR, branch, or
+# tag when a new workflow is triggered.
+#
+# https://stackoverflow.com/a/66336834
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
 
 jobs:
   # --------------------------------------------------------------------------
@@ -27,7 +35,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@nightly
         with:
-          targets: riscv32imc-unknown-none-elf
+          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
           components: rust-src
       - uses: Swatinem/rust-cache@v2
 
@@ -73,11 +81,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: dtolnay/rust-toolchain@nightly
         with:
-          targets: riscv32imc-unknown-none-elf
+          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
           components: rust-src
       - uses: dtolnay/rust-toolchain@1.65.0
         with:
-          targets: riscv32imc-unknown-none-elf
+          targets: riscv32imc-unknown-none-elf,riscv32imac-unknown-none-elf
           components: rust-src
       - uses: Swatinem/rust-cache@v2
 

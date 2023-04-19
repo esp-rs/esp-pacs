@@ -1,14 +1,9 @@
 [package]
 name = "esp32c3"
 version = "0.13.0"
-authors = [
-    "Samir Shetty <samirshetty23@gmail.com>",
-    "Jesse Braham <jesse@beta7.io>",
-]
 edition = "2021"
+rust-version = "1.60"
 description = "Peripheral access crate for the ESP32-C3"
-documentation = "https://docs.rs/esp32c3/"
-readme = "README.md"
 repository = "https://github.com/esp-rs/esp-pacs"
 license = "MIT OR Apache-2.0"
 keywords = [
@@ -23,7 +18,7 @@ categories = [
     "no-std",
 ]
 include = [
-    "/src/**",
+    "src/**",
     "build.rs",
     "device.x"
 ]
