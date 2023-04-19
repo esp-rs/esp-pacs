@@ -2,7 +2,7 @@
 name = "esp32c6"
 version = "0.3.0"
 edition = "2021"
-rust-version = "1.60"
+rust-version = "1.65"
 description = "Peripheral access crate for the ESP32-C6"
 repository = "https://github.com/esp-rs/esp-pacs"
 license = "MIT OR Apache-2.0"
