@@ -2,13 +2,13 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - core0 monitor enable configuration register"]
-    pub core_0_interrupt_ena: CORE_0_INTERRUPT_ENA,
+    pub core_0_montr_ena: CORE_0_MONTR_ENA,
     #[doc = "0x04 - core0 monitor interrupt status register"]
-    pub core_0_interrupt_raw: CORE_0_INTERRUPT_RAW,
+    pub core_0_intr_raw: CORE_0_INTR_RAW,
     #[doc = "0x08 - core0 monitor interrupt enable register"]
-    pub core_0_interrupt_rls: CORE_0_INTERRUPT_RLS,
+    pub core_0_intr_ena: CORE_0_INTR_ENA,
     #[doc = "0x0c - core0 monitor interrupt clr register"]
-    pub core_0_interrupt_clr: CORE_0_INTERRUPT_CLR,
+    pub core_0_intr_clr: CORE_0_INTR_CLR,
     #[doc = "0x10 - core0 dram0 region0 addr configuration register"]
     pub core_0_area_dram0_0_min: CORE_0_AREA_DRAM0_0_MIN,
     #[doc = "0x14 - core0 dram0 region0 addr configuration register"]
@@ -74,13 +74,13 @@ pub struct RegisterBlock {
     #[doc = "0x8c - core0 bus busy configuration regsiter"]
     pub core_0_dram0_exception_monitor_5: CORE_0_DRAM0_EXCEPTION_MONITOR_5,
     #[doc = "0x90 - Core1 monitor enable configuration register"]
-    pub core_1_interrupt_ena: CORE_1_INTERRUPT_ENA,
+    pub core_1_montr_ena: CORE_1_MONTR_ENA,
     #[doc = "0x94 - Core1 monitor interrupt status register"]
-    pub core_1_interrupt_raw: CORE_1_INTERRUPT_RAW,
+    pub core_1_intr_raw: CORE_1_INTR_RAW,
     #[doc = "0x98 - Core1 monitor interrupt enable register"]
-    pub core_1_interrupt_rls: CORE_1_INTERRUPT_RLS,
+    pub core_1_intr_ena: CORE_1_INTR_ENA,
     #[doc = "0x9c - Core1 monitor interrupt clr register"]
-    pub core_1_interrupt_clr: CORE_1_INTERRUPT_CLR,
+    pub core_1_intr_clr: CORE_1_INTR_CLR,
     #[doc = "0xa0 - Core1 dram0 region0 addr configuration register"]
     pub core_1_area_dram0_0_min: CORE_1_AREA_DRAM0_0_MIN,
     #[doc = "0xa4 - Core1 dram0 region0 addr configuration register"]
@@ -177,22 +177,22 @@ pub struct RegisterBlock {
     #[doc = "0x1fc - version register"]
     pub date: DATE,
 }
-#[doc = "CORE_0_INTERRUPT_ENA (rw) register accessor: an alias for `Reg<CORE_0_INTERRUPT_ENA_SPEC>`"]
-pub type CORE_0_INTERRUPT_ENA = crate::Reg<core_0_interrupt_ena::CORE_0_INTERRUPT_ENA_SPEC>;
+#[doc = "CORE_0_MONTR_ENA (rw) register accessor: an alias for `Reg<CORE_0_MONTR_ENA_SPEC>`"]
+pub type CORE_0_MONTR_ENA = crate::Reg<core_0_montr_ena::CORE_0_MONTR_ENA_SPEC>;
 #[doc = "core0 monitor enable configuration register"]
-pub mod core_0_interrupt_ena;
-#[doc = "CORE_0_INTERRUPT_RAW (r) register accessor: an alias for `Reg<CORE_0_INTERRUPT_RAW_SPEC>`"]
-pub type CORE_0_INTERRUPT_RAW = crate::Reg<core_0_interrupt_raw::CORE_0_INTERRUPT_RAW_SPEC>;
+pub mod core_0_montr_ena;
+#[doc = "CORE_0_INTR_RAW (r) register accessor: an alias for `Reg<CORE_0_INTR_RAW_SPEC>`"]
+pub type CORE_0_INTR_RAW = crate::Reg<core_0_intr_raw::CORE_0_INTR_RAW_SPEC>;
 #[doc = "core0 monitor interrupt status register"]
-pub mod core_0_interrupt_raw;
-#[doc = "CORE_0_INTERRUPT_RLS (rw) register accessor: an alias for `Reg<CORE_0_INTERRUPT_RLS_SPEC>`"]
-pub type CORE_0_INTERRUPT_RLS = crate::Reg<core_0_interrupt_rls::CORE_0_INTERRUPT_RLS_SPEC>;
+pub mod core_0_intr_raw;
+#[doc = "CORE_0_INTR_ENA (rw) register accessor: an alias for `Reg<CORE_0_INTR_ENA_SPEC>`"]
+pub type CORE_0_INTR_ENA = crate::Reg<core_0_intr_ena::CORE_0_INTR_ENA_SPEC>;
 #[doc = "core0 monitor interrupt enable register"]
-pub mod core_0_interrupt_rls;
-#[doc = "CORE_0_INTERRUPT_CLR (rw) register accessor: an alias for `Reg<CORE_0_INTERRUPT_CLR_SPEC>`"]
-pub type CORE_0_INTERRUPT_CLR = crate::Reg<core_0_interrupt_clr::CORE_0_INTERRUPT_CLR_SPEC>;
+pub mod core_0_intr_ena;
+#[doc = "CORE_0_INTR_CLR (rw) register accessor: an alias for `Reg<CORE_0_INTR_CLR_SPEC>`"]
+pub type CORE_0_INTR_CLR = crate::Reg<core_0_intr_clr::CORE_0_INTR_CLR_SPEC>;
 #[doc = "core0 monitor interrupt clr register"]
-pub mod core_0_interrupt_clr;
+pub mod core_0_intr_clr;
 #[doc = "CORE_0_AREA_DRAM0_0_MIN (rw) register accessor: an alias for `Reg<CORE_0_AREA_DRAM0_0_MIN_SPEC>`"]
 pub type CORE_0_AREA_DRAM0_0_MIN =
     crate::Reg<core_0_area_dram0_0_min::CORE_0_AREA_DRAM0_0_MIN_SPEC>;
@@ -338,22 +338,22 @@ pub type CORE_0_DRAM0_EXCEPTION_MONITOR_5 =
     crate::Reg<core_0_dram0_exception_monitor_5::CORE_0_DRAM0_EXCEPTION_MONITOR_5_SPEC>;
 #[doc = "core0 bus busy configuration regsiter"]
 pub mod core_0_dram0_exception_monitor_5;
-#[doc = "CORE_1_INTERRUPT_ENA (rw) register accessor: an alias for `Reg<CORE_1_INTERRUPT_ENA_SPEC>`"]
-pub type CORE_1_INTERRUPT_ENA = crate::Reg<core_1_interrupt_ena::CORE_1_INTERRUPT_ENA_SPEC>;
+#[doc = "CORE_1_MONTR_ENA (rw) register accessor: an alias for `Reg<CORE_1_MONTR_ENA_SPEC>`"]
+pub type CORE_1_MONTR_ENA = crate::Reg<core_1_montr_ena::CORE_1_MONTR_ENA_SPEC>;
 #[doc = "Core1 monitor enable configuration register"]
-pub mod core_1_interrupt_ena;
-#[doc = "CORE_1_INTERRUPT_RAW (r) register accessor: an alias for `Reg<CORE_1_INTERRUPT_RAW_SPEC>`"]
-pub type CORE_1_INTERRUPT_RAW = crate::Reg<core_1_interrupt_raw::CORE_1_INTERRUPT_RAW_SPEC>;
+pub mod core_1_montr_ena;
+#[doc = "CORE_1_INTR_RAW (r) register accessor: an alias for `Reg<CORE_1_INTR_RAW_SPEC>`"]
+pub type CORE_1_INTR_RAW = crate::Reg<core_1_intr_raw::CORE_1_INTR_RAW_SPEC>;
 #[doc = "Core1 monitor interrupt status register"]
-pub mod core_1_interrupt_raw;
-#[doc = "CORE_1_INTERRUPT_RLS (rw) register accessor: an alias for `Reg<CORE_1_INTERRUPT_RLS_SPEC>`"]
-pub type CORE_1_INTERRUPT_RLS = crate::Reg<core_1_interrupt_rls::CORE_1_INTERRUPT_RLS_SPEC>;
+pub mod core_1_intr_raw;
+#[doc = "CORE_1_INTR_ENA (rw) register accessor: an alias for `Reg<CORE_1_INTR_ENA_SPEC>`"]
+pub type CORE_1_INTR_ENA = crate::Reg<core_1_intr_ena::CORE_1_INTR_ENA_SPEC>;
 #[doc = "Core1 monitor interrupt enable register"]
-pub mod core_1_interrupt_rls;
-#[doc = "CORE_1_INTERRUPT_CLR (rw) register accessor: an alias for `Reg<CORE_1_INTERRUPT_CLR_SPEC>`"]
-pub type CORE_1_INTERRUPT_CLR = crate::Reg<core_1_interrupt_clr::CORE_1_INTERRUPT_CLR_SPEC>;
+pub mod core_1_intr_ena;
+#[doc = "CORE_1_INTR_CLR (rw) register accessor: an alias for `Reg<CORE_1_INTR_CLR_SPEC>`"]
+pub type CORE_1_INTR_CLR = crate::Reg<core_1_intr_clr::CORE_1_INTR_CLR_SPEC>;
 #[doc = "Core1 monitor interrupt clr register"]
-pub mod core_1_interrupt_clr;
+pub mod core_1_intr_clr;
 #[doc = "CORE_1_AREA_DRAM0_0_MIN (rw) register accessor: an alias for `Reg<CORE_1_AREA_DRAM0_0_MIN_SPEC>`"]
 pub type CORE_1_AREA_DRAM0_0_MIN =
     crate::Reg<core_1_area_dram0_0_min::CORE_1_AREA_DRAM0_0_MIN_SPEC>;

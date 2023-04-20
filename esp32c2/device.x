@@ -38,6 +38,6 @@ PROVIDE(FROM_CPU_INTR0 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR1 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR2 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR3 = DefaultHandler);
-PROVIDE(ETS_ASSIST_DEBUG = DefaultHandler);
+PROVIDE(ASSIST_DEBUG = DefaultHandler);
 PROVIDE(ETS_CORE0_PIF_PMS_SIZE = DefaultHandler);
 

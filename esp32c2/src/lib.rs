@@ -67,7 +67,7 @@ extern "C" {
     fn FROM_CPU_INTR1();
     fn FROM_CPU_INTR2();
     fn FROM_CPU_INTR3();
-    fn ETS_ASSIST_DEBUG();
+    fn ASSIST_DEBUG();
     fn ETS_CORE0_PIF_PMS_SIZE();
 }
 #[doc(hidden)]
@@ -154,7 +154,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 42] = [
         _handler: FROM_CPU_INTR3,
     },
     Vector {
-        _handler: ETS_ASSIST_DEBUG,
+        _handler: ASSIST_DEBUG,
     },
     Vector {
         _handler: ETS_CORE0_PIF_PMS_SIZE,

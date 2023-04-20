@@ -20,3 +20,39 @@ ECC:
       description: The memory that stores Py.
       addressOffset: 0x140
       size: 0x8
+
+
+ASSIST_DEBUG:
+  _modify:
+    _interrupts:
+      ETS_ASSIST_DEBUG:
+        name: ASSIST_DEBUG
+        description: Assist debug interrupt  
+    CORE_0_INTR_ENA:
+      name: CORE_0_MONTR_ENA
+    CORE_0_INTR_RLS:
+      name: CORE_0_INTR_ENA  
+  CORE_0_MONTR_ENA:
+    _modify:
+      CORE_0_AREA_DRAM0_0_RD_ENA:
+        name: CORE_0_SP_SPILL_MIN_ENA
+      CORE_0_AREA_DRAM0_0_WR_ENA:
+        name: CORE_0_SP_SPILL_MAX_ENA
+  CORE_0_INTR_ENA:
+    _modify:
+      CORE_0_AREA_DRAM0_0_RD_RLS:
+        name: CORE_0_SP_SPILL_MIN_INTR_ENA
+      CORE_0_AREA_DRAM0_0_WR_RLS:
+        name: CORE_0_SP_SPILL_MAX_INTR_ENA
+  CORE_0_INTR_RAW:
+    _modify:
+      CORE_0_AREA_DRAM0_0_RD_RAW:
+        name: CORE_0_SP_SPILL_MIN_RAW
+      CORE_0_AREA_DRAM0_0_WR_RAW:
+        name: CORE_0_SP_SPILL_MAX_RAW
+  CORE_0_INTR_CLR:
+    _modify:
+      CORE_0_AREA_DRAM0_0_RD_CLR:
+        name: CORE_0_SP_SPILL_MIN_CLR
+      CORE_0_AREA_DRAM0_0_WR_CLR:
+        name: CORE_0_SP_SPILL_MAX_CLR

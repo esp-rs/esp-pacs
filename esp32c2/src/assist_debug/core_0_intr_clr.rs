@@ -19,24 +19,24 @@ impl From<crate::W<CORE_0_INTR_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CORE_0_AREA_DRAM0_0_RD_CLR` writer - clr sp underlow monitor interrupt"]
-pub type CORE_0_AREA_DRAM0_0_RD_CLR_W<'a, const O: u8> =
+#[doc = "Field `CORE_0_SP_SPILL_MIN_CLR` writer - clr sp underlow monitor interrupt"]
+pub type CORE_0_SP_SPILL_MIN_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CORE_0_INTR_CLR_SPEC, bool, O>;
-#[doc = "Field `CORE_0_AREA_DRAM0_0_WR_CLR` writer - clr sp overflow monitor interrupt"]
-pub type CORE_0_AREA_DRAM0_0_WR_CLR_W<'a, const O: u8> =
+#[doc = "Field `CORE_0_SP_SPILL_MAX_CLR` writer - clr sp overflow monitor interrupt"]
+pub type CORE_0_SP_SPILL_MAX_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CORE_0_INTR_CLR_SPEC, bool, O>;
 impl W {
     #[doc = "Bit 0 - clr sp underlow monitor interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_area_dram0_0_rd_clr(&mut self) -> CORE_0_AREA_DRAM0_0_RD_CLR_W<0> {
-        CORE_0_AREA_DRAM0_0_RD_CLR_W::new(self)
+    pub fn core_0_sp_spill_min_clr(&mut self) -> CORE_0_SP_SPILL_MIN_CLR_W<0> {
+        CORE_0_SP_SPILL_MIN_CLR_W::new(self)
     }
     #[doc = "Bit 1 - clr sp overflow monitor interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn core_0_area_dram0_0_wr_clr(&mut self) -> CORE_0_AREA_DRAM0_0_WR_CLR_W<1> {
-        CORE_0_AREA_DRAM0_0_WR_CLR_W::new(self)
+    pub fn core_0_sp_spill_max_clr(&mut self) -> CORE_0_SP_SPILL_MAX_CLR_W<1> {
+        CORE_0_SP_SPILL_MAX_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -2,7 +2,7 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG"]
-    pub c0re_0_montr_ena: C0RE_0_MONTR_ENA,
+    pub core_0_montr_ena: CORE_0_MONTR_ENA,
     #[doc = "0x04 - ASSIST_DEBUG_CORE_0_INTR_RAW_REG"]
     pub core_0_intr_raw: CORE_0_INTR_RAW,
     #[doc = "0x08 - ASSIST_DEBUG_CORE_0_INTR_ENA_REG"]
@@ -83,10 +83,10 @@ pub struct RegisterBlock {
     #[doc = "0x1fc - ASSIST_DEBUG_DATE_REG"]
     pub date: DATE,
 }
-#[doc = "C0RE_0_MONTR_ENA (rw) register accessor: an alias for `Reg<C0RE_0_MONTR_ENA_SPEC>`"]
-pub type C0RE_0_MONTR_ENA = crate::Reg<c0re_0_montr_ena::C0RE_0_MONTR_ENA_SPEC>;
+#[doc = "CORE_0_MONTR_ENA (rw) register accessor: an alias for `Reg<CORE_0_MONTR_ENA_SPEC>`"]
+pub type CORE_0_MONTR_ENA = crate::Reg<core_0_montr_ena::CORE_0_MONTR_ENA_SPEC>;
 #[doc = "ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG"]
-pub mod c0re_0_montr_ena;
+pub mod core_0_montr_ena;
 #[doc = "CORE_0_INTR_RAW (r) register accessor: an alias for `Reg<CORE_0_INTR_RAW_SPEC>`"]
 pub type CORE_0_INTR_RAW = crate::Reg<core_0_intr_raw::CORE_0_INTR_RAW_SPEC>;
 #[doc = "ASSIST_DEBUG_CORE_0_INTR_RAW_REG"]

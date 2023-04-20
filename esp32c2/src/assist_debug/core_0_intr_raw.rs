@@ -13,20 +13,20 @@ impl From<crate::R<CORE_0_INTR_RAW_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `CORE_0_AREA_DRAM0_0_RD_RAW` reader - sp underlow monitor interrupt status register"]
-pub type CORE_0_AREA_DRAM0_0_RD_RAW_R = crate::BitReader<bool>;
-#[doc = "Field `CORE_0_AREA_DRAM0_0_WR_RAW` reader - sp overflow monitor interupt status register"]
-pub type CORE_0_AREA_DRAM0_0_WR_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CORE_0_SP_SPILL_MIN_RAW` reader - sp underlow monitor interrupt status register"]
+pub type CORE_0_SP_SPILL_MIN_RAW_R = crate::BitReader<bool>;
+#[doc = "Field `CORE_0_SP_SPILL_MAX_RAW` reader - sp overflow monitor interupt status register"]
+pub type CORE_0_SP_SPILL_MAX_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - sp underlow monitor interrupt status register"]
     #[inline(always)]
-    pub fn core_0_area_dram0_0_rd_raw(&self) -> CORE_0_AREA_DRAM0_0_RD_RAW_R {
-        CORE_0_AREA_DRAM0_0_RD_RAW_R::new((self.bits & 1) != 0)
+    pub fn core_0_sp_spill_min_raw(&self) -> CORE_0_SP_SPILL_MIN_RAW_R {
+        CORE_0_SP_SPILL_MIN_RAW_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - sp overflow monitor interupt status register"]
     #[inline(always)]
-    pub fn core_0_area_dram0_0_wr_raw(&self) -> CORE_0_AREA_DRAM0_0_WR_RAW_R {
-        CORE_0_AREA_DRAM0_0_WR_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn core_0_sp_spill_max_raw(&self) -> CORE_0_SP_SPILL_MAX_RAW_R {
+        CORE_0_SP_SPILL_MAX_RAW_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "core0 monitor interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_intr_raw](index.html) module"]
