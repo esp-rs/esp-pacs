@@ -16,7 +16,7 @@ pub struct RegisterBlock {
     #[doc = "0x18 - need_des"]
     pub wdtfeed: WDTFEED,
     #[doc = "0x1c - need_des"]
-    pub wprotect: WPROTECT,
+    pub wdtwprotect: WDTWPROTECT,
     #[doc = "0x20 - need_des"]
     pub swd_conf: SWD_CONF,
     #[doc = "0x24 - need_des"]
@@ -61,10 +61,10 @@ pub mod config5;
 pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "need_des"]
 pub mod wdtfeed;
-#[doc = "WPROTECT (rw) register accessor: an alias for `Reg<WPROTECT_SPEC>`"]
-pub type WPROTECT = crate::Reg<wprotect::WPROTECT_SPEC>;
+#[doc = "WDTWPROTECT (rw) register accessor: an alias for `Reg<WDTWPROTECT_SPEC>`"]
+pub type WDTWPROTECT = crate::Reg<wdtwprotect::WDTWPROTECT_SPEC>;
 #[doc = "need_des"]
-pub mod wprotect;
+pub mod wdtwprotect;
 #[doc = "SWD_CONF (rw) register accessor: an alias for `Reg<SWD_CONF_SPEC>`"]
 pub type SWD_CONF = crate::Reg<swd_conf::SWD_CONF_SPEC>;
 #[doc = "need_des"]

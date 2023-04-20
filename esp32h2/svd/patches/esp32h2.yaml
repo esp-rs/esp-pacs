@@ -18,6 +18,9 @@ LP_WDT:
     SWD_CONFIG:
       name: SWD_CONF
 
+    WPROTECT:
+      name: WDTWPROTECT
+
   INT_ST_RTC:
     _modify:
       LP_WDT_INT_ST:
