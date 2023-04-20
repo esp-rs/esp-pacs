@@ -2,11 +2,11 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - core0 monitor enable configuration register"]
-    pub c0re_0_intr_ena: C0RE_0_INTR_ENA,
+    pub core_0_montr_ena: CORE_0_MONTR_ENA,
     #[doc = "0x04 - core0 monitor interrupt status register"]
     pub core_0_intr_raw: CORE_0_INTR_RAW,
     #[doc = "0x08 - core0 monitor interrupt enable register"]
-    pub core_0_intr_rls: CORE_0_INTR_RLS,
+    pub core_0_intr_ena: CORE_0_INTR_ENA,
     #[doc = "0x0c - core0 monitor interrupt clr register"]
     pub core_0_intr_clr: CORE_0_INTR_CLR,
     #[doc = "0x10 - core0 dram0 region0 addr configuration register"]
@@ -67,18 +67,18 @@ pub struct RegisterBlock {
     #[doc = "0x3fc - version register"]
     pub date: DATE,
 }
-#[doc = "C0RE_0_INTR_ENA (rw) register accessor: an alias for `Reg<C0RE_0_INTR_ENA_SPEC>`"]
-pub type C0RE_0_INTR_ENA = crate::Reg<c0re_0_intr_ena::C0RE_0_INTR_ENA_SPEC>;
+#[doc = "CORE_0_MONTR_ENA (rw) register accessor: an alias for `Reg<CORE_0_MONTR_ENA_SPEC>`"]
+pub type CORE_0_MONTR_ENA = crate::Reg<core_0_montr_ena::CORE_0_MONTR_ENA_SPEC>;
 #[doc = "core0 monitor enable configuration register"]
-pub mod c0re_0_intr_ena;
+pub mod core_0_montr_ena;
 #[doc = "CORE_0_INTR_RAW (r) register accessor: an alias for `Reg<CORE_0_INTR_RAW_SPEC>`"]
 pub type CORE_0_INTR_RAW = crate::Reg<core_0_intr_raw::CORE_0_INTR_RAW_SPEC>;
 #[doc = "core0 monitor interrupt status register"]
 pub mod core_0_intr_raw;
-#[doc = "CORE_0_INTR_RLS (rw) register accessor: an alias for `Reg<CORE_0_INTR_RLS_SPEC>`"]
-pub type CORE_0_INTR_RLS = crate::Reg<core_0_intr_rls::CORE_0_INTR_RLS_SPEC>;
+#[doc = "CORE_0_INTR_ENA (rw) register accessor: an alias for `Reg<CORE_0_INTR_ENA_SPEC>`"]
+pub type CORE_0_INTR_ENA = crate::Reg<core_0_intr_ena::CORE_0_INTR_ENA_SPEC>;
 #[doc = "core0 monitor interrupt enable register"]
-pub mod core_0_intr_rls;
+pub mod core_0_intr_ena;
 #[doc = "CORE_0_INTR_CLR (w) register accessor: an alias for `Reg<CORE_0_INTR_CLR_SPEC>`"]
 pub type CORE_0_INTR_CLR = crate::Reg<core_0_intr_clr::CORE_0_INTR_CLR_SPEC>;
 #[doc = "core0 monitor interrupt clr register"]

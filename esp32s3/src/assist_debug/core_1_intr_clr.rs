@@ -1,22 +1,22 @@
-#[doc = "Register `CORE_1_INTERRUPT_CLR` reader"]
-pub struct R(crate::R<CORE_1_INTERRUPT_CLR_SPEC>);
+#[doc = "Register `CORE_1_INTR_CLR` reader"]
+pub struct R(crate::R<CORE_1_INTR_CLR_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<CORE_1_INTERRUPT_CLR_SPEC>;
+    type Target = crate::R<CORE_1_INTR_CLR_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<CORE_1_INTERRUPT_CLR_SPEC>> for R {
+impl From<crate::R<CORE_1_INTR_CLR_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<CORE_1_INTERRUPT_CLR_SPEC>) -> Self {
+    fn from(reader: crate::R<CORE_1_INTR_CLR_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `CORE_1_INTERRUPT_CLR` writer"]
-pub struct W(crate::W<CORE_1_INTERRUPT_CLR_SPEC>);
+#[doc = "Register `CORE_1_INTR_CLR` writer"]
+pub struct W(crate::W<CORE_1_INTR_CLR_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<CORE_1_INTERRUPT_CLR_SPEC>;
+    type Target = crate::W<CORE_1_INTR_CLR_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<CORE_1_INTERRUPT_CLR_SPEC>> for W {
+impl From<crate::W<CORE_1_INTR_CLR_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<CORE_1_INTERRUPT_CLR_SPEC>) -> Self {
+    fn from(writer: crate::W<CORE_1_INTR_CLR_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -38,62 +38,62 @@ impl From<crate::W<CORE_1_INTERRUPT_CLR_SPEC>> for W {
 pub type CORE_1_AREA_DRAM0_0_RD_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_RD_CLR` writer - Core1 dram0 area0 read monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_0_RD_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_WR_CLR` reader - Core1 dram0 area0 write monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_0_WR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_WR_CLR` writer - Core1 dram0 area0 write monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_0_WR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_RD_CLR` reader - Core1 dram0 area1 read monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_1_RD_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_RD_CLR` writer - Core1 dram0 area1 read monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_1_RD_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_WR_CLR` reader - Core1 dram0 area1 write monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_1_WR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_WR_CLR` writer - Core1 dram0 area1 write monitor interrupt clr"]
 pub type CORE_1_AREA_DRAM0_1_WR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_PIF_0_RD_CLR` reader - Core1 PIF area0 read monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_0_RD_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_RD_CLR` writer - Core1 PIF area0 read monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_0_RD_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_PIF_0_WR_CLR` reader - Core1 PIF area0 write monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_0_WR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_WR_CLR` writer - Core1 PIF area0 write monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_0_WR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_PIF_1_RD_CLR` reader - Core1 PIF area1 read monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_1_RD_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_RD_CLR` writer - Core1 PIF area1 read monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_1_RD_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_AREA_PIF_1_WR_CLR` reader - Core1 PIF area1 write monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_1_WR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_WR_CLR` writer - Core1 PIF area1 write monitor interrupt clr"]
 pub type CORE_1_AREA_PIF_1_WR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_SP_SPILL_MIN_CLR` reader - Core1 stackpoint overflow monitor interrupt clr"]
 pub type CORE_1_SP_SPILL_MIN_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MIN_CLR` writer - Core1 stackpoint overflow monitor interrupt clr"]
 pub type CORE_1_SP_SPILL_MIN_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_SP_SPILL_MAX_CLR` reader - Core1 stackpoint underflow monitor interrupt clr"]
 pub type CORE_1_SP_SPILL_MAX_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MAX_CLR` writer - Core1 stackpoint underflow monitor interrupt clr"]
 pub type CORE_1_SP_SPILL_MAX_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_IRAM0_EXCEPTION_MONITOR_CLR` reader - IBUS busy monitor interrupt clr"]
 pub type CORE_1_IRAM0_EXCEPTION_MONITOR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_EXCEPTION_MONITOR_CLR` writer - IBUS busy monitor interrupt clr"]
 pub type CORE_1_IRAM0_EXCEPTION_MONITOR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 #[doc = "Field `CORE_1_DRAM0_EXCEPTION_MONITOR_CLR` reader - DBUS busy monitor interrupt clr"]
 pub type CORE_1_DRAM0_EXCEPTION_MONITOR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_DRAM0_EXCEPTION_MONITOR_CLR` writer - DBUS busy monitor interrupt clr"]
 pub type CORE_1_DRAM0_EXCEPTION_MONITOR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, u32, CORE_1_INTR_CLR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Core1 dram0 area0 read monitor interrupt clr"]
     #[inline(always)]
@@ -240,22 +240,22 @@ impl W {
         self
     }
 }
-#[doc = "Core1 monitor interrupt clr register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_interrupt_clr](index.html) module"]
-pub struct CORE_1_INTERRUPT_CLR_SPEC;
-impl crate::RegisterSpec for CORE_1_INTERRUPT_CLR_SPEC {
+#[doc = "Core1 monitor interrupt clr register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_intr_clr](index.html) module"]
+pub struct CORE_1_INTR_CLR_SPEC;
+impl crate::RegisterSpec for CORE_1_INTR_CLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [core_1_interrupt_clr::R](R) reader structure"]
-impl crate::Readable for CORE_1_INTERRUPT_CLR_SPEC {
+#[doc = "`read()` method returns [core_1_intr_clr::R](R) reader structure"]
+impl crate::Readable for CORE_1_INTR_CLR_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [core_1_interrupt_clr::W](W) writer structure"]
-impl crate::Writable for CORE_1_INTERRUPT_CLR_SPEC {
+#[doc = "`write(|w| ..)` method takes [core_1_intr_clr::W](W) writer structure"]
+impl crate::Writable for CORE_1_INTR_CLR_SPEC {
     type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets CORE_1_INTERRUPT_CLR to value 0"]
-impl crate::Resettable for CORE_1_INTERRUPT_CLR_SPEC {
+#[doc = "`reset()` method sets CORE_1_INTR_CLR to value 0"]
+impl crate::Resettable for CORE_1_INTR_CLR_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

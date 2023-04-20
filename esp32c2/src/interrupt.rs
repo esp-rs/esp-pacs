@@ -82,8 +82,8 @@ pub enum Interrupt {
     FROM_CPU_INTR2 = 38,
     #[doc = "39 - FROM_CPU_INTR3"]
     FROM_CPU_INTR3 = 39,
-    #[doc = "40 - ETS_ASSIST_DEBUG"]
-    ETS_ASSIST_DEBUG = 40,
+    #[doc = "40 - Assist debug interrupt"]
+    ASSIST_DEBUG = 40,
     #[doc = "41 - ETS_CORE0_PIF_PMS_SIZE"]
     ETS_CORE0_PIF_PMS_SIZE = 41,
 }
@@ -135,7 +135,7 @@ impl Interrupt {
             37 => Ok(Interrupt::FROM_CPU_INTR1),
             38 => Ok(Interrupt::FROM_CPU_INTR2),
             39 => Ok(Interrupt::FROM_CPU_INTR3),
-            40 => Ok(Interrupt::ETS_ASSIST_DEBUG),
+            40 => Ok(Interrupt::ASSIST_DEBUG),
             41 => Ok(Interrupt::ETS_CORE0_PIF_PMS_SIZE),
             _ => Err(TryFromInterruptError(())),
         }
