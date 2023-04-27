@@ -35,3 +35,11 @@ LP_WDT:
     _modify:
       LP_WDT_INT_CLR:
         name: WDT_INT_CLR
+
+UART*:
+  CLK_CONF:
+    _modify:
+      RX_SCLK_EN:
+        name: SCLK_EN
+      RX_RST_CORE:
+        name: RST_CORE
