@@ -312,33 +312,33 @@ impl core::fmt::Debug for ASSIST_DEBUG {
 #[doc = "Debug Assist"]
 pub mod assist_debug;
 #[doc = "GDMA Peripheral"]
-pub struct GDMA {
+pub struct DMA {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for GDMA {}
-impl GDMA {
+unsafe impl Send for DMA {}
+impl DMA {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gdma::RegisterBlock = 0x6008_0000 as *const _;
+    pub const PTR: *const dma::RegisterBlock = 0x6008_0000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gdma::RegisterBlock {
+    pub const fn ptr() -> *const dma::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for GDMA {
-    type Target = gdma::RegisterBlock;
+impl Deref for DMA {
+    type Target = dma::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for GDMA {
+impl core::fmt::Debug for DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("GDMA").finish()
+        f.debug_struct("DMA").finish()
     }
 }
 #[doc = "GDMA Peripheral"]
-pub mod gdma;
+pub mod dma;
 #[doc = "Digital Signature"]
 pub struct DS {
     _marker: PhantomData<*const ()>,
@@ -1722,8 +1722,8 @@ pub struct Peripherals {
     pub APB_SARADC: APB_SARADC,
     #[doc = "ASSIST_DEBUG"]
     pub ASSIST_DEBUG: ASSIST_DEBUG,
-    #[doc = "GDMA"]
-    pub GDMA: GDMA,
+    #[doc = "DMA"]
+    pub DMA: DMA,
     #[doc = "DS"]
     pub DS: DS,
     #[doc = "ECC"]
@@ -1853,7 +1853,7 @@ impl Peripherals {
             ASSIST_DEBUG: ASSIST_DEBUG {
                 _marker: PhantomData,
             },
-            GDMA: GDMA {
+            DMA: DMA {
                 _marker: PhantomData,
             },
             DS: DS {
