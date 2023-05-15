@@ -1118,7 +1118,7 @@ pub struct INTERRUPT_CORE1 {
 unsafe impl Send for INTERRUPT_CORE1 {}
 impl INTERRUPT_CORE1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const interrupt_core1::RegisterBlock = 0x600c_2800 as *const _;
+    pub const PTR: *const interrupt_core1::RegisterBlock = 0x600c_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const interrupt_core1::RegisterBlock {
