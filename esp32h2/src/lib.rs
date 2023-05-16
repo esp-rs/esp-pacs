@@ -68,10 +68,10 @@ extern "C" {
     fn RMT();
     fn I2C_EXT0();
     fn I2C_EXT1();
-    fn TG0_T0();
-    fn TG0_WDT();
-    fn TG1_T0();
-    fn TG1_WDT();
+    fn TG0_T0_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_WDT_LEVEL();
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
@@ -177,10 +177,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 65] = [
     Vector { _handler: RMT },
     Vector { _handler: I2C_EXT0 },
     Vector { _handler: I2C_EXT1 },
-    Vector { _handler: TG0_T0 },
-    Vector { _handler: TG0_WDT },
-    Vector { _handler: TG1_T0 },
-    Vector { _handler: TG1_WDT },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_WDT_LEVEL,
+    },
     Vector {
         _handler: SYSTIMER_TARGET0,
     },

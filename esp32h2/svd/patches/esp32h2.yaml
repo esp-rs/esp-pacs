@@ -61,6 +61,22 @@ SPI2:
       UPDATE:
         access: read-write
 
+TIMG0:
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+TIMG1:
+  _modify:
+    _interrupts:
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_WDT:
+        name: TG1_WDT_LEVEL
+
 UART*:
   CLK_CONF:
     _modify:
