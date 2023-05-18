@@ -34,72 +34,68 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CNT_THR_EVENT_U0_INT_ENA` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
-pub type CNT_THR_EVENT_U0_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `CNT_THR_EVENT_U0_INT_ENA` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
-pub type CNT_THR_EVENT_U0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U1_INT_ENA` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
-pub type CNT_THR_EVENT_U1_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `CNT_THR_EVENT_U1_INT_ENA` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
-pub type CNT_THR_EVENT_U1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U2_INT_ENA` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
-pub type CNT_THR_EVENT_U2_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `CNT_THR_EVENT_U2_INT_ENA` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
-pub type CNT_THR_EVENT_U2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
-#[doc = "Field `CNT_THR_EVENT_U3_INT_ENA` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
-pub type CNT_THR_EVENT_U3_INT_ENA_R = crate::BitReader<bool>;
-#[doc = "Field `CNT_THR_EVENT_U3_INT_ENA` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
-pub type CNT_THR_EVENT_U3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U0` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
+pub type CNT_THR_EVENT_U0_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_THR_EVENT_U0` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
+pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U1` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
+pub type CNT_THR_EVENT_U1_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_THR_EVENT_U1` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
+pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U2` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
+pub type CNT_THR_EVENT_U2_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_THR_EVENT_U2` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
+pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+#[doc = "Field `CNT_THR_EVENT_U3` reader - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
+pub type CNT_THR_EVENT_U3_R = crate::BitReader<bool>;
+#[doc = "Field `CNT_THR_EVENT_U3` writer - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
+pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u0_int_ena(&self) -> CNT_THR_EVENT_U0_INT_ENA_R {
-        CNT_THR_EVENT_U0_INT_ENA_R::new((self.bits & 1) != 0)
+    pub fn cnt_thr_event_u0(&self) -> CNT_THR_EVENT_U0_R {
+        CNT_THR_EVENT_U0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u1_int_ena(&self) -> CNT_THR_EVENT_U1_INT_ENA_R {
-        CNT_THR_EVENT_U1_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cnt_thr_event_u1(&self) -> CNT_THR_EVENT_U1_R {
+        CNT_THR_EVENT_U1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u2_int_ena(&self) -> CNT_THR_EVENT_U2_INT_ENA_R {
-        CNT_THR_EVENT_U2_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cnt_thr_event_u2(&self) -> CNT_THR_EVENT_U2_R {
+        CNT_THR_EVENT_U2_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u3_int_ena(&self) -> CNT_THR_EVENT_U3_INT_ENA_R {
-        CNT_THR_EVENT_U3_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cnt_thr_event_u3(&self) -> CNT_THR_EVENT_U3_R {
+        CNT_THR_EVENT_U3_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u0_int_ena(&mut self) -> CNT_THR_EVENT_U0_INT_ENA_W<0> {
-        CNT_THR_EVENT_U0_INT_ENA_W::new(self)
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U0_W<0> {
+        CNT_THR_EVENT_U0_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u1_int_ena(&mut self) -> CNT_THR_EVENT_U1_INT_ENA_W<1> {
-        CNT_THR_EVENT_U1_INT_ENA_W::new(self)
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U1_W<1> {
+        CNT_THR_EVENT_U1_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u2_int_ena(&mut self) -> CNT_THR_EVENT_U2_INT_ENA_W<2> {
-        CNT_THR_EVENT_U2_INT_ENA_W::new(self)
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U2_W<2> {
+        CNT_THR_EVENT_U2_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn cnt_thr_event_u3_int_ena(&mut self) -> CNT_THR_EVENT_U3_INT_ENA_W<3> {
-        CNT_THR_EVENT_U3_INT_ENA_W::new(self)
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U3_W<3> {
+        CNT_THR_EVENT_U3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

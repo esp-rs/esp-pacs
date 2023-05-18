@@ -50,6 +50,78 @@ LP_WDT:
       LP_WDT_INT_CLR:
         name: WDT_INT_CLR
 
+PCNT:
+  "*":
+    _strip_end: "_U"
+  U%s_CNT:
+    _modify:
+      PULSE_CNT:
+        name: CNT
+  INT_RAW:
+    _modify:
+      CNT_THR_EVENT_U0_INT_RAW:
+        name: CNT_THR_EVENT_U0
+      CNT_THR_EVENT_U1_INT_RAW:
+        name: CNT_THR_EVENT_U1
+      CNT_THR_EVENT_U2_INT_RAW:
+        name: CNT_THR_EVENT_U2
+      CNT_THR_EVENT_U3_INT_RAW:
+        name: CNT_THR_EVENT_U3
+  INT_ST:
+    _modify:
+      CNT_THR_EVENT_U0_INT_ST:
+        name: CNT_THR_EVENT_U0
+      CNT_THR_EVENT_U1_INT_ST:
+        name: CNT_THR_EVENT_U1
+      CNT_THR_EVENT_U2_INT_ST:
+        name: CNT_THR_EVENT_U2
+      CNT_THR_EVENT_U3_INT_ST:
+        name: CNT_THR_EVENT_U3
+  INT_ENA:
+    _modify:
+      CNT_THR_EVENT_U0_INT_ENA:
+        name: CNT_THR_EVENT_U0
+      CNT_THR_EVENT_U1_INT_ENA:
+        name: CNT_THR_EVENT_U1
+      CNT_THR_EVENT_U2_INT_ENA:
+        name: CNT_THR_EVENT_U2
+      CNT_THR_EVENT_U3_INT_ENA:
+        name: CNT_THR_EVENT_U3
+  INT_CLR:
+    _modify:
+      CNT_THR_EVENT_U0_INT_CLR:
+        name: CNT_THR_EVENT_U0
+      CNT_THR_EVENT_U1_INT_CLR:
+        name: CNT_THR_EVENT_U1
+      CNT_THR_EVENT_U2_INT_CLR:
+        name: CNT_THR_EVENT_U2
+      CNT_THR_EVENT_U3_INT_CLR:
+        name: CNT_THR_EVENT_U3
+  U%s_STATUS:
+    _modify:
+      CNT_THR_ZERO_MODE:
+        name: ZERO_MODE
+      CNT_THR_THRES0_LAT:
+        name: THRES0
+      CNT_THR_THRES1_LAT:
+        name: THRES1
+      CNT_THR_L_LIM_LAT:
+        name: L_LIM
+      CNT_THR_H_LIM_LAT:
+        name: H_LIM
+      CNT_THR_ZERO_LAT:
+        name: ZERO
+  CTRL:
+    _modify:
+      PULSE_CNT_RST_U0:
+        name: CNT_RST_U0
+      PULSE_CNT_RST_U1:
+        name: CNT_RST_U1
+      PULSE_CNT_RST_U2:
+        name: CNT_RST_U2
+      PULSE_CNT_RST_U3:
+        name: CNT_RST_U3
+
 SPI2:
   _strip: "SPI_"
 
