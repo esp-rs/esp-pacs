@@ -2,7 +2,7 @@ use std::{
     env,
     fs::{self, File},
     io::Write,
-    path::PathBuf,
+    path::{Path, PathBuf},
     process::{Command, Stdio},
 };
 
@@ -92,7 +92,7 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
+fn patch_svd(chip: &str, path: &Path) -> Result<()> {
     let svd_path = path.join("svd");
     let yaml_file = svd_path.join("patches").join(format!("{chip}.yaml"));
     process_file(&yaml_file)?;
@@ -105,20 +105,28 @@ fn patch_svd(chip: &str, path: &PathBuf) -> Result<()> {
     Ok(())
 }
 
-fn generate_pac(chip: &str, path: &PathBuf) -> Result<()> {
+fn generate_pac(chip: &str, path: &Path) -> Result<()> {
     let svd_file = path.join("svd").join(format!("{chip}.svd"));
     info!("generating PAC from '{}'", svd_file.display());
 
+    let target = if get_build_target(path)?.contains("riscv") {
+        Target::RISCV
+    } else {
+        Target::XtensaLX
+    };
+
     let config = Config {
-        target: if get_build_target(path)?.contains("riscv") {
-            Target::RISCV
-        } else {
-            Target::XtensaLX
-        },
-        output_dir: path.clone(),
+        target,
+        output_dir: path.to_path_buf(),
         const_generic: true,
 
-        ..Config::default()
+        ..match target {
+            Target::RISCV => Config {
+                interrupt_link_section: Some(".trap.rodata".to_owned()),
+                ..Config::default()
+            },
+            _ => Config::default(),
+        }
     };
 
     let input = fs::read_to_string(svd_file)?;
@@ -176,7 +184,7 @@ fn build(path: &PathBuf) -> Result<()> {
 
     info!("building PAC using '{channel}' channel and targeting '{target}'");
     Command::new("cargo")
-        .args(&[
+        .args([
             &format!("+{channel}"),
             "build",
             "-Z",
@@ -192,21 +200,21 @@ fn build(path: &PathBuf) -> Result<()> {
     Ok(())
 }
 
-fn get_release_channel(path: &PathBuf) -> Result<String> {
+fn get_release_channel(path: &Path) -> Result<String> {
     let toolchain_file = path.join("rust-toolchain.toml");
     let channel = extract_toml_value(&toolchain_file, &["toolchain", "channel"])?;
 
     Ok(channel)
 }
 
-fn get_build_target(path: &PathBuf) -> Result<String> {
+fn get_build_target(path: &Path) -> Result<String> {
     let config_file = path.join(".cargo").join("config.toml");
     let target = extract_toml_value(&config_file, &["build", "target"])?;
 
     Ok(target)
 }
 
-fn extract_toml_value(path: &PathBuf, keys: &[&str]) -> Result<String> {
+fn extract_toml_value(path: &Path, keys: &[&str]) -> Result<String> {
     let contents = fs::read_to_string(path)?;
     let value = contents.parse::<Value>()?;
 
@@ -215,7 +223,7 @@ fn extract_toml_value(path: &PathBuf, keys: &[&str]) -> Result<String> {
         item = item.get(key).unwrap();
     }
 
-    let item = item.to_string().replace("\"", "");
+    let item = item.to_string().replace('\"', "");
 
     Ok(item)
 }
