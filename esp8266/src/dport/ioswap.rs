@@ -42,13 +42,13 @@ pub type UART_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, 
 pub type SPI_R = crate::BitReader<bool>;
 #[doc = "Field `spi` writer - Swap SPI"]
 pub type SPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
-#[doc = "Field `uart0` reader - Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"]
+#[doc = "Field `uart0` reader - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
 pub type UART0_R = crate::BitReader<bool>;
-#[doc = "Field `uart0` writer - Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"]
+#[doc = "Field `uart0` writer - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
 pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
-#[doc = "Field `uart1` reader - Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"]
+#[doc = "Field `uart1` reader - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
 pub type UART1_R = crate::BitReader<bool>;
-#[doc = "Field `uart1` writer - Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"]
+#[doc = "Field `uart1` writer - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
 pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
 #[doc = "Field `hspi` reader - Set HSPI with higher priority"]
 pub type HSPI_R = crate::BitReader<bool>;
@@ -73,12 +73,12 @@ impl R {
     pub fn spi(&self) -> SPI_R {
         SPI_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"]
+    #[doc = "Bit 2 - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
     #[inline(always)]
     pub fn uart0(&self) -> UART0_R {
         UART0_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"]
+    #[doc = "Bit 3 - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
     #[inline(always)]
     pub fn uart1(&self) -> UART1_R {
         UART1_R::new(((self.bits >> 3) & 1) != 0)
@@ -112,13 +112,13 @@ impl W {
     pub fn spi(&mut self) -> SPI_W<1> {
         SPI_W::new(self)
     }
-    #[doc = "Bit 2 - Swap UART0 pins (u0rxd <-> u0cts), (u0txd <-> u0rts)"]
+    #[doc = "Bit 2 - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
     #[inline(always)]
     #[must_use]
     pub fn uart0(&mut self) -> UART0_W<2> {
         UART0_W::new(self)
     }
-    #[doc = "Bit 3 - Swap UART1 pins (u1rxd <-> u1cts), (u1txd <-> u1rts)"]
+    #[doc = "Bit 3 - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
     #[inline(always)]
     #[must_use]
     pub fn uart1(&mut self) -> UART1_W<3> {

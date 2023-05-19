@@ -13,10 +13,10 @@ impl From<crate::R<HP_PERI_TIMEOUT_UID_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `HP_PERI_TIMEOUT_UID` reader - Record master id\\[4:0\\] & master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
+#[doc = "Field `HP_PERI_TIMEOUT_UID` reader - Record master id\\[4:0\\] &amp; master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
 pub type HP_PERI_TIMEOUT_UID_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 0:6 - Record master id\\[4:0\\] & master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
+    #[doc = "Bits 0:6 - Record master id\\[4:0\\] &amp; master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
     #[inline(always)]
     pub fn hp_peri_timeout_uid(&self) -> HP_PERI_TIMEOUT_UID_R {
         HP_PERI_TIMEOUT_UID_R::new((self.bits & 0x7f) as u8)

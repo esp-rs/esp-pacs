@@ -62,9 +62,9 @@ pub type RX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CONF_SPEC, 
 pub type RX_MONO_FST_VLD_R = crate::BitReader<bool>;
 #[doc = "Field `RX_MONO_FST_VLD` writer - 1: The first channel data value is valid in I2S RX mono mode. 0: The second channel data value is valid in I2S RX mono mode."]
 pub type RX_MONO_FST_VLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CONF_SPEC, bool, O>;
-#[doc = "Field `RX_PCM_CONF` reader - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
+#[doc = "Field `RX_PCM_CONF` reader - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
 pub type RX_PCM_CONF_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RX_PCM_CONF` writer - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
+#[doc = "Field `RX_PCM_CONF` writer - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
 pub type RX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_CONF_SPEC, u8, u8, 2, O>;
 #[doc = "Field `RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
 pub type RX_PCM_BYPASS_R = crate::BitReader<bool>;
@@ -138,7 +138,7 @@ impl R {
     pub fn rx_mono_fst_vld(&self) -> RX_MONO_FST_VLD_R {
         RX_MONO_FST_VLD_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
+    #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
     #[inline(always)]
     pub fn rx_pcm_conf(&self) -> RX_PCM_CONF_R {
         RX_PCM_CONF_R::new(((self.bits >> 10) & 3) as u8)
@@ -243,7 +243,7 @@ impl W {
     pub fn rx_mono_fst_vld(&mut self) -> RX_MONO_FST_VLD_W<9> {
         RX_MONO_FST_VLD_W::new(self)
     }
-    #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
+    #[doc = "Bits 10:11 - I2S RX compress/decompress configuration bit. &amp; 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &amp;"]
     #[inline(always)]
     #[must_use]
     pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<10> {

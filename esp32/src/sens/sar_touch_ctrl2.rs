@@ -38,9 +38,9 @@ impl From<crate::W<SAR_TOUCH_CTRL2_SPEC>> for W {
 pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - fsm set 1 to indicate touch touch meas is done"]
 pub type TOUCH_MEAS_DONE_R = crate::BitReader<bool>;
-#[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
+#[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
 pub type TOUCH_START_FSM_EN_R = crate::BitReader<bool>;
-#[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
+#[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
 pub type TOUCH_START_FSM_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, O>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm valid when reg_touch_start_force is set"]
@@ -72,7 +72,7 @@ impl R {
     pub fn touch_meas_done(&self) -> TOUCH_MEAS_DONE_R {
         TOUCH_MEAS_DONE_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
+    #[doc = "Bit 11 - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
     #[inline(always)]
     pub fn touch_start_fsm_en(&self) -> TOUCH_START_FSM_EN_R {
         TOUCH_START_FSM_EN_R::new(((self.bits >> 11) & 1) != 0)
@@ -94,7 +94,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
+    #[doc = "Bit 11 - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
     #[inline(always)]
     #[must_use]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<11> {

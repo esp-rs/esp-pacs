@@ -34,19 +34,19 @@ impl From<crate::W<ENDIAN_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ENDIAN` reader - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
+#[doc = "Field `ENDIAN` reader - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
 pub type ENDIAN_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `ENDIAN` writer - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
+#[doc = "Field `ENDIAN` writer - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
 pub type ENDIAN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ENDIAN_SPEC, u8, u8, 6, O>;
 impl R {
-    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
+    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
     #[inline(always)]
     pub fn endian(&self) -> ENDIAN_R {
         ENDIAN_R::new((self.bits & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
+    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
     #[inline(always)]
     #[must_use]
     pub fn endian(&mut self) -> ENDIAN_W<0> {

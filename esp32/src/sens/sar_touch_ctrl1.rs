@@ -49,9 +49,9 @@ pub type TOUCH_OUT_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_OUT_SEL` writer - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
 pub type TOUCH_OUT_SEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
-#[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
+#[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
 pub type TOUCH_OUT_1EN_R = crate::BitReader<bool>;
-#[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
+#[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
 pub type TOUCH_OUT_1EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
@@ -80,7 +80,7 @@ impl R {
     pub fn touch_out_sel(&self) -> TOUCH_OUT_SEL_R {
         TOUCH_OUT_SEL_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
+    #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
     #[inline(always)]
     pub fn touch_out_1en(&self) -> TOUCH_OUT_1EN_R {
         TOUCH_OUT_1EN_R::new(((self.bits >> 25) & 1) != 0)
@@ -115,7 +115,7 @@ impl W {
     pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<24> {
         TOUCH_OUT_SEL_W::new(self)
     }
-    #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
+    #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
     #[inline(always)]
     #[must_use]
     pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<25> {

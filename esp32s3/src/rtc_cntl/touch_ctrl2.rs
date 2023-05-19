@@ -67,9 +67,9 @@ pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` writer - touch timer enable bit"]
 pub type TOUCH_SLP_TIMER_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
-#[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm"]
+#[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm"]
 pub type TOUCH_START_FSM_EN_R = crate::BitReader<bool>;
-#[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm"]
+#[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm"]
 pub type TOUCH_START_FSM_EN_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm"]
@@ -144,7 +144,7 @@ impl R {
     pub fn touch_slp_timer_en(&self) -> TOUCH_SLP_TIMER_EN_R {
         TOUCH_SLP_TIMER_EN_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm"]
+    #[doc = "Bit 14 - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm"]
     #[inline(always)]
     pub fn touch_start_fsm_en(&self) -> TOUCH_START_FSM_EN_R {
         TOUCH_START_FSM_EN_R::new(((self.bits >> 14) & 1) != 0)
@@ -233,7 +233,7 @@ impl W {
     pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<13> {
         TOUCH_SLP_TIMER_EN_W::new(self)
     }
-    #[doc = "Bit 14 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm"]
+    #[doc = "Bit 14 - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm"]
     #[inline(always)]
     #[must_use]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<14> {
