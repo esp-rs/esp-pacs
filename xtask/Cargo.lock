@@ -600,7 +600,7 @@ dependencies = [
 [[package]]
 name = "svd2rust"
 version = "0.28.0"
-source = "git+https://github.com/rustbox/svd2rust.git?rev=328d0c37e21379cbcbf4952bad52793ee78be97f#328d0c37e21379cbcbf4952bad52793ee78be97f"
+source = "git+https://github.com/rust-embedded/svd2rust.git?rev=e6a6d150e480808b870a33a9032d25e3343bb656#e6a6d150e480808b870a33a9032d25e3343bb656"
 dependencies = [
  "anyhow",
  "html-escape",
