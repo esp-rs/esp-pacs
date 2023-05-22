@@ -35,24 +35,26 @@ If you submit a pull request we kindly ask that you keep the patches and generat
 
 ## Generating the PACs
 
-We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. Currently there is only a single task which generates a Peripheral Access Crate (PAC) for the specified chip(s). We've opted not to use the `cargo xtask` alias, as this requires a workspace which can cause problems when using different toolchains and targets like we are.
+We use the workflow described by [cargo-xtask] to automate tasks within this monorepo. We've opted not to use the `cargo xtask` alias as this requires a workspace, which can cause problems when using different toolchains and targets like we are.
 
 ```text
-Usage: xtask [OPTIONS] [CHIPS]...
+Usage: xtask <COMMAND>
 
-Arguments:
-  [CHIPS]...  Chip(s) to target [possible values: esp32, esp32c2, esp32c3, esp32c6, esp32h2, esp32s2, esp32s3, esp8266]
+Commands:
+  patch         Patch the specified package(s)'s SVD file
+  generate      Generate the specified package(s)
+  build         Build the specified package(s)
+  bump-version  Bump the version of the specified package(s)
+  help          Print this message or the help of the given subcommand(s)
 
 Options:
-  -p, --patch-only     Only patch the SVD, do not generate or build the PAC
-  -g, --generate-only  Patch the SVD and generate the PAC, but do not build it
-  -h, --help           Print help
+  -h, --help  Print help
 ```
 
 For example, to generate a PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
 
 ```shell
-$ cargo run -- --generate-only esp32c3
+$ cargo run -- generate esp32c3
 ```
 
 [cargo-xtask]: https://github.com/matklad/cargo-xtask/

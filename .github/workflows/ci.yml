@@ -40,7 +40,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
       - name: build pac
         run: cd ${{ matrix.chip }} && cargo check --all-targets
 
@@ -62,7 +62,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
       - name: build pac
         run: cd ${{ matrix.chip }} && cargo check --all-targets
 
@@ -90,7 +90,7 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: generate pac
-        run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+        run: cargo +nightly run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
       - name: build pac
         run: cd ${{ matrix.chip }} && cargo +1.65.0 check --all-targets
 
@@ -113,6 +113,6 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - name: generate pac
-        run: cargo run --manifest-path=xtask/Cargo.toml -- --generate-only ${{ matrix.chip }}
+        run: cargo run --manifest-path=xtask/Cargo.toml -- generate ${{ matrix.chip }}
       - name: build pac
         run: cd ${{ matrix.chip }} && cargo check --all-targets
