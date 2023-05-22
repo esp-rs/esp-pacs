@@ -67,6 +67,16 @@ enum Commands {
         #[clap(value_enum, default_values_t = Chip::iter())]
         chips: Vec<Chip>,
     },
+
+    /// Bump the version of the specified package(s)
+    BumpVersion {
+        /// How much to bump the version
+        #[clap(value_enum)]
+        amount: Version,
+        /// Chip(s) to target
+        #[clap(value_enum, default_values_t = Chip::iter())]
+        chips: Vec<Chip>,
+    },
 }
 
 fn main() -> Result<()> {
@@ -89,6 +99,12 @@ fn main() -> Result<()> {
         Commands::Build { chips } => chips
             .iter()
             .try_for_each(|chip| build_package(&workspace, chip)),
+        Commands::BumpVersion {
+            chips,
+            amount: version,
+        } => chips
+            .iter()
+            .try_for_each(|chip| bump_version(&workspace, chip, version)),
     }
 }
 
@@ -193,6 +209,43 @@ fn build_package(workspace: &Path, chip: &Chip) -> Result<()> {
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
         .output()?;
+
+    Ok(())
+}
+
+fn bump_version(workspace: &Path, chip: &Chip, amount: Version) -> Result<()> {
+    let path = workspace.join(chip.to_string());
+
+    let manifest_path = path.join("Cargo.toml");
+    let manifest = fs::read_to_string(&manifest_path)?;
+    let mut manifest = manifest.parse::<Document>()?;
+
+    let version = manifest["package"]["version"]
+        .to_string()
+        .trim()
+        .trim_matches('"')
+        .to_string();
+    let prev_version = &version;
+
+    let mut version = semver::Version::parse(&version)?;
+    match amount {
+        Version::Major => {
+            version.major += 1;
+            version.minor = 0;
+            version.patch = 0;
+        }
+        Version::Minor => {
+            version.minor += 1;
+            version.patch = 0;
+        }
+        Version::Patch => {
+            version.patch += 1;
+        }
+    }
+
+    log::info!("bumping version for package: {chip} ({prev_version} -> {version})");
+    manifest["package"]["version"] = toml_edit::value(version.to_string());
+    fs::write(manifest_path, manifest.to_string())?;
 
     Ok(())
 }

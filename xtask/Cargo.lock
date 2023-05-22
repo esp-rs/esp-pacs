@@ -490,6 +490,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f91339c0467de62360649f8d3e185ca8de4224ff281f66000de5eb2a77a79041"
 
 [[package]]
+name = "semver"
+version = "1.0.17"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bebd363326d05ec3e2f532ab7660680f3b02130d780c299bca73469d521bc0ed"
+
+[[package]]
 name = "serde"
 version = "1.0.163"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -875,6 +881,7 @@ dependencies = [
  "env_logger 0.10.0",
  "form",
  "log",
+ "semver",
  "strum",
  "svd2rust",
  "svdtools",

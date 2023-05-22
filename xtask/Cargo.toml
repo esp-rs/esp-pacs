@@ -10,6 +10,7 @@ clap       = { version = "4.2.7", features = ["derive"] }
 env_logger = "0.10.0"
 form       = "0.10.0"
 log        = "0.4.17"
+semver     = "1.0.17"
 strum      = { version = "0.24.1", features = ["derive"] }
 svd2rust   = { version = "0.28.0", default-features = false }
 svdtools   = "0.3.0"
