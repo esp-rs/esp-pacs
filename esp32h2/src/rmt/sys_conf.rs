@@ -42,34 +42,37 @@ pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_S
 pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit to enable the clock for RMT memory."]
 pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
-#[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
-#[doc = "Field `MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
-#[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
-#[doc = "Field `MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
-#[doc = "Field `SCLK_DIV_NUM` reader - the integral part of the fractional divisor"]
-pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SCLK_DIV_NUM` writer - the integral part of the fractional divisor"]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 8, O>;
-#[doc = "Field `SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor"]
-pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor"]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
-#[doc = "Field `SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor"]
-pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor"]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
-#[doc = "Field `SCLK_SEL` reader - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
-pub type SCLK_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SCLK_SEL` writer - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SCLK_ACTIVE` reader - rmt_sclk switch"]
-pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
-#[doc = "Field `SCLK_ACTIVE` writer - rmt_sclk switch"]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+#[doc = "Field `RMT_MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
+pub type RMT_MEM_FORCE_PD_R = crate::BitReader<bool>;
+#[doc = "Field `RMT_MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
+pub type RMT_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+#[doc = "Field `RMT_MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
+pub type RMT_MEM_FORCE_PU_R = crate::BitReader<bool>;
+#[doc = "Field `RMT_MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
+pub type RMT_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+#[doc = "Field `RMT_SCLK_DIV_NUM` reader - the integral part of the fractional divisor"]
+pub type RMT_SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RMT_SCLK_DIV_NUM` writer - the integral part of the fractional divisor"]
+pub type RMT_SCLK_DIV_NUM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 8, O>;
+#[doc = "Field `RMT_SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor"]
+pub type RMT_SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RMT_SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor"]
+pub type RMT_SCLK_DIV_A_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
+#[doc = "Field `RMT_SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor"]
+pub type RMT_SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RMT_SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor"]
+pub type RMT_SCLK_DIV_B_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
+#[doc = "Field `RMT_SCLK_SEL` reader - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
+pub type RMT_SCLK_SEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RMT_SCLK_SEL` writer - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
+pub type RMT_SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 2, O>;
+#[doc = "Field `RMT_SCLK_ACTIVE` reader - rmt_sclk switch"]
+pub type RMT_SCLK_ACTIVE_R = crate::BitReader<bool>;
+#[doc = "Field `RMT_SCLK_ACTIVE` writer - rmt_sclk switch"]
+pub type RMT_SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
 pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
@@ -87,38 +90,38 @@ impl R {
     }
     #[doc = "Bit 2 - Set this bit to power down RMT memory."]
     #[inline(always)]
-    pub fn mem_force_pd(&self) -> MEM_FORCE_PD_R {
-        MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn rmt_mem_force_pd(&self) -> RMT_MEM_FORCE_PD_R {
+        RMT_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
-    pub fn mem_force_pu(&self) -> MEM_FORCE_PU_R {
-        MEM_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn rmt_mem_force_pu(&self) -> RMT_MEM_FORCE_PU_R {
+        RMT_MEM_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bits 4:11 - the integral part of the fractional divisor"]
     #[inline(always)]
-    pub fn sclk_div_num(&self) -> SCLK_DIV_NUM_R {
-        SCLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
+    pub fn rmt_sclk_div_num(&self) -> RMT_SCLK_DIV_NUM_R {
+        RMT_SCLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
     }
     #[doc = "Bits 12:17 - the numerator of the fractional part of the fractional divisor"]
     #[inline(always)]
-    pub fn sclk_div_a(&self) -> SCLK_DIV_A_R {
-        SCLK_DIV_A_R::new(((self.bits >> 12) & 0x3f) as u8)
+    pub fn rmt_sclk_div_a(&self) -> RMT_SCLK_DIV_A_R {
+        RMT_SCLK_DIV_A_R::new(((self.bits >> 12) & 0x3f) as u8)
     }
     #[doc = "Bits 18:23 - the denominator of the fractional part of the fractional divisor"]
     #[inline(always)]
-    pub fn sclk_div_b(&self) -> SCLK_DIV_B_R {
-        SCLK_DIV_B_R::new(((self.bits >> 18) & 0x3f) as u8)
+    pub fn rmt_sclk_div_b(&self) -> RMT_SCLK_DIV_B_R {
+        RMT_SCLK_DIV_B_R::new(((self.bits >> 18) & 0x3f) as u8)
     }
     #[doc = "Bits 24:25 - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
     #[inline(always)]
-    pub fn sclk_sel(&self) -> SCLK_SEL_R {
-        SCLK_SEL_R::new(((self.bits >> 24) & 3) as u8)
+    pub fn rmt_sclk_sel(&self) -> RMT_SCLK_SEL_R {
+        RMT_SCLK_SEL_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bit 26 - rmt_sclk switch"]
     #[inline(always)]
-    pub fn sclk_active(&self) -> SCLK_ACTIVE_R {
-        SCLK_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn rmt_sclk_active(&self) -> RMT_SCLK_ACTIVE_R {
+        RMT_SCLK_ACTIVE_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
@@ -142,44 +145,44 @@ impl W {
     #[doc = "Bit 2 - Set this bit to power down RMT memory."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<2> {
-        MEM_FORCE_PD_W::new(self)
+    pub fn rmt_mem_force_pd(&mut self) -> RMT_MEM_FORCE_PD_W<2> {
+        RMT_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
     #[must_use]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<3> {
-        MEM_FORCE_PU_W::new(self)
+    pub fn rmt_mem_force_pu(&mut self) -> RMT_MEM_FORCE_PU_W<3> {
+        RMT_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bits 4:11 - the integral part of the fractional divisor"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<4> {
-        SCLK_DIV_NUM_W::new(self)
+    pub fn rmt_sclk_div_num(&mut self) -> RMT_SCLK_DIV_NUM_W<4> {
+        RMT_SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 12:17 - the numerator of the fractional part of the fractional divisor"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<12> {
-        SCLK_DIV_A_W::new(self)
+    pub fn rmt_sclk_div_a(&mut self) -> RMT_SCLK_DIV_A_W<12> {
+        RMT_SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 18:23 - the denominator of the fractional part of the fractional divisor"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<18> {
-        SCLK_DIV_B_W::new(self)
+    pub fn rmt_sclk_div_b(&mut self) -> RMT_SCLK_DIV_B_W<18> {
+        RMT_SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 24:25 - choose the clock source of rmt_sclk. 1:CLK_80Mhz,2:CLK_FOSC, 3:XTAL"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<24> {
-        SCLK_SEL_W::new(self)
+    pub fn rmt_sclk_sel(&mut self) -> RMT_SCLK_SEL_W<24> {
+        RMT_SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 26 - rmt_sclk switch"]
     #[inline(always)]
     #[must_use]
-    pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<26> {
-        SCLK_ACTIVE_W::new(self)
+    pub fn rmt_sclk_active(&mut self) -> RMT_SCLK_ACTIVE_W<26> {
+        RMT_SCLK_ACTIVE_W::new(self)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]

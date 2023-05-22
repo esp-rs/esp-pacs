@@ -4,7 +4,7 @@ pub struct RegisterBlock {
     #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
     pub tx_chdata: [TX_CHDATA; 4],
     #[doc = "0x10..0x18 - Channel %s configure register 0"]
-    pub ch_tx_conf0: [CH_TX_CONF0; 2],
+    pub tx_chconf0: [TX_CHCONF0; 2],
     #[doc = "0x18 - Channel %s configure register 0"]
     pub rx_ch0conf0: RX_CHCONF0,
     #[doc = "0x1c - Channel %s configure register 1"]
@@ -47,10 +47,10 @@ pub struct RegisterBlock {
 pub type TX_CHDATA = crate::Reg<tx_chdata::TX_CHDATA_SPEC>;
 #[doc = "The read and write data register for CHANNEL%s by apb fifo access."]
 pub mod tx_chdata;
-#[doc = "CH_TX_CONF0 (rw) register accessor: an alias for `Reg<CH_TX_CONF0_SPEC>`"]
-pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
+#[doc = "TX_CHCONF0 (rw) register accessor: an alias for `Reg<TX_CHCONF0_SPEC>`"]
+pub type TX_CHCONF0 = crate::Reg<tx_chconf0::TX_CHCONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
-pub mod ch_tx_conf0;
+pub mod tx_chconf0;
 #[doc = "RX_CHCONF0 (rw) register accessor: an alias for `Reg<RX_CHCONF0_SPEC>`"]
 pub type RX_CHCONF0 = crate::Reg<rx_chconf0::RX_CHCONF0_SPEC>;
 #[doc = "Channel %s configure register 0"]
