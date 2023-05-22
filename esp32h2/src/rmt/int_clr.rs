@@ -27,14 +27,14 @@ pub type CH1_TX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_C
 pub type CH2_RX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 #[doc = "Field `CH3_RX_END_INT_CLR` writer - Set this bit to clear theCH3_RX_END_INT interrupt."]
 pub type CH3_RX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CH0_RX_ERR_INT_CLR` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
-pub type CH0_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CH1_RX_ERR_INT_CLR` writer - Set this bit to clear theCH5_ERR_INT interrupt."]
-pub type CH1_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CH2_RX_ERR_INT_CLR` writer - Set this bit to clear theCH6_ERR_INT interrupt."]
-pub type CH2_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
-#[doc = "Field `CH3_RX_ERR_INT_CLR` writer - Set this bit to clear theCH7_ERR_INT interrupt."]
-pub type CH3_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `RX_CH0_ERR_INT_CLR` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
+pub type RX_CH0_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `RX_CH1_ERR_INT_CLR` writer - Set this bit to clear theCH5_ERR_INT interrupt."]
+pub type RX_CH1_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `RX_CH2_ERR_INT_CLR` writer - Set this bit to clear theCH6_ERR_INT interrupt."]
+pub type RX_CH2_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+#[doc = "Field `RX_CH3_ERR_INT_CLR` writer - Set this bit to clear theCH7_ERR_INT interrupt."]
+pub type RX_CH3_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
 #[doc = "Field `CH0_TX_THR_EVENT_INT_CLR` writer - Set this bit to clear theCH0_TX_THR_EVENT_INT interrupt."]
 pub type CH0_TX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
@@ -79,26 +79,26 @@ impl W {
     #[doc = "Bit 4 - Set this bit to clear theCH4_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ch0_rx_err_int_clr(&mut self) -> CH0_RX_ERR_INT_CLR_W<4> {
-        CH0_RX_ERR_INT_CLR_W::new(self)
+    pub fn rx_ch0_err_int_clr(&mut self) -> RX_CH0_ERR_INT_CLR_W<4> {
+        RX_CH0_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear theCH5_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_rx_err_int_clr(&mut self) -> CH1_RX_ERR_INT_CLR_W<5> {
-        CH1_RX_ERR_INT_CLR_W::new(self)
+    pub fn rx_ch1_err_int_clr(&mut self) -> RX_CH1_ERR_INT_CLR_W<5> {
+        RX_CH1_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear theCH6_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_rx_err_int_clr(&mut self) -> CH2_RX_ERR_INT_CLR_W<6> {
-        CH2_RX_ERR_INT_CLR_W::new(self)
+    pub fn rx_ch2_err_int_clr(&mut self) -> RX_CH2_ERR_INT_CLR_W<6> {
+        RX_CH2_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear theCH7_ERR_INT interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_rx_err_int_clr(&mut self) -> CH3_RX_ERR_INT_CLR_W<7> {
-        CH3_RX_ERR_INT_CLR_W::new(self)
+    pub fn rx_ch3_err_int_clr(&mut self) -> RX_CH3_ERR_INT_CLR_W<7> {
+        RX_CH3_ERR_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear theCH0_TX_THR_EVENT_INT interrupt."]
     #[inline(always)]

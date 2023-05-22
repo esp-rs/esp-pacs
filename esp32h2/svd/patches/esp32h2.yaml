@@ -177,13 +177,3 @@ RMT:
         name: CH2_TX_ERR_INT_RAW
       TX_CH3_ERR_INT_RAW:
         name: CH3_TX_ERR_INT_RAW
-  INT_CLR:
-    _modify:
-      RX_CH0_ERR_INT_CLR:
-        name: CH0_RX_ERR_INT_CLR
-      RX_CH1_ERR_INT_CLR:
-        name: CH1_RX_ERR_INT_CLR
-      RX_CH2_ERR_INT_CLR:
-        name: CH2_RX_ERR_INT_CLR
-      RX_CH3_ERR_INT_CLR:
-        name: CH3_RX_ERR_INT_CLR
