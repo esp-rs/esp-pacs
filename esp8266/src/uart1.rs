@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     pub uart_fifo: UART_FIFO,
     #[doc = "0x04 - UART INTERRUPT RAW STATE"]
     pub uart_int_raw: UART_INT_RAW,
-    #[doc = "0x08 - UART INTERRUPT STATEREGISTERUART_INT_RAW&UART_INT_ENA"]
+    #[doc = "0x08 - UART INTERRUPT STATEREGISTERUART_INT_RAW&amp;UART_INT_ENA"]
     pub uart_int_st: UART_INT_ST,
     #[doc = "0x0c - UART INTERRUPT ENABLE REGISTER"]
     pub uart_int_ena: UART_INT_ENA,
@@ -43,7 +43,7 @@ pub type UART_INT_RAW = crate::Reg<uart_int_raw::UART_INT_RAW_SPEC>;
 pub mod uart_int_raw;
 #[doc = "UART_INT_ST (r) register accessor: an alias for `Reg<UART_INT_ST_SPEC>`"]
 pub type UART_INT_ST = crate::Reg<uart_int_st::UART_INT_ST_SPEC>;
-#[doc = "UART INTERRUPT STATEREGISTERUART_INT_RAW&UART_INT_ENA"]
+#[doc = "UART INTERRUPT STATEREGISTERUART_INT_RAW&amp;UART_INT_ENA"]
 pub mod uart_int_st;
 #[doc = "UART_INT_ENA (rw) register accessor: an alias for `Reg<UART_INT_ENA_SPEC>`"]
 pub type UART_INT_ENA = crate::Reg<uart_int_ena::UART_INT_ENA_SPEC>;

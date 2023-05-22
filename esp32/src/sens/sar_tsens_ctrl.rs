@@ -67,9 +67,9 @@ pub type TSENS_POWER_UP_R = crate::BitReader<bool>;
 #[doc = "Field `TSENS_POWER_UP` writer - temperature sensor power up"]
 pub type TSENS_POWER_UP_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
-#[doc = "Field `TSENS_POWER_UP_FORCE` reader - 1: dump out & power up controlled by SW 0: by FSM"]
+#[doc = "Field `TSENS_POWER_UP_FORCE` reader - 1: dump out &amp; power up controlled by SW 0: by FSM"]
 pub type TSENS_POWER_UP_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `TSENS_POWER_UP_FORCE` writer - 1: dump out & power up controlled by SW 0: by FSM"]
+#[doc = "Field `TSENS_POWER_UP_FORCE` writer - 1: dump out &amp; power up controlled by SW 0: by FSM"]
 pub type TSENS_POWER_UP_FORCE_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
 #[doc = "Field `TSENS_DUMP_OUT` reader - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
@@ -113,7 +113,7 @@ impl R {
     pub fn tsens_power_up(&self) -> TSENS_POWER_UP_R {
         TSENS_POWER_UP_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - 1: dump out & power up controlled by SW 0: by FSM"]
+    #[doc = "Bit 25 - 1: dump out &amp; power up controlled by SW 0: by FSM"]
     #[inline(always)]
     pub fn tsens_power_up_force(&self) -> TSENS_POWER_UP_FORCE_R {
         TSENS_POWER_UP_FORCE_R::new(((self.bits >> 25) & 1) != 0)
@@ -167,7 +167,7 @@ impl W {
     pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<24> {
         TSENS_POWER_UP_W::new(self)
     }
-    #[doc = "Bit 25 - 1: dump out & power up controlled by SW 0: by FSM"]
+    #[doc = "Bit 25 - 1: dump out &amp; power up controlled by SW 0: by FSM"]
     #[inline(always)]
     #[must_use]
     pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<25> {

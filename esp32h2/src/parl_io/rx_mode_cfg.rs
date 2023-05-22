@@ -47,9 +47,9 @@ pub type RX_SW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_MODE_CFG_SPE
 pub type RX_EXT_EN_INV_R = crate::BitReader<bool>;
 #[doc = "Field `RX_EXT_EN_INV` writer - Set this bit to invert the external enable signal."]
 pub type RX_EXT_EN_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_MODE_CFG_SPEC, bool, O>;
-#[doc = "Field `RX_PULSE_SUBMODE_SEL` reader - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) && positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) && positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) && positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) && length end 4'd5: positive pulse start(data bit excluded) && length end"]
+#[doc = "Field `RX_PULSE_SUBMODE_SEL` reader - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
 pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `RX_PULSE_SUBMODE_SEL` writer - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) && positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) && positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) && positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) && length end 4'd5: positive pulse start(data bit excluded) && length end"]
+#[doc = "Field `RX_PULSE_SUBMODE_SEL` writer - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
 pub type RX_PULSE_SUBMODE_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, RX_MODE_CFG_SPEC, u8, u8, 3, O>;
 #[doc = "Field `RX_SMP_MODE_SEL` reader - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
@@ -73,7 +73,7 @@ impl R {
     pub fn rx_ext_en_inv(&self) -> RX_EXT_EN_INV_R {
         RX_EXT_EN_INV_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) && positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) && positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) && positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) && length end 4'd5: positive pulse start(data bit excluded) && length end"]
+    #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
     #[inline(always)]
     pub fn rx_pulse_submode_sel(&self) -> RX_PULSE_SUBMODE_SEL_R {
         RX_PULSE_SUBMODE_SEL_R::new(((self.bits >> 27) & 7) as u8)
@@ -103,7 +103,7 @@ impl W {
     pub fn rx_ext_en_inv(&mut self) -> RX_EXT_EN_INV_W<26> {
         RX_EXT_EN_INV_W::new(self)
     }
-    #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) && positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) && positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) && positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) && positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) && length end 4'd5: positive pulse start(data bit excluded) && length end"]
+    #[doc = "Bits 27:29 - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
     #[inline(always)]
     #[must_use]
     pub fn rx_pulse_submode_sel(&mut self) -> RX_PULSE_SUBMODE_SEL_W<27> {

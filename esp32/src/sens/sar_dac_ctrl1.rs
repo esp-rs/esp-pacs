@@ -48,9 +48,9 @@ pub type DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DEBUG_BIT_SEL` writer - "]
 pub type DEBUG_BIT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, SAR_DAC_CTRL1_SPEC, u8, u8, 5, O>;
-#[doc = "Field `DAC_DIG_FORCE` reader - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
+#[doc = "Field `DAC_DIG_FORCE` reader - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
 pub type DAC_DIG_FORCE_R = crate::BitReader<bool>;
-#[doc = "Field `DAC_DIG_FORCE` writer - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
+#[doc = "Field `DAC_DIG_FORCE` writer - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
 pub type DAC_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_DAC_CTRL1_SPEC, bool, O>;
 #[doc = "Field `DAC_CLK_FORCE_LOW` reader - 1: force PDAC_CLK to low"]
 pub type DAC_CLK_FORCE_LOW_R = crate::BitReader<bool>;
@@ -82,7 +82,7 @@ impl R {
     pub fn debug_bit_sel(&self) -> DEBUG_BIT_SEL_R {
         DEBUG_BIT_SEL_R::new(((self.bits >> 17) & 0x1f) as u8)
     }
-    #[doc = "Bit 22 - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
+    #[doc = "Bit 22 - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
     #[inline(always)]
     pub fn dac_dig_force(&self) -> DAC_DIG_FORCE_R {
         DAC_DIG_FORCE_R::new(((self.bits >> 22) & 1) != 0)
@@ -122,7 +122,7 @@ impl W {
     pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<17> {
         DEBUG_BIT_SEL_W::new(self)
     }
-    #[doc = "Bit 22 - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
+    #[doc = "Bit 22 - 1: DAC1 &amp; DAC2 use DMA 0: DAC1 &amp; DAC2 do not use DMA"]
     #[inline(always)]
     #[must_use]
     pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<22> {
