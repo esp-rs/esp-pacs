@@ -34,23 +34,23 @@ impl From<crate::W<CH_DUTY_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DUTY_CH` reader - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
-pub type DUTY_CH_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `DUTY_CH` writer - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
-pub type DUTY_CH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_DUTY_SPEC, u32, u32, 25, O>;
+#[doc = "Field `DUTY` reader - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
+pub type DUTY_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `DUTY` writer - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
+pub type DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_DUTY_SPEC, u32, u32, 25, O>;
 impl R {
     #[doc = "Bits 0:24 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]
-    pub fn duty_ch(&self) -> DUTY_CH_R {
-        DUTY_CH_R::new(self.bits & 0x01ff_ffff)
+    pub fn duty(&self) -> DUTY_R {
+        DUTY_R::new(self.bits & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:24 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]
     #[must_use]
-    pub fn duty_ch(&mut self) -> DUTY_CH_W<0> {
-        DUTY_CH_W::new(self)
+    pub fn duty(&mut self) -> DUTY_W<0> {
+        DUTY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

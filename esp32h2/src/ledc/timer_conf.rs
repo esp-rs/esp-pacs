@@ -34,93 +34,91 @@ impl From<crate::W<TIMER_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TIMER_DUTY_RES` reader - This register is used to control the range of the counter in timer %s."]
-pub type TIMER_DUTY_RES_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `TIMER_DUTY_RES` writer - This register is used to control the range of the counter in timer %s."]
-pub type TIMER_DUTY_RES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u8, u8, 5, O>;
-#[doc = "Field `CLK_DIV_TIMER` reader - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
-pub type CLK_DIV_TIMER_R = crate::FieldReader<u32, u32>;
-#[doc = "Field `CLK_DIV_TIMER` writer - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
-pub type CLK_DIV_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u32, u32, 18, O>;
-#[doc = "Field `TIMER_PAUSE` reader - This bit is used to suspend the counter in timer %s."]
-pub type TIMER_PAUSE_R = crate::BitReader<bool>;
-#[doc = "Field `TIMER_PAUSE` writer - This bit is used to suspend the counter in timer %s."]
-pub type TIMER_PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
-#[doc = "Field `TIMER_RST` reader - This bit is used to reset timer %s. The counter will show 0 after reset."]
-pub type TIMER_RST_R = crate::BitReader<bool>;
-#[doc = "Field `TIMER_RST` writer - This bit is used to reset timer %s. The counter will show 0 after reset."]
-pub type TIMER_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
-#[doc = "Field `TICK_SEL_TIMER` reader - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
-pub type TICK_SEL_TIMER_R = crate::BitReader<bool>;
-#[doc = "Field `TICK_SEL_TIMER` writer - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
-pub type TICK_SEL_TIMER_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
-#[doc = "Field `TIMER_PARA_UP` writer - Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES."]
-pub type TIMER_PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+#[doc = "Field `DUTY_RES` reader - This register is used to control the range of the counter in timer %s."]
+pub type DUTY_RES_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DUTY_RES` writer - This register is used to control the range of the counter in timer %s."]
+pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u8, u8, 5, O>;
+#[doc = "Field `CLK_DIV` reader - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
+pub type CLK_DIV_R = crate::FieldReader<u32, u32>;
+#[doc = "Field `CLK_DIV` writer - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
+pub type CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u32, u32, 18, O>;
+#[doc = "Field `PAUSE` reader - This bit is used to suspend the counter in timer %s."]
+pub type PAUSE_R = crate::BitReader<bool>;
+#[doc = "Field `PAUSE` writer - This bit is used to suspend the counter in timer %s."]
+pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+#[doc = "Field `RST` reader - This bit is used to reset timer %s. The counter will show 0 after reset."]
+pub type RST_R = crate::BitReader<bool>;
+#[doc = "Field `RST` writer - This bit is used to reset timer %s. The counter will show 0 after reset."]
+pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+#[doc = "Field `TICK_SEL` reader - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
+pub type TICK_SEL_R = crate::BitReader<bool>;
+#[doc = "Field `TICK_SEL` writer - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
+pub type TICK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+#[doc = "Field `PARA_UP` writer - Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES."]
+pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:4 - This register is used to control the range of the counter in timer %s."]
     #[inline(always)]
-    pub fn timer_duty_res(&self) -> TIMER_DUTY_RES_R {
-        TIMER_DUTY_RES_R::new((self.bits & 0x1f) as u8)
+    pub fn duty_res(&self) -> DUTY_RES_R {
+        DUTY_RES_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 5:22 - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
     #[inline(always)]
-    pub fn clk_div_timer(&self) -> CLK_DIV_TIMER_R {
-        CLK_DIV_TIMER_R::new((self.bits >> 5) & 0x0003_ffff)
+    pub fn clk_div(&self) -> CLK_DIV_R {
+        CLK_DIV_R::new((self.bits >> 5) & 0x0003_ffff)
     }
     #[doc = "Bit 23 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
-    pub fn timer_pause(&self) -> TIMER_PAUSE_R {
-        TIMER_PAUSE_R::new(((self.bits >> 23) & 1) != 0)
+    pub fn pause(&self) -> PAUSE_R {
+        PAUSE_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - This bit is used to reset timer %s. The counter will show 0 after reset."]
     #[inline(always)]
-    pub fn timer_rst(&self) -> TIMER_RST_R {
-        TIMER_RST_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn rst(&self) -> RST_R {
+        RST_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
     #[inline(always)]
-    pub fn tick_sel_timer(&self) -> TICK_SEL_TIMER_R {
-        TICK_SEL_TIMER_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn tick_sel(&self) -> TICK_SEL_R {
+        TICK_SEL_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:4 - This register is used to control the range of the counter in timer %s."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_duty_res(&mut self) -> TIMER_DUTY_RES_W<0> {
-        TIMER_DUTY_RES_W::new(self)
+    pub fn duty_res(&mut self) -> DUTY_RES_W<0> {
+        DUTY_RES_W::new(self)
     }
     #[doc = "Bits 5:22 - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
     #[inline(always)]
     #[must_use]
-    pub fn clk_div_timer(&mut self) -> CLK_DIV_TIMER_W<5> {
-        CLK_DIV_TIMER_W::new(self)
+    pub fn clk_div(&mut self) -> CLK_DIV_W<5> {
+        CLK_DIV_W::new(self)
     }
     #[doc = "Bit 23 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_pause(&mut self) -> TIMER_PAUSE_W<23> {
-        TIMER_PAUSE_W::new(self)
+    pub fn pause(&mut self) -> PAUSE_W<23> {
+        PAUSE_W::new(self)
     }
     #[doc = "Bit 24 - This bit is used to reset timer %s. The counter will show 0 after reset."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_rst(&mut self) -> TIMER_RST_W<24> {
-        TIMER_RST_W::new(self)
+    pub fn rst(&mut self) -> RST_W<24> {
+        RST_W::new(self)
     }
     #[doc = "Bit 25 - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 1'h0: SLOW_CLK 1'h1: REF_TICK"]
     #[inline(always)]
     #[must_use]
-    pub fn tick_sel_timer(&mut self) -> TICK_SEL_TIMER_W<25> {
-        TICK_SEL_TIMER_W::new(self)
+    pub fn tick_sel(&mut self) -> TICK_SEL_W<25> {
+        TICK_SEL_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES."]
     #[inline(always)]
     #[must_use]
-    pub fn timer_para_up(&mut self) -> TIMER_PARA_UP_W<26> {
-        TIMER_PARA_UP_W::new(self)
+    pub fn para_up(&mut self) -> PARA_UP_W<26> {
+        PARA_UP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
