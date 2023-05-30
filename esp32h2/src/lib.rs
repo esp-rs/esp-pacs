@@ -299,7 +299,7 @@ pub struct ASSIST_DEBUG {
 unsafe impl Send for ASSIST_DEBUG {}
 impl ASSIST_DEBUG {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const assist_debug::RegisterBlock = 0x600c_e000 as *const _;
+    pub const PTR: *const assist_debug::RegisterBlock = 0x600c_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const assist_debug::RegisterBlock {
