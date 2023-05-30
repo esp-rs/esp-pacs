@@ -3,6 +3,8 @@ _svd: "../esp32h2.base.svd"
 _modify:
   GDMA:
     name: DMA
+  ASSIST_DEBUG:
+    baseAddress: 0x600C2000
 
 ASSIST_DEBUG:
   _modify:
