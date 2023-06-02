@@ -35,15 +35,31 @@ impl From<crate::W<DMA_BLOCK_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_BLOCK_NUM` reader - dma-sha block number"]
-pub type DMA_BLOCK_NUM_R = crate::FieldReader<u8, u8>;
+pub type DMA_BLOCK_NUM_R = crate::FieldReader;
 #[doc = "Field `DMA_BLOCK_NUM` writer - dma-sha block number"]
-pub type DMA_BLOCK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_BLOCK_NUM_SPEC, u8, u8, 6, O>;
+pub type DMA_BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_BLOCK_NUM_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - dma-sha block number"]
     #[inline(always)]
     pub fn dma_block_num(&self) -> DMA_BLOCK_NUM_R {
         DMA_BLOCK_NUM_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_BLOCK_NUM")
+            .field(
+                "dma_block_num",
+                &format_args!("{}", self.dma_block_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_BLOCK_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

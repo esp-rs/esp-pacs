@@ -35,25 +35,23 @@ impl From<crate::W<RETENTION_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_ICACHE_SIZE` reader - ******* Description ***********"]
-pub type RET_ICACHE_SIZE_R = crate::FieldReader<u8, u8>;
+pub type RET_ICACHE_SIZE_R = crate::FieldReader;
 #[doc = "Field `RET_ICACHE_SIZE` writer - ******* Description ***********"]
-pub type RET_ICACHE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, O>;
+pub type RET_ICACHE_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CTRL2_SPEC, 8, O>;
 #[doc = "Field `RET_ICACHE_VLD_SIZE` reader - ******* Description ***********"]
-pub type RET_ICACHE_VLD_SIZE_R = crate::FieldReader<u8, u8>;
+pub type RET_ICACHE_VLD_SIZE_R = crate::FieldReader;
 #[doc = "Field `RET_ICACHE_VLD_SIZE` writer - ******* Description ***********"]
 pub type RET_ICACHE_VLD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL2_SPEC, 8, O>;
 #[doc = "Field `RET_ICACHE_START_POINT` reader - ******* Description ***********"]
-pub type RET_ICACHE_START_POINT_R = crate::FieldReader<u8, u8>;
+pub type RET_ICACHE_START_POINT_R = crate::FieldReader;
 #[doc = "Field `RET_ICACHE_START_POINT` writer - ******* Description ***********"]
 pub type RET_ICACHE_START_POINT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL2_SPEC, 8, O>;
 #[doc = "Field `RET_ICACHE_ENABLE` reader - ******* Description ***********"]
-pub type RET_ICACHE_ENABLE_R = crate::BitReader<bool>;
+pub type RET_ICACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `RET_ICACHE_ENABLE` writer - ******* Description ***********"]
-pub type RET_ICACHE_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RETENTION_CTRL2_SPEC, bool, O>;
+pub type RET_ICACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 4:11 - ******* Description ***********"]
     #[inline(always)]
@@ -74,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn ret_icache_enable(&self) -> RET_ICACHE_ENABLE_R {
         RET_ICACHE_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_CTRL2")
+            .field(
+                "ret_icache_size",
+                &format_args!("{}", self.ret_icache_size().bits()),
+            )
+            .field(
+                "ret_icache_vld_size",
+                &format_args!("{}", self.ret_icache_vld_size().bits()),
+            )
+            .field(
+                "ret_icache_start_point",
+                &format_args!("{}", self.ret_icache_start_point().bits()),
+            )
+            .field(
+                "ret_icache_enable",
+                &format_args!("{}", self.ret_icache_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

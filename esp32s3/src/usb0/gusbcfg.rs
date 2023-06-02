@@ -35,53 +35,53 @@ impl From<crate::W<GUSBCFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUTCAL` reader - "]
-pub type TOUTCAL_R = crate::FieldReader<u8, u8>;
+pub type TOUTCAL_R = crate::FieldReader;
 #[doc = "Field `TOUTCAL` writer - "]
-pub type TOUTCAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GUSBCFG_SPEC, u8, u8, 3, O>;
+pub type TOUTCAL_W<'a, const O: u8> = crate::FieldWriter<'a, GUSBCFG_SPEC, 3, O>;
 #[doc = "Field `PHYIF` reader - "]
-pub type PHYIF_R = crate::BitReader<bool>;
+pub type PHYIF_R = crate::BitReader;
 #[doc = "Field `PHYIF` writer - "]
-pub type PHYIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type PHYIF_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `ULPI_UTMI_SEL` reader - "]
-pub type ULPI_UTMI_SEL_R = crate::BitReader<bool>;
+pub type ULPI_UTMI_SEL_R = crate::BitReader;
 #[doc = "Field `FSINTF` reader - "]
-pub type FSINTF_R = crate::BitReader<bool>;
+pub type FSINTF_R = crate::BitReader;
 #[doc = "Field `FSINTF` writer - "]
-pub type FSINTF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type FSINTF_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `PHYSEL` reader - "]
-pub type PHYSEL_R = crate::BitReader<bool>;
+pub type PHYSEL_R = crate::BitReader;
 #[doc = "Field `SRPCAP` reader - "]
-pub type SRPCAP_R = crate::BitReader<bool>;
+pub type SRPCAP_R = crate::BitReader;
 #[doc = "Field `SRPCAP` writer - "]
-pub type SRPCAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type SRPCAP_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `HNPCAP` reader - "]
-pub type HNPCAP_R = crate::BitReader<bool>;
+pub type HNPCAP_R = crate::BitReader;
 #[doc = "Field `HNPCAP` writer - "]
-pub type HNPCAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type HNPCAP_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `USBTRDTIM` reader - "]
-pub type USBTRDTIM_R = crate::FieldReader<u8, u8>;
+pub type USBTRDTIM_R = crate::FieldReader;
 #[doc = "Field `USBTRDTIM` writer - "]
-pub type USBTRDTIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GUSBCFG_SPEC, u8, u8, 4, O>;
+pub type USBTRDTIM_W<'a, const O: u8> = crate::FieldWriter<'a, GUSBCFG_SPEC, 4, O>;
 #[doc = "Field `TERMSELDLPULSE` reader - "]
-pub type TERMSELDLPULSE_R = crate::BitReader<bool>;
+pub type TERMSELDLPULSE_R = crate::BitReader;
 #[doc = "Field `TERMSELDLPULSE` writer - "]
-pub type TERMSELDLPULSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type TERMSELDLPULSE_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `TXENDDELAY` reader - "]
-pub type TXENDDELAY_R = crate::BitReader<bool>;
+pub type TXENDDELAY_R = crate::BitReader;
 #[doc = "Field `TXENDDELAY` writer - "]
-pub type TXENDDELAY_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type TXENDDELAY_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `FORCEHSTMODE` reader - "]
-pub type FORCEHSTMODE_R = crate::BitReader<bool>;
+pub type FORCEHSTMODE_R = crate::BitReader;
 #[doc = "Field `FORCEHSTMODE` writer - "]
-pub type FORCEHSTMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type FORCEHSTMODE_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `FORCEDEVMODE` reader - "]
-pub type FORCEDEVMODE_R = crate::BitReader<bool>;
+pub type FORCEDEVMODE_R = crate::BitReader;
 #[doc = "Field `FORCEDEVMODE` writer - "]
-pub type FORCEDEVMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type FORCEDEVMODE_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 #[doc = "Field `CORRUPTTXPKT` reader - "]
-pub type CORRUPTTXPKT_R = crate::BitReader<bool>;
+pub type CORRUPTTXPKT_R = crate::BitReader;
 #[doc = "Field `CORRUPTTXPKT` writer - "]
-pub type CORRUPTTXPKT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GUSBCFG_SPEC, bool, O>;
+pub type CORRUPTTXPKT_W<'a, const O: u8> = crate::BitWriter<'a, GUSBCFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -147,6 +147,47 @@ impl R {
     #[inline(always)]
     pub fn corrupttxpkt(&self) -> CORRUPTTXPKT_R {
         CORRUPTTXPKT_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GUSBCFG")
+            .field("toutcal", &format_args!("{}", self.toutcal().bits()))
+            .field("phyif", &format_args!("{}", self.phyif().bit()))
+            .field(
+                "ulpi_utmi_sel",
+                &format_args!("{}", self.ulpi_utmi_sel().bit()),
+            )
+            .field("fsintf", &format_args!("{}", self.fsintf().bit()))
+            .field("physel", &format_args!("{}", self.physel().bit()))
+            .field("srpcap", &format_args!("{}", self.srpcap().bit()))
+            .field("hnpcap", &format_args!("{}", self.hnpcap().bit()))
+            .field("usbtrdtim", &format_args!("{}", self.usbtrdtim().bits()))
+            .field(
+                "termseldlpulse",
+                &format_args!("{}", self.termseldlpulse().bit()),
+            )
+            .field("txenddelay", &format_args!("{}", self.txenddelay().bit()))
+            .field(
+                "forcehstmode",
+                &format_args!("{}", self.forcehstmode().bit()),
+            )
+            .field(
+                "forcedevmode",
+                &format_args!("{}", self.forcedevmode().bit()),
+            )
+            .field(
+                "corrupttxpkt",
+                &format_args!("{}", self.corrupttxpkt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

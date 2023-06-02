@@ -35,14 +35,31 @@ impl From<crate::W<SEC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SEC_CLK_SEL` reader - xxxx"]
-pub type SEC_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type SEC_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SEC_CLK_SEL` writer - xxxx"]
-pub type SEC_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SEC_CONF_SPEC, u8, u8, 2, O>;
+pub type SEC_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SEC_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - xxxx"]
     #[inline(always)]
     pub fn sec_clk_sel(&self) -> SEC_CLK_SEL_R {
         SEC_CLK_SEL_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SEC_CONF")
+            .field(
+                "sec_clk_sel",
+                &format_args!("{}", self.sec_clk_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SEC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,20 +35,17 @@ impl From<crate::W<EXT_WAKEUP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - Set this bit to enable the GPIO wakeup event filter."]
-pub type GPIO_WAKEUP_FILTER_R = crate::BitReader<bool>;
+pub type GPIO_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `GPIO_WAKEUP_FILTER` writer - Set this bit to enable the GPIO wakeup event filter."]
-pub type GPIO_WAKEUP_FILTER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, O>;
+pub type GPIO_WAKEUP_FILTER_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP_CONF_SPEC, O>;
 #[doc = "Field `EXT_WAKEUP0_LV` reader - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
-pub type EXT_WAKEUP0_LV_R = crate::BitReader<bool>;
+pub type EXT_WAKEUP0_LV_R = crate::BitReader;
 #[doc = "Field `EXT_WAKEUP0_LV` writer - 0: external wakeup 0 at low level 1: external wakeup 0 at high level"]
-pub type EXT_WAKEUP0_LV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, O>;
+pub type EXT_WAKEUP0_LV_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP_CONF_SPEC, O>;
 #[doc = "Field `EXT_WAKEUP1_LV` reader - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
-pub type EXT_WAKEUP1_LV_R = crate::BitReader<bool>;
+pub type EXT_WAKEUP1_LV_R = crate::BitReader;
 #[doc = "Field `EXT_WAKEUP1_LV` writer - 0: external wakeup 1 at low level 1: external wakeup 1 at high level"]
-pub type EXT_WAKEUP1_LV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, O>;
+pub type EXT_WAKEUP1_LV_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 29 - Set this bit to enable the GPIO wakeup event filter."]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn ext_wakeup1_lv(&self) -> EXT_WAKEUP1_LV_R {
         EXT_WAKEUP1_LV_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_WAKEUP_CONF")
+            .field(
+                "gpio_wakeup_filter",
+                &format_args!("{}", self.gpio_wakeup_filter().bit()),
+            )
+            .field(
+                "ext_wakeup0_lv",
+                &format_args!("{}", self.ext_wakeup0_lv().bit()),
+            )
+            .field(
+                "ext_wakeup1_lv",
+                &format_args!("{}", self.ext_wakeup1_lv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

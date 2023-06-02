@@ -35,20 +35,20 @@ impl From<crate::W<CORE_1_CONTROL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_RUNSTALL` reader - Set 1 to stall core1"]
-pub type CONTROL_CORE_1_RUNSTALL_R = crate::BitReader<bool>;
+pub type CONTROL_CORE_1_RUNSTALL_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_RUNSTALL` writer - Set 1 to stall core1"]
 pub type CONTROL_CORE_1_RUNSTALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_CONTROL_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_CONTROL_0_SPEC, O>;
 #[doc = "Field `CONTROL_CORE_1_CLKGATE_EN` reader - Set 1 to open core1 clock"]
-pub type CONTROL_CORE_1_CLKGATE_EN_R = crate::BitReader<bool>;
+pub type CONTROL_CORE_1_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_CLKGATE_EN` writer - Set 1 to open core1 clock"]
 pub type CONTROL_CORE_1_CLKGATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_CONTROL_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_CONTROL_0_SPEC, O>;
 #[doc = "Field `CONTROL_CORE_1_RESETING` reader - Set 1 to let core1 reset"]
-pub type CONTROL_CORE_1_RESETING_R = crate::BitReader<bool>;
+pub type CONTROL_CORE_1_RESETING_R = crate::BitReader;
 #[doc = "Field `CONTROL_CORE_1_RESETING` writer - Set 1 to let core1 reset"]
 pub type CONTROL_CORE_1_RESETING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_CONTROL_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_CONTROL_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to stall core1"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn control_core_1_reseting(&self) -> CONTROL_CORE_1_RESETING_R {
         CONTROL_CORE_1_RESETING_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_CONTROL_0")
+            .field(
+                "control_core_1_runstall",
+                &format_args!("{}", self.control_core_1_runstall().bit()),
+            )
+            .field(
+                "control_core_1_clkgate_en",
+                &format_args!("{}", self.control_core_1_clkgate_en().bit()),
+            )
+            .field(
+                "control_core_1_reseting",
+                &format_args!("{}", self.control_core_1_reseting().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_CONTROL_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

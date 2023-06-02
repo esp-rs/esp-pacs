@@ -16,19 +16,19 @@ impl From<crate::R<RD_REPEAT_DATA1_SPEC>> for R {
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
 pub type RPT4_RESERVED2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WDT_DELAY_SEL` reader - Selects RTC watchdog timeout threshold, in unit of slow clock cycle. 0: 40000. 1: 80000. 2: 160000. 3:320000."]
-pub type WDT_DELAY_SEL_R = crate::FieldReader<u8, u8>;
+pub type WDT_DELAY_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT` reader - Set this bit to enable SPI boot encrypt/decrypt. Odd number of 1: enable. even number of 1: disable."]
-pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
+pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE0` reader - Set this bit to enable revoking first secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE1` reader - Set this bit to enable revoking second secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE2` reader - Set this bit to enable revoking third secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader;
 #[doc = "Field `KEY_PURPOSE_0` reader - Purpose of Key0."]
-pub type KEY_PURPOSE_0_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_0_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_1` reader - Purpose of Key1."]
-pub type KEY_PURPOSE_1_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_1_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15 - Reserved (used for four backups method)."]
     #[inline(always)]
@@ -69,6 +69,51 @@ impl R {
     #[inline(always)]
     pub fn key_purpose_1(&self) -> KEY_PURPOSE_1_R {
         KEY_PURPOSE_1_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA1")
+            .field(
+                "rpt4_reserved2",
+                &format_args!("{}", self.rpt4_reserved2().bits()),
+            )
+            .field(
+                "wdt_delay_sel",
+                &format_args!("{}", self.wdt_delay_sel().bits()),
+            )
+            .field(
+                "spi_boot_crypt_cnt",
+                &format_args!("{}", self.spi_boot_crypt_cnt().bits()),
+            )
+            .field(
+                "secure_boot_key_revoke0",
+                &format_args!("{}", self.secure_boot_key_revoke0().bit()),
+            )
+            .field(
+                "secure_boot_key_revoke1",
+                &format_args!("{}", self.secure_boot_key_revoke1().bit()),
+            )
+            .field(
+                "secure_boot_key_revoke2",
+                &format_args!("{}", self.secure_boot_key_revoke2().bit()),
+            )
+            .field(
+                "key_purpose_0",
+                &format_args!("{}", self.key_purpose_0().bits()),
+            )
+            .field(
+                "key_purpose_1",
+                &format_args!("{}", self.key_purpose_1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data1](index.html) module"]

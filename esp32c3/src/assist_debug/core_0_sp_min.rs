@@ -38,12 +38,29 @@ impl From<crate::W<CORE_0_SP_MIN_SPEC>> for W {
 pub type CORE_0_SP_MIN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_SP_MIN` writer - reg_core_0_sp_min"]
 pub type CORE_0_SP_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_SP_MIN_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CORE_0_SP_MIN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_sp_min"]
     #[inline(always)]
     pub fn core_0_sp_min(&self) -> CORE_0_SP_MIN_R {
         CORE_0_SP_MIN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_SP_MIN")
+            .field(
+                "core_0_sp_min",
+                &format_args!("{}", self.core_0_sp_min().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_SP_MIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

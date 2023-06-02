@@ -14,39 +14,39 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_START_INT_ST` reader - This is the masked interrupt bit for UHCI_RX_START_INT interrupt when UHCI_RX_START_INT_ENA is set to 1."]
-pub type RX_START_INT_ST_R = crate::BitReader<bool>;
+pub type RX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_ST` reader - This is the masked interrupt bit for UHCI_TX_START_INT interrupt when UHCI_TX_START_INT_ENA is set to 1."]
-pub type TX_START_INT_ST_R = crate::BitReader<bool>;
+pub type TX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ST` reader - This is the masked interrupt bit for UHCI_RX_HUNG_INT interrupt when UHCI_RX_HUNG_INT_ENA is set to 1."]
-pub type RX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ST` reader - This is the masked interrupt bit for UHCI_TX_HUNG_INT interrupt when UHCI_TX_HUNG_INT_ENA is set to 1."]
-pub type TX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DONE_INT interrupt when UHCI_IN_DONE_INT_ENA is set to 1."]
-pub type IN_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_SUC_EOF_INT interrupt when UHCI_IN_SUC_EOF_INT_ENA is set to 1."]
-pub type IN_SUC_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_ERR_EOF_INT interrupt when UHCI_IN_ERR_EOF_INT_ENA is set to 1."]
-pub type IN_ERR_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_DONE_INT interrupt when UHCI_OUT_DONE_INT_ENA is set to 1."]
-pub type OUT_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_EOF_INT interrupt when UHCI_OUT_EOF_INT_ENA is set to 1."]
-pub type OUT_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DSCR_ERR_INT interrupt when UHCI_IN_DSCR_ERR_INT is set to 1."]
-pub type IN_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DSCR_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_DSCR_ERR_INT interrupt when UHCI_OUT_DSCR_ERR_INT_ENA is set to 1."]
-pub type OUT_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_DSCR_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DSCR_EMPTY_INT interrupt when UHCI_IN_DSCR_EMPTY_INT_ENA is set to 1."]
-pub type IN_DSCR_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DSCR_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_OUTLINK_EOF_ERR_INT interrupt when UHCI_OUTLINK_EOF_ERR_INT_ENA is set to 1."]
-pub type OUTLINK_EOF_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type OUTLINK_EOF_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_TOTAL_EOF_INT interrupt when UHCI_OUT_TOTAL_EOF_INT_ENA is set to 1."]
-pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_ST` reader - This is the masked interrupt bit for UHCI_SEND_S_REG_Q_INT interrupt when UHCI_SEND_S_REG_Q_INT_ENA is set to 1."]
-pub type SEND_S_REG_Q_INT_ST_R = crate::BitReader<bool>;
+pub type SEND_S_REG_Q_INT_ST_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_ST` reader - This is the masked interrupt bit for UHCI_SEND_A_REG_Q_INT interrupt when UHCI_SEND_A_REG_Q_INT_ENA is set to 1."]
-pub type SEND_A_REG_Q_INT_ST_R = crate::BitReader<bool>;
+pub type SEND_A_REG_Q_INT_ST_R = crate::BitReader;
 #[doc = "Field `DMA_INFIFO_FULL_WM_INT_ST` reader - This is the masked interrupt bit for UHCI_DMA_INFIFO_FULL_WM_INT INTERRUPT when UHCI_DMA_INFIFO_FULL_WM_INT_ENA is set to 1."]
-pub type DMA_INFIFO_FULL_WM_INT_ST_R = crate::BitReader<bool>;
+pub type DMA_INFIFO_FULL_WM_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This is the masked interrupt bit for UHCI_RX_START_INT interrupt when UHCI_RX_START_INT_ENA is set to 1."]
     #[inline(always)]
@@ -132,6 +132,87 @@ impl R {
     #[inline(always)]
     pub fn dma_infifo_full_wm_int_st(&self) -> DMA_INFIFO_FULL_WM_INT_ST_R {
         DMA_INFIFO_FULL_WM_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "rx_start_int_st",
+                &format_args!("{}", self.rx_start_int_st().bit()),
+            )
+            .field(
+                "tx_start_int_st",
+                &format_args!("{}", self.tx_start_int_st().bit()),
+            )
+            .field(
+                "rx_hung_int_st",
+                &format_args!("{}", self.rx_hung_int_st().bit()),
+            )
+            .field(
+                "tx_hung_int_st",
+                &format_args!("{}", self.tx_hung_int_st().bit()),
+            )
+            .field(
+                "in_done_int_st",
+                &format_args!("{}", self.in_done_int_st().bit()),
+            )
+            .field(
+                "in_suc_eof_int_st",
+                &format_args!("{}", self.in_suc_eof_int_st().bit()),
+            )
+            .field(
+                "in_err_eof_int_st",
+                &format_args!("{}", self.in_err_eof_int_st().bit()),
+            )
+            .field(
+                "out_done_int_st",
+                &format_args!("{}", self.out_done_int_st().bit()),
+            )
+            .field(
+                "out_eof_int_st",
+                &format_args!("{}", self.out_eof_int_st().bit()),
+            )
+            .field(
+                "in_dscr_err_int_st",
+                &format_args!("{}", self.in_dscr_err_int_st().bit()),
+            )
+            .field(
+                "out_dscr_err_int_st",
+                &format_args!("{}", self.out_dscr_err_int_st().bit()),
+            )
+            .field(
+                "in_dscr_empty_int_st",
+                &format_args!("{}", self.in_dscr_empty_int_st().bit()),
+            )
+            .field(
+                "outlink_eof_err_int_st",
+                &format_args!("{}", self.outlink_eof_err_int_st().bit()),
+            )
+            .field(
+                "out_total_eof_int_st",
+                &format_args!("{}", self.out_total_eof_int_st().bit()),
+            )
+            .field(
+                "send_s_reg_q_int_st",
+                &format_args!("{}", self.send_s_reg_q_int_st().bit()),
+            )
+            .field(
+                "send_a_reg_q_int_st",
+                &format_args!("{}", self.send_a_reg_q_int_st().bit()),
+            )
+            .field(
+                "dma_infifo_full_wm_int_st",
+                &format_args!("{}", self.dma_infifo_full_wm_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

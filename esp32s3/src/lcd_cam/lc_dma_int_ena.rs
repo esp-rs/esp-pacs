@@ -35,25 +35,21 @@ impl From<crate::W<LC_DMA_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_ENA` reader - The enable bit for LCD frame end interrupt."]
-pub type LCD_VSYNC_INT_ENA_R = crate::BitReader<bool>;
+pub type LCD_VSYNC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LCD_VSYNC_INT_ENA` writer - The enable bit for LCD frame end interrupt."]
-pub type LCD_VSYNC_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, O>;
+pub type LCD_VSYNC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_ENA_SPEC, O>;
 #[doc = "Field `LCD_TRANS_DONE_INT_ENA` reader - The enable bit for lcd transfer end interrupt."]
-pub type LCD_TRANS_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type LCD_TRANS_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LCD_TRANS_DONE_INT_ENA` writer - The enable bit for lcd transfer end interrupt."]
-pub type LCD_TRANS_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, O>;
+pub type LCD_TRANS_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_ENA_SPEC, O>;
 #[doc = "Field `CAM_VSYNC_INT_ENA` reader - The enable bit for Camera frame end interrupt."]
-pub type CAM_VSYNC_INT_ENA_R = crate::BitReader<bool>;
+pub type CAM_VSYNC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_INT_ENA` writer - The enable bit for Camera frame end interrupt."]
-pub type CAM_VSYNC_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, O>;
+pub type CAM_VSYNC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_ENA_SPEC, O>;
 #[doc = "Field `CAM_HS_INT_ENA` reader - The enable bit for Camera line interrupt."]
-pub type CAM_HS_INT_ENA_R = crate::BitReader<bool>;
+pub type CAM_HS_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAM_HS_INT_ENA` writer - The enable bit for Camera line interrupt."]
-pub type CAM_HS_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, O>;
+pub type CAM_HS_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The enable bit for LCD frame end interrupt."]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn cam_hs_int_ena(&self) -> CAM_HS_INT_ENA_R {
         CAM_HS_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LC_DMA_INT_ENA")
+            .field(
+                "lcd_vsync_int_ena",
+                &format_args!("{}", self.lcd_vsync_int_ena().bit()),
+            )
+            .field(
+                "lcd_trans_done_int_ena",
+                &format_args!("{}", self.lcd_trans_done_int_ena().bit()),
+            )
+            .field(
+                "cam_vsync_int_ena",
+                &format_args!("{}", self.cam_vsync_int_ena().bit()),
+            )
+            .field(
+                "cam_hs_int_ena",
+                &format_args!("{}", self.cam_hs_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_DMA_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

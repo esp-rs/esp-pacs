@@ -35,13 +35,13 @@ impl From<crate::W<CLOCK_DIVIDER_SPEC>> for W {
     }
 }
 #[doc = "Field `CD` reader - These bits are used to define the frequency at the external CLKOUT pin."]
-pub type CD_R = crate::FieldReader<u8, u8>;
+pub type CD_R = crate::FieldReader;
 #[doc = "Field `CD` writer - These bits are used to define the frequency at the external CLKOUT pin."]
-pub type CD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLOCK_DIVIDER_SPEC, u8, u8, 8, O>;
+pub type CD_W<'a, const O: u8> = crate::FieldWriter<'a, CLOCK_DIVIDER_SPEC, 8, O>;
 #[doc = "Field `CLOCK_OFF` reader - 1: Disable the external CLKOUT pin. 0: Enable the external CLKOUT pin. Software has R/W permission in reset mode and RO in operation mode."]
-pub type CLOCK_OFF_R = crate::BitReader<bool>;
+pub type CLOCK_OFF_R = crate::BitReader;
 #[doc = "Field `CLOCK_OFF` writer - 1: Disable the external CLKOUT pin. 0: Enable the external CLKOUT pin. Software has R/W permission in reset mode and RO in operation mode."]
-pub type CLOCK_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCK_DIVIDER_SPEC, bool, O>;
+pub type CLOCK_OFF_W<'a, const O: u8> = crate::BitWriter<'a, CLOCK_DIVIDER_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - These bits are used to define the frequency at the external CLKOUT pin."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn clock_off(&self) -> CLOCK_OFF_R {
         CLOCK_OFF_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLOCK_DIVIDER")
+            .field("cd", &format_args!("{}", self.cd().bits()))
+            .field("clock_off", &format_args!("{}", self.clock_off().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLOCK_DIVIDER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,26 @@ impl From<crate::W<SLC_RX_EOF_BFR_DES_ADDR_SPEC>> for W {
 pub type REGISTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `Register` writer - "]
 pub type REGISTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_RX_EOF_BFR_DES_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SLC_RX_EOF_BFR_DES_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn register(&self) -> REGISTER_R {
         REGISTER_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_RX_EOF_BFR_DES_ADDR")
+            .field("register", &format_args!("{}", self.register().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_RX_EOF_BFR_DES_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,18 +35,17 @@ impl From<crate::W<ROM_MPU_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `SHARE_ROM_MPU_ENA` reader - "]
-pub type SHARE_ROM_MPU_ENA_R = crate::BitReader<bool>;
+pub type SHARE_ROM_MPU_ENA_R = crate::BitReader;
 #[doc = "Field `SHARE_ROM_MPU_ENA` writer - "]
-pub type SHARE_ROM_MPU_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, O>;
+pub type SHARE_ROM_MPU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ROM_MPU_ENA_SPEC, O>;
 #[doc = "Field `PRO_ROM_MPU_ENA` reader - "]
-pub type PRO_ROM_MPU_ENA_R = crate::BitReader<bool>;
+pub type PRO_ROM_MPU_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_ROM_MPU_ENA` writer - "]
-pub type PRO_ROM_MPU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, O>;
+pub type PRO_ROM_MPU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ROM_MPU_ENA_SPEC, O>;
 #[doc = "Field `APP_ROM_MPU_ENA` reader - "]
-pub type APP_ROM_MPU_ENA_R = crate::BitReader<bool>;
+pub type APP_ROM_MPU_ENA_R = crate::BitReader;
 #[doc = "Field `APP_ROM_MPU_ENA` writer - "]
-pub type APP_ROM_MPU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, O>;
+pub type APP_ROM_MPU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ROM_MPU_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -62,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn app_rom_mpu_ena(&self) -> APP_ROM_MPU_ENA_R {
         APP_ROM_MPU_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_MPU_ENA")
+            .field(
+                "share_rom_mpu_ena",
+                &format_args!("{}", self.share_rom_mpu_ena().bit()),
+            )
+            .field(
+                "pro_rom_mpu_ena",
+                &format_args!("{}", self.pro_rom_mpu_ena().bit()),
+            )
+            .field(
+                "app_rom_mpu_ena",
+                &format_args!("{}", self.app_rom_mpu_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_MPU_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,24 +35,21 @@ impl From<crate::W<HP_SLEEP_BIAS_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_SLEEP_XPD_BIAS` reader - need_des"]
-pub type HP_SLEEP_XPD_BIAS_R = crate::BitReader<bool>;
+pub type HP_SLEEP_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_XPD_BIAS` writer - need_des"]
-pub type HP_SLEEP_XPD_BIAS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BIAS_SPEC, bool, O>;
+pub type HP_SLEEP_XPD_BIAS_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_BIAS_SPEC, O>;
 #[doc = "Field `HP_SLEEP_DBG_ATTEN` reader - need_des"]
-pub type HP_SLEEP_DBG_ATTEN_R = crate::FieldReader<u8, u8>;
+pub type HP_SLEEP_DBG_ATTEN_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_DBG_ATTEN` writer - need_des"]
-pub type HP_SLEEP_DBG_ATTEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BIAS_SPEC, u8, u8, 4, O>;
+pub type HP_SLEEP_DBG_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, HP_SLEEP_BIAS_SPEC, 4, O>;
 #[doc = "Field `HP_SLEEP_PD_CUR` reader - need_des"]
-pub type HP_SLEEP_PD_CUR_R = crate::BitReader<bool>;
+pub type HP_SLEEP_PD_CUR_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_CUR` writer - need_des"]
-pub type HP_SLEEP_PD_CUR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BIAS_SPEC, bool, O>;
+pub type HP_SLEEP_PD_CUR_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_BIAS_SPEC, O>;
 #[doc = "Field `SLEEP` reader - need_des"]
-pub type SLEEP_R = crate::BitReader<bool>;
+pub type SLEEP_R = crate::BitReader;
 #[doc = "Field `SLEEP` writer - need_des"]
-pub type SLEEP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HP_SLEEP_BIAS_SPEC, bool, O>;
+pub type SLEEP_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_BIAS_SPEC, O>;
 impl R {
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
@@ -73,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn sleep(&self) -> SLEEP_R {
         SLEEP_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_SLEEP_BIAS")
+            .field(
+                "hp_sleep_xpd_bias",
+                &format_args!("{}", self.hp_sleep_xpd_bias().bit()),
+            )
+            .field(
+                "hp_sleep_dbg_atten",
+                &format_args!("{}", self.hp_sleep_dbg_atten().bits()),
+            )
+            .field(
+                "hp_sleep_pd_cur",
+                &format_args!("{}", self.hp_sleep_pd_cur().bit()),
+            )
+            .field("sleep", &format_args!("{}", self.sleep().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_BIAS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,25 +35,21 @@ impl From<crate::W<LCD_DLY_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_CD_MODE` reader - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_CD_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_CD_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_CD_MODE` writer - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_CD_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, O>;
+pub type LCD_CD_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_DLY_MODE_SPEC, 2, O>;
 #[doc = "Field `LCD_DE_MODE` reader - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_DE_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_DE_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_DE_MODE` writer - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_DE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, O>;
+pub type LCD_DE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_DLY_MODE_SPEC, 2, O>;
 #[doc = "Field `LCD_HSYNC_MODE` reader - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_HSYNC_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_HSYNC_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_MODE` writer - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_HSYNC_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, O>;
+pub type LCD_HSYNC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_DLY_MODE_SPEC, 2, O>;
 #[doc = "Field `LCD_VSYNC_MODE` reader - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_VSYNC_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_VSYNC_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_VSYNC_MODE` writer - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub type LCD_VSYNC_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, O>;
+pub type LCD_VSYNC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_DLY_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn lcd_vsync_mode(&self) -> LCD_VSYNC_MODE_R {
         LCD_VSYNC_MODE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_DLY_MODE")
+            .field(
+                "lcd_cd_mode",
+                &format_args!("{}", self.lcd_cd_mode().bits()),
+            )
+            .field(
+                "lcd_de_mode",
+                &format_args!("{}", self.lcd_de_mode().bits()),
+            )
+            .field(
+                "lcd_hsync_mode",
+                &format_args!("{}", self.lcd_hsync_mode().bits()),
+            )
+            .field(
+                "lcd_vsync_mode",
+                &format_args!("{}", self.lcd_vsync_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_DLY_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

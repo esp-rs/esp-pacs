@@ -35,13 +35,13 @@ impl From<crate::W<AUTOBAUD_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - This is the enable bit for baud rate detection."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This is the enable bit for baud rate detection."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, AUTOBAUD_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, AUTOBAUD_SPEC, O>;
 #[doc = "Field `GLITCH_FILT` reader - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
-pub type GLITCH_FILT_R = crate::FieldReader<u8, u8>;
+pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `GLITCH_FILT` writer - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
-pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AUTOBAUD_SPEC, u8, u8, 8, O>;
+pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, AUTOBAUD_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit for baud rate detection."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn glitch_filt(&self) -> GLITCH_FILT_R {
         GLITCH_FILT_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AUTOBAUD")
+            .field("en", &format_args!("{}", self.en().bit()))
+            .field(
+                "glitch_filt",
+                &format_args!("{}", self.glitch_filt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AUTOBAUD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

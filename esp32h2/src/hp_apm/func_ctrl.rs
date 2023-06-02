@@ -35,21 +35,21 @@ impl From<crate::W<FUNC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `M0_PMS_FUNC_EN` reader - PMS M0 function enable"]
-pub type M0_PMS_FUNC_EN_R = crate::BitReader<bool>;
+pub type M0_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M0_PMS_FUNC_EN` writer - PMS M0 function enable"]
-pub type M0_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_CTRL_SPEC, bool, O>;
+pub type M0_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_CTRL_SPEC, O>;
 #[doc = "Field `M1_PMS_FUNC_EN` reader - PMS M1 function enable"]
-pub type M1_PMS_FUNC_EN_R = crate::BitReader<bool>;
+pub type M1_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M1_PMS_FUNC_EN` writer - PMS M1 function enable"]
-pub type M1_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_CTRL_SPEC, bool, O>;
+pub type M1_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_CTRL_SPEC, O>;
 #[doc = "Field `M2_PMS_FUNC_EN` reader - PMS M2 function enable"]
-pub type M2_PMS_FUNC_EN_R = crate::BitReader<bool>;
+pub type M2_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M2_PMS_FUNC_EN` writer - PMS M2 function enable"]
-pub type M2_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_CTRL_SPEC, bool, O>;
+pub type M2_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_CTRL_SPEC, O>;
 #[doc = "Field `M3_PMS_FUNC_EN` reader - PMS M3 function enable"]
-pub type M3_PMS_FUNC_EN_R = crate::BitReader<bool>;
+pub type M3_PMS_FUNC_EN_R = crate::BitReader;
 #[doc = "Field `M3_PMS_FUNC_EN` writer - PMS M3 function enable"]
-pub type M3_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_CTRL_SPEC, bool, O>;
+pub type M3_PMS_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn m3_pms_func_en(&self) -> M3_PMS_FUNC_EN_R {
         M3_PMS_FUNC_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FUNC_CTRL")
+            .field(
+                "m0_pms_func_en",
+                &format_args!("{}", self.m0_pms_func_en().bit()),
+            )
+            .field(
+                "m1_pms_func_en",
+                &format_args!("{}", self.m1_pms_func_en().bit()),
+            )
+            .field(
+                "m2_pms_func_en",
+                &format_args!("{}", self.m2_pms_func_en().bit()),
+            )
+            .field(
+                "m3_pms_func_en",
+                &format_args!("{}", self.m3_pms_func_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FUNC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

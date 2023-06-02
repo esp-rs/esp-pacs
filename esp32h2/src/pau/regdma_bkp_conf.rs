@@ -35,25 +35,23 @@ impl From<crate::W<REGDMA_BKP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_INTERVAL` reader - Link read_interval"]
-pub type READ_INTERVAL_R = crate::FieldReader<u8, u8>;
+pub type READ_INTERVAL_R = crate::FieldReader;
 #[doc = "Field `READ_INTERVAL` writer - Link read_interval"]
-pub type READ_INTERVAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGDMA_BKP_CONF_SPEC, u8, u8, 7, O>;
+pub type READ_INTERVAL_W<'a, const O: u8> = crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 7, O>;
 #[doc = "Field `LINK_TOUT_THRES` reader - link wait timeout threshold"]
 pub type LINK_TOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LINK_TOUT_THRES` writer - link wait timeout threshold"]
 pub type LINK_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGDMA_BKP_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `BURST_LIMIT` reader - burst limit"]
-pub type BURST_LIMIT_R = crate::FieldReader<u8, u8>;
+pub type BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `BURST_LIMIT` writer - burst limit"]
-pub type BURST_LIMIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGDMA_BKP_CONF_SPEC, u8, u8, 5, O>;
+pub type BURST_LIMIT_W<'a, const O: u8> = crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 5, O>;
 #[doc = "Field `BACKUP_TOUT_THRES` reader - Backup timeout threshold"]
 pub type BACKUP_TOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BACKUP_TOUT_THRES` writer - Backup timeout threshold"]
 pub type BACKUP_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGDMA_BKP_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:6 - Link read_interval"]
     #[inline(always)]
@@ -74,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn backup_tout_thres(&self) -> BACKUP_TOUT_THRES_R {
         BACKUP_TOUT_THRES_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGDMA_BKP_CONF")
+            .field(
+                "read_interval",
+                &format_args!("{}", self.read_interval().bits()),
+            )
+            .field(
+                "link_tout_thres",
+                &format_args!("{}", self.link_tout_thres().bits()),
+            )
+            .field(
+                "burst_limit",
+                &format_args!("{}", self.burst_limit().bits()),
+            )
+            .field(
+                "backup_tout_thres",
+                &format_args!("{}", self.backup_tout_thres().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGDMA_BKP_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

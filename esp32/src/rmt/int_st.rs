@@ -14,13 +14,13 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CH_TX_END_INT_ST[0-7]` reader - The interrupt state bit for channel %s's mt_ch%s_tx_end_int_raw when mt_ch%s_tx_end_int_ena is set to %s."]
-pub type CH_TX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_ST[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_rx_end_int_raw when rmt_ch%s_rx_end_int_ena is set to %s."]
-pub type CH_RX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_ERR_INT_ST[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_err_int_raw when rmt_ch%s_err_int_ena is set to %s."]
-pub type CH_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type CH_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_ST[0-7]` reader - The interrupt state bit for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1."]
-pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "The interrupt state bit for channel [0-7]'s mt_ch[0-7]_tx_end_int_raw when mt_ch[0-7]_tx_end_int_ena is set to [0-7]."]
     #[inline(always)]
@@ -201,6 +201,147 @@ impl R {
     #[inline(always)]
     pub fn ch7_tx_thr_event_int_st(&self) -> CH_TX_THR_EVENT_INT_ST_R {
         CH_TX_THR_EVENT_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "ch0_tx_end_int_st",
+                &format_args!("{}", self.ch0_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_st",
+                &format_args!("{}", self.ch1_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch2_tx_end_int_st",
+                &format_args!("{}", self.ch2_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch3_tx_end_int_st",
+                &format_args!("{}", self.ch3_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch4_tx_end_int_st",
+                &format_args!("{}", self.ch4_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch5_tx_end_int_st",
+                &format_args!("{}", self.ch5_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch6_tx_end_int_st",
+                &format_args!("{}", self.ch6_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch7_tx_end_int_st",
+                &format_args!("{}", self.ch7_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch0_rx_end_int_st",
+                &format_args!("{}", self.ch0_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch1_rx_end_int_st",
+                &format_args!("{}", self.ch1_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch2_rx_end_int_st",
+                &format_args!("{}", self.ch2_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch3_rx_end_int_st",
+                &format_args!("{}", self.ch3_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch4_rx_end_int_st",
+                &format_args!("{}", self.ch4_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch5_rx_end_int_st",
+                &format_args!("{}", self.ch5_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch6_rx_end_int_st",
+                &format_args!("{}", self.ch6_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch7_rx_end_int_st",
+                &format_args!("{}", self.ch7_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch0_err_int_st",
+                &format_args!("{}", self.ch0_err_int_st().bit()),
+            )
+            .field(
+                "ch1_err_int_st",
+                &format_args!("{}", self.ch1_err_int_st().bit()),
+            )
+            .field(
+                "ch2_err_int_st",
+                &format_args!("{}", self.ch2_err_int_st().bit()),
+            )
+            .field(
+                "ch3_err_int_st",
+                &format_args!("{}", self.ch3_err_int_st().bit()),
+            )
+            .field(
+                "ch4_err_int_st",
+                &format_args!("{}", self.ch4_err_int_st().bit()),
+            )
+            .field(
+                "ch5_err_int_st",
+                &format_args!("{}", self.ch5_err_int_st().bit()),
+            )
+            .field(
+                "ch6_err_int_st",
+                &format_args!("{}", self.ch6_err_int_st().bit()),
+            )
+            .field(
+                "ch7_err_int_st",
+                &format_args!("{}", self.ch7_err_int_st().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_st",
+                &format_args!("{}", self.ch0_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_st",
+                &format_args!("{}", self.ch1_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch2_tx_thr_event_int_st",
+                &format_args!("{}", self.ch2_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch3_tx_thr_event_int_st",
+                &format_args!("{}", self.ch3_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch4_tx_thr_event_int_st",
+                &format_args!("{}", self.ch4_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch5_tx_thr_event_int_st",
+                &format_args!("{}", self.ch5_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch6_tx_thr_event_int_st",
+                &format_args!("{}", self.ch6_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch7_tx_thr_event_int_st",
+                &format_args!("{}", self.ch7_tx_thr_event_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

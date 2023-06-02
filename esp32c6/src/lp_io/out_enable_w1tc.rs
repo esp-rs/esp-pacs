@@ -21,7 +21,13 @@ impl From<crate::W<OUT_ENABLE_W1TC_SPEC>> for W {
 }
 #[doc = "Field `LP_GPIO_ENABLE_W1TC` writer - clear one time output data"]
 pub type LP_GPIO_ENABLE_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OUT_ENABLE_W1TC_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, OUT_ENABLE_W1TC_SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_ENABLE_W1TC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - clear one time output data"]
     #[inline(always)]

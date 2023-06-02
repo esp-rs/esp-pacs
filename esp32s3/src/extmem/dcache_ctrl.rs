@@ -35,18 +35,17 @@ impl From<crate::W<DCACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type DCACHE_ENABLE_R = crate::BitReader<bool>;
+pub type DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `DCACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type DCACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCACHE_CTRL_SPEC, bool, O>;
+pub type DCACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_SIZE_MODE` reader - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
-pub type DCACHE_SIZE_MODE_R = crate::BitReader<bool>;
+pub type DCACHE_SIZE_MODE_R = crate::BitReader;
 #[doc = "Field `DCACHE_SIZE_MODE` writer - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
-pub type DCACHE_SIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCACHE_CTRL_SPEC, bool, O>;
+pub type DCACHE_SIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
-pub type DCACHE_BLOCKSIZE_MODE_R = crate::FieldReader<u8, u8>;
+pub type DCACHE_BLOCKSIZE_MODE_R = crate::FieldReader;
 #[doc = "Field `DCACHE_BLOCKSIZE_MODE` writer - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
-pub type DCACHE_BLOCKSIZE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_CTRL_SPEC, u8, u8, 2, O>;
+pub type DCACHE_BLOCKSIZE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DCACHE_CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -62,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn dcache_blocksize_mode(&self) -> DCACHE_BLOCKSIZE_MODE_R {
         DCACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_CTRL")
+            .field(
+                "dcache_enable",
+                &format_args!("{}", self.dcache_enable().bit()),
+            )
+            .field(
+                "dcache_size_mode",
+                &format_args!("{}", self.dcache_size_mode().bit()),
+            )
+            .field(
+                "dcache_blocksize_mode",
+                &format_args!("{}", self.dcache_blocksize_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

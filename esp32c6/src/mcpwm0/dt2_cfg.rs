@@ -35,55 +35,53 @@ impl From<crate::W<DT2_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DB2_FED_UPMETHOD` reader - Update method for FED (falling edge delay) active register. 0: immediate,when bit0 is set to 1: tez, when bit1 is set to 1:tep, when bit2 is set to 1: sync, when bit3 is set to 1: disable the update"]
-pub type DB2_FED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DB2_FED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DB2_FED_UPMETHOD` writer - Update method for FED (falling edge delay) active register. 0: immediate,when bit0 is set to 1: tez, when bit1 is set to 1:tep, when bit2 is set to 1: sync, when bit3 is set to 1: disable the update"]
-pub type DB2_FED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT2_CFG_SPEC, u8, u8, 4, O>;
+pub type DB2_FED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT2_CFG_SPEC, 4, O>;
 #[doc = "Field `DB2_RED_UPMETHOD` reader - Update method for RED (rising edge delay) active register. 0: immediate,when bit0 is set to 1: tez, when bit1 is set to 1:tep, when bit2 is set to 1: sync, when bit3 is set to 1: disable the update"]
-pub type DB2_RED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DB2_RED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DB2_RED_UPMETHOD` writer - Update method for RED (rising edge delay) active register. 0: immediate,when bit0 is set to 1: tez, when bit1 is set to 1:tep, when bit2 is set to 1: sync, when bit3 is set to 1: disable the update"]
-pub type DB2_RED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT2_CFG_SPEC, u8, u8, 4, O>;
+pub type DB2_RED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT2_CFG_SPEC, 4, O>;
 #[doc = "Field `DB2_DEB_MODE` reader - S8 in table, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
-pub type DB2_DEB_MODE_R = crate::BitReader<bool>;
+pub type DB2_DEB_MODE_R = crate::BitReader;
 #[doc = "Field `DB2_DEB_MODE` writer - S8 in table, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
-pub type DB2_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_A_OUTSWAP` reader - S6 in table"]
-pub type DB2_A_OUTSWAP_R = crate::BitReader<bool>;
+pub type DB2_A_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DB2_A_OUTSWAP` writer - S6 in table"]
-pub type DB2_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_B_OUTSWAP` reader - S7 in table"]
-pub type DB2_B_OUTSWAP_R = crate::BitReader<bool>;
+pub type DB2_B_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DB2_B_OUTSWAP` writer - S7 in table"]
-pub type DB2_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_RED_INSEL` reader - S4 in table"]
-pub type DB2_RED_INSEL_R = crate::BitReader<bool>;
+pub type DB2_RED_INSEL_R = crate::BitReader;
 #[doc = "Field `DB2_RED_INSEL` writer - S4 in table"]
-pub type DB2_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_FED_INSEL` reader - S5 in table"]
-pub type DB2_FED_INSEL_R = crate::BitReader<bool>;
+pub type DB2_FED_INSEL_R = crate::BitReader;
 #[doc = "Field `DB2_FED_INSEL` writer - S5 in table"]
-pub type DB2_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_RED_OUTINVERT` reader - S2 in table"]
-pub type DB2_RED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DB2_RED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DB2_RED_OUTINVERT` writer - S2 in table"]
-pub type DB2_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_FED_OUTINVERT` reader - S3 in table"]
-pub type DB2_FED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DB2_FED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DB2_FED_OUTINVERT` writer - S3 in table"]
-pub type DB2_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_A_OUTBYPASS` reader - S1 in table"]
-pub type DB2_A_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DB2_A_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DB2_A_OUTBYPASS` writer - S1 in table"]
-pub type DB2_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_B_OUTBYPASS` reader - S0 in table"]
-pub type DB2_B_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DB2_B_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DB2_B_OUTBYPASS` writer - S0 in table"]
-pub type DB2_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DB2_CLK_SEL` reader - Dead time generator 2 clock selection. 0: PWM_clk, 1: PT_clk"]
-pub type DB2_CLK_SEL_R = crate::BitReader<bool>;
+pub type DB2_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `DB2_CLK_SEL` writer - Dead time generator 2 clock selection. 0: PWM_clk, 1: PT_clk"]
-pub type DB2_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DB2_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - Update method for FED (falling edge delay) active register. 0: immediate,when bit0 is set to 1: tez, when bit1 is set to 1:tep, when bit2 is set to 1: sync, when bit3 is set to 1: disable the update"]
     #[inline(always)]
@@ -144,6 +142,64 @@ impl R {
     #[inline(always)]
     pub fn db2_clk_sel(&self) -> DB2_CLK_SEL_R {
         DB2_CLK_SEL_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DT2_CFG")
+            .field(
+                "db2_fed_upmethod",
+                &format_args!("{}", self.db2_fed_upmethod().bits()),
+            )
+            .field(
+                "db2_red_upmethod",
+                &format_args!("{}", self.db2_red_upmethod().bits()),
+            )
+            .field(
+                "db2_deb_mode",
+                &format_args!("{}", self.db2_deb_mode().bit()),
+            )
+            .field(
+                "db2_a_outswap",
+                &format_args!("{}", self.db2_a_outswap().bit()),
+            )
+            .field(
+                "db2_b_outswap",
+                &format_args!("{}", self.db2_b_outswap().bit()),
+            )
+            .field(
+                "db2_red_insel",
+                &format_args!("{}", self.db2_red_insel().bit()),
+            )
+            .field(
+                "db2_fed_insel",
+                &format_args!("{}", self.db2_fed_insel().bit()),
+            )
+            .field(
+                "db2_red_outinvert",
+                &format_args!("{}", self.db2_red_outinvert().bit()),
+            )
+            .field(
+                "db2_fed_outinvert",
+                &format_args!("{}", self.db2_fed_outinvert().bit()),
+            )
+            .field(
+                "db2_a_outbypass",
+                &format_args!("{}", self.db2_a_outbypass().bit()),
+            )
+            .field(
+                "db2_b_outbypass",
+                &format_args!("{}", self.db2_b_outbypass().bit()),
+            )
+            .field("db2_clk_sel", &format_args!("{}", self.db2_clk_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DT2_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

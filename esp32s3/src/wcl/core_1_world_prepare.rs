@@ -35,15 +35,32 @@ impl From<crate::W<CORE_1_WORLD_PREPARE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_WORLD_PREPARE` reader - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
-pub type CORE_1_WORLD_PREPARE_R = crate::FieldReader<u8, u8>;
+pub type CORE_1_WORLD_PREPARE_R = crate::FieldReader;
 #[doc = "Field `CORE_1_WORLD_PREPARE` writer - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
 pub type CORE_1_WORLD_PREPARE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_WORLD_PREPARE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_1_WORLD_PREPARE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
     #[inline(always)]
     pub fn core_1_world_prepare(&self) -> CORE_1_WORLD_PREPARE_R {
         CORE_1_WORLD_PREPARE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_1_World_PREPARE")
+            .field(
+                "core_1_world_prepare",
+                &format_args!("{}", self.core_1_world_prepare().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_WORLD_PREPARE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

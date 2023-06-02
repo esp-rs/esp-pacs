@@ -14,11 +14,11 @@ impl From<crate::R<TIMING_CALI_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMING_CLK_ENA` reader - The bit is used to enable timing adjust clock for all reading operations."]
-pub type TIMING_CLK_ENA_R = crate::BitReader<bool>;
+pub type TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `TIMING_CALI` reader - The bit is used to enable timing auto-calibration for all reading operations."]
-pub type TIMING_CALI_R = crate::BitReader<bool>;
+pub type TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - add extra dummy spi clock cycle length for spi clock calibration."]
-pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
@@ -34,6 +34,28 @@ impl R {
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&self) -> EXTRA_DUMMY_CYCLELEN_R {
         EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMING_CALI")
+            .field(
+                "timing_clk_ena",
+                &format_args!("{}", self.timing_clk_ena().bit()),
+            )
+            .field("timing_cali", &format_args!("{}", self.timing_cali().bit()))
+            .field(
+                "extra_dummy_cyclelen",
+                &format_args!("{}", self.extra_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMING_CALI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI0 timing calibration register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timing_cali](index.html) module"]

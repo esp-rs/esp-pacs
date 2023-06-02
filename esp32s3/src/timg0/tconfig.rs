@@ -35,29 +35,29 @@ impl From<crate::W<TCONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `USE_XTAL` reader - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub type USE_XTAL_R = crate::BitReader<bool>;
+pub type USE_XTAL_R = crate::BitReader;
 #[doc = "Field `USE_XTAL` writer - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub type USE_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, O>;
+pub type USE_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
 #[doc = "Field `ALARM_EN` reader - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub type ALARM_EN_R = crate::BitReader<bool>;
+pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, O>;
+pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
 #[doc = "Field `DIVIDER` reader - Timer %s clock (T%s_clk) prescaler value."]
 pub type DIVIDER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DIVIDER` writer - Timer %s clock (T%s_clk) prescaler value."]
-pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TCONFIG_SPEC, u16, u16, 16, O>;
+pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, TCONFIG_SPEC, 16, O, u16, u16>;
 #[doc = "Field `AUTORELOAD` reader - When set, timer %s auto-reload at alarm is enabled."]
-pub type AUTORELOAD_R = crate::BitReader<bool>;
+pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - When set, timer %s auto-reload at alarm is enabled."]
-pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, O>;
+pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
 #[doc = "Field `INCREASE` reader - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub type INCREASE_R = crate::BitReader<bool>;
+pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, O>;
+pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
 #[doc = "Field `EN` reader - When set, the timer %s time-base counter is enabled."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set, the timer %s time-base counter is enabled."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, TCONFIG_SPEC, O>;
 impl R {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
@@ -88,6 +88,25 @@ impl R {
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TCONFIG")
+            .field("use_xtal", &format_args!("{}", self.use_xtal().bit()))
+            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
+            .field("divider", &format_args!("{}", self.divider().bits()))
+            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
+            .field("increase", &format_args!("{}", self.increase().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TCONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

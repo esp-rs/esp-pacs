@@ -35,35 +35,29 @@ impl From<crate::W<RTC_DEBUG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `DEBUG_SEL0` reader - "]
-pub type DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL0` writer - "]
-pub type DEBUG_SEL0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL1` reader - "]
-pub type DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL1` writer - "]
-pub type DEBUG_SEL1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL2` reader - "]
-pub type DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL2` writer - "]
-pub type DEBUG_SEL2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL3` reader - "]
-pub type DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL3` writer - "]
-pub type DEBUG_SEL3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL4` reader - "]
-pub type DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL4` writer - "]
-pub type DEBUG_SEL4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_12M_NO_GATING` reader - "]
-pub type DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
+pub type DEBUG_12M_NO_GATING_R = crate::BitReader;
 #[doc = "Field `DEBUG_12M_NO_GATING` writer - "]
-pub type DEBUG_12M_NO_GATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RTC_DEBUG_SEL_SPEC, bool, O>;
+pub type DEBUG_12M_NO_GATING_W<'a, const O: u8> = crate::BitWriter<'a, RTC_DEBUG_SEL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -94,6 +88,28 @@ impl R {
     #[inline(always)]
     pub fn debug_12m_no_gating(&self) -> DEBUG_12M_NO_GATING_R {
         DEBUG_12M_NO_GATING_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_DEBUG_SEL")
+            .field("debug_sel0", &format_args!("{}", self.debug_sel0().bits()))
+            .field("debug_sel1", &format_args!("{}", self.debug_sel1().bits()))
+            .field("debug_sel2", &format_args!("{}", self.debug_sel2().bits()))
+            .field("debug_sel3", &format_args!("{}", self.debug_sel3().bits()))
+            .field("debug_sel4", &format_args!("{}", self.debug_sel4().bits()))
+            .field(
+                "debug_12m_no_gating",
+                &format_args!("{}", self.debug_12m_no_gating().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_DEBUG_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

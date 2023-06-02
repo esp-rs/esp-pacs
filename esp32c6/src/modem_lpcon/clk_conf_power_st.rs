@@ -35,25 +35,24 @@ impl From<crate::W<CLK_CONF_POWER_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_WIFIPWR_ST_MAP` reader - "]
-pub type CLK_WIFIPWR_ST_MAP_R = crate::FieldReader<u8, u8>;
+pub type CLK_WIFIPWR_ST_MAP_R = crate::FieldReader;
 #[doc = "Field `CLK_WIFIPWR_ST_MAP` writer - "]
 pub type CLK_WIFIPWR_ST_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_CONF_POWER_ST_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CLK_CONF_POWER_ST_SPEC, 4, O>;
 #[doc = "Field `CLK_COEX_ST_MAP` reader - "]
-pub type CLK_COEX_ST_MAP_R = crate::FieldReader<u8, u8>;
+pub type CLK_COEX_ST_MAP_R = crate::FieldReader;
 #[doc = "Field `CLK_COEX_ST_MAP` writer - "]
-pub type CLK_COEX_ST_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_CONF_POWER_ST_SPEC, u8, u8, 4, O>;
+pub type CLK_COEX_ST_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_POWER_ST_SPEC, 4, O>;
 #[doc = "Field `CLK_I2C_MST_ST_MAP` reader - "]
-pub type CLK_I2C_MST_ST_MAP_R = crate::FieldReader<u8, u8>;
+pub type CLK_I2C_MST_ST_MAP_R = crate::FieldReader;
 #[doc = "Field `CLK_I2C_MST_ST_MAP` writer - "]
 pub type CLK_I2C_MST_ST_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_CONF_POWER_ST_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CLK_CONF_POWER_ST_SPEC, 4, O>;
 #[doc = "Field `CLK_LP_APB_ST_MAP` reader - "]
-pub type CLK_LP_APB_ST_MAP_R = crate::FieldReader<u8, u8>;
+pub type CLK_LP_APB_ST_MAP_R = crate::FieldReader;
 #[doc = "Field `CLK_LP_APB_ST_MAP` writer - "]
 pub type CLK_LP_APB_ST_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_CONF_POWER_ST_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CLK_CONF_POWER_ST_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 16:19"]
     #[inline(always)]
@@ -74,6 +73,35 @@ impl R {
     #[inline(always)]
     pub fn clk_lp_apb_st_map(&self) -> CLK_LP_APB_ST_MAP_R {
         CLK_LP_APB_ST_MAP_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF_POWER_ST")
+            .field(
+                "clk_wifipwr_st_map",
+                &format_args!("{}", self.clk_wifipwr_st_map().bits()),
+            )
+            .field(
+                "clk_coex_st_map",
+                &format_args!("{}", self.clk_coex_st_map().bits()),
+            )
+            .field(
+                "clk_i2c_mst_st_map",
+                &format_args!("{}", self.clk_i2c_mst_st_map().bits()),
+            )
+            .field(
+                "clk_lp_apb_st_map",
+                &format_args!("{}", self.clk_lp_apb_st_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_POWER_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

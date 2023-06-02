@@ -35,36 +35,33 @@ impl From<crate::W<LCD_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of LCD_VSYNC active pulse in a line."]
-pub type LCD_VSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type LCD_VSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_VSYNC_WIDTH` writer - It is the position of LCD_VSYNC active pulse in a line."]
-pub type LCD_VSYNC_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, O>;
+pub type LCD_VSYNC_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 7, O>;
 #[doc = "Field `LCD_VSYNC_IDLE_POL` reader - It is the idle value of LCD_VSYNC."]
-pub type LCD_VSYNC_IDLE_POL_R = crate::BitReader<bool>;
+pub type LCD_VSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `LCD_VSYNC_IDLE_POL` writer - It is the idle value of LCD_VSYNC."]
-pub type LCD_VSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type LCD_VSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_DE_IDLE_POL` reader - It is the idle value of LCD_DE."]
-pub type LCD_DE_IDLE_POL_R = crate::BitReader<bool>;
+pub type LCD_DE_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `LCD_DE_IDLE_POL` writer - It is the idle value of LCD_DE."]
-pub type LCD_DE_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type LCD_DE_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_HS_BLANK_EN` reader - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
-pub type LCD_HS_BLANK_EN_R = crate::BitReader<bool>;
+pub type LCD_HS_BLANK_EN_R = crate::BitReader;
 #[doc = "Field `LCD_HS_BLANK_EN` writer - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
-pub type LCD_HS_BLANK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type LCD_HS_BLANK_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of LCD_HSYNC active pulse in a line."]
-pub type LCD_HSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type LCD_HSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_WIDTH` writer - It is the position of LCD_HSYNC active pulse in a line."]
-pub type LCD_HSYNC_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, O>;
+pub type LCD_HSYNC_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 7, O>;
 #[doc = "Field `LCD_HSYNC_IDLE_POL` reader - It is the idle value of LCD_HSYNC."]
-pub type LCD_HSYNC_IDLE_POL_R = crate::BitReader<bool>;
+pub type LCD_HSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `LCD_HSYNC_IDLE_POL` writer - It is the idle value of LCD_HSYNC."]
-pub type LCD_HSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type LCD_HSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of LCD_HSYNC active pulse in a line."]
-pub type LCD_HSYNC_POSITION_R = crate::FieldReader<u8, u8>;
+pub type LCD_HSYNC_POSITION_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_POSITION` writer - It is the position of LCD_HSYNC active pulse in a line."]
-pub type LCD_HSYNC_POSITION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 8, O>;
+pub type LCD_HSYNC_POSITION_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
     #[inline(always)]
@@ -100,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn lcd_hsync_position(&self) -> LCD_HSYNC_POSITION_R {
         LCD_HSYNC_POSITION_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_CTRL2")
+            .field(
+                "lcd_vsync_width",
+                &format_args!("{}", self.lcd_vsync_width().bits()),
+            )
+            .field(
+                "lcd_vsync_idle_pol",
+                &format_args!("{}", self.lcd_vsync_idle_pol().bit()),
+            )
+            .field(
+                "lcd_de_idle_pol",
+                &format_args!("{}", self.lcd_de_idle_pol().bit()),
+            )
+            .field(
+                "lcd_hs_blank_en",
+                &format_args!("{}", self.lcd_hs_blank_en().bit()),
+            )
+            .field(
+                "lcd_hsync_width",
+                &format_args!("{}", self.lcd_hsync_width().bits()),
+            )
+            .field(
+                "lcd_hsync_idle_pol",
+                &format_args!("{}", self.lcd_hsync_idle_pol().bit()),
+            )
+            .field(
+                "lcd_hsync_position",
+                &format_args!("{}", self.lcd_hsync_position().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

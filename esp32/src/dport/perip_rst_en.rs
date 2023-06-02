@@ -35,113 +35,113 @@ impl From<crate::W<PERIP_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMERS_RST` reader - "]
-pub type TIMERS_RST_R = crate::BitReader<bool>;
+pub type TIMERS_RST_R = crate::BitReader;
 #[doc = "Field `TIMERS_RST` writer - "]
-pub type TIMERS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type TIMERS_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `SPI01_RST` reader - "]
-pub type SPI01_RST_R = crate::BitReader<bool>;
+pub type SPI01_RST_R = crate::BitReader;
 #[doc = "Field `SPI01_RST` writer - "]
-pub type SPI01_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type SPI01_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UART_RST` reader - "]
-pub type UART_RST_R = crate::BitReader<bool>;
+pub type UART_RST_R = crate::BitReader;
 #[doc = "Field `UART_RST` writer - "]
-pub type UART_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UART_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `WDG_RST` reader - "]
-pub type WDG_RST_R = crate::BitReader<bool>;
+pub type WDG_RST_R = crate::BitReader;
 #[doc = "Field `WDG_RST` writer - "]
-pub type WDG_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type WDG_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `I2S0_RST` reader - "]
-pub type I2S0_RST_R = crate::BitReader<bool>;
+pub type I2S0_RST_R = crate::BitReader;
 #[doc = "Field `I2S0_RST` writer - "]
-pub type I2S0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type I2S0_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UART1_RST` reader - "]
-pub type UART1_RST_R = crate::BitReader<bool>;
+pub type UART1_RST_R = crate::BitReader;
 #[doc = "Field `UART1_RST` writer - "]
-pub type UART1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UART1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `SPI2_RST` reader - "]
-pub type SPI2_RST_R = crate::BitReader<bool>;
+pub type SPI2_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_RST` writer - "]
-pub type SPI2_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type SPI2_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `I2C0_EXT0_RST` reader - "]
-pub type I2C0_EXT0_RST_R = crate::BitReader<bool>;
+pub type I2C0_EXT0_RST_R = crate::BitReader;
 #[doc = "Field `I2C0_EXT0_RST` writer - "]
-pub type I2C0_EXT0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type I2C0_EXT0_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UHCI0_RST` reader - "]
-pub type UHCI0_RST_R = crate::BitReader<bool>;
+pub type UHCI0_RST_R = crate::BitReader;
 #[doc = "Field `UHCI0_RST` writer - "]
-pub type UHCI0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UHCI0_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `RMT_RST` reader - "]
-pub type RMT_RST_R = crate::BitReader<bool>;
+pub type RMT_RST_R = crate::BitReader;
 #[doc = "Field `RMT_RST` writer - "]
-pub type RMT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type RMT_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `PCNT_RST` reader - "]
-pub type PCNT_RST_R = crate::BitReader<bool>;
+pub type PCNT_RST_R = crate::BitReader;
 #[doc = "Field `PCNT_RST` writer - "]
-pub type PCNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type PCNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `LEDC_RST` reader - "]
-pub type LEDC_RST_R = crate::BitReader<bool>;
+pub type LEDC_RST_R = crate::BitReader;
 #[doc = "Field `LEDC_RST` writer - "]
-pub type LEDC_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type LEDC_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UHCI1_RST` reader - "]
-pub type UHCI1_RST_R = crate::BitReader<bool>;
+pub type UHCI1_RST_R = crate::BitReader;
 #[doc = "Field `UHCI1_RST` writer - "]
-pub type UHCI1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UHCI1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `TIMERGROUP_RST` reader - "]
-pub type TIMERGROUP_RST_R = crate::BitReader<bool>;
+pub type TIMERGROUP_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_RST` writer - "]
-pub type TIMERGROUP_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type TIMERGROUP_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `EFUSE_RST` reader - "]
-pub type EFUSE_RST_R = crate::BitReader<bool>;
+pub type EFUSE_RST_R = crate::BitReader;
 #[doc = "Field `EFUSE_RST` writer - "]
-pub type EFUSE_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type EFUSE_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `TIMERGROUP1_RST` reader - "]
-pub type TIMERGROUP1_RST_R = crate::BitReader<bool>;
+pub type TIMERGROUP1_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP1_RST` writer - "]
-pub type TIMERGROUP1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type TIMERGROUP1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `SPI3_RST` reader - "]
-pub type SPI3_RST_R = crate::BitReader<bool>;
+pub type SPI3_RST_R = crate::BitReader;
 #[doc = "Field `SPI3_RST` writer - "]
-pub type SPI3_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type SPI3_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `PWM0_RST` reader - "]
-pub type PWM0_RST_R = crate::BitReader<bool>;
+pub type PWM0_RST_R = crate::BitReader;
 #[doc = "Field `PWM0_RST` writer - "]
-pub type PWM0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type PWM0_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `I2C_EXT1_RST` reader - "]
-pub type I2C_EXT1_RST_R = crate::BitReader<bool>;
+pub type I2C_EXT1_RST_R = crate::BitReader;
 #[doc = "Field `I2C_EXT1_RST` writer - "]
-pub type I2C_EXT1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type I2C_EXT1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `TWAI_RST` reader - "]
-pub type TWAI_RST_R = crate::BitReader<bool>;
+pub type TWAI_RST_R = crate::BitReader;
 #[doc = "Field `TWAI_RST` writer - "]
-pub type TWAI_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type TWAI_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `PWM1_RST` reader - "]
-pub type PWM1_RST_R = crate::BitReader<bool>;
+pub type PWM1_RST_R = crate::BitReader;
 #[doc = "Field `PWM1_RST` writer - "]
-pub type PWM1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type PWM1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `I2S1_RST` reader - "]
-pub type I2S1_RST_R = crate::BitReader<bool>;
+pub type I2S1_RST_R = crate::BitReader;
 #[doc = "Field `I2S1_RST` writer - "]
-pub type I2S1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type I2S1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `SPI_DMA_RST` reader - "]
-pub type SPI_DMA_RST_R = crate::BitReader<bool>;
+pub type SPI_DMA_RST_R = crate::BitReader;
 #[doc = "Field `SPI_DMA_RST` writer - "]
-pub type SPI_DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type SPI_DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UART2_RST` reader - "]
-pub type UART2_RST_R = crate::BitReader<bool>;
+pub type UART2_RST_R = crate::BitReader;
 #[doc = "Field `UART2_RST` writer - "]
-pub type UART2_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UART2_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `UART_MEM_RST` reader - "]
-pub type UART_MEM_RST_R = crate::BitReader<bool>;
+pub type UART_MEM_RST_R = crate::BitReader;
 #[doc = "Field `UART_MEM_RST` writer - "]
-pub type UART_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type UART_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `PWM2_RST` reader - "]
-pub type PWM2_RST_R = crate::BitReader<bool>;
+pub type PWM2_RST_R = crate::BitReader;
 #[doc = "Field `PWM2_RST` writer - "]
-pub type PWM2_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type PWM2_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 #[doc = "Field `PWM3_RST` reader - "]
-pub type PWM3_RST_R = crate::BitReader<bool>;
+pub type PWM3_RST_R = crate::BitReader;
 #[doc = "Field `PWM3_RST` writer - "]
-pub type PWM3_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, O>;
+pub type PWM3_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -277,6 +277,61 @@ impl R {
     #[inline(always)]
     pub fn pwm3_rst(&self) -> PWM3_RST_R {
         PWM3_RST_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_RST_EN")
+            .field("timers_rst", &format_args!("{}", self.timers_rst().bit()))
+            .field("spi01_rst", &format_args!("{}", self.spi01_rst().bit()))
+            .field("uart_rst", &format_args!("{}", self.uart_rst().bit()))
+            .field("wdg_rst", &format_args!("{}", self.wdg_rst().bit()))
+            .field("i2s0_rst", &format_args!("{}", self.i2s0_rst().bit()))
+            .field("uart1_rst", &format_args!("{}", self.uart1_rst().bit()))
+            .field("spi2_rst", &format_args!("{}", self.spi2_rst().bit()))
+            .field(
+                "i2c0_ext0_rst",
+                &format_args!("{}", self.i2c0_ext0_rst().bit()),
+            )
+            .field("uhci0_rst", &format_args!("{}", self.uhci0_rst().bit()))
+            .field("rmt_rst", &format_args!("{}", self.rmt_rst().bit()))
+            .field("pcnt_rst", &format_args!("{}", self.pcnt_rst().bit()))
+            .field("ledc_rst", &format_args!("{}", self.ledc_rst().bit()))
+            .field("uhci1_rst", &format_args!("{}", self.uhci1_rst().bit()))
+            .field(
+                "timergroup_rst",
+                &format_args!("{}", self.timergroup_rst().bit()),
+            )
+            .field("efuse_rst", &format_args!("{}", self.efuse_rst().bit()))
+            .field(
+                "timergroup1_rst",
+                &format_args!("{}", self.timergroup1_rst().bit()),
+            )
+            .field("spi3_rst", &format_args!("{}", self.spi3_rst().bit()))
+            .field("pwm0_rst", &format_args!("{}", self.pwm0_rst().bit()))
+            .field(
+                "i2c_ext1_rst",
+                &format_args!("{}", self.i2c_ext1_rst().bit()),
+            )
+            .field("twai_rst", &format_args!("{}", self.twai_rst().bit()))
+            .field("pwm1_rst", &format_args!("{}", self.pwm1_rst().bit()))
+            .field("i2s1_rst", &format_args!("{}", self.i2s1_rst().bit()))
+            .field("spi_dma_rst", &format_args!("{}", self.spi_dma_rst().bit()))
+            .field("uart2_rst", &format_args!("{}", self.uart2_rst().bit()))
+            .field(
+                "uart_mem_rst",
+                &format_args!("{}", self.uart_mem_rst().bit()),
+            )
+            .field("pwm2_rst", &format_args!("{}", self.pwm2_rst().bit()))
+            .field("pwm3_rst", &format_args!("{}", self.pwm3_rst().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

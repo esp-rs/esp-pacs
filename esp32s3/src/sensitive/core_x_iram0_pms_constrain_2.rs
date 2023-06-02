@@ -35,42 +35,40 @@ impl From<crate::W<CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core0/core1's permission of instruction region0 of SRAM in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - core0/core1's permission of instruction region0 of SRAM in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core0/core1's permission of instruction region1 of SRAM in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - core0/core1's permission of instruction region1 of SRAM in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core0/core1's permission of instruction region2 of SRAM in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - core0/core1's permission of instruction region2 of SRAM in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core0/core1's permission of instruction region3 of SRAM in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - core0/core1's permission of instruction region3 of SRAM in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` reader - core0/core1's permission of icache data sram block0 in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R =
-    crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` writer - core0/core1's permission of icache data sram block0 in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1` reader - core0/core1's permission of icache data sram block1 in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R =
-    crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1` writer - core0/core1's permission of icache data sram block1 in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core0/core1's permission of rom in world1"]
-pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` writer - core0/core1's permission of rom in world1"]
 pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - core0/core1's permission of instruction region0 of SRAM in world1"]
     #[inline(always)]
@@ -124,6 +122,70 @@ impl R {
         &self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
         CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R::new(((self.bits >> 18) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_IRAM0_PMS_CONSTRAIN_2")
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_pms_0",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_pms_0().bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_pms_1",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_pms_1().bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_pms_2",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_pms_2().bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_pms_3",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_pms_3().bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0()
+                        .bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_1",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_1()
+                        .bits()
+                ),
+            )
+            .field(
+                "core_x_iram0_pms_constrain_rom_world_0_pms",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_pms_constrain_rom_world_0_pms().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

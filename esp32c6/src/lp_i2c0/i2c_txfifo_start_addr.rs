@@ -22,6 +22,23 @@ impl R {
         I2C_TXFIFO_START_ADDR_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_TXFIFO_START_ADDR")
+            .field(
+                "i2c_txfifo_start_addr",
+                &format_args!("{}", self.i2c_txfifo_start_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_TXFIFO_START_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "I2C TXFIFO base address register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [i2c_txfifo_start_addr](index.html) module"]
 pub struct I2C_TXFIFO_START_ADDR_SPEC;
 impl crate::RegisterSpec for I2C_TXFIFO_START_ADDR_SPEC {

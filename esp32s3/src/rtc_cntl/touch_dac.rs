@@ -35,55 +35,45 @@ impl From<crate::W<TOUCH_DAC_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD9_DAC` reader - configure touch pad dac9"]
-pub type TOUCH_PAD9_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD9_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD9_DAC` writer - configure touch pad dac9"]
-pub type TOUCH_PAD9_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD9_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD8_DAC` reader - configure touch pad dac8"]
-pub type TOUCH_PAD8_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD8_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD8_DAC` writer - configure touch pad dac8"]
-pub type TOUCH_PAD8_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD8_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD7_DAC` reader - configure touch pad dac7"]
-pub type TOUCH_PAD7_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD7_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD7_DAC` writer - configure touch pad dac7"]
-pub type TOUCH_PAD7_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD7_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD6_DAC` reader - configure touch pad dac6"]
-pub type TOUCH_PAD6_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD6_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD6_DAC` writer - configure touch pad dac6"]
-pub type TOUCH_PAD6_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD6_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD5_DAC` reader - configure touch pad dac5"]
-pub type TOUCH_PAD5_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD5_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD5_DAC` writer - configure touch pad dac5"]
-pub type TOUCH_PAD5_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD5_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD4_DAC` reader - configure touch pad dac4"]
-pub type TOUCH_PAD4_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD4_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD4_DAC` writer - configure touch pad dac4"]
-pub type TOUCH_PAD4_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD4_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD3_DAC` reader - configure touch pad dac3"]
-pub type TOUCH_PAD3_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD3_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD3_DAC` writer - configure touch pad dac3"]
-pub type TOUCH_PAD3_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD3_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD2_DAC` reader - configure touch pad dac2"]
-pub type TOUCH_PAD2_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD2_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD2_DAC` writer - configure touch pad dac2"]
-pub type TOUCH_PAD2_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD2_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD1_DAC` reader - configure touch pad dac1"]
-pub type TOUCH_PAD1_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD1_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD1_DAC` writer - configure touch pad dac1"]
-pub type TOUCH_PAD1_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD1_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD0_DAC` reader - configure touch pad dac0"]
-pub type TOUCH_PAD0_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD0_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD0_DAC` writer - configure touch pad dac0"]
-pub type TOUCH_PAD0_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_DAC_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD0_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_DAC_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 2:4 - configure touch pad dac9"]
     #[inline(always)]
@@ -134,6 +124,59 @@ impl R {
     #[inline(always)]
     pub fn touch_pad0_dac(&self) -> TOUCH_PAD0_DAC_R {
         TOUCH_PAD0_DAC_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_DAC")
+            .field(
+                "touch_pad9_dac",
+                &format_args!("{}", self.touch_pad9_dac().bits()),
+            )
+            .field(
+                "touch_pad8_dac",
+                &format_args!("{}", self.touch_pad8_dac().bits()),
+            )
+            .field(
+                "touch_pad7_dac",
+                &format_args!("{}", self.touch_pad7_dac().bits()),
+            )
+            .field(
+                "touch_pad6_dac",
+                &format_args!("{}", self.touch_pad6_dac().bits()),
+            )
+            .field(
+                "touch_pad5_dac",
+                &format_args!("{}", self.touch_pad5_dac().bits()),
+            )
+            .field(
+                "touch_pad4_dac",
+                &format_args!("{}", self.touch_pad4_dac().bits()),
+            )
+            .field(
+                "touch_pad3_dac",
+                &format_args!("{}", self.touch_pad3_dac().bits()),
+            )
+            .field(
+                "touch_pad2_dac",
+                &format_args!("{}", self.touch_pad2_dac().bits()),
+            )
+            .field(
+                "touch_pad1_dac",
+                &format_args!("{}", self.touch_pad1_dac().bits()),
+            )
+            .field(
+                "touch_pad0_dac",
+                &format_args!("{}", self.touch_pad0_dac().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_DAC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

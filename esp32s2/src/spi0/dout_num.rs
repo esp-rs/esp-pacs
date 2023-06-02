@@ -35,37 +35,37 @@ impl From<crate::W<DOUT_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT0_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT0_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT0_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT1_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT1_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT1_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT1_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT2_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT2_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT2_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT2_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT3_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT3_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT3_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT3_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT4_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT4_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT4_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT4_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT5_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT5_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT5_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT5_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT6_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT6_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT6_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT6_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 #[doc = "Field `DOUT7_NUM` reader - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT7_NUM_R = crate::FieldReader<u8, u8>;
+pub type DOUT7_NUM_R = crate::FieldReader;
 #[doc = "Field `DOUT7_NUM` writer - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type DOUT7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_NUM_SPEC, u8, u8, 2, O>;
+pub type DOUT7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -106,6 +106,27 @@ impl R {
     #[inline(always)]
     pub fn dout7_num(&self) -> DOUT7_NUM_R {
         DOUT7_NUM_R::new(((self.bits >> 14) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOUT_NUM")
+            .field("dout0_num", &format_args!("{}", self.dout0_num().bits()))
+            .field("dout1_num", &format_args!("{}", self.dout1_num().bits()))
+            .field("dout2_num", &format_args!("{}", self.dout2_num().bits()))
+            .field("dout3_num", &format_args!("{}", self.dout3_num().bits()))
+            .field("dout4_num", &format_args!("{}", self.dout4_num().bits()))
+            .field("dout5_num", &format_args!("{}", self.dout5_num().bits()))
+            .field("dout6_num", &format_args!("{}", self.dout6_num().bits()))
+            .field("dout7_num", &format_args!("{}", self.dout7_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOUT_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

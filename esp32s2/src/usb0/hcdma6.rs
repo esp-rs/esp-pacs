@@ -37,12 +37,26 @@ impl From<crate::W<HCDMA6_SPEC>> for W {
 #[doc = "Field `H_DMAADDR6` reader - "]
 pub type H_DMAADDR6_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `H_DMAADDR6` writer - "]
-pub type H_DMAADDR6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCDMA6_SPEC, u32, u32, 32, O>;
+pub type H_DMAADDR6_W<'a, const O: u8> = crate::FieldWriter<'a, HCDMA6_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn h_dmaaddr6(&self) -> H_DMAADDR6_R {
         H_DMAADDR6_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCDMA6")
+            .field("h_dmaaddr6", &format_args!("{}", self.h_dmaaddr6().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCDMA6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

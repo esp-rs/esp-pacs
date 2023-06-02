@@ -35,33 +35,33 @@ impl From<crate::W<IOSWAP_SPEC>> for W {
     }
 }
 #[doc = "Field `uart` reader - Swap UART"]
-pub type UART_R = crate::BitReader<bool>;
+pub type UART_R = crate::BitReader;
 #[doc = "Field `uart` writer - Swap UART"]
-pub type UART_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type UART_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `spi` reader - Swap SPI"]
-pub type SPI_R = crate::BitReader<bool>;
+pub type SPI_R = crate::BitReader;
 #[doc = "Field `spi` writer - Swap SPI"]
-pub type SPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type SPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `uart0` reader - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
-pub type UART0_R = crate::BitReader<bool>;
+pub type UART0_R = crate::BitReader;
 #[doc = "Field `uart0` writer - Swap UART0 pins (u0rxd &lt;-> u0cts), (u0txd &lt;-> u0rts)"]
-pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `uart1` reader - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
-pub type UART1_R = crate::BitReader<bool>;
+pub type UART1_R = crate::BitReader;
 #[doc = "Field `uart1` writer - Swap UART1 pins (u1rxd &lt;-> u1cts), (u1txd &lt;-> u1rts)"]
-pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `hspi` reader - Set HSPI with higher priority"]
-pub type HSPI_R = crate::BitReader<bool>;
+pub type HSPI_R = crate::BitReader;
 #[doc = "Field `hspi` writer - Set HSPI with higher priority"]
-pub type HSPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type HSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `double_hspi` reader - Set two SPI masters on HSPI"]
-pub type DOUBLE_HSPI_R = crate::BitReader<bool>;
+pub type DOUBLE_HSPI_R = crate::BitReader;
 #[doc = "Field `double_hspi` writer - Set two SPI masters on HSPI"]
-pub type DOUBLE_HSPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type DOUBLE_HSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 #[doc = "Field `double_cspi` reader - Set two SPI masters on CSPI"]
-pub type DOUBLE_CSPI_R = crate::BitReader<bool>;
+pub type DOUBLE_CSPI_R = crate::BitReader;
 #[doc = "Field `double_cspi` writer - Set two SPI masters on CSPI"]
-pub type DOUBLE_CSPI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IOSWAP_SPEC, bool, O>;
+pub type DOUBLE_CSPI_W<'a, const O: u8> = crate::BitWriter<'a, IOSWAP_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Swap UART"]
     #[inline(always)]
@@ -97,6 +97,26 @@ impl R {
     #[inline(always)]
     pub fn double_cspi(&self) -> DOUBLE_CSPI_R {
         DOUBLE_CSPI_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IOSWAP")
+            .field("uart", &format_args!("{}", self.uart().bit()))
+            .field("spi", &format_args!("{}", self.spi().bit()))
+            .field("uart0", &format_args!("{}", self.uart0().bit()))
+            .field("uart1", &format_args!("{}", self.uart1().bit()))
+            .field("hspi", &format_args!("{}", self.hspi().bit()))
+            .field("double_hspi", &format_args!("{}", self.double_hspi().bit()))
+            .field("double_cspi", &format_args!("{}", self.double_cspi().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IOSWAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

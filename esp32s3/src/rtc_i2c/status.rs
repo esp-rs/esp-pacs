@@ -14,25 +14,25 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ACK_REC` reader - ack response"]
-pub type ACK_REC_R = crate::BitReader<bool>;
+pub type ACK_REC_R = crate::BitReader;
 #[doc = "Field `SLAVE_RW` reader - slave read or write"]
-pub type SLAVE_RW_R = crate::BitReader<bool>;
+pub type SLAVE_RW_R = crate::BitReader;
 #[doc = "Field `ARB_LOST` reader - arbitration is lost"]
-pub type ARB_LOST_R = crate::BitReader<bool>;
+pub type ARB_LOST_R = crate::BitReader;
 #[doc = "Field `BUS_BUSY` reader - bus is busy"]
-pub type BUS_BUSY_R = crate::BitReader<bool>;
+pub type BUS_BUSY_R = crate::BitReader;
 #[doc = "Field `SLAVE_ADDRESSED` reader - slave reg sub address"]
-pub type SLAVE_ADDRESSED_R = crate::BitReader<bool>;
+pub type SLAVE_ADDRESSED_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS` reader - One byte transit done"]
-pub type BYTE_TRANS_R = crate::BitReader<bool>;
+pub type BYTE_TRANS_R = crate::BitReader;
 #[doc = "Field `OP_CNT` reader - which operation is working"]
-pub type OP_CNT_R = crate::FieldReader<u8, u8>;
+pub type OP_CNT_R = crate::FieldReader;
 #[doc = "Field `SHIFT` reader - shifter content"]
-pub type SHIFT_R = crate::FieldReader<u8, u8>;
+pub type SHIFT_R = crate::FieldReader;
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - i2c last main status"]
-pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader;
 #[doc = "Field `SCL_STATE_LAST` reader - scl last status"]
-pub type SCL_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_STATE_LAST_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - ack response"]
     #[inline(always)]
@@ -83,6 +83,38 @@ impl R {
     #[inline(always)]
     pub fn scl_state_last(&self) -> SCL_STATE_LAST_R {
         SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATUS")
+            .field("ack_rec", &format_args!("{}", self.ack_rec().bit()))
+            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
+            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
+            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
+            .field(
+                "slave_addressed",
+                &format_args!("{}", self.slave_addressed().bit()),
+            )
+            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
+            .field("op_cnt", &format_args!("{}", self.op_cnt().bits()))
+            .field("shift", &format_args!("{}", self.shift().bits()))
+            .field(
+                "scl_main_state_last",
+                &format_args!("{}", self.scl_main_state_last().bits()),
+            )
+            .field(
+                "scl_state_last",
+                &format_args!("{}", self.scl_state_last().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "get i2c status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]

@@ -35,15 +35,13 @@ impl From<crate::W<UART1_PD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `UART1_MEM_FORCE_PU` reader - Set this bit to force power down UART1 memory."]
-pub type UART1_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type UART1_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `UART1_MEM_FORCE_PU` writer - Set this bit to force power down UART1 memory."]
-pub type UART1_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART1_PD_CTRL_SPEC, bool, O>;
+pub type UART1_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, UART1_PD_CTRL_SPEC, O>;
 #[doc = "Field `UART1_MEM_FORCE_PD` reader - Set this bit to force power up UART1 memory."]
-pub type UART1_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type UART1_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `UART1_MEM_FORCE_PD` writer - Set this bit to force power up UART1 memory."]
-pub type UART1_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART1_PD_CTRL_SPEC, bool, O>;
+pub type UART1_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, UART1_PD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set this bit to force power down UART1 memory."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn uart1_mem_force_pd(&self) -> UART1_MEM_FORCE_PD_R {
         UART1_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART1_PD_CTRL")
+            .field(
+                "uart1_mem_force_pu",
+                &format_args!("{}", self.uart1_mem_force_pu().bit()),
+            )
+            .field(
+                "uart1_mem_force_pd",
+                &format_args!("{}", self.uart1_mem_force_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART1_PD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

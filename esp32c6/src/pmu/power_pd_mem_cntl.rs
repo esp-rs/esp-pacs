@@ -35,25 +35,22 @@ impl From<crate::W<POWER_PD_MEM_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_HP_MEM_ISO` reader - need_des"]
-pub type FORCE_HP_MEM_ISO_R = crate::FieldReader<u8, u8>;
+pub type FORCE_HP_MEM_ISO_R = crate::FieldReader;
 #[doc = "Field `FORCE_HP_MEM_ISO` writer - need_des"]
-pub type FORCE_HP_MEM_ISO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_CNTL_SPEC, u8, u8, 4, O>;
+pub type FORCE_HP_MEM_ISO_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_CNTL_SPEC, 4, O>;
 #[doc = "Field `FORCE_HP_MEM_PD` reader - need_des"]
-pub type FORCE_HP_MEM_PD_R = crate::FieldReader<u8, u8>;
+pub type FORCE_HP_MEM_PD_R = crate::FieldReader;
 #[doc = "Field `FORCE_HP_MEM_PD` writer - need_des"]
-pub type FORCE_HP_MEM_PD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_CNTL_SPEC, u8, u8, 4, O>;
+pub type FORCE_HP_MEM_PD_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_CNTL_SPEC, 4, O>;
 #[doc = "Field `FORCE_HP_MEM_NO_ISO` reader - need_des"]
-pub type FORCE_HP_MEM_NO_ISO_R = crate::FieldReader<u8, u8>;
+pub type FORCE_HP_MEM_NO_ISO_R = crate::FieldReader;
 #[doc = "Field `FORCE_HP_MEM_NO_ISO` writer - need_des"]
 pub type FORCE_HP_MEM_NO_ISO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_CNTL_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, POWER_PD_MEM_CNTL_SPEC, 4, O>;
 #[doc = "Field `FORCE_HP_MEM_PU` reader - need_des"]
-pub type FORCE_HP_MEM_PU_R = crate::FieldReader<u8, u8>;
+pub type FORCE_HP_MEM_PU_R = crate::FieldReader;
 #[doc = "Field `FORCE_HP_MEM_PU` writer - need_des"]
-pub type FORCE_HP_MEM_PU_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_CNTL_SPEC, u8, u8, 4, O>;
+pub type FORCE_HP_MEM_PU_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_CNTL_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - need_des"]
     #[inline(always)]
@@ -74,6 +71,35 @@ impl R {
     #[inline(always)]
     pub fn force_hp_mem_pu(&self) -> FORCE_HP_MEM_PU_R {
         FORCE_HP_MEM_PU_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_PD_MEM_CNTL")
+            .field(
+                "force_hp_mem_iso",
+                &format_args!("{}", self.force_hp_mem_iso().bits()),
+            )
+            .field(
+                "force_hp_mem_pd",
+                &format_args!("{}", self.force_hp_mem_pd().bits()),
+            )
+            .field(
+                "force_hp_mem_no_iso",
+                &format_args!("{}", self.force_hp_mem_no_iso().bits()),
+            )
+            .field(
+                "force_hp_mem_pu",
+                &format_args!("{}", self.force_hp_mem_pu().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_PD_MEM_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

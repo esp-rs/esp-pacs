@@ -37,13 +37,29 @@ impl From<crate::W<ADDR_SPEC>> for W {
 #[doc = "Field `USR_ADDR_VALUE` reader - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
 pub type USR_ADDR_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub type USR_ADDR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ADDR_SPEC, u32, u32, 32, O>;
+pub type USR_ADDR_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
     pub fn usr_addr_value(&self) -> USR_ADDR_VALUE_R {
         USR_ADDR_VALUE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ADDR")
+            .field(
+                "usr_addr_value",
+                &format_args!("{}", self.usr_addr_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

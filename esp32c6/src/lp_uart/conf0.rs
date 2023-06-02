@@ -35,65 +35,65 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `PARITY` reader - This register is used to configure the parity check mode."]
-pub type PARITY_R = crate::BitReader<bool>;
+pub type PARITY_R = crate::BitReader;
 #[doc = "Field `PARITY` writer - This register is used to configure the parity check mode."]
-pub type PARITY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PARITY_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `PARITY_EN` reader - Set this bit to enable uart parity check."]
-pub type PARITY_EN_R = crate::BitReader<bool>;
+pub type PARITY_EN_R = crate::BitReader;
 #[doc = "Field `PARITY_EN` writer - Set this bit to enable uart parity check."]
-pub type PARITY_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PARITY_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `BIT_NUM` reader - This register is used to set the length of data."]
-pub type BIT_NUM_R = crate::FieldReader<u8, u8>;
+pub type BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `BIT_NUM` writer - This register is used to set the length of data."]
-pub type BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
+pub type BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CONF0_SPEC, 2, O>;
 #[doc = "Field `STOP_BIT_NUM` reader - This register is used to set the length of stop bit."]
-pub type STOP_BIT_NUM_R = crate::FieldReader<u8, u8>;
+pub type STOP_BIT_NUM_R = crate::FieldReader;
 #[doc = "Field `STOP_BIT_NUM` writer - This register is used to set the length of stop bit."]
-pub type STOP_BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
+pub type STOP_BIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CONF0_SPEC, 2, O>;
 #[doc = "Field `TXD_BRK` reader - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
-pub type TXD_BRK_R = crate::BitReader<bool>;
+pub type TXD_BRK_R = crate::BitReader;
 #[doc = "Field `TXD_BRK` writer - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
-pub type TXD_BRK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type TXD_BRK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `LOOPBACK` reader - Set this bit to enable uart loopback test mode."]
-pub type LOOPBACK_R = crate::BitReader<bool>;
+pub type LOOPBACK_R = crate::BitReader;
 #[doc = "Field `LOOPBACK` writer - Set this bit to enable uart loopback test mode."]
-pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `TX_FLOW_EN` reader - Set this bit to enable flow control function for transmitter."]
-pub type TX_FLOW_EN_R = crate::BitReader<bool>;
+pub type TX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `TX_FLOW_EN` writer - Set this bit to enable flow control function for transmitter."]
-pub type TX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type TX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `RXD_INV` reader - Set this bit to inverse the level value of uart rxd signal."]
-pub type RXD_INV_R = crate::BitReader<bool>;
+pub type RXD_INV_R = crate::BitReader;
 #[doc = "Field `RXD_INV` writer - Set this bit to inverse the level value of uart rxd signal."]
-pub type RXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type RXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `TXD_INV` reader - Set this bit to inverse the level value of uart txd signal."]
-pub type TXD_INV_R = crate::BitReader<bool>;
+pub type TXD_INV_R = crate::BitReader;
 #[doc = "Field `TXD_INV` writer - Set this bit to inverse the level value of uart txd signal."]
-pub type TXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type TXD_INV_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `DIS_RX_DAT_OVF` reader - Disable UART Rx data overflow detect."]
-pub type DIS_RX_DAT_OVF_R = crate::BitReader<bool>;
+pub type DIS_RX_DAT_OVF_R = crate::BitReader;
 #[doc = "Field `DIS_RX_DAT_OVF` writer - Disable UART Rx data overflow detect."]
-pub type DIS_RX_DAT_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type DIS_RX_DAT_OVF_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `ERR_WR_MASK` reader - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
-pub type ERR_WR_MASK_R = crate::BitReader<bool>;
+pub type ERR_WR_MASK_R = crate::BitReader;
 #[doc = "Field `ERR_WR_MASK` writer - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
-pub type ERR_WR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type ERR_WR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `MEM_CLK_EN` reader - UART memory clock gate enable signal."]
-pub type MEM_CLK_EN_R = crate::BitReader<bool>;
+pub type MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_EN` writer - UART memory clock gate enable signal."]
-pub type MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SW_RTS` reader - This register is used to configure the software rts signal which is used in software flow control."]
-pub type SW_RTS_R = crate::BitReader<bool>;
+pub type SW_RTS_R = crate::BitReader;
 #[doc = "Field `SW_RTS` writer - This register is used to configure the software rts signal which is used in software flow control."]
-pub type SW_RTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SW_RTS_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `RXFIFO_RST` reader - Set this bit to reset the uart receive-FIFO."]
-pub type RXFIFO_RST_R = crate::BitReader<bool>;
+pub type RXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_RST` writer - Set this bit to reset the uart receive-FIFO."]
-pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `TXFIFO_RST` reader - Set this bit to reset the uart transmit-FIFO."]
-pub type TXFIFO_RST_R = crate::BitReader<bool>;
+pub type TXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_RST` writer - Set this bit to reset the uart transmit-FIFO."]
-pub type TXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type TXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This register is used to configure the parity check mode."]
     #[inline(always)]
@@ -169,6 +169,40 @@ impl R {
     #[inline(always)]
     pub fn txfifo_rst(&self) -> TXFIFO_RST_R {
         TXFIFO_RST_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF0")
+            .field("parity", &format_args!("{}", self.parity().bit()))
+            .field("parity_en", &format_args!("{}", self.parity_en().bit()))
+            .field("bit_num", &format_args!("{}", self.bit_num().bits()))
+            .field(
+                "stop_bit_num",
+                &format_args!("{}", self.stop_bit_num().bits()),
+            )
+            .field("txd_brk", &format_args!("{}", self.txd_brk().bit()))
+            .field("loopback", &format_args!("{}", self.loopback().bit()))
+            .field("tx_flow_en", &format_args!("{}", self.tx_flow_en().bit()))
+            .field("rxd_inv", &format_args!("{}", self.rxd_inv().bit()))
+            .field("txd_inv", &format_args!("{}", self.txd_inv().bit()))
+            .field(
+                "dis_rx_dat_ovf",
+                &format_args!("{}", self.dis_rx_dat_ovf().bit()),
+            )
+            .field("err_wr_mask", &format_args!("{}", self.err_wr_mask().bit()))
+            .field("mem_clk_en", &format_args!("{}", self.mem_clk_en().bit()))
+            .field("sw_rts", &format_args!("{}", self.sw_rts().bit()))
+            .field("rxfifo_rst", &format_args!("{}", self.rxfifo_rst().bit()))
+            .field("txfifo_rst", &format_args!("{}", self.txfifo_rst().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

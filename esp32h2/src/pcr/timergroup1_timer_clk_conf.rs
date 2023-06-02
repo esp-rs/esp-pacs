@@ -35,15 +35,15 @@ impl From<crate::W<TIMERGROUP1_TIMER_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TG1_TIMER_CLK_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
-pub type TG1_TIMER_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type TG1_TIMER_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `TG1_TIMER_CLK_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
 pub type TG1_TIMER_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMERGROUP1_TIMER_CLK_CONF_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, TIMERGROUP1_TIMER_CLK_CONF_SPEC, 2, O>;
 #[doc = "Field `TG1_TIMER_CLK_EN` reader - Set 1 to enable timer_group1 timer clock"]
-pub type TG1_TIMER_CLK_EN_R = crate::BitReader<bool>;
+pub type TG1_TIMER_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TG1_TIMER_CLK_EN` writer - Set 1 to enable timer_group1 timer clock"]
 pub type TG1_TIMER_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMERGROUP1_TIMER_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, TIMERGROUP1_TIMER_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn tg1_timer_clk_en(&self) -> TG1_TIMER_CLK_EN_R {
         TG1_TIMER_CLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMERGROUP1_TIMER_CLK_CONF")
+            .field(
+                "tg1_timer_clk_sel",
+                &format_args!("{}", self.tg1_timer_clk_sel().bits()),
+            )
+            .field(
+                "tg1_timer_clk_en",
+                &format_args!("{}", self.tg1_timer_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP1_TIMER_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

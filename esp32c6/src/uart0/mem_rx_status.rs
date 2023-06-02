@@ -14,9 +14,9 @@ impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_SRAM_RADDR` reader - This register stores the offset read address in RX-SRAM."]
-pub type RX_SRAM_RADDR_R = crate::FieldReader<u8, u8>;
+pub type RX_SRAM_RADDR_R = crate::FieldReader;
 #[doc = "Field `RX_SRAM_WADDR` reader - This register stores the offset write address in Rx-SRAM."]
-pub type RX_SRAM_WADDR_R = crate::FieldReader<u8, u8>;
+pub type RX_SRAM_WADDR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - This register stores the offset read address in RX-SRAM."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn rx_sram_waddr(&self) -> RX_SRAM_WADDR_R {
         RX_SRAM_WADDR_R::new(((self.bits >> 9) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_RX_STATUS")
+            .field(
+                "rx_sram_raddr",
+                &format_args!("{}", self.rx_sram_raddr().bits()),
+            )
+            .field(
+                "rx_sram_waddr",
+                &format_args!("{}", self.rx_sram_waddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_RX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Rx-SRAM write and read offset address.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_rx_status](index.html) module"]

@@ -35,23 +35,21 @@ impl From<crate::W<QUICK_SENT_SPEC>> for W {
     }
 }
 #[doc = "Field `SINGLE_SEND_NUM` reader - The bits are used to choose which short packet"]
-pub type SINGLE_SEND_NUM_R = crate::FieldReader<u8, u8>;
+pub type SINGLE_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `SINGLE_SEND_NUM` writer - The bits are used to choose which short packet"]
-pub type SINGLE_SEND_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, QUICK_SENT_SPEC, u8, u8, 3, O>;
+pub type SINGLE_SEND_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, QUICK_SENT_SPEC, 3, O>;
 #[doc = "Field `SINGLE_SEND_EN` reader - Set this bit to enable send a short packet"]
-pub type SINGLE_SEND_EN_R = crate::BitReader<bool>;
+pub type SINGLE_SEND_EN_R = crate::BitReader;
 #[doc = "Field `SINGLE_SEND_EN` writer - Set this bit to enable send a short packet"]
-pub type SINGLE_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, QUICK_SENT_SPEC, bool, O>;
+pub type SINGLE_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, QUICK_SENT_SPEC, O>;
 #[doc = "Field `ALWAYS_SEND_NUM` reader - The bits are used to choose which short packet"]
-pub type ALWAYS_SEND_NUM_R = crate::FieldReader<u8, u8>;
+pub type ALWAYS_SEND_NUM_R = crate::FieldReader;
 #[doc = "Field `ALWAYS_SEND_NUM` writer - The bits are used to choose which short packet"]
-pub type ALWAYS_SEND_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, QUICK_SENT_SPEC, u8, u8, 3, O>;
+pub type ALWAYS_SEND_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, QUICK_SENT_SPEC, 3, O>;
 #[doc = "Field `ALWAYS_SEND_EN` reader - Set this bit to enable continuously send the same short packet"]
-pub type ALWAYS_SEND_EN_R = crate::BitReader<bool>;
+pub type ALWAYS_SEND_EN_R = crate::BitReader;
 #[doc = "Field `ALWAYS_SEND_EN` writer - Set this bit to enable continuously send the same short packet"]
-pub type ALWAYS_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, QUICK_SENT_SPEC, bool, O>;
+pub type ALWAYS_SEND_EN_W<'a, const O: u8> = crate::BitWriter<'a, QUICK_SENT_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - The bits are used to choose which short packet"]
     #[inline(always)]
@@ -72,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn always_send_en(&self) -> ALWAYS_SEND_EN_R {
         ALWAYS_SEND_EN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("QUICK_SENT")
+            .field(
+                "single_send_num",
+                &format_args!("{}", self.single_send_num().bits()),
+            )
+            .field(
+                "single_send_en",
+                &format_args!("{}", self.single_send_en().bit()),
+            )
+            .field(
+                "always_send_num",
+                &format_args!("{}", self.always_send_num().bits()),
+            )
+            .field(
+                "always_send_en",
+                &format_args!("{}", self.always_send_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<QUICK_SENT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

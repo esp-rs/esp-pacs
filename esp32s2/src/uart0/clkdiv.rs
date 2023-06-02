@@ -37,11 +37,11 @@ impl From<crate::W<CLKDIV_SPEC>> for W {
 #[doc = "Field `CLKDIV` reader - The integral part of the frequency divisor."]
 pub type CLKDIV_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CLKDIV` writer - The integral part of the frequency divisor."]
-pub type CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u32, u32, 20, O>;
+pub type CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 20, O, u32, u32>;
 #[doc = "Field `FRAG` reader - The fractional part of the frequency divisor."]
-pub type FRAG_R = crate::FieldReader<u8, u8>;
+pub type FRAG_R = crate::FieldReader;
 #[doc = "Field `FRAG` writer - The fractional part of the frequency divisor."]
-pub type FRAG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u8, u8, 4, O>;
+pub type FRAG_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:19 - The integral part of the frequency divisor."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn frag(&self) -> FRAG_R {
         FRAG_R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKDIV")
+            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
+            .field("frag", &format_args!("{}", self.frag().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

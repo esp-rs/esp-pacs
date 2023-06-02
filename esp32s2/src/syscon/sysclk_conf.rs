@@ -35,17 +35,17 @@ impl From<crate::W<SYSCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_320M_EN` reader - "]
-pub type CLK_320M_EN_R = crate::BitReader<bool>;
+pub type CLK_320M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_320M_EN` writer - "]
-pub type CLK_320M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYSCLK_CONF_SPEC, bool, O>;
+pub type CLK_320M_EN_W<'a, const O: u8> = crate::BitWriter<'a, SYSCLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - "]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYSCLK_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SYSCLK_CONF_SPEC, O>;
 #[doc = "Field `RST_TICK_CNT` reader - "]
-pub type RST_TICK_CNT_R = crate::BitReader<bool>;
+pub type RST_TICK_CNT_R = crate::BitReader;
 #[doc = "Field `RST_TICK_CNT` writer - "]
-pub type RST_TICK_CNT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYSCLK_CONF_SPEC, bool, O>;
+pub type RST_TICK_CNT_W<'a, const O: u8> = crate::BitWriter<'a, SYSCLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 10"]
     #[inline(always)]
@@ -61,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn rst_tick_cnt(&self) -> RST_TICK_CNT_R {
         RST_TICK_CNT_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYSCLK_CONF")
+            .field("clk_320m_en", &format_args!("{}", self.clk_320m_en().bit()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "rst_tick_cnt",
+                &format_args!("{}", self.rst_tick_cnt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYSCLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

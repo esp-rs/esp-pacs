@@ -35,30 +35,28 @@ impl From<crate::W<PVT_MONITOR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PVT_MONITOR_CLK_EN` reader - Set 1 to enable apb clock of pvt module"]
-pub type PVT_MONITOR_CLK_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_CLK_EN` writer - Set 1 to enable apb clock of pvt module"]
-pub type PVT_MONITOR_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_CONF_SPEC, bool, O>;
+pub type PVT_MONITOR_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PVT_MONITOR_CONF_SPEC, O>;
 #[doc = "Field `PVT_MONITOR_RST_EN` reader - Set 0 to reset all pvt monitor module"]
-pub type PVT_MONITOR_RST_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_RST_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_RST_EN` writer - Set 0 to reset all pvt monitor module"]
-pub type PVT_MONITOR_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_CONF_SPEC, bool, O>;
+pub type PVT_MONITOR_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, PVT_MONITOR_CONF_SPEC, O>;
 #[doc = "Field `PVT_MONITOR_SITE1_CLK_EN` reader - Set 1 to enable function clock of modem pvt module"]
-pub type PVT_MONITOR_SITE1_CLK_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_SITE1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE1_CLK_EN` writer - Set 1 to enable function clock of modem pvt module"]
 pub type PVT_MONITOR_SITE1_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, PVT_MONITOR_CONF_SPEC, O>;
 #[doc = "Field `PVT_MONITOR_SITE2_CLK_EN` reader - Set 1 to enable function clock of cpu pvt module"]
-pub type PVT_MONITOR_SITE2_CLK_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_SITE2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE2_CLK_EN` writer - Set 1 to enable function clock of cpu pvt module"]
 pub type PVT_MONITOR_SITE2_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, PVT_MONITOR_CONF_SPEC, O>;
 #[doc = "Field `PVT_MONITOR_SITE3_CLK_EN` reader - Set 1 to enable function clock of hp_peri pvt module"]
-pub type PVT_MONITOR_SITE3_CLK_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_SITE3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_SITE3_CLK_EN` writer - Set 1 to enable function clock of hp_peri pvt module"]
 pub type PVT_MONITOR_SITE3_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, PVT_MONITOR_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable apb clock of pvt module"]
     #[inline(always)]
@@ -84,6 +82,39 @@ impl R {
     #[inline(always)]
     pub fn pvt_monitor_site3_clk_en(&self) -> PVT_MONITOR_SITE3_CLK_EN_R {
         PVT_MONITOR_SITE3_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PVT_MONITOR_CONF")
+            .field(
+                "pvt_monitor_clk_en",
+                &format_args!("{}", self.pvt_monitor_clk_en().bit()),
+            )
+            .field(
+                "pvt_monitor_rst_en",
+                &format_args!("{}", self.pvt_monitor_rst_en().bit()),
+            )
+            .field(
+                "pvt_monitor_site1_clk_en",
+                &format_args!("{}", self.pvt_monitor_site1_clk_en().bit()),
+            )
+            .field(
+                "pvt_monitor_site2_clk_en",
+                &format_args!("{}", self.pvt_monitor_site2_clk_en().bit()),
+            )
+            .field(
+                "pvt_monitor_site3_clk_en",
+                &format_args!("{}", self.pvt_monitor_site3_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PVT_MONITOR_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,65 +35,65 @@ impl From<crate::W<SRAM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_MODE` reader - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
-pub type SCLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type SCLK_MODE_R = crate::FieldReader;
 #[doc = "Field `SCLK_MODE` writer - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
-pub type SCLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAM_CMD_SPEC, u8, u8, 2, O>;
+pub type SCLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CMD_SPEC, 2, O>;
 #[doc = "Field `SWB_MODE` reader - Mode bits when SPI0 accesses to Ext_RAM."]
-pub type SWB_MODE_R = crate::FieldReader<u8, u8>;
+pub type SWB_MODE_R = crate::FieldReader;
 #[doc = "Field `SWB_MODE` writer - Mode bits when SPI0 accesses to Ext_RAM."]
-pub type SWB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAM_CMD_SPEC, u8, u8, 8, O>;
+pub type SWB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CMD_SPEC, 8, O>;
 #[doc = "Field `SDIN_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
-pub type SDIN_DUAL_R = crate::BitReader<bool>;
+pub type SDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `SDIN_DUAL` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
-pub type SDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDOUT_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
-pub type SDOUT_DUAL_R = crate::BitReader<bool>;
+pub type SDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `SDOUT_DUAL` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
-pub type SDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SADDR_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
-pub type SADDR_DUAL_R = crate::BitReader<bool>;
+pub type SADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `SADDR_DUAL` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
-pub type SADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SCMD_DUAL` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
-pub type SCMD_DUAL_R = crate::BitReader<bool>;
+pub type SCMD_DUAL_R = crate::BitReader;
 #[doc = "Field `SCMD_DUAL` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
-pub type SCMD_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SCMD_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDIN_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
-pub type SDIN_QUAD_R = crate::BitReader<bool>;
+pub type SDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `SDIN_QUAD` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
-pub type SDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDOUT_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
-pub type SDOUT_QUAD_R = crate::BitReader<bool>;
+pub type SDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `SDOUT_QUAD` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
-pub type SDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SADDR_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
-pub type SADDR_QUAD_R = crate::BitReader<bool>;
+pub type SADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `SADDR_QUAD` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
-pub type SADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SCMD_QUAD` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
-pub type SCMD_QUAD_R = crate::BitReader<bool>;
+pub type SCMD_QUAD_R = crate::BitReader;
 #[doc = "Field `SCMD_QUAD` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
-pub type SCMD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SCMD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDIN_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
-pub type SDIN_OCT_R = crate::BitReader<bool>;
+pub type SDIN_OCT_R = crate::BitReader;
 #[doc = "Field `SDIN_OCT` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
-pub type SDIN_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDIN_OCT_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDOUT_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
-pub type SDOUT_OCT_R = crate::BitReader<bool>;
+pub type SDOUT_OCT_R = crate::BitReader;
 #[doc = "Field `SDOUT_OCT` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
-pub type SDOUT_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDOUT_OCT_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SADDR_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
-pub type SADDR_OCT_R = crate::BitReader<bool>;
+pub type SADDR_OCT_R = crate::BitReader;
 #[doc = "Field `SADDR_OCT` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
-pub type SADDR_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SADDR_OCT_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SCMD_OCT` reader - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
-pub type SCMD_OCT_R = crate::BitReader<bool>;
+pub type SCMD_OCT_R = crate::BitReader;
 #[doc = "Field `SCMD_OCT` writer - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
-pub type SCMD_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SCMD_OCT_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 #[doc = "Field `SDUMMY_OUT` reader - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
-pub type SDUMMY_OUT_R = crate::BitReader<bool>;
+pub type SDUMMY_OUT_R = crate::BitReader;
 #[doc = "Field `SDUMMY_OUT` writer - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
-pub type SDUMMY_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, O>;
+pub type SDUMMY_OUT_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CMD_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
@@ -169,6 +169,34 @@ impl R {
     #[inline(always)]
     pub fn sdummy_out(&self) -> SDUMMY_OUT_R {
         SDUMMY_OUT_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_CMD")
+            .field("sclk_mode", &format_args!("{}", self.sclk_mode().bits()))
+            .field("swb_mode", &format_args!("{}", self.swb_mode().bits()))
+            .field("sdin_dual", &format_args!("{}", self.sdin_dual().bit()))
+            .field("sdout_dual", &format_args!("{}", self.sdout_dual().bit()))
+            .field("saddr_dual", &format_args!("{}", self.saddr_dual().bit()))
+            .field("scmd_dual", &format_args!("{}", self.scmd_dual().bit()))
+            .field("sdin_quad", &format_args!("{}", self.sdin_quad().bit()))
+            .field("sdout_quad", &format_args!("{}", self.sdout_quad().bit()))
+            .field("saddr_quad", &format_args!("{}", self.saddr_quad().bit()))
+            .field("scmd_quad", &format_args!("{}", self.scmd_quad().bit()))
+            .field("sdin_oct", &format_args!("{}", self.sdin_oct().bit()))
+            .field("sdout_oct", &format_args!("{}", self.sdout_oct().bit()))
+            .field("saddr_oct", &format_args!("{}", self.saddr_oct().bit()))
+            .field("scmd_oct", &format_args!("{}", self.scmd_oct().bit()))
+            .field("sdummy_out", &format_args!("{}", self.sdummy_out().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

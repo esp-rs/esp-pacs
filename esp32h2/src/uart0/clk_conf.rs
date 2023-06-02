@@ -35,21 +35,21 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_R = crate::BitReader<bool>;
+pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type TX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `SCLK_EN` reader - Set this bit to enable UART Rx clock."]
-pub type SCLK_EN_R = crate::BitReader<bool>;
+pub type SCLK_EN_R = crate::BitReader;
 #[doc = "Field `SCLK_EN` writer - Set this bit to enable UART Rx clock."]
-pub type SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `TX_RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Tx."]
-pub type TX_RST_CORE_R = crate::BitReader<bool>;
+pub type TX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `TX_RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Tx."]
-pub type TX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type TX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit to reset UART Rx."]
-pub type RST_CORE_R = crate::BitReader<bool>;
+pub type RST_CORE_R = crate::BitReader;
 #[doc = "Field `RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Rx."]
-pub type RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn rst_core(&self) -> RST_CORE_R {
         RST_CORE_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field("tx_sclk_en", &format_args!("{}", self.tx_sclk_en().bit()))
+            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
+            .field("tx_rst_core", &format_args!("{}", self.tx_rst_core().bit()))
+            .field("rst_core", &format_args!("{}", self.rst_core().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

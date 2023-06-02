@@ -35,28 +35,24 @@ impl From<crate::W<CPUCORE0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_CORE0_SW_STALL` reader - need_des"]
-pub type CPU_CORE0_SW_STALL_R = crate::FieldReader<u8, u8>;
+pub type CPU_CORE0_SW_STALL_R = crate::FieldReader;
 #[doc = "Field `CPU_CORE0_SW_STALL` writer - need_des"]
-pub type CPU_CORE0_SW_STALL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPUCORE0_CFG_SPEC, u8, u8, 8, O>;
+pub type CPU_CORE0_SW_STALL_W<'a, const O: u8> = crate::FieldWriter<'a, CPUCORE0_CFG_SPEC, 8, O>;
 #[doc = "Field `CPU_CORE0_SW_RESET` writer - need_des"]
-pub type CPU_CORE0_SW_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPUCORE0_CFG_SPEC, bool, O>;
+pub type CPU_CORE0_SW_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` reader - need_des"]
-pub type CPU_CORE0_OCD_HALT_ON_RESET_R = crate::BitReader<bool>;
+pub type CPU_CORE0_OCD_HALT_ON_RESET_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_OCD_HALT_ON_RESET` writer - need_des"]
 pub type CPU_CORE0_OCD_HALT_ON_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPUCORE0_CFG_SPEC, bool, O>;
+    crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` reader - need_des"]
-pub type CPU_CORE0_STAT_VECTOR_SEL_R = crate::BitReader<bool>;
+pub type CPU_CORE0_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_STAT_VECTOR_SEL` writer - need_des"]
-pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPUCORE0_CFG_SPEC, bool, O>;
+pub type CPU_CORE0_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` reader - need_des"]
-pub type CPU_CORE0_DRESET_MASK_R = crate::BitReader<bool>;
+pub type CPU_CORE0_DRESET_MASK_R = crate::BitReader;
 #[doc = "Field `CPU_CORE0_DRESET_MASK` writer - need_des"]
-pub type CPU_CORE0_DRESET_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPUCORE0_CFG_SPEC, bool, O>;
+pub type CPU_CORE0_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, CPUCORE0_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -77,6 +73,35 @@ impl R {
     #[inline(always)]
     pub fn cpu_core0_dreset_mask(&self) -> CPU_CORE0_DRESET_MASK_R {
         CPU_CORE0_DRESET_MASK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPUCORE0_CFG")
+            .field(
+                "cpu_core0_sw_stall",
+                &format_args!("{}", self.cpu_core0_sw_stall().bits()),
+            )
+            .field(
+                "cpu_core0_ocd_halt_on_reset",
+                &format_args!("{}", self.cpu_core0_ocd_halt_on_reset().bit()),
+            )
+            .field(
+                "cpu_core0_stat_vector_sel",
+                &format_args!("{}", self.cpu_core0_stat_vector_sel().bit()),
+            )
+            .field(
+                "cpu_core0_dreset_mask",
+                &format_args!("{}", self.cpu_core0_dreset_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPUCORE0_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

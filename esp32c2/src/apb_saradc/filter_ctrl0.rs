@@ -35,19 +35,17 @@ impl From<crate::W<FILTER_CTRL0_SPEC>> for W {
     }
 }
 #[doc = "Field `FILTER_CHANNEL1` reader - Need add description"]
-pub type FILTER_CHANNEL1_R = crate::FieldReader<u8, u8>;
+pub type FILTER_CHANNEL1_R = crate::FieldReader;
 #[doc = "Field `FILTER_CHANNEL1` writer - Need add description"]
-pub type FILTER_CHANNEL1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL0_SPEC, u8, u8, 4, O>;
+pub type FILTER_CHANNEL1_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL0_SPEC, 4, O>;
 #[doc = "Field `FILTER_CHANNEL0` reader - apb_adc1_filter_factor"]
-pub type FILTER_CHANNEL0_R = crate::FieldReader<u8, u8>;
+pub type FILTER_CHANNEL0_R = crate::FieldReader;
 #[doc = "Field `FILTER_CHANNEL0` writer - apb_adc1_filter_factor"]
-pub type FILTER_CHANNEL0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL0_SPEC, u8, u8, 4, O>;
+pub type FILTER_CHANNEL0_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL0_SPEC, 4, O>;
 #[doc = "Field `FILTER_RESET` reader - enable apb_adc1_filter"]
-pub type FILTER_RESET_R = crate::BitReader<bool>;
+pub type FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `FILTER_RESET` writer - enable apb_adc1_filter"]
-pub type FILTER_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, FILTER_CTRL0_SPEC, bool, O>;
+pub type FILTER_RESET_W<'a, const O: u8> = crate::BitWriter<'a, FILTER_CTRL0_SPEC, O>;
 impl R {
     #[doc = "Bits 18:21 - Need add description"]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn filter_reset(&self) -> FILTER_RESET_R {
         FILTER_RESET_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FILTER_CTRL0")
+            .field(
+                "filter_channel1",
+                &format_args!("{}", self.filter_channel1().bits()),
+            )
+            .field(
+                "filter_channel0",
+                &format_args!("{}", self.filter_channel0().bits()),
+            )
+            .field(
+                "filter_reset",
+                &format_args!("{}", self.filter_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

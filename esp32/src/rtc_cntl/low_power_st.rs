@@ -16,7 +16,7 @@ impl From<crate::R<LOW_POWER_ST_SPEC>> for R {
 #[doc = "Field `LOW_POWER_DIAG0` reader - "]
 pub type LOW_POWER_DIAG0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - 1 if RTC controller is ready to execute WAKE instruction, 0 otherwise"]
-pub type RDY_FOR_WAKEUP_R = crate::BitReader<bool>;
+pub type RDY_FOR_WAKEUP_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn rdy_for_wakeup(&self) -> RDY_FOR_WAKEUP_R {
         RDY_FOR_WAKEUP_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOW_POWER_ST")
+            .field(
+                "low_power_diag0",
+                &format_args!("{}", self.low_power_diag0().bits()),
+            )
+            .field(
+                "rdy_for_wakeup",
+                &format_args!("{}", self.rdy_for_wakeup().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOW_POWER_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [low_power_st](index.html) module"]

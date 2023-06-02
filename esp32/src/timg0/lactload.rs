@@ -20,7 +20,13 @@ impl From<crate::W<LACTLOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_LOAD` writer - "]
-pub type LACT_LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LACTLOAD_SPEC, u32, u32, 32, O>;
+pub type LACT_LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, LACTLOAD_SPEC, 32, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LACTLOAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]

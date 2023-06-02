@@ -20,69 +20,75 @@ impl From<crate::W<CH_ENA_AD0_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_CLR0` writer - ch0 clear"]
-pub type CH_CLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR0_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR1` writer - ch1 clear"]
-pub type CH_CLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR1_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR2` writer - ch2 clear"]
-pub type CH_CLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR2_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR3` writer - ch3 clear"]
-pub type CH_CLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR3_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR4` writer - ch4 clear"]
-pub type CH_CLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR4_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR5` writer - ch5 clear"]
-pub type CH_CLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR5_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR6` writer - ch6 clear"]
-pub type CH_CLR6_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR6_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR7` writer - ch7 clear"]
-pub type CH_CLR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR7_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR8` writer - ch8 clear"]
-pub type CH_CLR8_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR8_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR9` writer - ch9 clear"]
-pub type CH_CLR9_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR9_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR10` writer - ch10 clear"]
-pub type CH_CLR10_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR10_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR11` writer - ch11 clear"]
-pub type CH_CLR11_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR11_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR12` writer - ch12 clear"]
-pub type CH_CLR12_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR12_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR13` writer - ch13 clear"]
-pub type CH_CLR13_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR13_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR14` writer - ch14 clear"]
-pub type CH_CLR14_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR14_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR15` writer - ch15 clear"]
-pub type CH_CLR15_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR15_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR16` writer - ch16 clear"]
-pub type CH_CLR16_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR16_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR17` writer - ch17 clear"]
-pub type CH_CLR17_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR17_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR18` writer - ch18 clear"]
-pub type CH_CLR18_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR18_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR19` writer - ch19 clear"]
-pub type CH_CLR19_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR19_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR20` writer - ch20 clear"]
-pub type CH_CLR20_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR20_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR21` writer - ch21 clear"]
-pub type CH_CLR21_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR21_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR22` writer - ch22 clear"]
-pub type CH_CLR22_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR22_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR23` writer - ch23 clear"]
-pub type CH_CLR23_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR23_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR24` writer - ch24 clear"]
-pub type CH_CLR24_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR24_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR25` writer - ch25 clear"]
-pub type CH_CLR25_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR25_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR26` writer - ch26 clear"]
-pub type CH_CLR26_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR26_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR27` writer - ch27 clear"]
-pub type CH_CLR27_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR27_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR28` writer - ch28 clear"]
-pub type CH_CLR28_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR28_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR29` writer - ch29 clear"]
-pub type CH_CLR29_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR29_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR30` writer - ch30 clear"]
-pub type CH_CLR30_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR30_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
 #[doc = "Field `CH_CLR31` writer - ch31 clear"]
-pub type CH_CLR31_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_CLR_SPEC, bool, O>;
+pub type CH_CLR31_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD0_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - ch0 clear"]
     #[inline(always)]

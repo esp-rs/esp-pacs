@@ -35,14 +35,28 @@ impl From<crate::W<CACHE_REQUEST_SPEC>> for W {
     }
 }
 #[doc = "Field `BYPASS` reader - The bit is used to disable request recording which could cause performance issue"]
-pub type BYPASS_R = crate::BitReader<bool>;
+pub type BYPASS_R = crate::BitReader;
 #[doc = "Field `BYPASS` writer - The bit is used to disable request recording which could cause performance issue"]
-pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_REQUEST_SPEC, bool, O>;
+pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_REQUEST_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable request recording which could cause performance issue"]
     #[inline(always)]
     pub fn bypass(&self) -> BYPASS_R {
         BYPASS_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_REQUEST")
+            .field("bypass", &format_args!("{}", self.bypass().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_REQUEST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

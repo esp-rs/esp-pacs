@@ -35,14 +35,28 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type WB_MODE_R = crate::FieldReader<u8, u8>;
+pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RD_STATUS_SPEC, u8, u8, 8, O>;
+pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
     pub fn wb_mode(&self) -> WB_MODE_R {
         WB_MODE_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_STATUS")
+            .field("wb_mode", &format_args!("{}", self.wb_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

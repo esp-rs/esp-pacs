@@ -22,6 +22,23 @@ impl R {
         INTR_STATUS_1_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_INTR_STATUS_1")
+            .field(
+                "intr_status_1",
+                &format_args!("{}", self.intr_status_1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_INTR_STATUS_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_intr_status_1](index.html) module"]
 pub struct APP_INTR_STATUS_1_SPEC;
 impl crate::RegisterSpec for APP_INTR_STATUS_1_SPEC {

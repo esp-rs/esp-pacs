@@ -35,109 +35,109 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_RESET` writer - Set this bit to reset transmitter."]
-pub type TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_RESET` writer - Set this bit to reset receiver."]
-pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_FIFO_RESET` writer - Set this bit to reset TX FIFO."]
-pub type TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_FIFO_RESET` writer - Set this bit to reset RX FIFO."]
-pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_START` reader - Set this bit to start transmitting data."]
-pub type TX_START_R = crate::BitReader<bool>;
+pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - Set this bit to start transmitting data."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_START` reader - Set this bit to start receiving data."]
-pub type RX_START_R = crate::BitReader<bool>;
+pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - Set this bit to start receiving data."]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_SLAVE_MOD` reader - Set this bit to enable slave transmitter mode."]
-pub type TX_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type TX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `TX_SLAVE_MOD` writer - Set this bit to enable slave transmitter mode."]
-pub type TX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_SLAVE_MOD` reader - Set this bit to enable slave receiver mode."]
-pub type RX_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type RX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `RX_SLAVE_MOD` writer - Set this bit to enable slave receiver mode."]
-pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_RIGHT_FIRST` reader - Set this bit to transmit right channel data first."]
-pub type TX_RIGHT_FIRST_R = crate::BitReader<bool>;
+pub type TX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_RIGHT_FIRST` writer - Set this bit to transmit right channel data first."]
-pub type TX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_RIGHT_FIRST` reader - Set this bit to receive right channel data first."]
-pub type RX_RIGHT_FIRST_R = crate::BitReader<bool>;
+pub type RX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_RIGHT_FIRST` writer - Set this bit to receive right channel data first."]
-pub type RX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MSB_SHIFT` reader - Set this bit to enable transmitter in Phillips standard mode."]
-pub type TX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type TX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_SHIFT` writer - Set this bit to enable transmitter in Phillips standard mode."]
-pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MSB_SHIFT` reader - Set this bit to enable receiver in Phillips standard mode."]
-pub type RX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - Set this bit to enable receiver in Phillips standard mode."]
-pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_SHORT_SYNC` reader - Set this bit to enable transmitter in PCM standard mode."]
-pub type TX_SHORT_SYNC_R = crate::BitReader<bool>;
+pub type TX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `TX_SHORT_SYNC` writer - Set this bit to enable transmitter in PCM standard mode."]
-pub type TX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_SHORT_SYNC` reader - Set this bit to enable receiver in PCM standard mode."]
-pub type RX_SHORT_SYNC_R = crate::BitReader<bool>;
+pub type RX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `RX_SHORT_SYNC` writer - Set this bit to enable receiver in PCM standard mode."]
-pub type RX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MONO` reader - Set this bit to enable transmitter in mono mode."]
-pub type TX_MONO_R = crate::BitReader<bool>;
+pub type TX_MONO_R = crate::BitReader;
 #[doc = "Field `TX_MONO` writer - Set this bit to enable transmitter in mono mode."]
-pub type TX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MONO` reader - Set this bit to enable receiver in mono mode."]
-pub type RX_MONO_R = crate::BitReader<bool>;
+pub type RX_MONO_R = crate::BitReader;
 #[doc = "Field `RX_MONO` writer - Set this bit to enable receiver in mono mode."]
-pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MSB_RIGHT` reader - Set this bit to place right channel data at the MSB in TX FIFO."]
-pub type TX_MSB_RIGHT_R = crate::BitReader<bool>;
+pub type TX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_RIGHT` writer - Set this bit to place right channel data at the MSB in TX FIFO."]
-pub type TX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MSB_RIGHT` reader - Set this bit to place right channel data at the MSB in RX FIFO."]
-pub type RX_MSB_RIGHT_R = crate::BitReader<bool>;
+pub type RX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_RIGHT` writer - Set this bit to place right channel data at the MSB in RX FIFO."]
-pub type RX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_LSB_FIRST_DMA` reader - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type TX_LSB_FIRST_DMA_R = crate::BitReader<bool>;
+pub type TX_LSB_FIRST_DMA_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST_DMA` writer - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type TX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_LSB_FIRST_DMA` reader - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type RX_LSB_FIRST_DMA_R = crate::BitReader<bool>;
+pub type RX_LSB_FIRST_DMA_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST_DMA` writer - 1:the data in DMA/APB transform from low bits. 0:the data from DMA/APB transform from high bits."]
-pub type RX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_LSB_FIRST_DMA_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `SIG_LOOPBACK` reader - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
-pub type SIG_LOOPBACK_R = crate::BitReader<bool>;
+pub type SIG_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `SIG_LOOPBACK` writer - Enable signal loopback mode with transmitter module and receiver module sharing the same WS and BCK signals."]
-pub type SIG_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type SIG_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_FIFO_RESET_ST` reader - I2S TX FIFO reset status. 1: I2S_TX_FIFO_RESET is not completed. 0: I2S_TX_FIFO_RESET is completed."]
-pub type TX_FIFO_RESET_ST_R = crate::BitReader<bool>;
+pub type TX_FIFO_RESET_ST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RESET_ST` reader - I2S RX FIFO reset status. 1: I2S_RX_FIFO_RESET is not completed. 0: I2S_RX_FIFO_RESET is completed."]
-pub type RX_FIFO_RESET_ST_R = crate::BitReader<bool>;
+pub type RX_FIFO_RESET_ST_R = crate::BitReader;
 #[doc = "Field `TX_RESET_ST` reader - I2S TX reset status. 1: I2S_TX_RESET is not completed. 0: I2S_TX_RESET is completed."]
-pub type TX_RESET_ST_R = crate::BitReader<bool>;
+pub type TX_RESET_ST_R = crate::BitReader;
 #[doc = "Field `TX_DMA_EQUAL` reader - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type TX_DMA_EQUAL_R = crate::BitReader<bool>;
+pub type TX_DMA_EQUAL_R = crate::BitReader;
 #[doc = "Field `TX_DMA_EQUAL` writer - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type TX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_DMA_EQUAL` reader - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type RX_DMA_EQUAL_R = crate::BitReader<bool>;
+pub type RX_DMA_EQUAL_R = crate::BitReader;
 #[doc = "Field `RX_DMA_EQUAL` writer - 1: Data in left channel is equal to data in right channel. 0: Data in left channel is not equal to data in right channel."]
-pub type RX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_DMA_EQUAL_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `PRE_REQ_EN` reader - Set this bit to enable I2S to prepare data earlier."]
-pub type PRE_REQ_EN_R = crate::BitReader<bool>;
+pub type PRE_REQ_EN_R = crate::BitReader;
 #[doc = "Field `PRE_REQ_EN` writer - Set this bit to enable I2S to prepare data earlier."]
-pub type PRE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type PRE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_BIG_ENDIAN` reader - I2S TX byte endianness."]
-pub type TX_BIG_ENDIAN_R = crate::BitReader<bool>;
+pub type TX_BIG_ENDIAN_R = crate::BitReader;
 #[doc = "Field `TX_BIG_ENDIAN` writer - I2S TX byte endianness."]
-pub type TX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_BIG_ENDIAN` reader - I2S RX byte endianness."]
-pub type RX_BIG_ENDIAN_R = crate::BitReader<bool>;
+pub type RX_BIG_ENDIAN_R = crate::BitReader;
 #[doc = "Field `RX_BIG_ENDIAN` writer - I2S RX byte endianness."]
-pub type RX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_BIG_ENDIAN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_RESET_ST` reader - I2S RX reset status. 1: I2S_RX_RESET is not completed. 0: I2S_RX_RESET is completed."]
-pub type RX_RESET_ST_R = crate::BitReader<bool>;
+pub type RX_RESET_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 4 - Set this bit to start transmitting data."]
     #[inline(always)]
@@ -268,6 +268,102 @@ impl R {
     #[inline(always)]
     pub fn rx_reset_st(&self) -> RX_RESET_ST_R {
         RX_RESET_ST_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
+            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
+            .field(
+                "tx_slave_mod",
+                &format_args!("{}", self.tx_slave_mod().bit()),
+            )
+            .field(
+                "rx_slave_mod",
+                &format_args!("{}", self.rx_slave_mod().bit()),
+            )
+            .field(
+                "tx_right_first",
+                &format_args!("{}", self.tx_right_first().bit()),
+            )
+            .field(
+                "rx_right_first",
+                &format_args!("{}", self.rx_right_first().bit()),
+            )
+            .field(
+                "tx_msb_shift",
+                &format_args!("{}", self.tx_msb_shift().bit()),
+            )
+            .field(
+                "rx_msb_shift",
+                &format_args!("{}", self.rx_msb_shift().bit()),
+            )
+            .field(
+                "tx_short_sync",
+                &format_args!("{}", self.tx_short_sync().bit()),
+            )
+            .field(
+                "rx_short_sync",
+                &format_args!("{}", self.rx_short_sync().bit()),
+            )
+            .field("tx_mono", &format_args!("{}", self.tx_mono().bit()))
+            .field("rx_mono", &format_args!("{}", self.rx_mono().bit()))
+            .field(
+                "tx_msb_right",
+                &format_args!("{}", self.tx_msb_right().bit()),
+            )
+            .field(
+                "rx_msb_right",
+                &format_args!("{}", self.rx_msb_right().bit()),
+            )
+            .field(
+                "tx_lsb_first_dma",
+                &format_args!("{}", self.tx_lsb_first_dma().bit()),
+            )
+            .field(
+                "rx_lsb_first_dma",
+                &format_args!("{}", self.rx_lsb_first_dma().bit()),
+            )
+            .field(
+                "sig_loopback",
+                &format_args!("{}", self.sig_loopback().bit()),
+            )
+            .field(
+                "tx_fifo_reset_st",
+                &format_args!("{}", self.tx_fifo_reset_st().bit()),
+            )
+            .field(
+                "rx_fifo_reset_st",
+                &format_args!("{}", self.rx_fifo_reset_st().bit()),
+            )
+            .field("tx_reset_st", &format_args!("{}", self.tx_reset_st().bit()))
+            .field(
+                "tx_dma_equal",
+                &format_args!("{}", self.tx_dma_equal().bit()),
+            )
+            .field(
+                "rx_dma_equal",
+                &format_args!("{}", self.rx_dma_equal().bit()),
+            )
+            .field("pre_req_en", &format_args!("{}", self.pre_req_en().bit()))
+            .field(
+                "tx_big_endian",
+                &format_args!("{}", self.tx_big_endian().bit()),
+            )
+            .field(
+                "rx_big_endian",
+                &format_args!("{}", self.rx_big_endian().bit()),
+            )
+            .field("rx_reset_st", &format_args!("{}", self.rx_reset_st().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

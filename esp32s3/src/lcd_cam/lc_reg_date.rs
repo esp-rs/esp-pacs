@@ -37,13 +37,26 @@ impl From<crate::W<LC_REG_DATE_SPEC>> for W {
 #[doc = "Field `LC_DATE` reader - LCD_CAM version control register"]
 pub type LC_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LC_DATE` writer - LCD_CAM version control register"]
-pub type LC_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LC_REG_DATE_SPEC, u32, u32, 28, O>;
+pub type LC_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, LC_REG_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - LCD_CAM version control register"]
     #[inline(always)]
     pub fn lc_date(&self) -> LC_DATE_R {
         LC_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LC_REG_DATE")
+            .field("lc_date", &format_args!("{}", self.lc_date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_REG_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

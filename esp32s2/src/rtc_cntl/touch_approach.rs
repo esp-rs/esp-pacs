@@ -35,18 +35,30 @@ impl From<crate::W<TOUCH_APPROACH_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_SLP_CHANNEL_CLR` writer - Clear touch sleep channel."]
-pub type TOUCH_SLP_CHANNEL_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_APPROACH_SPEC, bool, O>;
+pub type TOUCH_SLP_CHANNEL_CLR_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_APPROACH_SPEC, O>;
 #[doc = "Field `MEAS_TIME` reader - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
-pub type MEAS_TIME_R = crate::FieldReader<u8, u8>;
+pub type MEAS_TIME_R = crate::FieldReader;
 #[doc = "Field `MEAS_TIME` writer - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
-pub type MEAS_TIME_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_APPROACH_SPEC, u8, u8, 8, O>;
+pub type MEAS_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_APPROACH_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 24:31 - Set the total measurement times for the pads in proximity mode. Range: 0 – 255."]
     #[inline(always)]
     pub fn meas_time(&self) -> MEAS_TIME_R {
         MEAS_TIME_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_APPROACH")
+            .field("meas_time", &format_args!("{}", self.meas_time().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_APPROACH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

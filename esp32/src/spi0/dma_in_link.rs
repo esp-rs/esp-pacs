@@ -37,24 +37,23 @@ impl From<crate::W<DMA_IN_LINK_SPEC>> for W {
 #[doc = "Field `INLINK_ADDR` reader - The address of the first inlink descriptor."]
 pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INLINK_ADDR` writer - The address of the first inlink descriptor."]
-pub type INLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_IN_LINK_SPEC, u32, u32, 20, O>;
+pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_IN_LINK_SPEC, 20, O, u32, u32>;
 #[doc = "Field `INLINK_AUTO_RET` reader - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
-pub type INLINK_AUTO_RET_R = crate::BitReader<bool>;
+pub type INLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `INLINK_AUTO_RET` writer - when the bit is set inlink descriptor returns to the next descriptor while a packet is wrong"]
-pub type INLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, O>;
+pub type INLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, DMA_IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_STOP` reader - Set the bit to stop to use inlink descriptor."]
-pub type INLINK_STOP_R = crate::BitReader<bool>;
+pub type INLINK_STOP_R = crate::BitReader;
 #[doc = "Field `INLINK_STOP` writer - Set the bit to stop to use inlink descriptor."]
-pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, O>;
+pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, DMA_IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_START` reader - Set the bit to start to use inlink descriptor."]
-pub type INLINK_START_R = crate::BitReader<bool>;
+pub type INLINK_START_R = crate::BitReader;
 #[doc = "Field `INLINK_START` writer - Set the bit to start to use inlink descriptor."]
-pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, O>;
+pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, DMA_IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_RESTART` reader - Set the bit to mount on new inlink descriptors."]
-pub type INLINK_RESTART_R = crate::BitReader<bool>;
+pub type INLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `INLINK_RESTART` writer - Set the bit to mount on new inlink descriptors."]
-pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, O>;
+pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, DMA_IN_LINK_SPEC, O>;
 impl R {
     #[doc = "Bits 0:19 - The address of the first inlink descriptor."]
     #[inline(always)]
@@ -80,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn inlink_restart(&self) -> INLINK_RESTART_R {
         INLINK_RESTART_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_IN_LINK")
+            .field(
+                "inlink_addr",
+                &format_args!("{}", self.inlink_addr().bits()),
+            )
+            .field(
+                "inlink_auto_ret",
+                &format_args!("{}", self.inlink_auto_ret().bit()),
+            )
+            .field("inlink_stop", &format_args!("{}", self.inlink_stop().bit()))
+            .field(
+                "inlink_start",
+                &format_args!("{}", self.inlink_start().bit()),
+            )
+            .field(
+                "inlink_restart",
+                &format_args!("{}", self.inlink_restart().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_IN_LINK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

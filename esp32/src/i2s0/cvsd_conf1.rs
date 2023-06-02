@@ -38,12 +38,12 @@ impl From<crate::W<CVSD_CONF1_SPEC>> for W {
 pub type CVSD_SIGMA_MAX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CVSD_SIGMA_MAX` writer - "]
 pub type CVSD_SIGMA_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CVSD_CONF1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `CVSD_SIGMA_MIN` reader - "]
 pub type CVSD_SIGMA_MIN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CVSD_SIGMA_MIN` writer - "]
 pub type CVSD_SIGMA_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CVSD_CONF1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn cvsd_sigma_min(&self) -> CVSD_SIGMA_MIN_R {
         CVSD_SIGMA_MIN_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CVSD_CONF1")
+            .field(
+                "cvsd_sigma_max",
+                &format_args!("{}", self.cvsd_sigma_max().bits()),
+            )
+            .field(
+                "cvsd_sigma_min",
+                &format_args!("{}", self.cvsd_sigma_min().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CVSD_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

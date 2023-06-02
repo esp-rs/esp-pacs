@@ -35,25 +35,21 @@ impl From<crate::W<GEN1_STMP_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN1_A_UPMETHOD` reader - "]
-pub type GEN1_A_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type GEN1_A_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN1_A_UPMETHOD` writer - "]
-pub type GEN1_A_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN1_STMP_CFG_SPEC, u8, u8, 4, O>;
+pub type GEN1_A_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, GEN1_STMP_CFG_SPEC, 4, O>;
 #[doc = "Field `GEN1_B_UPMETHOD` reader - "]
-pub type GEN1_B_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type GEN1_B_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN1_B_UPMETHOD` writer - "]
-pub type GEN1_B_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN1_STMP_CFG_SPEC, u8, u8, 4, O>;
+pub type GEN1_B_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, GEN1_STMP_CFG_SPEC, 4, O>;
 #[doc = "Field `GEN1_A_SHDW_FULL` reader - "]
-pub type GEN1_A_SHDW_FULL_R = crate::BitReader<bool>;
+pub type GEN1_A_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `GEN1_A_SHDW_FULL` writer - "]
-pub type GEN1_A_SHDW_FULL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GEN1_STMP_CFG_SPEC, bool, O>;
+pub type GEN1_A_SHDW_FULL_W<'a, const O: u8> = crate::BitWriter<'a, GEN1_STMP_CFG_SPEC, O>;
 #[doc = "Field `GEN1_B_SHDW_FULL` reader - "]
-pub type GEN1_B_SHDW_FULL_R = crate::BitReader<bool>;
+pub type GEN1_B_SHDW_FULL_R = crate::BitReader;
 #[doc = "Field `GEN1_B_SHDW_FULL` writer - "]
-pub type GEN1_B_SHDW_FULL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GEN1_STMP_CFG_SPEC, bool, O>;
+pub type GEN1_B_SHDW_FULL_W<'a, const O: u8> = crate::BitWriter<'a, GEN1_STMP_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn gen1_b_shdw_full(&self) -> GEN1_B_SHDW_FULL_R {
         GEN1_B_SHDW_FULL_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GEN1_STMP_CFG")
+            .field(
+                "gen1_a_upmethod",
+                &format_args!("{}", self.gen1_a_upmethod().bits()),
+            )
+            .field(
+                "gen1_b_upmethod",
+                &format_args!("{}", self.gen1_b_upmethod().bits()),
+            )
+            .field(
+                "gen1_a_shdw_full",
+                &format_args!("{}", self.gen1_a_shdw_full().bit()),
+            )
+            .field(
+                "gen1_b_shdw_full",
+                &format_args!("{}", self.gen1_b_shdw_full().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GEN1_STMP_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

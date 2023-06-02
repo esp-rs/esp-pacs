@@ -20,8 +20,13 @@ impl From<crate::W<SET_INVALIDATE_DS_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_INVALIDATE_DS` writer - Set this bit to clear calculation results in DS function under downstream mode."]
-pub type SET_INVALIDATE_DS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SET_INVALIDATE_DS_SPEC, bool, O>;
+pub type SET_INVALIDATE_DS_W<'a, const O: u8> = crate::BitWriter<'a, SET_INVALIDATE_DS_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_INVALIDATE_DS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear calculation results in DS function under downstream mode."]
     #[inline(always)]

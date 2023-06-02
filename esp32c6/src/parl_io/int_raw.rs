@@ -35,19 +35,17 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_FIFO_REMPTY_INT_RAW` reader - The raw interrupt status of TX_FIFO_REMPTY_INTR."]
-pub type TX_FIFO_REMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_FIFO_REMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_REMPTY_INT_RAW` writer - The raw interrupt status of TX_FIFO_REMPTY_INTR."]
-pub type TX_FIFO_REMPTY_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_FIFO_REMPTY_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RX_FIFO_WFULL_INT_RAW` reader - The raw interrupt status of RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_FIFO_WFULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_WFULL_INT_RAW` writer - The raw interrupt status of RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_FIFO_WFULL_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_EOF_INT_RAW` reader - The raw interrupt status of TX_EOF_INTR."]
-pub type TX_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_RAW` writer - The raw interrupt status of TX_EOF_INTR."]
-pub type TX_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status of TX_FIFO_REMPTY_INTR."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn tx_eof_int_raw(&self) -> TX_EOF_INT_RAW_R {
         TX_EOF_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "tx_fifo_rempty_int_raw",
+                &format_args!("{}", self.tx_fifo_rempty_int_raw().bit()),
+            )
+            .field(
+                "rx_fifo_wfull_int_raw",
+                &format_args!("{}", self.rx_fifo_wfull_int_raw().bit()),
+            )
+            .field(
+                "tx_eof_int_raw",
+                &format_args!("{}", self.tx_eof_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

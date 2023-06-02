@@ -35,15 +35,32 @@ impl From<crate::W<SPI_MEM_XTS_LINESIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_XTS_LINESIZE` reader - This bits stores the line-size parameter which will be used in manual encryption calculation. It decides how many bytes will be encrypted one time. 0: 16-bytes, 1: 32-bytes, 2: 64-bytes, 3:reserved."]
-pub type SPI_XTS_LINESIZE_R = crate::FieldReader<u8, u8>;
+pub type SPI_XTS_LINESIZE_R = crate::FieldReader;
 #[doc = "Field `SPI_XTS_LINESIZE` writer - This bits stores the line-size parameter which will be used in manual encryption calculation. It decides how many bytes will be encrypted one time. 0: 16-bytes, 1: 32-bytes, 2: 64-bytes, 3:reserved."]
 pub type SPI_XTS_LINESIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_XTS_LINESIZE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_LINESIZE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This bits stores the line-size parameter which will be used in manual encryption calculation. It decides how many bytes will be encrypted one time. 0: 16-bytes, 1: 32-bytes, 2: 64-bytes, 3:reserved."]
     #[inline(always)]
     pub fn spi_xts_linesize(&self) -> SPI_XTS_LINESIZE_R {
         SPI_XTS_LINESIZE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_XTS_LINESIZE")
+            .field(
+                "spi_xts_linesize",
+                &format_args!("{}", self.spi_xts_linesize().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_LINESIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

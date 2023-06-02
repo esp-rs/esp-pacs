@@ -38,12 +38,12 @@ impl From<crate::W<SPI_MEM_USER2_SPEC>> for W {
 pub type SPI_MEM_USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_USR_COMMAND_VALUE` writer - The value of command."]
 pub type SPI_MEM_USR_COMMAND_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_USER2_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SPI_MEM_USER2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `SPI_MEM_USR_COMMAND_BITLEN` reader - The length in bits of command phase. The register value shall be (bit_num-1)"]
-pub type SPI_MEM_USR_COMMAND_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_USR_COMMAND_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_COMMAND_BITLEN` writer - The length in bits of command phase. The register value shall be (bit_num-1)"]
 pub type SPI_MEM_USR_COMMAND_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_USER2_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SPI_MEM_USER2_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:15 - The value of command."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_usr_command_bitlen(&self) -> SPI_MEM_USR_COMMAND_BITLEN_R {
         SPI_MEM_USR_COMMAND_BITLEN_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_USER2")
+            .field(
+                "spi_mem_usr_command_value",
+                &format_args!("{}", self.spi_mem_usr_command_value().bits()),
+            )
+            .field(
+                "spi_mem_usr_command_bitlen",
+                &format_args!("{}", self.spi_mem_usr_command_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_USER2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

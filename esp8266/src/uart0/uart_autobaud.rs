@@ -35,14 +35,13 @@ impl From<crate::W<UART_AUTOBAUD_SPEC>> for W {
     }
 }
 #[doc = "Field `autobaud_en` reader - Set this bit to enable baudrate detect"]
-pub type AUTOBAUD_EN_R = crate::BitReader<bool>;
+pub type AUTOBAUD_EN_R = crate::BitReader;
 #[doc = "Field `autobaud_en` writer - Set this bit to enable baudrate detect"]
-pub type AUTOBAUD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_AUTOBAUD_SPEC, bool, O>;
+pub type AUTOBAUD_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART_AUTOBAUD_SPEC, O>;
 #[doc = "Field `glitch_filt` reader - "]
-pub type GLITCH_FILT_R = crate::FieldReader<u8, u8>;
+pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `glitch_filt` writer - "]
-pub type GLITCH_FILT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_AUTOBAUD_SPEC, u8, u8, 8, O>;
+pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, UART_AUTOBAUD_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable baudrate detect"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn glitch_filt(&self) -> GLITCH_FILT_R {
         GLITCH_FILT_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_AUTOBAUD")
+            .field(
+                "glitch_filt",
+                &format_args!("{}", self.glitch_filt().bits()),
+            )
+            .field("autobaud_en", &format_args!("{}", self.autobaud_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_AUTOBAUD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

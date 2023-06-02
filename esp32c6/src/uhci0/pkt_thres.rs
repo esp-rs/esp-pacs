@@ -37,12 +37,26 @@ impl From<crate::W<PKT_THRES_SPEC>> for W {
 #[doc = "Field `PKT_THRS` reader - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
 pub type PKT_THRS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PKT_THRS` writer - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
-pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PKT_THRES_SPEC, u16, u16, 13, O>;
+pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, PKT_THRES_SPEC, 13, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:12 - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
     #[inline(always)]
     pub fn pkt_thrs(&self) -> PKT_THRS_R {
         PKT_THRS_R::new((self.bits & 0x1fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PKT_THRES")
+            .field("pkt_thrs", &format_args!("{}", self.pkt_thrs().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PKT_THRES_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

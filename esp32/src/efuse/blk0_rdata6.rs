@@ -14,25 +14,25 @@ impl From<crate::R<BLK0_RDATA6_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_CODING_SCHEME` reader - read for coding_scheme"]
-pub type RD_CODING_SCHEME_R = crate::FieldReader<u8, u8>;
+pub type RD_CODING_SCHEME_R = crate::FieldReader;
 #[doc = "Field `RD_CONSOLE_DEBUG_DISABLE` reader - read for console_debug_disable"]
-pub type RD_CONSOLE_DEBUG_DISABLE_R = crate::BitReader<bool>;
+pub type RD_CONSOLE_DEBUG_DISABLE_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_SDIO_HOST` reader - "]
-pub type RD_DISABLE_SDIO_HOST_R = crate::BitReader<bool>;
+pub type RD_DISABLE_SDIO_HOST_R = crate::BitReader;
 #[doc = "Field `RD_ABS_DONE_0` reader - read for abstract_done_0"]
-pub type RD_ABS_DONE_0_R = crate::BitReader<bool>;
+pub type RD_ABS_DONE_0_R = crate::BitReader;
 #[doc = "Field `RD_ABS_DONE_1` reader - read for abstract_done_1"]
-pub type RD_ABS_DONE_1_R = crate::BitReader<bool>;
+pub type RD_ABS_DONE_1_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_JTAG` reader - read for JTAG_disable"]
-pub type RD_DISABLE_JTAG_R = crate::BitReader<bool>;
+pub type RD_DISABLE_JTAG_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_DL_ENCRYPT` reader - read for download_dis_encrypt"]
-pub type RD_DISABLE_DL_ENCRYPT_R = crate::BitReader<bool>;
+pub type RD_DISABLE_DL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_DL_DECRYPT` reader - read for download_dis_decrypt"]
-pub type RD_DISABLE_DL_DECRYPT_R = crate::BitReader<bool>;
+pub type RD_DISABLE_DL_DECRYPT_R = crate::BitReader;
 #[doc = "Field `RD_DISABLE_DL_CACHE` reader - read for download_dis_cache"]
-pub type RD_DISABLE_DL_CACHE_R = crate::BitReader<bool>;
+pub type RD_DISABLE_DL_CACHE_R = crate::BitReader;
 #[doc = "Field `RD_KEY_STATUS` reader - read for key_status"]
-pub type RD_KEY_STATUS_R = crate::BitReader<bool>;
+pub type RD_KEY_STATUS_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1 - read for coding_scheme"]
     #[inline(always)]
@@ -83,6 +83,59 @@ impl R {
     #[inline(always)]
     pub fn rd_key_status(&self) -> RD_KEY_STATUS_R {
         RD_KEY_STATUS_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_RDATA6")
+            .field(
+                "rd_coding_scheme",
+                &format_args!("{}", self.rd_coding_scheme().bits()),
+            )
+            .field(
+                "rd_console_debug_disable",
+                &format_args!("{}", self.rd_console_debug_disable().bit()),
+            )
+            .field(
+                "rd_disable_sdio_host",
+                &format_args!("{}", self.rd_disable_sdio_host().bit()),
+            )
+            .field(
+                "rd_abs_done_0",
+                &format_args!("{}", self.rd_abs_done_0().bit()),
+            )
+            .field(
+                "rd_abs_done_1",
+                &format_args!("{}", self.rd_abs_done_1().bit()),
+            )
+            .field(
+                "rd_disable_jtag",
+                &format_args!("{}", self.rd_disable_jtag().bit()),
+            )
+            .field(
+                "rd_disable_dl_encrypt",
+                &format_args!("{}", self.rd_disable_dl_encrypt().bit()),
+            )
+            .field(
+                "rd_disable_dl_decrypt",
+                &format_args!("{}", self.rd_disable_dl_decrypt().bit()),
+            )
+            .field(
+                "rd_disable_dl_cache",
+                &format_args!("{}", self.rd_disable_dl_cache().bit()),
+            )
+            .field(
+                "rd_key_status",
+                &format_args!("{}", self.rd_key_status().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata6](index.html) module"]

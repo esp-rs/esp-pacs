@@ -35,20 +35,17 @@ impl From<crate::W<GET_LINE_CODE_W1_SPEC>> for W {
     }
 }
 #[doc = "Field `GET_BDATA_BITS` reader - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BDATA_BITS_R = crate::FieldReader<u8, u8>;
+pub type GET_BDATA_BITS_R = crate::FieldReader;
 #[doc = "Field `GET_BDATA_BITS` writer - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BDATA_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GET_LINE_CODE_W1_SPEC, u8, u8, 8, O>;
+pub type GET_BDATA_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, GET_LINE_CODE_W1_SPEC, 8, O>;
 #[doc = "Field `GET_BPARITY_TYPE` reader - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BPARITY_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GET_BPARITY_TYPE_R = crate::FieldReader;
 #[doc = "Field `GET_BPARITY_TYPE` writer - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BPARITY_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GET_LINE_CODE_W1_SPEC, u8, u8, 8, O>;
+pub type GET_BPARITY_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, GET_LINE_CODE_W1_SPEC, 8, O>;
 #[doc = "Field `GET_BCHAR_FORMAT` reader - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BCHAR_FORMAT_R = crate::FieldReader<u8, u8>;
+pub type GET_BCHAR_FORMAT_R = crate::FieldReader;
 #[doc = "Field `GET_BCHAR_FORMAT` writer - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
-pub type GET_BCHAR_FORMAT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GET_LINE_CODE_W1_SPEC, u8, u8, 8, O>;
+pub type GET_BCHAR_FORMAT_W<'a, const O: u8> = crate::FieldWriter<'a, GET_LINE_CODE_W1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn get_bchar_format(&self) -> GET_BCHAR_FORMAT_R {
         GET_BCHAR_FORMAT_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GET_LINE_CODE_W1")
+            .field(
+                "get_bdata_bits",
+                &format_args!("{}", self.get_bdata_bits().bits()),
+            )
+            .field(
+                "get_bparity_type",
+                &format_args!("{}", self.get_bparity_type().bits()),
+            )
+            .field(
+                "get_bchar_format",
+                &format_args!("{}", self.get_bchar_format().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GET_LINE_CODE_W1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

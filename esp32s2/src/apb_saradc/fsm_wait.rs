@@ -35,17 +35,17 @@ impl From<crate::W<FSM_WAIT_SPEC>> for W {
     }
 }
 #[doc = "Field `XPD_WAIT` reader - xpd wait"]
-pub type XPD_WAIT_R = crate::FieldReader<u8, u8>;
+pub type XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `XPD_WAIT` writer - xpd wait"]
-pub type XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 #[doc = "Field `RSTB_WAIT` reader - reset time"]
-pub type RSTB_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `RSTB_WAIT` writer - reset time"]
-pub type RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 #[doc = "Field `STANDBY_WAIT` reader - standby wait"]
-pub type STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
+pub type STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `STANDBY_WAIT` writer - standby wait"]
-pub type STANDBY_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type STANDBY_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
@@ -61,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn standby_wait(&self) -> STANDBY_WAIT_R {
         STANDBY_WAIT_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM_WAIT")
+            .field("xpd_wait", &format_args!("{}", self.xpd_wait().bits()))
+            .field("rstb_wait", &format_args!("{}", self.rstb_wait().bits()))
+            .field(
+                "standby_wait",
+                &format_args!("{}", self.standby_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FSM_WAIT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

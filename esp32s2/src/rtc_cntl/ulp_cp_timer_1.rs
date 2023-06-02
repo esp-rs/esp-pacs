@@ -38,12 +38,29 @@ impl From<crate::W<ULP_CP_TIMER_1_SPEC>> for W {
 pub type ULP_CP_TIMER_SLP_CYCLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ULP_CP_TIMER_SLP_CYCLE` writer - Set sleep cycles for ULP coprocessor timer"]
 pub type ULP_CP_TIMER_SLP_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ULP_CP_TIMER_1_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, ULP_CP_TIMER_1_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 8:31 - Set sleep cycles for ULP coprocessor timer"]
     #[inline(always)]
     pub fn ulp_cp_timer_slp_cycle(&self) -> ULP_CP_TIMER_SLP_CYCLE_R {
         ULP_CP_TIMER_SLP_CYCLE_R::new((self.bits >> 8) & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ULP_CP_TIMER_1")
+            .field(
+                "ulp_cp_timer_slp_cycle",
+                &format_args!("{}", self.ulp_cp_timer_slp_cycle().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ULP_CP_TIMER_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

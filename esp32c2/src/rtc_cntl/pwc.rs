@@ -35,14 +35,31 @@ impl From<crate::W<PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_FORCE_HOLD` reader - rtc pad force hold"]
-pub type PAD_FORCE_HOLD_R = crate::BitReader<bool>;
+pub type PAD_FORCE_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD_FORCE_HOLD` writer - rtc pad force hold"]
-pub type PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 impl R {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
     pub fn pad_force_hold(&self) -> PAD_FORCE_HOLD_R {
         PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWC")
+            .field(
+                "pad_force_hold",
+                &format_args!("{}", self.pad_force_hold().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PWC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

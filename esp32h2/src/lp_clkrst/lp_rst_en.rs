@@ -35,22 +35,21 @@ impl From<crate::W<LP_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `AON_EFUSE_CORE_RESET_EN` reader - need_des"]
-pub type AON_EFUSE_CORE_RESET_EN_R = crate::BitReader<bool>;
+pub type AON_EFUSE_CORE_RESET_EN_R = crate::BitReader;
 #[doc = "Field `AON_EFUSE_CORE_RESET_EN` writer - need_des"]
-pub type AON_EFUSE_CORE_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_RST_EN_SPEC, bool, O>;
+pub type AON_EFUSE_CORE_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_RST_EN_SPEC, O>;
 #[doc = "Field `LP_TIMER_RESET_EN` reader - need_des"]
-pub type LP_TIMER_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_TIMER_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_RESET_EN` writer - need_des"]
-pub type LP_TIMER_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_RST_EN_SPEC, bool, O>;
+pub type LP_TIMER_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_RST_EN_SPEC, O>;
 #[doc = "Field `WDT_RESET_EN` reader - need_des"]
-pub type WDT_RESET_EN_R = crate::BitReader<bool>;
+pub type WDT_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_RESET_EN` writer - need_des"]
-pub type WDT_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_RST_EN_SPEC, bool, O>;
+pub type WDT_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_RST_EN_SPEC, O>;
 #[doc = "Field `ANA_PERI_RESET_EN` reader - need_des"]
-pub type ANA_PERI_RESET_EN_R = crate::BitReader<bool>;
+pub type ANA_PERI_RESET_EN_R = crate::BitReader;
 #[doc = "Field `ANA_PERI_RESET_EN` writer - need_des"]
-pub type ANA_PERI_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_RST_EN_SPEC, bool, O>;
+pub type ANA_PERI_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_RST_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
@@ -71,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn ana_peri_reset_en(&self) -> ANA_PERI_RESET_EN_R {
         ANA_PERI_RESET_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_RST_EN")
+            .field(
+                "aon_efuse_core_reset_en",
+                &format_args!("{}", self.aon_efuse_core_reset_en().bit()),
+            )
+            .field(
+                "lp_timer_reset_en",
+                &format_args!("{}", self.lp_timer_reset_en().bit()),
+            )
+            .field(
+                "wdt_reset_en",
+                &format_args!("{}", self.wdt_reset_en().bit()),
+            )
+            .field(
+                "ana_peri_reset_en",
+                &format_args!("{}", self.ana_peri_reset_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_RST_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,13 +35,13 @@ impl From<crate::W<FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `SAMPLE_NUM` reader - sample number"]
-pub type SAMPLE_NUM_R = crate::FieldReader<u8, u8>;
+pub type SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_NUM` writer - sample number"]
-pub type SAMPLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSM_SPEC, u8, u8, 8, O>;
+pub type SAMPLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_SPEC, 8, O>;
 #[doc = "Field `SAMPLE_CYCLE` reader - sample cycles"]
-pub type SAMPLE_CYCLE_R = crate::FieldReader<u8, u8>;
+pub type SAMPLE_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_CYCLE` writer - sample cycles"]
-pub type SAMPLE_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSM_SPEC, u8, u8, 8, O>;
+pub type SAMPLE_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 16:23 - sample number"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn sample_cycle(&self) -> SAMPLE_CYCLE_R {
         SAMPLE_CYCLE_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM")
+            .field("sample_num", &format_args!("{}", self.sample_num().bits()))
+            .field(
+                "sample_cycle",
+                &format_args!("{}", self.sample_cycle().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FSM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

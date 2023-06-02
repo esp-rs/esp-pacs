@@ -35,25 +35,25 @@ impl From<crate::W<INTERNAL_SRAM_USAGE_2_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
-pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
 pub type INTERNAL_SRAM_CORE0_TRACE_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_2_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_2_SPEC, 7, O>;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
-pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
 pub type INTERNAL_SRAM_CORE1_TRACE_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_2_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_2_SPEC, 7, O>;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_ALLOC` reader - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
-pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE0_TRACE_ALLOC` writer - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
 pub type INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_2_SPEC, 2, O>;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_ALLOC` reader - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
-pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CORE1_TRACE_ALLOC` writer - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
 pub type INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_2_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:6 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core0 trace bus."]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn internal_sram_core1_trace_alloc(&self) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_R {
         INTERNAL_SRAM_CORE1_TRACE_ALLOC_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERNAL_SRAM_USAGE_2")
+            .field(
+                "internal_sram_core0_trace_usage",
+                &format_args!("{}", self.internal_sram_core0_trace_usage().bits()),
+            )
+            .field(
+                "internal_sram_core1_trace_usage",
+                &format_args!("{}", self.internal_sram_core1_trace_usage().bits()),
+            )
+            .field(
+                "internal_sram_core0_trace_alloc",
+                &format_args!("{}", self.internal_sram_core0_trace_alloc().bits()),
+            )
+            .field(
+                "internal_sram_core1_trace_alloc",
+                &format_args!("{}", self.internal_sram_core1_trace_alloc().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

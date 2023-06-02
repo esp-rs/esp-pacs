@@ -18,13 +18,13 @@ pub type MEM_WADDR_EX_CH2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_MEM_RADDR_CH2` reader - This register records the memory address offset when reads RAM over APB bus."]
 pub type APB_MEM_RADDR_CH2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE_CH2` reader - This register records the FSM status of CHANNEL%s."]
-pub type STATE_CH2_R = crate::FieldReader<u8, u8>;
+pub type STATE_CH2_R = crate::FieldReader;
 #[doc = "Field `MEM_OWNER_ERR_CH2` reader - This status bit will be set when the ownership of memory block is wrong."]
-pub type MEM_OWNER_ERR_CH2_R = crate::BitReader<bool>;
+pub type MEM_OWNER_ERR_CH2_R = crate::BitReader;
 #[doc = "Field `MEM_FULL_CH2` reader - This status bit will be set if the receiver receives more data than the memory size."]
-pub type MEM_FULL_CH2_R = crate::BitReader<bool>;
+pub type MEM_FULL_CH2_R = crate::BitReader;
 #[doc = "Field `APB_MEM_RD_ERR_CH2` reader - This status bit will be set if the offset address out of memory size when reads via APB bus."]
-pub type APB_MEM_RD_ERR_CH2_R = crate::BitReader<bool>;
+pub type APB_MEM_RD_ERR_CH2_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:8 - This register records the memory address offset when receiver of CHANNEL%s is using the RAM."]
     #[inline(always)]
@@ -55,6 +55,40 @@ impl R {
     #[inline(always)]
     pub fn apb_mem_rd_err_ch2(&self) -> APB_MEM_RD_ERR_CH2_R {
         APB_MEM_RD_ERR_CH2_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CHSTATUS")
+            .field(
+                "mem_waddr_ex_ch2",
+                &format_args!("{}", self.mem_waddr_ex_ch2().bits()),
+            )
+            .field(
+                "apb_mem_raddr_ch2",
+                &format_args!("{}", self.apb_mem_raddr_ch2().bits()),
+            )
+            .field("state_ch2", &format_args!("{}", self.state_ch2().bits()))
+            .field(
+                "mem_owner_err_ch2",
+                &format_args!("{}", self.mem_owner_err_ch2().bit()),
+            )
+            .field(
+                "mem_full_ch2",
+                &format_args!("{}", self.mem_full_ch2().bit()),
+            )
+            .field(
+                "apb_mem_rd_err_ch2",
+                &format_args!("{}", self.apb_mem_rd_err_ch2().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CHSTATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Channel %s status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_chstatus](index.html) module"]

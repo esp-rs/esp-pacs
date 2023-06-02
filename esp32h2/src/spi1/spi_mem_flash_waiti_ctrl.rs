@@ -35,40 +35,40 @@ impl From<crate::W<SPI_MEM_FLASH_WAITI_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_WAITI_EN` reader - 1: The hardware will wait idle after SE/PP/WRSR automatically, and hardware auto Suspend/Resume can be enabled. 0: The functions of hardware wait idle and auto Suspend/Resume are not supported."]
-pub type SPI_MEM_WAITI_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_WAITI_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WAITI_EN` writer - 1: The hardware will wait idle after SE/PP/WRSR automatically, and hardware auto Suspend/Resume can be enabled. 0: The functions of hardware wait idle and auto Suspend/Resume are not supported."]
 pub type SPI_MEM_WAITI_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WAITI_DUMMY` reader - The dummy phase enable when wait flash idle (RDSR)"]
-pub type SPI_MEM_WAITI_DUMMY_R = crate::BitReader<bool>;
+pub type SPI_MEM_WAITI_DUMMY_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WAITI_DUMMY` writer - The dummy phase enable when wait flash idle (RDSR)"]
 pub type SPI_MEM_WAITI_DUMMY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WAITI_ADDR_EN` reader - 1: Output address 0 in RDSR or read SUS command transfer. 0: Do not send out address in RDSR or read SUS command transfer."]
-pub type SPI_MEM_WAITI_ADDR_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_WAITI_ADDR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WAITI_ADDR_EN` writer - 1: Output address 0 in RDSR or read SUS command transfer. 0: Do not send out address in RDSR or read SUS command transfer."]
 pub type SPI_MEM_WAITI_ADDR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WAITI_ADDR_CYCLELEN` reader - When SPI_MEM_WAITI_ADDR_EN is set, the cycle length of sent out address is (SPI_MEM_WAITI_ADDR_CYCLELEN\\[1:0\\] + 1) SPI bus clock cycles. It is not active when SPI_MEM_WAITI_ADDR_EN is cleared."]
-pub type SPI_MEM_WAITI_ADDR_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_WAITI_ADDR_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_WAITI_ADDR_CYCLELEN` writer - When SPI_MEM_WAITI_ADDR_EN is set, the cycle length of sent out address is (SPI_MEM_WAITI_ADDR_CYCLELEN\\[1:0\\] + 1) SPI bus clock cycles. It is not active when SPI_MEM_WAITI_ADDR_EN is cleared."]
 pub type SPI_MEM_WAITI_ADDR_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_WAITI_CMD_2B` reader - 1:The wait idle command bit length is 16. 0: The wait idle command bit length is 8."]
-pub type SPI_MEM_WAITI_CMD_2B_R = crate::BitReader<bool>;
+pub type SPI_MEM_WAITI_CMD_2B_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WAITI_CMD_2B` writer - 1:The wait idle command bit length is 16. 0: The wait idle command bit length is 8."]
 pub type SPI_MEM_WAITI_CMD_2B_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WAITI_DUMMY_CYCLELEN` reader - The dummy cycle length when wait flash idle(RDSR)."]
-pub type SPI_MEM_WAITI_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_WAITI_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_WAITI_DUMMY_CYCLELEN` writer - The dummy cycle length when wait flash idle(RDSR)."]
 pub type SPI_MEM_WAITI_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 6, O>;
 #[doc = "Field `SPI_MEM_WAITI_CMD` reader - The command value to wait flash idle(RDSR)."]
 pub type SPI_MEM_WAITI_CMD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_WAITI_CMD` writer - The command value to wait flash idle(RDSR)."]
 pub type SPI_MEM_WAITI_CMD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_FLASH_WAITI_CTRL_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - 1: The hardware will wait idle after SE/PP/WRSR automatically, and hardware auto Suspend/Resume can be enabled. 0: The functions of hardware wait idle and auto Suspend/Resume are not supported."]
     #[inline(always)]
@@ -104,6 +104,47 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_waiti_cmd(&self) -> SPI_MEM_WAITI_CMD_R {
         SPI_MEM_WAITI_CMD_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_FLASH_WAITI_CTRL")
+            .field(
+                "spi_mem_waiti_en",
+                &format_args!("{}", self.spi_mem_waiti_en().bit()),
+            )
+            .field(
+                "spi_mem_waiti_dummy",
+                &format_args!("{}", self.spi_mem_waiti_dummy().bit()),
+            )
+            .field(
+                "spi_mem_waiti_addr_en",
+                &format_args!("{}", self.spi_mem_waiti_addr_en().bit()),
+            )
+            .field(
+                "spi_mem_waiti_addr_cyclelen",
+                &format_args!("{}", self.spi_mem_waiti_addr_cyclelen().bits()),
+            )
+            .field(
+                "spi_mem_waiti_cmd_2b",
+                &format_args!("{}", self.spi_mem_waiti_cmd_2b().bit()),
+            )
+            .field(
+                "spi_mem_waiti_dummy_cyclelen",
+                &format_args!("{}", self.spi_mem_waiti_dummy_cyclelen().bits()),
+            )
+            .field(
+                "spi_mem_waiti_cmd",
+                &format_args!("{}", self.spi_mem_waiti_cmd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_FLASH_WAITI_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

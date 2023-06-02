@@ -37,12 +37,26 @@ impl From<crate::W<DBADDR_SPEC>> for W {
 #[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
 pub type DBADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
-pub type DBADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBADDR_SPEC, u32, u32, 32, O>;
+pub type DBADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DBADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
     pub fn dbaddr(&self) -> DBADDR_R {
         DBADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBADDR")
+            .field("dbaddr", &format_args!("{}", self.dbaddr().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

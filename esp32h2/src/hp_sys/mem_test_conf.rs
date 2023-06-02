@@ -35,29 +35,25 @@ impl From<crate::W<MEM_TEST_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_MEM_WPULSE` reader - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
-pub type HP_MEM_WPULSE_R = crate::FieldReader<u8, u8>;
+pub type HP_MEM_WPULSE_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WPULSE` writer - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
-pub type HP_MEM_WPULSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_TEST_CONF_SPEC, u8, u8, 3, O>;
+pub type HP_MEM_WPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_TEST_CONF_SPEC, 3, O>;
 #[doc = "Field `HP_MEM_WA` reader - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
-pub type HP_MEM_WA_R = crate::FieldReader<u8, u8>;
+pub type HP_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_WA` writer - This field controls hp system memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
-pub type HP_MEM_WA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_TEST_CONF_SPEC, u8, u8, 3, O>;
+pub type HP_MEM_WA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_TEST_CONF_SPEC, 3, O>;
 #[doc = "Field `HP_MEM_RA` reader - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
-pub type HP_MEM_RA_R = crate::FieldReader<u8, u8>;
+pub type HP_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_RA` writer - This field controls hp system memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
-pub type HP_MEM_RA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_TEST_CONF_SPEC, u8, u8, 2, O>;
+pub type HP_MEM_RA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_TEST_CONF_SPEC, 2, O>;
 #[doc = "Field `HP_MEM_RM` reader - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
-pub type HP_MEM_RM_R = crate::FieldReader<u8, u8>;
+pub type HP_MEM_RM_R = crate::FieldReader;
 #[doc = "Field `HP_MEM_RM` writer - This field controls hp system memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
-pub type HP_MEM_RM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_TEST_CONF_SPEC, u8, u8, 4, O>;
+pub type HP_MEM_RM_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_TEST_CONF_SPEC, 4, O>;
 #[doc = "Field `ROM_RM` reader - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
-pub type ROM_RM_R = crate::FieldReader<u8, u8>;
+pub type ROM_RM_R = crate::FieldReader;
 #[doc = "Field `ROM_RM` writer - This field controls rom RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0010(default) or 0b0001(slow) for 0.9V."]
-pub type ROM_RM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_TEST_CONF_SPEC, u8, u8, 4, O>;
+pub type ROM_RM_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_TEST_CONF_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:2 - This field controls hp system memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
@@ -83,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn rom_rm(&self) -> ROM_RM_R {
         ROM_RM_R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_TEST_CONF")
+            .field(
+                "hp_mem_wpulse",
+                &format_args!("{}", self.hp_mem_wpulse().bits()),
+            )
+            .field("hp_mem_wa", &format_args!("{}", self.hp_mem_wa().bits()))
+            .field("hp_mem_ra", &format_args!("{}", self.hp_mem_ra().bits()))
+            .field("hp_mem_rm", &format_args!("{}", self.hp_mem_rm().bits()))
+            .field("rom_rm", &format_args!("{}", self.rom_rm().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_TEST_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

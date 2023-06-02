@@ -35,18 +35,17 @@ impl From<crate::W<TOUT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_TOUT_EN` reader - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_R = crate::BitReader<bool>;
+pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_EN` writer - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUT_CONF_SPEC, bool, O>;
+pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUT_CONF_SPEC, O>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub type RX_TOUT_FLOW_DIS_R = crate::BitReader<bool>;
+pub type RX_TOUT_FLOW_DIS_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
-pub type RX_TOUT_FLOW_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUT_CONF_SPEC, bool, O>;
+pub type RX_TOUT_FLOW_DIS_W<'a, const O: u8> = crate::BitWriter<'a, TOUT_CONF_SPEC, O>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
 pub type RX_TOUT_THRHD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
-pub type RX_TOUT_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUT_CONF_SPEC, u16, u16, 10, O>;
+pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, TOUT_CONF_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
@@ -62,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn rx_tout_thrhd(&self) -> RX_TOUT_THRHD_R {
         RX_TOUT_THRHD_R::new(((self.bits >> 2) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUT_CONF")
+            .field("rx_tout_en", &format_args!("{}", self.rx_tout_en().bit()))
+            .field(
+                "rx_tout_flow_dis",
+                &format_args!("{}", self.rx_tout_flow_dis().bit()),
+            )
+            .field(
+                "rx_tout_thrhd",
+                &format_args!("{}", self.rx_tout_thrhd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

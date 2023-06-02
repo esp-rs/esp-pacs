@@ -35,21 +35,21 @@ impl From<crate::W<LSCH_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL` reader - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
-pub type TIMER_SEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER_SEL` writer - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
-pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LSCH_CONF0_SPEC, u8, u8, 2, O>;
+pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LSCH_CONF0_SPEC, 2, O>;
 #[doc = "Field `SIG_OUT_EN` reader - This is the output enable control bit for low speed channel0."]
-pub type SIG_OUT_EN_R = crate::BitReader<bool>;
+pub type SIG_OUT_EN_R = crate::BitReader;
 #[doc = "Field `SIG_OUT_EN` writer - This is the output enable control bit for low speed channel0."]
-pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LSCH_CONF0_SPEC, bool, O>;
+pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, LSCH_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_LV` reader - This bit is used to control the output value when low speed channel0 is off."]
-pub type IDLE_LV_R = crate::BitReader<bool>;
+pub type IDLE_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_LV` writer - This bit is used to control the output value when low speed channel0 is off."]
-pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, LSCH_CONF0_SPEC, bool, O>;
+pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, LSCH_CONF0_SPEC, O>;
 #[doc = "Field `PARA_UP` reader - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
-pub type PARA_UP_R = crate::BitReader<bool>;
+pub type PARA_UP_R = crate::BitReader;
 #[doc = "Field `PARA_UP` writer - This bit is used to update register LEDC_LSCH0_HPOINT and LEDC_LSCH0_DUTY for low speed channel0."]
-pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, LSCH_CONF0_SPEC, bool, O>;
+pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, LSCH_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - There are four low speed timers the two bits are used to select one of them for low speed channel0. 2'b00: seletc lstimer0. 2'b01: select lstimer1. 2'b10: select lstimer2. 2'b11: select lstimer3."]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn para_up(&self) -> PARA_UP_R {
         PARA_UP_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LSCH_CONF0")
+            .field("timer_sel", &format_args!("{}", self.timer_sel().bits()))
+            .field("sig_out_en", &format_args!("{}", self.sig_out_en().bit()))
+            .field("idle_lv", &format_args!("{}", self.idle_lv().bit()))
+            .field("para_up", &format_args!("{}", self.para_up().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LSCH_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

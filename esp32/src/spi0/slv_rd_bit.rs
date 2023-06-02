@@ -38,12 +38,29 @@ impl From<crate::W<SLV_RD_BIT_SPEC>> for W {
 pub type SLV_RDATA_BIT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_RDATA_BIT` writer - In the slave mode it is the bit length of read data. The value is the length - 1."]
 pub type SLV_RDATA_BIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_RD_BIT_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, SLV_RD_BIT_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - In the slave mode it is the bit length of read data. The value is the length - 1."]
     #[inline(always)]
     pub fn slv_rdata_bit(&self) -> SLV_RDATA_BIT_R {
         SLV_RDATA_BIT_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLV_RD_BIT")
+            .field(
+                "slv_rdata_bit",
+                &format_args!("{}", self.slv_rdata_bit().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLV_RD_BIT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

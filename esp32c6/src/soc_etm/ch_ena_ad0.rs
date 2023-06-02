@@ -35,133 +35,133 @@ impl From<crate::W<CH_ENA_AD0_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_ENA0` reader - ch0 enable"]
-pub type CH_ENA0_R = crate::BitReader<bool>;
+pub type CH_ENA0_R = crate::BitReader;
 #[doc = "Field `CH_ENA0` writer - ch0 enable"]
-pub type CH_ENA0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA0_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA1` reader - ch1 enable"]
-pub type CH_ENA1_R = crate::BitReader<bool>;
+pub type CH_ENA1_R = crate::BitReader;
 #[doc = "Field `CH_ENA1` writer - ch1 enable"]
-pub type CH_ENA1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA1_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA2` reader - ch2 enable"]
-pub type CH_ENA2_R = crate::BitReader<bool>;
+pub type CH_ENA2_R = crate::BitReader;
 #[doc = "Field `CH_ENA2` writer - ch2 enable"]
-pub type CH_ENA2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA2_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA3` reader - ch3 enable"]
-pub type CH_ENA3_R = crate::BitReader<bool>;
+pub type CH_ENA3_R = crate::BitReader;
 #[doc = "Field `CH_ENA3` writer - ch3 enable"]
-pub type CH_ENA3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA3_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA4` reader - ch4 enable"]
-pub type CH_ENA4_R = crate::BitReader<bool>;
+pub type CH_ENA4_R = crate::BitReader;
 #[doc = "Field `CH_ENA4` writer - ch4 enable"]
-pub type CH_ENA4_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA4_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA5` reader - ch5 enable"]
-pub type CH_ENA5_R = crate::BitReader<bool>;
+pub type CH_ENA5_R = crate::BitReader;
 #[doc = "Field `CH_ENA5` writer - ch5 enable"]
-pub type CH_ENA5_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA5_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA6` reader - ch6 enable"]
-pub type CH_ENA6_R = crate::BitReader<bool>;
+pub type CH_ENA6_R = crate::BitReader;
 #[doc = "Field `CH_ENA6` writer - ch6 enable"]
-pub type CH_ENA6_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA6_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA7` reader - ch7 enable"]
-pub type CH_ENA7_R = crate::BitReader<bool>;
+pub type CH_ENA7_R = crate::BitReader;
 #[doc = "Field `CH_ENA7` writer - ch7 enable"]
-pub type CH_ENA7_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA7_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA8` reader - ch8 enable"]
-pub type CH_ENA8_R = crate::BitReader<bool>;
+pub type CH_ENA8_R = crate::BitReader;
 #[doc = "Field `CH_ENA8` writer - ch8 enable"]
-pub type CH_ENA8_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA8_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA9` reader - ch9 enable"]
-pub type CH_ENA9_R = crate::BitReader<bool>;
+pub type CH_ENA9_R = crate::BitReader;
 #[doc = "Field `CH_ENA9` writer - ch9 enable"]
-pub type CH_ENA9_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA9_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA10` reader - ch10 enable"]
-pub type CH_ENA10_R = crate::BitReader<bool>;
+pub type CH_ENA10_R = crate::BitReader;
 #[doc = "Field `CH_ENA10` writer - ch10 enable"]
-pub type CH_ENA10_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA10_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA11` reader - ch11 enable"]
-pub type CH_ENA11_R = crate::BitReader<bool>;
+pub type CH_ENA11_R = crate::BitReader;
 #[doc = "Field `CH_ENA11` writer - ch11 enable"]
-pub type CH_ENA11_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA11_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA12` reader - ch12 enable"]
-pub type CH_ENA12_R = crate::BitReader<bool>;
+pub type CH_ENA12_R = crate::BitReader;
 #[doc = "Field `CH_ENA12` writer - ch12 enable"]
-pub type CH_ENA12_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA12_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA13` reader - ch13 enable"]
-pub type CH_ENA13_R = crate::BitReader<bool>;
+pub type CH_ENA13_R = crate::BitReader;
 #[doc = "Field `CH_ENA13` writer - ch13 enable"]
-pub type CH_ENA13_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA13_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA14` reader - ch14 enable"]
-pub type CH_ENA14_R = crate::BitReader<bool>;
+pub type CH_ENA14_R = crate::BitReader;
 #[doc = "Field `CH_ENA14` writer - ch14 enable"]
-pub type CH_ENA14_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA14_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA15` reader - ch15 enable"]
-pub type CH_ENA15_R = crate::BitReader<bool>;
+pub type CH_ENA15_R = crate::BitReader;
 #[doc = "Field `CH_ENA15` writer - ch15 enable"]
-pub type CH_ENA15_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA15_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA16` reader - ch16 enable"]
-pub type CH_ENA16_R = crate::BitReader<bool>;
+pub type CH_ENA16_R = crate::BitReader;
 #[doc = "Field `CH_ENA16` writer - ch16 enable"]
-pub type CH_ENA16_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA16_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA17` reader - ch17 enable"]
-pub type CH_ENA17_R = crate::BitReader<bool>;
+pub type CH_ENA17_R = crate::BitReader;
 #[doc = "Field `CH_ENA17` writer - ch17 enable"]
-pub type CH_ENA17_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA17_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA18` reader - ch18 enable"]
-pub type CH_ENA18_R = crate::BitReader<bool>;
+pub type CH_ENA18_R = crate::BitReader;
 #[doc = "Field `CH_ENA18` writer - ch18 enable"]
-pub type CH_ENA18_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA18_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA19` reader - ch19 enable"]
-pub type CH_ENA19_R = crate::BitReader<bool>;
+pub type CH_ENA19_R = crate::BitReader;
 #[doc = "Field `CH_ENA19` writer - ch19 enable"]
-pub type CH_ENA19_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA19_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA20` reader - ch20 enable"]
-pub type CH_ENA20_R = crate::BitReader<bool>;
+pub type CH_ENA20_R = crate::BitReader;
 #[doc = "Field `CH_ENA20` writer - ch20 enable"]
-pub type CH_ENA20_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA20_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA21` reader - ch21 enable"]
-pub type CH_ENA21_R = crate::BitReader<bool>;
+pub type CH_ENA21_R = crate::BitReader;
 #[doc = "Field `CH_ENA21` writer - ch21 enable"]
-pub type CH_ENA21_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA21_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA22` reader - ch22 enable"]
-pub type CH_ENA22_R = crate::BitReader<bool>;
+pub type CH_ENA22_R = crate::BitReader;
 #[doc = "Field `CH_ENA22` writer - ch22 enable"]
-pub type CH_ENA22_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA22_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA23` reader - ch23 enable"]
-pub type CH_ENA23_R = crate::BitReader<bool>;
+pub type CH_ENA23_R = crate::BitReader;
 #[doc = "Field `CH_ENA23` writer - ch23 enable"]
-pub type CH_ENA23_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA23_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA24` reader - ch24 enable"]
-pub type CH_ENA24_R = crate::BitReader<bool>;
+pub type CH_ENA24_R = crate::BitReader;
 #[doc = "Field `CH_ENA24` writer - ch24 enable"]
-pub type CH_ENA24_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA24_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA25` reader - ch25 enable"]
-pub type CH_ENA25_R = crate::BitReader<bool>;
+pub type CH_ENA25_R = crate::BitReader;
 #[doc = "Field `CH_ENA25` writer - ch25 enable"]
-pub type CH_ENA25_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA25_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA26` reader - ch26 enable"]
-pub type CH_ENA26_R = crate::BitReader<bool>;
+pub type CH_ENA26_R = crate::BitReader;
 #[doc = "Field `CH_ENA26` writer - ch26 enable"]
-pub type CH_ENA26_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA26_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA27` reader - ch27 enable"]
-pub type CH_ENA27_R = crate::BitReader<bool>;
+pub type CH_ENA27_R = crate::BitReader;
 #[doc = "Field `CH_ENA27` writer - ch27 enable"]
-pub type CH_ENA27_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA27_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA28` reader - ch28 enable"]
-pub type CH_ENA28_R = crate::BitReader<bool>;
+pub type CH_ENA28_R = crate::BitReader;
 #[doc = "Field `CH_ENA28` writer - ch28 enable"]
-pub type CH_ENA28_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA28_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA29` reader - ch29 enable"]
-pub type CH_ENA29_R = crate::BitReader<bool>;
+pub type CH_ENA29_R = crate::BitReader;
 #[doc = "Field `CH_ENA29` writer - ch29 enable"]
-pub type CH_ENA29_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA29_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA30` reader - ch30 enable"]
-pub type CH_ENA30_R = crate::BitReader<bool>;
+pub type CH_ENA30_R = crate::BitReader;
 #[doc = "Field `CH_ENA30` writer - ch30 enable"]
-pub type CH_ENA30_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA30_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 #[doc = "Field `CH_ENA31` reader - ch31 enable"]
-pub type CH_ENA31_R = crate::BitReader<bool>;
+pub type CH_ENA31_R = crate::BitReader;
 #[doc = "Field `CH_ENA31` writer - ch31 enable"]
-pub type CH_ENA31_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD0_SPEC, bool, O>;
+pub type CH_ENA31_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - ch0 enable"]
     #[inline(always)]
@@ -322,6 +322,51 @@ impl R {
     #[inline(always)]
     pub fn ch_ena31(&self) -> CH_ENA31_R {
         CH_ENA31_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_ENA_AD0")
+            .field("ch_ena0", &format_args!("{}", self.ch_ena0().bit()))
+            .field("ch_ena1", &format_args!("{}", self.ch_ena1().bit()))
+            .field("ch_ena2", &format_args!("{}", self.ch_ena2().bit()))
+            .field("ch_ena3", &format_args!("{}", self.ch_ena3().bit()))
+            .field("ch_ena4", &format_args!("{}", self.ch_ena4().bit()))
+            .field("ch_ena5", &format_args!("{}", self.ch_ena5().bit()))
+            .field("ch_ena6", &format_args!("{}", self.ch_ena6().bit()))
+            .field("ch_ena7", &format_args!("{}", self.ch_ena7().bit()))
+            .field("ch_ena8", &format_args!("{}", self.ch_ena8().bit()))
+            .field("ch_ena9", &format_args!("{}", self.ch_ena9().bit()))
+            .field("ch_ena10", &format_args!("{}", self.ch_ena10().bit()))
+            .field("ch_ena11", &format_args!("{}", self.ch_ena11().bit()))
+            .field("ch_ena12", &format_args!("{}", self.ch_ena12().bit()))
+            .field("ch_ena13", &format_args!("{}", self.ch_ena13().bit()))
+            .field("ch_ena14", &format_args!("{}", self.ch_ena14().bit()))
+            .field("ch_ena15", &format_args!("{}", self.ch_ena15().bit()))
+            .field("ch_ena16", &format_args!("{}", self.ch_ena16().bit()))
+            .field("ch_ena17", &format_args!("{}", self.ch_ena17().bit()))
+            .field("ch_ena18", &format_args!("{}", self.ch_ena18().bit()))
+            .field("ch_ena19", &format_args!("{}", self.ch_ena19().bit()))
+            .field("ch_ena20", &format_args!("{}", self.ch_ena20().bit()))
+            .field("ch_ena21", &format_args!("{}", self.ch_ena21().bit()))
+            .field("ch_ena22", &format_args!("{}", self.ch_ena22().bit()))
+            .field("ch_ena23", &format_args!("{}", self.ch_ena23().bit()))
+            .field("ch_ena24", &format_args!("{}", self.ch_ena24().bit()))
+            .field("ch_ena25", &format_args!("{}", self.ch_ena25().bit()))
+            .field("ch_ena26", &format_args!("{}", self.ch_ena26().bit()))
+            .field("ch_ena27", &format_args!("{}", self.ch_ena27().bit()))
+            .field("ch_ena28", &format_args!("{}", self.ch_ena28().bit()))
+            .field("ch_ena29", &format_args!("{}", self.ch_ena29().bit()))
+            .field("ch_ena30", &format_args!("{}", self.ch_ena30().bit()))
+            .field("ch_ena31", &format_args!("{}", self.ch_ena31().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

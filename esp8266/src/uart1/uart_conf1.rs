@@ -35,33 +35,29 @@ impl From<crate::W<UART_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `rxfifo_full_thrhd` reader - The config bits for rx fifo full threshold,0-127"]
-pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `rxfifo_full_thrhd` writer - The config bits for rx fifo full threshold,0-127"]
-pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_CONF1_SPEC, u8, u8, 7, O>;
+pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CONF1_SPEC, 7, O>;
 #[doc = "Field `txfifo_empty_thrhd` reader - The config bits for tx fifo empty threshold,0-127"]
-pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `txfifo_empty_thrhd` writer - The config bits for tx fifo empty threshold,0-127"]
-pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_CONF1_SPEC, u8, u8, 7, O>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CONF1_SPEC, 7, O>;
 #[doc = "Field `rx_flow_thrhd` reader - The config bits for rx flow control threshold,0-127"]
-pub type RX_FLOW_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_FLOW_THRHD_R = crate::FieldReader;
 #[doc = "Field `rx_flow_thrhd` writer - The config bits for rx flow control threshold,0-127"]
-pub type RX_FLOW_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_CONF1_SPEC, u8, u8, 7, O>;
+pub type RX_FLOW_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CONF1_SPEC, 7, O>;
 #[doc = "Field `rx_flow_en` reader - Set this bit to enable rx hardware flow control"]
-pub type RX_FLOW_EN_R = crate::BitReader<bool>;
+pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `rx_flow_en` writer - Set this bit to enable rx hardware flow control"]
-pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_CONF1_SPEC, bool, O>;
+pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART_CONF1_SPEC, O>;
 #[doc = "Field `rx_tout_thrhd` reader - Config bits for rx time-out threshold,uint: byte,0-127"]
-pub type RX_TOUT_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_TOUT_THRHD_R = crate::FieldReader;
 #[doc = "Field `rx_tout_thrhd` writer - Config bits for rx time-out threshold,uint: byte,0-127"]
-pub type RX_TOUT_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_CONF1_SPEC, u8, u8, 7, O>;
+pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CONF1_SPEC, 7, O>;
 #[doc = "Field `rx_tout_en` reader - Set this bit to enable rx time-out function"]
-pub type RX_TOUT_EN_R = crate::BitReader<bool>;
+pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `rx_tout_en` writer - Set this bit to enable rx time-out function"]
-pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_CONF1_SPEC, bool, O>;
+pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:6 - The config bits for rx fifo full threshold,0-127"]
     #[inline(always)]
@@ -92,6 +88,37 @@ impl R {
     #[inline(always)]
     pub fn rx_tout_en(&self) -> RX_TOUT_EN_R {
         RX_TOUT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_CONF1")
+            .field("rx_tout_en", &format_args!("{}", self.rx_tout_en().bit()))
+            .field(
+                "rx_tout_thrhd",
+                &format_args!("{}", self.rx_tout_thrhd().bits()),
+            )
+            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
+            .field(
+                "rx_flow_thrhd",
+                &format_args!("{}", self.rx_flow_thrhd().bits()),
+            )
+            .field(
+                "txfifo_empty_thrhd",
+                &format_args!("{}", self.txfifo_empty_thrhd().bits()),
+            )
+            .field(
+                "rxfifo_full_thrhd",
+                &format_args!("{}", self.rxfifo_full_thrhd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

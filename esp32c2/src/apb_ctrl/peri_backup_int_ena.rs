@@ -35,15 +35,15 @@ impl From<crate::W<PERI_BACKUP_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_BACKUP_DONE_INT_ENA` reader - reg_peri_backup_done_int_ena"]
-pub type PERI_BACKUP_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type PERI_BACKUP_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_DONE_INT_ENA` writer - reg_peri_backup_done_int_ena"]
 pub type PERI_BACKUP_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERI_BACKUP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, PERI_BACKUP_INT_ENA_SPEC, O>;
 #[doc = "Field `PERI_BACKUP_ERR_INT_ENA` reader - reg_peri_backup_err_int_ena"]
-pub type PERI_BACKUP_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type PERI_BACKUP_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_ERR_INT_ENA` writer - reg_peri_backup_err_int_ena"]
 pub type PERI_BACKUP_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERI_BACKUP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, PERI_BACKUP_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_peri_backup_done_int_ena"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn peri_backup_err_int_ena(&self) -> PERI_BACKUP_ERR_INT_ENA_R {
         PERI_BACKUP_ERR_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERI_BACKUP_INT_ENA")
+            .field(
+                "peri_backup_done_int_ena",
+                &format_args!("{}", self.peri_backup_done_int_ena().bit()),
+            )
+            .field(
+                "peri_backup_err_int_ena",
+                &format_args!("{}", self.peri_backup_err_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

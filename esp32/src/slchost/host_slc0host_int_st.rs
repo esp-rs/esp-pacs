@@ -14,57 +14,57 @@ impl From<crate::R<HOST_SLC0HOST_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLC0_TOHOST_BIT0_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT0_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT0_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT1_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT1_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT1_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT2_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT2_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT2_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT3_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT3_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT3_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT4_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT4_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT4_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT5_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT5_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT5_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT6_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT6_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT6_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOHOST_BIT7_INT_ST` reader - "]
-pub type HOST_SLC0_TOHOST_BIT7_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOHOST_BIT7_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOKEN0_1TO0_INT_ST` reader - "]
-pub type HOST_SLC0_TOKEN0_1TO0_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOKEN0_1TO0_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOKEN1_1TO0_INT_ST` reader - "]
-pub type HOST_SLC0_TOKEN1_1TO0_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOKEN1_1TO0_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOKEN0_0TO1_INT_ST` reader - "]
-pub type HOST_SLC0_TOKEN0_0TO1_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOKEN0_0TO1_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TOKEN1_0TO1_INT_ST` reader - "]
-pub type HOST_SLC0_TOKEN1_0TO1_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TOKEN1_0TO1_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0HOST_RX_SOF_INT_ST` reader - "]
-pub type HOST_SLC0HOST_RX_SOF_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0HOST_RX_SOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0HOST_RX_EOF_INT_ST` reader - "]
-pub type HOST_SLC0HOST_RX_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0HOST_RX_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0HOST_RX_START_INT_ST` reader - "]
-pub type HOST_SLC0HOST_RX_START_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0HOST_RX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0HOST_TX_START_INT_ST` reader - "]
-pub type HOST_SLC0HOST_TX_START_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0HOST_TX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_RX_UDF_INT_ST` reader - "]
-pub type HOST_SLC0_RX_UDF_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_RX_UDF_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_TX_OVF_INT_ST` reader - "]
-pub type HOST_SLC0_TX_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_TX_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_RX_PF_VALID_INT_ST` reader - "]
-pub type HOST_SLC0_RX_PF_VALID_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_RX_PF_VALID_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_EXT_BIT0_INT_ST` reader - "]
-pub type HOST_SLC0_EXT_BIT0_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_EXT_BIT0_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_EXT_BIT1_INT_ST` reader - "]
-pub type HOST_SLC0_EXT_BIT1_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_EXT_BIT1_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_EXT_BIT2_INT_ST` reader - "]
-pub type HOST_SLC0_EXT_BIT2_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_EXT_BIT2_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_EXT_BIT3_INT_ST` reader - "]
-pub type HOST_SLC0_EXT_BIT3_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_EXT_BIT3_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_RX_NEW_PACKET_INT_ST` reader - "]
-pub type HOST_SLC0_RX_NEW_PACKET_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_RX_NEW_PACKET_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_SLC0_HOST_RD_RETRY_INT_ST` reader - "]
-pub type HOST_SLC0_HOST_RD_RETRY_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_SLC0_HOST_RD_RETRY_INT_ST_R = crate::BitReader;
 #[doc = "Field `HOST_GPIO_SDIO_INT_ST` reader - "]
-pub type HOST_GPIO_SDIO_INT_ST_R = crate::BitReader<bool>;
+pub type HOST_GPIO_SDIO_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -195,6 +195,123 @@ impl R {
     #[inline(always)]
     pub fn host_gpio_sdio_int_st(&self) -> HOST_GPIO_SDIO_INT_ST_R {
         HOST_GPIO_SDIO_INT_ST_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLC0HOST_INT_ST")
+            .field(
+                "host_slc0_tohost_bit0_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit0_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit1_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit1_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit2_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit2_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit3_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit3_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit4_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit4_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit5_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit5_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit6_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit6_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tohost_bit7_int_st",
+                &format_args!("{}", self.host_slc0_tohost_bit7_int_st().bit()),
+            )
+            .field(
+                "host_slc0_token0_1to0_int_st",
+                &format_args!("{}", self.host_slc0_token0_1to0_int_st().bit()),
+            )
+            .field(
+                "host_slc0_token1_1to0_int_st",
+                &format_args!("{}", self.host_slc0_token1_1to0_int_st().bit()),
+            )
+            .field(
+                "host_slc0_token0_0to1_int_st",
+                &format_args!("{}", self.host_slc0_token0_0to1_int_st().bit()),
+            )
+            .field(
+                "host_slc0_token1_0to1_int_st",
+                &format_args!("{}", self.host_slc0_token1_0to1_int_st().bit()),
+            )
+            .field(
+                "host_slc0host_rx_sof_int_st",
+                &format_args!("{}", self.host_slc0host_rx_sof_int_st().bit()),
+            )
+            .field(
+                "host_slc0host_rx_eof_int_st",
+                &format_args!("{}", self.host_slc0host_rx_eof_int_st().bit()),
+            )
+            .field(
+                "host_slc0host_rx_start_int_st",
+                &format_args!("{}", self.host_slc0host_rx_start_int_st().bit()),
+            )
+            .field(
+                "host_slc0host_tx_start_int_st",
+                &format_args!("{}", self.host_slc0host_tx_start_int_st().bit()),
+            )
+            .field(
+                "host_slc0_rx_udf_int_st",
+                &format_args!("{}", self.host_slc0_rx_udf_int_st().bit()),
+            )
+            .field(
+                "host_slc0_tx_ovf_int_st",
+                &format_args!("{}", self.host_slc0_tx_ovf_int_st().bit()),
+            )
+            .field(
+                "host_slc0_rx_pf_valid_int_st",
+                &format_args!("{}", self.host_slc0_rx_pf_valid_int_st().bit()),
+            )
+            .field(
+                "host_slc0_ext_bit0_int_st",
+                &format_args!("{}", self.host_slc0_ext_bit0_int_st().bit()),
+            )
+            .field(
+                "host_slc0_ext_bit1_int_st",
+                &format_args!("{}", self.host_slc0_ext_bit1_int_st().bit()),
+            )
+            .field(
+                "host_slc0_ext_bit2_int_st",
+                &format_args!("{}", self.host_slc0_ext_bit2_int_st().bit()),
+            )
+            .field(
+                "host_slc0_ext_bit3_int_st",
+                &format_args!("{}", self.host_slc0_ext_bit3_int_st().bit()),
+            )
+            .field(
+                "host_slc0_rx_new_packet_int_st",
+                &format_args!("{}", self.host_slc0_rx_new_packet_int_st().bit()),
+            )
+            .field(
+                "host_slc0_host_rd_retry_int_st",
+                &format_args!("{}", self.host_slc0_host_rd_retry_int_st().bit()),
+            )
+            .field(
+                "host_gpio_sdio_int_st",
+                &format_args!("{}", self.host_gpio_sdio_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLC0HOST_INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [host_slc0host_int_st](index.html) module"]

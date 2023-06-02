@@ -16,17 +16,17 @@ impl From<crate::R<CH0STATUS_SPEC>> for R {
 #[doc = "Field `MEM_RADDR_EX` reader - reg_mem_raddr_ex_ch0."]
 pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE` reader - reg_state_ch0."]
-pub type STATE_R = crate::FieldReader<u8, u8>;
+pub type STATE_R = crate::FieldReader;
 #[doc = "Field `APB_MEM_WADDR` reader - reg_apb_mem_waddr_ch0."]
 pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_MEM_RD_ERR` reader - reg_apb_mem_rd_err_ch0."]
-pub type APB_MEM_RD_ERR_R = crate::BitReader<bool>;
+pub type APB_MEM_RD_ERR_R = crate::BitReader;
 #[doc = "Field `MEM_EMPTY` reader - reg_mem_empty_ch0."]
-pub type MEM_EMPTY_R = crate::BitReader<bool>;
+pub type MEM_EMPTY_R = crate::BitReader;
 #[doc = "Field `APB_MEM_WR_ERR` reader - reg_apb_mem_wr_err_ch0."]
-pub type APB_MEM_WR_ERR_R = crate::BitReader<bool>;
+pub type APB_MEM_WR_ERR_R = crate::BitReader;
 #[doc = "Field `APB_MEM_RADDR` reader - reg_apb_mem_raddr_ch0."]
-pub type APB_MEM_RADDR_R = crate::FieldReader<u8, u8>;
+pub type APB_MEM_RADDR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:8 - reg_mem_raddr_ex_ch0."]
     #[inline(always)]
@@ -62,6 +62,41 @@ impl R {
     #[inline(always)]
     pub fn apb_mem_raddr(&self) -> APB_MEM_RADDR_R {
         APB_MEM_RADDR_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH0STATUS")
+            .field(
+                "mem_raddr_ex",
+                &format_args!("{}", self.mem_raddr_ex().bits()),
+            )
+            .field("state", &format_args!("{}", self.state().bits()))
+            .field(
+                "apb_mem_waddr",
+                &format_args!("{}", self.apb_mem_waddr().bits()),
+            )
+            .field(
+                "apb_mem_rd_err",
+                &format_args!("{}", self.apb_mem_rd_err().bit()),
+            )
+            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
+            .field(
+                "apb_mem_wr_err",
+                &format_args!("{}", self.apb_mem_wr_err().bit()),
+            )
+            .field(
+                "apb_mem_raddr",
+                &format_args!("{}", self.apb_mem_raddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH0STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "RMT_CH0STATUS_REG.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0status](index.html) module"]

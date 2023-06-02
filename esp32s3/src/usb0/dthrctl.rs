@@ -35,33 +35,33 @@ impl From<crate::W<DTHRCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `NONISOTHREN` reader - "]
-pub type NONISOTHREN_R = crate::BitReader<bool>;
+pub type NONISOTHREN_R = crate::BitReader;
 #[doc = "Field `NONISOTHREN` writer - "]
-pub type NONISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
+pub type NONISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
 #[doc = "Field `ISOTHREN` reader - "]
-pub type ISOTHREN_R = crate::BitReader<bool>;
+pub type ISOTHREN_R = crate::BitReader;
 #[doc = "Field `ISOTHREN` writer - "]
-pub type ISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
+pub type ISOTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
 #[doc = "Field `TXTHRLEN` reader - "]
 pub type TXTHRLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TXTHRLEN` writer - "]
-pub type TXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, O>;
+pub type TXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 9, O, u16, u16>;
 #[doc = "Field `AHBTHRRATIO` reader - "]
-pub type AHBTHRRATIO_R = crate::FieldReader<u8, u8>;
+pub type AHBTHRRATIO_R = crate::FieldReader;
 #[doc = "Field `AHBTHRRATIO` writer - "]
-pub type AHBTHRRATIO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u8, u8, 2, O>;
+pub type AHBTHRRATIO_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 2, O>;
 #[doc = "Field `RXTHREN` reader - "]
-pub type RXTHREN_R = crate::BitReader<bool>;
+pub type RXTHREN_R = crate::BitReader;
 #[doc = "Field `RXTHREN` writer - "]
-pub type RXTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
+pub type RXTHREN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
 #[doc = "Field `RXTHRLEN` reader - "]
 pub type RXTHRLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RXTHRLEN` writer - "]
-pub type RXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DTHRCTL_SPEC, u16, u16, 9, O>;
+pub type RXTHRLEN_W<'a, const O: u8> = crate::FieldWriter<'a, DTHRCTL_SPEC, 9, O, u16, u16>;
 #[doc = "Field `ARBPRKEN` reader - "]
-pub type ARBPRKEN_R = crate::BitReader<bool>;
+pub type ARBPRKEN_R = crate::BitReader;
 #[doc = "Field `ARBPRKEN` writer - "]
-pub type ARBPRKEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DTHRCTL_SPEC, bool, O>;
+pub type ARBPRKEN_W<'a, const O: u8> = crate::BitWriter<'a, DTHRCTL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -97,6 +97,29 @@ impl R {
     #[inline(always)]
     pub fn arbprken(&self) -> ARBPRKEN_R {
         ARBPRKEN_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DTHRCTL")
+            .field("nonisothren", &format_args!("{}", self.nonisothren().bit()))
+            .field("isothren", &format_args!("{}", self.isothren().bit()))
+            .field("txthrlen", &format_args!("{}", self.txthrlen().bits()))
+            .field(
+                "ahbthrratio",
+                &format_args!("{}", self.ahbthrratio().bits()),
+            )
+            .field("rxthren", &format_args!("{}", self.rxthren().bit()))
+            .field("rxthrlen", &format_args!("{}", self.rxthrlen().bits()))
+            .field("arbprken", &format_args!("{}", self.arbprken().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DTHRCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

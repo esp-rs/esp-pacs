@@ -35,32 +35,29 @@ impl From<crate::W<OUT_CONF0_CH0_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_RST` reader - This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST_R = crate::BitReader<bool>;
+pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 #[doc = "Field `OUT_LOOP_TEST` reader - reserved"]
-pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
+pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - reserved"]
-pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub type OUT_AUTO_WRBACK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 #[doc = "Field `OUT_EOF_MODE` reader - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 0 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
+pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 0 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type OUTDSCR_BURST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 transmitting data when accessing internal SRAM."]
-pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
+pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 transmitting data when accessing internal SRAM."]
-pub type OUT_DATA_BURST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_CONF0_CH0_SPEC, bool, O>;
+pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF0_CH0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
@@ -91,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn out_data_burst_en(&self) -> OUT_DATA_BURST_EN_R {
         OUT_DATA_BURST_EN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_CONF0_CH0")
+            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
+            .field(
+                "out_loop_test",
+                &format_args!("{}", self.out_loop_test().bit()),
+            )
+            .field(
+                "out_auto_wrback",
+                &format_args!("{}", self.out_auto_wrback().bit()),
+            )
+            .field(
+                "out_eof_mode",
+                &format_args!("{}", self.out_eof_mode().bit()),
+            )
+            .field(
+                "outdscr_burst_en",
+                &format_args!("{}", self.outdscr_burst_en().bit()),
+            )
+            .field(
+                "out_data_burst_en",
+                &format_args!("{}", self.out_data_burst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_CONF0_CH0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

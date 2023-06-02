@@ -38,26 +38,23 @@ impl From<crate::W<SAR_TSENS_CTRL2_SPEC>> for W {
 pub type TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TSENS_XPD_WAIT` writer - "]
 pub type TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 12, O, u16, u16>;
 #[doc = "Field `TSENS_XPD_FORCE` reader - "]
-pub type TSENS_XPD_FORCE_R = crate::FieldReader<u8, u8>;
+pub type TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `TSENS_XPD_FORCE` writer - "]
-pub type TSENS_XPD_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TSENS_XPD_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TSENS_CLK_INV` reader - "]
-pub type TSENS_CLK_INV_R = crate::BitReader<bool>;
+pub type TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_INV` writer - "]
-pub type TSENS_CLK_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, bool, O>;
+pub type TSENS_CLK_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL2_SPEC, O>;
 #[doc = "Field `TSENS_CLKGATE_EN` reader - Enable temperature sensor clock."]
-pub type TSENS_CLKGATE_EN_R = crate::BitReader<bool>;
+pub type TSENS_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLKGATE_EN` writer - Enable temperature sensor clock."]
-pub type TSENS_CLKGATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, bool, O>;
+pub type TSENS_CLKGATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL2_SPEC, O>;
 #[doc = "Field `TSENS_RESET` reader - Reset temperature sensor."]
-pub type TSENS_RESET_R = crate::BitReader<bool>;
+pub type TSENS_RESET_R = crate::BitReader;
 #[doc = "Field `TSENS_RESET` writer - Reset temperature sensor."]
-pub type TSENS_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, bool, O>;
+pub type TSENS_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -83,6 +80,36 @@ impl R {
     #[inline(always)]
     pub fn tsens_reset(&self) -> TSENS_RESET_R {
         TSENS_RESET_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TSENS_CTRL2")
+            .field(
+                "tsens_xpd_wait",
+                &format_args!("{}", self.tsens_xpd_wait().bits()),
+            )
+            .field(
+                "tsens_xpd_force",
+                &format_args!("{}", self.tsens_xpd_force().bits()),
+            )
+            .field(
+                "tsens_clk_inv",
+                &format_args!("{}", self.tsens_clk_inv().bit()),
+            )
+            .field(
+                "tsens_clkgate_en",
+                &format_args!("{}", self.tsens_clkgate_en().bit()),
+            )
+            .field("tsens_reset", &format_args!("{}", self.tsens_reset().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

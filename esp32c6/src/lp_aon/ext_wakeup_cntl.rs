@@ -35,25 +35,21 @@ impl From<crate::W<EXT_WAKEUP_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `EXT_WAKEUP_STATUS` reader - need_des"]
-pub type EXT_WAKEUP_STATUS_R = crate::FieldReader<u8, u8>;
+pub type EXT_WAKEUP_STATUS_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_STATUS_CLR` writer - need_des"]
-pub type EXT_WAKEUP_STATUS_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_WAKEUP_CNTL_SPEC, bool, O>;
+pub type EXT_WAKEUP_STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP_CNTL_SPEC, O>;
 #[doc = "Field `EXT_WAKEUP_SEL` reader - need_des"]
-pub type EXT_WAKEUP_SEL_R = crate::FieldReader<u8, u8>;
+pub type EXT_WAKEUP_SEL_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_SEL` writer - need_des"]
-pub type EXT_WAKEUP_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EXT_WAKEUP_CNTL_SPEC, u8, u8, 8, O>;
+pub type EXT_WAKEUP_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP_CNTL_SPEC, 8, O>;
 #[doc = "Field `EXT_WAKEUP_LV` reader - need_des"]
-pub type EXT_WAKEUP_LV_R = crate::FieldReader<u8, u8>;
+pub type EXT_WAKEUP_LV_R = crate::FieldReader;
 #[doc = "Field `EXT_WAKEUP_LV` writer - need_des"]
-pub type EXT_WAKEUP_LV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EXT_WAKEUP_CNTL_SPEC, u8, u8, 8, O>;
+pub type EXT_WAKEUP_LV_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP_CNTL_SPEC, 8, O>;
 #[doc = "Field `EXT_WAKEUP_FILTER` reader - need_des"]
-pub type EXT_WAKEUP_FILTER_R = crate::BitReader<bool>;
+pub type EXT_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `EXT_WAKEUP_FILTER` writer - need_des"]
-pub type EXT_WAKEUP_FILTER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_WAKEUP_CNTL_SPEC, bool, O>;
+pub type EXT_WAKEUP_FILTER_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn ext_wakeup_filter(&self) -> EXT_WAKEUP_FILTER_R {
         EXT_WAKEUP_FILTER_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_WAKEUP_CNTL")
+            .field(
+                "ext_wakeup_status",
+                &format_args!("{}", self.ext_wakeup_status().bits()),
+            )
+            .field(
+                "ext_wakeup_sel",
+                &format_args!("{}", self.ext_wakeup_sel().bits()),
+            )
+            .field(
+                "ext_wakeup_lv",
+                &format_args!("{}", self.ext_wakeup_lv().bits()),
+            )
+            .field(
+                "ext_wakeup_filter",
+                &format_args!("{}", self.ext_wakeup_filter().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

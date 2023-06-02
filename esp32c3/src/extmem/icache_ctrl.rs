@@ -35,14 +35,31 @@ impl From<crate::W<ICACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type ICACHE_ENABLE_R = crate::BitReader<bool>;
+pub type ICACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `ICACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type ICACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICACHE_CTRL_SPEC, bool, O>;
+pub type ICACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn icache_enable(&self) -> ICACHE_ENABLE_R {
         ICACHE_ENABLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_CTRL")
+            .field(
+                "icache_enable",
+                &format_args!("{}", self.icache_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,26 +35,25 @@ impl From<crate::W<CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKM_DIV_NUM` reader - "]
-pub type CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_NUM` writer - "]
-pub type CLKM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 8, O>;
+pub type CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 8, O>;
 #[doc = "Field `CLKM_DIV_B` reader - "]
-pub type CLKM_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_B` writer - "]
-pub type CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `CLKM_DIV_A` reader - "]
-pub type CLKM_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_A` writer - "]
-pub type CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `CLK_EN` reader - "]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKM_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLKM_CONF_SPEC, O>;
 #[doc = "Field `CLKA_ENA` reader - "]
-pub type CLKA_ENA_R = crate::BitReader<bool>;
+pub type CLKA_ENA_R = crate::BitReader;
 #[doc = "Field `CLKA_ENA` writer - "]
-pub type CLKA_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKM_CONF_SPEC, bool, O>;
+pub type CLKA_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CLKM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -80,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn clka_ena(&self) -> CLKA_ENA_R {
         CLKA_ENA_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKM_CONF")
+            .field(
+                "clkm_div_num",
+                &format_args!("{}", self.clkm_div_num().bits()),
+            )
+            .field("clkm_div_b", &format_args!("{}", self.clkm_div_b().bits()))
+            .field("clkm_div_a", &format_args!("{}", self.clkm_div_a().bits()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("clka_ena", &format_args!("{}", self.clka_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

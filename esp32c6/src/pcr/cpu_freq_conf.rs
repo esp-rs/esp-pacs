@@ -35,20 +35,17 @@ impl From<crate::W<CPU_FREQ_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_LS_DIV_NUM` reader - Set as one within (0,1,3) to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_AHB_LS_DIV_NUM."]
-pub type CPU_LS_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type CPU_LS_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CPU_LS_DIV_NUM` writer - Set as one within (0,1,3) to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_AHB_LS_DIV_NUM."]
-pub type CPU_LS_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_FREQ_CONF_SPEC, u8, u8, 8, O>;
+pub type CPU_LS_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_FREQ_CONF_SPEC, 8, O>;
 #[doc = "Field `CPU_HS_DIV_NUM` reader - Set as one within (0,1,3) to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for high-speed clock-source such as SPLL, and should be used together with PCR_AHB_HS_DIV_NUM."]
-pub type CPU_HS_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type CPU_HS_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CPU_HS_DIV_NUM` writer - Set as one within (0,1,3) to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for high-speed clock-source such as SPLL, and should be used together with PCR_AHB_HS_DIV_NUM."]
-pub type CPU_HS_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_FREQ_CONF_SPEC, u8, u8, 8, O>;
+pub type CPU_HS_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_FREQ_CONF_SPEC, 8, O>;
 #[doc = "Field `CPU_HS_120M_FORCE` reader - Given that PCR_CPU_HS_DIV_NUM is 0, set this field as 1 to force clk_cpu at 120MHz. Only avaliable when PCR_CPU_HS_DIV_NUM is 0 and clk_cpu is driven by SPLL."]
-pub type CPU_HS_120M_FORCE_R = crate::BitReader<bool>;
+pub type CPU_HS_120M_FORCE_R = crate::BitReader;
 #[doc = "Field `CPU_HS_120M_FORCE` writer - Given that PCR_CPU_HS_DIV_NUM is 0, set this field as 1 to force clk_cpu at 120MHz. Only avaliable when PCR_CPU_HS_DIV_NUM is 0 and clk_cpu is driven by SPLL."]
-pub type CPU_HS_120M_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_FREQ_CONF_SPEC, bool, O>;
+pub type CPU_HS_120M_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, CPU_FREQ_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - Set as one within (0,1,3) to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_AHB_LS_DIV_NUM."]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn cpu_hs_120m_force(&self) -> CPU_HS_120M_FORCE_R {
         CPU_HS_120M_FORCE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_FREQ_CONF")
+            .field(
+                "cpu_ls_div_num",
+                &format_args!("{}", self.cpu_ls_div_num().bits()),
+            )
+            .field(
+                "cpu_hs_div_num",
+                &format_args!("{}", self.cpu_hs_div_num().bits()),
+            )
+            .field(
+                "cpu_hs_120m_force",
+                &format_args!("{}", self.cpu_hs_120m_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_FREQ_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

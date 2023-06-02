@@ -35,15 +35,31 @@ impl From<crate::W<LP_UART_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_UART_INTR_MAP` reader - Need add description"]
-pub type LP_UART_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type LP_UART_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `LP_UART_INTR_MAP` writer - Need add description"]
-pub type LP_UART_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LP_UART_INTR_MAP_SPEC, u8, u8, 5, O>;
+pub type LP_UART_INTR_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, LP_UART_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     pub fn lp_uart_intr_map(&self) -> LP_UART_INTR_MAP_R {
         LP_UART_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_UART_INTR_MAP")
+            .field(
+                "lp_uart_intr_map",
+                &format_args!("{}", self.lp_uart_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_UART_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

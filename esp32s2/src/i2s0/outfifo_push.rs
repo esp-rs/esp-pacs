@@ -38,11 +38,11 @@ impl From<crate::W<OUTFIFO_PUSH_SPEC>> for W {
 pub type OUTFIFO_WDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OUTFIFO_WDATA` writer - APB out FIFO write data."]
 pub type OUTFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OUTFIFO_PUSH_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, OUTFIFO_PUSH_SPEC, 9, O, u16, u16>;
 #[doc = "Field `OUTFIFO_PUSH` reader - APB out FIFO push."]
-pub type OUTFIFO_PUSH_R = crate::BitReader<bool>;
+pub type OUTFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_PUSH` writer - APB out FIFO push."]
-pub type OUTFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUTFIFO_PUSH_SPEC, bool, O>;
+pub type OUTFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, OUTFIFO_PUSH_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8 - APB out FIFO write data."]
     #[inline(always)]
@@ -53,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn outfifo_push(&self) -> OUTFIFO_PUSH_R {
         OUTFIFO_PUSH_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUTFIFO_PUSH")
+            .field(
+                "outfifo_wdata",
+                &format_args!("{}", self.outfifo_wdata().bits()),
+            )
+            .field(
+                "outfifo_push",
+                &format_args!("{}", self.outfifo_push().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUTFIFO_PUSH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,37 +35,37 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_THR_EVENT_U0` reader - This is the interrupt enable bit for channel0 event."]
-pub type CNT_THR_EVENT_U0_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U0_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U0` writer - This is the interrupt enable bit for channel0 event."]
-pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U1` reader - This is the interrupt enable bit for channel1 event."]
-pub type CNT_THR_EVENT_U1_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U1_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U1` writer - This is the interrupt enable bit for channel1 event."]
-pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U2` reader - This is the interrupt enable bit for channel2 event."]
-pub type CNT_THR_EVENT_U2_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U2_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U2` writer - This is the interrupt enable bit for channel2 event."]
-pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U3` reader - This is the interrupt enable bit for channel3 event."]
-pub type CNT_THR_EVENT_U3_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U3_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U3` writer - This is the interrupt enable bit for channel3 event."]
-pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U4` reader - This is the interrupt enable bit for channel4 event."]
-pub type CNT_THR_EVENT_U4_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U4_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U4` writer - This is the interrupt enable bit for channel4 event."]
-pub type CNT_THR_EVENT_U4_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U4_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U5` reader - This is the interrupt enable bit for channel5 event."]
-pub type CNT_THR_EVENT_U5_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U5_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U5` writer - This is the interrupt enable bit for channel5 event."]
-pub type CNT_THR_EVENT_U5_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U5_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U6` reader - This is the interrupt enable bit for channel6 event."]
-pub type CNT_THR_EVENT_U6_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U6_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U6` writer - This is the interrupt enable bit for channel6 event."]
-pub type CNT_THR_EVENT_U6_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U6_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U7` reader - This is the interrupt enable bit for channel7 event."]
-pub type CNT_THR_EVENT_U7_R = crate::BitReader<bool>;
+pub type CNT_THR_EVENT_U7_R = crate::BitReader;
 #[doc = "Field `CNT_THR_EVENT_U7` writer - This is the interrupt enable bit for channel7 event."]
-pub type CNT_THR_EVENT_U7_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U7_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This is the interrupt enable bit for channel0 event."]
     #[inline(always)]
@@ -106,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn cnt_thr_event_u7(&self) -> CNT_THR_EVENT_U7_R {
         CNT_THR_EVENT_U7_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "cnt_thr_event_u0",
+                &format_args!("{}", self.cnt_thr_event_u0().bit()),
+            )
+            .field(
+                "cnt_thr_event_u1",
+                &format_args!("{}", self.cnt_thr_event_u1().bit()),
+            )
+            .field(
+                "cnt_thr_event_u2",
+                &format_args!("{}", self.cnt_thr_event_u2().bit()),
+            )
+            .field(
+                "cnt_thr_event_u3",
+                &format_args!("{}", self.cnt_thr_event_u3().bit()),
+            )
+            .field(
+                "cnt_thr_event_u4",
+                &format_args!("{}", self.cnt_thr_event_u4().bit()),
+            )
+            .field(
+                "cnt_thr_event_u5",
+                &format_args!("{}", self.cnt_thr_event_u5().bit()),
+            )
+            .field(
+                "cnt_thr_event_u6",
+                &format_args!("{}", self.cnt_thr_event_u6().bit()),
+            )
+            .field(
+                "cnt_thr_event_u7",
+                &format_args!("{}", self.cnt_thr_event_u7().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

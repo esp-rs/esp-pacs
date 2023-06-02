@@ -38,12 +38,11 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
 pub type RETENTION_CPU_LINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` writer - ******* Description ***********"]
 pub type RETENTION_CPU_LINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u32, u32, 27, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 27, O, u32, u32>;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` reader - ******* Description ***********"]
-pub type NOBYPASS_CPU_ISO_RST_R = crate::BitReader<bool>;
+pub type NOBYPASS_CPU_ISO_RST_R = crate::BitReader;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` writer - ******* Description ***********"]
-pub type NOBYPASS_CPU_ISO_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, O>;
+pub type NOBYPASS_CPU_ISO_RST_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn nobypass_cpu_iso_rst(&self) -> NOBYPASS_CPU_ISO_RST_R {
         NOBYPASS_CPU_ISO_RST_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_CTRL")
+            .field(
+                "retention_cpu_link_addr",
+                &format_args!("{}", self.retention_cpu_link_addr().bits()),
+            )
+            .field(
+                "nobypass_cpu_iso_rst",
+                &format_args!("{}", self.nobypass_cpu_iso_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,15 @@ impl From<crate::W<HP_SLEEP_LP_DIG_POWER_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` reader - need_des"]
-pub type HP_SLEEP_LP_MEM_DSLP_R = crate::BitReader<bool>;
+pub type HP_SLEEP_LP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` writer - need_des"]
 pub type HP_SLEEP_LP_MEM_DSLP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` reader - need_des"]
-pub type HP_SLEEP_PD_LP_PERI_PD_EN_R = crate::BitReader<bool>;
+pub type HP_SLEEP_PD_LP_PERI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` writer - need_des"]
 pub type HP_SLEEP_PD_LP_PERI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn hp_sleep_pd_lp_peri_pd_en(&self) -> HP_SLEEP_PD_LP_PERI_PD_EN_R {
         HP_SLEEP_PD_LP_PERI_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_SLEEP_LP_DIG_POWER")
+            .field(
+                "hp_sleep_lp_mem_dslp",
+                &format_args!("{}", self.hp_sleep_lp_mem_dslp().bit()),
+            )
+            .field(
+                "hp_sleep_pd_lp_peri_pd_en",
+                &format_args!("{}", self.hp_sleep_pd_lp_peri_pd_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_DIG_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

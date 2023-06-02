@@ -21,40 +21,46 @@ impl From<crate::W<SAR_COCPU_INT_ENA_W1TS_SPEC>> for W {
 }
 #[doc = "Field `SAR_COCPU_TOUCH_DONE_INT_ENA_W1TS` writer - int enable of touch done"]
 pub type SAR_COCPU_TOUCH_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TOUCH_INACTIVE_INT_ENA_W1TS` writer - int enable of from touch inactive"]
 pub type SAR_COCPU_TOUCH_INACTIVE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TOUCH_ACTIVE_INT_ENA_W1TS` writer - int enable of touch active"]
 pub type SAR_COCPU_TOUCH_ACTIVE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_SARADC1_INT_ENA_W1TS` writer - int enable of from saradc1"]
 pub type SAR_COCPU_SARADC1_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_SARADC2_INT_ENA_W1TS` writer - int enable of from saradc2"]
 pub type SAR_COCPU_SARADC2_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TSENS_INT_ENA_W1TS` writer - int enable of tsens"]
 pub type SAR_COCPU_TSENS_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_START_INT_ENA_W1TS` writer - int enable of start"]
 pub type SAR_COCPU_START_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_SW_INT_ENA_W1TS` writer - int enable of software"]
 pub type SAR_COCPU_SW_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_SWD_INT_ENA_W1TS` writer - int enable of super watch dog"]
 pub type SAR_COCPU_SWD_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TOUCH_TIMEOUT_INT_ENA_W1TS` writer - int enable of timeout done"]
 pub type SAR_COCPU_TOUCH_TIMEOUT_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W1TS` writer - int enable of approach loop done"]
 pub type SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
 #[doc = "Field `SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA_W1TS` writer - int enable of touch scan done"]
 pub type SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_W1TS_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_ENA_W1TS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - int enable of touch done"]
     #[inline(always)]

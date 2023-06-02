@@ -35,27 +35,27 @@ impl From<crate::W<TIMER_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_RES` reader - reg_lstimer0_duty_res."]
-pub type DUTY_RES_R = crate::FieldReader<u8, u8>;
+pub type DUTY_RES_R = crate::FieldReader;
 #[doc = "Field `DUTY_RES` writer - reg_lstimer0_duty_res."]
-pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u8, u8, 4, O>;
+pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_CONF_SPEC, 4, O>;
 #[doc = "Field `CLK_DIV` reader - reg_clk_div_lstimer0."]
 pub type CLK_DIV_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CLK_DIV` writer - reg_clk_div_lstimer0."]
-pub type CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER_CONF_SPEC, u32, u32, 18, O>;
+pub type CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_CONF_SPEC, 18, O, u32, u32>;
 #[doc = "Field `PAUSE` reader - reg_lstimer0_pause."]
-pub type PAUSE_R = crate::BitReader<bool>;
+pub type PAUSE_R = crate::BitReader;
 #[doc = "Field `PAUSE` writer - reg_lstimer0_pause."]
-pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_CONF_SPEC, O>;
 #[doc = "Field `RST` reader - reg_lstimer0_rst."]
-pub type RST_R = crate::BitReader<bool>;
+pub type RST_R = crate::BitReader;
 #[doc = "Field `RST` writer - reg_lstimer0_rst."]
-pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_CONF_SPEC, O>;
 #[doc = "Field `TICK_SEL` reader - reg_tick_sel_lstimer0."]
-pub type TICK_SEL_R = crate::BitReader<bool>;
+pub type TICK_SEL_R = crate::BitReader;
 #[doc = "Field `TICK_SEL` writer - reg_tick_sel_lstimer0."]
-pub type TICK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+pub type TICK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_CONF_SPEC, O>;
 #[doc = "Field `PARA_UP` writer - reg_lstimer0_para_up."]
-pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_CONF_SPEC, bool, O>;
+pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - reg_lstimer0_duty_res."]
     #[inline(always)]
@@ -81,6 +81,24 @@ impl R {
     #[inline(always)]
     pub fn tick_sel(&self) -> TICK_SEL_R {
         TICK_SEL_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER_CONF")
+            .field("duty_res", &format_args!("{}", self.duty_res().bits()))
+            .field("clk_div", &format_args!("{}", self.clk_div().bits()))
+            .field("pause", &format_args!("{}", self.pause().bit()))
+            .field("rst", &format_args!("{}", self.rst().bit()))
+            .field("tick_sel", &format_args!("{}", self.tick_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

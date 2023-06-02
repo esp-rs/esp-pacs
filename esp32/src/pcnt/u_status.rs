@@ -37,29 +37,29 @@ impl From<crate::W<U_STATUS_SPEC>> for W {
 #[doc = "Field `CORE_STATUS_U0` reader - "]
 pub type CORE_STATUS_U0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ZERO_MODE` reader - "]
-pub type ZERO_MODE_R = crate::FieldReader<u8, u8>;
+pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_MODE` writer - "]
-pub type ZERO_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_STATUS_SPEC, u8, u8, 2, O>;
+pub type ZERO_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_STATUS_SPEC, 2, O>;
 #[doc = "Field `THRES1` reader - "]
-pub type THRES1_R = crate::BitReader<bool>;
+pub type THRES1_R = crate::BitReader;
 #[doc = "Field `THRES1` writer - "]
-pub type THRES1_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_STATUS_SPEC, bool, O>;
+pub type THRES1_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
 #[doc = "Field `THRES0` reader - "]
-pub type THRES0_R = crate::BitReader<bool>;
+pub type THRES0_R = crate::BitReader;
 #[doc = "Field `THRES0` writer - "]
-pub type THRES0_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_STATUS_SPEC, bool, O>;
+pub type THRES0_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
 #[doc = "Field `L_LIM` reader - "]
-pub type L_LIM_R = crate::BitReader<bool>;
+pub type L_LIM_R = crate::BitReader;
 #[doc = "Field `L_LIM` writer - "]
-pub type L_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_STATUS_SPEC, bool, O>;
+pub type L_LIM_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
 #[doc = "Field `H_LIM` reader - "]
-pub type H_LIM_R = crate::BitReader<bool>;
+pub type H_LIM_R = crate::BitReader;
 #[doc = "Field `H_LIM` writer - "]
-pub type H_LIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_STATUS_SPEC, bool, O>;
+pub type H_LIM_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
 #[doc = "Field `ZERO` reader - "]
-pub type ZERO_R = crate::BitReader<bool>;
+pub type ZERO_R = crate::BitReader;
 #[doc = "Field `ZERO` writer - "]
-pub type ZERO_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_STATUS_SPEC, bool, O>;
+pub type ZERO_W<'a, const O: u8> = crate::BitWriter<'a, U_STATUS_SPEC, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -95,6 +95,29 @@ impl R {
     #[inline(always)]
     pub fn zero(&self) -> ZERO_R {
         ZERO_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("U_STATUS")
+            .field(
+                "core_status_u0",
+                &format_args!("{}", self.core_status_u0().bits()),
+            )
+            .field("zero_mode", &format_args!("{}", self.zero_mode().bits()))
+            .field("thres1", &format_args!("{}", self.thres1().bit()))
+            .field("thres0", &format_args!("{}", self.thres0().bit()))
+            .field("l_lim", &format_args!("{}", self.l_lim().bit()))
+            .field("h_lim", &format_args!("{}", self.h_lim().bit()))
+            .field("zero", &format_args!("{}", self.zero().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<U_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

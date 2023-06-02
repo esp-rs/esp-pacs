@@ -37,12 +37,26 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
 #[doc = "Field `TIMEOUT` reader - Maximum number of FAST_CLK cycles that the transmission can take"]
 pub type TIMEOUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMEOUT` writer - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub type TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMEOUT_SPEC, u32, u32, 20, O>;
+pub type TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMEOUT_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
         TIMEOUT_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMEOUT")
+            .field("timeout", &format_args!("{}", self.timeout().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMEOUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

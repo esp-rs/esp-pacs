@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00..0x20 - Register %s that stores data to be programmed."]
     pub pgm_data: [PGM_DATA; 8],

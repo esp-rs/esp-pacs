@@ -38,12 +38,29 @@ impl From<crate::W<TAR1_LOW_SPEC>> for W {
 pub type MAIN_TIMER_TAR_LOW1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MAIN_TIMER_TAR_LOW1` writer - need_des"]
 pub type MAIN_TIMER_TAR_LOW1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TAR1_LOW_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, TAR1_LOW_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn main_timer_tar_low1(&self) -> MAIN_TIMER_TAR_LOW1_R {
         MAIN_TIMER_TAR_LOW1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TAR1_LOW")
+            .field(
+                "main_timer_tar_low1",
+                &format_args!("{}", self.main_timer_tar_low1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TAR1_LOW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

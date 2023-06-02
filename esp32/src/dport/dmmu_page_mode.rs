@@ -35,15 +35,13 @@ impl From<crate::W<DMMU_PAGE_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_DMMU_ENA` reader - "]
-pub type INTERNAL_SRAM_DMMU_ENA_R = crate::BitReader<bool>;
+pub type INTERNAL_SRAM_DMMU_ENA_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_DMMU_ENA` writer - "]
-pub type INTERNAL_SRAM_DMMU_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMMU_PAGE_MODE_SPEC, bool, O>;
+pub type INTERNAL_SRAM_DMMU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DMMU_PAGE_MODE_SPEC, O>;
 #[doc = "Field `DMMU_PAGE_MODE` reader - "]
-pub type DMMU_PAGE_MODE_R = crate::FieldReader<u8, u8>;
+pub type DMMU_PAGE_MODE_R = crate::FieldReader;
 #[doc = "Field `DMMU_PAGE_MODE` writer - "]
-pub type DMMU_PAGE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMMU_PAGE_MODE_SPEC, u8, u8, 2, O>;
+pub type DMMU_PAGE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DMMU_PAGE_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn dmmu_page_mode(&self) -> DMMU_PAGE_MODE_R {
         DMMU_PAGE_MODE_R::new(((self.bits >> 1) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMMU_PAGE_MODE")
+            .field(
+                "internal_sram_dmmu_ena",
+                &format_args!("{}", self.internal_sram_dmmu_ena().bit()),
+            )
+            .field(
+                "dmmu_page_mode",
+                &format_args!("{}", self.dmmu_page_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMMU_PAGE_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

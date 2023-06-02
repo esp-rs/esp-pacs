@@ -37,17 +37,15 @@ impl From<crate::W<USER2_SPEC>> for W {
 #[doc = "Field `USR_COMMAND_VALUE` reader - The value of command. Can be configured in CONF state."]
 pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `USR_COMMAND_VALUE` writer - The value of command. Can be configured in CONF state."]
-pub type USR_COMMAND_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USER2_SPEC, u16, u16, 16, O>;
+pub type USR_COMMAND_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` reader - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
-pub type MST_REMPTY_ERR_END_EN_R = crate::BitReader<bool>;
+pub type MST_REMPTY_ERR_END_EN_R = crate::BitReader;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` writer - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
-pub type MST_REMPTY_ERR_END_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER2_SPEC, bool, O>;
+pub type MST_REMPTY_ERR_END_EN_W<'a, const O: u8> = crate::BitWriter<'a, USER2_SPEC, O>;
 #[doc = "Field `USR_COMMAND_BITLEN` reader - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_COMMAND_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type USR_COMMAND_BITLEN_R = crate::FieldReader;
 #[doc = "Field `USR_COMMAND_BITLEN` writer - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_COMMAND_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USER2_SPEC, u8, u8, 4, O>;
+pub type USR_COMMAND_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:15 - The value of command. Can be configured in CONF state."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn usr_command_bitlen(&self) -> USR_COMMAND_BITLEN_R {
         USR_COMMAND_BITLEN_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER2")
+            .field(
+                "usr_command_value",
+                &format_args!("{}", self.usr_command_value().bits()),
+            )
+            .field(
+                "mst_rempty_err_end_en",
+                &format_args!("{}", self.mst_rempty_err_end_en().bit()),
+            )
+            .field(
+                "usr_command_bitlen",
+                &format_args!("{}", self.usr_command_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,32 @@ impl From<crate::W<CACHE_CORE0_ACS_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_CORE0_ACS_INT_MAP` reader - reg_core0_cache_core0_acs_int_map"]
-pub type CACHE_CORE0_ACS_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type CACHE_CORE0_ACS_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `CACHE_CORE0_ACS_INT_MAP` writer - reg_core0_cache_core0_acs_int_map"]
 pub type CACHE_CORE0_ACS_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_CORE0_ACS_INT_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, CACHE_CORE0_ACS_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_cache_core0_acs_int_map"]
     #[inline(always)]
     pub fn cache_core0_acs_int_map(&self) -> CACHE_CORE0_ACS_INT_MAP_R {
         CACHE_CORE0_ACS_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_CORE0_ACS_INT_MAP")
+            .field(
+                "cache_core0_acs_int_map",
+                &format_args!("{}", self.cache_core0_acs_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_CORE0_ACS_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

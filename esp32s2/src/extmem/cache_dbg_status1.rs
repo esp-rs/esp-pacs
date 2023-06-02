@@ -14,57 +14,57 @@ impl From<crate::R<CACHE_DBG_STATUS1_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS0_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
-pub type DBUS0_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
+pub type DBUS0_ACS_MSK_DCACHE_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus1 is disabled or dcache is disabled which include speculative access."]
-pub type DBUS1_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
+pub type DBUS1_ACS_MSK_DCACHE_ST_R = crate::BitReader;
 #[doc = "Field `DBUS2_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus2 is disabled or dcache is disabled which include speculative access."]
-pub type DBUS2_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
+pub type DBUS2_ACS_MSK_DCACHE_ST_R = crate::BitReader;
 #[doc = "Field `DBUS0_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 counter overflow."]
-pub type DBUS0_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS0_ACS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 counter overflow."]
-pub type DBUS1_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS1_ACS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS2_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 counter overflow."]
-pub type DBUS2_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS2_ACS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS0_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 miss counter overflow."]
-pub type DBUS0_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS0_ACS_MISS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 miss counter overflow."]
-pub type DBUS1_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS1_ACS_MISS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS2_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 miss counter overflow."]
-pub type DBUS2_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS2_ACS_MISS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS0_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 eviction counter overflow."]
-pub type DBUS0_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS0_ACS_WB_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 eviction counter overflow."]
-pub type DBUS1_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS1_ACS_WB_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS2_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 eviction counter overflow."]
-pub type DBUS2_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS2_ACS_WB_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS0_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 abandon counter overflow."]
-pub type DBUS0_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS0_ABANDON_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS1_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 abandon counter overflow."]
-pub type DBUS1_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS1_ABANDON_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DBUS2_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 abandon counter overflow."]
-pub type DBUS2_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DBUS2_ABANDON_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DC_PRELOAD_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load miss counter overflow."]
-pub type DC_PRELOAD_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DC_PRELOAD_MISS_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DC_PRELOAD_EVICT_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load eviction counter overflow."]
-pub type DC_PRELOAD_EVICT_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DC_PRELOAD_EVICT_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DC_PRELOAD_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load counter overflow."]
-pub type DC_PRELOAD_CNT_OVF_ST_R = crate::BitReader<bool>;
+pub type DC_PRELOAD_CNT_OVF_ST_R = crate::BitReader;
 #[doc = "Field `DC_SYNC_SIZE_FAULT_ST` reader - The bit is used to indicate interrupt by manual sync configurations fault."]
-pub type DC_SYNC_SIZE_FAULT_ST_R = crate::BitReader<bool>;
+pub type DC_SYNC_SIZE_FAULT_ST_R = crate::BitReader;
 #[doc = "Field `DC_PRELOAD_SIZE_FAULT_ST` reader - The bit is used to indicate interrupt by manual pre-load configurations fault."]
-pub type DC_PRELOAD_SIZE_FAULT_ST_R = crate::BitReader<bool>;
+pub type DC_PRELOAD_SIZE_FAULT_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_WRITE_FLASH_ST` reader - The bit is used to indicate interrupt by dcache trying to write flash."]
-pub type DCACHE_WRITE_FLASH_ST_R = crate::BitReader<bool>;
+pub type DCACHE_WRITE_FLASH_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub type DCACHE_REJECT_ST_R = crate::BitReader<bool>;
+pub type DCACHE_REJECT_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_PRELOAD_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub type DCACHE_SET_PRELOAD_ILG_ST_R = crate::BitReader<bool>;
+pub type DCACHE_SET_PRELOAD_ILG_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_SYNC_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub type DCACHE_SET_SYNC_ILG_ST_R = crate::BitReader<bool>;
+pub type DCACHE_SET_SYNC_ILG_ST_R = crate::BitReader;
 #[doc = "Field `DCACHE_SET_LOCK_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
-pub type DCACHE_SET_LOCK_ILG_ST_R = crate::BitReader<bool>;
+pub type DCACHE_SET_LOCK_ILG_ST_R = crate::BitReader;
 #[doc = "Field `MMU_ENTRY_FAULT_ST` reader - The bit is used to indicate interrupt by mmu entry fault."]
-pub type MMU_ENTRY_FAULT_ST_R = crate::BitReader<bool>;
+pub type MMU_ENTRY_FAULT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
@@ -195,6 +195,123 @@ impl R {
     #[inline(always)]
     pub fn mmu_entry_fault_st(&self) -> MMU_ENTRY_FAULT_ST_R {
         MMU_ENTRY_FAULT_ST_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_DBG_STATUS1")
+            .field(
+                "dbus0_acs_msk_dcache_st",
+                &format_args!("{}", self.dbus0_acs_msk_dcache_st().bit()),
+            )
+            .field(
+                "dbus1_acs_msk_dcache_st",
+                &format_args!("{}", self.dbus1_acs_msk_dcache_st().bit()),
+            )
+            .field(
+                "dbus2_acs_msk_dcache_st",
+                &format_args!("{}", self.dbus2_acs_msk_dcache_st().bit()),
+            )
+            .field(
+                "dbus0_acs_cnt_ovf_st",
+                &format_args!("{}", self.dbus0_acs_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus1_acs_cnt_ovf_st",
+                &format_args!("{}", self.dbus1_acs_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus2_acs_cnt_ovf_st",
+                &format_args!("{}", self.dbus2_acs_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus0_acs_miss_cnt_ovf_st",
+                &format_args!("{}", self.dbus0_acs_miss_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus1_acs_miss_cnt_ovf_st",
+                &format_args!("{}", self.dbus1_acs_miss_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus2_acs_miss_cnt_ovf_st",
+                &format_args!("{}", self.dbus2_acs_miss_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus0_acs_wb_cnt_ovf_st",
+                &format_args!("{}", self.dbus0_acs_wb_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus1_acs_wb_cnt_ovf_st",
+                &format_args!("{}", self.dbus1_acs_wb_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus2_acs_wb_cnt_ovf_st",
+                &format_args!("{}", self.dbus2_acs_wb_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus0_abandon_cnt_ovf_st",
+                &format_args!("{}", self.dbus0_abandon_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus1_abandon_cnt_ovf_st",
+                &format_args!("{}", self.dbus1_abandon_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dbus2_abandon_cnt_ovf_st",
+                &format_args!("{}", self.dbus2_abandon_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dc_preload_miss_cnt_ovf_st",
+                &format_args!("{}", self.dc_preload_miss_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dc_preload_evict_cnt_ovf_st",
+                &format_args!("{}", self.dc_preload_evict_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dc_preload_cnt_ovf_st",
+                &format_args!("{}", self.dc_preload_cnt_ovf_st().bit()),
+            )
+            .field(
+                "dc_sync_size_fault_st",
+                &format_args!("{}", self.dc_sync_size_fault_st().bit()),
+            )
+            .field(
+                "dc_preload_size_fault_st",
+                &format_args!("{}", self.dc_preload_size_fault_st().bit()),
+            )
+            .field(
+                "dcache_write_flash_st",
+                &format_args!("{}", self.dcache_write_flash_st().bit()),
+            )
+            .field(
+                "dcache_reject_st",
+                &format_args!("{}", self.dcache_reject_st().bit()),
+            )
+            .field(
+                "dcache_set_preload_ilg_st",
+                &format_args!("{}", self.dcache_set_preload_ilg_st().bit()),
+            )
+            .field(
+                "dcache_set_sync_ilg_st",
+                &format_args!("{}", self.dcache_set_sync_ilg_st().bit()),
+            )
+            .field(
+                "dcache_set_lock_ilg_st",
+                &format_args!("{}", self.dcache_set_lock_ilg_st().bit()),
+            )
+            .field(
+                "mmu_entry_fault_st",
+                &format_args!("{}", self.mmu_entry_fault_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_DBG_STATUS1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cache_dbg_status1](index.html) module"]

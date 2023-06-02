@@ -38,12 +38,29 @@ impl From<crate::W<CORE_1_CONTROL_1_SPEC>> for W {
 pub type CONTROL_CORE_1_MESSAGE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` writer - it's only a R/W register, no function, software can write any value"]
 pub type CONTROL_CORE_1_MESSAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_CONTROL_1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CORE_1_CONTROL_1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
     pub fn control_core_1_message(&self) -> CONTROL_CORE_1_MESSAGE_R {
         CONTROL_CORE_1_MESSAGE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_CONTROL_1")
+            .field(
+                "control_core_1_message",
+                &format_args!("{}", self.control_core_1_message().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_CONTROL_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

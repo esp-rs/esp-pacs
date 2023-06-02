@@ -38,11 +38,11 @@ impl From<crate::W<RESYNC_PROLONGED_SPEC>> for W {
 pub type RESYNC_PROLONGED_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RESYNC_PROLONGED` writer - count number, when count to this value, send a sync package"]
 pub type RESYNC_PROLONGED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RESYNC_PROLONGED_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, RESYNC_PROLONGED_SPEC, 24, O, u32, u32>;
 #[doc = "Field `RESYNC_MODE` reader - resyc mode sel: 0: default, cycle count 1: package num count"]
-pub type RESYNC_MODE_R = crate::BitReader<bool>;
+pub type RESYNC_MODE_R = crate::BitReader;
 #[doc = "Field `RESYNC_MODE` writer - resyc mode sel: 0: default, cycle count 1: package num count"]
-pub type RESYNC_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESYNC_PROLONGED_SPEC, bool, O>;
+pub type RESYNC_MODE_W<'a, const O: u8> = crate::BitWriter<'a, RESYNC_PROLONGED_SPEC, O>;
 impl R {
     #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
     #[inline(always)]
@@ -53,6 +53,24 @@ impl R {
     #[inline(always)]
     pub fn resync_mode(&self) -> RESYNC_MODE_R {
         RESYNC_MODE_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESYNC_PROLONGED")
+            .field(
+                "resync_prolonged",
+                &format_args!("{}", self.resync_prolonged().bits()),
+            )
+            .field("resync_mode", &format_args!("{}", self.resync_mode().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESYNC_PROLONGED_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

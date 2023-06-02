@@ -35,35 +35,32 @@ impl From<crate::W<POWER_PD_LPPERI_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_LP_PERI_RESET` reader - need_des"]
-pub type FORCE_LP_PERI_RESET_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_RESET` writer - need_des"]
 pub type FORCE_LP_PERI_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_LP_PERI_ISO` reader - need_des"]
-pub type FORCE_LP_PERI_ISO_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_ISO` writer - need_des"]
-pub type FORCE_LP_PERI_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+pub type FORCE_LP_PERI_ISO_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_LP_PERI_PU` reader - need_des"]
-pub type FORCE_LP_PERI_PU_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_PU` writer - need_des"]
-pub type FORCE_LP_PERI_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+pub type FORCE_LP_PERI_PU_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_LP_PERI_NO_RESET` reader - need_des"]
-pub type FORCE_LP_PERI_NO_RESET_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_NO_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_NO_RESET` writer - need_des"]
 pub type FORCE_LP_PERI_NO_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_LP_PERI_NO_ISO` reader - need_des"]
-pub type FORCE_LP_PERI_NO_ISO_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_NO_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_NO_ISO` writer - need_des"]
 pub type FORCE_LP_PERI_NO_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_LP_PERI_PD` reader - need_des"]
-pub type FORCE_LP_PERI_PD_R = crate::BitReader<bool>;
+pub type FORCE_LP_PERI_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_LP_PERI_PD` writer - need_des"]
-pub type FORCE_LP_PERI_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_LPPERI_CNTL_SPEC, bool, O>;
+pub type FORCE_LP_PERI_PD_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_LPPERI_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -94,6 +91,43 @@ impl R {
     #[inline(always)]
     pub fn force_lp_peri_pd(&self) -> FORCE_LP_PERI_PD_R {
         FORCE_LP_PERI_PD_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_PD_LPPERI_CNTL")
+            .field(
+                "force_lp_peri_reset",
+                &format_args!("{}", self.force_lp_peri_reset().bit()),
+            )
+            .field(
+                "force_lp_peri_iso",
+                &format_args!("{}", self.force_lp_peri_iso().bit()),
+            )
+            .field(
+                "force_lp_peri_pu",
+                &format_args!("{}", self.force_lp_peri_pu().bit()),
+            )
+            .field(
+                "force_lp_peri_no_reset",
+                &format_args!("{}", self.force_lp_peri_no_reset().bit()),
+            )
+            .field(
+                "force_lp_peri_no_iso",
+                &format_args!("{}", self.force_lp_peri_no_iso().bit()),
+            )
+            .field(
+                "force_lp_peri_pd",
+                &format_args!("{}", self.force_lp_peri_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_PD_LPPERI_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

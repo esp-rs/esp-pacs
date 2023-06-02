@@ -35,94 +35,93 @@ impl From<crate::W<OTG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SRP_SESSEND_OVERRIDE` reader - This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software."]
-pub type SRP_SESSEND_OVERRIDE_R = crate::BitReader<bool>;
+pub type SRP_SESSEND_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `SRP_SESSEND_OVERRIDE` writer - This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software."]
-pub type SRP_SESSEND_OVERRIDE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type SRP_SESSEND_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `SRP_SESSEND_VALUE` reader - Software over-ride value of srp session end signal."]
-pub type SRP_SESSEND_VALUE_R = crate::BitReader<bool>;
+pub type SRP_SESSEND_VALUE_R = crate::BitReader;
 #[doc = "Field `SRP_SESSEND_VALUE` writer - Software over-ride value of srp session end signal."]
-pub type SRP_SESSEND_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type SRP_SESSEND_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `PHY_SEL` reader - Select internal external PHY. 1'b0: Select internal PHY. 1'b1: Select external PHY."]
-pub type PHY_SEL_R = crate::BitReader<bool>;
+pub type PHY_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_SEL` writer - Select internal external PHY. 1'b0: Select internal PHY. 1'b1: Select external PHY."]
-pub type PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DFIFO_FORCE_PD` reader - Force the dfifo to go into low power mode. The data in dfifo will not lost."]
-pub type DFIFO_FORCE_PD_R = crate::BitReader<bool>;
+pub type DFIFO_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DFIFO_FORCE_PD` writer - Force the dfifo to go into low power mode. The data in dfifo will not lost."]
-pub type DFIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DFIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DBNCE_FLTR_BYPASS` reader - Bypass Debounce filters for avalid,bvalid,vbusvalid,session end, id signals"]
-pub type DBNCE_FLTR_BYPASS_R = crate::BitReader<bool>;
+pub type DBNCE_FLTR_BYPASS_R = crate::BitReader;
 #[doc = "Field `DBNCE_FLTR_BYPASS` writer - Bypass Debounce filters for avalid,bvalid,vbusvalid,session end, id signals"]
-pub type DBNCE_FLTR_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DBNCE_FLTR_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` reader - Enable software controlle USB D+ D- exchange"]
-pub type EXCHG_PINS_OVERRIDE_R = crate::BitReader<bool>;
+pub type EXCHG_PINS_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` writer - Enable software controlle USB D+ D- exchange"]
-pub type EXCHG_PINS_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type EXCHG_PINS_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `EXCHG_PINS` reader - USB D+ D- exchange. 1'b0: don't change. 1'b1: exchange D+ D-"]
-pub type EXCHG_PINS_R = crate::BitReader<bool>;
+pub type EXCHG_PINS_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS` writer - USB D+ D- exchange. 1'b0: don't change. 1'b1: exchange D+ D-"]
-pub type EXCHG_PINS_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type EXCHG_PINS_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `VREFH` reader - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub type VREFH_R = crate::FieldReader<u8, u8>;
+pub type VREFH_R = crate::FieldReader;
 #[doc = "Field `VREFH` writer - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub type VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OTG_CONF_SPEC, u8, u8, 2, O>;
+pub type VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, OTG_CONF_SPEC, 2, O>;
 #[doc = "Field `VREFL` reader - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub type VREFL_R = crate::FieldReader<u8, u8>;
+pub type VREFL_R = crate::FieldReader;
 #[doc = "Field `VREFL` writer - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub type VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OTG_CONF_SPEC, u8, u8, 2, O>;
+pub type VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, OTG_CONF_SPEC, 2, O>;
 #[doc = "Field `VREF_OVERRIDE` reader - Enable software controlle input threshold"]
-pub type VREF_OVERRIDE_R = crate::BitReader<bool>;
+pub type VREF_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `VREF_OVERRIDE` writer - Enable software controlle input threshold"]
-pub type VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `PAD_PULL_OVERRIDE` reader - Enable software controlle USB D+ D- pullup pulldown"]
-pub type PAD_PULL_OVERRIDE_R = crate::BitReader<bool>;
+pub type PAD_PULL_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `PAD_PULL_OVERRIDE` writer - Enable software controlle USB D+ D- pullup pulldown"]
-pub type PAD_PULL_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type PAD_PULL_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DP_PULLUP` reader - Controlle USB D+ pullup"]
-pub type DP_PULLUP_R = crate::BitReader<bool>;
+pub type DP_PULLUP_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP` writer - Controlle USB D+ pullup"]
-pub type DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DP_PULLDOWN` reader - Controlle USB D+ pulldown"]
-pub type DP_PULLDOWN_R = crate::BitReader<bool>;
+pub type DP_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DP_PULLDOWN` writer - Controlle USB D+ pulldown"]
-pub type DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DM_PULLUP` reader - Controlle USB D+ pullup"]
-pub type DM_PULLUP_R = crate::BitReader<bool>;
+pub type DM_PULLUP_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP` writer - Controlle USB D+ pullup"]
-pub type DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DM_PULLDOWN` reader - Controlle USB D+ pulldown"]
-pub type DM_PULLDOWN_R = crate::BitReader<bool>;
+pub type DM_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DM_PULLDOWN` writer - Controlle USB D+ pulldown"]
-pub type DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `PULLUP_VALUE` reader - Controlle pullup value. 1'b0: typical value is 2.4K. 1'b1: typical value is 1.2K."]
-pub type PULLUP_VALUE_R = crate::BitReader<bool>;
+pub type PULLUP_VALUE_R = crate::BitReader;
 #[doc = "Field `PULLUP_VALUE` writer - Controlle pullup value. 1'b0: typical value is 2.4K. 1'b1: typical value is 1.2K."]
-pub type PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `USB_PAD_ENABLE` reader - Enable USB pad function"]
-pub type USB_PAD_ENABLE_R = crate::BitReader<bool>;
+pub type USB_PAD_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_ENABLE` writer - Enable USB pad function"]
-pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `AHB_CLK_FORCE_ON` reader - Force ahb clock always on"]
-pub type AHB_CLK_FORCE_ON_R = crate::BitReader<bool>;
+pub type AHB_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `AHB_CLK_FORCE_ON` writer - Force ahb clock always on"]
-pub type AHB_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type AHB_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `PHY_CLK_FORCE_ON` reader - Force phy clock always on"]
-pub type PHY_CLK_FORCE_ON_R = crate::BitReader<bool>;
+pub type PHY_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `PHY_CLK_FORCE_ON` writer - Force phy clock always on"]
-pub type PHY_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type PHY_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `PHY_TX_EDGE_SEL` reader - Select phy tx signal output clock edge. 1'b0: negedge. 1'b1: posedge."]
-pub type PHY_TX_EDGE_SEL_R = crate::BitReader<bool>;
+pub type PHY_TX_EDGE_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_TX_EDGE_SEL` writer - Select phy tx signal output clock edge. 1'b0: negedge. 1'b1: posedge."]
-pub type PHY_TX_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type PHY_TX_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `DFIFO_FORCE_PU` reader - Disable the dfifo to go into low power mode. The data in dfifo will not lost."]
-pub type DFIFO_FORCE_PU_R = crate::BitReader<bool>;
+pub type DFIFO_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DFIFO_FORCE_PU` writer - Disable the dfifo to go into low power mode. The data in dfifo will not lost."]
-pub type DFIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type DFIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - Disable auto clock gating of CSR registers"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Disable auto clock gating of CSR registers"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, OTG_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, OTG_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software."]
     #[inline(always)]
@@ -233,6 +232,80 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OTG_CONF")
+            .field(
+                "srp_sessend_override",
+                &format_args!("{}", self.srp_sessend_override().bit()),
+            )
+            .field(
+                "srp_sessend_value",
+                &format_args!("{}", self.srp_sessend_value().bit()),
+            )
+            .field("phy_sel", &format_args!("{}", self.phy_sel().bit()))
+            .field(
+                "dfifo_force_pd",
+                &format_args!("{}", self.dfifo_force_pd().bit()),
+            )
+            .field(
+                "dbnce_fltr_bypass",
+                &format_args!("{}", self.dbnce_fltr_bypass().bit()),
+            )
+            .field(
+                "exchg_pins_override",
+                &format_args!("{}", self.exchg_pins_override().bit()),
+            )
+            .field("exchg_pins", &format_args!("{}", self.exchg_pins().bit()))
+            .field("vrefh", &format_args!("{}", self.vrefh().bits()))
+            .field("vrefl", &format_args!("{}", self.vrefl().bits()))
+            .field(
+                "vref_override",
+                &format_args!("{}", self.vref_override().bit()),
+            )
+            .field(
+                "pad_pull_override",
+                &format_args!("{}", self.pad_pull_override().bit()),
+            )
+            .field("dp_pullup", &format_args!("{}", self.dp_pullup().bit()))
+            .field("dp_pulldown", &format_args!("{}", self.dp_pulldown().bit()))
+            .field("dm_pullup", &format_args!("{}", self.dm_pullup().bit()))
+            .field("dm_pulldown", &format_args!("{}", self.dm_pulldown().bit()))
+            .field(
+                "pullup_value",
+                &format_args!("{}", self.pullup_value().bit()),
+            )
+            .field(
+                "usb_pad_enable",
+                &format_args!("{}", self.usb_pad_enable().bit()),
+            )
+            .field(
+                "ahb_clk_force_on",
+                &format_args!("{}", self.ahb_clk_force_on().bit()),
+            )
+            .field(
+                "phy_clk_force_on",
+                &format_args!("{}", self.phy_clk_force_on().bit()),
+            )
+            .field(
+                "phy_tx_edge_sel",
+                &format_args!("{}", self.phy_tx_edge_sel().bit()),
+            )
+            .field(
+                "dfifo_force_pu",
+                &format_args!("{}", self.dfifo_force_pu().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OTG_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

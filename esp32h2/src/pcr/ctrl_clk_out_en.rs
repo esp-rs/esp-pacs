@@ -35,36 +35,33 @@ impl From<crate::W<CTRL_CLK_OUT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK8_OEN` reader - Set 1 to enable 8m clock"]
-pub type CLK8_OEN_R = crate::BitReader<bool>;
+pub type CLK8_OEN_R = crate::BitReader;
 #[doc = "Field `CLK8_OEN` writer - Set 1 to enable 8m clock"]
-pub type CLK8_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK8_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK16_OEN` reader - Set 1 to enable 16m clock"]
-pub type CLK16_OEN_R = crate::BitReader<bool>;
+pub type CLK16_OEN_R = crate::BitReader;
 #[doc = "Field `CLK16_OEN` writer - Set 1 to enable 16m clock"]
-pub type CLK16_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK16_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK32_OEN` reader - Set 1 to enable 32m clock"]
-pub type CLK32_OEN_R = crate::BitReader<bool>;
+pub type CLK32_OEN_R = crate::BitReader;
 #[doc = "Field `CLK32_OEN` writer - Set 1 to enable 32m clock"]
-pub type CLK32_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK32_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_ADC_INF_OEN` reader - Reserved"]
-pub type CLK_ADC_INF_OEN_R = crate::BitReader<bool>;
+pub type CLK_ADC_INF_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_ADC_INF_OEN` writer - Reserved"]
-pub type CLK_ADC_INF_OEN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_ADC_INF_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_DFM_INF_OEN` reader - Reserved"]
-pub type CLK_DFM_INF_OEN_R = crate::BitReader<bool>;
+pub type CLK_DFM_INF_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_DFM_INF_OEN` writer - Reserved"]
-pub type CLK_DFM_INF_OEN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_DFM_INF_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_SDM_MOD_OEN` reader - Reserved"]
-pub type CLK_SDM_MOD_OEN_R = crate::BitReader<bool>;
+pub type CLK_SDM_MOD_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_SDM_MOD_OEN` writer - Reserved"]
-pub type CLK_SDM_MOD_OEN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_SDM_MOD_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_XTAL_OEN` reader - Set 1 to enable xtal clock"]
-pub type CLK_XTAL_OEN_R = crate::BitReader<bool>;
+pub type CLK_XTAL_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_XTAL_OEN` writer - Set 1 to enable xtal clock"]
-pub type CLK_XTAL_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_XTAL_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_CLK_OUT_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable 8m clock"]
     #[inline(always)]
@@ -100,6 +97,38 @@ impl R {
     #[inline(always)]
     pub fn clk_xtal_oen(&self) -> CLK_XTAL_OEN_R {
         CLK_XTAL_OEN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL_CLK_OUT_EN")
+            .field("clk8_oen", &format_args!("{}", self.clk8_oen().bit()))
+            .field("clk16_oen", &format_args!("{}", self.clk16_oen().bit()))
+            .field("clk32_oen", &format_args!("{}", self.clk32_oen().bit()))
+            .field(
+                "clk_adc_inf_oen",
+                &format_args!("{}", self.clk_adc_inf_oen().bit()),
+            )
+            .field(
+                "clk_dfm_inf_oen",
+                &format_args!("{}", self.clk_dfm_inf_oen().bit()),
+            )
+            .field(
+                "clk_sdm_mod_oen",
+                &format_args!("{}", self.clk_sdm_mod_oen().bit()),
+            )
+            .field(
+                "clk_xtal_oen",
+                &format_args!("{}", self.clk_xtal_oen().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_CLK_OUT_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

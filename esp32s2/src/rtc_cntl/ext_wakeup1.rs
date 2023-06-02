@@ -37,14 +37,28 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
 #[doc = "Field `SEL` reader - Selects a RTC GPIO to be the EXT1 wakeup source."]
 pub type SEL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SEL` writer - Selects a RTC GPIO to be the EXT1 wakeup source."]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT_WAKEUP1_SPEC, u32, u32, 22, O>;
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP1_SPEC, 22, O, u32, u32>;
 #[doc = "Field `STATUS_CLR` writer - Clears the EXT1 wakeup status."]
-pub type STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_WAKEUP1_SPEC, bool, O>;
+pub type STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:21 - Selects a RTC GPIO to be the EXT1 wakeup source."]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_WAKEUP1")
+            .field("sel", &format_args!("{}", self.sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

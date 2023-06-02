@@ -35,21 +35,21 @@ impl From<crate::W<CLK_TO_HP_SPEC>> for W {
     }
 }
 #[doc = "Field `ICG_HP_XTAL32K` reader - need_des"]
-pub type ICG_HP_XTAL32K_R = crate::BitReader<bool>;
+pub type ICG_HP_XTAL32K_R = crate::BitReader;
 #[doc = "Field `ICG_HP_XTAL32K` writer - need_des"]
-pub type ICG_HP_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_TO_HP_SPEC, bool, O>;
+pub type ICG_HP_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, CLK_TO_HP_SPEC, O>;
 #[doc = "Field `ICG_HP_SOSC` reader - need_des"]
-pub type ICG_HP_SOSC_R = crate::BitReader<bool>;
+pub type ICG_HP_SOSC_R = crate::BitReader;
 #[doc = "Field `ICG_HP_SOSC` writer - need_des"]
-pub type ICG_HP_SOSC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_TO_HP_SPEC, bool, O>;
+pub type ICG_HP_SOSC_W<'a, const O: u8> = crate::BitWriter<'a, CLK_TO_HP_SPEC, O>;
 #[doc = "Field `ICG_HP_OSC32K` reader - need_des"]
-pub type ICG_HP_OSC32K_R = crate::BitReader<bool>;
+pub type ICG_HP_OSC32K_R = crate::BitReader;
 #[doc = "Field `ICG_HP_OSC32K` writer - need_des"]
-pub type ICG_HP_OSC32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_TO_HP_SPEC, bool, O>;
+pub type ICG_HP_OSC32K_W<'a, const O: u8> = crate::BitWriter<'a, CLK_TO_HP_SPEC, O>;
 #[doc = "Field `ICG_HP_FOSC` reader - need_des"]
-pub type ICG_HP_FOSC_R = crate::BitReader<bool>;
+pub type ICG_HP_FOSC_R = crate::BitReader;
 #[doc = "Field `ICG_HP_FOSC` writer - need_des"]
-pub type ICG_HP_FOSC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_TO_HP_SPEC, bool, O>;
+pub type ICG_HP_FOSC_W<'a, const O: u8> = crate::BitWriter<'a, CLK_TO_HP_SPEC, O>;
 impl R {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
@@ -70,6 +70,29 @@ impl R {
     #[inline(always)]
     pub fn icg_hp_fosc(&self) -> ICG_HP_FOSC_R {
         ICG_HP_FOSC_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_TO_HP")
+            .field(
+                "icg_hp_xtal32k",
+                &format_args!("{}", self.icg_hp_xtal32k().bit()),
+            )
+            .field("icg_hp_sosc", &format_args!("{}", self.icg_hp_sosc().bit()))
+            .field(
+                "icg_hp_osc32k",
+                &format_args!("{}", self.icg_hp_osc32k().bit()),
+            )
+            .field("icg_hp_fosc", &format_args!("{}", self.icg_hp_fosc().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_TO_HP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

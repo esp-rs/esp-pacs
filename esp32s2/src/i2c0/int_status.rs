@@ -14,39 +14,39 @@ impl From<crate::R<INT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_WM_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_WM_INT interrupt."]
-pub type RXFIFO_WM_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_WM_INT_ST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_WM_INT_ST` reader - The masked interrupt status bit for I2C_TXFIFO_WM_INT interrupt."]
-pub type TXFIFO_WM_INT_ST_R = crate::BitReader<bool>;
+pub type TXFIFO_WM_INT_ST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_OVF_INT interrupt."]
-pub type RXFIFO_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `END_DETECT_INT_ST` reader - The masked interrupt status bit for the I2C_END_DETECT_INT interrupt."]
-pub type END_DETECT_INT_ST_R = crate::BitReader<bool>;
+pub type END_DETECT_INT_ST_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS_DONE_INT_ST` reader - The masked interrupt status bit for the I2C_END_DETECT_INT interrupt."]
-pub type BYTE_TRANS_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type BYTE_TRANS_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ST` reader - The masked interrupt status bit for the I2C_ARBITRATION_LOST_INT interrupt."]
-pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader;
 #[doc = "Field `MST_TXFIFO_UDF_INT_ST` reader - The masked interrupt status bit for I2C_TRANS_COMPLETE_INT interrupt."]
-pub type MST_TXFIFO_UDF_INT_ST_R = crate::BitReader<bool>;
+pub type MST_TXFIFO_UDF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ST` reader - The masked interrupt status bit for the I2C_TRANS_COMPLETE_INT interrupt."]
-pub type TRANS_COMPLETE_INT_ST_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ST` reader - The masked interrupt status bit for the I2C_TIME_OUT_INT interrupt."]
-pub type TIME_OUT_INT_ST_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `TRANS_START_INT_ST` reader - The masked interrupt status bit for the I2C_TRANS_START_INT interrupt."]
-pub type TRANS_START_INT_ST_R = crate::BitReader<bool>;
+pub type TRANS_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `NACK_INT_ST` reader - The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt."]
-pub type NACK_INT_ST_R = crate::BitReader<bool>;
+pub type NACK_INT_ST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_OVF_INT_ST` reader - The masked interrupt status bit for I2C_TXFIFO_OVF_INT interrupt."]
-pub type TXFIFO_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type TXFIFO_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_UDF_INT_ST` reader - The masked interrupt status bit for I2C_RXFIFO_UDF_INT interrupt."]
-pub type RXFIFO_UDF_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_UDF_INT_ST_R = crate::BitReader;
 #[doc = "Field `SCL_ST_TO_INT_ST` reader - The masked interrupt status bit for I2C_SCL_ST_TO_INT interrupt."]
-pub type SCL_ST_TO_INT_ST_R = crate::BitReader<bool>;
+pub type SCL_ST_TO_INT_ST_R = crate::BitReader;
 #[doc = "Field `SCL_MAIN_ST_TO_INT_ST` reader - The masked interrupt status bit for I2C_SCL_MAIN_ST_TO_INT interrupt."]
-pub type SCL_MAIN_ST_TO_INT_ST_R = crate::BitReader<bool>;
+pub type SCL_MAIN_ST_TO_INT_ST_R = crate::BitReader;
 #[doc = "Field `DET_START_INT_ST` reader - The masked interrupt status bit for I2C_DET_START_INT interrupt."]
-pub type DET_START_INT_ST_R = crate::BitReader<bool>;
+pub type DET_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLAVE_STRETCH_INT_ST` reader - The masked interrupt status bit for I2C_SLAVE_STRETCH_INT interrupt."]
-pub type SLAVE_STRETCH_INT_ST_R = crate::BitReader<bool>;
+pub type SLAVE_STRETCH_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]
@@ -132,6 +132,84 @@ impl R {
     #[inline(always)]
     pub fn slave_stretch_int_st(&self) -> SLAVE_STRETCH_INT_ST_R {
         SLAVE_STRETCH_INT_ST_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_STATUS")
+            .field(
+                "rxfifo_wm_int_st",
+                &format_args!("{}", self.rxfifo_wm_int_st().bit()),
+            )
+            .field(
+                "txfifo_wm_int_st",
+                &format_args!("{}", self.txfifo_wm_int_st().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_st",
+                &format_args!("{}", self.rxfifo_ovf_int_st().bit()),
+            )
+            .field(
+                "end_detect_int_st",
+                &format_args!("{}", self.end_detect_int_st().bit()),
+            )
+            .field(
+                "byte_trans_done_int_st",
+                &format_args!("{}", self.byte_trans_done_int_st().bit()),
+            )
+            .field(
+                "arbitration_lost_int_st",
+                &format_args!("{}", self.arbitration_lost_int_st().bit()),
+            )
+            .field(
+                "mst_txfifo_udf_int_st",
+                &format_args!("{}", self.mst_txfifo_udf_int_st().bit()),
+            )
+            .field(
+                "trans_complete_int_st",
+                &format_args!("{}", self.trans_complete_int_st().bit()),
+            )
+            .field(
+                "time_out_int_st",
+                &format_args!("{}", self.time_out_int_st().bit()),
+            )
+            .field(
+                "trans_start_int_st",
+                &format_args!("{}", self.trans_start_int_st().bit()),
+            )
+            .field("nack_int_st", &format_args!("{}", self.nack_int_st().bit()))
+            .field(
+                "txfifo_ovf_int_st",
+                &format_args!("{}", self.txfifo_ovf_int_st().bit()),
+            )
+            .field(
+                "rxfifo_udf_int_st",
+                &format_args!("{}", self.rxfifo_udf_int_st().bit()),
+            )
+            .field(
+                "scl_st_to_int_st",
+                &format_args!("{}", self.scl_st_to_int_st().bit()),
+            )
+            .field(
+                "scl_main_st_to_int_st",
+                &format_args!("{}", self.scl_main_st_to_int_st().bit()),
+            )
+            .field(
+                "det_start_int_st",
+                &format_args!("{}", self.det_start_int_st().bit()),
+            )
+            .field(
+                "slave_stretch_int_st",
+                &format_args!("{}", self.slave_stretch_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Status of captured I2C communication events\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_status](index.html) module"]

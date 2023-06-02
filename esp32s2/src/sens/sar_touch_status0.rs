@@ -16,7 +16,7 @@ impl From<crate::R<SAR_TOUCH_STATUS0_SPEC>> for R {
 #[doc = "Field `TOUCH_DENOISE_DATA` reader - Denoise measure value from touch sensor 0."]
 pub type TOUCH_DENOISE_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_SCAN_CURR` reader - Current pad in scan status"]
-pub type TOUCH_SCAN_CURR_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_SCAN_CURR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:21 - Denoise measure value from touch sensor 0."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn touch_scan_curr(&self) -> TOUCH_SCAN_CURR_R {
         TOUCH_SCAN_CURR_R::new(((self.bits >> 22) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_STATUS0")
+            .field(
+                "touch_denoise_data",
+                &format_args!("{}", self.touch_denoise_data().bits()),
+            )
+            .field(
+                "touch_scan_curr",
+                &format_args!("{}", self.touch_scan_curr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Status of touch controller\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status0](index.html) module"]

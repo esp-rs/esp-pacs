@@ -35,37 +35,37 @@ impl From<crate::W<CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `RNG_CK_EN` reader - need_des"]
-pub type RNG_CK_EN_R = crate::BitReader<bool>;
+pub type RNG_CK_EN_R = crate::BitReader;
 #[doc = "Field `RNG_CK_EN` writer - need_des"]
-pub type RNG_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type RNG_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `OTP_DBG_CK_EN` reader - need_des"]
-pub type OTP_DBG_CK_EN_R = crate::BitReader<bool>;
+pub type OTP_DBG_CK_EN_R = crate::BitReader;
 #[doc = "Field `OTP_DBG_CK_EN` writer - need_des"]
-pub type OTP_DBG_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type OTP_DBG_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `LP_UART_CK_EN` reader - need_des"]
-pub type LP_UART_CK_EN_R = crate::BitReader<bool>;
+pub type LP_UART_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_UART_CK_EN` writer - need_des"]
-pub type LP_UART_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type LP_UART_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `LP_IO_CK_EN` reader - need_des"]
-pub type LP_IO_CK_EN_R = crate::BitReader<bool>;
+pub type LP_IO_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_IO_CK_EN` writer - need_des"]
-pub type LP_IO_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type LP_IO_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `LP_EXT_I2C_CK_EN` reader - need_des"]
-pub type LP_EXT_I2C_CK_EN_R = crate::BitReader<bool>;
+pub type LP_EXT_I2C_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_EXT_I2C_CK_EN` writer - need_des"]
-pub type LP_EXT_I2C_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type LP_EXT_I2C_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `LP_ANA_I2C_CK_EN` reader - need_des"]
-pub type LP_ANA_I2C_CK_EN_R = crate::BitReader<bool>;
+pub type LP_ANA_I2C_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_ANA_I2C_CK_EN` writer - need_des"]
-pub type LP_ANA_I2C_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type LP_ANA_I2C_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `EFUSE_CK_EN` reader - need_des"]
-pub type EFUSE_CK_EN_R = crate::BitReader<bool>;
+pub type EFUSE_CK_EN_R = crate::BitReader;
 #[doc = "Field `EFUSE_CK_EN` writer - need_des"]
-pub type EFUSE_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type EFUSE_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 #[doc = "Field `LP_CPU_CK_EN` reader - need_des"]
-pub type LP_CPU_CK_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_CK_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_CK_EN` writer - need_des"]
-pub type LP_CPU_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EN_SPEC, bool, O>;
+pub type LP_CPU_CK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
@@ -106,6 +106,42 @@ impl R {
     #[inline(always)]
     pub fn lp_cpu_ck_en(&self) -> LP_CPU_CK_EN_R {
         LP_CPU_CK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_EN")
+            .field("rng_ck_en", &format_args!("{}", self.rng_ck_en().bit()))
+            .field(
+                "otp_dbg_ck_en",
+                &format_args!("{}", self.otp_dbg_ck_en().bit()),
+            )
+            .field(
+                "lp_uart_ck_en",
+                &format_args!("{}", self.lp_uart_ck_en().bit()),
+            )
+            .field("lp_io_ck_en", &format_args!("{}", self.lp_io_ck_en().bit()))
+            .field(
+                "lp_ext_i2c_ck_en",
+                &format_args!("{}", self.lp_ext_i2c_ck_en().bit()),
+            )
+            .field(
+                "lp_ana_i2c_ck_en",
+                &format_args!("{}", self.lp_ana_i2c_ck_en().bit()),
+            )
+            .field("efuse_ck_en", &format_args!("{}", self.efuse_ck_en().bit()))
+            .field(
+                "lp_cpu_ck_en",
+                &format_args!("{}", self.lp_cpu_ck_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

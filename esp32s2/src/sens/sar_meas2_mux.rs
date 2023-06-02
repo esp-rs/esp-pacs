@@ -35,14 +35,13 @@ impl From<crate::W<SAR_MEAS2_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS2_MUX_SPEC, u8, u8, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_MUX_SPEC, 3, O>;
 #[doc = "Field `SAR2_RTC_FORCE` reader - In sleep, force to use RTC to control ADC."]
-pub type SAR2_RTC_FORCE_R = crate::BitReader<bool>;
+pub type SAR2_RTC_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR2_RTC_FORCE` writer - In sleep, force to use RTC to control ADC."]
-pub type SAR2_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_MEAS2_MUX_SPEC, bool, O>;
+pub type SAR2_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_MUX_SPEC, O>;
 impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sar2_rtc_force(&self) -> SAR2_RTC_FORCE_R {
         SAR2_RTC_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS2_MUX")
+            .field(
+                "sar2_pwdet_cct",
+                &format_args!("{}", self.sar2_pwdet_cct().bits()),
+            )
+            .field(
+                "sar2_rtc_force",
+                &format_args!("{}", self.sar2_rtc_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS2_MUX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

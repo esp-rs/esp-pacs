@@ -35,79 +35,69 @@ impl From<crate::W<PRO_DCACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type PRO_DCACHE_ENABLE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type PRO_DCACHE_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_SETSIZE_MODE` reader - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
-pub type PRO_DCACHE_SETSIZE_MODE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_SETSIZE_MODE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_SETSIZE_MODE` writer - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
-pub type PRO_DCACHE_SETSIZE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_SETSIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub type PRO_DCACHE_BLOCKSIZE_MODE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_BLOCKSIZE_MODE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_BLOCKSIZE_MODE` writer - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
 pub type PRO_DCACHE_BLOCKSIZE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type PRO_DCACHE_INVALIDATE_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
 pub type PRO_DCACHE_INVALIDATE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_DONE` reader - The bit is used to indicate invalidate operation is finished."]
-pub type PRO_DCACHE_INVALIDATE_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_INVALIDATE_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_FLUSH_ENA` reader - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
-pub type PRO_DCACHE_FLUSH_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_FLUSH_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_FLUSH_ENA` writer - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
-pub type PRO_DCACHE_FLUSH_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_FLUSH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_FLUSH_DONE` reader - The bit is used to indicate flush operation is finished."]
-pub type PRO_DCACHE_FLUSH_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_FLUSH_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub type PRO_DCACHE_CLEAN_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_CLEAN_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_CLEAN_ENA` writer - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub type PRO_DCACHE_CLEAN_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_CLEAN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_CLEAN_DONE` reader - The bit is used to indicate clean operation is finished."]
-pub type PRO_DCACHE_CLEAN_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_CLEAN_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_LOCK0_EN` reader - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
-pub type PRO_DCACHE_LOCK0_EN_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_LOCK0_EN_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_LOCK0_EN` writer - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
-pub type PRO_DCACHE_LOCK0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_LOCK0_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_LOCK1_EN` reader - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
-pub type PRO_DCACHE_LOCK1_EN_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_LOCK1_EN_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_LOCK1_EN` writer - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
-pub type PRO_DCACHE_LOCK1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_LOCK1_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
-pub type PRO_DCACHE_AUTOLOAD_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
-pub type PRO_DCACHE_AUTOLOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_AUTOLOAD_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_DONE` reader - The bit is used to indicate conditional-preload operation is finished."]
-pub type PRO_DCACHE_AUTOLOAD_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type PRO_DCACHE_PRELOAD_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type PRO_DCACHE_PRELOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_PRELOAD_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_DONE` reader - The bit is used to indicate preload operation is finished."]
-pub type PRO_DCACHE_PRELOAD_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub type PRO_DCACHE_UNLOCK_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_UNLOCK_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub type PRO_DCACHE_UNLOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_UNLOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_UNLOCK_DONE` reader - The bit is used to indicate unlock operation is finished."]
-pub type PRO_DCACHE_UNLOCK_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_UNLOCK_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub type PRO_DCACHE_LOCK_ENA_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_LOCK_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub type PRO_DCACHE_LOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DCACHE_LOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_LOCK_DONE` reader - The bit is used to indicate lock operation is finished."]
-pub type PRO_DCACHE_LOCK_DONE_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_LOCK_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -203,6 +193,95 @@ impl R {
     #[inline(always)]
     pub fn pro_dcache_lock_done(&self) -> PRO_DCACHE_LOCK_DONE_R {
         PRO_DCACHE_LOCK_DONE_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DCACHE_CTRL")
+            .field(
+                "pro_dcache_enable",
+                &format_args!("{}", self.pro_dcache_enable().bit()),
+            )
+            .field(
+                "pro_dcache_setsize_mode",
+                &format_args!("{}", self.pro_dcache_setsize_mode().bit()),
+            )
+            .field(
+                "pro_dcache_blocksize_mode",
+                &format_args!("{}", self.pro_dcache_blocksize_mode().bit()),
+            )
+            .field(
+                "pro_dcache_invalidate_ena",
+                &format_args!("{}", self.pro_dcache_invalidate_ena().bit()),
+            )
+            .field(
+                "pro_dcache_invalidate_done",
+                &format_args!("{}", self.pro_dcache_invalidate_done().bit()),
+            )
+            .field(
+                "pro_dcache_flush_ena",
+                &format_args!("{}", self.pro_dcache_flush_ena().bit()),
+            )
+            .field(
+                "pro_dcache_flush_done",
+                &format_args!("{}", self.pro_dcache_flush_done().bit()),
+            )
+            .field(
+                "pro_dcache_clean_ena",
+                &format_args!("{}", self.pro_dcache_clean_ena().bit()),
+            )
+            .field(
+                "pro_dcache_clean_done",
+                &format_args!("{}", self.pro_dcache_clean_done().bit()),
+            )
+            .field(
+                "pro_dcache_lock0_en",
+                &format_args!("{}", self.pro_dcache_lock0_en().bit()),
+            )
+            .field(
+                "pro_dcache_lock1_en",
+                &format_args!("{}", self.pro_dcache_lock1_en().bit()),
+            )
+            .field(
+                "pro_dcache_autoload_ena",
+                &format_args!("{}", self.pro_dcache_autoload_ena().bit()),
+            )
+            .field(
+                "pro_dcache_autoload_done",
+                &format_args!("{}", self.pro_dcache_autoload_done().bit()),
+            )
+            .field(
+                "pro_dcache_preload_ena",
+                &format_args!("{}", self.pro_dcache_preload_ena().bit()),
+            )
+            .field(
+                "pro_dcache_preload_done",
+                &format_args!("{}", self.pro_dcache_preload_done().bit()),
+            )
+            .field(
+                "pro_dcache_unlock_ena",
+                &format_args!("{}", self.pro_dcache_unlock_ena().bit()),
+            )
+            .field(
+                "pro_dcache_unlock_done",
+                &format_args!("{}", self.pro_dcache_unlock_done().bit()),
+            )
+            .field(
+                "pro_dcache_lock_ena",
+                &format_args!("{}", self.pro_dcache_lock_ena().bit()),
+            )
+            .field(
+                "pro_dcache_lock_done",
+                &format_args!("{}", self.pro_dcache_lock_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

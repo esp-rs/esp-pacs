@@ -35,15 +35,31 @@ impl From<crate::W<REGION_FILTER_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_FILTER_EN` reader - Region filter enable"]
-pub type REGION_FILTER_EN_R = crate::FieldReader<u8, u8>;
+pub type REGION_FILTER_EN_R = crate::FieldReader;
 #[doc = "Field `REGION_FILTER_EN` writer - Region filter enable"]
-pub type REGION_FILTER_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_FILTER_EN_SPEC, u8, u8, 4, O>;
+pub type REGION_FILTER_EN_W<'a, const O: u8> = crate::FieldWriter<'a, REGION_FILTER_EN_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Region filter enable"]
     #[inline(always)]
     pub fn region_filter_en(&self) -> REGION_FILTER_EN_R {
         REGION_FILTER_EN_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION_FILTER_EN")
+            .field(
+                "region_filter_en",
+                &format_args!("{}", self.region_filter_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION_FILTER_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

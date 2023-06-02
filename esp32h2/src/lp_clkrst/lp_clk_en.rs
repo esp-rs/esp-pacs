@@ -35,14 +35,31 @@ impl From<crate::W<LP_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `FAST_ORI_GATE` reader - need_des"]
-pub type FAST_ORI_GATE_R = crate::BitReader<bool>;
+pub type FAST_ORI_GATE_R = crate::BitReader;
 #[doc = "Field `FAST_ORI_GATE` writer - need_des"]
-pub type FAST_ORI_GATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_EN_SPEC, bool, O>;
+pub type FAST_ORI_GATE_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn fast_ori_gate(&self) -> FAST_ORI_GATE_R {
         FAST_ORI_GATE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_CLK_EN")
+            .field(
+                "fast_ori_gate",
+                &format_args!("{}", self.fast_ori_gate().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

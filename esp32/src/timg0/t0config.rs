@@ -35,33 +35,33 @@ impl From<crate::W<T0CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `ALARM_EN` reader - When set alarm is enabled"]
-pub type ALARM_EN_R = crate::BitReader<bool>;
+pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - When set alarm is enabled"]
-pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `LEVEL_INT_EN` reader - When set level type interrupt will be generated during alarm"]
-pub type LEVEL_INT_EN_R = crate::BitReader<bool>;
+pub type LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `LEVEL_INT_EN` writer - When set level type interrupt will be generated during alarm"]
-pub type LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `EDGE_INT_EN` reader - When set edge type interrupt will be generated during alarm"]
-pub type EDGE_INT_EN_R = crate::BitReader<bool>;
+pub type EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `EDGE_INT_EN` writer - When set edge type interrupt will be generated during alarm"]
-pub type EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `DIVIDER` reader - Timer 0 clock (T0_clk) prescale value."]
 pub type DIVIDER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DIVIDER` writer - Timer 0 clock (T0_clk) prescale value."]
-pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0CONFIG_SPEC, u16, u16, 16, O>;
+pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, T0CONFIG_SPEC, 16, O, u16, u16>;
 #[doc = "Field `AUTORELOAD` reader - When set timer 0 auto-reload at alarming is enabled"]
-pub type AUTORELOAD_R = crate::BitReader<bool>;
+pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - When set timer 0 auto-reload at alarming is enabled"]
-pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `INCREASE` reader - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
-pub type INCREASE_R = crate::BitReader<bool>;
+pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
-pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `EN` reader - When set timer 0 time-base counter is enabled"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When set timer 0 time-base counter is enabled"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 impl R {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
@@ -97,6 +97,29 @@ impl R {
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T0CONFIG")
+            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
+            .field(
+                "level_int_en",
+                &format_args!("{}", self.level_int_en().bit()),
+            )
+            .field("edge_int_en", &format_args!("{}", self.edge_int_en().bit()))
+            .field("divider", &format_args!("{}", self.divider().bits()))
+            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
+            .field("increase", &format_args!("{}", self.increase().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T0CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

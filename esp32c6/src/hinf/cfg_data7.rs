@@ -35,73 +35,71 @@ impl From<crate::W<CFG_DATA7_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_STATE` reader - configure cis addr 318 and 574"]
-pub type PIN_STATE_R = crate::FieldReader<u8, u8>;
+pub type PIN_STATE_R = crate::FieldReader;
 #[doc = "Field `PIN_STATE` writer - configure cis addr 318 and 574"]
-pub type PIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, O>;
+pub type PIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA7_SPEC, 8, O>;
 #[doc = "Field `CHIP_STATE` reader - configure cis addr 312, 315, 568 and 571"]
-pub type CHIP_STATE_R = crate::FieldReader<u8, u8>;
+pub type CHIP_STATE_R = crate::FieldReader;
 #[doc = "Field `CHIP_STATE` writer - configure cis addr 312, 315, 568 and 571"]
-pub type CHIP_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, O>;
+pub type CHIP_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA7_SPEC, 8, O>;
 #[doc = "Field `SDIO_RST` reader - soft reset control for sdio module"]
-pub type SDIO_RST_R = crate::BitReader<bool>;
+pub type SDIO_RST_R = crate::BitReader;
 #[doc = "Field `SDIO_RST` writer - soft reset control for sdio module"]
-pub type SDIO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDIO_IOREADY0` reader - sdio io ready, high enable"]
-pub type SDIO_IOREADY0_R = crate::BitReader<bool>;
+pub type SDIO_IOREADY0_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY0` writer - sdio io ready, high enable"]
-pub type SDIO_IOREADY0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_IOREADY0_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDIO_MEM_PD` reader - sdio memory power down, high active"]
-pub type SDIO_MEM_PD_R = crate::BitReader<bool>;
+pub type SDIO_MEM_PD_R = crate::BitReader;
 #[doc = "Field `SDIO_MEM_PD` writer - sdio memory power down, high active"]
-pub type SDIO_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `ESDIO_DATA1_INT_EN` reader - enable sdio interrupt on data1 line"]
-pub type ESDIO_DATA1_INT_EN_R = crate::BitReader<bool>;
+pub type ESDIO_DATA1_INT_EN_R = crate::BitReader;
 #[doc = "Field `ESDIO_DATA1_INT_EN` writer - enable sdio interrupt on data1 line"]
-pub type ESDIO_DATA1_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type ESDIO_DATA1_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDIO_SWITCH_VOLT_SW` reader - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
-pub type SDIO_SWITCH_VOLT_SW_R = crate::BitReader<bool>;
+pub type SDIO_SWITCH_VOLT_SW_R = crate::BitReader;
 #[doc = "Field `SDIO_SWITCH_VOLT_SW` writer - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
-pub type SDIO_SWITCH_VOLT_SW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_SWITCH_VOLT_SW_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `DDR50_BLK_LEN_FIX_EN` reader - enable block length to be fixed to 512 bytes in ddr50 mode"]
-pub type DDR50_BLK_LEN_FIX_EN_R = crate::BitReader<bool>;
+pub type DDR50_BLK_LEN_FIX_EN_R = crate::BitReader;
 #[doc = "Field `DDR50_BLK_LEN_FIX_EN` writer - enable block length to be fixed to 512 bytes in ddr50 mode"]
-pub type DDR50_BLK_LEN_FIX_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type DDR50_BLK_LEN_FIX_EN_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - sdio apb clock for configuration force on control:0-gating,1-force on."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - sdio apb clock for configuration force on control:0-gating,1-force on."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDDR50` reader - configure if support sdr50 mode in cccr"]
-pub type SDDR50_R = crate::BitReader<bool>;
+pub type SDDR50_R = crate::BitReader;
 #[doc = "Field `SDDR50` writer - configure if support sdr50 mode in cccr"]
-pub type SDDR50_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDDR50_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SSDR104` reader - configure if support sdr104 mode in cccr"]
-pub type SSDR104_R = crate::BitReader<bool>;
+pub type SSDR104_R = crate::BitReader;
 #[doc = "Field `SSDR104` writer - configure if support sdr104 mode in cccr"]
-pub type SSDR104_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SSDR104_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SSDR50` reader - configure if support ddr50 mode in cccr"]
-pub type SSDR50_R = crate::BitReader<bool>;
+pub type SSDR50_R = crate::BitReader;
 #[doc = "Field `SSDR50` writer - configure if support ddr50 mode in cccr"]
-pub type SSDR50_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SSDR50_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDTD` reader - configure if support driver type D in cccr"]
-pub type SDTD_R = crate::BitReader<bool>;
+pub type SDTD_R = crate::BitReader;
 #[doc = "Field `SDTD` writer - configure if support driver type D in cccr"]
-pub type SDTD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDTD_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDTA` reader - configure if support driver type A in cccr"]
-pub type SDTA_R = crate::BitReader<bool>;
+pub type SDTA_R = crate::BitReader;
 #[doc = "Field `SDTA` writer - configure if support driver type A in cccr"]
-pub type SDTA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDTA_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDTC` reader - configure if support driver type C in cccr"]
-pub type SDTC_R = crate::BitReader<bool>;
+pub type SDTC_R = crate::BitReader;
 #[doc = "Field `SDTC` writer - configure if support driver type C in cccr"]
-pub type SDTC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDTC_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SAI` reader - configure if support asynchronous interrupt in cccr"]
-pub type SAI_R = crate::BitReader<bool>;
+pub type SAI_R = crate::BitReader;
 #[doc = "Field `SAI` writer - configure if support asynchronous interrupt in cccr"]
-pub type SAI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SAI_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDIO_WAKEUP_CLR` writer - clear sdio_wake_up signal after the chip wakes up"]
-pub type SDIO_WAKEUP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_WAKEUP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - configure cis addr 318 and 574"]
     #[inline(always)]
@@ -182,6 +180,47 @@ impl R {
     #[inline(always)]
     pub fn sai(&self) -> SAI_R {
         SAI_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_DATA7")
+            .field("pin_state", &format_args!("{}", self.pin_state().bits()))
+            .field("chip_state", &format_args!("{}", self.chip_state().bits()))
+            .field("sdio_rst", &format_args!("{}", self.sdio_rst().bit()))
+            .field(
+                "sdio_ioready0",
+                &format_args!("{}", self.sdio_ioready0().bit()),
+            )
+            .field("sdio_mem_pd", &format_args!("{}", self.sdio_mem_pd().bit()))
+            .field(
+                "esdio_data1_int_en",
+                &format_args!("{}", self.esdio_data1_int_en().bit()),
+            )
+            .field(
+                "sdio_switch_volt_sw",
+                &format_args!("{}", self.sdio_switch_volt_sw().bit()),
+            )
+            .field(
+                "ddr50_blk_len_fix_en",
+                &format_args!("{}", self.ddr50_blk_len_fix_en().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("sddr50", &format_args!("{}", self.sddr50().bit()))
+            .field("ssdr104", &format_args!("{}", self.ssdr104().bit()))
+            .field("ssdr50", &format_args!("{}", self.ssdr50().bit()))
+            .field("sdtd", &format_args!("{}", self.sdtd().bit()))
+            .field("sdta", &format_args!("{}", self.sdta().bit()))
+            .field("sdtc", &format_args!("{}", self.sdtc().bit()))
+            .field("sai", &format_args!("{}", self.sai().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_DATA7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

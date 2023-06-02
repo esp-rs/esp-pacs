@@ -35,20 +35,17 @@ impl From<crate::W<LCD_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VB_FRONT` reader - It is the vertical blank front porch of a frame."]
-pub type LCD_VB_FRONT_R = crate::FieldReader<u8, u8>;
+pub type LCD_VB_FRONT_R = crate::FieldReader;
 #[doc = "Field `LCD_VB_FRONT` writer - It is the vertical blank front porch of a frame."]
-pub type LCD_VB_FRONT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u8, u8, 8, O>;
+pub type LCD_VB_FRONT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 8, O>;
 #[doc = "Field `LCD_HA_WIDTH` reader - It is the horizontal active width of a frame."]
 pub type LCD_HA_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_HA_WIDTH` writer - It is the horizontal active width of a frame."]
-pub type LCD_HA_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u16, u16, 12, O>;
+pub type LCD_HA_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `LCD_HT_WIDTH` reader - It is the horizontal total width of a frame."]
 pub type LCD_HT_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_HT_WIDTH` writer - It is the horizontal total width of a frame."]
-pub type LCD_HT_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u16, u16, 12, O>;
+pub type LCD_HT_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn lcd_ht_width(&self) -> LCD_HT_WIDTH_R {
         LCD_HT_WIDTH_R::new(((self.bits >> 20) & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_CTRL1")
+            .field(
+                "lcd_vb_front",
+                &format_args!("{}", self.lcd_vb_front().bits()),
+            )
+            .field(
+                "lcd_ha_width",
+                &format_args!("{}", self.lcd_ha_width().bits()),
+            )
+            .field(
+                "lcd_ht_width",
+                &format_args!("{}", self.lcd_ht_width().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

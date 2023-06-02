@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - cpu_peripheral clock gating register"]
     pub cpu_peri_clk_en: CPU_PERI_CLK_EN,

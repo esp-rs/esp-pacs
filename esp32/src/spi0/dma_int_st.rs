@@ -14,23 +14,23 @@ impl From<crate::R<DMA_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_ST` reader - The status bit for lack of enough inlink descriptors."]
-pub type INLINK_DSCR_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_ST` reader - The status bit for outlink descriptor error."]
-pub type OUTLINK_DSCR_ERROR_INT_ST_R = crate::BitReader<bool>;
+pub type OUTLINK_DSCR_ERROR_INT_ST_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_ST` reader - The status bit for inlink descriptor error."]
-pub type INLINK_DSCR_ERROR_INT_ST_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_ERROR_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_ST` reader - The status bit for completing usage of a inlink descriptor."]
-pub type IN_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_ST` reader - The status bit for receiving error."]
-pub type IN_ERR_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_ST` reader - The status bit for completing receiving all the packets from host."]
-pub type IN_SUC_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_ST` reader - The status bit for completing usage of a outlink descriptor."]
-pub type OUT_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_ST` reader - The status bit for sending a packet to host done."]
-pub type OUT_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ST` reader - The status bit for sending all the packets to host done."]
-pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The status bit for lack of enough inlink descriptors."]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn out_total_eof_int_st(&self) -> OUT_TOTAL_EOF_INT_ST_R {
         OUT_TOTAL_EOF_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_INT_ST")
+            .field(
+                "inlink_dscr_empty_int_st",
+                &format_args!("{}", self.inlink_dscr_empty_int_st().bit()),
+            )
+            .field(
+                "outlink_dscr_error_int_st",
+                &format_args!("{}", self.outlink_dscr_error_int_st().bit()),
+            )
+            .field(
+                "inlink_dscr_error_int_st",
+                &format_args!("{}", self.inlink_dscr_error_int_st().bit()),
+            )
+            .field(
+                "in_done_int_st",
+                &format_args!("{}", self.in_done_int_st().bit()),
+            )
+            .field(
+                "in_err_eof_int_st",
+                &format_args!("{}", self.in_err_eof_int_st().bit()),
+            )
+            .field(
+                "in_suc_eof_int_st",
+                &format_args!("{}", self.in_suc_eof_int_st().bit()),
+            )
+            .field(
+                "out_done_int_st",
+                &format_args!("{}", self.out_done_int_st().bit()),
+            )
+            .field(
+                "out_eof_int_st",
+                &format_args!("{}", self.out_eof_int_st().bit()),
+            )
+            .field(
+                "out_total_eof_int_st",
+                &format_args!("{}", self.out_total_eof_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_int_st](index.html) module"]

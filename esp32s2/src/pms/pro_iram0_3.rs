@@ -38,37 +38,31 @@ impl From<crate::W<PRO_IRAM0_3_SPEC>> for W {
 pub type PRO_IRAM0_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_SPLTADDR` writer - Configure the split address of RTC FAST for IBUS access."]
 pub type PRO_IRAM0_RTCFAST_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_IRAM0_3_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, PRO_IRAM0_3_SPEC, 11, O, u16, u16>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_F` reader - Setting to 1 grants IBUS permission to fetch RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_F` writer - Setting to 1 grants IBUS permission to fetch RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_L_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_R` reader - Setting to 1 grants IBUS permission to read RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_L_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_R` writer - Setting to 1 grants IBUS permission to read RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_L_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_W` reader - Setting to 1 grants IBUS permission to write RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_L_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_W` writer - Setting to 1 grants IBUS permission to write RTC FAST low address region."]
-pub type PRO_IRAM0_RTCFAST_L_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_L_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_F` reader - Setting to 1 grants IBUS permission to fetch RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_H_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_F` writer - Setting to 1 grants IBUS permission to fetch RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_H_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_R` reader - Setting to 1 grants IBUS permission to read RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_H_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_R` writer - Setting to 1 grants IBUS permission to read RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_H_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_W` reader - Setting to 1 grants IBUS permission to write RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_RTCFAST_H_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_H_W` writer - Setting to 1 grants IBUS permission to write RTC FAST high address region."]
-pub type PRO_IRAM0_RTCFAST_H_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_3_SPEC, bool, O>;
+pub type PRO_IRAM0_RTCFAST_H_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_3_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10 - Configure the split address of RTC FAST for IBUS access."]
     #[inline(always)]
@@ -104,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn pro_iram0_rtcfast_h_w(&self) -> PRO_IRAM0_RTCFAST_H_W_R {
         PRO_IRAM0_RTCFAST_H_W_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_IRAM0_3")
+            .field(
+                "pro_iram0_rtcfast_spltaddr",
+                &format_args!("{}", self.pro_iram0_rtcfast_spltaddr().bits()),
+            )
+            .field(
+                "pro_iram0_rtcfast_l_f",
+                &format_args!("{}", self.pro_iram0_rtcfast_l_f().bit()),
+            )
+            .field(
+                "pro_iram0_rtcfast_l_r",
+                &format_args!("{}", self.pro_iram0_rtcfast_l_r().bit()),
+            )
+            .field(
+                "pro_iram0_rtcfast_l_w",
+                &format_args!("{}", self.pro_iram0_rtcfast_l_w().bit()),
+            )
+            .field(
+                "pro_iram0_rtcfast_h_f",
+                &format_args!("{}", self.pro_iram0_rtcfast_h_f().bit()),
+            )
+            .field(
+                "pro_iram0_rtcfast_h_r",
+                &format_args!("{}", self.pro_iram0_rtcfast_h_r().bit()),
+            )
+            .field(
+                "pro_iram0_rtcfast_h_w",
+                &format_args!("{}", self.pro_iram0_rtcfast_h_w().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_IRAM0_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

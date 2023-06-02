@@ -35,19 +35,19 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
-pub type CS_SETUP_TIME_R = crate::FieldReader<u8, u8>;
+pub type CS_SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
-pub type CS_SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 5, O>;
+pub type CS_SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 5, O>;
 #[doc = "Field `CS_HOLD_TIME` reader - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
-pub type CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_TIME` writer - Spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
-pub type CS_HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 5, O>;
+pub type CS_HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 5, O>;
 #[doc = "Field `CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 6, O>;
+pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 6, O>;
 #[doc = "Field `SYNC_RESET` writer - The FSM will be reset."]
-pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
@@ -63,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn cs_hold_delay(&self) -> CS_HOLD_DELAY_R {
         CS_HOLD_DELAY_R::new(((self.bits >> 25) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field(
+                "cs_setup_time",
+                &format_args!("{}", self.cs_setup_time().bits()),
+            )
+            .field(
+                "cs_hold_time",
+                &format_args!("{}", self.cs_hold_time().bits()),
+            )
+            .field(
+                "cs_hold_delay",
+                &format_args!("{}", self.cs_hold_delay().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

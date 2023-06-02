@@ -38,12 +38,29 @@ impl From<crate::W<SLC0HOST_RX_INFOR_SPEC>> for W {
 pub type SLC0HOST_RX_INFOR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC0HOST_RX_INFOR` writer - *******Description***********"]
 pub type SLC0HOST_RX_INFOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC0HOST_RX_INFOR_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SLC0HOST_RX_INFOR_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - *******Description***********"]
     #[inline(always)]
     pub fn slc0host_rx_infor(&self) -> SLC0HOST_RX_INFOR_R {
         SLC0HOST_RX_INFOR_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC0HOST_RX_INFOR")
+            .field(
+                "slc0host_rx_infor",
+                &format_args!("{}", self.slc0host_rx_infor().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_RX_INFOR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

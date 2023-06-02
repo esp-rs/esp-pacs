@@ -35,15 +35,14 @@ impl From<crate::W<PWDET_SAR_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PWDET_SAR_CLK_DIV_NUM` reader - xxxx"]
-pub type PWDET_SAR_CLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type PWDET_SAR_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `PWDET_SAR_CLK_DIV_NUM` writer - xxxx"]
 pub type PWDET_SAR_CLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWDET_SAR_CLK_CONF_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, PWDET_SAR_CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `PWDET_SAR_READER_EN` reader - xxxx"]
-pub type PWDET_SAR_READER_EN_R = crate::BitReader<bool>;
+pub type PWDET_SAR_READER_EN_R = crate::BitReader;
 #[doc = "Field `PWDET_SAR_READER_EN` writer - xxxx"]
-pub type PWDET_SAR_READER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PWDET_SAR_CLK_CONF_SPEC, bool, O>;
+pub type PWDET_SAR_READER_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWDET_SAR_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn pwdet_sar_reader_en(&self) -> PWDET_SAR_READER_EN_R {
         PWDET_SAR_READER_EN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWDET_SAR_CLK_CONF")
+            .field(
+                "pwdet_sar_clk_div_num",
+                &format_args!("{}", self.pwdet_sar_clk_div_num().bits()),
+            )
+            .field(
+                "pwdet_sar_reader_en",
+                &format_args!("{}", self.pwdet_sar_reader_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PWDET_SAR_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

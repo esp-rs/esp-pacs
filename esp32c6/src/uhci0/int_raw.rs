@@ -35,41 +35,41 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_START_INT_RAW` reader - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
-pub type RX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_RAW` writer - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
-pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_START_INT_RAW` reader - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
-pub type TX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_RAW` writer - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
-pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
-pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_RAW` writer - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
-pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
-pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_RAW` writer - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
-pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` reader - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
-pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` writer - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
-pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` reader - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
-pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` writer - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
-pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
-pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_RAW` writer - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
-pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APP_CTRL0_INT_RAW` reader - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
-pub type APP_CTRL0_INT_RAW_R = crate::BitReader<bool>;
+pub type APP_CTRL0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_RAW` writer - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
-pub type APP_CTRL0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APP_CTRL0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APP_CTRL1_INT_RAW` reader - Indicates the raw interrupt of UHCI_APP_CTRL1_INT. Interrupt will be triggered when UHCI_APP_CTRL1_IN_SET is set to 1."]
-pub type APP_CTRL1_INT_RAW_R = crate::BitReader<bool>;
+pub type APP_CTRL1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_RAW` writer - Indicates the raw interrupt of UHCI_APP_CTRL1_INT. Interrupt will be triggered when UHCI_APP_CTRL1_IN_SET is set to 1."]
-pub type APP_CTRL1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APP_CTRL1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
     #[inline(always)]
@@ -115,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn app_ctrl1_int_raw(&self) -> APP_CTRL1_INT_RAW_R {
         APP_CTRL1_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "rx_start_int_raw",
+                &format_args!("{}", self.rx_start_int_raw().bit()),
+            )
+            .field(
+                "tx_start_int_raw",
+                &format_args!("{}", self.tx_start_int_raw().bit()),
+            )
+            .field(
+                "rx_hung_int_raw",
+                &format_args!("{}", self.rx_hung_int_raw().bit()),
+            )
+            .field(
+                "tx_hung_int_raw",
+                &format_args!("{}", self.tx_hung_int_raw().bit()),
+            )
+            .field(
+                "send_s_reg_q_int_raw",
+                &format_args!("{}", self.send_s_reg_q_int_raw().bit()),
+            )
+            .field(
+                "send_a_reg_q_int_raw",
+                &format_args!("{}", self.send_a_reg_q_int_raw().bit()),
+            )
+            .field(
+                "out_eof_int_raw",
+                &format_args!("{}", self.out_eof_int_raw().bit()),
+            )
+            .field(
+                "app_ctrl0_int_raw",
+                &format_args!("{}", self.app_ctrl0_int_raw().bit()),
+            )
+            .field(
+                "app_ctrl1_int_raw",
+                &format_args!("{}", self.app_ctrl1_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,26 @@ impl From<crate::W<SEARCH_POS_SPEC>> for W {
 #[doc = "Field `SEARCH_POS` reader - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
 pub type SEARCH_POS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SEARCH_POS` writer - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
-pub type SEARCH_POS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SEARCH_POS_SPEC, u16, u16, 12, O>;
+pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
     #[inline(always)]
     pub fn search_pos(&self) -> SEARCH_POS_R {
         SEARCH_POS_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SEARCH_POS")
+            .field("search_pos", &format_args!("{}", self.search_pos().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SEARCH_POS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,33 +35,33 @@ impl From<crate::W<DBG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `DEBUG_12M_NO_GATING` reader - use for debug"]
-pub type DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
+pub type DEBUG_12M_NO_GATING_R = crate::BitReader;
 #[doc = "Field `DEBUG_12M_NO_GATING` writer - use for debug"]
-pub type DEBUG_12M_NO_GATING_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_SEL_SPEC, bool, O>;
+pub type DEBUG_12M_NO_GATING_W<'a, const O: u8> = crate::BitWriter<'a, DBG_SEL_SPEC, O>;
 #[doc = "Field `DEBUG_BIT_SEL` reader - use for debug"]
-pub type DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_BIT_SEL_R = crate::FieldReader;
 #[doc = "Field `DEBUG_BIT_SEL` writer - use for debug"]
-pub type DEBUG_BIT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_BIT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL0` reader - use for debug"]
-pub type DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL0` writer - use for debug"]
-pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL1` reader - use for debug"]
-pub type DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL1` writer - use for debug"]
-pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL2` reader - use for debug"]
-pub type DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL2` writer - use for debug"]
-pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL3` reader - use for debug"]
-pub type DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL3` writer - use for debug"]
-pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 #[doc = "Field `DEBUG_SEL4` reader - use for debug"]
-pub type DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL4` writer - use for debug"]
-pub type DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, O>;
+pub type DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SEL_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
@@ -97,6 +97,32 @@ impl R {
     #[inline(always)]
     pub fn debug_sel4(&self) -> DEBUG_SEL4_R {
         DEBUG_SEL4_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBG_SEL")
+            .field(
+                "debug_12m_no_gating",
+                &format_args!("{}", self.debug_12m_no_gating().bit()),
+            )
+            .field(
+                "debug_bit_sel",
+                &format_args!("{}", self.debug_bit_sel().bits()),
+            )
+            .field("debug_sel0", &format_args!("{}", self.debug_sel0().bits()))
+            .field("debug_sel1", &format_args!("{}", self.debug_sel1().bits()))
+            .field("debug_sel2", &format_args!("{}", self.debug_sel2().bits()))
+            .field("debug_sel3", &format_args!("{}", self.debug_sel3().bits()))
+            .field("debug_sel4", &format_args!("{}", self.debug_sel4().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBG_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

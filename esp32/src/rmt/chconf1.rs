@@ -35,58 +35,57 @@ impl From<crate::W<CHCONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_START` reader - Set this bit to start sending data for channel0."]
-pub type TX_START_R = crate::BitReader<bool>;
+pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - Set this bit to start sending data for channel0."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `RX_EN` reader - Set this bit to enbale receving data for channel0."]
-pub type RX_EN_R = crate::BitReader<bool>;
+pub type RX_EN_R = crate::BitReader;
 #[doc = "Field `RX_EN` writer - Set this bit to enbale receving data for channel0."]
-pub type RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `MEM_WR_RST` reader - Set this bit to reset write ram address for channel0 by receiver access."]
-pub type MEM_WR_RST_R = crate::BitReader<bool>;
+pub type MEM_WR_RST_R = crate::BitReader;
 #[doc = "Field `MEM_WR_RST` writer - Set this bit to reset write ram address for channel0 by receiver access."]
-pub type MEM_WR_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type MEM_WR_RST_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `MEM_RD_RST` reader - Set this bit to reset read ram address for channel0 by transmitter access."]
-pub type MEM_RD_RST_R = crate::BitReader<bool>;
+pub type MEM_RD_RST_R = crate::BitReader;
 #[doc = "Field `MEM_RD_RST` writer - Set this bit to reset read ram address for channel0 by transmitter access."]
-pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `APB_MEM_RST` reader - Set this bit to reset W/R ram address for channel0 by apb fifo access"]
-pub type APB_MEM_RST_R = crate::BitReader<bool>;
+pub type APB_MEM_RST_R = crate::BitReader;
 #[doc = "Field `APB_MEM_RST` writer - Set this bit to reset W/R ram address for channel0 by apb fifo access"]
-pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `MEM_OWNER` reader - This is the mark of channel0's ram usage right.1'b1：receiver uses the ram 0：transmitter uses the ram"]
-pub type MEM_OWNER_R = crate::BitReader<bool>;
+pub type MEM_OWNER_R = crate::BitReader;
 #[doc = "Field `MEM_OWNER` writer - This is the mark of channel0's ram usage right.1'b1：receiver uses the ram 0：transmitter uses the ram"]
-pub type MEM_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type MEM_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `TX_CONTI_MODE` reader - Set this bit to continue sending from the first data to the last data in channel0 again and again."]
-pub type TX_CONTI_MODE_R = crate::BitReader<bool>;
+pub type TX_CONTI_MODE_R = crate::BitReader;
 #[doc = "Field `TX_CONTI_MODE` writer - Set this bit to continue sending from the first data to the last data in channel0 again and again."]
-pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_EN` reader - This is the receive filter enable bit for channel0."]
-pub type RX_FILTER_EN_R = crate::BitReader<bool>;
+pub type RX_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_EN` writer - This is the receive filter enable bit for channel0."]
-pub type RX_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type RX_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_THRES` reader - in receive mode channel0 ignore input pulse when the pulse width is smaller then this value."]
-pub type RX_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type RX_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `RX_FILTER_THRES` writer - in receive mode channel0 ignore input pulse when the pulse width is smaller then this value."]
-pub type RX_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CHCONF1_SPEC, u8, u8, 8, O>;
+pub type RX_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CHCONF1_SPEC, 8, O>;
 #[doc = "Field `REF_CNT_RST` reader - This bit is used to reset divider in channel0."]
-pub type REF_CNT_RST_R = crate::BitReader<bool>;
+pub type REF_CNT_RST_R = crate::BitReader;
 #[doc = "Field `REF_CNT_RST` writer - This bit is used to reset divider in channel0."]
-pub type REF_CNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type REF_CNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `REF_ALWAYS_ON` reader - This bit is used to select base clock. 1'b1:clk_apb 1'b0:clk_ref"]
-pub type REF_ALWAYS_ON_R = crate::BitReader<bool>;
+pub type REF_ALWAYS_ON_R = crate::BitReader;
 #[doc = "Field `REF_ALWAYS_ON` writer - This bit is used to select base clock. 1'b1:clk_apb 1'b0:clk_ref"]
-pub type REF_ALWAYS_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type REF_ALWAYS_ON_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `IDLE_OUT_LV` reader - This bit configures the output signal's level for channel0 in IDLE state."]
-pub type IDLE_OUT_LV_R = crate::BitReader<bool>;
+pub type IDLE_OUT_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_LV` writer - This bit configures the output signal's level for channel0 in IDLE state."]
-pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 #[doc = "Field `IDLE_OUT_EN` reader - This is the output enable control bit for channel0 in IDLE state."]
-pub type IDLE_OUT_EN_R = crate::BitReader<bool>;
+pub type IDLE_OUT_EN_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_EN` writer - This is the output enable control bit for channel0 in IDLE state."]
-pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCONF1_SPEC, bool, O>;
+pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CHCONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to start sending data for channel0."]
     #[inline(always)]
@@ -152,6 +151,44 @@ impl R {
     #[inline(always)]
     pub fn idle_out_en(&self) -> IDLE_OUT_EN_R {
         IDLE_OUT_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CHCONF1")
+            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
+            .field("rx_en", &format_args!("{}", self.rx_en().bit()))
+            .field("mem_wr_rst", &format_args!("{}", self.mem_wr_rst().bit()))
+            .field("mem_rd_rst", &format_args!("{}", self.mem_rd_rst().bit()))
+            .field("apb_mem_rst", &format_args!("{}", self.apb_mem_rst().bit()))
+            .field("mem_owner", &format_args!("{}", self.mem_owner().bit()))
+            .field(
+                "tx_conti_mode",
+                &format_args!("{}", self.tx_conti_mode().bit()),
+            )
+            .field(
+                "rx_filter_en",
+                &format_args!("{}", self.rx_filter_en().bit()),
+            )
+            .field(
+                "rx_filter_thres",
+                &format_args!("{}", self.rx_filter_thres().bits()),
+            )
+            .field("ref_cnt_rst", &format_args!("{}", self.ref_cnt_rst().bit()))
+            .field(
+                "ref_always_on",
+                &format_args!("{}", self.ref_always_on().bit()),
+            )
+            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
+            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CHCONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

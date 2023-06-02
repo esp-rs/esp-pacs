@@ -35,11 +35,11 @@ impl From<crate::W<RND_ECO_SPEC>> for W {
     }
 }
 #[doc = "Field `REDCY_ENA` reader - Only reserved for ECO."]
-pub type REDCY_ENA_R = crate::BitReader<bool>;
+pub type REDCY_ENA_R = crate::BitReader;
 #[doc = "Field `REDCY_ENA` writer - Only reserved for ECO."]
-pub type REDCY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, RND_ECO_SPEC, bool, O>;
+pub type REDCY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, RND_ECO_SPEC, O>;
 #[doc = "Field `REDCY_RESULT` reader - Only reserved for ECO."]
-pub type REDCY_RESULT_R = crate::BitReader<bool>;
+pub type REDCY_RESULT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Only reserved for ECO."]
     #[inline(always)]
@@ -50,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn redcy_result(&self) -> REDCY_RESULT_R {
         REDCY_RESULT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RND_ECO")
+            .field("redcy_ena", &format_args!("{}", self.redcy_ena().bit()))
+            .field(
+                "redcy_result",
+                &format_args!("{}", self.redcy_result().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RND_ECO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

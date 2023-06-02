@@ -35,20 +35,19 @@ impl From<crate::W<CAP_TIMER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP_TIMER_EN` reader - When set, capture timer incrementing under APB_clk is enabled."]
-pub type CAP_TIMER_EN_R = crate::BitReader<bool>;
+pub type CAP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CAP_TIMER_EN` writer - When set, capture timer incrementing under APB_clk is enabled."]
-pub type CAP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_TIMER_CFG_SPEC, bool, O>;
+pub type CAP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
 #[doc = "Field `CAP_SYNCI_EN` reader - When set, capture timer sync is enabled."]
-pub type CAP_SYNCI_EN_R = crate::BitReader<bool>;
+pub type CAP_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `CAP_SYNCI_EN` writer - When set, capture timer sync is enabled."]
-pub type CAP_SYNCI_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_TIMER_CFG_SPEC, bool, O>;
+pub type CAP_SYNCI_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
 #[doc = "Field `CAP_SYNCI_SEL` reader - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
-pub type CAP_SYNCI_SEL_R = crate::FieldReader<u8, u8>;
+pub type CAP_SYNCI_SEL_R = crate::FieldReader;
 #[doc = "Field `CAP_SYNCI_SEL` writer - capture module sync input selection. 0: none, 1: timer0 sync_out, 2: timer1 sync_out, 3: timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix"]
-pub type CAP_SYNCI_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAP_TIMER_CFG_SPEC, u8, u8, 3, O>;
+pub type CAP_SYNCI_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_TIMER_CFG_SPEC, 3, O>;
 #[doc = "Field `CAP_SYNC_SW` writer - When reg_cap_synci_en is 1, write 1 will trigger a capture timer sync, capture timer is loaded with value in phase register."]
-pub type CAP_SYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_TIMER_CFG_SPEC, bool, O>;
+pub type CAP_SYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, CAP_TIMER_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - When set, capture timer incrementing under APB_clk is enabled."]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn cap_synci_sel(&self) -> CAP_SYNCI_SEL_R {
         CAP_SYNCI_SEL_R::new(((self.bits >> 2) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CAP_TIMER_CFG")
+            .field(
+                "cap_timer_en",
+                &format_args!("{}", self.cap_timer_en().bit()),
+            )
+            .field(
+                "cap_synci_en",
+                &format_args!("{}", self.cap_synci_en().bit()),
+            )
+            .field(
+                "cap_synci_sel",
+                &format_args!("{}", self.cap_synci_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CAP_TIMER_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

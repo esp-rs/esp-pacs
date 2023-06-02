@@ -35,21 +35,21 @@ impl From<crate::W<TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE` reader - Enable test of the USB pad"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable test of the USB pad"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `USB_OE` reader - USB pad oen in test"]
-pub type USB_OE_R = crate::BitReader<bool>;
+pub type USB_OE_R = crate::BitReader;
 #[doc = "Field `USB_OE` writer - USB pad oen in test"]
-pub type USB_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type USB_OE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TX_DP` reader - USB D+ tx value in test"]
-pub type TX_DP_R = crate::BitReader<bool>;
+pub type TX_DP_R = crate::BitReader;
 #[doc = "Field `TX_DP` writer - USB D+ tx value in test"]
-pub type TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TX_DM` reader - USB D- tx value in test"]
-pub type TX_DM_R = crate::BitReader<bool>;
+pub type TX_DM_R = crate::BitReader;
 #[doc = "Field `TX_DM` writer - USB D- tx value in test"]
-pub type TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn tx_dm(&self) -> TX_DM_R {
         TX_DM_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEST")
+            .field("enable", &format_args!("{}", self.enable().bit()))
+            .field("usb_oe", &format_args!("{}", self.usb_oe().bit()))
+            .field("tx_dp", &format_args!("{}", self.tx_dp().bit()))
+            .field("tx_dm", &format_args!("{}", self.tx_dm().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

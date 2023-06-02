@@ -35,15 +35,31 @@ impl From<crate::W<CPU_INTR_FROM_CPU_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INTR_FROM_CPU_1` reader - Set this bit to generate CPU interrupt 1. This bit needs to be reset by software in the ISR process."]
-pub type CPU_INTR_FROM_CPU_1_R = crate::BitReader<bool>;
+pub type CPU_INTR_FROM_CPU_1_R = crate::BitReader;
 #[doc = "Field `CPU_INTR_FROM_CPU_1` writer - Set this bit to generate CPU interrupt 1. This bit needs to be reset by software in the ISR process."]
-pub type CPU_INTR_FROM_CPU_1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_INTR_FROM_CPU_1_SPEC, bool, O>;
+pub type CPU_INTR_FROM_CPU_1_W<'a, const O: u8> = crate::BitWriter<'a, CPU_INTR_FROM_CPU_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to generate CPU interrupt 1. This bit needs to be reset by software in the ISR process."]
     #[inline(always)]
     pub fn cpu_intr_from_cpu_1(&self) -> CPU_INTR_FROM_CPU_1_R {
         CPU_INTR_FROM_CPU_1_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INTR_FROM_CPU_1")
+            .field(
+                "cpu_intr_from_cpu_1",
+                &format_args!("{}", self.cpu_intr_from_cpu_1().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INTR_FROM_CPU_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

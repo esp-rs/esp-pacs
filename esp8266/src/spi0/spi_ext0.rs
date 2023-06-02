@@ -37,15 +37,15 @@ impl From<crate::W<SPI_EXT0_SPEC>> for W {
 #[doc = "Field `pp_time` reader - "]
 pub type PP_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `pp_time` writer - "]
-pub type PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_EXT0_SPEC, u16, u16, 12, O>;
+pub type PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT0_SPEC, 12, O, u16, u16>;
 #[doc = "Field `pp_shift` reader - "]
-pub type PP_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `pp_shift` writer - "]
-pub type PP_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_EXT0_SPEC, u8, u8, 4, O>;
+pub type PP_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT0_SPEC, 4, O>;
 #[doc = "Field `pp_enable` reader - "]
-pub type PP_ENABLE_R = crate::BitReader<bool>;
+pub type PP_ENABLE_R = crate::BitReader;
 #[doc = "Field `pp_enable` writer - "]
-pub type PP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_EXT0_SPEC, bool, O>;
+pub type PP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_EXT0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn pp_enable(&self) -> PP_ENABLE_R {
         PP_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_EXT0")
+            .field("pp_enable", &format_args!("{}", self.pp_enable().bit()))
+            .field("pp_shift", &format_args!("{}", self.pp_shift().bits()))
+            .field("pp_time", &format_args!("{}", self.pp_time().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_EXT0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

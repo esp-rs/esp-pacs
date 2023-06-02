@@ -35,14 +35,28 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_FEED` reader - Need add desc"]
-pub type WDT_FEED_R = crate::BitReader<bool>;
+pub type WDT_FEED_R = crate::BitReader;
 #[doc = "Field `WDT_FEED` writer - Need add desc"]
-pub type WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
+pub type WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, WDTFEED_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
     pub fn wdt_feed(&self) -> WDT_FEED_R {
         WDT_FEED_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WDTFEED")
+            .field("wdt_feed", &format_args!("{}", self.wdt_feed().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

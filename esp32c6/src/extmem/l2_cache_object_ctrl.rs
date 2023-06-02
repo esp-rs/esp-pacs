@@ -14,9 +14,9 @@ impl From<crate::R<L2_CACHE_OBJECT_CTRL_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_TAG_OBJECT` reader - Set this bit to set L2-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L2_CACHE_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L2_CACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_MEM_OBJECT` reader - Set this bit to set L2-Cache data memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L2_CACHE_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L2_CACHE_MEM_OBJECT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 5 - Set this bit to set L2-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_mem_object(&self) -> L2_CACHE_MEM_OBJECT_R {
         L2_CACHE_MEM_OBJECT_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_OBJECT_CTRL")
+            .field(
+                "l2_cache_tag_object",
+                &format_args!("{}", self.l2_cache_tag_object().bit()),
+            )
+            .field(
+                "l2_cache_mem_object",
+                &format_args!("{}", self.l2_cache_mem_object().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_OBJECT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Cache Tag and Data memory Object control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_object_ctrl](index.html) module"]

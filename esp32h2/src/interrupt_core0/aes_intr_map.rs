@@ -35,15 +35,31 @@ impl From<crate::W<AES_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `AES_INTR_MAP` reader - CORE0_AES_INTR mapping register"]
-pub type AES_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type AES_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `AES_INTR_MAP` writer - CORE0_AES_INTR mapping register"]
-pub type AES_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AES_INTR_MAP_SPEC, u8, u8, 5, O>;
+pub type AES_INTR_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, AES_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - CORE0_AES_INTR mapping register"]
     #[inline(always)]
     pub fn aes_intr_map(&self) -> AES_INTR_MAP_R {
         AES_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AES_INTR_MAP")
+            .field(
+                "aes_intr_map",
+                &format_args!("{}", self.aes_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AES_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

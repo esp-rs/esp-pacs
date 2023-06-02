@@ -35,23 +35,21 @@ impl From<crate::W<TX_CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_CLKM_DIV_NUM` reader - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
-pub type TX_CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type TX_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_CLKM_DIV_NUM` writer - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
-pub type TX_CLKM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CLKM_CONF_SPEC, u8, u8, 8, O>;
+pub type TX_CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CLKM_CONF_SPEC, 8, O>;
 #[doc = "Field `TX_CLK_ACTIVE` reader - I2S Tx module clock enable signal."]
-pub type TX_CLK_ACTIVE_R = crate::BitReader<bool>;
+pub type TX_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TX_CLK_ACTIVE` writer - I2S Tx module clock enable signal."]
-pub type TX_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CLKM_CONF_SPEC, bool, O>;
+pub type TX_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLKM_CONF_SPEC, O>;
 #[doc = "Field `TX_CLK_SEL` reader - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type TX_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type TX_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_CLK_SEL` writer - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
-pub type TX_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CLKM_CONF_SPEC, u8, u8, 2, O>;
+pub type TX_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CLKM_CONF_SPEC, 2, O>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CLKM_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLKM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
@@ -72,6 +70,29 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_CLKM_CONF")
+            .field(
+                "tx_clkm_div_num",
+                &format_args!("{}", self.tx_clkm_div_num().bits()),
+            )
+            .field(
+                "tx_clk_active",
+                &format_args!("{}", self.tx_clk_active().bit()),
+            )
+            .field("tx_clk_sel", &format_args!("{}", self.tx_clk_sel().bits()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_CLKM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

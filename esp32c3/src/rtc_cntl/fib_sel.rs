@@ -35,14 +35,28 @@ impl From<crate::W<FIB_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `FIB_SEL` reader - select use analog fib signal"]
-pub type FIB_SEL_R = crate::FieldReader<u8, u8>;
+pub type FIB_SEL_R = crate::FieldReader;
 #[doc = "Field `FIB_SEL` writer - select use analog fib signal"]
-pub type FIB_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIB_SEL_SPEC, u8, u8, 3, O>;
+pub type FIB_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FIB_SEL_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
     pub fn fib_sel(&self) -> FIB_SEL_R {
         FIB_SEL_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIB_SEL")
+            .field("fib_sel", &format_args!("{}", self.fib_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIB_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

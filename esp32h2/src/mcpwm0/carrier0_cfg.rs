@@ -35,34 +35,29 @@ impl From<crate::W<CARRIER0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CHOPPER0_EN` reader - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
-pub type CHOPPER0_EN_R = crate::BitReader<bool>;
+pub type CHOPPER0_EN_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_EN` writer - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
-pub type CHOPPER0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CARRIER0_CFG_SPEC, bool, O>;
+pub type CHOPPER0_EN_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
 #[doc = "Field `CHOPPER0_PRESCALE` reader - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
-pub type CHOPPER0_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type CHOPPER0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_PRESCALE` writer - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
-pub type CHOPPER0_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER0_CFG_SPEC, u8, u8, 4, O>;
+pub type CHOPPER0_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 4, O>;
 #[doc = "Field `CHOPPER0_DUTY` reader - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
-pub type CHOPPER0_DUTY_R = crate::FieldReader<u8, u8>;
+pub type CHOPPER0_DUTY_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_DUTY` writer - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
-pub type CHOPPER0_DUTY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER0_CFG_SPEC, u8, u8, 3, O>;
+pub type CHOPPER0_DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 3, O>;
 #[doc = "Field `CHOPPER0_OSHTWTH` reader - width of the first pulse in number of periods of the carrier"]
-pub type CHOPPER0_OSHTWTH_R = crate::FieldReader<u8, u8>;
+pub type CHOPPER0_OSHTWTH_R = crate::FieldReader;
 #[doc = "Field `CHOPPER0_OSHTWTH` writer - width of the first pulse in number of periods of the carrier"]
-pub type CHOPPER0_OSHTWTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER0_CFG_SPEC, u8, u8, 4, O>;
+pub type CHOPPER0_OSHTWTH_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER0_CFG_SPEC, 4, O>;
 #[doc = "Field `CHOPPER0_OUT_INVERT` reader - when set, invert the output of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_OUT_INVERT_R = crate::BitReader<bool>;
+pub type CHOPPER0_OUT_INVERT_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_OUT_INVERT` writer - when set, invert the output of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_OUT_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CARRIER0_CFG_SPEC, bool, O>;
+pub type CHOPPER0_OUT_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
 #[doc = "Field `CHOPPER0_IN_INVERT` reader - when set, invert the input of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_IN_INVERT_R = crate::BitReader<bool>;
+pub type CHOPPER0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CHOPPER0_IN_INVERT` writer - when set, invert the input of PWM0A and PWM0B for this submodule"]
-pub type CHOPPER0_IN_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CARRIER0_CFG_SPEC, bool, O>;
+pub type CHOPPER0_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER0_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
@@ -93,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn chopper0_in_invert(&self) -> CHOPPER0_IN_INVERT_R {
         CHOPPER0_IN_INVERT_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CARRIER0_CFG")
+            .field("chopper0_en", &format_args!("{}", self.chopper0_en().bit()))
+            .field(
+                "chopper0_prescale",
+                &format_args!("{}", self.chopper0_prescale().bits()),
+            )
+            .field(
+                "chopper0_duty",
+                &format_args!("{}", self.chopper0_duty().bits()),
+            )
+            .field(
+                "chopper0_oshtwth",
+                &format_args!("{}", self.chopper0_oshtwth().bits()),
+            )
+            .field(
+                "chopper0_out_invert",
+                &format_args!("{}", self.chopper0_out_invert().bit()),
+            )
+            .field(
+                "chopper0_in_invert",
+                &format_args!("{}", self.chopper0_in_invert().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CARRIER0_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

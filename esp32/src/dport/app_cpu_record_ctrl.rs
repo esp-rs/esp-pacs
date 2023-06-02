@@ -35,20 +35,20 @@ impl From<crate::W<APP_CPU_RECORD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CPU_RECORD_ENABLE` reader - "]
-pub type APP_CPU_RECORD_ENABLE_R = crate::BitReader<bool>;
+pub type APP_CPU_RECORD_ENABLE_R = crate::BitReader;
 #[doc = "Field `APP_CPU_RECORD_ENABLE` writer - "]
 pub type APP_CPU_RECORD_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_CPU_RECORD_CTRL_SPEC, O>;
 #[doc = "Field `APP_CPU_RECORD_DISABLE` reader - "]
-pub type APP_CPU_RECORD_DISABLE_R = crate::BitReader<bool>;
+pub type APP_CPU_RECORD_DISABLE_R = crate::BitReader;
 #[doc = "Field `APP_CPU_RECORD_DISABLE` writer - "]
 pub type APP_CPU_RECORD_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_CPU_RECORD_CTRL_SPEC, O>;
 #[doc = "Field `APP_CPU_PDEBUG_ENABLE` reader - "]
-pub type APP_CPU_PDEBUG_ENABLE_R = crate::BitReader<bool>;
+pub type APP_CPU_PDEBUG_ENABLE_R = crate::BitReader;
 #[doc = "Field `APP_CPU_PDEBUG_ENABLE` writer - "]
 pub type APP_CPU_PDEBUG_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_CPU_RECORD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn app_cpu_pdebug_enable(&self) -> APP_CPU_PDEBUG_ENABLE_R {
         APP_CPU_PDEBUG_ENABLE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_CPU_RECORD_CTRL")
+            .field(
+                "app_cpu_record_enable",
+                &format_args!("{}", self.app_cpu_record_enable().bit()),
+            )
+            .field(
+                "app_cpu_record_disable",
+                &format_args!("{}", self.app_cpu_record_disable().bit()),
+            )
+            .field(
+                "app_cpu_pdebug_enable",
+                &format_args!("{}", self.app_cpu_pdebug_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_CPU_RECORD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

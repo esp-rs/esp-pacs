@@ -35,25 +35,25 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `THRES_ALL_EN` reader - enable thres0 to monitor all channel"]
-pub type THRES_ALL_EN_R = crate::BitReader<bool>;
+pub type THRES_ALL_EN_R = crate::BitReader;
 #[doc = "Field `THRES_ALL_EN` writer - enable thres0 to monitor all channel"]
-pub type THRES_ALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type THRES_ALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `THRES3_EN` reader - no public"]
-pub type THRES3_EN_R = crate::BitReader<bool>;
+pub type THRES3_EN_R = crate::BitReader;
 #[doc = "Field `THRES3_EN` writer - no public"]
-pub type THRES3_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type THRES3_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `THRES2_EN` reader - no public"]
-pub type THRES2_EN_R = crate::BitReader<bool>;
+pub type THRES2_EN_R = crate::BitReader;
 #[doc = "Field `THRES2_EN` writer - no public"]
-pub type THRES2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type THRES2_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `THRES1_EN` reader - enable thres1"]
-pub type THRES1_EN_R = crate::BitReader<bool>;
+pub type THRES1_EN_R = crate::BitReader;
 #[doc = "Field `THRES1_EN` writer - enable thres1"]
-pub type THRES1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type THRES1_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `THRES0_EN` reader - enable thres0"]
-pub type THRES0_EN_R = crate::BitReader<bool>;
+pub type THRES0_EN_R = crate::BitReader;
 #[doc = "Field `THRES0_EN` writer - enable thres0"]
-pub type THRES0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type THRES0_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
@@ -79,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn thres0_en(&self) -> THRES0_EN_R {
         THRES0_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("THRES_CTRL")
+            .field(
+                "thres_all_en",
+                &format_args!("{}", self.thres_all_en().bit()),
+            )
+            .field("thres3_en", &format_args!("{}", self.thres3_en().bit()))
+            .field("thres2_en", &format_args!("{}", self.thres2_en().bit()))
+            .field("thres1_en", &format_args!("{}", self.thres1_en().bit()))
+            .field("thres0_en", &format_args!("{}", self.thres0_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

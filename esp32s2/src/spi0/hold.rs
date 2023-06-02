@@ -35,25 +35,25 @@ impl From<crate::W<HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_HOLD_ENA` reader - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set, if the other SPI is busy, the SPI will be hold. 1(3): hold at idle phase 2: hold at prepare phase. Can be configured in CONF state."]
-pub type INT_HOLD_ENA_R = crate::FieldReader<u8, u8>;
+pub type INT_HOLD_ENA_R = crate::FieldReader;
 #[doc = "Field `INT_HOLD_ENA` writer - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set, if the other SPI is busy, the SPI will be hold. 1(3): hold at idle phase 2: hold at prepare phase. Can be configured in CONF state."]
-pub type INT_HOLD_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HOLD_SPEC, u8, u8, 2, O>;
+pub type INT_HOLD_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, HOLD_SPEC, 2, O>;
 #[doc = "Field `VAL` reader - spi hold output value, which should be used with SPI_HOLD_OUT_EN. Can be configured in CONF state."]
-pub type VAL_R = crate::BitReader<bool>;
+pub type VAL_R = crate::BitReader;
 #[doc = "Field `VAL` writer - spi hold output value, which should be used with SPI_HOLD_OUT_EN. Can be configured in CONF state."]
-pub type VAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOLD_SPEC, bool, O>;
+pub type VAL_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_SPEC, O>;
 #[doc = "Field `OUT_EN` reader - Enable set spi output hold value to spi_hold_reg. It can be used to hold spi state machine with SPI_EXT_HOLD_EN and other usr hold signals. Can be configured in CONF state."]
-pub type OUT_EN_R = crate::BitReader<bool>;
+pub type OUT_EN_R = crate::BitReader;
 #[doc = "Field `OUT_EN` writer - Enable set spi output hold value to spi_hold_reg. It can be used to hold spi state machine with SPI_EXT_HOLD_EN and other usr hold signals. Can be configured in CONF state."]
-pub type OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOLD_SPEC, bool, O>;
+pub type OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_SPEC, O>;
 #[doc = "Field `OUT_TIME` reader - set the hold cycles of output spi_hold signal when SPI_HOLD_OUT_EN is enable. Can be configured in CONF state."]
-pub type OUT_TIME_R = crate::FieldReader<u8, u8>;
+pub type OUT_TIME_R = crate::FieldReader;
 #[doc = "Field `OUT_TIME` writer - set the hold cycles of output spi_hold signal when SPI_HOLD_OUT_EN is enable. Can be configured in CONF state."]
-pub type OUT_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HOLD_SPEC, u8, u8, 3, O>;
+pub type OUT_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, HOLD_SPEC, 3, O>;
 #[doc = "Field `DMA_SEG_TRANS_DONE` reader - 1: spi master DMA full-duplex/half-duplex seg-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-trans is not ended or not occurred. Can not be changed by CONF_buf."]
-pub type DMA_SEG_TRANS_DONE_R = crate::BitReader<bool>;
+pub type DMA_SEG_TRANS_DONE_R = crate::BitReader;
 #[doc = "Field `DMA_SEG_TRANS_DONE` writer - 1: spi master DMA full-duplex/half-duplex seg-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-trans is not ended or not occurred. Can not be changed by CONF_buf."]
-pub type DMA_SEG_TRANS_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HOLD_SPEC, bool, O>;
+pub type DMA_SEG_TRANS_DONE_W<'a, const O: u8> = crate::BitWriter<'a, HOLD_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set, if the other SPI is busy, the SPI will be hold. 1(3): hold at idle phase 2: hold at prepare phase. Can be configured in CONF state."]
     #[inline(always)]
@@ -79,6 +79,30 @@ impl R {
     #[inline(always)]
     pub fn dma_seg_trans_done(&self) -> DMA_SEG_TRANS_DONE_R {
         DMA_SEG_TRANS_DONE_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOLD")
+            .field(
+                "int_hold_ena",
+                &format_args!("{}", self.int_hold_ena().bits()),
+            )
+            .field("val", &format_args!("{}", self.val().bit()))
+            .field("out_en", &format_args!("{}", self.out_en().bit()))
+            .field("out_time", &format_args!("{}", self.out_time().bits()))
+            .field(
+                "dma_seg_trans_done",
+                &format_args!("{}", self.dma_seg_trans_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOLD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

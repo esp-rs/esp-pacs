@@ -37,30 +37,26 @@ impl From<crate::W<SAR_TOUCH_CTRL2_SPEC>> for W {
 #[doc = "Field `TOUCH_MEAS_EN` reader - 10-bit register to indicate which pads are \"touched\""]
 pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - fsm set 1 to indicate touch touch meas is done"]
-pub type TOUCH_MEAS_DONE_R = crate::BitReader<bool>;
+pub type TOUCH_MEAS_DONE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
-pub type TOUCH_START_FSM_EN_R = crate::BitReader<bool>;
+pub type TOUCH_START_FSM_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
-pub type TOUCH_START_FSM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_FSM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm valid when reg_touch_start_force is set"]
-pub type TOUCH_START_EN_R = crate::BitReader<bool>;
+pub type TOUCH_START_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_EN` writer - 1: start touch fsm valid when reg_touch_start_force is set"]
-pub type TOUCH_START_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_START_FORCE` reader - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
-pub type TOUCH_START_FORCE_R = crate::BitReader<bool>;
+pub type TOUCH_START_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FORCE` writer - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
-pub type TOUCH_START_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CTRL2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TOUCH_MEAS_EN_CLR` writer - to clear reg_touch_meas_en"]
-pub type TOUCH_MEAS_EN_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_MEAS_EN_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - 10-bit register to indicate which pads are \"touched\""]
     #[inline(always)]
@@ -91,6 +87,43 @@ impl R {
     #[inline(always)]
     pub fn touch_sleep_cycles(&self) -> TOUCH_SLEEP_CYCLES_R {
         TOUCH_SLEEP_CYCLES_R::new(((self.bits >> 14) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_CTRL2")
+            .field(
+                "touch_meas_en",
+                &format_args!("{}", self.touch_meas_en().bits()),
+            )
+            .field(
+                "touch_meas_done",
+                &format_args!("{}", self.touch_meas_done().bit()),
+            )
+            .field(
+                "touch_start_fsm_en",
+                &format_args!("{}", self.touch_start_fsm_en().bit()),
+            )
+            .field(
+                "touch_start_en",
+                &format_args!("{}", self.touch_start_en().bit()),
+            )
+            .field(
+                "touch_start_force",
+                &format_args!("{}", self.touch_start_force().bit()),
+            )
+            .field(
+                "touch_sleep_cycles",
+                &format_args!("{}", self.touch_sleep_cycles().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

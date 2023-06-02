@@ -35,40 +35,36 @@ impl From<crate::W<INT_ENA_RTC_W1TC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ENA_W1TC` reader - enable sleep wakeup interrupt"]
-pub type SLP_WAKEUP_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP_INT_ENA_W1TC` writer - enable sleep wakeup interrupt"]
 pub type SLP_WAKEUP_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_ENA_W1TC` reader - enable sleep reject interrupt"]
-pub type SLP_REJECT_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_ENA_W1TC` writer - enable sleep reject interrupt"]
 pub type SLP_REJECT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `WDT_INT_ENA_W1TC` reader - enable RTC WDT interrupt"]
-pub type WDT_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type WDT_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ENA_W1TC` writer - enable RTC WDT interrupt"]
-pub type WDT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type WDT_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_ENA_W1TC` reader - enable brown out interrupt"]
-pub type BROWN_OUT_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ENA_W1TC` writer - enable brown out interrupt"]
-pub type BROWN_OUT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type BROWN_OUT_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_ENA_W1TC` reader - enable RTC main timer interrupt"]
-pub type MAIN_TIMER_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_ENA_W1TC` writer - enable RTC main timer interrupt"]
 pub type MAIN_TIMER_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `SWD_INT_ENA_W1TC` reader - enable super watch dog interrupt"]
-pub type SWD_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type SWD_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `SWD_INT_ENA_W1TC` writer - enable super watch dog interrupt"]
-pub type SWD_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type SWD_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `BBPLL_CAL_INT_ENA_W1TC` reader - Need add desc"]
-pub type BBPLL_CAL_INT_ENA_W1TC_R = crate::BitReader<bool>;
+pub type BBPLL_CAL_INT_ENA_W1TC_R = crate::BitReader;
 #[doc = "Field `BBPLL_CAL_INT_ENA_W1TC` writer - Need add desc"]
-pub type BBPLL_CAL_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type BBPLL_CAL_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
@@ -104,6 +100,47 @@ impl R {
     #[inline(always)]
     pub fn bbpll_cal_int_ena_w1tc(&self) -> BBPLL_CAL_INT_ENA_W1TC_R {
         BBPLL_CAL_INT_ENA_W1TC_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA_RTC_W1TC")
+            .field(
+                "slp_wakeup_int_ena_w1tc",
+                &format_args!("{}", self.slp_wakeup_int_ena_w1tc().bit()),
+            )
+            .field(
+                "slp_reject_int_ena_w1tc",
+                &format_args!("{}", self.slp_reject_int_ena_w1tc().bit()),
+            )
+            .field(
+                "wdt_int_ena_w1tc",
+                &format_args!("{}", self.wdt_int_ena_w1tc().bit()),
+            )
+            .field(
+                "brown_out_int_ena_w1tc",
+                &format_args!("{}", self.brown_out_int_ena_w1tc().bit()),
+            )
+            .field(
+                "main_timer_int_ena_w1tc",
+                &format_args!("{}", self.main_timer_int_ena_w1tc().bit()),
+            )
+            .field(
+                "swd_int_ena_w1tc",
+                &format_args!("{}", self.swd_int_ena_w1tc().bit()),
+            )
+            .field(
+                "bbpll_cal_int_ena_w1tc",
+                &format_args!("{}", self.bbpll_cal_int_ena_w1tc().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_RTC_W1TC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

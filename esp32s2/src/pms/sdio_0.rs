@@ -35,14 +35,28 @@ impl From<crate::W<SDIO_0_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_LOCK` reader - Lock register. Setting to 1 locks SDIO permission control registers."]
-pub type SDIO_LOCK_R = crate::BitReader<bool>;
+pub type SDIO_LOCK_R = crate::BitReader;
 #[doc = "Field `SDIO_LOCK` writer - Lock register. Setting to 1 locks SDIO permission control registers."]
-pub type SDIO_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_0_SPEC, bool, O>;
+pub type SDIO_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks SDIO permission control registers."]
     #[inline(always)]
     pub fn sdio_lock(&self) -> SDIO_LOCK_R {
         SDIO_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_0")
+            .field("sdio_lock", &format_args!("{}", self.sdio_lock().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

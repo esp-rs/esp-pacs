@@ -35,9 +35,9 @@ impl From<crate::W<FRC2_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `frc2_ctrl` reader - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
-pub type FRC2_CTRL_R = crate::FieldReader<u8, u8>;
+pub type FRC2_CTRL_R = crate::FieldReader;
 #[doc = "Field `frc2_ctrl` writer - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
-pub type FRC2_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FRC2_CTRL_SPEC, u8, u8, 8, O>;
+pub type FRC2_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, FRC2_CTRL_SPEC, 8, O>;
 #[doc = "Field `interrupt_type` reader - Configure the interrupt type"]
 pub type INTERRUPT_TYPE_R = crate::BitReader<INTERRUPT_TYPE_A>;
 #[doc = "Configure the interrupt type\n\nValue on reset: 0"]
@@ -76,7 +76,7 @@ impl INTERRUPT_TYPE_R {
 }
 #[doc = "Field `interrupt_type` writer - Configure the interrupt type"]
 pub type INTERRUPT_TYPE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRC2_CTRL_SPEC, INTERRUPT_TYPE_A, O>;
+    crate::BitWriter<'a, FRC2_CTRL_SPEC, O, INTERRUPT_TYPE_A>;
 impl<'a, const O: u8> INTERRUPT_TYPE_W<'a, O> {
     #[doc = "edge"]
     #[inline(always)]
@@ -137,7 +137,7 @@ impl PRESCALE_DIVIDER_R {
 }
 #[doc = "Field `prescale_divider` writer - Pre-scale divider for the timer"]
 pub type PRESCALE_DIVIDER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FRC2_CTRL_SPEC, u8, PRESCALE_DIVIDER_A, 2, O>;
+    crate::FieldWriter<'a, FRC2_CTRL_SPEC, 2, O, u8, PRESCALE_DIVIDER_A>;
 impl<'a, const O: u8> PRESCALE_DIVIDER_W<'a, O> {
     #[doc = "divided by 1"]
     #[inline(always)]
@@ -156,15 +156,15 @@ impl<'a, const O: u8> PRESCALE_DIVIDER_W<'a, O> {
     }
 }
 #[doc = "Field `rollover` reader - Automatically reload when the counter hits zero"]
-pub type ROLLOVER_R = crate::BitReader<bool>;
+pub type ROLLOVER_R = crate::BitReader;
 #[doc = "Field `rollover` writer - Automatically reload when the counter hits zero"]
-pub type ROLLOVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRC2_CTRL_SPEC, bool, O>;
+pub type ROLLOVER_W<'a, const O: u8> = crate::BitWriter<'a, FRC2_CTRL_SPEC, O>;
 #[doc = "Field `timer_enable` reader - Enable or disable the timer"]
-pub type TIMER_ENABLE_R = crate::BitReader<bool>;
+pub type TIMER_ENABLE_R = crate::BitReader;
 #[doc = "Field `timer_enable` writer - Enable or disable the timer"]
-pub type TIMER_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRC2_CTRL_SPEC, bool, O>;
+pub type TIMER_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, FRC2_CTRL_SPEC, O>;
 #[doc = "Field `frc2_int` reader - the status of the interrupt, when the count is equal tothe alarm value"]
-pub type FRC2_INT_R = crate::BitReader<bool>;
+pub type FRC2_INT_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7 - bit\\[7\\]: timer enable, bit\\[6\\]: automatically reload, when the counter isequal to zero, bit\\[3:2\\]: prescale-divider, 0: divided by 1, 1: dividedby 16, 2 or 3: divided by 256, bit\\[0\\]: interrupt type, 0:edge, 1:level"]
     #[inline(always)]
@@ -195,6 +195,34 @@ impl R {
     #[inline(always)]
     pub fn frc2_int(&self) -> FRC2_INT_R {
         FRC2_INT_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRC2_CTRL")
+            .field("frc2_int", &format_args!("{}", self.frc2_int().bit()))
+            .field("frc2_ctrl", &format_args!("{}", self.frc2_ctrl().bits()))
+            .field(
+                "timer_enable",
+                &format_args!("{}", self.timer_enable().bit()),
+            )
+            .field("rollover", &format_args!("{}", self.rollover().bit()))
+            .field(
+                "prescale_divider",
+                &format_args!("{}", self.prescale_divider().bits()),
+            )
+            .field(
+                "interrupt_type",
+                &format_args!("{}", self.interrupt_type().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRC2_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

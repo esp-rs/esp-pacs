@@ -35,20 +35,18 @@ impl From<crate::W<TIMER1_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER1_PRESCALE` reader - "]
-pub type TIMER1_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type TIMER1_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TIMER1_PRESCALE` writer - "]
-pub type TIMER1_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER1_CFG0_SPEC, u8, u8, 8, O>;
+pub type TIMER1_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_CFG0_SPEC, 8, O>;
 #[doc = "Field `TIMER1_PERIOD` reader - "]
 pub type TIMER1_PERIOD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER1_PERIOD` writer - "]
 pub type TIMER1_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER1_CFG0_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TIMER1_CFG0_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TIMER1_PERIOD_UPMETHOD` reader - "]
-pub type TIMER1_PERIOD_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type TIMER1_PERIOD_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `TIMER1_PERIOD_UPMETHOD` writer - "]
-pub type TIMER1_PERIOD_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER1_CFG0_SPEC, u8, u8, 2, O>;
+pub type TIMER1_PERIOD_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_CFG0_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn timer1_period_upmethod(&self) -> TIMER1_PERIOD_UPMETHOD_R {
         TIMER1_PERIOD_UPMETHOD_R::new(((self.bits >> 24) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER1_CFG0")
+            .field(
+                "timer1_prescale",
+                &format_args!("{}", self.timer1_prescale().bits()),
+            )
+            .field(
+                "timer1_period",
+                &format_args!("{}", self.timer1_period().bits()),
+            )
+            .field(
+                "timer1_period_upmethod",
+                &format_args!("{}", self.timer1_period_upmethod().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER1_CFG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,12 +37,26 @@ impl From<crate::W<BUFFIFO_SPEC>> for W {
 #[doc = "Field `BUFFIFO` reader - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
 pub type BUFFIFO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BUFFIFO` writer - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
-pub type BUFFIFO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BUFFIFO_SPEC, u32, u32, 32, O>;
+pub type BUFFIFO_W<'a, const O: u8> = crate::FieldWriter<'a, BUFFIFO_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
     #[inline(always)]
     pub fn buffifo(&self) -> BUFFIFO_R {
         BUFFIFO_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BUFFIFO")
+            .field("buffifo", &format_args!("{}", self.buffifo().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BUFFIFO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,13 +35,13 @@ impl From<crate::W<CTYPE_SPEC>> for W {
     }
 }
 #[doc = "Field `CARD_WIDTH4` reader - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH4_R = crate::FieldReader<u8, u8>;
+pub type CARD_WIDTH4_R = crate::FieldReader;
 #[doc = "Field `CARD_WIDTH4` writer - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTYPE_SPEC, u8, u8, 2, O>;
+pub type CARD_WIDTH4_W<'a, const O: u8> = crate::FieldWriter<'a, CTYPE_SPEC, 2, O>;
 #[doc = "Field `CARD_WIDTH8` reader - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH8_R = crate::FieldReader<u8, u8>;
+pub type CARD_WIDTH8_R = crate::FieldReader;
 #[doc = "Field `CARD_WIDTH8` writer - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
-pub type CARD_WIDTH8_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTYPE_SPEC, u8, u8, 2, O>;
+pub type CARD_WIDTH8_W<'a, const O: u8> = crate::FieldWriter<'a, CTYPE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn card_width8(&self) -> CARD_WIDTH8_R {
         CARD_WIDTH8_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTYPE")
+            .field(
+                "card_width4",
+                &format_args!("{}", self.card_width4().bits()),
+            )
+            .field(
+                "card_width8",
+                &format_args!("{}", self.card_width8().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTYPE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

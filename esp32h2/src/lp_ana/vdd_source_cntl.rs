@@ -35,20 +35,18 @@ impl From<crate::W<VDD_SOURCE_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `DETMODE_SEL` reader - need_des"]
-pub type DETMODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type DETMODE_SEL_R = crate::FieldReader;
 #[doc = "Field `DETMODE_SEL` writer - need_des"]
-pub type DETMODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, VDD_SOURCE_CNTL_SPEC, u8, u8, 8, O>;
+pub type DETMODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, VDD_SOURCE_CNTL_SPEC, 8, O>;
 #[doc = "Field `VGOOD_EVENT_RECORD` reader - need_des"]
-pub type VGOOD_EVENT_RECORD_R = crate::FieldReader<u8, u8>;
+pub type VGOOD_EVENT_RECORD_R = crate::FieldReader;
 #[doc = "Field `VBAT_EVENT_RECORD_CLR` writer - need_des"]
 pub type VBAT_EVENT_RECORD_CLR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, VDD_SOURCE_CNTL_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, VDD_SOURCE_CNTL_SPEC, 8, O>;
 #[doc = "Field `BOD_SOURCE_ENA` reader - need_des"]
-pub type BOD_SOURCE_ENA_R = crate::FieldReader<u8, u8>;
+pub type BOD_SOURCE_ENA_R = crate::FieldReader;
 #[doc = "Field `BOD_SOURCE_ENA` writer - need_des"]
-pub type BOD_SOURCE_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, VDD_SOURCE_CNTL_SPEC, u8, u8, 8, O>;
+pub type BOD_SOURCE_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, VDD_SOURCE_CNTL_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn bod_source_ena(&self) -> BOD_SOURCE_ENA_R {
         BOD_SOURCE_ENA_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("VDD_SOURCE_CNTL")
+            .field(
+                "detmode_sel",
+                &format_args!("{}", self.detmode_sel().bits()),
+            )
+            .field(
+                "vgood_event_record",
+                &format_args!("{}", self.vgood_event_record().bits()),
+            )
+            .field(
+                "bod_source_ena",
+                &format_args!("{}", self.bod_source_ena().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<VDD_SOURCE_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

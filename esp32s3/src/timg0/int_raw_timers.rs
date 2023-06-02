@@ -35,17 +35,17 @@ impl From<crate::W<INT_RAW_TIMERS_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_INT_RAW` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_RAW_R = crate::BitReader<bool>;
+pub type T0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `T0_INT_RAW` writer - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_TIMERS_SPEC, bool, O>;
+pub type T0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_TIMERS_SPEC, O>;
 #[doc = "Field `T1_INT_RAW` reader - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_RAW_R = crate::BitReader<bool>;
+pub type T1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `T1_INT_RAW` writer - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_TIMERS_SPEC, bool, O>;
+pub type T1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_TIMERS_SPEC, O>;
 #[doc = "Field `WDT_INT_RAW` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+pub type WDT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` writer - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_TIMERS_SPEC, bool, O>;
+pub type WDT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_TIMERS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
         WDT_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW_TIMERS")
+            .field("t0_int_raw", &format_args!("{}", self.t0_int_raw().bit()))
+            .field("t1_int_raw", &format_args!("{}", self.t1_int_raw().bit()))
+            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_TIMERS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

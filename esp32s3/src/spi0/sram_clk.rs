@@ -35,21 +35,21 @@ impl From<crate::W<SRAM_CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLKCNT_L` reader - It must equal to the value of SPI_MEM_SCLKCNT_N."]
-pub type SCLKCNT_L_R = crate::FieldReader<u8, u8>;
+pub type SCLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_L` writer - It must equal to the value of SPI_MEM_SCLKCNT_N."]
-pub type SCLKCNT_L_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAM_CLK_SPEC, u8, u8, 8, O>;
+pub type SCLKCNT_L_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CLK_SPEC, 8, O>;
 #[doc = "Field `SCLKCNT_H` reader - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
-pub type SCLKCNT_H_R = crate::FieldReader<u8, u8>;
+pub type SCLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_H` writer - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
-pub type SCLKCNT_H_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAM_CLK_SPEC, u8, u8, 8, O>;
+pub type SCLKCNT_H_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CLK_SPEC, 8, O>;
 #[doc = "Field `SCLKCNT_N` reader - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
-pub type SCLKCNT_N_R = crate::FieldReader<u8, u8>;
+pub type SCLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `SCLKCNT_N` writer - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
-pub type SCLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SRAM_CLK_SPEC, u8, u8, 8, O>;
+pub type SCLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CLK_SPEC, 8, O>;
 #[doc = "Field `SCLK_EQU_SYSCLK` reader - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
-pub type SCLK_EQU_SYSCLK_R = crate::BitReader<bool>;
+pub type SCLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `SCLK_EQU_SYSCLK` writer - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
-pub type SCLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SRAM_CLK_SPEC, bool, O>;
+pub type SCLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, SRAM_CLK_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - It must equal to the value of SPI_MEM_SCLKCNT_N."]
     #[inline(always)]
@@ -70,6 +70,26 @@ impl R {
     #[inline(always)]
     pub fn sclk_equ_sysclk(&self) -> SCLK_EQU_SYSCLK_R {
         SCLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_CLK")
+            .field("sclkcnt_l", &format_args!("{}", self.sclkcnt_l().bits()))
+            .field("sclkcnt_h", &format_args!("{}", self.sclkcnt_h().bits()))
+            .field("sclkcnt_n", &format_args!("{}", self.sclkcnt_n().bits()))
+            .field(
+                "sclk_equ_sysclk",
+                &format_args!("{}", self.sclk_equ_sysclk().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_CLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

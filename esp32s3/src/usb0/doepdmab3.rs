@@ -38,12 +38,29 @@ impl From<crate::W<DOEPDMAB3_SPEC>> for W {
 pub type DMABUFFERADDR3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DMABUFFERADDR3` writer - "]
 pub type DMABUFFERADDR3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DOEPDMAB3_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, DOEPDMAB3_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn dmabufferaddr3(&self) -> DMABUFFERADDR3_R {
         DMABUFFERADDR3_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPDMAB3")
+            .field(
+                "dmabufferaddr3",
+                &format_args!("{}", self.dmabufferaddr3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPDMAB3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

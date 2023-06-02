@@ -35,30 +35,25 @@ impl From<crate::W<PLC_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `BAD_CEF_ATTEN_PARA` reader - "]
-pub type BAD_CEF_ATTEN_PARA_R = crate::FieldReader<u8, u8>;
+pub type BAD_CEF_ATTEN_PARA_R = crate::FieldReader;
 #[doc = "Field `BAD_CEF_ATTEN_PARA` writer - "]
-pub type BAD_CEF_ATTEN_PARA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF1_SPEC, u8, u8, 8, O>;
+pub type BAD_CEF_ATTEN_PARA_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF1_SPEC, 8, O>;
 #[doc = "Field `BAD_CEF_ATTEN_PARA_SHIFT` reader - "]
-pub type BAD_CEF_ATTEN_PARA_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type BAD_CEF_ATTEN_PARA_SHIFT_R = crate::FieldReader;
 #[doc = "Field `BAD_CEF_ATTEN_PARA_SHIFT` writer - "]
-pub type BAD_CEF_ATTEN_PARA_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF1_SPEC, u8, u8, 4, O>;
+pub type BAD_CEF_ATTEN_PARA_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF1_SPEC, 4, O>;
 #[doc = "Field `BAD_OLA_WIN2_PARA_SHIFT` reader - "]
-pub type BAD_OLA_WIN2_PARA_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type BAD_OLA_WIN2_PARA_SHIFT_R = crate::FieldReader;
 #[doc = "Field `BAD_OLA_WIN2_PARA_SHIFT` writer - "]
-pub type BAD_OLA_WIN2_PARA_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF1_SPEC, u8, u8, 4, O>;
+pub type BAD_OLA_WIN2_PARA_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF1_SPEC, 4, O>;
 #[doc = "Field `BAD_OLA_WIN2_PARA` reader - "]
-pub type BAD_OLA_WIN2_PARA_R = crate::FieldReader<u8, u8>;
+pub type BAD_OLA_WIN2_PARA_R = crate::FieldReader;
 #[doc = "Field `BAD_OLA_WIN2_PARA` writer - "]
-pub type BAD_OLA_WIN2_PARA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF1_SPEC, u8, u8, 8, O>;
+pub type BAD_OLA_WIN2_PARA_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF1_SPEC, 8, O>;
 #[doc = "Field `SLIDE_WIN_LEN` reader - "]
-pub type SLIDE_WIN_LEN_R = crate::FieldReader<u8, u8>;
+pub type SLIDE_WIN_LEN_R = crate::FieldReader;
 #[doc = "Field `SLIDE_WIN_LEN` writer - "]
-pub type SLIDE_WIN_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF1_SPEC, u8, u8, 8, O>;
+pub type SLIDE_WIN_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -84,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn slide_win_len(&self) -> SLIDE_WIN_LEN_R {
         SLIDE_WIN_LEN_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLC_CONF1")
+            .field(
+                "bad_cef_atten_para",
+                &format_args!("{}", self.bad_cef_atten_para().bits()),
+            )
+            .field(
+                "bad_cef_atten_para_shift",
+                &format_args!("{}", self.bad_cef_atten_para_shift().bits()),
+            )
+            .field(
+                "bad_ola_win2_para_shift",
+                &format_args!("{}", self.bad_ola_win2_para_shift().bits()),
+            )
+            .field(
+                "bad_ola_win2_para",
+                &format_args!("{}", self.bad_ola_win2_para().bits()),
+            )
+            .field(
+                "slide_win_len",
+                &format_args!("{}", self.slide_win_len().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLC_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

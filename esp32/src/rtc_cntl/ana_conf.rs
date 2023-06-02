@@ -35,37 +35,37 @@ impl From<crate::W<ANA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PLLA_FORCE_PD` reader - PLLA force power down"]
-pub type PLLA_FORCE_PD_R = crate::BitReader<bool>;
+pub type PLLA_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLLA_FORCE_PD` writer - PLLA force power down"]
-pub type PLLA_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type PLLA_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `PLLA_FORCE_PU` reader - PLLA force power up"]
-pub type PLLA_FORCE_PU_R = crate::BitReader<bool>;
+pub type PLLA_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLLA_FORCE_PU` writer - PLLA force power up"]
-pub type PLLA_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type PLLA_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `BBPLL_CAL_SLP_START` reader - start BBPLL calibration during sleep"]
-pub type BBPLL_CAL_SLP_START_R = crate::BitReader<bool>;
+pub type BBPLL_CAL_SLP_START_R = crate::BitReader;
 #[doc = "Field `BBPLL_CAL_SLP_START` writer - start BBPLL calibration during sleep"]
-pub type BBPLL_CAL_SLP_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type BBPLL_CAL_SLP_START_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `PVTMON_PU` reader - 1: PVTMON power up otherwise power down"]
-pub type PVTMON_PU_R = crate::BitReader<bool>;
+pub type PVTMON_PU_R = crate::BitReader;
 #[doc = "Field `PVTMON_PU` writer - 1: PVTMON power up otherwise power down"]
-pub type PVTMON_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type PVTMON_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `TXRF_I2C_PU` reader - 1: TXRF_I2C power up otherwise power down"]
-pub type TXRF_I2C_PU_R = crate::BitReader<bool>;
+pub type TXRF_I2C_PU_R = crate::BitReader;
 #[doc = "Field `TXRF_I2C_PU` writer - 1: TXRF_I2C power up otherwise power down"]
-pub type TXRF_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type TXRF_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `RFRX_PBUS_PU` reader - 1: RFRX_PBUS power up otherwise power down"]
-pub type RFRX_PBUS_PU_R = crate::BitReader<bool>;
+pub type RFRX_PBUS_PU_R = crate::BitReader;
 #[doc = "Field `RFRX_PBUS_PU` writer - 1: RFRX_PBUS power up otherwise power down"]
-pub type RFRX_PBUS_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type RFRX_PBUS_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `CKGEN_I2C_PU` reader - 1: CKGEN_I2C power up otherwise power down"]
-pub type CKGEN_I2C_PU_R = crate::BitReader<bool>;
+pub type CKGEN_I2C_PU_R = crate::BitReader;
 #[doc = "Field `CKGEN_I2C_PU` writer - 1: CKGEN_I2C power up otherwise power down"]
-pub type CKGEN_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type CKGEN_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 #[doc = "Field `PLL_I2C_PU` reader - 1: PLL_I2C power up otherwise power down"]
-pub type PLL_I2C_PU_R = crate::BitReader<bool>;
+pub type PLL_I2C_PU_R = crate::BitReader;
 #[doc = "Field `PLL_I2C_PU` writer - 1: PLL_I2C power up otherwise power down"]
-pub type PLL_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, O>;
+pub type PLL_I2C_PU_W<'a, const O: u8> = crate::BitWriter<'a, ANA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
@@ -106,6 +106,42 @@ impl R {
     #[inline(always)]
     pub fn pll_i2c_pu(&self) -> PLL_I2C_PU_R {
         PLL_I2C_PU_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ANA_CONF")
+            .field(
+                "plla_force_pd",
+                &format_args!("{}", self.plla_force_pd().bit()),
+            )
+            .field(
+                "plla_force_pu",
+                &format_args!("{}", self.plla_force_pu().bit()),
+            )
+            .field(
+                "bbpll_cal_slp_start",
+                &format_args!("{}", self.bbpll_cal_slp_start().bit()),
+            )
+            .field("pvtmon_pu", &format_args!("{}", self.pvtmon_pu().bit()))
+            .field("txrf_i2c_pu", &format_args!("{}", self.txrf_i2c_pu().bit()))
+            .field(
+                "rfrx_pbus_pu",
+                &format_args!("{}", self.rfrx_pbus_pu().bit()),
+            )
+            .field(
+                "ckgen_i2c_pu",
+                &format_args!("{}", self.ckgen_i2c_pu().bit()),
+            )
+            .field("pll_i2c_pu", &format_args!("{}", self.pll_i2c_pu().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ANA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

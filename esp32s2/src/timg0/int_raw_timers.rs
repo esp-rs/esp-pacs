@@ -14,13 +14,13 @@ impl From<crate::R<INT_RAW_TIMERS_SPEC>> for R {
     }
 }
 #[doc = "Field `T0_INT_RAW` reader - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
-pub type T0_INT_RAW_R = crate::BitReader<bool>;
+pub type T0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `T1_INT_RAW` reader - The raw interrupt status bit for the TIMG_T1_INT interrupt."]
-pub type T1_INT_RAW_R = crate::BitReader<bool>;
+pub type T1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+pub type WDT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `LACT_INT_RAW` reader - The raw interrupt status bit for the TIMG_LACT_INT interrupt."]
-pub type LACT_INT_RAW_R = crate::BitReader<bool>;
+pub type LACT_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
@@ -41,6 +41,26 @@ impl R {
     #[inline(always)]
     pub fn lact_int_raw(&self) -> LACT_INT_RAW_R {
         LACT_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW_TIMERS")
+            .field("t0_int_raw", &format_args!("{}", self.t0_int_raw().bit()))
+            .field("t1_int_raw", &format_args!("{}", self.t1_int_raw().bit()))
+            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
+            .field(
+                "lact_int_raw",
+                &format_args!("{}", self.lact_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_TIMERS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_timers](index.html) module"]

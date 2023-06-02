@@ -35,37 +35,33 @@ impl From<crate::W<SAR_READ_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_CLK_DIV` reader - clock divider"]
-pub type SAR1_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type SAR1_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR1_CLK_DIV` writer - clock divider"]
-pub type SAR1_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READ_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR1_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR1_SAMPLE_CYCLE` reader - sample cycles for SAR ADC1"]
-pub type SAR1_SAMPLE_CYCLE_R = crate::FieldReader<u8, u8>;
+pub type SAR1_SAMPLE_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_CYCLE` writer - sample cycles for SAR ADC1"]
-pub type SAR1_SAMPLE_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READ_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR1_SAMPLE_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR1_SAMPLE_BIT` reader - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
-pub type SAR1_SAMPLE_BIT_R = crate::FieldReader<u8, u8>;
+pub type SAR1_SAMPLE_BIT_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_BIT` writer - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
-pub type SAR1_SAMPLE_BIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READ_CTRL_SPEC, u8, u8, 2, O>;
+pub type SAR1_SAMPLE_BIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 2, O>;
 #[doc = "Field `SAR1_CLK_GATED` reader - "]
-pub type SAR1_CLK_GATED_R = crate::BitReader<bool>;
+pub type SAR1_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR1_CLK_GATED` writer - "]
-pub type SAR1_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_READ_CTRL_SPEC, bool, O>;
+pub type SAR1_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
 #[doc = "Field `SAR1_SAMPLE_NUM` reader - "]
-pub type SAR1_SAMPLE_NUM_R = crate::FieldReader<u8, u8>;
+pub type SAR1_SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR1_SAMPLE_NUM` writer - "]
-pub type SAR1_SAMPLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READ_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR1_SAMPLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READ_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR1_DIG_FORCE` reader - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
-pub type SAR1_DIG_FORCE_R = crate::BitReader<bool>;
+pub type SAR1_DIG_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR1_DIG_FORCE` writer - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
-pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_READ_CTRL_SPEC, bool, O>;
+pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
 #[doc = "Field `SAR1_DATA_INV` reader - Invert SAR ADC1 data"]
-pub type SAR1_DATA_INV_R = crate::BitReader<bool>;
+pub type SAR1_DATA_INV_R = crate::BitReader;
 #[doc = "Field `SAR1_DATA_INV` writer - Invert SAR ADC1 data"]
-pub type SAR1_DATA_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_READ_CTRL_SPEC, bool, O>;
+pub type SAR1_DATA_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READ_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
@@ -101,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn sar1_data_inv(&self) -> SAR1_DATA_INV_R {
         SAR1_DATA_INV_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_READ_CTRL")
+            .field(
+                "sar1_clk_div",
+                &format_args!("{}", self.sar1_clk_div().bits()),
+            )
+            .field(
+                "sar1_sample_cycle",
+                &format_args!("{}", self.sar1_sample_cycle().bits()),
+            )
+            .field(
+                "sar1_sample_bit",
+                &format_args!("{}", self.sar1_sample_bit().bits()),
+            )
+            .field(
+                "sar1_clk_gated",
+                &format_args!("{}", self.sar1_clk_gated().bit()),
+            )
+            .field(
+                "sar1_sample_num",
+                &format_args!("{}", self.sar1_sample_num().bits()),
+            )
+            .field(
+                "sar1_dig_force",
+                &format_args!("{}", self.sar1_dig_force().bit()),
+            )
+            .field(
+                "sar1_data_inv",
+                &format_args!("{}", self.sar1_data_inv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_READ_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

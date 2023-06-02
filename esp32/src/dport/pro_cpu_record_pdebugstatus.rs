@@ -35,17 +35,17 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGSTATUS` reader - "]
-pub type RECORD_PRO_PDEBUGSTATUS_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PRO_PDEBUGSTATUS_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_BBCAUSE` reader - "]
-pub type RECORD_PDEBUGSTATUS_BBCAUSE_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGSTATUS_BBCAUSE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_BBCAUSE` writer - "]
 pub type RECORD_PDEBUGSTATUS_BBCAUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, 6, O>;
 #[doc = "Field `RECORD_PDEBUGSTATUS_INSNTYPE` reader - "]
-pub type RECORD_PDEBUGSTATUS_INSNTYPE_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGSTATUS_INSNTYPE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGSTATUS_INSNTYPE` writer - "]
 pub type RECORD_PDEBUGSTATUS_INSNTYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn record_pdebugstatus_insntype(&self) -> RECORD_PDEBUGSTATUS_INSNTYPE_R {
         RECORD_PDEBUGSTATUS_INSNTYPE_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CPU_RECORD_PDEBUGSTATUS")
+            .field(
+                "record_pro_pdebugstatus",
+                &format_args!("{}", self.record_pro_pdebugstatus().bits()),
+            )
+            .field(
+                "record_pdebugstatus_bbcause",
+                &format_args!("{}", self.record_pdebugstatus_bbcause().bits()),
+            )
+            .field(
+                "record_pdebugstatus_insntype",
+                &format_args!("{}", self.record_pdebugstatus_insntype().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

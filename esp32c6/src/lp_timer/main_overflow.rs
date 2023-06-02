@@ -20,8 +20,13 @@ impl From<crate::W<MAIN_OVERFLOW_SPEC>> for W {
     }
 }
 #[doc = "Field `MAIN_TIMER_ALARM_LOAD` writer - need_des"]
-pub type MAIN_TIMER_ALARM_LOAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MAIN_OVERFLOW_SPEC, bool, O>;
+pub type MAIN_TIMER_ALARM_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, MAIN_OVERFLOW_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MAIN_OVERFLOW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]

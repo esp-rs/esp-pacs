@@ -35,14 +35,31 @@ impl From<crate::W<PRO_AHB_0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_AHB_LOCK` reader - Lock register. Setting to 1 locks PeriBus2 permission control registers."]
-pub type PRO_AHB_LOCK_R = crate::BitReader<bool>;
+pub type PRO_AHB_LOCK_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_LOCK` writer - Lock register. Setting to 1 locks PeriBus2 permission control registers."]
-pub type PRO_AHB_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, PRO_AHB_0_SPEC, bool, O>;
+pub type PRO_AHB_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks PeriBus2 permission control registers."]
     #[inline(always)]
     pub fn pro_ahb_lock(&self) -> PRO_AHB_LOCK_R {
         PRO_AHB_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_AHB_0")
+            .field(
+                "pro_ahb_lock",
+                &format_args!("{}", self.pro_ahb_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_AHB_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

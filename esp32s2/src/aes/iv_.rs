@@ -37,12 +37,26 @@ impl From<crate::W<IV__SPEC>> for W {
 #[doc = "Field `IV_0` reader - This register stores the %sth 32-bit piece of 128-bit initialization vector"]
 pub type IV_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `IV_0` writer - This register stores the %sth 32-bit piece of 128-bit initialization vector"]
-pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IV__SPEC, u32, u32, 32, O>;
+pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit initialization vector"]
     #[inline(always)]
     pub fn iv_0(&self) -> IV_0_R {
         IV_0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IV_")
+            .field("iv_0", &format_args!("{}", self.iv_0().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IV__SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

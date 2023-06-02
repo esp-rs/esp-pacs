@@ -38,16 +38,16 @@ impl From<crate::W<SAR_SLAVE_ADDR3_SPEC>> for W {
 pub type I2C_SLAVE_ADDR5_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR5` writer - "]
 pub type I2C_SLAVE_ADDR5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR3_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR4` reader - "]
 pub type I2C_SLAVE_ADDR4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR4` writer - "]
 pub type I2C_SLAVE_ADDR4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR3_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16, u16>;
 #[doc = "Field `TSENS_OUT` reader - temperature sensor data out"]
-pub type TSENS_OUT_R = crate::FieldReader<u8, u8>;
+pub type TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `TSENS_RDY_OUT` reader - indicate temperature sensor out ready"]
-pub type TSENS_RDY_OUT_R = crate::BitReader<bool>;
+pub type TSENS_RDY_OUT_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -68,6 +68,32 @@ impl R {
     #[inline(always)]
     pub fn tsens_rdy_out(&self) -> TSENS_RDY_OUT_R {
         TSENS_RDY_OUT_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_SLAVE_ADDR3")
+            .field(
+                "i2c_slave_addr5",
+                &format_args!("{}", self.i2c_slave_addr5().bits()),
+            )
+            .field(
+                "i2c_slave_addr4",
+                &format_args!("{}", self.i2c_slave_addr4().bits()),
+            )
+            .field("tsens_out", &format_args!("{}", self.tsens_out().bits()))
+            .field(
+                "tsens_rdy_out",
+                &format_args!("{}", self.tsens_rdy_out().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

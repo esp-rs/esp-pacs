@@ -16,11 +16,11 @@ impl From<crate::R<SLC1HOST_TOKEN_RDATA_SPEC>> for R {
 #[doc = "Field `SLC1_TOKEN0` reader - *******Description***********"]
 pub type SLC1_TOKEN0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_RX_PF_VALID` reader - *******Description***********"]
-pub type SLC1_RX_PF_VALID_R = crate::BitReader<bool>;
+pub type SLC1_RX_PF_VALID_R = crate::BitReader;
 #[doc = "Field `HOSTSLCHOST_SLC1_TOKEN1` reader - *******Description***********"]
 pub type HOSTSLCHOST_SLC1_TOKEN1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_RX_PF_EOF` reader - *******Description***********"]
-pub type SLC1_RX_PF_EOF_R = crate::FieldReader<u8, u8>;
+pub type SLC1_RX_PF_EOF_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:11 - *******Description***********"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn slc1_rx_pf_eof(&self) -> SLC1_RX_PF_EOF_R {
         SLC1_RX_PF_EOF_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC1HOST_TOKEN_RDATA")
+            .field(
+                "slc1_token0",
+                &format_args!("{}", self.slc1_token0().bits()),
+            )
+            .field(
+                "slc1_rx_pf_valid",
+                &format_args!("{}", self.slc1_rx_pf_valid().bit()),
+            )
+            .field(
+                "hostslchost_slc1_token1",
+                &format_args!("{}", self.hostslchost_slc1_token1().bits()),
+            )
+            .field(
+                "slc1_rx_pf_eof",
+                &format_args!("{}", self.slc1_rx_pf_eof().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC1HOST_TOKEN_RDATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slc1host_token_rdata](index.html) module"]

@@ -38,12 +38,26 @@ impl From<crate::W<SRAM_FO_CTRL_0_SPEC>> for W {
 pub type SRAM_FO_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SRAM_FO_0` writer - "]
 pub type SRAM_FO_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_FO_CTRL_0_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SRAM_FO_CTRL_0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sram_fo_0(&self) -> SRAM_FO_0_R {
         SRAM_FO_0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_FO_CTRL_0")
+            .field("sram_fo_0", &format_args!("{}", self.sram_fo_0().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_FO_CTRL_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

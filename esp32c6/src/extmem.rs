@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - L1 instruction Cache(L1-ICache) control register"]
     pub l1_icache_ctrl: L1_ICACHE_CTRL,

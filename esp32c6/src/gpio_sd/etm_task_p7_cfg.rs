@@ -35,35 +35,32 @@ impl From<crate::W<ETM_TASK_P7_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_TASK_GPIO28_EN` reader - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO28_EN_R = crate::BitReader<bool>;
+pub type ETM_TASK_GPIO28_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO28_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO28_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, bool, O>;
+pub type ETM_TASK_GPIO28_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_TASK_P7_CFG_SPEC, O>;
 #[doc = "Field `ETM_TASK_GPIO28_SEL` reader - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO28_SEL_R = crate::FieldReader<u8, u8>;
+pub type ETM_TASK_GPIO28_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO28_SEL` writer - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO28_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, ETM_TASK_P7_CFG_SPEC, 3, O>;
 #[doc = "Field `ETM_TASK_GPIO29_EN` reader - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO29_EN_R = crate::BitReader<bool>;
+pub type ETM_TASK_GPIO29_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO29_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO29_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, bool, O>;
+pub type ETM_TASK_GPIO29_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_TASK_P7_CFG_SPEC, O>;
 #[doc = "Field `ETM_TASK_GPIO29_SEL` reader - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO29_SEL_R = crate::FieldReader<u8, u8>;
+pub type ETM_TASK_GPIO29_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO29_SEL` writer - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO29_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, ETM_TASK_P7_CFG_SPEC, 3, O>;
 #[doc = "Field `ETM_TASK_GPIO30_EN` reader - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO30_EN_R = crate::BitReader<bool>;
+pub type ETM_TASK_GPIO30_EN_R = crate::BitReader;
 #[doc = "Field `ETM_TASK_GPIO30_EN` writer - Enable bit of GPIO response etm task."]
-pub type ETM_TASK_GPIO30_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, bool, O>;
+pub type ETM_TASK_GPIO30_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_TASK_P7_CFG_SPEC, O>;
 #[doc = "Field `ETM_TASK_GPIO30_SEL` reader - GPIO choose a etm task channel."]
-pub type ETM_TASK_GPIO30_SEL_R = crate::FieldReader<u8, u8>;
+pub type ETM_TASK_GPIO30_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_TASK_GPIO30_SEL` writer - GPIO choose a etm task channel."]
 pub type ETM_TASK_GPIO30_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ETM_TASK_P7_CFG_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, ETM_TASK_P7_CFG_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Enable bit of GPIO response etm task."]
     #[inline(always)]
@@ -94,6 +91,43 @@ impl R {
     #[inline(always)]
     pub fn etm_task_gpio30_sel(&self) -> ETM_TASK_GPIO30_SEL_R {
         ETM_TASK_GPIO30_SEL_R::new(((self.bits >> 17) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ETM_TASK_P7_CFG")
+            .field(
+                "etm_task_gpio28_en",
+                &format_args!("{}", self.etm_task_gpio28_en().bit()),
+            )
+            .field(
+                "etm_task_gpio28_sel",
+                &format_args!("{}", self.etm_task_gpio28_sel().bits()),
+            )
+            .field(
+                "etm_task_gpio29_en",
+                &format_args!("{}", self.etm_task_gpio29_en().bit()),
+            )
+            .field(
+                "etm_task_gpio29_sel",
+                &format_args!("{}", self.etm_task_gpio29_sel().bits()),
+            )
+            .field(
+                "etm_task_gpio30_en",
+                &format_args!("{}", self.etm_task_gpio30_en().bit()),
+            )
+            .field(
+                "etm_task_gpio30_sel",
+                &format_args!("{}", self.etm_task_gpio30_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ETM_TASK_P7_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

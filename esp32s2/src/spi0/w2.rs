@@ -37,12 +37,26 @@ impl From<crate::W<W2_SPEC>> for W {
 #[doc = "Field `BUF2` reader - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
 pub type BUF2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BUF2` writer - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub type BUF2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, W2_SPEC, u32, u32, 32, O>;
+pub type BUF2_W<'a, const O: u8> = crate::FieldWriter<'a, W2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]
     pub fn buf2(&self) -> BUF2_R {
         BUF2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("W2")
+            .field("buf2", &format_args!("{}", self.buf2().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<W2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

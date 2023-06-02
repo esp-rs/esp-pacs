@@ -35,47 +35,41 @@ impl From<crate::W<DMA_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_CLR` reader - The clear bit for lack of enough inlink descriptors."]
-pub type INLINK_DSCR_EMPTY_INT_CLR_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_EMPTY_INT_CLR_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_CLR` writer - The clear bit for lack of enough inlink descriptors."]
-pub type INLINK_DSCR_EMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type INLINK_DSCR_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_CLR` reader - The clear bit for outlink descriptor error."]
-pub type OUTLINK_DSCR_ERROR_INT_CLR_R = crate::BitReader<bool>;
+pub type OUTLINK_DSCR_ERROR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_CLR` writer - The clear bit for outlink descriptor error."]
-pub type OUTLINK_DSCR_ERROR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type OUTLINK_DSCR_ERROR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_CLR` reader - The clear bit for inlink descriptor error."]
-pub type INLINK_DSCR_ERROR_INT_CLR_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_ERROR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_CLR` writer - The clear bit for inlink descriptor error."]
-pub type INLINK_DSCR_ERROR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type INLINK_DSCR_ERROR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `IN_DONE_INT_CLR` reader - The clear bit for completing usage of a inlink descriptor."]
-pub type IN_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_CLR` writer - The clear bit for completing usage of a inlink descriptor."]
-pub type IN_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type IN_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `IN_ERR_EOF_INT_CLR` reader - The clear bit for receiving error."]
-pub type IN_ERR_EOF_INT_CLR_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_CLR` writer - The clear bit for receiving error."]
-pub type IN_ERR_EOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type IN_ERR_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `IN_SUC_EOF_INT_CLR` reader - The clear bit for completing receiving all the packets from host."]
-pub type IN_SUC_EOF_INT_CLR_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_CLR` writer - The clear bit for completing receiving all the packets from host."]
-pub type IN_SUC_EOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type IN_SUC_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_DONE_INT_CLR` reader - The clear bit for completing usage of a outlink descriptor."]
-pub type OUT_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_CLR` writer - The clear bit for completing usage of a outlink descriptor."]
-pub type OUT_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type OUT_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_EOF_INT_CLR` reader - The clear bit for sending a packet to host done."]
-pub type OUT_EOF_INT_CLR_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_CLR` writer - The clear bit for sending a packet to host done."]
-pub type OUT_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type OUT_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_CLR` reader - The clear bit for sending all the packets to host done."]
-pub type OUT_TOTAL_EOF_INT_CLR_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_CLR` writer - The clear bit for sending all the packets to host done."]
-pub type OUT_TOTAL_EOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type OUT_TOTAL_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The clear bit for lack of enough inlink descriptors."]
     #[inline(always)]
@@ -121,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn out_total_eof_int_clr(&self) -> OUT_TOTAL_EOF_INT_CLR_R {
         OUT_TOTAL_EOF_INT_CLR_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_INT_CLR")
+            .field(
+                "inlink_dscr_empty_int_clr",
+                &format_args!("{}", self.inlink_dscr_empty_int_clr().bit()),
+            )
+            .field(
+                "outlink_dscr_error_int_clr",
+                &format_args!("{}", self.outlink_dscr_error_int_clr().bit()),
+            )
+            .field(
+                "inlink_dscr_error_int_clr",
+                &format_args!("{}", self.inlink_dscr_error_int_clr().bit()),
+            )
+            .field(
+                "in_done_int_clr",
+                &format_args!("{}", self.in_done_int_clr().bit()),
+            )
+            .field(
+                "in_err_eof_int_clr",
+                &format_args!("{}", self.in_err_eof_int_clr().bit()),
+            )
+            .field(
+                "in_suc_eof_int_clr",
+                &format_args!("{}", self.in_suc_eof_int_clr().bit()),
+            )
+            .field(
+                "out_done_int_clr",
+                &format_args!("{}", self.out_done_int_clr().bit()),
+            )
+            .field(
+                "out_eof_int_clr",
+                &format_args!("{}", self.out_eof_int_clr().bit()),
+            )
+            .field(
+                "out_total_eof_int_clr",
+                &format_args!("{}", self.out_total_eof_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

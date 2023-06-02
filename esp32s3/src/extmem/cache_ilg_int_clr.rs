@@ -21,31 +21,35 @@ impl From<crate::W<CACHE_ILG_INT_CLR_SPEC>> for W {
 }
 #[doc = "Field `ICACHE_SYNC_OP_FAULT_INT_CLR` writer - The bit is used to clear interrupt by sync configurations fault."]
 pub type ICACHE_SYNC_OP_FAULT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `ICACHE_PRELOAD_OP_FAULT_INT_CLR` writer - The bit is used to clear interrupt by preload configurations fault."]
 pub type ICACHE_PRELOAD_OP_FAULT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `DCACHE_SYNC_OP_FAULT_INT_CLR` writer - The bit is used to clear interrupt by sync configurations fault."]
 pub type DCACHE_SYNC_OP_FAULT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `DCACHE_PRELOAD_OP_FAULT_INT_CLR` writer - The bit is used to clear interrupt by preload configurations fault."]
 pub type DCACHE_PRELOAD_OP_FAULT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `DCACHE_WRITE_FLASH_INT_CLR` writer - The bit is used to clear interrupt by dcache trying to write flash."]
 pub type DCACHE_WRITE_FLASH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `MMU_ENTRY_FAULT_INT_CLR` writer - The bit is used to clear interrupt by mmu entry fault."]
 pub type MMU_ENTRY_FAULT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `DCACHE_OCCUPY_EXC_INT_CLR` writer - The bit is used to clear interrupt by dcache trying to replace a line whose blocks all have been occupied by occupy-mode."]
 pub type DCACHE_OCCUPY_EXC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `IBUS_CNT_OVF_INT_CLR` writer - The bit is used to clear interrupt by ibus counter overflow."]
-pub type IBUS_CNT_OVF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+pub type IBUS_CNT_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
 #[doc = "Field `DBUS_CNT_OVF_INT_CLR` writer - The bit is used to clear interrupt by dbus counter overflow."]
-pub type DBUS_CNT_OVF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ILG_INT_CLR_SPEC, bool, O>;
+pub type DBUS_CNT_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_ILG_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_ILG_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt by sync configurations fault."]
     #[inline(always)]

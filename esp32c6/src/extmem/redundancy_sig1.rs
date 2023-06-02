@@ -38,12 +38,29 @@ impl From<crate::W<REDUNDANCY_SIG1_SPEC>> for W {
 pub type CACHE_REDCY_SIG1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CACHE_REDCY_SIG1` writer - Those bits are prepared for ECO."]
 pub type CACHE_REDCY_SIG1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REDUNDANCY_SIG1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, REDUNDANCY_SIG1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are prepared for ECO."]
     #[inline(always)]
     pub fn cache_redcy_sig1(&self) -> CACHE_REDCY_SIG1_R {
         CACHE_REDCY_SIG1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REDUNDANCY_SIG1")
+            .field(
+                "cache_redcy_sig1",
+                &format_args!("{}", self.cache_redcy_sig1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REDUNDANCY_SIG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

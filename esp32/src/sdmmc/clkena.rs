@@ -35,13 +35,13 @@ impl From<crate::W<CLKENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CCLK_ENABLE` reader - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub type CCLK_ENABLE_R = crate::FieldReader<u8, u8>;
+pub type CCLK_ENABLE_R = crate::FieldReader;
 #[doc = "Field `CCLK_ENABLE` writer - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub type CCLK_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKENA_SPEC, u8, u8, 2, O>;
+pub type CCLK_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, CLKENA_SPEC, 2, O>;
 #[doc = "Field `LP_ENABLE` reader - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub type LP_ENABLE_R = crate::FieldReader<u8, u8>;
+pub type LP_ENABLE_R = crate::FieldReader;
 #[doc = "Field `LP_ENABLE` writer - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub type LP_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKENA_SPEC, u8, u8, 2, O>;
+pub type LP_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, CLKENA_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn lp_enable(&self) -> LP_ENABLE_R {
         LP_ENABLE_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKENA")
+            .field(
+                "cclk_enable",
+                &format_args!("{}", self.cclk_enable().bits()),
+            )
+            .field("lp_enable", &format_args!("{}", self.lp_enable().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

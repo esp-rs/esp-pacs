@@ -35,17 +35,17 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET0_INT_ENA` reader - interupt0 enable"]
-pub type TARGET0_INT_ENA_R = crate::BitReader<bool>;
+pub type TARGET0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TARGET0_INT_ENA` writer - interupt0 enable"]
-pub type TARGET0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TARGET0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TARGET1_INT_ENA` reader - interupt1 enable"]
-pub type TARGET1_INT_ENA_R = crate::BitReader<bool>;
+pub type TARGET1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TARGET1_INT_ENA` writer - interupt1 enable"]
-pub type TARGET1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TARGET1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TARGET2_INT_ENA` reader - interupt2 enable"]
-pub type TARGET2_INT_ENA_R = crate::BitReader<bool>;
+pub type TARGET2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TARGET2_INT_ENA` writer - interupt2 enable"]
-pub type TARGET2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TARGET2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - interupt0 enable"]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn target2_int_ena(&self) -> TARGET2_INT_ENA_R {
         TARGET2_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "target0_int_ena",
+                &format_args!("{}", self.target0_int_ena().bit()),
+            )
+            .field(
+                "target1_int_ena",
+                &format_args!("{}", self.target1_int_ena().bit()),
+            )
+            .field(
+                "target2_int_ena",
+                &format_args!("{}", self.target2_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

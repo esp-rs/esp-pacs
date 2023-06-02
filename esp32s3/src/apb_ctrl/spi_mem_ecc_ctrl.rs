@@ -35,15 +35,13 @@ impl From<crate::W<SPI_MEM_ECC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PAGE_SIZE` reader - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type FLASH_PAGE_SIZE_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `FLASH_PAGE_SIZE` writer - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type FLASH_PAGE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_ECC_CTRL_SPEC, u8, u8, 2, O>;
+pub type FLASH_PAGE_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_ECC_CTRL_SPEC, 2, O>;
 #[doc = "Field `SRAM_PAGE_SIZE` reader - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type SRAM_PAGE_SIZE_R = crate::FieldReader<u8, u8>;
+pub type SRAM_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `SRAM_PAGE_SIZE` writer - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub type SRAM_PAGE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_ECC_CTRL_SPEC, u8, u8, 2, O>;
+pub type SRAM_PAGE_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_ECC_CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sram_page_size(&self) -> SRAM_PAGE_SIZE_R {
         SRAM_PAGE_SIZE_R::new(((self.bits >> 20) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_ECC_CTRL")
+            .field(
+                "flash_page_size",
+                &format_args!("{}", self.flash_page_size().bits()),
+            )
+            .field(
+                "sram_page_size",
+                &format_args!("{}", self.sram_page_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ECC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

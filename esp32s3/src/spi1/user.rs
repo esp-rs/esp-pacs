@@ -35,57 +35,57 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CK_OUT_EDGE` reader - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
-pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
-pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_DUAL` reader - Set this bit to enable 2-bm in DOUT phase in SPI1 write operation."]
-pub type FWRITE_DUAL_R = crate::BitReader<bool>;
+pub type FWRITE_DUAL_R = crate::BitReader;
 #[doc = "Field `FWRITE_DUAL` writer - Set this bit to enable 2-bm in DOUT phase in SPI1 write operation."]
-pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_QUAD` reader - Set this bit to enable 4-bm in DOUT phase in SPI1 write operation."]
-pub type FWRITE_QUAD_R = crate::BitReader<bool>;
+pub type FWRITE_QUAD_R = crate::BitReader;
 #[doc = "Field `FWRITE_QUAD` writer - Set this bit to enable 4-bm in DOUT phase in SPI1 write operation."]
-pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_DIO` reader - Set this bit to enable 2-bm in ADDR and DOUT phase in SPI1 write operation."]
-pub type FWRITE_DIO_R = crate::BitReader<bool>;
+pub type FWRITE_DIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_DIO` writer - Set this bit to enable 2-bm in ADDR and DOUT phase in SPI1 write operation."]
-pub type FWRITE_DIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_DIO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_QIO` reader - Set this bit to enable 4-bit-mode(4-bm) in ADDR and DOUT phase in SPI1 write operation."]
-pub type FWRITE_QIO_R = crate::BitReader<bool>;
+pub type FWRITE_QIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_QIO` writer - Set this bit to enable 4-bit-mode(4-bm) in ADDR and DOUT phase in SPI1 write operation."]
-pub type FWRITE_QIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_QIO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO_HIGHPART` reader - DIN phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
-pub type USR_MISO_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MISO_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MISO_HIGHPART` writer - DIN phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
-pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI_HIGHPART` reader - DOUT phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
-pub type USR_MOSI_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MOSI_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MOSI_HIGHPART` writer - DOUT phase only access to high-part of the buffer SPI_MEM_W8_REG~SPI_MEM_W15_REG. 1: enable 0: disable."]
-pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI` reader - Set this bit to enable the DOUT phase of an write-data operation."]
-pub type USR_MOSI_R = crate::BitReader<bool>;
+pub type USR_MOSI_R = crate::BitReader;
 #[doc = "Field `USR_MOSI` writer - Set this bit to enable the DOUT phase of an write-data operation."]
-pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO` reader - Set this bit to enable enable the DIN phase of a read-data operation."]
-pub type USR_MISO_R = crate::BitReader<bool>;
+pub type USR_MISO_R = crate::BitReader;
 #[doc = "Field `USR_MISO` writer - Set this bit to enable enable the DIN phase of a read-data operation."]
-pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY` reader - Set this bit to enable enable the DUMMY phase of an operation."]
-pub type USR_DUMMY_R = crate::BitReader<bool>;
+pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - Set this bit to enable enable the DUMMY phase of an operation."]
-pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_ADDR` reader - Set this bit to enable enable the ADDR phase of an operation."]
-pub type USR_ADDR_R = crate::BitReader<bool>;
+pub type USR_ADDR_R = crate::BitReader;
 #[doc = "Field `USR_ADDR` writer - Set this bit to enable enable the ADDR phase of an operation."]
-pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_COMMAND` reader - Set this bit to enable enable the CMD phase of an operation."]
-pub type USR_COMMAND_R = crate::BitReader<bool>;
+pub type USR_COMMAND_R = crate::BitReader;
 #[doc = "Field `USR_COMMAND` writer - Set this bit to enable enable the CMD phase of an operation."]
-pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 impl R {
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
@@ -151,6 +151,41 @@ impl R {
     #[inline(always)]
     pub fn usr_command(&self) -> USR_COMMAND_R {
         USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER")
+            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
+            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
+            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
+            .field("fwrite_dio", &format_args!("{}", self.fwrite_dio().bit()))
+            .field("fwrite_qio", &format_args!("{}", self.fwrite_qio().bit()))
+            .field(
+                "usr_miso_highpart",
+                &format_args!("{}", self.usr_miso_highpart().bit()),
+            )
+            .field(
+                "usr_mosi_highpart",
+                &format_args!("{}", self.usr_mosi_highpart().bit()),
+            )
+            .field(
+                "usr_dummy_idle",
+                &format_args!("{}", self.usr_dummy_idle().bit()),
+            )
+            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
+            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
+            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
+            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

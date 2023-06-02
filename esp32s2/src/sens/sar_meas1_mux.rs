@@ -35,14 +35,31 @@ impl From<crate::W<SAR_MEAS1_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_DIG_FORCE` reader - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
-pub type SAR1_DIG_FORCE_R = crate::BitReader<bool>;
+pub type SAR1_DIG_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR1_DIG_FORCE` writer - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
-pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_MEAS1_MUX_SPEC, bool, O>;
+pub type SAR1_DIG_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_MUX_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - 1: SAR ADC1 controlled by DIG ADC1 CTRL"]
     #[inline(always)]
     pub fn sar1_dig_force(&self) -> SAR1_DIG_FORCE_R {
         SAR1_DIG_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS1_MUX")
+            .field(
+                "sar1_dig_force",
+                &format_args!("{}", self.sar1_dig_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS1_MUX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<WDTCONFIG2_SPEC>> for W {
 pub type WDT_STG0_HOLD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WDT_STG0_HOLD` writer - reg_wdt_stg0_hold."]
 pub type WDT_STG0_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WDTCONFIG2_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, WDTCONFIG2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_wdt_stg0_hold."]
     #[inline(always)]
     pub fn wdt_stg0_hold(&self) -> WDT_STG0_HOLD_R {
         WDT_STG0_HOLD_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WDTCONFIG2")
+            .field(
+                "wdt_stg0_hold",
+                &format_args!("{}", self.wdt_stg0_hold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

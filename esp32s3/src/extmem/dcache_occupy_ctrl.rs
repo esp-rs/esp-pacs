@@ -35,12 +35,11 @@ impl From<crate::W<DCACHE_OCCUPY_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_OCCUPY_ENA` reader - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
-pub type DCACHE_OCCUPY_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_OCCUPY_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_OCCUPY_ENA` writer - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
-pub type DCACHE_OCCUPY_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_OCCUPY_CTRL_SPEC, bool, O>;
+pub type DCACHE_OCCUPY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_OCCUPY_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_OCCUPY_DONE` reader - The bit is used to indicate occupy operation is finished."]
-pub type DCACHE_OCCUPY_DONE_R = crate::BitReader<bool>;
+pub type DCACHE_OCCUPY_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn dcache_occupy_done(&self) -> DCACHE_OCCUPY_DONE_R {
         DCACHE_OCCUPY_DONE_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_OCCUPY_CTRL")
+            .field(
+                "dcache_occupy_ena",
+                &format_args!("{}", self.dcache_occupy_ena().bit()),
+            )
+            .field(
+                "dcache_occupy_done",
+                &format_args!("{}", self.dcache_occupy_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_OCCUPY_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

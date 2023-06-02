@@ -35,57 +35,55 @@ impl From<crate::W<CFG_DATA1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_ENABLE` reader - "]
-pub type SDIO_ENABLE_R = crate::BitReader<bool>;
+pub type SDIO_ENABLE_R = crate::BitReader;
 #[doc = "Field `SDIO_ENABLE` writer - "]
-pub type SDIO_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type SDIO_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `SDIO_IOREADY1` reader - "]
-pub type SDIO_IOREADY1_R = crate::BitReader<bool>;
+pub type SDIO_IOREADY1_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY1` writer - "]
-pub type SDIO_IOREADY1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type SDIO_IOREADY1_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `HIGHSPEED_ENABLE` reader - "]
-pub type HIGHSPEED_ENABLE_R = crate::BitReader<bool>;
+pub type HIGHSPEED_ENABLE_R = crate::BitReader;
 #[doc = "Field `HIGHSPEED_ENABLE` writer - "]
-pub type HIGHSPEED_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type HIGHSPEED_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `HIGHSPEED_MODE` reader - "]
-pub type HIGHSPEED_MODE_R = crate::BitReader<bool>;
+pub type HIGHSPEED_MODE_R = crate::BitReader;
 #[doc = "Field `SDIO_CD_ENABLE` reader - "]
-pub type SDIO_CD_ENABLE_R = crate::BitReader<bool>;
+pub type SDIO_CD_ENABLE_R = crate::BitReader;
 #[doc = "Field `SDIO_CD_ENABLE` writer - "]
-pub type SDIO_CD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type SDIO_CD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `SDIO_IOREADY2` reader - "]
-pub type SDIO_IOREADY2_R = crate::BitReader<bool>;
+pub type SDIO_IOREADY2_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY2` writer - "]
-pub type SDIO_IOREADY2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type SDIO_IOREADY2_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `SDIO_INT_MASK` reader - "]
-pub type SDIO_INT_MASK_R = crate::BitReader<bool>;
+pub type SDIO_INT_MASK_R = crate::BitReader;
 #[doc = "Field `SDIO_INT_MASK` writer - "]
-pub type SDIO_INT_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, O>;
+pub type SDIO_INT_MASK_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA1_SPEC, O>;
 #[doc = "Field `IOENABLE2` reader - "]
-pub type IOENABLE2_R = crate::BitReader<bool>;
+pub type IOENABLE2_R = crate::BitReader;
 #[doc = "Field `CD_DISABLE` reader - "]
-pub type CD_DISABLE_R = crate::BitReader<bool>;
+pub type CD_DISABLE_R = crate::BitReader;
 #[doc = "Field `FUNC1_EPS` reader - "]
-pub type FUNC1_EPS_R = crate::BitReader<bool>;
+pub type FUNC1_EPS_R = crate::BitReader;
 #[doc = "Field `EMP` reader - "]
-pub type EMP_R = crate::BitReader<bool>;
+pub type EMP_R = crate::BitReader;
 #[doc = "Field `IOENABLE1` reader - "]
-pub type IOENABLE1_R = crate::BitReader<bool>;
+pub type IOENABLE1_R = crate::BitReader;
 #[doc = "Field `SDIO20_CONF0` reader - "]
-pub type SDIO20_CONF0_R = crate::FieldReader<u8, u8>;
+pub type SDIO20_CONF0_R = crate::FieldReader;
 #[doc = "Field `SDIO20_CONF0` writer - "]
-pub type SDIO20_CONF0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u8, u8, 4, O>;
+pub type SDIO20_CONF0_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA1_SPEC, 4, O>;
 #[doc = "Field `SDIO_VER` reader - "]
 pub type SDIO_VER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDIO_VER` writer - "]
-pub type SDIO_VER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u16, u16, 12, O>;
+pub type SDIO_VER_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `FUNC2_EPS` reader - "]
-pub type FUNC2_EPS_R = crate::BitReader<bool>;
+pub type FUNC2_EPS_R = crate::BitReader;
 #[doc = "Field `SDIO20_CONF1` reader - "]
-pub type SDIO20_CONF1_R = crate::FieldReader<u8, u8>;
+pub type SDIO20_CONF1_R = crate::FieldReader;
 #[doc = "Field `SDIO20_CONF1` writer - "]
-pub type SDIO20_CONF1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u8, u8, 3, O>;
+pub type SDIO20_CONF1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA1_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -166,6 +164,59 @@ impl R {
     #[inline(always)]
     pub fn sdio20_conf1(&self) -> SDIO20_CONF1_R {
         SDIO20_CONF1_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_DATA1")
+            .field("sdio_enable", &format_args!("{}", self.sdio_enable().bit()))
+            .field(
+                "sdio_ioready1",
+                &format_args!("{}", self.sdio_ioready1().bit()),
+            )
+            .field(
+                "highspeed_enable",
+                &format_args!("{}", self.highspeed_enable().bit()),
+            )
+            .field(
+                "highspeed_mode",
+                &format_args!("{}", self.highspeed_mode().bit()),
+            )
+            .field(
+                "sdio_cd_enable",
+                &format_args!("{}", self.sdio_cd_enable().bit()),
+            )
+            .field(
+                "sdio_ioready2",
+                &format_args!("{}", self.sdio_ioready2().bit()),
+            )
+            .field(
+                "sdio_int_mask",
+                &format_args!("{}", self.sdio_int_mask().bit()),
+            )
+            .field("ioenable2", &format_args!("{}", self.ioenable2().bit()))
+            .field("cd_disable", &format_args!("{}", self.cd_disable().bit()))
+            .field("func1_eps", &format_args!("{}", self.func1_eps().bit()))
+            .field("emp", &format_args!("{}", self.emp().bit()))
+            .field("ioenable1", &format_args!("{}", self.ioenable1().bit()))
+            .field(
+                "sdio20_conf0",
+                &format_args!("{}", self.sdio20_conf0().bits()),
+            )
+            .field("sdio_ver", &format_args!("{}", self.sdio_ver().bits()))
+            .field("func2_eps", &format_args!("{}", self.func2_eps().bit()))
+            .field(
+                "sdio20_conf1",
+                &format_args!("{}", self.sdio20_conf1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_DATA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

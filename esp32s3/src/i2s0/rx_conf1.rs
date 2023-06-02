@@ -35,33 +35,29 @@ impl From<crate::W<RX_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_TDM_WS_WIDTH` reader - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
-pub type RX_TDM_WS_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type RX_TDM_WS_WIDTH_R = crate::FieldReader;
 #[doc = "Field `RX_TDM_WS_WIDTH` writer - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
-pub type RX_TDM_WS_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CONF1_SPEC, u8, u8, 7, O>;
+pub type RX_TDM_WS_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 7, O>;
 #[doc = "Field `RX_BCK_DIV_NUM` reader - Bit clock configuration bits in receiver mode."]
-pub type RX_BCK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type RX_BCK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_DIV_NUM` writer - Bit clock configuration bits in receiver mode."]
-pub type RX_BCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CONF1_SPEC, u8, u8, 6, O>;
+pub type RX_BCK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 6, O>;
 #[doc = "Field `RX_BITS_MOD` reader - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type RX_BITS_MOD_R = crate::FieldReader<u8, u8>;
+pub type RX_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_BITS_MOD` writer - Set the bits to configure the valid data bit length of I2S receiver channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type RX_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_CONF1_SPEC, u8, u8, 5, O>;
+pub type RX_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 5, O>;
 #[doc = "Field `RX_HALF_SAMPLE_BITS` reader - I2S Rx half sample bits -1."]
-pub type RX_HALF_SAMPLE_BITS_R = crate::FieldReader<u8, u8>;
+pub type RX_HALF_SAMPLE_BITS_R = crate::FieldReader;
 #[doc = "Field `RX_HALF_SAMPLE_BITS` writer - I2S Rx half sample bits -1."]
-pub type RX_HALF_SAMPLE_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CONF1_SPEC, u8, u8, 6, O>;
+pub type RX_HALF_SAMPLE_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 6, O>;
 #[doc = "Field `RX_TDM_CHAN_BITS` reader - The Rx bit number for each channel minus 1in TDM mode."]
-pub type RX_TDM_CHAN_BITS_R = crate::FieldReader<u8, u8>;
+pub type RX_TDM_CHAN_BITS_R = crate::FieldReader;
 #[doc = "Field `RX_TDM_CHAN_BITS` writer - The Rx bit number for each channel minus 1in TDM mode."]
-pub type RX_TDM_CHAN_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CONF1_SPEC, u8, u8, 5, O>;
+pub type RX_TDM_CHAN_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CONF1_SPEC, 5, O>;
 #[doc = "Field `RX_MSB_SHIFT` reader - Set this bit to enable receiver in Phillips standard mode"]
-pub type RX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - Set this bit to enable receiver in Phillips standard mode"]
-pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CONF1_SPEC, bool, O>;
+pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, RX_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:6 - The width of rx_ws_out in TDM mode is (I2S_RX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
@@ -92,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn rx_msb_shift(&self) -> RX_MSB_SHIFT_R {
         RX_MSB_SHIFT_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CONF1")
+            .field(
+                "rx_tdm_ws_width",
+                &format_args!("{}", self.rx_tdm_ws_width().bits()),
+            )
+            .field(
+                "rx_bck_div_num",
+                &format_args!("{}", self.rx_bck_div_num().bits()),
+            )
+            .field(
+                "rx_bits_mod",
+                &format_args!("{}", self.rx_bits_mod().bits()),
+            )
+            .field(
+                "rx_half_sample_bits",
+                &format_args!("{}", self.rx_half_sample_bits().bits()),
+            )
+            .field(
+                "rx_tdm_chan_bits",
+                &format_args!("{}", self.rx_tdm_chan_bits().bits()),
+            )
+            .field(
+                "rx_msb_shift",
+                &format_args!("{}", self.rx_msb_shift().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

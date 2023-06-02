@@ -35,135 +35,135 @@ impl From<crate::W<HOST_SLC1HOST_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC1_TOHOST_BIT0_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT0_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT0_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT1_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT1_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT1_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT2_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT2_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT2_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT3_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT3_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT3_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT4_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT4_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT4_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT4_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT5_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT5_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT5_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT5_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT6_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT6_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT6_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT6_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT7_INT_ENA` reader - "]
-pub type HOST_SLC1_TOHOST_BIT7_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOHOST_BIT7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT7_INT_ENA` writer - "]
 pub type HOST_SLC1_TOHOST_BIT7_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOKEN0_1TO0_INT_ENA` reader - "]
-pub type HOST_SLC1_TOKEN0_1TO0_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOKEN0_1TO0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOKEN0_1TO0_INT_ENA` writer - "]
 pub type HOST_SLC1_TOKEN0_1TO0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOKEN1_1TO0_INT_ENA` reader - "]
-pub type HOST_SLC1_TOKEN1_1TO0_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOKEN1_1TO0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOKEN1_1TO0_INT_ENA` writer - "]
 pub type HOST_SLC1_TOKEN1_1TO0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOKEN0_0TO1_INT_ENA` reader - "]
-pub type HOST_SLC1_TOKEN0_0TO1_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOKEN0_0TO1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOKEN0_0TO1_INT_ENA` writer - "]
 pub type HOST_SLC1_TOKEN0_0TO1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TOKEN1_0TO1_INT_ENA` reader - "]
-pub type HOST_SLC1_TOKEN1_0TO1_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TOKEN1_0TO1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TOKEN1_0TO1_INT_ENA` writer - "]
 pub type HOST_SLC1_TOKEN1_0TO1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_RX_SOF_INT_ENA` reader - "]
-pub type HOST_SLC1HOST_RX_SOF_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1HOST_RX_SOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1HOST_RX_SOF_INT_ENA` writer - "]
 pub type HOST_SLC1HOST_RX_SOF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_RX_EOF_INT_ENA` reader - "]
-pub type HOST_SLC1HOST_RX_EOF_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1HOST_RX_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1HOST_RX_EOF_INT_ENA` writer - "]
 pub type HOST_SLC1HOST_RX_EOF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_RX_START_INT_ENA` reader - "]
-pub type HOST_SLC1HOST_RX_START_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1HOST_RX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1HOST_RX_START_INT_ENA` writer - "]
 pub type HOST_SLC1HOST_RX_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_TX_START_INT_ENA` reader - "]
-pub type HOST_SLC1HOST_TX_START_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1HOST_TX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1HOST_TX_START_INT_ENA` writer - "]
 pub type HOST_SLC1HOST_TX_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_RX_UDF_INT_ENA` reader - "]
-pub type HOST_SLC1_RX_UDF_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_RX_UDF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_RX_UDF_INT_ENA` writer - "]
 pub type HOST_SLC1_RX_UDF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_TX_OVF_INT_ENA` reader - "]
-pub type HOST_SLC1_TX_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_TX_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_TX_OVF_INT_ENA` writer - "]
 pub type HOST_SLC1_TX_OVF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_RX_PF_VALID_INT_ENA` reader - "]
-pub type HOST_SLC1_RX_PF_VALID_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_RX_PF_VALID_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_RX_PF_VALID_INT_ENA` writer - "]
 pub type HOST_SLC1_RX_PF_VALID_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_EXT_BIT0_INT_ENA` reader - "]
-pub type HOST_SLC1_EXT_BIT0_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_EXT_BIT0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_EXT_BIT0_INT_ENA` writer - "]
 pub type HOST_SLC1_EXT_BIT0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_EXT_BIT1_INT_ENA` reader - "]
-pub type HOST_SLC1_EXT_BIT1_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_EXT_BIT1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_EXT_BIT1_INT_ENA` writer - "]
 pub type HOST_SLC1_EXT_BIT1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_EXT_BIT2_INT_ENA` reader - "]
-pub type HOST_SLC1_EXT_BIT2_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_EXT_BIT2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_EXT_BIT2_INT_ENA` writer - "]
 pub type HOST_SLC1_EXT_BIT2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_EXT_BIT3_INT_ENA` reader - "]
-pub type HOST_SLC1_EXT_BIT3_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_EXT_BIT3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_EXT_BIT3_INT_ENA` writer - "]
 pub type HOST_SLC1_EXT_BIT3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ENA` reader - "]
-pub type HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ENA` writer - "]
 pub type HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_HOST_RD_RETRY_INT_ENA` reader - "]
-pub type HOST_SLC1_HOST_RD_RETRY_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_HOST_RD_RETRY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_HOST_RD_RETRY_INT_ENA` writer - "]
 pub type HOST_SLC1_HOST_RD_RETRY_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 #[doc = "Field `HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA` reader - "]
-pub type HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA_R = crate::BitReader<bool>;
+pub type HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA` writer - "]
 pub type HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC1HOST_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC1HOST_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -294,6 +294,123 @@ impl R {
     #[inline(always)]
     pub fn host_slc1_bt_rx_new_packet_int_ena(&self) -> HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA_R {
         HOST_SLC1_BT_RX_NEW_PACKET_INT_ENA_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLC1HOST_INT_ENA")
+            .field(
+                "host_slc1_tohost_bit0_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit0_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit1_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit1_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit2_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit2_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit3_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit3_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit4_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit4_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit5_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit5_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit6_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit6_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tohost_bit7_int_ena",
+                &format_args!("{}", self.host_slc1_tohost_bit7_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_token0_1to0_int_ena",
+                &format_args!("{}", self.host_slc1_token0_1to0_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_token1_1to0_int_ena",
+                &format_args!("{}", self.host_slc1_token1_1to0_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_token0_0to1_int_ena",
+                &format_args!("{}", self.host_slc1_token0_0to1_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_token1_0to1_int_ena",
+                &format_args!("{}", self.host_slc1_token1_0to1_int_ena().bit()),
+            )
+            .field(
+                "host_slc1host_rx_sof_int_ena",
+                &format_args!("{}", self.host_slc1host_rx_sof_int_ena().bit()),
+            )
+            .field(
+                "host_slc1host_rx_eof_int_ena",
+                &format_args!("{}", self.host_slc1host_rx_eof_int_ena().bit()),
+            )
+            .field(
+                "host_slc1host_rx_start_int_ena",
+                &format_args!("{}", self.host_slc1host_rx_start_int_ena().bit()),
+            )
+            .field(
+                "host_slc1host_tx_start_int_ena",
+                &format_args!("{}", self.host_slc1host_tx_start_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_rx_udf_int_ena",
+                &format_args!("{}", self.host_slc1_rx_udf_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_tx_ovf_int_ena",
+                &format_args!("{}", self.host_slc1_tx_ovf_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_rx_pf_valid_int_ena",
+                &format_args!("{}", self.host_slc1_rx_pf_valid_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_ext_bit0_int_ena",
+                &format_args!("{}", self.host_slc1_ext_bit0_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_ext_bit1_int_ena",
+                &format_args!("{}", self.host_slc1_ext_bit1_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_ext_bit2_int_ena",
+                &format_args!("{}", self.host_slc1_ext_bit2_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_ext_bit3_int_ena",
+                &format_args!("{}", self.host_slc1_ext_bit3_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_wifi_rx_new_packet_int_ena",
+                &format_args!("{}", self.host_slc1_wifi_rx_new_packet_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_host_rd_retry_int_ena",
+                &format_args!("{}", self.host_slc1_host_rd_retry_int_ena().bit()),
+            )
+            .field(
+                "host_slc1_bt_rx_new_packet_int_ena",
+                &format_args!("{}", self.host_slc1_bt_rx_new_packet_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLC1HOST_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

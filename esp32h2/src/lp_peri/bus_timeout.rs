@@ -38,15 +38,13 @@ impl From<crate::W<BUS_TIMEOUT_SPEC>> for W {
 pub type LP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` writer - need_des"]
 pub type LP_PERI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMEOUT_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, BUS_TIMEOUT_SPEC, 16, O, u16, u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_INT_CLEAR` writer - need_des"]
-pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BUS_TIMEOUT_SPEC, bool, O>;
+pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMEOUT_SPEC, O>;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` reader - need_des"]
-pub type LP_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader<bool>;
+pub type LP_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` writer - need_des"]
-pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BUS_TIMEOUT_SPEC, bool, O>;
+pub type LP_PERI_TIMEOUT_PROTECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMEOUT_SPEC, O>;
 impl R {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
@@ -57,6 +55,27 @@ impl R {
     #[inline(always)]
     pub fn lp_peri_timeout_protect_en(&self) -> LP_PERI_TIMEOUT_PROTECT_EN_R {
         LP_PERI_TIMEOUT_PROTECT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BUS_TIMEOUT")
+            .field(
+                "lp_peri_timeout_thres",
+                &format_args!("{}", self.lp_peri_timeout_thres().bits()),
+            )
+            .field(
+                "lp_peri_timeout_protect_en",
+                &format_args!("{}", self.lp_peri_timeout_protect_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BUS_TIMEOUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

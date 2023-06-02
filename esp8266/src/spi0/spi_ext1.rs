@@ -37,16 +37,15 @@ impl From<crate::W<SPI_EXT1_SPEC>> for W {
 #[doc = "Field `erase_time` reader - "]
 pub type ERASE_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `erase_time` writer - "]
-pub type ERASE_TIME_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_EXT1_SPEC, u16, u16, 12, O>;
+pub type ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `erase_shift` reader - "]
-pub type ERASE_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type ERASE_SHIFT_R = crate::FieldReader;
 #[doc = "Field `erase_shift` writer - "]
-pub type ERASE_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_EXT1_SPEC, u8, u8, 4, O>;
+pub type ERASE_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT1_SPEC, 4, O>;
 #[doc = "Field `erase_enable` reader - "]
-pub type ERASE_ENABLE_R = crate::BitReader<bool>;
+pub type ERASE_ENABLE_R = crate::BitReader;
 #[doc = "Field `erase_enable` writer - "]
-pub type ERASE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_EXT1_SPEC, bool, O>;
+pub type ERASE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_EXT1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -62,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn erase_enable(&self) -> ERASE_ENABLE_R {
         ERASE_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_EXT1")
+            .field(
+                "erase_enable",
+                &format_args!("{}", self.erase_enable().bit()),
+            )
+            .field(
+                "erase_shift",
+                &format_args!("{}", self.erase_shift().bits()),
+            )
+            .field("erase_time", &format_args!("{}", self.erase_time().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_EXT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

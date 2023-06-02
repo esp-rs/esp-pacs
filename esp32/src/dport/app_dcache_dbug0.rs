@@ -35,26 +35,25 @@ impl From<crate::W<APP_DCACHE_DBUG0_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_SLAVE_WDATA` reader - "]
-pub type APP_SLAVE_WDATA_R = crate::BitReader<bool>;
+pub type APP_SLAVE_WDATA_R = crate::BitReader;
 #[doc = "Field `APP_SLAVE_WDATA` writer - "]
-pub type APP_SLAVE_WDATA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG0_SPEC, bool, O>;
+pub type APP_SLAVE_WDATA_W<'a, const O: u8> = crate::BitWriter<'a, APP_DCACHE_DBUG0_SPEC, O>;
 #[doc = "Field `APP_CACHE_MMU_IA` reader - "]
-pub type APP_CACHE_MMU_IA_R = crate::BitReader<bool>;
+pub type APP_CACHE_MMU_IA_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_IA` reader - "]
-pub type APP_CACHE_IA_R = crate::FieldReader<u8, u8>;
+pub type APP_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `APP_CACHE_STATE` reader - "]
 pub type APP_CACHE_STATE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APP_WR_BAK_TO_READ` reader - "]
-pub type APP_WR_BAK_TO_READ_R = crate::BitReader<bool>;
+pub type APP_WR_BAK_TO_READ_R = crate::BitReader;
 #[doc = "Field `APP_TX_END` reader - "]
-pub type APP_TX_END_R = crate::BitReader<bool>;
+pub type APP_TX_END_R = crate::BitReader;
 #[doc = "Field `APP_SLAVE_WR` reader - "]
-pub type APP_SLAVE_WR_R = crate::BitReader<bool>;
+pub type APP_SLAVE_WR_R = crate::BitReader;
 #[doc = "Field `APP_SLAVE_WDATA_V` reader - "]
-pub type APP_SLAVE_WDATA_V_R = crate::BitReader<bool>;
+pub type APP_SLAVE_WDATA_V_R = crate::BitReader;
 #[doc = "Field `APP_RX_END` reader - "]
-pub type APP_RX_END_R = crate::BitReader<bool>;
+pub type APP_RX_END_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -100,6 +99,49 @@ impl R {
     #[inline(always)]
     pub fn app_rx_end(&self) -> APP_RX_END_R {
         APP_RX_END_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_DCACHE_DBUG0")
+            .field(
+                "app_slave_wdata",
+                &format_args!("{}", self.app_slave_wdata().bit()),
+            )
+            .field(
+                "app_cache_mmu_ia",
+                &format_args!("{}", self.app_cache_mmu_ia().bit()),
+            )
+            .field(
+                "app_cache_ia",
+                &format_args!("{}", self.app_cache_ia().bits()),
+            )
+            .field(
+                "app_cache_state",
+                &format_args!("{}", self.app_cache_state().bits()),
+            )
+            .field(
+                "app_wr_bak_to_read",
+                &format_args!("{}", self.app_wr_bak_to_read().bit()),
+            )
+            .field("app_tx_end", &format_args!("{}", self.app_tx_end().bit()))
+            .field(
+                "app_slave_wr",
+                &format_args!("{}", self.app_slave_wr().bit()),
+            )
+            .field(
+                "app_slave_wdata_v",
+                &format_args!("{}", self.app_slave_wdata_v().bit()),
+            )
+            .field("app_rx_end", &format_args!("{}", self.app_rx_end().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_DCACHE_DBUG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

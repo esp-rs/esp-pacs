@@ -35,17 +35,17 @@ impl From<crate::W<RSA_PD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RSA_MEM_PD` reader - reg_rsa_mem_pd"]
-pub type RSA_MEM_PD_R = crate::BitReader<bool>;
+pub type RSA_MEM_PD_R = crate::BitReader;
 #[doc = "Field `RSA_MEM_PD` writer - reg_rsa_mem_pd"]
-pub type RSA_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSA_PD_CTRL_SPEC, bool, O>;
+pub type RSA_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, RSA_PD_CTRL_SPEC, O>;
 #[doc = "Field `RSA_MEM_FORCE_PU` reader - reg_rsa_mem_force_pu"]
-pub type RSA_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type RSA_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `RSA_MEM_FORCE_PU` writer - reg_rsa_mem_force_pu"]
-pub type RSA_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSA_PD_CTRL_SPEC, bool, O>;
+pub type RSA_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, RSA_PD_CTRL_SPEC, O>;
 #[doc = "Field `RSA_MEM_FORCE_PD` reader - reg_rsa_mem_force_pd"]
-pub type RSA_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type RSA_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `RSA_MEM_FORCE_PD` writer - reg_rsa_mem_force_pd"]
-pub type RSA_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSA_PD_CTRL_SPEC, bool, O>;
+pub type RSA_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, RSA_PD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_rsa_mem_pd"]
     #[inline(always)]
@@ -61,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn rsa_mem_force_pd(&self) -> RSA_MEM_FORCE_PD_R {
         RSA_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RSA_PD_CTRL")
+            .field("rsa_mem_pd", &format_args!("{}", self.rsa_mem_pd().bit()))
+            .field(
+                "rsa_mem_force_pu",
+                &format_args!("{}", self.rsa_mem_force_pu().bit()),
+            )
+            .field(
+                "rsa_mem_force_pd",
+                &format_args!("{}", self.rsa_mem_force_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RSA_PD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

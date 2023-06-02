@@ -35,14 +35,28 @@ impl From<crate::W<IN_WIGHT_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_WEIGHT` reader - The weight of Rx channel 0."]
-pub type RX_WEIGHT_R = crate::FieldReader<u8, u8>;
+pub type RX_WEIGHT_R = crate::FieldReader;
 #[doc = "Field `RX_WEIGHT` writer - The weight of Rx channel 0."]
-pub type RX_WEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IN_WIGHT_CH_SPEC, u8, u8, 4, O>;
+pub type RX_WEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, IN_WIGHT_CH_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 8:11 - The weight of Rx channel 0."]
     #[inline(always)]
     pub fn rx_weight(&self) -> RX_WEIGHT_R {
         RX_WEIGHT_R::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_WIGHT_CH")
+            .field("rx_weight", &format_args!("{}", self.rx_weight().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_WIGHT_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

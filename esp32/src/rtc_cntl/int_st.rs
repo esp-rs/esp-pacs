@@ -14,23 +14,23 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ST` reader - sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_ST_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_ST` reader - sleep reject interrupt state"]
-pub type SLP_REJECT_INT_ST_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_ST_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_ST` reader - SDIO idle interrupt state"]
-pub type SDIO_IDLE_INT_ST_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_ST_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ST` reader - RTC WDT interrupt state"]
-pub type WDT_INT_ST_R = crate::BitReader<bool>;
+pub type WDT_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIME_VALID_INT_ST` reader - RTC time valid interrupt state"]
-pub type TIME_VALID_INT_ST_R = crate::BitReader<bool>;
+pub type TIME_VALID_INT_ST_R = crate::BitReader;
 #[doc = "Field `SAR_INT_ST` reader - ULP-coprocessor interrupt state"]
-pub type SAR_INT_ST_R = crate::BitReader<bool>;
+pub type SAR_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_INT_ST` reader - touch interrupt state"]
-pub type TOUCH_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_INT_ST_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ST` reader - brown out interrupt state"]
-pub type BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_ST_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
@@ -76,6 +76,49 @@ impl R {
     #[inline(always)]
     pub fn main_timer_int_st(&self) -> MAIN_TIMER_INT_ST_R {
         MAIN_TIMER_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "slp_wakeup_int_st",
+                &format_args!("{}", self.slp_wakeup_int_st().bit()),
+            )
+            .field(
+                "slp_reject_int_st",
+                &format_args!("{}", self.slp_reject_int_st().bit()),
+            )
+            .field(
+                "sdio_idle_int_st",
+                &format_args!("{}", self.sdio_idle_int_st().bit()),
+            )
+            .field("wdt_int_st", &format_args!("{}", self.wdt_int_st().bit()))
+            .field(
+                "time_valid_int_st",
+                &format_args!("{}", self.time_valid_int_st().bit()),
+            )
+            .field("sar_int_st", &format_args!("{}", self.sar_int_st().bit()))
+            .field(
+                "touch_int_st",
+                &format_args!("{}", self.touch_int_st().bit()),
+            )
+            .field(
+                "brown_out_int_st",
+                &format_args!("{}", self.brown_out_int_st().bit()),
+            )
+            .field(
+                "main_timer_int_st",
+                &format_args!("{}", self.main_timer_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

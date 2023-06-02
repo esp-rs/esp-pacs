@@ -37,12 +37,26 @@ impl From<crate::W<ID_SPEC>> for W {
 #[doc = "Field `ID` reader - This register is used to configure the UART_ID."]
 pub type ID_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ID` writer - This register is used to configure the UART_ID."]
-pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ID_SPEC, u32, u32, 32, O>;
+pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register is used to configure the UART_ID."]
     #[inline(always)]
     pub fn id(&self) -> ID_R {
         ID_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ID")
+            .field("id", &format_args!("{}", self.id().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,32 @@ impl From<crate::W<CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE` reader - Set 1 to mask toomanyexception."]
-pub type CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R = crate::BitReader<bool>;
+pub type CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE` writer - Set 1 to mask toomanyexception."]
 pub type CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to mask toomanyexception."]
     #[inline(always)]
     pub fn core_1_toomanyexceptions_m_override(&self) -> CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R {
         CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1")
+            .field(
+                "core_1_toomanyexceptions_m_override",
+                &format_args!("{}", self.core_1_toomanyexceptions_m_override().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

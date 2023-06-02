@@ -35,31 +35,31 @@ impl From<crate::W<L1_CACHE_OBJECT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_TAG_OBJECT` reader - Set this bit to set L1-ICache0 tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_ICACHE0_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_TAG_OBJECT` reader - Set this bit to set L1-ICache1 tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_ICACHE1_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_TAG_OBJECT` reader - Reserved"]
-pub type L1_ICACHE2_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_TAG_OBJECT` reader - Reserved"]
-pub type L1_ICACHE3_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_OBJECT` reader - Set this bit to set L1-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_CACHE_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type L1_CACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_OBJECT` writer - Set this bit to set L1-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
 pub type L1_CACHE_TAG_OBJECT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_OBJECT_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_OBJECT_CTRL_SPEC, O>;
 #[doc = "Field `L1_ICACHE0_MEM_OBJECT` reader - Set this bit to set L1-ICache0 data memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_ICACHE0_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_MEM_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_MEM_OBJECT` reader - Set this bit to set L1-ICache1 data memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_ICACHE1_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_MEM_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_MEM_OBJECT` reader - Reserved"]
-pub type L1_ICACHE2_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_MEM_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_MEM_OBJECT` reader - Reserved"]
-pub type L1_ICACHE3_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_MEM_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_MEM_OBJECT` reader - Set this bit to set L1-Cache data memory as object. This bit should be onehot with the others fields inside this register."]
-pub type L1_CACHE_MEM_OBJECT_R = crate::BitReader<bool>;
+pub type L1_CACHE_MEM_OBJECT_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_MEM_OBJECT` writer - Set this bit to set L1-Cache data memory as object. This bit should be onehot with the others fields inside this register."]
 pub type L1_CACHE_MEM_OBJECT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_OBJECT_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_OBJECT_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to set L1-ICache0 tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
@@ -110,6 +110,59 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_mem_object(&self) -> L1_CACHE_MEM_OBJECT_R {
         L1_CACHE_MEM_OBJECT_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_OBJECT_CTRL")
+            .field(
+                "l1_icache0_tag_object",
+                &format_args!("{}", self.l1_icache0_tag_object().bit()),
+            )
+            .field(
+                "l1_icache1_tag_object",
+                &format_args!("{}", self.l1_icache1_tag_object().bit()),
+            )
+            .field(
+                "l1_icache2_tag_object",
+                &format_args!("{}", self.l1_icache2_tag_object().bit()),
+            )
+            .field(
+                "l1_icache3_tag_object",
+                &format_args!("{}", self.l1_icache3_tag_object().bit()),
+            )
+            .field(
+                "l1_cache_tag_object",
+                &format_args!("{}", self.l1_cache_tag_object().bit()),
+            )
+            .field(
+                "l1_icache0_mem_object",
+                &format_args!("{}", self.l1_icache0_mem_object().bit()),
+            )
+            .field(
+                "l1_icache1_mem_object",
+                &format_args!("{}", self.l1_icache1_mem_object().bit()),
+            )
+            .field(
+                "l1_icache2_mem_object",
+                &format_args!("{}", self.l1_icache2_mem_object().bit()),
+            )
+            .field(
+                "l1_icache3_mem_object",
+                &format_args!("{}", self.l1_icache3_mem_object().bit()),
+            )
+            .field(
+                "l1_cache_mem_object",
+                &format_args!("{}", self.l1_cache_mem_object().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_OBJECT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

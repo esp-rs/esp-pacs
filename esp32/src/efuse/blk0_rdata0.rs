@@ -16,9 +16,9 @@ impl From<crate::R<BLK0_RDATA0_SPEC>> for R {
 #[doc = "Field `RD_EFUSE_WR_DIS` reader - read for efuse_wr_disable"]
 pub type RD_EFUSE_WR_DIS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RD_EFUSE_RD_DIS` reader - read for efuse_rd_disable"]
-pub type RD_EFUSE_RD_DIS_R = crate::FieldReader<u8, u8>;
+pub type RD_EFUSE_RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RD_FLASH_CRYPT_CNT` reader - read for flash_crypt_cnt"]
-pub type RD_FLASH_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
+pub type RD_FLASH_CRYPT_CNT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15 - read for efuse_wr_disable"]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn rd_flash_crypt_cnt(&self) -> RD_FLASH_CRYPT_CNT_R {
         RD_FLASH_CRYPT_CNT_R::new(((self.bits >> 20) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_RDATA0")
+            .field(
+                "rd_efuse_wr_dis",
+                &format_args!("{}", self.rd_efuse_wr_dis().bits()),
+            )
+            .field(
+                "rd_efuse_rd_dis",
+                &format_args!("{}", self.rd_efuse_rd_dis().bits()),
+            )
+            .field(
+                "rd_flash_crypt_cnt",
+                &format_args!("{}", self.rd_flash_crypt_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata0](index.html) module"]

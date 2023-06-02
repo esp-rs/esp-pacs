@@ -35,23 +35,22 @@ impl From<crate::W<WR_TIM_CONF0_RS_BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `BYPASS_RS_CORRECTION` reader - Set this bit to bypass reed solomon correction step."]
-pub type BYPASS_RS_CORRECTION_R = crate::BitReader<bool>;
+pub type BYPASS_RS_CORRECTION_R = crate::BitReader;
 #[doc = "Field `BYPASS_RS_CORRECTION` writer - Set this bit to bypass reed solomon correction step."]
 pub type BYPASS_RS_CORRECTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WR_TIM_CONF0_RS_BYPASS_SPEC, bool, O>;
+    crate::BitWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, O>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` reader - Configures block number of programming twice operation."]
 pub type BYPASS_RS_BLK_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` writer - Configures block number of programming twice operation."]
 pub type BYPASS_RS_BLK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WR_TIM_CONF0_RS_BYPASS_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, 11, O, u16, u16>;
 #[doc = "Field `UPDATE` writer - Set this bit to update multi-bit register signals."]
-pub type UPDATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WR_TIM_CONF0_RS_BYPASS_SPEC, bool, O>;
+pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, O>;
 #[doc = "Field `TPGM_INACTIVE` reader - Configures the inactive programming time."]
-pub type TPGM_INACTIVE_R = crate::FieldReader<u8, u8>;
+pub type TPGM_INACTIVE_R = crate::FieldReader;
 #[doc = "Field `TPGM_INACTIVE` writer - Configures the inactive programming time."]
 pub type TPGM_INACTIVE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WR_TIM_CONF0_RS_BYPASS_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to bypass reed solomon correction step."]
     #[inline(always)]
@@ -67,6 +66,31 @@ impl R {
     #[inline(always)]
     pub fn tpgm_inactive(&self) -> TPGM_INACTIVE_R {
         TPGM_INACTIVE_R::new(((self.bits >> 13) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WR_TIM_CONF0_RS_BYPASS")
+            .field(
+                "bypass_rs_correction",
+                &format_args!("{}", self.bypass_rs_correction().bit()),
+            )
+            .field(
+                "bypass_rs_blk_num",
+                &format_args!("{}", self.bypass_rs_blk_num().bits()),
+            )
+            .field(
+                "tpgm_inactive",
+                &format_args!("{}", self.tpgm_inactive().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF0_RS_BYPASS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

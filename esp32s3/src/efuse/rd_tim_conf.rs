@@ -35,15 +35,31 @@ impl From<crate::W<RD_TIM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_INIT_NUM` reader - Configures the initial read time of eFuse."]
-pub type READ_INIT_NUM_R = crate::FieldReader<u8, u8>;
+pub type READ_INIT_NUM_R = crate::FieldReader;
 #[doc = "Field `READ_INIT_NUM` writer - Configures the initial read time of eFuse."]
-pub type READ_INIT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RD_TIM_CONF_SPEC, u8, u8, 8, O>;
+pub type READ_INIT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RD_TIM_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
     #[inline(always)]
     pub fn read_init_num(&self) -> READ_INIT_NUM_R {
         READ_INIT_NUM_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_TIM_CONF")
+            .field(
+                "read_init_num",
+                &format_args!("{}", self.read_init_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_TIM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

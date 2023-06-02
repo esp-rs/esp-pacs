@@ -38,22 +38,21 @@ impl From<crate::W<_1TX_LINK_SPEC>> for W {
 pub type SLC1_TXLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC1_TXLINK_ADDR` writer - "]
 pub type SLC1_TXLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _1TX_LINK_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, _1TX_LINK_SPEC, 20, O, u32, u32>;
 #[doc = "Field `SLC1_TXLINK_STOP` reader - "]
-pub type SLC1_TXLINK_STOP_R = crate::BitReader<bool>;
+pub type SLC1_TXLINK_STOP_R = crate::BitReader;
 #[doc = "Field `SLC1_TXLINK_STOP` writer - "]
-pub type SLC1_TXLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, O>;
+pub type SLC1_TXLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, _1TX_LINK_SPEC, O>;
 #[doc = "Field `SLC1_TXLINK_START` reader - "]
-pub type SLC1_TXLINK_START_R = crate::BitReader<bool>;
+pub type SLC1_TXLINK_START_R = crate::BitReader;
 #[doc = "Field `SLC1_TXLINK_START` writer - "]
-pub type SLC1_TXLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, O>;
+pub type SLC1_TXLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, _1TX_LINK_SPEC, O>;
 #[doc = "Field `SLC1_TXLINK_RESTART` reader - "]
-pub type SLC1_TXLINK_RESTART_R = crate::BitReader<bool>;
+pub type SLC1_TXLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `SLC1_TXLINK_RESTART` writer - "]
-pub type SLC1_TXLINK_RESTART_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, O>;
+pub type SLC1_TXLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, _1TX_LINK_SPEC, O>;
 #[doc = "Field `SLC1_TXLINK_PARK` reader - "]
-pub type SLC1_TXLINK_PARK_R = crate::BitReader<bool>;
+pub type SLC1_TXLINK_PARK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -79,6 +78,39 @@ impl R {
     #[inline(always)]
     pub fn slc1_txlink_park(&self) -> SLC1_TXLINK_PARK_R {
         SLC1_TXLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_1TX_LINK")
+            .field(
+                "slc1_txlink_addr",
+                &format_args!("{}", self.slc1_txlink_addr().bits()),
+            )
+            .field(
+                "slc1_txlink_stop",
+                &format_args!("{}", self.slc1_txlink_stop().bit()),
+            )
+            .field(
+                "slc1_txlink_start",
+                &format_args!("{}", self.slc1_txlink_start().bit()),
+            )
+            .field(
+                "slc1_txlink_restart",
+                &format_args!("{}", self.slc1_txlink_restart().bit()),
+            )
+            .field(
+                "slc1_txlink_park",
+                &format_args!("{}", self.slc1_txlink_park().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_1TX_LINK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

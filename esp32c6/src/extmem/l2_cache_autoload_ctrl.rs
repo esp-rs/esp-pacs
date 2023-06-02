@@ -14,23 +14,23 @@ impl From<crate::R<L2_CACHE_AUTOLOAD_CTRL_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation on L2-Cache. 1: enable, 0: disable."]
-pub type L2_CACHE_AUTOLOAD_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_DONE` reader - The bit is used to indicate whether autoload operation on L2-Cache is finished or not. 0: not finished. 1: finished."]
-pub type L2_CACHE_AUTOLOAD_DONE_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_ORDER` reader - The bit is used to configure the direction of autoload operation on L2-Cache. 0: ascending. 1: descending."]
-pub type L2_CACHE_AUTOLOAD_ORDER_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_TRIGGER_MODE` reader - The field is used to configure trigger mode of autoload operation on L2-Cache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
-pub type L2_CACHE_AUTOLOAD_TRIGGER_MODE_R = crate::FieldReader<u8, u8>;
+pub type L2_CACHE_AUTOLOAD_TRIGGER_MODE_R = crate::FieldReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_SCT0_ENA` reader - The bit is used to enable the first section for autoload operation on L2-Cache."]
-pub type L2_CACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_SCT1_ENA` reader - The bit is used to enable the second section for autoload operation on L2-Cache."]
-pub type L2_CACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_SCT2_ENA` reader - The bit is used to enable the third section for autoload operation on L2-Cache."]
-pub type L2_CACHE_AUTOLOAD_SCT2_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_SCT2_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_SCT3_ENA` reader - The bit is used to enable the fourth section for autoload operation on L2-Cache."]
-pub type L2_CACHE_AUTOLOAD_SCT3_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_AUTOLOAD_SCT3_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_AUTOLOAD_RGID` reader - The bit is used to set the gid of l2 cache autoload."]
-pub type L2_CACHE_AUTOLOAD_RGID_R = crate::FieldReader<u8, u8>;
+pub type L2_CACHE_AUTOLOAD_RGID_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable and disable autoload operation on L2-Cache. 1: enable, 0: disable."]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_autoload_rgid(&self) -> L2_CACHE_AUTOLOAD_RGID_R {
         L2_CACHE_AUTOLOAD_RGID_R::new(((self.bits >> 12) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_AUTOLOAD_CTRL")
+            .field(
+                "l2_cache_autoload_ena",
+                &format_args!("{}", self.l2_cache_autoload_ena().bit()),
+            )
+            .field(
+                "l2_cache_autoload_done",
+                &format_args!("{}", self.l2_cache_autoload_done().bit()),
+            )
+            .field(
+                "l2_cache_autoload_order",
+                &format_args!("{}", self.l2_cache_autoload_order().bit()),
+            )
+            .field(
+                "l2_cache_autoload_trigger_mode",
+                &format_args!("{}", self.l2_cache_autoload_trigger_mode().bits()),
+            )
+            .field(
+                "l2_cache_autoload_sct0_ena",
+                &format_args!("{}", self.l2_cache_autoload_sct0_ena().bit()),
+            )
+            .field(
+                "l2_cache_autoload_sct1_ena",
+                &format_args!("{}", self.l2_cache_autoload_sct1_ena().bit()),
+            )
+            .field(
+                "l2_cache_autoload_sct2_ena",
+                &format_args!("{}", self.l2_cache_autoload_sct2_ena().bit()),
+            )
+            .field(
+                "l2_cache_autoload_sct3_ena",
+                &format_args!("{}", self.l2_cache_autoload_sct3_ena().bit()),
+            )
+            .field(
+                "l2_cache_autoload_rgid",
+                &format_args!("{}", self.l2_cache_autoload_rgid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_AUTOLOAD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "L2 Cache autoload-operation control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_autoload_ctrl](index.html) module"]

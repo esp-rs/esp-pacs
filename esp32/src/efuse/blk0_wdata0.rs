@@ -37,16 +37,15 @@ impl From<crate::W<BLK0_WDATA0_SPEC>> for W {
 #[doc = "Field `WR_DIS` reader - program for efuse_wr_disable"]
 pub type WR_DIS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WR_DIS` writer - program for efuse_wr_disable"]
-pub type WR_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLK0_WDATA0_SPEC, u16, u16, 16, O>;
+pub type WR_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA0_SPEC, 16, O, u16, u16>;
 #[doc = "Field `RD_DIS` reader - program for efuse_rd_disable"]
-pub type RD_DIS_R = crate::FieldReader<u8, u8>;
+pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RD_DIS` writer - program for efuse_rd_disable"]
-pub type RD_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLK0_WDATA0_SPEC, u8, u8, 4, O>;
+pub type RD_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA0_SPEC, 4, O>;
 #[doc = "Field `FLASH_CRYPT_CNT` reader - program for flash_crypt_cnt"]
-pub type FLASH_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
+pub type FLASH_CRYPT_CNT_R = crate::FieldReader;
 #[doc = "Field `FLASH_CRYPT_CNT` writer - program for flash_crypt_cnt"]
-pub type FLASH_CRYPT_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA0_SPEC, u8, u8, 7, O>;
+pub type FLASH_CRYPT_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA0_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:15 - program for efuse_wr_disable"]
     #[inline(always)]
@@ -62,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn flash_crypt_cnt(&self) -> FLASH_CRYPT_CNT_R {
         FLASH_CRYPT_CNT_R::new(((self.bits >> 20) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_WDATA0")
+            .field("wr_dis", &format_args!("{}", self.wr_dis().bits()))
+            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
+            .field(
+                "flash_crypt_cnt",
+                &format_args!("{}", self.flash_crypt_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

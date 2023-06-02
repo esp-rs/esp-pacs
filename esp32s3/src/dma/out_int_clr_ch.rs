@@ -20,25 +20,27 @@ impl From<crate::W<OUT_INT_CLR_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_DONE` writer - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
-pub type OUT_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUT_DONE_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUT_EOF` writer - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
-pub type OUT_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUT_EOF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUT_DSCR_ERR` writer - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
-pub type OUT_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUT_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUT_TOTAL_EOF` writer - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub type OUT_TOTAL_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUT_TOTAL_EOF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_OVF_L1` writer - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUTFIFO_OVF_L1_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_UDF_L1` writer - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUTFIFO_UDF_L1_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_OVF_L3` writer - Set this bit to clear the OUTFIFO_OVF_L3_CH_INT interrupt."]
-pub type OUTFIFO_OVF_L3_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUTFIFO_OVF_L3_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_UDF_L3` writer - Set this bit to clear the OUTFIFO_UDF_L3_CH_INT interrupt."]
-pub type OUTFIFO_UDF_L3_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, OUT_INT_CLR_CH_SPEC, bool, O>;
+pub type OUTFIFO_UDF_L3_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_CLR_CH_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_INT_CLR_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]

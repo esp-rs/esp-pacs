@@ -35,25 +35,21 @@ impl From<crate::W<SPI_MEM_CLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_CLKCNT_L` reader - In the master mode it must be equal to spi_mem_clkcnt_N."]
-pub type SPI_MEM_CLKCNT_L_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_CLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CLKCNT_L` writer - In the master mode it must be equal to spi_mem_clkcnt_N."]
-pub type SPI_MEM_CLKCNT_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_CLOCK_SPEC, u8, u8, 8, O>;
+pub type SPI_MEM_CLKCNT_L_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_CLOCK_SPEC, 8, O>;
 #[doc = "Field `SPI_MEM_CLKCNT_H` reader - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
-pub type SPI_MEM_CLKCNT_H_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_CLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CLKCNT_H` writer - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
-pub type SPI_MEM_CLKCNT_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_CLOCK_SPEC, u8, u8, 8, O>;
+pub type SPI_MEM_CLKCNT_H_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_CLOCK_SPEC, 8, O>;
 #[doc = "Field `SPI_MEM_CLKCNT_N` reader - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
-pub type SPI_MEM_CLKCNT_N_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CLKCNT_N` writer - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
-pub type SPI_MEM_CLKCNT_N_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_CLOCK_SPEC, u8, u8, 8, O>;
+pub type SPI_MEM_CLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_CLOCK_SPEC, 8, O>;
 #[doc = "Field `SPI_MEM_CLK_EQU_SYSCLK` reader - 1: 1-division mode, the frequency of SPI bus clock equals to that of MSPI module clock."]
-pub type SPI_MEM_CLK_EQU_SYSCLK_R = crate::BitReader<bool>;
+pub type SPI_MEM_CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CLK_EQU_SYSCLK` writer - 1: 1-division mode, the frequency of SPI bus clock equals to that of MSPI module clock."]
-pub type SPI_MEM_CLK_EQU_SYSCLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CLOCK_SPEC, bool, O>;
+pub type SPI_MEM_CLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CLOCK_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_clk_equ_sysclk(&self) -> SPI_MEM_CLK_EQU_SYSCLK_R {
         SPI_MEM_CLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CLOCK")
+            .field(
+                "spi_mem_clkcnt_l",
+                &format_args!("{}", self.spi_mem_clkcnt_l().bits()),
+            )
+            .field(
+                "spi_mem_clkcnt_h",
+                &format_args!("{}", self.spi_mem_clkcnt_h().bits()),
+            )
+            .field(
+                "spi_mem_clkcnt_n",
+                &format_args!("{}", self.spi_mem_clkcnt_n().bits()),
+            )
+            .field(
+                "spi_mem_clk_equ_sysclk",
+                &format_args!("{}", self.spi_mem_clk_equ_sysclk().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CLOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

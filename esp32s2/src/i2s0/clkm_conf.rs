@@ -35,26 +35,25 @@ impl From<crate::W<CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKM_DIV_NUM` reader - Integral I2S clock divider value."]
-pub type CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_NUM` writer - Integral I2S clock divider value."]
-pub type CLKM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 8, O>;
+pub type CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 8, O>;
 #[doc = "Field `CLKM_DIV_B` reader - Fractional clock divider numerator value."]
-pub type CLKM_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_B` writer - Fractional clock divider numerator value."]
-pub type CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `CLKM_DIV_A` reader - Fractional clock divider denominator value."]
-pub type CLKM_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `CLKM_DIV_A` writer - Fractional clock divider denominator value."]
-pub type CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clock gate."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clock gate."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLKM_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLKM_CONF_SPEC, O>;
 #[doc = "Field `CLK_SEL` reader - Set this bit to select I2S module clock source. 0: No clock. 1: APLL_CLK. 2: PLL_160M_CLK. 3: No clock."]
-pub type CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_SEL` writer - Set this bit to select I2S module clock source. 0: No clock. 1: APLL_CLK. 2: PLL_160M_CLK. 3: No clock."]
-pub type CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 2, O>;
+pub type CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLKM_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S clock divider value."]
     #[inline(always)]
@@ -80,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn clk_sel(&self) -> CLK_SEL_R {
         CLK_SEL_R::new(((self.bits >> 21) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKM_CONF")
+            .field(
+                "clkm_div_num",
+                &format_args!("{}", self.clkm_div_num().bits()),
+            )
+            .field("clkm_div_b", &format_args!("{}", self.clkm_div_b().bits()))
+            .field("clkm_div_a", &format_args!("{}", self.clkm_div_a().bits()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("clk_sel", &format_args!("{}", self.clk_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

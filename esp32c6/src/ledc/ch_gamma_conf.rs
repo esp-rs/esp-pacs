@@ -35,20 +35,35 @@ impl From<crate::W<CH_GAMMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_GAMMA_ENTRY_NUM` reader - Ledc ch%s gamma entry num."]
-pub type CH_GAMMA_ENTRY_NUM_R = crate::FieldReader<u8, u8>;
+pub type CH_GAMMA_ENTRY_NUM_R = crate::FieldReader;
 #[doc = "Field `CH_GAMMA_ENTRY_NUM` writer - Ledc ch%s gamma entry num."]
-pub type CH_GAMMA_ENTRY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_GAMMA_CONF_SPEC, u8, u8, 5, O>;
+pub type CH_GAMMA_ENTRY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_GAMMA_CONF_SPEC, 5, O>;
 #[doc = "Field `CH_GAMMA_PAUSE` writer - Ledc ch%s gamma pause, write 1 to pause."]
-pub type CH_GAMMA_PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_GAMMA_CONF_SPEC, bool, O>;
+pub type CH_GAMMA_PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, CH_GAMMA_CONF_SPEC, O>;
 #[doc = "Field `CH_GAMMA_RESUME` writer - Ledc ch%s gamma resume, write 1 to resume."]
-pub type CH_GAMMA_RESUME_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CH_GAMMA_CONF_SPEC, bool, O>;
+pub type CH_GAMMA_RESUME_W<'a, const O: u8> = crate::BitWriter<'a, CH_GAMMA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - Ledc ch%s gamma entry num."]
     #[inline(always)]
     pub fn ch_gamma_entry_num(&self) -> CH_GAMMA_ENTRY_NUM_R {
         CH_GAMMA_ENTRY_NUM_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_GAMMA_CONF")
+            .field(
+                "ch_gamma_entry_num",
+                &format_args!("{}", self.ch_gamma_entry_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_GAMMA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

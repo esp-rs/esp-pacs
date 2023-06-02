@@ -35,39 +35,33 @@ impl From<crate::W<SAR_TSENS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_TSENS_OUT` reader - temperature sensor data out"]
-pub type SAR_TSENS_OUT_R = crate::FieldReader<u8, u8>;
+pub type SAR_TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `SAR_TSENS_READY` reader - indicate temperature sensor out ready"]
-pub type SAR_TSENS_READY_R = crate::BitReader<bool>;
+pub type SAR_TSENS_READY_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_INT_EN` reader - enable temperature sensor to send out interrupt"]
-pub type SAR_TSENS_INT_EN_R = crate::BitReader<bool>;
+pub type SAR_TSENS_INT_EN_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_INT_EN` writer - enable temperature sensor to send out interrupt"]
-pub type SAR_TSENS_INT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
+pub type SAR_TSENS_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL_SPEC, O>;
 #[doc = "Field `SAR_TSENS_IN_INV` reader - invert temperature sensor data"]
-pub type SAR_TSENS_IN_INV_R = crate::BitReader<bool>;
+pub type SAR_TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_IN_INV` writer - invert temperature sensor data"]
-pub type SAR_TSENS_IN_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
+pub type SAR_TSENS_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL_SPEC, O>;
 #[doc = "Field `SAR_TSENS_CLK_DIV` reader - temperature sensor clock divider"]
-pub type SAR_TSENS_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type SAR_TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR_TSENS_CLK_DIV` writer - temperature sensor clock divider"]
-pub type SAR_TSENS_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TSENS_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR_TSENS_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TSENS_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR_TSENS_POWER_UP` reader - temperature sensor power up"]
-pub type SAR_TSENS_POWER_UP_R = crate::BitReader<bool>;
+pub type SAR_TSENS_POWER_UP_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_POWER_UP` writer - temperature sensor power up"]
-pub type SAR_TSENS_POWER_UP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
+pub type SAR_TSENS_POWER_UP_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL_SPEC, O>;
 #[doc = "Field `SAR_TSENS_POWER_UP_FORCE` reader - 1: dump out &amp; power up controlled by SW 0: by FSM"]
-pub type SAR_TSENS_POWER_UP_FORCE_R = crate::BitReader<bool>;
+pub type SAR_TSENS_POWER_UP_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_POWER_UP_FORCE` writer - 1: dump out &amp; power up controlled by SW 0: by FSM"]
-pub type SAR_TSENS_POWER_UP_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
+pub type SAR_TSENS_POWER_UP_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL_SPEC, O>;
 #[doc = "Field `SAR_TSENS_DUMP_OUT` reader - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
-pub type SAR_TSENS_DUMP_OUT_R = crate::BitReader<bool>;
+pub type SAR_TSENS_DUMP_OUT_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_DUMP_OUT` writer - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
-pub type SAR_TSENS_DUMP_OUT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL_SPEC, bool, O>;
+pub type SAR_TSENS_DUMP_OUT_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - temperature sensor data out"]
     #[inline(always)]
@@ -108,6 +102,51 @@ impl R {
     #[inline(always)]
     pub fn sar_tsens_dump_out(&self) -> SAR_TSENS_DUMP_OUT_R {
         SAR_TSENS_DUMP_OUT_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TSENS_CTRL")
+            .field(
+                "sar_tsens_out",
+                &format_args!("{}", self.sar_tsens_out().bits()),
+            )
+            .field(
+                "sar_tsens_ready",
+                &format_args!("{}", self.sar_tsens_ready().bit()),
+            )
+            .field(
+                "sar_tsens_int_en",
+                &format_args!("{}", self.sar_tsens_int_en().bit()),
+            )
+            .field(
+                "sar_tsens_in_inv",
+                &format_args!("{}", self.sar_tsens_in_inv().bit()),
+            )
+            .field(
+                "sar_tsens_clk_div",
+                &format_args!("{}", self.sar_tsens_clk_div().bits()),
+            )
+            .field(
+                "sar_tsens_power_up",
+                &format_args!("{}", self.sar_tsens_power_up().bit()),
+            )
+            .field(
+                "sar_tsens_power_up_force",
+                &format_args!("{}", self.sar_tsens_power_up_force().bit()),
+            )
+            .field(
+                "sar_tsens_dump_out",
+                &format_args!("{}", self.sar_tsens_dump_out().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

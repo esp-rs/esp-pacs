@@ -35,13 +35,13 @@ impl From<crate::W<EMMCDDR_SPEC>> for W {
     }
 }
 #[doc = "Field `HALFSTARTBIT` reader - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
-pub type HALFSTARTBIT_R = crate::FieldReader<u8, u8>;
+pub type HALFSTARTBIT_R = crate::FieldReader;
 #[doc = "Field `HALFSTARTBIT` writer - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
-pub type HALFSTARTBIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EMMCDDR_SPEC, u8, u8, 2, O>;
+pub type HALFSTARTBIT_W<'a, const O: u8> = crate::FieldWriter<'a, EMMCDDR_SPEC, 2, O>;
 #[doc = "Field `HS400_MODE` reader - Set 1 to enable HS400 mode."]
-pub type HS400_MODE_R = crate::BitReader<bool>;
+pub type HS400_MODE_R = crate::BitReader;
 #[doc = "Field `HS400_MODE` writer - Set 1 to enable HS400 mode."]
-pub type HS400_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EMMCDDR_SPEC, bool, O>;
+pub type HS400_MODE_W<'a, const O: u8> = crate::BitWriter<'a, EMMCDDR_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn hs400_mode(&self) -> HS400_MODE_R {
         HS400_MODE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EMMCDDR")
+            .field(
+                "halfstartbit",
+                &format_args!("{}", self.halfstartbit().bits()),
+            )
+            .field("hs400_mode", &format_args!("{}", self.hs400_mode().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EMMCDDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

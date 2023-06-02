@@ -35,10 +35,9 @@ impl From<crate::W<WDTCONFIG0_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - When set flash boot protection is enabled"]
-pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader<bool>;
+pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set flash boot protection is enabled"]
-pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<u8, WDT_SYS_RESET_LENGTH_A>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
@@ -127,7 +126,7 @@ impl WDT_SYS_RESET_LENGTH_R {
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, WDTCONFIG0_SPEC, u8, WDT_SYS_RESET_LENGTH_A, 3, O>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, u8, WDT_SYS_RESET_LENGTH_A>;
 impl<'a, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, O> {
     #[doc = "100ns"]
     #[inline(always)]
@@ -258,7 +257,7 @@ impl WDT_CPU_RESET_LENGTH_R {
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, WDTCONFIG0_SPEC, u8, WDT_CPU_RESET_LENGTH_A, 3, O>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, u8, WDT_CPU_RESET_LENGTH_A>;
 impl<'a, const O: u8> WDT_CPU_RESET_LENGTH_W<'a, O> {
     #[doc = "100ns"]
     #[inline(always)]
@@ -302,13 +301,13 @@ impl<'a, const O: u8> WDT_CPU_RESET_LENGTH_W<'a, O> {
     }
 }
 #[doc = "Field `WDT_LEVEL_INT_EN` reader - When set level type interrupt generation is enabled"]
-pub type WDT_LEVEL_INT_EN_R = crate::BitReader<bool>;
+pub type WDT_LEVEL_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_LEVEL_INT_EN` writer - When set level type interrupt generation is enabled"]
-pub type WDT_LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_LEVEL_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_EDGE_INT_EN` reader - When set edge type interrupt generation is enabled"]
-pub type WDT_EDGE_INT_EN_R = crate::BitReader<bool>;
+pub type WDT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EDGE_INT_EN` writer - When set edge type interrupt generation is enabled"]
-pub type WDT_EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_R = crate::FieldReader<u8, WDT_STG3_A>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
@@ -365,7 +364,7 @@ impl WDT_STG3_R {
 }
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, WDTCONFIG0_SPEC, u8, WDT_STG3_A, 2, O>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 2, O, u8, WDT_STG3_A>;
 impl<'a, const O: u8> WDT_STG3_W<'a, O> {
     #[doc = "Off"]
     #[inline(always)]
@@ -401,9 +400,9 @@ pub use WDT_STG3_W as WDT_STG1_W;
 #[doc = "Field `WDT_STG0` writer - Stage 0 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub use WDT_STG3_W as WDT_STG0_W;
 #[doc = "Field `WDT_EN` reader - When set SWDT is enabled"]
-pub type WDT_EN_R = crate::BitReader<bool>;
+pub type WDT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EN` writer - When set SWDT is enabled"]
-pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 impl R {
     #[doc = "Bit 14 - When set flash boot protection is enabled"]
     #[inline(always)]
@@ -454,6 +453,44 @@ impl R {
     #[inline(always)]
     pub fn wdt_en(&self) -> WDT_EN_R {
         WDT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WDTCONFIG0")
+            .field(
+                "wdt_flashboot_mod_en",
+                &format_args!("{}", self.wdt_flashboot_mod_en().bit()),
+            )
+            .field(
+                "wdt_sys_reset_length",
+                &format_args!("{}", self.wdt_sys_reset_length().bits()),
+            )
+            .field(
+                "wdt_cpu_reset_length",
+                &format_args!("{}", self.wdt_cpu_reset_length().bits()),
+            )
+            .field(
+                "wdt_level_int_en",
+                &format_args!("{}", self.wdt_level_int_en().bit()),
+            )
+            .field(
+                "wdt_edge_int_en",
+                &format_args!("{}", self.wdt_edge_int_en().bit()),
+            )
+            .field("wdt_stg3", &format_args!("{}", self.wdt_stg3().bits()))
+            .field("wdt_stg2", &format_args!("{}", self.wdt_stg2().bits()))
+            .field("wdt_stg1", &format_args!("{}", self.wdt_stg1().bits()))
+            .field("wdt_stg0", &format_args!("{}", self.wdt_stg0().bits()))
+            .field("wdt_en", &format_args!("{}", self.wdt_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

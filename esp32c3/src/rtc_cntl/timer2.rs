@@ -35,15 +35,31 @@ impl From<crate::W<TIMER2_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - minimal cycles in slow_clk_rtc for CK8M in power down state"]
-pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader<u8, u8>;
+pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader;
 #[doc = "Field `MIN_TIME_CK8M_OFF` writer - minimal cycles in slow_clk_rtc for CK8M in power down state"]
-pub type MIN_TIME_CK8M_OFF_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER2_SPEC, u8, u8, 8, O>;
+pub type MIN_TIME_CK8M_OFF_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
     pub fn min_time_ck8m_off(&self) -> MIN_TIME_CK8M_OFF_R {
         MIN_TIME_CK8M_OFF_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER2")
+            .field(
+                "min_time_ck8m_off",
+                &format_args!("{}", self.min_time_ck8m_off().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

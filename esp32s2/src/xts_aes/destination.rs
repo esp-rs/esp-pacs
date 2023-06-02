@@ -35,14 +35,28 @@ impl From<crate::W<DESTINATION_SPEC>> for W {
     }
 }
 #[doc = "Field `DESTINATION` reader - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
-pub type DESTINATION_R = crate::BitReader<bool>;
+pub type DESTINATION_R = crate::BitReader;
 #[doc = "Field `DESTINATION` writer - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
-pub type DESTINATION_W<'a, const O: u8> = crate::BitWriter<'a, u32, DESTINATION_SPEC, bool, O>;
+pub type DESTINATION_W<'a, const O: u8> = crate::BitWriter<'a, DESTINATION_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
     #[inline(always)]
     pub fn destination(&self) -> DESTINATION_R {
         DESTINATION_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DESTINATION")
+            .field("destination", &format_args!("{}", self.destination().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DESTINATION_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

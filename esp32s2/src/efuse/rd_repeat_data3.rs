@@ -14,29 +14,29 @@ impl From<crate::R<RD_REPEAT_DATA3_SPEC>> for R {
     }
 }
 #[doc = "Field `DIS_DOWNLOAD_MODE` reader - Set this bit to disable all download boot modes."]
-pub type DIS_DOWNLOAD_MODE_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MODE_R = crate::BitReader;
 #[doc = "Field `DIS_LEGACY_SPI_BOOT` reader - Set this bit to disable Legacy SPI boot mode."]
-pub type DIS_LEGACY_SPI_BOOT_R = crate::BitReader<bool>;
+pub type DIS_LEGACY_SPI_BOOT_R = crate::BitReader;
 #[doc = "Field `UART_PRINT_CHANNEL` reader - Selects the default UART for printing boot messages. 0: UART0. 1: UART1."]
-pub type UART_PRINT_CHANNEL_R = crate::BitReader<bool>;
+pub type UART_PRINT_CHANNEL_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED3` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED3_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED3_R = crate::BitReader;
 #[doc = "Field `DIS_USB_DOWNLOAD_MODE` reader - Set this bit to disable use of USB OTG in UART download boot mode."]
-pub type DIS_USB_DOWNLOAD_MODE_R = crate::BitReader<bool>;
+pub type DIS_USB_DOWNLOAD_MODE_R = crate::BitReader;
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD` reader - Set this bit to enable secure UART download mode (read/write flash only)."]
-pub type ENABLE_SECURITY_DOWNLOAD_R = crate::BitReader<bool>;
+pub type ENABLE_SECURITY_DOWNLOAD_R = crate::BitReader;
 #[doc = "Field `UART_PRINT_CONTROL` reader - Set the default UART boot message output mode. 00: Enabled. 01: Enable when GPIO46 is low at reset. 10: Enable when GPIO46 is high at reset. 11: Disabled."]
-pub type UART_PRINT_CONTROL_R = crate::FieldReader<u8, u8>;
+pub type UART_PRINT_CONTROL_R = crate::FieldReader;
 #[doc = "Field `PIN_POWER_SELECTION` reader - Set default power supply for GPIO33-GPIO37, set when SPI flash is initialized. 0: VDD3P3_CPU. 1: VDD_SPI."]
-pub type PIN_POWER_SELECTION_R = crate::BitReader<bool>;
+pub type PIN_POWER_SELECTION_R = crate::BitReader;
 #[doc = "Field `FLASH_TYPE` reader - SPI flash type. 0: maximum four data lines, 1: eight data lines."]
-pub type FLASH_TYPE_R = crate::BitReader<bool>;
+pub type FLASH_TYPE_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME` reader - If set, forces ROM code to send an SPI flash resume command during SPI boot."]
-pub type FORCE_SEND_RESUME_R = crate::BitReader<bool>;
+pub type FORCE_SEND_RESUME_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION` reader - Secure version (used by ESP-IDF anti-rollback feature)."]
 pub type SECURE_VERSION_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED2_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED2_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable all download boot modes."]
     #[inline(always)]
@@ -97,6 +97,64 @@ impl R {
     #[inline(always)]
     pub fn rpt4_reserved2(&self) -> RPT4_RESERVED2_R {
         RPT4_RESERVED2_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA3")
+            .field(
+                "dis_download_mode",
+                &format_args!("{}", self.dis_download_mode().bit()),
+            )
+            .field(
+                "dis_legacy_spi_boot",
+                &format_args!("{}", self.dis_legacy_spi_boot().bit()),
+            )
+            .field(
+                "uart_print_channel",
+                &format_args!("{}", self.uart_print_channel().bit()),
+            )
+            .field(
+                "rpt4_reserved3",
+                &format_args!("{}", self.rpt4_reserved3().bit()),
+            )
+            .field(
+                "dis_usb_download_mode",
+                &format_args!("{}", self.dis_usb_download_mode().bit()),
+            )
+            .field(
+                "enable_security_download",
+                &format_args!("{}", self.enable_security_download().bit()),
+            )
+            .field(
+                "uart_print_control",
+                &format_args!("{}", self.uart_print_control().bits()),
+            )
+            .field(
+                "pin_power_selection",
+                &format_args!("{}", self.pin_power_selection().bit()),
+            )
+            .field("flash_type", &format_args!("{}", self.flash_type().bit()))
+            .field(
+                "force_send_resume",
+                &format_args!("{}", self.force_send_resume().bit()),
+            )
+            .field(
+                "secure_version",
+                &format_args!("{}", self.secure_version().bits()),
+            )
+            .field(
+                "rpt4_reserved2",
+                &format_args!("{}", self.rpt4_reserved2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Register 4 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data3](index.html) module"]

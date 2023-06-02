@@ -35,35 +35,29 @@ impl From<crate::W<RTC_DEBUG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_DEBUG_SEL0` reader - configure rtc debug"]
-pub type RTC_DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
+pub type RTC_DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL0` writer - configure rtc debug"]
-pub type RTC_DEBUG_SEL0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type RTC_DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `RTC_DEBUG_SEL1` reader - configure rtc debug"]
-pub type RTC_DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
+pub type RTC_DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL1` writer - configure rtc debug"]
-pub type RTC_DEBUG_SEL1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type RTC_DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `RTC_DEBUG_SEL2` reader - configure rtc debug"]
-pub type RTC_DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
+pub type RTC_DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL2` writer - configure rtc debug"]
-pub type RTC_DEBUG_SEL2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type RTC_DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `RTC_DEBUG_SEL3` reader - configure rtc debug"]
-pub type RTC_DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
+pub type RTC_DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL3` writer - configure rtc debug"]
-pub type RTC_DEBUG_SEL3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type RTC_DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `RTC_DEBUG_SEL4` reader - configure rtc debug"]
-pub type RTC_DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
+pub type RTC_DEBUG_SEL4_R = crate::FieldReader;
 #[doc = "Field `RTC_DEBUG_SEL4` writer - configure rtc debug"]
-pub type RTC_DEBUG_SEL4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_DEBUG_SEL_SPEC, u8, u8, 5, O>;
+pub type RTC_DEBUG_SEL4_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_DEBUG_SEL_SPEC, 5, O>;
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` reader - configure rtc debug"]
-pub type RTC_DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
+pub type RTC_DEBUG_12M_NO_GATING_R = crate::BitReader;
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` writer - configure rtc debug"]
-pub type RTC_DEBUG_12M_NO_GATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RTC_DEBUG_SEL_SPEC, bool, O>;
+pub type RTC_DEBUG_12M_NO_GATING_W<'a, const O: u8> = crate::BitWriter<'a, RTC_DEBUG_SEL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - configure rtc debug"]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn rtc_debug_12m_no_gating(&self) -> RTC_DEBUG_12M_NO_GATING_R {
         RTC_DEBUG_12M_NO_GATING_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_DEBUG_SEL")
+            .field(
+                "rtc_debug_sel0",
+                &format_args!("{}", self.rtc_debug_sel0().bits()),
+            )
+            .field(
+                "rtc_debug_sel1",
+                &format_args!("{}", self.rtc_debug_sel1().bits()),
+            )
+            .field(
+                "rtc_debug_sel2",
+                &format_args!("{}", self.rtc_debug_sel2().bits()),
+            )
+            .field(
+                "rtc_debug_sel3",
+                &format_args!("{}", self.rtc_debug_sel3().bits()),
+            )
+            .field(
+                "rtc_debug_sel4",
+                &format_args!("{}", self.rtc_debug_sel4().bits()),
+            )
+            .field(
+                "rtc_debug_12m_no_gating",
+                &format_args!("{}", self.rtc_debug_12m_no_gating().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_DEBUG_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

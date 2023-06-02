@@ -37,30 +37,30 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGINST_SPEC>> for W {
 #[doc = "Field `RECORD_PRO_PDEBUGINST` reader - "]
 pub type RECORD_PRO_PDEBUGINST_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` reader - "]
-pub type RECORD_PDEBUGINST_SZ_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGINST_SZ_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` writer - "]
 pub type RECORD_PDEBUGINST_SZ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGINST_SPEC, 8, O>;
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` reader - "]
-pub type RECORD_PDEBUGINST_ISRC_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGINST_ISRC_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_ISRC` writer - "]
 pub type RECORD_PDEBUGINST_ISRC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGINST_SPEC, 3, O>;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` reader - "]
-pub type RECORD_PDEBUGINST_LOOP_REP_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGINST_LOOP_REP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP_REP` writer - "]
 pub type RECORD_PDEBUGINST_LOOP_REP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGINST_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP` reader - "]
-pub type RECORD_PDEBUGINST_LOOP_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGINST_LOOP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGINST_LOOP` writer - "]
 pub type RECORD_PDEBUGINST_LOOP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGINST_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` reader - "]
-pub type RECORD_PDEBUGINST_CINTL_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGINST_CINTL_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_CINTL` writer - "]
 pub type RECORD_PDEBUGINST_CINTL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGINST_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGINST_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -91,6 +91,43 @@ impl R {
     #[inline(always)]
     pub fn record_pdebuginst_cintl(&self) -> RECORD_PDEBUGINST_CINTL_R {
         RECORD_PDEBUGINST_CINTL_R::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CPU_RECORD_PDEBUGINST")
+            .field(
+                "record_pro_pdebuginst",
+                &format_args!("{}", self.record_pro_pdebuginst().bits()),
+            )
+            .field(
+                "record_pdebuginst_sz",
+                &format_args!("{}", self.record_pdebuginst_sz().bits()),
+            )
+            .field(
+                "record_pdebuginst_isrc",
+                &format_args!("{}", self.record_pdebuginst_isrc().bits()),
+            )
+            .field(
+                "record_pdebuginst_loop_rep",
+                &format_args!("{}", self.record_pdebuginst_loop_rep().bit()),
+            )
+            .field(
+                "record_pdebuginst_loop",
+                &format_args!("{}", self.record_pdebuginst_loop().bit()),
+            )
+            .field(
+                "record_pdebuginst_cintl",
+                &format_args!("{}", self.record_pdebuginst_cintl().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

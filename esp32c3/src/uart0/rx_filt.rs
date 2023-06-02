@@ -35,13 +35,13 @@ impl From<crate::W<RX_FILT_SPEC>> for W {
     }
 }
 #[doc = "Field `GLITCH_FILT` reader - when input pulse width is lower than this value, the pulse is ignored."]
-pub type GLITCH_FILT_R = crate::FieldReader<u8, u8>;
+pub type GLITCH_FILT_R = crate::FieldReader;
 #[doc = "Field `GLITCH_FILT` writer - when input pulse width is lower than this value, the pulse is ignored."]
-pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_FILT_SPEC, u8, u8, 8, O>;
+pub type GLITCH_FILT_W<'a, const O: u8> = crate::FieldWriter<'a, RX_FILT_SPEC, 8, O>;
 #[doc = "Field `GLITCH_FILT_EN` reader - Set this bit to enable Rx signal filter."]
-pub type GLITCH_FILT_EN_R = crate::BitReader<bool>;
+pub type GLITCH_FILT_EN_R = crate::BitReader;
 #[doc = "Field `GLITCH_FILT_EN` writer - Set this bit to enable Rx signal filter."]
-pub type GLITCH_FILT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_FILT_SPEC, bool, O>;
+pub type GLITCH_FILT_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_FILT_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - when input pulse width is lower than this value, the pulse is ignored."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn glitch_filt_en(&self) -> GLITCH_FILT_EN_R {
         GLITCH_FILT_EN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_FILT")
+            .field(
+                "glitch_filt",
+                &format_args!("{}", self.glitch_filt().bits()),
+            )
+            .field(
+                "glitch_filt_en",
+                &format_args!("{}", self.glitch_filt_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_FILT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,13 @@ impl From<crate::W<SWFC_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `XON_THRESHOLD` reader - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
-pub type XON_THRESHOLD_R = crate::FieldReader<u8, u8>;
+pub type XON_THRESHOLD_R = crate::FieldReader;
 #[doc = "Field `XON_THRESHOLD` writer - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
-pub type XON_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWFC_CONF1_SPEC, u8, u8, 8, O>;
+pub type XON_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF1_SPEC, 8, O>;
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1 it will send a Xoff char."]
-pub type XOFF_THRESHOLD_R = crate::FieldReader<u8, u8>;
+pub type XOFF_THRESHOLD_R = crate::FieldReader;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1 it will send a Xoff char."]
-pub type XOFF_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWFC_CONF1_SPEC, u8, u8, 8, O>;
+pub type XOFF_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - When the data amount in Rx-FIFO is less than this register value with uart_sw_flow_con_en set to 1 it will send a Xon char."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn xoff_threshold(&self) -> XOFF_THRESHOLD_R {
         XOFF_THRESHOLD_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWFC_CONF1")
+            .field(
+                "xon_threshold",
+                &format_args!("{}", self.xon_threshold().bits()),
+            )
+            .field(
+                "xoff_threshold",
+                &format_args!("{}", self.xoff_threshold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

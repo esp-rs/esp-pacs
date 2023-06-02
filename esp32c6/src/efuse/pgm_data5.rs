@@ -37,13 +37,26 @@ impl From<crate::W<PGM_DATA5_SPEC>> for W {
 #[doc = "Field `PGM_DATA_5` reader - Configures the 5th 32-bit data to be programmed."]
 pub type PGM_DATA_5_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PGM_DATA_5` writer - Configures the 5th 32-bit data to be programmed."]
-pub type PGM_DATA_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PGM_DATA5_SPEC, u32, u32, 32, O>;
+pub type PGM_DATA_5_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA5_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configures the 5th 32-bit data to be programmed."]
     #[inline(always)]
     pub fn pgm_data_5(&self) -> PGM_DATA_5_R {
         PGM_DATA_5_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PGM_DATA5")
+            .field("pgm_data_5", &format_args!("{}", self.pgm_data_5().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PGM_DATA5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

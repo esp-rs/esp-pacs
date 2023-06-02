@@ -35,15 +35,32 @@ impl From<crate::W<EXTMEM_REJECT_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` reader - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
-pub type EXTMEM_REJECT_INT_RAW_R = crate::BitReader<bool>;
+pub type EXTMEM_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` writer - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
 pub type EXTMEM_REJECT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXTMEM_REJECT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, EXTMEM_REJECT_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]
     pub fn extmem_reject_int_raw(&self) -> EXTMEM_REJECT_INT_RAW_R {
         EXTMEM_REJECT_INT_RAW_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXTMEM_REJECT_INT_RAW")
+            .field(
+                "extmem_reject_int_raw",
+                &format_args!("{}", self.extmem_reject_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

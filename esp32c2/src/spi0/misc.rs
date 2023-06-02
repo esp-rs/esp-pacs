@@ -35,30 +35,29 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `TRANS_END` reader - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_R = crate::BitReader<bool>;
+pub type TRANS_END_R = crate::BitReader;
 #[doc = "Field `TRANS_END` writer - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type TRANS_END_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_INT_ENA_R = crate::BitReader<bool>;
+pub type TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
-pub type TRANS_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type TRANS_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CSPI_ST_TRANS_END` reader - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_R = crate::BitReader<bool>;
+pub type CSPI_ST_TRANS_END_R = crate::BitReader;
 #[doc = "Field `CSPI_ST_TRANS_END` writer - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CSPI_ST_TRANS_END_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_INT_ENA_R = crate::BitReader<bool>;
+pub type CSPI_ST_TRANS_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
-pub type CSPI_ST_TRANS_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CSPI_ST_TRANS_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
+pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
+pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
@@ -89,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn cs_keep_active(&self) -> CS_KEEP_ACTIVE_R {
         CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC")
+            .field("trans_end", &format_args!("{}", self.trans_end().bit()))
+            .field(
+                "trans_end_int_ena",
+                &format_args!("{}", self.trans_end_int_ena().bit()),
+            )
+            .field(
+                "cspi_st_trans_end",
+                &format_args!("{}", self.cspi_st_trans_end().bit()),
+            )
+            .field(
+                "cspi_st_trans_end_int_ena",
+                &format_args!("{}", self.cspi_st_trans_end_int_ena().bit()),
+            )
+            .field(
+                "ck_idle_edge",
+                &format_args!("{}", self.ck_idle_edge().bit()),
+            )
+            .field(
+                "cs_keep_active",
+                &format_args!("{}", self.cs_keep_active().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

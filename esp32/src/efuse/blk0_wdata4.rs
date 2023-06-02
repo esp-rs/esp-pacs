@@ -35,40 +35,37 @@ impl From<crate::W<BLK0_WDATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `CK8M_FREQ` reader - "]
-pub type CK8M_FREQ_R = crate::FieldReader<u8, u8>;
+pub type CK8M_FREQ_R = crate::FieldReader;
 #[doc = "Field `CK8M_FREQ` writer - "]
-pub type CK8M_FREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLK0_WDATA4_SPEC, u8, u8, 8, O>;
+pub type CK8M_FREQ_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA4_SPEC, 8, O>;
 #[doc = "Field `ADC_VREF` reader - True ADC reference voltage"]
-pub type ADC_VREF_R = crate::FieldReader<u8, u8>;
+pub type ADC_VREF_R = crate::FieldReader;
 #[doc = "Field `ADC_VREF` writer - True ADC reference voltage"]
-pub type ADC_VREF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLK0_WDATA4_SPEC, u8, u8, 5, O>;
+pub type ADC_VREF_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA4_SPEC, 5, O>;
 #[doc = "Field `SDIO_DREFH` reader - "]
-pub type SDIO_DREFH_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DREFH_R = crate::FieldReader;
 #[doc = "Field `SDIO_DREFH` writer - "]
-pub type SDIO_DREFH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA4_SPEC, u8, u8, 2, O>;
+pub type SDIO_DREFH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA4_SPEC, 2, O>;
 #[doc = "Field `SDIO_DREFM` reader - "]
-pub type SDIO_DREFM_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DREFM_R = crate::FieldReader;
 #[doc = "Field `SDIO_DREFM` writer - "]
-pub type SDIO_DREFM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA4_SPEC, u8, u8, 2, O>;
+pub type SDIO_DREFM_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA4_SPEC, 2, O>;
 #[doc = "Field `SDIO_DREFL` reader - "]
-pub type SDIO_DREFL_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DREFL_R = crate::FieldReader;
 #[doc = "Field `SDIO_DREFL` writer - "]
-pub type SDIO_DREFL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA4_SPEC, u8, u8, 2, O>;
+pub type SDIO_DREFL_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA4_SPEC, 2, O>;
 #[doc = "Field `XPD_SDIO` reader - program for XPD_SDIO_REG"]
-pub type XPD_SDIO_R = crate::BitReader<bool>;
+pub type XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `XPD_SDIO` writer - program for XPD_SDIO_REG"]
-pub type XPD_SDIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA4_SPEC, bool, O>;
+pub type XPD_SDIO_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA4_SPEC, O>;
 #[doc = "Field `SDIO_TIEH` reader - program for SDIO_TIEH"]
-pub type SDIO_TIEH_R = crate::BitReader<bool>;
+pub type SDIO_TIEH_R = crate::BitReader;
 #[doc = "Field `SDIO_TIEH` writer - program for SDIO_TIEH"]
-pub type SDIO_TIEH_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA4_SPEC, bool, O>;
+pub type SDIO_TIEH_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA4_SPEC, O>;
 #[doc = "Field `SDIO_FORCE` reader - program for sdio_force"]
-pub type SDIO_FORCE_R = crate::BitReader<bool>;
+pub type SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `SDIO_FORCE` writer - program for sdio_force"]
-pub type SDIO_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA4_SPEC, bool, O>;
+pub type SDIO_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA4_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -109,6 +106,27 @@ impl R {
     #[inline(always)]
     pub fn sdio_force(&self) -> SDIO_FORCE_R {
         SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_WDATA4")
+            .field("ck8m_freq", &format_args!("{}", self.ck8m_freq().bits()))
+            .field("adc_vref", &format_args!("{}", self.adc_vref().bits()))
+            .field("sdio_drefh", &format_args!("{}", self.sdio_drefh().bits()))
+            .field("sdio_drefm", &format_args!("{}", self.sdio_drefm().bits()))
+            .field("sdio_drefl", &format_args!("{}", self.sdio_drefl().bits()))
+            .field("xpd_sdio", &format_args!("{}", self.xpd_sdio().bit()))
+            .field("sdio_tieh", &format_args!("{}", self.sdio_tieh().bit()))
+            .field("sdio_force", &format_args!("{}", self.sdio_force().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

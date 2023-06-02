@@ -35,69 +35,65 @@ impl From<crate::W<I2SCONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_I2S_TX_RESET` reader - "]
-pub type I2S_I2S_TX_RESET_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_RESET_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_RESET` writer - "]
-pub type I2S_I2S_TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_RESET` reader - "]
-pub type I2S_I2S_RX_RESET_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_RESET_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_RESET` writer - "]
-pub type I2S_I2S_RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_FIFO_RESET` reader - "]
-pub type I2S_I2S_TX_FIFO_RESET_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_FIFO_RESET` writer - "]
-pub type I2S_I2S_TX_FIFO_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_FIFO_RESET` reader - "]
-pub type I2S_I2S_RX_FIFO_RESET_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_FIFO_RESET` writer - "]
-pub type I2S_I2S_RX_FIFO_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_TRANS_SLAVE_MOD` reader - "]
-pub type I2S_TRANS_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type I2S_TRANS_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_SLAVE_MOD` writer - "]
-pub type I2S_TRANS_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_TRANS_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_RECE_SLAVE_MOD` reader - "]
-pub type I2S_RECE_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type I2S_RECE_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `I2S_RECE_SLAVE_MOD` writer - "]
-pub type I2S_RECE_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_RECE_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_RIGHT_FIRST` reader - "]
-pub type I2S_RIGHT_FIRST_R = crate::BitReader<bool>;
+pub type I2S_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `I2S_RIGHT_FIRST` writer - "]
-pub type I2S_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_MSB_RIGHT` reader - "]
-pub type I2S_MSB_RIGHT_R = crate::BitReader<bool>;
+pub type I2S_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `I2S_MSB_RIGHT` writer - "]
-pub type I2S_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_START` reader - "]
-pub type I2S_I2S_TX_START_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_START_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_START` writer - "]
-pub type I2S_I2S_TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_TX_START_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_START` reader - "]
-pub type I2S_I2S_RX_START_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_START_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_START` writer - "]
-pub type I2S_I2S_RX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_I2S_RX_START_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_TRANS_MSB_SHIFT` reader - "]
-pub type I2S_TRANS_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type I2S_TRANS_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_MSB_SHIFT` writer - "]
-pub type I2S_TRANS_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_TRANS_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_RECE_MSB_SHIFT` reader - "]
-pub type I2S_RECE_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type I2S_RECE_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `I2S_RECE_MSB_SHIFT` writer - "]
-pub type I2S_RECE_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2SCONF_SPEC, bool, O>;
+pub type I2S_RECE_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, I2SCONF_SPEC, O>;
 #[doc = "Field `I2S_BITS_MOD` reader - "]
-pub type I2S_BITS_MOD_R = crate::FieldReader<u8, u8>;
+pub type I2S_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `I2S_BITS_MOD` writer - "]
-pub type I2S_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, I2SCONF_SPEC, u8, u8, 4, O>;
+pub type I2S_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, I2SCONF_SPEC, 4, O>;
 #[doc = "Field `I2S_CLKM_DIV_NUM` reader - "]
-pub type I2S_CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type I2S_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2S_CLKM_DIV_NUM` writer - "]
-pub type I2S_CLKM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2SCONF_SPEC, u8, u8, 6, O>;
+pub type I2S_CLKM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, I2SCONF_SPEC, 6, O>;
 #[doc = "Field `I2S_BCK_DIV_NUM` reader - "]
-pub type I2S_BCK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type I2S_BCK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2S_BCK_DIV_NUM` writer - "]
-pub type I2S_BCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2SCONF_SPEC, u8, u8, 6, O>;
+pub type I2S_BCK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, I2SCONF_SPEC, 6, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -173,6 +169,79 @@ impl R {
     #[inline(always)]
     pub fn i2s_bck_div_num(&self) -> I2S_BCK_DIV_NUM_R {
         I2S_BCK_DIV_NUM_R::new(((self.bits >> 22) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SCONF")
+            .field(
+                "i2s_bck_div_num",
+                &format_args!("{}", self.i2s_bck_div_num().bits()),
+            )
+            .field(
+                "i2s_clkm_div_num",
+                &format_args!("{}", self.i2s_clkm_div_num().bits()),
+            )
+            .field(
+                "i2s_bits_mod",
+                &format_args!("{}", self.i2s_bits_mod().bits()),
+            )
+            .field(
+                "i2s_rece_msb_shift",
+                &format_args!("{}", self.i2s_rece_msb_shift().bit()),
+            )
+            .field(
+                "i2s_trans_msb_shift",
+                &format_args!("{}", self.i2s_trans_msb_shift().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_start",
+                &format_args!("{}", self.i2s_i2s_rx_start().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_start",
+                &format_args!("{}", self.i2s_i2s_tx_start().bit()),
+            )
+            .field(
+                "i2s_msb_right",
+                &format_args!("{}", self.i2s_msb_right().bit()),
+            )
+            .field(
+                "i2s_right_first",
+                &format_args!("{}", self.i2s_right_first().bit()),
+            )
+            .field(
+                "i2s_rece_slave_mod",
+                &format_args!("{}", self.i2s_rece_slave_mod().bit()),
+            )
+            .field(
+                "i2s_trans_slave_mod",
+                &format_args!("{}", self.i2s_trans_slave_mod().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_fifo_reset",
+                &format_args!("{}", self.i2s_i2s_rx_fifo_reset().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_fifo_reset",
+                &format_args!("{}", self.i2s_i2s_tx_fifo_reset().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_reset",
+                &format_args!("{}", self.i2s_i2s_rx_reset().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_reset",
+                &format_args!("{}", self.i2s_i2s_tx_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2SCONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

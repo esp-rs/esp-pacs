@@ -35,15 +35,31 @@ impl From<crate::W<CPU_INTR_FROM_CPU_3_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INTR_FROM_CPU_3` reader - "]
-pub type CPU_INTR_FROM_CPU_3_R = crate::BitReader<bool>;
+pub type CPU_INTR_FROM_CPU_3_R = crate::BitReader;
 #[doc = "Field `CPU_INTR_FROM_CPU_3` writer - "]
-pub type CPU_INTR_FROM_CPU_3_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_INTR_FROM_CPU_3_SPEC, bool, O>;
+pub type CPU_INTR_FROM_CPU_3_W<'a, const O: u8> = crate::BitWriter<'a, CPU_INTR_FROM_CPU_3_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn cpu_intr_from_cpu_3(&self) -> CPU_INTR_FROM_CPU_3_R {
         CPU_INTR_FROM_CPU_3_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INTR_FROM_CPU_3")
+            .field(
+                "cpu_intr_from_cpu_3",
+                &format_args!("{}", self.cpu_intr_from_cpu_3().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INTR_FROM_CPU_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

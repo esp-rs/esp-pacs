@@ -35,14 +35,31 @@ impl From<crate::W<DMA_TX_I_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_TX_I_LOCK` reader - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
-pub type DMA_TX_I_LOCK_R = crate::BitReader<bool>;
+pub type DMA_TX_I_LOCK_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_LOCK` writer - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
-pub type DMA_TX_I_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_0_SPEC, bool, O>;
+pub type DMA_TX_I_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
     pub fn dma_tx_i_lock(&self) -> DMA_TX_I_LOCK_R {
         DMA_TX_I_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_TX_I_0")
+            .field(
+                "dma_tx_i_lock",
+                &format_args!("{}", self.dma_tx_i_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_TX_I_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

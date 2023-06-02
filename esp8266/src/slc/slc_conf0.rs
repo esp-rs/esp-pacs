@@ -35,50 +35,49 @@ impl From<crate::W<SLC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TXLINK_RST` reader - "]
-pub type SLC_TXLINK_RST_R = crate::BitReader<bool>;
+pub type SLC_TXLINK_RST_R = crate::BitReader;
 #[doc = "Field `SLC_TXLINK_RST` writer - "]
-pub type SLC_TXLINK_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_TXLINK_RST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_RXLINK_RST` reader - "]
-pub type SLC_RXLINK_RST_R = crate::BitReader<bool>;
+pub type SLC_RXLINK_RST_R = crate::BitReader;
 #[doc = "Field `SLC_RXLINK_RST` writer - "]
-pub type SLC_RXLINK_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_RXLINK_RST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_AHBM_FIFO_RST` reader - "]
-pub type SLC_AHBM_FIFO_RST_R = crate::BitReader<bool>;
+pub type SLC_AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `SLC_AHBM_FIFO_RST` writer - "]
-pub type SLC_AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_AHBM_RST` reader - "]
-pub type SLC_AHBM_RST_R = crate::BitReader<bool>;
+pub type SLC_AHBM_RST_R = crate::BitReader;
 #[doc = "Field `SLC_AHBM_RST` writer - "]
-pub type SLC_AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_TX_LOOP_TEST` reader - "]
-pub type SLC_TX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC_TX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC_TX_LOOP_TEST` writer - "]
-pub type SLC_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_RX_LOOP_TEST` reader - "]
-pub type SLC_RX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC_RX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC_RX_LOOP_TEST` writer - "]
-pub type SLC_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_RX_AUTO_WRBACK` reader - "]
-pub type SLC_RX_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type SLC_RX_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `SLC_RX_AUTO_WRBACK` writer - "]
-pub type SLC_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_RX_NO_RESTART_CLR` reader - "]
-pub type SLC_RX_NO_RESTART_CLR_R = crate::BitReader<bool>;
+pub type SLC_RX_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `SLC_RX_NO_RESTART_CLR` writer - "]
-pub type SLC_RX_NO_RESTART_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_RX_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_DSCR_BURST_EN` reader - "]
-pub type SLC_DSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC_DSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC_DSCR_BURST_EN` writer - "]
-pub type SLC_DSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_DSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_DATA_BURST_EN` reader - "]
-pub type SLC_DATA_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC_DATA_BURST_EN` writer - "]
-pub type SLC_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_CONF0_SPEC, bool, O>;
+pub type SLC_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLC_CONF0_SPEC, O>;
 #[doc = "Field `SLC_MODE` reader - "]
-pub type SLC_MODE_R = crate::FieldReader<u8, u8>;
+pub type SLC_MODE_R = crate::FieldReader;
 #[doc = "Field `SLC_MODE` writer - "]
-pub type SLC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLC_CONF0_SPEC, u8, u8, 2, O>;
+pub type SLC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_CONF0_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -134,6 +133,60 @@ impl R {
     #[inline(always)]
     pub fn slc_mode(&self) -> SLC_MODE_R {
         SLC_MODE_R::new(((self.bits >> 12) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_CONF0")
+            .field("slc_mode", &format_args!("{}", self.slc_mode().bits()))
+            .field(
+                "slc_data_burst_en",
+                &format_args!("{}", self.slc_data_burst_en().bit()),
+            )
+            .field(
+                "slc_dscr_burst_en",
+                &format_args!("{}", self.slc_dscr_burst_en().bit()),
+            )
+            .field(
+                "slc_rx_no_restart_clr",
+                &format_args!("{}", self.slc_rx_no_restart_clr().bit()),
+            )
+            .field(
+                "slc_rx_auto_wrback",
+                &format_args!("{}", self.slc_rx_auto_wrback().bit()),
+            )
+            .field(
+                "slc_rx_loop_test",
+                &format_args!("{}", self.slc_rx_loop_test().bit()),
+            )
+            .field(
+                "slc_tx_loop_test",
+                &format_args!("{}", self.slc_tx_loop_test().bit()),
+            )
+            .field(
+                "slc_ahbm_rst",
+                &format_args!("{}", self.slc_ahbm_rst().bit()),
+            )
+            .field(
+                "slc_ahbm_fifo_rst",
+                &format_args!("{}", self.slc_ahbm_fifo_rst().bit()),
+            )
+            .field(
+                "slc_rxlink_rst",
+                &format_args!("{}", self.slc_rxlink_rst().bit()),
+            )
+            .field(
+                "slc_txlink_rst",
+                &format_args!("{}", self.slc_txlink_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,19 +35,19 @@ impl From<crate::W<UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `MAIN_TIMER_UPDATE` writer - need_des"]
-pub type MAIN_TIMER_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_SPEC, bool, O>;
+pub type MAIN_TIMER_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_XTAL_OFF` reader - need_des"]
-pub type MAIN_TIMER_XTAL_OFF_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_XTAL_OFF_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_XTAL_OFF` writer - need_des"]
-pub type MAIN_TIMER_XTAL_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_SPEC, bool, O>;
+pub type MAIN_TIMER_XTAL_OFF_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_SYS_STALL` reader - need_des"]
-pub type MAIN_TIMER_SYS_STALL_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_SYS_STALL_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_SYS_STALL` writer - need_des"]
-pub type MAIN_TIMER_SYS_STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_SPEC, bool, O>;
+pub type MAIN_TIMER_SYS_STALL_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_SYS_RST` reader - need_des"]
-pub type MAIN_TIMER_SYS_RST_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_SYS_RST_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_SYS_RST` writer - need_des"]
-pub type MAIN_TIMER_SYS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_SPEC, bool, O>;
+pub type MAIN_TIMER_SYS_RST_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_SPEC, O>;
 impl R {
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
@@ -63,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn main_timer_sys_rst(&self) -> MAIN_TIMER_SYS_RST_R {
         MAIN_TIMER_SYS_RST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UPDATE")
+            .field(
+                "main_timer_xtal_off",
+                &format_args!("{}", self.main_timer_xtal_off().bit()),
+            )
+            .field(
+                "main_timer_sys_stall",
+                &format_args!("{}", self.main_timer_sys_stall().bit()),
+            )
+            .field(
+                "main_timer_sys_rst",
+                &format_args!("{}", self.main_timer_sys_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

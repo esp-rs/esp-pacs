@@ -38,12 +38,12 @@ impl From<crate::W<SAR_SLAVE_ADDR2_SPEC>> for W {
 pub type SAR_I2C_SLAVE_ADDR3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR3` writer - configure i2c slave address3"]
 pub type SAR_I2C_SLAVE_ADDR3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR2_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR2` reader - configure i2c slave address2"]
 pub type SAR_I2C_SLAVE_ADDR2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR2` writer - configure i2c slave address2"]
 pub type SAR_I2C_SLAVE_ADDR2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR2_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:10 - configure i2c slave address3"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn sar_i2c_slave_addr2(&self) -> SAR_I2C_SLAVE_ADDR2_R {
         SAR_I2C_SLAVE_ADDR2_R::new(((self.bits >> 11) & 0x07ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_SLAVE_ADDR2")
+            .field(
+                "sar_i2c_slave_addr3",
+                &format_args!("{}", self.sar_i2c_slave_addr3().bits()),
+            )
+            .field(
+                "sar_i2c_slave_addr2",
+                &format_args!("{}", self.sar_i2c_slave_addr2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

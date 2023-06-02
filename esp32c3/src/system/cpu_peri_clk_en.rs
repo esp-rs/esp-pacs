@@ -35,15 +35,13 @@ impl From<crate::W<CPU_PERI_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` reader - reg_clk_en_assist_debug"]
-pub type CLK_EN_ASSIST_DEBUG_R = crate::BitReader<bool>;
+pub type CLK_EN_ASSIST_DEBUG_R = crate::BitReader;
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` writer - reg_clk_en_assist_debug"]
-pub type CLK_EN_ASSIST_DEBUG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PERI_CLK_EN_SPEC, bool, O>;
+pub type CLK_EN_ASSIST_DEBUG_W<'a, const O: u8> = crate::BitWriter<'a, CPU_PERI_CLK_EN_SPEC, O>;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` reader - reg_clk_en_dedicated_gpio"]
-pub type CLK_EN_DEDICATED_GPIO_R = crate::BitReader<bool>;
+pub type CLK_EN_DEDICATED_GPIO_R = crate::BitReader;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` writer - reg_clk_en_dedicated_gpio"]
-pub type CLK_EN_DEDICATED_GPIO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PERI_CLK_EN_SPEC, bool, O>;
+pub type CLK_EN_DEDICATED_GPIO_W<'a, const O: u8> = crate::BitWriter<'a, CPU_PERI_CLK_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 6 - reg_clk_en_assist_debug"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn clk_en_dedicated_gpio(&self) -> CLK_EN_DEDICATED_GPIO_R {
         CLK_EN_DEDICATED_GPIO_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_PERI_CLK_EN")
+            .field(
+                "clk_en_assist_debug",
+                &format_args!("{}", self.clk_en_assist_debug().bit()),
+            )
+            .field(
+                "clk_en_dedicated_gpio",
+                &format_args!("{}", self.clk_en_dedicated_gpio().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_PERI_CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

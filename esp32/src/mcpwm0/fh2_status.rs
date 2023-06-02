@@ -14,9 +14,9 @@ impl From<crate::R<FH2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FH2_CBC_ON` reader - "]
-pub type FH2_CBC_ON_R = crate::BitReader<bool>;
+pub type FH2_CBC_ON_R = crate::BitReader;
 #[doc = "Field `FH2_OST_ON` reader - "]
-pub type FH2_OST_ON_R = crate::BitReader<bool>;
+pub type FH2_OST_ON_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,6 +27,21 @@ impl R {
     #[inline(always)]
     pub fn fh2_ost_on(&self) -> FH2_OST_ON_R {
         FH2_OST_ON_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FH2_STATUS")
+            .field("fh2_cbc_on", &format_args!("{}", self.fh2_cbc_on().bit()))
+            .field("fh2_ost_on", &format_args!("{}", self.fh2_ost_on().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FH2_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fh2_status](index.html) module"]

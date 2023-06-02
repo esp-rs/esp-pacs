@@ -35,30 +35,30 @@ impl From<crate::W<WIFI_LP_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_OSC_SLOW` reader - "]
-pub type CLK_WIFIPWR_LP_SEL_OSC_SLOW_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_LP_SEL_OSC_SLOW_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_OSC_SLOW` writer - "]
 pub type CLK_WIFIPWR_LP_SEL_OSC_SLOW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_LP_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, WIFI_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_OSC_FAST` reader - "]
-pub type CLK_WIFIPWR_LP_SEL_OSC_FAST_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_LP_SEL_OSC_FAST_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_OSC_FAST` writer - "]
 pub type CLK_WIFIPWR_LP_SEL_OSC_FAST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_LP_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, WIFI_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_XTAL` reader - "]
-pub type CLK_WIFIPWR_LP_SEL_XTAL_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_LP_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_XTAL` writer - "]
 pub type CLK_WIFIPWR_LP_SEL_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_LP_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, WIFI_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_XTAL32K` reader - "]
-pub type CLK_WIFIPWR_LP_SEL_XTAL32K_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_LP_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_LP_SEL_XTAL32K` writer - "]
 pub type CLK_WIFIPWR_LP_SEL_XTAL32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WIFI_LP_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, WIFI_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_WIFIPWR_LP_DIV_NUM` reader - "]
 pub type CLK_WIFIPWR_LP_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CLK_WIFIPWR_LP_DIV_NUM` writer - "]
 pub type CLK_WIFIPWR_LP_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_LP_CLK_CONF_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, WIFI_LP_CLK_CONF_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -84,6 +84,39 @@ impl R {
     #[inline(always)]
     pub fn clk_wifipwr_lp_div_num(&self) -> CLK_WIFIPWR_LP_DIV_NUM_R {
         CLK_WIFIPWR_LP_DIV_NUM_R::new(((self.bits >> 4) & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI_LP_CLK_CONF")
+            .field(
+                "clk_wifipwr_lp_sel_osc_slow",
+                &format_args!("{}", self.clk_wifipwr_lp_sel_osc_slow().bit()),
+            )
+            .field(
+                "clk_wifipwr_lp_sel_osc_fast",
+                &format_args!("{}", self.clk_wifipwr_lp_sel_osc_fast().bit()),
+            )
+            .field(
+                "clk_wifipwr_lp_sel_xtal",
+                &format_args!("{}", self.clk_wifipwr_lp_sel_xtal().bit()),
+            )
+            .field(
+                "clk_wifipwr_lp_sel_xtal32k",
+                &format_args!("{}", self.clk_wifipwr_lp_sel_xtal32k().bit()),
+            )
+            .field(
+                "clk_wifipwr_lp_div_num",
+                &format_args!("{}", self.clk_wifipwr_lp_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WIFI_LP_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

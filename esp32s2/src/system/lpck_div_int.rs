@@ -38,12 +38,29 @@ impl From<crate::W<LPCK_DIV_INT_SPEC>> for W {
 pub type LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LPCK_DIV_NUM` writer - This field is used to set the integer number of the divider value."]
 pub type LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LPCK_DIV_INT_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]
     pub fn lpck_div_num(&self) -> LPCK_DIV_NUM_R {
         LPCK_DIV_NUM_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LPCK_DIV_INT")
+            .field(
+                "lpck_div_num",
+                &format_args!("{}", self.lpck_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LPCK_DIV_INT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -16,9 +16,9 @@ impl From<crate::R<CALI_DATA_SPEC>> for R {
 #[doc = "Field `CALI_VALUE_SYNC2` reader - "]
 pub type CALI_VALUE_SYNC2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CALI_RDY_REAL` reader - "]
-pub type CALI_RDY_REAL_R = crate::BitReader<bool>;
+pub type CALI_RDY_REAL_R = crate::BitReader;
 #[doc = "Field `CALI_RDY_SYNC2` reader - "]
-pub type CALI_RDY_SYNC2_R = crate::BitReader<bool>;
+pub type CALI_RDY_SYNC2_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn cali_rdy_sync2(&self) -> CALI_RDY_SYNC2_R {
         CALI_RDY_SYNC2_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("cali_data")
+            .field(
+                "cali_value_sync2",
+                &format_args!("{}", self.cali_value_sync2().bits()),
+            )
+            .field(
+                "cali_rdy_real",
+                &format_args!("{}", self.cali_rdy_real().bit()),
+            )
+            .field(
+                "cali_rdy_sync2",
+                &format_args!("{}", self.cali_rdy_sync2().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CALI_DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cali_data](index.html) module"]

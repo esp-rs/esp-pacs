@@ -38,12 +38,29 @@ impl From<crate::W<FRC1_LOAD_SPEC>> for W {
 pub type FRC1_LOAD_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `frc1_load_value` writer - the load value into the counter"]
 pub type FRC1_LOAD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FRC1_LOAD_SPEC, u32, u32, 23, O>;
+    crate::FieldWriter<'a, FRC1_LOAD_SPEC, 23, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:22 - the load value into the counter"]
     #[inline(always)]
     pub fn frc1_load_value(&self) -> FRC1_LOAD_VALUE_R {
         FRC1_LOAD_VALUE_R::new(self.bits & 0x007f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRC1_LOAD")
+            .field(
+                "frc1_load_value",
+                &format_args!("{}", self.frc1_load_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRC1_LOAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

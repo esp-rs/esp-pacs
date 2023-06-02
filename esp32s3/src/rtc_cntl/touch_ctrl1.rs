@@ -38,12 +38,12 @@ impl From<crate::W<TOUCH_CTRL1_SPEC>> for W {
 pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` reader - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` writer - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - sleep cycles for timer"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn touch_meas_num(&self) -> TOUCH_MEAS_NUM_R {
         TOUCH_MEAS_NUM_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_CTRL1")
+            .field(
+                "touch_sleep_cycles",
+                &format_args!("{}", self.touch_sleep_cycles().bits()),
+            )
+            .field(
+                "touch_meas_num",
+                &format_args!("{}", self.touch_meas_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

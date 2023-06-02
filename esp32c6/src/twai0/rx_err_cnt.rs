@@ -35,14 +35,28 @@ impl From<crate::W<RX_ERR_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_ERR_CNT` reader - The RX error counter register reflects the current value of the transmit error counter. Software has R/W permission in reset mode and RO in operation mode."]
-pub type RX_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type RX_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `RX_ERR_CNT` writer - The RX error counter register reflects the current value of the transmit error counter. Software has R/W permission in reset mode and RO in operation mode."]
-pub type RX_ERR_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_ERR_CNT_SPEC, u8, u8, 8, O>;
+pub type RX_ERR_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, RX_ERR_CNT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - The RX error counter register reflects the current value of the transmit error counter. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     pub fn rx_err_cnt(&self) -> RX_ERR_CNT_R {
         RX_ERR_CNT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_ERR_CNT")
+            .field("rx_err_cnt", &format_args!("{}", self.rx_err_cnt().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_ERR_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

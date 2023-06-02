@@ -35,125 +35,125 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_STOP_INT_ENA` reader - The enable bit for the interrupt triggered when the timer 0 stops."]
-pub type TIMER0_STOP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER0_STOP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER0_STOP_INT_ENA` writer - The enable bit for the interrupt triggered when the timer 0 stops."]
-pub type TIMER0_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER0_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER1_STOP_INT_ENA` reader - The enable bit for the interrupt triggered when the timer 1 stops."]
-pub type TIMER1_STOP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER1_STOP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER1_STOP_INT_ENA` writer - The enable bit for the interrupt triggered when the timer 1 stops."]
-pub type TIMER1_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER1_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER2_STOP_INT_ENA` reader - The enable bit for the interrupt triggered when the timer 2 stops."]
-pub type TIMER2_STOP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER2_STOP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER2_STOP_INT_ENA` writer - The enable bit for the interrupt triggered when the timer 2 stops."]
-pub type TIMER2_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER2_STOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER0_TEZ_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 0 TEZ event."]
-pub type TIMER0_TEZ_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER0_TEZ_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER0_TEZ_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 0 TEZ event."]
-pub type TIMER0_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER0_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER1_TEZ_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 1 TEZ event."]
-pub type TIMER1_TEZ_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER1_TEZ_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER1_TEZ_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 1 TEZ event."]
-pub type TIMER1_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER1_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER2_TEZ_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 2 TEZ event."]
-pub type TIMER2_TEZ_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER2_TEZ_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER2_TEZ_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 2 TEZ event."]
-pub type TIMER2_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER2_TEZ_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER0_TEP_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 0 TEP event."]
-pub type TIMER0_TEP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER0_TEP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER0_TEP_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 0 TEP event."]
-pub type TIMER0_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER0_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER1_TEP_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 1 TEP event."]
-pub type TIMER1_TEP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER1_TEP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER1_TEP_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 1 TEP event."]
-pub type TIMER1_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER1_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIMER2_TEP_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM timer 2 TEP event."]
-pub type TIMER2_TEP_INT_ENA_R = crate::BitReader<bool>;
+pub type TIMER2_TEP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIMER2_TEP_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM timer 2 TEP event."]
-pub type TIMER2_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIMER2_TEP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT0_INT_ENA` reader - The enable bit for the interrupt triggered when event_f0 starts."]
-pub type FAULT0_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT0_INT_ENA` writer - The enable bit for the interrupt triggered when event_f0 starts."]
-pub type FAULT0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT1_INT_ENA` reader - The enable bit for the interrupt triggered when event_f1 starts."]
-pub type FAULT1_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT1_INT_ENA` writer - The enable bit for the interrupt triggered when event_f1 starts."]
-pub type FAULT1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT2_INT_ENA` reader - The enable bit for the interrupt triggered when event_f2 starts."]
-pub type FAULT2_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT2_INT_ENA` writer - The enable bit for the interrupt triggered when event_f2 starts."]
-pub type FAULT2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT0_CLR_INT_ENA` reader - The enable bit for the interrupt triggered when event_f0 ends."]
-pub type FAULT0_CLR_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT0_CLR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT0_CLR_INT_ENA` writer - The enable bit for the interrupt triggered when event_f0 ends."]
-pub type FAULT0_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT0_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT1_CLR_INT_ENA` reader - The enable bit for the interrupt triggered when event_f1 ends."]
-pub type FAULT1_CLR_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT1_CLR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT1_CLR_INT_ENA` writer - The enable bit for the interrupt triggered when event_f1 ends."]
-pub type FAULT1_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT1_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `FAULT2_CLR_INT_ENA` reader - The enable bit for the interrupt triggered when event_f2 ends."]
-pub type FAULT2_CLR_INT_ENA_R = crate::BitReader<bool>;
+pub type FAULT2_CLR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `FAULT2_CLR_INT_ENA` writer - The enable bit for the interrupt triggered when event_f2 ends."]
-pub type FAULT2_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type FAULT2_CLR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR0_TEA_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 0 TEA event"]
-pub type CMPR0_TEA_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR0_TEA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR0_TEA_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 0 TEA event"]
-pub type CMPR0_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR0_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR1_TEA_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 1 TEA event"]
-pub type CMPR1_TEA_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR1_TEA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR1_TEA_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 1 TEA event"]
-pub type CMPR1_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR1_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR2_TEA_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 2 TEA event"]
-pub type CMPR2_TEA_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR2_TEA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR2_TEA_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 2 TEA event"]
-pub type CMPR2_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR2_TEA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR0_TEB_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 0 TEB event"]
-pub type CMPR0_TEB_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR0_TEB_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR0_TEB_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 0 TEB event"]
-pub type CMPR0_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR0_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR1_TEB_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 1 TEB event"]
-pub type CMPR1_TEB_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR1_TEB_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR1_TEB_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 1 TEB event"]
-pub type CMPR1_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR1_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CMPR2_TEB_INT_ENA` reader - The enable bit for the interrupt triggered by a PWM operator 2 TEB event"]
-pub type CMPR2_TEB_INT_ENA_R = crate::BitReader<bool>;
+pub type CMPR2_TEB_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CMPR2_TEB_INT_ENA` writer - The enable bit for the interrupt triggered by a PWM operator 2 TEB event"]
-pub type CMPR2_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CMPR2_TEB_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ0_CBC_INT_ENA` reader - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
-pub type TZ0_CBC_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ0_CBC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ0_CBC_INT_ENA` writer - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
-pub type TZ0_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ0_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ1_CBC_INT_ENA` reader - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
-pub type TZ1_CBC_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ1_CBC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ1_CBC_INT_ENA` writer - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
-pub type TZ1_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ1_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ2_CBC_INT_ENA` reader - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
-pub type TZ2_CBC_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ2_CBC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ2_CBC_INT_ENA` writer - The enable bit for the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
-pub type TZ2_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ2_CBC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ0_OST_INT_ENA` reader - The enable bit for the interrupt triggered by a one-shot mode action on PWM0."]
-pub type TZ0_OST_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ0_OST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ0_OST_INT_ENA` writer - The enable bit for the interrupt triggered by a one-shot mode action on PWM0."]
-pub type TZ0_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ0_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ1_OST_INT_ENA` reader - The enable bit for the interrupt triggered by a one-shot mode action on PWM1."]
-pub type TZ1_OST_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ1_OST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ1_OST_INT_ENA` writer - The enable bit for the interrupt triggered by a one-shot mode action on PWM1."]
-pub type TZ1_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ1_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TZ2_OST_INT_ENA` reader - The enable bit for the interrupt triggered by a one-shot mode action on PWM2."]
-pub type TZ2_OST_INT_ENA_R = crate::BitReader<bool>;
+pub type TZ2_OST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TZ2_OST_INT_ENA` writer - The enable bit for the interrupt triggered by a one-shot mode action on PWM2."]
-pub type TZ2_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TZ2_OST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CAP0_INT_ENA` reader - The enable bit for the interrupt triggered by capture on channel 0."]
-pub type CAP0_INT_ENA_R = crate::BitReader<bool>;
+pub type CAP0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAP0_INT_ENA` writer - The enable bit for the interrupt triggered by capture on channel 0."]
-pub type CAP0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CAP0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CAP1_INT_ENA` reader - The enable bit for the interrupt triggered by capture on channel 1."]
-pub type CAP1_INT_ENA_R = crate::BitReader<bool>;
+pub type CAP1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAP1_INT_ENA` writer - The enable bit for the interrupt triggered by capture on channel 1."]
-pub type CAP1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CAP1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CAP2_INT_ENA` reader - The enable bit for the interrupt triggered by capture on channel 2."]
-pub type CAP2_INT_ENA_R = crate::BitReader<bool>;
+pub type CAP2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CAP2_INT_ENA` writer - The enable bit for the interrupt triggered by capture on channel 2."]
-pub type CAP2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CAP2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The enable bit for the interrupt triggered when the timer 0 stops."]
     #[inline(always)]
@@ -304,6 +304,139 @@ impl R {
     #[inline(always)]
     pub fn cap2_int_ena(&self) -> CAP2_INT_ENA_R {
         CAP2_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "timer0_stop_int_ena",
+                &format_args!("{}", self.timer0_stop_int_ena().bit()),
+            )
+            .field(
+                "timer1_stop_int_ena",
+                &format_args!("{}", self.timer1_stop_int_ena().bit()),
+            )
+            .field(
+                "timer2_stop_int_ena",
+                &format_args!("{}", self.timer2_stop_int_ena().bit()),
+            )
+            .field(
+                "timer0_tez_int_ena",
+                &format_args!("{}", self.timer0_tez_int_ena().bit()),
+            )
+            .field(
+                "timer1_tez_int_ena",
+                &format_args!("{}", self.timer1_tez_int_ena().bit()),
+            )
+            .field(
+                "timer2_tez_int_ena",
+                &format_args!("{}", self.timer2_tez_int_ena().bit()),
+            )
+            .field(
+                "timer0_tep_int_ena",
+                &format_args!("{}", self.timer0_tep_int_ena().bit()),
+            )
+            .field(
+                "timer1_tep_int_ena",
+                &format_args!("{}", self.timer1_tep_int_ena().bit()),
+            )
+            .field(
+                "timer2_tep_int_ena",
+                &format_args!("{}", self.timer2_tep_int_ena().bit()),
+            )
+            .field(
+                "fault0_int_ena",
+                &format_args!("{}", self.fault0_int_ena().bit()),
+            )
+            .field(
+                "fault1_int_ena",
+                &format_args!("{}", self.fault1_int_ena().bit()),
+            )
+            .field(
+                "fault2_int_ena",
+                &format_args!("{}", self.fault2_int_ena().bit()),
+            )
+            .field(
+                "fault0_clr_int_ena",
+                &format_args!("{}", self.fault0_clr_int_ena().bit()),
+            )
+            .field(
+                "fault1_clr_int_ena",
+                &format_args!("{}", self.fault1_clr_int_ena().bit()),
+            )
+            .field(
+                "fault2_clr_int_ena",
+                &format_args!("{}", self.fault2_clr_int_ena().bit()),
+            )
+            .field(
+                "cmpr0_tea_int_ena",
+                &format_args!("{}", self.cmpr0_tea_int_ena().bit()),
+            )
+            .field(
+                "cmpr1_tea_int_ena",
+                &format_args!("{}", self.cmpr1_tea_int_ena().bit()),
+            )
+            .field(
+                "cmpr2_tea_int_ena",
+                &format_args!("{}", self.cmpr2_tea_int_ena().bit()),
+            )
+            .field(
+                "cmpr0_teb_int_ena",
+                &format_args!("{}", self.cmpr0_teb_int_ena().bit()),
+            )
+            .field(
+                "cmpr1_teb_int_ena",
+                &format_args!("{}", self.cmpr1_teb_int_ena().bit()),
+            )
+            .field(
+                "cmpr2_teb_int_ena",
+                &format_args!("{}", self.cmpr2_teb_int_ena().bit()),
+            )
+            .field(
+                "tz0_cbc_int_ena",
+                &format_args!("{}", self.tz0_cbc_int_ena().bit()),
+            )
+            .field(
+                "tz1_cbc_int_ena",
+                &format_args!("{}", self.tz1_cbc_int_ena().bit()),
+            )
+            .field(
+                "tz2_cbc_int_ena",
+                &format_args!("{}", self.tz2_cbc_int_ena().bit()),
+            )
+            .field(
+                "tz0_ost_int_ena",
+                &format_args!("{}", self.tz0_ost_int_ena().bit()),
+            )
+            .field(
+                "tz1_ost_int_ena",
+                &format_args!("{}", self.tz1_ost_int_ena().bit()),
+            )
+            .field(
+                "tz2_ost_int_ena",
+                &format_args!("{}", self.tz2_ost_int_ena().bit()),
+            )
+            .field(
+                "cap0_int_ena",
+                &format_args!("{}", self.cap0_int_ena().bit()),
+            )
+            .field(
+                "cap1_int_ena",
+                &format_args!("{}", self.cap1_int_ena().bit()),
+            )
+            .field(
+                "cap2_int_ena",
+                &format_args!("{}", self.cap2_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

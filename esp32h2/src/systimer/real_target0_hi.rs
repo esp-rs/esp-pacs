@@ -22,6 +22,23 @@ impl R {
         TARGET0_HI_RO_R::new(self.bits & 0x000f_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REAL_TARGET0_HI")
+            .field(
+                "target0_hi_ro",
+                &format_args!("{}", self.target0_hi_ro().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REAL_TARGET0_HI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "system timer comp0 actual target value high register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [real_target0_hi](index.html) module"]
 pub struct REAL_TARGET0_HI_SPEC;
 impl crate::RegisterSpec for REAL_TARGET0_HI_SPEC {

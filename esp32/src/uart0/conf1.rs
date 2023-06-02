@@ -35,31 +35,29 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - When receiver receives more data than its threshold value.receiver will produce rxfifo_full_int_raw interrupt.the threshold value is (rx_flow_thrhd_h3 rxfifo_full_thrhd)."]
-pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - When receiver receives more data than its threshold value.receiver will produce rxfifo_full_int_raw interrupt.the threshold value is (rx_flow_thrhd_h3 rxfifo_full_thrhd)."]
-pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 7, O>;
+pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 7, O>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - when the data amount in transmitter fifo is less than its threshold value. it will produce txfifo_empty_int_raw interrupt. the threshold value is (tx_mem_empty_thrhd txfifo_empty_thrhd)"]
-pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - when the data amount in transmitter fifo is less than its threshold value. it will produce txfifo_empty_int_raw interrupt. the threshold value is (tx_mem_empty_thrhd txfifo_empty_thrhd)"]
-pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 7, O>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 7, O>;
 #[doc = "Field `RX_FLOW_THRHD` reader - when receiver receives more data than its threshold value. receiver produce signal to tell the transmitter stop transferring data. the threshold value is (rx_flow_thrhd_h3 rx_flow_thrhd)."]
-pub type RX_FLOW_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_FLOW_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_FLOW_THRHD` writer - when receiver receives more data than its threshold value. receiver produce signal to tell the transmitter stop transferring data. the threshold value is (rx_flow_thrhd_h3 rx_flow_thrhd)."]
-pub type RX_FLOW_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 7, O>;
+pub type RX_FLOW_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 7, O>;
 #[doc = "Field `RX_FLOW_EN` reader - This is the flow enable bit for uart receiver. 1:choose software flow control with configuring sw_rts signal"]
-pub type RX_FLOW_EN_R = crate::BitReader<bool>;
+pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `RX_FLOW_EN` writer - This is the flow enable bit for uart receiver. 1:choose software flow control with configuring sw_rts signal"]
-pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the timeout value for uart receiver receiving a byte."]
-pub type RX_TOUT_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_TOUT_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the timeout value for uart receiver receiving a byte."]
-pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 7, O>;
+pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 7, O>;
 #[doc = "Field `RX_TOUT_EN` reader - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_R = crate::BitReader<bool>;
+pub type RX_TOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_EN` writer - This is the enble bit for uart receiver's timeout function."]
-pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type RX_TOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:6 - When receiver receives more data than its threshold value.receiver will produce rxfifo_full_int_raw interrupt.the threshold value is (rx_flow_thrhd_h3 rxfifo_full_thrhd)."]
     #[inline(always)]
@@ -90,6 +88,37 @@ impl R {
     #[inline(always)]
     pub fn rx_tout_en(&self) -> RX_TOUT_EN_R {
         RX_TOUT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF1")
+            .field(
+                "rxfifo_full_thrhd",
+                &format_args!("{}", self.rxfifo_full_thrhd().bits()),
+            )
+            .field(
+                "txfifo_empty_thrhd",
+                &format_args!("{}", self.txfifo_empty_thrhd().bits()),
+            )
+            .field(
+                "rx_flow_thrhd",
+                &format_args!("{}", self.rx_flow_thrhd().bits()),
+            )
+            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
+            .field(
+                "rx_tout_thrhd",
+                &format_args!("{}", self.rx_tout_thrhd().bits()),
+            )
+            .field("rx_tout_en", &format_args!("{}", self.rx_tout_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

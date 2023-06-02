@@ -38,32 +38,27 @@ impl From<crate::W<SAR_TOUCH_CTRL1_SPEC>> for W {
 pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DELAY` writer - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub type TOUCH_XPD_WAIT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub type TOUCH_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, u8, u8, 8, O>;
+pub type TOUCH_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 8, O>;
 #[doc = "Field `TOUCH_OUT_SEL` reader - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub type TOUCH_OUT_SEL_R = crate::BitReader<bool>;
+pub type TOUCH_OUT_SEL_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_SEL` writer - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub type TOUCH_OUT_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
+pub type TOUCH_OUT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
 #[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
-pub type TOUCH_OUT_1EN_R = crate::BitReader<bool>;
+pub type TOUCH_OUT_1EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 &amp; SET2 is both \"touched\""]
-pub type TOUCH_OUT_1EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
+pub type TOUCH_OUT_1EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type XPD_HALL_FORCE_R = crate::BitReader<bool>;
+pub type XPD_HALL_FORCE_R = crate::BitReader;
 #[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub type XPD_HALL_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
+pub type XPD_HALL_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
 #[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type HALL_PHASE_FORCE_R = crate::BitReader<bool>;
+pub type HALL_PHASE_FORCE_R = crate::BitReader;
 #[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub type HALL_PHASE_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, O>;
+pub type HALL_PHASE_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
@@ -94,6 +89,43 @@ impl R {
     #[inline(always)]
     pub fn hall_phase_force(&self) -> HALL_PHASE_FORCE_R {
         HALL_PHASE_FORCE_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_CTRL1")
+            .field(
+                "touch_meas_delay",
+                &format_args!("{}", self.touch_meas_delay().bits()),
+            )
+            .field(
+                "touch_xpd_wait",
+                &format_args!("{}", self.touch_xpd_wait().bits()),
+            )
+            .field(
+                "touch_out_sel",
+                &format_args!("{}", self.touch_out_sel().bit()),
+            )
+            .field(
+                "touch_out_1en",
+                &format_args!("{}", self.touch_out_1en().bit()),
+            )
+            .field(
+                "xpd_hall_force",
+                &format_args!("{}", self.xpd_hall_force().bit()),
+            )
+            .field(
+                "hall_phase_force",
+                &format_args!("{}", self.hall_phase_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

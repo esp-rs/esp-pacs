@@ -14,39 +14,39 @@ impl From<crate::R<CLK_STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `STABLE_XPD_BBPLL_STATE` reader - need_des"]
-pub type STABLE_XPD_BBPLL_STATE_R = crate::BitReader<bool>;
+pub type STABLE_XPD_BBPLL_STATE_R = crate::BitReader;
 #[doc = "Field `STABLE_XPD_XTAL_STATE` reader - need_des"]
-pub type STABLE_XPD_XTAL_STATE_R = crate::BitReader<bool>;
+pub type STABLE_XPD_XTAL_STATE_R = crate::BitReader;
 #[doc = "Field `SYS_CLK_SLP_SEL_STATE` reader - need_des"]
-pub type SYS_CLK_SLP_SEL_STATE_R = crate::BitReader<bool>;
+pub type SYS_CLK_SLP_SEL_STATE_R = crate::BitReader;
 #[doc = "Field `SYS_CLK_SEL_STATE` reader - need_des"]
-pub type SYS_CLK_SEL_STATE_R = crate::FieldReader<u8, u8>;
+pub type SYS_CLK_SEL_STATE_R = crate::FieldReader;
 #[doc = "Field `SYS_CLK_NO_DIV_STATE` reader - need_des"]
-pub type SYS_CLK_NO_DIV_STATE_R = crate::BitReader<bool>;
+pub type SYS_CLK_NO_DIV_STATE_R = crate::BitReader;
 #[doc = "Field `ICG_SYS_CLK_EN_STATE` reader - need_des"]
-pub type ICG_SYS_CLK_EN_STATE_R = crate::BitReader<bool>;
+pub type ICG_SYS_CLK_EN_STATE_R = crate::BitReader;
 #[doc = "Field `ICG_MODEM_SWITCH_STATE` reader - need_des"]
-pub type ICG_MODEM_SWITCH_STATE_R = crate::BitReader<bool>;
+pub type ICG_MODEM_SWITCH_STATE_R = crate::BitReader;
 #[doc = "Field `ICG_MODEM_CODE_STATE` reader - need_des"]
-pub type ICG_MODEM_CODE_STATE_R = crate::FieldReader<u8, u8>;
+pub type ICG_MODEM_CODE_STATE_R = crate::FieldReader;
 #[doc = "Field `ICG_SLP_SEL_STATE` reader - need_des"]
-pub type ICG_SLP_SEL_STATE_R = crate::BitReader<bool>;
+pub type ICG_SLP_SEL_STATE_R = crate::BitReader;
 #[doc = "Field `ICG_GLOBAL_XTAL_STATE` reader - need_des"]
-pub type ICG_GLOBAL_XTAL_STATE_R = crate::BitReader<bool>;
+pub type ICG_GLOBAL_XTAL_STATE_R = crate::BitReader;
 #[doc = "Field `ICG_GLOBAL_PLL_STATE` reader - need_des"]
-pub type ICG_GLOBAL_PLL_STATE_R = crate::BitReader<bool>;
+pub type ICG_GLOBAL_PLL_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_I2C_ISO_EN_STATE` reader - need_des"]
-pub type ANA_I2C_ISO_EN_STATE_R = crate::BitReader<bool>;
+pub type ANA_I2C_ISO_EN_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_I2C_RETENTION_STATE` reader - need_des"]
-pub type ANA_I2C_RETENTION_STATE_R = crate::BitReader<bool>;
+pub type ANA_I2C_RETENTION_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_XPD_BB_I2C_STATE` reader - need_des"]
-pub type ANA_XPD_BB_I2C_STATE_R = crate::BitReader<bool>;
+pub type ANA_XPD_BB_I2C_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_XPD_BBPLL_I2C_STATE` reader - need_des"]
-pub type ANA_XPD_BBPLL_I2C_STATE_R = crate::BitReader<bool>;
+pub type ANA_XPD_BBPLL_I2C_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_XPD_BBPLL_STATE` reader - need_des"]
-pub type ANA_XPD_BBPLL_STATE_R = crate::BitReader<bool>;
+pub type ANA_XPD_BBPLL_STATE_R = crate::BitReader;
 #[doc = "Field `ANA_XPD_XTAL_STATE` reader - need_des"]
-pub type ANA_XPD_XTAL_STATE_R = crate::BitReader<bool>;
+pub type ANA_XPD_XTAL_STATE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -132,6 +132,87 @@ impl R {
     #[inline(always)]
     pub fn ana_xpd_xtal_state(&self) -> ANA_XPD_XTAL_STATE_R {
         ANA_XPD_XTAL_STATE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_STATE0")
+            .field(
+                "stable_xpd_bbpll_state",
+                &format_args!("{}", self.stable_xpd_bbpll_state().bit()),
+            )
+            .field(
+                "stable_xpd_xtal_state",
+                &format_args!("{}", self.stable_xpd_xtal_state().bit()),
+            )
+            .field(
+                "sys_clk_slp_sel_state",
+                &format_args!("{}", self.sys_clk_slp_sel_state().bit()),
+            )
+            .field(
+                "sys_clk_sel_state",
+                &format_args!("{}", self.sys_clk_sel_state().bits()),
+            )
+            .field(
+                "sys_clk_no_div_state",
+                &format_args!("{}", self.sys_clk_no_div_state().bit()),
+            )
+            .field(
+                "icg_sys_clk_en_state",
+                &format_args!("{}", self.icg_sys_clk_en_state().bit()),
+            )
+            .field(
+                "icg_modem_switch_state",
+                &format_args!("{}", self.icg_modem_switch_state().bit()),
+            )
+            .field(
+                "icg_modem_code_state",
+                &format_args!("{}", self.icg_modem_code_state().bits()),
+            )
+            .field(
+                "icg_slp_sel_state",
+                &format_args!("{}", self.icg_slp_sel_state().bit()),
+            )
+            .field(
+                "icg_global_xtal_state",
+                &format_args!("{}", self.icg_global_xtal_state().bit()),
+            )
+            .field(
+                "icg_global_pll_state",
+                &format_args!("{}", self.icg_global_pll_state().bit()),
+            )
+            .field(
+                "ana_i2c_iso_en_state",
+                &format_args!("{}", self.ana_i2c_iso_en_state().bit()),
+            )
+            .field(
+                "ana_i2c_retention_state",
+                &format_args!("{}", self.ana_i2c_retention_state().bit()),
+            )
+            .field(
+                "ana_xpd_bb_i2c_state",
+                &format_args!("{}", self.ana_xpd_bb_i2c_state().bit()),
+            )
+            .field(
+                "ana_xpd_bbpll_i2c_state",
+                &format_args!("{}", self.ana_xpd_bbpll_i2c_state().bit()),
+            )
+            .field(
+                "ana_xpd_bbpll_state",
+                &format_args!("{}", self.ana_xpd_bbpll_state().bit()),
+            )
+            .field(
+                "ana_xpd_xtal_state",
+                &format_args!("{}", self.ana_xpd_xtal_state().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [clk_state0](index.html) module"]

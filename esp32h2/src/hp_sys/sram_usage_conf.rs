@@ -35,17 +35,15 @@ impl From<crate::W<SRAM_USAGE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_USAGE` reader - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
-pub type SRAM_USAGE_R = crate::FieldReader<u8, u8>;
+pub type SRAM_USAGE_R = crate::FieldReader;
 #[doc = "Field `SRAM_USAGE` writer - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
-pub type SRAM_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_USAGE_CONF_SPEC, u8, u8, 5, O>;
+pub type SRAM_USAGE_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_USAGE_CONF_SPEC, 5, O>;
 #[doc = "Field `MAC_DUMP_ALLOC` reader - reserved."]
-pub type MAC_DUMP_ALLOC_R = crate::FieldReader<u8, u8>;
+pub type MAC_DUMP_ALLOC_R = crate::FieldReader;
 #[doc = "Field `MAC_DUMP_ALLOC` writer - reserved."]
-pub type MAC_DUMP_ALLOC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_USAGE_CONF_SPEC, u8, u8, 5, O>;
+pub type MAC_DUMP_ALLOC_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_USAGE_CONF_SPEC, 5, O>;
 #[doc = "Field `CACHE_USAGE` reader - reserved"]
-pub type CACHE_USAGE_R = crate::BitReader<bool>;
+pub type CACHE_USAGE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 10:14 - 0: cpu use hp-memory. 1: mac-dump accessing hp-memory."]
     #[inline(always)]
@@ -61,6 +59,25 @@ impl R {
     #[inline(always)]
     pub fn cache_usage(&self) -> CACHE_USAGE_R {
         CACHE_USAGE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_USAGE_CONF")
+            .field("sram_usage", &format_args!("{}", self.sram_usage().bits()))
+            .field(
+                "mac_dump_alloc",
+                &format_args!("{}", self.mac_dump_alloc().bits()),
+            )
+            .field("cache_usage", &format_args!("{}", self.cache_usage().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_USAGE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

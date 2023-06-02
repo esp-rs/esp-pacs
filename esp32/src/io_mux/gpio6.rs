@@ -35,49 +35,49 @@ impl From<crate::W<GPIO6_SPEC>> for W {
     }
 }
 #[doc = "Field `MCU_OE` reader - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
-pub type MCU_OE_R = crate::BitReader<bool>;
+pub type MCU_OE_R = crate::BitReader;
 #[doc = "Field `MCU_OE` writer - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
-pub type MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `SLP_SEL` reader - Sleep mode selection of this pad. Set to 1 to put the pad in sleep mode."]
-pub type SLP_SEL_R = crate::BitReader<bool>;
+pub type SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SLP_SEL` writer - Sleep mode selection of this pad. Set to 1 to put the pad in sleep mode."]
-pub type SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `MCU_WPD` reader - Pull-down enable of the pad during sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type MCU_WPD_R = crate::BitReader<bool>;
+pub type MCU_WPD_R = crate::BitReader;
 #[doc = "Field `MCU_WPD` writer - Pull-down enable of the pad during sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
-pub type MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `MCU_WPU` reader - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type MCU_WPU_R = crate::BitReader<bool>;
+pub type MCU_WPU_R = crate::BitReader;
 #[doc = "Field `MCU_WPU` writer - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
-pub type MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `MCU_IE` reader - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
-pub type MCU_IE_R = crate::BitReader<bool>;
+pub type MCU_IE_R = crate::BitReader;
 #[doc = "Field `MCU_IE` writer - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
-pub type MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `MCU_DRV` reader - Select the drive strength of the pad during sleep mode. A higher value corresponds with a higher strength."]
-pub type MCU_DRV_R = crate::FieldReader<u8, u8>;
+pub type MCU_DRV_R = crate::FieldReader;
 #[doc = "Field `MCU_DRV` writer - Select the drive strength of the pad during sleep mode. A higher value corresponds with a higher strength."]
-pub type MCU_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO6_SPEC, u8, u8, 2, O>;
+pub type MCU_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO6_SPEC, 2, O>;
 #[doc = "Field `FUN_WPD` reader - Pull-down enable of the pad. 1: internal pull-down enabled, 0: internal pull-down disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull-down circuitry, therefore, their FUN_WPD is always 0."]
-pub type FUN_WPD_R = crate::BitReader<bool>;
+pub type FUN_WPD_R = crate::BitReader;
 #[doc = "Field `FUN_WPD` writer - Pull-down enable of the pad. 1: internal pull-down enabled, 0: internal pull-down disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull-down circuitry, therefore, their FUN_WPD is always 0."]
-pub type FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `FUN_WPU` reader - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull- down circuitry, therefore, their FUN_WPU is always 0."]
-pub type FUN_WPU_R = crate::BitReader<bool>;
+pub type FUN_WPU_R = crate::BitReader;
 #[doc = "Field `FUN_WPU` writer - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull- down circuitry, therefore, their FUN_WPU is always 0."]
-pub type FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `FUN_IE` reader - Input enable of the pad. 1: input enabled; 0: input disabled."]
-pub type FUN_IE_R = crate::BitReader<bool>;
+pub type FUN_IE_R = crate::BitReader;
 #[doc = "Field `FUN_IE` writer - Input enable of the pad. 1: input enabled; 0: input disabled."]
-pub type FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO6_SPEC, bool, O>;
+pub type FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO6_SPEC, O>;
 #[doc = "Field `FUN_DRV` reader - Select the drive strength of the pad. A higher value corresponds with a higher strength. For GPIO34-39, FUN_DRV is always 0. For detailed drive strength, please see note 8 in Table ”Notes on ESP32 Pin Lists”, in ESP32 Datasheet."]
-pub type FUN_DRV_R = crate::FieldReader<u8, u8>;
+pub type FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `FUN_DRV` writer - Select the drive strength of the pad. A higher value corresponds with a higher strength. For GPIO34-39, FUN_DRV is always 0. For detailed drive strength, please see note 8 in Table ”Notes on ESP32 Pin Lists”, in ESP32 Datasheet."]
-pub type FUN_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO6_SPEC, u8, u8, 2, O>;
+pub type FUN_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO6_SPEC, 2, O>;
 #[doc = "Field `MCU_SEL` reader - Select the IO_MUX function for this signal. 0 selects Function 0, 1 selects Function 1, etc."]
-pub type MCU_SEL_R = crate::FieldReader<u8, u8>;
+pub type MCU_SEL_R = crate::FieldReader;
 #[doc = "Field `MCU_SEL` writer - Select the IO_MUX function for this signal. 0 selects Function 0, 1 selects Function 1, etc."]
-pub type MCU_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO6_SPEC, u8, u8, 3, O>;
+pub type MCU_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO6_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
     #[inline(always)]
@@ -133,6 +133,30 @@ impl R {
     #[inline(always)]
     pub fn mcu_sel(&self) -> MCU_SEL_R {
         MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO6")
+            .field("mcu_oe", &format_args!("{}", self.mcu_oe().bit()))
+            .field("slp_sel", &format_args!("{}", self.slp_sel().bit()))
+            .field("mcu_wpd", &format_args!("{}", self.mcu_wpd().bit()))
+            .field("mcu_wpu", &format_args!("{}", self.mcu_wpu().bit()))
+            .field("mcu_ie", &format_args!("{}", self.mcu_ie().bit()))
+            .field("mcu_drv", &format_args!("{}", self.mcu_drv().bits()))
+            .field("fun_wpd", &format_args!("{}", self.fun_wpd().bit()))
+            .field("fun_wpu", &format_args!("{}", self.fun_wpu().bit()))
+            .field("fun_ie", &format_args!("{}", self.fun_ie().bit()))
+            .field("fun_drv", &format_args!("{}", self.fun_drv().bits()))
+            .field("mcu_sel", &format_args!("{}", self.mcu_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

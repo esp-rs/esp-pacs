@@ -35,15 +35,31 @@ impl From<crate::W<IMMU_TABLE1_SPEC>> for W {
     }
 }
 #[doc = "Field `IMMU_TABLE1` reader - "]
-pub type IMMU_TABLE1_R = crate::FieldReader<u8, u8>;
+pub type IMMU_TABLE1_R = crate::FieldReader;
 #[doc = "Field `IMMU_TABLE1` writer - "]
-pub type IMMU_TABLE1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IMMU_TABLE1_SPEC, u8, u8, 7, O>;
+pub type IMMU_TABLE1_W<'a, const O: u8> = crate::FieldWriter<'a, IMMU_TABLE1_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     pub fn immu_table1(&self) -> IMMU_TABLE1_R {
         IMMU_TABLE1_R::new((self.bits & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IMMU_TABLE1")
+            .field(
+                "immu_table1",
+                &format_args!("{}", self.immu_table1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IMMU_TABLE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

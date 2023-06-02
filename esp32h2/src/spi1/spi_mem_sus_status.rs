@@ -35,55 +35,53 @@ impl From<crate::W<SPI_MEM_SUS_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_FLASH_SUS` reader - The status of flash suspend, only used in SPI1."]
-pub type SPI_MEM_FLASH_SUS_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_SUS_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_SUS` writer - The status of flash suspend, only used in SPI1."]
-pub type SPI_MEM_FLASH_SUS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_SUS_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_WAIT_PESR_CMD_2B` reader - 1: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[15:0\\] to check SUS/SUS1/SUS2 bit. 0: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[7:0\\] to check SUS/SUS1/SUS2 bit."]
-pub type SPI_MEM_WAIT_PESR_CMD_2B_R = crate::BitReader<bool>;
+pub type SPI_MEM_WAIT_PESR_CMD_2B_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WAIT_PESR_CMD_2B` writer - 1: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[15:0\\] to check SUS/SUS1/SUS2 bit. 0: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[7:0\\] to check SUS/SUS1/SUS2 bit."]
 pub type SPI_MEM_WAIT_PESR_CMD_2B_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_HPM_DLY_128` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
-pub type SPI_MEM_FLASH_HPM_DLY_128_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_HPM_DLY_128_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_HPM_DLY_128` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
 pub type SPI_MEM_FLASH_HPM_DLY_128_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_RES_DLY_128` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
-pub type SPI_MEM_FLASH_RES_DLY_128_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_RES_DLY_128_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RES_DLY_128` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
 pub type SPI_MEM_FLASH_RES_DLY_128_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_DP_DLY_128` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
-pub type SPI_MEM_FLASH_DP_DLY_128_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_DP_DLY_128_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_DP_DLY_128` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
 pub type SPI_MEM_FLASH_DP_DLY_128_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PER_DLY_128` reader - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
-pub type SPI_MEM_FLASH_PER_DLY_128_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PER_DLY_128_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PER_DLY_128` writer - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
 pub type SPI_MEM_FLASH_PER_DLY_128_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PES_DLY_128` reader - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
-pub type SPI_MEM_FLASH_PES_DLY_128_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PES_DLY_128_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PES_DLY_128` writer - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
 pub type SPI_MEM_FLASH_PES_DLY_128_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_SPI0_LOCK_EN` reader - 1: Enable SPI0 lock SPI0/1 arbiter option. 0: Disable it."]
-pub type SPI_MEM_SPI0_LOCK_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_SPI0_LOCK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SPI0_LOCK_EN` writer - 1: Enable SPI0 lock SPI0/1 arbiter option. 0: Disable it."]
-pub type SPI_MEM_SPI0_LOCK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+pub type SPI_MEM_SPI0_LOCK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PESR_CMD_2B` reader - 1: The bit length of Program/Erase Suspend/Resume command is 16. 0: The bit length of Program/Erase Suspend/Resume command is 8."]
-pub type SPI_MEM_FLASH_PESR_CMD_2B_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PESR_CMD_2B_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PESR_CMD_2B` writer - 1: The bit length of Program/Erase Suspend/Resume command is 16. 0: The bit length of Program/Erase Suspend/Resume command is 8."]
 pub type SPI_MEM_FLASH_PESR_CMD_2B_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PER_COMMAND` reader - Program/Erase resume command."]
 pub type SPI_MEM_FLASH_PER_COMMAND_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_FLASH_PER_COMMAND` writer - Program/Erase resume command."]
 pub type SPI_MEM_FLASH_PER_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_SUS_STATUS_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SPI_MEM_SUS_STATUS_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - The status of flash suspend, only used in SPI1."]
     #[inline(always)]
@@ -134,6 +132,59 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_flash_per_command(&self) -> SPI_MEM_FLASH_PER_COMMAND_R {
         SPI_MEM_FLASH_PER_COMMAND_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_SUS_STATUS")
+            .field(
+                "spi_mem_flash_sus",
+                &format_args!("{}", self.spi_mem_flash_sus().bit()),
+            )
+            .field(
+                "spi_mem_wait_pesr_cmd_2b",
+                &format_args!("{}", self.spi_mem_wait_pesr_cmd_2b().bit()),
+            )
+            .field(
+                "spi_mem_flash_hpm_dly_128",
+                &format_args!("{}", self.spi_mem_flash_hpm_dly_128().bit()),
+            )
+            .field(
+                "spi_mem_flash_res_dly_128",
+                &format_args!("{}", self.spi_mem_flash_res_dly_128().bit()),
+            )
+            .field(
+                "spi_mem_flash_dp_dly_128",
+                &format_args!("{}", self.spi_mem_flash_dp_dly_128().bit()),
+            )
+            .field(
+                "spi_mem_flash_per_dly_128",
+                &format_args!("{}", self.spi_mem_flash_per_dly_128().bit()),
+            )
+            .field(
+                "spi_mem_flash_pes_dly_128",
+                &format_args!("{}", self.spi_mem_flash_pes_dly_128().bit()),
+            )
+            .field(
+                "spi_mem_spi0_lock_en",
+                &format_args!("{}", self.spi_mem_spi0_lock_en().bit()),
+            )
+            .field(
+                "spi_mem_flash_pesr_cmd_2b",
+                &format_args!("{}", self.spi_mem_flash_pesr_cmd_2b().bit()),
+            )
+            .field(
+                "spi_mem_flash_per_command",
+                &format_args!("{}", self.spi_mem_flash_per_command().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SUS_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

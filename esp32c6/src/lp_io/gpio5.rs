@@ -35,52 +35,49 @@ impl From<crate::W<GPIO5_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_GPIO5_MCU_OE` reader - need des"]
-pub type LP_GPIO5_MCU_OE_R = crate::BitReader<bool>;
+pub type LP_GPIO5_MCU_OE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_MCU_OE` writer - need des"]
-pub type LP_GPIO5_MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_SLP_SEL` reader - need des"]
-pub type LP_GPIO5_SLP_SEL_R = crate::BitReader<bool>;
+pub type LP_GPIO5_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_SLP_SEL` writer - need des"]
-pub type LP_GPIO5_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_MCU_WPD` reader - need des"]
-pub type LP_GPIO5_MCU_WPD_R = crate::BitReader<bool>;
+pub type LP_GPIO5_MCU_WPD_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_MCU_WPD` writer - need des"]
-pub type LP_GPIO5_MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_MCU_WPU` reader - need des"]
-pub type LP_GPIO5_MCU_WPU_R = crate::BitReader<bool>;
+pub type LP_GPIO5_MCU_WPU_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_MCU_WPU` writer - need des"]
-pub type LP_GPIO5_MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_MCU_IE` reader - need des"]
-pub type LP_GPIO5_MCU_IE_R = crate::BitReader<bool>;
+pub type LP_GPIO5_MCU_IE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_MCU_IE` writer - need des"]
-pub type LP_GPIO5_MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_MCU_DRV` reader - need des"]
-pub type LP_GPIO5_MCU_DRV_R = crate::FieldReader<u8, u8>;
+pub type LP_GPIO5_MCU_DRV_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO5_MCU_DRV` writer - need des"]
-pub type LP_GPIO5_MCU_DRV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO5_SPEC, u8, u8, 2, O>;
+pub type LP_GPIO5_MCU_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO5_SPEC, 2, O>;
 #[doc = "Field `LP_GPIO5_FUN_WPD` reader - need des"]
-pub type LP_GPIO5_FUN_WPD_R = crate::BitReader<bool>;
+pub type LP_GPIO5_FUN_WPD_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_FUN_WPD` writer - need des"]
-pub type LP_GPIO5_FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_FUN_WPU` reader - need des"]
-pub type LP_GPIO5_FUN_WPU_R = crate::BitReader<bool>;
+pub type LP_GPIO5_FUN_WPU_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_FUN_WPU` writer - need des"]
-pub type LP_GPIO5_FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_FUN_IE` reader - need des"]
-pub type LP_GPIO5_FUN_IE_R = crate::BitReader<bool>;
+pub type LP_GPIO5_FUN_IE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO5_FUN_IE` writer - need des"]
-pub type LP_GPIO5_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO5_SPEC, bool, O>;
+pub type LP_GPIO5_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO5_SPEC, O>;
 #[doc = "Field `LP_GPIO5_FUN_DRV` reader - need des"]
-pub type LP_GPIO5_FUN_DRV_R = crate::FieldReader<u8, u8>;
+pub type LP_GPIO5_FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO5_FUN_DRV` writer - need des"]
-pub type LP_GPIO5_FUN_DRV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO5_SPEC, u8, u8, 2, O>;
+pub type LP_GPIO5_FUN_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO5_SPEC, 2, O>;
 #[doc = "Field `LP_GPIO5_MCU_SEL` reader - need des"]
-pub type LP_GPIO5_MCU_SEL_R = crate::FieldReader<u8, u8>;
+pub type LP_GPIO5_MCU_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO5_MCU_SEL` writer - need des"]
-pub type LP_GPIO5_MCU_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO5_SPEC, u8, u8, 3, O>;
+pub type LP_GPIO5_MCU_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO5_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
@@ -136,6 +133,63 @@ impl R {
     #[inline(always)]
     pub fn lp_gpio5_mcu_sel(&self) -> LP_GPIO5_MCU_SEL_R {
         LP_GPIO5_MCU_SEL_R::new(((self.bits >> 12) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO5")
+            .field(
+                "lp_gpio5_mcu_oe",
+                &format_args!("{}", self.lp_gpio5_mcu_oe().bit()),
+            )
+            .field(
+                "lp_gpio5_slp_sel",
+                &format_args!("{}", self.lp_gpio5_slp_sel().bit()),
+            )
+            .field(
+                "lp_gpio5_mcu_wpd",
+                &format_args!("{}", self.lp_gpio5_mcu_wpd().bit()),
+            )
+            .field(
+                "lp_gpio5_mcu_wpu",
+                &format_args!("{}", self.lp_gpio5_mcu_wpu().bit()),
+            )
+            .field(
+                "lp_gpio5_mcu_ie",
+                &format_args!("{}", self.lp_gpio5_mcu_ie().bit()),
+            )
+            .field(
+                "lp_gpio5_mcu_drv",
+                &format_args!("{}", self.lp_gpio5_mcu_drv().bits()),
+            )
+            .field(
+                "lp_gpio5_fun_wpd",
+                &format_args!("{}", self.lp_gpio5_fun_wpd().bit()),
+            )
+            .field(
+                "lp_gpio5_fun_wpu",
+                &format_args!("{}", self.lp_gpio5_fun_wpu().bit()),
+            )
+            .field(
+                "lp_gpio5_fun_ie",
+                &format_args!("{}", self.lp_gpio5_fun_ie().bit()),
+            )
+            .field(
+                "lp_gpio5_fun_drv",
+                &format_args!("{}", self.lp_gpio5_fun_drv().bits()),
+            )
+            .field(
+                "lp_gpio5_mcu_sel",
+                &format_args!("{}", self.lp_gpio5_mcu_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

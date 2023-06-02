@@ -35,40 +35,39 @@ impl From<crate::W<HP_MODEM_DIG_POWER_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_MODEM_VDD_SPI_PD_EN` reader - need_des"]
-pub type HP_MODEM_VDD_SPI_PD_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_VDD_SPI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_VDD_SPI_PD_EN` writer - need_des"]
 pub type HP_MODEM_VDD_SPI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_MODEM_HP_MEM_DSLP` reader - need_des"]
-pub type HP_MODEM_HP_MEM_DSLP_R = crate::BitReader<bool>;
+pub type HP_MODEM_HP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_HP_MEM_DSLP` writer - need_des"]
-pub type HP_MODEM_HP_MEM_DSLP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+pub type HP_MODEM_HP_MEM_DSLP_W<'a, const O: u8> = crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_MODEM_PD_HP_MEM_PD_EN` reader - need_des"]
-pub type HP_MODEM_PD_HP_MEM_PD_EN_R = crate::FieldReader<u8, u8>;
+pub type HP_MODEM_PD_HP_MEM_PD_EN_R = crate::FieldReader;
 #[doc = "Field `HP_MODEM_PD_HP_MEM_PD_EN` writer - need_des"]
 pub type HP_MODEM_PD_HP_MEM_PD_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, HP_MODEM_DIG_POWER_SPEC, 4, O>;
 #[doc = "Field `HP_MODEM_PD_HP_WIFI_PD_EN` reader - need_des"]
-pub type HP_MODEM_PD_HP_WIFI_PD_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_PD_HP_WIFI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_PD_HP_WIFI_PD_EN` writer - need_des"]
 pub type HP_MODEM_PD_HP_WIFI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_MODEM_PD_HP_CPU_PD_EN` reader - need_des"]
-pub type HP_MODEM_PD_HP_CPU_PD_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_PD_HP_CPU_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_PD_HP_CPU_PD_EN` writer - need_des"]
 pub type HP_MODEM_PD_HP_CPU_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_MODEM_PD_HP_AON_PD_EN` reader - need_des"]
-pub type HP_MODEM_PD_HP_AON_PD_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_PD_HP_AON_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_PD_HP_AON_PD_EN` writer - need_des"]
 pub type HP_MODEM_PD_HP_AON_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_MODEM_PD_TOP_PD_EN` reader - need_des"]
-pub type HP_MODEM_PD_TOP_PD_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_PD_TOP_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_PD_TOP_PD_EN` writer - need_des"]
 pub type HP_MODEM_PD_TOP_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_DIG_POWER_SPEC, O>;
 impl R {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
@@ -104,6 +103,47 @@ impl R {
     #[inline(always)]
     pub fn hp_modem_pd_top_pd_en(&self) -> HP_MODEM_PD_TOP_PD_EN_R {
         HP_MODEM_PD_TOP_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_MODEM_DIG_POWER")
+            .field(
+                "hp_modem_vdd_spi_pd_en",
+                &format_args!("{}", self.hp_modem_vdd_spi_pd_en().bit()),
+            )
+            .field(
+                "hp_modem_hp_mem_dslp",
+                &format_args!("{}", self.hp_modem_hp_mem_dslp().bit()),
+            )
+            .field(
+                "hp_modem_pd_hp_mem_pd_en",
+                &format_args!("{}", self.hp_modem_pd_hp_mem_pd_en().bits()),
+            )
+            .field(
+                "hp_modem_pd_hp_wifi_pd_en",
+                &format_args!("{}", self.hp_modem_pd_hp_wifi_pd_en().bit()),
+            )
+            .field(
+                "hp_modem_pd_hp_cpu_pd_en",
+                &format_args!("{}", self.hp_modem_pd_hp_cpu_pd_en().bit()),
+            )
+            .field(
+                "hp_modem_pd_hp_aon_pd_en",
+                &format_args!("{}", self.hp_modem_pd_hp_aon_pd_en().bit()),
+            )
+            .field(
+                "hp_modem_pd_top_pd_en",
+                &format_args!("{}", self.hp_modem_pd_top_pd_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_DIG_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

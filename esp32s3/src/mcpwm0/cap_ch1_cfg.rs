@@ -35,24 +35,23 @@ impl From<crate::W<CAP_CH1_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP1_EN` reader - When set, capture on channel 2 is enabled"]
-pub type CAP1_EN_R = crate::BitReader<bool>;
+pub type CAP1_EN_R = crate::BitReader;
 #[doc = "Field `CAP1_EN` writer - When set, capture on channel 2 is enabled"]
-pub type CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH1_CFG_SPEC, bool, O>;
+pub type CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH1_CFG_SPEC, O>;
 #[doc = "Field `CAP1_MODE` reader - Edge of capture on channel 1 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
-pub type CAP1_MODE_R = crate::FieldReader<u8, u8>;
+pub type CAP1_MODE_R = crate::FieldReader;
 #[doc = "Field `CAP1_MODE` writer - Edge of capture on channel 1 after prescaling. When bit0 is set to 1: enable capture on the negative edge, When bit1 is set to 1: enable capture on the positive edge."]
-pub type CAP1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CAP_CH1_CFG_SPEC, u8, u8, 2, O>;
+pub type CAP1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH1_CFG_SPEC, 2, O>;
 #[doc = "Field `CAP1_PRESCALE` reader - Value of prescaling on possitive edge of CAP1. Prescale value = PWM_CAP1_PRESCALE + 1"]
-pub type CAP1_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type CAP1_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CAP1_PRESCALE` writer - Value of prescaling on possitive edge of CAP1. Prescale value = PWM_CAP1_PRESCALE + 1"]
-pub type CAP1_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAP_CH1_CFG_SPEC, u8, u8, 8, O>;
+pub type CAP1_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH1_CFG_SPEC, 8, O>;
 #[doc = "Field `CAP1_IN_INVERT` reader - when set, CAP1 form GPIO matrix is inverted before prescale"]
-pub type CAP1_IN_INVERT_R = crate::BitReader<bool>;
+pub type CAP1_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CAP1_IN_INVERT` writer - when set, CAP1 form GPIO matrix is inverted before prescale"]
-pub type CAP1_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH1_CFG_SPEC, bool, O>;
+pub type CAP1_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH1_CFG_SPEC, O>;
 #[doc = "Field `CAP1_SW` writer - Write 1 will trigger a software forced capture on channel 1"]
-pub type CAP1_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH1_CFG_SPEC, bool, O>;
+pub type CAP1_SW_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH1_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - When set, capture on channel 2 is enabled"]
     #[inline(always)]
@@ -73,6 +72,29 @@ impl R {
     #[inline(always)]
     pub fn cap1_in_invert(&self) -> CAP1_IN_INVERT_R {
         CAP1_IN_INVERT_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CAP_CH1_CFG")
+            .field("cap1_en", &format_args!("{}", self.cap1_en().bit()))
+            .field("cap1_mode", &format_args!("{}", self.cap1_mode().bits()))
+            .field(
+                "cap1_prescale",
+                &format_args!("{}", self.cap1_prescale().bits()),
+            )
+            .field(
+                "cap1_in_invert",
+                &format_args!("{}", self.cap1_in_invert().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CAP_CH1_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

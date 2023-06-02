@@ -14,25 +14,25 @@ impl From<crate::R<SR_SPEC>> for R {
     }
 }
 #[doc = "Field `RESP_REC` reader - reg_resp_rec"]
-pub type RESP_REC_R = crate::BitReader<bool>;
+pub type RESP_REC_R = crate::BitReader;
 #[doc = "Field `SLAVE_RW` reader - reg_slave_rw"]
-pub type SLAVE_RW_R = crate::BitReader<bool>;
+pub type SLAVE_RW_R = crate::BitReader;
 #[doc = "Field `ARB_LOST` reader - reg_arb_lost"]
-pub type ARB_LOST_R = crate::BitReader<bool>;
+pub type ARB_LOST_R = crate::BitReader;
 #[doc = "Field `BUS_BUSY` reader - reg_bus_busy"]
-pub type BUS_BUSY_R = crate::BitReader<bool>;
+pub type BUS_BUSY_R = crate::BitReader;
 #[doc = "Field `SLAVE_ADDRESSED` reader - reg_slave_addressed"]
-pub type SLAVE_ADDRESSED_R = crate::BitReader<bool>;
+pub type SLAVE_ADDRESSED_R = crate::BitReader;
 #[doc = "Field `RXFIFO_CNT` reader - reg_rxfifo_cnt"]
-pub type RXFIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `STRETCH_CAUSE` reader - reg_stretch_cause"]
-pub type STRETCH_CAUSE_R = crate::FieldReader<u8, u8>;
+pub type STRETCH_CAUSE_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_CNT` reader - reg_txfifo_cnt"]
-pub type TXFIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - reg_scl_main_state_last"]
-pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader;
 #[doc = "Field `SCL_STATE_LAST` reader - reg_scl_state_last"]
-pub type SCL_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_STATE_LAST_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - reg_resp_rec"]
     #[inline(always)]
@@ -83,6 +83,41 @@ impl R {
     #[inline(always)]
     pub fn scl_state_last(&self) -> SCL_STATE_LAST_R {
         SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SR")
+            .field("resp_rec", &format_args!("{}", self.resp_rec().bit()))
+            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
+            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
+            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
+            .field(
+                "slave_addressed",
+                &format_args!("{}", self.slave_addressed().bit()),
+            )
+            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
+            .field(
+                "stretch_cause",
+                &format_args!("{}", self.stretch_cause().bits()),
+            )
+            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
+            .field(
+                "scl_main_state_last",
+                &format_args!("{}", self.scl_main_state_last().bits()),
+            )
+            .field(
+                "scl_state_last",
+                &format_args!("{}", self.scl_state_last().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "I2C_SR_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]

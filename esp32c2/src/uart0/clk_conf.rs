@@ -35,45 +35,45 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_B` reader - The denominator of the frequency divider factor."]
-pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - The denominator of the frequency divider factor."]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_DIV_A` reader - The numerator of the frequency divider factor."]
-pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - The numerator of the frequency divider factor."]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_DIV_NUM` reader - The integral part of the frequency divider factor."]
-pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - The integral part of the frequency divider factor."]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `SCLK_SEL` reader - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
-pub type SCLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SCLK_SEL` writer - UART clock source select. 1: 80Mhz, 2: 8Mhz, 3: XTAL."]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 2, O>;
+pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 2, O>;
 #[doc = "Field `SCLK_EN` reader - Set this bit to enable UART Tx/Rx clock."]
-pub type SCLK_EN_R = crate::BitReader<bool>;
+pub type SCLK_EN_R = crate::BitReader;
 #[doc = "Field `SCLK_EN` writer - Set this bit to enable UART Tx/Rx clock."]
-pub type SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
-pub type RST_CORE_R = crate::BitReader<bool>;
+pub type RST_CORE_R = crate::BitReader;
 #[doc = "Field `RST_CORE` writer - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
-pub type RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_R = crate::BitReader<bool>;
+pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Set this bit to enable UART Tx clock."]
-pub type TX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type TX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `RX_SCLK_EN` reader - Set this bit to enable UART Rx clock."]
-pub type RX_SCLK_EN_R = crate::BitReader<bool>;
+pub type RX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `RX_SCLK_EN` writer - Set this bit to enable UART Rx clock."]
-pub type RX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type RX_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `TX_RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Tx."]
-pub type TX_RST_CORE_R = crate::BitReader<bool>;
+pub type TX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `TX_RST_CORE` writer - Write 1 then write 0 to this bit, reset UART Tx."]
-pub type TX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type TX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `RX_RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Rx."]
-pub type RX_RST_CORE_R = crate::BitReader<bool>;
+pub type RX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `RX_RST_CORE` writer - Write 1 then write 0 to this bit, reset UART Rx."]
-pub type RX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type RX_RST_CORE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor."]
     #[inline(always)]
@@ -124,6 +124,32 @@ impl R {
     #[inline(always)]
     pub fn rx_rst_core(&self) -> RX_RST_CORE_R {
         RX_RST_CORE_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
+            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
+            .field(
+                "sclk_div_num",
+                &format_args!("{}", self.sclk_div_num().bits()),
+            )
+            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bits()))
+            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
+            .field("rst_core", &format_args!("{}", self.rst_core().bit()))
+            .field("tx_sclk_en", &format_args!("{}", self.tx_sclk_en().bit()))
+            .field("rx_sclk_en", &format_args!("{}", self.rx_sclk_en().bit()))
+            .field("tx_rst_core", &format_args!("{}", self.tx_rst_core().bit()))
+            .field("rx_rst_core", &format_args!("{}", self.rx_rst_core().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,26 @@ impl From<crate::W<GEN2_TSTMP_B_SPEC>> for W {
 #[doc = "Field `GEN2_B` reader - "]
 pub type GEN2_B_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GEN2_B` writer - "]
-pub type GEN2_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN2_TSTMP_B_SPEC, u16, u16, 16, O>;
+pub type GEN2_B_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_TSTMP_B_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn gen2_b(&self) -> GEN2_B_R {
         GEN2_B_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GEN2_TSTMP_B")
+            .field("gen2_b", &format_args!("{}", self.gen2_b().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GEN2_TSTMP_B_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

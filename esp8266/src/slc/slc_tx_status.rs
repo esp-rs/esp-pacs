@@ -35,13 +35,13 @@ impl From<crate::W<SLC_TX_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TX_FULL` reader - "]
-pub type SLC_TX_FULL_R = crate::BitReader<bool>;
+pub type SLC_TX_FULL_R = crate::BitReader;
 #[doc = "Field `SLC_TX_FULL` writer - "]
-pub type SLC_TX_FULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_TX_STATUS_SPEC, bool, O>;
+pub type SLC_TX_FULL_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TX_STATUS_SPEC, O>;
 #[doc = "Field `SLC_TX_EMPTY` reader - "]
-pub type SLC_TX_EMPTY_R = crate::BitReader<bool>;
+pub type SLC_TX_EMPTY_R = crate::BitReader;
 #[doc = "Field `SLC_TX_EMPTY` writer - "]
-pub type SLC_TX_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_TX_STATUS_SPEC, bool, O>;
+pub type SLC_TX_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TX_STATUS_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn slc_tx_empty(&self) -> SLC_TX_EMPTY_R {
         SLC_TX_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_TX_STATUS")
+            .field(
+                "slc_tx_empty",
+                &format_args!("{}", self.slc_tx_empty().bit()),
+            )
+            .field("slc_tx_full", &format_args!("{}", self.slc_tx_full().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_TX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

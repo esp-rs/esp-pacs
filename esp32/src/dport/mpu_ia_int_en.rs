@@ -38,12 +38,29 @@ impl From<crate::W<MPU_IA_INT_EN_SPEC>> for W {
 pub type MPU_IA_INT_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MPU_IA_INT_EN` writer - "]
 pub type MPU_IA_INT_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MPU_IA_INT_EN_SPEC, u32, u32, 17, O>;
+    crate::FieldWriter<'a, MPU_IA_INT_EN_SPEC, 17, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:16"]
     #[inline(always)]
     pub fn mpu_ia_int_en(&self) -> MPU_IA_INT_EN_R {
         MPU_IA_INT_EN_R::new(self.bits & 0x0001_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MPU_IA_INT_EN")
+            .field(
+                "mpu_ia_int_en",
+                &format_args!("{}", self.mpu_ia_int_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MPU_IA_INT_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

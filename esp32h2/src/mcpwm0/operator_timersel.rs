@@ -35,20 +35,20 @@ impl From<crate::W<OPERATOR_TIMERSEL_SPEC>> for W {
     }
 }
 #[doc = "Field `OPERATOR0_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator0, 0: timer0, 1: timer1, 2: timer2"]
-pub type OPERATOR0_TIMERSEL_R = crate::FieldReader<u8, u8>;
+pub type OPERATOR0_TIMERSEL_R = crate::FieldReader;
 #[doc = "Field `OPERATOR0_TIMERSEL` writer - Select which PWM timer's is the timing reference for PWM operator0, 0: timer0, 1: timer1, 2: timer2"]
 pub type OPERATOR0_TIMERSEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, OPERATOR_TIMERSEL_SPEC, 2, O>;
 #[doc = "Field `OPERATOR1_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator1, 0: timer0, 1: timer1, 2: timer2"]
-pub type OPERATOR1_TIMERSEL_R = crate::FieldReader<u8, u8>;
+pub type OPERATOR1_TIMERSEL_R = crate::FieldReader;
 #[doc = "Field `OPERATOR1_TIMERSEL` writer - Select which PWM timer's is the timing reference for PWM operator1, 0: timer0, 1: timer1, 2: timer2"]
 pub type OPERATOR1_TIMERSEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, OPERATOR_TIMERSEL_SPEC, 2, O>;
 #[doc = "Field `OPERATOR2_TIMERSEL` reader - Select which PWM timer's is the timing reference for PWM operator2, 0: timer0, 1: timer1, 2: timer2"]
-pub type OPERATOR2_TIMERSEL_R = crate::FieldReader<u8, u8>;
+pub type OPERATOR2_TIMERSEL_R = crate::FieldReader;
 #[doc = "Field `OPERATOR2_TIMERSEL` writer - Select which PWM timer's is the timing reference for PWM operator2, 0: timer0, 1: timer1, 2: timer2"]
 pub type OPERATOR2_TIMERSEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, OPERATOR_TIMERSEL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Select which PWM timer's is the timing reference for PWM operator0, 0: timer0, 1: timer1, 2: timer2"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn operator2_timersel(&self) -> OPERATOR2_TIMERSEL_R {
         OPERATOR2_TIMERSEL_R::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OPERATOR_TIMERSEL")
+            .field(
+                "operator0_timersel",
+                &format_args!("{}", self.operator0_timersel().bits()),
+            )
+            .field(
+                "operator1_timersel",
+                &format_args!("{}", self.operator1_timersel().bits()),
+            )
+            .field(
+                "operator2_timersel",
+                &format_args!("{}", self.operator2_timersel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OPERATOR_TIMERSEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

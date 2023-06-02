@@ -20,65 +20,71 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_STOP_INT_CLR` writer - Set this bit to clear the interrupt triggered when the timer 0 stops."]
-pub type TIMER0_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_STOP_INT_CLR` writer - Set this bit to clear the interrupt triggered when the timer 1 stops."]
-pub type TIMER1_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_STOP_INT_CLR` writer - Set this bit to clear the interrupt triggered when the timer 2 stops."]
-pub type TIMER2_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER0_TEZ_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 0 TEZ event."]
-pub type TIMER0_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_TEZ_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 1 TEZ event."]
-pub type TIMER1_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_TEZ_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 2 TEZ event."]
-pub type TIMER2_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER0_TEP_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 0 TEP event."]
-pub type TIMER0_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_TEP_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 1 TEP event."]
-pub type TIMER1_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_TEP_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM timer 2 TEP event."]
-pub type TIMER2_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT0_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f0 starts."]
-pub type FAULT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT1_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f1 starts."]
-pub type FAULT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT2_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f2 starts."]
-pub type FAULT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT0_CLR_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f0 ends."]
-pub type FAULT0_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT0_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT1_CLR_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f1 ends."]
-pub type FAULT1_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT1_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT2_CLR_INT_CLR` writer - Set this bit to clear the interrupt triggered when event_f2 ends."]
-pub type FAULT2_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT2_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR0_TEA_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 0 TEA event"]
-pub type CMPR0_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR0_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR1_TEA_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 1 TEA event"]
-pub type CMPR1_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR1_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR2_TEA_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 2 TEA event"]
-pub type CMPR2_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR2_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR0_TEB_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 0 TEB event"]
-pub type CMPR0_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR0_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR1_TEB_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 1 TEB event"]
-pub type CMPR1_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR1_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CMPR2_TEB_INT_CLR` writer - Set this bit to clear the interrupt triggered by a PWM operator 2 TEB event"]
-pub type CMPR2_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CMPR2_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ0_CBC_INT_CLR` writer - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
-pub type TZ0_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ0_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ1_CBC_INT_CLR` writer - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
-pub type TZ1_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ1_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ2_CBC_INT_CLR` writer - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
-pub type TZ2_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ2_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ0_OST_INT_CLR` writer - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM0."]
-pub type TZ0_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ0_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ1_OST_INT_CLR` writer - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM1."]
-pub type TZ1_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ1_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TZ2_OST_INT_CLR` writer - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM2."]
-pub type TZ2_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TZ2_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP0_INT_CLR` writer - Set this bit to clear the interrupt triggered by capture on channel 0."]
-pub type CAP0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP1_INT_CLR` writer - Set this bit to clear the interrupt triggered by capture on channel 1."]
-pub type CAP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP2_INT_CLR` writer - Set this bit to clear the interrupt triggered by capture on channel 2."]
-pub type CAP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the interrupt triggered when the timer 0 stops."]
     #[inline(always)]

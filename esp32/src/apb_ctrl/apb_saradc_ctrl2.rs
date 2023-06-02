@@ -35,25 +35,22 @@ impl From<crate::W<APB_SARADC_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` reader - "]
-pub type SARADC_MEAS_NUM_LIMIT_R = crate::BitReader<bool>;
+pub type SARADC_MEAS_NUM_LIMIT_R = crate::BitReader;
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` writer - "]
-pub type SARADC_MEAS_NUM_LIMIT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_SARADC_CTRL2_SPEC, bool, O>;
+pub type SARADC_MEAS_NUM_LIMIT_W<'a, const O: u8> = crate::BitWriter<'a, APB_SARADC_CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` reader - max conversion number"]
-pub type SARADC_MAX_MEAS_NUM_R = crate::FieldReader<u8, u8>;
+pub type SARADC_MAX_MEAS_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` writer - max conversion number"]
 pub type SARADC_MAX_MEAS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_SARADC_CTRL2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, APB_SARADC_CTRL2_SPEC, 8, O>;
 #[doc = "Field `SARADC_SAR1_INV` reader - 1: data to DIG ADC1 CTRL is inverted otherwise not"]
-pub type SARADC_SAR1_INV_R = crate::BitReader<bool>;
+pub type SARADC_SAR1_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR1_INV` writer - 1: data to DIG ADC1 CTRL is inverted otherwise not"]
-pub type SARADC_SAR1_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_SARADC_CTRL2_SPEC, bool, O>;
+pub type SARADC_SAR1_INV_W<'a, const O: u8> = crate::BitWriter<'a, APB_SARADC_CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_SAR2_INV` reader - 1: data to DIG ADC2 CTRL is inverted otherwise not"]
-pub type SARADC_SAR2_INV_R = crate::BitReader<bool>;
+pub type SARADC_SAR2_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR2_INV` writer - 1: data to DIG ADC2 CTRL is inverted otherwise not"]
-pub type SARADC_SAR2_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_SARADC_CTRL2_SPEC, bool, O>;
+pub type SARADC_SAR2_INV_W<'a, const O: u8> = crate::BitWriter<'a, APB_SARADC_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -74,6 +71,35 @@ impl R {
     #[inline(always)]
     pub fn saradc_sar2_inv(&self) -> SARADC_SAR2_INV_R {
         SARADC_SAR2_INV_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_SARADC_CTRL2")
+            .field(
+                "saradc_meas_num_limit",
+                &format_args!("{}", self.saradc_meas_num_limit().bit()),
+            )
+            .field(
+                "saradc_max_meas_num",
+                &format_args!("{}", self.saradc_max_meas_num().bits()),
+            )
+            .field(
+                "saradc_sar1_inv",
+                &format_args!("{}", self.saradc_sar1_inv().bit()),
+            )
+            .field(
+                "saradc_sar2_inv",
+                &format_args!("{}", self.saradc_sar2_inv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_SARADC_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

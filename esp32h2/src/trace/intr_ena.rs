@@ -35,14 +35,13 @@ impl From<crate::W<INTR_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_OVERFLOW_INTR_ENA` reader - Set 1 enable fifo_overflow interrupt"]
-pub type FIFO_OVERFLOW_INTR_ENA_R = crate::BitReader<bool>;
+pub type FIFO_OVERFLOW_INTR_ENA_R = crate::BitReader;
 #[doc = "Field `FIFO_OVERFLOW_INTR_ENA` writer - Set 1 enable fifo_overflow interrupt"]
-pub type FIFO_OVERFLOW_INTR_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INTR_ENA_SPEC, bool, O>;
+pub type FIFO_OVERFLOW_INTR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_ENA_SPEC, O>;
 #[doc = "Field `MEM_FULL_INTR_ENA` reader - Set 1 enable mem_full interrupt"]
-pub type MEM_FULL_INTR_ENA_R = crate::BitReader<bool>;
+pub type MEM_FULL_INTR_ENA_R = crate::BitReader;
 #[doc = "Field `MEM_FULL_INTR_ENA` writer - Set 1 enable mem_full interrupt"]
-pub type MEM_FULL_INTR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_ENA_SPEC, bool, O>;
+pub type MEM_FULL_INTR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 enable fifo_overflow interrupt"]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn mem_full_intr_ena(&self) -> MEM_FULL_INTR_ENA_R {
         MEM_FULL_INTR_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_ENA")
+            .field(
+                "fifo_overflow_intr_ena",
+                &format_args!("{}", self.fifo_overflow_intr_ena().bit()),
+            )
+            .field(
+                "mem_full_intr_ena",
+                &format_args!("{}", self.mem_full_intr_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

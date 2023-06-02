@@ -35,38 +35,33 @@ impl From<crate::W<GEN0_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` reader - "]
-pub type GEN0_CNTUFORCE_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type GEN0_CNTUFORCE_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN0_CNTUFORCE_UPMETHOD` writer - "]
-pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN0_FORCE_SPEC, u8, u8, 6, O>;
+pub type GEN0_CNTUFORCE_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_FORCE_SPEC, 6, O>;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` reader - "]
-pub type GEN0_A_CNTUFORCE_MODE_R = crate::FieldReader<u8, u8>;
+pub type GEN0_A_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_CNTUFORCE_MODE` writer - "]
-pub type GEN0_A_CNTUFORCE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN0_FORCE_SPEC, u8, u8, 2, O>;
+pub type GEN0_A_CNTUFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_FORCE_SPEC, 2, O>;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` reader - "]
-pub type GEN0_B_CNTUFORCE_MODE_R = crate::FieldReader<u8, u8>;
+pub type GEN0_B_CNTUFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_CNTUFORCE_MODE` writer - "]
-pub type GEN0_B_CNTUFORCE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN0_FORCE_SPEC, u8, u8, 2, O>;
+pub type GEN0_B_CNTUFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_FORCE_SPEC, 2, O>;
 #[doc = "Field `GEN0_A_NCIFORCE` reader - "]
-pub type GEN0_A_NCIFORCE_R = crate::BitReader<bool>;
+pub type GEN0_A_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_A_NCIFORCE` writer - "]
-pub type GEN0_A_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GEN0_FORCE_SPEC, bool, O>;
+pub type GEN0_A_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, GEN0_FORCE_SPEC, O>;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` reader - "]
-pub type GEN0_A_NCIFORCE_MODE_R = crate::FieldReader<u8, u8>;
+pub type GEN0_A_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_A_NCIFORCE_MODE` writer - "]
-pub type GEN0_A_NCIFORCE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN0_FORCE_SPEC, u8, u8, 2, O>;
+pub type GEN0_A_NCIFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_FORCE_SPEC, 2, O>;
 #[doc = "Field `GEN0_B_NCIFORCE` reader - "]
-pub type GEN0_B_NCIFORCE_R = crate::BitReader<bool>;
+pub type GEN0_B_NCIFORCE_R = crate::BitReader;
 #[doc = "Field `GEN0_B_NCIFORCE` writer - "]
-pub type GEN0_B_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GEN0_FORCE_SPEC, bool, O>;
+pub type GEN0_B_NCIFORCE_W<'a, const O: u8> = crate::BitWriter<'a, GEN0_FORCE_SPEC, O>;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` reader - "]
-pub type GEN0_B_NCIFORCE_MODE_R = crate::FieldReader<u8, u8>;
+pub type GEN0_B_NCIFORCE_MODE_R = crate::FieldReader;
 #[doc = "Field `GEN0_B_NCIFORCE_MODE` writer - "]
-pub type GEN0_B_NCIFORCE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN0_FORCE_SPEC, u8, u8, 2, O>;
+pub type GEN0_B_NCIFORCE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_FORCE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -102,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn gen0_b_nciforce_mode(&self) -> GEN0_B_NCIFORCE_MODE_R {
         GEN0_B_NCIFORCE_MODE_R::new(((self.bits >> 14) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GEN0_FORCE")
+            .field(
+                "gen0_cntuforce_upmethod",
+                &format_args!("{}", self.gen0_cntuforce_upmethod().bits()),
+            )
+            .field(
+                "gen0_a_cntuforce_mode",
+                &format_args!("{}", self.gen0_a_cntuforce_mode().bits()),
+            )
+            .field(
+                "gen0_b_cntuforce_mode",
+                &format_args!("{}", self.gen0_b_cntuforce_mode().bits()),
+            )
+            .field(
+                "gen0_a_nciforce",
+                &format_args!("{}", self.gen0_a_nciforce().bit()),
+            )
+            .field(
+                "gen0_a_nciforce_mode",
+                &format_args!("{}", self.gen0_a_nciforce_mode().bits()),
+            )
+            .field(
+                "gen0_b_nciforce",
+                &format_args!("{}", self.gen0_b_nciforce().bit()),
+            )
+            .field(
+                "gen0_b_nciforce_mode",
+                &format_args!("{}", self.gen0_b_nciforce_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GEN0_FORCE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

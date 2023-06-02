@@ -35,14 +35,28 @@ impl From<crate::W<JTAG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `SOFT` reader - If strapping_sel_jtag feature is disabled by efuse, and if neither pad_jtag or usb_jtag is disabled by efuse, this field determines which one jtag between usb_jtag and pad_jtag will be used. 1'b1(default): usb_jtag, 1'b0: pad_jtag."]
-pub type SOFT_R = crate::BitReader<bool>;
+pub type SOFT_R = crate::BitReader;
 #[doc = "Field `SOFT` writer - If strapping_sel_jtag feature is disabled by efuse, and if neither pad_jtag or usb_jtag is disabled by efuse, this field determines which one jtag between usb_jtag and pad_jtag will be used. 1'b1(default): usb_jtag, 1'b0: pad_jtag."]
-pub type SOFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, JTAG_SEL_SPEC, bool, O>;
+pub type SOFT_W<'a, const O: u8> = crate::BitWriter<'a, JTAG_SEL_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - If strapping_sel_jtag feature is disabled by efuse, and if neither pad_jtag or usb_jtag is disabled by efuse, this field determines which one jtag between usb_jtag and pad_jtag will be used. 1'b1(default): usb_jtag, 1'b0: pad_jtag."]
     #[inline(always)]
     pub fn soft(&self) -> SOFT_R {
         SOFT_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("JTAG_SEL")
+            .field("soft", &format_args!("{}", self.soft().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<JTAG_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

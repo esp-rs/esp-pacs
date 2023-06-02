@@ -22,6 +22,23 @@ impl R {
         SLC0_TX_SUC_EOF_DES_ADDR_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0_TX_EOF_DES_ADDR")
+            .field(
+                "slc0_tx_suc_eof_des_addr",
+                &format_args!("{}", self.slc0_tx_suc_eof_des_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0_TX_EOF_DES_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [_0_tx_eof_des_addr](index.html) module"]
 pub struct _0_TX_EOF_DES_ADDR_SPEC;
 impl crate::RegisterSpec for _0_TX_EOF_DES_ADDR_SPEC {

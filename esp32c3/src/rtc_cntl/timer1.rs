@@ -35,26 +35,25 @@ impl From<crate::W<TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_STALL_EN` reader - CPU stall enable bit"]
-pub type CPU_STALL_EN_R = crate::BitReader<bool>;
+pub type CPU_STALL_EN_R = crate::BitReader;
 #[doc = "Field `CPU_STALL_EN` writer - CPU stall enable bit"]
-pub type CPU_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER1_SPEC, bool, O>;
+pub type CPU_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMER1_SPEC, O>;
 #[doc = "Field `CPU_STALL_WAIT` reader - CPU stall wait cycles in fast_clk_rtc"]
-pub type CPU_STALL_WAIT_R = crate::FieldReader<u8, u8>;
+pub type CPU_STALL_WAIT_R = crate::FieldReader;
 #[doc = "Field `CPU_STALL_WAIT` writer - CPU stall wait cycles in fast_clk_rtc"]
-pub type CPU_STALL_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 5, O>;
+pub type CPU_STALL_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SPEC, 5, O>;
 #[doc = "Field `CK8M_WAIT` reader - CK8M wait cycles in slow_clk_rtc"]
-pub type CK8M_WAIT_R = crate::FieldReader<u8, u8>;
+pub type CK8M_WAIT_R = crate::FieldReader;
 #[doc = "Field `CK8M_WAIT` writer - CK8M wait cycles in slow_clk_rtc"]
-pub type CK8M_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 8, O>;
+pub type CK8M_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SPEC, 8, O>;
 #[doc = "Field `XTL_BUF_WAIT` reader - XTAL wait cycles in slow_clk_rtc"]
 pub type XTL_BUF_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `XTL_BUF_WAIT` writer - XTAL wait cycles in slow_clk_rtc"]
-pub type XTL_BUF_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER1_SPEC, u16, u16, 10, O>;
+pub type XTL_BUF_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `PLL_BUF_WAIT` reader - PLL wait cycles in slow_clk_rtc"]
-pub type PLL_BUF_WAIT_R = crate::FieldReader<u8, u8>;
+pub type PLL_BUF_WAIT_R = crate::FieldReader;
 #[doc = "Field `PLL_BUF_WAIT` writer - PLL wait cycles in slow_clk_rtc"]
-pub type PLL_BUF_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 8, O>;
+pub type PLL_BUF_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - CPU stall enable bit"]
     #[inline(always)]
@@ -80,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn pll_buf_wait(&self) -> PLL_BUF_WAIT_R {
         PLL_BUF_WAIT_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER1")
+            .field(
+                "cpu_stall_en",
+                &format_args!("{}", self.cpu_stall_en().bit()),
+            )
+            .field(
+                "cpu_stall_wait",
+                &format_args!("{}", self.cpu_stall_wait().bits()),
+            )
+            .field("ck8m_wait", &format_args!("{}", self.ck8m_wait().bits()))
+            .field(
+                "xtl_buf_wait",
+                &format_args!("{}", self.xtl_buf_wait().bits()),
+            )
+            .field(
+                "pll_buf_wait",
+                &format_args!("{}", self.pll_buf_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

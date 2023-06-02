@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - Raw status interrupt of channel 0"]
     pub in_int_raw_ch0: IN_INT_RAW_CH,

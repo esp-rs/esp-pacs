@@ -35,30 +35,27 @@ impl From<crate::W<PIN7_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_GPIO7_SYNC_BYPASS` reader - need des"]
-pub type LP_GPIO7_SYNC_BYPASS_R = crate::FieldReader<u8, u8>;
+pub type LP_GPIO7_SYNC_BYPASS_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO7_SYNC_BYPASS` writer - need des"]
-pub type LP_GPIO7_SYNC_BYPASS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PIN7_SPEC, u8, u8, 2, O>;
+pub type LP_GPIO7_SYNC_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, PIN7_SPEC, 2, O>;
 #[doc = "Field `LP_GPIO7_PAD_DRIVER` reader - need des"]
-pub type LP_GPIO7_PAD_DRIVER_R = crate::BitReader<bool>;
+pub type LP_GPIO7_PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `LP_GPIO7_PAD_DRIVER` writer - need des"]
-pub type LP_GPIO7_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN7_SPEC, bool, O>;
+pub type LP_GPIO7_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, PIN7_SPEC, O>;
 #[doc = "Field `LP_GPIO7_EDGE_WAKEUP_CLR` writer - need des"]
-pub type LP_GPIO7_EDGE_WAKEUP_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PIN7_SPEC, bool, O>;
+pub type LP_GPIO7_EDGE_WAKEUP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, PIN7_SPEC, O>;
 #[doc = "Field `LP_GPIO7_INT_TYPE` reader - need des"]
-pub type LP_GPIO7_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type LP_GPIO7_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `LP_GPIO7_INT_TYPE` writer - need des"]
-pub type LP_GPIO7_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PIN7_SPEC, u8, u8, 3, O>;
+pub type LP_GPIO7_INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, PIN7_SPEC, 3, O>;
 #[doc = "Field `LP_GPIO7_WAKEUP_ENABLE` reader - need des"]
-pub type LP_GPIO7_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type LP_GPIO7_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LP_GPIO7_WAKEUP_ENABLE` writer - need des"]
-pub type LP_GPIO7_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN7_SPEC, bool, O>;
+pub type LP_GPIO7_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PIN7_SPEC, O>;
 #[doc = "Field `LP_GPIO7_FILTER_EN` reader - need des"]
-pub type LP_GPIO7_FILTER_EN_R = crate::BitReader<bool>;
+pub type LP_GPIO7_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `LP_GPIO7_FILTER_EN` writer - need des"]
-pub type LP_GPIO7_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN7_SPEC, bool, O>;
+pub type LP_GPIO7_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, PIN7_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
@@ -84,6 +81,39 @@ impl R {
     #[inline(always)]
     pub fn lp_gpio7_filter_en(&self) -> LP_GPIO7_FILTER_EN_R {
         LP_GPIO7_FILTER_EN_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PIN7")
+            .field(
+                "lp_gpio7_sync_bypass",
+                &format_args!("{}", self.lp_gpio7_sync_bypass().bits()),
+            )
+            .field(
+                "lp_gpio7_pad_driver",
+                &format_args!("{}", self.lp_gpio7_pad_driver().bit()),
+            )
+            .field(
+                "lp_gpio7_int_type",
+                &format_args!("{}", self.lp_gpio7_int_type().bits()),
+            )
+            .field(
+                "lp_gpio7_wakeup_enable",
+                &format_args!("{}", self.lp_gpio7_wakeup_enable().bit()),
+            )
+            .field(
+                "lp_gpio7_filter_en",
+                &format_args!("{}", self.lp_gpio7_filter_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PIN7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

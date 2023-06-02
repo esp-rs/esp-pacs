@@ -37,36 +37,35 @@ impl From<crate::W<TX_CFG0_SPEC>> for W {
 #[doc = "Field `TX_BYTELEN` reader - Configures tx sending data byte length."]
 pub type TX_BYTELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_BYTELEN` writer - Configures tx sending data byte length."]
-pub type TX_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_CFG0_SPEC, u16, u16, 16, O>;
+pub type TX_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG0_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Write 1 to enable output tx clock gating."]
-pub type TX_GATING_EN_R = crate::BitReader<bool>;
+pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Write 1 to enable output tx clock gating."]
-pub type TX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 #[doc = "Field `TX_START` reader - Write 1 to start tx global data output."]
-pub type TX_START_R = crate::BitReader<bool>;
+pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - Write 1 to start tx global data output."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 #[doc = "Field `TX_HW_VALID_EN` reader - Write 1 to enable tx hardware data valid signal."]
-pub type TX_HW_VALID_EN_R = crate::BitReader<bool>;
+pub type TX_HW_VALID_EN_R = crate::BitReader;
 #[doc = "Field `TX_HW_VALID_EN` writer - Write 1 to enable tx hardware data valid signal."]
-pub type TX_HW_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_HW_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 #[doc = "Field `TX_SMP_EDGE_SEL` reader - Write 0 to enable sampling data on the rising edge of tx clock. Write 0 to enable sampling data on the falling edge of tx clock."]
-pub type TX_SMP_EDGE_SEL_R = crate::BitReader<bool>;
+pub type TX_SMP_EDGE_SEL_R = crate::BitReader;
 #[doc = "Field `TX_SMP_EDGE_SEL` writer - Write 0 to enable sampling data on the rising edge of tx clock. Write 0 to enable sampling data on the falling edge of tx clock."]
-pub type TX_SMP_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_SMP_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 #[doc = "Field `TX_BIT_UNPACK_ORDER` reader - Write 0 to unpack bits from 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to unpack bits from 1byte from LSB when data bus width is 4/2/1 bits."]
-pub type TX_BIT_UNPACK_ORDER_R = crate::BitReader<bool>;
+pub type TX_BIT_UNPACK_ORDER_R = crate::BitReader;
 #[doc = "Field `TX_BIT_UNPACK_ORDER` writer - Write 0 to unpack bits from 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to unpack bits from 1byte from LSB when data bus width is 4/2/1 bits."]
-pub type TX_BIT_UNPACK_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_BIT_UNPACK_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 #[doc = "Field `TX_BUS_WID_SEL` reader - Tx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
-pub type TX_BUS_WID_SEL_R = crate::FieldReader<u8, u8>;
+pub type TX_BUS_WID_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_BUS_WID_SEL` writer - Tx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
-pub type TX_BUS_WID_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CFG0_SPEC, u8, u8, 3, O>;
+pub type TX_BUS_WID_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG0_SPEC, 3, O>;
 #[doc = "Field `TX_FIFO_SRST` reader - Write 1 to enable soft reset of async fifo in tx module."]
-pub type TX_FIFO_SRST_R = crate::BitReader<bool>;
+pub type TX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_SRST` writer - Write 1 to enable soft reset of async fifo in tx module."]
-pub type TX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CFG0_SPEC, bool, O>;
+pub type TX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, TX_CFG0_SPEC, O>;
 impl R {
     #[doc = "Bits 2:17 - Configures tx sending data byte length."]
     #[inline(always)]
@@ -107,6 +106,45 @@ impl R {
     #[inline(always)]
     pub fn tx_fifo_srst(&self) -> TX_FIFO_SRST_R {
         TX_FIFO_SRST_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_CFG0")
+            .field("tx_bytelen", &format_args!("{}", self.tx_bytelen().bits()))
+            .field(
+                "tx_gating_en",
+                &format_args!("{}", self.tx_gating_en().bit()),
+            )
+            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
+            .field(
+                "tx_hw_valid_en",
+                &format_args!("{}", self.tx_hw_valid_en().bit()),
+            )
+            .field(
+                "tx_smp_edge_sel",
+                &format_args!("{}", self.tx_smp_edge_sel().bit()),
+            )
+            .field(
+                "tx_bit_unpack_order",
+                &format_args!("{}", self.tx_bit_unpack_order().bit()),
+            )
+            .field(
+                "tx_bus_wid_sel",
+                &format_args!("{}", self.tx_bus_wid_sel().bits()),
+            )
+            .field(
+                "tx_fifo_srst",
+                &format_args!("{}", self.tx_fifo_srst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_CFG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

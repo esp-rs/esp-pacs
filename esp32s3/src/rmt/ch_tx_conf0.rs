@@ -35,55 +35,55 @@ impl From<crate::W<CH_TX_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_START` writer - Set this bit to start sending data on CHANNEL%s."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `MEM_RD_RST` writer - Set this bit to reset read ram address for CHANNEL%s by accessing transmitter."]
-pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `APB_MEM_RST` writer - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
-pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `TX_CONTI_MODE` reader - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
-pub type TX_CONTI_MODE_R = crate::BitReader<bool>;
+pub type TX_CONTI_MODE_R = crate::BitReader;
 #[doc = "Field `TX_CONTI_MODE` writer - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
-pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - This is the channel %s enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
+pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - This is the channel %s enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_OUT_LV` reader - This bit configures the level of output signal in CHANNEL%s when the latter is in IDLE state."]
-pub type IDLE_OUT_LV_R = crate::BitReader<bool>;
+pub type IDLE_OUT_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_LV` writer - This bit configures the level of output signal in CHANNEL%s when the latter is in IDLE state."]
-pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_OUT_EN` reader - This is the output enable-control bit for CHANNEL%s in IDLE state."]
-pub type IDLE_OUT_EN_R = crate::BitReader<bool>;
+pub type IDLE_OUT_EN_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_EN` writer - This is the output enable-control bit for CHANNEL%s in IDLE state."]
-pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `TX_STOP` reader - Set this bit to stop the transmitter of CHANNEL%s sending data out."]
-pub type TX_STOP_R = crate::BitReader<bool>;
+pub type TX_STOP_R = crate::BitReader;
 #[doc = "Field `TX_STOP` writer - Set this bit to stop the transmitter of CHANNEL%s sending data out."]
-pub type TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `DIV_CNT` reader - This register is used to configure the divider for clock of CHANNEL%s."]
-pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
+pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - This register is used to configure the divider for clock of CHANNEL%s."]
-pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 8, O>;
+pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_CONF0_SPEC, 8, O>;
 #[doc = "Field `MEM_SIZE` reader - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
-pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
+pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
-pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 4, O>;
+pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_CONF0_SPEC, 4, O>;
 #[doc = "Field `CARRIER_EFF_EN` reader - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
-pub type CARRIER_EFF_EN_R = crate::BitReader<bool>;
+pub type CARRIER_EFF_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EFF_EN` writer - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
-pub type CARRIER_EFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_EFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CARRIER_EN` reader - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
-pub type CARRIER_EN_R = crate::BitReader<bool>;
+pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
-pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CARRIER_OUT_LV` reader - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
-pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
+pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
-pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `AFIFO_RST` writer - Reserved"]
-pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CONF_UPDATE` writer - synchronization bit for CHANNEL%s"]
-pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 3 - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
     #[inline(always)]
@@ -134,6 +134,41 @@ impl R {
     #[inline(always)]
     pub fn carrier_out_lv(&self) -> CARRIER_OUT_LV_R {
         CARRIER_OUT_LV_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_TX_CONF0")
+            .field(
+                "tx_conti_mode",
+                &format_args!("{}", self.tx_conti_mode().bit()),
+            )
+            .field(
+                "mem_tx_wrap_en",
+                &format_args!("{}", self.mem_tx_wrap_en().bit()),
+            )
+            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
+            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
+            .field("tx_stop", &format_args!("{}", self.tx_stop().bit()))
+            .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
+            .field("mem_size", &format_args!("{}", self.mem_size().bits()))
+            .field(
+                "carrier_eff_en",
+                &format_args!("{}", self.carrier_eff_en().bit()),
+            )
+            .field("carrier_en", &format_args!("{}", self.carrier_en().bit()))
+            .field(
+                "carrier_out_lv",
+                &format_args!("{}", self.carrier_out_lv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_TX_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

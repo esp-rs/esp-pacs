@@ -35,37 +35,37 @@ impl From<crate::W<INTR_RLS_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO0_INT_ENA` reader - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub type GPIO0_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO0_INT_ENA` writer - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub type GPIO0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO1_INT_ENA` reader - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub type GPIO1_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO1_INT_ENA` writer - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub type GPIO1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO2_INT_ENA` reader - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub type GPIO2_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO2_INT_ENA` writer - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub type GPIO2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO3_INT_ENA` reader - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub type GPIO3_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO3_INT_ENA` writer - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub type GPIO3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO4_INT_ENA` reader - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub type GPIO4_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO4_INT_ENA` writer - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub type GPIO4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO5_INT_ENA` reader - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub type GPIO5_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO5_INT_ENA` writer - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub type GPIO5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO6_INT_ENA` reader - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub type GPIO6_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO6_INT_ENA` writer - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub type GPIO6_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO6_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 #[doc = "Field `GPIO7_INT_ENA` reader - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub type GPIO7_INT_ENA_R = crate::BitReader<bool>;
+pub type GPIO7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GPIO7_INT_ENA` writer - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub type GPIO7_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, O>;
+pub type GPIO7_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTR_RLS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
@@ -106,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn gpio7_int_ena(&self) -> GPIO7_INT_ENA_R {
         GPIO7_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_RLS")
+            .field(
+                "gpio0_int_ena",
+                &format_args!("{}", self.gpio0_int_ena().bit()),
+            )
+            .field(
+                "gpio1_int_ena",
+                &format_args!("{}", self.gpio1_int_ena().bit()),
+            )
+            .field(
+                "gpio2_int_ena",
+                &format_args!("{}", self.gpio2_int_ena().bit()),
+            )
+            .field(
+                "gpio3_int_ena",
+                &format_args!("{}", self.gpio3_int_ena().bit()),
+            )
+            .field(
+                "gpio4_int_ena",
+                &format_args!("{}", self.gpio4_int_ena().bit()),
+            )
+            .field(
+                "gpio5_int_ena",
+                &format_args!("{}", self.gpio5_int_ena().bit()),
+            )
+            .field(
+                "gpio6_int_ena",
+                &format_args!("{}", self.gpio6_int_ena().bit()),
+            )
+            .field(
+                "gpio7_int_ena",
+                &format_args!("{}", self.gpio7_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_RLS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

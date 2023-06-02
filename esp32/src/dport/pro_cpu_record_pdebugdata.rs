@@ -37,160 +37,160 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGDATA_SPEC>> for W {
 #[doc = "Field `RECORD_PRO_PDEBUGDATA` reader - "]
 pub type RECORD_PRO_PDEBUGDATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_OTHER_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_OTHER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_OTHER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCVEC` reader - "]
-pub type RECORD_PDEBUGDATA_EXCVEC_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGDATA_EXCVEC_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCVEC` writer - "]
 pub type RECORD_PDEBUGDATA_EXCVEC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 5, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_SR` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_SR_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_SR_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_SR` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_SR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 8, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RER` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_RER_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_RER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RER` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_RER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFF` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_BUFF_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_BUFF_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFF` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_BUFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WER` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_WER_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_WER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WER` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_WER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFFCONFL` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BUFFCONFL` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` reader - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_ER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_ER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 12, O, u16, u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_DCM_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_DCM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_DCM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSU` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_LSU_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_LSU_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSU` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_LSU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ICM` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_ICM_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_ICM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ICM` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_ICM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IRAMBUSY` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IRAMBUSY` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_IRAMBUSY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_LSU` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_LSU_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_LSU_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_LSU` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_LSU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IPIF` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_IPIF_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_IPIF_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_IPIF` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_IPIF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RSR` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_RSR` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_RSR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_TIE` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_TIE_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_TIE_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_TIE` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_TIE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WSR` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_WSR` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_WSR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_RUN` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_RUN_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_RUN_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_RUN` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_RUN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_XSR` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_XSR` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_XSR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_STR` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_STR_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_STR_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_STR` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_STR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPIFETCH` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPIFETCH` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_BPIFETCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_L32R` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_L32R_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_L32R_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_L32R` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_L32R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSPROC` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_LSPROC_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_LSPROC_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_LSPROC` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_LSPROC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPLOAD` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_BPLOAD_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_BPLOAD_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BPLOAD` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_BPLOAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_MEMW` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_MEMW_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_MEMW_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_MEMW` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_MEMW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCCAUSE` reader - "]
-pub type RECORD_PDEBUGDATA_EXCCAUSE_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGDATA_EXCCAUSE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGDATA_EXCCAUSE` writer - "]
 pub type RECORD_PDEBUGDATA_EXCCAUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 6, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BANKCONFL` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_BANKCONFL` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_BANKCONFL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_HALT` reader - "]
-pub type RECORD_PDEBUGDATA_DEP_HALT_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_DEP_HALT_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_HALT` writer - "]
 pub type RECORD_PDEBUGDATA_DEP_HALT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERMUL` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_ITERMUL_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_ITERMUL_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERMUL` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_ITERMUL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERDIV` reader - "]
-pub type RECORD_PDEBUGDATA_STALL_ITERDIV_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGDATA_STALL_ITERDIV_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_ITERDIV` writer - "]
 pub type RECORD_PDEBUGDATA_STALL_ITERDIV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGDATA_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -351,6 +351,147 @@ impl R {
     #[inline(always)]
     pub fn record_pdebugdata_stall_iterdiv(&self) -> RECORD_PDEBUGDATA_STALL_ITERDIV_R {
         RECORD_PDEBUGDATA_STALL_ITERDIV_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CPU_RECORD_PDEBUGDATA")
+            .field(
+                "record_pro_pdebugdata",
+                &format_args!("{}", self.record_pro_pdebugdata().bits()),
+            )
+            .field(
+                "record_pdebugdata_dep_other",
+                &format_args!("{}", self.record_pdebugdata_dep_other().bit()),
+            )
+            .field(
+                "record_pdebugdata_excvec",
+                &format_args!("{}", self.record_pdebugdata_excvec().bits()),
+            )
+            .field(
+                "record_pdebugdata_insntype_sr",
+                &format_args!("{}", self.record_pdebugdata_insntype_sr().bits()),
+            )
+            .field(
+                "record_pdebugdata_insntype_rer",
+                &format_args!("{}", self.record_pdebugdata_insntype_rer().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_buff",
+                &format_args!("{}", self.record_pdebugdata_stall_buff().bit()),
+            )
+            .field(
+                "record_pdebugdata_insntype_wer",
+                &format_args!("{}", self.record_pdebugdata_insntype_wer().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_buffconfl",
+                &format_args!("{}", self.record_pdebugdata_stall_buffconfl().bit()),
+            )
+            .field(
+                "record_pdebugdata_insntype_er",
+                &format_args!("{}", self.record_pdebugdata_insntype_er().bits()),
+            )
+            .field(
+                "record_pdebugdata_stall_dcm",
+                &format_args!("{}", self.record_pdebugdata_stall_dcm().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_lsu",
+                &format_args!("{}", self.record_pdebugdata_stall_lsu().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_icm",
+                &format_args!("{}", self.record_pdebugdata_stall_icm().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_irambusy",
+                &format_args!("{}", self.record_pdebugdata_stall_irambusy().bit()),
+            )
+            .field(
+                "record_pdebugdata_dep_lsu",
+                &format_args!("{}", self.record_pdebugdata_dep_lsu().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_ipif",
+                &format_args!("{}", self.record_pdebugdata_stall_ipif().bit()),
+            )
+            .field(
+                "record_pdebugdata_insntype_rsr",
+                &format_args!("{}", self.record_pdebugdata_insntype_rsr().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_tie",
+                &format_args!("{}", self.record_pdebugdata_stall_tie().bit()),
+            )
+            .field(
+                "record_pdebugdata_insntype_wsr",
+                &format_args!("{}", self.record_pdebugdata_insntype_wsr().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_run",
+                &format_args!("{}", self.record_pdebugdata_stall_run().bit()),
+            )
+            .field(
+                "record_pdebugdata_insntype_xsr",
+                &format_args!("{}", self.record_pdebugdata_insntype_xsr().bit()),
+            )
+            .field(
+                "record_pdebugdata_dep_str",
+                &format_args!("{}", self.record_pdebugdata_dep_str().bit()),
+            )
+            .field(
+                "record_pdebugdata_dep",
+                &format_args!("{}", self.record_pdebugdata_dep().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_bpifetch",
+                &format_args!("{}", self.record_pdebugdata_stall_bpifetch().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_l32r",
+                &format_args!("{}", self.record_pdebugdata_stall_l32r().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_lsproc",
+                &format_args!("{}", self.record_pdebugdata_stall_lsproc().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_bpload",
+                &format_args!("{}", self.record_pdebugdata_stall_bpload().bit()),
+            )
+            .field(
+                "record_pdebugdata_dep_memw",
+                &format_args!("{}", self.record_pdebugdata_dep_memw().bit()),
+            )
+            .field(
+                "record_pdebugdata_exccause",
+                &format_args!("{}", self.record_pdebugdata_exccause().bits()),
+            )
+            .field(
+                "record_pdebugdata_stall_bankconfl",
+                &format_args!("{}", self.record_pdebugdata_stall_bankconfl().bit()),
+            )
+            .field(
+                "record_pdebugdata_dep_halt",
+                &format_args!("{}", self.record_pdebugdata_dep_halt().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_itermul",
+                &format_args!("{}", self.record_pdebugdata_stall_itermul().bit()),
+            )
+            .field(
+                "record_pdebugdata_stall_iterdiv",
+                &format_args!("{}", self.record_pdebugdata_stall_iterdiv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

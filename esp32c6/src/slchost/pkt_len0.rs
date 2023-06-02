@@ -29,6 +29,27 @@ impl R {
         HOSTSLCHOST_SLC0_LEN0_CHECK_R::new(((self.bits >> 20) & 0x0fff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PKT_LEN0")
+            .field(
+                "hostslchost_slc0_len0",
+                &format_args!("{}", self.hostslchost_slc0_len0().bits()),
+            )
+            .field(
+                "hostslchost_slc0_len0_check",
+                &format_args!("{}", self.hostslchost_slc0_len0_check().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PKT_LEN0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pkt_len0](index.html) module"]
 pub struct PKT_LEN0_SPEC;
 impl crate::RegisterSpec for PKT_LEN0_SPEC {

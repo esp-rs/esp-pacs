@@ -35,35 +35,35 @@ impl From<crate::W<DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_0` reader - rmt's permission(store,load) in data region0 of SRAM"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_0_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_0` writer - rmt's permission(store,load) in data region0 of SRAM"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_1` reader - rmt's permission(store,load) in data region1 of SRAM"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_1_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_1` writer - rmt's permission(store,load) in data region1 of SRAM"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_2` reader - rmt's permission(store,load) in data region2 of SRAM"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_2_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_2_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_2` writer - rmt's permission(store,load) in data region2 of SRAM"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_3` reader - rmt's permission(store,load) in data region3 of SRAM"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_3_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_3_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_3` writer - rmt's permission(store,load) in data region3 of SRAM"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_PMS_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` reader - rmt's permission(store,load) in dcache data sram block0"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` writer - rmt's permission(store,load) in dcache data sram block0"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` reader - rmt's permission(store,load) in dcache data sram block1"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R = crate::FieldReader<u8, u8>;
+pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` writer - rmt's permission(store,load) in dcache data sram block1"]
 pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - rmt's permission(store,load) in data region0 of SRAM"]
     #[inline(always)]
@@ -108,6 +108,51 @@ impl R {
         DMA_APBPERI_RMT_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R::new(
             ((self.bits >> 10) & 3) as u8,
         )
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_APBPERI_RMT_PMS_CONSTRAIN_1")
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_pms_0",
+                &format_args!("{}", self.dma_apbperi_rmt_pms_constrain_sram_pms_0().bits()),
+            )
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_pms_1",
+                &format_args!("{}", self.dma_apbperi_rmt_pms_constrain_sram_pms_1().bits()),
+            )
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_pms_2",
+                &format_args!("{}", self.dma_apbperi_rmt_pms_constrain_sram_pms_2().bits()),
+            )
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_pms_3",
+                &format_args!("{}", self.dma_apbperi_rmt_pms_constrain_sram_pms_3().bits()),
+            )
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_cachedataarray_pms_0",
+                &format_args!(
+                    "{}",
+                    self.dma_apbperi_rmt_pms_constrain_sram_cachedataarray_pms_0()
+                        .bits()
+                ),
+            )
+            .field(
+                "dma_apbperi_rmt_pms_constrain_sram_cachedataarray_pms_1",
+                &format_args!(
+                    "{}",
+                    self.dma_apbperi_rmt_pms_constrain_sram_cachedataarray_pms_1()
+                        .bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

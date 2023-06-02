@@ -35,14 +35,13 @@ impl From<crate::W<SCL_FILTER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_FILTER_THRES` reader - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub type SCL_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type SCL_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SCL_FILTER_THRES` writer - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub type SCL_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SCL_FILTER_CFG_SPEC, u8, u8, 4, O>;
+pub type SCL_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_FILTER_CFG_SPEC, 4, O>;
 #[doc = "Field `SCL_FILTER_EN` reader - This is the filter enable bit for SCL."]
-pub type SCL_FILTER_EN_R = crate::BitReader<bool>;
+pub type SCL_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SCL_FILTER_EN` writer - This is the filter enable bit for SCL."]
-pub type SCL_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCL_FILTER_CFG_SPEC, bool, O>;
+pub type SCL_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCL_FILTER_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn scl_filter_en(&self) -> SCL_FILTER_EN_R {
         SCL_FILTER_EN_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_FILTER_CFG")
+            .field(
+                "scl_filter_thres",
+                &format_args!("{}", self.scl_filter_thres().bits()),
+            )
+            .field(
+                "scl_filter_en",
+                &format_args!("{}", self.scl_filter_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_FILTER_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

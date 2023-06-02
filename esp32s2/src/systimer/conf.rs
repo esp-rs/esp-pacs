@@ -35,13 +35,13 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_FO` reader - System timer clock force enable."]
-pub type CLK_FO_R = crate::BitReader<bool>;
+pub type CLK_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FO` writer - System timer clock force enable."]
-pub type CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - Register clock enable."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Register clock enable."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - System timer clock force enable."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("clk_fo", &format_args!("{}", self.clk_fo().bit()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

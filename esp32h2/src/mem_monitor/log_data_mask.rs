@@ -35,15 +35,31 @@ impl From<crate::W<LOG_DATA_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_DATA_MASK` reader - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
-pub type LOG_DATA_MASK_R = crate::FieldReader<u8, u8>;
+pub type LOG_DATA_MASK_R = crate::FieldReader;
 #[doc = "Field `LOG_DATA_MASK` writer - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
-pub type LOG_DATA_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LOG_DATA_MASK_SPEC, u8, u8, 4, O>;
+pub type LOG_DATA_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_DATA_MASK_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
     #[inline(always)]
     pub fn log_data_mask(&self) -> LOG_DATA_MASK_R {
         LOG_DATA_MASK_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_DATA_MASK")
+            .field(
+                "log_data_mask",
+                &format_args!("{}", self.log_data_mask().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_DATA_MASK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

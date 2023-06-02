@@ -35,22 +35,19 @@ impl From<crate::W<DCACHE_SYNC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type DCACHE_INVALIDATE_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type DCACHE_INVALIDATE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, O>;
+pub type DCACHE_INVALIDATE_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_SYNC_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_WRITEBACK_ENA` reader - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
-pub type DCACHE_WRITEBACK_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_WRITEBACK_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_WRITEBACK_ENA` writer - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
-pub type DCACHE_WRITEBACK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, O>;
+pub type DCACHE_WRITEBACK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_SYNC_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub type DCACHE_CLEAN_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_CLEAN_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_CLEAN_ENA` writer - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub type DCACHE_CLEAN_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, O>;
+pub type DCACHE_CLEAN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_SYNC_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_SYNC_DONE` reader - The bit is used to indicate clean/writeback/invalidate operation is finished."]
-pub type DCACHE_SYNC_DONE_R = crate::BitReader<bool>;
+pub type DCACHE_SYNC_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
@@ -71,6 +68,35 @@ impl R {
     #[inline(always)]
     pub fn dcache_sync_done(&self) -> DCACHE_SYNC_DONE_R {
         DCACHE_SYNC_DONE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_SYNC_CTRL")
+            .field(
+                "dcache_invalidate_ena",
+                &format_args!("{}", self.dcache_invalidate_ena().bit()),
+            )
+            .field(
+                "dcache_writeback_ena",
+                &format_args!("{}", self.dcache_writeback_ena().bit()),
+            )
+            .field(
+                "dcache_clean_ena",
+                &format_args!("{}", self.dcache_clean_ena().bit()),
+            )
+            .field(
+                "dcache_sync_done",
+                &format_args!("{}", self.dcache_sync_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_SYNC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

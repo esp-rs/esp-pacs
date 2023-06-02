@@ -14,13 +14,13 @@ impl From<crate::R<CORE_0_IRAM0_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR` reader - core_0_iram0_pms_monitor_violate_intr"]
-pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
+pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - core_0_iram0_pms_monitor_violate_status_wr"]
-pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader<bool>;
+pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE` reader - core_0_iram0_pms_monitor_violate_status_loadstore"]
-pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R = crate::BitReader<bool>;
+pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R = crate::BitReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - core_0_iram0_pms_monitor_violate_status_world"]
-pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader;
 #[doc = "Field `CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - core_0_iram0_pms_monitor_violate_status_addr"]
 pub type CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
@@ -56,6 +56,52 @@ impl R {
         &self,
     ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
         CORE_0_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R::new((self.bits >> 5) & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_IRAM0_PMS_MONITOR_2")
+            .field(
+                "core_0_iram0_pms_monitor_violate_intr",
+                &format_args!("{}", self.core_0_iram0_pms_monitor_violate_intr().bit()),
+            )
+            .field(
+                "core_0_iram0_pms_monitor_violate_status_wr",
+                &format_args!(
+                    "{}",
+                    self.core_0_iram0_pms_monitor_violate_status_wr().bit()
+                ),
+            )
+            .field(
+                "core_0_iram0_pms_monitor_violate_status_loadstore",
+                &format_args!(
+                    "{}",
+                    self.core_0_iram0_pms_monitor_violate_status_loadstore()
+                        .bit()
+                ),
+            )
+            .field(
+                "core_0_iram0_pms_monitor_violate_status_world",
+                &format_args!(
+                    "{}",
+                    self.core_0_iram0_pms_monitor_violate_status_world().bits()
+                ),
+            )
+            .field(
+                "core_0_iram0_pms_monitor_violate_status_addr",
+                &format_args!(
+                    "{}",
+                    self.core_0_iram0_pms_monitor_violate_status_addr().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_IRAM0_PMS_MONITOR_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SENSITIVE_CORE_0_IRAM0_PMS_MONITOR_2_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_iram0_pms_monitor_2](index.html) module"]

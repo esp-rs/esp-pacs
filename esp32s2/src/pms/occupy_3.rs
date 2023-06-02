@@ -38,12 +38,29 @@ impl From<crate::W<OCCUPY_3_SPEC>> for W {
 pub type OCCUPY_PRO_TRACE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OCCUPY_PRO_TRACE` writer - Configure one block of SRAM Block 4-21 is used as trace memory."]
 pub type OCCUPY_PRO_TRACE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OCCUPY_3_SPEC, u32, u32, 18, O>;
+    crate::FieldWriter<'a, OCCUPY_3_SPEC, 18, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
     pub fn occupy_pro_trace(&self) -> OCCUPY_PRO_TRACE_R {
         OCCUPY_PRO_TRACE_R::new(self.bits & 0x0003_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OCCUPY_3")
+            .field(
+                "occupy_pro_trace",
+                &format_args!("{}", self.occupy_pro_trace().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OCCUPY_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

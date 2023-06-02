@@ -35,15 +35,15 @@ impl From<crate::W<SHA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA_CLK_EN` reader - Set 1 to enable sha clock"]
-pub type SHA_CLK_EN_R = crate::BitReader<bool>;
+pub type SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SHA_CLK_EN` writer - Set 1 to enable sha clock"]
-pub type SHA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA_CONF_SPEC, bool, O>;
+pub type SHA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SHA_CONF_SPEC, O>;
 #[doc = "Field `SHA_RST_EN` reader - Set 0 to reset sha module"]
-pub type SHA_RST_EN_R = crate::BitReader<bool>;
+pub type SHA_RST_EN_R = crate::BitReader;
 #[doc = "Field `SHA_RST_EN` writer - Set 0 to reset sha module"]
-pub type SHA_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA_CONF_SPEC, bool, O>;
+pub type SHA_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SHA_CONF_SPEC, O>;
 #[doc = "Field `SHA_READY` reader - Query this field after reset sha module"]
-pub type SHA_READY_R = crate::BitReader<bool>;
+pub type SHA_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable sha clock"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn sha_ready(&self) -> SHA_READY_R {
         SHA_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SHA_CONF")
+            .field("sha_clk_en", &format_args!("{}", self.sha_clk_en().bit()))
+            .field("sha_rst_en", &format_args!("{}", self.sha_rst_en().bit()))
+            .field("sha_ready", &format_args!("{}", self.sha_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SHA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

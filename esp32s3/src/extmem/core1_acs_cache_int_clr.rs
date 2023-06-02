@@ -21,19 +21,25 @@ impl From<crate::W<CORE1_ACS_CACHE_INT_CLR_SPEC>> for W {
 }
 #[doc = "Field `CORE1_IBUS_ACS_MSK_IC_INT_CLR` writer - The bit is used to clear interrupt by cpu access icache while the corresponding ibus is disabled or icache is disabled which include speculative access."]
 pub type CORE1_IBUS_ACS_MSK_IC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE1_ACS_CACHE_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE1_ACS_CACHE_INT_CLR_SPEC, O>;
 #[doc = "Field `CORE1_IBUS_WR_IC_INT_CLR` writer - The bit is used to clear interrupt by ibus trying to write icache"]
 pub type CORE1_IBUS_WR_IC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE1_ACS_CACHE_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE1_ACS_CACHE_INT_CLR_SPEC, O>;
 #[doc = "Field `CORE1_IBUS_REJECT_INT_CLR` writer - The bit is used to clear interrupt by authentication fail."]
 pub type CORE1_IBUS_REJECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE1_ACS_CACHE_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE1_ACS_CACHE_INT_CLR_SPEC, O>;
 #[doc = "Field `CORE1_DBUS_ACS_MSK_DC_INT_CLR` writer - The bit is used to clear interrupt by cpu access dcache while the corresponding dbus is disabled or dcache is disabled which include speculative access."]
 pub type CORE1_DBUS_ACS_MSK_DC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE1_ACS_CACHE_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE1_ACS_CACHE_INT_CLR_SPEC, O>;
 #[doc = "Field `CORE1_DBUS_REJECT_INT_CLR` writer - The bit is used to clear interrupt by authentication fail."]
 pub type CORE1_DBUS_REJECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE1_ACS_CACHE_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE1_ACS_CACHE_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE1_ACS_CACHE_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt by cpu access icache while the corresponding ibus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]

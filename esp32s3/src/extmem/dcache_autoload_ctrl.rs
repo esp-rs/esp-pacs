@@ -35,42 +35,42 @@ impl From<crate::W<DCACHE_AUTOLOAD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the first section for autoload operation."]
-pub type DCACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ENA` writer - The bits are used to enable the first section for autoload operation."]
 pub type DCACHE_AUTOLOAD_SCT0_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the second section for autoload operation."]
-pub type DCACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT1_ENA` writer - The bits are used to enable the second section for autoload operation."]
 pub type DCACHE_AUTOLOAD_SCT1_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
-pub type DCACHE_AUTOLOAD_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
 pub type DCACHE_AUTOLOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_DONE` reader - The bit is used to indicate autoload operation is finished."]
-pub type DCACHE_AUTOLOAD_DONE_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_DONE_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub type DCACHE_AUTOLOAD_ORDER_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_ORDER` writer - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
 pub type DCACHE_AUTOLOAD_ORDER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub type DCACHE_AUTOLOAD_RQST_R = crate::FieldReader<u8, u8>;
+pub type DCACHE_AUTOLOAD_RQST_R = crate::FieldReader;
 #[doc = "Field `DCACHE_AUTOLOAD_RQST` writer - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
 pub type DCACHE_AUTOLOAD_RQST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, 2, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_SIZE` reader - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
-pub type DCACHE_AUTOLOAD_SIZE_R = crate::FieldReader<u8, u8>;
+pub type DCACHE_AUTOLOAD_SIZE_R = crate::FieldReader;
 #[doc = "Field `DCACHE_AUTOLOAD_SIZE` writer - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
 pub type DCACHE_AUTOLOAD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, 2, O>;
 #[doc = "Field `DCACHE_AUTOLOAD_BUFFER_CLEAR` reader - The bit is used to clear autoload buffer in dcache."]
-pub type DCACHE_AUTOLOAD_BUFFER_CLEAR_R = crate::BitReader<bool>;
+pub type DCACHE_AUTOLOAD_BUFFER_CLEAR_R = crate::BitReader;
 #[doc = "Field `DCACHE_AUTOLOAD_BUFFER_CLEAR` writer - The bit is used to clear autoload buffer in dcache."]
 pub type DCACHE_AUTOLOAD_BUFFER_CLEAR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_AUTOLOAD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
@@ -111,6 +111,51 @@ impl R {
     #[inline(always)]
     pub fn dcache_autoload_buffer_clear(&self) -> DCACHE_AUTOLOAD_BUFFER_CLEAR_R {
         DCACHE_AUTOLOAD_BUFFER_CLEAR_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_AUTOLOAD_CTRL")
+            .field(
+                "dcache_autoload_sct0_ena",
+                &format_args!("{}", self.dcache_autoload_sct0_ena().bit()),
+            )
+            .field(
+                "dcache_autoload_sct1_ena",
+                &format_args!("{}", self.dcache_autoload_sct1_ena().bit()),
+            )
+            .field(
+                "dcache_autoload_ena",
+                &format_args!("{}", self.dcache_autoload_ena().bit()),
+            )
+            .field(
+                "dcache_autoload_done",
+                &format_args!("{}", self.dcache_autoload_done().bit()),
+            )
+            .field(
+                "dcache_autoload_order",
+                &format_args!("{}", self.dcache_autoload_order().bit()),
+            )
+            .field(
+                "dcache_autoload_rqst",
+                &format_args!("{}", self.dcache_autoload_rqst().bits()),
+            )
+            .field(
+                "dcache_autoload_size",
+                &format_args!("{}", self.dcache_autoload_size().bits()),
+            )
+            .field(
+                "dcache_autoload_buffer_clear",
+                &format_args!("{}", self.dcache_autoload_buffer_clear().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_AUTOLOAD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

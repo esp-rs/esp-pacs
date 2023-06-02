@@ -22,6 +22,20 @@ impl R {
         DUTY_R_R::new(self.bits & 0x0007_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_DUTY_R")
+            .field("duty_r", &format_args!("{}", self.duty_r().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_DUTY_R_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Current duty cycle for channel %s\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_duty_r](index.html) module"]
 pub struct CH_DUTY_R_SPEC;
 impl crate::RegisterSpec for CH_DUTY_R_SPEC {

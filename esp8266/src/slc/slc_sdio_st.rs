@@ -35,24 +35,21 @@ impl From<crate::W<SLC_SDIO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_CMD_ST` reader - "]
-pub type SLC_CMD_ST_R = crate::FieldReader<u8, u8>;
+pub type SLC_CMD_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_CMD_ST` writer - "]
-pub type SLC_CMD_ST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_SDIO_ST_SPEC, u8, u8, 3, O>;
+pub type SLC_CMD_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_SDIO_ST_SPEC, 3, O>;
 #[doc = "Field `SLC_FUNC_ST` reader - "]
-pub type SLC_FUNC_ST_R = crate::FieldReader<u8, u8>;
+pub type SLC_FUNC_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_FUNC_ST` writer - "]
-pub type SLC_FUNC_ST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_SDIO_ST_SPEC, u8, u8, 4, O>;
+pub type SLC_FUNC_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_SDIO_ST_SPEC, 4, O>;
 #[doc = "Field `SLC_SDIO_WAKEUP` reader - "]
-pub type SLC_SDIO_WAKEUP_R = crate::BitReader<bool>;
+pub type SLC_SDIO_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLC_SDIO_WAKEUP` writer - "]
-pub type SLC_SDIO_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_SDIO_ST_SPEC, bool, O>;
+pub type SLC_SDIO_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, SLC_SDIO_ST_SPEC, O>;
 #[doc = "Field `SLC_BUS_ST` reader - "]
-pub type SLC_BUS_ST_R = crate::FieldReader<u8, u8>;
+pub type SLC_BUS_ST_R = crate::FieldReader;
 #[doc = "Field `SLC_BUS_ST` writer - "]
-pub type SLC_BUS_ST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_SDIO_ST_SPEC, u8, u8, 3, O>;
+pub type SLC_BUS_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_SDIO_ST_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -73,6 +70,29 @@ impl R {
     #[inline(always)]
     pub fn slc_bus_st(&self) -> SLC_BUS_ST_R {
         SLC_BUS_ST_R::new(((self.bits >> 12) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_SDIO_ST")
+            .field("slc_bus_st", &format_args!("{}", self.slc_bus_st().bits()))
+            .field(
+                "slc_sdio_wakeup",
+                &format_args!("{}", self.slc_sdio_wakeup().bit()),
+            )
+            .field(
+                "slc_func_st",
+                &format_args!("{}", self.slc_func_st().bits()),
+            )
+            .field("slc_cmd_st", &format_args!("{}", self.slc_cmd_st().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_SDIO_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

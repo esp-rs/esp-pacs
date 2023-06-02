@@ -22,6 +22,23 @@ impl R {
         DMA_TX_I_ILG_ST_R::new(self.bits & 0x007f_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_TX_I_3")
+            .field(
+                "dma_tx_i_ilg_st",
+                &format_args!("{}", self.dma_tx_i_ilg_st().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_TX_I_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "TX Copy DMA status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_tx_i_3](index.html) module"]
 pub struct DMA_TX_I_3_SPEC;
 impl crate::RegisterSpec for DMA_TX_I_3_SPEC {

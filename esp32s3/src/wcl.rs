@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - Core_0 Entry 1 address configuration Register"]
     pub core_0_entry_1_addr: CORE_0_ENTRY_1_ADDR,

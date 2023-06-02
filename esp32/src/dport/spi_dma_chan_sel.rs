@@ -35,20 +35,17 @@ impl From<crate::W<SPI_DMA_CHAN_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI1_DMA_CHAN_SEL` reader - "]
-pub type SPI1_DMA_CHAN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SPI1_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI1_DMA_CHAN_SEL` writer - "]
-pub type SPI1_DMA_CHAN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_DMA_CHAN_SEL_SPEC, u8, u8, 2, O>;
+pub type SPI1_DMA_CHAN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_DMA_CHAN_SEL_SPEC, 2, O>;
 #[doc = "Field `SPI2_DMA_CHAN_SEL` reader - "]
-pub type SPI2_DMA_CHAN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SPI2_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI2_DMA_CHAN_SEL` writer - "]
-pub type SPI2_DMA_CHAN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_DMA_CHAN_SEL_SPEC, u8, u8, 2, O>;
+pub type SPI2_DMA_CHAN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_DMA_CHAN_SEL_SPEC, 2, O>;
 #[doc = "Field `SPI3_DMA_CHAN_SEL` reader - "]
-pub type SPI3_DMA_CHAN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SPI3_DMA_CHAN_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI3_DMA_CHAN_SEL` writer - "]
-pub type SPI3_DMA_CHAN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_DMA_CHAN_SEL_SPEC, u8, u8, 2, O>;
+pub type SPI3_DMA_CHAN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_DMA_CHAN_SEL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn spi3_dma_chan_sel(&self) -> SPI3_DMA_CHAN_SEL_R {
         SPI3_DMA_CHAN_SEL_R::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_DMA_CHAN_SEL")
+            .field(
+                "spi1_dma_chan_sel",
+                &format_args!("{}", self.spi1_dma_chan_sel().bits()),
+            )
+            .field(
+                "spi2_dma_chan_sel",
+                &format_args!("{}", self.spi2_dma_chan_sel().bits()),
+            )
+            .field(
+                "spi3_dma_chan_sel",
+                &format_args!("{}", self.spi3_dma_chan_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_DMA_CHAN_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

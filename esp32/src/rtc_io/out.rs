@@ -37,12 +37,26 @@ impl From<crate::W<OUT_SPEC>> for W {
 #[doc = "Field `DATA` reader - GPIO0~17 output value"]
 pub type DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA` writer - GPIO0~17 output value"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_SPEC, u32, u32, 18, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_SPEC, 18, O, u32, u32>;
 impl R {
     #[doc = "Bits 14:31 - GPIO0~17 output value"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new((self.bits >> 14) & 0x0003_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT")
+            .field("data", &format_args!("{}", self.data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

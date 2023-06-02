@@ -35,25 +35,25 @@ impl From<crate::W<CFG_UHS1_INT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTOE_END_AHEAD_MODE` reader - intoe on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
-pub type INTOE_END_AHEAD_MODE_R = crate::FieldReader<u8, u8>;
+pub type INTOE_END_AHEAD_MODE_R = crate::FieldReader;
 #[doc = "Field `INTOE_END_AHEAD_MODE` writer - intoe on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
 pub type INTOE_END_AHEAD_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_UHS1_INT_MODE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CFG_UHS1_INT_MODE_SPEC, 2, O>;
 #[doc = "Field `INT_END_AHEAD_MODE` reader - int on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
-pub type INT_END_AHEAD_MODE_R = crate::FieldReader<u8, u8>;
+pub type INT_END_AHEAD_MODE_R = crate::FieldReader;
 #[doc = "Field `INT_END_AHEAD_MODE` writer - int on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
 pub type INT_END_AHEAD_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_UHS1_INT_MODE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CFG_UHS1_INT_MODE_SPEC, 2, O>;
 #[doc = "Field `INTOE_ST_AHEAD_MODE` reader - intoe on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
-pub type INTOE_ST_AHEAD_MODE_R = crate::FieldReader<u8, u8>;
+pub type INTOE_ST_AHEAD_MODE_R = crate::FieldReader;
 #[doc = "Field `INTOE_ST_AHEAD_MODE` writer - intoe on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
 pub type INTOE_ST_AHEAD_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_UHS1_INT_MODE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CFG_UHS1_INT_MODE_SPEC, 2, O>;
 #[doc = "Field `INT_ST_AHEAD_MODE` reader - int on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
-pub type INT_ST_AHEAD_MODE_R = crate::FieldReader<u8, u8>;
+pub type INT_ST_AHEAD_MODE_R = crate::FieldReader;
 #[doc = "Field `INT_ST_AHEAD_MODE` writer - int on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
 pub type INT_ST_AHEAD_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_UHS1_INT_MODE_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CFG_UHS1_INT_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - intoe on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn int_st_ahead_mode(&self) -> INT_ST_AHEAD_MODE_R {
         INT_ST_AHEAD_MODE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_UHS1_INT_MODE")
+            .field(
+                "intoe_end_ahead_mode",
+                &format_args!("{}", self.intoe_end_ahead_mode().bits()),
+            )
+            .field(
+                "int_end_ahead_mode",
+                &format_args!("{}", self.int_end_ahead_mode().bits()),
+            )
+            .field(
+                "intoe_st_ahead_mode",
+                &format_args!("{}", self.intoe_st_ahead_mode().bits()),
+            )
+            .field(
+                "int_st_ahead_mode",
+                &format_args!("{}", self.int_st_ahead_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_UHS1_INT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

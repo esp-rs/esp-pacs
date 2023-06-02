@@ -35,14 +35,28 @@ impl From<crate::W<RSA_PD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RSA_PD` reader - "]
-pub type RSA_PD_R = crate::BitReader<bool>;
+pub type RSA_PD_R = crate::BitReader;
 #[doc = "Field `RSA_PD` writer - "]
-pub type RSA_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RSA_PD_CTRL_SPEC, bool, O>;
+pub type RSA_PD_W<'a, const O: u8> = crate::BitWriter<'a, RSA_PD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn rsa_pd(&self) -> RSA_PD_R {
         RSA_PD_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RSA_PD_CTRL")
+            .field("rsa_pd", &format_args!("{}", self.rsa_pd().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RSA_PD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

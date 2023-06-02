@@ -20,62 +20,56 @@ impl From<crate::W<DMA_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL_ERR_INT_CLR` writer - The clear bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
-pub type DMA_INFIFO_FULL_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type DMA_INFIFO_FULL_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `DMA_OUTFIFO_EMPTY_ERR_INT_CLR` writer - The clear bit for SPI_DMA_OUTFIFO_EMPTY_ERR_INT interrupt."]
 pub type DMA_OUTFIFO_EMPTY_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_EX_QPI_INT_CLR` writer - The clear bit for SPI slave Ex_QPI interrupt."]
-pub type SLV_EX_QPI_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_EX_QPI_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_EN_QPI_INT_CLR` writer - The clear bit for SPI slave En_QPI interrupt."]
-pub type SLV_EN_QPI_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_EN_QPI_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_CMD7_INT_CLR` writer - The clear bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_CMD7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_CMD8_INT_CLR` writer - The clear bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_CMD8_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_CMD9_INT_CLR` writer - The clear bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_CMD9_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_CMDA_INT_CLR` writer - The clear bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_CMDA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_RD_DMA_DONE_INT_CLR` writer - The clear bit for SPI_SLV_RD_DMA_DONE_INT interrupt."]
-pub type SLV_RD_DMA_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_RD_DMA_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_WR_DMA_DONE_INT_CLR` writer - The clear bit for SPI_SLV_WR_DMA_DONE_INT interrupt."]
-pub type SLV_WR_DMA_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_WR_DMA_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_RD_BUF_DONE_INT_CLR` writer - The clear bit for SPI_SLV_RD_BUF_DONE_INT interrupt."]
-pub type SLV_RD_BUF_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_RD_BUF_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_WR_BUF_DONE_INT_CLR` writer - The clear bit for SPI_SLV_WR_BUF_DONE_INT interrupt."]
-pub type SLV_WR_BUF_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_WR_BUF_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_DONE_INT_CLR` writer - The clear bit for SPI_TRANS_DONE_INT interrupt."]
-pub type TRANS_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type TRANS_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `DMA_SEG_TRANS_DONE_INT_CLR` writer - The clear bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt."]
-pub type DMA_SEG_TRANS_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type DMA_SEG_TRANS_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SEG_MAGIC_ERR_INT_CLR` writer - The clear bit for SPI_SEG_MAGIC_ERR_INT interrupt."]
-pub type SEG_MAGIC_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SEG_MAGIC_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_BUF_ADDR_ERR_INT_CLR` writer - The clear bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt."]
-pub type SLV_BUF_ADDR_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_BUF_ADDR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `SLV_CMD_ERR_INT_CLR` writer - The clear bit for SPI_SLV_CMD_ERR_INT interrupt."]
-pub type SLV_CMD_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type SLV_CMD_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `MST_RX_AFIFO_WFULL_ERR_INT_CLR` writer - The clear bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt."]
 pub type MST_RX_AFIFO_WFULL_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `MST_TX_AFIFO_REMPTY_ERR_INT_CLR` writer - The clear bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt."]
 pub type MST_TX_AFIFO_REMPTY_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `APP2_INT_CLR` writer - The clear bit for SPI_APP2_INT interrupt."]
-pub type APP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type APP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `APP1_INT_CLR` writer - The clear bit for SPI_APP1_INT interrupt."]
-pub type APP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_CLR_SPEC, bool, O>;
+pub type APP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The clear bit for SPI_DMA_INFIFO_FULL_ERR_INT interrupt."]
     #[inline(always)]

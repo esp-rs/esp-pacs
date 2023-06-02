@@ -35,33 +35,29 @@ impl From<crate::W<FILTER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_FILTER_RESET` reader - Reset ADC2 filter."]
-pub type ADC2_FILTER_RESET_R = crate::BitReader<bool>;
+pub type ADC2_FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `ADC2_FILTER_RESET` writer - Reset ADC2 filter."]
-pub type ADC2_FILTER_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FILTER_CTRL_SPEC, bool, O>;
+pub type ADC2_FILTER_RESET_W<'a, const O: u8> = crate::BitWriter<'a, FILTER_CTRL_SPEC, O>;
 #[doc = "Field `ADC1_FILTER_RESET` reader - Reset ADC1 filter."]
-pub type ADC1_FILTER_RESET_R = crate::BitReader<bool>;
+pub type ADC1_FILTER_RESET_R = crate::BitReader;
 #[doc = "Field `ADC1_FILTER_RESET` writer - Reset ADC1 filter."]
-pub type ADC1_FILTER_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FILTER_CTRL_SPEC, bool, O>;
+pub type ADC1_FILTER_RESET_W<'a, const O: u8> = crate::BitWriter<'a, FILTER_CTRL_SPEC, O>;
 #[doc = "Field `ADC2_FILTER_FACTOR` reader - Set filter factor for DIG ADC2 CRTL."]
-pub type ADC2_FILTER_FACTOR_R = crate::FieldReader<u8, u8>;
+pub type ADC2_FILTER_FACTOR_R = crate::FieldReader;
 #[doc = "Field `ADC2_FILTER_FACTOR` writer - Set filter factor for DIG ADC2 CRTL."]
-pub type ADC2_FILTER_FACTOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL_SPEC, u8, u8, 7, O>;
+pub type ADC2_FILTER_FACTOR_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL_SPEC, 7, O>;
 #[doc = "Field `ADC1_FILTER_FACTOR` reader - Set filter factor for DIG ADC1 CRTL."]
-pub type ADC1_FILTER_FACTOR_R = crate::FieldReader<u8, u8>;
+pub type ADC1_FILTER_FACTOR_R = crate::FieldReader;
 #[doc = "Field `ADC1_FILTER_FACTOR` writer - Set filter factor for DIG ADC1 CRTL."]
-pub type ADC1_FILTER_FACTOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL_SPEC, u8, u8, 7, O>;
+pub type ADC1_FILTER_FACTOR_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL_SPEC, 7, O>;
 #[doc = "Field `ADC2_FILTER_EN` reader - Enable DIG ADC2 CRTL filter."]
-pub type ADC2_FILTER_EN_R = crate::BitReader<bool>;
+pub type ADC2_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_FILTER_EN` writer - Enable DIG ADC2 CRTL filter."]
-pub type ADC2_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FILTER_CTRL_SPEC, bool, O>;
+pub type ADC2_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, FILTER_CTRL_SPEC, O>;
 #[doc = "Field `ADC1_FILTER_EN` reader - Enable DIG ADC1 CRTL filter."]
-pub type ADC1_FILTER_EN_R = crate::BitReader<bool>;
+pub type ADC1_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `ADC1_FILTER_EN` writer - Enable DIG ADC1 CRTL filter."]
-pub type ADC1_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FILTER_CTRL_SPEC, bool, O>;
+pub type ADC1_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, FILTER_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
@@ -92,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn adc1_filter_en(&self) -> ADC1_FILTER_EN_R {
         ADC1_FILTER_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FILTER_CTRL")
+            .field(
+                "adc2_filter_reset",
+                &format_args!("{}", self.adc2_filter_reset().bit()),
+            )
+            .field(
+                "adc1_filter_reset",
+                &format_args!("{}", self.adc1_filter_reset().bit()),
+            )
+            .field(
+                "adc2_filter_factor",
+                &format_args!("{}", self.adc2_filter_factor().bits()),
+            )
+            .field(
+                "adc1_filter_factor",
+                &format_args!("{}", self.adc1_filter_factor().bits()),
+            )
+            .field(
+                "adc2_filter_en",
+                &format_args!("{}", self.adc2_filter_en().bit()),
+            )
+            .field(
+                "adc1_filter_en",
+                &format_args!("{}", self.adc1_filter_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

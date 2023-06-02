@@ -14,23 +14,23 @@ impl From<crate::R<UART_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `rxfifo_full_int_raw` reader - The interrupt raw bit for rx fifo full interrupt(depands onUART_RXFIFO_FULL_THRHD bits)"]
-pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `txfifo_empty_int_raw` reader - The interrupt raw bit for tx fifo empty interrupt(depands onUART_TXFIFO_EMPTY_THRHD bits)"]
-pub type TXFIFO_EMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type TXFIFO_EMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `parity_err_int_raw` reader - The interrupt raw bit for parity check error"]
-pub type PARITY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type PARITY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `frm_err_int_raw` reader - The interrupt raw bit for other rx error"]
-pub type FRM_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type FRM_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `rxfifo_ovf_int_raw` reader - The interrupt raw bit for rx fifo overflow"]
-pub type RXFIFO_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `dsr_chg_int_raw` reader - The interrupt raw bit for DSR changing level"]
-pub type DSR_CHG_INT_RAW_R = crate::BitReader<bool>;
+pub type DSR_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `cts_chg_int_raw` reader - The interrupt raw bit for CTS changing level"]
-pub type CTS_CHG_INT_RAW_R = crate::BitReader<bool>;
+pub type CTS_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `brk_det_int_raw` reader - The interrupt raw bit for Rx byte start error"]
-pub type BRK_DET_INT_RAW_R = crate::BitReader<bool>;
+pub type BRK_DET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `rxfifo_tout_int_raw` reader - The interrupt raw bit for Rx time-out interrupt(depands on theUART_RX_TOUT_THRHD)"]
-pub type RXFIFO_TOUT_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_TOUT_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The interrupt raw bit for rx fifo full interrupt(depands onUART_RXFIFO_FULL_THRHD bits)"]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn rxfifo_tout_int_raw(&self) -> RXFIFO_TOUT_INT_RAW_R {
         RXFIFO_TOUT_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_INT_RAW")
+            .field(
+                "rxfifo_tout_int_raw",
+                &format_args!("{}", self.rxfifo_tout_int_raw().bit()),
+            )
+            .field(
+                "brk_det_int_raw",
+                &format_args!("{}", self.brk_det_int_raw().bit()),
+            )
+            .field(
+                "cts_chg_int_raw",
+                &format_args!("{}", self.cts_chg_int_raw().bit()),
+            )
+            .field(
+                "dsr_chg_int_raw",
+                &format_args!("{}", self.dsr_chg_int_raw().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_raw",
+                &format_args!("{}", self.rxfifo_ovf_int_raw().bit()),
+            )
+            .field(
+                "frm_err_int_raw",
+                &format_args!("{}", self.frm_err_int_raw().bit()),
+            )
+            .field(
+                "parity_err_int_raw",
+                &format_args!("{}", self.parity_err_int_raw().bit()),
+            )
+            .field(
+                "txfifo_empty_int_raw",
+                &format_args!("{}", self.txfifo_empty_int_raw().bit()),
+            )
+            .field(
+                "rxfifo_full_int_raw",
+                &format_args!("{}", self.rxfifo_full_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UART INTERRUPT RAW STATE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uart_int_raw](index.html) module"]

@@ -35,13 +35,13 @@ impl From<crate::W<IO_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `PULL_LDO` reader - need_des"]
-pub type PULL_LDO_R = crate::FieldReader<u8, u8>;
+pub type PULL_LDO_R = crate::FieldReader;
 #[doc = "Field `PULL_LDO` writer - need_des"]
-pub type PULL_LDO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IO_MUX_SPEC, u8, u8, 3, O>;
+pub type PULL_LDO_W<'a, const O: u8> = crate::FieldWriter<'a, IO_MUX_SPEC, 3, O>;
 #[doc = "Field `RESET_DISABLE` reader - need_des"]
-pub type RESET_DISABLE_R = crate::BitReader<bool>;
+pub type RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `RESET_DISABLE` writer - need_des"]
-pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IO_MUX_SPEC, bool, O>;
+pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SPEC, O>;
 impl R {
     #[doc = "Bits 28:30 - need_des"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn reset_disable(&self) -> RESET_DISABLE_R {
         RESET_DISABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IO_MUX")
+            .field("pull_ldo", &format_args!("{}", self.pull_ldo().bits()))
+            .field(
+                "reset_disable",
+                &format_args!("{}", self.reset_disable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IO_MUX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

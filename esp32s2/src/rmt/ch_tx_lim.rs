@@ -37,18 +37,17 @@ impl From<crate::W<CH_TX_LIM_SPEC>> for W {
 #[doc = "Field `TX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can send out."]
 pub type TX_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can send out."]
-pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_LIM_SPEC, u16, u16, 9, O>;
+pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16, u16>;
 #[doc = "Field `TX_LOOP_NUM` reader - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
 pub type TX_LOOP_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_LOOP_NUM` writer - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
-pub type TX_LOOP_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_TX_LIM_SPEC, u16, u16, 10, O>;
+pub type TX_LOOP_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TX_LOOP_CNT_EN` reader - This register is the enabled bit for loop count."]
-pub type TX_LOOP_CNT_EN_R = crate::BitReader<bool>;
+pub type TX_LOOP_CNT_EN_R = crate::BitReader;
 #[doc = "Field `TX_LOOP_CNT_EN` writer - This register is the enabled bit for loop count."]
-pub type TX_LOOP_CNT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_LIM_SPEC, bool, O>;
+pub type TX_LOOP_CNT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_LIM_SPEC, O>;
 #[doc = "Field `LOOP_COUNT_RESET` writer - This register is used to reset the loop count when tx_conti_mode is valid."]
-pub type LOOP_COUNT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_LIM_SPEC, bool, O>;
+pub type LOOP_COUNT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_LIM_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can send out."]
     #[inline(always)]
@@ -64,6 +63,28 @@ impl R {
     #[inline(always)]
     pub fn tx_loop_cnt_en(&self) -> TX_LOOP_CNT_EN_R {
         TX_LOOP_CNT_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_TX_LIM")
+            .field("tx_lim", &format_args!("{}", self.tx_lim().bits()))
+            .field(
+                "tx_loop_num",
+                &format_args!("{}", self.tx_loop_num().bits()),
+            )
+            .field(
+                "tx_loop_cnt_en",
+                &format_args!("{}", self.tx_loop_cnt_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_TX_LIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

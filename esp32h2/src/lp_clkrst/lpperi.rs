@@ -38,36 +38,35 @@ impl From<crate::W<LPPERI_SPEC>> for W {
 pub type LP_BLETIMER_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LP_BLETIMER_DIV_NUM` writer - need_des"]
 pub type LP_BLETIMER_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LPPERI_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, LPPERI_SPEC, 12, O, u16, u16>;
 #[doc = "Field `LP_BLETIMER_32K_SEL` reader - need_des"]
-pub type LP_BLETIMER_32K_SEL_R = crate::FieldReader<u8, u8>;
+pub type LP_BLETIMER_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_BLETIMER_32K_SEL` writer - need_des"]
-pub type LP_BLETIMER_32K_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LPPERI_SPEC, u8, u8, 2, O>;
+pub type LP_BLETIMER_32K_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LPPERI_SPEC, 2, O>;
 #[doc = "Field `LP_SEL_OSC_SLOW` reader - need_des"]
-pub type LP_SEL_OSC_SLOW_R = crate::BitReader<bool>;
+pub type LP_SEL_OSC_SLOW_R = crate::BitReader;
 #[doc = "Field `LP_SEL_OSC_SLOW` writer - need_des"]
-pub type LP_SEL_OSC_SLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_SEL_OSC_SLOW_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 #[doc = "Field `LP_SEL_OSC_FAST` reader - need_des"]
-pub type LP_SEL_OSC_FAST_R = crate::BitReader<bool>;
+pub type LP_SEL_OSC_FAST_R = crate::BitReader;
 #[doc = "Field `LP_SEL_OSC_FAST` writer - need_des"]
-pub type LP_SEL_OSC_FAST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_SEL_OSC_FAST_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 #[doc = "Field `LP_SEL_XTAL` reader - need_des"]
-pub type LP_SEL_XTAL_R = crate::BitReader<bool>;
+pub type LP_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_SEL_XTAL` writer - need_des"]
-pub type LP_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 #[doc = "Field `LP_SEL_XTAL32K` reader - need_des"]
-pub type LP_SEL_XTAL32K_R = crate::BitReader<bool>;
+pub type LP_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LP_SEL_XTAL32K` writer - need_des"]
-pub type LP_SEL_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_SEL_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 #[doc = "Field `LP_I2C_CLK_SEL` reader - need_des"]
-pub type LP_I2C_CLK_SEL_R = crate::BitReader<bool>;
+pub type LP_I2C_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_I2C_CLK_SEL` writer - need_des"]
-pub type LP_I2C_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_I2C_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 #[doc = "Field `LP_UART_CLK_SEL` reader - need_des"]
-pub type LP_UART_CLK_SEL_R = crate::BitReader<bool>;
+pub type LP_UART_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LP_UART_CLK_SEL` writer - need_des"]
-pub type LP_UART_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPPERI_SPEC, bool, O>;
+pub type LP_UART_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, LPPERI_SPEC, O>;
 impl R {
     #[doc = "Bits 12:23 - need_des"]
     #[inline(always)]
@@ -108,6 +107,48 @@ impl R {
     #[inline(always)]
     pub fn lp_uart_clk_sel(&self) -> LP_UART_CLK_SEL_R {
         LP_UART_CLK_SEL_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LPPERI")
+            .field(
+                "lp_bletimer_div_num",
+                &format_args!("{}", self.lp_bletimer_div_num().bits()),
+            )
+            .field(
+                "lp_bletimer_32k_sel",
+                &format_args!("{}", self.lp_bletimer_32k_sel().bits()),
+            )
+            .field(
+                "lp_sel_osc_slow",
+                &format_args!("{}", self.lp_sel_osc_slow().bit()),
+            )
+            .field(
+                "lp_sel_osc_fast",
+                &format_args!("{}", self.lp_sel_osc_fast().bit()),
+            )
+            .field("lp_sel_xtal", &format_args!("{}", self.lp_sel_xtal().bit()))
+            .field(
+                "lp_sel_xtal32k",
+                &format_args!("{}", self.lp_sel_xtal32k().bit()),
+            )
+            .field(
+                "lp_i2c_clk_sel",
+                &format_args!("{}", self.lp_i2c_clk_sel().bit()),
+            )
+            .field(
+                "lp_uart_clk_sel",
+                &format_args!("{}", self.lp_uart_clk_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LPPERI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

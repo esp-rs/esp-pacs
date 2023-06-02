@@ -35,61 +35,61 @@ impl From<crate::W<SPI_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_fastrd_mode` reader - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
-pub type SPI_FASTRD_MODE_R = crate::BitReader<bool>;
+pub type SPI_FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `spi_fastrd_mode` writer - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
-pub type SPI_FASTRD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_FASTRD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_dout_mode` reader - In the read operations, \"read-data\" phase apply 2 signals"]
-pub type SPI_DOUT_MODE_R = crate::BitReader<bool>;
+pub type SPI_DOUT_MODE_R = crate::BitReader;
 #[doc = "Field `spi_dout_mode` writer - In the read operations, \"read-data\" phase apply 2 signals"]
-pub type SPI_DOUT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_DOUT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `res_and_res` reader - 'Res and res'?"]
-pub type RES_AND_RES_R = crate::BitReader<bool>;
+pub type RES_AND_RES_R = crate::BitReader;
 #[doc = "Field `res_and_res` writer - 'Res and res'?"]
-pub type RES_AND_RES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type RES_AND_RES_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `sst_aai` reader - SST_AAI?"]
-pub type SST_AAI_R = crate::BitReader<bool>;
+pub type SST_AAI_R = crate::BitReader;
 #[doc = "Field `sst_aai` writer - SST_AAI?"]
-pub type SST_AAI_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SST_AAI_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `enable_ahb` reader - Enable AHB"]
-pub type ENABLE_AHB_R = crate::BitReader<bool>;
+pub type ENABLE_AHB_R = crate::BitReader;
 #[doc = "Field `enable_ahb` writer - Enable AHB"]
-pub type ENABLE_AHB_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type ENABLE_AHB_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `hold_mode` reader - Hold mode"]
-pub type HOLD_MODE_R = crate::BitReader<bool>;
+pub type HOLD_MODE_R = crate::BitReader;
 #[doc = "Field `hold_mode` writer - Hold mode"]
-pub type HOLD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type HOLD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `share_but` reader - Share bus"]
-pub type SHARE_BUT_R = crate::BitReader<bool>;
+pub type SHARE_BUT_R = crate::BitReader;
 #[doc = "Field `share_but` writer - Share bus"]
-pub type SHARE_BUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SHARE_BUT_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_qout_mode` reader - In the read operations, \"read-data\" phase apply 4 signals"]
-pub type SPI_QOUT_MODE_R = crate::BitReader<bool>;
+pub type SPI_QOUT_MODE_R = crate::BitReader;
 #[doc = "Field `spi_qout_mode` writer - In the read operations, \"read-data\" phase apply 4 signals"]
-pub type SPI_QOUT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_QOUT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `wp_reg` reader - Write protect?"]
-pub type WP_REG_R = crate::BitReader<bool>;
+pub type WP_REG_R = crate::BitReader;
 #[doc = "Field `wp_reg` writer - Write protect?"]
-pub type WP_REG_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type WP_REG_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `two_byte_status` reader - Enable two byte status"]
-pub type TWO_BYTE_STATUS_R = crate::BitReader<bool>;
+pub type TWO_BYTE_STATUS_R = crate::BitReader;
 #[doc = "Field `two_byte_status` writer - Enable two byte status"]
-pub type TWO_BYTE_STATUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type TWO_BYTE_STATUS_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_dio_mode` reader - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
-pub type SPI_DIO_MODE_R = crate::BitReader<bool>;
+pub type SPI_DIO_MODE_R = crate::BitReader;
 #[doc = "Field `spi_dio_mode` writer - In the read operations, \"address\" phase and \"read-data\" phase apply 2 signals"]
-pub type SPI_DIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_DIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_qio_mode` reader - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
-pub type SPI_QIO_MODE_R = crate::BitReader<bool>;
+pub type SPI_QIO_MODE_R = crate::BitReader;
 #[doc = "Field `spi_qio_mode` writer - In the read operations, \"address\" phase and \"read-data\" phase apply 4 signals"]
-pub type SPI_QIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_QIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_rd_bit_order` reader - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
-pub type SPI_RD_BIT_ORDER_R = crate::BitReader<bool>;
+pub type SPI_RD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `spi_rd_bit_order` writer - In \"read-data\" (MISO) phase, 1: LSB first; 0: MSB first"]
-pub type SPI_RD_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_RD_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 #[doc = "Field `spi_wr_bit_order` reader - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
-pub type SPI_WR_BIT_ORDER_R = crate::BitReader<bool>;
+pub type SPI_WR_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `spi_wr_bit_order` writer - In \"command\", \"address\", \"write-data\" (MOSI) phases, 1: LSB first; 0: MSB first"]
-pub type SPI_WR_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
+pub type SPI_WR_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 13 - this bit enable the bits: spi_qio_mode, spi_dio_mode, spi_qout_mode and spi_dout_mode"]
     #[inline(always)]
@@ -160,6 +160,57 @@ impl R {
     #[inline(always)]
     pub fn spi_wr_bit_order(&self) -> SPI_WR_BIT_ORDER_R {
         SPI_WR_BIT_ORDER_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CTRL")
+            .field(
+                "spi_wr_bit_order",
+                &format_args!("{}", self.spi_wr_bit_order().bit()),
+            )
+            .field(
+                "spi_rd_bit_order",
+                &format_args!("{}", self.spi_rd_bit_order().bit()),
+            )
+            .field(
+                "spi_qio_mode",
+                &format_args!("{}", self.spi_qio_mode().bit()),
+            )
+            .field(
+                "spi_dio_mode",
+                &format_args!("{}", self.spi_dio_mode().bit()),
+            )
+            .field(
+                "spi_qout_mode",
+                &format_args!("{}", self.spi_qout_mode().bit()),
+            )
+            .field(
+                "spi_dout_mode",
+                &format_args!("{}", self.spi_dout_mode().bit()),
+            )
+            .field(
+                "spi_fastrd_mode",
+                &format_args!("{}", self.spi_fastrd_mode().bit()),
+            )
+            .field(
+                "two_byte_status",
+                &format_args!("{}", self.two_byte_status().bit()),
+            )
+            .field("wp_reg", &format_args!("{}", self.wp_reg().bit()))
+            .field("share_but", &format_args!("{}", self.share_but().bit()))
+            .field("hold_mode", &format_args!("{}", self.hold_mode().bit()))
+            .field("enable_ahb", &format_args!("{}", self.enable_ahb().bit()))
+            .field("sst_aai", &format_args!("{}", self.sst_aai().bit()))
+            .field("res_and_res", &format_args!("{}", self.res_and_res().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,14 +38,31 @@ impl From<crate::W<TAR1_HIGH_SPEC>> for W {
 pub type MAIN_TIMER_TAR_HIGH1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MAIN_TIMER_TAR_HIGH1` writer - need_des"]
 pub type MAIN_TIMER_TAR_HIGH1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TAR1_HIGH_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TAR1_HIGH_SPEC, 16, O, u16, u16>;
 #[doc = "Field `MAIN_TIMER_TAR_EN1` writer - need_des"]
-pub type MAIN_TIMER_TAR_EN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TAR1_HIGH_SPEC, bool, O>;
+pub type MAIN_TIMER_TAR_EN1_W<'a, const O: u8> = crate::BitWriter<'a, TAR1_HIGH_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
     pub fn main_timer_tar_high1(&self) -> MAIN_TIMER_TAR_HIGH1_R {
         MAIN_TIMER_TAR_HIGH1_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TAR1_HIGH")
+            .field(
+                "main_timer_tar_high1",
+                &format_args!("{}", self.main_timer_tar_high1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TAR1_HIGH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

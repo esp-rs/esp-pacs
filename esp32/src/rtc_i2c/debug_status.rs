@@ -35,44 +35,41 @@ impl From<crate::W<DEBUG_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `ACK_VAL` reader - The value of an acknowledge signal on the bus"]
-pub type ACK_VAL_R = crate::BitReader<bool>;
+pub type ACK_VAL_R = crate::BitReader;
 #[doc = "Field `ACK_VAL` writer - The value of an acknowledge signal on the bus"]
-pub type ACK_VAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type ACK_VAL_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `SLAVE_RW` reader - When working as a slave, the value of R/W bit received"]
-pub type SLAVE_RW_R = crate::BitReader<bool>;
+pub type SLAVE_RW_R = crate::BitReader;
 #[doc = "Field `SLAVE_RW` writer - When working as a slave, the value of R/W bit received"]
-pub type SLAVE_RW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type SLAVE_RW_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `TIMED_OUT` reader - Transfer has timed out"]
-pub type TIMED_OUT_R = crate::BitReader<bool>;
+pub type TIMED_OUT_R = crate::BitReader;
 #[doc = "Field `TIMED_OUT` writer - Transfer has timed out"]
-pub type TIMED_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type TIMED_OUT_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `ARB_LOST` reader - When working as a master, lost control of I2C bus"]
-pub type ARB_LOST_R = crate::BitReader<bool>;
+pub type ARB_LOST_R = crate::BitReader;
 #[doc = "Field `ARB_LOST` writer - When working as a master, lost control of I2C bus"]
-pub type ARB_LOST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type ARB_LOST_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `BUS_BUSY` reader - operation is in progress"]
-pub type BUS_BUSY_R = crate::BitReader<bool>;
+pub type BUS_BUSY_R = crate::BitReader;
 #[doc = "Field `BUS_BUSY` writer - operation is in progress"]
-pub type BUS_BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type BUS_BUSY_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `SLAVE_ADDR_MATCH` reader - When working as a slave, whether address was matched"]
-pub type SLAVE_ADDR_MATCH_R = crate::BitReader<bool>;
+pub type SLAVE_ADDR_MATCH_R = crate::BitReader;
 #[doc = "Field `SLAVE_ADDR_MATCH` writer - When working as a slave, whether address was matched"]
-pub type SLAVE_ADDR_MATCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type SLAVE_ADDR_MATCH_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `BYTE_TRANS` reader - 8 bit transmit done"]
-pub type BYTE_TRANS_R = crate::BitReader<bool>;
+pub type BYTE_TRANS_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS` writer - 8 bit transmit done"]
-pub type BYTE_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DEBUG_STATUS_SPEC, bool, O>;
+pub type BYTE_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, DEBUG_STATUS_SPEC, O>;
 #[doc = "Field `MAIN_STATE` reader - state of the main state machine"]
-pub type MAIN_STATE_R = crate::FieldReader<u8, u8>;
+pub type MAIN_STATE_R = crate::FieldReader;
 #[doc = "Field `MAIN_STATE` writer - state of the main state machine"]
-pub type MAIN_STATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DEBUG_STATUS_SPEC, u8, u8, 3, O>;
+pub type MAIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_STATUS_SPEC, 3, O>;
 #[doc = "Field `SCL_STATE` reader - state of SCL state machine"]
-pub type SCL_STATE_R = crate::FieldReader<u8, u8>;
+pub type SCL_STATE_R = crate::FieldReader;
 #[doc = "Field `SCL_STATE` writer - state of SCL state machine"]
-pub type SCL_STATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DEBUG_STATUS_SPEC, u8, u8, 3, O>;
+pub type SCL_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_STATUS_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
@@ -118,6 +115,31 @@ impl R {
     #[inline(always)]
     pub fn scl_state(&self) -> SCL_STATE_R {
         SCL_STATE_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DEBUG_STATUS")
+            .field("ack_val", &format_args!("{}", self.ack_val().bit()))
+            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
+            .field("timed_out", &format_args!("{}", self.timed_out().bit()))
+            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
+            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
+            .field(
+                "slave_addr_match",
+                &format_args!("{}", self.slave_addr_match().bit()),
+            )
+            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
+            .field("main_state", &format_args!("{}", self.main_state().bits()))
+            .field("scl_state", &format_args!("{}", self.scl_state().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DEBUG_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

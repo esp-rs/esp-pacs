@@ -35,80 +35,78 @@ impl From<crate::W<CNTL_GPIO_WAKEUP_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_WAKEUP_STATUS` reader - Need add desc"]
-pub type GPIO_WAKEUP_STATUS_R = crate::FieldReader<u8, u8>;
+pub type GPIO_WAKEUP_STATUS_R = crate::FieldReader;
 #[doc = "Field `GPIO_WAKEUP_STATUS` writer - Need add desc"]
 pub type GPIO_WAKEUP_STATUS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 6, O>;
 #[doc = "Field `GPIO_WAKEUP_STATUS_CLR` reader - Need add desc"]
-pub type GPIO_WAKEUP_STATUS_CLR_R = crate::BitReader<bool>;
+pub type GPIO_WAKEUP_STATUS_CLR_R = crate::BitReader;
 #[doc = "Field `GPIO_WAKEUP_STATUS_CLR` writer - Need add desc"]
-pub type GPIO_WAKEUP_STATUS_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+pub type GPIO_WAKEUP_STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN_CLK_GATE` reader - Need add desc"]
-pub type GPIO_PIN_CLK_GATE_R = crate::BitReader<bool>;
+pub type GPIO_PIN_CLK_GATE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN_CLK_GATE` writer - Need add desc"]
-pub type GPIO_PIN_CLK_GATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+pub type GPIO_PIN_CLK_GATE_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN5_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN5_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN5_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN5_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN5_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN4_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN4_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN4_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN4_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN4_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN3_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN3_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN3_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN3_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN3_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN2_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN2_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN2_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN2_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN2_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN1_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN1_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN1_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN1_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN1_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN0_INT_TYPE` reader - Need add desc"]
-pub type GPIO_PIN0_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN0_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN0_INT_TYPE` writer - Need add desc"]
 pub type GPIO_PIN0_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_GPIO_WAKEUP_SPEC, 3, O>;
 #[doc = "Field `GPIO_PIN5_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN5_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN5_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN5_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN4_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN4_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN4_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN4_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN3_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN3_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN3_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN3_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN2_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN2_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN2_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN2_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN1_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN1_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN1_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN1_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 #[doc = "Field `GPIO_PIN0_WAKEUP_ENABLE` reader - Need add desc"]
-pub type GPIO_PIN0_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN0_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_WAKEUP_ENABLE` writer - Need add desc"]
 pub type GPIO_PIN0_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_GPIO_WAKEUP_SPEC, bool, O>;
+    crate::BitWriter<'a, CNTL_GPIO_WAKEUP_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - Need add desc"]
     #[inline(always)]
@@ -184,6 +182,79 @@ impl R {
     #[inline(always)]
     pub fn gpio_pin0_wakeup_enable(&self) -> GPIO_PIN0_WAKEUP_ENABLE_R {
         GPIO_PIN0_WAKEUP_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CNTL_GPIO_WAKEUP")
+            .field(
+                "gpio_wakeup_status",
+                &format_args!("{}", self.gpio_wakeup_status().bits()),
+            )
+            .field(
+                "gpio_wakeup_status_clr",
+                &format_args!("{}", self.gpio_wakeup_status_clr().bit()),
+            )
+            .field(
+                "gpio_pin_clk_gate",
+                &format_args!("{}", self.gpio_pin_clk_gate().bit()),
+            )
+            .field(
+                "gpio_pin5_int_type",
+                &format_args!("{}", self.gpio_pin5_int_type().bits()),
+            )
+            .field(
+                "gpio_pin4_int_type",
+                &format_args!("{}", self.gpio_pin4_int_type().bits()),
+            )
+            .field(
+                "gpio_pin3_int_type",
+                &format_args!("{}", self.gpio_pin3_int_type().bits()),
+            )
+            .field(
+                "gpio_pin2_int_type",
+                &format_args!("{}", self.gpio_pin2_int_type().bits()),
+            )
+            .field(
+                "gpio_pin1_int_type",
+                &format_args!("{}", self.gpio_pin1_int_type().bits()),
+            )
+            .field(
+                "gpio_pin0_int_type",
+                &format_args!("{}", self.gpio_pin0_int_type().bits()),
+            )
+            .field(
+                "gpio_pin5_wakeup_enable",
+                &format_args!("{}", self.gpio_pin5_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin4_wakeup_enable",
+                &format_args!("{}", self.gpio_pin4_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin3_wakeup_enable",
+                &format_args!("{}", self.gpio_pin3_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin2_wakeup_enable",
+                &format_args!("{}", self.gpio_pin2_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin1_wakeup_enable",
+                &format_args!("{}", self.gpio_pin1_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin0_wakeup_enable",
+                &format_args!("{}", self.gpio_pin0_wakeup_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CNTL_GPIO_WAKEUP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

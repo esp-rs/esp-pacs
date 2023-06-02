@@ -20,7 +20,13 @@ impl From<crate::W<TRIGGER_SPEC>> for W {
     }
 }
 #[doc = "Field `TRIGGER` writer - Write 1 to activate manual encryption."]
-pub type TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, O>;
+pub type TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, TRIGGER_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TRIGGER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to activate manual encryption."]
     #[inline(always)]

@@ -20,8 +20,13 @@ impl From<crate::W<ENABLE_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_W1TS` writer - GPIO output enable set register for GPIO0-25"]
-pub type ENABLE_W1TS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ENABLE_W1TS_SPEC, u32, u32, 26, O>;
+pub type ENABLE_W1TS_W<'a, const O: u8> = crate::FieldWriter<'a, ENABLE_W1TS_SPEC, 26, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:25 - GPIO output enable set register for GPIO0-25"]
     #[inline(always)]

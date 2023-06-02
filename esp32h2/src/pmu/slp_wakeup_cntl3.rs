@@ -35,20 +35,17 @@ impl From<crate::W<SLP_WAKEUP_CNTL3_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_MIN_SLP_VAL` reader - need_des"]
-pub type LP_MIN_SLP_VAL_R = crate::FieldReader<u8, u8>;
+pub type LP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `LP_MIN_SLP_VAL` writer - need_des"]
-pub type LP_MIN_SLP_VAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL3_SPEC, u8, u8, 8, O>;
+pub type LP_MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 8, O>;
 #[doc = "Field `HP_MIN_SLP_VAL` reader - need_des"]
-pub type HP_MIN_SLP_VAL_R = crate::FieldReader<u8, u8>;
+pub type HP_MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `HP_MIN_SLP_VAL` writer - need_des"]
-pub type HP_MIN_SLP_VAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL3_SPEC, u8, u8, 8, O>;
+pub type HP_MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 8, O>;
 #[doc = "Field `SLEEP_PRT_SEL` reader - need_des"]
-pub type SLEEP_PRT_SEL_R = crate::FieldReader<u8, u8>;
+pub type SLEEP_PRT_SEL_R = crate::FieldReader;
 #[doc = "Field `SLEEP_PRT_SEL` writer - need_des"]
-pub type SLEEP_PRT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL3_SPEC, u8, u8, 2, O>;
+pub type SLEEP_PRT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_WAKEUP_CNTL3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn sleep_prt_sel(&self) -> SLEEP_PRT_SEL_R {
         SLEEP_PRT_SEL_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_WAKEUP_CNTL3")
+            .field(
+                "lp_min_slp_val",
+                &format_args!("{}", self.lp_min_slp_val().bits()),
+            )
+            .field(
+                "hp_min_slp_val",
+                &format_args!("{}", self.hp_min_slp_val().bits()),
+            )
+            .field(
+                "sleep_prt_sel",
+                &format_args!("{}", self.sleep_prt_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

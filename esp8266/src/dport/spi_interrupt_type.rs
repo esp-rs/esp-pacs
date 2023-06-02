@@ -14,11 +14,11 @@ impl From<crate::R<SPI_INTERRUPT_TYPE_SPEC>> for R {
     }
 }
 #[doc = "Field `spi0` reader - SPI0 interrupt"]
-pub type SPI0_R = crate::BitReader<bool>;
+pub type SPI0_R = crate::BitReader;
 #[doc = "Field `spi1` reader - SPI1 interrupt"]
-pub type SPI1_R = crate::BitReader<bool>;
+pub type SPI1_R = crate::BitReader;
 #[doc = "Field `i2s` reader - I2S interrupt"]
-pub type I2S_R = crate::BitReader<bool>;
+pub type I2S_R = crate::BitReader;
 impl R {
     #[doc = "Bit 4 - SPI0 interrupt"]
     #[inline(always)]
@@ -34,6 +34,22 @@ impl R {
     #[inline(always)]
     pub fn i2s(&self) -> I2S_R {
         I2S_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_INTERRUPT_TYPE")
+            .field("spi0", &format_args!("{}", self.spi0().bit()))
+            .field("spi1", &format_args!("{}", self.spi1().bit()))
+            .field("i2s", &format_args!("{}", self.i2s().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_INTERRUPT_TYPE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI interrupt type register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_interrupt_type](index.html) module"]

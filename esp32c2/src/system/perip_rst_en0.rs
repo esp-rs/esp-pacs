@@ -35,49 +35,49 @@ impl From<crate::W<PERIP_RST_EN0_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI01_RST` reader - Set 1 to let SPI01 reset"]
-pub type SPI01_RST_R = crate::BitReader<bool>;
+pub type SPI01_RST_R = crate::BitReader;
 #[doc = "Field `SPI01_RST` writer - Set 1 to let SPI01 reset"]
-pub type SPI01_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type SPI01_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `UART_RST` reader - Set 1 to let UART reset"]
-pub type UART_RST_R = crate::BitReader<bool>;
+pub type UART_RST_R = crate::BitReader;
 #[doc = "Field `UART_RST` writer - Set 1 to let UART reset"]
-pub type UART_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type UART_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `UART1_RST` reader - Set 1 to let UART1 reset"]
-pub type UART1_RST_R = crate::BitReader<bool>;
+pub type UART1_RST_R = crate::BitReader;
 #[doc = "Field `UART1_RST` writer - Set 1 to let UART1 reset"]
-pub type UART1_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type UART1_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `SPI2_RST` reader - Set 1 to let SPI2 reset"]
-pub type SPI2_RST_R = crate::BitReader<bool>;
+pub type SPI2_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_RST` writer - Set 1 to let SPI2 reset"]
-pub type SPI2_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type SPI2_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `I2C_EXT0_RST` reader - Set 1 to let I2C_EXT0 reset"]
-pub type I2C_EXT0_RST_R = crate::BitReader<bool>;
+pub type I2C_EXT0_RST_R = crate::BitReader;
 #[doc = "Field `I2C_EXT0_RST` writer - Set 1 to let I2C_EXT0 reset"]
-pub type I2C_EXT0_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type I2C_EXT0_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `LEDC_RST` reader - Set 1 to let LEDC reset"]
-pub type LEDC_RST_R = crate::BitReader<bool>;
+pub type LEDC_RST_R = crate::BitReader;
 #[doc = "Field `LEDC_RST` writer - Set 1 to let LEDC reset"]
-pub type LEDC_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type LEDC_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `TIMERGROUP_RST` reader - Set 1 to let TIMERGROUP reset"]
-pub type TIMERGROUP_RST_R = crate::BitReader<bool>;
+pub type TIMERGROUP_RST_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_RST` writer - Set 1 to let TIMERGROUP reset"]
-pub type TIMERGROUP_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type TIMERGROUP_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `UART_MEM_RST` reader - Set 1 to let UART_MEM reset"]
-pub type UART_MEM_RST_R = crate::BitReader<bool>;
+pub type UART_MEM_RST_R = crate::BitReader;
 #[doc = "Field `UART_MEM_RST` writer - Set 1 to let UART_MEM reset"]
-pub type UART_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type UART_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `APB_SARADC_RST` reader - Set 1 to let APB_SARADC reset"]
-pub type APB_SARADC_RST_R = crate::BitReader<bool>;
+pub type APB_SARADC_RST_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_RST` writer - Set 1 to let APB_SARADC reset"]
-pub type APB_SARADC_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type APB_SARADC_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `SYSTIMER_RST` reader - Set 1 to let SYSTIMER reset"]
-pub type SYSTIMER_RST_R = crate::BitReader<bool>;
+pub type SYSTIMER_RST_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_RST` writer - Set 1 to let SYSTIMER reset"]
-pub type SYSTIMER_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type SYSTIMER_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 #[doc = "Field `ADC2_ARB_RST` reader - Set 1 to let ADC2_ARB reset"]
-pub type ADC2_ARB_RST_R = crate::BitReader<bool>;
+pub type ADC2_ARB_RST_R = crate::BitReader;
 #[doc = "Field `ADC2_ARB_RST` writer - Set 1 to let ADC2_ARB reset"]
-pub type ADC2_ARB_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN0_SPEC, bool, O>;
+pub type ADC2_ARB_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN0_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set 1 to let SPI01 reset"]
     #[inline(always)]
@@ -133,6 +133,48 @@ impl R {
     #[inline(always)]
     pub fn adc2_arb_rst(&self) -> ADC2_ARB_RST_R {
         ADC2_ARB_RST_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_RST_EN0")
+            .field("spi01_rst", &format_args!("{}", self.spi01_rst().bit()))
+            .field("uart_rst", &format_args!("{}", self.uart_rst().bit()))
+            .field("uart1_rst", &format_args!("{}", self.uart1_rst().bit()))
+            .field("spi2_rst", &format_args!("{}", self.spi2_rst().bit()))
+            .field(
+                "i2c_ext0_rst",
+                &format_args!("{}", self.i2c_ext0_rst().bit()),
+            )
+            .field("ledc_rst", &format_args!("{}", self.ledc_rst().bit()))
+            .field(
+                "timergroup_rst",
+                &format_args!("{}", self.timergroup_rst().bit()),
+            )
+            .field(
+                "uart_mem_rst",
+                &format_args!("{}", self.uart_mem_rst().bit()),
+            )
+            .field(
+                "apb_saradc_rst",
+                &format_args!("{}", self.apb_saradc_rst().bit()),
+            )
+            .field(
+                "systimer_rst",
+                &format_args!("{}", self.systimer_rst().bit()),
+            )
+            .field(
+                "adc2_arb_rst",
+                &format_args!("{}", self.adc2_arb_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

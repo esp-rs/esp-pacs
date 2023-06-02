@@ -38,12 +38,29 @@ impl From<crate::W<AHB_MPU_TABLE_0_SPEC>> for W {
 pub type AHB_ACCESS_GRANT_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `AHB_ACCESS_GRANT_0` writer - "]
 pub type AHB_ACCESS_GRANT_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHB_MPU_TABLE_0_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, AHB_MPU_TABLE_0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn ahb_access_grant_0(&self) -> AHB_ACCESS_GRANT_0_R {
         AHB_ACCESS_GRANT_0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHB_MPU_TABLE_0")
+            .field(
+                "ahb_access_grant_0",
+                &format_args!("{}", self.ahb_access_grant_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHB_MPU_TABLE_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

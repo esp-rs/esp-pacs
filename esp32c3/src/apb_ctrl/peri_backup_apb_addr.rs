@@ -38,12 +38,29 @@ impl From<crate::W<PERI_BACKUP_APB_ADDR_SPEC>> for W {
 pub type BACKUP_APB_START_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BACKUP_APB_START_ADDR` writer - reg_backup_apb_start_addr"]
 pub type BACKUP_APB_START_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERI_BACKUP_APB_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, PERI_BACKUP_APB_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_backup_apb_start_addr"]
     #[inline(always)]
     pub fn backup_apb_start_addr(&self) -> BACKUP_APB_START_ADDR_R {
         BACKUP_APB_START_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERI_BACKUP_APB_ADDR")
+            .field(
+                "backup_apb_start_addr",
+                &format_args!("{}", self.backup_apb_start_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_APB_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

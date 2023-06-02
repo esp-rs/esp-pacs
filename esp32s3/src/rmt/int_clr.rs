@@ -20,36 +20,35 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_TX_END_INT_CLR[0-3]` writer - Set this bit to clear theCH%s_TX_END_INT interrupt."]
-pub type CH_TX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_TX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH_TX_ERR_INT_CLR[0-3]` writer - Set this bit to clear theCH%s_ERR_INT interrupt."]
-pub type CH_TX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_TX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_CLR[0-3]` writer - Set this bit to clear theCH%s_TX_THR_EVENT_INT interrupt."]
-pub type CH_TX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_TX_THR_EVENT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH_TX_LOOP_INT_CLR[0-3]` writer - Set this bit to clear theCH%s_TX_LOOP_INT interrupt."]
-pub type CH_TX_LOOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_TX_LOOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH_RX_END_INT_CLR[4-7]` writer - Set this bit to clear theCH4_RX_END_INT interrupt."]
-pub type CH_RX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_RX_END_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH_RX_ERR_INT_CLR[RX_CH4,RX_CH5,RX_CH6,RX_CH7]` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
-pub type CH_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH_RX_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH4_RX_THR_EVENT_INT_CLR` writer - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
-pub type CH4_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH4_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH5_RX_THR_EVENT_INT_CLR` writer - Set this bit to clear theCH5_RX_THR_EVENT_INT interrupt."]
-pub type CH5_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH5_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH6_RX_THR_EVENT_INT_CLR` writer - Set this bit to clear theCH6_RX_THR_EVENT_INT interrupt."]
-pub type CH6_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH6_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CH7_RX_THR_EVENT_INT_CLR` writer - Set this bit to clear theCH7_RX_THR_EVENT_INT interrupt."]
-pub type CH7_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CH7_RX_THR_EVENT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_CLR` writer - Set this bit to clear the CH3_DMA_ACCESS_FAIL_INT interrupt."]
-pub type TX_CH3_DMA_ACCESS_FAIL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_CLR` writer - Set this bit to clear the CH7_DMA_ACCESS_FAIL_INT interrupt."]
-pub type RX_CH7_DMA_ACCESS_FAIL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Set this bit to clear theCH[0-3]_TX_END_INT interrupt."]
     #[inline(always)]

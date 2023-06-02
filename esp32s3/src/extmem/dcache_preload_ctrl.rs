@@ -35,17 +35,16 @@ impl From<crate::W<DCACHE_PRELOAD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type DCACHE_PRELOAD_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub type DCACHE_PRELOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_PRELOAD_CTRL_SPEC, bool, O>;
+pub type DCACHE_PRELOAD_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_PRELOAD_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_PRELOAD_DONE` reader - The bit is used to indicate preload operation is finished."]
-pub type DCACHE_PRELOAD_DONE_R = crate::BitReader<bool>;
+pub type DCACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
-pub type DCACHE_PRELOAD_ORDER_R = crate::BitReader<bool>;
+pub type DCACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOAD_ORDER` writer - The bit is used to configure the direction of preload operation. 1: descending, 0: ascending."]
 pub type DCACHE_PRELOAD_ORDER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_PRELOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_PRELOAD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
@@ -61,6 +60,31 @@ impl R {
     #[inline(always)]
     pub fn dcache_preload_order(&self) -> DCACHE_PRELOAD_ORDER_R {
         DCACHE_PRELOAD_ORDER_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_PRELOAD_CTRL")
+            .field(
+                "dcache_preload_ena",
+                &format_args!("{}", self.dcache_preload_ena().bit()),
+            )
+            .field(
+                "dcache_preload_done",
+                &format_args!("{}", self.dcache_preload_done().bit()),
+            )
+            .field(
+                "dcache_preload_order",
+                &format_args!("{}", self.dcache_preload_order().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOAD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

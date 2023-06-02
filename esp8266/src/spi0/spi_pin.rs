@@ -35,21 +35,21 @@ impl From<crate::W<SPI_PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_cs0_dis` reader - 1: disable CS0; 0: spi_cs signal is from/to CS0 pin"]
-pub type SPI_CS0_DIS_R = crate::BitReader<bool>;
+pub type SPI_CS0_DIS_R = crate::BitReader;
 #[doc = "Field `spi_cs0_dis` writer - 1: disable CS0; 0: spi_cs signal is from/to CS0 pin"]
-pub type SPI_CS0_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_PIN_SPEC, bool, O>;
+pub type SPI_CS0_DIS_W<'a, const O: u8> = crate::BitWriter<'a, SPI_PIN_SPEC, O>;
 #[doc = "Field `spi_cs1_dis` reader - 1: disable CS1; 0: spi_cs signal is from/to CS1 pin"]
-pub type SPI_CS1_DIS_R = crate::BitReader<bool>;
+pub type SPI_CS1_DIS_R = crate::BitReader;
 #[doc = "Field `spi_cs1_dis` writer - 1: disable CS1; 0: spi_cs signal is from/to CS1 pin"]
-pub type SPI_CS1_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_PIN_SPEC, bool, O>;
+pub type SPI_CS1_DIS_W<'a, const O: u8> = crate::BitWriter<'a, SPI_PIN_SPEC, O>;
 #[doc = "Field `spi_cs2_dis` reader - 1: disable CS2; 0: spi_cs signal is from/to CS2 pin"]
-pub type SPI_CS2_DIS_R = crate::BitReader<bool>;
+pub type SPI_CS2_DIS_R = crate::BitReader;
 #[doc = "Field `spi_cs2_dis` writer - 1: disable CS2; 0: spi_cs signal is from/to CS2 pin"]
-pub type SPI_CS2_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_PIN_SPEC, bool, O>;
+pub type SPI_CS2_DIS_W<'a, const O: u8> = crate::BitWriter<'a, SPI_PIN_SPEC, O>;
 #[doc = "Field `spi_idle_edge` reader - In the master mode, 1: high when idle; 0: low when idle"]
-pub type SPI_IDLE_EDGE_R = crate::BitReader<bool>;
+pub type SPI_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `spi_idle_edge` writer - In the master mode, 1: high when idle; 0: low when idle"]
-pub type SPI_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_PIN_SPEC, bool, O>;
+pub type SPI_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_PIN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: disable CS0; 0: spi_cs signal is from/to CS0 pin"]
     #[inline(always)]
@@ -70,6 +70,26 @@ impl R {
     #[inline(always)]
     pub fn spi_idle_edge(&self) -> SPI_IDLE_EDGE_R {
         SPI_IDLE_EDGE_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_PIN")
+            .field("spi_cs2_dis", &format_args!("{}", self.spi_cs2_dis().bit()))
+            .field("spi_cs1_dis", &format_args!("{}", self.spi_cs1_dis().bit()))
+            .field("spi_cs0_dis", &format_args!("{}", self.spi_cs0_dis().bit()))
+            .field(
+                "spi_idle_edge",
+                &format_args!("{}", self.spi_idle_edge().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_PIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

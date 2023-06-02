@@ -35,41 +35,41 @@ impl From<crate::W<DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DIN0_NUM` reader - SPI_D input delay number."]
-pub type DIN0_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN0_NUM` writer - SPI_D input delay number."]
-pub type DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN1_NUM` reader - SPI_Q input delay number."]
-pub type DIN1_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` writer - SPI_Q input delay number."]
-pub type DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN2_NUM` reader - SPI_WP input delay number."]
-pub type DIN2_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN2_NUM` writer - SPI_WP input delay number."]
-pub type DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN3_NUM` reader - SPI_HD input delay number."]
-pub type DIN3_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN3_NUM` writer - SPI_HD input delay number."]
-pub type DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN4_NUM` reader - SPI_IO4 input delay number."]
-pub type DIN4_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN4_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN4_NUM` writer - SPI_IO4 input delay number."]
-pub type DIN4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN5_NUM` reader - SPI_IO5 input delay number."]
-pub type DIN5_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN5_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN5_NUM` writer - SPI_IO5 input delay number."]
-pub type DIN5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN6_NUM` reader - SPI_IO6 input delay number."]
-pub type DIN6_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN6_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN6_NUM` writer - SPI_IO6 input delay number."]
-pub type DIN6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN7_NUM` reader - SPI_IO7 input delay number."]
-pub type DIN7_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN7_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN7_NUM` writer - SPI_IO7 input delay number."]
-pub type DIN7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DINS_NUM` reader - SPI_DQS input delay number."]
-pub type DINS_NUM_R = crate::FieldReader<u8, u8>;
+pub type DINS_NUM_R = crate::FieldReader;
 #[doc = "Field `DINS_NUM` writer - SPI_DQS input delay number."]
-pub type DINS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DINS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
@@ -115,6 +115,28 @@ impl R {
     #[inline(always)]
     pub fn dins_num(&self) -> DINS_NUM_R {
         DINS_NUM_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIN_NUM")
+            .field("din0_num", &format_args!("{}", self.din0_num().bits()))
+            .field("din1_num", &format_args!("{}", self.din1_num().bits()))
+            .field("din2_num", &format_args!("{}", self.din2_num().bits()))
+            .field("din3_num", &format_args!("{}", self.din3_num().bits()))
+            .field("din4_num", &format_args!("{}", self.din4_num().bits()))
+            .field("din5_num", &format_args!("{}", self.din5_num().bits()))
+            .field("din6_num", &format_args!("{}", self.din6_num().bits()))
+            .field("din7_num", &format_args!("{}", self.din7_num().bits()))
+            .field("dins_num", &format_args!("{}", self.dins_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

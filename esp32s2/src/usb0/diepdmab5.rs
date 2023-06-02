@@ -22,6 +22,23 @@ impl R {
         D_DMABUFFERADDR5_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPDMAB5")
+            .field(
+                "d_dmabufferaddr5",
+                &format_args!("{}", self.d_dmabufferaddr5().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIEPDMAB5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [diepdmab5](index.html) module"]
 pub struct DIEPDMAB5_SPEC;
 impl crate::RegisterSpec for DIEPDMAB5_SPEC {

@@ -14,13 +14,13 @@ impl From<crate::R<RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_RX_FULL` reader - "]
-pub type SLC0_RX_FULL_R = crate::BitReader<bool>;
+pub type SLC0_RX_FULL_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_EMPTY` reader - "]
-pub type SLC0_RX_EMPTY_R = crate::BitReader<bool>;
+pub type SLC0_RX_EMPTY_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_FULL` reader - "]
-pub type SLC1_RX_FULL_R = crate::BitReader<bool>;
+pub type SLC1_RX_FULL_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_EMPTY` reader - "]
-pub type SLC1_RX_EMPTY_R = crate::BitReader<bool>;
+pub type SLC1_RX_EMPTY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn slc1_rx_empty(&self) -> SLC1_RX_EMPTY_R {
         SLC1_RX_EMPTY_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_STATUS")
+            .field(
+                "slc0_rx_full",
+                &format_args!("{}", self.slc0_rx_full().bit()),
+            )
+            .field(
+                "slc0_rx_empty",
+                &format_args!("{}", self.slc0_rx_empty().bit()),
+            )
+            .field(
+                "slc1_rx_full",
+                &format_args!("{}", self.slc1_rx_full().bit()),
+            )
+            .field(
+                "slc1_rx_empty",
+                &format_args!("{}", self.slc1_rx_empty().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rx_status](index.html) module"]

@@ -35,25 +35,25 @@ impl From<crate::W<REGULATOR_DRV_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `REGULATOR_DRV_B_MONITOR` reader - No public"]
-pub type REGULATOR_DRV_B_MONITOR_R = crate::FieldReader<u8, u8>;
+pub type REGULATOR_DRV_B_MONITOR_R = crate::FieldReader;
 #[doc = "Field `REGULATOR_DRV_B_MONITOR` writer - No public"]
 pub type REGULATOR_DRV_B_MONITOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, REGULATOR_DRV_CTRL_SPEC, 6, O>;
 #[doc = "Field `REGULATOR_DRV_B_SLP` reader - No public"]
-pub type REGULATOR_DRV_B_SLP_R = crate::FieldReader<u8, u8>;
+pub type REGULATOR_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `REGULATOR_DRV_B_SLP` writer - No public"]
 pub type REGULATOR_DRV_B_SLP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, REGULATOR_DRV_CTRL_SPEC, 6, O>;
 #[doc = "Field `DG_VDD_DRV_B_SLP` reader - No public"]
-pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader<u8, u8>;
+pub type DG_VDD_DRV_B_SLP_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_SLP` writer - No public"]
 pub type DG_VDD_DRV_B_SLP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, REGULATOR_DRV_CTRL_SPEC, 8, O>;
 #[doc = "Field `DG_VDD_DRV_B_MONITOR` reader - No public"]
-pub type DG_VDD_DRV_B_MONITOR_R = crate::FieldReader<u8, u8>;
+pub type DG_VDD_DRV_B_MONITOR_R = crate::FieldReader;
 #[doc = "Field `DG_VDD_DRV_B_MONITOR` writer - No public"]
 pub type DG_VDD_DRV_B_MONITOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGULATOR_DRV_CTRL_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, REGULATOR_DRV_CTRL_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:5 - No public"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn dg_vdd_drv_b_monitor(&self) -> DG_VDD_DRV_B_MONITOR_R {
         DG_VDD_DRV_B_MONITOR_R::new(((self.bits >> 20) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGULATOR_DRV_CTRL")
+            .field(
+                "regulator_drv_b_monitor",
+                &format_args!("{}", self.regulator_drv_b_monitor().bits()),
+            )
+            .field(
+                "regulator_drv_b_slp",
+                &format_args!("{}", self.regulator_drv_b_slp().bits()),
+            )
+            .field(
+                "dg_vdd_drv_b_slp",
+                &format_args!("{}", self.dg_vdd_drv_b_slp().bits()),
+            )
+            .field(
+                "dg_vdd_drv_b_monitor",
+                &format_args!("{}", self.dg_vdd_drv_b_monitor().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGULATOR_DRV_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

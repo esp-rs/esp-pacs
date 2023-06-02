@@ -37,12 +37,26 @@ impl From<crate::W<I2C_DATE_SPEC>> for W {
 #[doc = "Field `I2C_DATE` reader - This is the the version register."]
 pub type I2C_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `I2C_DATE` writer - This is the the version register."]
-pub type I2C_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, I2C_DATE_SPEC, u32, u32, 32, O>;
+pub type I2C_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_DATE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is the the version register."]
     #[inline(always)]
     pub fn i2c_date(&self) -> I2C_DATE_R {
         I2C_DATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_DATE")
+            .field("i2c_date", &format_args!("{}", self.i2c_date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

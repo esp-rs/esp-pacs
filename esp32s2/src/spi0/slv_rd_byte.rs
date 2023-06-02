@@ -38,40 +38,35 @@ impl From<crate::W<SLV_RD_BYTE_SPEC>> for W {
 pub type SLV_DATA_BYTELEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_DATA_BYTELEN` writer - The full-duplex or half-duplex data byte length of the last SPI transfer in slave mode. In half-duplex mode, this value is controlled by bits \\[23:20\\]."]
 pub type SLV_DATA_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_RD_BYTE_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SLV_RD_BYTE_SPEC, 20, O, u32, u32>;
 #[doc = "Field `SLV_RDDMA_BYTELEN_EN` reader - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
-pub type SLV_RDDMA_BYTELEN_EN_R = crate::BitReader<bool>;
+pub type SLV_RDDMA_BYTELEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDDMA_BYTELEN_EN` writer - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
-pub type SLV_RDDMA_BYTELEN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type SLV_RDDMA_BYTELEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 #[doc = "Field `SLV_WRDMA_BYTELEN_EN` reader - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
-pub type SLV_WRDMA_BYTELEN_EN_R = crate::BitReader<bool>;
+pub type SLV_WRDMA_BYTELEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRDMA_BYTELEN_EN` writer - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
-pub type SLV_WRDMA_BYTELEN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type SLV_WRDMA_BYTELEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 #[doc = "Field `SLV_RDBUF_BYTELEN_EN` reader - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
-pub type SLV_RDBUF_BYTELEN_EN_R = crate::BitReader<bool>;
+pub type SLV_RDBUF_BYTELEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDBUF_BYTELEN_EN` writer - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
-pub type SLV_RDBUF_BYTELEN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type SLV_RDBUF_BYTELEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 #[doc = "Field `SLV_WRBUF_BYTELEN_EN` reader - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
-pub type SLV_WRBUF_BYTELEN_EN_R = crate::BitReader<bool>;
+pub type SLV_WRBUF_BYTELEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRBUF_BYTELEN_EN` writer - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
-pub type SLV_WRBUF_BYTELEN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type SLV_WRBUF_BYTELEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 #[doc = "Field `DMA_SEG_MAGIC_VALUE` reader - The magic value of BM table in master DMA seg-trans."]
-pub type DMA_SEG_MAGIC_VALUE_R = crate::FieldReader<u8, u8>;
+pub type DMA_SEG_MAGIC_VALUE_R = crate::FieldReader;
 #[doc = "Field `DMA_SEG_MAGIC_VALUE` writer - The magic value of BM table in master DMA seg-trans."]
-pub type DMA_SEG_MAGIC_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_RD_BYTE_SPEC, u8, u8, 4, O>;
+pub type DMA_SEG_MAGIC_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_RD_BYTE_SPEC, 4, O>;
 #[doc = "Field `SLV_RD_DMA_DONE` reader - The interrupt raw bit for the completion of Rd-DMA operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_RD_DMA_DONE_R = crate::BitReader<bool>;
+pub type SLV_RD_DMA_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_RD_DMA_DONE` writer - The interrupt raw bit for the completion of Rd-DMA operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_RD_DMA_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type SLV_RD_DMA_DONE_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 #[doc = "Field `USR_CONF` reader - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
-pub type USR_CONF_R = crate::BitReader<bool>;
+pub type USR_CONF_R = crate::BitReader;
 #[doc = "Field `USR_CONF` writer - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
-pub type USR_CONF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLV_RD_BYTE_SPEC, bool, O>;
+pub type USR_CONF_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RD_BYTE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:19 - The full-duplex or half-duplex data byte length of the last SPI transfer in slave mode. In half-duplex mode, this value is controlled by bits \\[23:20\\]."]
     #[inline(always)]
@@ -112,6 +107,48 @@ impl R {
     #[inline(always)]
     pub fn usr_conf(&self) -> USR_CONF_R {
         USR_CONF_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLV_RD_BYTE")
+            .field(
+                "slv_data_bytelen",
+                &format_args!("{}", self.slv_data_bytelen().bits()),
+            )
+            .field(
+                "slv_rddma_bytelen_en",
+                &format_args!("{}", self.slv_rddma_bytelen_en().bit()),
+            )
+            .field(
+                "slv_wrdma_bytelen_en",
+                &format_args!("{}", self.slv_wrdma_bytelen_en().bit()),
+            )
+            .field(
+                "slv_rdbuf_bytelen_en",
+                &format_args!("{}", self.slv_rdbuf_bytelen_en().bit()),
+            )
+            .field(
+                "slv_wrbuf_bytelen_en",
+                &format_args!("{}", self.slv_wrbuf_bytelen_en().bit()),
+            )
+            .field(
+                "dma_seg_magic_value",
+                &format_args!("{}", self.dma_seg_magic_value().bits()),
+            )
+            .field(
+                "slv_rd_dma_done",
+                &format_args!("{}", self.slv_rd_dma_done().bit()),
+            )
+            .field("usr_conf", &format_args!("{}", self.usr_conf().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLV_RD_BYTE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,27 +37,24 @@ impl From<crate::W<SAR_MEAS1_CTRL2_SPEC>> for W {
 #[doc = "Field `MEAS1_DATA_SAR` reader - SAR ADC1 data"]
 pub type MEAS1_DATA_SAR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEAS1_DONE_SAR` reader - Indicate SAR ADC1 conversion is done."]
-pub type MEAS1_DONE_SAR_R = crate::BitReader<bool>;
+pub type MEAS1_DONE_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS1_START_SAR` reader - SAR ADC1 controller (in RTC) starts conversion, active only when SENS_MEAS1_START_FORCE = 1."]
-pub type MEAS1_START_SAR_R = crate::BitReader<bool>;
+pub type MEAS1_START_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS1_START_SAR` writer - SAR ADC1 controller (in RTC) starts conversion, active only when SENS_MEAS1_START_FORCE = 1."]
-pub type MEAS1_START_SAR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_CTRL2_SPEC, bool, O>;
+pub type MEAS1_START_SAR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_CTRL2_SPEC, O>;
 #[doc = "Field `MEAS1_START_FORCE` reader - 1: SAR ADC1 controller (in RTC) is started by software. 0: SAR ADC1 controller is started by ULP coprocessor."]
-pub type MEAS1_START_FORCE_R = crate::BitReader<bool>;
+pub type MEAS1_START_FORCE_R = crate::BitReader;
 #[doc = "Field `MEAS1_START_FORCE` writer - 1: SAR ADC1 controller (in RTC) is started by software. 0: SAR ADC1 controller is started by ULP coprocessor."]
-pub type MEAS1_START_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_CTRL2_SPEC, bool, O>;
+pub type MEAS1_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_CTRL2_SPEC, O>;
 #[doc = "Field `SAR1_EN_PAD` reader - SAR ADC1 pad enable bitmap, active only when SENS_SAR1_EN_PAD_FORCE = 1."]
 pub type SAR1_EN_PAD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR1_EN_PAD` writer - SAR ADC1 pad enable bitmap, active only when SENS_SAR1_EN_PAD_FORCE = 1."]
 pub type SAR1_EN_PAD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL2_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, SAR_MEAS1_CTRL2_SPEC, 12, O, u16, u16>;
 #[doc = "Field `SAR1_EN_PAD_FORCE` reader - 1: SAR ADC1 pad enable bitmap is controlled by software. 0: SAR ADC1 pad enable bitmap is controlled by ULP coprocessor."]
-pub type SAR1_EN_PAD_FORCE_R = crate::BitReader<bool>;
+pub type SAR1_EN_PAD_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR1_EN_PAD_FORCE` writer - 1: SAR ADC1 pad enable bitmap is controlled by software. 0: SAR ADC1 pad enable bitmap is controlled by ULP coprocessor."]
-pub type SAR1_EN_PAD_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_CTRL2_SPEC, bool, O>;
+pub type SAR1_EN_PAD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - SAR ADC1 data"]
     #[inline(always)]
@@ -88,6 +85,43 @@ impl R {
     #[inline(always)]
     pub fn sar1_en_pad_force(&self) -> SAR1_EN_PAD_FORCE_R {
         SAR1_EN_PAD_FORCE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS1_CTRL2")
+            .field(
+                "meas1_data_sar",
+                &format_args!("{}", self.meas1_data_sar().bits()),
+            )
+            .field(
+                "meas1_done_sar",
+                &format_args!("{}", self.meas1_done_sar().bit()),
+            )
+            .field(
+                "meas1_start_sar",
+                &format_args!("{}", self.meas1_start_sar().bit()),
+            )
+            .field(
+                "meas1_start_force",
+                &format_args!("{}", self.meas1_start_force().bit()),
+            )
+            .field(
+                "sar1_en_pad",
+                &format_args!("{}", self.sar1_en_pad().bits()),
+            )
+            .field(
+                "sar1_en_pad_force",
+                &format_args!("{}", self.sar1_en_pad_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS1_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

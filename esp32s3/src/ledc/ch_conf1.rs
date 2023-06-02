@@ -37,25 +37,23 @@ impl From<crate::W<CH_CONF1_SPEC>> for W {
 #[doc = "Field `DUTY_SCALE` reader - This register is used to configure the changing step scale of duty on channel %s."]
 pub type DUTY_SCALE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_SCALE` writer - This register is used to configure the changing step scale of duty on channel %s."]
-pub type DUTY_SCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_CYCLE` reader - The duty will change every LEDC_DUTY_CYCLE_CH%s on channel %s."]
 pub type DUTY_CYCLE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_CYCLE` writer - The duty will change every LEDC_DUTY_CYCLE_CH%s on channel %s."]
-pub type DUTY_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_NUM` reader - This register is used to control the number of times the duty cycle will be changed."]
 pub type DUTY_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_NUM` writer - This register is used to control the number of times the duty cycle will be changed."]
-pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_INC` reader - This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase; 0: Decrease."]
-pub type DUTY_INC_R = crate::BitReader<bool>;
+pub type DUTY_INC_R = crate::BitReader;
 #[doc = "Field `DUTY_INC` writer - This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase; 0: Decrease."]
-pub type DUTY_INC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+pub type DUTY_INC_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF1_SPEC, O>;
 #[doc = "Field `DUTY_START` reader - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_R = crate::BitReader<bool>;
+pub type DUTY_START_R = crate::BitReader;
 #[doc = "Field `DUTY_START` writer - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure the changing step scale of duty on channel %s."]
     #[inline(always)]
@@ -81,6 +79,24 @@ impl R {
     #[inline(always)]
     pub fn duty_start(&self) -> DUTY_START_R {
         DUTY_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_CONF1")
+            .field("duty_scale", &format_args!("{}", self.duty_scale().bits()))
+            .field("duty_cycle", &format_args!("{}", self.duty_cycle().bits()))
+            .field("duty_num", &format_args!("{}", self.duty_num().bits()))
+            .field("duty_inc", &format_args!("{}", self.duty_inc().bit()))
+            .field("duty_start", &format_args!("{}", self.duty_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

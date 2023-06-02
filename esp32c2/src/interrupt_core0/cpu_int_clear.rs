@@ -38,12 +38,29 @@ impl From<crate::W<CPU_INT_CLEAR_SPEC>> for W {
 pub type CPU_INT_CLEAR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CPU_INT_CLEAR` writer - Need add description"]
 pub type CPU_INT_CLEAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_INT_CLEAR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CPU_INT_CLEAR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]
     pub fn cpu_int_clear(&self) -> CPU_INT_CLEAR_R {
         CPU_INT_CLEAR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INT_CLEAR")
+            .field(
+                "cpu_int_clear",
+                &format_args!("{}", self.cpu_int_clear().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INT_CLEAR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,29 @@ impl From<crate::W<DATE_SPEC>> for W {
 #[doc = "Field `ASSIST_DEBUG_DATE` reader - version register"]
 pub type ASSIST_DEBUG_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ASSIST_DEBUG_DATE` writer - version register"]
-pub type ASSIST_DEBUG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, O>;
+pub type ASSIST_DEBUG_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - version register"]
     #[inline(always)]
     pub fn assist_debug_date(&self) -> ASSIST_DEBUG_DATE_R {
         ASSIST_DEBUG_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATE")
+            .field(
+                "assist_debug_date",
+                &format_args!("{}", self.assist_debug_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

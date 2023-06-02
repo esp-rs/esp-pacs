@@ -20,8 +20,13 @@ impl From<crate::W<SPI_MEM_XTS_DESTROY_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_XTS_DESTROY` writer - Set this bit to destroy encrypted result. This action should be asserted only when manual encryption status is 3. After this action, manual encryption status will become 0."]
-pub type SPI_XTS_DESTROY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_XTS_DESTROY_SPEC, bool, O>;
+pub type SPI_XTS_DESTROY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_XTS_DESTROY_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_DESTROY_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to destroy encrypted result. This action should be asserted only when manual encryption status is 3. After this action, manual encryption status will become 0."]
     #[inline(always)]

@@ -35,42 +35,41 @@ impl From<crate::W<XTAL_32N_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `X32N_FUN_IE` reader - Input enable in normal execution."]
-pub type X32N_FUN_IE_R = crate::BitReader<bool>;
+pub type X32N_FUN_IE_R = crate::BitReader;
 #[doc = "Field `X32N_FUN_IE` writer - Input enable in normal execution."]
-pub type X32N_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_SLP_OE` reader - Output enable in sleep mode."]
-pub type X32N_SLP_OE_R = crate::BitReader<bool>;
+pub type X32N_SLP_OE_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_OE` writer - Output enable in sleep mode."]
-pub type X32N_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_SLP_IE` reader - Input enable in sleep mode."]
-pub type X32N_SLP_IE_R = crate::BitReader<bool>;
+pub type X32N_SLP_IE_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_IE` writer - Input enable in sleep mode."]
-pub type X32N_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_SLP_SEL` reader - 1: enable sleep mode. 0: no sleep mode."]
-pub type X32N_SLP_SEL_R = crate::BitReader<bool>;
+pub type X32N_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `X32N_SLP_SEL` writer - 1: enable sleep mode. 0: no sleep mode."]
-pub type X32N_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_FUN_SEL` reader - Function selection."]
-pub type X32N_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type X32N_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `X32N_FUN_SEL` writer - Function selection."]
-pub type X32N_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, XTAL_32N_PAD_SPEC, u8, u8, 2, O>;
+pub type X32N_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL_32N_PAD_SPEC, 2, O>;
 #[doc = "Field `X32N_MUX_SEL` reader - 1: use RTC GPIO. 0: use digital GPIO."]
-pub type X32N_MUX_SEL_R = crate::BitReader<bool>;
+pub type X32N_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `X32N_MUX_SEL` writer - 1: use RTC GPIO. 0: use digital GPIO."]
-pub type X32N_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_RUE` reader - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
-pub type X32N_RUE_R = crate::BitReader<bool>;
+pub type X32N_RUE_R = crate::BitReader;
 #[doc = "Field `X32N_RUE` writer - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
-pub type X32N_RUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_RUE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_RDE` reader - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
-pub type X32N_RDE_R = crate::BitReader<bool>;
+pub type X32N_RDE_R = crate::BitReader;
 #[doc = "Field `X32N_RDE` writer - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
-pub type X32N_RDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL_32N_PAD_SPEC, bool, O>;
+pub type X32N_RDE_W<'a, const O: u8> = crate::BitWriter<'a, XTAL_32N_PAD_SPEC, O>;
 #[doc = "Field `X32N_DRV` reader - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type X32N_DRV_R = crate::FieldReader<u8, u8>;
+pub type X32N_DRV_R = crate::FieldReader;
 #[doc = "Field `X32N_DRV` writer - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type X32N_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTAL_32N_PAD_SPEC, u8, u8, 2, O>;
+pub type X32N_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL_32N_PAD_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
@@ -116,6 +115,37 @@ impl R {
     #[inline(always)]
     pub fn x32n_drv(&self) -> X32N_DRV_R {
         X32N_DRV_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTAL_32N_PAD")
+            .field("x32n_fun_ie", &format_args!("{}", self.x32n_fun_ie().bit()))
+            .field("x32n_slp_oe", &format_args!("{}", self.x32n_slp_oe().bit()))
+            .field("x32n_slp_ie", &format_args!("{}", self.x32n_slp_ie().bit()))
+            .field(
+                "x32n_slp_sel",
+                &format_args!("{}", self.x32n_slp_sel().bit()),
+            )
+            .field(
+                "x32n_fun_sel",
+                &format_args!("{}", self.x32n_fun_sel().bits()),
+            )
+            .field(
+                "x32n_mux_sel",
+                &format_args!("{}", self.x32n_mux_sel().bit()),
+            )
+            .field("x32n_rue", &format_args!("{}", self.x32n_rue().bit()))
+            .field("x32n_rde", &format_args!("{}", self.x32n_rde().bit()))
+            .field("x32n_drv", &format_args!("{}", self.x32n_drv().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTAL_32N_PAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

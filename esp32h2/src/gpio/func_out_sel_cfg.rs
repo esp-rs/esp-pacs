@@ -35,22 +35,21 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_SEL` reader - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-127: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=128: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
-pub type OUT_SEL_R = crate::FieldReader<u8, u8>;
+pub type OUT_SEL_R = crate::FieldReader;
 #[doc = "Field `OUT_SEL` writer - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-127: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=128: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
-pub type OUT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, u8, u8, 8, O>;
+pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 8, O>;
 #[doc = "Field `INV_SEL` reader - set this bit to invert output signal.1:invert.0:not invert."]
-pub type INV_SEL_R = crate::BitReader<bool>;
+pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - set this bit to invert output signal.1:invert.0:not invert."]
-pub type INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, bool, O>;
+pub type INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
 #[doc = "Field `OEN_SEL` reader - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
-pub type OEN_SEL_R = crate::BitReader<bool>;
+pub type OEN_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_SEL` writer - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
-pub type OEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, bool, O>;
+pub type OEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
 #[doc = "Field `OEN_INV_SEL` reader - set this bit to invert output enable signal.1:invert.0:not invert."]
-pub type OEN_INV_SEL_R = crate::BitReader<bool>;
+pub type OEN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_INV_SEL` writer - set this bit to invert output enable signal.1:invert.0:not invert."]
-pub type OEN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_OUT_SEL_CFG_SPEC, bool, O>;
+pub type OEN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_OUT_SEL_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-127: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=128: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
     #[inline(always)]
@@ -71,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn oen_inv_sel(&self) -> OEN_INV_SEL_R {
         OEN_INV_SEL_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FUNC_OUT_SEL_CFG")
+            .field("out_sel", &format_args!("{}", self.out_sel().bits()))
+            .field("inv_sel", &format_args!("{}", self.inv_sel().bit()))
+            .field("oen_sel", &format_args!("{}", self.oen_sel().bit()))
+            .field("oen_inv_sel", &format_args!("{}", self.oen_inv_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FUNC_OUT_SEL_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

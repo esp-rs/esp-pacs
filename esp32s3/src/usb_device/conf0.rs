@@ -35,65 +35,65 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `PHY_SEL` reader - Select internal/external PHY"]
-pub type PHY_SEL_R = crate::BitReader<bool>;
+pub type PHY_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_SEL` writer - Select internal/external PHY"]
-pub type PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` reader - Enable software control USB D+ D- exchange"]
-pub type EXCHG_PINS_OVERRIDE_R = crate::BitReader<bool>;
+pub type EXCHG_PINS_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS_OVERRIDE` writer - Enable software control USB D+ D- exchange"]
-pub type EXCHG_PINS_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type EXCHG_PINS_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `EXCHG_PINS` reader - USB D+ D- exchange"]
-pub type EXCHG_PINS_R = crate::BitReader<bool>;
+pub type EXCHG_PINS_R = crate::BitReader;
 #[doc = "Field `EXCHG_PINS` writer - USB D+ D- exchange"]
-pub type EXCHG_PINS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type EXCHG_PINS_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `VREFH` reader - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub type VREFH_R = crate::FieldReader<u8, u8>;
+pub type VREFH_R = crate::FieldReader;
 #[doc = "Field `VREFH` writer - Control single-end input high threshold,1.76V to 2V, step 80mV"]
-pub type VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
+pub type VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, CONF0_SPEC, 2, O>;
 #[doc = "Field `VREFL` reader - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub type VREFL_R = crate::FieldReader<u8, u8>;
+pub type VREFL_R = crate::FieldReader;
 #[doc = "Field `VREFL` writer - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
-pub type VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF0_SPEC, u8, u8, 2, O>;
+pub type VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, CONF0_SPEC, 2, O>;
 #[doc = "Field `VREF_OVERRIDE` reader - Enable software control input threshold"]
-pub type VREF_OVERRIDE_R = crate::BitReader<bool>;
+pub type VREF_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `VREF_OVERRIDE` writer - Enable software control input threshold"]
-pub type VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `PAD_PULL_OVERRIDE` reader - Enable software control USB D+ D- pullup pulldown"]
-pub type PAD_PULL_OVERRIDE_R = crate::BitReader<bool>;
+pub type PAD_PULL_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `PAD_PULL_OVERRIDE` writer - Enable software control USB D+ D- pullup pulldown"]
-pub type PAD_PULL_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PAD_PULL_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `DP_PULLUP` reader - Control USB D+ pull up."]
-pub type DP_PULLUP_R = crate::BitReader<bool>;
+pub type DP_PULLUP_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP` writer - Control USB D+ pull up."]
-pub type DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `DP_PULLDOWN` reader - Control USB D+ pull down."]
-pub type DP_PULLDOWN_R = crate::BitReader<bool>;
+pub type DP_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DP_PULLDOWN` writer - Control USB D+ pull down."]
-pub type DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `DM_PULLUP` reader - Control USB D- pull up."]
-pub type DM_PULLUP_R = crate::BitReader<bool>;
+pub type DM_PULLUP_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP` writer - Control USB D- pull up."]
-pub type DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `DM_PULLDOWN` reader - Control USB D- pull down."]
-pub type DM_PULLDOWN_R = crate::BitReader<bool>;
+pub type DM_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `DM_PULLDOWN` writer - Control USB D- pull down."]
-pub type DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `PULLUP_VALUE` reader - Control pull up value."]
-pub type PULLUP_VALUE_R = crate::BitReader<bool>;
+pub type PULLUP_VALUE_R = crate::BitReader;
 #[doc = "Field `PULLUP_VALUE` writer - Control pull up value."]
-pub type PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `USB_PAD_ENABLE` reader - Enable USB pad function."]
-pub type USB_PAD_ENABLE_R = crate::BitReader<bool>;
+pub type USB_PAD_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_ENABLE` writer - Enable USB pad function."]
-pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `PHY_TX_EDGE_SEL` reader - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
-pub type PHY_TX_EDGE_SEL_R = crate::BitReader<bool>;
+pub type PHY_TX_EDGE_SEL_R = crate::BitReader;
 #[doc = "Field `PHY_TX_EDGE_SEL` writer - 0: TX output at clock negedge. 1: Tx output at clock posedge."]
-pub type PHY_TX_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type PHY_TX_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `USB_JTAG_BRIDGE_EN` reader - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
-pub type USB_JTAG_BRIDGE_EN_R = crate::BitReader<bool>;
+pub type USB_JTAG_BRIDGE_EN_R = crate::BitReader;
 #[doc = "Field `USB_JTAG_BRIDGE_EN` writer - Set this bit usb_jtag, the connection between usb_jtag and internal JTAG is disconnected, and MTMS, MTDI, MTCK are output through GPIO Matrix, MTDO is input through GPIO Matrix."]
-pub type USB_JTAG_BRIDGE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type USB_JTAG_BRIDGE_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Select internal/external PHY"]
     #[inline(always)]
@@ -169,6 +169,55 @@ impl R {
     #[inline(always)]
     pub fn usb_jtag_bridge_en(&self) -> USB_JTAG_BRIDGE_EN_R {
         USB_JTAG_BRIDGE_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF0")
+            .field("phy_sel", &format_args!("{}", self.phy_sel().bit()))
+            .field(
+                "exchg_pins_override",
+                &format_args!("{}", self.exchg_pins_override().bit()),
+            )
+            .field("exchg_pins", &format_args!("{}", self.exchg_pins().bit()))
+            .field("vrefh", &format_args!("{}", self.vrefh().bits()))
+            .field("vrefl", &format_args!("{}", self.vrefl().bits()))
+            .field(
+                "vref_override",
+                &format_args!("{}", self.vref_override().bit()),
+            )
+            .field(
+                "pad_pull_override",
+                &format_args!("{}", self.pad_pull_override().bit()),
+            )
+            .field("dp_pullup", &format_args!("{}", self.dp_pullup().bit()))
+            .field("dp_pulldown", &format_args!("{}", self.dp_pulldown().bit()))
+            .field("dm_pullup", &format_args!("{}", self.dm_pullup().bit()))
+            .field("dm_pulldown", &format_args!("{}", self.dm_pulldown().bit()))
+            .field(
+                "pullup_value",
+                &format_args!("{}", self.pullup_value().bit()),
+            )
+            .field(
+                "usb_pad_enable",
+                &format_args!("{}", self.usb_pad_enable().bit()),
+            )
+            .field(
+                "phy_tx_edge_sel",
+                &format_args!("{}", self.phy_tx_edge_sel().bit()),
+            )
+            .field(
+                "usb_jtag_bridge_en",
+                &format_args!("{}", self.usb_jtag_bridge_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

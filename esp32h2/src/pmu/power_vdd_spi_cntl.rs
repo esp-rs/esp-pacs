@@ -38,17 +38,15 @@ impl From<crate::W<POWER_VDD_SPI_CNTL_SPEC>> for W {
 pub type VDD_SPI_PWR_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VDD_SPI_PWR_WAIT` writer - need_des"]
 pub type VDD_SPI_PWR_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_VDD_SPI_CNTL_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, POWER_VDD_SPI_CNTL_SPEC, 11, O, u16, u16>;
 #[doc = "Field `VDD_SPI_PWR_SW` reader - need_des"]
-pub type VDD_SPI_PWR_SW_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_PWR_SW_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_PWR_SW` writer - need_des"]
-pub type VDD_SPI_PWR_SW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_VDD_SPI_CNTL_SPEC, u8, u8, 2, O>;
+pub type VDD_SPI_PWR_SW_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_VDD_SPI_CNTL_SPEC, 2, O>;
 #[doc = "Field `VDD_SPI_PWR_SEL_SW` reader - need_des"]
-pub type VDD_SPI_PWR_SEL_SW_R = crate::BitReader<bool>;
+pub type VDD_SPI_PWR_SEL_SW_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_PWR_SEL_SW` writer - need_des"]
-pub type VDD_SPI_PWR_SEL_SW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_VDD_SPI_CNTL_SPEC, bool, O>;
+pub type VDD_SPI_PWR_SEL_SW_W<'a, const O: u8> = crate::BitWriter<'a, POWER_VDD_SPI_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bits 18:28 - need_des"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn vdd_spi_pwr_sel_sw(&self) -> VDD_SPI_PWR_SEL_SW_R {
         VDD_SPI_PWR_SEL_SW_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_VDD_SPI_CNTL")
+            .field(
+                "vdd_spi_pwr_wait",
+                &format_args!("{}", self.vdd_spi_pwr_wait().bits()),
+            )
+            .field(
+                "vdd_spi_pwr_sw",
+                &format_args!("{}", self.vdd_spi_pwr_sw().bits()),
+            )
+            .field(
+                "vdd_spi_pwr_sel_sw",
+                &format_args!("{}", self.vdd_spi_pwr_sel_sw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_VDD_SPI_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

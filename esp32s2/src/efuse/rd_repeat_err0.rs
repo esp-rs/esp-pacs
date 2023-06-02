@@ -14,49 +14,49 @@ impl From<crate::R<RD_REPEAT_ERR0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_DIS_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_RD_DIS."]
-pub type RD_DIS_ERR_R = crate::FieldReader<u8, u8>;
+pub type RD_DIS_ERR_R = crate::FieldReader;
 #[doc = "Field `DIS_RTC_RAM_BOOT_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_RTC_RAM_BOOT."]
-pub type DIS_RTC_RAM_BOOT_ERR_R = crate::BitReader<bool>;
+pub type DIS_RTC_RAM_BOOT_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_ICACHE_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_ICACHE."]
-pub type DIS_ICACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_ICACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DCACHE_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DCACHE."]
-pub type DIS_DCACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DCACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_ICACHE_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_ICACHE."]
-pub type DIS_DOWNLOAD_ICACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_ICACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_DCACHE_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_DCACHE."]
-pub type DIS_DOWNLOAD_DCACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_DCACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_FORCE_DOWNLOAD_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_FORCE_DOWNLOAD."]
-pub type DIS_FORCE_DOWNLOAD_ERR_R = crate::BitReader<bool>;
+pub type DIS_FORCE_DOWNLOAD_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_USB_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_USB."]
-pub type DIS_USB_ERR_R = crate::BitReader<bool>;
+pub type DIS_USB_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_CAN_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_CAN."]
-pub type DIS_CAN_ERR_R = crate::BitReader<bool>;
+pub type DIS_CAN_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_BOOT_REMAP_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_BOOT_REMAP."]
-pub type DIS_BOOT_REMAP_ERR_R = crate::BitReader<bool>;
+pub type DIS_BOOT_REMAP_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED5_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED5."]
-pub type RPT4_RESERVED5_ERR_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED5_ERR_R = crate::BitReader;
 #[doc = "Field `SOFT_DIS_JTAG_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_SOFT_DIS_JTAG."]
-pub type SOFT_DIS_JTAG_ERR_R = crate::BitReader<bool>;
+pub type SOFT_DIS_JTAG_ERR_R = crate::BitReader;
 #[doc = "Field `HARD_DIS_JTAG_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_HARD_DIS_JTAG."]
-pub type HARD_DIS_JTAG_ERR_R = crate::BitReader<bool>;
+pub type HARD_DIS_JTAG_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_DIS_DOWNLOAD_MANUAL_ENCRYPT."]
-pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R = crate::BitReader;
 #[doc = "Field `USB_DREFH_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_USB_DREFH."]
-pub type USB_DREFH_ERR_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFH_ERR_R = crate::FieldReader;
 #[doc = "Field `USB_DREFL_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_USB_DREFL."]
-pub type USB_DREFL_ERR_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFL_ERR_R = crate::FieldReader;
 #[doc = "Field `USB_EXCHG_PINS_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_USB_EXCHG_PINS."]
-pub type USB_EXCHG_PINS_ERR_R = crate::BitReader<bool>;
+pub type USB_EXCHG_PINS_ERR_R = crate::BitReader;
 #[doc = "Field `EXT_PHY_ENABLE_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_EXT_PHY_ENABLE."]
-pub type EXT_PHY_ENABLE_ERR_R = crate::BitReader<bool>;
+pub type EXT_PHY_ENABLE_ERR_R = crate::BitReader;
 #[doc = "Field `USB_FORCE_NOPERSIST_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_USB_FORCE_NOPERSIST."]
-pub type USB_FORCE_NOPERSIST_ERR_R = crate::BitReader<bool>;
+pub type USB_FORCE_NOPERSIST_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED0_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED0."]
-pub type RPT4_RESERVED0_ERR_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_ERR_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_MODECURLIM_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_VDD_SPI_MODECURLIM."]
-pub type VDD_SPI_MODECURLIM_ERR_R = crate::BitReader<bool>;
+pub type VDD_SPI_MODECURLIM_ERR_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_DREFH_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_VDD_SPI_DREFH."]
-pub type VDD_SPI_DREFH_ERR_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DREFH_ERR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:6 - Any bit equal to 1 denotes a programming error in EFUSE_RD_DIS."]
     #[inline(always)]
@@ -167,6 +167,98 @@ impl R {
     #[inline(always)]
     pub fn vdd_spi_drefh_err(&self) -> VDD_SPI_DREFH_ERR_R {
         VDD_SPI_DREFH_ERR_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR0")
+            .field("rd_dis_err", &format_args!("{}", self.rd_dis_err().bits()))
+            .field(
+                "dis_rtc_ram_boot_err",
+                &format_args!("{}", self.dis_rtc_ram_boot_err().bit()),
+            )
+            .field(
+                "dis_icache_err",
+                &format_args!("{}", self.dis_icache_err().bit()),
+            )
+            .field(
+                "dis_dcache_err",
+                &format_args!("{}", self.dis_dcache_err().bit()),
+            )
+            .field(
+                "dis_download_icache_err",
+                &format_args!("{}", self.dis_download_icache_err().bit()),
+            )
+            .field(
+                "dis_download_dcache_err",
+                &format_args!("{}", self.dis_download_dcache_err().bit()),
+            )
+            .field(
+                "dis_force_download_err",
+                &format_args!("{}", self.dis_force_download_err().bit()),
+            )
+            .field("dis_usb_err", &format_args!("{}", self.dis_usb_err().bit()))
+            .field("dis_can_err", &format_args!("{}", self.dis_can_err().bit()))
+            .field(
+                "dis_boot_remap_err",
+                &format_args!("{}", self.dis_boot_remap_err().bit()),
+            )
+            .field(
+                "rpt4_reserved5_err",
+                &format_args!("{}", self.rpt4_reserved5_err().bit()),
+            )
+            .field(
+                "soft_dis_jtag_err",
+                &format_args!("{}", self.soft_dis_jtag_err().bit()),
+            )
+            .field(
+                "hard_dis_jtag_err",
+                &format_args!("{}", self.hard_dis_jtag_err().bit()),
+            )
+            .field(
+                "dis_download_manual_encrypt_err",
+                &format_args!("{}", self.dis_download_manual_encrypt_err().bit()),
+            )
+            .field(
+                "usb_drefh_err",
+                &format_args!("{}", self.usb_drefh_err().bits()),
+            )
+            .field(
+                "usb_drefl_err",
+                &format_args!("{}", self.usb_drefl_err().bits()),
+            )
+            .field(
+                "usb_exchg_pins_err",
+                &format_args!("{}", self.usb_exchg_pins_err().bit()),
+            )
+            .field(
+                "ext_phy_enable_err",
+                &format_args!("{}", self.ext_phy_enable_err().bit()),
+            )
+            .field(
+                "usb_force_nopersist_err",
+                &format_args!("{}", self.usb_force_nopersist_err().bit()),
+            )
+            .field(
+                "rpt4_reserved0_err",
+                &format_args!("{}", self.rpt4_reserved0_err().bits()),
+            )
+            .field(
+                "vdd_spi_modecurlim_err",
+                &format_args!("{}", self.vdd_spi_modecurlim_err().bit()),
+            )
+            .field(
+                "vdd_spi_drefh_err",
+                &format_args!("{}", self.vdd_spi_drefh_err().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err0](index.html) module"]

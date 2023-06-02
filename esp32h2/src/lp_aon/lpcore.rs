@@ -35,15 +35,15 @@ impl From<crate::W<LPCORE_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_WAKEUP_FLAG_CLR` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPCORE_SPEC, bool, O>;
+pub type ETM_WAKEUP_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
 #[doc = "Field `ETM_WAKEUP_FLAG` reader - need_des"]
-pub type ETM_WAKEUP_FLAG_R = crate::BitReader<bool>;
+pub type ETM_WAKEUP_FLAG_R = crate::BitReader;
 #[doc = "Field `ETM_WAKEUP_FLAG` writer - need_des"]
-pub type ETM_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPCORE_SPEC, bool, O>;
+pub type ETM_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
 #[doc = "Field `DISABLE` reader - need_des"]
-pub type DISABLE_R = crate::BitReader<bool>;
+pub type DISABLE_R = crate::BitReader;
 #[doc = "Field `DISABLE` writer - need_des"]
-pub type DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LPCORE_SPEC, bool, O>;
+pub type DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, LPCORE_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
@@ -54,6 +54,24 @@ impl R {
     #[inline(always)]
     pub fn disable(&self) -> DISABLE_R {
         DISABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LPCORE")
+            .field(
+                "etm_wakeup_flag",
+                &format_args!("{}", self.etm_wakeup_flag().bit()),
+            )
+            .field("disable", &format_args!("{}", self.disable().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LPCORE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,20 +37,19 @@ impl From<crate::W<HCTSIZ0_SPEC>> for W {
 #[doc = "Field `H_XFERSIZE0` reader - "]
 pub type H_XFERSIZE0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `H_XFERSIZE0` writer - "]
-pub type H_XFERSIZE0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HCTSIZ0_SPEC, u32, u32, 19, O>;
+pub type H_XFERSIZE0_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ0_SPEC, 19, O, u32, u32>;
 #[doc = "Field `H_PKTCNT0` reader - "]
 pub type H_PKTCNT0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `H_PKTCNT0` writer - "]
-pub type H_PKTCNT0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCTSIZ0_SPEC, u16, u16, 10, O>;
+pub type H_PKTCNT0_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ0_SPEC, 10, O, u16, u16>;
 #[doc = "Field `H_PID0` reader - "]
-pub type H_PID0_R = crate::FieldReader<u8, u8>;
+pub type H_PID0_R = crate::FieldReader;
 #[doc = "Field `H_PID0` writer - "]
-pub type H_PID0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCTSIZ0_SPEC, u8, u8, 2, O>;
+pub type H_PID0_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ0_SPEC, 2, O>;
 #[doc = "Field `H_DOPNG0` reader - "]
-pub type H_DOPNG0_R = crate::BitReader<bool>;
+pub type H_DOPNG0_R = crate::BitReader;
 #[doc = "Field `H_DOPNG0` writer - "]
-pub type H_DOPNG0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCTSIZ0_SPEC, bool, O>;
+pub type H_DOPNG0_W<'a, const O: u8> = crate::BitWriter<'a, HCTSIZ0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:18"]
     #[inline(always)]
@@ -71,6 +70,26 @@ impl R {
     #[inline(always)]
     pub fn h_dopng0(&self) -> H_DOPNG0_R {
         H_DOPNG0_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCTSIZ0")
+            .field(
+                "h_xfersize0",
+                &format_args!("{}", self.h_xfersize0().bits()),
+            )
+            .field("h_pktcnt0", &format_args!("{}", self.h_pktcnt0().bits()))
+            .field("h_pid0", &format_args!("{}", self.h_pid0().bits()))
+            .field("h_dopng0", &format_args!("{}", self.h_dopng0().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCTSIZ0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

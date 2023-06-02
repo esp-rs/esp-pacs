@@ -35,55 +35,45 @@ impl From<crate::W<CLK_CONF_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_WIFIPWR_FO` reader - "]
-pub type CLK_WIFIPWR_FO_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_FO_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_FO` writer - "]
-pub type CLK_WIFIPWR_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_WIFIPWR_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_COEX_FO` reader - "]
-pub type CLK_COEX_FO_R = crate::BitReader<bool>;
+pub type CLK_COEX_FO_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_FO` writer - "]
-pub type CLK_COEX_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_COEX_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_I2C_MST_FO` reader - "]
-pub type CLK_I2C_MST_FO_R = crate::BitReader<bool>;
+pub type CLK_I2C_MST_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_FO` writer - "]
-pub type CLK_I2C_MST_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_I2C_MST_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_LP_TIMER_FO` reader - "]
-pub type CLK_LP_TIMER_FO_R = crate::BitReader<bool>;
+pub type CLK_LP_TIMER_FO_R = crate::BitReader;
 #[doc = "Field `CLK_LP_TIMER_FO` writer - "]
-pub type CLK_LP_TIMER_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_LP_TIMER_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_BCMEM_FO` reader - "]
-pub type CLK_BCMEM_FO_R = crate::BitReader<bool>;
+pub type CLK_BCMEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BCMEM_FO` writer - "]
-pub type CLK_BCMEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_BCMEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_I2C_MST_MEM_FO` reader - "]
-pub type CLK_I2C_MST_MEM_FO_R = crate::BitReader<bool>;
+pub type CLK_I2C_MST_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_MEM_FO` writer - "]
-pub type CLK_I2C_MST_MEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_I2C_MST_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_CHAN_FREQ_MEM_FO` reader - "]
-pub type CLK_CHAN_FREQ_MEM_FO_R = crate::BitReader<bool>;
+pub type CLK_CHAN_FREQ_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_CHAN_FREQ_MEM_FO` writer - "]
-pub type CLK_CHAN_FREQ_MEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_CHAN_FREQ_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_PBUS_MEM_FO` reader - "]
-pub type CLK_PBUS_MEM_FO_R = crate::BitReader<bool>;
+pub type CLK_PBUS_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_PBUS_MEM_FO` writer - "]
-pub type CLK_PBUS_MEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_PBUS_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_AGC_MEM_FO` reader - "]
-pub type CLK_AGC_MEM_FO_R = crate::BitReader<bool>;
+pub type CLK_AGC_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_AGC_MEM_FO` writer - "]
-pub type CLK_AGC_MEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_AGC_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_DC_MEM_FO` reader - "]
-pub type CLK_DC_MEM_FO_R = crate::BitReader<bool>;
+pub type CLK_DC_MEM_FO_R = crate::BitReader;
 #[doc = "Field `CLK_DC_MEM_FO` writer - "]
-pub type CLK_DC_MEM_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_FORCE_ON_SPEC, bool, O>;
+pub type CLK_DC_MEM_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_FORCE_ON_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -134,6 +124,56 @@ impl R {
     #[inline(always)]
     pub fn clk_dc_mem_fo(&self) -> CLK_DC_MEM_FO_R {
         CLK_DC_MEM_FO_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF_FORCE_ON")
+            .field(
+                "clk_wifipwr_fo",
+                &format_args!("{}", self.clk_wifipwr_fo().bit()),
+            )
+            .field("clk_coex_fo", &format_args!("{}", self.clk_coex_fo().bit()))
+            .field(
+                "clk_i2c_mst_fo",
+                &format_args!("{}", self.clk_i2c_mst_fo().bit()),
+            )
+            .field(
+                "clk_lp_timer_fo",
+                &format_args!("{}", self.clk_lp_timer_fo().bit()),
+            )
+            .field(
+                "clk_bcmem_fo",
+                &format_args!("{}", self.clk_bcmem_fo().bit()),
+            )
+            .field(
+                "clk_i2c_mst_mem_fo",
+                &format_args!("{}", self.clk_i2c_mst_mem_fo().bit()),
+            )
+            .field(
+                "clk_chan_freq_mem_fo",
+                &format_args!("{}", self.clk_chan_freq_mem_fo().bit()),
+            )
+            .field(
+                "clk_pbus_mem_fo",
+                &format_args!("{}", self.clk_pbus_mem_fo().bit()),
+            )
+            .field(
+                "clk_agc_mem_fo",
+                &format_args!("{}", self.clk_agc_mem_fo().bit()),
+            )
+            .field(
+                "clk_dc_mem_fo",
+                &format_args!("{}", self.clk_dc_mem_fo().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

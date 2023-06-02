@@ -20,11 +20,15 @@ impl From<crate::W<INTVEC_TOHOST_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TOHOST_INTVEC` writer - "]
-pub type SLC0_TOHOST_INTVEC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTVEC_TOHOST_SPEC, u8, u8, 8, O>;
+pub type SLC0_TOHOST_INTVEC_W<'a, const O: u8> = crate::FieldWriter<'a, INTVEC_TOHOST_SPEC, 8, O>;
 #[doc = "Field `SLC1_TOHOST_INTVEC` writer - "]
-pub type SLC1_TOHOST_INTVEC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTVEC_TOHOST_SPEC, u8, u8, 8, O>;
+pub type SLC1_TOHOST_INTVEC_W<'a, const O: u8> = crate::FieldWriter<'a, INTVEC_TOHOST_SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTVEC_TOHOST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]

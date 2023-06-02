@@ -14,29 +14,29 @@ impl From<crate::R<SAR_COCPU_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `SAR_COCPU_TOUCH_DONE_INT_RAW` reader - int from touch done"]
-pub type SAR_COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_INACTIVE_INT_RAW` reader - int from touch inactive"]
-pub type SAR_COCPU_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_ACTIVE_INT_RAW` reader - int from touch active"]
-pub type SAR_COCPU_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_SARADC1_INT_RAW` reader - int from saradc1"]
-pub type SAR_COCPU_SARADC1_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_SARADC1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_SARADC2_INT_RAW` reader - int from saradc2"]
-pub type SAR_COCPU_SARADC2_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_SARADC2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TSENS_INT_RAW` reader - int from tsens"]
-pub type SAR_COCPU_TSENS_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TSENS_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_START_INT_RAW` reader - int from start"]
-pub type SAR_COCPU_START_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_SW_INT_RAW` reader - int from software"]
-pub type SAR_COCPU_SW_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_SW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_SWD_INT_RAW` reader - int from super watch dog"]
-pub type SAR_COCPU_SWD_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_SWD_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_TIMEOUT_INT_RAW` reader - int from timeout done"]
-pub type SAR_COCPU_TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_RAW` reader - int from approach loop done"]
-pub type SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_APPROACH_LOOP_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW` reader - int from touch scan done"]
-pub type SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - int from touch done"]
     #[inline(always)]
@@ -99,6 +99,70 @@ impl R {
     #[inline(always)]
     pub fn sar_cocpu_touch_scan_done_int_raw(&self) -> SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW_R {
         SAR_COCPU_TOUCH_SCAN_DONE_INT_RAW_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_COCPU_INT_RAW")
+            .field(
+                "sar_cocpu_touch_done_int_raw",
+                &format_args!("{}", self.sar_cocpu_touch_done_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_touch_inactive_int_raw",
+                &format_args!("{}", self.sar_cocpu_touch_inactive_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_touch_active_int_raw",
+                &format_args!("{}", self.sar_cocpu_touch_active_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_saradc1_int_raw",
+                &format_args!("{}", self.sar_cocpu_saradc1_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_saradc2_int_raw",
+                &format_args!("{}", self.sar_cocpu_saradc2_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_tsens_int_raw",
+                &format_args!("{}", self.sar_cocpu_tsens_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_start_int_raw",
+                &format_args!("{}", self.sar_cocpu_start_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_sw_int_raw",
+                &format_args!("{}", self.sar_cocpu_sw_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_swd_int_raw",
+                &format_args!("{}", self.sar_cocpu_swd_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_touch_timeout_int_raw",
+                &format_args!("{}", self.sar_cocpu_touch_timeout_int_raw().bit()),
+            )
+            .field(
+                "sar_cocpu_touch_approach_loop_done_int_raw",
+                &format_args!(
+                    "{}",
+                    self.sar_cocpu_touch_approach_loop_done_int_raw().bit()
+                ),
+            )
+            .field(
+                "sar_cocpu_touch_scan_done_int_raw",
+                &format_args!("{}", self.sar_cocpu_touch_scan_done_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "the interrupt raw of ulp\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_int_raw](index.html) module"]

@@ -35,14 +35,28 @@ impl From<crate::W<XTL_EXT_CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
-pub type SEL_R = crate::FieldReader<u8, u8>;
+pub type SEL_R = crate::FieldReader;
 #[doc = "Field `SEL` writer - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTL_EXT_CTR_SPEC, u8, u8, 5, O>;
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, XTL_EXT_CTR_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 27:31 - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTL_EXT_CTR")
+            .field("sel", &format_args!("{}", self.sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTL_EXT_CTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

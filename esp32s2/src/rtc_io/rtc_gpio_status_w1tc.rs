@@ -21,7 +21,13 @@ impl From<crate::W<RTC_GPIO_STATUS_W1TC_SPEC>> for W {
 }
 #[doc = "Field `GPIO_STATUS_INT_W1TC` writer - GPIO0 ~ 21 interrupt clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be cleared. Recommended operation: use this register to clear RTCIO_GPIO_STATUS_INT."]
 pub type GPIO_STATUS_INT_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_GPIO_STATUS_W1TC_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, RTC_GPIO_STATUS_W1TC_SPEC, 22, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_STATUS_W1TC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 interrupt clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_GPIO_STATUS_INT will be cleared. Recommended operation: use this register to clear RTCIO_GPIO_STATUS_INT."]
     #[inline(always)]

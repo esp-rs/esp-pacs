@@ -35,21 +35,21 @@ impl From<crate::W<BMOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SWR` reader - Software Reset. When set, the DMA Controller resets all its internal registers. It is automatically cleared after one clock cycle."]
-pub type SWR_R = crate::BitReader<bool>;
+pub type SWR_R = crate::BitReader;
 #[doc = "Field `SWR` writer - Software Reset. When set, the DMA Controller resets all its internal registers. It is automatically cleared after one clock cycle."]
-pub type SWR_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMOD_SPEC, bool, O>;
+pub type SWR_W<'a, const O: u8> = crate::BitWriter<'a, BMOD_SPEC, O>;
 #[doc = "Field `FB` reader - Fixed Burst. Controls whether the AHB Master interface performs fixed burst transfers or not. When set, the AHB will use only SINGLE, INCR4, INCR8 or INCR16 during start of normal burst transfers. When reset, the AHB will use SINGLE and INCR burst transfer operations."]
-pub type FB_R = crate::BitReader<bool>;
+pub type FB_R = crate::BitReader;
 #[doc = "Field `FB` writer - Fixed Burst. Controls whether the AHB Master interface performs fixed burst transfers or not. When set, the AHB will use only SINGLE, INCR4, INCR8 or INCR16 during start of normal burst transfers. When reset, the AHB will use SINGLE and INCR burst transfer operations."]
-pub type FB_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMOD_SPEC, bool, O>;
+pub type FB_W<'a, const O: u8> = crate::BitWriter<'a, BMOD_SPEC, O>;
 #[doc = "Field `DE` reader - IDMAC Enable. When set, the IDMAC is enabled."]
-pub type DE_R = crate::BitReader<bool>;
+pub type DE_R = crate::BitReader;
 #[doc = "Field `DE` writer - IDMAC Enable. When set, the IDMAC is enabled."]
-pub type DE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BMOD_SPEC, bool, O>;
+pub type DE_W<'a, const O: u8> = crate::BitWriter<'a, BMOD_SPEC, O>;
 #[doc = "Field `PBL` reader - Programmable Burst Length. These bits indicate the maximum number of beats to be performed in one IDMAC???Internal DMA Control???transaction. The IDMAC will always attempt to burst as specified in PBL each time it starts a burst transfer on the host bus. The permissible values are 1, 4, 8, 16, 32, 64, 128 and 256. This value is the mirror of MSIZE of FIFOTH register. In order to change this value, write the required value to FIFOTH register. This is an encode value as follows: 000: 1-byte transfer; 001: 4-byte transfer; 010: 8-byte transfer; 011: 16-byte transfer; 100: 32-byte transfer; 101: 64-byte transfer; 110: 128-byte transfer; 111: 256-byte transfer. PBL is a read-only value and is applicable only for data access, it does not apply to descriptor access."]
-pub type PBL_R = crate::FieldReader<u8, u8>;
+pub type PBL_R = crate::FieldReader;
 #[doc = "Field `PBL` writer - Programmable Burst Length. These bits indicate the maximum number of beats to be performed in one IDMAC???Internal DMA Control???transaction. The IDMAC will always attempt to burst as specified in PBL each time it starts a burst transfer on the host bus. The permissible values are 1, 4, 8, 16, 32, 64, 128 and 256. This value is the mirror of MSIZE of FIFOTH register. In order to change this value, write the required value to FIFOTH register. This is an encode value as follows: 000: 1-byte transfer; 001: 4-byte transfer; 010: 8-byte transfer; 011: 16-byte transfer; 100: 32-byte transfer; 101: 64-byte transfer; 110: 128-byte transfer; 111: 256-byte transfer. PBL is a read-only value and is applicable only for data access, it does not apply to descriptor access."]
-pub type PBL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BMOD_SPEC, u8, u8, 3, O>;
+pub type PBL_W<'a, const O: u8> = crate::FieldWriter<'a, BMOD_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Software Reset. When set, the DMA Controller resets all its internal registers. It is automatically cleared after one clock cycle."]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn pbl(&self) -> PBL_R {
         PBL_R::new(((self.bits >> 8) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BMOD")
+            .field("swr", &format_args!("{}", self.swr().bit()))
+            .field("fb", &format_args!("{}", self.fb().bit()))
+            .field("de", &format_args!("{}", self.de().bit()))
+            .field("pbl", &format_args!("{}", self.pbl().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BMOD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

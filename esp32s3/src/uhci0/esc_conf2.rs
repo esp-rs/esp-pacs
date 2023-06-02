@@ -35,19 +35,17 @@ impl From<crate::W<ESC_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `ESC_SEQ1` reader - This register is used to define a char that need to be encoded, default is 0x11 that used as flow control char."]
-pub type ESC_SEQ1_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ1_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1` writer - This register is used to define a char that need to be encoded, default is 0x11 that used as flow control char."]
-pub type ESC_SEQ1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESC_CONF2_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ1_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF2_SPEC, 8, O>;
 #[doc = "Field `ESC_SEQ1_CHAR0` reader - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ1, default is 0xdb."]
-pub type ESC_SEQ1_CHAR0_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ1_CHAR0_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1_CHAR0` writer - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ1, default is 0xdb."]
-pub type ESC_SEQ1_CHAR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF2_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ1_CHAR0_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF2_SPEC, 8, O>;
 #[doc = "Field `ESC_SEQ1_CHAR1` reader - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ1, default is 0xde."]
-pub type ESC_SEQ1_CHAR1_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ1_CHAR1_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ1_CHAR1` writer - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ1, default is 0xde."]
-pub type ESC_SEQ1_CHAR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF2_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ1_CHAR1_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to define a char that need to be encoded, default is 0x11 that used as flow control char."]
     #[inline(always)]
@@ -63,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn esc_seq1_char1(&self) -> ESC_SEQ1_CHAR1_R {
         ESC_SEQ1_CHAR1_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESC_CONF2")
+            .field("esc_seq1", &format_args!("{}", self.esc_seq1().bits()))
+            .field(
+                "esc_seq1_char0",
+                &format_args!("{}", self.esc_seq1_char0().bits()),
+            )
+            .field(
+                "esc_seq1_char1",
+                &format_args!("{}", self.esc_seq1_char1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ESC_CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

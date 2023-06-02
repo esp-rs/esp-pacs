@@ -35,15 +35,32 @@ impl From<crate::W<APP_TIMER_INT2_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_TIMER_INT2_MAP` reader - "]
-pub type APP_TIMER_INT2_MAP_R = crate::FieldReader<u8, u8>;
+pub type APP_TIMER_INT2_MAP_R = crate::FieldReader;
 #[doc = "Field `APP_TIMER_INT2_MAP` writer - "]
 pub type APP_TIMER_INT2_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APP_TIMER_INT2_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, APP_TIMER_INT2_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     pub fn app_timer_int2_map(&self) -> APP_TIMER_INT2_MAP_R {
         APP_TIMER_INT2_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_TIMER_INT2_MAP")
+            .field(
+                "app_timer_int2_map",
+                &format_args!("{}", self.app_timer_int2_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_TIMER_INT2_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

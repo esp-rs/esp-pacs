@@ -35,19 +35,19 @@ impl From<crate::W<TIMERGROUP1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TG1_CLK_EN` reader - Set 1 to enable timer_group1 apb clock"]
-pub type TG1_CLK_EN_R = crate::BitReader<bool>;
+pub type TG1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TG1_CLK_EN` writer - Set 1 to enable timer_group1 apb clock"]
-pub type TG1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMERGROUP1_CONF_SPEC, bool, O>;
+pub type TG1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMERGROUP1_CONF_SPEC, O>;
 #[doc = "Field `TG1_RST_EN` reader - Set 0 to reset timer_group1 module"]
-pub type TG1_RST_EN_R = crate::BitReader<bool>;
+pub type TG1_RST_EN_R = crate::BitReader;
 #[doc = "Field `TG1_RST_EN` writer - Set 0 to reset timer_group1 module"]
-pub type TG1_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMERGROUP1_CONF_SPEC, bool, O>;
+pub type TG1_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMERGROUP1_CONF_SPEC, O>;
 #[doc = "Field `TG1_WDT_READY` reader - Query this field after reset timer_group1 wdt module"]
-pub type TG1_WDT_READY_R = crate::BitReader<bool>;
+pub type TG1_WDT_READY_R = crate::BitReader;
 #[doc = "Field `TG1_TIMER0_READY` reader - Query this field after reset timer_group1 timer0 module"]
-pub type TG1_TIMER0_READY_R = crate::BitReader<bool>;
+pub type TG1_TIMER0_READY_R = crate::BitReader;
 #[doc = "Field `TG1_TIMER1_READY` reader - reserved"]
-pub type TG1_TIMER1_READY_R = crate::BitReader<bool>;
+pub type TG1_TIMER1_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable timer_group1 apb clock"]
     #[inline(always)]
@@ -73,6 +73,33 @@ impl R {
     #[inline(always)]
     pub fn tg1_timer1_ready(&self) -> TG1_TIMER1_READY_R {
         TG1_TIMER1_READY_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMERGROUP1_CONF")
+            .field("tg1_clk_en", &format_args!("{}", self.tg1_clk_en().bit()))
+            .field("tg1_rst_en", &format_args!("{}", self.tg1_rst_en().bit()))
+            .field(
+                "tg1_wdt_ready",
+                &format_args!("{}", self.tg1_wdt_ready().bit()),
+            )
+            .field(
+                "tg1_timer0_ready",
+                &format_args!("{}", self.tg1_timer0_ready().bit()),
+            )
+            .field(
+                "tg1_timer1_ready",
+                &format_args!("{}", self.tg1_timer1_ready().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP1_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

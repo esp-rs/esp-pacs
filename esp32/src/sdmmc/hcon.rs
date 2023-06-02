@@ -14,23 +14,23 @@ impl From<crate::R<HCON_SPEC>> for R {
     }
 }
 #[doc = "Field `CARD_TYPE` reader - Hardware support SDIO and MMC."]
-pub type CARD_TYPE_R = crate::BitReader<bool>;
+pub type CARD_TYPE_R = crate::BitReader;
 #[doc = "Field `CARD_NUM` reader - Support card number is 2."]
-pub type CARD_NUM_R = crate::FieldReader<u8, u8>;
+pub type CARD_NUM_R = crate::FieldReader;
 #[doc = "Field `BUS_TYPE` reader - Register config is APB bus."]
-pub type BUS_TYPE_R = crate::BitReader<bool>;
+pub type BUS_TYPE_R = crate::BitReader;
 #[doc = "Field `DATA_WIDTH` reader - Regisger data widht is 32."]
-pub type DATA_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type DATA_WIDTH_R = crate::FieldReader;
 #[doc = "Field `ADDR_WIDTH` reader - Register address width is 32."]
-pub type ADDR_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type ADDR_WIDTH_R = crate::FieldReader;
 #[doc = "Field `DMA_WIDTH` reader - DMA data witdth is 32."]
-pub type DMA_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type DMA_WIDTH_R = crate::FieldReader;
 #[doc = "Field `RAM_INDISE` reader - Inside RAM in SDMMC module."]
-pub type RAM_INDISE_R = crate::BitReader<bool>;
+pub type RAM_INDISE_R = crate::BitReader;
 #[doc = "Field `HOLD` reader - Have a hold regiser in data path ."]
-pub type HOLD_R = crate::BitReader<bool>;
+pub type HOLD_R = crate::BitReader;
 #[doc = "Field `NUM_CLK_DIV` reader - Have 4 clk divider in design ."]
-pub type NUM_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type NUM_CLK_DIV_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Hardware support SDIO and MMC."]
     #[inline(always)]
@@ -76,6 +76,31 @@ impl R {
     #[inline(always)]
     pub fn num_clk_div(&self) -> NUM_CLK_DIV_R {
         NUM_CLK_DIV_R::new(((self.bits >> 24) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCON")
+            .field("card_type", &format_args!("{}", self.card_type().bit()))
+            .field("card_num", &format_args!("{}", self.card_num().bits()))
+            .field("bus_type", &format_args!("{}", self.bus_type().bit()))
+            .field("data_width", &format_args!("{}", self.data_width().bits()))
+            .field("addr_width", &format_args!("{}", self.addr_width().bits()))
+            .field("dma_width", &format_args!("{}", self.dma_width().bits()))
+            .field("ram_indise", &format_args!("{}", self.ram_indise().bit()))
+            .field("hold", &format_args!("{}", self.hold().bit()))
+            .field(
+                "num_clk_div",
+                &format_args!("{}", self.num_clk_div().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Hardware feature register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hcon](index.html) module"]

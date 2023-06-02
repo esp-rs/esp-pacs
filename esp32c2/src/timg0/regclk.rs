@@ -35,17 +35,17 @@ impl From<crate::W<REGCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_CLK_IS_ACTIVE` reader - enable WDT's clock"]
-pub type WDT_CLK_IS_ACTIVE_R = crate::BitReader<bool>;
+pub type WDT_CLK_IS_ACTIVE_R = crate::BitReader;
 #[doc = "Field `WDT_CLK_IS_ACTIVE` writer - enable WDT's clock"]
-pub type WDT_CLK_IS_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGCLK_SPEC, bool, O>;
+pub type WDT_CLK_IS_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, REGCLK_SPEC, O>;
 #[doc = "Field `TIMER_CLK_IS_ACTIVE` reader - enable Timer 30's clock"]
-pub type TIMER_CLK_IS_ACTIVE_R = crate::BitReader<bool>;
+pub type TIMER_CLK_IS_ACTIVE_R = crate::BitReader;
 #[doc = "Field `TIMER_CLK_IS_ACTIVE` writer - enable Timer 30's clock"]
-pub type TIMER_CLK_IS_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGCLK_SPEC, bool, O>;
+pub type TIMER_CLK_IS_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, REGCLK_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGCLK_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, REGCLK_SPEC, O>;
 impl R {
     #[doc = "Bit 29 - enable WDT's clock"]
     #[inline(always)]
@@ -61,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGCLK")
+            .field(
+                "wdt_clk_is_active",
+                &format_args!("{}", self.wdt_clk_is_active().bit()),
+            )
+            .field(
+                "timer_clk_is_active",
+                &format_args!("{}", self.timer_clk_is_active().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGCLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

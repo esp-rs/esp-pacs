@@ -38,47 +38,44 @@ impl From<crate::W<BROWN_OUT_SPEC>> for W {
 pub type BROWN_OUT_INT_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BROWN_OUT_INT_WAIT` writer - brown out interrupt wait cycles"]
 pub type BROWN_OUT_INT_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16, u16>;
 #[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
-pub type BROWN_OUT_CLOSE_FLASH_ENA_R = crate::BitReader<bool>;
+pub type BROWN_OUT_CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
-pub type BROWN_OUT_CLOSE_FLASH_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_CLOSE_FLASH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_PD_RF_ENA` reader - enable power down RF when brown out happens"]
-pub type BROWN_OUT_PD_RF_ENA_R = crate::BitReader<bool>;
+pub type BROWN_OUT_PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_PD_RF_ENA` writer - enable power down RF when brown out happens"]
-pub type BROWN_OUT_PD_RF_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_RST_WAIT` reader - brown out reset wait cycles"]
 pub type BROWN_OUT_RST_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BROWN_OUT_RST_WAIT` writer - brown out reset wait cycles"]
 pub type BROWN_OUT_RST_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16, u16>;
 #[doc = "Field `BROWN_OUT_RST_ENA` reader - enable brown out reset"]
-pub type BROWN_OUT_RST_ENA_R = crate::BitReader<bool>;
+pub type BROWN_OUT_RST_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_RST_ENA` writer - enable brown out reset"]
-pub type BROWN_OUT_RST_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_RST_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_RST_SEL` reader - 1: 4-pos reset"]
-pub type BROWN_OUT_RST_SEL_R = crate::BitReader<bool>;
+pub type BROWN_OUT_RST_SEL_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_RST_SEL` writer - 1: 4-pos reset"]
-pub type BROWN_OUT_RST_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_RST_SEL_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_ANA_RST_EN` reader - Need add desc"]
-pub type BROWN_OUT_ANA_RST_EN_R = crate::BitReader<bool>;
+pub type BROWN_OUT_ANA_RST_EN_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_ANA_RST_EN` writer - Need add desc"]
-pub type BROWN_OUT_ANA_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_ANA_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_CNT_CLR` reader - clear brown out counter"]
-pub type BROWN_OUT_CNT_CLR_R = crate::BitReader<bool>;
+pub type BROWN_OUT_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_CNT_CLR` writer - clear brown out counter"]
-pub type BROWN_OUT_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_ENA` reader - enable brown out"]
-pub type BROWN_OUT_ENA_R = crate::BitReader<bool>;
+pub type BROWN_OUT_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_ENA` writer - enable brown out"]
-pub type BROWN_OUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type BROWN_OUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `DET` reader - Need add desc"]
-pub type DET_R = crate::BitReader<bool>;
+pub type DET_R = crate::BitReader;
 #[doc = "Field `DET` writer - Need add desc"]
-pub type DET_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type DET_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 impl R {
     #[doc = "Bits 4:13 - brown out interrupt wait cycles"]
     #[inline(always)]
@@ -129,6 +126,56 @@ impl R {
     #[inline(always)]
     pub fn det(&self) -> DET_R {
         DET_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BROWN_OUT")
+            .field(
+                "brown_out_int_wait",
+                &format_args!("{}", self.brown_out_int_wait().bits()),
+            )
+            .field(
+                "brown_out_close_flash_ena",
+                &format_args!("{}", self.brown_out_close_flash_ena().bit()),
+            )
+            .field(
+                "brown_out_pd_rf_ena",
+                &format_args!("{}", self.brown_out_pd_rf_ena().bit()),
+            )
+            .field(
+                "brown_out_rst_wait",
+                &format_args!("{}", self.brown_out_rst_wait().bits()),
+            )
+            .field(
+                "brown_out_rst_ena",
+                &format_args!("{}", self.brown_out_rst_ena().bit()),
+            )
+            .field(
+                "brown_out_rst_sel",
+                &format_args!("{}", self.brown_out_rst_sel().bit()),
+            )
+            .field(
+                "brown_out_ana_rst_en",
+                &format_args!("{}", self.brown_out_ana_rst_en().bit()),
+            )
+            .field(
+                "brown_out_cnt_clr",
+                &format_args!("{}", self.brown_out_cnt_clr().bit()),
+            )
+            .field(
+                "brown_out_ena",
+                &format_args!("{}", self.brown_out_ena().bit()),
+            )
+            .field("det", &format_args!("{}", self.det().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BROWN_OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

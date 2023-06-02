@@ -35,50 +35,45 @@ impl From<crate::W<BLK0_WDATA6_SPEC>> for W {
     }
 }
 #[doc = "Field `CODING_SCHEME` reader - program for coding_scheme"]
-pub type CODING_SCHEME_R = crate::FieldReader<u8, u8>;
+pub type CODING_SCHEME_R = crate::FieldReader;
 #[doc = "Field `CODING_SCHEME` writer - program for coding_scheme"]
-pub type CODING_SCHEME_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA6_SPEC, u8, u8, 2, O>;
+pub type CODING_SCHEME_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA6_SPEC, 2, O>;
 #[doc = "Field `CONSOLE_DEBUG_DISABLE` reader - program for console_debug_disable"]
-pub type CONSOLE_DEBUG_DISABLE_R = crate::BitReader<bool>;
+pub type CONSOLE_DEBUG_DISABLE_R = crate::BitReader;
 #[doc = "Field `CONSOLE_DEBUG_DISABLE` writer - program for console_debug_disable"]
-pub type CONSOLE_DEBUG_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type CONSOLE_DEBUG_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `DISABLE_SDIO_HOST` reader - "]
-pub type DISABLE_SDIO_HOST_R = crate::BitReader<bool>;
+pub type DISABLE_SDIO_HOST_R = crate::BitReader;
 #[doc = "Field `DISABLE_SDIO_HOST` writer - "]
-pub type DISABLE_SDIO_HOST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type DISABLE_SDIO_HOST_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `ABS_DONE_0` reader - program for abstract_done_0"]
-pub type ABS_DONE_0_R = crate::BitReader<bool>;
+pub type ABS_DONE_0_R = crate::BitReader;
 #[doc = "Field `ABS_DONE_0` writer - program for abstract_done_0"]
-pub type ABS_DONE_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type ABS_DONE_0_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `ABS_DONE_1` reader - program for abstract_done_1"]
-pub type ABS_DONE_1_R = crate::BitReader<bool>;
+pub type ABS_DONE_1_R = crate::BitReader;
 #[doc = "Field `ABS_DONE_1` writer - program for abstract_done_1"]
-pub type ABS_DONE_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type ABS_DONE_1_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `DISABLE_JTAG` reader - program for JTAG_disable"]
-pub type DISABLE_JTAG_R = crate::BitReader<bool>;
+pub type DISABLE_JTAG_R = crate::BitReader;
 #[doc = "Field `DISABLE_JTAG` writer - program for JTAG_disable"]
-pub type DISABLE_JTAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type DISABLE_JTAG_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `DISABLE_DL_ENCRYPT` reader - program for download_dis_encrypt"]
-pub type DISABLE_DL_ENCRYPT_R = crate::BitReader<bool>;
+pub type DISABLE_DL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_ENCRYPT` writer - program for download_dis_encrypt"]
-pub type DISABLE_DL_ENCRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type DISABLE_DL_ENCRYPT_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `DISABLE_DL_DECRYPT` reader - program for download_dis_decrypt"]
-pub type DISABLE_DL_DECRYPT_R = crate::BitReader<bool>;
+pub type DISABLE_DL_DECRYPT_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_DECRYPT` writer - program for download_dis_decrypt"]
-pub type DISABLE_DL_DECRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type DISABLE_DL_DECRYPT_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `DISABLE_DL_CACHE` reader - program for download_dis_cache"]
-pub type DISABLE_DL_CACHE_R = crate::BitReader<bool>;
+pub type DISABLE_DL_CACHE_R = crate::BitReader;
 #[doc = "Field `DISABLE_DL_CACHE` writer - program for download_dis_cache"]
-pub type DISABLE_DL_CACHE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type DISABLE_DL_CACHE_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 #[doc = "Field `KEY_STATUS` reader - program for key_status"]
-pub type KEY_STATUS_R = crate::BitReader<bool>;
+pub type KEY_STATUS_R = crate::BitReader;
 #[doc = "Field `KEY_STATUS` writer - program for key_status"]
-pub type KEY_STATUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_WDATA6_SPEC, bool, O>;
+pub type KEY_STATUS_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_WDATA6_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - program for coding_scheme"]
     #[inline(always)]
@@ -129,6 +124,50 @@ impl R {
     #[inline(always)]
     pub fn key_status(&self) -> KEY_STATUS_R {
         KEY_STATUS_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_WDATA6")
+            .field(
+                "coding_scheme",
+                &format_args!("{}", self.coding_scheme().bits()),
+            )
+            .field(
+                "console_debug_disable",
+                &format_args!("{}", self.console_debug_disable().bit()),
+            )
+            .field(
+                "disable_sdio_host",
+                &format_args!("{}", self.disable_sdio_host().bit()),
+            )
+            .field("abs_done_0", &format_args!("{}", self.abs_done_0().bit()))
+            .field("abs_done_1", &format_args!("{}", self.abs_done_1().bit()))
+            .field(
+                "disable_jtag",
+                &format_args!("{}", self.disable_jtag().bit()),
+            )
+            .field(
+                "disable_dl_encrypt",
+                &format_args!("{}", self.disable_dl_encrypt().bit()),
+            )
+            .field(
+                "disable_dl_decrypt",
+                &format_args!("{}", self.disable_dl_decrypt().bit()),
+            )
+            .field(
+                "disable_dl_cache",
+                &format_args!("{}", self.disable_dl_cache().bit()),
+            )
+            .field("key_status", &format_args!("{}", self.key_status().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

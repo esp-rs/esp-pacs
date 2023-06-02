@@ -35,19 +35,17 @@ impl From<crate::W<PWM_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PWM_DIV_NUM` reader - The integral part of the frequency divider factor of the pwm function clock."]
-pub type PWM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type PWM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `PWM_DIV_NUM` writer - The integral part of the frequency divider factor of the pwm function clock."]
-pub type PWM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWM_CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type PWM_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, PWM_CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `PWM_CLKM_SEL` reader - set this field to select clock-source. 0(default): do not select anyone clock, 1: 160MHz, 2: XTAL, 3: FOSC."]
-pub type PWM_CLKM_SEL_R = crate::FieldReader<u8, u8>;
+pub type PWM_CLKM_SEL_R = crate::FieldReader;
 #[doc = "Field `PWM_CLKM_SEL` writer - set this field to select clock-source. 0(default): do not select anyone clock, 1: 160MHz, 2: XTAL, 3: FOSC."]
-pub type PWM_CLKM_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PWM_CLK_CONF_SPEC, u8, u8, 2, O>;
+pub type PWM_CLKM_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, PWM_CLK_CONF_SPEC, 2, O>;
 #[doc = "Field `PWM_CLKM_EN` reader - set this field as 1 to activate pwm clkm."]
-pub type PWM_CLKM_EN_R = crate::BitReader<bool>;
+pub type PWM_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `PWM_CLKM_EN` writer - set this field as 1 to activate pwm clkm."]
-pub type PWM_CLKM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM_CLK_CONF_SPEC, bool, O>;
+pub type PWM_CLKM_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWM_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the pwm function clock."]
     #[inline(always)]
@@ -63,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn pwm_clkm_en(&self) -> PWM_CLKM_EN_R {
         PWM_CLKM_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWM_CLK_CONF")
+            .field(
+                "pwm_div_num",
+                &format_args!("{}", self.pwm_div_num().bits()),
+            )
+            .field(
+                "pwm_clkm_sel",
+                &format_args!("{}", self.pwm_clkm_sel().bits()),
+            )
+            .field("pwm_clkm_en", &format_args!("{}", self.pwm_clkm_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PWM_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

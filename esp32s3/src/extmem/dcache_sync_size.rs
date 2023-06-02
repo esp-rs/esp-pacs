@@ -38,12 +38,29 @@ impl From<crate::W<DCACHE_SYNC_SIZE_SPEC>> for W {
 pub type DCACHE_SYNC_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DCACHE_SYNC_SIZE` writer - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with DCACHE_SYNC_ADDR_REG."]
 pub type DCACHE_SYNC_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_SYNC_SIZE_SPEC, u32, u32, 23, O>;
+    crate::FieldWriter<'a, DCACHE_SYNC_SIZE_SPEC, 23, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with DCACHE_SYNC_ADDR_REG."]
     #[inline(always)]
     pub fn dcache_sync_size(&self) -> DCACHE_SYNC_SIZE_R {
         DCACHE_SYNC_SIZE_R::new(self.bits & 0x007f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_SYNC_SIZE")
+            .field(
+                "dcache_sync_size",
+                &format_args!("{}", self.dcache_sync_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_SYNC_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

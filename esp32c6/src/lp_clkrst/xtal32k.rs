@@ -35,21 +35,21 @@ impl From<crate::W<XTAL32K_SPEC>> for W {
     }
 }
 #[doc = "Field `DRES_XTAL32K` reader - need_des"]
-pub type DRES_XTAL32K_R = crate::FieldReader<u8, u8>;
+pub type DRES_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DRES_XTAL32K` writer - need_des"]
-pub type DRES_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 3, O>;
+pub type DRES_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL32K_SPEC, 3, O>;
 #[doc = "Field `DGM_XTAL32K` reader - need_des"]
-pub type DGM_XTAL32K_R = crate::FieldReader<u8, u8>;
+pub type DGM_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DGM_XTAL32K` writer - need_des"]
-pub type DGM_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 3, O>;
+pub type DGM_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL32K_SPEC, 3, O>;
 #[doc = "Field `DBUF_XTAL32K` reader - need_des"]
-pub type DBUF_XTAL32K_R = crate::BitReader<bool>;
+pub type DBUF_XTAL32K_R = crate::BitReader;
 #[doc = "Field `DBUF_XTAL32K` writer - need_des"]
-pub type DBUF_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, XTAL32K_SPEC, bool, O>;
+pub type DBUF_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, XTAL32K_SPEC, O>;
 #[doc = "Field `DAC_XTAL32K` reader - need_des"]
-pub type DAC_XTAL32K_R = crate::FieldReader<u8, u8>;
+pub type DAC_XTAL32K_R = crate::FieldReader;
 #[doc = "Field `DAC_XTAL32K` writer - need_des"]
-pub type DAC_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTAL32K_SPEC, u8, u8, 3, O>;
+pub type DAC_XTAL32K_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL32K_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn dac_xtal32k(&self) -> DAC_XTAL32K_R {
         DAC_XTAL32K_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTAL32K")
+            .field(
+                "dres_xtal32k",
+                &format_args!("{}", self.dres_xtal32k().bits()),
+            )
+            .field(
+                "dgm_xtal32k",
+                &format_args!("{}", self.dgm_xtal32k().bits()),
+            )
+            .field(
+                "dbuf_xtal32k",
+                &format_args!("{}", self.dbuf_xtal32k().bit()),
+            )
+            .field(
+                "dac_xtal32k",
+                &format_args!("{}", self.dac_xtal32k().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTAL32K_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

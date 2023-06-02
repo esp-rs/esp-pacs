@@ -35,28 +35,25 @@ impl From<crate::W<HP_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_CPU_EXC_INT_ENA` reader - need_des"]
-pub type LP_CPU_EXC_INT_ENA_R = crate::BitReader<bool>;
+pub type LP_CPU_EXC_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LP_CPU_EXC_INT_ENA` writer - need_des"]
-pub type LP_CPU_EXC_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_INT_ENA_SPEC, bool, O>;
+pub type LP_CPU_EXC_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HP_INT_ENA_SPEC, O>;
 #[doc = "Field `SDIO_IDLE_INT_ENA` reader - need_des"]
-pub type SDIO_IDLE_INT_ENA_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_ENA` writer - need_des"]
-pub type SDIO_IDLE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HP_INT_ENA_SPEC, bool, O>;
+pub type SDIO_IDLE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HP_INT_ENA_SPEC, O>;
 #[doc = "Field `SW_INT_ENA` reader - need_des"]
-pub type SW_INT_ENA_R = crate::BitReader<bool>;
+pub type SW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SW_INT_ENA` writer - need_des"]
-pub type SW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HP_INT_ENA_SPEC, bool, O>;
+pub type SW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HP_INT_ENA_SPEC, O>;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_ENA` reader - need_des"]
-pub type SOC_SLEEP_REJECT_INT_ENA_R = crate::BitReader<bool>;
+pub type SOC_SLEEP_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_ENA` writer - need_des"]
-pub type SOC_SLEEP_REJECT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_INT_ENA_SPEC, bool, O>;
+pub type SOC_SLEEP_REJECT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HP_INT_ENA_SPEC, O>;
 #[doc = "Field `SOC_WAKEUP_INT_ENA` reader - need_des"]
-pub type SOC_WAKEUP_INT_ENA_R = crate::BitReader<bool>;
+pub type SOC_WAKEUP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_ENA` writer - need_des"]
-pub type SOC_WAKEUP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_INT_ENA_SPEC, bool, O>;
+pub type SOC_WAKEUP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HP_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -82,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn soc_wakeup_int_ena(&self) -> SOC_WAKEUP_INT_ENA_R {
         SOC_WAKEUP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_INT_ENA")
+            .field(
+                "lp_cpu_exc_int_ena",
+                &format_args!("{}", self.lp_cpu_exc_int_ena().bit()),
+            )
+            .field(
+                "sdio_idle_int_ena",
+                &format_args!("{}", self.sdio_idle_int_ena().bit()),
+            )
+            .field("sw_int_ena", &format_args!("{}", self.sw_int_ena().bit()))
+            .field(
+                "soc_sleep_reject_int_ena",
+                &format_args!("{}", self.soc_sleep_reject_int_ena().bit()),
+            )
+            .field(
+                "soc_wakeup_int_ena",
+                &format_args!("{}", self.soc_wakeup_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

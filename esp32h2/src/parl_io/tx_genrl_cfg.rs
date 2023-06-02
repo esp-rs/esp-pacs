@@ -38,16 +38,15 @@ impl From<crate::W<TX_GENRL_CFG_SPEC>> for W {
 pub type TX_IDLE_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_IDLE_VALUE` writer - Configures bus value of transmitter in IDLE state."]
 pub type TX_IDLE_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_GENRL_CFG_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TX_GENRL_CFG_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Set this bit to enable the clock gating of output tx clock."]
-pub type TX_GATING_EN_R = crate::BitReader<bool>;
+pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Set this bit to enable the clock gating of output tx clock."]
-pub type TX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_GENRL_CFG_SPEC, bool, O>;
+pub type TX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_GENRL_CFG_SPEC, O>;
 #[doc = "Field `TX_VALID_OUTPUT_EN` reader - Set this bit to enable the output of tx data valid signal."]
-pub type TX_VALID_OUTPUT_EN_R = crate::BitReader<bool>;
+pub type TX_VALID_OUTPUT_EN_R = crate::BitReader;
 #[doc = "Field `TX_VALID_OUTPUT_EN` writer - Set this bit to enable the output of tx data valid signal."]
-pub type TX_VALID_OUTPUT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TX_GENRL_CFG_SPEC, bool, O>;
+pub type TX_VALID_OUTPUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_GENRL_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 14:29 - Configures bus value of transmitter in IDLE state."]
     #[inline(always)]
@@ -63,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn tx_valid_output_en(&self) -> TX_VALID_OUTPUT_EN_R {
         TX_VALID_OUTPUT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_GENRL_CFG")
+            .field(
+                "tx_idle_value",
+                &format_args!("{}", self.tx_idle_value().bits()),
+            )
+            .field(
+                "tx_gating_en",
+                &format_args!("{}", self.tx_gating_en().bit()),
+            )
+            .field(
+                "tx_valid_output_en",
+                &format_args!("{}", self.tx_valid_output_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_GENRL_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

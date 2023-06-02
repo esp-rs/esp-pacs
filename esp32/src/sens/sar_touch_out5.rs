@@ -29,6 +29,27 @@ impl R {
         TOUCH_MEAS_OUT8_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_OUT5")
+            .field(
+                "touch_meas_out9",
+                &format_args!("{}", self.touch_meas_out9().bits()),
+            )
+            .field(
+                "touch_meas_out8",
+                &format_args!("{}", self.touch_meas_out8().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_OUT5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_out5](index.html) module"]
 pub struct SAR_TOUCH_OUT5_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_OUT5_SPEC {

@@ -35,46 +35,45 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SETUP_TIME` reader - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
-pub type SETUP_TIME_R = crate::FieldReader<u8, u8>;
+pub type SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `SETUP_TIME` writer - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
-pub type SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 4, O>;
+pub type SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 4, O>;
 #[doc = "Field `HOLD_TIME` reader - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
-pub type HOLD_TIME_R = crate::FieldReader<u8, u8>;
+pub type HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `HOLD_TIME` writer - delay cycles of cs pin by spi clock, this bits combined with spi_cs_hold bit."]
-pub type HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 4, O>;
+pub type HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 4, O>;
 #[doc = "Field `CK_OUT_LOW_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
-pub type CK_OUT_LOW_MODE_R = crate::FieldReader<u8, u8>;
+pub type CK_OUT_LOW_MODE_R = crate::FieldReader;
 #[doc = "Field `CK_OUT_LOW_MODE` writer - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_L bits."]
-pub type CK_OUT_LOW_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 4, O>;
+pub type CK_OUT_LOW_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 4, O>;
 #[doc = "Field `CK_OUT_HIGH_MODE` reader - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
-pub type CK_OUT_HIGH_MODE_R = crate::FieldReader<u8, u8>;
+pub type CK_OUT_HIGH_MODE_R = crate::FieldReader;
 #[doc = "Field `CK_OUT_HIGH_MODE` writer - modify spi clock duty ratio when the value is lager than 8, the bits are combined with spi_clkcnt_N bits and spi_clkcnt_H bits."]
-pub type CK_OUT_HIGH_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 4, O>;
+pub type CK_OUT_HIGH_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 4, O>;
 #[doc = "Field `MISO_DELAY_MODE` reader - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MISO_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type MISO_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `MISO_DELAY_MODE` writer - MISO signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MISO_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 2, O>;
+pub type MISO_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 2, O>;
 #[doc = "Field `MISO_DELAY_NUM` reader - MISO signals are delayed by system clock cycles"]
-pub type MISO_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type MISO_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `MISO_DELAY_NUM` writer - MISO signals are delayed by system clock cycles"]
-pub type MISO_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 3, O>;
+pub type MISO_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 3, O>;
 #[doc = "Field `MOSI_DELAY_MODE` reader - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MOSI_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type MOSI_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `MOSI_DELAY_MODE` writer - MOSI signals are delayed by spi_clk. 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type MOSI_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 2, O>;
+pub type MOSI_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 2, O>;
 #[doc = "Field `MOSI_DELAY_NUM` reader - MOSI signals are delayed by system clock cycles"]
-pub type MOSI_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type MOSI_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `MOSI_DELAY_NUM` writer - MOSI signals are delayed by system clock cycles"]
-pub type MOSI_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 3, O>;
+pub type MOSI_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 3, O>;
 #[doc = "Field `CS_DELAY_MODE` reader - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type CS_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type CS_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `CS_DELAY_MODE` writer - spi_cs signal is delayed by spi_clk . 0: zero 1: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by half cycle else delayed by one cycle 2: if spi_ck_out_edge or spi_ck_i_edge is set 1 delayed by one cycle else delayed by half cycle 3: delayed one cycle"]
-pub type CS_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 2, O>;
+pub type CS_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 2, O>;
 #[doc = "Field `CS_DELAY_NUM` reader - spi_cs signal is delayed by system clock cycles"]
-pub type CS_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type CS_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `CS_DELAY_NUM` writer - spi_cs signal is delayed by system clock cycles"]
-pub type CS_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 4, O>;
+pub type CS_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - (cycles-1) of ¡°prepare¡± phase by spi clock, this bits combined with spi_cs_setup bit."]
     #[inline(always)]
@@ -125,6 +124,53 @@ impl R {
     #[inline(always)]
     pub fn cs_delay_num(&self) -> CS_DELAY_NUM_R {
         CS_DELAY_NUM_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("setup_time", &format_args!("{}", self.setup_time().bits()))
+            .field("hold_time", &format_args!("{}", self.hold_time().bits()))
+            .field(
+                "ck_out_low_mode",
+                &format_args!("{}", self.ck_out_low_mode().bits()),
+            )
+            .field(
+                "ck_out_high_mode",
+                &format_args!("{}", self.ck_out_high_mode().bits()),
+            )
+            .field(
+                "miso_delay_mode",
+                &format_args!("{}", self.miso_delay_mode().bits()),
+            )
+            .field(
+                "miso_delay_num",
+                &format_args!("{}", self.miso_delay_num().bits()),
+            )
+            .field(
+                "mosi_delay_mode",
+                &format_args!("{}", self.mosi_delay_mode().bits()),
+            )
+            .field(
+                "mosi_delay_num",
+                &format_args!("{}", self.mosi_delay_num().bits()),
+            )
+            .field(
+                "cs_delay_mode",
+                &format_args!("{}", self.cs_delay_mode().bits()),
+            )
+            .field(
+                "cs_delay_num",
+                &format_args!("{}", self.cs_delay_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

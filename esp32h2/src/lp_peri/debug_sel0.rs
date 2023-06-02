@@ -35,21 +35,21 @@ impl From<crate::W<DEBUG_SEL0_SPEC>> for W {
     }
 }
 #[doc = "Field `DEBUG_SEL0` reader - need des"]
-pub type DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL0_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL0` writer - need des"]
-pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DEBUG_SEL0_SPEC, u8, u8, 7, O>;
+pub type DEBUG_SEL0_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_SEL0_SPEC, 7, O>;
 #[doc = "Field `DEBUG_SEL1` reader - need des"]
-pub type DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL1_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL1` writer - need des"]
-pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DEBUG_SEL0_SPEC, u8, u8, 7, O>;
+pub type DEBUG_SEL1_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_SEL0_SPEC, 7, O>;
 #[doc = "Field `DEBUG_SEL2` reader - need des"]
-pub type DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL2_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL2` writer - need des"]
-pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DEBUG_SEL0_SPEC, u8, u8, 7, O>;
+pub type DEBUG_SEL2_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_SEL0_SPEC, 7, O>;
 #[doc = "Field `DEBUG_SEL3` reader - need des"]
-pub type DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
+pub type DEBUG_SEL3_R = crate::FieldReader;
 #[doc = "Field `DEBUG_SEL3` writer - need des"]
-pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DEBUG_SEL0_SPEC, u8, u8, 7, O>;
+pub type DEBUG_SEL3_W<'a, const O: u8> = crate::FieldWriter<'a, DEBUG_SEL0_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn debug_sel3(&self) -> DEBUG_SEL3_R {
         DEBUG_SEL3_R::new(((self.bits >> 21) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DEBUG_SEL0")
+            .field("debug_sel0", &format_args!("{}", self.debug_sel0().bits()))
+            .field("debug_sel1", &format_args!("{}", self.debug_sel1().bits()))
+            .field("debug_sel2", &format_args!("{}", self.debug_sel2().bits()))
+            .field("debug_sel3", &format_args!("{}", self.debug_sel3().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DEBUG_SEL0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,32 @@ impl From<crate::W<CORE_DEBUG_RUNSTALL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_DEBUG_RUNSTALL_ENABLE` reader - Set this field to 1 to enable debug runstall feature between HP-core and LP-core."]
-pub type CORE_DEBUG_RUNSTALL_ENABLE_R = crate::BitReader<bool>;
+pub type CORE_DEBUG_RUNSTALL_ENABLE_R = crate::BitReader;
 #[doc = "Field `CORE_DEBUG_RUNSTALL_ENABLE` writer - Set this field to 1 to enable debug runstall feature between HP-core and LP-core."]
 pub type CORE_DEBUG_RUNSTALL_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_DEBUG_RUNSTALL_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_DEBUG_RUNSTALL_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this field to 1 to enable debug runstall feature between HP-core and LP-core."]
     #[inline(always)]
     pub fn core_debug_runstall_enable(&self) -> CORE_DEBUG_RUNSTALL_ENABLE_R {
         CORE_DEBUG_RUNSTALL_ENABLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_DEBUG_RUNSTALL_CONF")
+            .field(
+                "core_debug_runstall_enable",
+                &format_args!("{}", self.core_debug_runstall_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_DEBUG_RUNSTALL_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,11 +14,11 @@ impl From<crate::R<MAIN_STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `MAIN_LAST_ST_STATE` reader - need_des"]
-pub type MAIN_LAST_ST_STATE_R = crate::FieldReader<u8, u8>;
+pub type MAIN_LAST_ST_STATE_R = crate::FieldReader;
 #[doc = "Field `MAIN_TAR_ST_STATE` reader - need_des"]
-pub type MAIN_TAR_ST_STATE_R = crate::FieldReader<u8, u8>;
+pub type MAIN_TAR_ST_STATE_R = crate::FieldReader;
 #[doc = "Field `MAIN_CUR_ST_STATE` reader - need_des"]
-pub type MAIN_CUR_ST_STATE_R = crate::FieldReader<u8, u8>;
+pub type MAIN_CUR_ST_STATE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 11:17 - need_des"]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn main_cur_st_state(&self) -> MAIN_CUR_ST_STATE_R {
         MAIN_CUR_ST_STATE_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MAIN_STATE")
+            .field(
+                "main_last_st_state",
+                &format_args!("{}", self.main_last_st_state().bits()),
+            )
+            .field(
+                "main_tar_st_state",
+                &format_args!("{}", self.main_tar_st_state().bits()),
+            )
+            .field(
+                "main_cur_st_state",
+                &format_args!("{}", self.main_cur_st_state().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MAIN_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [main_state](index.html) module"]

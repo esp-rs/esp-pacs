@@ -35,15 +35,32 @@ impl From<crate::W<CORE_1_VECBASE_OVERRIDE_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_VECBASE_WORLD_MASK` reader - Set 1 to mask world, then only world0_value will work."]
-pub type CORE_1_VECBASE_WORLD_MASK_R = crate::BitReader<bool>;
+pub type CORE_1_VECBASE_WORLD_MASK_R = crate::BitReader;
 #[doc = "Field `CORE_1_VECBASE_WORLD_MASK` writer - Set 1 to mask world, then only world0_value will work."]
 pub type CORE_1_VECBASE_WORLD_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_VECBASE_OVERRIDE_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_VECBASE_OVERRIDE_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to mask world, then only world0_value will work."]
     #[inline(always)]
     pub fn core_1_vecbase_world_mask(&self) -> CORE_1_VECBASE_WORLD_MASK_R {
         CORE_1_VECBASE_WORLD_MASK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_VECBASE_OVERRIDE_0")
+            .field(
+                "core_1_vecbase_world_mask",
+                &format_args!("{}", self.core_1_vecbase_world_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_VECBASE_OVERRIDE_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

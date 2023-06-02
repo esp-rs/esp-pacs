@@ -20,7 +20,13 @@ impl From<crate::W<MODEXP_START_SPEC>> for W {
     }
 }
 #[doc = "Field `MODEXP_START` writer - Set this bit to 1 to start the modular exponentiation."]
-pub type MODEXP_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODEXP_START_SPEC, bool, O>;
+pub type MODEXP_START_W<'a, const O: u8> = crate::BitWriter<'a, MODEXP_START_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODEXP_START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to start the modular exponentiation."]
     #[inline(always)]

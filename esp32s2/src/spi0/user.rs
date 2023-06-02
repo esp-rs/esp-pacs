@@ -35,125 +35,125 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUTDIN` reader - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
-pub type DOUTDIN_R = crate::BitReader<bool>;
+pub type DOUTDIN_R = crate::BitReader;
 #[doc = "Field `DOUTDIN` writer - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
-pub type DOUTDIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type DOUTDIN_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `QPI_MODE` reader - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
-pub type QPI_MODE_R = crate::BitReader<bool>;
+pub type QPI_MODE_R = crate::BitReader;
 #[doc = "Field `QPI_MODE` writer - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
-pub type QPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type QPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `OPI_MODE` reader - Just for master mode. 1: spi controller is in OPI mode (all in 8-bit mode). 0: others. Can be configured in CONF state."]
-pub type OPI_MODE_R = crate::BitReader<bool>;
+pub type OPI_MODE_R = crate::BitReader;
 #[doc = "Field `OPI_MODE` writer - Just for master mode. 1: spi controller is in OPI mode (all in 8-bit mode). 0: others. Can be configured in CONF state."]
-pub type OPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type OPI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `TSCK_I_EDGE` reader - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
-pub type TSCK_I_EDGE_R = crate::BitReader<bool>;
+pub type TSCK_I_EDGE_R = crate::BitReader;
 #[doc = "Field `TSCK_I_EDGE` writer - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
-pub type TSCK_I_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type TSCK_I_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CS_HOLD` reader - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub type CS_HOLD_R = crate::BitReader<bool>;
+pub type CS_HOLD_R = crate::BitReader;
 #[doc = "Field `CS_HOLD` writer - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CS_SETUP` reader - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub type CS_SETUP_R = crate::BitReader<bool>;
+pub type CS_SETUP_R = crate::BitReader;
 #[doc = "Field `CS_SETUP` writer - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `RSCK_I_EDGE` reader - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
-pub type RSCK_I_EDGE_R = crate::BitReader<bool>;
+pub type RSCK_I_EDGE_R = crate::BitReader;
 #[doc = "Field `RSCK_I_EDGE` writer - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
-pub type RSCK_I_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type RSCK_I_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with SPI_DOUT_MODE register to set mosi signal delay mode. Can be configured in CONF state."]
-pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - the bit combined with SPI_DOUT_MODE register to set mosi signal delay mode. Can be configured in CONF state."]
-pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `RD_BYTE_ORDER` reader - In read-data (MISO) phase 1: big-endian 0: little_endian. Can be configured in CONF state."]
-pub type RD_BYTE_ORDER_R = crate::BitReader<bool>;
+pub type RD_BYTE_ORDER_R = crate::BitReader;
 #[doc = "Field `RD_BYTE_ORDER` writer - In read-data (MISO) phase 1: big-endian 0: little_endian. Can be configured in CONF state."]
-pub type RD_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type RD_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `WR_BYTE_ORDER` reader - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian. Can be configured in CONF state."]
-pub type WR_BYTE_ORDER_R = crate::BitReader<bool>;
+pub type WR_BYTE_ORDER_R = crate::BitReader;
 #[doc = "Field `WR_BYTE_ORDER` writer - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian. Can be configured in CONF state."]
-pub type WR_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type WR_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_DUAL` reader - In the write operations read-data phase is in 2-bit mode. Can be configured in CONF state."]
-pub type FWRITE_DUAL_R = crate::BitReader<bool>;
+pub type FWRITE_DUAL_R = crate::BitReader;
 #[doc = "Field `FWRITE_DUAL` writer - In the write operations read-data phase is in 2-bit mode. Can be configured in CONF state."]
-pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_QUAD` reader - In the write operations read-data phase is in 4-bit mode. Can be configured in CONF state."]
-pub type FWRITE_QUAD_R = crate::BitReader<bool>;
+pub type FWRITE_QUAD_R = crate::BitReader;
 #[doc = "Field `FWRITE_QUAD` writer - In the write operations read-data phase is in 4-bit mode. Can be configured in CONF state."]
-pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_OCT` reader - In the write operations read-data phase is in 8-bit mode. Can be configured in CONF state."]
-pub type FWRITE_OCT_R = crate::BitReader<bool>;
+pub type FWRITE_OCT_R = crate::BitReader;
 #[doc = "Field `FWRITE_OCT` writer - In the write operations read-data phase is in 8-bit mode. Can be configured in CONF state."]
-pub type FWRITE_OCT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_OCT_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_CONF_NXT` reader - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
-pub type USR_CONF_NXT_R = crate::BitReader<bool>;
+pub type USR_CONF_NXT_R = crate::BitReader;
 #[doc = "Field `USR_CONF_NXT` writer - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
-pub type USR_CONF_NXT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_CONF_NXT_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `SIO` reader - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
-pub type SIO_R = crate::BitReader<bool>;
+pub type SIO_R = crate::BitReader;
 #[doc = "Field `SIO` writer - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
-pub type SIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type SIO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_HOLD_POL` reader - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low. Can be configured in CONF state."]
-pub type USR_HOLD_POL_R = crate::BitReader<bool>;
+pub type USR_HOLD_POL_R = crate::BitReader;
 #[doc = "Field `USR_HOLD_POL` writer - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low. Can be configured in CONF state."]
-pub type USR_HOLD_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_HOLD_POL_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DOUT_HOLD` reader - spi is hold at data out state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DOUT_HOLD_R = crate::BitReader<bool>;
+pub type USR_DOUT_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_DOUT_HOLD` writer - spi is hold at data out state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DOUT_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DOUT_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DIN_HOLD` reader - spi is hold at data in state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DIN_HOLD_R = crate::BitReader<bool>;
+pub type USR_DIN_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_DIN_HOLD` writer - spi is hold at data in state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DIN_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DIN_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_HOLD` reader - spi is hold at dummy state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DUMMY_HOLD_R = crate::BitReader<bool>;
+pub type USR_DUMMY_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_HOLD` writer - spi is hold at dummy state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_DUMMY_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_ADDR_HOLD` reader - spi is hold at address state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_ADDR_HOLD_R = crate::BitReader<bool>;
+pub type USR_ADDR_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_ADDR_HOLD` writer - spi is hold at address state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_ADDR_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_ADDR_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_CMD_HOLD` reader - spi is hold at command state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_CMD_HOLD_R = crate::BitReader<bool>;
+pub type USR_CMD_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_CMD_HOLD` writer - spi is hold at command state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_CMD_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_CMD_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_PREP_HOLD` reader - spi is hold at prepare state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_PREP_HOLD_R = crate::BitReader<bool>;
+pub type USR_PREP_HOLD_R = crate::BitReader;
 #[doc = "Field `USR_PREP_HOLD` writer - spi is hold at prepare state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub type USR_PREP_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_PREP_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub type USR_MISO_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MISO_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MISO_HIGHPART` writer - read-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub type USR_MOSI_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MOSI_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MOSI_HIGHPART` writer - write-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
-pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
-pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI` reader - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
-pub type USR_MOSI_R = crate::BitReader<bool>;
+pub type USR_MOSI_R = crate::BitReader;
 #[doc = "Field `USR_MOSI` writer - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
-pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO` reader - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
-pub type USR_MISO_R = crate::BitReader<bool>;
+pub type USR_MISO_R = crate::BitReader;
 #[doc = "Field `USR_MISO` writer - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
-pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
-pub type USR_DUMMY_R = crate::BitReader<bool>;
+pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
-pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_ADDR` reader - This bit enable the address phase of an operation. Can be configured in CONF state."]
-pub type USR_ADDR_R = crate::BitReader<bool>;
+pub type USR_ADDR_R = crate::BitReader;
 #[doc = "Field `USR_ADDR` writer - This bit enable the address phase of an operation. Can be configured in CONF state."]
-pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_COMMAND` reader - This bit enable the command phase of an operation. Can be configured in CONF state."]
-pub type USR_COMMAND_R = crate::BitReader<bool>;
+pub type USR_COMMAND_R = crate::BitReader;
 #[doc = "Field `USR_COMMAND` writer - This bit enable the command phase of an operation. Can be configured in CONF state."]
-pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
@@ -304,6 +304,88 @@ impl R {
     #[inline(always)]
     pub fn usr_command(&self) -> USR_COMMAND_R {
         USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER")
+            .field("doutdin", &format_args!("{}", self.doutdin().bit()))
+            .field("qpi_mode", &format_args!("{}", self.qpi_mode().bit()))
+            .field("opi_mode", &format_args!("{}", self.opi_mode().bit()))
+            .field("tsck_i_edge", &format_args!("{}", self.tsck_i_edge().bit()))
+            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
+            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
+            .field("rsck_i_edge", &format_args!("{}", self.rsck_i_edge().bit()))
+            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
+            .field(
+                "rd_byte_order",
+                &format_args!("{}", self.rd_byte_order().bit()),
+            )
+            .field(
+                "wr_byte_order",
+                &format_args!("{}", self.wr_byte_order().bit()),
+            )
+            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
+            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
+            .field("fwrite_oct", &format_args!("{}", self.fwrite_oct().bit()))
+            .field(
+                "usr_conf_nxt",
+                &format_args!("{}", self.usr_conf_nxt().bit()),
+            )
+            .field("sio", &format_args!("{}", self.sio().bit()))
+            .field(
+                "usr_hold_pol",
+                &format_args!("{}", self.usr_hold_pol().bit()),
+            )
+            .field(
+                "usr_dout_hold",
+                &format_args!("{}", self.usr_dout_hold().bit()),
+            )
+            .field(
+                "usr_din_hold",
+                &format_args!("{}", self.usr_din_hold().bit()),
+            )
+            .field(
+                "usr_dummy_hold",
+                &format_args!("{}", self.usr_dummy_hold().bit()),
+            )
+            .field(
+                "usr_addr_hold",
+                &format_args!("{}", self.usr_addr_hold().bit()),
+            )
+            .field(
+                "usr_cmd_hold",
+                &format_args!("{}", self.usr_cmd_hold().bit()),
+            )
+            .field(
+                "usr_prep_hold",
+                &format_args!("{}", self.usr_prep_hold().bit()),
+            )
+            .field(
+                "usr_miso_highpart",
+                &format_args!("{}", self.usr_miso_highpart().bit()),
+            )
+            .field(
+                "usr_mosi_highpart",
+                &format_args!("{}", self.usr_mosi_highpart().bit()),
+            )
+            .field(
+                "usr_dummy_idle",
+                &format_args!("{}", self.usr_dummy_idle().bit()),
+            )
+            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
+            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
+            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
+            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

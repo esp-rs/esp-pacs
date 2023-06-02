@@ -20,7 +20,13 @@ impl From<crate::W<BUFFER__SPEC>> for W {
     }
 }
 #[doc = "Field `BUFFER` writer - Data buffers for encryption."]
-pub type BUFFER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BUFFER__SPEC, u8, u8, 8, O>;
+pub type BUFFER_W<'a, const O: u8> = crate::FieldWriter<'a, BUFFER__SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BUFFER__SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Data buffers for encryption."]
     #[inline(always)]

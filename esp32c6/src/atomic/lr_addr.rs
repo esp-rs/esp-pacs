@@ -37,13 +37,29 @@ impl From<crate::W<LR_ADDR_SPEC>> for W {
 #[doc = "Field `GLOABLE_LR_ADDR` reader - backup gloable address"]
 pub type GLOABLE_LR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `GLOABLE_LR_ADDR` writer - backup gloable address"]
-pub type GLOABLE_LR_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LR_ADDR_SPEC, u32, u32, 32, O>;
+pub type GLOABLE_LR_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, LR_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - backup gloable address"]
     #[inline(always)]
     pub fn gloable_lr_addr(&self) -> GLOABLE_LR_ADDR_R {
         GLOABLE_LR_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LR_ADDR")
+            .field(
+                "gloable_lr_addr",
+                &format_args!("{}", self.gloable_lr_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LR_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

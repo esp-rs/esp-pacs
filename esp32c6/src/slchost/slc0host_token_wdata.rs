@@ -38,12 +38,12 @@ impl From<crate::W<SLC0HOST_TOKEN_WDATA_SPEC>> for W {
 pub type SLC0HOST_TOKEN0_WD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0HOST_TOKEN0_WD` writer - *******Description***********"]
 pub type SLC0HOST_TOKEN0_WD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC0HOST_TOKEN_WDATA_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16, u16>;
 #[doc = "Field `SLC0HOST_TOKEN1_WD` reader - *******Description***********"]
 pub type SLC0HOST_TOKEN1_WD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0HOST_TOKEN1_WD` writer - *******Description***********"]
 pub type SLC0HOST_TOKEN1_WD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC0HOST_TOKEN_WDATA_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - *******Description***********"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn slc0host_token1_wd(&self) -> SLC0HOST_TOKEN1_WD_R {
         SLC0HOST_TOKEN1_WD_R::new(((self.bits >> 16) & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC0HOST_TOKEN_WDATA")
+            .field(
+                "slc0host_token0_wd",
+                &format_args!("{}", self.slc0host_token0_wd().bits()),
+            )
+            .field(
+                "slc0host_token1_wd",
+                &format_args!("{}", self.slc0host_token1_wd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_TOKEN_WDATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

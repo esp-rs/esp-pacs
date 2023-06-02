@@ -35,15 +35,32 @@ impl From<crate::W<ERR_WARNING_LIMIT_SPEC>> for W {
     }
 }
 #[doc = "Field `ERR_WARNING_LIMIT` reader - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
-pub type ERR_WARNING_LIMIT_R = crate::FieldReader<u8, u8>;
+pub type ERR_WARNING_LIMIT_R = crate::FieldReader;
 #[doc = "Field `ERR_WARNING_LIMIT` writer - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
 pub type ERR_WARNING_LIMIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ERR_WARNING_LIMIT_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, ERR_WARNING_LIMIT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - The threshold that trigger error warning interrupt when this interrupt is enabled. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
     pub fn err_warning_limit(&self) -> ERR_WARNING_LIMIT_R {
         ERR_WARNING_LIMIT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ERR_WARNING_LIMIT")
+            .field(
+                "err_warning_limit",
+                &format_args!("{}", self.err_warning_limit().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ERR_WARNING_LIMIT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

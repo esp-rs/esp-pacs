@@ -38,12 +38,29 @@ impl From<crate::W<PHYSICAL_ADDRESS_SPEC>> for W {
 pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PHYSICAL_ADDRESS` writer - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
 pub type PHYSICAL_ADDRESS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PHYSICAL_ADDRESS_SPEC, u32, u32, 30, O>;
+    crate::FieldWriter<'a, PHYSICAL_ADDRESS_SPEC, 30, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:29 - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
     #[inline(always)]
     pub fn physical_address(&self) -> PHYSICAL_ADDRESS_R {
         PHYSICAL_ADDRESS_R::new(self.bits & 0x3fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PHYSICAL_ADDRESS")
+            .field(
+                "physical_address",
+                &format_args!("{}", self.physical_address().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PHYSICAL_ADDRESS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,31 @@ impl From<crate::W<ROM_TABLE_LOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_TABLE_LOCK` reader - XXXX"]
-pub type ROM_TABLE_LOCK_R = crate::BitReader<bool>;
+pub type ROM_TABLE_LOCK_R = crate::BitReader;
 #[doc = "Field `ROM_TABLE_LOCK` writer - XXXX"]
-pub type ROM_TABLE_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ROM_TABLE_LOCK_SPEC, bool, O>;
+pub type ROM_TABLE_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, ROM_TABLE_LOCK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - XXXX"]
     #[inline(always)]
     pub fn rom_table_lock(&self) -> ROM_TABLE_LOCK_R {
         ROM_TABLE_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_TABLE_LOCK")
+            .field(
+                "rom_table_lock",
+                &format_args!("{}", self.rom_table_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_TABLE_LOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

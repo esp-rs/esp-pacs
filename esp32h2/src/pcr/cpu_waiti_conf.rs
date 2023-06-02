@@ -35,19 +35,17 @@ impl From<crate::W<CPU_WAITI_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPUPERIOD_SEL` reader - Reserved. This filed has been replaced by PCR_CPU_DIV_NUM"]
-pub type CPUPERIOD_SEL_R = crate::FieldReader<u8, u8>;
+pub type CPUPERIOD_SEL_R = crate::FieldReader;
 #[doc = "Field `PLL_FREQ_SEL` reader - Reserved. This filed has been replaced by PCR_CPU_DIV_NUM"]
-pub type PLL_FREQ_SEL_R = crate::BitReader<bool>;
+pub type PLL_FREQ_SEL_R = crate::BitReader;
 #[doc = "Field `CPU_WAIT_MODE_FORCE_ON` reader - Set 1 to force cpu_waiti_clk enable."]
-pub type CPU_WAIT_MODE_FORCE_ON_R = crate::BitReader<bool>;
+pub type CPU_WAIT_MODE_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `CPU_WAIT_MODE_FORCE_ON` writer - Set 1 to force cpu_waiti_clk enable."]
-pub type CPU_WAIT_MODE_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_WAITI_CONF_SPEC, bool, O>;
+pub type CPU_WAIT_MODE_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, CPU_WAITI_CONF_SPEC, O>;
 #[doc = "Field `CPU_WAITI_DELAY_NUM` reader - This field used to set delay cycle when cpu enter waiti mode, after delay waiti_clk will close"]
-pub type CPU_WAITI_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type CPU_WAITI_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `CPU_WAITI_DELAY_NUM` writer - This field used to set delay cycle when cpu enter waiti mode, after delay waiti_clk will close"]
-pub type CPU_WAITI_DELAY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_WAITI_CONF_SPEC, u8, u8, 4, O>;
+pub type CPU_WAITI_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_WAITI_CONF_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:1 - Reserved. This filed has been replaced by PCR_CPU_DIV_NUM"]
     #[inline(always)]
@@ -68,6 +66,35 @@ impl R {
     #[inline(always)]
     pub fn cpu_waiti_delay_num(&self) -> CPU_WAITI_DELAY_NUM_R {
         CPU_WAITI_DELAY_NUM_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_WAITI_CONF")
+            .field(
+                "cpuperiod_sel",
+                &format_args!("{}", self.cpuperiod_sel().bits()),
+            )
+            .field(
+                "pll_freq_sel",
+                &format_args!("{}", self.pll_freq_sel().bit()),
+            )
+            .field(
+                "cpu_wait_mode_force_on",
+                &format_args!("{}", self.cpu_wait_mode_force_on().bit()),
+            )
+            .field(
+                "cpu_waiti_delay_num",
+                &format_args!("{}", self.cpu_waiti_delay_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_WAITI_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,37 +35,37 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `FRC_SDIO11` reader - *******Description***********"]
-pub type FRC_SDIO11_R = crate::FieldReader<u8, u8>;
+pub type FRC_SDIO11_R = crate::FieldReader;
 #[doc = "Field `FRC_SDIO11` writer - *******Description***********"]
-pub type FRC_SDIO11_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 5, O>;
+pub type FRC_SDIO11_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
 #[doc = "Field `FRC_SDIO20` reader - *******Description***********"]
-pub type FRC_SDIO20_R = crate::FieldReader<u8, u8>;
+pub type FRC_SDIO20_R = crate::FieldReader;
 #[doc = "Field `FRC_SDIO20` writer - *******Description***********"]
-pub type FRC_SDIO20_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 5, O>;
+pub type FRC_SDIO20_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
 #[doc = "Field `FRC_NEG_SAMP` reader - *******Description***********"]
-pub type FRC_NEG_SAMP_R = crate::FieldReader<u8, u8>;
+pub type FRC_NEG_SAMP_R = crate::FieldReader;
 #[doc = "Field `FRC_NEG_SAMP` writer - *******Description***********"]
-pub type FRC_NEG_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 5, O>;
+pub type FRC_NEG_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
 #[doc = "Field `FRC_POS_SAMP` reader - *******Description***********"]
-pub type FRC_POS_SAMP_R = crate::FieldReader<u8, u8>;
+pub type FRC_POS_SAMP_R = crate::FieldReader;
 #[doc = "Field `FRC_POS_SAMP` writer - *******Description***********"]
-pub type FRC_POS_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 5, O>;
+pub type FRC_POS_SAMP_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
 #[doc = "Field `FRC_QUICK_IN` reader - *******Description***********"]
-pub type FRC_QUICK_IN_R = crate::FieldReader<u8, u8>;
+pub type FRC_QUICK_IN_R = crate::FieldReader;
 #[doc = "Field `FRC_QUICK_IN` writer - *******Description***********"]
-pub type FRC_QUICK_IN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 5, O>;
+pub type FRC_QUICK_IN_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 5, O>;
 #[doc = "Field `SDIO20_INT_DELAY` reader - *******Description***********"]
-pub type SDIO20_INT_DELAY_R = crate::BitReader<bool>;
+pub type SDIO20_INT_DELAY_R = crate::BitReader;
 #[doc = "Field `SDIO20_INT_DELAY` writer - *******Description***********"]
-pub type SDIO20_INT_DELAY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type SDIO20_INT_DELAY_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `SDIO_PAD_PULLUP` reader - *******Description***********"]
-pub type SDIO_PAD_PULLUP_R = crate::BitReader<bool>;
+pub type SDIO_PAD_PULLUP_R = crate::BitReader;
 #[doc = "Field `SDIO_PAD_PULLUP` writer - *******Description***********"]
-pub type SDIO_PAD_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type SDIO_PAD_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `HSPEED_CON_EN` reader - *******Description***********"]
-pub type HSPEED_CON_EN_R = crate::BitReader<bool>;
+pub type HSPEED_CON_EN_R = crate::BitReader;
 #[doc = "Field `HSPEED_CON_EN` writer - *******Description***********"]
-pub type HSPEED_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type HSPEED_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
@@ -106,6 +106,45 @@ impl R {
     #[inline(always)]
     pub fn hspeed_con_en(&self) -> HSPEED_CON_EN_R {
         HSPEED_CON_EN_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("frc_sdio11", &format_args!("{}", self.frc_sdio11().bits()))
+            .field("frc_sdio20", &format_args!("{}", self.frc_sdio20().bits()))
+            .field(
+                "frc_neg_samp",
+                &format_args!("{}", self.frc_neg_samp().bits()),
+            )
+            .field(
+                "frc_pos_samp",
+                &format_args!("{}", self.frc_pos_samp().bits()),
+            )
+            .field(
+                "frc_quick_in",
+                &format_args!("{}", self.frc_quick_in().bits()),
+            )
+            .field(
+                "sdio20_int_delay",
+                &format_args!("{}", self.sdio20_int_delay().bit()),
+            )
+            .field(
+                "sdio_pad_pullup",
+                &format_args!("{}", self.sdio_pad_pullup().bit()),
+            )
+            .field(
+                "hspeed_con_en",
+                &format_args!("{}", self.hspeed_con_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

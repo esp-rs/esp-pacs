@@ -35,12 +35,11 @@ impl From<crate::W<REDUNDANT_ECO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `REDUNDANT_ECO_DRIVE` reader - ******* Description ***********"]
-pub type REDUNDANT_ECO_DRIVE_R = crate::BitReader<bool>;
+pub type REDUNDANT_ECO_DRIVE_R = crate::BitReader;
 #[doc = "Field `REDUNDANT_ECO_DRIVE` writer - ******* Description ***********"]
-pub type REDUNDANT_ECO_DRIVE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REDUNDANT_ECO_CTRL_SPEC, bool, O>;
+pub type REDUNDANT_ECO_DRIVE_W<'a, const O: u8> = crate::BitWriter<'a, REDUNDANT_ECO_CTRL_SPEC, O>;
 #[doc = "Field `REDUNDANT_ECO_RESULT` reader - ******* Description ***********"]
-pub type REDUNDANT_ECO_RESULT_R = crate::BitReader<bool>;
+pub type REDUNDANT_ECO_RESULT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn redundant_eco_result(&self) -> REDUNDANT_ECO_RESULT_R {
         REDUNDANT_ECO_RESULT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REDUNDANT_ECO_CTRL")
+            .field(
+                "redundant_eco_drive",
+                &format_args!("{}", self.redundant_eco_drive().bit()),
+            )
+            .field(
+                "redundant_eco_result",
+                &format_args!("{}", self.redundant_eco_result().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REDUNDANT_ECO_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

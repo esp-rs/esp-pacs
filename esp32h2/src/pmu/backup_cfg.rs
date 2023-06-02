@@ -35,15 +35,31 @@ impl From<crate::W<BACKUP_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_SYS_CLK_NO_DIV` reader - need_des"]
-pub type BACKUP_SYS_CLK_NO_DIV_R = crate::BitReader<bool>;
+pub type BACKUP_SYS_CLK_NO_DIV_R = crate::BitReader;
 #[doc = "Field `BACKUP_SYS_CLK_NO_DIV` writer - need_des"]
-pub type BACKUP_SYS_CLK_NO_DIV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BACKUP_CFG_SPEC, bool, O>;
+pub type BACKUP_SYS_CLK_NO_DIV_W<'a, const O: u8> = crate::BitWriter<'a, BACKUP_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn backup_sys_clk_no_div(&self) -> BACKUP_SYS_CLK_NO_DIV_R {
         BACKUP_SYS_CLK_NO_DIV_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_CFG")
+            .field(
+                "backup_sys_clk_no_div",
+                &format_args!("{}", self.backup_sys_clk_no_div().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

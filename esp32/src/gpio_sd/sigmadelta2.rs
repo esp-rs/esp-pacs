@@ -35,14 +35,13 @@ impl From<crate::W<SIGMADELTA2_SPEC>> for W {
     }
 }
 #[doc = "Field `SD2_IN` reader - "]
-pub type SD2_IN_R = crate::FieldReader<u8, u8>;
+pub type SD2_IN_R = crate::FieldReader;
 #[doc = "Field `SD2_IN` writer - "]
-pub type SD2_IN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SIGMADELTA2_SPEC, u8, u8, 8, O>;
+pub type SD2_IN_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA2_SPEC, 8, O>;
 #[doc = "Field `SD2_PRESCALE` reader - "]
-pub type SD2_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type SD2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `SD2_PRESCALE` writer - "]
-pub type SD2_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SIGMADELTA2_SPEC, u8, u8, 8, O>;
+pub type SD2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn sd2_prescale(&self) -> SD2_PRESCALE_R {
         SD2_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SIGMADELTA2")
+            .field("sd2_in", &format_args!("{}", self.sd2_in().bits()))
+            .field(
+                "sd2_prescale",
+                &format_args!("{}", self.sd2_prescale().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SIGMADELTA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

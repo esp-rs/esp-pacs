@@ -35,14 +35,28 @@ impl From<crate::W<RST_N_SPEC>> for W {
     }
 }
 #[doc = "Field `CARD_RESET` reader - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
-pub type CARD_RESET_R = crate::FieldReader<u8, u8>;
+pub type CARD_RESET_R = crate::FieldReader;
 #[doc = "Field `CARD_RESET` writer - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
-pub type CARD_RESET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RST_N_SPEC, u8, u8, 2, O>;
+pub type CARD_RESET_W<'a, const O: u8> = crate::FieldWriter<'a, RST_N_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Hardware reset. 1: Active mode; 0: Reset. These bits cause the cards to enter pre-idle state, which requires them to be re-initialized. SDHOST_RST_CARD_RESET\\[0\\] should be set to 1'b0 to reset card0, SDHOST_RST_CARD_RESET\\[1\\] should be set to 1'b0 to reset card1."]
     #[inline(always)]
     pub fn card_reset(&self) -> CARD_RESET_R {
         CARD_RESET_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RST_N")
+            .field("card_reset", &format_args!("{}", self.card_reset().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RST_N_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

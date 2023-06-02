@@ -35,79 +35,69 @@ impl From<crate::W<TOUCH_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DRANGE` reader - TOUCH attenuation."]
-pub type TOUCH_DRANGE_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DRANGE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DRANGE` writer - TOUCH attenuation."]
-pub type TOUCH_DRANGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DRANGE_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DREFL` reader - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
-pub type TOUCH_DREFL_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DREFL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFL` writer - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
-pub type TOUCH_DREFL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DREFL_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DREFH` reader - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
-pub type TOUCH_DREFH_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DREFH_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFH` writer - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
-pub type TOUCH_DREFH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DREFH_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TOUCH_XPD_BIAS` reader - TOUCH BIAS power switch."]
-pub type TOUCH_XPD_BIAS_R = crate::BitReader<bool>;
+pub type TOUCH_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_XPD_BIAS` writer - TOUCH BIAS power switch."]
-pub type TOUCH_XPD_BIAS_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_XPD_BIAS_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_REFC` reader - Touch pad 0 reference capacitance."]
-pub type TOUCH_REFC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_REFC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_REFC` writer - Touch pad 0 reference capacitance."]
-pub type TOUCH_REFC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 3, O>;
+pub type TOUCH_REFC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 3, O>;
 #[doc = "Field `TOUCH_DBIAS` reader - 0: Use bandgap bias. 1: Use self bias."]
-pub type TOUCH_DBIAS_R = crate::BitReader<bool>;
+pub type TOUCH_DBIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_DBIAS` writer - 0: Use bandgap bias. 1: Use self bias."]
-pub type TOUCH_DBIAS_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_DBIAS_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` reader - Touch timer enable bit."]
-pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader<bool>;
+pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` writer - Touch timer enable bit."]
-pub type TOUCH_SLP_TIMER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
-pub type TOUCH_START_FSM_EN_R = crate::BitReader<bool>;
+pub type TOUCH_START_FSM_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` writer - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
-pub type TOUCH_START_FSM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_FSM_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
-pub type TOUCH_START_EN_R = crate::BitReader<bool>;
+pub type TOUCH_START_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_EN` writer - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
-pub type TOUCH_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_START_FORCE` reader - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
-pub type TOUCH_START_FORCE_R = crate::BitReader<bool>;
+pub type TOUCH_START_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FORCE` writer - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
-pub type TOUCH_START_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
-pub type TOUCH_XPD_WAIT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
-pub type TOUCH_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 8, O>;
+pub type TOUCH_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 8, O>;
 #[doc = "Field `TOUCH_SLP_CYC_DIV` reader - When a touch pad is active, sleep cycle could be divided by this number."]
-pub type TOUCH_SLP_CYC_DIV_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_SLP_CYC_DIV_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_CYC_DIV` writer - When a touch pad is active, sleep cycle could be divided by this number."]
-pub type TOUCH_SLP_CYC_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TOUCH_SLP_CYC_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TOUCH_TIMER_FORCE_DONE` reader - Force touch timer done."]
-pub type TOUCH_TIMER_FORCE_DONE_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_TIMER_FORCE_DONE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_TIMER_FORCE_DONE` writer - Force touch timer done."]
-pub type TOUCH_TIMER_FORCE_DONE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL2_SPEC, u8, u8, 2, O>;
+pub type TOUCH_TIMER_FORCE_DONE_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL2_SPEC, 2, O>;
 #[doc = "Field `TOUCH_RESET` reader - Reset TOUCH FSM via software."]
-pub type TOUCH_RESET_R = crate::BitReader<bool>;
+pub type TOUCH_RESET_R = crate::BitReader;
 #[doc = "Field `TOUCH_RESET` writer - Reset TOUCH FSM via software."]
-pub type TOUCH_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_RESET_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_CLK_FO` reader - Touch clock force on."]
-pub type TOUCH_CLK_FO_R = crate::BitReader<bool>;
+pub type TOUCH_CLK_FO_R = crate::BitReader;
 #[doc = "Field `TOUCH_CLK_FO` writer - Touch clock force on."]
-pub type TOUCH_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_CLKGATE_EN` reader - Touch clock enable bit."]
-pub type TOUCH_CLKGATE_EN_R = crate::BitReader<bool>;
+pub type TOUCH_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_CLKGATE_EN` writer - Touch clock enable bit."]
-pub type TOUCH_CLKGATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL2_SPEC, bool, O>;
+pub type TOUCH_CLKGATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
@@ -188,6 +178,74 @@ impl R {
     #[inline(always)]
     pub fn touch_clkgate_en(&self) -> TOUCH_CLKGATE_EN_R {
         TOUCH_CLKGATE_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_CTRL2")
+            .field(
+                "touch_drange",
+                &format_args!("{}", self.touch_drange().bits()),
+            )
+            .field(
+                "touch_drefl",
+                &format_args!("{}", self.touch_drefl().bits()),
+            )
+            .field(
+                "touch_drefh",
+                &format_args!("{}", self.touch_drefh().bits()),
+            )
+            .field(
+                "touch_xpd_bias",
+                &format_args!("{}", self.touch_xpd_bias().bit()),
+            )
+            .field("touch_refc", &format_args!("{}", self.touch_refc().bits()))
+            .field("touch_dbias", &format_args!("{}", self.touch_dbias().bit()))
+            .field(
+                "touch_slp_timer_en",
+                &format_args!("{}", self.touch_slp_timer_en().bit()),
+            )
+            .field(
+                "touch_start_fsm_en",
+                &format_args!("{}", self.touch_start_fsm_en().bit()),
+            )
+            .field(
+                "touch_start_en",
+                &format_args!("{}", self.touch_start_en().bit()),
+            )
+            .field(
+                "touch_start_force",
+                &format_args!("{}", self.touch_start_force().bit()),
+            )
+            .field(
+                "touch_xpd_wait",
+                &format_args!("{}", self.touch_xpd_wait().bits()),
+            )
+            .field(
+                "touch_slp_cyc_div",
+                &format_args!("{}", self.touch_slp_cyc_div().bits()),
+            )
+            .field(
+                "touch_timer_force_done",
+                &format_args!("{}", self.touch_timer_force_done().bits()),
+            )
+            .field("touch_reset", &format_args!("{}", self.touch_reset().bit()))
+            .field(
+                "touch_clk_fo",
+                &format_args!("{}", self.touch_clk_fo().bit()),
+            )
+            .field(
+                "touch_clkgate_en",
+                &format_args!("{}", self.touch_clkgate_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

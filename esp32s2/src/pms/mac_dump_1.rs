@@ -38,12 +38,29 @@ impl From<crate::W<MAC_DUMP_1_SPEC>> for W {
 pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection."]
 pub type MAC_DUMP_CONNECT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MAC_DUMP_1_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, MAC_DUMP_1_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
     pub fn mac_dump_connect(&self) -> MAC_DUMP_CONNECT_R {
         MAC_DUMP_CONNECT_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MAC_DUMP_1")
+            .field(
+                "mac_dump_connect",
+                &format_args!("{}", self.mac_dump_connect().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MAC_DUMP_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

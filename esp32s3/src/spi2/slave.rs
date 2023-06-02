@@ -35,48 +35,47 @@ impl From<crate::W<SLAVE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
-pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
-pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLAVE_SPEC, u8, u8, 2, O>;
+pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_SPEC, 2, O>;
 #[doc = "Field `CLK_MODE_13` reader - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
-pub type CLK_MODE_13_R = crate::BitReader<bool>;
+pub type CLK_MODE_13_R = crate::BitReader;
 #[doc = "Field `CLK_MODE_13` writer - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
-pub type CLK_MODE_13_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type CLK_MODE_13_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `RSCK_DATA_OUT` reader - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
-pub type RSCK_DATA_OUT_R = crate::BitReader<bool>;
+pub type RSCK_DATA_OUT_R = crate::BitReader;
 #[doc = "Field `RSCK_DATA_OUT` writer - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
-pub type RSCK_DATA_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type RSCK_DATA_OUT_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SLV_RDDMA_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
-pub type SLV_RDDMA_BITLEN_EN_R = crate::BitReader<bool>;
+pub type SLV_RDDMA_BITLEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDDMA_BITLEN_EN` writer - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
-pub type SLV_RDDMA_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SLV_RDDMA_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SLV_WRDMA_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
-pub type SLV_WRDMA_BITLEN_EN_R = crate::BitReader<bool>;
+pub type SLV_WRDMA_BITLEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRDMA_BITLEN_EN` writer - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
-pub type SLV_WRDMA_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SLV_WRDMA_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SLV_RDBUF_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
-pub type SLV_RDBUF_BITLEN_EN_R = crate::BitReader<bool>;
+pub type SLV_RDBUF_BITLEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDBUF_BITLEN_EN` writer - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
-pub type SLV_RDBUF_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SLV_RDBUF_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SLV_WRBUF_BITLEN_EN` reader - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
-pub type SLV_WRBUF_BITLEN_EN_R = crate::BitReader<bool>;
+pub type SLV_WRBUF_BITLEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_WRBUF_BITLEN_EN` writer - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
-pub type SLV_WRBUF_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SLV_WRBUF_BITLEN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `DMA_SEG_MAGIC_VALUE` reader - The magic value of BM table in master DMA seg-trans."]
-pub type DMA_SEG_MAGIC_VALUE_R = crate::FieldReader<u8, u8>;
+pub type DMA_SEG_MAGIC_VALUE_R = crate::FieldReader;
 #[doc = "Field `DMA_SEG_MAGIC_VALUE` writer - The magic value of BM table in master DMA seg-trans."]
-pub type DMA_SEG_MAGIC_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLAVE_SPEC, u8, u8, 4, O>;
+pub type DMA_SEG_MAGIC_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_SPEC, 4, O>;
 #[doc = "Field `MODE` reader - Set SPI work mode. 1: slave mode 0: master mode."]
-pub type MODE_R = crate::BitReader<bool>;
+pub type MODE_R = crate::BitReader;
 #[doc = "Field `MODE` writer - Set SPI work mode. 1: slave mode 0: master mode."]
-pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SOFT_RESET` writer - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
-pub type SOFT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SOFT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `USR_CONF` reader - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
-pub type USR_CONF_R = crate::BitReader<bool>;
+pub type USR_CONF_R = crate::BitReader;
 #[doc = "Field `USR_CONF` writer - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
-pub type USR_CONF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type USR_CONF_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
     #[inline(always)]
@@ -127,6 +126,47 @@ impl R {
     #[inline(always)]
     pub fn usr_conf(&self) -> USR_CONF_R {
         USR_CONF_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE")
+            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .field("clk_mode_13", &format_args!("{}", self.clk_mode_13().bit()))
+            .field(
+                "rsck_data_out",
+                &format_args!("{}", self.rsck_data_out().bit()),
+            )
+            .field(
+                "slv_rddma_bitlen_en",
+                &format_args!("{}", self.slv_rddma_bitlen_en().bit()),
+            )
+            .field(
+                "slv_wrdma_bitlen_en",
+                &format_args!("{}", self.slv_wrdma_bitlen_en().bit()),
+            )
+            .field(
+                "slv_rdbuf_bitlen_en",
+                &format_args!("{}", self.slv_rdbuf_bitlen_en().bit()),
+            )
+            .field(
+                "slv_wrbuf_bitlen_en",
+                &format_args!("{}", self.slv_wrbuf_bitlen_en().bit()),
+            )
+            .field(
+                "dma_seg_magic_value",
+                &format_args!("{}", self.dma_seg_magic_value().bits()),
+            )
+            .field("mode", &format_args!("{}", self.mode().bit()))
+            .field("usr_conf", &format_args!("{}", self.usr_conf().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

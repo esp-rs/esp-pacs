@@ -35,68 +35,57 @@ impl From<crate::W<I2STIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_TRANS_BCK_IN_DELAY` reader - "]
-pub type I2S_TRANS_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_TRANS_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_BCK_IN_DELAY` writer - "]
-pub type I2S_TRANS_BCK_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_TRANS_BCK_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_TRANS_WS_IN_DELAY` reader - "]
-pub type I2S_TRANS_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_TRANS_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_WS_IN_DELAY` writer - "]
-pub type I2S_TRANS_WS_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_TRANS_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_RECE_BCK_IN_DELAY` reader - "]
-pub type I2S_RECE_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_RECE_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_BCK_IN_DELAY` writer - "]
-pub type I2S_RECE_BCK_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_RECE_BCK_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_RECE_WS_IN_DELAY` reader - "]
-pub type I2S_RECE_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_RECE_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_WS_IN_DELAY` writer - "]
-pub type I2S_RECE_WS_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_RECE_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_RECE_SD_IN_DELAY` reader - "]
-pub type I2S_RECE_SD_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_RECE_SD_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_SD_IN_DELAY` writer - "]
-pub type I2S_RECE_SD_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_RECE_SD_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_TRANS_BCK_OUT_DELAY` reader - "]
-pub type I2S_TRANS_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_TRANS_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_BCK_OUT_DELAY` writer - "]
-pub type I2S_TRANS_BCK_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_TRANS_BCK_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_TRANS_WS_OUT_DELAY` reader - "]
-pub type I2S_TRANS_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_TRANS_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_WS_OUT_DELAY` writer - "]
-pub type I2S_TRANS_WS_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_TRANS_WS_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_TRANS_SD_OUT_DELAY` reader - "]
-pub type I2S_TRANS_SD_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_TRANS_SD_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_TRANS_SD_OUT_DELAY` writer - "]
-pub type I2S_TRANS_SD_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_TRANS_SD_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_RECE_WS_OUT_DELAY` reader - "]
-pub type I2S_RECE_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_RECE_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_WS_OUT_DELAY` writer - "]
-pub type I2S_RECE_WS_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_RECE_WS_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_RECE_BCK_OUT_DELAY` reader - "]
-pub type I2S_RECE_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type I2S_RECE_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `I2S_RECE_BCK_OUT_DELAY` writer - "]
-pub type I2S_RECE_BCK_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2STIMING_SPEC, u8, u8, 2, O>;
+pub type I2S_RECE_BCK_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, I2STIMING_SPEC, 2, O>;
 #[doc = "Field `I2S_TRANS_DSYNC_SW` reader - "]
-pub type I2S_TRANS_DSYNC_SW_R = crate::BitReader<bool>;
+pub type I2S_TRANS_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_DSYNC_SW` writer - "]
-pub type I2S_TRANS_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2STIMING_SPEC, bool, O>;
+pub type I2S_TRANS_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, I2STIMING_SPEC, O>;
 #[doc = "Field `I2S_RECE_DSYNC_SW` reader - "]
-pub type I2S_RECE_DSYNC_SW_R = crate::BitReader<bool>;
+pub type I2S_RECE_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `I2S_RECE_DSYNC_SW` writer - "]
-pub type I2S_RECE_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2STIMING_SPEC, bool, O>;
+pub type I2S_RECE_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, I2STIMING_SPEC, O>;
 #[doc = "Field `I2S_TRANS_BCK_IN_INV` reader - "]
-pub type I2S_TRANS_BCK_IN_INV_R = crate::BitReader<bool>;
+pub type I2S_TRANS_BCK_IN_INV_R = crate::BitReader;
 #[doc = "Field `I2S_TRANS_BCK_IN_INV` writer - "]
-pub type I2S_TRANS_BCK_IN_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2STIMING_SPEC, bool, O>;
+pub type I2S_TRANS_BCK_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, I2STIMING_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -162,6 +151,71 @@ impl R {
     #[inline(always)]
     pub fn i2s_trans_bck_in_inv(&self) -> I2S_TRANS_BCK_IN_INV_R {
         I2S_TRANS_BCK_IN_INV_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2STIMING")
+            .field(
+                "i2s_trans_bck_in_inv",
+                &format_args!("{}", self.i2s_trans_bck_in_inv().bit()),
+            )
+            .field(
+                "i2s_rece_dsync_sw",
+                &format_args!("{}", self.i2s_rece_dsync_sw().bit()),
+            )
+            .field(
+                "i2s_trans_dsync_sw",
+                &format_args!("{}", self.i2s_trans_dsync_sw().bit()),
+            )
+            .field(
+                "i2s_rece_bck_out_delay",
+                &format_args!("{}", self.i2s_rece_bck_out_delay().bits()),
+            )
+            .field(
+                "i2s_rece_ws_out_delay",
+                &format_args!("{}", self.i2s_rece_ws_out_delay().bits()),
+            )
+            .field(
+                "i2s_trans_sd_out_delay",
+                &format_args!("{}", self.i2s_trans_sd_out_delay().bits()),
+            )
+            .field(
+                "i2s_trans_ws_out_delay",
+                &format_args!("{}", self.i2s_trans_ws_out_delay().bits()),
+            )
+            .field(
+                "i2s_trans_bck_out_delay",
+                &format_args!("{}", self.i2s_trans_bck_out_delay().bits()),
+            )
+            .field(
+                "i2s_rece_sd_in_delay",
+                &format_args!("{}", self.i2s_rece_sd_in_delay().bits()),
+            )
+            .field(
+                "i2s_rece_ws_in_delay",
+                &format_args!("{}", self.i2s_rece_ws_in_delay().bits()),
+            )
+            .field(
+                "i2s_rece_bck_in_delay",
+                &format_args!("{}", self.i2s_rece_bck_in_delay().bits()),
+            )
+            .field(
+                "i2s_trans_ws_in_delay",
+                &format_args!("{}", self.i2s_trans_ws_in_delay().bits()),
+            )
+            .field(
+                "i2s_trans_bck_in_delay",
+                &format_args!("{}", self.i2s_trans_bck_in_delay().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2STIMING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

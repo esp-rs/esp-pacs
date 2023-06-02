@@ -35,14 +35,28 @@ impl From<crate::W<SDIO_SELECT_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_SEL` reader - GPIO sdio select register"]
-pub type SDIO_SEL_R = crate::FieldReader<u8, u8>;
+pub type SDIO_SEL_R = crate::FieldReader;
 #[doc = "Field `SDIO_SEL` writer - GPIO sdio select register"]
-pub type SDIO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_SELECT_SPEC, u8, u8, 8, O>;
+pub type SDIO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_SELECT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - GPIO sdio select register"]
     #[inline(always)]
     pub fn sdio_sel(&self) -> SDIO_SEL_R {
         SDIO_SEL_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_SELECT")
+            .field("sdio_sel", &format_args!("{}", self.sdio_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_SELECT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

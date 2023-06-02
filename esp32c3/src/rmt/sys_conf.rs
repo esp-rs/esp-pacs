@@ -35,45 +35,45 @@ impl From<crate::W<SYS_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - reg_apb_fifo_mask."]
-pub type APB_FIFO_MASK_R = crate::BitReader<bool>;
+pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - reg_apb_fifo_mask."]
-pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - reg_mem_clk_force_on."]
-pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - reg_mem_clk_force_on."]
-pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PD` reader - reg_rmt_mem_force_pd."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - reg_rmt_mem_force_pd."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - reg_rmt_mem_force_pu."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - reg_rmt_mem_force_pu."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_rmt_sclk_div_num."]
-pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_rmt_sclk_div_num."]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 8, O>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_rmt_sclk_div_a."]
-pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - reg_rmt_sclk_div_a."]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_rmt_sclk_div_b."]
-pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - reg_rmt_sclk_div_b."]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_SEL` reader - reg_rmt_sclk_sel."]
-pub type SCLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SCLK_SEL` writer - reg_rmt_sclk_sel."]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 2, O>;
+pub type SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SYS_CONF_SPEC, 2, O>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_rmt_sclk_active."]
-pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
+pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_rmt_sclk_active."]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - reg_clk_en."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - reg_clk_en."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_apb_fifo_mask."]
     #[inline(always)]
@@ -124,6 +124,44 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYS_CONF")
+            .field(
+                "apb_fifo_mask",
+                &format_args!("{}", self.apb_fifo_mask().bit()),
+            )
+            .field(
+                "mem_clk_force_on",
+                &format_args!("{}", self.mem_clk_force_on().bit()),
+            )
+            .field(
+                "mem_force_pd",
+                &format_args!("{}", self.mem_force_pd().bit()),
+            )
+            .field(
+                "mem_force_pu",
+                &format_args!("{}", self.mem_force_pu().bit()),
+            )
+            .field(
+                "sclk_div_num",
+                &format_args!("{}", self.sclk_div_num().bits()),
+            )
+            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
+            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
+            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bits()))
+            .field("sclk_active", &format_args!("{}", self.sclk_active().bit()))
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYS_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

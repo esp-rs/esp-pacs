@@ -35,60 +35,59 @@ impl From<crate::W<HP_SLEEP_BACKUP_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE` reader - need_des"]
-pub type HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE_R = crate::FieldReader<u8, u8>;
+pub type HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE_R = crate::FieldReader;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE` writer - need_des"]
 pub type HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 2, O>;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE` reader - need_des"]
-pub type HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE` writer - need_des"]
 pub type HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 2, O>;
 #[doc = "Field `HP_SLEEP_RETENTION_MODE` reader - need_des"]
-pub type HP_SLEEP_RETENTION_MODE_R = crate::BitReader<bool>;
+pub type HP_SLEEP_RETENTION_MODE_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_RETENTION_MODE` writer - need_des"]
-pub type HP_SLEEP_RETENTION_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, bool, O>;
+pub type HP_SLEEP_RETENTION_MODE_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_BACKUP_SPEC, O>;
 #[doc = "Field `HP_MODEM2SLEEP_RETENTION_EN` reader - need_des"]
-pub type HP_MODEM2SLEEP_RETENTION_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM2SLEEP_RETENTION_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM2SLEEP_RETENTION_EN` writer - need_des"]
 pub type HP_MODEM2SLEEP_RETENTION_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_BACKUP_SPEC, O>;
 #[doc = "Field `HP_ACTIVE2SLEEP_RETENTION_EN` reader - need_des"]
-pub type HP_ACTIVE2SLEEP_RETENTION_EN_R = crate::BitReader<bool>;
+pub type HP_ACTIVE2SLEEP_RETENTION_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE2SLEEP_RETENTION_EN` writer - need_des"]
 pub type HP_ACTIVE2SLEEP_RETENTION_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_BACKUP_SPEC, O>;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_CLK_SEL` reader - need_des"]
-pub type HP_MODEM2SLEEP_BACKUP_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type HP_MODEM2SLEEP_BACKUP_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_CLK_SEL` writer - need_des"]
 pub type HP_MODEM2SLEEP_BACKUP_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 2, O>;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_CLK_SEL` reader - need_des"]
-pub type HP_ACTIVE2SLEEP_BACKUP_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE2SLEEP_BACKUP_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_CLK_SEL` writer - need_des"]
 pub type HP_ACTIVE2SLEEP_BACKUP_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 2, O>;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_MODE` reader - need_des"]
-pub type HP_MODEM2SLEEP_BACKUP_MODE_R = crate::FieldReader<u8, u8>;
+pub type HP_MODEM2SLEEP_BACKUP_MODE_R = crate::FieldReader;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_MODE` writer - need_des"]
 pub type HP_MODEM2SLEEP_BACKUP_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 3, O>;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_MODE` reader - need_des"]
-pub type HP_ACTIVE2SLEEP_BACKUP_MODE_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE2SLEEP_BACKUP_MODE_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_MODE` writer - need_des"]
 pub type HP_ACTIVE2SLEEP_BACKUP_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, HP_SLEEP_BACKUP_SPEC, 3, O>;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_EN` reader - need_des"]
-pub type HP_MODEM2SLEEP_BACKUP_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM2SLEEP_BACKUP_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM2SLEEP_BACKUP_EN` writer - need_des"]
 pub type HP_MODEM2SLEEP_BACKUP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_BACKUP_SPEC, O>;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_EN` reader - need_des"]
-pub type HP_ACTIVE2SLEEP_BACKUP_EN_R = crate::BitReader<bool>;
+pub type HP_ACTIVE2SLEEP_BACKUP_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE2SLEEP_BACKUP_EN` writer - need_des"]
 pub type HP_ACTIVE2SLEEP_BACKUP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_BACKUP_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_BACKUP_SPEC, O>;
 impl R {
     #[doc = "Bits 6:7 - need_des"]
     #[inline(always)]
@@ -144,6 +143,63 @@ impl R {
     #[inline(always)]
     pub fn hp_active2sleep_backup_en(&self) -> HP_ACTIVE2SLEEP_BACKUP_EN_R {
         HP_ACTIVE2SLEEP_BACKUP_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_SLEEP_BACKUP")
+            .field(
+                "hp_modem2sleep_backup_modem_clk_code",
+                &format_args!("{}", self.hp_modem2sleep_backup_modem_clk_code().bits()),
+            )
+            .field(
+                "hp_active2sleep_backup_modem_clk_code",
+                &format_args!("{}", self.hp_active2sleep_backup_modem_clk_code().bits()),
+            )
+            .field(
+                "hp_sleep_retention_mode",
+                &format_args!("{}", self.hp_sleep_retention_mode().bit()),
+            )
+            .field(
+                "hp_modem2sleep_retention_en",
+                &format_args!("{}", self.hp_modem2sleep_retention_en().bit()),
+            )
+            .field(
+                "hp_active2sleep_retention_en",
+                &format_args!("{}", self.hp_active2sleep_retention_en().bit()),
+            )
+            .field(
+                "hp_modem2sleep_backup_clk_sel",
+                &format_args!("{}", self.hp_modem2sleep_backup_clk_sel().bits()),
+            )
+            .field(
+                "hp_active2sleep_backup_clk_sel",
+                &format_args!("{}", self.hp_active2sleep_backup_clk_sel().bits()),
+            )
+            .field(
+                "hp_modem2sleep_backup_mode",
+                &format_args!("{}", self.hp_modem2sleep_backup_mode().bits()),
+            )
+            .field(
+                "hp_active2sleep_backup_mode",
+                &format_args!("{}", self.hp_active2sleep_backup_mode().bits()),
+            )
+            .field(
+                "hp_modem2sleep_backup_en",
+                &format_args!("{}", self.hp_modem2sleep_backup_en().bit()),
+            )
+            .field(
+                "hp_active2sleep_backup_en",
+                &format_args!("{}", self.hp_active2sleep_backup_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_BACKUP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

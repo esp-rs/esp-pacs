@@ -35,15 +35,31 @@ impl From<crate::W<PRO_TRACEMEM_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_TRACEMEM_ENA` reader - "]
-pub type PRO_TRACEMEM_ENA_R = crate::BitReader<bool>;
+pub type PRO_TRACEMEM_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_TRACEMEM_ENA` writer - "]
-pub type PRO_TRACEMEM_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_TRACEMEM_ENA_SPEC, bool, O>;
+pub type PRO_TRACEMEM_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_TRACEMEM_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_tracemem_ena(&self) -> PRO_TRACEMEM_ENA_R {
         PRO_TRACEMEM_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_TRACEMEM_ENA")
+            .field(
+                "pro_tracemem_ena",
+                &format_args!("{}", self.pro_tracemem_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_TRACEMEM_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

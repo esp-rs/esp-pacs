@@ -14,45 +14,45 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER0_OVF_INT_RAW` reader - Triggered when the timer0 has reached its maximum counter value."]
-pub type TIMER0_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type TIMER0_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER1_OVF_INT_RAW` reader - Triggered when the timer1 has reached its maximum counter value."]
-pub type TIMER1_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type TIMER1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER2_OVF_INT_RAW` reader - Triggered when the timer2 has reached its maximum counter value."]
-pub type TIMER2_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type TIMER2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIMER3_OVF_INT_RAW` reader - Triggered when the timer3 has reached its maximum counter value."]
-pub type TIMER3_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type TIMER3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_RAW` reader - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH0_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_RAW` reader - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH1_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_RAW` reader - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH2_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_RAW` reader - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH3_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_RAW` reader - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH4_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH4_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_RAW` reader - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH5_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH5_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH6_INT_RAW` reader - Interrupt raw bit for channel 6. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH6_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH6_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH7_INT_RAW` reader - Interrupt raw bit for channel 7. Triggered when the gradual change of duty has finished."]
-pub type DUTY_CHNG_END_CH7_INT_RAW_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH7_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH0_INT_RAW` reader - Interrupt raw bit for channel 0. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH0."]
-pub type OVF_CNT_CH0_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH1_INT_RAW` reader - Interrupt raw bit for channel 1. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH1."]
-pub type OVF_CNT_CH1_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH2_INT_RAW` reader - Interrupt raw bit for channel 2. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH2."]
-pub type OVF_CNT_CH2_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH3_INT_RAW` reader - Interrupt raw bit for channel 3. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH3."]
-pub type OVF_CNT_CH3_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH4_INT_RAW` reader - Interrupt raw bit for channel 4. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH4."]
-pub type OVF_CNT_CH4_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH4_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH5_INT_RAW` reader - Interrupt raw bit for channel 5. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH5."]
-pub type OVF_CNT_CH5_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH5_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH6_INT_RAW` reader - Interrupt raw bit for channel 6. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH6."]
-pub type OVF_CNT_CH6_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH6_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH7_INT_RAW` reader - Interrupt raw bit for channel 7. Triggered when the ovf_cnt has reached the value specified by LEDC_OVF_NUM_CH7."]
-pub type OVF_CNT_CH7_INT_RAW_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH7_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
@@ -153,6 +153,99 @@ impl R {
     #[inline(always)]
     pub fn ovf_cnt_ch7_int_raw(&self) -> OVF_CNT_CH7_INT_RAW_R {
         OVF_CNT_CH7_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "timer0_ovf_int_raw",
+                &format_args!("{}", self.timer0_ovf_int_raw().bit()),
+            )
+            .field(
+                "timer1_ovf_int_raw",
+                &format_args!("{}", self.timer1_ovf_int_raw().bit()),
+            )
+            .field(
+                "timer2_ovf_int_raw",
+                &format_args!("{}", self.timer2_ovf_int_raw().bit()),
+            )
+            .field(
+                "timer3_ovf_int_raw",
+                &format_args!("{}", self.timer3_ovf_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch0_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch0_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch1_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch1_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch2_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch2_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch3_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch3_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch4_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch4_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch5_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch5_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch6_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch6_int_raw().bit()),
+            )
+            .field(
+                "duty_chng_end_ch7_int_raw",
+                &format_args!("{}", self.duty_chng_end_ch7_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch0_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch0_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch1_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch1_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch2_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch2_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch3_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch3_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch4_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch4_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch5_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch5_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch6_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch6_int_raw().bit()),
+            )
+            .field(
+                "ovf_cnt_ch7_int_raw",
+                &format_args!("{}", self.ovf_cnt_ch7_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

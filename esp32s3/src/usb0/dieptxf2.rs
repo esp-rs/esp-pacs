@@ -37,13 +37,11 @@ impl From<crate::W<DIEPTXF2_SPEC>> for W {
 #[doc = "Field `INEP2TXFSTADDR` reader - "]
 pub type INEP2TXFSTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INEP2TXFSTADDR` writer - "]
-pub type INEP2TXFSTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIEPTXF2_SPEC, u16, u16, 16, O>;
+pub type INEP2TXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `INEP2TXFDEP` reader - "]
 pub type INEP2TXFDEP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INEP2TXFDEP` writer - "]
-pub type INEP2TXFDEP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIEPTXF2_SPEC, u16, u16, 16, O>;
+pub type INEP2TXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF2_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn inep2txfdep(&self) -> INEP2TXFDEP_R {
         INEP2TXFDEP_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPTXF2")
+            .field(
+                "inep2txfstaddr",
+                &format_args!("{}", self.inep2txfstaddr().bits()),
+            )
+            .field(
+                "inep2txfdep",
+                &format_args!("{}", self.inep2txfdep().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIEPTXF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

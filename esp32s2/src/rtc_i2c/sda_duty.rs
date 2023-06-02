@@ -37,12 +37,26 @@ impl From<crate::W<SDA_DUTY_SPEC>> for W {
 #[doc = "Field `NUM` reader - The number of clock cycles between the SDA switch and the falling edge of SCL."]
 pub type NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `NUM` writer - The number of clock cycles between the SDA switch and the falling edge of SCL."]
-pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDA_DUTY_SPEC, u32, u32, 20, O>;
+pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_DUTY_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - The number of clock cycles between the SDA switch and the falling edge of SCL."]
     #[inline(always)]
     pub fn num(&self) -> NUM_R {
         NUM_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDA_DUTY")
+            .field("num", &format_args!("{}", self.num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDA_DUTY_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

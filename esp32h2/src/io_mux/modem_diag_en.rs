@@ -38,12 +38,29 @@ impl From<crate::W<MODEM_DIAG_EN_SPEC>> for W {
 pub type MODEM_DIAG_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MODEM_DIAG_EN` writer - bit i to enable modem_diag\\[i\\] into gpio matrix. 1:enable modem_diag\\[i\\] into gpio matrix. 0:enable other signals into gpio matrix"]
 pub type MODEM_DIAG_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MODEM_DIAG_EN_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, MODEM_DIAG_EN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - bit i to enable modem_diag\\[i\\] into gpio matrix. 1:enable modem_diag\\[i\\] into gpio matrix. 0:enable other signals into gpio matrix"]
     #[inline(always)]
     pub fn modem_diag_en(&self) -> MODEM_DIAG_EN_R {
         MODEM_DIAG_EN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_DIAG_EN")
+            .field(
+                "modem_diag_en",
+                &format_args!("{}", self.modem_diag_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODEM_DIAG_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

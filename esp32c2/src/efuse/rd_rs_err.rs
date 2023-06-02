@@ -14,17 +14,17 @@ impl From<crate::R<RD_RS_ERR_SPEC>> for R {
     }
 }
 #[doc = "Field `BLK1_ERR_NUM` reader - The value of this signal means the number of error bytes in block1."]
-pub type BLK1_ERR_NUM_R = crate::FieldReader<u8, u8>;
+pub type BLK1_ERR_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK1_FAIL` reader - 0: Means no failure and that the data of block1 is reliable 1: Means that programming user data failed and the number of error bytes is over 6."]
-pub type BLK1_FAIL_R = crate::BitReader<bool>;
+pub type BLK1_FAIL_R = crate::BitReader;
 #[doc = "Field `BLK2_ERR_NUM` reader - The value of this signal means the number of error bytes in block2."]
-pub type BLK2_ERR_NUM_R = crate::FieldReader<u8, u8>;
+pub type BLK2_ERR_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK2_FAIL` reader - 0: Means no failure and that the data of block2 is reliable 1: Means that programming user data failed and the number of error bytes is over 6."]
-pub type BLK2_FAIL_R = crate::BitReader<bool>;
+pub type BLK2_FAIL_R = crate::BitReader;
 #[doc = "Field `BLK3_ERR_NUM` reader - The value of this signal means the number of error bytes in block3."]
-pub type BLK3_ERR_NUM_R = crate::FieldReader<u8, u8>;
+pub type BLK3_ERR_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK3_FAIL` reader - 0: Means no failure and that the block3 data is reliable 1: Means that programming user data failed and the number of error bytes is over 6."]
-pub type BLK3_FAIL_R = crate::BitReader<bool>;
+pub type BLK3_FAIL_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:2 - The value of this signal means the number of error bytes in block1."]
     #[inline(always)]
@@ -55,6 +55,34 @@ impl R {
     #[inline(always)]
     pub fn blk3_fail(&self) -> BLK3_FAIL_R {
         BLK3_FAIL_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_RS_ERR")
+            .field(
+                "blk1_err_num",
+                &format_args!("{}", self.blk1_err_num().bits()),
+            )
+            .field("blk1_fail", &format_args!("{}", self.blk1_fail().bit()))
+            .field(
+                "blk2_err_num",
+                &format_args!("{}", self.blk2_err_num().bits()),
+            )
+            .field("blk2_fail", &format_args!("{}", self.blk2_fail().bit()))
+            .field(
+                "blk3_err_num",
+                &format_args!("{}", self.blk3_err_num().bits()),
+            )
+            .field("blk3_fail", &format_args!("{}", self.blk3_fail().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_RS_ERR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK1-10.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_rs_err](index.html) module"]

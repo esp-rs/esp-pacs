@@ -35,25 +35,21 @@ impl From<crate::W<CACHE_TAG_ACCESS_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_I_TAG_RD_ACS` reader - Setting to 1 permits read access to Icache tag memory."]
-pub type PRO_I_TAG_RD_ACS_R = crate::BitReader<bool>;
+pub type PRO_I_TAG_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_I_TAG_RD_ACS` writer - Setting to 1 permits read access to Icache tag memory."]
-pub type PRO_I_TAG_RD_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_ACCESS_1_SPEC, bool, O>;
+pub type PRO_I_TAG_RD_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_ACCESS_1_SPEC, O>;
 #[doc = "Field `PRO_I_TAG_WR_ACS` reader - Setting to 1 permits write access to Icache tag memory."]
-pub type PRO_I_TAG_WR_ACS_R = crate::BitReader<bool>;
+pub type PRO_I_TAG_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_I_TAG_WR_ACS` writer - Setting to 1 permits write access to Icache tag memory."]
-pub type PRO_I_TAG_WR_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_ACCESS_1_SPEC, bool, O>;
+pub type PRO_I_TAG_WR_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_ACCESS_1_SPEC, O>;
 #[doc = "Field `PRO_D_TAG_RD_ACS` reader - Setting to 1 permits read access to Dcache tag memory."]
-pub type PRO_D_TAG_RD_ACS_R = crate::BitReader<bool>;
+pub type PRO_D_TAG_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_D_TAG_RD_ACS` writer - Setting to 1 permits read access to Dcache tag memory."]
-pub type PRO_D_TAG_RD_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_ACCESS_1_SPEC, bool, O>;
+pub type PRO_D_TAG_RD_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_ACCESS_1_SPEC, O>;
 #[doc = "Field `PRO_D_TAG_WR_ACS` reader - Setting to 1 permits write access to Dcache tag memory."]
-pub type PRO_D_TAG_WR_ACS_R = crate::BitReader<bool>;
+pub type PRO_D_TAG_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_D_TAG_WR_ACS` writer - Setting to 1 permits write access to Dcache tag memory."]
-pub type PRO_D_TAG_WR_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_ACCESS_1_SPEC, bool, O>;
+pub type PRO_D_TAG_WR_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_ACCESS_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 permits read access to Icache tag memory."]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn pro_d_tag_wr_acs(&self) -> PRO_D_TAG_WR_ACS_R {
         PRO_D_TAG_WR_ACS_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_TAG_ACCESS_1")
+            .field(
+                "pro_i_tag_rd_acs",
+                &format_args!("{}", self.pro_i_tag_rd_acs().bit()),
+            )
+            .field(
+                "pro_i_tag_wr_acs",
+                &format_args!("{}", self.pro_i_tag_wr_acs().bit()),
+            )
+            .field(
+                "pro_d_tag_rd_acs",
+                &format_args!("{}", self.pro_d_tag_rd_acs().bit()),
+            )
+            .field(
+                "pro_d_tag_wr_acs",
+                &format_args!("{}", self.pro_d_tag_wr_acs().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_ACCESS_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

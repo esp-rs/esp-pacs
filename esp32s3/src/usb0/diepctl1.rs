@@ -35,39 +35,39 @@ impl From<crate::W<DIEPCTL1_SPEC>> for W {
     }
 }
 #[doc = "Field `D_MPS1` reader - "]
-pub type D_MPS1_R = crate::FieldReader<u8, u8>;
+pub type D_MPS1_R = crate::FieldReader;
 #[doc = "Field `D_MPS1` writer - "]
-pub type D_MPS1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPCTL1_SPEC, u8, u8, 2, O>;
+pub type D_MPS1_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPCTL1_SPEC, 2, O>;
 #[doc = "Field `D_USBACTEP1` reader - "]
-pub type D_USBACTEP1_R = crate::BitReader<bool>;
+pub type D_USBACTEP1_R = crate::BitReader;
 #[doc = "Field `D_NAKSTS1` reader - "]
-pub type D_NAKSTS1_R = crate::BitReader<bool>;
+pub type D_NAKSTS1_R = crate::BitReader;
 #[doc = "Field `D_EPTYPE1` reader - "]
-pub type D_EPTYPE1_R = crate::FieldReader<u8, u8>;
+pub type D_EPTYPE1_R = crate::FieldReader;
 #[doc = "Field `D_STALL1` reader - "]
-pub type D_STALL1_R = crate::BitReader<bool>;
+pub type D_STALL1_R = crate::BitReader;
 #[doc = "Field `D_STALL1` writer - "]
-pub type D_STALL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type D_STALL1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `D_TXFNUM1` reader - "]
-pub type D_TXFNUM1_R = crate::FieldReader<u8, u8>;
+pub type D_TXFNUM1_R = crate::FieldReader;
 #[doc = "Field `D_TXFNUM1` writer - "]
-pub type D_TXFNUM1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPCTL1_SPEC, u8, u8, 4, O>;
+pub type D_TXFNUM1_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPCTL1_SPEC, 4, O>;
 #[doc = "Field `D_CNAK1` writer - "]
-pub type D_CNAK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type D_CNAK1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `DI_SNAK1` writer - "]
-pub type DI_SNAK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type DI_SNAK1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `DI_SETD0PID1` writer - "]
-pub type DI_SETD0PID1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type DI_SETD0PID1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `DI_SETD1PID1` writer - "]
-pub type DI_SETD1PID1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type DI_SETD1PID1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `D_EPDIS1` reader - "]
-pub type D_EPDIS1_R = crate::BitReader<bool>;
+pub type D_EPDIS1_R = crate::BitReader;
 #[doc = "Field `D_EPDIS1` writer - "]
-pub type D_EPDIS1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type D_EPDIS1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 #[doc = "Field `D_EPENA1` reader - "]
-pub type D_EPENA1_R = crate::BitReader<bool>;
+pub type D_EPENA1_R = crate::BitReader;
 #[doc = "Field `D_EPENA1` writer - "]
-pub type D_EPENA1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIEPCTL1_SPEC, bool, O>;
+pub type D_EPENA1_W<'a, const O: u8> = crate::BitWriter<'a, DIEPCTL1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -108,6 +108,27 @@ impl R {
     #[inline(always)]
     pub fn d_epena1(&self) -> D_EPENA1_R {
         D_EPENA1_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPCTL1")
+            .field("d_mps1", &format_args!("{}", self.d_mps1().bits()))
+            .field("d_usbactep1", &format_args!("{}", self.d_usbactep1().bit()))
+            .field("d_naksts1", &format_args!("{}", self.d_naksts1().bit()))
+            .field("d_eptype1", &format_args!("{}", self.d_eptype1().bits()))
+            .field("d_stall1", &format_args!("{}", self.d_stall1().bit()))
+            .field("d_txfnum1", &format_args!("{}", self.d_txfnum1().bits()))
+            .field("d_epdis1", &format_args!("{}", self.d_epdis1().bit()))
+            .field("d_epena1", &format_args!("{}", self.d_epena1().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIEPCTL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

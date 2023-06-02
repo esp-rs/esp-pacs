@@ -37,12 +37,26 @@ impl From<crate::W<CONF_SPEC>> for W {
 #[doc = "Field `OP_CODE` reader - 0x5A5A: programming operation command 0x5AA5: read operation command."]
 pub type OP_CODE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OP_CODE` writer - 0x5A5A: programming operation command 0x5AA5: read operation command."]
-pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u16, u16, 16, O>;
+pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - 0x5A5A: programming operation command 0x5AA5: read operation command."]
     #[inline(always)]
     pub fn op_code(&self) -> OP_CODE_R {
         OP_CODE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("op_code", &format_args!("{}", self.op_code().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

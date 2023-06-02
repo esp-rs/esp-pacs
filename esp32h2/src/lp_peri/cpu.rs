@@ -35,14 +35,31 @@ impl From<crate::W<CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `LPCORE_DBGM_UNAVALIABLE` reader - need_des"]
-pub type LPCORE_DBGM_UNAVALIABLE_R = crate::BitReader<bool>;
+pub type LPCORE_DBGM_UNAVALIABLE_R = crate::BitReader;
 #[doc = "Field `LPCORE_DBGM_UNAVALIABLE` writer - need_des"]
-pub type LPCORE_DBGM_UNAVALIABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPU_SPEC, bool, O>;
+pub type LPCORE_DBGM_UNAVALIABLE_W<'a, const O: u8> = crate::BitWriter<'a, CPU_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn lpcore_dbgm_unavaliable(&self) -> LPCORE_DBGM_UNAVALIABLE_R {
         LPCORE_DBGM_UNAVALIABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU")
+            .field(
+                "lpcore_dbgm_unavaliable",
+                &format_args!("{}", self.lpcore_dbgm_unavaliable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

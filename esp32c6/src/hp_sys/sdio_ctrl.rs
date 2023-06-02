@@ -35,13 +35,13 @@ impl From<crate::W<SDIO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DIS_SDIO_PROB` reader - Set this bit as 1 to disable SDIO_PROB function. disable by default."]
-pub type DIS_SDIO_PROB_R = crate::BitReader<bool>;
+pub type DIS_SDIO_PROB_R = crate::BitReader;
 #[doc = "Field `DIS_SDIO_PROB` writer - Set this bit as 1 to disable SDIO_PROB function. disable by default."]
-pub type DIS_SDIO_PROB_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CTRL_SPEC, bool, O>;
+pub type DIS_SDIO_PROB_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CTRL_SPEC, O>;
 #[doc = "Field `SDIO_WIN_ACCESS_EN` reader - Enable sdio slave to access other peripherals on the chip"]
-pub type SDIO_WIN_ACCESS_EN_R = crate::BitReader<bool>;
+pub type SDIO_WIN_ACCESS_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_WIN_ACCESS_EN` writer - Enable sdio slave to access other peripherals on the chip"]
-pub type SDIO_WIN_ACCESS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CTRL_SPEC, bool, O>;
+pub type SDIO_WIN_ACCESS_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit as 1 to disable SDIO_PROB function. disable by default."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sdio_win_access_en(&self) -> SDIO_WIN_ACCESS_EN_R {
         SDIO_WIN_ACCESS_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_CTRL")
+            .field(
+                "dis_sdio_prob",
+                &format_args!("{}", self.dis_sdio_prob().bit()),
+            )
+            .field(
+                "sdio_win_access_en",
+                &format_args!("{}", self.sdio_win_access_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

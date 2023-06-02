@@ -35,26 +35,25 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_CPU_EXC_INT_RAW` reader - need_des"]
-pub type LP_CPU_EXC_INT_RAW_R = crate::BitReader<bool>;
+pub type LP_CPU_EXC_INT_RAW_R = crate::BitReader;
 #[doc = "Field `LP_CPU_EXC_INT_RAW` writer - need_des"]
-pub type LP_CPU_EXC_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type LP_CPU_EXC_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - need_des"]
-pub type SDIO_IDLE_INT_RAW_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_RAW` writer - need_des"]
-pub type SDIO_IDLE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SDIO_IDLE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SW_INT_RAW` reader - need_des"]
-pub type SW_INT_RAW_R = crate::BitReader<bool>;
+pub type SW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SW_INT_RAW` writer - need_des"]
-pub type SW_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SW_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_RAW` reader - need_des"]
-pub type SOC_SLEEP_REJECT_INT_RAW_R = crate::BitReader<bool>;
+pub type SOC_SLEEP_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_RAW` writer - need_des"]
-pub type SOC_SLEEP_REJECT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SOC_SLEEP_REJECT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` reader - need_des"]
-pub type SOC_WAKEUP_INT_RAW_R = crate::BitReader<bool>;
+pub type SOC_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_RAW` writer - need_des"]
-pub type SOC_WAKEUP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SOC_WAKEUP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -80,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn soc_wakeup_int_raw(&self) -> SOC_WAKEUP_INT_RAW_R {
         SOC_WAKEUP_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "lp_cpu_exc_int_raw",
+                &format_args!("{}", self.lp_cpu_exc_int_raw().bit()),
+            )
+            .field(
+                "sdio_idle_int_raw",
+                &format_args!("{}", self.sdio_idle_int_raw().bit()),
+            )
+            .field("sw_int_raw", &format_args!("{}", self.sw_int_raw().bit()))
+            .field(
+                "soc_sleep_reject_int_raw",
+                &format_args!("{}", self.soc_sleep_reject_int_raw().bit()),
+            )
+            .field(
+                "soc_wakeup_int_raw",
+                &format_args!("{}", self.soc_wakeup_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<MEM_START_ADDR_SPEC>> for W {
 pub type MEM_STAET_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MEM_STAET_ADDR` writer - The start address of trace memory"]
 pub type MEM_STAET_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_START_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, MEM_START_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The start address of trace memory"]
     #[inline(always)]
     pub fn mem_staet_addr(&self) -> MEM_STAET_ADDR_R {
         MEM_STAET_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_START_ADDR")
+            .field(
+                "mem_staet_addr",
+                &format_args!("{}", self.mem_staet_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_START_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

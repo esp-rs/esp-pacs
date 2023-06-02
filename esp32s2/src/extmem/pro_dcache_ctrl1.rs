@@ -35,20 +35,17 @@ impl From<crate::W<PRO_DCACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_MASK_BUS0` reader - The bit is used to disable dbus0, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS0_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_MASK_BUS0_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS0` writer - The bit is used to disable dbus0, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL1_SPEC, bool, O>;
+pub type PRO_DCACHE_MASK_BUS0_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL1_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_MASK_BUS1` reader - The bit is used to disable dbus1, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS1_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_MASK_BUS1_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS1` writer - The bit is used to disable dbus1, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL1_SPEC, bool, O>;
+pub type PRO_DCACHE_MASK_BUS1_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL1_SPEC, O>;
 #[doc = "Field `PRO_DCACHE_MASK_BUS2` reader - The bit is used to disable dbus2, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS2_R = crate::BitReader<bool>;
+pub type PRO_DCACHE_MASK_BUS2_R = crate::BitReader;
 #[doc = "Field `PRO_DCACHE_MASK_BUS2` writer - The bit is used to disable dbus2, 0: enable, 1: disable"]
-pub type PRO_DCACHE_MASK_BUS2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_CTRL1_SPEC, bool, O>;
+pub type PRO_DCACHE_MASK_BUS2_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable dbus0, 0: enable, 1: disable"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn pro_dcache_mask_bus2(&self) -> PRO_DCACHE_MASK_BUS2_R {
         PRO_DCACHE_MASK_BUS2_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DCACHE_CTRL1")
+            .field(
+                "pro_dcache_mask_bus0",
+                &format_args!("{}", self.pro_dcache_mask_bus0().bit()),
+            )
+            .field(
+                "pro_dcache_mask_bus1",
+                &format_args!("{}", self.pro_dcache_mask_bus1().bit()),
+            )
+            .field(
+                "pro_dcache_mask_bus2",
+                &format_args!("{}", self.pro_dcache_mask_bus2().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

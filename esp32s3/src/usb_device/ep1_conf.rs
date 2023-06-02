@@ -35,11 +35,11 @@ impl From<crate::W<EP1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_DONE` writer - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
-pub type WR_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP1_CONF_SPEC, bool, O>;
+pub type WR_DONE_W<'a, const O: u8> = crate::BitWriter<'a, EP1_CONF_SPEC, O>;
 #[doc = "Field `SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
-pub type SERIAL_IN_EP_DATA_FREE_R = crate::BitReader<bool>;
+pub type SERIAL_IN_EP_DATA_FREE_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
-pub type SERIAL_OUT_EP_DATA_AVAIL_R = crate::BitReader<bool>;
+pub type SERIAL_OUT_EP_DATA_AVAIL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 1 - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
     #[inline(always)]
@@ -50,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn serial_out_ep_data_avail(&self) -> SERIAL_OUT_EP_DATA_AVAIL_R {
         SERIAL_OUT_EP_DATA_AVAIL_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EP1_CONF")
+            .field(
+                "serial_in_ep_data_free",
+                &format_args!("{}", self.serial_in_ep_data_free().bit()),
+            )
+            .field(
+                "serial_out_ep_data_avail",
+                &format_args!("{}", self.serial_out_ep_data_avail().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EP1_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

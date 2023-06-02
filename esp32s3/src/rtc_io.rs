@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - RTC GPIO 0 ~ 21 output data register"]
     pub rtc_gpio_out: RTC_GPIO_OUT,

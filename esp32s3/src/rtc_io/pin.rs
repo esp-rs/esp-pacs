@@ -35,17 +35,17 @@ impl From<crate::W<PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `PAD_DRIVER` reader - if set to 0: normal output, if set to 1: open drain"]
-pub type PAD_DRIVER_R = crate::BitReader<bool>;
+pub type PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PAD_DRIVER` writer - if set to 0: normal output, if set to 1: open drain"]
-pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, PIN_SPEC, O>;
 #[doc = "Field `INT_TYPE` reader - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
-pub type INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `INT_TYPE` writer - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
-pub type INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 3, O>;
+pub type INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 3, O>;
 #[doc = "Field `WAKEUP_ENABLE` reader - RTC GPIO wakeup enable bit"]
-pub type WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - RTC GPIO wakeup enable bit"]
-pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PIN_SPEC, O>;
 impl R {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
@@ -61,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn wakeup_enable(&self) -> WAKEUP_ENABLE_R {
         WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PIN")
+            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
+            .field("int_type", &format_args!("{}", self.int_type().bits()))
+            .field(
+                "wakeup_enable",
+                &format_args!("{}", self.wakeup_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

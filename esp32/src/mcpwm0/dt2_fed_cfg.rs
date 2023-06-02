@@ -37,13 +37,26 @@ impl From<crate::W<DT2_FED_CFG_SPEC>> for W {
 #[doc = "Field `DT2_FED` reader - "]
 pub type DT2_FED_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DT2_FED` writer - "]
-pub type DT2_FED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT2_FED_CFG_SPEC, u16, u16, 16, O>;
+pub type DT2_FED_W<'a, const O: u8> = crate::FieldWriter<'a, DT2_FED_CFG_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn dt2_fed(&self) -> DT2_FED_R {
         DT2_FED_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DT2_FED_CFG")
+            .field("dt2_fed", &format_args!("{}", self.dt2_fed().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DT2_FED_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

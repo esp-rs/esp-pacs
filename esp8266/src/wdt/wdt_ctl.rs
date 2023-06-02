@@ -37,31 +37,31 @@ impl From<crate::W<WDT_CTL_SPEC>> for W {
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDT_CTL_SPEC, u32, u32, 32, O>;
+pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, WDT_CTL_SPEC, 32, O, u32, u32>;
 #[doc = "Field `enable` reader - Enable the watchdog timer."]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `enable` writer - Enable the watchdog timer."]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 #[doc = "Field `stage_1_no_reset` reader - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
-pub type STAGE_1_NO_RESET_R = crate::BitReader<bool>;
+pub type STAGE_1_NO_RESET_R = crate::BitReader;
 #[doc = "Field `stage_1_no_reset` writer - When set to 1, and running in two-stage mode, it turns the watchdog into a single shot timer that doesn't reset the device."]
-pub type STAGE_1_NO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type STAGE_1_NO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 #[doc = "Field `stage_1_disable` reader - Set to 1 to disable the stage 1 of the watchdog timer"]
-pub type STAGE_1_DISABLE_R = crate::BitReader<bool>;
+pub type STAGE_1_DISABLE_R = crate::BitReader;
 #[doc = "Field `stage_1_disable` writer - Set to 1 to disable the stage 1 of the watchdog timer"]
-pub type STAGE_1_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type STAGE_1_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 #[doc = "Field `unknown_3` reader - "]
-pub type UNKNOWN_3_R = crate::BitReader<bool>;
+pub type UNKNOWN_3_R = crate::BitReader;
 #[doc = "Field `unknown_3` writer - "]
-pub type UNKNOWN_3_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type UNKNOWN_3_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 #[doc = "Field `unknown_4` reader - "]
-pub type UNKNOWN_4_R = crate::BitReader<bool>;
+pub type UNKNOWN_4_R = crate::BitReader;
 #[doc = "Field `unknown_4` writer - "]
-pub type UNKNOWN_4_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type UNKNOWN_4_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 #[doc = "Field `unknown_5` reader - "]
-pub type UNKNOWN_5_R = crate::BitReader<bool>;
+pub type UNKNOWN_5_R = crate::BitReader;
 #[doc = "Field `unknown_5` writer - "]
-pub type UNKNOWN_5_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDT_CTL_SPEC, bool, O>;
+pub type UNKNOWN_5_W<'a, const O: u8> = crate::BitWriter<'a, WDT_CTL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -97,6 +97,32 @@ impl R {
     #[inline(always)]
     pub fn unknown_5(&self) -> UNKNOWN_5_R {
         UNKNOWN_5_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WDT_CTL")
+            .field("register", &format_args!("{}", self.register().bits()))
+            .field("enable", &format_args!("{}", self.enable().bit()))
+            .field(
+                "stage_1_no_reset",
+                &format_args!("{}", self.stage_1_no_reset().bit()),
+            )
+            .field(
+                "stage_1_disable",
+                &format_args!("{}", self.stage_1_disable().bit()),
+            )
+            .field("unknown_3", &format_args!("{}", self.unknown_3().bit()))
+            .field("unknown_4", &format_args!("{}", self.unknown_4().bit()))
+            .field("unknown_5", &format_args!("{}", self.unknown_5().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDT_CTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

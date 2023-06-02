@@ -35,46 +35,39 @@ impl From<crate::W<SPI_MEM_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
-pub type SPI_MEM_CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CLK_MODE` writer - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
-pub type SPI_MEM_CLK_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_CTRL1_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_CTRL1_SPEC, 2, O>;
 #[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AR_SIZE0_1_SUPPORT_EN_R = crate::BitReader<bool>;
+pub type SPI_AR_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_AR_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports ARSIZE 0~3. When ARSIZE =0~2, MSPI read address is 4*n and reply the real AXI read data back. 0: When ARSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_AR_SIZE0_1_SUPPORT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 #[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` reader - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader<bool>;
+pub type SPI_AW_SIZE0_1_SUPPORT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_AW_SIZE0_1_SUPPORT_EN` writer - 1: MSPI supports AWSIZE 0~3. 0: When AWSIZE 0~1, MSPI reply SLV_ERR."]
-pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_AW_SIZE0_1_SUPPORT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 #[doc = "Field `SPI_AXI_RDATA_BACK_FAST` reader - 1: Reply AXI read data to AXI bus when one AXI read beat data is available. 0: Reply AXI read data to AXI bus when all the read data is available."]
-pub type SPI_AXI_RDATA_BACK_FAST_R = crate::BitReader<bool>;
+pub type SPI_AXI_RDATA_BACK_FAST_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RRESP_ECC_ERR_EN` reader - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
-pub type SPI_MEM_RRESP_ECC_ERR_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_RRESP_ECC_ERR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RRESP_ECC_ERR_EN` writer - 1: RRESP is SLV_ERR when there is a ECC error in AXI read data. 0: RRESP is OKAY when there is a ECC error in AXI read data. The ECC error information is recorded in SPI_MEM_ECC_ERR_ADDR_REG."]
-pub type SPI_MEM_RRESP_ECC_ERR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_MEM_RRESP_ECC_ERR_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 #[doc = "Field `SPI_MEM_AR_SPLICE_EN` reader - Set this bit to enable AXI Read Splice-transfer."]
-pub type SPI_MEM_AR_SPLICE_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_AR_SPLICE_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AW_SPLICE_EN` reader - Set this bit to enable AXI Write Splice-transfer."]
-pub type SPI_MEM_AW_SPLICE_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_AW_SPLICE_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RAM0_EN` reader - When SPI_MEM_DUAL_RAM_EN is 0 and SPI_MEM_RAM0_EN is 1, only EXT_RAM0 will be accessed. When SPI_MEM_DUAL_RAM_EN is 0 and SPI_MEM_RAM0_EN is 0, only EXT_RAM1 will be accessed. When SPI_MEM_DUAL_RAM_EN is 1, EXT_RAM0 and EXT_RAM1 will be accessed at the same time."]
-pub type SPI_MEM_RAM0_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_RAM0_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DUAL_RAM_EN` reader - Set this bit to enable DUAL-RAM mode, EXT_RAM0 and EXT_RAM1 will be accessed at the same time."]
-pub type SPI_MEM_DUAL_RAM_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_DUAL_RAM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FAST_WRITE_EN` reader - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
-pub type SPI_MEM_FAST_WRITE_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FAST_WRITE_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FAST_WRITE_EN` writer - Set this bit to write data faster, do not wait write data has been stored in tx_bus_fifo_l2. It will wait 4*T_clk_ctrl to insure the write data has been stored in tx_bus_fifo_l2."]
-pub type SPI_MEM_FAST_WRITE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_MEM_FAST_WRITE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 #[doc = "Field `SPI_MEM_RXFIFO_RST` writer - The synchronous reset signal for SPI0 RX AFIFO and all the AES_MSPI SYNC FIFO to receive signals from AXI. Set this bit to reset these FIFO."]
-pub type SPI_MEM_RXFIFO_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_MEM_RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 #[doc = "Field `SPI_MEM_TXFIFO_RST` writer - The synchronous reset signal for SPI0 TX AFIFO and all the AES_MSPI SYNC FIFO to send signals to AXI. Set this bit to reset these FIFO."]
-pub type SPI_MEM_TXFIFO_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL1_SPEC, bool, O>;
+pub type SPI_MEM_TXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
@@ -125,6 +118,59 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_fast_write_en(&self) -> SPI_MEM_FAST_WRITE_EN_R {
         SPI_MEM_FAST_WRITE_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CTRL1")
+            .field(
+                "spi_mem_clk_mode",
+                &format_args!("{}", self.spi_mem_clk_mode().bits()),
+            )
+            .field(
+                "spi_ar_size0_1_support_en",
+                &format_args!("{}", self.spi_ar_size0_1_support_en().bit()),
+            )
+            .field(
+                "spi_aw_size0_1_support_en",
+                &format_args!("{}", self.spi_aw_size0_1_support_en().bit()),
+            )
+            .field(
+                "spi_axi_rdata_back_fast",
+                &format_args!("{}", self.spi_axi_rdata_back_fast().bit()),
+            )
+            .field(
+                "spi_mem_rresp_ecc_err_en",
+                &format_args!("{}", self.spi_mem_rresp_ecc_err_en().bit()),
+            )
+            .field(
+                "spi_mem_ar_splice_en",
+                &format_args!("{}", self.spi_mem_ar_splice_en().bit()),
+            )
+            .field(
+                "spi_mem_aw_splice_en",
+                &format_args!("{}", self.spi_mem_aw_splice_en().bit()),
+            )
+            .field(
+                "spi_mem_ram0_en",
+                &format_args!("{}", self.spi_mem_ram0_en().bit()),
+            )
+            .field(
+                "spi_mem_dual_ram_en",
+                &format_args!("{}", self.spi_mem_dual_ram_en().bit()),
+            )
+            .field(
+                "spi_mem_fast_write_en",
+                &format_args!("{}", self.spi_mem_fast_write_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

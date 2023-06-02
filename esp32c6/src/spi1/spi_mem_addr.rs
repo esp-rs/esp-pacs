@@ -38,12 +38,29 @@ impl From<crate::W<SPI_MEM_ADDR_SPEC>> for W {
 pub type SPI_MEM_USR_ADDR_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MEM_USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
 pub type SPI_MEM_USR_ADDR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_MEM_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
     pub fn spi_mem_usr_addr_value(&self) -> SPI_MEM_USR_ADDR_VALUE_R {
         SPI_MEM_USR_ADDR_VALUE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_ADDR")
+            .field(
+                "spi_mem_usr_addr_value",
+                &format_args!("{}", self.spi_mem_usr_addr_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

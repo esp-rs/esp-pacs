@@ -35,19 +35,17 @@ impl From<crate::W<TIMER5_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_SLP_VAL` reader - Sets the minimal sleep cycles (using the RTC slow clock)."]
-pub type MIN_SLP_VAL_R = crate::FieldReader<u8, u8>;
+pub type MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `MIN_SLP_VAL` writer - Sets the minimal sleep cycles (using the RTC slow clock)."]
-pub type MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER5_SPEC, u8, u8, 8, O>;
+pub type MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER5_SPEC, 8, O>;
 #[doc = "Field `RTCMEM_WAIT_TIMER` reader - "]
 pub type RTCMEM_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTCMEM_WAIT_TIMER` writer - "]
-pub type RTCMEM_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER5_SPEC, u16, u16, 9, O>;
+pub type RTCMEM_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER5_SPEC, 9, O, u16, u16>;
 #[doc = "Field `RTCMEM_POWERUP_TIMER` reader - "]
-pub type RTCMEM_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type RTCMEM_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `RTCMEM_POWERUP_TIMER` writer - "]
-pub type RTCMEM_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER5_SPEC, u8, u8, 7, O>;
+pub type RTCMEM_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER5_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 8:15 - Sets the minimal sleep cycles (using the RTC slow clock)."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn rtcmem_powerup_timer(&self) -> RTCMEM_POWERUP_TIMER_R {
         RTCMEM_POWERUP_TIMER_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER5")
+            .field(
+                "min_slp_val",
+                &format_args!("{}", self.min_slp_val().bits()),
+            )
+            .field(
+                "rtcmem_wait_timer",
+                &format_args!("{}", self.rtcmem_wait_timer().bits()),
+            )
+            .field(
+                "rtcmem_powerup_timer",
+                &format_args!("{}", self.rtcmem_powerup_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

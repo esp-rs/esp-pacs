@@ -37,13 +37,26 @@ impl From<crate::W<TEXT_IN_2_SPEC>> for W {
 #[doc = "Field `TEXT_IN_2` reader - This bits stores text_in_2 that is a part of source text material."]
 pub type TEXT_IN_2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TEXT_IN_2` writer - This bits stores text_in_2 that is a part of source text material."]
-pub type TEXT_IN_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TEXT_IN_2_SPEC, u32, u32, 32, O>;
+pub type TEXT_IN_2_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_IN_2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores text_in_2 that is a part of source text material."]
     #[inline(always)]
     pub fn text_in_2(&self) -> TEXT_IN_2_R {
         TEXT_IN_2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEXT_IN_2")
+            .field("text_in_2", &format_args!("{}", self.text_in_2().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEXT_IN_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

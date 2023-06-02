@@ -38,12 +38,11 @@ impl From<crate::W<SPI_MEM_RD_STATUS_SPEC>> for W {
 pub type SPI_MEM_STATUS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_STATUS` writer - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
 pub type SPI_MEM_STATUS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_RD_STATUS_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SPI_MEM_RD_STATUS_SPEC, 16, O, u16, u16>;
 #[doc = "Field `SPI_MEM_WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type SPI_MEM_WB_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_WB_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type SPI_MEM_WB_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_RD_STATUS_SPEC, u8, u8, 8, O>;
+pub type SPI_MEM_WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_RD_STATUS_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:15 - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_wb_mode(&self) -> SPI_MEM_WB_MODE_R {
         SPI_MEM_WB_MODE_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_RD_STATUS")
+            .field(
+                "spi_mem_status",
+                &format_args!("{}", self.spi_mem_status().bits()),
+            )
+            .field(
+                "spi_mem_wb_mode",
+                &format_args!("{}", self.spi_mem_wb_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_RD_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -21,31 +21,31 @@ impl From<crate::W<SAR_COCPU_INT_CLR_SPEC>> for W {
 }
 #[doc = "Field `COCPU_TOUCH_DONE_INT_CLR` writer - TOUCH_DONE_INT interrupt clear bit"]
 pub type COCPU_TOUCH_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_TOUCH_INACTIVE_INT_CLR` writer - TOUCH_INACTIVE_INT interrupt clear bit"]
 pub type COCPU_TOUCH_INACTIVE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_TOUCH_ACTIVE_INT_CLR` writer - TOUCH_ACTIVE_INT interrupt clear bit"]
 pub type COCPU_TOUCH_ACTIVE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_SARADC1_INT_CLR` writer - SARADC1_DONE_INT interrupt clear bit"]
-pub type COCPU_SARADC1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_SARADC1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_SARADC2_INT_CLR` writer - SARADC2_DONE_INT interrupt clear bit"]
-pub type COCPU_SARADC2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_SARADC2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_TSENS_INT_CLR` writer - TSENS_DONE_INT interrupt clear bit"]
-pub type COCPU_TSENS_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_TSENS_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_START_INT_CLR` writer - RISCV_START_INT interrupt clear bit"]
-pub type COCPU_START_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_SW_INT_CLR` writer - SW_INT interrupt clear bit"]
-pub type COCPU_SW_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_SW_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
 #[doc = "Field `COCPU_SWD_INT_CLR` writer - SWD_INT interrupt clear bit"]
-pub type COCPU_SWD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_CLR_SPEC, bool, O>;
+pub type COCPU_SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt clear bit"]
     #[inline(always)]

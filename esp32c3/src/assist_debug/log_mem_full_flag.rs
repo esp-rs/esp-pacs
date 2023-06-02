@@ -35,12 +35,11 @@ impl From<crate::W<LOG_MEM_FULL_FLAG_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_FULL_FLAG` reader - reg_log_mem_full_flag"]
-pub type LOG_MEM_FULL_FLAG_R = crate::BitReader<bool>;
+pub type LOG_MEM_FULL_FLAG_R = crate::BitReader;
 #[doc = "Field `CLR_LOG_MEM_FULL_FLAG` reader - reg_clr_log_mem_full_flag"]
-pub type CLR_LOG_MEM_FULL_FLAG_R = crate::BitReader<bool>;
+pub type CLR_LOG_MEM_FULL_FLAG_R = crate::BitReader;
 #[doc = "Field `CLR_LOG_MEM_FULL_FLAG` writer - reg_clr_log_mem_full_flag"]
-pub type CLR_LOG_MEM_FULL_FLAG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOG_MEM_FULL_FLAG_SPEC, bool, O>;
+pub type CLR_LOG_MEM_FULL_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, LOG_MEM_FULL_FLAG_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_log_mem_full_flag"]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn clr_log_mem_full_flag(&self) -> CLR_LOG_MEM_FULL_FLAG_R {
         CLR_LOG_MEM_FULL_FLAG_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_MEM_FULL_FLAG")
+            .field(
+                "log_mem_full_flag",
+                &format_args!("{}", self.log_mem_full_flag().bit()),
+            )
+            .field(
+                "clr_log_mem_full_flag",
+                &format_args!("{}", self.clr_log_mem_full_flag().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_FULL_FLAG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,55 +35,55 @@ impl From<crate::W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core_x_dram0_pms_constrain_sram_world_0_pms_0"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - core_x_dram0_pms_constrain_sram_world_0_pms_0"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core_x_dram0_pms_constrain_sram_world_0_pms_1"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - core_x_dram0_pms_constrain_sram_world_0_pms_1"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core_x_dram0_pms_constrain_sram_world_0_pms_2"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - core_x_dram0_pms_constrain_sram_world_0_pms_2"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core_x_dram0_pms_constrain_sram_world_0_pms_3"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - core_x_dram0_pms_constrain_sram_world_0_pms_3"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - core_x_dram0_pms_constrain_sram_world_1_pms_0"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` writer - core_x_dram0_pms_constrain_sram_world_1_pms_0"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - core_x_dram0_pms_constrain_sram_world_1_pms_1"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` writer - core_x_dram0_pms_constrain_sram_world_1_pms_1"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - core_x_dram0_pms_constrain_sram_world_1_pms_2"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` writer - core_x_dram0_pms_constrain_sram_world_1_pms_2"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - core_x_dram0_pms_constrain_sram_world_1_pms_3"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` writer - core_x_dram0_pms_constrain_sram_world_1_pms_3"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core_x_dram0_pms_constrain_rom_world_0_pms"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` writer - core_x_dram0_pms_constrain_rom_world_0_pms"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` reader - core_x_dram0_pms_constrain_rom_world_1_pms"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS` writer - core_x_dram0_pms_constrain_rom_world_1_pms"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - core_x_dram0_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
@@ -154,6 +154,89 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_R::new(((self.bits >> 26) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_DRAM0_PMS_CONSTRAIN_1")
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_0_pms_0",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_0_pms_0().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_0_pms_1",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_0_pms_1().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_0_pms_2",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_0_pms_2().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_0_pms_3",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_0_pms_3().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_1_pms_0",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_1_pms_0().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_1_pms_1",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_1_pms_1().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_1_pms_2",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_1_pms_2().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_sram_world_1_pms_3",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_sram_world_1_pms_3().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_rom_world_0_pms",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_rom_world_0_pms().bits()
+                ),
+            )
+            .field(
+                "core_x_dram0_pms_constrain_rom_world_1_pms",
+                &format_args!(
+                    "{}",
+                    self.core_x_dram0_pms_constrain_rom_world_1_pms().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

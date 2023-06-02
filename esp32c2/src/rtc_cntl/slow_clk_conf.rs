@@ -35,20 +35,17 @@ impl From<crate::W<SLOW_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ANA_CLK_DIV_VLD` reader - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
-pub type ANA_CLK_DIV_VLD_R = crate::BitReader<bool>;
+pub type ANA_CLK_DIV_VLD_R = crate::BitReader;
 #[doc = "Field `ANA_CLK_DIV_VLD` writer - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
-pub type ANA_CLK_DIV_VLD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLOW_CLK_CONF_SPEC, bool, O>;
+pub type ANA_CLK_DIV_VLD_W<'a, const O: u8> = crate::BitWriter<'a, SLOW_CLK_CONF_SPEC, O>;
 #[doc = "Field `ANA_CLK_DIV` reader - Need add desc"]
-pub type ANA_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type ANA_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `ANA_CLK_DIV` writer - Need add desc"]
-pub type ANA_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLOW_CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type ANA_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, SLOW_CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `SLOW_CLK_NEXT_EDGE` reader - Need add desc"]
-pub type SLOW_CLK_NEXT_EDGE_R = crate::BitReader<bool>;
+pub type SLOW_CLK_NEXT_EDGE_R = crate::BitReader;
 #[doc = "Field `SLOW_CLK_NEXT_EDGE` writer - Need add desc"]
-pub type SLOW_CLK_NEXT_EDGE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLOW_CLK_CONF_SPEC, bool, O>;
+pub type SLOW_CLK_NEXT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, SLOW_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn slow_clk_next_edge(&self) -> SLOW_CLK_NEXT_EDGE_R {
         SLOW_CLK_NEXT_EDGE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLOW_CLK_CONF")
+            .field(
+                "ana_clk_div_vld",
+                &format_args!("{}", self.ana_clk_div_vld().bit()),
+            )
+            .field(
+                "ana_clk_div",
+                &format_args!("{}", self.ana_clk_div().bits()),
+            )
+            .field(
+                "slow_clk_next_edge",
+                &format_args!("{}", self.slow_clk_next_edge().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLOW_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

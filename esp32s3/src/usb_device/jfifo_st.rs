@@ -35,25 +35,25 @@ impl From<crate::W<JFIFO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_FIFO_CNT` reader - JTAT in fifo counter."]
-pub type IN_FIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type IN_FIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `IN_FIFO_EMPTY` reader - 1: JTAG in fifo is empty."]
-pub type IN_FIFO_EMPTY_R = crate::BitReader<bool>;
+pub type IN_FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `IN_FIFO_FULL` reader - 1: JTAG in fifo is full."]
-pub type IN_FIFO_FULL_R = crate::BitReader<bool>;
+pub type IN_FIFO_FULL_R = crate::BitReader;
 #[doc = "Field `OUT_FIFO_CNT` reader - JTAT out fifo counter."]
-pub type OUT_FIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type OUT_FIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `OUT_FIFO_EMPTY` reader - 1: JTAG out fifo is empty."]
-pub type OUT_FIFO_EMPTY_R = crate::BitReader<bool>;
+pub type OUT_FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `OUT_FIFO_FULL` reader - 1: JTAG out fifo is full."]
-pub type OUT_FIFO_FULL_R = crate::BitReader<bool>;
+pub type OUT_FIFO_FULL_R = crate::BitReader;
 #[doc = "Field `IN_FIFO_RESET` reader - Write 1 to reset JTAG in fifo."]
-pub type IN_FIFO_RESET_R = crate::BitReader<bool>;
+pub type IN_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `IN_FIFO_RESET` writer - Write 1 to reset JTAG in fifo."]
-pub type IN_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, JFIFO_ST_SPEC, bool, O>;
+pub type IN_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, JFIFO_ST_SPEC, O>;
 #[doc = "Field `OUT_FIFO_RESET` reader - Write 1 to reset JTAG out fifo."]
-pub type OUT_FIFO_RESET_R = crate::BitReader<bool>;
+pub type OUT_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `OUT_FIFO_RESET` writer - Write 1 to reset JTAG out fifo."]
-pub type OUT_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, JFIFO_ST_SPEC, bool, O>;
+pub type OUT_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, JFIFO_ST_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - JTAT in fifo counter."]
     #[inline(always)]
@@ -94,6 +94,51 @@ impl R {
     #[inline(always)]
     pub fn out_fifo_reset(&self) -> OUT_FIFO_RESET_R {
         OUT_FIFO_RESET_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("JFIFO_ST")
+            .field(
+                "in_fifo_cnt",
+                &format_args!("{}", self.in_fifo_cnt().bits()),
+            )
+            .field(
+                "in_fifo_empty",
+                &format_args!("{}", self.in_fifo_empty().bit()),
+            )
+            .field(
+                "in_fifo_full",
+                &format_args!("{}", self.in_fifo_full().bit()),
+            )
+            .field(
+                "out_fifo_cnt",
+                &format_args!("{}", self.out_fifo_cnt().bits()),
+            )
+            .field(
+                "out_fifo_empty",
+                &format_args!("{}", self.out_fifo_empty().bit()),
+            )
+            .field(
+                "out_fifo_full",
+                &format_args!("{}", self.out_fifo_full().bit()),
+            )
+            .field(
+                "in_fifo_reset",
+                &format_args!("{}", self.in_fifo_reset().bit()),
+            )
+            .field(
+                "out_fifo_reset",
+                &format_args!("{}", self.out_fifo_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<JFIFO_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

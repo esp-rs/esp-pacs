@@ -35,13 +35,13 @@ impl From<crate::W<CLOCK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCK_GATE_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLOCK_GATE_SPEC, O>;
 #[doc = "Field `PRO_NMI_MASK_HW` reader - This bit is used to disable all NMI interrupt signals to CPU."]
-pub type PRO_NMI_MASK_HW_R = crate::BitReader<bool>;
+pub type PRO_NMI_MASK_HW_R = crate::BitReader;
 #[doc = "Field `PRO_NMI_MASK_HW` writer - This bit is used to disable all NMI interrupt signals to CPU."]
-pub type PRO_NMI_MASK_HW_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLOCK_GATE_SPEC, bool, O>;
+pub type PRO_NMI_MASK_HW_W<'a, const O: u8> = crate::BitWriter<'a, CLOCK_GATE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to enable or disable the clock of interrupt matrix. 1: enable the clock. 0: disable the clock."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn pro_nmi_mask_hw(&self) -> PRO_NMI_MASK_HW_R {
         PRO_NMI_MASK_HW_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLOCK_GATE")
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "pro_nmi_mask_hw",
+                &format_args!("{}", self.pro_nmi_mask_hw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLOCK_GATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

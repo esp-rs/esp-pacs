@@ -35,83 +35,77 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_WM_INT_ENA` reader - reg_rxfifo_wm_int_ena"]
-pub type RXFIFO_WM_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_WM_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_WM_INT_ENA` writer - reg_rxfifo_wm_int_ena"]
-pub type RXFIFO_WM_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_WM_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TXFIFO_WM_INT_ENA` reader - reg_txfifo_wm_int_ena"]
-pub type TXFIFO_WM_INT_ENA_R = crate::BitReader<bool>;
+pub type TXFIFO_WM_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_WM_INT_ENA` writer - reg_txfifo_wm_int_ena"]
-pub type TXFIFO_WM_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TXFIFO_WM_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - reg_rxfifo_ovf_int_ena"]
-pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` writer - reg_rxfifo_ovf_int_ena"]
-pub type RXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `END_DETECT_INT_ENA` reader - reg_end_detect_int_ena"]
-pub type END_DETECT_INT_ENA_R = crate::BitReader<bool>;
+pub type END_DETECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `END_DETECT_INT_ENA` writer - reg_end_detect_int_ena"]
-pub type END_DETECT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type END_DETECT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `BYTE_TRANS_DONE_INT_ENA` reader - reg_byte_trans_done_int_ena"]
-pub type BYTE_TRANS_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type BYTE_TRANS_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS_DONE_INT_ENA` writer - reg_byte_trans_done_int_ena"]
-pub type BYTE_TRANS_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type BYTE_TRANS_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - reg_arbitration_lost_int_ena"]
-pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - reg_arbitration_lost_int_ena"]
-pub type ARBITRATION_LOST_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `MST_TXFIFO_UDF_INT_ENA` reader - reg_mst_txfifo_udf_int_ena"]
-pub type MST_TXFIFO_UDF_INT_ENA_R = crate::BitReader<bool>;
+pub type MST_TXFIFO_UDF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MST_TXFIFO_UDF_INT_ENA` writer - reg_mst_txfifo_udf_int_ena"]
-pub type MST_TXFIFO_UDF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type MST_TXFIFO_UDF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - reg_trans_complete_int_ena"]
-pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` writer - reg_trans_complete_int_ena"]
-pub type TRANS_COMPLETE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_ENA` reader - reg_time_out_int_ena"]
-pub type TIME_OUT_INT_ENA_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ENA` writer - reg_time_out_int_ena"]
-pub type TIME_OUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIME_OUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TRANS_START_INT_ENA` reader - reg_trans_start_int_ena"]
-pub type TRANS_START_INT_ENA_R = crate::BitReader<bool>;
+pub type TRANS_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_START_INT_ENA` writer - reg_trans_start_int_ena"]
-pub type TRANS_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TRANS_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `NACK_INT_ENA` reader - reg_nack_int_ena"]
-pub type NACK_INT_ENA_R = crate::BitReader<bool>;
+pub type NACK_INT_ENA_R = crate::BitReader;
 #[doc = "Field `NACK_INT_ENA` writer - reg_nack_int_ena"]
-pub type NACK_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type NACK_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TXFIFO_OVF_INT_ENA` reader - reg_txfifo_ovf_int_ena"]
-pub type TXFIFO_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type TXFIFO_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_OVF_INT_ENA` writer - reg_txfifo_ovf_int_ena"]
-pub type TXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RXFIFO_UDF_INT_ENA` reader - reg_rxfifo_udf_int_ena"]
-pub type RXFIFO_UDF_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_UDF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_UDF_INT_ENA` writer - reg_rxfifo_udf_int_ena"]
-pub type RXFIFO_UDF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_UDF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SCL_ST_TO_INT_ENA` reader - reg_scl_st_to_int_ena"]
-pub type SCL_ST_TO_INT_ENA_R = crate::BitReader<bool>;
+pub type SCL_ST_TO_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SCL_ST_TO_INT_ENA` writer - reg_scl_st_to_int_ena"]
-pub type SCL_ST_TO_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SCL_ST_TO_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SCL_MAIN_ST_TO_INT_ENA` reader - reg_scl_main_st_to_int_ena"]
-pub type SCL_MAIN_ST_TO_INT_ENA_R = crate::BitReader<bool>;
+pub type SCL_MAIN_ST_TO_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SCL_MAIN_ST_TO_INT_ENA` writer - reg_scl_main_st_to_int_ena"]
-pub type SCL_MAIN_ST_TO_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SCL_MAIN_ST_TO_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DET_START_INT_ENA` reader - reg_det_start_int_ena"]
-pub type DET_START_INT_ENA_R = crate::BitReader<bool>;
+pub type DET_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DET_START_INT_ENA` writer - reg_det_start_int_ena"]
-pub type DET_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DET_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SLAVE_STRETCH_INT_ENA` reader - reg_slave_stretch_int_ena"]
-pub type SLAVE_STRETCH_INT_ENA_R = crate::BitReader<bool>;
+pub type SLAVE_STRETCH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLAVE_STRETCH_INT_ENA` writer - reg_slave_stretch_int_ena"]
-pub type SLAVE_STRETCH_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SLAVE_STRETCH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `GENERAL_CALL_INT_ENA` reader - reg_general_call_int_ena"]
-pub type GENERAL_CALL_INT_ENA_R = crate::BitReader<bool>;
+pub type GENERAL_CALL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `GENERAL_CALL_INT_ENA` writer - reg_general_call_int_ena"]
-pub type GENERAL_CALL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type GENERAL_CALL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_rxfifo_wm_int_ena"]
     #[inline(always)]
@@ -202,6 +196,91 @@ impl R {
     #[inline(always)]
     pub fn general_call_int_ena(&self) -> GENERAL_CALL_INT_ENA_R {
         GENERAL_CALL_INT_ENA_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "rxfifo_wm_int_ena",
+                &format_args!("{}", self.rxfifo_wm_int_ena().bit()),
+            )
+            .field(
+                "txfifo_wm_int_ena",
+                &format_args!("{}", self.txfifo_wm_int_ena().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_ena",
+                &format_args!("{}", self.rxfifo_ovf_int_ena().bit()),
+            )
+            .field(
+                "end_detect_int_ena",
+                &format_args!("{}", self.end_detect_int_ena().bit()),
+            )
+            .field(
+                "byte_trans_done_int_ena",
+                &format_args!("{}", self.byte_trans_done_int_ena().bit()),
+            )
+            .field(
+                "arbitration_lost_int_ena",
+                &format_args!("{}", self.arbitration_lost_int_ena().bit()),
+            )
+            .field(
+                "mst_txfifo_udf_int_ena",
+                &format_args!("{}", self.mst_txfifo_udf_int_ena().bit()),
+            )
+            .field(
+                "trans_complete_int_ena",
+                &format_args!("{}", self.trans_complete_int_ena().bit()),
+            )
+            .field(
+                "time_out_int_ena",
+                &format_args!("{}", self.time_out_int_ena().bit()),
+            )
+            .field(
+                "trans_start_int_ena",
+                &format_args!("{}", self.trans_start_int_ena().bit()),
+            )
+            .field(
+                "nack_int_ena",
+                &format_args!("{}", self.nack_int_ena().bit()),
+            )
+            .field(
+                "txfifo_ovf_int_ena",
+                &format_args!("{}", self.txfifo_ovf_int_ena().bit()),
+            )
+            .field(
+                "rxfifo_udf_int_ena",
+                &format_args!("{}", self.rxfifo_udf_int_ena().bit()),
+            )
+            .field(
+                "scl_st_to_int_ena",
+                &format_args!("{}", self.scl_st_to_int_ena().bit()),
+            )
+            .field(
+                "scl_main_st_to_int_ena",
+                &format_args!("{}", self.scl_main_st_to_int_ena().bit()),
+            )
+            .field(
+                "det_start_int_ena",
+                &format_args!("{}", self.det_start_int_ena().bit()),
+            )
+            .field(
+                "slave_stretch_int_ena",
+                &format_args!("{}", self.slave_stretch_int_ena().bit()),
+            )
+            .field(
+                "general_call_int_ena",
+                &format_args!("{}", self.general_call_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

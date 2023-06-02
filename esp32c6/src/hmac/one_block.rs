@@ -20,7 +20,13 @@ impl From<crate::W<ONE_BLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_ONE_BLOCK` writer - Don't have to do padding."]
-pub type SET_ONE_BLOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, ONE_BLOCK_SPEC, bool, O>;
+pub type SET_ONE_BLOCK_W<'a, const O: u8> = crate::BitWriter<'a, ONE_BLOCK_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Don't have to do padding."]
     #[inline(always)]

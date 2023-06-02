@@ -16,11 +16,11 @@ impl From<crate::R<SAR_COCPU_DEBUG_SPEC>> for R {
 #[doc = "Field `COCPU_PC` reader - ULP-RISCV Program counter"]
 pub type COCPU_PC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COCPU_MEM_VLD` reader - ULP-RISCV memory valid output"]
-pub type COCPU_MEM_VLD_R = crate::BitReader<bool>;
+pub type COCPU_MEM_VLD_R = crate::BitReader;
 #[doc = "Field `COCPU_MEM_RDY` reader - ULP-RISCV memory ready input"]
-pub type COCPU_MEM_RDY_R = crate::BitReader<bool>;
+pub type COCPU_MEM_RDY_R = crate::BitReader;
 #[doc = "Field `COCPU_MEM_WEN` reader - ULP-RISCV memory write enable output"]
-pub type COCPU_MEM_WEN_R = crate::FieldReader<u8, u8>;
+pub type COCPU_MEM_WEN_R = crate::FieldReader;
 #[doc = "Field `COCPU_MEM_ADDR` reader - ULP-RISCV memory address output"]
 pub type COCPU_MEM_ADDR_R = crate::FieldReader<u16, u16>;
 impl R {
@@ -48,6 +48,36 @@ impl R {
     #[inline(always)]
     pub fn cocpu_mem_addr(&self) -> COCPU_MEM_ADDR_R {
         COCPU_MEM_ADDR_R::new(((self.bits >> 19) & 0x1fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_COCPU_DEBUG")
+            .field("cocpu_pc", &format_args!("{}", self.cocpu_pc().bits()))
+            .field(
+                "cocpu_mem_vld",
+                &format_args!("{}", self.cocpu_mem_vld().bit()),
+            )
+            .field(
+                "cocpu_mem_rdy",
+                &format_args!("{}", self.cocpu_mem_rdy().bit()),
+            )
+            .field(
+                "cocpu_mem_wen",
+                &format_args!("{}", self.cocpu_mem_wen().bits()),
+            )
+            .field(
+                "cocpu_mem_addr",
+                &format_args!("{}", self.cocpu_mem_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_DEBUG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "ULP-RISCV debug register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_debug](index.html) module"]

@@ -38,15 +38,13 @@ impl From<crate::W<SCL_STRETCH_CONF_SPEC>> for W {
 pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STRETCH_PROTECT_NUM` writer - Configure the period of I2C slave stretching SCL line."]
 pub type STRETCH_PROTECT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SCL_STRETCH_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE."]
-pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader<bool>;
+pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE."]
-pub type SLAVE_SCL_STRETCH_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_SCL_STRETCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 #[doc = "Field `SLAVE_SCL_STRETCH_CLR` writer - Set this bit to clear the I2C slave SCL stretch function."]
-pub type SLAVE_SCL_STRETCH_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_SCL_STRETCH_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - Configure the period of I2C slave stretching SCL line."]
     #[inline(always)]
@@ -57,6 +55,27 @@ impl R {
     #[inline(always)]
     pub fn slave_scl_stretch_en(&self) -> SLAVE_SCL_STRETCH_EN_R {
         SLAVE_SCL_STRETCH_EN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_STRETCH_CONF")
+            .field(
+                "stretch_protect_num",
+                &format_args!("{}", self.stretch_protect_num().bits()),
+            )
+            .field(
+                "slave_scl_stretch_en",
+                &format_args!("{}", self.slave_scl_stretch_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_STRETCH_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

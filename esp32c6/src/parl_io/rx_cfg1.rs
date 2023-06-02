@@ -35,20 +35,20 @@ impl From<crate::W<RX_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_REG_UPDATE` writer - Write 1 to update rx register configuration signals."]
-pub type RX_REG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG1_SPEC, bool, O>;
+pub type RX_REG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG1_SPEC, O>;
 #[doc = "Field `RX_TIMEOUT_EN` reader - Write 1 to enable timeout count to generate error eof."]
-pub type RX_TIMEOUT_EN_R = crate::BitReader<bool>;
+pub type RX_TIMEOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TIMEOUT_EN` writer - Write 1 to enable timeout count to generate error eof."]
-pub type RX_TIMEOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG1_SPEC, bool, O>;
+pub type RX_TIMEOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG1_SPEC, O>;
 #[doc = "Field `RX_EXT_EN_SEL` reader - Configures rx external enable signal selection from 16 data lines."]
-pub type RX_EXT_EN_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_EXT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_EXT_EN_SEL` writer - Configures rx external enable signal selection from 16 data lines."]
-pub type RX_EXT_EN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_CFG1_SPEC, u8, u8, 4, O>;
+pub type RX_EXT_EN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG1_SPEC, 4, O>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` reader - Configures rx threshold of timeout counter."]
 pub type RX_TIMEOUT_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` writer - Configures rx threshold of timeout counter."]
 pub type RX_TIMEOUT_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CFG1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, RX_CFG1_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bit 3 - Write 1 to enable timeout count to generate error eof."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn rx_timeout_threshold(&self) -> RX_TIMEOUT_THRESHOLD_R {
         RX_TIMEOUT_THRESHOLD_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CFG1")
+            .field(
+                "rx_timeout_en",
+                &format_args!("{}", self.rx_timeout_en().bit()),
+            )
+            .field(
+                "rx_ext_en_sel",
+                &format_args!("{}", self.rx_ext_en_sel().bits()),
+            )
+            .field(
+                "rx_timeout_threshold",
+                &format_args!("{}", self.rx_timeout_threshold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

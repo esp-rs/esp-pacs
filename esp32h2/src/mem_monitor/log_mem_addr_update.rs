@@ -20,8 +20,13 @@ impl From<crate::W<LOG_MEM_ADDR_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_ADDR_UPDATE` writer - Set 1 to updata MEM_MONITOR_LOG_MEM_CURRENT_ADDR, when set 1, MEM_MONITOR_LOG_MEM_CURRENT_ADDR will update to MEM_MONITOR_LOG_MEM_START"]
-pub type LOG_MEM_ADDR_UPDATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOG_MEM_ADDR_UPDATE_SPEC, bool, O>;
+pub type LOG_MEM_ADDR_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, LOG_MEM_ADDR_UPDATE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_ADDR_UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set 1 to updata MEM_MONITOR_LOG_MEM_CURRENT_ADDR, when set 1, MEM_MONITOR_LOG_MEM_CURRENT_ADDR will update to MEM_MONITOR_LOG_MEM_START"]
     #[inline(always)]

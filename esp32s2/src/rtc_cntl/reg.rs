@@ -35,41 +35,41 @@ impl From<crate::W<REG_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_REG_DBIAS_SLP` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
-pub type DIG_REG_DBIAS_SLP_R = crate::FieldReader<u8, u8>;
+pub type DIG_REG_DBIAS_SLP_R = crate::FieldReader;
 #[doc = "Field `DIG_REG_DBIAS_SLP` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
-pub type DIG_REG_DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, O>;
+pub type DIG_REG_DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
 #[doc = "Field `DIG_REG_DBIAS_WAK` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub type DIG_REG_DBIAS_WAK_R = crate::FieldReader<u8, u8>;
+pub type DIG_REG_DBIAS_WAK_R = crate::FieldReader;
 #[doc = "Field `DIG_REG_DBIAS_WAK` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub type DIG_REG_DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, O>;
+pub type DIG_REG_DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
 #[doc = "Field `SCK_DCAP` reader - Configures the frequency of the RTC clocks."]
-pub type SCK_DCAP_R = crate::FieldReader<u8, u8>;
+pub type SCK_DCAP_R = crate::FieldReader;
 #[doc = "Field `SCK_DCAP` writer - Configures the frequency of the RTC clocks."]
-pub type SCK_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 8, O>;
+pub type SCK_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 8, O>;
 #[doc = "Field `DBIAS_SLP` reader - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
-pub type DBIAS_SLP_R = crate::FieldReader<u8, u8>;
+pub type DBIAS_SLP_R = crate::FieldReader;
 #[doc = "Field `DBIAS_SLP` writer - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
-pub type DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, O>;
+pub type DBIAS_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
 #[doc = "Field `DBIAS_WAK` reader - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
-pub type DBIAS_WAK_R = crate::FieldReader<u8, u8>;
+pub type DBIAS_WAK_R = crate::FieldReader;
 #[doc = "Field `DBIAS_WAK` writer - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
-pub type DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, O>;
+pub type DBIAS_WAK_W<'a, const O: u8> = crate::FieldWriter<'a, REG_SPEC, 3, O>;
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_R = crate::BitReader<bool>;
+pub type DBOOST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, REG_SPEC, bool, O>;
+pub type DBOOST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_R = crate::BitReader<bool>;
+pub type DBOOST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, REG_SPEC, bool, O>;
+pub type DBOOST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
 #[doc = "Field `REGULATOR_FORCE_PD` reader - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
-pub type REGULATOR_FORCE_PD_R = crate::BitReader<bool>;
+pub type REGULATOR_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PD` writer - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
-pub type REGULATOR_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, REG_SPEC, bool, O>;
+pub type REGULATOR_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
 #[doc = "Field `REGULATOR_FORCE_PU` reader - Set this bit to FPU the RTC_REG."]
-pub type REGULATOR_FORCE_PU_R = crate::BitReader<bool>;
+pub type REGULATOR_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PU` writer - Set this bit to FPU the RTC_REG."]
-pub type REGULATOR_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, REG_SPEC, bool, O>;
+pub type REGULATOR_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, REG_SPEC, O>;
 impl R {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
@@ -115,6 +115,46 @@ impl R {
     #[inline(always)]
     pub fn regulator_force_pu(&self) -> REGULATOR_FORCE_PU_R {
         REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REG")
+            .field(
+                "dig_reg_dbias_slp",
+                &format_args!("{}", self.dig_reg_dbias_slp().bits()),
+            )
+            .field(
+                "dig_reg_dbias_wak",
+                &format_args!("{}", self.dig_reg_dbias_wak().bits()),
+            )
+            .field("sck_dcap", &format_args!("{}", self.sck_dcap().bits()))
+            .field("dbias_slp", &format_args!("{}", self.dbias_slp().bits()))
+            .field("dbias_wak", &format_args!("{}", self.dbias_wak().bits()))
+            .field(
+                "dboost_force_pd",
+                &format_args!("{}", self.dboost_force_pd().bit()),
+            )
+            .field(
+                "dboost_force_pu",
+                &format_args!("{}", self.dboost_force_pu().bit()),
+            )
+            .field(
+                "regulator_force_pd",
+                &format_args!("{}", self.regulator_force_pd().bit()),
+            )
+            .field(
+                "regulator_force_pu",
+                &format_args!("{}", self.regulator_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

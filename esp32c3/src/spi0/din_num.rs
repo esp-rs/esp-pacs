@@ -35,21 +35,21 @@ impl From<crate::W<DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `DIN0_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN0_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN0_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN1_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN1_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN1_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN2_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN2_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN2_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `DIN3_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN3_NUM_R = crate::FieldReader<u8, u8>;
+pub type DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `DIN3_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn din3_num(&self) -> DIN3_NUM_R {
         DIN3_NUM_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIN_NUM")
+            .field("din0_num", &format_args!("{}", self.din0_num().bits()))
+            .field("din1_num", &format_args!("{}", self.din1_num().bits()))
+            .field("din2_num", &format_args!("{}", self.din2_num().bits()))
+            .field("din3_num", &format_args!("{}", self.din3_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

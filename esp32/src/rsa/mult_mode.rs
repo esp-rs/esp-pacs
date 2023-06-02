@@ -35,14 +35,28 @@ impl From<crate::W<MULT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MULT_MODE` reader - This register contains the mode of modular multiplication and multiplication."]
-pub type MULT_MODE_R = crate::BitReader<bool>;
+pub type MULT_MODE_R = crate::BitReader;
 #[doc = "Field `MULT_MODE` writer - This register contains the mode of modular multiplication and multiplication."]
-pub type MULT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_MODE_SPEC, bool, O>;
+pub type MULT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MULT_MODE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This register contains the mode of modular multiplication and multiplication."]
     #[inline(always)]
     pub fn mult_mode(&self) -> MULT_MODE_R {
         MULT_MODE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MULT_MODE")
+            .field("mult_mode", &format_args!("{}", self.mult_mode().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MULT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

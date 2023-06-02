@@ -37,55 +37,55 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC>> for W {
 #[doc = "Field `RECORD_PRO_PDEBUGLS0STAT` reader - "]
 pub type RECORD_PRO_PDEBUGLS0STAT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` reader - "]
-pub type RECORD_PDEBUGLS0STAT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGLS0STAT_TYPE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` writer - "]
 pub type RECORD_PDEBUGLS0STAT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 4, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` reader - "]
-pub type RECORD_PDEBUGLS0STAT_SZ_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGLS0STAT_SZ_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` writer - "]
 pub type RECORD_PDEBUGLS0STAT_SZ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 4, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DTLBM` reader - "]
-pub type RECORD_PDEBUGLS0STAT_DTLBM_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_DTLBM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DTLBM` writer - "]
 pub type RECORD_PDEBUGLS0STAT_DTLBM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCM` reader - "]
-pub type RECORD_PDEBUGLS0STAT_DCM_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_DCM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCM` writer - "]
 pub type RECORD_PDEBUGLS0STAT_DCM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCH` reader - "]
-pub type RECORD_PDEBUGLS0STAT_DCH_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_DCH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_DCH` writer - "]
 pub type RECORD_PDEBUGLS0STAT_DCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_UC` reader - "]
-pub type RECORD_PDEBUGLS0STAT_UC_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_UC_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_UC` writer - "]
 pub type RECORD_PDEBUGLS0STAT_UC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_WB` reader - "]
-pub type RECORD_PDEBUGLS0STAT_WB_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_WB_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_WB` writer - "]
 pub type RECORD_PDEBUGLS0STAT_WB_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_COH` reader - "]
-pub type RECORD_PDEBUGLS0STAT_COH_R = crate::BitReader<bool>;
+pub type RECORD_PDEBUGLS0STAT_COH_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_COH` writer - "]
 pub type RECORD_PDEBUGLS0STAT_COH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` reader - "]
-pub type RECORD_PDEBUGLS0STAT_STCOH_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGLS0STAT_STCOH_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` writer - "]
 pub type RECORD_PDEBUGLS0STAT_STCOH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 2, O>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` reader - "]
-pub type RECORD_PDEBUGLS0STAT_TGT_R = crate::FieldReader<u8, u8>;
+pub type RECORD_PDEBUGLS0STAT_TGT_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` writer - "]
 pub type RECORD_PDEBUGLS0STAT_TGT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -141,6 +141,63 @@ impl R {
     #[inline(always)]
     pub fn record_pdebugls0stat_tgt(&self) -> RECORD_PDEBUGLS0STAT_TGT_R {
         RECORD_PDEBUGLS0STAT_TGT_R::new(((self.bits >> 20) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CPU_RECORD_PDEBUGLS0STAT")
+            .field(
+                "record_pro_pdebugls0stat",
+                &format_args!("{}", self.record_pro_pdebugls0stat().bits()),
+            )
+            .field(
+                "record_pdebugls0stat_type",
+                &format_args!("{}", self.record_pdebugls0stat_type().bits()),
+            )
+            .field(
+                "record_pdebugls0stat_sz",
+                &format_args!("{}", self.record_pdebugls0stat_sz().bits()),
+            )
+            .field(
+                "record_pdebugls0stat_dtlbm",
+                &format_args!("{}", self.record_pdebugls0stat_dtlbm().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_dcm",
+                &format_args!("{}", self.record_pdebugls0stat_dcm().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_dch",
+                &format_args!("{}", self.record_pdebugls0stat_dch().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_uc",
+                &format_args!("{}", self.record_pdebugls0stat_uc().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_wb",
+                &format_args!("{}", self.record_pdebugls0stat_wb().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_coh",
+                &format_args!("{}", self.record_pdebugls0stat_coh().bit()),
+            )
+            .field(
+                "record_pdebugls0stat_stcoh",
+                &format_args!("{}", self.record_pdebugls0stat_stcoh().bits()),
+            )
+            .field(
+                "record_pdebugls0stat_tgt",
+                &format_args!("{}", self.record_pdebugls0stat_tgt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

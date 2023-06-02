@@ -35,17 +35,15 @@ impl From<crate::W<DCACHE_LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub type DCACHE_LOCK_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_LOCK_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub type DCACHE_LOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_LOCK_CTRL_SPEC, bool, O>;
+pub type DCACHE_LOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_LOCK_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub type DCACHE_UNLOCK_ENA_R = crate::BitReader<bool>;
+pub type DCACHE_UNLOCK_ENA_R = crate::BitReader;
 #[doc = "Field `DCACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub type DCACHE_UNLOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_LOCK_CTRL_SPEC, bool, O>;
+pub type DCACHE_UNLOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_LOCK_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_LOCK_DONE` reader - The bit is used to indicate unlock/lock operation is finished."]
-pub type DCACHE_LOCK_DONE_R = crate::BitReader<bool>;
+pub type DCACHE_LOCK_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
@@ -61,6 +59,31 @@ impl R {
     #[inline(always)]
     pub fn dcache_lock_done(&self) -> DCACHE_LOCK_DONE_R {
         DCACHE_LOCK_DONE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_LOCK_CTRL")
+            .field(
+                "dcache_lock_ena",
+                &format_args!("{}", self.dcache_lock_ena().bit()),
+            )
+            .field(
+                "dcache_unlock_ena",
+                &format_args!("{}", self.dcache_unlock_ena().bit()),
+            )
+            .field(
+                "dcache_lock_done",
+                &format_args!("{}", self.dcache_lock_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_LOCK_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

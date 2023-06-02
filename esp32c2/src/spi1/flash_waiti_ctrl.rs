@@ -35,19 +35,18 @@ impl From<crate::W<FLASH_WAITI_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `WAITI_DUMMY` reader - The dummy phase enable when wait flash idle (RDSR)"]
-pub type WAITI_DUMMY_R = crate::BitReader<bool>;
+pub type WAITI_DUMMY_R = crate::BitReader;
 #[doc = "Field `WAITI_DUMMY` writer - The dummy phase enable when wait flash idle (RDSR)"]
-pub type WAITI_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASH_WAITI_CTRL_SPEC, bool, O>;
+pub type WAITI_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, FLASH_WAITI_CTRL_SPEC, O>;
 #[doc = "Field `WAITI_CMD` reader - The command to wait flash idle(RDSR)."]
-pub type WAITI_CMD_R = crate::FieldReader<u8, u8>;
+pub type WAITI_CMD_R = crate::FieldReader;
 #[doc = "Field `WAITI_CMD` writer - The command to wait flash idle(RDSR)."]
-pub type WAITI_CMD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_WAITI_CTRL_SPEC, u8, u8, 8, O>;
+pub type WAITI_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_WAITI_CTRL_SPEC, 8, O>;
 #[doc = "Field `WAITI_DUMMY_CYCLELEN` reader - The dummy cycle length when wait flash idle(RDSR)."]
-pub type WAITI_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type WAITI_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `WAITI_DUMMY_CYCLELEN` writer - The dummy cycle length when wait flash idle(RDSR)."]
 pub type WAITI_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_WAITI_CTRL_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, FLASH_WAITI_CTRL_SPEC, 6, O>;
 impl R {
     #[doc = "Bit 1 - The dummy phase enable when wait flash idle (RDSR)"]
     #[inline(always)]
@@ -63,6 +62,25 @@ impl R {
     #[inline(always)]
     pub fn waiti_dummy_cyclelen(&self) -> WAITI_DUMMY_CYCLELEN_R {
         WAITI_DUMMY_CYCLELEN_R::new(((self.bits >> 10) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_WAITI_CTRL")
+            .field("waiti_dummy", &format_args!("{}", self.waiti_dummy().bit()))
+            .field("waiti_cmd", &format_args!("{}", self.waiti_cmd().bits()))
+            .field(
+                "waiti_dummy_cyclelen",
+                &format_args!("{}", self.waiti_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_WAITI_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

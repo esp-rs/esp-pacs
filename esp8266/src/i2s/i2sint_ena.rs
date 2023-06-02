@@ -35,35 +35,29 @@ impl From<crate::W<I2SINT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_I2S_RX_TAKE_DATA_INT_ENA` reader - "]
-pub type I2S_I2S_RX_TAKE_DATA_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_TAKE_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_TAKE_DATA_INT_ENA` writer - "]
-pub type I2S_I2S_RX_TAKE_DATA_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_RX_TAKE_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_PUT_DATA_INT_ENA` reader - "]
-pub type I2S_I2S_TX_PUT_DATA_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_PUT_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_PUT_DATA_INT_ENA` writer - "]
-pub type I2S_I2S_TX_PUT_DATA_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_TX_PUT_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_WFULL_INT_ENA` reader - "]
-pub type I2S_I2S_RX_WFULL_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_WFULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_WFULL_INT_ENA` writer - "]
-pub type I2S_I2S_RX_WFULL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_RX_WFULL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_REMPTY_INT_ENA` reader - "]
-pub type I2S_I2S_RX_REMPTY_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_REMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_REMPTY_INT_ENA` writer - "]
-pub type I2S_I2S_RX_REMPTY_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_RX_REMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_WFULL_INT_ENA` reader - "]
-pub type I2S_I2S_TX_WFULL_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_WFULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_WFULL_INT_ENA` writer - "]
-pub type I2S_I2S_TX_WFULL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_TX_WFULL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_REMPTY_INT_ENA` reader - "]
-pub type I2S_I2S_TX_REMPTY_INT_ENA_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_REMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_REMPTY_INT_ENA` writer - "]
-pub type I2S_I2S_TX_REMPTY_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_ENA_SPEC, bool, O>;
+pub type I2S_I2S_TX_REMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn i2s_i2s_tx_rempty_int_ena(&self) -> I2S_I2S_TX_REMPTY_INT_ENA_R {
         I2S_I2S_TX_REMPTY_INT_ENA_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SINT_ENA")
+            .field(
+                "i2s_i2s_tx_rempty_int_ena",
+                &format_args!("{}", self.i2s_i2s_tx_rempty_int_ena().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_wfull_int_ena",
+                &format_args!("{}", self.i2s_i2s_tx_wfull_int_ena().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_rempty_int_ena",
+                &format_args!("{}", self.i2s_i2s_rx_rempty_int_ena().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_wfull_int_ena",
+                &format_args!("{}", self.i2s_i2s_rx_wfull_int_ena().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_put_data_int_ena",
+                &format_args!("{}", self.i2s_i2s_tx_put_data_int_ena().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_take_data_int_ena",
+                &format_args!("{}", self.i2s_i2s_rx_take_data_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2SINT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

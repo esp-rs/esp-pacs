@@ -37,12 +37,11 @@ impl From<crate::W<CALI_CONF_SPEC>> for W {
 #[doc = "Field `CALI_RTC_MAX` reader - "]
 pub type CALI_RTC_MAX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CALI_RTC_MAX` writer - "]
-pub type CALI_RTC_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CALI_CONF_SPEC, u16, u16, 10, O>;
+pub type CALI_RTC_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `CALI_START` reader - "]
-pub type CALI_START_R = crate::BitReader<bool>;
+pub type CALI_START_R = crate::BitReader;
 #[doc = "Field `CALI_START` writer - "]
-pub type CALI_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CALI_CONF_SPEC, bool, O>;
+pub type CALI_START_W<'a, const O: u8> = crate::BitWriter<'a, CALI_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn cali_start(&self) -> CALI_START_R {
         CALI_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("cali_conf")
+            .field(
+                "cali_rtc_max",
+                &format_args!("{}", self.cali_rtc_max().bits()),
+            )
+            .field("cali_start", &format_args!("{}", self.cali_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CALI_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,19 +35,17 @@ impl From<crate::W<BUS_TIMING_1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_SEG1` reader - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEG1_R = crate::FieldReader<u8, u8>;
+pub type TIME_SEG1_R = crate::FieldReader;
 #[doc = "Field `TIME_SEG1` writer - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEG1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 4, O>;
+pub type TIME_SEG1_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_1_SPEC, 4, O>;
 #[doc = "Field `TIME_SEG2` reader - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEG2_R = crate::FieldReader<u8, u8>;
+pub type TIME_SEG2_R = crate::FieldReader;
 #[doc = "Field `TIME_SEG2` writer - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SEG2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 3, O>;
+pub type TIME_SEG2_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_1_SPEC, 3, O>;
 #[doc = "Field `TIME_SAMP` reader - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SAMP_R = crate::BitReader<bool>;
+pub type TIME_SAMP_R = crate::BitReader;
 #[doc = "Field `TIME_SAMP` writer - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
-pub type TIME_SAMP_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_TIMING_1_SPEC, bool, O>;
+pub type TIME_SAMP_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMING_1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
@@ -63,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn time_samp(&self) -> TIME_SAMP_R {
         TIME_SAMP_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BUS_TIMING_1")
+            .field("time_seg1", &format_args!("{}", self.time_seg1().bits()))
+            .field("time_seg2", &format_args!("{}", self.time_seg2().bits()))
+            .field("time_samp", &format_args!("{}", self.time_samp().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BUS_TIMING_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

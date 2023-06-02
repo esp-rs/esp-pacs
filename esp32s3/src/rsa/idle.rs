@@ -14,12 +14,26 @@ impl From<crate::R<IDLE_SPEC>> for R {
     }
 }
 #[doc = "Field `IDLE` reader - The content of this bit is 1 when the RSA accelerator is idle."]
-pub type IDLE_R = crate::BitReader<bool>;
+pub type IDLE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The content of this bit is 1 when the RSA accelerator is idle."]
     #[inline(always)]
     pub fn idle(&self) -> IDLE_R {
         IDLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDLE")
+            .field("idle", &format_args!("{}", self.idle().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IDLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "RSA idle register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [idle](index.html) module"]

@@ -35,60 +35,53 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_TX_END_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmission done."]
-pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_END_INT_RAW[0-3]` writer - The interrupt raw bit for CHANNEL%s. Triggered when transmission done."]
-pub type CH_TX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_ERR_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when error occurs."]
-pub type CH_TX_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR_INT_RAW[0-3]` writer - The interrupt raw bit for CHANNEL%s. Triggered when error occurs."]
-pub type CH_TX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
-pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-3]` writer - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
-pub type CH_TX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_LOOP_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value."]
-pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP_INT_RAW[0-3]` writer - The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value."]
-pub type CH_TX_LOOP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_LOOP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_RX_END_INT_RAW[4-7]` reader - The interrupt raw bit for CHANNEL4. Triggered when reception done."]
-pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_RAW[4-7]` writer - The interrupt raw bit for CHANNEL4. Triggered when reception done."]
-pub type CH_RX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_RX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_RX_ERR_INT_RAW[4-7]` reader - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
-pub type CH_RX_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_RX_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_RX_ERR_INT_RAW[4-7]` writer - The interrupt raw bit for CHANNEL4. Triggered when error occurs."]
-pub type CH_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH4_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL4. Triggered when receiver receive more data than configured value."]
-pub type CH4_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH4_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH4_RX_THR_EVENT_INT_RAW` writer - The interrupt raw bit for CHANNEL4. Triggered when receiver receive more data than configured value."]
-pub type CH4_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH4_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH5_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL5. Triggered when receiver receive more data than configured value."]
-pub type CH5_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH5_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH5_RX_THR_EVENT_INT_RAW` writer - The interrupt raw bit for CHANNEL5. Triggered when receiver receive more data than configured value."]
-pub type CH5_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH5_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH6_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL6. Triggered when receiver receive more data than configured value."]
-pub type CH6_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH6_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH6_RX_THR_EVENT_INT_RAW` writer - The interrupt raw bit for CHANNEL6. Triggered when receiver receive more data than configured value."]
-pub type CH6_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH6_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH7_RX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL7. Triggered when receiver receive more data than configured value."]
-pub type CH7_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH7_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH7_RX_THR_EVENT_INT_RAW` writer - The interrupt raw bit for CHANNEL7. Triggered when receiver receive more data than configured value."]
-pub type CH7_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH7_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_RAW` reader - The interrupt raw bit for CHANNEL3. Triggered when dma accessing CHANNEL3 fails."]
-pub type TX_CH3_DMA_ACCESS_FAIL_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_RAW` writer - The interrupt raw bit for CHANNEL3. Triggered when dma accessing CHANNEL3 fails."]
-pub type TX_CH3_DMA_ACCESS_FAIL_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_RAW` reader - The interrupt raw bit for CHANNEL7. Triggered when dma accessing CHANNEL7 fails."]
-pub type RX_CH7_DMA_ACCESS_FAIL_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_RAW` writer - The interrupt raw bit for CHANNEL7. Triggered when dma accessing CHANNEL7 fails."]
-pub type RX_CH7_DMA_ACCESS_FAIL_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "The interrupt raw bit for CHANNEL[0-3]. Triggered when transmission done."]
     #[inline(always)]
@@ -269,6 +262,139 @@ impl R {
     #[inline(always)]
     pub fn rx_ch7_dma_access_fail_int_raw(&self) -> RX_CH7_DMA_ACCESS_FAIL_INT_RAW_R {
         RX_CH7_DMA_ACCESS_FAIL_INT_RAW_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "ch0_tx_end_int_raw",
+                &format_args!("{}", self.ch0_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_raw",
+                &format_args!("{}", self.ch1_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_end_int_raw",
+                &format_args!("{}", self.ch2_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_end_int_raw",
+                &format_args!("{}", self.ch3_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_err_int_raw",
+                &format_args!("{}", self.ch0_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_err_int_raw",
+                &format_args!("{}", self.ch1_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_err_int_raw",
+                &format_args!("{}", self.ch2_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_err_int_raw",
+                &format_args!("{}", self.ch3_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch0_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch1_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch2_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch3_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_raw",
+                &format_args!("{}", self.ch0_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_raw",
+                &format_args!("{}", self.ch1_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_loop_int_raw",
+                &format_args!("{}", self.ch2_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_loop_int_raw",
+                &format_args!("{}", self.ch3_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch4_rx_end_int_raw",
+                &format_args!("{}", self.ch4_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch5_rx_end_int_raw",
+                &format_args!("{}", self.ch5_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch6_rx_end_int_raw",
+                &format_args!("{}", self.ch6_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch7_rx_end_int_raw",
+                &format_args!("{}", self.ch7_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch4_rx_err_int_raw",
+                &format_args!("{}", self.ch4_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch5_rx_err_int_raw",
+                &format_args!("{}", self.ch5_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch6_rx_err_int_raw",
+                &format_args!("{}", self.ch6_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch7_rx_err_int_raw",
+                &format_args!("{}", self.ch7_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch4_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch4_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch5_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch5_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch6_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch6_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch7_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch7_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "tx_ch3_dma_access_fail_int_raw",
+                &format_args!("{}", self.tx_ch3_dma_access_fail_int_raw().bit()),
+            )
+            .field(
+                "rx_ch7_dma_access_fail_int_raw",
+                &format_args!("{}", self.rx_ch7_dma_access_fail_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

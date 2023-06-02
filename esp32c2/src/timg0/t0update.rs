@@ -35,14 +35,28 @@ impl From<crate::W<T0UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_UPDATE` reader - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
-pub type T0_UPDATE_R = crate::BitReader<bool>;
+pub type T0_UPDATE_R = crate::BitReader;
 #[doc = "Field `T0_UPDATE` writer - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
-pub type T0_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0UPDATE_SPEC, bool, O>;
+pub type T0_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, T0UPDATE_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T31UPDATE_REG, the counter value is latched."]
     #[inline(always)]
     pub fn t0_update(&self) -> T0_UPDATE_R {
         T0_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T0UPDATE")
+            .field("t0_update", &format_args!("{}", self.t0_update().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T0UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

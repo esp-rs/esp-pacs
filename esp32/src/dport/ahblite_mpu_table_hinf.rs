@@ -35,15 +35,32 @@ impl From<crate::W<AHBLITE_MPU_TABLE_HINF_SPEC>> for W {
     }
 }
 #[doc = "Field `HINF_ACCESS_GRANT_CONFIG` reader - "]
-pub type HINF_ACCESS_GRANT_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type HINF_ACCESS_GRANT_CONFIG_R = crate::FieldReader;
 #[doc = "Field `HINF_ACCESS_GRANT_CONFIG` writer - "]
 pub type HINF_ACCESS_GRANT_CONFIG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHBLITE_MPU_TABLE_HINF_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, AHBLITE_MPU_TABLE_HINF_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn hinf_access_grant_config(&self) -> HINF_ACCESS_GRANT_CONFIG_R {
         HINF_ACCESS_GRANT_CONFIG_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLITE_MPU_TABLE_HINF")
+            .field(
+                "hinf_access_grant_config",
+                &format_args!("{}", self.hinf_access_grant_config().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_HINF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

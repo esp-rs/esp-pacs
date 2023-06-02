@@ -35,15 +35,31 @@ impl From<crate::W<SAR_DEBUG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DEBUG_BIT_SEL` reader - no public"]
-pub type SAR_DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
+pub type SAR_DEBUG_BIT_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_DEBUG_BIT_SEL` writer - no public"]
-pub type SAR_DEBUG_BIT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_DEBUG_CONF_SPEC, u8, u8, 5, O>;
+pub type SAR_DEBUG_BIT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_DEBUG_CONF_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - no public"]
     #[inline(always)]
     pub fn sar_debug_bit_sel(&self) -> SAR_DEBUG_BIT_SEL_R {
         SAR_DEBUG_BIT_SEL_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_DEBUG_CONF")
+            .field(
+                "sar_debug_bit_sel",
+                &format_args!("{}", self.sar_debug_bit_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_DEBUG_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

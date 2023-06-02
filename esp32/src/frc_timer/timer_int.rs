@@ -35,14 +35,28 @@ impl From<crate::W<TIMER_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `CLR` reader - "]
-pub type CLR_R = crate::BitReader<bool>;
+pub type CLR_R = crate::BitReader;
 #[doc = "Field `CLR` writer - "]
-pub type CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER_INT_SPEC, bool, O>;
+pub type CLR_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_INT_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn clr(&self) -> CLR_R {
         CLR_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER_INT")
+            .field("clr", &format_args!("{}", self.clr().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER_INT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,46 +35,46 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CHECK_SUM_EN` reader - Set this bit to enable decoder to check check_sum in packet header."]
-pub type CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SUM_EN` writer - Set this bit to enable decoder to check check_sum in packet header."]
-pub type CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CHECK_SEQ_EN` reader - Set this bit to enable decoder to check seq num in packet header."]
-pub type CHECK_SEQ_EN_R = crate::BitReader<bool>;
+pub type CHECK_SEQ_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SEQ_EN` writer - Set this bit to enable decoder to check seq num in packet header."]
-pub type CHECK_SEQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CHECK_SEQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CRC_DISABLE` reader - Set this bit to disable crc calculation."]
-pub type CRC_DISABLE_R = crate::BitReader<bool>;
+pub type CRC_DISABLE_R = crate::BitReader;
 #[doc = "Field `CRC_DISABLE` writer - Set this bit to disable crc calculation."]
-pub type CRC_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CRC_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SAVE_HEAD` reader - Set this bit to save packet header ."]
-pub type SAVE_HEAD_R = crate::BitReader<bool>;
+pub type SAVE_HEAD_R = crate::BitReader;
 #[doc = "Field `SAVE_HEAD` writer - Set this bit to save packet header ."]
-pub type SAVE_HEAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SAVE_HEAD_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to enable hardware replace check_sum in packet header automatically."]
-pub type TX_CHECK_SUM_RE_R = crate::BitReader<bool>;
+pub type TX_CHECK_SUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_CHECK_SUM_RE` writer - Set this bit to enable hardware replace check_sum in packet header automatically."]
-pub type TX_CHECK_SUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_CHECK_SUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to enable hardware replace ack num in packet header automatically."]
-pub type TX_ACK_NUM_RE_R = crate::BitReader<bool>;
+pub type TX_ACK_NUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_ACK_NUM_RE` writer - Set this bit to enable hardware replace ack num in packet header automatically."]
-pub type TX_ACK_NUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_ACK_NUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CHECK_OWNER` reader - Set this bit to check the owner bit in link descriptor."]
-pub type CHECK_OWNER_R = crate::BitReader<bool>;
+pub type CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `CHECK_OWNER` writer - Set this bit to check the owner bit in link descriptor."]
-pub type CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `WAIT_SW_START` reader - Set this bit to enable software way to add packet header."]
-pub type WAIT_SW_START_R = crate::BitReader<bool>;
+pub type WAIT_SW_START_R = crate::BitReader;
 #[doc = "Field `WAIT_SW_START` writer - Set this bit to enable software way to add packet header."]
-pub type WAIT_SW_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type WAIT_SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SW_START` reader - Set this bit to start inserting the packet header."]
-pub type SW_START_R = crate::BitReader<bool>;
+pub type SW_START_R = crate::BitReader;
 #[doc = "Field `SW_START` writer - Set this bit to start inserting the packet header."]
-pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` reader - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
 pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
 pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONF1_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, CONF1_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable decoder to check check_sum in packet header."]
     #[inline(always)]
@@ -125,6 +125,47 @@ impl R {
     #[inline(always)]
     pub fn dma_infifo_full_thrs(&self) -> DMA_INFIFO_FULL_THRS_R {
         DMA_INFIFO_FULL_THRS_R::new(((self.bits >> 9) & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF1")
+            .field(
+                "check_sum_en",
+                &format_args!("{}", self.check_sum_en().bit()),
+            )
+            .field(
+                "check_seq_en",
+                &format_args!("{}", self.check_seq_en().bit()),
+            )
+            .field("crc_disable", &format_args!("{}", self.crc_disable().bit()))
+            .field("save_head", &format_args!("{}", self.save_head().bit()))
+            .field(
+                "tx_check_sum_re",
+                &format_args!("{}", self.tx_check_sum_re().bit()),
+            )
+            .field(
+                "tx_ack_num_re",
+                &format_args!("{}", self.tx_ack_num_re().bit()),
+            )
+            .field("check_owner", &format_args!("{}", self.check_owner().bit()))
+            .field(
+                "wait_sw_start",
+                &format_args!("{}", self.wait_sw_start().bit()),
+            )
+            .field("sw_start", &format_args!("{}", self.sw_start().bit()))
+            .field(
+                "dma_infifo_full_thrs",
+                &format_args!("{}", self.dma_infifo_full_thrs().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

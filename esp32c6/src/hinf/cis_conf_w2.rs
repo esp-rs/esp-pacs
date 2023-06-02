@@ -37,13 +37,29 @@ impl From<crate::W<CIS_CONF_W2_SPEC>> for W {
 #[doc = "Field `CIS_CONF_W2` reader - Configure cis addr 47~44"]
 pub type CIS_CONF_W2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CIS_CONF_W2` writer - Configure cis addr 47~44"]
-pub type CIS_CONF_W2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CIS_CONF_W2_SPEC, u32, u32, 32, O>;
+pub type CIS_CONF_W2_W<'a, const O: u8> = crate::FieldWriter<'a, CIS_CONF_W2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure cis addr 47~44"]
     #[inline(always)]
     pub fn cis_conf_w2(&self) -> CIS_CONF_W2_R {
         CIS_CONF_W2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CIS_CONF_W2")
+            .field(
+                "cis_conf_w2",
+                &format_args!("{}", self.cis_conf_w2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CIS_CONF_W2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

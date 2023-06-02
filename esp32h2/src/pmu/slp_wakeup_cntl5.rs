@@ -38,12 +38,12 @@ impl From<crate::W<SLP_WAKEUP_CNTL5_SPEC>> for W {
 pub type MODEM_WAIT_TARGET_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MODEM_WAIT_TARGET` writer - need_des"]
 pub type MODEM_WAIT_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL5_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL5_SPEC, 20, O, u32, u32>;
 #[doc = "Field `LP_ANA_WAIT_TARGET` reader - need_des"]
-pub type LP_ANA_WAIT_TARGET_R = crate::FieldReader<u8, u8>;
+pub type LP_ANA_WAIT_TARGET_R = crate::FieldReader;
 #[doc = "Field `LP_ANA_WAIT_TARGET` writer - need_des"]
 pub type LP_ANA_WAIT_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL5_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL5_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:19 - need_des"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn lp_ana_wait_target(&self) -> LP_ANA_WAIT_TARGET_R {
         LP_ANA_WAIT_TARGET_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_WAKEUP_CNTL5")
+            .field(
+                "modem_wait_target",
+                &format_args!("{}", self.modem_wait_target().bits()),
+            )
+            .field(
+                "lp_ana_wait_target",
+                &format_args!("{}", self.lp_ana_wait_target().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

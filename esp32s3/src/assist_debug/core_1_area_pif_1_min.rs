@@ -38,12 +38,29 @@ impl From<crate::W<CORE_1_AREA_PIF_1_MIN_SPEC>> for W {
 pub type CORE_1_AREA_PIF_1_MIN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_AREA_PIF_1_MIN` writer - Core1 PIF region1 start addr"]
 pub type CORE_1_AREA_PIF_1_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_AREA_PIF_1_MIN_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CORE_1_AREA_PIF_1_MIN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core1 PIF region1 start addr"]
     #[inline(always)]
     pub fn core_1_area_pif_1_min(&self) -> CORE_1_AREA_PIF_1_MIN_R {
         CORE_1_AREA_PIF_1_MIN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_AREA_PIF_1_MIN")
+            .field(
+                "core_1_area_pif_1_min",
+                &format_args!("{}", self.core_1_area_pif_1_min().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_AREA_PIF_1_MIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

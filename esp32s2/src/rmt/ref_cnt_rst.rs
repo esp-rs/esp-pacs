@@ -35,21 +35,21 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
     }
 }
 #[doc = "Field `CH0` reader - This register is used to reset the clock divider of CHANNEL0."]
-pub type CH0_R = crate::BitReader<bool>;
+pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH0` writer - This register is used to reset the clock divider of CHANNEL0."]
-pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH1` reader - This register is used to reset the clock divider of CHANNEL1."]
-pub type CH1_R = crate::BitReader<bool>;
+pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH1` writer - This register is used to reset the clock divider of CHANNEL1."]
-pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH2` reader - This register is used to reset the clock divider of CHANNEL2."]
-pub type CH2_R = crate::BitReader<bool>;
+pub type CH2_R = crate::BitReader;
 #[doc = "Field `CH2` writer - This register is used to reset the clock divider of CHANNEL2."]
-pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH3` reader - This register is used to reset the clock divider of CHANNEL3."]
-pub type CH3_R = crate::BitReader<bool>;
+pub type CH3_R = crate::BitReader;
 #[doc = "Field `CH3` writer - This register is used to reset the clock divider of CHANNEL3."]
-pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn ch3(&self) -> CH3_R {
         CH3_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REF_CNT_RST")
+            .field("ch0", &format_args!("{}", self.ch0().bit()))
+            .field("ch1", &format_args!("{}", self.ch1().bit()))
+            .field("ch2", &format_args!("{}", self.ch2().bit()))
+            .field("ch3", &format_args!("{}", self.ch3().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

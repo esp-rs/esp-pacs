@@ -35,47 +35,45 @@ impl From<crate::W<FIFO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_DATA_NUM` reader - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
-pub type RX_DATA_NUM_R = crate::FieldReader<u8, u8>;
+pub type RX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_DATA_NUM` writer - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
-pub type RX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, O>;
+pub type RX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 6, O>;
 #[doc = "Field `TX_DATA_NUM` reader - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
-pub type TX_DATA_NUM_R = crate::FieldReader<u8, u8>;
+pub type TX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_DATA_NUM` writer - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
-pub type TX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, O>;
+pub type TX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 6, O>;
 #[doc = "Field `DSCR_EN` reader - Set this bit to enable I2S DMA mode."]
-pub type DSCR_EN_R = crate::BitReader<bool>;
+pub type DSCR_EN_R = crate::BitReader;
 #[doc = "Field `DSCR_EN` writer - Set this bit to enable I2S DMA mode."]
-pub type DSCR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type DSCR_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `TX_FIFO_MOD` reader - Transmitter FIFO mode configuration bits"]
-pub type TX_FIFO_MOD_R = crate::FieldReader<u8, u8>;
+pub type TX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_MOD` writer - Transmitter FIFO mode configuration bits"]
-pub type TX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 3, O>;
+pub type TX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 3, O>;
 #[doc = "Field `RX_FIFO_MOD` reader - Receiver FIFO mode configuration bits"]
-pub type RX_FIFO_MOD_R = crate::FieldReader<u8, u8>;
+pub type RX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_FIFO_MOD` writer - Receiver FIFO mode configuration bits"]
-pub type RX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 3, O>;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` reader - The bit should always be set to 1"]
-pub type TX_FIFO_MOD_FORCE_EN_R = crate::BitReader<bool>;
+pub type TX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` writer - The bit should always be set to 1"]
-pub type TX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type TX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` reader - The bit should always be set to 1"]
-pub type RX_FIFO_MOD_FORCE_EN_R = crate::BitReader<bool>;
+pub type RX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` writer - The bit should always be set to 1"]
-pub type RX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type RX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `RX_FIFO_SYNC` reader - force write back rx data to memory"]
-pub type RX_FIFO_SYNC_R = crate::BitReader<bool>;
+pub type RX_FIFO_SYNC_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_SYNC` writer - force write back rx data to memory"]
-pub type RX_FIFO_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type RX_FIFO_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `RX_24MSB_EN` reader - Only useful in rx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub type RX_24MSB_EN_R = crate::BitReader<bool>;
+pub type RX_24MSB_EN_R = crate::BitReader;
 #[doc = "Field `RX_24MSB_EN` writer - Only useful in rx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub type RX_24MSB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type RX_24MSB_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `TX_24MSB_EN` reader - Only useful in tx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub type TX_24MSB_EN_R = crate::BitReader<bool>;
+pub type TX_24MSB_EN_R = crate::BitReader;
 #[doc = "Field `TX_24MSB_EN` writer - Only useful in tx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
-pub type TX_24MSB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type TX_24MSB_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
     #[inline(always)]
@@ -126,6 +124,50 @@ impl R {
     #[inline(always)]
     pub fn tx_24msb_en(&self) -> TX_24MSB_EN_R {
         TX_24MSB_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO_CONF")
+            .field(
+                "rx_data_num",
+                &format_args!("{}", self.rx_data_num().bits()),
+            )
+            .field(
+                "tx_data_num",
+                &format_args!("{}", self.tx_data_num().bits()),
+            )
+            .field("dscr_en", &format_args!("{}", self.dscr_en().bit()))
+            .field(
+                "tx_fifo_mod",
+                &format_args!("{}", self.tx_fifo_mod().bits()),
+            )
+            .field(
+                "rx_fifo_mod",
+                &format_args!("{}", self.rx_fifo_mod().bits()),
+            )
+            .field(
+                "tx_fifo_mod_force_en",
+                &format_args!("{}", self.tx_fifo_mod_force_en().bit()),
+            )
+            .field(
+                "rx_fifo_mod_force_en",
+                &format_args!("{}", self.rx_fifo_mod_force_en().bit()),
+            )
+            .field(
+                "rx_fifo_sync",
+                &format_args!("{}", self.rx_fifo_sync().bit()),
+            )
+            .field("rx_24msb_en", &format_args!("{}", self.rx_24msb_en().bit()))
+            .field("tx_24msb_en", &format_args!("{}", self.tx_24msb_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

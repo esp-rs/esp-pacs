@@ -20,8 +20,13 @@ impl From<crate::W<SOFT_JTAG_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SOFT_JTAG_CTRL` writer - Turn on JTAG verification."]
-pub type SOFT_JTAG_CTRL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SOFT_JTAG_CTRL_SPEC, bool, O>;
+pub type SOFT_JTAG_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, SOFT_JTAG_CTRL_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SOFT_JTAG_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Turn on JTAG verification."]
     #[inline(always)]

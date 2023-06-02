@@ -20,8 +20,13 @@ impl From<crate::W<SPI_MEM_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_SYNC_RESET` writer - The FSM will be reset."]
-pub type SPI_MEM_SYNC_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL2_SPEC, bool, O>;
+pub type SPI_MEM_SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL2_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]

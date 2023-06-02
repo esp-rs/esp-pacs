@@ -35,34 +35,30 @@ impl From<crate::W<SAR_READER2_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_CLK_DIV` reader - clock divider"]
-pub type SAR2_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type SAR2_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SAR2_CLK_DIV` writer - clock divider"]
-pub type SAR2_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READER2_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR2_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READER2_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR2_WAIT_ARB_CYCLE` reader - wait arbit stable after sar_done"]
-pub type SAR2_WAIT_ARB_CYCLE_R = crate::FieldReader<u8, u8>;
+pub type SAR2_WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SAR2_WAIT_ARB_CYCLE` writer - wait arbit stable after sar_done"]
 pub type SAR2_WAIT_ARB_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READER2_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SAR_READER2_CTRL_SPEC, 2, O>;
 #[doc = "Field `SAR2_CLK_GATED` reader - "]
-pub type SAR2_CLK_GATED_R = crate::BitReader<bool>;
+pub type SAR2_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SAR2_CLK_GATED` writer - "]
-pub type SAR2_CLK_GATED_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_READER2_CTRL_SPEC, bool, O>;
+pub type SAR2_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READER2_CTRL_SPEC, O>;
 #[doc = "Field `SAR2_SAMPLE_NUM` reader - "]
-pub type SAR2_SAMPLE_NUM_R = crate::FieldReader<u8, u8>;
+pub type SAR2_SAMPLE_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR2_SAMPLE_NUM` writer - "]
-pub type SAR2_SAMPLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_READER2_CTRL_SPEC, u8, u8, 8, O>;
+pub type SAR2_SAMPLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_READER2_CTRL_SPEC, 8, O>;
 #[doc = "Field `SAR2_DATA_INV` reader - Invert SAR ADC2 data"]
-pub type SAR2_DATA_INV_R = crate::BitReader<bool>;
+pub type SAR2_DATA_INV_R = crate::BitReader;
 #[doc = "Field `SAR2_DATA_INV` writer - Invert SAR ADC2 data"]
-pub type SAR2_DATA_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_READER2_CTRL_SPEC, bool, O>;
+pub type SAR2_DATA_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READER2_CTRL_SPEC, O>;
 #[doc = "Field `SAR2_INT_EN` reader - enable saradc2 to send out interrupt"]
-pub type SAR2_INT_EN_R = crate::BitReader<bool>;
+pub type SAR2_INT_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_INT_EN` writer - enable saradc2 to send out interrupt"]
-pub type SAR2_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_READER2_CTRL_SPEC, bool, O>;
+pub type SAR2_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_READER2_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
@@ -93,6 +89,40 @@ impl R {
     #[inline(always)]
     pub fn sar2_int_en(&self) -> SAR2_INT_EN_R {
         SAR2_INT_EN_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_READER2_CTRL")
+            .field(
+                "sar2_clk_div",
+                &format_args!("{}", self.sar2_clk_div().bits()),
+            )
+            .field(
+                "sar2_wait_arb_cycle",
+                &format_args!("{}", self.sar2_wait_arb_cycle().bits()),
+            )
+            .field(
+                "sar2_clk_gated",
+                &format_args!("{}", self.sar2_clk_gated().bit()),
+            )
+            .field(
+                "sar2_sample_num",
+                &format_args!("{}", self.sar2_sample_num().bits()),
+            )
+            .field(
+                "sar2_data_inv",
+                &format_args!("{}", self.sar2_data_inv().bit()),
+            )
+            .field("sar2_int_en", &format_args!("{}", self.sar2_int_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_READER2_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

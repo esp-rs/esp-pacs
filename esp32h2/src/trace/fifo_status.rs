@@ -14,9 +14,9 @@ impl From<crate::R<FIFO_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFO_EMPTY` reader - 1 indicate that fifo is empty"]
-pub type FIFO_EMPTY_R = crate::BitReader<bool>;
+pub type FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `WORK_STATUS` reader - mem_full interrupt status"]
-pub type WORK_STATUS_R = crate::BitReader<bool>;
+pub type WORK_STATUS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - 1 indicate that fifo is empty"]
     #[inline(always)]
@@ -27,6 +27,21 @@ impl R {
     #[inline(always)]
     pub fn work_status(&self) -> WORK_STATUS_R {
         WORK_STATUS_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO_STATUS")
+            .field("fifo_empty", &format_args!("{}", self.fifo_empty().bit()))
+            .field("work_status", &format_args!("{}", self.work_status().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "fifo status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_status](index.html) module"]

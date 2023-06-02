@@ -38,12 +38,29 @@ impl From<crate::W<GET_LINE_CODE_W0_SPEC>> for W {
 pub type GET_DW_DTE_RATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `GET_DW_DTE_RATE` writer - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
 pub type GET_DW_DTE_RATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GET_LINE_CODE_W0_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, GET_LINE_CODE_W0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
     pub fn get_dw_dte_rate(&self) -> GET_DW_DTE_RATE_R {
         GET_DW_DTE_RATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GET_LINE_CODE_W0")
+            .field(
+                "get_dw_dte_rate",
+                &format_args!("{}", self.get_dw_dte_rate().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GET_LINE_CODE_W0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

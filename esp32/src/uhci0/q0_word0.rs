@@ -37,13 +37,29 @@ impl From<crate::W<Q0_WORD0_SPEC>> for W {
 #[doc = "Field `SEND_Q0_WORD0` reader - This register stores the content of short packet's first dword"]
 pub type SEND_Q0_WORD0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SEND_Q0_WORD0` writer - This register stores the content of short packet's first dword"]
-pub type SEND_Q0_WORD0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, Q0_WORD0_SPEC, u32, u32, 32, O>;
+pub type SEND_Q0_WORD0_W<'a, const O: u8> = crate::FieldWriter<'a, Q0_WORD0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the content of short packet's first dword"]
     #[inline(always)]
     pub fn send_q0_word0(&self) -> SEND_Q0_WORD0_R {
         SEND_Q0_WORD0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Q0_WORD0")
+            .field(
+                "send_q0_word0",
+                &format_args!("{}", self.send_q0_word0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<Q0_WORD0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

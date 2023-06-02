@@ -35,13 +35,13 @@ impl From<crate::W<CONF_CHAN_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_CHAN_MOD` reader - I2S transmitter channel mode configuration bits."]
-pub type TX_CHAN_MOD_R = crate::FieldReader<u8, u8>;
+pub type TX_CHAN_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_CHAN_MOD` writer - I2S transmitter channel mode configuration bits."]
-pub type TX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_CHAN_SPEC, u8, u8, 3, O>;
+pub type TX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_CHAN_SPEC, 3, O>;
 #[doc = "Field `RX_CHAN_MOD` reader - I2S receiver channel mode configuration bits."]
-pub type RX_CHAN_MOD_R = crate::FieldReader<u8, u8>;
+pub type RX_CHAN_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_CHAN_MOD` writer - I2S receiver channel mode configuration bits."]
-pub type RX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_CHAN_SPEC, u8, u8, 2, O>;
+pub type RX_CHAN_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_CHAN_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn rx_chan_mod(&self) -> RX_CHAN_MOD_R {
         RX_CHAN_MOD_R::new(((self.bits >> 3) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF_CHAN")
+            .field(
+                "tx_chan_mod",
+                &format_args!("{}", self.tx_chan_mod().bits()),
+            )
+            .field(
+                "rx_chan_mod",
+                &format_args!("{}", self.rx_chan_mod().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_CHAN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

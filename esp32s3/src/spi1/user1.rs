@@ -35,14 +35,13 @@ impl From<crate::W<USER1_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_DUMMY_CYCLELEN` reader - The SPI_CLK cycle length minus 1 of DUMMY phase."]
-pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `USR_DUMMY_CYCLELEN` writer - The SPI_CLK cycle length minus 1 of DUMMY phase."]
-pub type USR_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 6, O>;
+pub type USR_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, USER1_SPEC, 6, O>;
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of ADDR phase. The register value shall be (bit_num-1)."]
-pub type USR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `USR_ADDR_BITLEN` writer - The length in bits of ADDR phase. The register value shall be (bit_num-1)."]
-pub type USR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 6, O>;
+pub type USR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, USER1_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - The SPI_CLK cycle length minus 1 of DUMMY phase."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn usr_addr_bitlen(&self) -> USR_ADDR_BITLEN_R {
         USR_ADDR_BITLEN_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER1")
+            .field(
+                "usr_dummy_cyclelen",
+                &format_args!("{}", self.usr_dummy_cyclelen().bits()),
+            )
+            .field(
+                "usr_addr_bitlen",
+                &format_args!("{}", self.usr_addr_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

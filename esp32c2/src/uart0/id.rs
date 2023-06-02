@@ -37,15 +37,15 @@ impl From<crate::W<ID_SPEC>> for W {
 #[doc = "Field `ID` reader - This register is used to configure the uart_id."]
 pub type ID_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ID` writer - This register is used to configure the uart_id."]
-pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ID_SPEC, u32, u32, 30, O>;
+pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 30, O, u32, u32>;
 #[doc = "Field `HIGH_SPEED` reader - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
-pub type HIGH_SPEED_R = crate::BitReader<bool>;
+pub type HIGH_SPEED_R = crate::BitReader;
 #[doc = "Field `HIGH_SPEED` writer - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
-pub type HIGH_SPEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, ID_SPEC, bool, O>;
+pub type HIGH_SPEED_W<'a, const O: u8> = crate::BitWriter<'a, ID_SPEC, O>;
 #[doc = "Field `REG_UPDATE` reader - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
-pub type REG_UPDATE_R = crate::BitReader<bool>;
+pub type REG_UPDATE_R = crate::BitReader;
 #[doc = "Field `REG_UPDATE` writer - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
-pub type REG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ID_SPEC, bool, O>;
+pub type REG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, ID_SPEC, O>;
 impl R {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn reg_update(&self) -> REG_UPDATE_R {
         REG_UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ID")
+            .field("id", &format_args!("{}", self.id().bits()))
+            .field("high_speed", &format_args!("{}", self.high_speed().bit()))
+            .field("reg_update", &format_args!("{}", self.reg_update().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -72,7 +72,7 @@ impl GPIO_PIN6_SOURCE_R {
 }
 #[doc = "Field `GPIO_PIN6_SOURCE` writer - 1: sigma-delta; 0: GPIO_DATA"]
 pub type GPIO_PIN6_SOURCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_PIN6_SPEC, GPIO_PIN6_SOURCE_A, O>;
+    crate::BitWriter<'a, GPIO_PIN6_SPEC, O, GPIO_PIN6_SOURCE_A>;
 impl<'a, const O: u8> GPIO_PIN6_SOURCE_W<'a, O> {
     #[doc = "sigma-delta"]
     #[inline(always)]
@@ -123,7 +123,7 @@ impl GPIO_PIN6_DRIVER_R {
 }
 #[doc = "Field `GPIO_PIN6_DRIVER` writer - 1: open drain; 0: normal"]
 pub type GPIO_PIN6_DRIVER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_PIN6_SPEC, GPIO_PIN6_DRIVER_A, O>;
+    crate::BitWriter<'a, GPIO_PIN6_SPEC, O, GPIO_PIN6_DRIVER_A>;
 impl<'a, const O: u8> GPIO_PIN6_DRIVER_W<'a, O> {
     #[doc = "open drain"]
     #[inline(always)]
@@ -208,7 +208,7 @@ impl GPIO_PIN6_INT_TYPE_R {
 }
 #[doc = "Field `GPIO_PIN6_INT_TYPE` writer - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
 pub type GPIO_PIN6_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_PIN6_SPEC, u8, GPIO_PIN6_INT_TYPE_A, 3, O>;
+    crate::FieldWriter<'a, GPIO_PIN6_SPEC, 3, O, u8, GPIO_PIN6_INT_TYPE_A>;
 impl<'a, const O: u8> GPIO_PIN6_INT_TYPE_W<'a, O> {
     #[doc = "interrupt is disabled"]
     #[inline(always)]
@@ -242,10 +242,9 @@ impl<'a, const O: u8> GPIO_PIN6_INT_TYPE_W<'a, O> {
     }
 }
 #[doc = "Field `GPIO_PIN6_WAKEUP_ENABLE` reader - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
-pub type GPIO_PIN6_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type GPIO_PIN6_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN6_WAKEUP_ENABLE` writer - 0: disable; 1: enable GPIO wakeup CPU, only when GPIO_PIN0_INT_TYPE is 0x4 or 0x5"]
-pub type GPIO_PIN6_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_PIN6_SPEC, bool, O>;
+pub type GPIO_PIN6_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_PIN6_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: sigma-delta; 0: GPIO_DATA"]
     #[inline(always)]
@@ -266,6 +265,35 @@ impl R {
     #[inline(always)]
     pub fn gpio_pin6_wakeup_enable(&self) -> GPIO_PIN6_WAKEUP_ENABLE_R {
         GPIO_PIN6_WAKEUP_ENABLE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_PIN6")
+            .field(
+                "gpio_pin6_wakeup_enable",
+                &format_args!("{}", self.gpio_pin6_wakeup_enable().bit()),
+            )
+            .field(
+                "gpio_pin6_int_type",
+                &format_args!("{}", self.gpio_pin6_int_type().bits()),
+            )
+            .field(
+                "gpio_pin6_driver",
+                &format_args!("{}", self.gpio_pin6_driver().bit()),
+            )
+            .field(
+                "gpio_pin6_source",
+                &format_args!("{}", self.gpio_pin6_source().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_PIN6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

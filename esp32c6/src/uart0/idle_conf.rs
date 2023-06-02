@@ -37,13 +37,11 @@ impl From<crate::W<IDLE_CONF_SPEC>> for W {
 #[doc = "Field `RX_IDLE_THRHD` reader - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
 pub type RX_IDLE_THRHD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_IDLE_THRHD` writer - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
-pub type RX_IDLE_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IDLE_CONF_SPEC, u16, u16, 10, O>;
+pub type RX_IDLE_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TX_IDLE_NUM` reader - This register is used to configure the duration time between transfers."]
 pub type TX_IDLE_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_IDLE_NUM` writer - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IDLE_CONF_SPEC, u16, u16, 10, O>;
+pub type TX_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn tx_idle_num(&self) -> TX_IDLE_NUM_R {
         TX_IDLE_NUM_R::new(((self.bits >> 10) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDLE_CONF")
+            .field(
+                "rx_idle_thrhd",
+                &format_args!("{}", self.rx_idle_thrhd().bits()),
+            )
+            .field(
+                "tx_idle_num",
+                &format_args!("{}", self.tx_idle_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IDLE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

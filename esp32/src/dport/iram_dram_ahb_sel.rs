@@ -35,34 +35,29 @@ impl From<crate::W<IRAM_DRAM_AHB_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `MASK_PRO_IRAM` reader - "]
-pub type MASK_PRO_IRAM_R = crate::BitReader<bool>;
+pub type MASK_PRO_IRAM_R = crate::BitReader;
 #[doc = "Field `MASK_PRO_IRAM` writer - "]
-pub type MASK_PRO_IRAM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, O>;
+pub type MASK_PRO_IRAM_W<'a, const O: u8> = crate::BitWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, O>;
 #[doc = "Field `MASK_APP_IRAM` reader - "]
-pub type MASK_APP_IRAM_R = crate::BitReader<bool>;
+pub type MASK_APP_IRAM_R = crate::BitReader;
 #[doc = "Field `MASK_APP_IRAM` writer - "]
-pub type MASK_APP_IRAM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, O>;
+pub type MASK_APP_IRAM_W<'a, const O: u8> = crate::BitWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, O>;
 #[doc = "Field `MASK_PRO_DRAM` reader - "]
-pub type MASK_PRO_DRAM_R = crate::BitReader<bool>;
+pub type MASK_PRO_DRAM_R = crate::BitReader;
 #[doc = "Field `MASK_PRO_DRAM` writer - "]
-pub type MASK_PRO_DRAM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, O>;
+pub type MASK_PRO_DRAM_W<'a, const O: u8> = crate::BitWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, O>;
 #[doc = "Field `MASK_APP_DRAM` reader - "]
-pub type MASK_APP_DRAM_R = crate::BitReader<bool>;
+pub type MASK_APP_DRAM_R = crate::BitReader;
 #[doc = "Field `MASK_APP_DRAM` writer - "]
-pub type MASK_APP_DRAM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, O>;
+pub type MASK_APP_DRAM_W<'a, const O: u8> = crate::BitWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, O>;
 #[doc = "Field `MASK_AHB` reader - "]
-pub type MASK_AHB_R = crate::BitReader<bool>;
+pub type MASK_AHB_R = crate::BitReader;
 #[doc = "Field `MASK_AHB` writer - "]
-pub type MASK_AHB_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, O>;
+pub type MASK_AHB_W<'a, const O: u8> = crate::BitWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, O>;
 #[doc = "Field `MAC_DUMP_MODE` reader - "]
-pub type MAC_DUMP_MODE_R = crate::FieldReader<u8, u8>;
+pub type MAC_DUMP_MODE_R = crate::FieldReader;
 #[doc = "Field `MAC_DUMP_MODE` writer - "]
-pub type MAC_DUMP_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, u8, u8, 2, O>;
+pub type MAC_DUMP_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, IRAM_DRAM_AHB_SEL_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -93,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn mac_dump_mode(&self) -> MAC_DUMP_MODE_R {
         MAC_DUMP_MODE_R::new(((self.bits >> 5) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IRAM_DRAM_AHB_SEL")
+            .field(
+                "mask_pro_iram",
+                &format_args!("{}", self.mask_pro_iram().bit()),
+            )
+            .field(
+                "mask_app_iram",
+                &format_args!("{}", self.mask_app_iram().bit()),
+            )
+            .field(
+                "mask_pro_dram",
+                &format_args!("{}", self.mask_pro_dram().bit()),
+            )
+            .field(
+                "mask_app_dram",
+                &format_args!("{}", self.mask_app_dram().bit()),
+            )
+            .field("mask_ahb", &format_args!("{}", self.mask_ahb().bit()))
+            .field(
+                "mac_dump_mode",
+                &format_args!("{}", self.mac_dump_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IRAM_DRAM_AHB_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

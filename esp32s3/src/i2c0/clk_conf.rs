@@ -35,25 +35,25 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_NUM` reader - the integral part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - the integral part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor for i2c module"]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_SEL` reader - The clock selection for i2c module:0-XTAL;1-CLK_8MHz."]
-pub type SCLK_SEL_R = crate::BitReader<bool>;
+pub type SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `SCLK_SEL` writer - The clock selection for i2c module:0-XTAL;1-CLK_8MHz."]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `SCLK_ACTIVE` reader - The clock switch for i2c module"]
-pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
+pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - The clock switch for i2c module"]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
@@ -79,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn sclk_active(&self) -> SCLK_ACTIVE_R {
         SCLK_ACTIVE_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field(
+                "sclk_div_num",
+                &format_args!("{}", self.sclk_div_num().bits()),
+            )
+            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
+            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
+            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bit()))
+            .field("sclk_active", &format_args!("{}", self.sclk_active().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

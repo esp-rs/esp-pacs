@@ -35,20 +35,20 @@ impl From<crate::W<SPI_SMEM_TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` reader - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
-pub type SPI_SMEM_TIMING_CLK_ENA_R = crate::BitReader<bool>;
+pub type SPI_SMEM_TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` writer - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
 pub type SPI_SMEM_TIMING_CLK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_TIMING_CALI_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_SMEM_TIMING_CALI_SPEC, O>;
 #[doc = "Field `SPI_SMEM_TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub type SPI_SMEM_TIMING_CALI_R = crate::BitReader<bool>;
+pub type SPI_SMEM_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_TIMING_CALI` writer - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
 pub type SPI_SMEM_TIMING_CALI_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_TIMING_CALI_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_SMEM_TIMING_CALI_SPEC, O>;
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
-pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
 pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_TIMING_CALI_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_TIMING_CALI_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_extra_dummy_cyclelen(&self) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R {
         SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_TIMING_CALI")
+            .field(
+                "spi_smem_timing_clk_ena",
+                &format_args!("{}", self.spi_smem_timing_clk_ena().bit()),
+            )
+            .field(
+                "spi_smem_timing_cali",
+                &format_args!("{}", self.spi_smem_timing_cali().bit()),
+            )
+            .field(
+                "spi_smem_extra_dummy_cyclelen",
+                &format_args!("{}", self.spi_smem_extra_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_TIMING_CALI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

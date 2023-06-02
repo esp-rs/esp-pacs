@@ -35,31 +35,31 @@ impl From<crate::W<DOEPCTL0_SPEC>> for W {
     }
 }
 #[doc = "Field `MPS0` reader - "]
-pub type MPS0_R = crate::FieldReader<u8, u8>;
+pub type MPS0_R = crate::FieldReader;
 #[doc = "Field `USBACTEP0` reader - "]
-pub type USBACTEP0_R = crate::BitReader<bool>;
+pub type USBACTEP0_R = crate::BitReader;
 #[doc = "Field `NAKSTS0` reader - "]
-pub type NAKSTS0_R = crate::BitReader<bool>;
+pub type NAKSTS0_R = crate::BitReader;
 #[doc = "Field `EPTYPE0` reader - "]
-pub type EPTYPE0_R = crate::FieldReader<u8, u8>;
+pub type EPTYPE0_R = crate::FieldReader;
 #[doc = "Field `SNP0` reader - "]
-pub type SNP0_R = crate::BitReader<bool>;
+pub type SNP0_R = crate::BitReader;
 #[doc = "Field `SNP0` writer - "]
-pub type SNP0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL0_SPEC, bool, O>;
+pub type SNP0_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL0_SPEC, O>;
 #[doc = "Field `STALL0` reader - "]
-pub type STALL0_R = crate::BitReader<bool>;
+pub type STALL0_R = crate::BitReader;
 #[doc = "Field `STALL0` writer - "]
-pub type STALL0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL0_SPEC, bool, O>;
+pub type STALL0_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL0_SPEC, O>;
 #[doc = "Field `CNAK0` writer - "]
-pub type CNAK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL0_SPEC, bool, O>;
+pub type CNAK0_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL0_SPEC, O>;
 #[doc = "Field `DO_SNAK0` writer - "]
-pub type DO_SNAK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL0_SPEC, bool, O>;
+pub type DO_SNAK0_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL0_SPEC, O>;
 #[doc = "Field `EPDIS0` reader - "]
-pub type EPDIS0_R = crate::BitReader<bool>;
+pub type EPDIS0_R = crate::BitReader;
 #[doc = "Field `EPENA0` reader - "]
-pub type EPENA0_R = crate::BitReader<bool>;
+pub type EPENA0_R = crate::BitReader;
 #[doc = "Field `EPENA0` writer - "]
-pub type EPENA0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPCTL0_SPEC, bool, O>;
+pub type EPENA0_W<'a, const O: u8> = crate::BitWriter<'a, DOEPCTL0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -100,6 +100,27 @@ impl R {
     #[inline(always)]
     pub fn epena0(&self) -> EPENA0_R {
         EPENA0_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPCTL0")
+            .field("mps0", &format_args!("{}", self.mps0().bits()))
+            .field("usbactep0", &format_args!("{}", self.usbactep0().bit()))
+            .field("naksts0", &format_args!("{}", self.naksts0().bit()))
+            .field("eptype0", &format_args!("{}", self.eptype0().bits()))
+            .field("snp0", &format_args!("{}", self.snp0().bit()))
+            .field("stall0", &format_args!("{}", self.stall0().bit()))
+            .field("epdis0", &format_args!("{}", self.epdis0().bit()))
+            .field("epena0", &format_args!("{}", self.epena0().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPCTL0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,14 +35,13 @@ impl From<crate::W<TOUCH_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `IO_TOUCH_BUFSEL` reader - BUF_SEL when touch work without fsm"]
-pub type IO_TOUCH_BUFSEL_R = crate::FieldReader<u8, u8>;
+pub type IO_TOUCH_BUFSEL_R = crate::FieldReader;
 #[doc = "Field `IO_TOUCH_BUFSEL` writer - BUF_SEL when touch work without fsm"]
-pub type IO_TOUCH_BUFSEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CTRL_SPEC, u8, u8, 4, O>;
+pub type IO_TOUCH_BUFSEL_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL_SPEC, 4, O>;
 #[doc = "Field `IO_TOUCH_BUFMODE` reader - BUF_MODE when touch work without fsm"]
-pub type IO_TOUCH_BUFMODE_R = crate::BitReader<bool>;
+pub type IO_TOUCH_BUFMODE_R = crate::BitReader;
 #[doc = "Field `IO_TOUCH_BUFMODE` writer - BUF_MODE when touch work without fsm"]
-pub type IO_TOUCH_BUFMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CTRL_SPEC, bool, O>;
+pub type IO_TOUCH_BUFMODE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - BUF_SEL when touch work without fsm"]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn io_touch_bufmode(&self) -> IO_TOUCH_BUFMODE_R {
         IO_TOUCH_BUFMODE_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_CTRL")
+            .field(
+                "io_touch_bufsel",
+                &format_args!("{}", self.io_touch_bufsel().bits()),
+            )
+            .field(
+                "io_touch_bufmode",
+                &format_args!("{}", self.io_touch_bufmode().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

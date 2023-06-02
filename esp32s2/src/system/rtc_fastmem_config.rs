@@ -35,22 +35,21 @@ impl From<crate::W<RTC_FASTMEM_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_START` reader - Set this bit to start the CRC of RTC memory."]
-pub type RTC_MEM_CRC_START_R = crate::BitReader<bool>;
+pub type RTC_MEM_CRC_START_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_START` writer - Set this bit to start the CRC of RTC memory."]
-pub type RTC_MEM_CRC_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, bool, O>;
+pub type RTC_MEM_CRC_START_W<'a, const O: u8> = crate::BitWriter<'a, RTC_FASTMEM_CONFIG_SPEC, O>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - This field is used to set address of RTC memory for CRC."]
 pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - This field is used to set address of RTC memory for CRC."]
 pub type RTC_MEM_CRC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - This field is used to set length of RTC memory for CRC based on start address."]
 pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - This field is used to set length of RTC memory for CRC based on start address."]
 pub type RTC_MEM_CRC_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - This bit stores the status of RTC memory CRC. High level means finished while low level means not finished."]
-pub type RTC_MEM_CRC_FINISH_R = crate::BitReader<bool>;
+pub type RTC_MEM_CRC_FINISH_R = crate::BitReader;
 impl R {
     #[doc = "Bit 8 - Set this bit to start the CRC of RTC memory."]
     #[inline(always)]
@@ -71,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn rtc_mem_crc_finish(&self) -> RTC_MEM_CRC_FINISH_R {
         RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_FASTMEM_CONFIG")
+            .field(
+                "rtc_mem_crc_start",
+                &format_args!("{}", self.rtc_mem_crc_start().bit()),
+            )
+            .field(
+                "rtc_mem_crc_addr",
+                &format_args!("{}", self.rtc_mem_crc_addr().bits()),
+            )
+            .field(
+                "rtc_mem_crc_len",
+                &format_args!("{}", self.rtc_mem_crc_len().bits()),
+            )
+            .field(
+                "rtc_mem_crc_finish",
+                &format_args!("{}", self.rtc_mem_crc_finish().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_FASTMEM_CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,31 @@ impl From<crate::W<FLASH_ACE2_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_ACE2_ATTR` reader - "]
-pub type FLASH_ACE2_ATTR_R = crate::FieldReader<u8, u8>;
+pub type FLASH_ACE2_ATTR_R = crate::FieldReader;
 #[doc = "Field `FLASH_ACE2_ATTR` writer - "]
-pub type FLASH_ACE2_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_ACE2_ATTR_SPEC, u8, u8, 3, O>;
+pub type FLASH_ACE2_ATTR_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_ACE2_ATTR_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn flash_ace2_attr(&self) -> FLASH_ACE2_ATTR_R {
         FLASH_ACE2_ATTR_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_ACE2_ATTR")
+            .field(
+                "flash_ace2_attr",
+                &format_args!("{}", self.flash_ace2_attr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_ACE2_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

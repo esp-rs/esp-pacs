@@ -35,51 +35,51 @@ impl From<crate::W<SLAVE_SPEC>> for W {
     }
 }
 #[doc = "Field `TRANS_DONE` reader - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
-pub type TRANS_DONE_R = crate::BitReader<bool>;
+pub type TRANS_DONE_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE` writer - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
-pub type TRANS_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type TRANS_DONE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_RD_BUF_DONE_EN` reader - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_BUF_DONE_EN_R = crate::BitReader<bool>;
+pub type INT_RD_BUF_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_RD_BUF_DONE_EN` writer - SPI_SLV_RD_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_BUF_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_RD_BUF_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_WR_BUF_DONE_EN` reader - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_BUF_DONE_EN_R = crate::BitReader<bool>;
+pub type INT_WR_BUF_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_WR_BUF_DONE_EN` writer - SPI_SLV_WR_BUF_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_BUF_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_WR_BUF_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_RD_DMA_DONE_EN` reader - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_DMA_DONE_EN_R = crate::BitReader<bool>;
+pub type INT_RD_DMA_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_RD_DMA_DONE_EN` writer - SPI_SLV_RD_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_RD_DMA_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_RD_DMA_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_WR_DMA_DONE_EN` reader - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_DMA_DONE_EN_R = crate::BitReader<bool>;
+pub type INT_WR_DMA_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_WR_DMA_DONE_EN` writer - SPI_SLV_WR_DMA_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_WR_DMA_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_WR_DMA_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_TRANS_DONE_EN` reader - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_TRANS_DONE_EN_R = crate::BitReader<bool>;
+pub type INT_TRANS_DONE_EN_R = crate::BitReader;
 #[doc = "Field `INT_TRANS_DONE_EN` writer - SPI_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_TRANS_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_TRANS_DONE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `INT_DMA_SEG_TRANS_EN` reader - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_DMA_SEG_TRANS_EN_R = crate::BitReader<bool>;
+pub type INT_DMA_SEG_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `INT_DMA_SEG_TRANS_EN` writer - SPI_DMA_SEG_TRANS_DONE Interrupt enable. 1: enable 0: disable. Can be configured in CONF state."]
-pub type INT_DMA_SEG_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type INT_DMA_SEG_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SEG_MAGIC_ERR_INT_EN` reader - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
-pub type SEG_MAGIC_ERR_INT_EN_R = crate::BitReader<bool>;
+pub type SEG_MAGIC_ERR_INT_EN_R = crate::BitReader;
 #[doc = "Field `SEG_MAGIC_ERR_INT_EN` writer - 1: Enable seg magic value error interrupt. 0: Others. Can be configured in CONF state."]
-pub type SEG_MAGIC_ERR_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SEG_MAGIC_ERR_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `TRANS_CNT` reader - The operations counter in both the master mode and the slave mode."]
-pub type TRANS_CNT_R = crate::FieldReader<u8, u8>;
+pub type TRANS_CNT_R = crate::FieldReader;
 #[doc = "Field `TRANS_DONE_AUTO_CLR_EN` reader - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
-pub type TRANS_DONE_AUTO_CLR_EN_R = crate::BitReader<bool>;
+pub type TRANS_DONE_AUTO_CLR_EN_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE_AUTO_CLR_EN` writer - SPI_TRANS_DONE auto clear enable, clear it 3 apb cycles after the pos edge of SPI_TRANS_DONE. 0:disable. 1: enable. Can be configured in CONF state."]
-pub type TRANS_DONE_AUTO_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type TRANS_DONE_AUTO_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `MODE` reader - Set SPI work mode. 1: slave mode 0: master mode."]
-pub type MODE_R = crate::BitReader<bool>;
+pub type MODE_R = crate::BitReader;
 #[doc = "Field `MODE` writer - Set SPI work mode. 1: slave mode 0: master mode."]
-pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 #[doc = "Field `SOFT_RESET` reader - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
-pub type SOFT_RESET_R = crate::BitReader<bool>;
+pub type SOFT_RESET_R = crate::BitReader;
 #[doc = "Field `SOFT_RESET` writer - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
-pub type SOFT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_SPEC, bool, O>;
+pub type SOFT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPEC, O>;
 impl R {
     #[doc = "Bit 4 - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
@@ -140,6 +140,55 @@ impl R {
     #[inline(always)]
     pub fn soft_reset(&self) -> SOFT_RESET_R {
         SOFT_RESET_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE")
+            .field("trans_done", &format_args!("{}", self.trans_done().bit()))
+            .field(
+                "int_rd_buf_done_en",
+                &format_args!("{}", self.int_rd_buf_done_en().bit()),
+            )
+            .field(
+                "int_wr_buf_done_en",
+                &format_args!("{}", self.int_wr_buf_done_en().bit()),
+            )
+            .field(
+                "int_rd_dma_done_en",
+                &format_args!("{}", self.int_rd_dma_done_en().bit()),
+            )
+            .field(
+                "int_wr_dma_done_en",
+                &format_args!("{}", self.int_wr_dma_done_en().bit()),
+            )
+            .field(
+                "int_trans_done_en",
+                &format_args!("{}", self.int_trans_done_en().bit()),
+            )
+            .field(
+                "int_dma_seg_trans_en",
+                &format_args!("{}", self.int_dma_seg_trans_en().bit()),
+            )
+            .field(
+                "seg_magic_err_int_en",
+                &format_args!("{}", self.seg_magic_err_int_en().bit()),
+            )
+            .field("trans_cnt", &format_args!("{}", self.trans_cnt().bits()))
+            .field(
+                "trans_done_auto_clr_en",
+                &format_args!("{}", self.trans_done_auto_clr_en().bit()),
+            )
+            .field("mode", &format_args!("{}", self.mode().bit()))
+            .field("soft_reset", &format_args!("{}", self.soft_reset().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

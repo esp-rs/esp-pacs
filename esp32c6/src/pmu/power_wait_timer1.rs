@@ -35,20 +35,20 @@ impl From<crate::W<POWER_WAIT_TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `DG_LP_POWERDOWN_TIMER` reader - need_des"]
-pub type DG_LP_POWERDOWN_TIMER_R = crate::FieldReader<u8, u8>;
+pub type DG_LP_POWERDOWN_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_LP_POWERDOWN_TIMER` writer - need_des"]
 pub type DG_LP_POWERDOWN_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER1_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 7, O>;
 #[doc = "Field `DG_LP_POWERUP_TIMER` reader - need_des"]
-pub type DG_LP_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type DG_LP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_LP_POWERUP_TIMER` writer - need_des"]
 pub type DG_LP_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER1_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 7, O>;
 #[doc = "Field `DG_LP_WAIT_TIMER` reader - need_des"]
 pub type DG_LP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_LP_WAIT_TIMER` writer - need_des"]
 pub type DG_LP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 9:15 - need_des"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn dg_lp_wait_timer(&self) -> DG_LP_WAIT_TIMER_R {
         DG_LP_WAIT_TIMER_R::new(((self.bits >> 23) & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_WAIT_TIMER1")
+            .field(
+                "dg_lp_powerdown_timer",
+                &format_args!("{}", self.dg_lp_powerdown_timer().bits()),
+            )
+            .field(
+                "dg_lp_powerup_timer",
+                &format_args!("{}", self.dg_lp_powerup_timer().bits()),
+            )
+            .field(
+                "dg_lp_wait_timer",
+                &format_args!("{}", self.dg_lp_wait_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_WAIT_TIMER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

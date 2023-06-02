@@ -35,25 +35,22 @@ impl From<crate::W<SLC_BRIDGE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TXEOF_ENA` reader - "]
-pub type SLC_TXEOF_ENA_R = crate::FieldReader<u8, u8>;
+pub type SLC_TXEOF_ENA_R = crate::FieldReader;
 #[doc = "Field `SLC_TXEOF_ENA` writer - "]
-pub type SLC_TXEOF_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_BRIDGE_CONF_SPEC, u8, u8, 6, O>;
+pub type SLC_TXEOF_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_BRIDGE_CONF_SPEC, 6, O>;
 #[doc = "Field `SLC_FIFO_MAP_ENA` reader - "]
-pub type SLC_FIFO_MAP_ENA_R = crate::FieldReader<u8, u8>;
+pub type SLC_FIFO_MAP_ENA_R = crate::FieldReader;
 #[doc = "Field `SLC_FIFO_MAP_ENA` writer - "]
-pub type SLC_FIFO_MAP_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_BRIDGE_CONF_SPEC, u8, u8, 4, O>;
+pub type SLC_FIFO_MAP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_BRIDGE_CONF_SPEC, 4, O>;
 #[doc = "Field `SLC_TX_DUMMY_MODE` reader - "]
-pub type SLC_TX_DUMMY_MODE_R = crate::BitReader<bool>;
+pub type SLC_TX_DUMMY_MODE_R = crate::BitReader;
 #[doc = "Field `SLC_TX_DUMMY_MODE` writer - "]
-pub type SLC_TX_DUMMY_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC_BRIDGE_CONF_SPEC, bool, O>;
+pub type SLC_TX_DUMMY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SLC_BRIDGE_CONF_SPEC, O>;
 #[doc = "Field `SLC_TX_PUSH_IDLE_NUM` reader - "]
 pub type SLC_TX_PUSH_IDLE_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC_TX_PUSH_IDLE_NUM` writer - "]
 pub type SLC_TX_PUSH_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_BRIDGE_CONF_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SLC_BRIDGE_CONF_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -74,6 +71,35 @@ impl R {
     #[inline(always)]
     pub fn slc_tx_push_idle_num(&self) -> SLC_TX_PUSH_IDLE_NUM_R {
         SLC_TX_PUSH_IDLE_NUM_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_BRIDGE_CONF")
+            .field(
+                "slc_tx_push_idle_num",
+                &format_args!("{}", self.slc_tx_push_idle_num().bits()),
+            )
+            .field(
+                "slc_tx_dummy_mode",
+                &format_args!("{}", self.slc_tx_dummy_mode().bit()),
+            )
+            .field(
+                "slc_fifo_map_ena",
+                &format_args!("{}", self.slc_fifo_map_ena().bits()),
+            )
+            .field(
+                "slc_txeof_ena",
+                &format_args!("{}", self.slc_txeof_ena().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_BRIDGE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,29 +35,29 @@ impl From<crate::W<OUT_INT_RAW_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_DONE` reader - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
-pub type OUT_DONE_R = crate::BitReader<bool>;
+pub type OUT_DONE_R = crate::BitReader;
 #[doc = "Field `OUT_DONE` writer - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
-pub type OUT_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUT_DONE_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 #[doc = "Field `OUT_EOF` reader - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
-pub type OUT_EOF_R = crate::BitReader<bool>;
+pub type OUT_EOF_R = crate::BitReader;
 #[doc = "Field `OUT_EOF` writer - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel 0."]
-pub type OUT_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUT_EOF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 #[doc = "Field `OUT_DSCR_ERR` reader - The raw interrupt bit turns to high level when detecting outlink descriptor error including owner error and the second and third word error of outlink descriptor for Tx channel 0."]
-pub type OUT_DSCR_ERR_R = crate::BitReader<bool>;
+pub type OUT_DSCR_ERR_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR` writer - The raw interrupt bit turns to high level when detecting outlink descriptor error including owner error and the second and third word error of outlink descriptor for Tx channel 0."]
-pub type OUT_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUT_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 #[doc = "Field `OUT_TOTAL_EOF` reader - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
-pub type OUT_TOTAL_EOF_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF` writer - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel 0."]
-pub type OUT_TOTAL_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUT_TOTAL_EOF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_OVF` reader - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
-pub type OUTFIFO_OVF_R = crate::BitReader<bool>;
+pub type OUTFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_OVF` writer - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is overflow."]
-pub type OUTFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUTFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 #[doc = "Field `OUTFIFO_UDF` reader - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
-pub type OUTFIFO_UDF_R = crate::BitReader<bool>;
+pub type OUTFIFO_UDF_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_UDF` writer - This raw interrupt bit turns to high level when level 1 fifo of Tx channel 0 is underflow."]
-pub type OUTFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_INT_RAW_CH_SPEC, bool, O>;
+pub type OUTFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, OUT_INT_RAW_CH_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel 0."]
     #[inline(always)]
@@ -88,6 +88,31 @@ impl R {
     #[inline(always)]
     pub fn outfifo_udf(&self) -> OUTFIFO_UDF_R {
         OUTFIFO_UDF_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_INT_RAW_CH")
+            .field("out_done", &format_args!("{}", self.out_done().bit()))
+            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
+            .field(
+                "out_dscr_err",
+                &format_args!("{}", self.out_dscr_err().bit()),
+            )
+            .field(
+                "out_total_eof",
+                &format_args!("{}", self.out_total_eof().bit()),
+            )
+            .field("outfifo_ovf", &format_args!("{}", self.outfifo_ovf().bit()))
+            .field("outfifo_udf", &format_args!("{}", self.outfifo_udf().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_INT_RAW_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

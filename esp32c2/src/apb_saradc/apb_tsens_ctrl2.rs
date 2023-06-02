@@ -38,22 +38,20 @@ impl From<crate::W<APB_TSENS_CTRL2_SPEC>> for W {
 pub type REG_TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `REG_TSENS_XPD_WAIT` writer - Need add description"]
 pub type REG_TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_CTRL2_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, APB_TSENS_CTRL2_SPEC, 12, O, u16, u16>;
 #[doc = "Field `REG_TSENS_XPD_FORCE` reader - Need add description"]
-pub type REG_TSENS_XPD_FORCE_R = crate::FieldReader<u8, u8>;
+pub type REG_TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_XPD_FORCE` writer - Need add description"]
 pub type REG_TSENS_XPD_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_CTRL2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, APB_TSENS_CTRL2_SPEC, 2, O>;
 #[doc = "Field `REG_TSENS_CLK_INV` reader - Need add description"]
-pub type REG_TSENS_CLK_INV_R = crate::BitReader<bool>;
+pub type REG_TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `REG_TSENS_CLK_INV` writer - Need add description"]
-pub type REG_TSENS_CLK_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_TSENS_CTRL2_SPEC, bool, O>;
+pub type REG_TSENS_CLK_INV_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL2_SPEC, O>;
 #[doc = "Field `TSENS_CLK_SEL` reader - Need add description"]
-pub type TSENS_CLK_SEL_R = crate::BitReader<bool>;
+pub type TSENS_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_SEL` writer - Need add description"]
-pub type TSENS_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_TSENS_CTRL2_SPEC, bool, O>;
+pub type TSENS_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - Need add description"]
     #[inline(always)]
@@ -74,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn tsens_clk_sel(&self) -> TSENS_CLK_SEL_R {
         TSENS_CLK_SEL_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_TSENS_CTRL2")
+            .field(
+                "reg_tsens_xpd_wait",
+                &format_args!("{}", self.reg_tsens_xpd_wait().bits()),
+            )
+            .field(
+                "reg_tsens_xpd_force",
+                &format_args!("{}", self.reg_tsens_xpd_force().bits()),
+            )
+            .field(
+                "reg_tsens_clk_inv",
+                &format_args!("{}", self.reg_tsens_clk_inv().bit()),
+            )
+            .field(
+                "tsens_clk_sel",
+                &format_args!("{}", self.tsens_clk_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

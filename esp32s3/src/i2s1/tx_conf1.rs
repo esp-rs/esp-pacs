@@ -35,37 +35,33 @@ impl From<crate::W<TX_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_TDM_WS_WIDTH` reader - The width of tx_ws_out in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
-pub type TX_TDM_WS_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type TX_TDM_WS_WIDTH_R = crate::FieldReader;
 #[doc = "Field `TX_TDM_WS_WIDTH` writer - The width of tx_ws_out in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
-pub type TX_TDM_WS_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CONF1_SPEC, u8, u8, 7, O>;
+pub type TX_TDM_WS_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 7, O>;
 #[doc = "Field `TX_BCK_DIV_NUM` reader - Bit clock configuration bits in transmitter mode."]
-pub type TX_BCK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type TX_BCK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_DIV_NUM` writer - Bit clock configuration bits in transmitter mode."]
-pub type TX_BCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CONF1_SPEC, u8, u8, 6, O>;
+pub type TX_BCK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 6, O>;
 #[doc = "Field `TX_BITS_MOD` reader - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type TX_BITS_MOD_R = crate::FieldReader<u8, u8>;
+pub type TX_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_BITS_MOD` writer - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
-pub type TX_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_CONF1_SPEC, u8, u8, 5, O>;
+pub type TX_BITS_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 5, O>;
 #[doc = "Field `TX_HALF_SAMPLE_BITS` reader - I2S Tx half sample bits -1."]
-pub type TX_HALF_SAMPLE_BITS_R = crate::FieldReader<u8, u8>;
+pub type TX_HALF_SAMPLE_BITS_R = crate::FieldReader;
 #[doc = "Field `TX_HALF_SAMPLE_BITS` writer - I2S Tx half sample bits -1."]
-pub type TX_HALF_SAMPLE_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CONF1_SPEC, u8, u8, 6, O>;
+pub type TX_HALF_SAMPLE_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 6, O>;
 #[doc = "Field `TX_TDM_CHAN_BITS` reader - The Tx bit number for each channel minus 1in TDM mode."]
-pub type TX_TDM_CHAN_BITS_R = crate::FieldReader<u8, u8>;
+pub type TX_TDM_CHAN_BITS_R = crate::FieldReader;
 #[doc = "Field `TX_TDM_CHAN_BITS` writer - The Tx bit number for each channel minus 1in TDM mode."]
-pub type TX_TDM_CHAN_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CONF1_SPEC, u8, u8, 5, O>;
+pub type TX_TDM_CHAN_BITS_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 5, O>;
 #[doc = "Field `TX_MSB_SHIFT` reader - Set this bit to enable transmitter in Phillips standard mode"]
-pub type TX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type TX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_SHIFT` writer - Set this bit to enable transmitter in Phillips standard mode"]
-pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CONF1_SPEC, bool, O>;
+pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, TX_CONF1_SPEC, O>;
 #[doc = "Field `TX_BCK_NO_DLY` reader - 1: BCK is not delayed to generate pos/neg edge in master mode. 0: BCK is delayed to generate pos/neg edge in master mode."]
-pub type TX_BCK_NO_DLY_R = crate::BitReader<bool>;
+pub type TX_BCK_NO_DLY_R = crate::BitReader;
 #[doc = "Field `TX_BCK_NO_DLY` writer - 1: BCK is not delayed to generate pos/neg edge in master mode. 0: BCK is delayed to generate pos/neg edge in master mode."]
-pub type TX_BCK_NO_DLY_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_CONF1_SPEC, bool, O>;
+pub type TX_BCK_NO_DLY_W<'a, const O: u8> = crate::BitWriter<'a, TX_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:6 - The width of tx_ws_out in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
@@ -101,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn tx_bck_no_dly(&self) -> TX_BCK_NO_DLY_R {
         TX_BCK_NO_DLY_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_CONF1")
+            .field(
+                "tx_tdm_ws_width",
+                &format_args!("{}", self.tx_tdm_ws_width().bits()),
+            )
+            .field(
+                "tx_bck_div_num",
+                &format_args!("{}", self.tx_bck_div_num().bits()),
+            )
+            .field(
+                "tx_bits_mod",
+                &format_args!("{}", self.tx_bits_mod().bits()),
+            )
+            .field(
+                "tx_half_sample_bits",
+                &format_args!("{}", self.tx_half_sample_bits().bits()),
+            )
+            .field(
+                "tx_tdm_chan_bits",
+                &format_args!("{}", self.tx_tdm_chan_bits().bits()),
+            )
+            .field(
+                "tx_msb_shift",
+                &format_args!("{}", self.tx_msb_shift().bit()),
+            )
+            .field(
+                "tx_bck_no_dly",
+                &format_args!("{}", self.tx_bck_no_dly().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

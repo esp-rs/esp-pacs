@@ -35,42 +35,41 @@ impl From<crate::W<SWFC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `XON_CHAR` reader - This register stores the Xon flow control char."]
-pub type XON_CHAR_R = crate::FieldReader<u8, u8>;
+pub type XON_CHAR_R = crate::FieldReader;
 #[doc = "Field `XON_CHAR` writer - This register stores the Xon flow control char."]
-pub type XON_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SWFC_CONF0_SPEC, u8, u8, 8, O>;
+pub type XON_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 8, O>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_R = crate::FieldReader<u8, u8>;
+pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SWFC_CONF0_SPEC, u8, u8, 8, O>;
+pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 8, O>;
 #[doc = "Field `XON_XOFF_STILL_SEND` reader - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
-pub type XON_XOFF_STILL_SEND_R = crate::BitReader<bool>;
+pub type XON_XOFF_STILL_SEND_R = crate::BitReader;
 #[doc = "Field `XON_XOFF_STILL_SEND` writer - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
-pub type XON_XOFF_STILL_SEND_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type XON_XOFF_STILL_SEND_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
-pub type SW_FLOW_CON_EN_R = crate::BitReader<bool>;
+pub type SW_FLOW_CON_EN_R = crate::BitReader;
 #[doc = "Field `SW_FLOW_CON_EN` writer - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
-pub type SW_FLOW_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type SW_FLOW_CON_EN_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control char from the received data."]
-pub type XONOFF_DEL_R = crate::BitReader<bool>;
+pub type XONOFF_DEL_R = crate::BitReader;
 #[doc = "Field `XONOFF_DEL` writer - Set this bit to remove flow control char from the received data."]
-pub type XONOFF_DEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type XONOFF_DEL_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `FORCE_XON` reader - Set this bit to enable the transmitter to go on sending data."]
-pub type FORCE_XON_R = crate::BitReader<bool>;
+pub type FORCE_XON_R = crate::BitReader;
 #[doc = "Field `FORCE_XON` writer - Set this bit to enable the transmitter to go on sending data."]
-pub type FORCE_XON_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type FORCE_XON_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to stop the transmitter from sending data."]
-pub type FORCE_XOFF_R = crate::BitReader<bool>;
+pub type FORCE_XOFF_R = crate::BitReader;
 #[doc = "Field `FORCE_XOFF` writer - Set this bit to stop the transmitter from sending data."]
-pub type FORCE_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type FORCE_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `SEND_XON` reader - Set this bit to send Xon char. It is cleared by hardware automatically."]
-pub type SEND_XON_R = crate::BitReader<bool>;
+pub type SEND_XON_R = crate::BitReader;
 #[doc = "Field `SEND_XON` writer - Set this bit to send Xon char. It is cleared by hardware automatically."]
-pub type SEND_XON_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type SEND_XON_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send Xoff char. It is cleared by hardware automatically."]
-pub type SEND_XOFF_R = crate::BitReader<bool>;
+pub type SEND_XOFF_R = crate::BitReader;
 #[doc = "Field `SEND_XOFF` writer - Set this bit to send Xoff char. It is cleared by hardware automatically."]
-pub type SEND_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWFC_CONF0_SPEC, bool, O>;
+pub type SEND_XOFF_W<'a, const O: u8> = crate::BitWriter<'a, SWFC_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - This register stores the Xon flow control char."]
     #[inline(always)]
@@ -116,6 +115,34 @@ impl R {
     #[inline(always)]
     pub fn send_xoff(&self) -> SEND_XOFF_R {
         SEND_XOFF_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWFC_CONF0")
+            .field("xon_char", &format_args!("{}", self.xon_char().bits()))
+            .field("xoff_char", &format_args!("{}", self.xoff_char().bits()))
+            .field(
+                "xon_xoff_still_send",
+                &format_args!("{}", self.xon_xoff_still_send().bit()),
+            )
+            .field(
+                "sw_flow_con_en",
+                &format_args!("{}", self.sw_flow_con_en().bit()),
+            )
+            .field("xonoff_del", &format_args!("{}", self.xonoff_del().bit()))
+            .field("force_xon", &format_args!("{}", self.force_xon().bit()))
+            .field("force_xoff", &format_args!("{}", self.force_xoff().bit()))
+            .field("send_xon", &format_args!("{}", self.send_xon().bit()))
+            .field("send_xoff", &format_args!("{}", self.send_xoff().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

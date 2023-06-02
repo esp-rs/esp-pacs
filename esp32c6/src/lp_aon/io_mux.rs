@@ -35,14 +35,31 @@ impl From<crate::W<IO_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_DISABLE` reader - need_des"]
-pub type RESET_DISABLE_R = crate::BitReader<bool>;
+pub type RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `RESET_DISABLE` writer - need_des"]
-pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IO_MUX_SPEC, bool, O>;
+pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn reset_disable(&self) -> RESET_DISABLE_R {
         RESET_DISABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IO_MUX")
+            .field(
+                "reset_disable",
+                &format_args!("{}", self.reset_disable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IO_MUX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -20,8 +20,13 @@ impl From<crate::W<SLP_WAKEUP_CNTL4_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - need_des"]
-pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_WAKEUP_CNTL4_SPEC, bool, O>;
+pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLP_WAKEUP_CNTL4_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]

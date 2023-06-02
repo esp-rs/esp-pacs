@@ -35,46 +35,41 @@ impl From<crate::W<UART_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `rxfifo_full_int_ena` reader - The interrupt enable bit for rx fifo full event"]
-pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `rxfifo_full_int_ena` writer - The interrupt enable bit for rx fifo full event"]
-pub type RXFIFO_FULL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_FULL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `txfifo_empty_int_ena` reader - The interrupt enable bit for tx fifo empty event"]
-pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader<bool>;
+pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `txfifo_empty_int_ena` writer - The interrupt enable bit for tx fifo empty event"]
-pub type TXFIFO_EMPTY_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type TXFIFO_EMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `parity_err_int_ena` reader - The interrupt enable bit for parity error"]
-pub type PARITY_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type PARITY_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `parity_err_int_ena` writer - The interrupt enable bit for parity error"]
-pub type PARITY_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type PARITY_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `frm_err_int_ena` reader - The interrupt enable bit for other rx error"]
-pub type FRM_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type FRM_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `frm_err_int_ena` writer - The interrupt enable bit for other rx error"]
-pub type FRM_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type FRM_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `rxfifo_ovf_int_ena` reader - The interrupt enable bit for rx fifo overflow"]
-pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `rxfifo_ovf_int_ena` writer - The interrupt enable bit for rx fifo overflow"]
-pub type RXFIFO_OVF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `dsr_chg_int_ena` reader - The interrupt enable bit for DSR changing level"]
-pub type DSR_CHG_INT_ENA_R = crate::BitReader<bool>;
+pub type DSR_CHG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `dsr_chg_int_ena` writer - The interrupt enable bit for DSR changing level"]
-pub type DSR_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type DSR_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `cts_chg_int_ena` reader - The interrupt enable bit for CTS changing level"]
-pub type CTS_CHG_INT_ENA_R = crate::BitReader<bool>;
+pub type CTS_CHG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `cts_chg_int_ena` writer - The interrupt enable bit for CTS changing level"]
-pub type CTS_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type CTS_CHG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `brk_det_int_ena` reader - The interrupt enable bit for rx byte start error"]
-pub type BRK_DET_INT_ENA_R = crate::BitReader<bool>;
+pub type BRK_DET_INT_ENA_R = crate::BitReader;
 #[doc = "Field `brk_det_int_ena` writer - The interrupt enable bit for rx byte start error"]
-pub type BRK_DET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type BRK_DET_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 #[doc = "Field `rxfifo_tout_int_ena` reader - The interrupt enable bit for rx time-out interrupt"]
-pub type RXFIFO_TOUT_INT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_TOUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `rxfifo_tout_int_ena` writer - The interrupt enable bit for rx time-out interrupt"]
-pub type RXFIFO_TOUT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, UART_INT_ENA_SPEC, bool, O>;
+pub type RXFIFO_TOUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, UART_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for rx fifo full event"]
     #[inline(always)]
@@ -120,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn rxfifo_tout_int_ena(&self) -> RXFIFO_TOUT_INT_ENA_R {
         RXFIFO_TOUT_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_INT_ENA")
+            .field(
+                "rxfifo_tout_int_ena",
+                &format_args!("{}", self.rxfifo_tout_int_ena().bit()),
+            )
+            .field(
+                "brk_det_int_ena",
+                &format_args!("{}", self.brk_det_int_ena().bit()),
+            )
+            .field(
+                "cts_chg_int_ena",
+                &format_args!("{}", self.cts_chg_int_ena().bit()),
+            )
+            .field(
+                "dsr_chg_int_ena",
+                &format_args!("{}", self.dsr_chg_int_ena().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_ena",
+                &format_args!("{}", self.rxfifo_ovf_int_ena().bit()),
+            )
+            .field(
+                "frm_err_int_ena",
+                &format_args!("{}", self.frm_err_int_ena().bit()),
+            )
+            .field(
+                "parity_err_int_ena",
+                &format_args!("{}", self.parity_err_int_ena().bit()),
+            )
+            .field(
+                "txfifo_empty_int_ena",
+                &format_args!("{}", self.txfifo_empty_int_ena().bit()),
+            )
+            .field(
+                "rxfifo_full_int_ena",
+                &format_args!("{}", self.rxfifo_full_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,29 @@ impl From<crate::W<CONFIG2_SPEC>> for W {
 #[doc = "Field `WDT_STG1_HOLD` reader - need_des"]
 pub type WDT_STG1_HOLD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WDT_STG1_HOLD` writer - need_des"]
-pub type WDT_STG1_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG2_SPEC, u32, u32, 32, O>;
+pub type WDT_STG1_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn wdt_stg1_hold(&self) -> WDT_STG1_HOLD_R {
         WDT_STG1_HOLD_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONFIG2")
+            .field(
+                "wdt_stg1_hold",
+                &format_args!("{}", self.wdt_stg1_hold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONFIG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

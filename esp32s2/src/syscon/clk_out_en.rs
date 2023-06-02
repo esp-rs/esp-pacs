@@ -35,49 +35,49 @@ impl From<crate::W<CLK_OUT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK20_OEN` reader - "]
-pub type CLK20_OEN_R = crate::BitReader<bool>;
+pub type CLK20_OEN_R = crate::BitReader;
 #[doc = "Field `CLK20_OEN` writer - "]
-pub type CLK20_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK20_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK22_OEN` reader - "]
-pub type CLK22_OEN_R = crate::BitReader<bool>;
+pub type CLK22_OEN_R = crate::BitReader;
 #[doc = "Field `CLK22_OEN` writer - "]
-pub type CLK22_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK22_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK44_OEN` reader - "]
-pub type CLK44_OEN_R = crate::BitReader<bool>;
+pub type CLK44_OEN_R = crate::BitReader;
 #[doc = "Field `CLK44_OEN` writer - "]
-pub type CLK44_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK44_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_BB_OEN` reader - "]
-pub type CLK_BB_OEN_R = crate::BitReader<bool>;
+pub type CLK_BB_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_BB_OEN` writer - "]
-pub type CLK_BB_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_BB_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK80_OEN` reader - "]
-pub type CLK80_OEN_R = crate::BitReader<bool>;
+pub type CLK80_OEN_R = crate::BitReader;
 #[doc = "Field `CLK80_OEN` writer - "]
-pub type CLK80_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK80_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK160_OEN` reader - "]
-pub type CLK160_OEN_R = crate::BitReader<bool>;
+pub type CLK160_OEN_R = crate::BitReader;
 #[doc = "Field `CLK160_OEN` writer - "]
-pub type CLK160_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK160_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_320M_OEN` reader - "]
-pub type CLK_320M_OEN_R = crate::BitReader<bool>;
+pub type CLK_320M_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_320M_OEN` writer - "]
-pub type CLK_320M_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_320M_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_ADC_INF_OEN` reader - "]
-pub type CLK_ADC_INF_OEN_R = crate::BitReader<bool>;
+pub type CLK_ADC_INF_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_ADC_INF_OEN` writer - "]
-pub type CLK_ADC_INF_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_ADC_INF_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_DAC_CPU_OEN` reader - "]
-pub type CLK_DAC_CPU_OEN_R = crate::BitReader<bool>;
+pub type CLK_DAC_CPU_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_DAC_CPU_OEN` writer - "]
-pub type CLK_DAC_CPU_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_DAC_CPU_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK40X_BB_OEN` reader - "]
-pub type CLK40X_BB_OEN_R = crate::BitReader<bool>;
+pub type CLK40X_BB_OEN_R = crate::BitReader;
 #[doc = "Field `CLK40X_BB_OEN` writer - "]
-pub type CLK40X_BB_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK40X_BB_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 #[doc = "Field `CLK_XTAL_OEN` reader - "]
-pub type CLK_XTAL_OEN_R = crate::BitReader<bool>;
+pub type CLK_XTAL_OEN_R = crate::BitReader;
 #[doc = "Field `CLK_XTAL_OEN` writer - "]
-pub type CLK_XTAL_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, O>;
+pub type CLK_XTAL_OEN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_OUT_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -133,6 +133,45 @@ impl R {
     #[inline(always)]
     pub fn clk_xtal_oen(&self) -> CLK_XTAL_OEN_R {
         CLK_XTAL_OEN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_OUT_EN")
+            .field("clk20_oen", &format_args!("{}", self.clk20_oen().bit()))
+            .field("clk22_oen", &format_args!("{}", self.clk22_oen().bit()))
+            .field("clk44_oen", &format_args!("{}", self.clk44_oen().bit()))
+            .field("clk_bb_oen", &format_args!("{}", self.clk_bb_oen().bit()))
+            .field("clk80_oen", &format_args!("{}", self.clk80_oen().bit()))
+            .field("clk160_oen", &format_args!("{}", self.clk160_oen().bit()))
+            .field(
+                "clk_320m_oen",
+                &format_args!("{}", self.clk_320m_oen().bit()),
+            )
+            .field(
+                "clk_adc_inf_oen",
+                &format_args!("{}", self.clk_adc_inf_oen().bit()),
+            )
+            .field(
+                "clk_dac_cpu_oen",
+                &format_args!("{}", self.clk_dac_cpu_oen().bit()),
+            )
+            .field(
+                "clk40x_bb_oen",
+                &format_args!("{}", self.clk40x_bb_oen().bit()),
+            )
+            .field(
+                "clk_xtal_oen",
+                &format_args!("{}", self.clk_xtal_oen().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_OUT_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

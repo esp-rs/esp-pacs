@@ -37,13 +37,29 @@ impl From<crate::W<STORE3_SPEC>> for W {
 #[doc = "Field `LP_AON_STORE3` reader - need_des"]
 pub type LP_AON_STORE3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_AON_STORE3` writer - need_des"]
-pub type LP_AON_STORE3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STORE3_SPEC, u32, u32, 32, O>;
+pub type LP_AON_STORE3_W<'a, const O: u8> = crate::FieldWriter<'a, STORE3_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn lp_aon_store3(&self) -> LP_AON_STORE3_R {
         LP_AON_STORE3_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STORE3")
+            .field(
+                "lp_aon_store3",
+                &format_args!("{}", self.lp_aon_store3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STORE3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<APB_PERIPHERAL_INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` reader - The clear signal for APB peripheral interrupt."]
-pub type APB_PERI_BYTE_ERROR_CLR_R = crate::BitReader<bool>;
+pub type APB_PERI_BYTE_ERROR_CLR_R = crate::BitReader;
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` writer - The clear signal for APB peripheral interrupt."]
 pub type APB_PERI_BYTE_ERROR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_PERIPHERAL_INTR_SPEC, bool, O>;
+    crate::BitWriter<'a, APB_PERIPHERAL_INTR_SPEC, O>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` reader - The enable signal for APB peripheral access interrupt."]
-pub type APB_PERI_BYTE_ERROR_EN_R = crate::BitReader<bool>;
+pub type APB_PERI_BYTE_ERROR_EN_R = crate::BitReader;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` writer - The enable signal for APB peripheral access interrupt."]
 pub type APB_PERI_BYTE_ERROR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_PERIPHERAL_INTR_SPEC, bool, O>;
+    crate::BitWriter<'a, APB_PERIPHERAL_INTR_SPEC, O>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_INTR` reader - APB peripheral access interrupt signal."]
-pub type APB_PERI_BYTE_ERROR_INTR_R = crate::BitReader<bool>;
+pub type APB_PERI_BYTE_ERROR_INTR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The clear signal for APB peripheral interrupt."]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn apb_peri_byte_error_intr(&self) -> APB_PERI_BYTE_ERROR_INTR_R {
         APB_PERI_BYTE_ERROR_INTR_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_PERIPHERAL_INTR")
+            .field(
+                "apb_peri_byte_error_clr",
+                &format_args!("{}", self.apb_peri_byte_error_clr().bit()),
+            )
+            .field(
+                "apb_peri_byte_error_en",
+                &format_args!("{}", self.apb_peri_byte_error_en().bit()),
+            )
+            .field(
+                "apb_peri_byte_error_intr",
+                &format_args!("{}", self.apb_peri_byte_error_intr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_INTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

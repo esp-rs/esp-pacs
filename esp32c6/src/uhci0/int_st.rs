@@ -14,23 +14,23 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_START_INT_ST` reader - Indicates the interrupt status of UHCI_RX_START_INT."]
-pub type RX_START_INT_ST_R = crate::BitReader<bool>;
+pub type RX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_ST` reader - Indicates the interrupt status of UHCI_TX_START_INT."]
-pub type TX_START_INT_ST_R = crate::BitReader<bool>;
+pub type TX_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ST` reader - Indicates the interrupt status of UHCI_RX_HUNG_INT."]
-pub type RX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ST` reader - Indicates the interrupt status of UHCI_TX_HUNG_INT."]
-pub type TX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_ST` reader - Indicates the interrupt status of UHCI_SEND_S_REG_Q_INT."]
-pub type SEND_S_REG_Q_INT_ST_R = crate::BitReader<bool>;
+pub type SEND_S_REG_Q_INT_ST_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_ST` reader - Indicates the interrupt status of UHCI_SEND_A_REG_Q_INT."]
-pub type SEND_A_REG_Q_INT_ST_R = crate::BitReader<bool>;
+pub type SEND_A_REG_Q_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ST` reader - Indicates the interrupt status of UHCI_OUT_EOF_INT."]
-pub type OUTLINK_EOF_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type OUTLINK_EOF_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_ST` reader - Indicates the interrupt status of UHCI_APP_CTRL0_INT."]
-pub type APP_CTRL0_INT_ST_R = crate::BitReader<bool>;
+pub type APP_CTRL0_INT_ST_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_ST` reader - Indicates the interrupt status of UHCI_APP_CTRL1_INT."]
-pub type APP_CTRL1_INT_ST_R = crate::BitReader<bool>;
+pub type APP_CTRL1_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Indicates the interrupt status of UHCI_RX_START_INT."]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn app_ctrl1_int_st(&self) -> APP_CTRL1_INT_ST_R {
         APP_CTRL1_INT_ST_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "rx_start_int_st",
+                &format_args!("{}", self.rx_start_int_st().bit()),
+            )
+            .field(
+                "tx_start_int_st",
+                &format_args!("{}", self.tx_start_int_st().bit()),
+            )
+            .field(
+                "rx_hung_int_st",
+                &format_args!("{}", self.rx_hung_int_st().bit()),
+            )
+            .field(
+                "tx_hung_int_st",
+                &format_args!("{}", self.tx_hung_int_st().bit()),
+            )
+            .field(
+                "send_s_reg_q_int_st",
+                &format_args!("{}", self.send_s_reg_q_int_st().bit()),
+            )
+            .field(
+                "send_a_reg_q_int_st",
+                &format_args!("{}", self.send_a_reg_q_int_st().bit()),
+            )
+            .field(
+                "outlink_eof_err_int_st",
+                &format_args!("{}", self.outlink_eof_err_int_st().bit()),
+            )
+            .field(
+                "app_ctrl0_int_st",
+                &format_args!("{}", self.app_ctrl0_int_st().bit()),
+            )
+            .field(
+                "app_ctrl1_int_st",
+                &format_args!("{}", self.app_ctrl1_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UHCI Interrupt Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

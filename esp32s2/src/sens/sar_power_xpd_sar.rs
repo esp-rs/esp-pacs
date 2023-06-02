@@ -35,14 +35,13 @@ impl From<crate::W<SAR_POWER_XPD_SAR_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
+pub type FORCE_XPD_SAR_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_SAR` writer - "]
-pub type FORCE_XPD_SAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, u8, u8, 2, O>;
+pub type FORCE_XPD_SAR_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_POWER_XPD_SAR_SPEC, 2, O>;
 #[doc = "Field `SARCLK_EN` reader - "]
-pub type SARCLK_EN_R = crate::BitReader<bool>;
+pub type SARCLK_EN_R = crate::BitReader;
 #[doc = "Field `SARCLK_EN` writer - "]
-pub type SARCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, bool, O>;
+pub type SARCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_POWER_XPD_SAR_SPEC, O>;
 impl R {
     #[doc = "Bits 29:30"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn sarclk_en(&self) -> SARCLK_EN_R {
         SARCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_POWER_XPD_SAR")
+            .field(
+                "force_xpd_sar",
+                &format_args!("{}", self.force_xpd_sar().bits()),
+            )
+            .field("sarclk_en", &format_args!("{}", self.sarclk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_POWER_XPD_SAR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

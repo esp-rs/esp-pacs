@@ -35,15 +35,31 @@ impl From<crate::W<CACHE_SYNC_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_SYNC_MAP` reader - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
-pub type CACHE_SYNC_MAP_R = crate::FieldReader<u8, u8>;
+pub type CACHE_SYNC_MAP_R = crate::FieldReader;
 #[doc = "Field `CACHE_SYNC_MAP` writer - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
-pub type CACHE_SYNC_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_SYNC_MAP_SPEC, u8, u8, 6, O>;
+pub type CACHE_SYNC_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_SYNC_MAP_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
     #[inline(always)]
     pub fn cache_sync_map(&self) -> CACHE_SYNC_MAP_R {
         CACHE_SYNC_MAP_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_SYNC_MAP")
+            .field(
+                "cache_sync_map",
+                &format_args!("{}", self.cache_sync_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

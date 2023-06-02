@@ -35,15 +35,13 @@ impl From<crate::W<SEQ_POSITION_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_SEQ_POSITION` reader - "]
-pub type SLC0_SEQ_POSITION_R = crate::FieldReader<u8, u8>;
+pub type SLC0_SEQ_POSITION_R = crate::FieldReader;
 #[doc = "Field `SLC0_SEQ_POSITION` writer - "]
-pub type SLC0_SEQ_POSITION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SEQ_POSITION_SPEC, u8, u8, 8, O>;
+pub type SLC0_SEQ_POSITION_W<'a, const O: u8> = crate::FieldWriter<'a, SEQ_POSITION_SPEC, 8, O>;
 #[doc = "Field `SLC1_SEQ_POSITION` reader - "]
-pub type SLC1_SEQ_POSITION_R = crate::FieldReader<u8, u8>;
+pub type SLC1_SEQ_POSITION_R = crate::FieldReader;
 #[doc = "Field `SLC1_SEQ_POSITION` writer - "]
-pub type SLC1_SEQ_POSITION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SEQ_POSITION_SPEC, u8, u8, 8, O>;
+pub type SLC1_SEQ_POSITION_W<'a, const O: u8> = crate::FieldWriter<'a, SEQ_POSITION_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn slc1_seq_position(&self) -> SLC1_SEQ_POSITION_R {
         SLC1_SEQ_POSITION_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SEQ_POSITION")
+            .field(
+                "slc0_seq_position",
+                &format_args!("{}", self.slc0_seq_position().bits()),
+            )
+            .field(
+                "slc1_seq_position",
+                &format_args!("{}", self.slc1_seq_position().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SEQ_POSITION_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

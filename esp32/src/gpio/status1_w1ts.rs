@@ -35,15 +35,31 @@ impl From<crate::W<STATUS1_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS1_INT_W1TS` reader - GPIO32~39 interrupt status write 1 to set"]
-pub type STATUS1_INT_W1TS_R = crate::FieldReader<u8, u8>;
+pub type STATUS1_INT_W1TS_R = crate::FieldReader;
 #[doc = "Field `STATUS1_INT_W1TS` writer - GPIO32~39 interrupt status write 1 to set"]
-pub type STATUS1_INT_W1TS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STATUS1_W1TS_SPEC, u8, u8, 8, O>;
+pub type STATUS1_INT_W1TS_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS1_W1TS_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 interrupt status write 1 to set"]
     #[inline(always)]
     pub fn status1_int_w1ts(&self) -> STATUS1_INT_W1TS_R {
         STATUS1_INT_W1TS_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATUS1_W1TS")
+            .field(
+                "status1_int_w1ts",
+                &format_args!("{}", self.status1_int_w1ts().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATUS1_W1TS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

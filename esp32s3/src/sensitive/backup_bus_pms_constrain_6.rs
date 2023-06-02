@@ -35,15 +35,15 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` reader - BackUp access rtcfast_l permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` writer - BackUp access rtcfast_l permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, 3, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` reader - BackUp access rtcfast_h permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` writer - BackUp access rtcfast_h permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_h(&self) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R {
         BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R::new(((self.bits >> 3) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_6")
+            .field(
+                "backup_bus_pms_constrain_rtcfast_l",
+                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_l().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_rtcfast_h",
+                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_h().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

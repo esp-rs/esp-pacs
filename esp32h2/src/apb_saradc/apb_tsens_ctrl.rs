@@ -35,20 +35,19 @@ impl From<crate::W<APB_TSENS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TSENS_OUT` reader - temperature sensor data out"]
-pub type TSENS_OUT_R = crate::FieldReader<u8, u8>;
+pub type TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `TSENS_IN_INV` reader - invert temperature sensor data"]
-pub type TSENS_IN_INV_R = crate::BitReader<bool>;
+pub type TSENS_IN_INV_R = crate::BitReader;
 #[doc = "Field `TSENS_IN_INV` writer - invert temperature sensor data"]
-pub type TSENS_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_TSENS_CTRL_SPEC, bool, O>;
+pub type TSENS_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL_SPEC, O>;
 #[doc = "Field `TSENS_CLK_DIV` reader - temperature sensor clock divider"]
-pub type TSENS_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type TSENS_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `TSENS_CLK_DIV` writer - temperature sensor clock divider"]
-pub type TSENS_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_CTRL_SPEC, u8, u8, 8, O>;
+pub type TSENS_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, APB_TSENS_CTRL_SPEC, 8, O>;
 #[doc = "Field `TSENS_PU` reader - temperature sensor power up"]
-pub type TSENS_PU_R = crate::BitReader<bool>;
+pub type TSENS_PU_R = crate::BitReader;
 #[doc = "Field `TSENS_PU` writer - temperature sensor power up"]
-pub type TSENS_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_TSENS_CTRL_SPEC, bool, O>;
+pub type TSENS_PU_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - temperature sensor data out"]
     #[inline(always)]
@@ -69,6 +68,29 @@ impl R {
     #[inline(always)]
     pub fn tsens_pu(&self) -> TSENS_PU_R {
         TSENS_PU_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_TSENS_CTRL")
+            .field("tsens_out", &format_args!("{}", self.tsens_out().bits()))
+            .field(
+                "tsens_in_inv",
+                &format_args!("{}", self.tsens_in_inv().bit()),
+            )
+            .field(
+                "tsens_clk_div",
+                &format_args!("{}", self.tsens_clk_div().bits()),
+            )
+            .field("tsens_pu", &format_args!("{}", self.tsens_pu().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,14 +35,28 @@ impl From<crate::W<TIME_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_VALID` reader - To indicate the register is updated"]
-pub type TIME_VALID_R = crate::BitReader<bool>;
+pub type TIME_VALID_R = crate::BitReader;
 #[doc = "Field `TIME_UPDATE` writer - Set 1: to update register with RTC timer"]
-pub type TIME_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIME_UPDATE_SPEC, bool, O>;
+pub type TIME_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, TIME_UPDATE_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - To indicate the register is updated"]
     #[inline(always)]
     pub fn time_valid(&self) -> TIME_VALID_R {
         TIME_VALID_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIME_UPDATE")
+            .field("time_valid", &format_args!("{}", self.time_valid().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIME_UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

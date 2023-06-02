@@ -35,21 +35,21 @@ impl From<crate::W<SCO_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SCO_WITH_I2S_EN` reader - "]
-pub type SCO_WITH_I2S_EN_R = crate::BitReader<bool>;
+pub type SCO_WITH_I2S_EN_R = crate::BitReader;
 #[doc = "Field `SCO_WITH_I2S_EN` writer - "]
-pub type SCO_WITH_I2S_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, O>;
+pub type SCO_WITH_I2S_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCO_CONF0_SPEC, O>;
 #[doc = "Field `SCO_NO_I2S_EN` reader - "]
-pub type SCO_NO_I2S_EN_R = crate::BitReader<bool>;
+pub type SCO_NO_I2S_EN_R = crate::BitReader;
 #[doc = "Field `SCO_NO_I2S_EN` writer - "]
-pub type SCO_NO_I2S_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, O>;
+pub type SCO_NO_I2S_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCO_CONF0_SPEC, O>;
 #[doc = "Field `CVSD_ENC_START` reader - "]
-pub type CVSD_ENC_START_R = crate::BitReader<bool>;
+pub type CVSD_ENC_START_R = crate::BitReader;
 #[doc = "Field `CVSD_ENC_START` writer - "]
-pub type CVSD_ENC_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, O>;
+pub type CVSD_ENC_START_W<'a, const O: u8> = crate::BitWriter<'a, SCO_CONF0_SPEC, O>;
 #[doc = "Field `CVSD_ENC_RESET` reader - "]
-pub type CVSD_ENC_RESET_R = crate::BitReader<bool>;
+pub type CVSD_ENC_RESET_R = crate::BitReader;
 #[doc = "Field `CVSD_ENC_RESET` writer - "]
-pub type CVSD_ENC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, O>;
+pub type CVSD_ENC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SCO_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn cvsd_enc_reset(&self) -> CVSD_ENC_RESET_R {
         CVSD_ENC_RESET_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCO_CONF0")
+            .field(
+                "sco_with_i2s_en",
+                &format_args!("{}", self.sco_with_i2s_en().bit()),
+            )
+            .field(
+                "sco_no_i2s_en",
+                &format_args!("{}", self.sco_no_i2s_en().bit()),
+            )
+            .field(
+                "cvsd_enc_start",
+                &format_args!("{}", self.cvsd_enc_start().bit()),
+            )
+            .field(
+                "cvsd_enc_reset",
+                &format_args!("{}", self.cvsd_enc_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCO_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

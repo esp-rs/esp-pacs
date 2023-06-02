@@ -37,12 +37,26 @@ impl From<crate::W<HSCH_HPOINT_SPEC>> for W {
 #[doc = "Field `HPOINT` reader - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
 pub type HPOINT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HPOINT` writer - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
-pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSCH_HPOINT_SPEC, u32, u32, 20, O>;
+pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_HPOINT_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
     #[inline(always)]
     pub fn hpoint(&self) -> HPOINT_R {
         HPOINT_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HSCH_HPOINT")
+            .field("hpoint", &format_args!("{}", self.hpoint().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HSCH_HPOINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

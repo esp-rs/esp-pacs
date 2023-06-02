@@ -35,66 +35,65 @@ impl From<crate::W<LC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
-pub type IN_RST_R = crate::BitReader<bool>;
+pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
-pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_RST` reader - Set this bit to reset out-DMA FSM. Set this bit before the DMA configuration."]
-pub type OUT_RST_R = crate::BitReader<bool>;
+pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - Set this bit to reset out-DMA FSM. Set this bit before the DMA configuration."]
-pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `AHBM_FIFO_RST` reader - Set this bit to reset AHB interface cmdFIFO of DMA. Set this bit before the DMA configuration."]
-pub type AHBM_FIFO_RST_R = crate::BitReader<bool>;
+pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - Set this bit to reset AHB interface cmdFIFO of DMA. Set this bit before the DMA configuration."]
-pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `AHBM_RST` reader - Set this bit to reset AHB interface of DMA. Set this bit before the DMA configuration."]
-pub type AHBM_RST_R = crate::BitReader<bool>;
+pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - Set this bit to reset AHB interface of DMA. Set this bit before the DMA configuration."]
-pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set this bit to loop test inlink."]
-pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
+pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set this bit to loop test inlink."]
-pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set this bit to loop test outlink."]
-pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
+pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - Set this bit to loop test outlink."]
-pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - Set this bit to enable outlink-written-back automatically when out buffer is transmitted done."]
-pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - Set this bit to enable outlink-written-back automatically when out buffer is transmitted done."]
-pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_NO_RESTART_CLR` reader - Reserved."]
-pub type OUT_NO_RESTART_CLR_R = crate::BitReader<bool>;
+pub type OUT_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `OUT_NO_RESTART_CLR` writer - Reserved."]
-pub type OUT_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_EOF_MODE` reader - DMA out EOF flag generation mode. 1: When DMA has popped all data from the FIFO. 0: When AHB has pushed all data to the FIFO."]
-pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
+pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - DMA out EOF flag generation mode. 1: When DMA has popped all data from the FIFO. 0: When AHB has pushed all data to the FIFO."]
-pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - DMA outlink descriptor transfer mode configuration bit. 1: Prepare outlink descriptor with burst mode. 0: Prepare outlink descriptor with byte mode."]
-pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - DMA outlink descriptor transfer mode configuration bit. 1: Prepare outlink descriptor with burst mode. 0: Prepare outlink descriptor with byte mode."]
-pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `INDSCR_BURST_EN` reader - DMA inlink descriptor transfer mode configuration bit. 1: Prepare inlink descriptor with burst mode. 0: Prepare inlink descriptor with byte mode."]
-pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - DMA inlink descriptor transfer mode configuration bit. 1: Prepare inlink descriptor with burst mode. 0: Prepare inlink descriptor with byte mode."]
-pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - Transmitter data transfer mode configuration bit. 1: Prepare out data with burst mode. 0: Prepare out data with byte mode."]
-pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
+pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - Transmitter data transfer mode configuration bit. 1: Prepare out data with burst mode. 0: Prepare out data with byte mode."]
-pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `CHECK_OWNER` reader - Set this bit to enable check owner bit by hardware."]
-pub type CHECK_OWNER_R = crate::BitReader<bool>;
+pub type CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `CHECK_OWNER` writer - Set this bit to enable check owner bit by hardware."]
-pub type CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `MEM_TRANS_EN` reader - Reserved."]
-pub type MEM_TRANS_EN_R = crate::BitReader<bool>;
+pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - Reserved."]
-pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LC_CONF_SPEC, bool, O>;
+pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, LC_CONF_SPEC, O>;
 #[doc = "Field `EXT_MEM_BK_SIZE` reader - DMA access external memory block size. 0: 16 bytes. 1: 32 bytes. 2: 64 bytes. 3: reserved."]
-pub type EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+pub type EXT_MEM_BK_SIZE_R = crate::FieldReader;
 #[doc = "Field `EXT_MEM_BK_SIZE` writer - DMA access external memory block size. 0: 16 bytes. 1: 32 bytes. 2: 64 bytes. 3: reserved."]
-pub type EXT_MEM_BK_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LC_CONF_SPEC, u8, u8, 2, O>;
+pub type EXT_MEM_BK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, LC_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
@@ -170,6 +169,67 @@ impl R {
     #[inline(always)]
     pub fn ext_mem_bk_size(&self) -> EXT_MEM_BK_SIZE_R {
         EXT_MEM_BK_SIZE_R::new(((self.bits >> 14) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LC_CONF")
+            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
+            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
+            .field(
+                "ahbm_fifo_rst",
+                &format_args!("{}", self.ahbm_fifo_rst().bit()),
+            )
+            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
+            .field(
+                "out_loop_test",
+                &format_args!("{}", self.out_loop_test().bit()),
+            )
+            .field(
+                "in_loop_test",
+                &format_args!("{}", self.in_loop_test().bit()),
+            )
+            .field(
+                "out_auto_wrback",
+                &format_args!("{}", self.out_auto_wrback().bit()),
+            )
+            .field(
+                "out_no_restart_clr",
+                &format_args!("{}", self.out_no_restart_clr().bit()),
+            )
+            .field(
+                "out_eof_mode",
+                &format_args!("{}", self.out_eof_mode().bit()),
+            )
+            .field(
+                "outdscr_burst_en",
+                &format_args!("{}", self.outdscr_burst_en().bit()),
+            )
+            .field(
+                "indscr_burst_en",
+                &format_args!("{}", self.indscr_burst_en().bit()),
+            )
+            .field(
+                "out_data_burst_en",
+                &format_args!("{}", self.out_data_burst_en().bit()),
+            )
+            .field("check_owner", &format_args!("{}", self.check_owner().bit()))
+            .field(
+                "mem_trans_en",
+                &format_args!("{}", self.mem_trans_en().bit()),
+            )
+            .field(
+                "ext_mem_bk_size",
+                &format_args!("{}", self.ext_mem_bk_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

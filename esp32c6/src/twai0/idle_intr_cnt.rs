@@ -38,12 +38,29 @@ impl From<crate::W<IDLE_INTR_CNT_SPEC>> for W {
 pub type IDLE_INTR_CNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `IDLE_INTR_CNT` writer - Configure the number of cycles before triggering idle interrupt."]
 pub type IDLE_INTR_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IDLE_INTR_CNT_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, IDLE_INTR_CNT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure the number of cycles before triggering idle interrupt."]
     #[inline(always)]
     pub fn idle_intr_cnt(&self) -> IDLE_INTR_CNT_R {
         IDLE_INTR_CNT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDLE_INTR_CNT")
+            .field(
+                "idle_intr_cnt",
+                &format_args!("{}", self.idle_intr_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IDLE_INTR_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

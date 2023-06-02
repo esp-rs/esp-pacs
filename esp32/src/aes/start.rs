@@ -20,7 +20,13 @@ impl From<crate::W<START_SPEC>> for W {
     }
 }
 #[doc = "Field `START` writer - Write 1 to start the AES operation."]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, START_SPEC, bool, O>;
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, START_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to start the AES operation."]
     #[inline(always)]

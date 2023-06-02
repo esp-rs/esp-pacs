@@ -14,12 +14,29 @@ impl From<crate::R<PCPU_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_INT_H` reader - GPIO32~39 PRO CPU interrupt status"]
-pub type PROCPU_INT_H_R = crate::FieldReader<u8, u8>;
+pub type PROCPU_INT_H_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 PRO CPU interrupt status"]
     #[inline(always)]
     pub fn procpu_int_h(&self) -> PROCPU_INT_H_R {
         PROCPU_INT_H_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PCPU_INT1")
+            .field(
+                "procpu_int_h",
+                &format_args!("{}", self.procpu_int_h().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PCPU_INT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pcpu_int1](index.html) module"]

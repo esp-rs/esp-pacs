@@ -35,20 +35,20 @@ impl From<crate::W<ICACHE_TAG_POWER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of icache tag memory. 1: close gating, 0: open clock gating."]
-pub type ICACHE_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type ICACHE_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of icache tag memory. 1: close gating, 0: open clock gating."]
 pub type ICACHE_TAG_MEM_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_TAG_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_TAG_POWER_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power icache tag memory down, 0: follow rtc_lslp, 1: power down"]
-pub type ICACHE_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type ICACHE_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power icache tag memory down, 0: follow rtc_lslp, 1: power down"]
 pub type ICACHE_TAG_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_TAG_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_TAG_POWER_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power icache tag memory up, 0: follow rtc_lslp, 1: power up"]
-pub type ICACHE_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type ICACHE_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `ICACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power icache tag memory up, 0: follow rtc_lslp, 1: power up"]
 pub type ICACHE_TAG_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_TAG_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_TAG_POWER_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of icache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn icache_tag_mem_force_pu(&self) -> ICACHE_TAG_MEM_FORCE_PU_R {
         ICACHE_TAG_MEM_FORCE_PU_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_TAG_POWER_CTRL")
+            .field(
+                "icache_tag_mem_force_on",
+                &format_args!("{}", self.icache_tag_mem_force_on().bit()),
+            )
+            .field(
+                "icache_tag_mem_force_pd",
+                &format_args!("{}", self.icache_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "icache_tag_mem_force_pu",
+                &format_args!("{}", self.icache_tag_mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_TAG_POWER_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

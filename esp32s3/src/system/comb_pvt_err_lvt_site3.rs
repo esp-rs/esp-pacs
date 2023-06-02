@@ -22,6 +22,23 @@ impl R {
         COMB_TIMING_ERR_CNT_LVT_SITE3_R::new((self.bits & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COMB_PVT_ERR_LVT_SITE3")
+            .field(
+                "comb_timing_err_cnt_lvt_site3",
+                &format_args!("{}", self.comb_timing_err_cnt_lvt_site3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_ERR_LVT_SITE3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "******* Description ***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [comb_pvt_err_lvt_site3](index.html) module"]
 pub struct COMB_PVT_ERR_LVT_SITE3_SPEC;
 impl crate::RegisterSpec for COMB_PVT_ERR_LVT_SITE3_SPEC {

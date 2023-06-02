@@ -14,12 +14,29 @@ impl From<crate::R<QUERY_KEY_WRONG_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_KEY_WRONG` reader - digital signature key wrong counter"]
-pub type QUERY_KEY_WRONG_R = crate::FieldReader<u8, u8>;
+pub type QUERY_KEY_WRONG_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - digital signature key wrong counter"]
     #[inline(always)]
     pub fn query_key_wrong(&self) -> QUERY_KEY_WRONG_R {
         QUERY_KEY_WRONG_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("QUERY_KEY_WRONG")
+            .field(
+                "query_key_wrong",
+                &format_args!("{}", self.query_key_wrong().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<QUERY_KEY_WRONG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "DS query key-wrong counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [query_key_wrong](index.html) module"]

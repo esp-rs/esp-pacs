@@ -38,37 +38,32 @@ impl From<crate::W<BT_LPCK_DIV_FRAC_SPEC>> for W {
 pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_B` writer - reg_bt_lpck_div_b"]
 pub type BT_LPCK_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` reader - reg_bt_lpck_div_a"]
 pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` writer - reg_bt_lpck_div_a"]
 pub type BT_LPCK_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16, u16>;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - reg_lpclk_sel_rtc_slow"]
-pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader<bool>;
+pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` writer - reg_lpclk_sel_rtc_slow"]
-pub type LPCLK_SEL_RTC_SLOW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, bool, O>;
+pub type LPCLK_SEL_RTC_SLOW_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
 #[doc = "Field `LPCLK_SEL_8M` reader - reg_lpclk_sel_8m"]
-pub type LPCLK_SEL_8M_R = crate::BitReader<bool>;
+pub type LPCLK_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_8M` writer - reg_lpclk_sel_8m"]
-pub type LPCLK_SEL_8M_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, bool, O>;
+pub type LPCLK_SEL_8M_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
 #[doc = "Field `LPCLK_SEL_XTAL` reader - reg_lpclk_sel_xtal"]
-pub type LPCLK_SEL_XTAL_R = crate::BitReader<bool>;
+pub type LPCLK_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL` writer - reg_lpclk_sel_xtal"]
-pub type LPCLK_SEL_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, bool, O>;
+pub type LPCLK_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
 #[doc = "Field `LPCLK_SEL_XTAL32K` reader - reg_lpclk_sel_xtal32k"]
-pub type LPCLK_SEL_XTAL32K_R = crate::BitReader<bool>;
+pub type LPCLK_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_XTAL32K` writer - reg_lpclk_sel_xtal32k"]
-pub type LPCLK_SEL_XTAL32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, bool, O>;
+pub type LPCLK_SEL_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
 #[doc = "Field `LPCLK_RTC_EN` reader - reg_lpclk_rtc_en"]
-pub type LPCLK_RTC_EN_R = crate::BitReader<bool>;
+pub type LPCLK_RTC_EN_R = crate::BitReader;
 #[doc = "Field `LPCLK_RTC_EN` writer - reg_lpclk_rtc_en"]
-pub type LPCLK_RTC_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_FRAC_SPEC, bool, O>;
+pub type LPCLK_RTC_EN_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_FRAC_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - reg_bt_lpck_div_b"]
     #[inline(always)]
@@ -104,6 +99,47 @@ impl R {
     #[inline(always)]
     pub fn lpclk_rtc_en(&self) -> LPCLK_RTC_EN_R {
         LPCLK_RTC_EN_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BT_LPCK_DIV_FRAC")
+            .field(
+                "bt_lpck_div_b",
+                &format_args!("{}", self.bt_lpck_div_b().bits()),
+            )
+            .field(
+                "bt_lpck_div_a",
+                &format_args!("{}", self.bt_lpck_div_a().bits()),
+            )
+            .field(
+                "lpclk_sel_rtc_slow",
+                &format_args!("{}", self.lpclk_sel_rtc_slow().bit()),
+            )
+            .field(
+                "lpclk_sel_8m",
+                &format_args!("{}", self.lpclk_sel_8m().bit()),
+            )
+            .field(
+                "lpclk_sel_xtal",
+                &format_args!("{}", self.lpclk_sel_xtal().bit()),
+            )
+            .field(
+                "lpclk_sel_xtal32k",
+                &format_args!("{}", self.lpclk_sel_xtal32k().bit()),
+            )
+            .field(
+                "lpclk_rtc_en",
+                &format_args!("{}", self.lpclk_rtc_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_FRAC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

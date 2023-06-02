@@ -20,8 +20,13 @@ impl From<crate::W<STATUS1_W1TC_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS1_W1TC` writer - GPIO interrupt status clear register for GPIO32-34"]
-pub type STATUS1_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STATUS1_W1TC_SPEC, u8, u8, 3, O>;
+pub type STATUS1_W1TC_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS1_W1TC_SPEC, 3, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATUS1_W1TC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - GPIO interrupt status clear register for GPIO32-34"]
     #[inline(always)]

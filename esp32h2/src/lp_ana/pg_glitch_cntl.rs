@@ -35,15 +35,31 @@ impl From<crate::W<PG_GLITCH_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `POWER_GLITCH_RESET_ENA` reader - need_des"]
-pub type POWER_GLITCH_RESET_ENA_R = crate::BitReader<bool>;
+pub type POWER_GLITCH_RESET_ENA_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_RESET_ENA` writer - need_des"]
-pub type POWER_GLITCH_RESET_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PG_GLITCH_CNTL_SPEC, bool, O>;
+pub type POWER_GLITCH_RESET_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PG_GLITCH_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn power_glitch_reset_ena(&self) -> POWER_GLITCH_RESET_ENA_R {
         POWER_GLITCH_RESET_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PG_GLITCH_CNTL")
+            .field(
+                "power_glitch_reset_ena",
+                &format_args!("{}", self.power_glitch_reset_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PG_GLITCH_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

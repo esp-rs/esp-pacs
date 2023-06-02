@@ -14,12 +14,26 @@ impl From<crate::R<EXT2_SPEC>> for R {
     }
 }
 #[doc = "Field `ST` reader - The status of spi state machine ."]
-pub type ST_R = crate::FieldReader<u8, u8>;
+pub type ST_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:2 - The status of spi state machine ."]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
         ST_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT2")
+            .field("st", &format_args!("{}", self.st().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ext2](index.html) module"]

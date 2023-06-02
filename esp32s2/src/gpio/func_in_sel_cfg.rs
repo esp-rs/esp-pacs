@@ -35,18 +35,17 @@ impl From<crate::W<FUNC_IN_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_SEL` reader - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
-pub type IN_SEL_R = crate::FieldReader<u8, u8>;
+pub type IN_SEL_R = crate::FieldReader;
 #[doc = "Field `IN_SEL` writer - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
-pub type IN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, u8, u8, 6, O>;
+pub type IN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_IN_SEL_CFG_SPEC, 6, O>;
 #[doc = "Field `IN_INV_SEL` reader - Invert the input value. 1: invert enabled; 0: invert disabled."]
-pub type IN_INV_SEL_R = crate::BitReader<bool>;
+pub type IN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `IN_INV_SEL` writer - Invert the input value. 1: invert enabled; 0: invert disabled."]
-pub type IN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, O>;
+pub type IN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_IN_SEL_CFG_SPEC, O>;
 #[doc = "Field `SEL` reader - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
-pub type SEL_R = crate::BitReader<bool>;
+pub type SEL_R = crate::BitReader;
 #[doc = "Field `SEL` writer - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
-pub type SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, O>;
+pub type SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_IN_SEL_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
     #[inline(always)]
@@ -62,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FUNC_IN_SEL_CFG")
+            .field("in_sel", &format_args!("{}", self.in_sel().bits()))
+            .field("in_inv_sel", &format_args!("{}", self.in_inv_sel().bit()))
+            .field("sel", &format_args!("{}", self.sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FUNC_IN_SEL_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

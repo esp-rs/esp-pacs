@@ -37,12 +37,11 @@ impl From<crate::W<CTRL1_SPEC>> for W {
 #[doc = "Field `CS_HOLD_DELAY_RES` reader - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
 pub type CS_HOLD_DELAY_RES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_HOLD_DELAY_RES` writer - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub type CS_HOLD_DELAY_RES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL1_SPEC, u16, u16, 12, O>;
+pub type CS_HOLD_DELAY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles"]
-pub type CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - SPI cs signal is delayed by spi clock cycles"]
-pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 4, O>;
+pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn cs_hold_delay(&self) -> CS_HOLD_DELAY_R {
         CS_HOLD_DELAY_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field(
+                "cs_hold_delay_res",
+                &format_args!("{}", self.cs_hold_delay_res().bits()),
+            )
+            .field(
+                "cs_hold_delay",
+                &format_args!("{}", self.cs_hold_delay().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

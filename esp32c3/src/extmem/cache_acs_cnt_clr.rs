@@ -20,11 +20,15 @@ impl From<crate::W<CACHE_ACS_CNT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_ACS_CNT_CLR` writer - The bit is used to clear ibus counter."]
-pub type IBUS_ACS_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ACS_CNT_CLR_SPEC, bool, O>;
+pub type IBUS_ACS_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_ACS_CNT_CLR_SPEC, O>;
 #[doc = "Field `DBUS_ACS_CNT_CLR` writer - The bit is used to clear dbus counter."]
-pub type DBUS_ACS_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ACS_CNT_CLR_SPEC, bool, O>;
+pub type DBUS_ACS_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_ACS_CNT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_ACS_CNT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The bit is used to clear ibus counter."]
     #[inline(always)]

@@ -20,7 +20,13 @@ impl From<crate::W<SET_ME_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_ME` writer - Write 1 to this register to start DS operation."]
-pub type SET_ME_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_ME_SPEC, bool, O>;
+pub type SET_ME_W<'a, const O: u8> = crate::BitWriter<'a, SET_ME_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_ME_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to this register to start DS operation."]
     #[inline(always)]

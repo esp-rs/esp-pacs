@@ -35,105 +35,101 @@ impl From<crate::W<SENSOR_PADS_SPEC>> for W {
     }
 }
 #[doc = "Field `SENSE4_FUN_IE` reader - the input enable of the pad"]
-pub type SENSE4_FUN_IE_R = crate::BitReader<bool>;
+pub type SENSE4_FUN_IE_R = crate::BitReader;
 #[doc = "Field `SENSE4_FUN_IE` writer - the input enable of the pad"]
-pub type SENSE4_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE4_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE4_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type SENSE4_SLP_IE_R = crate::BitReader<bool>;
+pub type SENSE4_SLP_IE_R = crate::BitReader;
 #[doc = "Field `SENSE4_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type SENSE4_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE4_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE4_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type SENSE4_SLP_SEL_R = crate::BitReader<bool>;
+pub type SENSE4_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE4_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type SENSE4_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE4_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE4_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type SENSE4_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SENSE4_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `SENSE4_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type SENSE4_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, O>;
+pub type SENSE4_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_PADS_SPEC, 2, O>;
 #[doc = "Field `SENSE3_FUN_IE` reader - the input enable of the pad"]
-pub type SENSE3_FUN_IE_R = crate::BitReader<bool>;
+pub type SENSE3_FUN_IE_R = crate::BitReader;
 #[doc = "Field `SENSE3_FUN_IE` writer - the input enable of the pad"]
-pub type SENSE3_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE3_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE3_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type SENSE3_SLP_IE_R = crate::BitReader<bool>;
+pub type SENSE3_SLP_IE_R = crate::BitReader;
 #[doc = "Field `SENSE3_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type SENSE3_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE3_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE3_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type SENSE3_SLP_SEL_R = crate::BitReader<bool>;
+pub type SENSE3_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE3_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type SENSE3_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE3_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE3_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type SENSE3_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SENSE3_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `SENSE3_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type SENSE3_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, O>;
+pub type SENSE3_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_PADS_SPEC, 2, O>;
 #[doc = "Field `SENSE2_FUN_IE` reader - the input enable of the pad"]
-pub type SENSE2_FUN_IE_R = crate::BitReader<bool>;
+pub type SENSE2_FUN_IE_R = crate::BitReader;
 #[doc = "Field `SENSE2_FUN_IE` writer - the input enable of the pad"]
-pub type SENSE2_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE2_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type SENSE2_SLP_IE_R = crate::BitReader<bool>;
+pub type SENSE2_SLP_IE_R = crate::BitReader;
 #[doc = "Field `SENSE2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type SENSE2_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE2_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type SENSE2_SLP_SEL_R = crate::BitReader<bool>;
+pub type SENSE2_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type SENSE2_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE2_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type SENSE2_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SENSE2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `SENSE2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type SENSE2_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, O>;
+pub type SENSE2_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_PADS_SPEC, 2, O>;
 #[doc = "Field `SENSE1_FUN_IE` reader - the input enable of the pad"]
-pub type SENSE1_FUN_IE_R = crate::BitReader<bool>;
+pub type SENSE1_FUN_IE_R = crate::BitReader;
 #[doc = "Field `SENSE1_FUN_IE` writer - the input enable of the pad"]
-pub type SENSE1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type SENSE1_SLP_IE_R = crate::BitReader<bool>;
+pub type SENSE1_SLP_IE_R = crate::BitReader;
 #[doc = "Field `SENSE1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type SENSE1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type SENSE1_SLP_SEL_R = crate::BitReader<bool>;
+pub type SENSE1_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type SENSE1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type SENSE1_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type SENSE1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `SENSE1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type SENSE1_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, O>;
+pub type SENSE1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_PADS_SPEC, 2, O>;
 #[doc = "Field `SENSE4_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE4_MUX_SEL_R = crate::BitReader<bool>;
+pub type SENSE4_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE4_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE4_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE4_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE3_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE3_MUX_SEL_R = crate::BitReader<bool>;
+pub type SENSE3_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE3_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE3_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE3_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE2_MUX_SEL_R = crate::BitReader<bool>;
+pub type SENSE2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE1_MUX_SEL_R = crate::BitReader<bool>;
+pub type SENSE1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `SENSE1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type SENSE1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE4_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE4_HOLD_R = crate::BitReader<bool>;
+pub type SENSE4_HOLD_R = crate::BitReader;
 #[doc = "Field `SENSE4_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE4_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE4_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE3_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE3_HOLD_R = crate::BitReader<bool>;
+pub type SENSE3_HOLD_R = crate::BitReader;
 #[doc = "Field `SENSE3_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE3_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE3_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE2_HOLD_R = crate::BitReader<bool>;
+pub type SENSE2_HOLD_R = crate::BitReader;
 #[doc = "Field `SENSE2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 #[doc = "Field `SENSE1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE1_HOLD_R = crate::BitReader<bool>;
+pub type SENSE1_HOLD_R = crate::BitReader;
 #[doc = "Field `SENSE1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type SENSE1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, O>;
+pub type SENSE1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, SENSOR_PADS_SPEC, O>;
 impl R {
     #[doc = "Bit 4 - the input enable of the pad"]
     #[inline(always)]
@@ -254,6 +250,103 @@ impl R {
     #[inline(always)]
     pub fn sense1_hold(&self) -> SENSE1_HOLD_R {
         SENSE1_HOLD_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SENSOR_PADS")
+            .field(
+                "sense4_fun_ie",
+                &format_args!("{}", self.sense4_fun_ie().bit()),
+            )
+            .field(
+                "sense4_slp_ie",
+                &format_args!("{}", self.sense4_slp_ie().bit()),
+            )
+            .field(
+                "sense4_slp_sel",
+                &format_args!("{}", self.sense4_slp_sel().bit()),
+            )
+            .field(
+                "sense4_fun_sel",
+                &format_args!("{}", self.sense4_fun_sel().bits()),
+            )
+            .field(
+                "sense3_fun_ie",
+                &format_args!("{}", self.sense3_fun_ie().bit()),
+            )
+            .field(
+                "sense3_slp_ie",
+                &format_args!("{}", self.sense3_slp_ie().bit()),
+            )
+            .field(
+                "sense3_slp_sel",
+                &format_args!("{}", self.sense3_slp_sel().bit()),
+            )
+            .field(
+                "sense3_fun_sel",
+                &format_args!("{}", self.sense3_fun_sel().bits()),
+            )
+            .field(
+                "sense2_fun_ie",
+                &format_args!("{}", self.sense2_fun_ie().bit()),
+            )
+            .field(
+                "sense2_slp_ie",
+                &format_args!("{}", self.sense2_slp_ie().bit()),
+            )
+            .field(
+                "sense2_slp_sel",
+                &format_args!("{}", self.sense2_slp_sel().bit()),
+            )
+            .field(
+                "sense2_fun_sel",
+                &format_args!("{}", self.sense2_fun_sel().bits()),
+            )
+            .field(
+                "sense1_fun_ie",
+                &format_args!("{}", self.sense1_fun_ie().bit()),
+            )
+            .field(
+                "sense1_slp_ie",
+                &format_args!("{}", self.sense1_slp_ie().bit()),
+            )
+            .field(
+                "sense1_slp_sel",
+                &format_args!("{}", self.sense1_slp_sel().bit()),
+            )
+            .field(
+                "sense1_fun_sel",
+                &format_args!("{}", self.sense1_fun_sel().bits()),
+            )
+            .field(
+                "sense4_mux_sel",
+                &format_args!("{}", self.sense4_mux_sel().bit()),
+            )
+            .field(
+                "sense3_mux_sel",
+                &format_args!("{}", self.sense3_mux_sel().bit()),
+            )
+            .field(
+                "sense2_mux_sel",
+                &format_args!("{}", self.sense2_mux_sel().bit()),
+            )
+            .field(
+                "sense1_mux_sel",
+                &format_args!("{}", self.sense1_mux_sel().bit()),
+            )
+            .field("sense4_hold", &format_args!("{}", self.sense4_hold().bit()))
+            .field("sense3_hold", &format_args!("{}", self.sense3_hold().bit()))
+            .field("sense2_hold", &format_args!("{}", self.sense2_hold().bit()))
+            .field("sense1_hold", &format_args!("{}", self.sense1_hold().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SENSOR_PADS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

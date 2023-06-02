@@ -35,15 +35,31 @@ impl From<crate::W<SECURE_BOOT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_BOOTLOADER_SEL` reader - "]
-pub type SW_BOOTLOADER_SEL_R = crate::BitReader<bool>;
+pub type SW_BOOTLOADER_SEL_R = crate::BitReader;
 #[doc = "Field `SW_BOOTLOADER_SEL` writer - "]
-pub type SW_BOOTLOADER_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SECURE_BOOT_CTRL_SPEC, bool, O>;
+pub type SW_BOOTLOADER_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SECURE_BOOT_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sw_bootloader_sel(&self) -> SW_BOOTLOADER_SEL_R {
         SW_BOOTLOADER_SEL_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SECURE_BOOT_CTRL")
+            .field(
+                "sw_bootloader_sel",
+                &format_args!("{}", self.sw_bootloader_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SECURE_BOOT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,12 +37,26 @@ impl From<crate::W<TX_CRC_SPEC>> for W {
 #[doc = "Field `DATA` reader - For SPI1 the value of crc32 for 256 bits data."]
 pub type DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA` writer - For SPI1 the value of crc32 for 256 bits data."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_CRC_SPEC, u32, u32, 32, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CRC_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - For SPI1 the value of crc32 for 256 bits data."]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_CRC")
+            .field("data", &format_args!("{}", self.data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_CRC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,18 +37,15 @@ impl From<crate::W<RX_DATA_CFG_SPEC>> for W {
 #[doc = "Field `RX_BITLEN` reader - Configures expected byte number of received data."]
 pub type RX_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RX_BITLEN` writer - Configures expected byte number of received data."]
-pub type RX_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_DATA_CFG_SPEC, u32, u32, 19, O>;
+pub type RX_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, RX_DATA_CFG_SPEC, 19, O, u32, u32>;
 #[doc = "Field `RX_DATA_ORDER_INV` reader - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
-pub type RX_DATA_ORDER_INV_R = crate::BitReader<bool>;
+pub type RX_DATA_ORDER_INV_R = crate::BitReader;
 #[doc = "Field `RX_DATA_ORDER_INV` writer - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
-pub type RX_DATA_ORDER_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DATA_CFG_SPEC, bool, O>;
+pub type RX_DATA_ORDER_INV_W<'a, const O: u8> = crate::BitWriter<'a, RX_DATA_CFG_SPEC, O>;
 #[doc = "Field `RX_BUS_WID_SEL` reader - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
-pub type RX_BUS_WID_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_BUS_WID_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_BUS_WID_SEL` writer - Configures the rxd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
-pub type RX_BUS_WID_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_DATA_CFG_SPEC, u8, u8, 3, O>;
+pub type RX_BUS_WID_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_DATA_CFG_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 9:27 - Configures expected byte number of received data."]
     #[inline(always)]
@@ -64,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn rx_bus_wid_sel(&self) -> RX_BUS_WID_SEL_R {
         RX_BUS_WID_SEL_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_DATA_CFG")
+            .field("rx_bitlen", &format_args!("{}", self.rx_bitlen().bits()))
+            .field(
+                "rx_data_order_inv",
+                &format_args!("{}", self.rx_data_order_inv().bit()),
+            )
+            .field(
+                "rx_bus_wid_sel",
+                &format_args!("{}", self.rx_bus_wid_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_DATA_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

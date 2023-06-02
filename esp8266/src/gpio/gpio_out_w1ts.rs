@@ -21,7 +21,13 @@ impl From<crate::W<GPIO_OUT_W1TS_SPEC>> for W {
 }
 #[doc = "Field `GPIO_OUT_DATA_W1TS` writer - Writing 1 into a bit in this register will set the related bit in GPIO_OUT_DATA"]
 pub type GPIO_OUT_DATA_W1TS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_OUT_W1TS_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, GPIO_OUT_W1TS_SPEC, 16, O, u16, u16>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_OUT_W1TS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Writing 1 into a bit in this register will set the related bit in GPIO_OUT_DATA"]
     #[inline(always)]

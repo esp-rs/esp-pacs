@@ -37,12 +37,26 @@ impl From<crate::W<SDA_HOLD_SPEC>> for W {
 #[doc = "Field `TIME` reader - This register is used to configure the interval between changing the SDA output level and the falling edge of SCL, in I2C module clock cycles."]
 pub type TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIME` writer - This register is used to configure the interval between changing the SDA output level and the falling edge of SCL, in I2C module clock cycles."]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDA_HOLD_SPEC, u16, u16, 10, O>;
+pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_HOLD_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure the interval between changing the SDA output level and the falling edge of SCL, in I2C module clock cycles."]
     #[inline(always)]
     pub fn time(&self) -> TIME_R {
         TIME_R::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDA_HOLD")
+            .field("time", &format_args!("{}", self.time().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDA_HOLD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

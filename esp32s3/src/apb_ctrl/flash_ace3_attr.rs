@@ -38,12 +38,29 @@ impl From<crate::W<FLASH_ACE3_ATTR_SPEC>> for W {
 pub type FLASH_ACE3_ATTR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FLASH_ACE3_ATTR` writer - ******* Description ***********"]
 pub type FLASH_ACE3_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_ACE3_ATTR_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, FLASH_ACE3_ATTR_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:8 - ******* Description ***********"]
     #[inline(always)]
     pub fn flash_ace3_attr(&self) -> FLASH_ACE3_ATTR_R {
         FLASH_ACE3_ATTR_R::new((self.bits & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_ACE3_ATTR")
+            .field(
+                "flash_ace3_attr",
+                &format_args!("{}", self.flash_ace3_attr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_ACE3_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

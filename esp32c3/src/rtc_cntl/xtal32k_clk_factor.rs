@@ -38,12 +38,29 @@ impl From<crate::W<XTAL32K_CLK_FACTOR_SPEC>> for W {
 pub type XTAL32K_CLK_FACTOR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `XTAL32K_CLK_FACTOR` writer - xtal 32k watch dog backup clock factor"]
 pub type XTAL32K_CLK_FACTOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, XTAL32K_CLK_FACTOR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, XTAL32K_CLK_FACTOR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - xtal 32k watch dog backup clock factor"]
     #[inline(always)]
     pub fn xtal32k_clk_factor(&self) -> XTAL32K_CLK_FACTOR_R {
         XTAL32K_CLK_FACTOR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTAL32K_CLK_FACTOR")
+            .field(
+                "xtal32k_clk_factor",
+                &format_args!("{}", self.xtal32k_clk_factor().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTAL32K_CLK_FACTOR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

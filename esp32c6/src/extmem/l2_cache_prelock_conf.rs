@@ -14,11 +14,11 @@ impl From<crate::R<L2_CACHE_PRELOCK_CONF_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function on L2-Cache."]
-pub type L2_CACHE_PRELOCK_SCT0_EN_R = crate::BitReader<bool>;
+pub type L2_CACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function on L2-Cache."]
-pub type L2_CACHE_PRELOCK_SCT1_EN_R = crate::BitReader<bool>;
+pub type L2_CACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOCK_RGID` reader - The bit is used to set the gid of l2 cache prelock."]
-pub type L2_CACHE_PRELOCK_RGID_R = crate::FieldReader<u8, u8>;
+pub type L2_CACHE_PRELOCK_RGID_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function on L2-Cache."]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_prelock_rgid(&self) -> L2_CACHE_PRELOCK_RGID_R {
         L2_CACHE_PRELOCK_RGID_R::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_PRELOCK_CONF")
+            .field(
+                "l2_cache_prelock_sct0_en",
+                &format_args!("{}", self.l2_cache_prelock_sct0_en().bit()),
+            )
+            .field(
+                "l2_cache_prelock_sct1_en",
+                &format_args!("{}", self.l2_cache_prelock_sct1_en().bit()),
+            )
+            .field(
+                "l2_cache_prelock_rgid",
+                &format_args!("{}", self.l2_cache_prelock_rgid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOCK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "L2 Cache prelock configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_prelock_conf](index.html) module"]

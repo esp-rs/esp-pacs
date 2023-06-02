@@ -35,14 +35,31 @@ impl From<crate::W<INTERRUPT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT_ENA` reader - Set this bit to 1 to enable the RSA interrupt. This option is enabled by default."]
-pub type INTERRUPT_ENA_R = crate::BitReader<bool>;
+pub type INTERRUPT_ENA_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ENA` writer - Set this bit to 1 to enable the RSA interrupt. This option is enabled by default."]
-pub type INTERRUPT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTERRUPT_ENA_SPEC, bool, O>;
+pub type INTERRUPT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 1 to enable the RSA interrupt. This option is enabled by default."]
     #[inline(always)]
     pub fn interrupt_ena(&self) -> INTERRUPT_ENA_R {
         INTERRUPT_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_ENA")
+            .field(
+                "interrupt_ena",
+                &format_args!("{}", self.interrupt_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

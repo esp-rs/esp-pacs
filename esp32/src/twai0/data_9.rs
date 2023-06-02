@@ -35,14 +35,28 @@ impl From<crate::W<DATA_9_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BYTE_9` reader - Stored the 9th byte information of the data to be transmitted under operating mode."]
-pub type TX_BYTE_9_R = crate::FieldReader<u8, u8>;
+pub type TX_BYTE_9_R = crate::FieldReader;
 #[doc = "Field `TX_BYTE_9` writer - Stored the 9th byte information of the data to be transmitted under operating mode."]
-pub type TX_BYTE_9_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_9_SPEC, u8, u8, 8, O>;
+pub type TX_BYTE_9_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_9_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Stored the 9th byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
     pub fn tx_byte_9(&self) -> TX_BYTE_9_R {
         TX_BYTE_9_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATA_9")
+            .field("tx_byte_9", &format_args!("{}", self.tx_byte_9().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATA_9_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,21 +35,21 @@ impl From<crate::W<CACHE_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_CLK_ON` reader - Set 1 to enable icache clock"]
-pub type ICACHE_CLK_ON_R = crate::BitReader<bool>;
+pub type ICACHE_CLK_ON_R = crate::BitReader;
 #[doc = "Field `ICACHE_CLK_ON` writer - Set 1 to enable icache clock"]
-pub type ICACHE_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, O>;
+pub type ICACHE_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONTROL_SPEC, O>;
 #[doc = "Field `ICACHE_RESET` reader - Set 1 to let icache reset"]
-pub type ICACHE_RESET_R = crate::BitReader<bool>;
+pub type ICACHE_RESET_R = crate::BitReader;
 #[doc = "Field `ICACHE_RESET` writer - Set 1 to let icache reset"]
-pub type ICACHE_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, O>;
+pub type ICACHE_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONTROL_SPEC, O>;
 #[doc = "Field `DCACHE_CLK_ON` reader - Set 1 to enable dcache clock"]
-pub type DCACHE_CLK_ON_R = crate::BitReader<bool>;
+pub type DCACHE_CLK_ON_R = crate::BitReader;
 #[doc = "Field `DCACHE_CLK_ON` writer - Set 1 to enable dcache clock"]
-pub type DCACHE_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, O>;
+pub type DCACHE_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONTROL_SPEC, O>;
 #[doc = "Field `DCACHE_RESET` reader - Set 1 to let dcache reset"]
-pub type DCACHE_RESET_R = crate::BitReader<bool>;
+pub type DCACHE_RESET_R = crate::BitReader;
 #[doc = "Field `DCACHE_RESET` writer - Set 1 to let dcache reset"]
-pub type DCACHE_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, O>;
+pub type DCACHE_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONTROL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable icache clock"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn dcache_reset(&self) -> DCACHE_RESET_R {
         DCACHE_RESET_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_CONTROL")
+            .field(
+                "icache_clk_on",
+                &format_args!("{}", self.icache_clk_on().bit()),
+            )
+            .field(
+                "icache_reset",
+                &format_args!("{}", self.icache_reset().bit()),
+            )
+            .field(
+                "dcache_clk_on",
+                &format_args!("{}", self.dcache_clk_on().bit()),
+            )
+            .field(
+                "dcache_reset",
+                &format_args!("{}", self.dcache_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_CONTROL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

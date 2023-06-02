@@ -14,7 +14,7 @@ impl From<crate::R<TX_ST0_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_CNT` reader - Indicates the cycle number of reading Tx FIFO."]
-pub type TX_CNT_R = crate::FieldReader<u8, u8>;
+pub type TX_CNT_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_RD_BIT_CNT` reader - Indicates the current read bit number from Tx FIFO."]
 pub type TX_FIFO_RD_BIT_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
@@ -27,6 +27,24 @@ impl R {
     #[inline(always)]
     pub fn tx_fifo_rd_bit_cnt(&self) -> TX_FIFO_RD_BIT_CNT_R {
         TX_FIFO_RD_BIT_CNT_R::new((self.bits >> 13) & 0x0007_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_ST0")
+            .field("tx_cnt", &format_args!("{}", self.tx_cnt().bits()))
+            .field(
+                "tx_fifo_rd_bit_cnt",
+                &format_args!("{}", self.tx_fifo_rd_bit_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_ST0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Parallel IO TX status register0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tx_st0](index.html) module"]

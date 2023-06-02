@@ -37,23 +37,19 @@ impl From<crate::W<TIMER3_SPEC>> for W {
 #[doc = "Field `WIFI_WAIT_TIMER` reader - No public"]
 pub type WIFI_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WIFI_WAIT_TIMER` writer - No public"]
-pub type WIFI_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER3_SPEC, u16, u16, 9, O>;
+pub type WIFI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `WIFI_POWERUP_TIMER` reader - No public"]
-pub type WIFI_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type WIFI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `WIFI_POWERUP_TIMER` writer - No public"]
-pub type WIFI_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER3_SPEC, u8, u8, 7, O>;
+pub type WIFI_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 7, O>;
 #[doc = "Field `BT_WAIT_TIMER` reader - No public"]
 pub type BT_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_WAIT_TIMER` writer - No public"]
-pub type BT_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER3_SPEC, u16, u16, 9, O>;
+pub type BT_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `BT_POWERUP_TIMER` reader - No public"]
-pub type BT_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type BT_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `BT_POWERUP_TIMER` writer - No public"]
-pub type BT_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER3_SPEC, u8, u8, 7, O>;
+pub type BT_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn bt_powerup_timer(&self) -> BT_POWERUP_TIMER_R {
         BT_POWERUP_TIMER_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER3")
+            .field(
+                "wifi_wait_timer",
+                &format_args!("{}", self.wifi_wait_timer().bits()),
+            )
+            .field(
+                "wifi_powerup_timer",
+                &format_args!("{}", self.wifi_powerup_timer().bits()),
+            )
+            .field(
+                "bt_wait_timer",
+                &format_args!("{}", self.bt_wait_timer().bits()),
+            )
+            .field(
+                "bt_powerup_timer",
+                &format_args!("{}", self.bt_powerup_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

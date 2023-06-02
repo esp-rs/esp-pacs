@@ -35,35 +35,33 @@ impl From<crate::W<LCD_D_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `D_DQS_MODE` reader - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_DQS_MODE_R = crate::FieldReader<u8, u8>;
+pub type D_DQS_MODE_R = crate::FieldReader;
 #[doc = "Field `D_DQS_MODE` writer - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_DQS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, O>;
+pub type D_DQS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_MODE_SPEC, 3, O>;
 #[doc = "Field `D_CD_MODE` reader - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_CD_MODE_R = crate::FieldReader<u8, u8>;
+pub type D_CD_MODE_R = crate::FieldReader;
 #[doc = "Field `D_CD_MODE` writer - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_CD_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, O>;
+pub type D_CD_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_MODE_SPEC, 3, O>;
 #[doc = "Field `D_DE_MODE` reader - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_DE_MODE_R = crate::FieldReader<u8, u8>;
+pub type D_DE_MODE_R = crate::FieldReader;
 #[doc = "Field `D_DE_MODE` writer - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_DE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, O>;
+pub type D_DE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_MODE_SPEC, 3, O>;
 #[doc = "Field `D_HSYNC_MODE` reader - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_HSYNC_MODE_R = crate::FieldReader<u8, u8>;
+pub type D_HSYNC_MODE_R = crate::FieldReader;
 #[doc = "Field `D_HSYNC_MODE` writer - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_HSYNC_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, O>;
+pub type D_HSYNC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_MODE_SPEC, 3, O>;
 #[doc = "Field `D_VSYNC_MODE` reader - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_VSYNC_MODE_R = crate::FieldReader<u8, u8>;
+pub type D_VSYNC_MODE_R = crate::FieldReader;
 #[doc = "Field `D_VSYNC_MODE` writer - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type D_VSYNC_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, O>;
+pub type D_VSYNC_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_MODE_SPEC, 3, O>;
 #[doc = "Field `DE_IDLE_POL` reader - It is the idle value of spi_de."]
-pub type DE_IDLE_POL_R = crate::BitReader<bool>;
+pub type DE_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `DE_IDLE_POL` writer - It is the idle value of spi_de."]
-pub type DE_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_D_MODE_SPEC, bool, O>;
+pub type DE_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_D_MODE_SPEC, O>;
 #[doc = "Field `HS_BLANK_EN` reader - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
-pub type HS_BLANK_EN_R = crate::BitReader<bool>;
+pub type HS_BLANK_EN_R = crate::BitReader;
 #[doc = "Field `HS_BLANK_EN` writer - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
-pub type HS_BLANK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_D_MODE_SPEC, bool, O>;
+pub type HS_BLANK_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_D_MODE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
@@ -99,6 +97,32 @@ impl R {
     #[inline(always)]
     pub fn hs_blank_en(&self) -> HS_BLANK_EN_R {
         HS_BLANK_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_D_MODE")
+            .field("d_dqs_mode", &format_args!("{}", self.d_dqs_mode().bits()))
+            .field("d_cd_mode", &format_args!("{}", self.d_cd_mode().bits()))
+            .field("d_de_mode", &format_args!("{}", self.d_de_mode().bits()))
+            .field(
+                "d_hsync_mode",
+                &format_args!("{}", self.d_hsync_mode().bits()),
+            )
+            .field(
+                "d_vsync_mode",
+                &format_args!("{}", self.d_vsync_mode().bits()),
+            )
+            .field("de_idle_pol", &format_args!("{}", self.de_idle_pol().bit()))
+            .field("hs_blank_en", &format_args!("{}", self.hs_blank_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_D_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

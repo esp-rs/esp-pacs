@@ -35,61 +35,61 @@ impl From<crate::W<DAINTMSK_SPEC>> for W {
     }
 }
 #[doc = "Field `INEPMSK0` reader - "]
-pub type INEPMSK0_R = crate::BitReader<bool>;
+pub type INEPMSK0_R = crate::BitReader;
 #[doc = "Field `INEPMSK0` writer - "]
-pub type INEPMSK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK0_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK1` reader - "]
-pub type INEPMSK1_R = crate::BitReader<bool>;
+pub type INEPMSK1_R = crate::BitReader;
 #[doc = "Field `INEPMSK1` writer - "]
-pub type INEPMSK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK1_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK2` reader - "]
-pub type INEPMSK2_R = crate::BitReader<bool>;
+pub type INEPMSK2_R = crate::BitReader;
 #[doc = "Field `INEPMSK2` writer - "]
-pub type INEPMSK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK2_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK3` reader - "]
-pub type INEPMSK3_R = crate::BitReader<bool>;
+pub type INEPMSK3_R = crate::BitReader;
 #[doc = "Field `INEPMSK3` writer - "]
-pub type INEPMSK3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK3_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK4` reader - "]
-pub type INEPMSK4_R = crate::BitReader<bool>;
+pub type INEPMSK4_R = crate::BitReader;
 #[doc = "Field `INEPMSK4` writer - "]
-pub type INEPMSK4_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK4_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK5` reader - "]
-pub type INEPMSK5_R = crate::BitReader<bool>;
+pub type INEPMSK5_R = crate::BitReader;
 #[doc = "Field `INEPMSK5` writer - "]
-pub type INEPMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK5_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `INEPMSK6` reader - "]
-pub type INEPMSK6_R = crate::BitReader<bool>;
+pub type INEPMSK6_R = crate::BitReader;
 #[doc = "Field `INEPMSK6` writer - "]
-pub type INEPMSK6_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type INEPMSK6_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK0` reader - "]
-pub type OUTEPMSK0_R = crate::BitReader<bool>;
+pub type OUTEPMSK0_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK0` writer - "]
-pub type OUTEPMSK0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK0_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK1` reader - "]
-pub type OUTEPMSK1_R = crate::BitReader<bool>;
+pub type OUTEPMSK1_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK1` writer - "]
-pub type OUTEPMSK1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK1_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK2` reader - "]
-pub type OUTEPMSK2_R = crate::BitReader<bool>;
+pub type OUTEPMSK2_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK2` writer - "]
-pub type OUTEPMSK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK2_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK3` reader - "]
-pub type OUTEPMSK3_R = crate::BitReader<bool>;
+pub type OUTEPMSK3_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK3` writer - "]
-pub type OUTEPMSK3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK3_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK4` reader - "]
-pub type OUTEPMSK4_R = crate::BitReader<bool>;
+pub type OUTEPMSK4_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK4` writer - "]
-pub type OUTEPMSK4_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK4_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK5` reader - "]
-pub type OUTEPMSK5_R = crate::BitReader<bool>;
+pub type OUTEPMSK5_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK5` writer - "]
-pub type OUTEPMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK5_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 #[doc = "Field `OUTEPMSK6` reader - "]
-pub type OUTEPMSK6_R = crate::BitReader<bool>;
+pub type OUTEPMSK6_R = crate::BitReader;
 #[doc = "Field `OUTEPMSK6` writer - "]
-pub type OUTEPMSK6_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAINTMSK_SPEC, bool, O>;
+pub type OUTEPMSK6_W<'a, const O: u8> = crate::BitWriter<'a, DAINTMSK_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,6 +160,33 @@ impl R {
     #[inline(always)]
     pub fn outepmsk6(&self) -> OUTEPMSK6_R {
         OUTEPMSK6_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DAINTMSK")
+            .field("inepmsk0", &format_args!("{}", self.inepmsk0().bit()))
+            .field("inepmsk1", &format_args!("{}", self.inepmsk1().bit()))
+            .field("inepmsk2", &format_args!("{}", self.inepmsk2().bit()))
+            .field("inepmsk3", &format_args!("{}", self.inepmsk3().bit()))
+            .field("inepmsk4", &format_args!("{}", self.inepmsk4().bit()))
+            .field("inepmsk5", &format_args!("{}", self.inepmsk5().bit()))
+            .field("inepmsk6", &format_args!("{}", self.inepmsk6().bit()))
+            .field("outepmsk0", &format_args!("{}", self.outepmsk0().bit()))
+            .field("outepmsk1", &format_args!("{}", self.outepmsk1().bit()))
+            .field("outepmsk2", &format_args!("{}", self.outepmsk2().bit()))
+            .field("outepmsk3", &format_args!("{}", self.outepmsk3().bit()))
+            .field("outepmsk4", &format_args!("{}", self.outepmsk4().bit()))
+            .field("outepmsk5", &format_args!("{}", self.outepmsk5().bit()))
+            .field("outepmsk6", &format_args!("{}", self.outepmsk6().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DAINTMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

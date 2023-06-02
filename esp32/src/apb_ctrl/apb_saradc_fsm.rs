@@ -35,25 +35,21 @@ impl From<crate::W<APB_SARADC_FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_RSTB_WAIT` reader - "]
-pub type SARADC_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_RSTB_WAIT` writer - "]
-pub type SARADC_RSTB_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, O>;
+pub type SARADC_RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, APB_SARADC_FSM_SPEC, 8, O>;
 #[doc = "Field `SARADC_STANDBY_WAIT` reader - "]
-pub type SARADC_STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_STANDBY_WAIT` writer - "]
-pub type SARADC_STANDBY_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, O>;
+pub type SARADC_STANDBY_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, APB_SARADC_FSM_SPEC, 8, O>;
 #[doc = "Field `SARADC_START_WAIT` reader - "]
-pub type SARADC_START_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_START_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_START_WAIT` writer - "]
-pub type SARADC_START_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, O>;
+pub type SARADC_START_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, APB_SARADC_FSM_SPEC, 8, O>;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` reader - sample cycles"]
-pub type SARADC_SAMPLE_CYCLE_R = crate::FieldReader<u8, u8>;
+pub type SARADC_SAMPLE_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` writer - sample cycles"]
-pub type SARADC_SAMPLE_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, O>;
+pub type SARADC_SAMPLE_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, APB_SARADC_FSM_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn saradc_sample_cycle(&self) -> SARADC_SAMPLE_CYCLE_R {
         SARADC_SAMPLE_CYCLE_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_SARADC_FSM")
+            .field(
+                "saradc_rstb_wait",
+                &format_args!("{}", self.saradc_rstb_wait().bits()),
+            )
+            .field(
+                "saradc_standby_wait",
+                &format_args!("{}", self.saradc_standby_wait().bits()),
+            )
+            .field(
+                "saradc_start_wait",
+                &format_args!("{}", self.saradc_start_wait().bits()),
+            )
+            .field(
+                "saradc_sample_cycle",
+                &format_args!("{}", self.saradc_sample_cycle().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_SARADC_FSM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

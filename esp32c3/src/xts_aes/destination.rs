@@ -35,14 +35,28 @@ impl From<crate::W<DESTINATION_SPEC>> for W {
     }
 }
 #[doc = "Field `DESTINATION` reader - This bit stores the destination. 0: flash(default). 1: reserved."]
-pub type DESTINATION_R = crate::BitReader<bool>;
+pub type DESTINATION_R = crate::BitReader;
 #[doc = "Field `DESTINATION` writer - This bit stores the destination. 0: flash(default). 1: reserved."]
-pub type DESTINATION_W<'a, const O: u8> = crate::BitWriter<'a, u32, DESTINATION_SPEC, bool, O>;
+pub type DESTINATION_W<'a, const O: u8> = crate::BitWriter<'a, DESTINATION_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit stores the destination. 0: flash(default). 1: reserved."]
     #[inline(always)]
     pub fn destination(&self) -> DESTINATION_R {
         DESTINATION_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DESTINATION")
+            .field("destination", &format_args!("{}", self.destination().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DESTINATION_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

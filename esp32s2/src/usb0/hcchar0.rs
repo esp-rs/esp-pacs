@@ -37,43 +37,43 @@ impl From<crate::W<HCCHAR0_SPEC>> for W {
 #[doc = "Field `H_MPS0` reader - "]
 pub type H_MPS0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `H_MPS0` writer - "]
-pub type H_MPS0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR0_SPEC, u16, u16, 11, O>;
+pub type H_MPS0_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR0_SPEC, 11, O, u16, u16>;
 #[doc = "Field `H_EPNUM0` reader - "]
-pub type H_EPNUM0_R = crate::FieldReader<u8, u8>;
+pub type H_EPNUM0_R = crate::FieldReader;
 #[doc = "Field `H_EPNUM0` writer - "]
-pub type H_EPNUM0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR0_SPEC, u8, u8, 4, O>;
+pub type H_EPNUM0_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR0_SPEC, 4, O>;
 #[doc = "Field `H_EPDIR0` reader - "]
-pub type H_EPDIR0_R = crate::BitReader<bool>;
+pub type H_EPDIR0_R = crate::BitReader;
 #[doc = "Field `H_EPDIR0` writer - "]
-pub type H_EPDIR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_EPDIR0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 #[doc = "Field `H_LSPDDEV0` reader - "]
-pub type H_LSPDDEV0_R = crate::BitReader<bool>;
+pub type H_LSPDDEV0_R = crate::BitReader;
 #[doc = "Field `H_LSPDDEV0` writer - "]
-pub type H_LSPDDEV0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_LSPDDEV0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 #[doc = "Field `H_EPTYPE0` reader - "]
-pub type H_EPTYPE0_R = crate::FieldReader<u8, u8>;
+pub type H_EPTYPE0_R = crate::FieldReader;
 #[doc = "Field `H_EPTYPE0` writer - "]
-pub type H_EPTYPE0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR0_SPEC, u8, u8, 2, O>;
+pub type H_EPTYPE0_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR0_SPEC, 2, O>;
 #[doc = "Field `H_EC0` reader - "]
-pub type H_EC0_R = crate::BitReader<bool>;
+pub type H_EC0_R = crate::BitReader;
 #[doc = "Field `H_EC0` writer - "]
-pub type H_EC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_EC0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 #[doc = "Field `H_DEVADDR0` reader - "]
-pub type H_DEVADDR0_R = crate::FieldReader<u8, u8>;
+pub type H_DEVADDR0_R = crate::FieldReader;
 #[doc = "Field `H_DEVADDR0` writer - "]
-pub type H_DEVADDR0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR0_SPEC, u8, u8, 7, O>;
+pub type H_DEVADDR0_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR0_SPEC, 7, O>;
 #[doc = "Field `H_ODDFRM0` reader - "]
-pub type H_ODDFRM0_R = crate::BitReader<bool>;
+pub type H_ODDFRM0_R = crate::BitReader;
 #[doc = "Field `H_ODDFRM0` writer - "]
-pub type H_ODDFRM0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_ODDFRM0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 #[doc = "Field `H_CHDIS0` reader - "]
-pub type H_CHDIS0_R = crate::BitReader<bool>;
+pub type H_CHDIS0_R = crate::BitReader;
 #[doc = "Field `H_CHDIS0` writer - "]
-pub type H_CHDIS0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_CHDIS0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 #[doc = "Field `H_CHENA0` reader - "]
-pub type H_CHENA0_R = crate::BitReader<bool>;
+pub type H_CHENA0_R = crate::BitReader;
 #[doc = "Field `H_CHENA0` writer - "]
-pub type H_CHENA0_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR0_SPEC, bool, O>;
+pub type H_CHENA0_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -124,6 +124,29 @@ impl R {
     #[inline(always)]
     pub fn h_chena0(&self) -> H_CHENA0_R {
         H_CHENA0_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCCHAR0")
+            .field("h_mps0", &format_args!("{}", self.h_mps0().bits()))
+            .field("h_epnum0", &format_args!("{}", self.h_epnum0().bits()))
+            .field("h_epdir0", &format_args!("{}", self.h_epdir0().bit()))
+            .field("h_lspddev0", &format_args!("{}", self.h_lspddev0().bit()))
+            .field("h_eptype0", &format_args!("{}", self.h_eptype0().bits()))
+            .field("h_ec0", &format_args!("{}", self.h_ec0().bit()))
+            .field("h_devaddr0", &format_args!("{}", self.h_devaddr0().bits()))
+            .field("h_oddfrm0", &format_args!("{}", self.h_oddfrm0().bit()))
+            .field("h_chdis0", &format_args!("{}", self.h_chdis0().bit()))
+            .field("h_chena0", &format_args!("{}", self.h_chena0().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCCHAR0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

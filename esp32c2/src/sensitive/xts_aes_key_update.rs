@@ -35,15 +35,31 @@ impl From<crate::W<XTS_AES_KEY_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `XTS_AES_KEY_UPDATE` reader - Set this bit to update xts_aes key"]
-pub type XTS_AES_KEY_UPDATE_R = crate::BitReader<bool>;
+pub type XTS_AES_KEY_UPDATE_R = crate::BitReader;
 #[doc = "Field `XTS_AES_KEY_UPDATE` writer - Set this bit to update xts_aes key"]
-pub type XTS_AES_KEY_UPDATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, XTS_AES_KEY_UPDATE_SPEC, bool, O>;
+pub type XTS_AES_KEY_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, XTS_AES_KEY_UPDATE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to update xts_aes key"]
     #[inline(always)]
     pub fn xts_aes_key_update(&self) -> XTS_AES_KEY_UPDATE_R {
         XTS_AES_KEY_UPDATE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTS_AES_KEY_UPDATE")
+            .field(
+                "xts_aes_key_update",
+                &format_args!("{}", self.xts_aes_key_update().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTS_AES_KEY_UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

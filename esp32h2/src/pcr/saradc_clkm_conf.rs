@@ -35,30 +35,26 @@ impl From<crate::W<SARADC_CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_CLKM_DIV_A` reader - The denominator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type SARADC_CLKM_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_A` writer - The denominator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SARADC_CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type SARADC_CLKM_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, SARADC_CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `SARADC_CLKM_DIV_B` reader - The numerator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type SARADC_CLKM_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_B` writer - The numerator of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SARADC_CLKM_CONF_SPEC, u8, u8, 6, O>;
+pub type SARADC_CLKM_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, SARADC_CLKM_CONF_SPEC, 6, O>;
 #[doc = "Field `SARADC_CLKM_DIV_NUM` reader - The integral part of the frequency divider factor of the saradc function clock."]
-pub type SARADC_CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SARADC_CLKM_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_DIV_NUM` writer - The integral part of the frequency divider factor of the saradc function clock."]
 pub type SARADC_CLKM_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SARADC_CLKM_CONF_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SARADC_CLKM_CONF_SPEC, 8, O>;
 #[doc = "Field `SARADC_CLKM_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
-pub type SARADC_CLKM_SEL_R = crate::FieldReader<u8, u8>;
+pub type SARADC_CLKM_SEL_R = crate::FieldReader;
 #[doc = "Field `SARADC_CLKM_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
-pub type SARADC_CLKM_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SARADC_CLKM_CONF_SPEC, u8, u8, 2, O>;
+pub type SARADC_CLKM_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SARADC_CLKM_CONF_SPEC, 2, O>;
 #[doc = "Field `SARADC_CLKM_EN` reader - Set 1 to enable saradc function clock"]
-pub type SARADC_CLKM_EN_R = crate::BitReader<bool>;
+pub type SARADC_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLKM_EN` writer - Set 1 to enable saradc function clock"]
-pub type SARADC_CLKM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SARADC_CLKM_CONF_SPEC, bool, O>;
+pub type SARADC_CLKM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SARADC_CLKM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
@@ -84,6 +80,39 @@ impl R {
     #[inline(always)]
     pub fn saradc_clkm_en(&self) -> SARADC_CLKM_EN_R {
         SARADC_CLKM_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SARADC_CLKM_CONF")
+            .field(
+                "saradc_clkm_div_a",
+                &format_args!("{}", self.saradc_clkm_div_a().bits()),
+            )
+            .field(
+                "saradc_clkm_div_b",
+                &format_args!("{}", self.saradc_clkm_div_b().bits()),
+            )
+            .field(
+                "saradc_clkm_div_num",
+                &format_args!("{}", self.saradc_clkm_div_num().bits()),
+            )
+            .field(
+                "saradc_clkm_sel",
+                &format_args!("{}", self.saradc_clkm_sel().bits()),
+            )
+            .field(
+                "saradc_clkm_en",
+                &format_args!("{}", self.saradc_clkm_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SARADC_CLKM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

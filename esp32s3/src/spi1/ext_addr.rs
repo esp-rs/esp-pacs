@@ -37,12 +37,26 @@ impl From<crate::W<EXT_ADDR_SPEC>> for W {
 #[doc = "Field `EXT_ADDR` reader - The register are the higher 32bits in the 64 bits address mode."]
 pub type EXT_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `EXT_ADDR` writer - The register are the higher 32bits in the 64 bits address mode."]
-pub type EXT_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT_ADDR_SPEC, u32, u32, 32, O>;
+pub type EXT_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The register are the higher 32bits in the 64 bits address mode."]
     #[inline(always)]
     pub fn ext_addr(&self) -> EXT_ADDR_R {
         EXT_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_ADDR")
+            .field("ext_addr", &format_args!("{}", self.ext_addr().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

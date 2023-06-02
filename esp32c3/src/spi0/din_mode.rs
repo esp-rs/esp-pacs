@@ -35,21 +35,21 @@ impl From<crate::W<DIN_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN0_MODE_R = crate::FieldReader<u8, u8>;
+pub type DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN0_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_MODE_SPEC, u8, u8, 2, O>;
+pub type DIN0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_MODE_SPEC, 2, O>;
 #[doc = "Field `DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN1_MODE_R = crate::FieldReader<u8, u8>;
+pub type DIN1_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN1_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_MODE_SPEC, u8, u8, 2, O>;
+pub type DIN1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_MODE_SPEC, 2, O>;
 #[doc = "Field `DIN2_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN2_MODE_R = crate::FieldReader<u8, u8>;
+pub type DIN2_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN2_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_MODE_SPEC, u8, u8, 2, O>;
+pub type DIN2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_MODE_SPEC, 2, O>;
 #[doc = "Field `DIN3_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN3_MODE_R = crate::FieldReader<u8, u8>;
+pub type DIN3_MODE_R = crate::FieldReader;
 #[doc = "Field `DIN3_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type DIN3_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIN_MODE_SPEC, u8, u8, 2, O>;
+pub type DIN3_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DIN_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
@@ -70,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn din3_mode(&self) -> DIN3_MODE_R {
         DIN3_MODE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIN_MODE")
+            .field("din0_mode", &format_args!("{}", self.din0_mode().bits()))
+            .field("din1_mode", &format_args!("{}", self.din1_mode().bits()))
+            .field("din2_mode", &format_args!("{}", self.din2_mode().bits()))
+            .field("din3_mode", &format_args!("{}", self.din3_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIN_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

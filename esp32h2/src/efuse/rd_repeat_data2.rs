@@ -14,27 +14,27 @@ impl From<crate::R<RD_REPEAT_DATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY_PURPOSE_2` reader - Represents the purpose of Key2."]
-pub type KEY_PURPOSE_2_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_2_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_3` reader - Represents the purpose of Key3."]
-pub type KEY_PURPOSE_3_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_3_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_4` reader - Represents the purpose of Key4."]
-pub type KEY_PURPOSE_4_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_4_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_5` reader - Represents the purpose of Key5."]
-pub type KEY_PURPOSE_5_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_5_R = crate::FieldReader;
 #[doc = "Field `SEC_DPA_LEVEL` reader - Represents the spa secure level by configuring the clock random divide mode."]
-pub type SEC_DPA_LEVEL_R = crate::FieldReader<u8, u8>;
+pub type SEC_DPA_LEVEL_R = crate::FieldReader;
 #[doc = "Field `ECDSA_FORCE_USE_HARDWARE_K` reader - Represents whether hardware random number k is forced used in ESDCA. 1: force used. 0: not force used."]
-pub type ECDSA_FORCE_USE_HARDWARE_K_R = crate::BitReader<bool>;
+pub type ECDSA_FORCE_USE_HARDWARE_K_R = crate::BitReader;
 #[doc = "Field `CRYPT_DPA_ENABLE` reader - Represents whether anti-dpa attack is enabled. 1:enabled. 0: disabled."]
-pub type CRYPT_DPA_ENABLE_R = crate::BitReader<bool>;
+pub type CRYPT_DPA_ENABLE_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_EN` reader - Represents whether secure boot is enabled or disabled. 1: enabled. 0: disabled."]
-pub type SECURE_BOOT_EN_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_EN_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE` reader - Represents whether revoking aggressive secure boot is enabled or disabled. 1: enabled. 0: disabled."]
-pub type SECURE_BOOT_AGGRESSIVE_REVOKE_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_AGGRESSIVE_REVOKE_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED2_0` reader - Reserved."]
-pub type RPT4_RESERVED2_0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED2_0_R = crate::FieldReader;
 #[doc = "Field `FLASH_TPUW` reader - Represents the flash waiting time after power-up, in unit of ms. When the value less than 15, the waiting time is the programmed value. Otherwise, the waiting time is 2 times the programmed value."]
-pub type FLASH_TPUW_R = crate::FieldReader<u8, u8>;
+pub type FLASH_TPUW_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Represents the purpose of Key2."]
     #[inline(always)]
@@ -90,6 +90,60 @@ impl R {
     #[inline(always)]
     pub fn flash_tpuw(&self) -> FLASH_TPUW_R {
         FLASH_TPUW_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA2")
+            .field(
+                "key_purpose_2",
+                &format_args!("{}", self.key_purpose_2().bits()),
+            )
+            .field(
+                "key_purpose_3",
+                &format_args!("{}", self.key_purpose_3().bits()),
+            )
+            .field(
+                "key_purpose_4",
+                &format_args!("{}", self.key_purpose_4().bits()),
+            )
+            .field(
+                "key_purpose_5",
+                &format_args!("{}", self.key_purpose_5().bits()),
+            )
+            .field(
+                "sec_dpa_level",
+                &format_args!("{}", self.sec_dpa_level().bits()),
+            )
+            .field(
+                "ecdsa_force_use_hardware_k",
+                &format_args!("{}", self.ecdsa_force_use_hardware_k().bit()),
+            )
+            .field(
+                "crypt_dpa_enable",
+                &format_args!("{}", self.crypt_dpa_enable().bit()),
+            )
+            .field(
+                "secure_boot_en",
+                &format_args!("{}", self.secure_boot_en().bit()),
+            )
+            .field(
+                "secure_boot_aggressive_revoke",
+                &format_args!("{}", self.secure_boot_aggressive_revoke().bit()),
+            )
+            .field(
+                "rpt4_reserved2_0",
+                &format_args!("{}", self.rpt4_reserved2_0().bits()),
+            )
+            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data2](index.html) module"]

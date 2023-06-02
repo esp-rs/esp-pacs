@@ -35,15 +35,31 @@ impl From<crate::W<PLL_TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PLL_TICK_NUM` reader - "]
-pub type PLL_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type PLL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `PLL_TICK_NUM` writer - "]
-pub type PLL_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLL_TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type PLL_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_TICK_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn pll_tick_num(&self) -> PLL_TICK_NUM_R {
         PLL_TICK_NUM_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLL_TICK_CONF")
+            .field(
+                "pll_tick_num",
+                &format_args!("{}", self.pll_tick_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLL_TICK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

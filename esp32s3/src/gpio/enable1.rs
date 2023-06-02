@@ -37,12 +37,26 @@ impl From<crate::W<ENABLE1_SPEC>> for W {
 #[doc = "Field `DATA` reader - GPIO output enable register for GPIO32-53"]
 pub type DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA` writer - GPIO output enable register for GPIO32-53"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ENABLE1_SPEC, u32, u32, 22, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, ENABLE1_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO output enable register for GPIO32-53"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ENABLE1")
+            .field("data", &format_args!("{}", self.data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ENABLE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

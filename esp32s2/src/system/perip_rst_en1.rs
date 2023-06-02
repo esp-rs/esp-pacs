@@ -35,30 +35,29 @@ impl From<crate::W<PERIP_RST_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_AES_RST` reader - Set this bit to reset cryptography AES."]
-pub type CRYPTO_AES_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_AES_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_RST` writer - Set this bit to reset cryptography AES."]
-pub type CRYPTO_AES_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_AES_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_SHA_RST` reader - Set this bit to reset cryptography SHA."]
-pub type CRYPTO_SHA_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_SHA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_RST` writer - Set this bit to reset cryptography SHA."]
-pub type CRYPTO_SHA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_SHA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_RSA_RST` reader - Set this bit to reset cryptography RSA."]
-pub type CRYPTO_RSA_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_RSA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_RST` writer - Set this bit to reset cryptography RSA."]
-pub type CRYPTO_RSA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_RSA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_DS_RST` reader - Set this bit to reset cryptography digital signature."]
-pub type CRYPTO_DS_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_DS_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_RST` writer - Set this bit to reset cryptography digital signature."]
-pub type CRYPTO_DS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_DS_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_HMAC_RST` reader - Set this bit to reset cryptography HMAC."]
-pub type CRYPTO_HMAC_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_HMAC_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_RST` writer - Set this bit to reset cryptography HMAC."]
-pub type CRYPTO_HMAC_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_HMAC_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_DMA_RST` reader - Set this bit to reset cryptography DMA."]
-pub type CRYPTO_DMA_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_DMA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DMA_RST` writer - Set this bit to reset cryptography DMA."]
-pub type CRYPTO_DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set this bit to reset cryptography AES."]
     #[inline(always)]
@@ -89,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn crypto_dma_rst(&self) -> CRYPTO_DMA_RST_R {
         CRYPTO_DMA_RST_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_RST_EN1")
+            .field(
+                "crypto_aes_rst",
+                &format_args!("{}", self.crypto_aes_rst().bit()),
+            )
+            .field(
+                "crypto_sha_rst",
+                &format_args!("{}", self.crypto_sha_rst().bit()),
+            )
+            .field(
+                "crypto_rsa_rst",
+                &format_args!("{}", self.crypto_rsa_rst().bit()),
+            )
+            .field(
+                "crypto_ds_rst",
+                &format_args!("{}", self.crypto_ds_rst().bit()),
+            )
+            .field(
+                "crypto_hmac_rst",
+                &format_args!("{}", self.crypto_hmac_rst().bit()),
+            )
+            .field(
+                "crypto_dma_rst",
+                &format_args!("{}", self.crypto_dma_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

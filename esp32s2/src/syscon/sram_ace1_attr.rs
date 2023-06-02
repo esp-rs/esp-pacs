@@ -35,15 +35,31 @@ impl From<crate::W<SRAM_ACE1_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_ACE1_ATTR` reader - "]
-pub type SRAM_ACE1_ATTR_R = crate::FieldReader<u8, u8>;
+pub type SRAM_ACE1_ATTR_R = crate::FieldReader;
 #[doc = "Field `SRAM_ACE1_ATTR` writer - "]
-pub type SRAM_ACE1_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_ACE1_ATTR_SPEC, u8, u8, 3, O>;
+pub type SRAM_ACE1_ATTR_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_ACE1_ATTR_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn sram_ace1_attr(&self) -> SRAM_ACE1_ATTR_R {
         SRAM_ACE1_ATTR_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_ACE1_ATTR")
+            .field(
+                "sram_ace1_attr",
+                &format_args!("{}", self.sram_ace1_attr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_ACE1_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

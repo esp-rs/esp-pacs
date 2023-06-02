@@ -35,26 +35,25 @@ impl From<crate::W<CH_RX_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch2."]
-pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
+pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch2."]
-pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u8, u8, 8, O>;
+pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 8, O>;
 #[doc = "Field `IDLE_THRES` reader - reg_idle_thres_ch2."]
 pub type IDLE_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IDLE_THRES` writer - reg_idle_thres_ch2."]
-pub type IDLE_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u16, u16, 15, O>;
+pub type IDLE_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 15, O, u16, u16>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch2."]
-pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
+pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch2."]
-pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u8, u8, 3, O>;
+pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_CONF0_SPEC, 3, O>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch2."]
-pub type CARRIER_EN_R = crate::BitReader<bool>;
+pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch2."]
-pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_RX_CONF0_SPEC, bool, O>;
+pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_RX_CONF0_SPEC, O>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch2."]
-pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
+pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch2."]
-pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_RX_CONF0_SPEC, bool, O>;
+pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_RX_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
@@ -80,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn carrier_out_lv(&self) -> CARRIER_OUT_LV_R {
         CARRIER_OUT_LV_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_RX_CONF0")
+            .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
+            .field("idle_thres", &format_args!("{}", self.idle_thres().bits()))
+            .field("mem_size", &format_args!("{}", self.mem_size().bits()))
+            .field("carrier_en", &format_args!("{}", self.carrier_en().bit()))
+            .field(
+                "carrier_out_lv",
+                &format_args!("{}", self.carrier_out_lv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_RX_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

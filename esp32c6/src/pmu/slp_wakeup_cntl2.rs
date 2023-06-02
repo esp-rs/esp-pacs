@@ -38,12 +38,26 @@ impl From<crate::W<SLP_WAKEUP_CNTL2_SPEC>> for W {
 pub type WAKEUP_ENA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WAKEUP_ENA` writer - need_des"]
 pub type WAKEUP_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL2_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn wakeup_ena(&self) -> WAKEUP_ENA_R {
         WAKEUP_ENA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_WAKEUP_CNTL2")
+            .field("wakeup_ena", &format_args!("{}", self.wakeup_ena().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

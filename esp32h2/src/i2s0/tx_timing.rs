@@ -35,34 +35,29 @@ impl From<crate::W<TX_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SD_OUT_DM` reader - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_SD_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_SD_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `TX_SD_OUT_DM` writer - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_SD_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_SD_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_SD1_OUT_DM` reader - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_SD1_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_SD1_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `TX_SD1_OUT_DM` writer - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_SD1_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_SD1_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_WS_OUT_DM` reader - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_WS_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_WS_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `TX_WS_OUT_DM` writer - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_WS_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_WS_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_BCK_OUT_DM` reader - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_BCK_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_BCK_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_OUT_DM` writer - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_BCK_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_BCK_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_WS_IN_DM` reader - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_WS_IN_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_WS_IN_DM_R = crate::FieldReader;
 #[doc = "Field `TX_WS_IN_DM` writer - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_WS_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_WS_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_BCK_IN_DM` reader - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_BCK_IN_DM_R = crate::FieldReader<u8, u8>;
+pub type TX_BCK_IN_DM_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_IN_DM` writer - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type TX_BCK_IN_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_BCK_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, TX_TIMING_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
@@ -93,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn tx_bck_in_dm(&self) -> TX_BCK_IN_DM_R {
         TX_BCK_IN_DM_R::new(((self.bits >> 28) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_TIMING")
+            .field(
+                "tx_sd_out_dm",
+                &format_args!("{}", self.tx_sd_out_dm().bits()),
+            )
+            .field(
+                "tx_sd1_out_dm",
+                &format_args!("{}", self.tx_sd1_out_dm().bits()),
+            )
+            .field(
+                "tx_ws_out_dm",
+                &format_args!("{}", self.tx_ws_out_dm().bits()),
+            )
+            .field(
+                "tx_bck_out_dm",
+                &format_args!("{}", self.tx_bck_out_dm().bits()),
+            )
+            .field(
+                "tx_ws_in_dm",
+                &format_args!("{}", self.tx_ws_in_dm().bits()),
+            )
+            .field(
+                "tx_bck_in_dm",
+                &format_args!("{}", self.tx_bck_in_dm().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_TIMING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

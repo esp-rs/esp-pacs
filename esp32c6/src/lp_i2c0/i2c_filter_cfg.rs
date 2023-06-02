@@ -35,25 +35,23 @@ impl From<crate::W<I2C_FILTER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SCL_FILTER_THRES` reader - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub type I2C_SCL_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCL_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `I2C_SCL_FILTER_THRES` writer - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
 pub type I2C_SCL_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_FILTER_CFG_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, I2C_FILTER_CFG_SPEC, 4, O>;
 #[doc = "Field `I2C_SDA_FILTER_THRES` reader - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub type I2C_SDA_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type I2C_SDA_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `I2C_SDA_FILTER_THRES` writer - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
 pub type I2C_SDA_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_FILTER_CFG_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, I2C_FILTER_CFG_SPEC, 4, O>;
 #[doc = "Field `I2C_SCL_FILTER_EN` reader - This is the filter enable bit for SCL."]
-pub type I2C_SCL_FILTER_EN_R = crate::BitReader<bool>;
+pub type I2C_SCL_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `I2C_SCL_FILTER_EN` writer - This is the filter enable bit for SCL."]
-pub type I2C_SCL_FILTER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_FILTER_CFG_SPEC, bool, O>;
+pub type I2C_SCL_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_FILTER_CFG_SPEC, O>;
 #[doc = "Field `I2C_SDA_FILTER_EN` reader - This is the filter enable bit for SDA."]
-pub type I2C_SDA_FILTER_EN_R = crate::BitReader<bool>;
+pub type I2C_SDA_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `I2C_SDA_FILTER_EN` writer - This is the filter enable bit for SDA."]
-pub type I2C_SDA_FILTER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_FILTER_CFG_SPEC, bool, O>;
+pub type I2C_SDA_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_FILTER_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
@@ -74,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn i2c_sda_filter_en(&self) -> I2C_SDA_FILTER_EN_R {
         I2C_SDA_FILTER_EN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_FILTER_CFG")
+            .field(
+                "i2c_scl_filter_thres",
+                &format_args!("{}", self.i2c_scl_filter_thres().bits()),
+            )
+            .field(
+                "i2c_sda_filter_thres",
+                &format_args!("{}", self.i2c_sda_filter_thres().bits()),
+            )
+            .field(
+                "i2c_scl_filter_en",
+                &format_args!("{}", self.i2c_scl_filter_en().bit()),
+            )
+            .field(
+                "i2c_sda_filter_en",
+                &format_args!("{}", self.i2c_sda_filter_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_FILTER_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

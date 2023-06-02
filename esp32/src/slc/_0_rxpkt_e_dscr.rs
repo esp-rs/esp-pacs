@@ -38,12 +38,29 @@ impl From<crate::W<_0_RXPKT_E_DSCR_SPEC>> for W {
 pub type SLC0_RX_PKT_E_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC0_RX_PKT_E_DSCR_ADDR` writer - "]
 pub type SLC0_RX_PKT_E_DSCR_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _0_RXPKT_E_DSCR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, _0_RXPKT_E_DSCR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn slc0_rx_pkt_e_dscr_addr(&self) -> SLC0_RX_PKT_E_DSCR_ADDR_R {
         SLC0_RX_PKT_E_DSCR_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0_RXPKT_E_DSCR")
+            .field(
+                "slc0_rx_pkt_e_dscr_addr",
+                &format_args!("{}", self.slc0_rx_pkt_e_dscr_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0_RXPKT_E_DSCR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

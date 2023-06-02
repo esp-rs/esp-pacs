@@ -20,8 +20,13 @@ impl From<crate::W<IMM_HP_FUNC_ICG_SPEC>> for W {
     }
 }
 #[doc = "Field `UPDATE_DIG_ICG_FUNC_EN` writer - need_des"]
-pub type UPDATE_DIG_ICG_FUNC_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_FUNC_ICG_SPEC, bool, O>;
+pub type UPDATE_DIG_ICG_FUNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_FUNC_ICG_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IMM_HP_FUNC_ICG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]

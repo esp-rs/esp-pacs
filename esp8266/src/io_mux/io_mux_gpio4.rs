@@ -37,30 +37,28 @@ impl From<crate::W<IO_MUX_GPIO4_SPEC>> for W {
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IO_MUX_GPIO4_SPEC, u32, u32, 32, O>;
+pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, IO_MUX_GPIO4_SPEC, 32, O, u32, u32>;
 #[doc = "Field `SLEEP_ENABLE` reader - configures output enable during sleep mode"]
-pub type SLEEP_ENABLE_R = crate::BitReader<bool>;
+pub type SLEEP_ENABLE_R = crate::BitReader;
 #[doc = "Field `SLEEP_ENABLE` writer - configures output enable during sleep mode"]
-pub type SLEEP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IO_MUX_GPIO4_SPEC, bool, O>;
+pub type SLEEP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_GPIO4_SPEC, O>;
 #[doc = "Field `SLEEP_PULLUP` reader - configures pull up during sleep mode"]
-pub type SLEEP_PULLUP_R = crate::BitReader<bool>;
+pub type SLEEP_PULLUP_R = crate::BitReader;
 #[doc = "Field `SLEEP_PULLUP` writer - configures pull up during sleep mode"]
-pub type SLEEP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IO_MUX_GPIO4_SPEC, bool, O>;
+pub type SLEEP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_GPIO4_SPEC, O>;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` reader - configures IO_MUX function, bottom 2 bits"]
-pub type FUNCTION_SELECT_LOW_BITS_R = crate::FieldReader<u8, u8>;
+pub type FUNCTION_SELECT_LOW_BITS_R = crate::FieldReader;
 #[doc = "Field `FUNCTION_SELECT_LOW_BITS` writer - configures IO_MUX function, bottom 2 bits"]
 pub type FUNCTION_SELECT_LOW_BITS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IO_MUX_GPIO4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, IO_MUX_GPIO4_SPEC, 2, O>;
 #[doc = "Field `PULLUP` reader - configures pull up"]
-pub type PULLUP_R = crate::BitReader<bool>;
+pub type PULLUP_R = crate::BitReader;
 #[doc = "Field `PULLUP` writer - configures pull up"]
-pub type PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IO_MUX_GPIO4_SPEC, bool, O>;
+pub type PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_GPIO4_SPEC, O>;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` reader - configures IO_MUX function, upper bit"]
-pub type FUNCTION_SELECT_HIGH_BIT_R = crate::BitReader<bool>;
+pub type FUNCTION_SELECT_HIGH_BIT_R = crate::BitReader;
 #[doc = "Field `FUNCTION_SELECT_HIGH_BIT` writer - configures IO_MUX function, upper bit"]
-pub type FUNCTION_SELECT_HIGH_BIT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IO_MUX_GPIO4_SPEC, bool, O>;
+pub type FUNCTION_SELECT_HIGH_BIT_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_GPIO4_SPEC, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -91,6 +89,37 @@ impl R {
     #[inline(always)]
     pub fn function_select_high_bit(&self) -> FUNCTION_SELECT_HIGH_BIT_R {
         FUNCTION_SELECT_HIGH_BIT_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IO_MUX_GPIO4")
+            .field("register", &format_args!("{}", self.register().bits()))
+            .field(
+                "function_select_low_bits",
+                &format_args!("{}", self.function_select_low_bits().bits()),
+            )
+            .field(
+                "function_select_high_bit",
+                &format_args!("{}", self.function_select_high_bit().bit()),
+            )
+            .field("pullup", &format_args!("{}", self.pullup().bit()))
+            .field(
+                "sleep_pullup",
+                &format_args!("{}", self.sleep_pullup().bit()),
+            )
+            .field(
+                "sleep_enable",
+                &format_args!("{}", self.sleep_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IO_MUX_GPIO4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

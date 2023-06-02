@@ -35,14 +35,28 @@ impl From<crate::W<DATA_12_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BYTE_12` reader - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 12 and when software initiate read operation, it is rx data register 12."]
-pub type TX_BYTE_12_R = crate::FieldReader<u8, u8>;
+pub type TX_BYTE_12_R = crate::FieldReader;
 #[doc = "Field `TX_BYTE_12` writer - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 12 and when software initiate read operation, it is rx data register 12."]
-pub type TX_BYTE_12_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_12_SPEC, u8, u8, 8, O>;
+pub type TX_BYTE_12_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_12_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 12 and when software initiate read operation, it is rx data register 12."]
     #[inline(always)]
     pub fn tx_byte_12(&self) -> TX_BYTE_12_R {
         TX_BYTE_12_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATA_12")
+            .field("tx_byte_12", &format_args!("{}", self.tx_byte_12().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATA_12_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

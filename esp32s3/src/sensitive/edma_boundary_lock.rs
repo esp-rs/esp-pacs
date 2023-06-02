@@ -35,15 +35,31 @@ impl From<crate::W<EDMA_BOUNDARY_LOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `EDMA_BOUNDARY_LOCK` reader - Set 1 to lock EDMA boundary registers."]
-pub type EDMA_BOUNDARY_LOCK_R = crate::BitReader<bool>;
+pub type EDMA_BOUNDARY_LOCK_R = crate::BitReader;
 #[doc = "Field `EDMA_BOUNDARY_LOCK` writer - Set 1 to lock EDMA boundary registers."]
-pub type EDMA_BOUNDARY_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EDMA_BOUNDARY_LOCK_SPEC, bool, O>;
+pub type EDMA_BOUNDARY_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, EDMA_BOUNDARY_LOCK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock EDMA boundary registers."]
     #[inline(always)]
     pub fn edma_boundary_lock(&self) -> EDMA_BOUNDARY_LOCK_R {
         EDMA_BOUNDARY_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EDMA_BOUNDARY_LOCK")
+            .field(
+                "edma_boundary_lock",
+                &format_args!("{}", self.edma_boundary_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EDMA_BOUNDARY_LOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

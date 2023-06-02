@@ -35,51 +35,51 @@ impl From<crate::W<CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - 0: direct output, 1: open drain output."]
-pub type SDA_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - 0: direct output, 1: open drain output."]
-pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `SCL_FORCE_OUT` reader - 0: direct output, 1: open drain output."]
-pub type SCL_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - 0: direct output, 1: open drain output."]
-pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
-pub type SAMPLE_SCL_LEVEL_R = crate::BitReader<bool>;
+pub type SAMPLE_SCL_LEVEL_R = crate::BitReader;
 #[doc = "Field `SAMPLE_SCL_LEVEL` writer - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
-pub type SAMPLE_SCL_LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type SAMPLE_SCL_LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `RX_FULL_ACK_LEVEL` reader - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
-pub type RX_FULL_ACK_LEVEL_R = crate::BitReader<bool>;
+pub type RX_FULL_ACK_LEVEL_R = crate::BitReader;
 #[doc = "Field `RX_FULL_ACK_LEVEL` writer - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
-pub type RX_FULL_ACK_LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type RX_FULL_ACK_LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `MS_MODE` reader - Set this bit to configure the module as an I2C Master. Clear this bit to configure the module as an I2C Slave."]
-pub type MS_MODE_R = crate::BitReader<bool>;
+pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - Set this bit to configure the module as an I2C Master. Clear this bit to configure the module as an I2C Slave."]
-pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `TRANS_START` writer - Set this bit to start sending the data in txfifo."]
-pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `TX_LSB_FIRST` reader - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
-pub type TX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
-pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `RX_LSB_FIRST` reader - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit, 0: receive data from the most significant bit."]
-pub type RX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit, 0: receive data from the most significant bit."]
-pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - Reserved"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Reserved"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `ARBITRATION_EN` reader - This is the enable bit for arbitration_lost."]
-pub type ARBITRATION_EN_R = crate::BitReader<bool>;
+pub type ARBITRATION_EN_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_EN` writer - This is the enable bit for arbitration_lost."]
-pub type ARBITRATION_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type ARBITRATION_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `FSM_RST` writer - This register is used to reset the scl FMS."]
-pub type FSM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type FSM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `CONF_UPGATE` writer - synchronization bit"]
-pub type CONF_UPGATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type CONF_UPGATE_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 #[doc = "Field `SLV_TX_AUTO_START_EN` reader - This is the enable bit for slave to send data automatically"]
-pub type SLV_TX_AUTO_START_EN_R = crate::BitReader<bool>;
+pub type SLV_TX_AUTO_START_EN_R = crate::BitReader;
 #[doc = "Field `SLV_TX_AUTO_START_EN` writer - This is the enable bit for slave to send data automatically"]
-pub type SLV_TX_AUTO_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTR_SPEC, bool, O>;
+pub type SLV_TX_AUTO_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 0: direct output, 1: open drain output."]
     #[inline(always)]
@@ -130,6 +130,53 @@ impl R {
     #[inline(always)]
     pub fn slv_tx_auto_start_en(&self) -> SLV_TX_AUTO_START_EN_R {
         SLV_TX_AUTO_START_EN_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTR")
+            .field(
+                "sda_force_out",
+                &format_args!("{}", self.sda_force_out().bit()),
+            )
+            .field(
+                "scl_force_out",
+                &format_args!("{}", self.scl_force_out().bit()),
+            )
+            .field(
+                "sample_scl_level",
+                &format_args!("{}", self.sample_scl_level().bit()),
+            )
+            .field(
+                "rx_full_ack_level",
+                &format_args!("{}", self.rx_full_ack_level().bit()),
+            )
+            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
+            .field(
+                "tx_lsb_first",
+                &format_args!("{}", self.tx_lsb_first().bit()),
+            )
+            .field(
+                "rx_lsb_first",
+                &format_args!("{}", self.rx_lsb_first().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "arbitration_en",
+                &format_args!("{}", self.arbitration_en().bit()),
+            )
+            .field(
+                "slv_tx_auto_start_en",
+                &format_args!("{}", self.slv_tx_auto_start_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

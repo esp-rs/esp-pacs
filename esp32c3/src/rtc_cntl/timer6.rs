@@ -38,12 +38,11 @@ impl From<crate::W<TIMER6_SPEC>> for W {
 pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` writer - digital peri power domain wakeup time"]
 pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER6_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16, u16>;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` reader - digital peri power domain power on time"]
-pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` writer - digital peri power domain power on time"]
-pub type DG_PERI_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER6_SPEC, u8, u8, 7, O>;
+pub type DG_PERI_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 16:24 - digital peri power domain wakeup time"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn dg_peri_powerup_timer(&self) -> DG_PERI_POWERUP_TIMER_R {
         DG_PERI_POWERUP_TIMER_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER6")
+            .field(
+                "dg_peri_wait_timer",
+                &format_args!("{}", self.dg_peri_wait_timer().bits()),
+            )
+            .field(
+                "dg_peri_powerup_timer",
+                &format_args!("{}", self.dg_peri_powerup_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

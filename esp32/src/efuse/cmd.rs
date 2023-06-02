@@ -35,13 +35,13 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_CMD` reader - command for read"]
-pub type READ_CMD_R = crate::BitReader<bool>;
+pub type READ_CMD_R = crate::BitReader;
 #[doc = "Field `READ_CMD` writer - command for read"]
-pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `PGM_CMD` reader - command for program"]
-pub type PGM_CMD_R = crate::BitReader<bool>;
+pub type PGM_CMD_R = crate::BitReader;
 #[doc = "Field `PGM_CMD` writer - command for program"]
-pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - command for read"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn pgm_cmd(&self) -> PGM_CMD_R {
         PGM_CMD_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD")
+            .field("read_cmd", &format_args!("{}", self.read_cmd().bit()))
+            .field("pgm_cmd", &format_args!("{}", self.pgm_cmd().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

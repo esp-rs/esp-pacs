@@ -35,15 +35,32 @@ impl From<crate::W<ERR_WARNING_LIMIT_SPEC>> for W {
     }
 }
 #[doc = "Field `ERR_WARNING_LIMIT` reader - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
-pub type ERR_WARNING_LIMIT_R = crate::FieldReader<u8, u8>;
+pub type ERR_WARNING_LIMIT_R = crate::FieldReader;
 #[doc = "Field `ERR_WARNING_LIMIT` writer - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
 pub type ERR_WARNING_LIMIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ERR_WARNING_LIMIT_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, ERR_WARNING_LIMIT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
     #[inline(always)]
     pub fn err_warning_limit(&self) -> ERR_WARNING_LIMIT_R {
         ERR_WARNING_LIMIT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ERR_WARNING_LIMIT")
+            .field(
+                "err_warning_limit",
+                &format_args!("{}", self.err_warning_limit().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ERR_WARNING_LIMIT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

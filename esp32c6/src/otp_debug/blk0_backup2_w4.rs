@@ -22,6 +22,23 @@ impl R {
         OTP_BEBUG_BLOCK0_BACKUP2_W4_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_BACKUP2_W4")
+            .field(
+                "otp_bebug_block0_backup2_w4",
+                &format_args!("{}", self.otp_bebug_block0_backup2_w4().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_BACKUP2_W4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Otp debuger block0 data register10.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_backup2_w4](index.html) module"]
 pub struct BLK0_BACKUP2_W4_SPEC;
 impl crate::RegisterSpec for BLK0_BACKUP2_W4_SPEC {

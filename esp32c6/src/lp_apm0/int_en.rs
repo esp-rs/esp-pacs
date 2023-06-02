@@ -35,14 +35,31 @@ impl From<crate::W<INT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `M0_APM_INT_EN` reader - APM M0 interrupt enable"]
-pub type M0_APM_INT_EN_R = crate::BitReader<bool>;
+pub type M0_APM_INT_EN_R = crate::BitReader;
 #[doc = "Field `M0_APM_INT_EN` writer - APM M0 interrupt enable"]
-pub type M0_APM_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_EN_SPEC, bool, O>;
+pub type M0_APM_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, INT_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - APM M0 interrupt enable"]
     #[inline(always)]
     pub fn m0_apm_int_en(&self) -> M0_APM_INT_EN_R {
         M0_APM_INT_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_EN")
+            .field(
+                "m0_apm_int_en",
+                &format_args!("{}", self.m0_apm_int_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

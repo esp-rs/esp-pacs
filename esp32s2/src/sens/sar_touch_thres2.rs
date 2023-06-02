@@ -38,12 +38,29 @@ impl From<crate::W<SAR_TOUCH_THRES2_SPEC>> for W {
 pub type TOUCH_OUT_TH2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_OUT_TH2` writer - Finger threshold for touch pad 2"]
 pub type TOUCH_OUT_TH2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_THRES2_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_THRES2_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - Finger threshold for touch pad 2"]
     #[inline(always)]
     pub fn touch_out_th2(&self) -> TOUCH_OUT_TH2_R {
         TOUCH_OUT_TH2_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_THRES2")
+            .field(
+                "touch_out_th2",
+                &format_args!("{}", self.touch_out_th2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_THRES2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

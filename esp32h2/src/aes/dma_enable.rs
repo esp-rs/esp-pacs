@@ -35,14 +35,28 @@ impl From<crate::W<DMA_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_ENABLE` reader - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
-pub type DMA_ENABLE_R = crate::BitReader<bool>;
+pub type DMA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DMA_ENABLE` writer - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
-pub type DMA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_ENABLE_SPEC, bool, O>;
+pub type DMA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, DMA_ENABLE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1'b0: typical AES working mode, 1'b1: DMA-AES working mode."]
     #[inline(always)]
     pub fn dma_enable(&self) -> DMA_ENABLE_R {
         DMA_ENABLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_ENABLE")
+            .field("dma_enable", &format_args!("{}", self.dma_enable().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_ENABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,44 +35,37 @@ impl From<crate::W<LP_CPU_PWR0_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_CPU_WAITI_RDY` reader - need_des"]
-pub type LP_CPU_WAITI_RDY_R = crate::BitReader<bool>;
+pub type LP_CPU_WAITI_RDY_R = crate::BitReader;
 #[doc = "Field `LP_CPU_STALL_RDY` reader - need_des"]
-pub type LP_CPU_STALL_RDY_R = crate::BitReader<bool>;
+pub type LP_CPU_STALL_RDY_R = crate::BitReader;
 #[doc = "Field `LP_CPU_FORCE_STALL` reader - need_des"]
-pub type LP_CPU_FORCE_STALL_R = crate::BitReader<bool>;
+pub type LP_CPU_FORCE_STALL_R = crate::BitReader;
 #[doc = "Field `LP_CPU_FORCE_STALL` writer - need_des"]
-pub type LP_CPU_FORCE_STALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_FORCE_STALL_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 #[doc = "Field `LP_CPU_SLP_WAITI_FLAG_EN` reader - need_des"]
-pub type LP_CPU_SLP_WAITI_FLAG_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_SLP_WAITI_FLAG_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_SLP_WAITI_FLAG_EN` writer - need_des"]
-pub type LP_CPU_SLP_WAITI_FLAG_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_SLP_WAITI_FLAG_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 #[doc = "Field `LP_CPU_SLP_STALL_FLAG_EN` reader - need_des"]
-pub type LP_CPU_SLP_STALL_FLAG_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_SLP_STALL_FLAG_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_SLP_STALL_FLAG_EN` writer - need_des"]
-pub type LP_CPU_SLP_STALL_FLAG_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_SLP_STALL_FLAG_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 #[doc = "Field `LP_CPU_SLP_STALL_WAIT` reader - need_des"]
-pub type LP_CPU_SLP_STALL_WAIT_R = crate::FieldReader<u8, u8>;
+pub type LP_CPU_SLP_STALL_WAIT_R = crate::FieldReader;
 #[doc = "Field `LP_CPU_SLP_STALL_WAIT` writer - need_des"]
-pub type LP_CPU_SLP_STALL_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LP_CPU_PWR0_SPEC, u8, u8, 8, O>;
+pub type LP_CPU_SLP_STALL_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CPU_PWR0_SPEC, 8, O>;
 #[doc = "Field `LP_CPU_SLP_STALL_EN` reader - need_des"]
-pub type LP_CPU_SLP_STALL_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_SLP_STALL_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_SLP_STALL_EN` writer - need_des"]
-pub type LP_CPU_SLP_STALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_SLP_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 #[doc = "Field `LP_CPU_SLP_RESET_EN` reader - need_des"]
-pub type LP_CPU_SLP_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_SLP_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_SLP_RESET_EN` writer - need_des"]
-pub type LP_CPU_SLP_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_SLP_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 #[doc = "Field `LP_CPU_SLP_BYPASS_INTR_EN` reader - need_des"]
-pub type LP_CPU_SLP_BYPASS_INTR_EN_R = crate::BitReader<bool>;
+pub type LP_CPU_SLP_BYPASS_INTR_EN_R = crate::BitReader;
 #[doc = "Field `LP_CPU_SLP_BYPASS_INTR_EN` writer - need_des"]
-pub type LP_CPU_SLP_BYPASS_INTR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_CPU_PWR0_SPEC, bool, O>;
+pub type LP_CPU_SLP_BYPASS_INTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -118,6 +111,55 @@ impl R {
     #[inline(always)]
     pub fn lp_cpu_slp_bypass_intr_en(&self) -> LP_CPU_SLP_BYPASS_INTR_EN_R {
         LP_CPU_SLP_BYPASS_INTR_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_CPU_PWR0")
+            .field(
+                "lp_cpu_waiti_rdy",
+                &format_args!("{}", self.lp_cpu_waiti_rdy().bit()),
+            )
+            .field(
+                "lp_cpu_stall_rdy",
+                &format_args!("{}", self.lp_cpu_stall_rdy().bit()),
+            )
+            .field(
+                "lp_cpu_force_stall",
+                &format_args!("{}", self.lp_cpu_force_stall().bit()),
+            )
+            .field(
+                "lp_cpu_slp_waiti_flag_en",
+                &format_args!("{}", self.lp_cpu_slp_waiti_flag_en().bit()),
+            )
+            .field(
+                "lp_cpu_slp_stall_flag_en",
+                &format_args!("{}", self.lp_cpu_slp_stall_flag_en().bit()),
+            )
+            .field(
+                "lp_cpu_slp_stall_wait",
+                &format_args!("{}", self.lp_cpu_slp_stall_wait().bits()),
+            )
+            .field(
+                "lp_cpu_slp_stall_en",
+                &format_args!("{}", self.lp_cpu_slp_stall_en().bit()),
+            )
+            .field(
+                "lp_cpu_slp_reset_en",
+                &format_args!("{}", self.lp_cpu_slp_reset_en().bit()),
+            )
+            .field(
+                "lp_cpu_slp_bypass_intr_en",
+                &format_args!("{}", self.lp_cpu_slp_bypass_intr_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_CPU_PWR0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

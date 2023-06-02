@@ -20,13 +20,19 @@ impl From<crate::W<REGDMA_ETM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_START_0` writer - etm_start_0 reg"]
-pub type ETM_START_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_ETM_CTRL_SPEC, bool, O>;
+pub type ETM_START_0_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_ETM_CTRL_SPEC, O>;
 #[doc = "Field `ETM_START_1` writer - etm_start_1 reg"]
-pub type ETM_START_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_ETM_CTRL_SPEC, bool, O>;
+pub type ETM_START_1_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_ETM_CTRL_SPEC, O>;
 #[doc = "Field `ETM_START_2` writer - etm_start_2 reg"]
-pub type ETM_START_2_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_ETM_CTRL_SPEC, bool, O>;
+pub type ETM_START_2_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_ETM_CTRL_SPEC, O>;
 #[doc = "Field `ETM_START_3` writer - etm_start_3 reg"]
-pub type ETM_START_3_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_ETM_CTRL_SPEC, bool, O>;
+pub type ETM_START_3_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_ETM_CTRL_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGDMA_ETM_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - etm_start_0 reg"]
     #[inline(always)]

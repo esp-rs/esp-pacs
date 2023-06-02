@@ -35,16 +35,15 @@ impl From<crate::W<PRO_DPORT_6_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DPORT_ILG_CLR` reader - The clear signal for PeriBus1 access interrupt."]
-pub type PRO_DPORT_ILG_CLR_R = crate::BitReader<bool>;
+pub type PRO_DPORT_ILG_CLR_R = crate::BitReader;
 #[doc = "Field `PRO_DPORT_ILG_CLR` writer - The clear signal for PeriBus1 access interrupt."]
-pub type PRO_DPORT_ILG_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DPORT_6_SPEC, bool, O>;
+pub type PRO_DPORT_ILG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DPORT_6_SPEC, O>;
 #[doc = "Field `PRO_DPORT_ILG_EN` reader - The enable signal for PeriBus1 access interrupt."]
-pub type PRO_DPORT_ILG_EN_R = crate::BitReader<bool>;
+pub type PRO_DPORT_ILG_EN_R = crate::BitReader;
 #[doc = "Field `PRO_DPORT_ILG_EN` writer - The enable signal for PeriBus1 access interrupt."]
-pub type PRO_DPORT_ILG_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PRO_DPORT_6_SPEC, bool, O>;
+pub type PRO_DPORT_ILG_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DPORT_6_SPEC, O>;
 #[doc = "Field `PRO_DPORT_ILG_INTR` reader - PeriBus1 access interrupt signal."]
-pub type PRO_DPORT_ILG_INTR_R = crate::BitReader<bool>;
+pub type PRO_DPORT_ILG_INTR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The clear signal for PeriBus1 access interrupt."]
     #[inline(always)]
@@ -60,6 +59,31 @@ impl R {
     #[inline(always)]
     pub fn pro_dport_ilg_intr(&self) -> PRO_DPORT_ILG_INTR_R {
         PRO_DPORT_ILG_INTR_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DPORT_6")
+            .field(
+                "pro_dport_ilg_clr",
+                &format_args!("{}", self.pro_dport_ilg_clr().bit()),
+            )
+            .field(
+                "pro_dport_ilg_en",
+                &format_args!("{}", self.pro_dport_ilg_en().bit()),
+            )
+            .field(
+                "pro_dport_ilg_intr",
+                &format_args!("{}", self.pro_dport_ilg_intr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DPORT_6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

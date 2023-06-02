@@ -35,15 +35,13 @@ impl From<crate::W<CTRL_32K_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_32K_SEL` reader - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type CLK_32K_SEL_R = crate::FieldReader<u8, u8>;
+pub type CLK_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_32K_SEL` writer - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type CLK_32K_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_32K_CONF_SPEC, u8, u8, 2, O>;
+pub type CLK_32K_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_32K_CONF_SPEC, 2, O>;
 #[doc = "Field `_32K_MODEM_SEL` reader - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type _32K_MODEM_SEL_R = crate::FieldReader<u8, u8>;
+pub type _32K_MODEM_SEL_R = crate::FieldReader;
 #[doc = "Field `_32K_MODEM_SEL` writer - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
-pub type _32K_MODEM_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_32K_CONF_SPEC, u8, u8, 2, O>;
+pub type _32K_MODEM_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_32K_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn _32k_modem_sel(&self) -> _32K_MODEM_SEL_R {
         _32K_MODEM_SEL_R::new(((self.bits >> 2) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL_32K_CONF")
+            .field(
+                "clk_32k_sel",
+                &format_args!("{}", self.clk_32k_sel().bits()),
+            )
+            .field(
+                "_32k_modem_sel",
+                &format_args!("{}", self._32k_modem_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_32K_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

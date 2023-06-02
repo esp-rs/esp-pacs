@@ -35,63 +35,55 @@ impl From<crate::W<RX_DSCR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TOKEN_NO_REPLACE` reader - "]
-pub type SLC0_TOKEN_NO_REPLACE_R = crate::BitReader<bool>;
+pub type SLC0_TOKEN_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC0_TOKEN_NO_REPLACE` writer - "]
-pub type SLC0_TOKEN_NO_REPLACE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC0_TOKEN_NO_REPLACE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_INFOR_NO_REPLACE` reader - "]
-pub type SLC0_INFOR_NO_REPLACE_R = crate::BitReader<bool>;
+pub type SLC0_INFOR_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC0_INFOR_NO_REPLACE` writer - "]
-pub type SLC0_INFOR_NO_REPLACE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC0_INFOR_NO_REPLACE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_FILL_MODE` reader - "]
-pub type SLC0_RX_FILL_MODE_R = crate::BitReader<bool>;
+pub type SLC0_RX_FILL_MODE_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_FILL_MODE` writer - "]
-pub type SLC0_RX_FILL_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC0_RX_FILL_MODE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_EOF_MODE` reader - "]
-pub type SLC0_RX_EOF_MODE_R = crate::BitReader<bool>;
+pub type SLC0_RX_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_EOF_MODE` writer - "]
-pub type SLC0_RX_EOF_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC0_RX_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_FILL_EN` reader - "]
-pub type SLC0_RX_FILL_EN_R = crate::BitReader<bool>;
+pub type SLC0_RX_FILL_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_FILL_EN` writer - "]
-pub type SLC0_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC0_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` reader - "]
 pub type SLC0_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` writer - "]
 pub type SLC0_RD_RETRY_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_DSCR_CONF_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` reader - "]
-pub type SLC1_TOKEN_NO_REPLACE_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` writer - "]
-pub type SLC1_TOKEN_NO_REPLACE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC1_TOKEN_NO_REPLACE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_INFOR_NO_REPLACE` reader - "]
-pub type SLC1_INFOR_NO_REPLACE_R = crate::BitReader<bool>;
+pub type SLC1_INFOR_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC1_INFOR_NO_REPLACE` writer - "]
-pub type SLC1_INFOR_NO_REPLACE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC1_INFOR_NO_REPLACE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_RX_FILL_MODE` reader - "]
-pub type SLC1_RX_FILL_MODE_R = crate::BitReader<bool>;
+pub type SLC1_RX_FILL_MODE_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_FILL_MODE` writer - "]
-pub type SLC1_RX_FILL_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC1_RX_FILL_MODE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_RX_EOF_MODE` reader - "]
-pub type SLC1_RX_EOF_MODE_R = crate::BitReader<bool>;
+pub type SLC1_RX_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_EOF_MODE` writer - "]
-pub type SLC1_RX_EOF_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC1_RX_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_RX_FILL_EN` reader - "]
-pub type SLC1_RX_FILL_EN_R = crate::BitReader<bool>;
+pub type SLC1_RX_FILL_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_FILL_EN` writer - "]
-pub type SLC1_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, O>;
+pub type SLC1_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` reader - "]
 pub type SLC1_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` writer - "]
 pub type SLC1_RD_RETRY_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_DSCR_CONF_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -152,6 +144,67 @@ impl R {
     #[inline(always)]
     pub fn slc1_rd_retry_threshold(&self) -> SLC1_RD_RETRY_THRESHOLD_R {
         SLC1_RD_RETRY_THRESHOLD_R::new(((self.bits >> 21) & 0x07ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_DSCR_CONF")
+            .field(
+                "slc0_token_no_replace",
+                &format_args!("{}", self.slc0_token_no_replace().bit()),
+            )
+            .field(
+                "slc0_infor_no_replace",
+                &format_args!("{}", self.slc0_infor_no_replace().bit()),
+            )
+            .field(
+                "slc0_rx_fill_mode",
+                &format_args!("{}", self.slc0_rx_fill_mode().bit()),
+            )
+            .field(
+                "slc0_rx_eof_mode",
+                &format_args!("{}", self.slc0_rx_eof_mode().bit()),
+            )
+            .field(
+                "slc0_rx_fill_en",
+                &format_args!("{}", self.slc0_rx_fill_en().bit()),
+            )
+            .field(
+                "slc0_rd_retry_threshold",
+                &format_args!("{}", self.slc0_rd_retry_threshold().bits()),
+            )
+            .field(
+                "slc1_token_no_replace",
+                &format_args!("{}", self.slc1_token_no_replace().bit()),
+            )
+            .field(
+                "slc1_infor_no_replace",
+                &format_args!("{}", self.slc1_infor_no_replace().bit()),
+            )
+            .field(
+                "slc1_rx_fill_mode",
+                &format_args!("{}", self.slc1_rx_fill_mode().bit()),
+            )
+            .field(
+                "slc1_rx_eof_mode",
+                &format_args!("{}", self.slc1_rx_eof_mode().bit()),
+            )
+            .field(
+                "slc1_rx_fill_en",
+                &format_args!("{}", self.slc1_rx_fill_en().bit()),
+            )
+            .field(
+                "slc1_rd_retry_threshold",
+                &format_args!("{}", self.slc1_rd_retry_threshold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_DSCR_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

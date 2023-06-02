@@ -35,15 +35,31 @@ impl From<crate::W<IN_PERI_SEL_CH2_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IN_SEL` reader - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub type PERI_IN_SEL_R = crate::FieldReader<u8, u8>;
+pub type PERI_IN_SEL_R = crate::FieldReader;
 #[doc = "Field `PERI_IN_SEL` writer - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub type PERI_IN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IN_PERI_SEL_CH2_SPEC, u8, u8, 6, O>;
+pub type PERI_IN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, IN_PERI_SEL_CH2_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
     #[inline(always)]
     pub fn peri_in_sel(&self) -> PERI_IN_SEL_R {
         PERI_IN_SEL_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_PERI_SEL_CH2")
+            .field(
+                "peri_in_sel",
+                &format_args!("{}", self.peri_in_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_PERI_SEL_CH2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

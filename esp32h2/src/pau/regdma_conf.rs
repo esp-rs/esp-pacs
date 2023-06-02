@@ -35,27 +35,27 @@ impl From<crate::W<REGDMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `FLOW_ERR` reader - backup error type"]
-pub type FLOW_ERR_R = crate::FieldReader<u8, u8>;
+pub type FLOW_ERR_R = crate::FieldReader;
 #[doc = "Field `START` writer - backup start signal"]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_CONF_SPEC, bool, O>;
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_CONF_SPEC, O>;
 #[doc = "Field `TO_MEM` reader - backup direction(reg to mem / mem to reg)"]
-pub type TO_MEM_R = crate::BitReader<bool>;
+pub type TO_MEM_R = crate::BitReader;
 #[doc = "Field `TO_MEM` writer - backup direction(reg to mem / mem to reg)"]
-pub type TO_MEM_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_CONF_SPEC, bool, O>;
+pub type TO_MEM_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_CONF_SPEC, O>;
 #[doc = "Field `LINK_SEL` reader - Link select"]
-pub type LINK_SEL_R = crate::FieldReader<u8, u8>;
+pub type LINK_SEL_R = crate::FieldReader;
 #[doc = "Field `LINK_SEL` writer - Link select"]
-pub type LINK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REGDMA_CONF_SPEC, u8, u8, 2, O>;
+pub type LINK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, REGDMA_CONF_SPEC, 2, O>;
 #[doc = "Field `START_MAC` writer - mac sw backup start signal"]
-pub type START_MAC_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_CONF_SPEC, bool, O>;
+pub type START_MAC_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_CONF_SPEC, O>;
 #[doc = "Field `TO_MEM_MAC` reader - mac sw backup direction(reg to mem / mem to reg)"]
-pub type TO_MEM_MAC_R = crate::BitReader<bool>;
+pub type TO_MEM_MAC_R = crate::BitReader;
 #[doc = "Field `TO_MEM_MAC` writer - mac sw backup direction(reg to mem / mem to reg)"]
-pub type TO_MEM_MAC_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_CONF_SPEC, bool, O>;
+pub type TO_MEM_MAC_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_CONF_SPEC, O>;
 #[doc = "Field `SEL_MAC` reader - mac hw/sw select"]
-pub type SEL_MAC_R = crate::BitReader<bool>;
+pub type SEL_MAC_R = crate::BitReader;
 #[doc = "Field `SEL_MAC` writer - mac hw/sw select"]
-pub type SEL_MAC_W<'a, const O: u8> = crate::BitWriter<'a, u32, REGDMA_CONF_SPEC, bool, O>;
+pub type SEL_MAC_W<'a, const O: u8> = crate::BitWriter<'a, REGDMA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - backup error type"]
     #[inline(always)]
@@ -81,6 +81,24 @@ impl R {
     #[inline(always)]
     pub fn sel_mac(&self) -> SEL_MAC_R {
         SEL_MAC_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGDMA_CONF")
+            .field("flow_err", &format_args!("{}", self.flow_err().bits()))
+            .field("to_mem", &format_args!("{}", self.to_mem().bit()))
+            .field("link_sel", &format_args!("{}", self.link_sel().bits()))
+            .field("to_mem_mac", &format_args!("{}", self.to_mem_mac().bit()))
+            .field("sel_mac", &format_args!("{}", self.sel_mac().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGDMA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

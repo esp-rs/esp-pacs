@@ -37,12 +37,26 @@ impl From<crate::W<RTC_GPIO_OUT_SPEC>> for W {
 #[doc = "Field `DATA` reader - RTC GPIO 0 ~ 21 output data"]
 pub type DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA` writer - RTC GPIO 0 ~ 21 output data"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RTC_GPIO_OUT_SPEC, u32, u32, 22, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_OUT_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 output data"]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new((self.bits >> 10) & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_GPIO_OUT")
+            .field("data", &format_args!("{}", self.data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,47 +35,46 @@ impl From<crate::W<HP_ACTIVE_HP_REGULATOR0_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_DBIAS_VOL` reader - need_des"]
-pub type LP_DBIAS_VOL_R = crate::FieldReader<u8, u8>;
+pub type LP_DBIAS_VOL_R = crate::FieldReader;
 #[doc = "Field `HP_DBIAS_VOL` reader - need_des"]
-pub type HP_DBIAS_VOL_R = crate::FieldReader<u8, u8>;
+pub type HP_DBIAS_VOL_R = crate::FieldReader;
 #[doc = "Field `DIG_REGULATOR0_DBIAS_SEL` reader - need_des"]
-pub type DIG_REGULATOR0_DBIAS_SEL_R = crate::BitReader<bool>;
+pub type DIG_REGULATOR0_DBIAS_SEL_R = crate::BitReader;
 #[doc = "Field `DIG_REGULATOR0_DBIAS_SEL` writer - need_des"]
 pub type DIG_REGULATOR0_DBIAS_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, O>;
 #[doc = "Field `DIG_DBIAS_INIT` writer - need_des"]
-pub type DIG_DBIAS_INIT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, bool, O>;
+pub type DIG_DBIAS_INIT_W<'a, const O: u8> = crate::BitWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_XPD` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_XPD_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_HP_REGULATOR_XPD_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_XPD` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_XPD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, 4, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, 4, O>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_DBIAS` reader - need_des"]
-pub type HP_ACTIVE_HP_REGULATOR_DBIAS_R = crate::FieldReader<u8, u8>;
+pub type HP_ACTIVE_HP_REGULATOR_DBIAS_R = crate::FieldReader;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_DBIAS` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_DBIAS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_ACTIVE_HP_REGULATOR0_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, HP_ACTIVE_HP_REGULATOR0_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 4:8 - need_des"]
     #[inline(always)]
@@ -123,6 +122,55 @@ impl R {
     #[inline(always)]
     pub fn hp_active_hp_regulator_dbias(&self) -> HP_ACTIVE_HP_REGULATOR_DBIAS_R {
         HP_ACTIVE_HP_REGULATOR_DBIAS_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_ACTIVE_HP_REGULATOR0")
+            .field(
+                "lp_dbias_vol",
+                &format_args!("{}", self.lp_dbias_vol().bits()),
+            )
+            .field(
+                "hp_dbias_vol",
+                &format_args!("{}", self.hp_dbias_vol().bits()),
+            )
+            .field(
+                "dig_regulator0_dbias_sel",
+                &format_args!("{}", self.dig_regulator0_dbias_sel().bit()),
+            )
+            .field(
+                "hp_active_hp_regulator_slp_mem_xpd",
+                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_xpd().bit()),
+            )
+            .field(
+                "hp_active_hp_regulator_slp_logic_xpd",
+                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_xpd().bit()),
+            )
+            .field(
+                "hp_active_hp_regulator_xpd",
+                &format_args!("{}", self.hp_active_hp_regulator_xpd().bit()),
+            )
+            .field(
+                "hp_active_hp_regulator_slp_mem_dbias",
+                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_dbias().bits()),
+            )
+            .field(
+                "hp_active_hp_regulator_slp_logic_dbias",
+                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_dbias().bits()),
+            )
+            .field(
+                "hp_active_hp_regulator_dbias",
+                &format_args!("{}", self.hp_active_hp_regulator_dbias().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_REGULATOR0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

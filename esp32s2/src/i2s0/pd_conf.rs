@@ -35,33 +35,33 @@ impl From<crate::W<PD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_FORCE_PD` reader - Force FIFO power-down."]
-pub type FIFO_FORCE_PD_R = crate::BitReader<bool>;
+pub type FIFO_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PD` writer - Force FIFO power-down."]
-pub type FIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type FIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `FIFO_FORCE_PU` reader - Force FIFO power-up."]
-pub type FIFO_FORCE_PU_R = crate::BitReader<bool>;
+pub type FIFO_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PU` writer - Force FIFO power-up."]
-pub type FIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type FIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `PLC_MEM_FORCE_PD` reader - Force I2S memory power-down."]
-pub type PLC_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type PLC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PD` writer - Force I2S memory power-down."]
-pub type PLC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type PLC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `PLC_MEM_FORCE_PU` reader - Force I2S memory power-up."]
-pub type PLC_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type PLC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PU` writer - Force I2S memory power-up."]
-pub type PLC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type PLC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `DMA_RAM_FORCE_PD` reader - Force DMA FIFO power-down."]
-pub type DMA_RAM_FORCE_PD_R = crate::BitReader<bool>;
+pub type DMA_RAM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PD` writer - Force DMA FIFO power-down."]
-pub type DMA_RAM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type DMA_RAM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `DMA_RAM_FORCE_PU` reader - Force DMA FIFO power-up."]
-pub type DMA_RAM_FORCE_PU_R = crate::BitReader<bool>;
+pub type DMA_RAM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_FORCE_PU` writer - Force DMA FIFO power-up."]
-pub type DMA_RAM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type DMA_RAM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `DMA_RAM_CLK_FO` reader - Set this bit to force on DMA RAM clock."]
-pub type DMA_RAM_CLK_FO_R = crate::BitReader<bool>;
+pub type DMA_RAM_CLK_FO_R = crate::BitReader;
 #[doc = "Field `DMA_RAM_CLK_FO` writer - Set this bit to force on DMA RAM clock."]
-pub type DMA_RAM_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type DMA_RAM_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Force FIFO power-down."]
     #[inline(always)]
@@ -97,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn dma_ram_clk_fo(&self) -> DMA_RAM_CLK_FO_R {
         DMA_RAM_CLK_FO_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PD_CONF")
+            .field(
+                "fifo_force_pd",
+                &format_args!("{}", self.fifo_force_pd().bit()),
+            )
+            .field(
+                "fifo_force_pu",
+                &format_args!("{}", self.fifo_force_pu().bit()),
+            )
+            .field(
+                "plc_mem_force_pd",
+                &format_args!("{}", self.plc_mem_force_pd().bit()),
+            )
+            .field(
+                "plc_mem_force_pu",
+                &format_args!("{}", self.plc_mem_force_pu().bit()),
+            )
+            .field(
+                "dma_ram_force_pd",
+                &format_args!("{}", self.dma_ram_force_pd().bit()),
+            )
+            .field(
+                "dma_ram_force_pu",
+                &format_args!("{}", self.dma_ram_force_pu().bit()),
+            )
+            .field(
+                "dma_ram_clk_fo",
+                &format_args!("{}", self.dma_ram_clk_fo().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

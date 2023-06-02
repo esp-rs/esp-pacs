@@ -35,41 +35,41 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_START_INT_RAW` reader - a"]
-pub type RX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_RAW` writer - a"]
-pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_START_INT_RAW` reader - a"]
-pub type TX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_RAW` writer - a"]
-pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_START_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - a"]
-pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_RAW` writer - a"]
-pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - a"]
-pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_RAW` writer - a"]
-pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_HUNG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` reader - a"]
-pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+pub type SEND_S_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_RAW` writer - a"]
-pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SEND_S_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` reader - a"]
-pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader<bool>;
+pub type SEND_A_REG_Q_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_RAW` writer - a"]
-pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SEND_A_REG_Q_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
-pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_RAW` writer - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
-pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type OUT_EOF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APP_CTRL0_INT_RAW` reader - Soft control int raw bit."]
-pub type APP_CTRL0_INT_RAW_R = crate::BitReader<bool>;
+pub type APP_CTRL0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_RAW` writer - Soft control int raw bit."]
-pub type APP_CTRL0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APP_CTRL0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APP_CTRL1_INT_RAW` reader - Soft control int raw bit."]
-pub type APP_CTRL1_INT_RAW_R = crate::BitReader<bool>;
+pub type APP_CTRL1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_RAW` writer - Soft control int raw bit."]
-pub type APP_CTRL1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APP_CTRL1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
@@ -115,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn app_ctrl1_int_raw(&self) -> APP_CTRL1_INT_RAW_R {
         APP_CTRL1_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "rx_start_int_raw",
+                &format_args!("{}", self.rx_start_int_raw().bit()),
+            )
+            .field(
+                "tx_start_int_raw",
+                &format_args!("{}", self.tx_start_int_raw().bit()),
+            )
+            .field(
+                "rx_hung_int_raw",
+                &format_args!("{}", self.rx_hung_int_raw().bit()),
+            )
+            .field(
+                "tx_hung_int_raw",
+                &format_args!("{}", self.tx_hung_int_raw().bit()),
+            )
+            .field(
+                "send_s_reg_q_int_raw",
+                &format_args!("{}", self.send_s_reg_q_int_raw().bit()),
+            )
+            .field(
+                "send_a_reg_q_int_raw",
+                &format_args!("{}", self.send_a_reg_q_int_raw().bit()),
+            )
+            .field(
+                "out_eof_int_raw",
+                &format_args!("{}", self.out_eof_int_raw().bit()),
+            )
+            .field(
+                "app_ctrl0_int_raw",
+                &format_args!("{}", self.app_ctrl0_int_raw().bit()),
+            )
+            .field(
+                "app_ctrl1_int_raw",
+                &format_args!("{}", self.app_ctrl1_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

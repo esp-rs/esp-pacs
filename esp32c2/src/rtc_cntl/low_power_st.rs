@@ -35,105 +35,89 @@ impl From<crate::W<LOW_POWER_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `XPD_DIG` reader - digital wrap power down"]
-pub type XPD_DIG_R = crate::BitReader<bool>;
+pub type XPD_DIG_R = crate::BitReader;
 #[doc = "Field `XPD_DIG` writer - digital wrap power down"]
-pub type XPD_DIG_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type XPD_DIG_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `TOUCH_STATE_START` reader - touch should start to work"]
-pub type TOUCH_STATE_START_R = crate::BitReader<bool>;
+pub type TOUCH_STATE_START_R = crate::BitReader;
 #[doc = "Field `TOUCH_STATE_START` writer - touch should start to work"]
-pub type TOUCH_STATE_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type TOUCH_STATE_START_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `TOUCH_STATE_SWITCH` reader - touch is about to working. Switch rtc main state"]
-pub type TOUCH_STATE_SWITCH_R = crate::BitReader<bool>;
+pub type TOUCH_STATE_SWITCH_R = crate::BitReader;
 #[doc = "Field `TOUCH_STATE_SWITCH` writer - touch is about to working. Switch rtc main state"]
-pub type TOUCH_STATE_SWITCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type TOUCH_STATE_SWITCH_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `TOUCH_STATE_SLP` reader - touch is in sleep state"]
-pub type TOUCH_STATE_SLP_R = crate::BitReader<bool>;
+pub type TOUCH_STATE_SLP_R = crate::BitReader;
 #[doc = "Field `TOUCH_STATE_SLP` writer - touch is in sleep state"]
-pub type TOUCH_STATE_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type TOUCH_STATE_SLP_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `TOUCH_STATE_DONE` reader - touch is done"]
-pub type TOUCH_STATE_DONE_R = crate::BitReader<bool>;
+pub type TOUCH_STATE_DONE_R = crate::BitReader;
 #[doc = "Field `TOUCH_STATE_DONE` writer - touch is done"]
-pub type TOUCH_STATE_DONE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type TOUCH_STATE_DONE_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `COCPU_STATE_START` reader - ulp/cocpu should start to work"]
-pub type COCPU_STATE_START_R = crate::BitReader<bool>;
+pub type COCPU_STATE_START_R = crate::BitReader;
 #[doc = "Field `COCPU_STATE_START` writer - ulp/cocpu should start to work"]
-pub type COCPU_STATE_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type COCPU_STATE_START_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `COCPU_STATE_SWITCH` reader - ulp/cocpu is about to working. Switch rtc main state"]
-pub type COCPU_STATE_SWITCH_R = crate::BitReader<bool>;
+pub type COCPU_STATE_SWITCH_R = crate::BitReader;
 #[doc = "Field `COCPU_STATE_SWITCH` writer - ulp/cocpu is about to working. Switch rtc main state"]
-pub type COCPU_STATE_SWITCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type COCPU_STATE_SWITCH_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `COCPU_STATE_SLP` reader - ulp/cocpu is in sleep state"]
-pub type COCPU_STATE_SLP_R = crate::BitReader<bool>;
+pub type COCPU_STATE_SLP_R = crate::BitReader;
 #[doc = "Field `COCPU_STATE_SLP` writer - ulp/cocpu is in sleep state"]
-pub type COCPU_STATE_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type COCPU_STATE_SLP_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `COCPU_STATE_DONE` reader - ulp/cocpu is done"]
-pub type COCPU_STATE_DONE_R = crate::BitReader<bool>;
+pub type COCPU_STATE_DONE_R = crate::BitReader;
 #[doc = "Field `COCPU_STATE_DONE` writer - ulp/cocpu is done"]
-pub type COCPU_STATE_DONE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type COCPU_STATE_DONE_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_XTAL_ISO` reader - no use any more"]
-pub type MAIN_STATE_XTAL_ISO_R = crate::BitReader<bool>;
+pub type MAIN_STATE_XTAL_ISO_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_XTAL_ISO` writer - no use any more"]
-pub type MAIN_STATE_XTAL_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_XTAL_ISO_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_PLL_ON` reader - rtc main state machine is in states that pll should be running"]
-pub type MAIN_STATE_PLL_ON_R = crate::BitReader<bool>;
+pub type MAIN_STATE_PLL_ON_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_PLL_ON` writer - rtc main state machine is in states that pll should be running"]
-pub type MAIN_STATE_PLL_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_PLL_ON_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - rtc is ready to receive wake up trigger from wake up source"]
-pub type RDY_FOR_WAKEUP_R = crate::BitReader<bool>;
+pub type RDY_FOR_WAKEUP_R = crate::BitReader;
 #[doc = "Field `RDY_FOR_WAKEUP` writer - rtc is ready to receive wake up trigger from wake up source"]
-pub type RDY_FOR_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type RDY_FOR_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_WAIT_END` reader - rtc main state machine has been waited for some cycles"]
-pub type MAIN_STATE_WAIT_END_R = crate::BitReader<bool>;
+pub type MAIN_STATE_WAIT_END_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_WAIT_END` writer - rtc main state machine has been waited for some cycles"]
-pub type MAIN_STATE_WAIT_END_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_WAIT_END_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `IN_WAKEUP_STATE` reader - rtc main state machine is in the states of wakeup process"]
-pub type IN_WAKEUP_STATE_R = crate::BitReader<bool>;
+pub type IN_WAKEUP_STATE_R = crate::BitReader;
 #[doc = "Field `IN_WAKEUP_STATE` writer - rtc main state machine is in the states of wakeup process"]
-pub type IN_WAKEUP_STATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type IN_WAKEUP_STATE_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `IN_LOW_POWER_STATE` reader - rtc main state machine is in the states of low power"]
-pub type IN_LOW_POWER_STATE_R = crate::BitReader<bool>;
+pub type IN_LOW_POWER_STATE_R = crate::BitReader;
 #[doc = "Field `IN_LOW_POWER_STATE` writer - rtc main state machine is in the states of low power"]
-pub type IN_LOW_POWER_STATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type IN_LOW_POWER_STATE_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_8M` reader - rtc main state machine is in wait 8m state"]
-pub type MAIN_STATE_IN_WAIT_8M_R = crate::BitReader<bool>;
+pub type MAIN_STATE_IN_WAIT_8M_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_IN_WAIT_8M` writer - rtc main state machine is in wait 8m state"]
-pub type MAIN_STATE_IN_WAIT_8M_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_IN_WAIT_8M_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_PLL` reader - rtc main state machine is in wait pll state"]
-pub type MAIN_STATE_IN_WAIT_PLL_R = crate::BitReader<bool>;
+pub type MAIN_STATE_IN_WAIT_PLL_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_IN_WAIT_PLL` writer - rtc main state machine is in wait pll state"]
-pub type MAIN_STATE_IN_WAIT_PLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_IN_WAIT_PLL_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_XTL` reader - rtc main state machine is in wait xtal state"]
-pub type MAIN_STATE_IN_WAIT_XTL_R = crate::BitReader<bool>;
+pub type MAIN_STATE_IN_WAIT_XTL_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_IN_WAIT_XTL` writer - rtc main state machine is in wait xtal state"]
-pub type MAIN_STATE_IN_WAIT_XTL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_IN_WAIT_XTL_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_IN_SLP` reader - rtc main state machine is in sleep state"]
-pub type MAIN_STATE_IN_SLP_R = crate::BitReader<bool>;
+pub type MAIN_STATE_IN_SLP_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_IN_SLP` writer - rtc main state machine is in sleep state"]
-pub type MAIN_STATE_IN_SLP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_IN_SLP_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE_IN_IDLE` reader - rtc main state machine is in idle state"]
-pub type MAIN_STATE_IN_IDLE_R = crate::BitReader<bool>;
+pub type MAIN_STATE_IN_IDLE_R = crate::BitReader;
 #[doc = "Field `MAIN_STATE_IN_IDLE` writer - rtc main state machine is in idle state"]
-pub type MAIN_STATE_IN_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOW_POWER_ST_SPEC, bool, O>;
+pub type MAIN_STATE_IN_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, LOW_POWER_ST_SPEC, O>;
 #[doc = "Field `MAIN_STATE` reader - rtc main state machine status"]
-pub type MAIN_STATE_R = crate::FieldReader<u8, u8>;
+pub type MAIN_STATE_R = crate::FieldReader;
 #[doc = "Field `MAIN_STATE` writer - rtc main state machine status"]
-pub type MAIN_STATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LOW_POWER_ST_SPEC, u8, u8, 4, O>;
+pub type MAIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, LOW_POWER_ST_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 8 - digital wrap power down"]
     #[inline(always)]
@@ -239,6 +223,97 @@ impl R {
     #[inline(always)]
     pub fn main_state(&self) -> MAIN_STATE_R {
         MAIN_STATE_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOW_POWER_ST")
+            .field("xpd_dig", &format_args!("{}", self.xpd_dig().bit()))
+            .field(
+                "touch_state_start",
+                &format_args!("{}", self.touch_state_start().bit()),
+            )
+            .field(
+                "touch_state_switch",
+                &format_args!("{}", self.touch_state_switch().bit()),
+            )
+            .field(
+                "touch_state_slp",
+                &format_args!("{}", self.touch_state_slp().bit()),
+            )
+            .field(
+                "touch_state_done",
+                &format_args!("{}", self.touch_state_done().bit()),
+            )
+            .field(
+                "cocpu_state_start",
+                &format_args!("{}", self.cocpu_state_start().bit()),
+            )
+            .field(
+                "cocpu_state_switch",
+                &format_args!("{}", self.cocpu_state_switch().bit()),
+            )
+            .field(
+                "cocpu_state_slp",
+                &format_args!("{}", self.cocpu_state_slp().bit()),
+            )
+            .field(
+                "cocpu_state_done",
+                &format_args!("{}", self.cocpu_state_done().bit()),
+            )
+            .field(
+                "main_state_xtal_iso",
+                &format_args!("{}", self.main_state_xtal_iso().bit()),
+            )
+            .field(
+                "main_state_pll_on",
+                &format_args!("{}", self.main_state_pll_on().bit()),
+            )
+            .field(
+                "rdy_for_wakeup",
+                &format_args!("{}", self.rdy_for_wakeup().bit()),
+            )
+            .field(
+                "main_state_wait_end",
+                &format_args!("{}", self.main_state_wait_end().bit()),
+            )
+            .field(
+                "in_wakeup_state",
+                &format_args!("{}", self.in_wakeup_state().bit()),
+            )
+            .field(
+                "in_low_power_state",
+                &format_args!("{}", self.in_low_power_state().bit()),
+            )
+            .field(
+                "main_state_in_wait_8m",
+                &format_args!("{}", self.main_state_in_wait_8m().bit()),
+            )
+            .field(
+                "main_state_in_wait_pll",
+                &format_args!("{}", self.main_state_in_wait_pll().bit()),
+            )
+            .field(
+                "main_state_in_wait_xtl",
+                &format_args!("{}", self.main_state_in_wait_xtl().bit()),
+            )
+            .field(
+                "main_state_in_slp",
+                &format_args!("{}", self.main_state_in_slp().bit()),
+            )
+            .field(
+                "main_state_in_idle",
+                &format_args!("{}", self.main_state_in_idle().bit()),
+            )
+            .field("main_state", &format_args!("{}", self.main_state().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOW_POWER_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

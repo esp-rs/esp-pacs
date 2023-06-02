@@ -35,13 +35,13 @@ impl From<crate::W<CACHE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_CLK_EN` reader - Set 1 to enable cache clock"]
-pub type CACHE_CLK_EN_R = crate::BitReader<bool>;
+pub type CACHE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_CLK_EN` writer - Set 1 to enable cache clock"]
-pub type CACHE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONF_SPEC, bool, O>;
+pub type CACHE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONF_SPEC, O>;
 #[doc = "Field `CACHE_RST_EN` reader - Set 0 to reset cache module"]
-pub type CACHE_RST_EN_R = crate::BitReader<bool>;
+pub type CACHE_RST_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_RST_EN` writer - Set 0 to reset cache module"]
-pub type CACHE_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_CONF_SPEC, bool, O>;
+pub type CACHE_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable cache clock"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn cache_rst_en(&self) -> CACHE_RST_EN_R {
         CACHE_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_CONF")
+            .field(
+                "cache_clk_en",
+                &format_args!("{}", self.cache_clk_en().bit()),
+            )
+            .field(
+                "cache_rst_en",
+                &format_args!("{}", self.cache_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

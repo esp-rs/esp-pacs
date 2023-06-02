@@ -35,15 +35,13 @@ impl From<crate::W<FILTER_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `FILTER_FACTOR1` reader - apb saradc factor1"]
-pub type FILTER_FACTOR1_R = crate::FieldReader<u8, u8>;
+pub type FILTER_FACTOR1_R = crate::FieldReader;
 #[doc = "Field `FILTER_FACTOR1` writer - apb saradc factor1"]
-pub type FILTER_FACTOR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, O>;
+pub type FILTER_FACTOR1_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL1_SPEC, 3, O>;
 #[doc = "Field `FILTER_FACTOR0` reader - apb saradc factor0"]
-pub type FILTER_FACTOR0_R = crate::FieldReader<u8, u8>;
+pub type FILTER_FACTOR0_R = crate::FieldReader;
 #[doc = "Field `FILTER_FACTOR0` writer - apb saradc factor0"]
-pub type FILTER_FACTOR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, O>;
+pub type FILTER_FACTOR0_W<'a, const O: u8> = crate::FieldWriter<'a, FILTER_CTRL1_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 26:28 - apb saradc factor1"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn filter_factor0(&self) -> FILTER_FACTOR0_R {
         FILTER_FACTOR0_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FILTER_CTRL1")
+            .field(
+                "filter_factor1",
+                &format_args!("{}", self.filter_factor1().bits()),
+            )
+            .field(
+                "filter_factor0",
+                &format_args!("{}", self.filter_factor0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

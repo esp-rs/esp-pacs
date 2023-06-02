@@ -20,7 +20,13 @@ impl From<crate::W<CONFIG_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CONFIG_UPDATE` writer - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
-pub type CONFIG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_UPDATE_SPEC, bool, O>;
+pub type CONFIG_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG_UPDATE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONFIG_UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
     #[inline(always)]

@@ -38,25 +38,21 @@ impl From<crate::W<SCL_STRETCH_CONF_SPEC>> for W {
 pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STRETCH_PROTECT_NUM` writer - reg_stretch_protect_num"]
 pub type STRETCH_PROTECT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SCL_STRETCH_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - reg_slave_scl_stretch_en"]
-pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader<bool>;
+pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - reg_slave_scl_stretch_en"]
-pub type SLAVE_SCL_STRETCH_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_SCL_STRETCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 #[doc = "Field `SLAVE_SCL_STRETCH_CLR` writer - reg_slave_scl_stretch_clr"]
-pub type SLAVE_SCL_STRETCH_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_SCL_STRETCH_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 #[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` reader - reg_slave_byte_ack_ctl_en"]
-pub type SLAVE_BYTE_ACK_CTL_EN_R = crate::BitReader<bool>;
+pub type SLAVE_BYTE_ACK_CTL_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_BYTE_ACK_CTL_EN` writer - reg_slave_byte_ack_ctl_en"]
-pub type SLAVE_BYTE_ACK_CTL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_BYTE_ACK_CTL_EN_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 #[doc = "Field `SLAVE_BYTE_ACK_LVL` reader - reg_slave_byte_ack_lvl"]
-pub type SLAVE_BYTE_ACK_LVL_R = crate::BitReader<bool>;
+pub type SLAVE_BYTE_ACK_LVL_R = crate::BitReader;
 #[doc = "Field `SLAVE_BYTE_ACK_LVL` writer - reg_slave_byte_ack_lvl"]
-pub type SLAVE_BYTE_ACK_LVL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SCL_STRETCH_CONF_SPEC, bool, O>;
+pub type SLAVE_BYTE_ACK_LVL_W<'a, const O: u8> = crate::BitWriter<'a, SCL_STRETCH_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - reg_stretch_protect_num"]
     #[inline(always)]
@@ -77,6 +73,35 @@ impl R {
     #[inline(always)]
     pub fn slave_byte_ack_lvl(&self) -> SLAVE_BYTE_ACK_LVL_R {
         SLAVE_BYTE_ACK_LVL_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_STRETCH_CONF")
+            .field(
+                "stretch_protect_num",
+                &format_args!("{}", self.stretch_protect_num().bits()),
+            )
+            .field(
+                "slave_scl_stretch_en",
+                &format_args!("{}", self.slave_scl_stretch_en().bit()),
+            )
+            .field(
+                "slave_byte_ack_ctl_en",
+                &format_args!("{}", self.slave_byte_ack_ctl_en().bit()),
+            )
+            .field(
+                "slave_byte_ack_lvl",
+                &format_args!("{}", self.slave_byte_ack_lvl().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_STRETCH_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

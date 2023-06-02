@@ -35,15 +35,31 @@ impl From<crate::W<SPI_EXT3_SPEC>> for W {
     }
 }
 #[doc = "Field `reg_int_hold_ena` reader - This register is for two SPI masters to share the same cs, clock and data signals."]
-pub type REG_INT_HOLD_ENA_R = crate::FieldReader<u8, u8>;
+pub type REG_INT_HOLD_ENA_R = crate::FieldReader;
 #[doc = "Field `reg_int_hold_ena` writer - This register is for two SPI masters to share the same cs, clock and data signals."]
-pub type REG_INT_HOLD_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_EXT3_SPEC, u8, u8, 2, O>;
+pub type REG_INT_HOLD_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs, clock and data signals."]
     #[inline(always)]
     pub fn reg_int_hold_ena(&self) -> REG_INT_HOLD_ENA_R {
         REG_INT_HOLD_ENA_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_EXT3")
+            .field(
+                "reg_int_hold_ena",
+                &format_args!("{}", self.reg_int_hold_ena().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_EXT3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

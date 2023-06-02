@@ -37,12 +37,26 @@ impl From<crate::W<HCDMA1_SPEC>> for W {
 #[doc = "Field `H_DMAADDR1` reader - "]
 pub type H_DMAADDR1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `H_DMAADDR1` writer - "]
-pub type H_DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCDMA1_SPEC, u32, u32, 32, O>;
+pub type H_DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, HCDMA1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn h_dmaaddr1(&self) -> H_DMAADDR1_R {
         H_DMAADDR1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCDMA1")
+            .field("h_dmaaddr1", &format_args!("{}", self.h_dmaaddr1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCDMA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

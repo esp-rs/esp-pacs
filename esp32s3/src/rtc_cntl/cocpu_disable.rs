@@ -35,15 +35,31 @@ impl From<crate::W<COCPU_DISABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `DISABLE_RTC_CPU` reader - configure ulp diable"]
-pub type DISABLE_RTC_CPU_R = crate::BitReader<bool>;
+pub type DISABLE_RTC_CPU_R = crate::BitReader;
 #[doc = "Field `DISABLE_RTC_CPU` writer - configure ulp diable"]
-pub type DISABLE_RTC_CPU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COCPU_DISABLE_SPEC, bool, O>;
+pub type DISABLE_RTC_CPU_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_DISABLE_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - configure ulp diable"]
     #[inline(always)]
     pub fn disable_rtc_cpu(&self) -> DISABLE_RTC_CPU_R {
         DISABLE_RTC_CPU_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COCPU_DISABLE")
+            .field(
+                "disable_rtc_cpu",
+                &format_args!("{}", self.disable_rtc_cpu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COCPU_DISABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

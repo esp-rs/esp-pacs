@@ -35,17 +35,17 @@ impl From<crate::W<TX_SIM_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SIM_CH0` reader - reg_rmt_tx_sim_ch0."]
-pub type TX_SIM_CH0_R = crate::BitReader<bool>;
+pub type TX_SIM_CH0_R = crate::BitReader;
 #[doc = "Field `TX_SIM_CH0` writer - reg_rmt_tx_sim_ch0."]
-pub type TX_SIM_CH0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type TX_SIM_CH0_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 #[doc = "Field `TX_SIM_CH1` reader - reg_rmt_tx_sim_ch1."]
-pub type TX_SIM_CH1_R = crate::BitReader<bool>;
+pub type TX_SIM_CH1_R = crate::BitReader;
 #[doc = "Field `TX_SIM_CH1` writer - reg_rmt_tx_sim_ch1."]
-pub type TX_SIM_CH1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type TX_SIM_CH1_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 #[doc = "Field `TX_SIM_EN` reader - reg_rmt_tx_sim_en."]
-pub type TX_SIM_EN_R = crate::BitReader<bool>;
+pub type TX_SIM_EN_R = crate::BitReader;
 #[doc = "Field `TX_SIM_EN` writer - reg_rmt_tx_sim_en."]
-pub type TX_SIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type TX_SIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn tx_sim_en(&self) -> TX_SIM_EN_R {
         TX_SIM_EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_SIM")
+            .field("tx_sim_ch0", &format_args!("{}", self.tx_sim_ch0().bit()))
+            .field("tx_sim_ch1", &format_args!("{}", self.tx_sim_ch1().bit()))
+            .field("tx_sim_en", &format_args!("{}", self.tx_sim_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_SIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -20,7 +20,13 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
     }
 }
 #[doc = "Field `CH[TX_REF_CNT_RST_CH0,TX_REF_CNT_RST_CH1,TX_REF_CNT_RST_CH2,TX_REF_CNT_RST_CH3,RX_REF_CNT_RST_CH4,RX_REF_CNT_RST_CH5,RX_REF_CNT_RST_CH6,RX_REF_CNT_RST_CH7]` writer - This register is used to reset the clock divider of CHANNEL0."]
-pub type CH_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]

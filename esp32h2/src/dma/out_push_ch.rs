@@ -38,14 +38,31 @@ impl From<crate::W<OUT_PUSH_CH_SPEC>> for W {
 pub type OUTFIFO_WDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OUTFIFO_WDATA` writer - This register stores the data that need to be pushed into DMA FIFO."]
 pub type OUTFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OUT_PUSH_CH_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, OUT_PUSH_CH_SPEC, 9, O, u16, u16>;
 #[doc = "Field `OUTFIFO_PUSH` writer - Set this bit to push data into DMA FIFO."]
-pub type OUTFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_PUSH_CH_SPEC, bool, O>;
+pub type OUTFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, OUT_PUSH_CH_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
     pub fn outfifo_wdata(&self) -> OUTFIFO_WDATA_R {
         OUTFIFO_WDATA_R::new((self.bits & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_PUSH_CH")
+            .field(
+                "outfifo_wdata",
+                &format_args!("{}", self.outfifo_wdata().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_PUSH_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

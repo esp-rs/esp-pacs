@@ -35,20 +35,20 @@ impl From<crate::W<PVT_MONITOR_FUNC_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_DIV_NUM` reader - The integral part of the frequency divider factor of the pvt_monitor function clock."]
-pub type PVT_MONITOR_FUNC_CLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type PVT_MONITOR_FUNC_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_DIV_NUM` writer - The integral part of the frequency divider factor of the pvt_monitor function clock."]
 pub type PVT_MONITOR_FUNC_CLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PVT_MONITOR_FUNC_CLK_CONF_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, PVT_MONITOR_FUNC_CLK_CONF_SPEC, 4, O>;
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_SEL` reader - set this field to select clock-source. 0: XTAL, 1(default): 160MHz drived by SPLL divided by 3."]
-pub type PVT_MONITOR_FUNC_CLK_SEL_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_FUNC_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_SEL` writer - set this field to select clock-source. 0: XTAL, 1(default): 160MHz drived by SPLL divided by 3."]
 pub type PVT_MONITOR_FUNC_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_FUNC_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, PVT_MONITOR_FUNC_CLK_CONF_SPEC, O>;
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_EN` reader - Set 1 to enable source clock of pvt sitex"]
-pub type PVT_MONITOR_FUNC_CLK_EN_R = crate::BitReader<bool>;
+pub type PVT_MONITOR_FUNC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PVT_MONITOR_FUNC_CLK_EN` writer - Set 1 to enable source clock of pvt sitex"]
 pub type PVT_MONITOR_FUNC_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PVT_MONITOR_FUNC_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, PVT_MONITOR_FUNC_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - The integral part of the frequency divider factor of the pvt_monitor function clock."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn pvt_monitor_func_clk_en(&self) -> PVT_MONITOR_FUNC_CLK_EN_R {
         PVT_MONITOR_FUNC_CLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PVT_MONITOR_FUNC_CLK_CONF")
+            .field(
+                "pvt_monitor_func_clk_div_num",
+                &format_args!("{}", self.pvt_monitor_func_clk_div_num().bits()),
+            )
+            .field(
+                "pvt_monitor_func_clk_sel",
+                &format_args!("{}", self.pvt_monitor_func_clk_sel().bit()),
+            )
+            .field(
+                "pvt_monitor_func_clk_en",
+                &format_args!("{}", self.pvt_monitor_func_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

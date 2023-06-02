@@ -35,28 +35,25 @@ impl From<crate::W<I2C_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SCLK_DIV_NUM` reader - the integral part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_NUM` writer - the integral part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type I2C_SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `I2C_SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type I2C_SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `I2C_SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `I2C_SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor for i2c module"]
-pub type I2C_SCLK_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type I2C_SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `I2C_SCLK_SEL` reader - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
-pub type I2C_SCLK_SEL_R = crate::BitReader<bool>;
+pub type I2C_SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `I2C_SCLK_SEL` writer - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
-pub type I2C_SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_CLK_CONF_SPEC, bool, O>;
+pub type I2C_SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CLK_CONF_SPEC, O>;
 #[doc = "Field `I2C_SCLK_ACTIVE` reader - The clock switch for i2c module"]
-pub type I2C_SCLK_ACTIVE_R = crate::BitReader<bool>;
+pub type I2C_SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `I2C_SCLK_ACTIVE` writer - The clock switch for i2c module"]
-pub type I2C_SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_CLK_CONF_SPEC, bool, O>;
+pub type I2C_SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
@@ -82,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn i2c_sclk_active(&self) -> I2C_SCLK_ACTIVE_R {
         I2C_SCLK_ACTIVE_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_CLK_CONF")
+            .field(
+                "i2c_sclk_div_num",
+                &format_args!("{}", self.i2c_sclk_div_num().bits()),
+            )
+            .field(
+                "i2c_sclk_div_a",
+                &format_args!("{}", self.i2c_sclk_div_a().bits()),
+            )
+            .field(
+                "i2c_sclk_div_b",
+                &format_args!("{}", self.i2c_sclk_div_b().bits()),
+            )
+            .field(
+                "i2c_sclk_sel",
+                &format_args!("{}", self.i2c_sclk_sel().bit()),
+            )
+            .field(
+                "i2c_sclk_active",
+                &format_args!("{}", self.i2c_sclk_active().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

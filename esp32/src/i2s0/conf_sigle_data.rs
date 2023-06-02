@@ -38,12 +38,26 @@ impl From<crate::W<CONF_SIGLE_DATA_SPEC>> for W {
 pub type SIGLE_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SIGLE_DATA` writer - "]
 pub type SIGLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONF_SIGLE_DATA_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CONF_SIGLE_DATA_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sigle_data(&self) -> SIGLE_DATA_R {
         SIGLE_DATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF_SIGLE_DATA")
+            .field("sigle_data", &format_args!("{}", self.sigle_data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SIGLE_DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

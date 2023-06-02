@@ -14,13 +14,13 @@ impl From<crate::R<SDIO_CRC_ST0_SPEC>> for R {
     }
 }
 #[doc = "Field `DAT0_CRC_ERR_CNT` reader - "]
-pub type DAT0_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type DAT0_CRC_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `DAT1_CRC_ERR_CNT` reader - "]
-pub type DAT1_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type DAT1_CRC_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `DAT2_CRC_ERR_CNT` reader - "]
-pub type DAT2_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type DAT2_CRC_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `DAT3_CRC_ERR_CNT` reader - "]
-pub type DAT3_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type DAT3_CRC_ERR_CNT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn dat3_crc_err_cnt(&self) -> DAT3_CRC_ERR_CNT_R {
         DAT3_CRC_ERR_CNT_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_CRC_ST0")
+            .field(
+                "dat0_crc_err_cnt",
+                &format_args!("{}", self.dat0_crc_err_cnt().bits()),
+            )
+            .field(
+                "dat1_crc_err_cnt",
+                &format_args!("{}", self.dat1_crc_err_cnt().bits()),
+            )
+            .field(
+                "dat2_crc_err_cnt",
+                &format_args!("{}", self.dat2_crc_err_cnt().bits()),
+            )
+            .field(
+                "dat3_crc_err_cnt",
+                &format_args!("{}", self.dat3_crc_err_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_CRC_ST0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sdio_crc_st0](index.html) module"]

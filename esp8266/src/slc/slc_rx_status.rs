@@ -35,13 +35,13 @@ impl From<crate::W<SLC_RX_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_RX_FULL` reader - "]
-pub type SLC_RX_FULL_R = crate::BitReader<bool>;
+pub type SLC_RX_FULL_R = crate::BitReader;
 #[doc = "Field `SLC_RX_FULL` writer - "]
-pub type SLC_RX_FULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_RX_STATUS_SPEC, bool, O>;
+pub type SLC_RX_FULL_W<'a, const O: u8> = crate::BitWriter<'a, SLC_RX_STATUS_SPEC, O>;
 #[doc = "Field `SLC_RX_EMPTY` reader - "]
-pub type SLC_RX_EMPTY_R = crate::BitReader<bool>;
+pub type SLC_RX_EMPTY_R = crate::BitReader;
 #[doc = "Field `SLC_RX_EMPTY` writer - "]
-pub type SLC_RX_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLC_RX_STATUS_SPEC, bool, O>;
+pub type SLC_RX_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, SLC_RX_STATUS_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn slc_rx_empty(&self) -> SLC_RX_EMPTY_R {
         SLC_RX_EMPTY_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_RX_STATUS")
+            .field(
+                "slc_rx_empty",
+                &format_args!("{}", self.slc_rx_empty().bit()),
+            )
+            .field("slc_rx_full", &format_args!("{}", self.slc_rx_full().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_RX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

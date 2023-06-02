@@ -14,29 +14,29 @@ impl From<crate::R<LP_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LP_CPU_WAKEUP_INT_ST` reader - need_des"]
-pub type LP_CPU_WAKEUP_INT_ST_R = crate::BitReader<bool>;
+pub type LP_CPU_WAKEUP_INT_ST_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_END_INT_ST` reader - need_des"]
-pub type MODEM_SWITCH_ACTIVE_END_INT_ST_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_ACTIVE_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_END_INT_ST` reader - need_des"]
-pub type SLEEP_SWITCH_ACTIVE_END_INT_ST_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_ACTIVE_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_MODEM_END_INT_ST` reader - need_des"]
-pub type SLEEP_SWITCH_MODEM_END_INT_ST_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_MODEM_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_SLEEP_END_INT_ST` reader - need_des"]
-pub type MODEM_SWITCH_SLEEP_END_INT_ST_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_SLEEP_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_END_INT_ST` reader - need_des"]
-pub type ACTIVE_SWITCH_SLEEP_END_INT_ST_R = crate::BitReader<bool>;
+pub type ACTIVE_SWITCH_SLEEP_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_START_INT_ST` reader - need_des"]
-pub type MODEM_SWITCH_ACTIVE_START_INT_ST_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_ACTIVE_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_START_INT_ST` reader - need_des"]
-pub type SLEEP_SWITCH_ACTIVE_START_INT_ST_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_ACTIVE_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_MODEM_START_INT_ST` reader - need_des"]
-pub type SLEEP_SWITCH_MODEM_START_INT_ST_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_MODEM_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_SLEEP_START_INT_ST` reader - need_des"]
-pub type MODEM_SWITCH_SLEEP_START_INT_ST_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_SLEEP_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_START_INT_ST` reader - need_des"]
-pub type ACTIVE_SWITCH_SLEEP_START_INT_ST_R = crate::BitReader<bool>;
+pub type ACTIVE_SWITCH_SLEEP_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `HP_SW_TRIGGER_INT_ST` reader - need_des"]
-pub type HP_SW_TRIGGER_INT_ST_R = crate::BitReader<bool>;
+pub type HP_SW_TRIGGER_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
@@ -97,6 +97,67 @@ impl R {
     #[inline(always)]
     pub fn hp_sw_trigger_int_st(&self) -> HP_SW_TRIGGER_INT_ST_R {
         HP_SW_TRIGGER_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_INT_ST")
+            .field(
+                "lp_cpu_wakeup_int_st",
+                &format_args!("{}", self.lp_cpu_wakeup_int_st().bit()),
+            )
+            .field(
+                "modem_switch_active_end_int_st",
+                &format_args!("{}", self.modem_switch_active_end_int_st().bit()),
+            )
+            .field(
+                "sleep_switch_active_end_int_st",
+                &format_args!("{}", self.sleep_switch_active_end_int_st().bit()),
+            )
+            .field(
+                "sleep_switch_modem_end_int_st",
+                &format_args!("{}", self.sleep_switch_modem_end_int_st().bit()),
+            )
+            .field(
+                "modem_switch_sleep_end_int_st",
+                &format_args!("{}", self.modem_switch_sleep_end_int_st().bit()),
+            )
+            .field(
+                "active_switch_sleep_end_int_st",
+                &format_args!("{}", self.active_switch_sleep_end_int_st().bit()),
+            )
+            .field(
+                "modem_switch_active_start_int_st",
+                &format_args!("{}", self.modem_switch_active_start_int_st().bit()),
+            )
+            .field(
+                "sleep_switch_active_start_int_st",
+                &format_args!("{}", self.sleep_switch_active_start_int_st().bit()),
+            )
+            .field(
+                "sleep_switch_modem_start_int_st",
+                &format_args!("{}", self.sleep_switch_modem_start_int_st().bit()),
+            )
+            .field(
+                "modem_switch_sleep_start_int_st",
+                &format_args!("{}", self.modem_switch_sleep_start_int_st().bit()),
+            )
+            .field(
+                "active_switch_sleep_start_int_st",
+                &format_args!("{}", self.active_switch_sleep_start_int_st().bit()),
+            )
+            .field(
+                "hp_sw_trigger_int_st",
+                &format_args!("{}", self.hp_sw_trigger_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lp_int_st](index.html) module"]

@@ -35,15 +35,15 @@ impl From<crate::W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `L2_CACHE_PLD_DONE_INT_RAW` reader - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
-pub type L2_CACHE_PLD_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_CACHE_PLD_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PLD_DONE_INT_RAW` writer - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
 pub type L2_CACHE_PLD_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_CACHE_PLD_ERR_INT_RAW` reader - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
-pub type L2_CACHE_PLD_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_CACHE_PLD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PLD_ERR_INT_RAW` writer - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
 pub type L2_CACHE_PLD_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 5 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_pld_err_int_raw(&self) -> L2_CACHE_PLD_ERR_INT_RAW_R {
         L2_CACHE_PLD_ERR_INT_RAW_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_RAW")
+            .field(
+                "l2_cache_pld_done_int_raw",
+                &format_args!("{}", self.l2_cache_pld_done_int_raw().bit()),
+            )
+            .field(
+                "l2_cache_pld_err_int_raw",
+                &format_args!("{}", self.l2_cache_pld_err_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

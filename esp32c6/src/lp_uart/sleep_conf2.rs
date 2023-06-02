@@ -38,27 +38,23 @@ impl From<crate::W<SLEEP_CONF2_SPEC>> for W {
 pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
 pub type ACTIVE_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF2_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 10, O, u16, u16>;
 #[doc = "Field `RX_WAKE_UP_THRHD` reader - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
-pub type RX_WAKE_UP_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_WAKE_UP_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_WAKE_UP_THRHD` writer - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
-pub type RX_WAKE_UP_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF2_SPEC, u8, u8, 5, O>;
+pub type RX_WAKE_UP_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 5, O>;
 #[doc = "Field `WK_CHAR_NUM` reader - This register is used to select number of wake up char."]
-pub type WK_CHAR_NUM_R = crate::FieldReader<u8, u8>;
+pub type WK_CHAR_NUM_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR_NUM` writer - This register is used to select number of wake up char."]
-pub type WK_CHAR_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF2_SPEC, u8, u8, 3, O>;
+pub type WK_CHAR_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 3, O>;
 #[doc = "Field `WK_CHAR_MASK` reader - This register is used to mask wake up char."]
-pub type WK_CHAR_MASK_R = crate::FieldReader<u8, u8>;
+pub type WK_CHAR_MASK_R = crate::FieldReader;
 #[doc = "Field `WK_CHAR_MASK` writer - This register is used to mask wake up char."]
-pub type WK_CHAR_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF2_SPEC, u8, u8, 5, O>;
+pub type WK_CHAR_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 5, O>;
 #[doc = "Field `WK_MODE_SEL` reader - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
-pub type WK_MODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type WK_MODE_SEL_R = crate::FieldReader;
 #[doc = "Field `WK_MODE_SEL` writer - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
-pub type WK_MODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF2_SPEC, u8, u8, 2, O>;
+pub type WK_MODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF2_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:9 - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
     #[inline(always)]
@@ -84,6 +80,39 @@ impl R {
     #[inline(always)]
     pub fn wk_mode_sel(&self) -> WK_MODE_SEL_R {
         WK_MODE_SEL_R::new(((self.bits >> 26) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLEEP_CONF2")
+            .field(
+                "active_threshold",
+                &format_args!("{}", self.active_threshold().bits()),
+            )
+            .field(
+                "rx_wake_up_thrhd",
+                &format_args!("{}", self.rx_wake_up_thrhd().bits()),
+            )
+            .field(
+                "wk_char_num",
+                &format_args!("{}", self.wk_char_num().bits()),
+            )
+            .field(
+                "wk_char_mask",
+                &format_args!("{}", self.wk_char_mask().bits()),
+            )
+            .field(
+                "wk_mode_sel",
+                &format_args!("{}", self.wk_mode_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

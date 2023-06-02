@@ -35,14 +35,31 @@ impl From<crate::W<FUNC2_2_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_FUNC1_MDSTAT` reader - *******Description***********"]
-pub type SLC_FUNC1_MDSTAT_R = crate::BitReader<bool>;
+pub type SLC_FUNC1_MDSTAT_R = crate::BitReader;
 #[doc = "Field `SLC_FUNC1_MDSTAT` writer - *******Description***********"]
-pub type SLC_FUNC1_MDSTAT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC2_2_SPEC, bool, O>;
+pub type SLC_FUNC1_MDSTAT_W<'a, const O: u8> = crate::BitWriter<'a, FUNC2_2_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]
     pub fn slc_func1_mdstat(&self) -> SLC_FUNC1_MDSTAT_R {
         SLC_FUNC1_MDSTAT_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FUNC2_2")
+            .field(
+                "slc_func1_mdstat",
+                &format_args!("{}", self.slc_func1_mdstat().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FUNC2_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

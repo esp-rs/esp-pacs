@@ -38,12 +38,29 @@ impl From<crate::W<CPU_INT_TYPE_SPEC>> for W {
 pub type CPU_INT_TYPE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CPU_INT_TYPE` writer - reg_core0_cpu_int_type"]
 pub type CPU_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_INT_TYPE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CPU_INT_TYPE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core0_cpu_int_type"]
     #[inline(always)]
     pub fn cpu_int_type(&self) -> CPU_INT_TYPE_R {
         CPU_INT_TYPE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INT_TYPE")
+            .field(
+                "cpu_int_type",
+                &format_args!("{}", self.cpu_int_type().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INT_TYPE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

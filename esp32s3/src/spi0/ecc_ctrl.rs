@@ -35,15 +35,13 @@ impl From<crate::W<ECC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_ERR_INT_NUM` reader - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub type ECC_ERR_INT_NUM_R = crate::FieldReader<u8, u8>;
+pub type ECC_ERR_INT_NUM_R = crate::FieldReader;
 #[doc = "Field `ECC_ERR_INT_NUM` writer - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub type ECC_ERR_INT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ECC_CTRL_SPEC, u8, u8, 8, O>;
+pub type ECC_ERR_INT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, ECC_CTRL_SPEC, 8, O>;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` reader - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub type SPI_FMEM_ECC_ERR_INT_EN_R = crate::BitReader<bool>;
+pub type SPI_FMEM_ECC_ERR_INT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` writer - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub type SPI_FMEM_ECC_ERR_INT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ECC_CTRL_SPEC, bool, O>;
+pub type SPI_FMEM_ECC_ERR_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, ECC_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn spi_fmem_ecc_err_int_en(&self) -> SPI_FMEM_ECC_ERR_INT_EN_R {
         SPI_FMEM_ECC_ERR_INT_EN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECC_CTRL")
+            .field(
+                "ecc_err_int_num",
+                &format_args!("{}", self.ecc_err_int_num().bits()),
+            )
+            .field(
+                "spi_fmem_ecc_err_int_en",
+                &format_args!("{}", self.spi_fmem_ecc_err_int_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

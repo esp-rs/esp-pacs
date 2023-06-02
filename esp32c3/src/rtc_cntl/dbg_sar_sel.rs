@@ -35,15 +35,31 @@ impl From<crate::W<DBG_SAR_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DEBUG_SEL` reader - use for debug"]
-pub type SAR_DEBUG_SEL_R = crate::FieldReader<u8, u8>;
+pub type SAR_DEBUG_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_DEBUG_SEL` writer - use for debug"]
-pub type SAR_DEBUG_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_SAR_SEL_SPEC, u8, u8, 5, O>;
+pub type SAR_DEBUG_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_SAR_SEL_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
     pub fn sar_debug_sel(&self) -> SAR_DEBUG_SEL_R {
         SAR_DEBUG_SEL_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBG_SAR_SEL")
+            .field(
+                "sar_debug_sel",
+                &format_args!("{}", self.sar_debug_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBG_SAR_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

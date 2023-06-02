@@ -35,15 +35,13 @@ impl From<crate::W<ETM_EVENT_CH_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_CH0_EVENT_SEL` reader - Etm event channel select gpio."]
-pub type ETM_CH0_EVENT_SEL_R = crate::FieldReader<u8, u8>;
+pub type ETM_CH0_EVENT_SEL_R = crate::FieldReader;
 #[doc = "Field `ETM_CH0_EVENT_SEL` writer - Etm event channel select gpio."]
-pub type ETM_CH0_EVENT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ETM_EVENT_CH_CFG_SPEC, u8, u8, 5, O>;
+pub type ETM_CH0_EVENT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, ETM_EVENT_CH_CFG_SPEC, 5, O>;
 #[doc = "Field `ETM_CH0_EVENT_EN` reader - Etm event send enable bit."]
-pub type ETM_CH0_EVENT_EN_R = crate::BitReader<bool>;
+pub type ETM_CH0_EVENT_EN_R = crate::BitReader;
 #[doc = "Field `ETM_CH0_EVENT_EN` writer - Etm event send enable bit."]
-pub type ETM_CH0_EVENT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ETM_EVENT_CH_CFG_SPEC, bool, O>;
+pub type ETM_CH0_EVENT_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_EVENT_CH_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - Etm event channel select gpio."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn etm_ch0_event_en(&self) -> ETM_CH0_EVENT_EN_R {
         ETM_CH0_EVENT_EN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ETM_EVENT_CH_CFG")
+            .field(
+                "etm_ch0_event_sel",
+                &format_args!("{}", self.etm_ch0_event_sel().bits()),
+            )
+            .field(
+                "etm_ch0_event_en",
+                &format_args!("{}", self.etm_ch0_event_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ETM_EVENT_CH_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

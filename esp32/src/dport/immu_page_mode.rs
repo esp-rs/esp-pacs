@@ -35,15 +35,13 @@ impl From<crate::W<IMMU_PAGE_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_IMMU_ENA` reader - "]
-pub type INTERNAL_SRAM_IMMU_ENA_R = crate::BitReader<bool>;
+pub type INTERNAL_SRAM_IMMU_ENA_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_IMMU_ENA` writer - "]
-pub type INTERNAL_SRAM_IMMU_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMMU_PAGE_MODE_SPEC, bool, O>;
+pub type INTERNAL_SRAM_IMMU_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IMMU_PAGE_MODE_SPEC, O>;
 #[doc = "Field `IMMU_PAGE_MODE` reader - "]
-pub type IMMU_PAGE_MODE_R = crate::FieldReader<u8, u8>;
+pub type IMMU_PAGE_MODE_R = crate::FieldReader;
 #[doc = "Field `IMMU_PAGE_MODE` writer - "]
-pub type IMMU_PAGE_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IMMU_PAGE_MODE_SPEC, u8, u8, 2, O>;
+pub type IMMU_PAGE_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, IMMU_PAGE_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn immu_page_mode(&self) -> IMMU_PAGE_MODE_R {
         IMMU_PAGE_MODE_R::new(((self.bits >> 1) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IMMU_PAGE_MODE")
+            .field(
+                "internal_sram_immu_ena",
+                &format_args!("{}", self.internal_sram_immu_ena().bit()),
+            )
+            .field(
+                "immu_page_mode",
+                &format_args!("{}", self.immu_page_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IMMU_PAGE_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

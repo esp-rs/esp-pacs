@@ -35,14 +35,28 @@ impl From<crate::W<DATA_3_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_3` reader - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
-pub type DATA_3_R = crate::FieldReader<u8, u8>;
+pub type DATA_3_R = crate::FieldReader;
 #[doc = "Field `DATA_3` writer - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
-pub type DATA_3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_3_SPEC, u8, u8, 8, O>;
+pub type DATA_3_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_3_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 3 and when software initiate read operation, it is rx data register 3."]
     #[inline(always)]
     pub fn data_3(&self) -> DATA_3_R {
         DATA_3_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATA_3")
+            .field("data_3", &format_args!("{}", self.data_3().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATA_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

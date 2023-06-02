@@ -35,25 +35,25 @@ impl From<crate::W<CORE_0_PIF_PMS_CONSTRAIN_12_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L` reader - RTCSlow_0 memory low region permission in world 0 for core0."]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L` writer - RTCSlow_0 memory low region permission in world 0 for core0."]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, 3, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H` reader - RTCSlow_0 memory high region permission in world 0 for core0."]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H` writer - RTCSlow_0 memory high region permission in world 0 for core0."]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_0_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, 3, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L` reader - RTCSlow_0 memory low region permission in world 1 for core0."]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L` writer - RTCSlow_0 memory low region permission in world 1 for core0."]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, 3, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H` reader - RTCSlow_0 memory high region permission in world 1 for core0."]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H` writer - RTCSlow_0 memory high region permission in world 1 for core0."]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_12_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - RTCSlow_0 memory low region permission in world 0 for core0."]
     #[inline(always)]
@@ -82,6 +82,47 @@ impl R {
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_R {
         CORE_0_PIF_PMS_CONSTRAIN_RTCSLOW_0_WORLD_1_H_R::new(((self.bits >> 9) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_12")
+            .field(
+                "core_0_pif_pms_constrain_rtcslow_0_world_0_l",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_constrain_rtcslow_0_world_0_l().bits()
+                ),
+            )
+            .field(
+                "core_0_pif_pms_constrain_rtcslow_0_world_0_h",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_constrain_rtcslow_0_world_0_h().bits()
+                ),
+            )
+            .field(
+                "core_0_pif_pms_constrain_rtcslow_0_world_1_l",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_constrain_rtcslow_0_world_1_l().bits()
+                ),
+            )
+            .field(
+                "core_0_pif_pms_constrain_rtcslow_0_world_1_h",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_constrain_rtcslow_0_world_1_h().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_12_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

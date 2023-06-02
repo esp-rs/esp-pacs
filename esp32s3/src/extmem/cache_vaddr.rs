@@ -37,13 +37,29 @@ impl From<crate::W<CACHE_VADDR_SPEC>> for W {
 #[doc = "Field `CACHE_VADDR` reader - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
 pub type CACHE_VADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CACHE_VADDR` writer - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
-pub type CACHE_VADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_VADDR_SPEC, u32, u32, 32, O>;
+pub type CACHE_VADDR_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_VADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]
     pub fn cache_vaddr(&self) -> CACHE_VADDR_R {
         CACHE_VADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_VADDR")
+            .field(
+                "cache_vaddr",
+                &format_args!("{}", self.cache_vaddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_VADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

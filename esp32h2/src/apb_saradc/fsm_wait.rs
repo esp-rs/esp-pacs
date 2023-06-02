@@ -35,20 +35,17 @@ impl From<crate::W<FSM_WAIT_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_XPD_WAIT` reader - saradc_xpd_wait"]
-pub type SARADC_XPD_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_XPD_WAIT` writer - saradc_xpd_wait"]
-pub type SARADC_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type SARADC_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 #[doc = "Field `SARADC_RSTB_WAIT` reader - saradc_rstb_wait"]
-pub type SARADC_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_RSTB_WAIT` writer - saradc_rstb_wait"]
-pub type SARADC_RSTB_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type SARADC_RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 #[doc = "Field `SARADC_STANDBY_WAIT` reader - saradc_standby_wait"]
-pub type SARADC_STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SARADC_STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `SARADC_STANDBY_WAIT` writer - saradc_standby_wait"]
-pub type SARADC_STANDBY_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, O>;
+pub type SARADC_STANDBY_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_WAIT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - saradc_xpd_wait"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn saradc_standby_wait(&self) -> SARADC_STANDBY_WAIT_R {
         SARADC_STANDBY_WAIT_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM_WAIT")
+            .field(
+                "saradc_xpd_wait",
+                &format_args!("{}", self.saradc_xpd_wait().bits()),
+            )
+            .field(
+                "saradc_rstb_wait",
+                &format_args!("{}", self.saradc_rstb_wait().bits()),
+            )
+            .field(
+                "saradc_standby_wait",
+                &format_args!("{}", self.saradc_standby_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FSM_WAIT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

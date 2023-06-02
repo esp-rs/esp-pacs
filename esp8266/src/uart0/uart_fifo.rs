@@ -35,12 +35,11 @@ impl From<crate::W<UART_FIFO_SPEC>> for W {
     }
 }
 #[doc = "Field `rxfifo_rd_byte` reader - R/W share the same address"]
-pub type RXFIFO_RD_BYTE_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_RD_BYTE_R = crate::FieldReader;
 #[doc = "Field `rxfifo_write_byte` reader - R/W share the same address"]
-pub type RXFIFO_WRITE_BYTE_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_WRITE_BYTE_R = crate::FieldReader;
 #[doc = "Field `rxfifo_write_byte` writer - R/W share the same address"]
-pub type RXFIFO_WRITE_BYTE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_FIFO_SPEC, u8, u8, 8, O>;
+pub type RXFIFO_WRITE_BYTE_W<'a, const O: u8> = crate::FieldWriter<'a, UART_FIFO_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - R/W share the same address"]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn rxfifo_write_byte(&self) -> RXFIFO_WRITE_BYTE_R {
         RXFIFO_WRITE_BYTE_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_FIFO")
+            .field(
+                "rxfifo_rd_byte",
+                &format_args!("{}", self.rxfifo_rd_byte().bits()),
+            )
+            .field(
+                "rxfifo_write_byte",
+                &format_args!("{}", self.rxfifo_write_byte().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_FIFO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

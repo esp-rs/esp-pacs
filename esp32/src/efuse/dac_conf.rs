@@ -35,13 +35,13 @@ impl From<crate::W<DAC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_CLK_DIV` reader - efuse timing configure"]
-pub type DAC_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type DAC_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `DAC_CLK_DIV` writer - efuse timing configure"]
-pub type DAC_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DAC_CONF_SPEC, u8, u8, 8, O>;
+pub type DAC_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, DAC_CONF_SPEC, 8, O>;
 #[doc = "Field `DAC_CLK_PAD_SEL` reader - "]
-pub type DAC_CLK_PAD_SEL_R = crate::BitReader<bool>;
+pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
 #[doc = "Field `DAC_CLK_PAD_SEL` writer - "]
-pub type DAC_CLK_PAD_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DAC_CONF_SPEC, bool, O>;
+pub type DAC_CLK_PAD_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DAC_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - efuse timing configure"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn dac_clk_pad_sel(&self) -> DAC_CLK_PAD_SEL_R {
         DAC_CLK_PAD_SEL_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DAC_CONF")
+            .field(
+                "dac_clk_div",
+                &format_args!("{}", self.dac_clk_div().bits()),
+            )
+            .field(
+                "dac_clk_pad_sel",
+                &format_args!("{}", self.dac_clk_pad_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DAC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

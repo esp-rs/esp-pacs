@@ -35,13 +35,13 @@ impl From<crate::W<SPI_CACHE_TARGET_SPEC>> for W {
     }
 }
 #[doc = "Field `target1` reader - "]
-pub type TARGET1_R = crate::BitReader<bool>;
+pub type TARGET1_R = crate::BitReader;
 #[doc = "Field `target1` writer - "]
-pub type TARGET1_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_TARGET_SPEC, bool, O>;
+pub type TARGET1_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_TARGET_SPEC, O>;
 #[doc = "Field `target2` reader - "]
-pub type TARGET2_R = crate::BitReader<bool>;
+pub type TARGET2_R = crate::BitReader;
 #[doc = "Field `target2` writer - "]
-pub type TARGET2_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_TARGET_SPEC, bool, O>;
+pub type TARGET2_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_TARGET_SPEC, O>;
 impl R {
     #[doc = "Bit 3"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn target2(&self) -> TARGET2_R {
         TARGET2_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CACHE_TARGET")
+            .field("target1", &format_args!("{}", self.target1().bit()))
+            .field("target2", &format_args!("{}", self.target2().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CACHE_TARGET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

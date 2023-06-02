@@ -35,15 +35,31 @@ impl From<crate::W<APPCPU_CTRL_B_SPEC>> for W {
     }
 }
 #[doc = "Field `APPCPU_CLKGATE_EN` reader - "]
-pub type APPCPU_CLKGATE_EN_R = crate::BitReader<bool>;
+pub type APPCPU_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `APPCPU_CLKGATE_EN` writer - "]
-pub type APPCPU_CLKGATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APPCPU_CTRL_B_SPEC, bool, O>;
+pub type APPCPU_CLKGATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, APPCPU_CTRL_B_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn appcpu_clkgate_en(&self) -> APPCPU_CLKGATE_EN_R {
         APPCPU_CLKGATE_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APPCPU_CTRL_B")
+            .field(
+                "appcpu_clkgate_en",
+                &format_args!("{}", self.appcpu_clkgate_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_B_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,25 +37,23 @@ impl From<crate::W<CH_CONF1_SPEC>> for W {
 #[doc = "Field `DUTY_SCALE` reader - reg_duty_scale_lsch0."]
 pub type DUTY_SCALE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_SCALE` writer - reg_duty_scale_lsch0."]
-pub type DUTY_SCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_CYCLE` reader - reg_duty_cycle_lsch0."]
 pub type DUTY_CYCLE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_CYCLE` writer - reg_duty_cycle_lsch0."]
-pub type DUTY_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_NUM` reader - reg_duty_num_lsch0."]
 pub type DUTY_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_NUM` writer - reg_duty_num_lsch0."]
-pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONF1_SPEC, u16, u16, 10, O>;
+pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `DUTY_INC` reader - reg_duty_inc_lsch0."]
-pub type DUTY_INC_R = crate::BitReader<bool>;
+pub type DUTY_INC_R = crate::BitReader;
 #[doc = "Field `DUTY_INC` writer - reg_duty_inc_lsch0."]
-pub type DUTY_INC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+pub type DUTY_INC_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF1_SPEC, O>;
 #[doc = "Field `DUTY_START` reader - reg_duty_start_lsch0."]
-pub type DUTY_START_R = crate::BitReader<bool>;
+pub type DUTY_START_R = crate::BitReader;
 #[doc = "Field `DUTY_START` writer - reg_duty_start_lsch0."]
-pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - reg_duty_scale_lsch0."]
     #[inline(always)]
@@ -81,6 +79,24 @@ impl R {
     #[inline(always)]
     pub fn duty_start(&self) -> DUTY_START_R {
         DUTY_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_CONF1")
+            .field("duty_scale", &format_args!("{}", self.duty_scale().bits()))
+            .field("duty_cycle", &format_args!("{}", self.duty_cycle().bits()))
+            .field("duty_num", &format_args!("{}", self.duty_num().bits()))
+            .field("duty_inc", &format_args!("{}", self.duty_inc().bit()))
+            .field("duty_start", &format_args!("{}", self.duty_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

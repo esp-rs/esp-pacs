@@ -35,18 +35,17 @@ impl From<crate::W<ROM_FO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ROM_FO` reader - "]
-pub type PRO_ROM_FO_R = crate::BitReader<bool>;
+pub type PRO_ROM_FO_R = crate::BitReader;
 #[doc = "Field `PRO_ROM_FO` writer - "]
-pub type PRO_ROM_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROM_FO_CTRL_SPEC, bool, O>;
+pub type PRO_ROM_FO_W<'a, const O: u8> = crate::BitWriter<'a, ROM_FO_CTRL_SPEC, O>;
 #[doc = "Field `APP_ROM_FO` reader - "]
-pub type APP_ROM_FO_R = crate::BitReader<bool>;
+pub type APP_ROM_FO_R = crate::BitReader;
 #[doc = "Field `APP_ROM_FO` writer - "]
-pub type APP_ROM_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, ROM_FO_CTRL_SPEC, bool, O>;
+pub type APP_ROM_FO_W<'a, const O: u8> = crate::BitWriter<'a, ROM_FO_CTRL_SPEC, O>;
 #[doc = "Field `SHARE_ROM_FO` reader - "]
-pub type SHARE_ROM_FO_R = crate::FieldReader<u8, u8>;
+pub type SHARE_ROM_FO_R = crate::FieldReader;
 #[doc = "Field `SHARE_ROM_FO` writer - "]
-pub type SHARE_ROM_FO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROM_FO_CTRL_SPEC, u8, u8, 6, O>;
+pub type SHARE_ROM_FO_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_FO_CTRL_SPEC, 6, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -62,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn share_rom_fo(&self) -> SHARE_ROM_FO_R {
         SHARE_ROM_FO_R::new(((self.bits >> 2) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_FO_CTRL")
+            .field("pro_rom_fo", &format_args!("{}", self.pro_rom_fo().bit()))
+            .field("app_rom_fo", &format_args!("{}", self.app_rom_fo().bit()))
+            .field(
+                "share_rom_fo",
+                &format_args!("{}", self.share_rom_fo().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_FO_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

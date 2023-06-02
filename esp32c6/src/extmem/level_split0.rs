@@ -22,6 +22,23 @@ impl R {
         LEVEL_SPLIT0_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LEVEL_SPLIT0")
+            .field(
+                "level_split0",
+                &format_args!("{}", self.level_split0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LEVEL_SPLIT0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [level_split0](index.html) module"]
 pub struct LEVEL_SPLIT0_SPEC;
 impl crate::RegisterSpec for LEVEL_SPLIT0_SPEC {

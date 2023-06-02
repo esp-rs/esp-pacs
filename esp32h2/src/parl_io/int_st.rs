@@ -14,11 +14,11 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_FIFO_REMPTY_INT_ST` reader - The masked interrupt status of TX_FIFO_REMPTY_INT."]
-pub type TX_FIFO_REMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type TX_FIFO_REMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_WOVF_INT_ST` reader - The masked interrupt status of RX_FIFO_WOVF_INT."]
-pub type RX_FIFO_WOVF_INT_ST_R = crate::BitReader<bool>;
+pub type RX_FIFO_WOVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_ST` reader - The masked interrupt status of TX_EOF_INT."]
-pub type TX_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type TX_EOF_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status of TX_FIFO_REMPTY_INT."]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn tx_eof_int_st(&self) -> TX_EOF_INT_ST_R {
         TX_EOF_INT_ST_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "tx_fifo_rempty_int_st",
+                &format_args!("{}", self.tx_fifo_rempty_int_st().bit()),
+            )
+            .field(
+                "rx_fifo_wovf_int_st",
+                &format_args!("{}", self.rx_fifo_wovf_int_st().bit()),
+            )
+            .field(
+                "tx_eof_int_st",
+                &format_args!("{}", self.tx_eof_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Parallel IO interrupt singal status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

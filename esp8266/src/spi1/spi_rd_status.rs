@@ -38,12 +38,29 @@ impl From<crate::W<SPI_RD_STATUS_SPEC>> for W {
 pub type SLV_RD_STATUS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `slv_rd_status` writer - In the slave mode, this register are the status register for the master to read out."]
 pub type SLV_RD_STATUS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_RD_STATUS_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_RD_STATUS_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode, this register are the status register for the master to read out."]
     #[inline(always)]
     pub fn slv_rd_status(&self) -> SLV_RD_STATUS_R {
         SLV_RD_STATUS_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_RD_STATUS")
+            .field(
+                "slv_rd_status",
+                &format_args!("{}", self.slv_rd_status().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_RD_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -21,31 +21,37 @@ impl From<crate::W<HOST_SLCHOST_TOKEN_CON_SPEC>> for W {
 }
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_DEC` writer - "]
 pub type HOST_SLC0HOST_TOKEN0_DEC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_DEC` writer - "]
 pub type HOST_SLC0HOST_TOKEN1_DEC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_WR` writer - "]
 pub type HOST_SLC0HOST_TOKEN0_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_WR` writer - "]
 pub type HOST_SLC0HOST_TOKEN1_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_TOKEN0_DEC` writer - "]
 pub type HOST_SLC1HOST_TOKEN0_DEC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_TOKEN1_DEC` writer - "]
 pub type HOST_SLC1HOST_TOKEN1_DEC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_TOKEN0_WR` writer - "]
 pub type HOST_SLC1HOST_TOKEN0_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC1HOST_TOKEN1_WR` writer - "]
 pub type HOST_SLC1HOST_TOKEN1_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
 #[doc = "Field `HOST_SLC0HOST_LEN_WR` writer - "]
 pub type HOST_SLC0HOST_LEN_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_TOKEN_CON_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_TOKEN_CON_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]

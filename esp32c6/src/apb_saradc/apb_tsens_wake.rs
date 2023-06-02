@@ -35,25 +35,23 @@ impl From<crate::W<APB_TSENS_WAKE_SPEC>> for W {
     }
 }
 #[doc = "Field `WAKEUP_TH_LOW` reader - reg_wakeup_th_low"]
-pub type WAKEUP_TH_LOW_R = crate::FieldReader<u8, u8>;
+pub type WAKEUP_TH_LOW_R = crate::FieldReader;
 #[doc = "Field `WAKEUP_TH_LOW` writer - reg_wakeup_th_low"]
-pub type WAKEUP_TH_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_WAKE_SPEC, u8, u8, 8, O>;
+pub type WAKEUP_TH_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, APB_TSENS_WAKE_SPEC, 8, O>;
 #[doc = "Field `WAKEUP_TH_HIGH` reader - reg_wakeup_th_high"]
-pub type WAKEUP_TH_HIGH_R = crate::FieldReader<u8, u8>;
+pub type WAKEUP_TH_HIGH_R = crate::FieldReader;
 #[doc = "Field `WAKEUP_TH_HIGH` writer - reg_wakeup_th_high"]
-pub type WAKEUP_TH_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_WAKE_SPEC, u8, u8, 8, O>;
+pub type WAKEUP_TH_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, APB_TSENS_WAKE_SPEC, 8, O>;
 #[doc = "Field `WAKEUP_OVER_UPPER_TH` reader - reg_wakeup_over_upper_th"]
-pub type WAKEUP_OVER_UPPER_TH_R = crate::BitReader<bool>;
+pub type WAKEUP_OVER_UPPER_TH_R = crate::BitReader;
 #[doc = "Field `WAKEUP_MODE` reader - reg_wakeup_mode"]
-pub type WAKEUP_MODE_R = crate::BitReader<bool>;
+pub type WAKEUP_MODE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_MODE` writer - reg_wakeup_mode"]
-pub type WAKEUP_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_TSENS_WAKE_SPEC, bool, O>;
+pub type WAKEUP_MODE_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_WAKE_SPEC, O>;
 #[doc = "Field `WAKEUP_EN` reader - reg_wakeup_en"]
-pub type WAKEUP_EN_R = crate::BitReader<bool>;
+pub type WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `WAKEUP_EN` writer - reg_wakeup_en"]
-pub type WAKEUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_TSENS_WAKE_SPEC, bool, O>;
+pub type WAKEUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_WAKE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_wakeup_th_low"]
     #[inline(always)]
@@ -79,6 +77,33 @@ impl R {
     #[inline(always)]
     pub fn wakeup_en(&self) -> WAKEUP_EN_R {
         WAKEUP_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_TSENS_WAKE")
+            .field(
+                "wakeup_th_low",
+                &format_args!("{}", self.wakeup_th_low().bits()),
+            )
+            .field(
+                "wakeup_th_high",
+                &format_args!("{}", self.wakeup_th_high().bits()),
+            )
+            .field(
+                "wakeup_over_upper_th",
+                &format_args!("{}", self.wakeup_over_upper_th().bit()),
+            )
+            .field("wakeup_mode", &format_args!("{}", self.wakeup_mode().bit()))
+            .field("wakeup_en", &format_args!("{}", self.wakeup_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_WAKE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,28 +35,25 @@ impl From<crate::W<I2C0_SCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C0_SCLK_DIV_A` reader - The denominator of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type I2C0_SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `I2C0_SCLK_DIV_A` writer - The denominator of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C0_SCLK_CONF_SPEC, u8, u8, 6, O>;
+pub type I2C0_SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, I2C0_SCLK_CONF_SPEC, 6, O>;
 #[doc = "Field `I2C0_SCLK_DIV_B` reader - The numerator of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type I2C0_SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `I2C0_SCLK_DIV_B` writer - The numerator of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C0_SCLK_CONF_SPEC, u8, u8, 6, O>;
+pub type I2C0_SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, I2C0_SCLK_CONF_SPEC, 6, O>;
 #[doc = "Field `I2C0_SCLK_DIV_NUM` reader - The integral part of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type I2C0_SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `I2C0_SCLK_DIV_NUM` writer - The integral part of the frequency divider factor of the i2c function clock."]
-pub type I2C0_SCLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C0_SCLK_CONF_SPEC, u8, u8, 8, O>;
+pub type I2C0_SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, I2C0_SCLK_CONF_SPEC, 8, O>;
 #[doc = "Field `I2C0_SCLK_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
-pub type I2C0_SCLK_SEL_R = crate::BitReader<bool>;
+pub type I2C0_SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `I2C0_SCLK_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
-pub type I2C0_SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C0_SCLK_CONF_SPEC, bool, O>;
+pub type I2C0_SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, I2C0_SCLK_CONF_SPEC, O>;
 #[doc = "Field `I2C0_SCLK_EN` reader - Set 1 to enable i2c function clock"]
-pub type I2C0_SCLK_EN_R = crate::BitReader<bool>;
+pub type I2C0_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C0_SCLK_EN` writer - Set 1 to enable i2c function clock"]
-pub type I2C0_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C0_SCLK_CONF_SPEC, bool, O>;
+pub type I2C0_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C0_SCLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the i2c function clock."]
     #[inline(always)]
@@ -82,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn i2c0_sclk_en(&self) -> I2C0_SCLK_EN_R {
         I2C0_SCLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C0_SCLK_CONF")
+            .field(
+                "i2c0_sclk_div_a",
+                &format_args!("{}", self.i2c0_sclk_div_a().bits()),
+            )
+            .field(
+                "i2c0_sclk_div_b",
+                &format_args!("{}", self.i2c0_sclk_div_b().bits()),
+            )
+            .field(
+                "i2c0_sclk_div_num",
+                &format_args!("{}", self.i2c0_sclk_div_num().bits()),
+            )
+            .field(
+                "i2c0_sclk_sel",
+                &format_args!("{}", self.i2c0_sclk_sel().bit()),
+            )
+            .field(
+                "i2c0_sclk_en",
+                &format_args!("{}", self.i2c0_sclk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C0_SCLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

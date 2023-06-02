@@ -37,13 +37,26 @@ impl From<crate::W<SDIO_DATE_SPEC>> for W {
 #[doc = "Field `SDIO_DATE` reader - sdio version date."]
 pub type SDIO_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SDIO_DATE` writer - sdio version date."]
-pub type SDIO_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDIO_DATE_SPEC, u32, u32, 32, O>;
+pub type SDIO_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_DATE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - sdio version date."]
     #[inline(always)]
     pub fn sdio_date(&self) -> SDIO_DATE_R {
         SDIO_DATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_DATE")
+            .field("sdio_date", &format_args!("{}", self.sdio_date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

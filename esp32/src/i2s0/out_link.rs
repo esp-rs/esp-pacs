@@ -37,22 +37,21 @@ impl From<crate::W<OUT_LINK_SPEC>> for W {
 #[doc = "Field `OUTLINK_ADDR` reader - "]
 pub type OUTLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - "]
-pub type OUTLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OUT_LINK_SPEC, u32, u32, 20, O>;
+pub type OUTLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_LINK_SPEC, 20, O, u32, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - "]
-pub type OUTLINK_STOP_R = crate::BitReader<bool>;
+pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - "]
-pub type OUTLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_START` reader - "]
-pub type OUTLINK_START_R = crate::BitReader<bool>;
+pub type OUTLINK_START_R = crate::BitReader;
 #[doc = "Field `OUTLINK_START` writer - "]
-pub type OUTLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_RESTART` reader - "]
-pub type OUTLINK_RESTART_R = crate::BitReader<bool>;
+pub type OUTLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `OUTLINK_RESTART` writer - "]
-pub type OUTLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_PARK` reader - "]
-pub type OUTLINK_PARK_R = crate::BitReader<bool>;
+pub type OUTLINK_PARK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -78,6 +77,39 @@ impl R {
     #[inline(always)]
     pub fn outlink_park(&self) -> OUTLINK_PARK_R {
         OUTLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_LINK")
+            .field(
+                "outlink_addr",
+                &format_args!("{}", self.outlink_addr().bits()),
+            )
+            .field(
+                "outlink_stop",
+                &format_args!("{}", self.outlink_stop().bit()),
+            )
+            .field(
+                "outlink_start",
+                &format_args!("{}", self.outlink_start().bit()),
+            )
+            .field(
+                "outlink_restart",
+                &format_args!("{}", self.outlink_restart().bit()),
+            )
+            .field(
+                "outlink_park",
+                &format_args!("{}", self.outlink_park().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_LINK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

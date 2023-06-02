@@ -35,17 +35,17 @@ impl From<crate::W<CLK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GATE_SPEC, O>;
 #[doc = "Field `MST_CLK_ACTIVE` reader - Set this bit to power on the SPI module clock."]
-pub type MST_CLK_ACTIVE_R = crate::BitReader<bool>;
+pub type MST_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `MST_CLK_ACTIVE` writer - Set this bit to power on the SPI module clock."]
-pub type MST_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, O>;
+pub type MST_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GATE_SPEC, O>;
 #[doc = "Field `MST_CLK_SEL` reader - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub type MST_CLK_SEL_R = crate::BitReader<bool>;
+pub type MST_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `MST_CLK_SEL` writer - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub type MST_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, O>;
+pub type MST_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GATE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
@@ -61,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn mst_clk_sel(&self) -> MST_CLK_SEL_R {
         MST_CLK_SEL_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_GATE")
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "mst_clk_active",
+                &format_args!("{}", self.mst_clk_active().bit()),
+            )
+            .field("mst_clk_sel", &format_args!("{}", self.mst_clk_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_GATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

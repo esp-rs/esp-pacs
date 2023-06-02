@@ -35,25 +35,25 @@ impl From<crate::W<HOST_SLCHOST_CONF_W2_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CONF8` reader - "]
-pub type HOST_SLCHOST_CONF8_R = crate::FieldReader<u8, u8>;
+pub type HOST_SLCHOST_CONF8_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF8` writer - "]
 pub type HOST_SLCHOST_CONF8_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_CONF_W2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_CONF_W2_SPEC, 8, O>;
 #[doc = "Field `HOST_SLCHOST_CONF9` reader - "]
-pub type HOST_SLCHOST_CONF9_R = crate::FieldReader<u8, u8>;
+pub type HOST_SLCHOST_CONF9_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF9` writer - "]
 pub type HOST_SLCHOST_CONF9_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_CONF_W2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_CONF_W2_SPEC, 8, O>;
 #[doc = "Field `HOST_SLCHOST_CONF10` reader - "]
-pub type HOST_SLCHOST_CONF10_R = crate::FieldReader<u8, u8>;
+pub type HOST_SLCHOST_CONF10_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF10` writer - "]
 pub type HOST_SLCHOST_CONF10_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_CONF_W2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_CONF_W2_SPEC, 8, O>;
 #[doc = "Field `HOST_SLCHOST_CONF11` reader - "]
-pub type HOST_SLCHOST_CONF11_R = crate::FieldReader<u8, u8>;
+pub type HOST_SLCHOST_CONF11_R = crate::FieldReader;
 #[doc = "Field `HOST_SLCHOST_CONF11` writer - "]
 pub type HOST_SLCHOST_CONF11_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_CONF_W2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_CONF_W2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn host_slchost_conf11(&self) -> HOST_SLCHOST_CONF11_R {
         HOST_SLCHOST_CONF11_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLCHOST_CONF_W2")
+            .field(
+                "host_slchost_conf8",
+                &format_args!("{}", self.host_slchost_conf8().bits()),
+            )
+            .field(
+                "host_slchost_conf9",
+                &format_args!("{}", self.host_slchost_conf9().bits()),
+            )
+            .field(
+                "host_slchost_conf10",
+                &format_args!("{}", self.host_slchost_conf10().bits()),
+            )
+            .field(
+                "host_slchost_conf11",
+                &format_args!("{}", self.host_slchost_conf11().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_CONF_W2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

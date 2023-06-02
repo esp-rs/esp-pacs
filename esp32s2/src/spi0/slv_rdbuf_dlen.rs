@@ -38,16 +38,15 @@ impl From<crate::W<SLV_RDBUF_DLEN_SPEC>> for W {
 pub type SLV_DMA_RD_BYTELEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_DMA_RD_BYTELEN` writer - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
 pub type SLV_DMA_RD_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_RDBUF_DLEN_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SLV_RDBUF_DLEN_SPEC, 20, O, u32, u32>;
 #[doc = "Field `SLV_RD_BUF_DONE` reader - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_RD_BUF_DONE_R = crate::BitReader<bool>;
+pub type SLV_RD_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_RD_BUF_DONE` writer - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_RD_BUF_DONE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_RDBUF_DLEN_SPEC, bool, O>;
+pub type SLV_RD_BUF_DONE_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RDBUF_DLEN_SPEC, O>;
 #[doc = "Field `SEG_MAGIC_ERR` reader - 1: The recent magic value in CONF buffer is not right in master DMA seg-trans mode. 0: others."]
-pub type SEG_MAGIC_ERR_R = crate::BitReader<bool>;
+pub type SEG_MAGIC_ERR_R = crate::BitReader;
 #[doc = "Field `SEG_MAGIC_ERR` writer - 1: The recent magic value in CONF buffer is not right in master DMA seg-trans mode. 0: others."]
-pub type SEG_MAGIC_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLV_RDBUF_DLEN_SPEC, bool, O>;
+pub type SEG_MAGIC_ERR_W<'a, const O: u8> = crate::BitWriter<'a, SLV_RDBUF_DLEN_SPEC, O>;
 impl R {
     #[doc = "Bits 0:19 - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
     #[inline(always)]
@@ -63,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn seg_magic_err(&self) -> SEG_MAGIC_ERR_R {
         SEG_MAGIC_ERR_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLV_RDBUF_DLEN")
+            .field(
+                "slv_dma_rd_bytelen",
+                &format_args!("{}", self.slv_dma_rd_bytelen().bits()),
+            )
+            .field(
+                "slv_rd_buf_done",
+                &format_args!("{}", self.slv_rd_buf_done().bit()),
+            )
+            .field(
+                "seg_magic_err",
+                &format_args!("{}", self.seg_magic_err().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLV_RDBUF_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

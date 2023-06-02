@@ -37,13 +37,26 @@ impl From<crate::W<SAR_ATTEN1_SPEC>> for W {
 #[doc = "Field `SAR1_ATTEN` reader - 2-bit attenuation for each pad 11:1dB 10:6dB 01:3dB 00:0dB"]
 pub type SAR1_ATTEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR1_ATTEN` writer - 2-bit attenuation for each pad 11:1dB 10:6dB 01:3dB 00:0dB"]
-pub type SAR1_ATTEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_ATTEN1_SPEC, u32, u32, 32, O>;
+pub type SAR1_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_ATTEN1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad 11:1dB 10:6dB 01:3dB 00:0dB"]
     #[inline(always)]
     pub fn sar1_atten(&self) -> SAR1_ATTEN_R {
         SAR1_ATTEN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_ATTEN1")
+            .field("sar1_atten", &format_args!("{}", self.sar1_atten().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_ATTEN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

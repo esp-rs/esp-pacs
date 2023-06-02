@@ -35,50 +35,41 @@ impl From<crate::W<SPI_SMEM_DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_DOUT0_MODE` reader - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT0_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT0_MODE` writer - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT0_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT1_MODE` reader - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT1_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT1_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT1_MODE` writer - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT1_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT2_MODE` reader - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT2_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT2_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT2_MODE` writer - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT2_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT3_MODE` reader - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT3_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT3_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT3_MODE` writer - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT3_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT4_MODE` reader - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT4_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT4_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT4_MODE` writer - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT4_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT4_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT5_MODE` reader - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT5_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT5_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT5_MODE` writer - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT5_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT5_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT6_MODE` reader - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT6_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT6_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT6_MODE` writer - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT6_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT6_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUT7_MODE` reader - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT7_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUT7_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUT7_MODE` writer - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUT7_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUT7_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_SMEM_DOUTS_MODE` reader - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUTS_MODE_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DOUTS_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DOUTS_MODE` writer - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DOUTS_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SMEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_SMEM_DOUTS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SMEM_DOUT_MODE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_douts_mode(&self) -> SPI_SMEM_DOUTS_MODE_R {
         SPI_SMEM_DOUTS_MODE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_DOUT_MODE")
+            .field(
+                "spi_smem_dout0_mode",
+                &format_args!("{}", self.spi_smem_dout0_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout1_mode",
+                &format_args!("{}", self.spi_smem_dout1_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout2_mode",
+                &format_args!("{}", self.spi_smem_dout2_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout3_mode",
+                &format_args!("{}", self.spi_smem_dout3_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout4_mode",
+                &format_args!("{}", self.spi_smem_dout4_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout5_mode",
+                &format_args!("{}", self.spi_smem_dout5_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout6_mode",
+                &format_args!("{}", self.spi_smem_dout6_mode().bit()),
+            )
+            .field(
+                "spi_smem_dout7_mode",
+                &format_args!("{}", self.spi_smem_dout7_mode().bit()),
+            )
+            .field(
+                "spi_smem_douts_mode",
+                &format_args!("{}", self.spi_smem_douts_mode().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DOUT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

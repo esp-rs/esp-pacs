@@ -35,14 +35,28 @@ impl From<crate::W<ROM_CTRL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_FO` reader - This field is used to force on clock gate of internal ROM."]
-pub type ROM_FO_R = crate::FieldReader<u8, u8>;
+pub type ROM_FO_R = crate::FieldReader;
 #[doc = "Field `ROM_FO` writer - This field is used to force on clock gate of internal ROM."]
-pub type ROM_FO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ROM_CTRL_0_SPEC, u8, u8, 2, O>;
+pub type ROM_FO_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_CTRL_0_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
     pub fn rom_fo(&self) -> ROM_FO_R {
         ROM_FO_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_CTRL_0")
+            .field("rom_fo", &format_args!("{}", self.rom_fo().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_CTRL_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

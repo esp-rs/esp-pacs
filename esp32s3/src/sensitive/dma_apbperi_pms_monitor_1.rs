@@ -35,15 +35,15 @@ impl From<crate::W<DMA_APBPERI_PMS_MONITOR_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` reader - Set 1 to clear dma_pms_monitor_violate interrupt"]
-pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader<bool>;
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` writer - Set 1 to clear dma_pms_monitor_violate interrupt"]
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_APBPERI_PMS_MONITOR_1_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_APBPERI_PMS_MONITOR_1_SPEC, O>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` reader - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
-pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader<bool>;
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` writer - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_APBPERI_PMS_MONITOR_1_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_APBPERI_PMS_MONITOR_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to clear dma_pms_monitor_violate interrupt"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_en(&self) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R {
         DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_APBPERI_PMS_MONITOR_1")
+            .field(
+                "dma_apbperi_pms_monitor_violate_clr",
+                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_clr().bit()),
+            )
+            .field(
+                "dma_apbperi_pms_monitor_violate_en",
+                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

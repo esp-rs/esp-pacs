@@ -35,30 +35,26 @@ impl From<crate::W<SAR_MEAS_WAIT2_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR_SW` reader - "]
-pub type FORCE_XPD_SAR_SW_R = crate::BitReader<bool>;
+pub type FORCE_XPD_SAR_SW_R = crate::BitReader;
 #[doc = "Field `FORCE_XPD_SAR_SW` writer - "]
-pub type FORCE_XPD_SAR_SW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, bool, O>;
+pub type FORCE_XPD_SAR_SW_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS_WAIT2_SPEC, O>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
 pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - "]
 pub type SAR_AMP_WAIT3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
-pub type FORCE_XPD_AMP_R = crate::FieldReader<u8, u8>;
+pub type FORCE_XPD_AMP_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_AMP` writer - "]
-pub type FORCE_XPD_AMP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 2, O>;
+pub type FORCE_XPD_AMP_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 2, O>;
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
+pub type FORCE_XPD_SAR_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_SAR` writer - "]
-pub type FORCE_XPD_SAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 2, O>;
+pub type FORCE_XPD_SAR_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 2, O>;
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub type SAR2_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_RSTB_WAIT` writer - "]
-pub type SAR2_RSTB_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 8, O>;
+pub type SAR2_RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -84,6 +80,39 @@ impl R {
     #[inline(always)]
     pub fn sar2_rstb_wait(&self) -> SAR2_RSTB_WAIT_R {
         SAR2_RSTB_WAIT_R::new(((self.bits >> 20) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS_WAIT2")
+            .field(
+                "force_xpd_sar_sw",
+                &format_args!("{}", self.force_xpd_sar_sw().bit()),
+            )
+            .field(
+                "sar_amp_wait3",
+                &format_args!("{}", self.sar_amp_wait3().bits()),
+            )
+            .field(
+                "force_xpd_amp",
+                &format_args!("{}", self.force_xpd_amp().bits()),
+            )
+            .field(
+                "force_xpd_sar",
+                &format_args!("{}", self.force_xpd_sar().bits()),
+            )
+            .field(
+                "sar2_rstb_wait",
+                &format_args!("{}", self.sar2_rstb_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS_WAIT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

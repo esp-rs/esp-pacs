@@ -38,12 +38,29 @@ impl From<crate::W<SLC_APBWIN_WDATA_SPEC>> for W {
 pub type SLC_APBWIN_WDATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC_APBWIN_WDATA` writer - *******Description***********"]
 pub type SLC_APBWIN_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_APBWIN_WDATA_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SLC_APBWIN_WDATA_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
     pub fn slc_apbwin_wdata(&self) -> SLC_APBWIN_WDATA_R {
         SLC_APBWIN_WDATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_APBWIN_WDATA")
+            .field(
+                "slc_apbwin_wdata",
+                &format_args!("{}", self.slc_apbwin_wdata().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_APBWIN_WDATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

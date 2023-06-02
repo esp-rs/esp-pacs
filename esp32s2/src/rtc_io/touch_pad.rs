@@ -35,60 +35,57 @@ impl From<crate::W<TOUCH_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD0_FUN_IE` reader - Input enable in normal execution."]
-pub type TOUCH_PAD0_FUN_IE_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_FUN_IE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_FUN_IE` writer - Input enable in normal execution."]
-pub type TOUCH_PAD0_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_SLP_OE` reader - Output enable in sleep mode."]
-pub type TOUCH_PAD0_SLP_OE_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_SLP_OE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_SLP_OE` writer - Output enable in sleep mode."]
-pub type TOUCH_PAD0_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_SLP_IE` reader - Input enable in sleep mode."]
-pub type TOUCH_PAD0_SLP_IE_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_SLP_IE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_SLP_IE` writer - Input enable in sleep mode."]
-pub type TOUCH_PAD0_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_SLP_SEL` reader - 0: no sleep mode. 1: enable sleep mode."]
-pub type TOUCH_PAD0_SLP_SEL_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_SLP_SEL` writer - 0: no sleep mode. 1: enable sleep mode."]
-pub type TOUCH_PAD0_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_FUN_SEL` reader - Function selection."]
-pub type TOUCH_PAD0_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD0_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD0_FUN_SEL` writer - Function selection."]
-pub type TOUCH_PAD0_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_PAD_SPEC, u8, u8, 2, O>;
+pub type TOUCH_PAD0_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD_SPEC, 2, O>;
 #[doc = "Field `TOUCH_PAD0_MUX_SEL` reader - Connect the RTC pad input to digital pad input. 0 is available."]
-pub type TOUCH_PAD0_MUX_SEL_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_MUX_SEL` writer - Connect the RTC pad input to digital pad input. 0 is available."]
-pub type TOUCH_PAD0_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_XPD` reader - Touch sensor power on."]
-pub type TOUCH_PAD0_XPD_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_XPD_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_XPD` writer - Touch sensor power on."]
-pub type TOUCH_PAD0_XPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_XPD_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_TIE_OPT` reader - The tie option of touch sensor. 0: tie low. 1: tie high."]
-pub type TOUCH_PAD0_TIE_OPT_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_TIE_OPT_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_TIE_OPT` writer - The tie option of touch sensor. 0: tie low. 1: tie high."]
-pub type TOUCH_PAD0_TIE_OPT_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_TIE_OPT_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_START` reader - Start touch sensor."]
-pub type TOUCH_PAD0_START_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_START_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_START` writer - Start touch sensor."]
-pub type TOUCH_PAD0_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_START_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_DAC` reader - Touch sensor slope control. 3-bit for each touch pad, defaults to 0x4."]
-pub type TOUCH_PAD0_DAC_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD0_DAC_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD0_DAC` writer - Touch sensor slope control. 3-bit for each touch pad, defaults to 0x4."]
-pub type TOUCH_PAD0_DAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_PAD_SPEC, u8, u8, 3, O>;
+pub type TOUCH_PAD0_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD_SPEC, 3, O>;
 #[doc = "Field `TOUCH_PAD0_RUE` reader - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
-pub type TOUCH_PAD0_RUE_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_RUE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_RUE` writer - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
-pub type TOUCH_PAD0_RUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_RUE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_RDE` reader - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
-pub type TOUCH_PAD0_RDE_R = crate::BitReader<bool>;
+pub type TOUCH_PAD0_RDE_R = crate::BitReader;
 #[doc = "Field `TOUCH_PAD0_RDE` writer - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
-pub type TOUCH_PAD0_RDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD_SPEC, bool, O>;
+pub type TOUCH_PAD0_RDE_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD_SPEC, O>;
 #[doc = "Field `TOUCH_PAD0_DRV` reader - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type TOUCH_PAD0_DRV_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD0_DRV_R = crate::FieldReader;
 #[doc = "Field `TOUCH_PAD0_DRV` writer - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type TOUCH_PAD0_DRV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_PAD_SPEC, u8, u8, 2, O>;
+pub type TOUCH_PAD0_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
@@ -154,6 +151,71 @@ impl R {
     #[inline(always)]
     pub fn touch_pad0_drv(&self) -> TOUCH_PAD0_DRV_R {
         TOUCH_PAD0_DRV_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_PAD")
+            .field(
+                "touch_pad0_fun_ie",
+                &format_args!("{}", self.touch_pad0_fun_ie().bit()),
+            )
+            .field(
+                "touch_pad0_slp_oe",
+                &format_args!("{}", self.touch_pad0_slp_oe().bit()),
+            )
+            .field(
+                "touch_pad0_slp_ie",
+                &format_args!("{}", self.touch_pad0_slp_ie().bit()),
+            )
+            .field(
+                "touch_pad0_slp_sel",
+                &format_args!("{}", self.touch_pad0_slp_sel().bit()),
+            )
+            .field(
+                "touch_pad0_fun_sel",
+                &format_args!("{}", self.touch_pad0_fun_sel().bits()),
+            )
+            .field(
+                "touch_pad0_mux_sel",
+                &format_args!("{}", self.touch_pad0_mux_sel().bit()),
+            )
+            .field(
+                "touch_pad0_xpd",
+                &format_args!("{}", self.touch_pad0_xpd().bit()),
+            )
+            .field(
+                "touch_pad0_tie_opt",
+                &format_args!("{}", self.touch_pad0_tie_opt().bit()),
+            )
+            .field(
+                "touch_pad0_start",
+                &format_args!("{}", self.touch_pad0_start().bit()),
+            )
+            .field(
+                "touch_pad0_dac",
+                &format_args!("{}", self.touch_pad0_dac().bits()),
+            )
+            .field(
+                "touch_pad0_rue",
+                &format_args!("{}", self.touch_pad0_rue().bit()),
+            )
+            .field(
+                "touch_pad0_rde",
+                &format_args!("{}", self.touch_pad0_rde().bit()),
+            )
+            .field(
+                "touch_pad0_drv",
+                &format_args!("{}", self.touch_pad0_drv().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_PAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

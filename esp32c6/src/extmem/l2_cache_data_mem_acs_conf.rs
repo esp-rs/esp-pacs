@@ -14,9 +14,9 @@ impl From<crate::R<L2_CACHE_DATA_MEM_ACS_CONF_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_DATA_MEM_RD_EN` reader - The bit is used to enable config-bus read L2-Cache data memoryory. 0: disable, 1: enable."]
-pub type L2_CACHE_DATA_MEM_RD_EN_R = crate::BitReader<bool>;
+pub type L2_CACHE_DATA_MEM_RD_EN_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_DATA_MEM_WR_EN` reader - The bit is used to enable config-bus write L2-Cache data memoryory. 0: disable, 1: enable."]
-pub type L2_CACHE_DATA_MEM_WR_EN_R = crate::BitReader<bool>;
+pub type L2_CACHE_DATA_MEM_WR_EN_R = crate::BitReader;
 impl R {
     #[doc = "Bit 20 - The bit is used to enable config-bus read L2-Cache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_data_mem_wr_en(&self) -> L2_CACHE_DATA_MEM_WR_EN_R {
         L2_CACHE_DATA_MEM_WR_EN_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_DATA_MEM_ACS_CONF")
+            .field(
+                "l2_cache_data_mem_rd_en",
+                &format_args!("{}", self.l2_cache_data_mem_rd_en().bit()),
+            )
+            .field(
+                "l2_cache_data_mem_wr_en",
+                &format_args!("{}", self.l2_cache_data_mem_wr_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_DATA_MEM_ACS_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Cache data memory access configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_data_mem_acs_conf](index.html) module"]

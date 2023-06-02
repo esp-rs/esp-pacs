@@ -35,23 +35,21 @@ impl From<crate::W<PERIP_CLK_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_ECC_CLK_EN` reader - Set 1 to enable ECC clock"]
-pub type CRYPTO_ECC_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_ECC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_ECC_CLK_EN` writer - Set 1 to enable ECC clock"]
-pub type CRYPTO_ECC_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_ECC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Set 1 to enable SHA clock"]
-pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Set 1 to enable SHA clock"]
-pub type CRYPTO_SHA_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_SHA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `DMA_CLK_EN` reader - Set 1 to enable DMA clock"]
-pub type DMA_CLK_EN_R = crate::BitReader<bool>;
+pub type DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `DMA_CLK_EN` writer - Set 1 to enable DMA clock"]
-pub type DMA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type DMA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `TSENS_CLK_EN` reader - Set 1 to enable TSENS clock"]
-pub type TSENS_CLK_EN_R = crate::BitReader<bool>;
+pub type TSENS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_CLK_EN` writer - Set 1 to enable TSENS clock"]
-pub type TSENS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type TSENS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set 1 to enable ECC clock"]
     #[inline(always)]
@@ -72,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn tsens_clk_en(&self) -> TSENS_CLK_EN_R {
         TSENS_CLK_EN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_CLK_EN1")
+            .field(
+                "crypto_ecc_clk_en",
+                &format_args!("{}", self.crypto_ecc_clk_en().bit()),
+            )
+            .field(
+                "crypto_sha_clk_en",
+                &format_args!("{}", self.crypto_sha_clk_en().bit()),
+            )
+            .field("dma_clk_en", &format_args!("{}", self.dma_clk_en().bit()))
+            .field(
+                "tsens_clk_en",
+                &format_args!("{}", self.tsens_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

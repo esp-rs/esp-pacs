@@ -35,13 +35,13 @@ impl From<crate::W<APB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - Set this bit to disable apb fifo access"]
-pub type APB_FIFO_MASK_R = crate::BitReader<bool>;
+pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - Set this bit to disable apb fifo access"]
-pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
-pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
+pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
-pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable apb fifo access"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn mem_tx_wrap_en(&self) -> MEM_TX_WRAP_EN_R {
         MEM_TX_WRAP_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_CONF")
+            .field(
+                "apb_fifo_mask",
+                &format_args!("{}", self.apb_fifo_mask().bit()),
+            )
+            .field(
+                "mem_tx_wrap_en",
+                &format_args!("{}", self.mem_tx_wrap_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

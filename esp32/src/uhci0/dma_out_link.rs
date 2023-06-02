@@ -38,21 +38,21 @@ impl From<crate::W<DMA_OUT_LINK_SPEC>> for W {
 pub type OUTLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - This register stores the least 20 bits of the first out link descriptor's address."]
 pub type OUTLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_OUT_LINK_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, DMA_OUT_LINK_SPEC, 20, O, u32, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - Set this bit to stop dealing with the out link descriptors."]
-pub type OUTLINK_STOP_R = crate::BitReader<bool>;
+pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - Set this bit to stop dealing with the out link descriptors."]
-pub type OUTLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, DMA_OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_START` reader - Set this bit to start dealing with the out link descriptors."]
-pub type OUTLINK_START_R = crate::BitReader<bool>;
+pub type OUTLINK_START_R = crate::BitReader;
 #[doc = "Field `OUTLINK_START` writer - Set this bit to start dealing with the out link descriptors."]
-pub type OUTLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, DMA_OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_RESTART` reader - Set this bit to mount on new out link descriptors"]
-pub type OUTLINK_RESTART_R = crate::BitReader<bool>;
+pub type OUTLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `OUTLINK_RESTART` writer - Set this bit to mount on new out link descriptors"]
-pub type OUTLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, O>;
+pub type OUTLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, DMA_OUT_LINK_SPEC, O>;
 #[doc = "Field `OUTLINK_PARK` reader - 1£º the out link descriptor's fsm is in idle state. 0:the out link descriptor's fsm is working."]
-pub type OUTLINK_PARK_R = crate::BitReader<bool>;
+pub type OUTLINK_PARK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:19 - This register stores the least 20 bits of the first out link descriptor's address."]
     #[inline(always)]
@@ -78,6 +78,39 @@ impl R {
     #[inline(always)]
     pub fn outlink_park(&self) -> OUTLINK_PARK_R {
         OUTLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_OUT_LINK")
+            .field(
+                "outlink_addr",
+                &format_args!("{}", self.outlink_addr().bits()),
+            )
+            .field(
+                "outlink_stop",
+                &format_args!("{}", self.outlink_stop().bit()),
+            )
+            .field(
+                "outlink_start",
+                &format_args!("{}", self.outlink_start().bit()),
+            )
+            .field(
+                "outlink_restart",
+                &format_args!("{}", self.outlink_restart().bit()),
+            )
+            .field(
+                "outlink_park",
+                &format_args!("{}", self.outlink_park().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_OUT_LINK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

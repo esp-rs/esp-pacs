@@ -14,21 +14,21 @@ impl From<crate::R<L2_CACHE_ACS_CNT_INT_CLR_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_IBUS0_OVF_INT_CLR` reader - The bit is used to clear counters overflow interrupt and counters in L2-Cache due to bus0 accesses L2-Cache."]
-pub type L2_IBUS0_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS0_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS1_OVF_INT_CLR` reader - The bit is used to clear counters overflow interrupt and counters in L2-Cache due to bus1 accesses L2-Cache."]
-pub type L2_IBUS1_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS1_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS2_OVF_INT_CLR` reader - Reserved"]
-pub type L2_IBUS2_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS2_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS3_OVF_INT_CLR` reader - Reserved"]
-pub type L2_IBUS3_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS3_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS0_OVF_INT_CLR` reader - The bit is used to clear counters overflow interrupt and counters in L2-Cache due to bus0 accesses L2-Cache."]
-pub type L2_DBUS0_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS0_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS1_OVF_INT_CLR` reader - The bit is used to clear counters overflow interrupt and counters in L2-Cache due to bus1 accesses L2-Cache."]
-pub type L2_DBUS1_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS1_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS2_OVF_INT_CLR` reader - Reserved"]
-pub type L2_DBUS2_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS2_OVF_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS3_OVF_INT_CLR` reader - Reserved"]
-pub type L2_DBUS3_OVF_INT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS3_OVF_INT_CLR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 8 - The bit is used to clear counters overflow interrupt and counters in L2-Cache due to bus0 accesses L2-Cache."]
     #[inline(always)]
@@ -69,6 +69,51 @@ impl R {
     #[inline(always)]
     pub fn l2_dbus3_ovf_int_clr(&self) -> L2_DBUS3_OVF_INT_CLR_R {
         L2_DBUS3_OVF_INT_CLR_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_ACS_CNT_INT_CLR")
+            .field(
+                "l2_ibus0_ovf_int_clr",
+                &format_args!("{}", self.l2_ibus0_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_ibus1_ovf_int_clr",
+                &format_args!("{}", self.l2_ibus1_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_ibus2_ovf_int_clr",
+                &format_args!("{}", self.l2_ibus2_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_ibus3_ovf_int_clr",
+                &format_args!("{}", self.l2_ibus3_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_dbus0_ovf_int_clr",
+                &format_args!("{}", self.l2_dbus0_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_dbus1_ovf_int_clr",
+                &format_args!("{}", self.l2_dbus1_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_dbus2_ovf_int_clr",
+                &format_args!("{}", self.l2_dbus2_ovf_int_clr().bit()),
+            )
+            .field(
+                "l2_dbus3_ovf_int_clr",
+                &format_args!("{}", self.l2_dbus3_ovf_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Cache Access Counter Interrupt clear register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_acs_cnt_int_clr](index.html) module"]

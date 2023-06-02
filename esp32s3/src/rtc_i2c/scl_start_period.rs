@@ -38,12 +38,29 @@ impl From<crate::W<SCL_START_PERIOD_SPEC>> for W {
 pub type SCL_START_PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SCL_START_PERIOD` writer - time period for SCL to toggle after I2C start is triggered"]
 pub type SCL_START_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SCL_START_PERIOD_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SCL_START_PERIOD_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - time period for SCL to toggle after I2C start is triggered"]
     #[inline(always)]
     pub fn scl_start_period(&self) -> SCL_START_PERIOD_R {
         SCL_START_PERIOD_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_START_PERIOD")
+            .field(
+                "scl_start_period",
+                &format_args!("{}", self.scl_start_period().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_START_PERIOD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

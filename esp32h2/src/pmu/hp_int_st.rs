@@ -14,15 +14,15 @@ impl From<crate::R<HP_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LP_CPU_EXC_INT_ST` reader - need_des"]
-pub type LP_CPU_EXC_INT_ST_R = crate::BitReader<bool>;
+pub type LP_CPU_EXC_INT_ST_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_ST` reader - need_des"]
-pub type SDIO_IDLE_INT_ST_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_ST_R = crate::BitReader;
 #[doc = "Field `SW_INT_ST` reader - need_des"]
-pub type SW_INT_ST_R = crate::BitReader<bool>;
+pub type SW_INT_ST_R = crate::BitReader;
 #[doc = "Field `SOC_SLEEP_REJECT_INT_ST` reader - need_des"]
-pub type SOC_SLEEP_REJECT_INT_ST_R = crate::BitReader<bool>;
+pub type SOC_SLEEP_REJECT_INT_ST_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_ST` reader - need_des"]
-pub type SOC_WAKEUP_INT_ST_R = crate::BitReader<bool>;
+pub type SOC_WAKEUP_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -48,6 +48,36 @@ impl R {
     #[inline(always)]
     pub fn soc_wakeup_int_st(&self) -> SOC_WAKEUP_INT_ST_R {
         SOC_WAKEUP_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_INT_ST")
+            .field(
+                "lp_cpu_exc_int_st",
+                &format_args!("{}", self.lp_cpu_exc_int_st().bit()),
+            )
+            .field(
+                "sdio_idle_int_st",
+                &format_args!("{}", self.sdio_idle_int_st().bit()),
+            )
+            .field("sw_int_st", &format_args!("{}", self.sw_int_st().bit()))
+            .field(
+                "soc_sleep_reject_int_st",
+                &format_args!("{}", self.soc_sleep_reject_int_st().bit()),
+            )
+            .field(
+                "soc_wakeup_int_st",
+                &format_args!("{}", self.soc_wakeup_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hp_int_st](index.html) module"]

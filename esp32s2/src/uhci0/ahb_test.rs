@@ -35,13 +35,13 @@ impl From<crate::W<AHB_TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `AHB_TESTMODE` reader - Reserved."]
-pub type AHB_TESTMODE_R = crate::FieldReader<u8, u8>;
+pub type AHB_TESTMODE_R = crate::FieldReader;
 #[doc = "Field `AHB_TESTMODE` writer - Reserved."]
-pub type AHB_TESTMODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AHB_TEST_SPEC, u8, u8, 3, O>;
+pub type AHB_TESTMODE_W<'a, const O: u8> = crate::FieldWriter<'a, AHB_TEST_SPEC, 3, O>;
 #[doc = "Field `AHB_TESTADDR` reader - Reserved."]
-pub type AHB_TESTADDR_R = crate::FieldReader<u8, u8>;
+pub type AHB_TESTADDR_R = crate::FieldReader;
 #[doc = "Field `AHB_TESTADDR` writer - Reserved."]
-pub type AHB_TESTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AHB_TEST_SPEC, u8, u8, 2, O>;
+pub type AHB_TESTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, AHB_TEST_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2 - Reserved."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn ahb_testaddr(&self) -> AHB_TESTADDR_R {
         AHB_TESTADDR_R::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHB_TEST")
+            .field(
+                "ahb_testmode",
+                &format_args!("{}", self.ahb_testmode().bits()),
+            )
+            .field(
+                "ahb_testaddr",
+                &format_args!("{}", self.ahb_testaddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHB_TEST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

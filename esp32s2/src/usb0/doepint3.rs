@@ -35,61 +35,61 @@ impl From<crate::W<DOEPINT3_SPEC>> for W {
     }
 }
 #[doc = "Field `XFERCOMPL3` reader - "]
-pub type XFERCOMPL3_R = crate::BitReader<bool>;
+pub type XFERCOMPL3_R = crate::BitReader;
 #[doc = "Field `XFERCOMPL3` writer - "]
-pub type XFERCOMPL3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type XFERCOMPL3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `EPDISBLD3` reader - "]
-pub type EPDISBLD3_R = crate::BitReader<bool>;
+pub type EPDISBLD3_R = crate::BitReader;
 #[doc = "Field `EPDISBLD3` writer - "]
-pub type EPDISBLD3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type EPDISBLD3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `AHBERR3` reader - "]
-pub type AHBERR3_R = crate::BitReader<bool>;
+pub type AHBERR3_R = crate::BitReader;
 #[doc = "Field `AHBERR3` writer - "]
-pub type AHBERR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type AHBERR3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `SETUP3` reader - "]
-pub type SETUP3_R = crate::BitReader<bool>;
+pub type SETUP3_R = crate::BitReader;
 #[doc = "Field `SETUP3` writer - "]
-pub type SETUP3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type SETUP3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `OUTTKNEPDIS3` reader - "]
-pub type OUTTKNEPDIS3_R = crate::BitReader<bool>;
+pub type OUTTKNEPDIS3_R = crate::BitReader;
 #[doc = "Field `OUTTKNEPDIS3` writer - "]
-pub type OUTTKNEPDIS3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type OUTTKNEPDIS3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `STSPHSERCVD3` reader - "]
-pub type STSPHSERCVD3_R = crate::BitReader<bool>;
+pub type STSPHSERCVD3_R = crate::BitReader;
 #[doc = "Field `STSPHSERCVD3` writer - "]
-pub type STSPHSERCVD3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type STSPHSERCVD3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `BACK2BACKSETUP3` reader - "]
-pub type BACK2BACKSETUP3_R = crate::BitReader<bool>;
+pub type BACK2BACKSETUP3_R = crate::BitReader;
 #[doc = "Field `BACK2BACKSETUP3` writer - "]
-pub type BACK2BACKSETUP3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type BACK2BACKSETUP3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `OUTPKTERR3` reader - "]
-pub type OUTPKTERR3_R = crate::BitReader<bool>;
+pub type OUTPKTERR3_R = crate::BitReader;
 #[doc = "Field `OUTPKTERR3` writer - "]
-pub type OUTPKTERR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type OUTPKTERR3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `BNAINTR3` reader - "]
-pub type BNAINTR3_R = crate::BitReader<bool>;
+pub type BNAINTR3_R = crate::BitReader;
 #[doc = "Field `BNAINTR3` writer - "]
-pub type BNAINTR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type BNAINTR3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `PKTDRPSTS3` reader - "]
-pub type PKTDRPSTS3_R = crate::BitReader<bool>;
+pub type PKTDRPSTS3_R = crate::BitReader;
 #[doc = "Field `PKTDRPSTS3` writer - "]
-pub type PKTDRPSTS3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type PKTDRPSTS3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `BBLEERR3` reader - "]
-pub type BBLEERR3_R = crate::BitReader<bool>;
+pub type BBLEERR3_R = crate::BitReader;
 #[doc = "Field `BBLEERR3` writer - "]
-pub type BBLEERR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type BBLEERR3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `NAKINTRPT3` reader - "]
-pub type NAKINTRPT3_R = crate::BitReader<bool>;
+pub type NAKINTRPT3_R = crate::BitReader;
 #[doc = "Field `NAKINTRPT3` writer - "]
-pub type NAKINTRPT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type NAKINTRPT3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `NYEPINTRPT3` reader - "]
-pub type NYEPINTRPT3_R = crate::BitReader<bool>;
+pub type NYEPINTRPT3_R = crate::BitReader;
 #[doc = "Field `NYEPINTRPT3` writer - "]
-pub type NYEPINTRPT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type NYEPINTRPT3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 #[doc = "Field `STUPPKTRCVD3` reader - "]
-pub type STUPPKTRCVD3_R = crate::BitReader<bool>;
+pub type STUPPKTRCVD3_R = crate::BitReader;
 #[doc = "Field `STUPPKTRCVD3` writer - "]
-pub type STUPPKTRCVD3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPINT3_SPEC, bool, O>;
+pub type STUPPKTRCVD3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPINT3_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,6 +160,45 @@ impl R {
     #[inline(always)]
     pub fn stuppktrcvd3(&self) -> STUPPKTRCVD3_R {
         STUPPKTRCVD3_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPINT3")
+            .field("xfercompl3", &format_args!("{}", self.xfercompl3().bit()))
+            .field("epdisbld3", &format_args!("{}", self.epdisbld3().bit()))
+            .field("ahberr3", &format_args!("{}", self.ahberr3().bit()))
+            .field("setup3", &format_args!("{}", self.setup3().bit()))
+            .field(
+                "outtknepdis3",
+                &format_args!("{}", self.outtknepdis3().bit()),
+            )
+            .field(
+                "stsphsercvd3",
+                &format_args!("{}", self.stsphsercvd3().bit()),
+            )
+            .field(
+                "back2backsetup3",
+                &format_args!("{}", self.back2backsetup3().bit()),
+            )
+            .field("outpkterr3", &format_args!("{}", self.outpkterr3().bit()))
+            .field("bnaintr3", &format_args!("{}", self.bnaintr3().bit()))
+            .field("pktdrpsts3", &format_args!("{}", self.pktdrpsts3().bit()))
+            .field("bbleerr3", &format_args!("{}", self.bbleerr3().bit()))
+            .field("nakintrpt3", &format_args!("{}", self.nakintrpt3().bit()))
+            .field("nyepintrpt3", &format_args!("{}", self.nyepintrpt3().bit()))
+            .field(
+                "stuppktrcvd3",
+                &format_args!("{}", self.stuppktrcvd3().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPINT3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

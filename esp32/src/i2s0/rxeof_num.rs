@@ -37,13 +37,26 @@ impl From<crate::W<RXEOF_NUM_SPEC>> for W {
 #[doc = "Field `RX_EOF_NUM` reader - "]
 pub type RX_EOF_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RX_EOF_NUM` writer - "]
-pub type RX_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RXEOF_NUM_SPEC, u32, u32, 32, O>;
+pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn rx_eof_num(&self) -> RX_EOF_NUM_R {
         RX_EOF_NUM_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RXEOF_NUM")
+            .field("rx_eof_num", &format_args!("{}", self.rx_eof_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RXEOF_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

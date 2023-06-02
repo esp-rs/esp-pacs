@@ -38,12 +38,29 @@ impl From<crate::W<RETENTION_CTRL4_SPEC>> for W {
 pub type RETENTION_INV_CFG_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RETENTION_INV_CFG` writer - ******* Description ***********"]
 pub type RETENTION_INV_CFG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL4_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL4_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
     pub fn retention_inv_cfg(&self) -> RETENTION_INV_CFG_R {
         RETENTION_INV_CFG_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_CTRL4")
+            .field(
+                "retention_inv_cfg",
+                &format_args!("{}", self.retention_inv_cfg().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

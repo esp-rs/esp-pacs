@@ -35,24 +35,21 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_REQ_EN` reader - For SPI0 Cache access enable 1: enable 0:disable."]
-pub type CACHE_REQ_EN_R = crate::BitReader<bool>;
+pub type CACHE_REQ_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_REQ_EN` writer - For SPI0 Cache access enable 1: enable 0:disable."]
-pub type CACHE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type CACHE_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub type CACHE_USR_CMD_4BYTE_R = crate::BitReader<bool>;
+pub type CACHE_USR_CMD_4BYTE_R = crate::BitReader;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` writer - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub type CACHE_USR_CMD_4BYTE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type CACHE_USR_CMD_4BYTE_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub type CACHE_FLASH_USR_CMD_R = crate::BitReader<bool>;
+pub type CACHE_FLASH_USR_CMD_R = crate::BitReader;
 #[doc = "Field `CACHE_FLASH_USR_CMD` writer - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub type CACHE_FLASH_USR_CMD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type CACHE_FLASH_USR_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `CACHE_FLASH_PES_EN` reader - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub type CACHE_FLASH_PES_EN_R = crate::BitReader<bool>;
+pub type CACHE_FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `CACHE_FLASH_PES_EN` writer - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub type CACHE_FLASH_PES_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type CACHE_FLASH_PES_EN_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
@@ -73,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn cache_flash_pes_en(&self) -> CACHE_FLASH_PES_EN_R {
         CACHE_FLASH_PES_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_FCTRL")
+            .field(
+                "cache_req_en",
+                &format_args!("{}", self.cache_req_en().bit()),
+            )
+            .field(
+                "cache_usr_cmd_4byte",
+                &format_args!("{}", self.cache_usr_cmd_4byte().bit()),
+            )
+            .field(
+                "cache_flash_usr_cmd",
+                &format_args!("{}", self.cache_flash_usr_cmd().bit()),
+            )
+            .field(
+                "cache_flash_pes_en",
+                &format_args!("{}", self.cache_flash_pes_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_FCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

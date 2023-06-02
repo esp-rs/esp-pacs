@@ -35,76 +35,69 @@ impl From<crate::W<BIAS_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `BIAS_BUF_IDLE` reader - open bias buf when system in active"]
-pub type BIAS_BUF_IDLE_R = crate::BitReader<bool>;
+pub type BIAS_BUF_IDLE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_IDLE` writer - open bias buf when system in active"]
-pub type BIAS_BUF_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_BUF_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `BIAS_BUF_WAKE` reader - open bias buf when rtc in wakeup"]
-pub type BIAS_BUF_WAKE_R = crate::BitReader<bool>;
+pub type BIAS_BUF_WAKE_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_WAKE` writer - open bias buf when rtc in wakeup"]
-pub type BIAS_BUF_WAKE_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_BUF_WAKE_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` reader - open bias buf when rtc in deep sleep"]
-pub type BIAS_BUF_DEEP_SLP_R = crate::BitReader<bool>;
+pub type BIAS_BUF_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_DEEP_SLP` writer - open bias buf when rtc in deep sleep"]
-pub type BIAS_BUF_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_BUF_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `BIAS_BUF_MONITOR` reader - open bias buf when rtc in monitor state"]
-pub type BIAS_BUF_MONITOR_R = crate::BitReader<bool>;
+pub type BIAS_BUF_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_BUF_MONITOR` writer - open bias buf when rtc in monitor state"]
-pub type BIAS_BUF_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_BUF_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `PD_CUR_DEEP_SLP` reader - xpd cur when rtc in sleep_state"]
-pub type PD_CUR_DEEP_SLP_R = crate::BitReader<bool>;
+pub type PD_CUR_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `PD_CUR_DEEP_SLP` writer - xpd cur when rtc in sleep_state"]
-pub type PD_CUR_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type PD_CUR_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `PD_CUR_MONITOR` reader - xpd cur when rtc in monitor state"]
-pub type PD_CUR_MONITOR_R = crate::BitReader<bool>;
+pub type PD_CUR_MONITOR_R = crate::BitReader;
 #[doc = "Field `PD_CUR_MONITOR` writer - xpd cur when rtc in monitor state"]
-pub type PD_CUR_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type PD_CUR_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` reader - bias_sleep when rtc in sleep_state"]
-pub type BIAS_SLEEP_DEEP_SLP_R = crate::BitReader<bool>;
+pub type BIAS_SLEEP_DEEP_SLP_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_DEEP_SLP` writer - bias_sleep when rtc in sleep_state"]
-pub type BIAS_SLEEP_DEEP_SLP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_SLEEP_DEEP_SLP_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `BIAS_SLEEP_MONITOR` reader - bias_sleep when rtc in monitor state"]
-pub type BIAS_SLEEP_MONITOR_R = crate::BitReader<bool>;
+pub type BIAS_SLEEP_MONITOR_R = crate::BitReader;
 #[doc = "Field `BIAS_SLEEP_MONITOR` writer - bias_sleep when rtc in monitor state"]
-pub type BIAS_SLEEP_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type BIAS_SLEEP_MONITOR_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` reader - DBG_ATTEN when rtc in sleep state"]
-pub type DBG_ATTEN_DEEP_SLP_R = crate::FieldReader<u8, u8>;
+pub type DBG_ATTEN_DEEP_SLP_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_DEEP_SLP` writer - DBG_ATTEN when rtc in sleep state"]
-pub type DBG_ATTEN_DEEP_SLP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BIAS_CONF_SPEC, u8, u8, 4, O>;
+pub type DBG_ATTEN_DEEP_SLP_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 4, O>;
 #[doc = "Field `DBG_ATTEN_MONITOR` reader - DBG_ATTEN when rtc in monitor state"]
-pub type DBG_ATTEN_MONITOR_R = crate::FieldReader<u8, u8>;
+pub type DBG_ATTEN_MONITOR_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN_MONITOR` writer - DBG_ATTEN when rtc in monitor state"]
-pub type DBG_ATTEN_MONITOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BIAS_CONF_SPEC, u8, u8, 4, O>;
+pub type DBG_ATTEN_MONITOR_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 4, O>;
 #[doc = "Field `ENB_SCK_XTAL` reader - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_R = crate::BitReader<bool>;
+pub type ENB_SCK_XTAL_R = crate::BitReader;
 #[doc = "Field `ENB_SCK_XTAL` writer - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type ENB_SCK_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` reader - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader<bool>;
+pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` writer - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type INC_HEARTBEAT_REFRESH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` reader - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader<bool>;
+pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` writer - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type DEC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` reader - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader<bool>;
+pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` writer - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type INC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` reader - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader<bool>;
+pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` writer - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type DEC_HEARTBEAT_WIDTH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `RST_BIAS_I2C` reader - "]
-pub type RST_BIAS_I2C_R = crate::BitReader<bool>;
+pub type RST_BIAS_I2C_R = crate::BitReader;
 #[doc = "Field `RST_BIAS_I2C` writer - "]
-pub type RST_BIAS_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type RST_BIAS_I2C_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 10 - open bias buf when system in active"]
     #[inline(always)]
@@ -185,6 +178,83 @@ impl R {
     #[inline(always)]
     pub fn rst_bias_i2c(&self) -> RST_BIAS_I2C_R {
         RST_BIAS_I2C_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BIAS_CONF")
+            .field(
+                "bias_buf_idle",
+                &format_args!("{}", self.bias_buf_idle().bit()),
+            )
+            .field(
+                "bias_buf_wake",
+                &format_args!("{}", self.bias_buf_wake().bit()),
+            )
+            .field(
+                "bias_buf_deep_slp",
+                &format_args!("{}", self.bias_buf_deep_slp().bit()),
+            )
+            .field(
+                "bias_buf_monitor",
+                &format_args!("{}", self.bias_buf_monitor().bit()),
+            )
+            .field(
+                "pd_cur_deep_slp",
+                &format_args!("{}", self.pd_cur_deep_slp().bit()),
+            )
+            .field(
+                "pd_cur_monitor",
+                &format_args!("{}", self.pd_cur_monitor().bit()),
+            )
+            .field(
+                "bias_sleep_deep_slp",
+                &format_args!("{}", self.bias_sleep_deep_slp().bit()),
+            )
+            .field(
+                "bias_sleep_monitor",
+                &format_args!("{}", self.bias_sleep_monitor().bit()),
+            )
+            .field(
+                "dbg_atten_deep_slp",
+                &format_args!("{}", self.dbg_atten_deep_slp().bits()),
+            )
+            .field(
+                "dbg_atten_monitor",
+                &format_args!("{}", self.dbg_atten_monitor().bits()),
+            )
+            .field(
+                "enb_sck_xtal",
+                &format_args!("{}", self.enb_sck_xtal().bit()),
+            )
+            .field(
+                "inc_heartbeat_refresh",
+                &format_args!("{}", self.inc_heartbeat_refresh().bit()),
+            )
+            .field(
+                "dec_heartbeat_period",
+                &format_args!("{}", self.dec_heartbeat_period().bit()),
+            )
+            .field(
+                "inc_heartbeat_period",
+                &format_args!("{}", self.inc_heartbeat_period().bit()),
+            )
+            .field(
+                "dec_heartbeat_width",
+                &format_args!("{}", self.dec_heartbeat_width().bit()),
+            )
+            .field(
+                "rst_bias_i2c",
+                &format_args!("{}", self.rst_bias_i2c().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BIAS_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

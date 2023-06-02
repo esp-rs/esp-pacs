@@ -35,13 +35,13 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `OVERFLOW_ENA` reader - need_des"]
-pub type OVERFLOW_ENA_R = crate::BitReader<bool>;
+pub type OVERFLOW_ENA_R = crate::BitReader;
 #[doc = "Field `OVERFLOW_ENA` writer - need_des"]
-pub type OVERFLOW_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVERFLOW_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SOC_WAKEUP_INT_ENA` reader - need_des"]
-pub type SOC_WAKEUP_INT_ENA_R = crate::BitReader<bool>;
+pub type SOC_WAKEUP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SOC_WAKEUP_INT_ENA` writer - need_des"]
-pub type SOC_WAKEUP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SOC_WAKEUP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn soc_wakeup_int_ena(&self) -> SOC_WAKEUP_INT_ENA_R {
         SOC_WAKEUP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "overflow_ena",
+                &format_args!("{}", self.overflow_ena().bit()),
+            )
+            .field(
+                "soc_wakeup_int_ena",
+                &format_args!("{}", self.soc_wakeup_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

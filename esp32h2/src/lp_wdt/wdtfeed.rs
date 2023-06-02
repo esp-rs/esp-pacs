@@ -20,7 +20,13 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_WDT_FEED` writer - need_des"]
-pub type RTC_WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTFEED_SPEC, bool, O>;
+pub type RTC_WDT_FEED_W<'a, const O: u8> = crate::BitWriter<'a, WDTFEED_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]

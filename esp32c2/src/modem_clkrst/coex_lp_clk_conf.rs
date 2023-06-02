@@ -35,30 +35,27 @@ impl From<crate::W<COEX_LP_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `COEX_LPCLK_SEL_RTC_SLOW` reader - ."]
-pub type COEX_LPCLK_SEL_RTC_SLOW_R = crate::BitReader<bool>;
+pub type COEX_LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `COEX_LPCLK_SEL_RTC_SLOW` writer - ."]
 pub type COEX_LPCLK_SEL_RTC_SLOW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COEX_LP_CLK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, COEX_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `COEX_LPCLK_SEL_8M` reader - ."]
-pub type COEX_LPCLK_SEL_8M_R = crate::BitReader<bool>;
+pub type COEX_LPCLK_SEL_8M_R = crate::BitReader;
 #[doc = "Field `COEX_LPCLK_SEL_8M` writer - ."]
-pub type COEX_LPCLK_SEL_8M_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COEX_LP_CLK_CONF_SPEC, bool, O>;
+pub type COEX_LPCLK_SEL_8M_W<'a, const O: u8> = crate::BitWriter<'a, COEX_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `COEX_LPCLK_SEL_XTAL` reader - ."]
-pub type COEX_LPCLK_SEL_XTAL_R = crate::BitReader<bool>;
+pub type COEX_LPCLK_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `COEX_LPCLK_SEL_XTAL` writer - ."]
-pub type COEX_LPCLK_SEL_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COEX_LP_CLK_CONF_SPEC, bool, O>;
+pub type COEX_LPCLK_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, COEX_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `COEX_LPCLK_SEL_XTAL32K` reader - ."]
-pub type COEX_LPCLK_SEL_XTAL32K_R = crate::BitReader<bool>;
+pub type COEX_LPCLK_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `COEX_LPCLK_SEL_XTAL32K` writer - ."]
-pub type COEX_LPCLK_SEL_XTAL32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COEX_LP_CLK_CONF_SPEC, bool, O>;
+pub type COEX_LPCLK_SEL_XTAL32K_W<'a, const O: u8> = crate::BitWriter<'a, COEX_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `COEX_LPCLK_DIV_NUM` reader - ."]
-pub type COEX_LPCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type COEX_LPCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `COEX_LPCLK_DIV_NUM` writer - ."]
 pub type COEX_LPCLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COEX_LP_CLK_CONF_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, COEX_LP_CLK_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
@@ -84,6 +81,39 @@ impl R {
     #[inline(always)]
     pub fn coex_lpclk_div_num(&self) -> COEX_LPCLK_DIV_NUM_R {
         COEX_LPCLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COEX_LP_CLK_CONF")
+            .field(
+                "coex_lpclk_sel_rtc_slow",
+                &format_args!("{}", self.coex_lpclk_sel_rtc_slow().bit()),
+            )
+            .field(
+                "coex_lpclk_sel_8m",
+                &format_args!("{}", self.coex_lpclk_sel_8m().bit()),
+            )
+            .field(
+                "coex_lpclk_sel_xtal",
+                &format_args!("{}", self.coex_lpclk_sel_xtal().bit()),
+            )
+            .field(
+                "coex_lpclk_sel_xtal32k",
+                &format_args!("{}", self.coex_lpclk_sel_xtal32k().bit()),
+            )
+            .field(
+                "coex_lpclk_div_num",
+                &format_args!("{}", self.coex_lpclk_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COEX_LP_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

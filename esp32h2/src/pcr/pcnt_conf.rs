@@ -35,15 +35,15 @@ impl From<crate::W<PCNT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PCNT_CLK_EN` reader - Set 1 to enable pcnt clock"]
-pub type PCNT_CLK_EN_R = crate::BitReader<bool>;
+pub type PCNT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_CLK_EN` writer - Set 1 to enable pcnt clock"]
-pub type PCNT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCNT_CONF_SPEC, bool, O>;
+pub type PCNT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PCNT_CONF_SPEC, O>;
 #[doc = "Field `PCNT_RST_EN` reader - Set 0 to reset pcnt module"]
-pub type PCNT_RST_EN_R = crate::BitReader<bool>;
+pub type PCNT_RST_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_RST_EN` writer - Set 0 to reset pcnt module"]
-pub type PCNT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCNT_CONF_SPEC, bool, O>;
+pub type PCNT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, PCNT_CONF_SPEC, O>;
 #[doc = "Field `PCNT_READY` reader - Query this field after reset pcnt module"]
-pub type PCNT_READY_R = crate::BitReader<bool>;
+pub type PCNT_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable pcnt clock"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn pcnt_ready(&self) -> PCNT_READY_R {
         PCNT_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PCNT_CONF")
+            .field("pcnt_clk_en", &format_args!("{}", self.pcnt_clk_en().bit()))
+            .field("pcnt_rst_en", &format_args!("{}", self.pcnt_rst_en().bit()))
+            .field("pcnt_ready", &format_args!("{}", self.pcnt_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PCNT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

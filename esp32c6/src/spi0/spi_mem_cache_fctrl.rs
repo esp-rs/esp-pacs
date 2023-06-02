@@ -35,57 +35,50 @@ impl From<crate::W<SPI_MEM_CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_AXI_REQ_EN` reader - For SPI0, AXI master access enable, 1: enable, 0:disable."]
-pub type SPI_MEM_AXI_REQ_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_REQ_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_REQ_EN` writer - For SPI0, AXI master access enable, 1: enable, 0:disable."]
-pub type SPI_MEM_AXI_REQ_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_AXI_REQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` reader - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` writer - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
 pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_CACHE_FLASH_USR_CMD` reader - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
-pub type SPI_MEM_CACHE_FLASH_USR_CMD_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_FLASH_USR_CMD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CACHE_FLASH_USR_CMD` writer - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
 pub type SPI_MEM_CACHE_FLASH_USR_CMD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` reader - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDIN_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` writer - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDIN_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` reader - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDOUT_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` writer - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDOUT_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` reader - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FADDR_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` writer - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FADDR_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` reader - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDIN_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` writer - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDIN_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` reader - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDOUT_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` writer - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDOUT_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` reader - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FADDR_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` writer - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FADDR_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_SAME_AW_AR_ADDR_CHK_EN` reader - Set this bit to check AXI read/write the same address region."]
-pub type SPI_SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader<bool>;
+pub type SPI_SAME_AW_AR_ADDR_CHK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_CLOSE_AXI_INF_EN` reader - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
-pub type SPI_CLOSE_AXI_INF_EN_R = crate::BitReader<bool>;
+pub type SPI_CLOSE_AXI_INF_EN_R = crate::BitReader;
 #[doc = "Field `SPI_CLOSE_AXI_INF_EN` writer - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
 pub type SPI_CLOSE_AXI_INF_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - For SPI0, AXI master access enable, 1: enable, 0:disable."]
     #[inline(always)]
@@ -141,6 +134,63 @@ impl R {
     #[inline(always)]
     pub fn spi_close_axi_inf_en(&self) -> SPI_CLOSE_AXI_INF_EN_R {
         SPI_CLOSE_AXI_INF_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CACHE_FCTRL")
+            .field(
+                "spi_mem_axi_req_en",
+                &format_args!("{}", self.spi_mem_axi_req_en().bit()),
+            )
+            .field(
+                "spi_mem_cache_usr_addr_4byte",
+                &format_args!("{}", self.spi_mem_cache_usr_addr_4byte().bit()),
+            )
+            .field(
+                "spi_mem_cache_flash_usr_cmd",
+                &format_args!("{}", self.spi_mem_cache_flash_usr_cmd().bit()),
+            )
+            .field(
+                "spi_mem_fdin_dual",
+                &format_args!("{}", self.spi_mem_fdin_dual().bit()),
+            )
+            .field(
+                "spi_mem_fdout_dual",
+                &format_args!("{}", self.spi_mem_fdout_dual().bit()),
+            )
+            .field(
+                "spi_mem_faddr_dual",
+                &format_args!("{}", self.spi_mem_faddr_dual().bit()),
+            )
+            .field(
+                "spi_mem_fdin_quad",
+                &format_args!("{}", self.spi_mem_fdin_quad().bit()),
+            )
+            .field(
+                "spi_mem_fdout_quad",
+                &format_args!("{}", self.spi_mem_fdout_quad().bit()),
+            )
+            .field(
+                "spi_mem_faddr_quad",
+                &format_args!("{}", self.spi_mem_faddr_quad().bit()),
+            )
+            .field(
+                "spi_same_aw_ar_addr_chk_en",
+                &format_args!("{}", self.spi_same_aw_ar_addr_chk_en().bit()),
+            )
+            .field(
+                "spi_close_axi_inf_en",
+                &format_args!("{}", self.spi_close_axi_inf_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CACHE_FCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

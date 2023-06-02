@@ -35,27 +35,23 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_REJECT_EN` reader - enable GPIO reject"]
-pub type GPIO_REJECT_EN_R = crate::BitReader<bool>;
+pub type GPIO_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `GPIO_REJECT_EN` writer - enable GPIO reject"]
-pub type GPIO_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type GPIO_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 #[doc = "Field `SDIO_REJECT_EN` reader - enable SDIO reject"]
-pub type SDIO_REJECT_EN_R = crate::BitReader<bool>;
+pub type SDIO_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_REJECT_EN` writer - enable SDIO reject"]
-pub type SDIO_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type SDIO_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
-pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader<bool>;
+pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - enable reject for light sleep"]
-pub type LIGHT_SLP_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type LIGHT_SLP_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - enable reject for deep sleep"]
-pub type DEEP_SLP_REJECT_EN_R = crate::BitReader<bool>;
+pub type DEEP_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `DEEP_SLP_REJECT_EN` writer - enable reject for deep sleep"]
-pub type DEEP_SLP_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type DEEP_SLP_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub type REJECT_CAUSE_R = crate::FieldReader<u8, u8>;
+pub type REJECT_CAUSE_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
@@ -81,6 +77,39 @@ impl R {
     #[inline(always)]
     pub fn reject_cause(&self) -> REJECT_CAUSE_R {
         REJECT_CAUSE_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_REJECT_CONF")
+            .field(
+                "gpio_reject_en",
+                &format_args!("{}", self.gpio_reject_en().bit()),
+            )
+            .field(
+                "sdio_reject_en",
+                &format_args!("{}", self.sdio_reject_en().bit()),
+            )
+            .field(
+                "light_slp_reject_en",
+                &format_args!("{}", self.light_slp_reject_en().bit()),
+            )
+            .field(
+                "deep_slp_reject_en",
+                &format_args!("{}", self.deep_slp_reject_en().bit()),
+            )
+            .field(
+                "reject_cause",
+                &format_args!("{}", self.reject_cause().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

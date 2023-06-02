@@ -35,15 +35,31 @@ impl From<crate::W<TRACE_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `TRACE_INTR_MAP` reader - Need add description"]
-pub type TRACE_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type TRACE_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `TRACE_INTR_MAP` writer - Need add description"]
-pub type TRACE_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TRACE_INTR_MAP_SPEC, u8, u8, 5, O>;
+pub type TRACE_INTR_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, TRACE_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     pub fn trace_intr_map(&self) -> TRACE_INTR_MAP_R {
         TRACE_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TRACE_INTR_MAP")
+            .field(
+                "trace_intr_map",
+                &format_args!("{}", self.trace_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TRACE_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

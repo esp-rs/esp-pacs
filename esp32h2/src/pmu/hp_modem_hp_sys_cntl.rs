@@ -35,35 +35,35 @@ impl From<crate::W<HP_MODEM_HP_SYS_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_MODEM_UART_WAKEUP_EN` reader - need_des"]
-pub type HP_MODEM_UART_WAKEUP_EN_R = crate::BitReader<bool>;
+pub type HP_MODEM_UART_WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_UART_WAKEUP_EN` writer - need_des"]
 pub type HP_MODEM_UART_WAKEUP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 #[doc = "Field `HP_MODEM_LP_PAD_HOLD_ALL` reader - need_des"]
-pub type HP_MODEM_LP_PAD_HOLD_ALL_R = crate::BitReader<bool>;
+pub type HP_MODEM_LP_PAD_HOLD_ALL_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_LP_PAD_HOLD_ALL` writer - need_des"]
 pub type HP_MODEM_LP_PAD_HOLD_ALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 #[doc = "Field `HP_MODEM_HP_PAD_HOLD_ALL` reader - need_des"]
-pub type HP_MODEM_HP_PAD_HOLD_ALL_R = crate::BitReader<bool>;
+pub type HP_MODEM_HP_PAD_HOLD_ALL_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_HP_PAD_HOLD_ALL` writer - need_des"]
 pub type HP_MODEM_HP_PAD_HOLD_ALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 #[doc = "Field `HP_MODEM_DIG_PAD_SLP_SEL` reader - need_des"]
-pub type HP_MODEM_DIG_PAD_SLP_SEL_R = crate::BitReader<bool>;
+pub type HP_MODEM_DIG_PAD_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_DIG_PAD_SLP_SEL` writer - need_des"]
 pub type HP_MODEM_DIG_PAD_SLP_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 #[doc = "Field `HP_MODEM_DIG_PAUSE_WDT` reader - need_des"]
-pub type HP_MODEM_DIG_PAUSE_WDT_R = crate::BitReader<bool>;
+pub type HP_MODEM_DIG_PAUSE_WDT_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_DIG_PAUSE_WDT` writer - need_des"]
 pub type HP_MODEM_DIG_PAUSE_WDT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 #[doc = "Field `HP_MODEM_DIG_CPU_STALL` reader - need_des"]
-pub type HP_MODEM_DIG_CPU_STALL_R = crate::BitReader<bool>;
+pub type HP_MODEM_DIG_CPU_STALL_R = crate::BitReader;
 #[doc = "Field `HP_MODEM_DIG_CPU_STALL` writer - need_des"]
 pub type HP_MODEM_DIG_CPU_STALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_MODEM_HP_SYS_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_MODEM_HP_SYS_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
@@ -94,6 +94,43 @@ impl R {
     #[inline(always)]
     pub fn hp_modem_dig_cpu_stall(&self) -> HP_MODEM_DIG_CPU_STALL_R {
         HP_MODEM_DIG_CPU_STALL_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_MODEM_HP_SYS_CNTL")
+            .field(
+                "hp_modem_uart_wakeup_en",
+                &format_args!("{}", self.hp_modem_uart_wakeup_en().bit()),
+            )
+            .field(
+                "hp_modem_lp_pad_hold_all",
+                &format_args!("{}", self.hp_modem_lp_pad_hold_all().bit()),
+            )
+            .field(
+                "hp_modem_hp_pad_hold_all",
+                &format_args!("{}", self.hp_modem_hp_pad_hold_all().bit()),
+            )
+            .field(
+                "hp_modem_dig_pad_slp_sel",
+                &format_args!("{}", self.hp_modem_dig_pad_slp_sel().bit()),
+            )
+            .field(
+                "hp_modem_dig_pause_wdt",
+                &format_args!("{}", self.hp_modem_dig_pause_wdt().bit()),
+            )
+            .field(
+                "hp_modem_dig_cpu_stall",
+                &format_args!("{}", self.hp_modem_dig_cpu_stall().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_SYS_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

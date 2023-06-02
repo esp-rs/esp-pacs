@@ -37,13 +37,29 @@ impl From<crate::W<DIAG0_SPEC>> for W {
 #[doc = "Field `LOW_POWER_DIAG1` reader - Need add desc"]
 pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOW_POWER_DIAG1` writer - Need add desc"]
-pub type LOW_POWER_DIAG1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIAG0_SPEC, u32, u32, 32, O>;
+pub type LOW_POWER_DIAG1_W<'a, const O: u8> = crate::FieldWriter<'a, DIAG0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
     pub fn low_power_diag1(&self) -> LOW_POWER_DIAG1_R {
         LOW_POWER_DIAG1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIAG0")
+            .field(
+                "low_power_diag1",
+                &format_args!("{}", self.low_power_diag1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIAG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

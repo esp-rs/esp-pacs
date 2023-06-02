@@ -35,14 +35,31 @@ impl From<crate::W<EXT3_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_HOLD_ENA` reader - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
-pub type INT_HOLD_ENA_R = crate::FieldReader<u8, u8>;
+pub type INT_HOLD_ENA_R = crate::FieldReader;
 #[doc = "Field `INT_HOLD_ENA` writer - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
-pub type INT_HOLD_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT3_SPEC, u8, u8, 2, O>;
+pub type INT_HOLD_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, EXT3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
     #[inline(always)]
     pub fn int_hold_ena(&self) -> INT_HOLD_ENA_R {
         INT_HOLD_ENA_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT3")
+            .field(
+                "int_hold_ena",
+                &format_args!("{}", self.int_hold_ena().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

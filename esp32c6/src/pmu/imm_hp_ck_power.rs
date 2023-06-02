@@ -36,46 +36,47 @@ impl From<crate::W<IMM_HP_CK_POWER_SPEC>> for W {
 }
 #[doc = "Field `TIE_LOW_GLOBAL_BBPLL_ICG` writer - need_des"]
 pub type TIE_LOW_GLOBAL_BBPLL_ICG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_GLOBAL_XTAL_ICG` writer - need_des"]
-pub type TIE_LOW_GLOBAL_XTAL_ICG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_GLOBAL_XTAL_ICG_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_I2C_RETENTION` writer - need_des"]
-pub type TIE_LOW_I2C_RETENTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_I2C_RETENTION_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_XPD_BB_I2C` writer - need_des"]
-pub type TIE_LOW_XPD_BB_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_XPD_BB_I2C_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_XPD_BBPLL_I2C` writer - need_des"]
-pub type TIE_LOW_XPD_BBPLL_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_XPD_BBPLL_I2C_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_XPD_BBPLL` writer - need_des"]
-pub type TIE_LOW_XPD_BBPLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_XPD_BBPLL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_LOW_XPD_XTAL` writer - need_des"]
-pub type TIE_LOW_XPD_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_LOW_XPD_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_GLOBAL_BBPLL_ICG` writer - need_des"]
 pub type TIE_HIGH_GLOBAL_BBPLL_ICG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_GLOBAL_XTAL_ICG` writer - need_des"]
 pub type TIE_HIGH_GLOBAL_XTAL_ICG_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_I2C_RETENTION` writer - need_des"]
-pub type TIE_HIGH_I2C_RETENTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_HIGH_I2C_RETENTION_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_XPD_BB_I2C` writer - need_des"]
-pub type TIE_HIGH_XPD_BB_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_HIGH_XPD_BB_I2C_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_XPD_BBPLL_I2C` writer - need_des"]
-pub type TIE_HIGH_XPD_BBPLL_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_HIGH_XPD_BBPLL_I2C_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_XPD_BBPLL` writer - need_des"]
-pub type TIE_HIGH_XPD_BBPLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_HIGH_XPD_BBPLL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `TIE_HIGH_XPD_XTAL` writer - need_des"]
-pub type TIE_HIGH_XPD_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_HP_CK_POWER_SPEC, bool, O>;
+pub type TIE_HIGH_XPD_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_HP_CK_POWER_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IMM_HP_CK_POWER").finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IMM_HP_CK_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]

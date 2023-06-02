@@ -14,13 +14,13 @@ impl From<crate::R<SAR_TOUCH_STATUS16_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_APPROACH_PAD2_CNT` reader - Count status of proximity pad 2."]
-pub type TOUCH_APPROACH_PAD2_CNT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_APPROACH_PAD2_CNT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_APPROACH_PAD1_CNT` reader - Count status of proximity pad 1."]
-pub type TOUCH_APPROACH_PAD1_CNT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_APPROACH_PAD1_CNT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_APPROACH_PAD0_CNT` reader - Count status of proximity pad 0."]
-pub type TOUCH_APPROACH_PAD0_CNT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_APPROACH_PAD0_CNT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_APPROACH_CNT` reader - Count status of sleep pad in proximity mode."]
-pub type TOUCH_SLP_APPROACH_CNT_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_SLP_APPROACH_CNT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Count status of proximity pad 2."]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn touch_slp_approach_cnt(&self) -> TOUCH_SLP_APPROACH_CNT_R {
         TOUCH_SLP_APPROACH_CNT_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_STATUS16")
+            .field(
+                "touch_approach_pad2_cnt",
+                &format_args!("{}", self.touch_approach_pad2_cnt().bits()),
+            )
+            .field(
+                "touch_approach_pad1_cnt",
+                &format_args!("{}", self.touch_approach_pad1_cnt().bits()),
+            )
+            .field(
+                "touch_approach_pad0_cnt",
+                &format_args!("{}", self.touch_approach_pad0_cnt().bits()),
+            )
+            .field(
+                "touch_slp_approach_cnt",
+                &format_args!("{}", self.touch_slp_approach_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS16_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Touch approach count status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status16](index.html) module"]

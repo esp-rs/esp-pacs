@@ -38,12 +38,29 @@ impl From<crate::W<REGDMA_LINK_3_ADDR_SPEC>> for W {
 pub type LINK_ADDR_3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LINK_ADDR_3` writer - Link_3_addr reg"]
 pub type LINK_ADDR_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGDMA_LINK_3_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, REGDMA_LINK_3_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Link_3_addr reg"]
     #[inline(always)]
     pub fn link_addr_3(&self) -> LINK_ADDR_3_R {
         LINK_ADDR_3_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGDMA_LINK_3_ADDR")
+            .field(
+                "link_addr_3",
+                &format_args!("{}", self.link_addr_3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGDMA_LINK_3_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

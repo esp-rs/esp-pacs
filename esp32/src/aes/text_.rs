@@ -35,14 +35,28 @@ impl From<crate::W<TEXT__SPEC>> for W {
     }
 }
 #[doc = "Field `TEXT` reader - Plaintext and ciphertext register."]
-pub type TEXT_R = crate::FieldReader<u8, u8>;
+pub type TEXT_R = crate::FieldReader;
 #[doc = "Field `TEXT` writer - Plaintext and ciphertext register."]
-pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TEXT__SPEC, u8, u8, 8, O>;
+pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT__SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Plaintext and ciphertext register."]
     #[inline(always)]
     pub fn text(&self) -> TEXT_R {
         TEXT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEXT_")
+            .field("text", &format_args!("{}", self.text().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEXT__SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

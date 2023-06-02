@@ -38,12 +38,29 @@ impl From<crate::W<SDIO_SLAVE_ECO_HIGH_SPEC>> for W {
 pub type RDN_ECO_HIGH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RDN_ECO_HIGH` writer - redundant registers for sdio_slave"]
 pub type RDN_ECO_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDIO_SLAVE_ECO_HIGH_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SDIO_SLAVE_ECO_HIGH_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - redundant registers for sdio_slave"]
     #[inline(always)]
     pub fn rdn_eco_high(&self) -> RDN_ECO_HIGH_R {
         RDN_ECO_HIGH_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_SLAVE_ECO_HIGH")
+            .field(
+                "rdn_eco_high",
+                &format_args!("{}", self.rdn_eco_high().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_ECO_HIGH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

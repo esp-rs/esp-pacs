@@ -35,14 +35,13 @@ impl From<crate::W<SIGMADELTA_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `FUNCTION_CLK_EN` reader - Clock enable bit of sigma delta modulation."]
-pub type FUNCTION_CLK_EN_R = crate::BitReader<bool>;
+pub type FUNCTION_CLK_EN_R = crate::BitReader;
 #[doc = "Field `FUNCTION_CLK_EN` writer - Clock enable bit of sigma delta modulation."]
-pub type FUNCTION_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SIGMADELTA_MISC_SPEC, bool, O>;
+pub type FUNCTION_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SIGMADELTA_MISC_SPEC, O>;
 #[doc = "Field `SPI_SWAP` reader - Reserved."]
-pub type SPI_SWAP_R = crate::BitReader<bool>;
+pub type SPI_SWAP_R = crate::BitReader;
 #[doc = "Field `SPI_SWAP` writer - Reserved."]
-pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SIGMADELTA_MISC_SPEC, bool, O>;
+pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, SIGMADELTA_MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn spi_swap(&self) -> SPI_SWAP_R {
         SPI_SWAP_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SIGMADELTA_MISC")
+            .field(
+                "function_clk_en",
+                &format_args!("{}", self.function_clk_en().bit()),
+            )
+            .field("spi_swap", &format_args!("{}", self.spi_swap().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SIGMADELTA_MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,21 +14,21 @@ impl From<crate::R<CONF_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FUNC0_CONFIG0` reader - func0 config0 (addr: 0x20f0 ) status"]
-pub type FUNC0_CONFIG0_R = crate::FieldReader<u8, u8>;
+pub type FUNC0_CONFIG0_R = crate::FieldReader;
 #[doc = "Field `SDR25_ST` reader - sdr25 status"]
-pub type SDR25_ST_R = crate::BitReader<bool>;
+pub type SDR25_ST_R = crate::BitReader;
 #[doc = "Field `SDR50_ST` reader - sdr50 status"]
-pub type SDR50_ST_R = crate::BitReader<bool>;
+pub type SDR50_ST_R = crate::BitReader;
 #[doc = "Field `SDR104_ST` reader - sdr104 status"]
-pub type SDR104_ST_R = crate::BitReader<bool>;
+pub type SDR104_ST_R = crate::BitReader;
 #[doc = "Field `DDR50_ST` reader - ddr50 status"]
-pub type DDR50_ST_R = crate::BitReader<bool>;
+pub type DDR50_ST_R = crate::BitReader;
 #[doc = "Field `TUNE_ST` reader - tune_st fsm status"]
-pub type TUNE_ST_R = crate::FieldReader<u8, u8>;
+pub type TUNE_ST_R = crate::FieldReader;
 #[doc = "Field `SDIO_SWITCH_VOLT_ST` reader - sdio switch voltage status:0-3.3V, 1-1.8V."]
-pub type SDIO_SWITCH_VOLT_ST_R = crate::BitReader<bool>;
+pub type SDIO_SWITCH_VOLT_ST_R = crate::BitReader;
 #[doc = "Field `SDIO_SWITCH_END` reader - sdio switch voltage ldo ready"]
-pub type SDIO_SWITCH_END_R = crate::BitReader<bool>;
+pub type SDIO_SWITCH_END_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7 - func0 config0 (addr: 0x20f0 ) status"]
     #[inline(always)]
@@ -69,6 +69,36 @@ impl R {
     #[inline(always)]
     pub fn sdio_switch_end(&self) -> SDIO_SWITCH_END_R {
         SDIO_SWITCH_END_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF_STATUS")
+            .field(
+                "func0_config0",
+                &format_args!("{}", self.func0_config0().bits()),
+            )
+            .field("sdr25_st", &format_args!("{}", self.sdr25_st().bit()))
+            .field("sdr50_st", &format_args!("{}", self.sdr50_st().bit()))
+            .field("sdr104_st", &format_args!("{}", self.sdr104_st().bit()))
+            .field("ddr50_st", &format_args!("{}", self.ddr50_st().bit()))
+            .field("tune_st", &format_args!("{}", self.tune_st().bits()))
+            .field(
+                "sdio_switch_volt_st",
+                &format_args!("{}", self.sdio_switch_volt_st().bit()),
+            )
+            .field(
+                "sdio_switch_end",
+                &format_args!("{}", self.sdio_switch_end().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "func0 config0 status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [conf_status](index.html) module"]

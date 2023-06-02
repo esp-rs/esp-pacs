@@ -14,23 +14,23 @@ impl From<crate::R<RD_REPEAT_ERR2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY_PURPOSE_2_ERR` reader - If any bit in KEY_PURPOSE_2 is 1, then it indicates a programming error."]
-pub type KEY_PURPOSE_2_ERR_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_2_ERR_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_3_ERR` reader - If any bit in KEY_PURPOSE_3 is 1, then it indicates a programming error."]
-pub type KEY_PURPOSE_3_ERR_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_3_ERR_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_4_ERR` reader - If any bit in KEY_PURPOSE_4 is 1, then it indicates a programming error."]
-pub type KEY_PURPOSE_4_ERR_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_4_ERR_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_5_ERR` reader - If any bit in KEY_PURPOSE_5 is 1, then it indicates a programming error."]
-pub type KEY_PURPOSE_5_ERR_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_5_ERR_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED3_ERR` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED3_ERR_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_EN_ERR` reader - If SECURE_BOOT_EN is 1, then it indicates a programming error."]
-pub type SECURE_BOOT_EN_ERR_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_EN_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE_ERR` reader - If SECURE_BOOT_AGGRESSIVE_REVOKE is 1, then it indicates a programming error."]
-pub type SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED0_ERR` reader - Reserved."]
-pub type RPT4_RESERVED0_ERR_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_ERR_R = crate::FieldReader;
 #[doc = "Field `FLASH_TPUW_ERR` reader - If any bit in FLASH_TPUM is 1, then it indicates a programming error."]
-pub type FLASH_TPUW_ERR_R = crate::FieldReader<u8, u8>;
+pub type FLASH_TPUW_ERR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - If any bit in KEY_PURPOSE_2 is 1, then it indicates a programming error."]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn flash_tpuw_err(&self) -> FLASH_TPUW_ERR_R {
         FLASH_TPUW_ERR_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR2")
+            .field(
+                "key_purpose_2_err",
+                &format_args!("{}", self.key_purpose_2_err().bits()),
+            )
+            .field(
+                "key_purpose_3_err",
+                &format_args!("{}", self.key_purpose_3_err().bits()),
+            )
+            .field(
+                "key_purpose_4_err",
+                &format_args!("{}", self.key_purpose_4_err().bits()),
+            )
+            .field(
+                "key_purpose_5_err",
+                &format_args!("{}", self.key_purpose_5_err().bits()),
+            )
+            .field(
+                "rpt4_reserved3_err",
+                &format_args!("{}", self.rpt4_reserved3_err().bits()),
+            )
+            .field(
+                "secure_boot_en_err",
+                &format_args!("{}", self.secure_boot_en_err().bit()),
+            )
+            .field(
+                "secure_boot_aggressive_revoke_err",
+                &format_args!("{}", self.secure_boot_aggressive_revoke_err().bit()),
+            )
+            .field(
+                "rpt4_reserved0_err",
+                &format_args!("{}", self.rpt4_reserved0_err().bits()),
+            )
+            .field(
+                "flash_tpuw_err",
+                &format_args!("{}", self.flash_tpuw_err().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 2 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err2](index.html) module"]

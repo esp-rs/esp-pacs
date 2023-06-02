@@ -37,12 +37,26 @@ impl From<crate::W<SCL_HIGH_SPEC>> for W {
 #[doc = "Field `PERIOD` reader - This register is used to configure how many cycles SCL remains high."]
 pub type PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERIOD` writer - This register is used to configure how many cycles SCL remains high."]
-pub type PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SCL_HIGH_SPEC, u32, u32, 20, O>;
+pub type PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_HIGH_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register is used to configure how many cycles SCL remains high."]
     #[inline(always)]
     pub fn period(&self) -> PERIOD_R {
         PERIOD_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_HIGH")
+            .field("period", &format_args!("{}", self.period().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_HIGH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

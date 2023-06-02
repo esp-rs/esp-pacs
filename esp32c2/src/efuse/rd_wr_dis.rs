@@ -14,12 +14,26 @@ impl From<crate::R<RD_WR_DIS_SPEC>> for R {
     }
 }
 #[doc = "Field `WR_DIS` reader - Disable programming of individual eFuses."]
-pub type WR_DIS_R = crate::FieldReader<u8, u8>;
+pub type WR_DIS_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Disable programming of individual eFuses."]
     #[inline(always)]
     pub fn wr_dis(&self) -> WR_DIS_R {
         WR_DIS_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_WR_DIS")
+            .field("wr_dis", &format_args!("{}", self.wr_dis().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_WR_DIS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_wr_dis](index.html) module"]

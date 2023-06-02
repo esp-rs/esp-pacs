@@ -14,13 +14,13 @@ impl From<crate::R<SPI_SMEM_TIMING_CALI_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_SMEM_TIMING_CLK_ENA` reader - For sram, the bit is used to enable timing adjust clock for all reading operations."]
-pub type SPI_SMEM_TIMING_CLK_ENA_R = crate::BitReader<bool>;
+pub type SPI_SMEM_TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_TIMING_CALI` reader - For sram, the bit is used to enable timing auto-calibration for all reading operations."]
-pub type SPI_SMEM_TIMING_CALI_R = crate::BitReader<bool>;
+pub type SPI_SMEM_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_EXTRA_DUMMY_CYCLELEN` reader - For sram, add extra dummy spi clock cycle length for spi clock calibration."]
-pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DLL_TIMING_CALI` reader - Set this bit to enable DLL for timing calibration in DDR mode when accessed to EXT_RAM."]
-pub type SPI_SMEM_DLL_TIMING_CALI_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DLL_TIMING_CALI_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - For sram, the bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_dll_timing_cali(&self) -> SPI_SMEM_DLL_TIMING_CALI_R {
         SPI_SMEM_DLL_TIMING_CALI_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_TIMING_CALI")
+            .field(
+                "spi_smem_timing_clk_ena",
+                &format_args!("{}", self.spi_smem_timing_clk_ena().bit()),
+            )
+            .field(
+                "spi_smem_timing_cali",
+                &format_args!("{}", self.spi_smem_timing_cali().bit()),
+            )
+            .field(
+                "spi_smem_extra_dummy_cyclelen",
+                &format_args!("{}", self.spi_smem_extra_dummy_cyclelen().bits()),
+            )
+            .field(
+                "spi_smem_dll_timing_cali",
+                &format_args!("{}", self.spi_smem_dll_timing_cali().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_TIMING_CALI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "MSPI external RAM timing calibration register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_timing_cali](index.html) module"]

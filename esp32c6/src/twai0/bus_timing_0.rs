@@ -37,13 +37,11 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
 #[doc = "Field `BAUD_PRESC` reader - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
 pub type BAUD_PRESC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BAUD_PRESC` writer - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
-pub type BAUD_PRESC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u16, u16, 14, O>;
+pub type BAUD_PRESC_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 14, O, u16, u16>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - The synchronization jump width defines the maximum number of clock cycles a bit period may be shortened or lengthened. Software has R/W permission in reset mode and RO in operation mode."]
-pub type SYNC_JUMP_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type SYNC_JUMP_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - The synchronization jump width defines the maximum number of clock cycles a bit period may be shortened or lengthened. Software has R/W permission in reset mode and RO in operation mode."]
-pub type SYNC_JUMP_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u8, u8, 2, O>;
+pub type SYNC_JUMP_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:13 - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
     #[inline(always)]
@@ -54,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn sync_jump_width(&self) -> SYNC_JUMP_WIDTH_R {
         SYNC_JUMP_WIDTH_R::new(((self.bits >> 14) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BUS_TIMING_0")
+            .field("baud_presc", &format_args!("{}", self.baud_presc().bits()))
+            .field(
+                "sync_jump_width",
+                &format_args!("{}", self.sync_jump_width().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BUS_TIMING_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

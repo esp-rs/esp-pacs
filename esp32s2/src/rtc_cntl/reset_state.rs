@@ -35,19 +35,17 @@ impl From<crate::W<RESET_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - Stores the CPU reset cause."]
-pub type RESET_CAUSE_PROCPU_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_PROCPU_R = crate::FieldReader;
 #[doc = "Field `RESET_CAUSE_APPCPU` reader - reset cause of APP CPU"]
-pub type RESET_CAUSE_APPCPU_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_APPCPU_R = crate::FieldReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` reader - APP CPU state vector sel"]
-pub type APPCPU_STAT_VECTOR_SEL_R = crate::BitReader<bool>;
+pub type APPCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` writer - APP CPU state vector sel"]
-pub type APPCPU_STAT_VECTOR_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type APPCPU_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` reader - Selects the CPU state vector."]
-pub type PROCPU_STAT_VECTOR_SEL_R = crate::BitReader<bool>;
+pub type PROCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` writer - Selects the CPU state vector."]
-pub type PROCPU_STAT_VECTOR_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type PROCPU_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - Stores the CPU reset cause."]
     #[inline(always)]
@@ -68,6 +66,35 @@ impl R {
     #[inline(always)]
     pub fn procpu_stat_vector_sel(&self) -> PROCPU_STAT_VECTOR_SEL_R {
         PROCPU_STAT_VECTOR_SEL_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_STATE")
+            .field(
+                "reset_cause_procpu",
+                &format_args!("{}", self.reset_cause_procpu().bits()),
+            )
+            .field(
+                "reset_cause_appcpu",
+                &format_args!("{}", self.reset_cause_appcpu().bits()),
+            )
+            .field(
+                "appcpu_stat_vector_sel",
+                &format_args!("{}", self.appcpu_stat_vector_sel().bit()),
+            )
+            .field(
+                "procpu_stat_vector_sel",
+                &format_args!("{}", self.procpu_stat_vector_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

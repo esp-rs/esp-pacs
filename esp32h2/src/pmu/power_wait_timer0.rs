@@ -38,17 +38,17 @@ impl From<crate::W<POWER_WAIT_TIMER0_SPEC>> for W {
 pub type DG_HP_POWERDOWN_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_HP_POWERDOWN_TIMER` writer - need_des"]
 pub type DG_HP_POWERDOWN_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER0_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` reader - need_des"]
 pub type DG_HP_POWERUP_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` writer - need_des"]
 pub type DG_HP_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER0_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` reader - need_des"]
 pub type DG_HP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` writer - need_des"]
 pub type DG_HP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_WAIT_TIMER0_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn dg_hp_wait_timer(&self) -> DG_HP_WAIT_TIMER_R {
         DG_HP_WAIT_TIMER_R::new(((self.bits >> 23) & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_WAIT_TIMER0")
+            .field(
+                "dg_hp_powerdown_timer",
+                &format_args!("{}", self.dg_hp_powerdown_timer().bits()),
+            )
+            .field(
+                "dg_hp_powerup_timer",
+                &format_args!("{}", self.dg_hp_powerup_timer().bits()),
+            )
+            .field(
+                "dg_hp_wait_timer",
+                &format_args!("{}", self.dg_hp_wait_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_WAIT_TIMER0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

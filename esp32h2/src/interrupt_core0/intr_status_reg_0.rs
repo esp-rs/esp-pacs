@@ -22,6 +22,23 @@ impl R {
         INTR_STATUS_0_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_STATUS_REG_0")
+            .field(
+                "intr_status_0",
+                &format_args!("{}", self.intr_status_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_STATUS_REG_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_status_reg_0](index.html) module"]
 pub struct INTR_STATUS_REG_0_SPEC;
 impl crate::RegisterSpec for INTR_STATUS_REG_0_SPEC {

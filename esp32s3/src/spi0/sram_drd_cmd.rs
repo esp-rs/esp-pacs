@@ -38,12 +38,12 @@ impl From<crate::W<SRAM_DRD_CMD_SPEC>> for W {
 pub type CACHE_SRAM_USR_RD_CMD_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_VALUE` writer - When SPI0 reads Ext_RAM, it is the command value of CMD phase."]
 pub type CACHE_SRAM_USR_RD_CMD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_DRD_CMD_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SRAM_DRD_CMD_SPEC, 16, O, u16, u16>;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_BITLEN` reader - When SPI0 reads Ext_RAM, it is the length in bits of CMD phase. The register value shall be (bit_num-1)."]
-pub type CACHE_SRAM_USR_RD_CMD_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type CACHE_SRAM_USR_RD_CMD_BITLEN_R = crate::FieldReader;
 #[doc = "Field `CACHE_SRAM_USR_RD_CMD_BITLEN` writer - When SPI0 reads Ext_RAM, it is the length in bits of CMD phase. The register value shall be (bit_num-1)."]
 pub type CACHE_SRAM_USR_RD_CMD_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_DRD_CMD_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SRAM_DRD_CMD_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:15 - When SPI0 reads Ext_RAM, it is the command value of CMD phase."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn cache_sram_usr_rd_cmd_bitlen(&self) -> CACHE_SRAM_USR_RD_CMD_BITLEN_R {
         CACHE_SRAM_USR_RD_CMD_BITLEN_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_DRD_CMD")
+            .field(
+                "cache_sram_usr_rd_cmd_value",
+                &format_args!("{}", self.cache_sram_usr_rd_cmd_value().bits()),
+            )
+            .field(
+                "cache_sram_usr_rd_cmd_bitlen",
+                &format_args!("{}", self.cache_sram_usr_rd_cmd_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_DRD_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

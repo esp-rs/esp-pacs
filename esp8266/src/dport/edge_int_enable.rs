@@ -38,17 +38,15 @@ impl From<crate::W<EDGE_INT_ENABLE_SPEC>> for W {
 pub type REGISTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `Register` writer - "]
 pub type REGISTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EDGE_INT_ENABLE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, EDGE_INT_ENABLE_SPEC, 32, O, u32, u32>;
 #[doc = "Field `wdt_edge_int_enable` reader - Enable the watchdog timer edge interrupt"]
-pub type WDT_EDGE_INT_ENABLE_R = crate::BitReader<bool>;
+pub type WDT_EDGE_INT_ENABLE_R = crate::BitReader;
 #[doc = "Field `wdt_edge_int_enable` writer - Enable the watchdog timer edge interrupt"]
-pub type WDT_EDGE_INT_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EDGE_INT_ENABLE_SPEC, bool, O>;
+pub type WDT_EDGE_INT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, EDGE_INT_ENABLE_SPEC, O>;
 #[doc = "Field `timer1_edge_int_enable` reader - Enable the timer1 edge interrupt"]
-pub type TIMER1_EDGE_INT_ENABLE_R = crate::BitReader<bool>;
+pub type TIMER1_EDGE_INT_ENABLE_R = crate::BitReader;
 #[doc = "Field `timer1_edge_int_enable` writer - Enable the timer1 edge interrupt"]
-pub type TIMER1_EDGE_INT_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EDGE_INT_ENABLE_SPEC, bool, O>;
+pub type TIMER1_EDGE_INT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, EDGE_INT_ENABLE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -64,6 +62,28 @@ impl R {
     #[inline(always)]
     pub fn timer1_edge_int_enable(&self) -> TIMER1_EDGE_INT_ENABLE_R {
         TIMER1_EDGE_INT_ENABLE_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EDGE_INT_ENABLE")
+            .field("register", &format_args!("{}", self.register().bits()))
+            .field(
+                "wdt_edge_int_enable",
+                &format_args!("{}", self.wdt_edge_int_enable().bit()),
+            )
+            .field(
+                "timer1_edge_int_enable",
+                &format_args!("{}", self.timer1_edge_int_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EDGE_INT_ENABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

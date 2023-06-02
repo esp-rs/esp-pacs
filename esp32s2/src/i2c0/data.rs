@@ -35,14 +35,28 @@ impl From<crate::W<DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_RDATA` reader - The value of RX FIFO read data."]
-pub type FIFO_RDATA_R = crate::FieldReader<u8, u8>;
+pub type FIFO_RDATA_R = crate::FieldReader;
 #[doc = "Field `FIFO_RDATA` writer - The value of RX FIFO read data."]
-pub type FIFO_RDATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_SPEC, u8, u8, 8, O>;
+pub type FIFO_RDATA_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - The value of RX FIFO read data."]
     #[inline(always)]
     pub fn fifo_rdata(&self) -> FIFO_RDATA_R {
         FIFO_RDATA_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATA")
+            .field("fifo_rdata", &format_args!("{}", self.fifo_rdata().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

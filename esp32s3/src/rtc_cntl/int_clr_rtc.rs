@@ -20,61 +20,54 @@ impl From<crate::W<INT_CLR_RTC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_CLR` writer - Clear sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_CLR` writer - Clear sleep reject interrupt state"]
-pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SDIO_IDLE_INT_CLR` writer - Clear SDIO idle interrupt state"]
-pub type SDIO_IDLE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SDIO_IDLE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_SCAN_DONE_INT_CLR` writer - clear touch scan done interrupt raw"]
-pub type TOUCH_SCAN_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TOUCH_SCAN_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `ULP_CP_INT_CLR` writer - Clear ULP-coprocessor interrupt state"]
-pub type ULP_CP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type ULP_CP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_DONE_INT_CLR` writer - Clear touch done interrupt state"]
-pub type TOUCH_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TOUCH_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_ACTIVE_INT_CLR` writer - Clear touch active interrupt state"]
-pub type TOUCH_ACTIVE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TOUCH_ACTIVE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_INACTIVE_INT_CLR` writer - Clear touch inactive interrupt state"]
-pub type TOUCH_INACTIVE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TOUCH_INACTIVE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
-pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SARADC1_INT_CLR` writer - Clear saradc1 interrupt state"]
-pub type SARADC1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SARADC1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TSENS_INT_CLR` writer - Clear tsens interrupt state"]
-pub type TSENS_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TSENS_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `COCPU_INT_CLR` writer - Clear riscV cocpu interrupt state"]
-pub type COCPU_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type COCPU_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SARADC2_INT_CLR` writer - Clear saradc2 interrupt state"]
-pub type SARADC2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SARADC2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
-pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `XTAL32K_DEAD_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `COCPU_TRAP_INT_CLR` writer - Clear cocpu trap interrupt state"]
-pub type COCPU_TRAP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type COCPU_TRAP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_TIMEOUT_INT_CLR` writer - Clear touch timeout interrupt state"]
-pub type TOUCH_TIMEOUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type TOUCH_TIMEOUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_CLR` writer - Clear glitch det interrupt state"]
-pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_CLR` writer - cleartouch approach mode loop interrupt state"]
 pub type TOUCH_APPROACH_LOOP_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_RTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]

@@ -35,37 +35,33 @@ impl From<crate::W<BIAS_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DBG_ATTEN` reader - DBG_ATTEN"]
-pub type DBG_ATTEN_R = crate::FieldReader<u8, u8>;
+pub type DBG_ATTEN_R = crate::FieldReader;
 #[doc = "Field `DBG_ATTEN` writer - DBG_ATTEN"]
-pub type DBG_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BIAS_CONF_SPEC, u8, u8, 2, O>;
+pub type DBG_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, BIAS_CONF_SPEC, 2, O>;
 #[doc = "Field `ENB_SCK_XTAL` reader - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_R = crate::BitReader<bool>;
+pub type ENB_SCK_XTAL_R = crate::BitReader;
 #[doc = "Field `ENB_SCK_XTAL` writer - ENB_SCK_XTAL"]
-pub type ENB_SCK_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type ENB_SCK_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` reader - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader<bool>;
+pub type INC_HEARTBEAT_REFRESH_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_REFRESH` writer - INC_HEARTBEAT_REFRESH"]
-pub type INC_HEARTBEAT_REFRESH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type INC_HEARTBEAT_REFRESH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` reader - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader<bool>;
+pub type DEC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_PERIOD` writer - DEC_HEARTBEAT_PERIOD"]
-pub type DEC_HEARTBEAT_PERIOD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type DEC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` reader - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader<bool>;
+pub type INC_HEARTBEAT_PERIOD_R = crate::BitReader;
 #[doc = "Field `INC_HEARTBEAT_PERIOD` writer - INC_HEARTBEAT_PERIOD"]
-pub type INC_HEARTBEAT_PERIOD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type INC_HEARTBEAT_PERIOD_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` reader - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader<bool>;
+pub type DEC_HEARTBEAT_WIDTH_R = crate::BitReader;
 #[doc = "Field `DEC_HEARTBEAT_WIDTH` writer - DEC_HEARTBEAT_WIDTH"]
-pub type DEC_HEARTBEAT_WIDTH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type DEC_HEARTBEAT_WIDTH_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 #[doc = "Field `RST_BIAS_I2C` reader - RST_BIAS_I2C"]
-pub type RST_BIAS_I2C_R = crate::BitReader<bool>;
+pub type RST_BIAS_I2C_R = crate::BitReader;
 #[doc = "Field `RST_BIAS_I2C` writer - RST_BIAS_I2C"]
-pub type RST_BIAS_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, BIAS_CONF_SPEC, bool, O>;
+pub type RST_BIAS_I2C_W<'a, const O: u8> = crate::BitWriter<'a, BIAS_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
@@ -101,6 +97,44 @@ impl R {
     #[inline(always)]
     pub fn rst_bias_i2c(&self) -> RST_BIAS_I2C_R {
         RST_BIAS_I2C_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BIAS_CONF")
+            .field("dbg_atten", &format_args!("{}", self.dbg_atten().bits()))
+            .field(
+                "enb_sck_xtal",
+                &format_args!("{}", self.enb_sck_xtal().bit()),
+            )
+            .field(
+                "inc_heartbeat_refresh",
+                &format_args!("{}", self.inc_heartbeat_refresh().bit()),
+            )
+            .field(
+                "dec_heartbeat_period",
+                &format_args!("{}", self.dec_heartbeat_period().bit()),
+            )
+            .field(
+                "inc_heartbeat_period",
+                &format_args!("{}", self.inc_heartbeat_period().bit()),
+            )
+            .field(
+                "dec_heartbeat_width",
+                &format_args!("{}", self.dec_heartbeat_width().bit()),
+            )
+            .field(
+                "rst_bias_i2c",
+                &format_args!("{}", self.rst_bias_i2c().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BIAS_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

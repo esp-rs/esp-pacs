@@ -35,15 +35,14 @@ impl From<crate::W<MEM_POWER_DOWN_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_POWER_DOWN` reader - ******* Description ***********"]
-pub type ROM_POWER_DOWN_R = crate::FieldReader<u8, u8>;
+pub type ROM_POWER_DOWN_R = crate::FieldReader;
 #[doc = "Field `ROM_POWER_DOWN` writer - ******* Description ***********"]
-pub type ROM_POWER_DOWN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_POWER_DOWN_SPEC, u8, u8, 3, O>;
+pub type ROM_POWER_DOWN_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_POWER_DOWN_SPEC, 3, O>;
 #[doc = "Field `SRAM_POWER_DOWN` reader - ******* Description ***********"]
 pub type SRAM_POWER_DOWN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SRAM_POWER_DOWN` writer - ******* Description ***********"]
 pub type SRAM_POWER_DOWN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_POWER_DOWN_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, MEM_POWER_DOWN_SPEC, 11, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn sram_power_down(&self) -> SRAM_POWER_DOWN_R {
         SRAM_POWER_DOWN_R::new(((self.bits >> 3) & 0x07ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_POWER_DOWN")
+            .field(
+                "rom_power_down",
+                &format_args!("{}", self.rom_power_down().bits()),
+            )
+            .field(
+                "sram_power_down",
+                &format_args!("{}", self.sram_power_down().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_POWER_DOWN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

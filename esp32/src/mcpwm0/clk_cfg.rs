@@ -35,14 +35,31 @@ impl From<crate::W<CLK_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_PRESCALE` reader - "]
-pub type CLK_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type CLK_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CLK_PRESCALE` writer - "]
-pub type CLK_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CFG_SPEC, u8, u8, 8, O>;
+pub type CLK_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CFG_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn clk_prescale(&self) -> CLK_PRESCALE_R {
         CLK_PRESCALE_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CFG")
+            .field(
+                "clk_prescale",
+                &format_args!("{}", self.clk_prescale().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

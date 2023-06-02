@@ -35,13 +35,13 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `DONE_INT_ENA` reader - x"]
-pub type DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DONE_INT_ENA` writer - x"]
-pub type DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ERR_INT_ENA` reader - x"]
-pub type ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_INT_ENA` writer - x"]
-pub type ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn err_int_ena(&self) -> ERR_INT_ENA_R {
         ERR_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "done_int_ena",
+                &format_args!("{}", self.done_int_ena().bit()),
+            )
+            .field("err_int_ena", &format_args!("{}", self.err_int_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

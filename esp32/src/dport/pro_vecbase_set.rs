@@ -38,12 +38,29 @@ impl From<crate::W<PRO_VECBASE_SET_SPEC>> for W {
 pub type PRO_OUT_VECBASE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_OUT_VECBASE` writer - "]
 pub type PRO_OUT_VECBASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_VECBASE_SET_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, PRO_VECBASE_SET_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]
     pub fn pro_out_vecbase(&self) -> PRO_OUT_VECBASE_R {
         PRO_OUT_VECBASE_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_VECBASE_SET")
+            .field(
+                "pro_out_vecbase",
+                &format_args!("{}", self.pro_out_vecbase().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_VECBASE_SET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

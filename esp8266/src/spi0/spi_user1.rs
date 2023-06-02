@@ -35,25 +35,23 @@ impl From<crate::W<SPI_USER1_SPEC>> for W {
     }
 }
 #[doc = "Field `reg_usr_dummy_cyclelen` reader - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
-pub type REG_USR_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type REG_USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_dummy_cyclelen` writer - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
-pub type REG_USR_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_USER1_SPEC, u8, u8, 8, O>;
+pub type REG_USR_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_USER1_SPEC, 8, O>;
 #[doc = "Field `reg_usr_miso_bitlen` reader - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MISO_BITLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `reg_usr_miso_bitlen` writer - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MISO_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_USER1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16, u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` reader - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MOSI_BITLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` writer - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_MOSI_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_USER1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16, u16>;
 #[doc = "Field `reg_usr_addr_bitlen` reader - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type REG_USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_addr_bitlen` writer - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_ADDR_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_USER1_SPEC, u8, u8, 6, O>;
+pub type REG_USR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_USER1_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
     #[inline(always)]
@@ -74,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn reg_usr_addr_bitlen(&self) -> REG_USR_ADDR_BITLEN_R {
         REG_USR_ADDR_BITLEN_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_USER1")
+            .field(
+                "reg_usr_addr_bitlen",
+                &format_args!("{}", self.reg_usr_addr_bitlen().bits()),
+            )
+            .field(
+                "reg_usr_mosi_bitlen",
+                &format_args!("{}", self.reg_usr_mosi_bitlen().bits()),
+            )
+            .field(
+                "reg_usr_miso_bitlen",
+                &format_args!("{}", self.reg_usr_miso_bitlen().bits()),
+            )
+            .field(
+                "reg_usr_dummy_cyclelen",
+                &format_args!("{}", self.reg_usr_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_USER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

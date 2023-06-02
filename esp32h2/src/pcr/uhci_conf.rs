@@ -35,15 +35,15 @@ impl From<crate::W<UHCI_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `UHCI_CLK_EN` reader - Set 1 to enable uhci clock"]
-pub type UHCI_CLK_EN_R = crate::BitReader<bool>;
+pub type UHCI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI_CLK_EN` writer - Set 1 to enable uhci clock"]
-pub type UHCI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UHCI_CONF_SPEC, bool, O>;
+pub type UHCI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, UHCI_CONF_SPEC, O>;
 #[doc = "Field `UHCI_RST_EN` reader - Set 0 to reset uhci module"]
-pub type UHCI_RST_EN_R = crate::BitReader<bool>;
+pub type UHCI_RST_EN_R = crate::BitReader;
 #[doc = "Field `UHCI_RST_EN` writer - Set 0 to reset uhci module"]
-pub type UHCI_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UHCI_CONF_SPEC, bool, O>;
+pub type UHCI_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, UHCI_CONF_SPEC, O>;
 #[doc = "Field `UHCI_READY` reader - Query this field after reset uhci module"]
-pub type UHCI_READY_R = crate::BitReader<bool>;
+pub type UHCI_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable uhci clock"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn uhci_ready(&self) -> UHCI_READY_R {
         UHCI_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UHCI_CONF")
+            .field("uhci_clk_en", &format_args!("{}", self.uhci_clk_en().bit()))
+            .field("uhci_rst_en", &format_args!("{}", self.uhci_rst_en().bit()))
+            .field("uhci_ready", &format_args!("{}", self.uhci_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UHCI_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,45 +35,45 @@ impl From<crate::W<L2_CACHE_ACS_CNT_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `L2_IBUS0_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
-pub type L2_IBUS0_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_IBUS0_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS0_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
 pub type L2_IBUS0_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_IBUS1_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1."]
-pub type L2_IBUS1_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_IBUS1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS1_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-ICache1."]
 pub type L2_IBUS1_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_IBUS2_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2."]
-pub type L2_IBUS2_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_IBUS2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS2_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-ICache2."]
 pub type L2_IBUS2_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_IBUS3_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3."]
-pub type L2_IBUS3_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_IBUS3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_IBUS3_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-ICache3."]
 pub type L2_IBUS3_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_DBUS0_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache."]
-pub type L2_DBUS0_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_DBUS0_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS0_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-DCache."]
 pub type L2_DBUS0_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_DBUS1_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache."]
-pub type L2_DBUS1_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_DBUS1_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS1_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-DCache."]
 pub type L2_DBUS1_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_DBUS2_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache."]
-pub type L2_DBUS2_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_DBUS2_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS2_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus2 accesses L2-DCache."]
 pub type L2_DBUS2_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 #[doc = "Field `L2_DBUS3_OVF_INT_RAW` reader - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache."]
-pub type L2_DBUS3_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type L2_DBUS3_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `L2_DBUS3_OVF_INT_RAW` writer - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus3 accesses L2-DCache."]
 pub type L2_DBUS3_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_ACS_CNT_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_ACS_CNT_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 8 - The raw bit of the interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-ICache0."]
     #[inline(always)]
@@ -114,6 +114,51 @@ impl R {
     #[inline(always)]
     pub fn l2_dbus3_ovf_int_raw(&self) -> L2_DBUS3_OVF_INT_RAW_R {
         L2_DBUS3_OVF_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_ACS_CNT_INT_RAW")
+            .field(
+                "l2_ibus0_ovf_int_raw",
+                &format_args!("{}", self.l2_ibus0_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_ibus1_ovf_int_raw",
+                &format_args!("{}", self.l2_ibus1_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_ibus2_ovf_int_raw",
+                &format_args!("{}", self.l2_ibus2_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_ibus3_ovf_int_raw",
+                &format_args!("{}", self.l2_ibus3_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_dbus0_ovf_int_raw",
+                &format_args!("{}", self.l2_dbus0_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_dbus1_ovf_int_raw",
+                &format_args!("{}", self.l2_dbus1_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_dbus2_ovf_int_raw",
+                &format_args!("{}", self.l2_dbus2_ovf_int_raw().bit()),
+            )
+            .field(
+                "l2_dbus3_ovf_int_raw",
+                &format_args!("{}", self.l2_dbus3_ovf_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

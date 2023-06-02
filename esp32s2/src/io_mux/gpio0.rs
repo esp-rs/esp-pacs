@@ -35,49 +35,49 @@ impl From<crate::W<GPIO0_SPEC>> for W {
     }
 }
 #[doc = "Field `MCU_OE` reader - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
-pub type MCU_OE_R = crate::BitReader<bool>;
+pub type MCU_OE_R = crate::BitReader;
 #[doc = "Field `MCU_OE` writer - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
-pub type MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type MCU_OE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `SLP_SEL` reader - Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode."]
-pub type SLP_SEL_R = crate::BitReader<bool>;
+pub type SLP_SEL_R = crate::BitReader;
 #[doc = "Field `SLP_SEL` writer - Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode."]
-pub type SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `MCU_WPD` reader - Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub type MCU_WPD_R = crate::BitReader<bool>;
+pub type MCU_WPD_R = crate::BitReader;
 #[doc = "Field `MCU_WPD` writer - Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub type MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type MCU_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `MCU_WPU` reader - Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub type MCU_WPU_R = crate::BitReader<bool>;
+pub type MCU_WPU_R = crate::BitReader;
 #[doc = "Field `MCU_WPU` writer - Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub type MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type MCU_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `MCU_IE` reader - Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled."]
-pub type MCU_IE_R = crate::BitReader<bool>;
+pub type MCU_IE_R = crate::BitReader;
 #[doc = "Field `MCU_IE` writer - Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled."]
-pub type MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type MCU_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `FUN_WPD` reader - Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub type FUN_WPD_R = crate::BitReader<bool>;
+pub type FUN_WPD_R = crate::BitReader;
 #[doc = "Field `FUN_WPD` writer - Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
-pub type FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type FUN_WPD_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `FUN_WPU` reader - Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub type FUN_WPU_R = crate::BitReader<bool>;
+pub type FUN_WPU_R = crate::BitReader;
 #[doc = "Field `FUN_WPU` writer - Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
-pub type FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type FUN_WPU_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `FUN_IE` reader - Input enable of the pin. 1: Input enabled. 0: Input disabled."]
-pub type FUN_IE_R = crate::BitReader<bool>;
+pub type FUN_IE_R = crate::BitReader;
 #[doc = "Field `FUN_IE` writer - Input enable of the pin. 1: Input enabled. 0: Input disabled."]
-pub type FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 #[doc = "Field `FUN_DRV` reader - Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type FUN_DRV_R = crate::FieldReader<u8, u8>;
+pub type FUN_DRV_R = crate::FieldReader;
 #[doc = "Field `FUN_DRV` writer - Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
-pub type FUN_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO0_SPEC, u8, u8, 2, O>;
+pub type FUN_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO0_SPEC, 2, O>;
 #[doc = "Field `MCU_SEL` reader - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc."]
-pub type MCU_SEL_R = crate::FieldReader<u8, u8>;
+pub type MCU_SEL_R = crate::FieldReader;
 #[doc = "Field `MCU_SEL` writer - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc."]
-pub type MCU_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO0_SPEC, u8, u8, 3, O>;
+pub type MCU_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO0_SPEC, 3, O>;
 #[doc = "Field `FILTER_EN` reader - Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled."]
-pub type FILTER_EN_R = crate::BitReader<bool>;
+pub type FILTER_EN_R = crate::BitReader;
 #[doc = "Field `FILTER_EN` writer - Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled."]
-pub type FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO0_SPEC, bool, O>;
+pub type FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, GPIO0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
     #[inline(always)]
@@ -133,6 +133,30 @@ impl R {
     #[inline(always)]
     pub fn filter_en(&self) -> FILTER_EN_R {
         FILTER_EN_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO0")
+            .field("mcu_oe", &format_args!("{}", self.mcu_oe().bit()))
+            .field("slp_sel", &format_args!("{}", self.slp_sel().bit()))
+            .field("mcu_wpd", &format_args!("{}", self.mcu_wpd().bit()))
+            .field("mcu_wpu", &format_args!("{}", self.mcu_wpu().bit()))
+            .field("mcu_ie", &format_args!("{}", self.mcu_ie().bit()))
+            .field("fun_wpd", &format_args!("{}", self.fun_wpd().bit()))
+            .field("fun_wpu", &format_args!("{}", self.fun_wpu().bit()))
+            .field("fun_ie", &format_args!("{}", self.fun_ie().bit()))
+            .field("fun_drv", &format_args!("{}", self.fun_drv().bits()))
+            .field("mcu_sel", &format_args!("{}", self.mcu_sel().bits()))
+            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

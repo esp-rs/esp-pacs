@@ -35,17 +35,17 @@ impl From<crate::W<L1_CACHE_PRELOCK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function on L1-Cache."]
-pub type L1_CACHE_PRELOCK_SCT0_EN_R = crate::BitReader<bool>;
+pub type L1_CACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT0_EN` writer - The bit is used to enable the first section of prelock function on L1-Cache."]
 pub type L1_CACHE_PRELOCK_SCT0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_PRELOCK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_PRELOCK_CONF_SPEC, O>;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function on L1-Cache."]
-pub type L1_CACHE_PRELOCK_SCT1_EN_R = crate::BitReader<bool>;
+pub type L1_CACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PRELOCK_SCT1_EN` writer - The bit is used to enable the second section of prelock function on L1-Cache."]
 pub type L1_CACHE_PRELOCK_SCT1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_PRELOCK_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_PRELOCK_CONF_SPEC, O>;
 #[doc = "Field `L1_CACHE_PRELOCK_RGID` reader - The bit is used to set the gid of l1 cache prelock."]
-pub type L1_CACHE_PRELOCK_RGID_R = crate::FieldReader<u8, u8>;
+pub type L1_CACHE_PRELOCK_RGID_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function on L1-Cache."]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_prelock_rgid(&self) -> L1_CACHE_PRELOCK_RGID_R {
         L1_CACHE_PRELOCK_RGID_R::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_PRELOCK_CONF")
+            .field(
+                "l1_cache_prelock_sct0_en",
+                &format_args!("{}", self.l1_cache_prelock_sct0_en().bit()),
+            )
+            .field(
+                "l1_cache_prelock_sct1_en",
+                &format_args!("{}", self.l1_cache_prelock_sct1_en().bit()),
+            )
+            .field(
+                "l1_cache_prelock_rgid",
+                &format_args!("{}", self.l1_cache_prelock_rgid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOCK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

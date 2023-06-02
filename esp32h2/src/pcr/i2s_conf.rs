@@ -35,17 +35,17 @@ impl From<crate::W<I2S_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_CLK_EN` reader - Set 1 to enable i2s apb clock"]
-pub type I2S_CLK_EN_R = crate::BitReader<bool>;
+pub type I2S_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S_CLK_EN` writer - Set 1 to enable i2s apb clock"]
-pub type I2S_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_CONF_SPEC, bool, O>;
+pub type I2S_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2S_CONF_SPEC, O>;
 #[doc = "Field `I2S_RST_EN` reader - Set 0 to reset i2s module"]
-pub type I2S_RST_EN_R = crate::BitReader<bool>;
+pub type I2S_RST_EN_R = crate::BitReader;
 #[doc = "Field `I2S_RST_EN` writer - Set 0 to reset i2s module"]
-pub type I2S_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2S_CONF_SPEC, bool, O>;
+pub type I2S_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2S_CONF_SPEC, O>;
 #[doc = "Field `I2S_RX_READY` reader - Query this field before using i2s rx function, after reset i2s module"]
-pub type I2S_RX_READY_R = crate::BitReader<bool>;
+pub type I2S_RX_READY_R = crate::BitReader;
 #[doc = "Field `I2S_TX_READY` reader - Query this field before using i2s tx function, after reset i2s module"]
-pub type I2S_TX_READY_R = crate::BitReader<bool>;
+pub type I2S_TX_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
     #[inline(always)]
@@ -66,6 +66,29 @@ impl R {
     #[inline(always)]
     pub fn i2s_tx_ready(&self) -> I2S_TX_READY_R {
         I2S_TX_READY_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2S_CONF")
+            .field("i2s_clk_en", &format_args!("{}", self.i2s_clk_en().bit()))
+            .field("i2s_rst_en", &format_args!("{}", self.i2s_rst_en().bit()))
+            .field(
+                "i2s_rx_ready",
+                &format_args!("{}", self.i2s_rx_ready().bit()),
+            )
+            .field(
+                "i2s_tx_ready",
+                &format_args!("{}", self.i2s_tx_ready().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2S_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

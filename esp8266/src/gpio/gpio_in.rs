@@ -37,13 +37,11 @@ impl From<crate::W<GPIO_IN_SPEC>> for W {
 #[doc = "Field `GPIO_IN_DATA` reader - The values of the GPIO pins when the GPIO pin is set as input."]
 pub type GPIO_IN_DATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_IN_DATA` writer - The values of the GPIO pins when the GPIO pin is set as input."]
-pub type GPIO_IN_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_IN_SPEC, u16, u16, 16, O>;
+pub type GPIO_IN_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16, u16>;
 #[doc = "Field `GPIO_STRAPPING` reader - The values of the strapping pins."]
 pub type GPIO_STRAPPING_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_STRAPPING` writer - The values of the strapping pins."]
-pub type GPIO_STRAPPING_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_IN_SPEC, u16, u16, 16, O>;
+pub type GPIO_STRAPPING_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The values of the GPIO pins when the GPIO pin is set as input."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn gpio_strapping(&self) -> GPIO_STRAPPING_R {
         GPIO_STRAPPING_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_IN")
+            .field(
+                "gpio_strapping",
+                &format_args!("{}", self.gpio_strapping().bits()),
+            )
+            .field(
+                "gpio_in_data",
+                &format_args!("{}", self.gpio_in_data().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_IN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

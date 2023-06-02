@@ -38,12 +38,29 @@ impl From<crate::W<SCL_LOW_PERIOD_SPEC>> for W {
 pub type SCL_LOW_PERIOD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SCL_LOW_PERIOD` writer - reg_scl_low_period"]
 pub type SCL_LOW_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SCL_LOW_PERIOD_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_scl_low_period"]
     #[inline(always)]
     pub fn scl_low_period(&self) -> SCL_LOW_PERIOD_R {
         SCL_LOW_PERIOD_R::new((self.bits & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCL_LOW_PERIOD")
+            .field(
+                "scl_low_period",
+                &format_args!("{}", self.scl_low_period().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SCL_LOW_PERIOD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

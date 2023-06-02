@@ -35,15 +35,32 @@ impl From<crate::W<PRO_TG1_LACT_EDGE_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_TG1_LACT_EDGE_INT_MAP` reader - "]
-pub type PRO_TG1_LACT_EDGE_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type PRO_TG1_LACT_EDGE_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `PRO_TG1_LACT_EDGE_INT_MAP` writer - "]
 pub type PRO_TG1_LACT_EDGE_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_TG1_LACT_EDGE_INT_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, PRO_TG1_LACT_EDGE_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     pub fn pro_tg1_lact_edge_int_map(&self) -> PRO_TG1_LACT_EDGE_INT_MAP_R {
         PRO_TG1_LACT_EDGE_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_TG1_LACT_EDGE_INT_MAP")
+            .field(
+                "pro_tg1_lact_edge_int_map",
+                &format_args!("{}", self.pro_tg1_lact_edge_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_TG1_LACT_EDGE_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

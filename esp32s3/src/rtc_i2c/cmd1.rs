@@ -37,9 +37,9 @@ impl From<crate::W<CMD1_SPEC>> for W {
 #[doc = "Field `COMMAND1` reader - command1"]
 pub type COMMAND1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COMMAND1` writer - command1"]
-pub type COMMAND1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMD1_SPEC, u16, u16, 14, O>;
+pub type COMMAND1_W<'a, const O: u8> = crate::FieldWriter<'a, CMD1_SPEC, 14, O, u16, u16>;
 #[doc = "Field `COMMAND1_DONE` reader - command1_done"]
-pub type COMMAND1_DONE_R = crate::BitReader<bool>;
+pub type COMMAND1_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:13 - command1"]
     #[inline(always)]
@@ -50,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn command1_done(&self) -> COMMAND1_DONE_R {
         COMMAND1_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD1")
+            .field("command1", &format_args!("{}", self.command1().bits()))
+            .field(
+                "command1_done",
+                &format_args!("{}", self.command1_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

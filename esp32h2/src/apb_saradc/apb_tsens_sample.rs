@@ -38,12 +38,11 @@ impl From<crate::W<APB_TSENS_SAMPLE_SPEC>> for W {
 pub type TSENS_SAMPLE_RATE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TSENS_SAMPLE_RATE` writer - HW sample rate"]
 pub type TSENS_SAMPLE_RATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_TSENS_SAMPLE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, APB_TSENS_SAMPLE_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TSENS_SAMPLE_EN` reader - HW sample en"]
-pub type TSENS_SAMPLE_EN_R = crate::BitReader<bool>;
+pub type TSENS_SAMPLE_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_SAMPLE_EN` writer - HW sample en"]
-pub type TSENS_SAMPLE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_TSENS_SAMPLE_SPEC, bool, O>;
+pub type TSENS_SAMPLE_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_TSENS_SAMPLE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - HW sample rate"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn tsens_sample_en(&self) -> TSENS_SAMPLE_EN_R {
         TSENS_SAMPLE_EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_TSENS_SAMPLE")
+            .field(
+                "tsens_sample_rate",
+                &format_args!("{}", self.tsens_sample_rate().bits()),
+            )
+            .field(
+                "tsens_sample_en",
+                &format_args!("{}", self.tsens_sample_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_TSENS_SAMPLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

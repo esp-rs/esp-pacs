@@ -35,33 +35,33 @@ impl From<crate::W<CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `FLOW_ERR` reader - x"]
-pub type FLOW_ERR_R = crate::FieldReader<u8, u8>;
+pub type FLOW_ERR_R = crate::FieldReader;
 #[doc = "Field `ADDR_MAP_MODE` reader - x"]
-pub type ADDR_MAP_MODE_R = crate::BitReader<bool>;
+pub type ADDR_MAP_MODE_R = crate::BitReader;
 #[doc = "Field `ADDR_MAP_MODE` writer - x"]
-pub type ADDR_MAP_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
+pub type ADDR_MAP_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG_SPEC, O>;
 #[doc = "Field `BURST_LIMIT` reader - x"]
-pub type BURST_LIMIT_R = crate::FieldReader<u8, u8>;
+pub type BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `BURST_LIMIT` writer - x"]
-pub type BURST_LIMIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u8, u8, 5, O>;
+pub type BURST_LIMIT_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG_SPEC, 5, O>;
 #[doc = "Field `TOUT_THRES` reader - x"]
 pub type TOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUT_THRES` writer - x"]
-pub type TOUT_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u16, u16, 10, O>;
+pub type TOUT_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SIZE` reader - x"]
 pub type SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SIZE` writer - x"]
-pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONFIG_SPEC, u16, u16, 10, O>;
+pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG_SPEC, 10, O, u16, u16>;
 #[doc = "Field `START` writer - x"]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG_SPEC, O>;
 #[doc = "Field `TO_MEM` reader - x"]
-pub type TO_MEM_R = crate::BitReader<bool>;
+pub type TO_MEM_R = crate::BitReader;
 #[doc = "Field `TO_MEM` writer - x"]
-pub type TO_MEM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
+pub type TO_MEM_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG_SPEC, O>;
 #[doc = "Field `ENA` reader - x"]
-pub type ENA_R = crate::BitReader<bool>;
+pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - x"]
-pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG_SPEC, bool, O>;
+pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - x"]
     #[inline(always)]
@@ -97,6 +97,32 @@ impl R {
     #[inline(always)]
     pub fn ena(&self) -> ENA_R {
         ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONFIG")
+            .field("flow_err", &format_args!("{}", self.flow_err().bits()))
+            .field(
+                "addr_map_mode",
+                &format_args!("{}", self.addr_map_mode().bit()),
+            )
+            .field(
+                "burst_limit",
+                &format_args!("{}", self.burst_limit().bits()),
+            )
+            .field("tout_thres", &format_args!("{}", self.tout_thres().bits()))
+            .field("size", &format_args!("{}", self.size().bits()))
+            .field("to_mem", &format_args!("{}", self.to_mem().bit()))
+            .field("ena", &format_args!("{}", self.ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

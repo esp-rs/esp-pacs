@@ -35,18 +35,17 @@ impl From<crate::W<TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMING_CLK_ENA` reader - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
-pub type TIMING_CLK_ENA_R = crate::BitReader<bool>;
+pub type TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `TIMING_CLK_ENA` writer - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
-pub type TIMING_CLK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMING_CALI_SPEC, bool, O>;
+pub type TIMING_CLK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, TIMING_CALI_SPEC, O>;
 #[doc = "Field `TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub type TIMING_CALI_R = crate::BitReader<bool>;
+pub type TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `TIMING_CALI` writer - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub type TIMING_CALI_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMING_CALI_SPEC, bool, O>;
+pub type TIMING_CALI_W<'a, const O: u8> = crate::BitWriter<'a, TIMING_CALI_SPEC, O>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
-pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to flash. Active when SPI_MEM_TIMING_CALI bit is set."]
-pub type EXTRA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_CALI_SPEC, u8, u8, 3, O>;
+pub type EXTRA_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_CALI_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power on HCLK. When PLL is powered on, the frequency of HCLK equals to that of PLL. Otherwise, the frequency equals to that of XTAL."]
     #[inline(always)]
@@ -62,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&self) -> EXTRA_DUMMY_CYCLELEN_R {
         EXTRA_DUMMY_CYCLELEN_R::new(((self.bits >> 2) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMING_CALI")
+            .field(
+                "timing_clk_ena",
+                &format_args!("{}", self.timing_clk_ena().bit()),
+            )
+            .field("timing_cali", &format_args!("{}", self.timing_cali().bit()))
+            .field(
+                "extra_dummy_cyclelen",
+                &format_args!("{}", self.extra_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMING_CALI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,29 +35,29 @@ impl From<crate::W<GOTGINT_SPEC>> for W {
     }
 }
 #[doc = "Field `SESENDDET` reader - "]
-pub type SESENDDET_R = crate::BitReader<bool>;
+pub type SESENDDET_R = crate::BitReader;
 #[doc = "Field `SESENDDET` writer - "]
-pub type SESENDDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type SESENDDET_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 #[doc = "Field `SESREQSUCSTSCHNG` reader - "]
-pub type SESREQSUCSTSCHNG_R = crate::BitReader<bool>;
+pub type SESREQSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `SESREQSUCSTSCHNG` writer - "]
-pub type SESREQSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type SESREQSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 #[doc = "Field `HSTNEGSUCSTSCHNG` reader - "]
-pub type HSTNEGSUCSTSCHNG_R = crate::BitReader<bool>;
+pub type HSTNEGSUCSTSCHNG_R = crate::BitReader;
 #[doc = "Field `HSTNEGSUCSTSCHNG` writer - "]
-pub type HSTNEGSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type HSTNEGSUCSTSCHNG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 #[doc = "Field `HSTNEGDET` reader - "]
-pub type HSTNEGDET_R = crate::BitReader<bool>;
+pub type HSTNEGDET_R = crate::BitReader;
 #[doc = "Field `HSTNEGDET` writer - "]
-pub type HSTNEGDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type HSTNEGDET_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 #[doc = "Field `ADEVTOUTCHG` reader - "]
-pub type ADEVTOUTCHG_R = crate::BitReader<bool>;
+pub type ADEVTOUTCHG_R = crate::BitReader;
 #[doc = "Field `ADEVTOUTCHG` writer - "]
-pub type ADEVTOUTCHG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type ADEVTOUTCHG_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 #[doc = "Field `DBNCEDONE` reader - "]
-pub type DBNCEDONE_R = crate::BitReader<bool>;
+pub type DBNCEDONE_R = crate::BitReader;
 #[doc = "Field `DBNCEDONE` writer - "]
-pub type DBNCEDONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGINT_SPEC, bool, O>;
+pub type DBNCEDONE_W<'a, const O: u8> = crate::BitWriter<'a, GOTGINT_SPEC, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -88,6 +88,31 @@ impl R {
     #[inline(always)]
     pub fn dbncedone(&self) -> DBNCEDONE_R {
         DBNCEDONE_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOTGINT")
+            .field("sesenddet", &format_args!("{}", self.sesenddet().bit()))
+            .field(
+                "sesreqsucstschng",
+                &format_args!("{}", self.sesreqsucstschng().bit()),
+            )
+            .field(
+                "hstnegsucstschng",
+                &format_args!("{}", self.hstnegsucstschng().bit()),
+            )
+            .field("hstnegdet", &format_args!("{}", self.hstnegdet().bit()))
+            .field("adevtoutchg", &format_args!("{}", self.adevtoutchg().bit()))
+            .field("dbncedone", &format_args!("{}", self.dbncedone().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GOTGINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

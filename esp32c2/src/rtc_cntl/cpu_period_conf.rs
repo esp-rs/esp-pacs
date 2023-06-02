@@ -35,14 +35,13 @@ impl From<crate::W<CPU_PERIOD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPUSEL_CONF` reader - CPU sel option"]
-pub type CPUSEL_CONF_R = crate::BitReader<bool>;
+pub type CPUSEL_CONF_R = crate::BitReader;
 #[doc = "Field `CPUSEL_CONF` writer - CPU sel option"]
-pub type CPUSEL_CONF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPU_PERIOD_CONF_SPEC, bool, O>;
+pub type CPUSEL_CONF_W<'a, const O: u8> = crate::BitWriter<'a, CPU_PERIOD_CONF_SPEC, O>;
 #[doc = "Field `CPUPERIOD_SEL` reader - Need add desc"]
-pub type CPUPERIOD_SEL_R = crate::FieldReader<u8, u8>;
+pub type CPUPERIOD_SEL_R = crate::FieldReader;
 #[doc = "Field `CPUPERIOD_SEL` writer - Need add desc"]
-pub type CPUPERIOD_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_PERIOD_CONF_SPEC, u8, u8, 2, O>;
+pub type CPUPERIOD_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_PERIOD_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn cpuperiod_sel(&self) -> CPUPERIOD_SEL_R {
         CPUPERIOD_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_PERIOD_CONF")
+            .field("cpusel_conf", &format_args!("{}", self.cpusel_conf().bit()))
+            .field(
+                "cpuperiod_sel",
+                &format_args!("{}", self.cpuperiod_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_PERIOD_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

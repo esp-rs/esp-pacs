@@ -35,40 +35,33 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_TSENS_INT_RAW` reader - saradc tsens interrupt raw"]
-pub type APB_SARADC_TSENS_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC_TSENS_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_TSENS_INT_RAW` writer - saradc tsens interrupt raw"]
-pub type APB_SARADC_TSENS_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC_TSENS_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_RAW` reader - saradc thres1 low interrupt raw"]
-pub type APB_SARADC_THRES1_LOW_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES1_LOW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_RAW` writer - saradc thres1 low interrupt raw"]
-pub type APB_SARADC_THRES1_LOW_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC_THRES1_LOW_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_RAW` reader - saradc thres0 low interrupt raw"]
-pub type APB_SARADC_THRES0_LOW_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES0_LOW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_RAW` writer - saradc thres0 low interrupt raw"]
-pub type APB_SARADC_THRES0_LOW_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC_THRES0_LOW_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_RAW` reader - saradc thres1 high interrupt raw"]
-pub type APB_SARADC_THRES1_HIGH_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES1_HIGH_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_RAW` writer - saradc thres1 high interrupt raw"]
-pub type APB_SARADC_THRES1_HIGH_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC_THRES1_HIGH_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_RAW` reader - saradc thres0 high interrupt raw"]
-pub type APB_SARADC_THRES0_HIGH_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES0_HIGH_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_RAW` writer - saradc thres0 high interrupt raw"]
-pub type APB_SARADC_THRES0_HIGH_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC_THRES0_HIGH_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC2_DONE_INT_RAW` reader - saradc2 done interrupt raw"]
-pub type APB_SARADC2_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC2_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC2_DONE_INT_RAW` writer - saradc2 done interrupt raw"]
-pub type APB_SARADC2_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC2_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `APB_SARADC1_DONE_INT_RAW` reader - saradc1 done interrupt raw"]
-pub type APB_SARADC1_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type APB_SARADC1_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APB_SARADC1_DONE_INT_RAW` writer - saradc1 done interrupt raw"]
-pub type APB_SARADC1_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type APB_SARADC1_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 25 - saradc tsens interrupt raw"]
     #[inline(always)]
@@ -104,6 +97,47 @@ impl R {
     #[inline(always)]
     pub fn apb_saradc1_done_int_raw(&self) -> APB_SARADC1_DONE_INT_RAW_R {
         APB_SARADC1_DONE_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "apb_saradc_tsens_int_raw",
+                &format_args!("{}", self.apb_saradc_tsens_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc_thres1_low_int_raw",
+                &format_args!("{}", self.apb_saradc_thres1_low_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc_thres0_low_int_raw",
+                &format_args!("{}", self.apb_saradc_thres0_low_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc_thres1_high_int_raw",
+                &format_args!("{}", self.apb_saradc_thres1_high_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc_thres0_high_int_raw",
+                &format_args!("{}", self.apb_saradc_thres0_high_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc2_done_int_raw",
+                &format_args!("{}", self.apb_saradc2_done_int_raw().bit()),
+            )
+            .field(
+                "apb_saradc1_done_int_raw",
+                &format_args!("{}", self.apb_saradc1_done_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

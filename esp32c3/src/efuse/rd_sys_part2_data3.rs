@@ -22,6 +22,23 @@ impl R {
         SYS_DATA_PART2_3_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_SYS_PART2_DATA3")
+            .field(
+                "sys_data_part2_3",
+                &format_args!("{}", self.sys_data_part2_3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_SYS_PART2_DATA3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Register 3 of BLOCK10 (system).\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_sys_part2_data3](index.html) module"]
 pub struct RD_SYS_PART2_DATA3_SPEC;
 impl crate::RegisterSpec for RD_SYS_PART2_DATA3_SPEC {

@@ -35,55 +35,53 @@ impl From<crate::W<BROWN_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_MEM_PID_CONF` reader - "]
-pub type RTC_MEM_PID_CONF_R = crate::FieldReader<u8, u8>;
+pub type RTC_MEM_PID_CONF_R = crate::FieldReader;
 #[doc = "Field `RTC_MEM_PID_CONF` writer - "]
-pub type RTC_MEM_PID_CONF_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u8, u8, 8, O>;
+pub type RTC_MEM_PID_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 8, O>;
 #[doc = "Field `RTC_MEM_CRC_START` reader - "]
-pub type RTC_MEM_CRC_START_R = crate::BitReader<bool>;
+pub type RTC_MEM_CRC_START_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_START` writer - "]
-pub type RTC_MEM_CRC_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type RTC_MEM_CRC_START_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - "]
 pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - "]
 pub type RTC_MEM_CRC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, BROWN_OUT_SPEC, 11, O, u16, u16>;
 #[doc = "Field `CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
-pub type CLOSE_FLASH_ENA_R = crate::BitReader<bool>;
+pub type CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
-pub type CLOSE_FLASH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type CLOSE_FLASH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `PD_RF_ENA` reader - enable power down RF when brown out happens"]
-pub type PD_RF_ENA_R = crate::BitReader<bool>;
+pub type PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `PD_RF_ENA` writer - enable power down RF when brown out happens"]
-pub type PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `RST_WAIT` reader - brown out reset wait cycles"]
 pub type RST_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RST_WAIT` writer - brown out reset wait cycles"]
-pub type RST_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u16, u16, 10, O>;
+pub type RST_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - "]
 pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - "]
 pub type RTC_MEM_CRC_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, BROWN_OUT_SPEC, 11, O, u16, u16>;
 #[doc = "Field `RST_ENA` reader - enable brown out reset"]
-pub type RST_ENA_R = crate::BitReader<bool>;
+pub type RST_ENA_R = crate::BitReader;
 #[doc = "Field `RST_ENA` writer - enable brown out reset"]
-pub type RST_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type RST_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `DBROWN_OUT_THRES` reader - brown out threshold"]
-pub type DBROWN_OUT_THRES_R = crate::FieldReader<u8, u8>;
+pub type DBROWN_OUT_THRES_R = crate::FieldReader;
 #[doc = "Field `DBROWN_OUT_THRES` writer - brown out threshold"]
-pub type DBROWN_OUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BROWN_OUT_SPEC, u8, u8, 3, O>;
+pub type DBROWN_OUT_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 3, O>;
 #[doc = "Field `ENA` reader - enable brown out"]
-pub type ENA_R = crate::BitReader<bool>;
+pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - enable brown out"]
-pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `DET` reader - brown out detect"]
-pub type DET_R = crate::BitReader<bool>;
+pub type DET_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - "]
-pub type RTC_MEM_CRC_FINISH_R = crate::BitReader<bool>;
+pub type RTC_MEM_CRC_FINISH_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_FINISH` writer - "]
-pub type RTC_MEM_CRC_FINISH_W<'a, const O: u8> = crate::BitWriter<'a, u32, BROWN_OUT_SPEC, bool, O>;
+pub type RTC_MEM_CRC_FINISH_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -144,6 +142,52 @@ impl R {
     #[inline(always)]
     pub fn rtc_mem_crc_finish(&self) -> RTC_MEM_CRC_FINISH_R {
         RTC_MEM_CRC_FINISH_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BROWN_OUT")
+            .field(
+                "rtc_mem_pid_conf",
+                &format_args!("{}", self.rtc_mem_pid_conf().bits()),
+            )
+            .field(
+                "rtc_mem_crc_start",
+                &format_args!("{}", self.rtc_mem_crc_start().bit()),
+            )
+            .field(
+                "rtc_mem_crc_addr",
+                &format_args!("{}", self.rtc_mem_crc_addr().bits()),
+            )
+            .field(
+                "close_flash_ena",
+                &format_args!("{}", self.close_flash_ena().bit()),
+            )
+            .field("pd_rf_ena", &format_args!("{}", self.pd_rf_ena().bit()))
+            .field("rst_wait", &format_args!("{}", self.rst_wait().bits()))
+            .field(
+                "rtc_mem_crc_len",
+                &format_args!("{}", self.rtc_mem_crc_len().bits()),
+            )
+            .field("rst_ena", &format_args!("{}", self.rst_ena().bit()))
+            .field(
+                "dbrown_out_thres",
+                &format_args!("{}", self.dbrown_out_thres().bits()),
+            )
+            .field("ena", &format_args!("{}", self.ena().bit()))
+            .field("det", &format_args!("{}", self.det().bit()))
+            .field(
+                "rtc_mem_crc_finish",
+                &format_args!("{}", self.rtc_mem_crc_finish().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BROWN_OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

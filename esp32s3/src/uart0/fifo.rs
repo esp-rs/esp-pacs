@@ -35,14 +35,31 @@ impl From<crate::W<FIFO_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_RD_BYTE` reader - UART 0 accesses FIFO via this register."]
-pub type RXFIFO_RD_BYTE_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_RD_BYTE_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_RD_BYTE` writer - UART 0 accesses FIFO via this register."]
-pub type RXFIFO_RD_BYTE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_SPEC, u8, u8, 8, O>;
+pub type RXFIFO_RD_BYTE_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - UART 0 accesses FIFO via this register."]
     #[inline(always)]
     pub fn rxfifo_rd_byte(&self) -> RXFIFO_RD_BYTE_R {
         RXFIFO_RD_BYTE_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO")
+            .field(
+                "rxfifo_rd_byte",
+                &format_args!("{}", self.rxfifo_rd_byte().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

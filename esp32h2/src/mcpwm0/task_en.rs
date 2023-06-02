@@ -35,96 +35,93 @@ impl From<crate::W<TASK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `TASK_CMPR0_A_UP_EN` reader - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR0_A_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR0_A_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR0_A_UP_EN` writer - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR0_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR0_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CMPR1_A_UP_EN` reader - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR1_A_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR1_A_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR1_A_UP_EN` writer - set this bit high to enable PWM generator1 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR1_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR1_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CMPR2_A_UP_EN` reader - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR2_A_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR2_A_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR2_A_UP_EN` writer - set this bit high to enable PWM generator2 timer stamp A's shadow register update task receive"]
-pub type TASK_CMPR2_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR2_A_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CMPR0_B_UP_EN` reader - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR0_B_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR0_B_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR0_B_UP_EN` writer - set this bit high to enable PWM generator0 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR0_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR0_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CMPR1_B_UP_EN` reader - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR1_B_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR1_B_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR1_B_UP_EN` writer - set this bit high to enable PWM generator1 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR1_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR1_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CMPR2_B_UP_EN` reader - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR2_B_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_CMPR2_B_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CMPR2_B_UP_EN` writer - set this bit high to enable PWM generator2 timer stamp B's shadow register update task receive"]
-pub type TASK_CMPR2_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CMPR2_B_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_GEN_STOP_EN` reader - set this bit high to enable all PWM generate stop task receive"]
-pub type TASK_GEN_STOP_EN_R = crate::BitReader<bool>;
+pub type TASK_GEN_STOP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GEN_STOP_EN` writer - set this bit high to enable all PWM generate stop task receive"]
-pub type TASK_GEN_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_GEN_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER0_SYNC_EN` reader - set this bit high to enable timer0 sync task receive"]
-pub type TASK_TIMER0_SYNC_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER0_SYNC_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER0_SYNC_EN` writer - set this bit high to enable timer0 sync task receive"]
-pub type TASK_TIMER0_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER0_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER1_SYNC_EN` reader - set this bit high to enable timer1 sync task receive"]
-pub type TASK_TIMER1_SYNC_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER1_SYNC_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER1_SYNC_EN` writer - set this bit high to enable timer1 sync task receive"]
-pub type TASK_TIMER1_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER1_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER2_SYNC_EN` reader - set this bit high to enable timer2 sync task receive"]
-pub type TASK_TIMER2_SYNC_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER2_SYNC_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER2_SYNC_EN` writer - set this bit high to enable timer2 sync task receive"]
-pub type TASK_TIMER2_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER2_SYNC_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` reader - set this bit high to enable timer0 period update task receive"]
-pub type TASK_TIMER0_PERIOD_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER0_PERIOD_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER0_PERIOD_UP_EN` writer - set this bit high to enable timer0 period update task receive"]
-pub type TASK_TIMER0_PERIOD_UP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER0_PERIOD_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` reader - set this bit high to enable timer1 period update task receive"]
-pub type TASK_TIMER1_PERIOD_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER1_PERIOD_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER1_PERIOD_UP_EN` writer - set this bit high to enable timer1 period update task receive"]
-pub type TASK_TIMER1_PERIOD_UP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER1_PERIOD_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` reader - set this bit high to enable timer2 period update task receive"]
-pub type TASK_TIMER2_PERIOD_UP_EN_R = crate::BitReader<bool>;
+pub type TASK_TIMER2_PERIOD_UP_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TIMER2_PERIOD_UP_EN` writer - set this bit high to enable timer2 period update task receive"]
-pub type TASK_TIMER2_PERIOD_UP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TIMER2_PERIOD_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TZ0_OST_EN` reader - set this bit high to enable one shot trip0 task receive"]
-pub type TASK_TZ0_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_TZ0_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TZ0_OST_EN` writer - set this bit high to enable one shot trip0 task receive"]
-pub type TASK_TZ0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TZ0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TZ1_OST_EN` reader - set this bit high to enable one shot trip1 task receive"]
-pub type TASK_TZ1_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_TZ1_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TZ1_OST_EN` writer - set this bit high to enable one shot trip1 task receive"]
-pub type TASK_TZ1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TZ1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_TZ2_OST_EN` reader - set this bit high to enable one shot trip2 task receive"]
-pub type TASK_TZ2_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_TZ2_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_TZ2_OST_EN` writer - set this bit high to enable one shot trip2 task receive"]
-pub type TASK_TZ2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_TZ2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CLR0_OST_EN` reader - set this bit high to enable one shot trip0 clear task receive"]
-pub type TASK_CLR0_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_CLR0_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CLR0_OST_EN` writer - set this bit high to enable one shot trip0 clear task receive"]
-pub type TASK_CLR0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CLR0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CLR1_OST_EN` reader - set this bit high to enable one shot trip1 clear task receive"]
-pub type TASK_CLR1_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_CLR1_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CLR1_OST_EN` writer - set this bit high to enable one shot trip1 clear task receive"]
-pub type TASK_CLR1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CLR1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CLR2_OST_EN` reader - set this bit high to enable one shot trip2 clear task receive"]
-pub type TASK_CLR2_OST_EN_R = crate::BitReader<bool>;
+pub type TASK_CLR2_OST_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CLR2_OST_EN` writer - set this bit high to enable one shot trip2 clear task receive"]
-pub type TASK_CLR2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CLR2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CAP0_EN` reader - set this bit high to enable capture0 task receive"]
-pub type TASK_CAP0_EN_R = crate::BitReader<bool>;
+pub type TASK_CAP0_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CAP0_EN` writer - set this bit high to enable capture0 task receive"]
-pub type TASK_CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CAP1_EN` reader - set this bit high to enable capture1 task receive"]
-pub type TASK_CAP1_EN_R = crate::BitReader<bool>;
+pub type TASK_CAP1_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CAP1_EN` writer - set this bit high to enable capture1 task receive"]
-pub type TASK_CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 #[doc = "Field `TASK_CAP2_EN` reader - set this bit high to enable capture2 task receive"]
-pub type TASK_CAP2_EN_R = crate::BitReader<bool>;
+pub type TASK_CAP2_EN_R = crate::BitReader;
 #[doc = "Field `TASK_CAP2_EN` writer - set this bit high to enable capture2 task receive"]
-pub type TASK_CAP2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TASK_EN_SPEC, bool, O>;
+pub type TASK_CAP2_EN_W<'a, const O: u8> = crate::BitWriter<'a, TASK_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - set this bit high to enable PWM generator0 timer stamp A's shadow register update task receive"]
     #[inline(always)]
@@ -235,6 +232,107 @@ impl R {
     #[inline(always)]
     pub fn task_cap2_en(&self) -> TASK_CAP2_EN_R {
         TASK_CAP2_EN_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TASK_EN")
+            .field(
+                "task_cmpr0_a_up_en",
+                &format_args!("{}", self.task_cmpr0_a_up_en().bit()),
+            )
+            .field(
+                "task_cmpr1_a_up_en",
+                &format_args!("{}", self.task_cmpr1_a_up_en().bit()),
+            )
+            .field(
+                "task_cmpr2_a_up_en",
+                &format_args!("{}", self.task_cmpr2_a_up_en().bit()),
+            )
+            .field(
+                "task_cmpr0_b_up_en",
+                &format_args!("{}", self.task_cmpr0_b_up_en().bit()),
+            )
+            .field(
+                "task_cmpr1_b_up_en",
+                &format_args!("{}", self.task_cmpr1_b_up_en().bit()),
+            )
+            .field(
+                "task_cmpr2_b_up_en",
+                &format_args!("{}", self.task_cmpr2_b_up_en().bit()),
+            )
+            .field(
+                "task_gen_stop_en",
+                &format_args!("{}", self.task_gen_stop_en().bit()),
+            )
+            .field(
+                "task_timer0_sync_en",
+                &format_args!("{}", self.task_timer0_sync_en().bit()),
+            )
+            .field(
+                "task_timer1_sync_en",
+                &format_args!("{}", self.task_timer1_sync_en().bit()),
+            )
+            .field(
+                "task_timer2_sync_en",
+                &format_args!("{}", self.task_timer2_sync_en().bit()),
+            )
+            .field(
+                "task_timer0_period_up_en",
+                &format_args!("{}", self.task_timer0_period_up_en().bit()),
+            )
+            .field(
+                "task_timer1_period_up_en",
+                &format_args!("{}", self.task_timer1_period_up_en().bit()),
+            )
+            .field(
+                "task_timer2_period_up_en",
+                &format_args!("{}", self.task_timer2_period_up_en().bit()),
+            )
+            .field(
+                "task_tz0_ost_en",
+                &format_args!("{}", self.task_tz0_ost_en().bit()),
+            )
+            .field(
+                "task_tz1_ost_en",
+                &format_args!("{}", self.task_tz1_ost_en().bit()),
+            )
+            .field(
+                "task_tz2_ost_en",
+                &format_args!("{}", self.task_tz2_ost_en().bit()),
+            )
+            .field(
+                "task_clr0_ost_en",
+                &format_args!("{}", self.task_clr0_ost_en().bit()),
+            )
+            .field(
+                "task_clr1_ost_en",
+                &format_args!("{}", self.task_clr1_ost_en().bit()),
+            )
+            .field(
+                "task_clr2_ost_en",
+                &format_args!("{}", self.task_clr2_ost_en().bit()),
+            )
+            .field(
+                "task_cap0_en",
+                &format_args!("{}", self.task_cap0_en().bit()),
+            )
+            .field(
+                "task_cap1_en",
+                &format_args!("{}", self.task_cap1_en().bit()),
+            )
+            .field(
+                "task_cap2_en",
+                &format_args!("{}", self.task_cap2_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TASK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

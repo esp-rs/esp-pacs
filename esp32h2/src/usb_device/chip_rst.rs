@@ -35,14 +35,13 @@ impl From<crate::W<CHIP_RST_SPEC>> for W {
     }
 }
 #[doc = "Field `RTS` reader - 1: Chip reset is detected from usb serial channel. Software write 1 to clear it."]
-pub type RTS_R = crate::BitReader<bool>;
+pub type RTS_R = crate::BitReader;
 #[doc = "Field `DTR` reader - 1: Chip reset is detected from usb jtag channel. Software write 1 to clear it."]
-pub type DTR_R = crate::BitReader<bool>;
+pub type DTR_R = crate::BitReader;
 #[doc = "Field `USB_UART_CHIP_RST_DIS` reader - Set this bit to disable chip reset from usb serial channel to reset chip."]
-pub type USB_UART_CHIP_RST_DIS_R = crate::BitReader<bool>;
+pub type USB_UART_CHIP_RST_DIS_R = crate::BitReader;
 #[doc = "Field `USB_UART_CHIP_RST_DIS` writer - Set this bit to disable chip reset from usb serial channel to reset chip."]
-pub type USB_UART_CHIP_RST_DIS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CHIP_RST_SPEC, bool, O>;
+pub type USB_UART_CHIP_RST_DIS_W<'a, const O: u8> = crate::BitWriter<'a, CHIP_RST_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: Chip reset is detected from usb serial channel. Software write 1 to clear it."]
     #[inline(always)]
@@ -58,6 +57,25 @@ impl R {
     #[inline(always)]
     pub fn usb_uart_chip_rst_dis(&self) -> USB_UART_CHIP_RST_DIS_R {
         USB_UART_CHIP_RST_DIS_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CHIP_RST")
+            .field("rts", &format_args!("{}", self.rts().bit()))
+            .field("dtr", &format_args!("{}", self.dtr().bit()))
+            .field(
+                "usb_uart_chip_rst_dis",
+                &format_args!("{}", self.usb_uart_chip_rst_dis().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CHIP_RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

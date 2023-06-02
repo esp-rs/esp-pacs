@@ -14,41 +14,41 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_TAKE_DATA_INT_ST` reader - The masked interrupt status bit for I2S_RX_TAKE_DATA_INT interrupt."]
-pub type RX_TAKE_DATA_INT_ST_R = crate::BitReader<bool>;
+pub type RX_TAKE_DATA_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_PUT_DATA_INT_ST` reader - The masked interrupt status bit for I2S_TX_PUT_DATA_INT interrupt."]
-pub type TX_PUT_DATA_INT_ST_R = crate::BitReader<bool>;
+pub type TX_PUT_DATA_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_WFULL_INT_ST` reader - The masked interrupt status bit for I2S_RX_WFULL_INT interrupt."]
-pub type RX_WFULL_INT_ST_R = crate::BitReader<bool>;
+pub type RX_WFULL_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_REMPTY_INT_ST` reader - The masked interrupt status bit for I2S_RX_REMPTY_INT interrupt."]
-pub type RX_REMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type RX_REMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_WFULL_INT_ST` reader - The masked interrupt status bit for I2S_TX_WFULL_INT interrupt."]
-pub type TX_WFULL_INT_ST_R = crate::BitReader<bool>;
+pub type TX_WFULL_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_REMPTY_INT_ST` reader - The masked interrupt status bit for I2S_TX_REMPTY_INT interrupt."]
-pub type TX_REMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type TX_REMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ST` reader - The masked interrupt status bit for I2S_RX_HUNG_INT interrupt."]
-pub type RX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ST` reader - The masked interrupt status bit for I2S_TX_HUNG_INT interrupt."]
-pub type TX_HUNG_INT_ST_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_ST` reader - The masked interrupt status bit for I2S_IN_DONE_INT interrupt."]
-pub type IN_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_ST` reader - The masked interrupt status bit for I2S_IN_SUC_EOF_INT interrupt."]
-pub type IN_SUC_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_ST` reader - Reserved."]
-pub type IN_ERR_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_ST` reader - The masked interrupt status bit for I2S_OUT_DONE_INT interrupt."]
-pub type OUT_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_ST` reader - The masked interrupt status bit for I2S_OUT_EOF_INT interrupt."]
-pub type OUT_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR_INT_ST` reader - The masked interrupt status bit for I2S_IN_DSCR_ERR_INT interrupt."]
-pub type IN_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DSCR_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR_INT_ST` reader - The masked interrupt status bit for I2S_OUT_DSCR_ERR_INT interrupt."]
-pub type OUT_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_DSCR_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY_INT_ST` reader - The masked interrupt status bit for I2S_IN_DSCR_EMPTY_INT interrupt."]
-pub type IN_DSCR_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type IN_DSCR_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ST` reader - The masked interrupt status bit for I2S_OUT_TOTAL_EOF_INT interrupt."]
-pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader;
 #[doc = "Field `V_SYNC_INT_ST` reader - The masked interrupt status bit for I2S_V_SYNC_INT interrupt."]
-pub type V_SYNC_INT_ST_R = crate::BitReader<bool>;
+pub type V_SYNC_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for I2S_RX_TAKE_DATA_INT interrupt."]
     #[inline(always)]
@@ -139,6 +139,91 @@ impl R {
     #[inline(always)]
     pub fn v_sync_int_st(&self) -> V_SYNC_INT_ST_R {
         V_SYNC_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "rx_take_data_int_st",
+                &format_args!("{}", self.rx_take_data_int_st().bit()),
+            )
+            .field(
+                "tx_put_data_int_st",
+                &format_args!("{}", self.tx_put_data_int_st().bit()),
+            )
+            .field(
+                "rx_wfull_int_st",
+                &format_args!("{}", self.rx_wfull_int_st().bit()),
+            )
+            .field(
+                "rx_rempty_int_st",
+                &format_args!("{}", self.rx_rempty_int_st().bit()),
+            )
+            .field(
+                "tx_wfull_int_st",
+                &format_args!("{}", self.tx_wfull_int_st().bit()),
+            )
+            .field(
+                "tx_rempty_int_st",
+                &format_args!("{}", self.tx_rempty_int_st().bit()),
+            )
+            .field(
+                "rx_hung_int_st",
+                &format_args!("{}", self.rx_hung_int_st().bit()),
+            )
+            .field(
+                "tx_hung_int_st",
+                &format_args!("{}", self.tx_hung_int_st().bit()),
+            )
+            .field(
+                "in_done_int_st",
+                &format_args!("{}", self.in_done_int_st().bit()),
+            )
+            .field(
+                "in_suc_eof_int_st",
+                &format_args!("{}", self.in_suc_eof_int_st().bit()),
+            )
+            .field(
+                "in_err_eof_int_st",
+                &format_args!("{}", self.in_err_eof_int_st().bit()),
+            )
+            .field(
+                "out_done_int_st",
+                &format_args!("{}", self.out_done_int_st().bit()),
+            )
+            .field(
+                "out_eof_int_st",
+                &format_args!("{}", self.out_eof_int_st().bit()),
+            )
+            .field(
+                "in_dscr_err_int_st",
+                &format_args!("{}", self.in_dscr_err_int_st().bit()),
+            )
+            .field(
+                "out_dscr_err_int_st",
+                &format_args!("{}", self.out_dscr_err_int_st().bit()),
+            )
+            .field(
+                "in_dscr_empty_int_st",
+                &format_args!("{}", self.in_dscr_empty_int_st().bit()),
+            )
+            .field(
+                "out_total_eof_int_st",
+                &format_args!("{}", self.out_total_eof_int_st().bit()),
+            )
+            .field(
+                "v_sync_int_st",
+                &format_args!("{}", self.v_sync_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

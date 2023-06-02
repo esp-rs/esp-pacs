@@ -35,11 +35,11 @@ impl From<crate::W<ECO_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RDN_ENA` reader - Enable eco module."]
-pub type RDN_ENA_R = crate::BitReader<bool>;
+pub type RDN_ENA_R = crate::BitReader;
 #[doc = "Field `RDN_ENA` writer - Enable eco module."]
-pub type RDN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECO_CFG_SPEC, bool, O>;
+pub type RDN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ECO_CFG_SPEC, O>;
 #[doc = "Field `RDN_RESULT` reader - Output of eco module."]
-pub type RDN_RESULT_R = crate::BitReader<bool>;
+pub type RDN_RESULT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Enable eco module."]
     #[inline(always)]
@@ -50,6 +50,21 @@ impl R {
     #[inline(always)]
     pub fn rdn_result(&self) -> RDN_RESULT_R {
         RDN_RESULT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECO_CFG")
+            .field("rdn_ena", &format_args!("{}", self.rdn_ena().bit()))
+            .field("rdn_result", &format_args!("{}", self.rdn_result().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECO_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

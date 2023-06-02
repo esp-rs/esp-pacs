@@ -38,12 +38,11 @@ impl From<crate::W<TIMER2_SPEC>> for W {
 pub type ULPCP_TOUCH_START_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ULPCP_TOUCH_START_WAIT` writer - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
 pub type ULPCP_TOUCH_START_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER2_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TIMER2_SPEC, 9, O, u16, u16>;
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
-pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader<u8, u8>;
+pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader;
 #[doc = "Field `MIN_TIME_CK8M_OFF` writer - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
-pub type MIN_TIME_CK8M_OFF_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER2_SPEC, u8, u8, 8, O>;
+pub type MIN_TIME_CK8M_OFF_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 15:23 - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn min_time_ck8m_off(&self) -> MIN_TIME_CK8M_OFF_R {
         MIN_TIME_CK8M_OFF_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER2")
+            .field(
+                "ulpcp_touch_start_wait",
+                &format_args!("{}", self.ulpcp_touch_start_wait().bits()),
+            )
+            .field(
+                "min_time_ck8m_off",
+                &format_args!("{}", self.min_time_ck8m_off().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

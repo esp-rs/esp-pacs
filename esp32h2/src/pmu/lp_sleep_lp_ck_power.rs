@@ -35,30 +35,28 @@ impl From<crate::W<LP_SLEEP_LP_CK_POWER_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_SLEEP_XPD_LPPLL` reader - need_des"]
-pub type LP_SLEEP_XPD_LPPLL_R = crate::BitReader<bool>;
+pub type LP_SLEEP_XPD_LPPLL_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_LPPLL` writer - need_des"]
-pub type LP_SLEEP_XPD_LPPLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_SLEEP_LP_CK_POWER_SPEC, bool, O>;
+pub type LP_SLEEP_XPD_LPPLL_W<'a, const O: u8> = crate::BitWriter<'a, LP_SLEEP_LP_CK_POWER_SPEC, O>;
 #[doc = "Field `LP_SLEEP_XPD_XTAL32K` reader - need_des"]
-pub type LP_SLEEP_XPD_XTAL32K_R = crate::BitReader<bool>;
+pub type LP_SLEEP_XPD_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_XTAL32K` writer - need_des"]
 pub type LP_SLEEP_XPD_XTAL32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_SLEEP_LP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_SLEEP_LP_CK_POWER_SPEC, O>;
 #[doc = "Field `LP_SLEEP_XPD_RC32K` reader - need_des"]
-pub type LP_SLEEP_XPD_RC32K_R = crate::BitReader<bool>;
+pub type LP_SLEEP_XPD_RC32K_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_RC32K` writer - need_des"]
-pub type LP_SLEEP_XPD_RC32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_SLEEP_LP_CK_POWER_SPEC, bool, O>;
+pub type LP_SLEEP_XPD_RC32K_W<'a, const O: u8> = crate::BitWriter<'a, LP_SLEEP_LP_CK_POWER_SPEC, O>;
 #[doc = "Field `LP_SLEEP_XPD_FOSC_CLK` reader - need_des"]
-pub type LP_SLEEP_XPD_FOSC_CLK_R = crate::BitReader<bool>;
+pub type LP_SLEEP_XPD_FOSC_CLK_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_XPD_FOSC_CLK` writer - need_des"]
 pub type LP_SLEEP_XPD_FOSC_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_SLEEP_LP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_SLEEP_LP_CK_POWER_SPEC, O>;
 #[doc = "Field `LP_SLEEP_PD_OSC_CLK` reader - need_des"]
-pub type LP_SLEEP_PD_OSC_CLK_R = crate::BitReader<bool>;
+pub type LP_SLEEP_PD_OSC_CLK_R = crate::BitReader;
 #[doc = "Field `LP_SLEEP_PD_OSC_CLK` writer - need_des"]
 pub type LP_SLEEP_PD_OSC_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_SLEEP_LP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_SLEEP_LP_CK_POWER_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -84,6 +82,39 @@ impl R {
     #[inline(always)]
     pub fn lp_sleep_pd_osc_clk(&self) -> LP_SLEEP_PD_OSC_CLK_R {
         LP_SLEEP_PD_OSC_CLK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_SLEEP_LP_CK_POWER")
+            .field(
+                "lp_sleep_xpd_lppll",
+                &format_args!("{}", self.lp_sleep_xpd_lppll().bit()),
+            )
+            .field(
+                "lp_sleep_xpd_xtal32k",
+                &format_args!("{}", self.lp_sleep_xpd_xtal32k().bit()),
+            )
+            .field(
+                "lp_sleep_xpd_rc32k",
+                &format_args!("{}", self.lp_sleep_xpd_rc32k().bit()),
+            )
+            .field(
+                "lp_sleep_xpd_fosc_clk",
+                &format_args!("{}", self.lp_sleep_xpd_fosc_clk().bit()),
+            )
+            .field(
+                "lp_sleep_pd_osc_clk",
+                &format_args!("{}", self.lp_sleep_pd_osc_clk().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_LP_CK_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

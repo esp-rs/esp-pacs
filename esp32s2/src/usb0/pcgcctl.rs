@@ -35,29 +35,29 @@ impl From<crate::W<PCGCCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `STOPPCLK` reader - "]
-pub type STOPPCLK_R = crate::BitReader<bool>;
+pub type STOPPCLK_R = crate::BitReader;
 #[doc = "Field `STOPPCLK` writer - "]
-pub type STOPPCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCGCCTL_SPEC, bool, O>;
+pub type STOPPCLK_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
 #[doc = "Field `GATEHCLK` reader - "]
-pub type GATEHCLK_R = crate::BitReader<bool>;
+pub type GATEHCLK_R = crate::BitReader;
 #[doc = "Field `GATEHCLK` writer - "]
-pub type GATEHCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCGCCTL_SPEC, bool, O>;
+pub type GATEHCLK_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
 #[doc = "Field `PWRCLMP` reader - "]
-pub type PWRCLMP_R = crate::BitReader<bool>;
+pub type PWRCLMP_R = crate::BitReader;
 #[doc = "Field `PWRCLMP` writer - "]
-pub type PWRCLMP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCGCCTL_SPEC, bool, O>;
+pub type PWRCLMP_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
 #[doc = "Field `RSTPDWNMODULE` reader - "]
-pub type RSTPDWNMODULE_R = crate::BitReader<bool>;
+pub type RSTPDWNMODULE_R = crate::BitReader;
 #[doc = "Field `RSTPDWNMODULE` writer - "]
-pub type RSTPDWNMODULE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCGCCTL_SPEC, bool, O>;
+pub type RSTPDWNMODULE_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
 #[doc = "Field `PHYSLEEP` reader - "]
-pub type PHYSLEEP_R = crate::BitReader<bool>;
+pub type PHYSLEEP_R = crate::BitReader;
 #[doc = "Field `L1SUSPENDED` reader - "]
-pub type L1SUSPENDED_R = crate::BitReader<bool>;
+pub type L1SUSPENDED_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` reader - "]
-pub type RESETAFTERSUSP_R = crate::BitReader<bool>;
+pub type RESETAFTERSUSP_R = crate::BitReader;
 #[doc = "Field `RESETAFTERSUSP` writer - "]
-pub type RESETAFTERSUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PCGCCTL_SPEC, bool, O>;
+pub type RESETAFTERSUSP_W<'a, const O: u8> = crate::BitWriter<'a, PCGCCTL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -93,6 +93,32 @@ impl R {
     #[inline(always)]
     pub fn resetaftersusp(&self) -> RESETAFTERSUSP_R {
         RESETAFTERSUSP_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PCGCCTL")
+            .field("stoppclk", &format_args!("{}", self.stoppclk().bit()))
+            .field("gatehclk", &format_args!("{}", self.gatehclk().bit()))
+            .field("pwrclmp", &format_args!("{}", self.pwrclmp().bit()))
+            .field(
+                "rstpdwnmodule",
+                &format_args!("{}", self.rstpdwnmodule().bit()),
+            )
+            .field("physleep", &format_args!("{}", self.physleep().bit()))
+            .field("l1suspended", &format_args!("{}", self.l1suspended().bit()))
+            .field(
+                "resetaftersusp",
+                &format_args!("{}", self.resetaftersusp().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PCGCCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

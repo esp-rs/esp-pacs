@@ -37,12 +37,26 @@ impl From<crate::W<USRID_SPEC>> for W {
 #[doc = "Field `USRID` reader - User identification register, value set by user. Can also be used as a scratchpad register by user."]
 pub type USRID_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USRID` writer - User identification register, value set by user. Can also be used as a scratchpad register by user."]
-pub type USRID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USRID_SPEC, u32, u32, 32, O>;
+pub type USRID_W<'a, const O: u8> = crate::FieldWriter<'a, USRID_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - User identification register, value set by user. Can also be used as a scratchpad register by user."]
     #[inline(always)]
     pub fn usrid(&self) -> USRID_R {
         USRID_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USRID")
+            .field("usrid", &format_args!("{}", self.usrid().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USRID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

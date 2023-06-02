@@ -38,17 +38,15 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
 pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLEEP_REJECT_ENA` writer - sleep reject enable"]
 pub type SLEEP_REJECT_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_REJECT_CONF_SPEC, u32, u32, 18, O>;
+    crate::FieldWriter<'a, SLP_REJECT_CONF_SPEC, 18, O, u32, u32>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
-pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader<bool>;
+pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - enable reject for light sleep"]
-pub type LIGHT_SLP_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type LIGHT_SLP_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - enable reject for deep sleep"]
-pub type DEEP_SLP_REJECT_EN_R = crate::BitReader<bool>;
+pub type DEEP_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `DEEP_SLP_REJECT_EN` writer - enable reject for deep sleep"]
-pub type DEEP_SLP_REJECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, O>;
+pub type DEEP_SLP_REJECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_REJECT_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 12:29 - sleep reject enable"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn deep_slp_reject_en(&self) -> DEEP_SLP_REJECT_EN_R {
         DEEP_SLP_REJECT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_REJECT_CONF")
+            .field(
+                "sleep_reject_ena",
+                &format_args!("{}", self.sleep_reject_ena().bits()),
+            )
+            .field(
+                "light_slp_reject_en",
+                &format_args!("{}", self.light_slp_reject_en().bit()),
+            )
+            .field(
+                "deep_slp_reject_en",
+                &format_args!("{}", self.deep_slp_reject_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

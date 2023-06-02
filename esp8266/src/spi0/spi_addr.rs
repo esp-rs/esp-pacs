@@ -38,15 +38,15 @@ impl From<crate::W<SPI_ADDR_SPEC>> for W {
 pub type IODATA_START_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `iodata_start_addr` writer - In the master mode, it is the value of address in \"address\" phase."]
 pub type IODATA_START_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_ADDR_SPEC, 32, O, u32, u32>;
 #[doc = "Field `address` reader - "]
 pub type ADDRESS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `address` writer - "]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_ADDR_SPEC, u32, u32, 24, O>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_ADDR_SPEC, 24, O, u32, u32>;
 #[doc = "Field `size` reader - "]
-pub type SIZE_R = crate::FieldReader<u8, u8>;
+pub type SIZE_R = crate::FieldReader;
 #[doc = "Field `size` writer - "]
-pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_ADDR_SPEC, u8, u8, 8, O>;
+pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_ADDR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:31 - In the master mode, it is the value of address in \"address\" phase."]
     #[inline(always)]
@@ -62,6 +62,25 @@ impl R {
     #[inline(always)]
     pub fn size(&self) -> SIZE_R {
         SIZE_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_ADDR")
+            .field(
+                "iodata_start_addr",
+                &format_args!("{}", self.iodata_start_addr().bits()),
+            )
+            .field("address", &format_args!("{}", self.address().bits()))
+            .field("size", &format_args!("{}", self.size().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

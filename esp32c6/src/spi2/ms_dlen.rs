@@ -37,13 +37,29 @@ impl From<crate::W<MS_DLEN_SPEC>> for W {
 #[doc = "Field `MS_DATA_BITLEN` reader - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
 pub type MS_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MS_DATA_BITLEN` writer - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type MS_DATA_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MS_DLEN_SPEC, u32, u32, 18, O>;
+pub type MS_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MS_DLEN_SPEC, 18, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn ms_data_bitlen(&self) -> MS_DATA_BITLEN_R {
         MS_DATA_BITLEN_R::new(self.bits & 0x0003_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MS_DLEN")
+            .field(
+                "ms_data_bitlen",
+                &format_args!("{}", self.ms_data_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MS_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

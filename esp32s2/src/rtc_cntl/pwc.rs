@@ -35,93 +35,93 @@ impl From<crate::W<PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `FASTMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC fast memory."]
-pub type FASTMEM_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC fast memory."]
-pub type FASTMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC fast memory."]
-pub type FASTMEM_FORCE_ISO_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC fast memory."]
-pub type FASTMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC slow memory."]
-pub type SLOWMEM_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC slow memory."]
-pub type SLOWMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_ISO` reader - Set this bit to force isolate the RTC slow memory."]
-pub type SLOWMEM_FORCE_ISO_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_ISO` writer - Set this bit to force isolate the RTC slow memory."]
-pub type SLOWMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FORCE_ISO` reader - Set this bit to force isolate the RTC peripherals."]
-pub type FORCE_ISO_R = crate::BitReader<bool>;
+pub type FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_ISO` writer - Set this bit to force isolate the RTC peripherals."]
-pub type FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FORCE_NOISO` reader - Set this bit to disable the force isolation to the RTC peripherals."]
-pub type FORCE_NOISO_R = crate::BitReader<bool>;
+pub type FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `FORCE_NOISO` writer - Set this bit to disable the force isolation to the RTC peripherals."]
-pub type FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FOLW_CPU` reader - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
-pub type FASTMEM_FOLW_CPU_R = crate::BitReader<bool>;
+pub type FASTMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FOLW_CPU` writer - Set 1 to FPD the RTC fast memory when the CPU is powered down. Set 0 to FPD the RTC fast memory when the RTC main state machine is powered down."]
-pub type FASTMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_LPD` reader - Set this bit to force not retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPD_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPD` writer - Set this bit to force not retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_LPU` reader - Set this bit to force retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPU_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPU` writer - Set this bit to force retain the RTC fast memory."]
-pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FOLW_CPU` reader - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
-pub type SLOWMEM_FOLW_CPU_R = crate::BitReader<bool>;
+pub type SLOWMEM_FOLW_CPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FOLW_CPU` writer - Set 1 to FPD the RTC slow memory when the CPU is powered down. Set 0 to FPD the RTC slow memory when the RTC main state machine is powered down."]
-pub type SLOWMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FOLW_CPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_LPD` reader - Set this bit to force not retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPD_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPD` writer - Set this bit to force not retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_LPU` reader - Set this bit to force retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPU_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_LPU` writer - Set this bit to force retain the RTC slow memory."]
-pub type SLOWMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_PD` reader - Set this bit to FPD the RTC fast memory."]
-pub type FASTMEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PD` writer - Set this bit to FPD the RTC fast memory."]
-pub type FASTMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_PU` reader - Set this bit to FPU the RTC fast memory."]
-pub type FASTMEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_PU` writer - Set this bit to FPU the RTC fast memory."]
-pub type FASTMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_PD_EN` reader - Set this bit to enable PD for the RTC fast memory in sleep."]
-pub type FASTMEM_PD_EN_R = crate::BitReader<bool>;
+pub type FASTMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `FASTMEM_PD_EN` writer - Set this bit to enable PD for the RTC fast memory in sleep."]
-pub type FASTMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FASTMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_PD` reader - Set this bit to FPD the RTC slow memory."]
-pub type SLOWMEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PD` writer - Set this bit to FPD the RTC slow memory."]
-pub type SLOWMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_FORCE_PU` reader - Set this bit to FPU the RTC slow memory."]
-pub type SLOWMEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type SLOWMEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_FORCE_PU` writer - Set this bit to FPU the RTC slow memory."]
-pub type SLOWMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `SLOWMEM_PD_EN` reader - Set this bit to enable PD for the RTC slow memory in sleep."]
-pub type SLOWMEM_PD_EN_R = crate::BitReader<bool>;
+pub type SLOWMEM_PD_EN_R = crate::BitReader;
 #[doc = "Field `SLOWMEM_PD_EN` writer - Set this bit to enable PD for the RTC slow memory in sleep."]
-pub type SLOWMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type SLOWMEM_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FORCE_PD` reader - Set this bit to FPD the RTC peripherals."]
-pub type FORCE_PD_R = crate::BitReader<bool>;
+pub type FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_PD` writer - Set this bit to FPD the RTC peripherals."]
-pub type FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `FORCE_PU` reader - Set this bit to FPU the RTC peripherals."]
-pub type FORCE_PU_R = crate::BitReader<bool>;
+pub type FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_PU` writer - Set this bit to FPU the RTC peripherals."]
-pub type FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `PD_EN` reader - Set this bit to enable PD for the RTC peripherals in sleep."]
-pub type PD_EN_R = crate::BitReader<bool>;
+pub type PD_EN_R = crate::BitReader;
 #[doc = "Field `PD_EN` writer - Set this bit to enable PD for the RTC peripherals in sleep."]
-pub type PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 #[doc = "Field `PAD_FORCE_HOLD` reader - Set this bit the force hold the RTC GPIOs."]
-pub type PAD_FORCE_HOLD_R = crate::BitReader<bool>;
+pub type PAD_FORCE_HOLD_R = crate::BitReader;
 #[doc = "Field `PAD_FORCE_HOLD` writer - Set this bit the force hold the RTC GPIOs."]
-pub type PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWC_SPEC, bool, O>;
+pub type PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PWC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable the force isolation to the RTC fast memory."]
     #[inline(always)]
@@ -232,6 +232,92 @@ impl R {
     #[inline(always)]
     pub fn pad_force_hold(&self) -> PAD_FORCE_HOLD_R {
         PAD_FORCE_HOLD_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWC")
+            .field(
+                "fastmem_force_noiso",
+                &format_args!("{}", self.fastmem_force_noiso().bit()),
+            )
+            .field(
+                "fastmem_force_iso",
+                &format_args!("{}", self.fastmem_force_iso().bit()),
+            )
+            .field(
+                "slowmem_force_noiso",
+                &format_args!("{}", self.slowmem_force_noiso().bit()),
+            )
+            .field(
+                "slowmem_force_iso",
+                &format_args!("{}", self.slowmem_force_iso().bit()),
+            )
+            .field("force_iso", &format_args!("{}", self.force_iso().bit()))
+            .field("force_noiso", &format_args!("{}", self.force_noiso().bit()))
+            .field(
+                "fastmem_folw_cpu",
+                &format_args!("{}", self.fastmem_folw_cpu().bit()),
+            )
+            .field(
+                "fastmem_force_lpd",
+                &format_args!("{}", self.fastmem_force_lpd().bit()),
+            )
+            .field(
+                "fastmem_force_lpu",
+                &format_args!("{}", self.fastmem_force_lpu().bit()),
+            )
+            .field(
+                "slowmem_folw_cpu",
+                &format_args!("{}", self.slowmem_folw_cpu().bit()),
+            )
+            .field(
+                "slowmem_force_lpd",
+                &format_args!("{}", self.slowmem_force_lpd().bit()),
+            )
+            .field(
+                "slowmem_force_lpu",
+                &format_args!("{}", self.slowmem_force_lpu().bit()),
+            )
+            .field(
+                "fastmem_force_pd",
+                &format_args!("{}", self.fastmem_force_pd().bit()),
+            )
+            .field(
+                "fastmem_force_pu",
+                &format_args!("{}", self.fastmem_force_pu().bit()),
+            )
+            .field(
+                "fastmem_pd_en",
+                &format_args!("{}", self.fastmem_pd_en().bit()),
+            )
+            .field(
+                "slowmem_force_pd",
+                &format_args!("{}", self.slowmem_force_pd().bit()),
+            )
+            .field(
+                "slowmem_force_pu",
+                &format_args!("{}", self.slowmem_force_pu().bit()),
+            )
+            .field(
+                "slowmem_pd_en",
+                &format_args!("{}", self.slowmem_pd_en().bit()),
+            )
+            .field("force_pd", &format_args!("{}", self.force_pd().bit()))
+            .field("force_pu", &format_args!("{}", self.force_pu().bit()))
+            .field("pd_en", &format_args!("{}", self.pd_en().bit()))
+            .field(
+                "pad_force_hold",
+                &format_args!("{}", self.pad_force_hold().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PWC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

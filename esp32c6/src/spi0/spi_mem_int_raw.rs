@@ -35,31 +35,31 @@ impl From<crate::W<SPI_MEM_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
-pub type SPI_MEM_SLV_ST_END_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_SLV_ST_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_RAW` writer - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
 pub type SPI_MEM_SLV_ST_END_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_RAW_SPEC, O>;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi0_mst_st is changed from non idle state to idle state. 0: Others."]
-pub type SPI_MEM_MST_ST_END_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_MST_ST_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_RAW` writer - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi0_mst_st is changed from non idle state to idle state. 0: Others."]
 pub type SPI_MEM_MST_ST_END_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_RAW_SPEC, O>;
 #[doc = "Field `SPI_MEM_ECC_ERR_INT_RAW` reader - The raw bit for SPI_MEM_ECC_ERR_INT interrupt. When SPI_FMEM_ECC_ERR_INT_EN is set and SPI_SMEM_ECC_ERR_INT_EN is cleared, this bit is triggered when the error times of SPI0/1 ECC read flash are equal or bigger than SPI_MEM_ECC_ERR_INT_NUM. When SPI_FMEM_ECC_ERR_INT_EN is cleared and SPI_SMEM_ECC_ERR_INT_EN is set, this bit is triggered when the error times of SPI0/1 ECC read external RAM are equal or bigger than SPI_MEM_ECC_ERR_INT_NUM. When SPI_FMEM_ECC_ERR_INT_EN and SPI_SMEM_ECC_ERR_INT_EN are set, this bit is triggered when the total error times of SPI0/1 ECC read external RAM and flash are equal or bigger than SPI_MEM_ECC_ERR_INT_NUM. When SPI_FMEM_ECC_ERR_INT_EN and SPI_SMEM_ECC_ERR_INT_EN are cleared, this bit will not be triggered."]
-pub type SPI_MEM_ECC_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_ECC_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_REJECT_INT_RAW` reader - The raw bit for SPI_MEM_PMS_REJECT_INT interrupt. 1: Triggered when SPI1 access is rejected. 0: Others."]
-pub type SPI_MEM_PMS_REJECT_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_REJECT_INT_RAW` writer - The raw bit for SPI_MEM_PMS_REJECT_INT interrupt. 1: Triggered when SPI1 access is rejected. 0: Others."]
 pub type SPI_MEM_PMS_REJECT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_RAW_SPEC, O>;
 #[doc = "Field `SPI_MEM_AXI_RADDR_ERR_INT_RAW` reader - The raw bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt. 1: Triggered when AXI read address is invalid by compared to MMU configuration. 0: Others."]
-pub type SPI_MEM_AXI_RADDR_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_RADDR_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_RADDR_ERR_INT_RAW` writer - The raw bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt. 1: Triggered when AXI read address is invalid by compared to MMU configuration. 0: Others."]
 pub type SPI_MEM_AXI_RADDR_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_RAW_SPEC, O>;
 #[doc = "Field `SPI_MEM_AXI_WR_FLASH_ERR_INT_RAW` reader - The raw bit for SPI_MEM_AXI_WR_FALSH_ERR_INT interrupt. 1: Triggered when AXI write flash request is received. 0: Others."]
-pub type SPI_MEM_AXI_WR_FLASH_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_WR_FLASH_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_WADDR_ERR_INT_RAW` reader - The raw bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt. 1: Triggered when AXI write address is invalid by compared to MMU configuration. 0: Others."]
-pub type SPI_MEM_AXI_WADDR_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_WADDR_ERR_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi0_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
@@ -95,6 +95,47 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_axi_waddr_err_int_raw(&self) -> SPI_MEM_AXI_WADDR_ERR_INT_RAW_R {
         SPI_MEM_AXI_WADDR_ERR_INT_RAW_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_INT_RAW")
+            .field(
+                "spi_mem_slv_st_end_int_raw",
+                &format_args!("{}", self.spi_mem_slv_st_end_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_mst_st_end_int_raw",
+                &format_args!("{}", self.spi_mem_mst_st_end_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_ecc_err_int_raw",
+                &format_args!("{}", self.spi_mem_ecc_err_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_pms_reject_int_raw",
+                &format_args!("{}", self.spi_mem_pms_reject_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_axi_raddr_err_int_raw",
+                &format_args!("{}", self.spi_mem_axi_raddr_err_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_axi_wr_flash_err_int_raw",
+                &format_args!("{}", self.spi_mem_axi_wr_flash_err_int_raw().bit()),
+            )
+            .field(
+                "spi_mem_axi_waddr_err_int_raw",
+                &format_args!("{}", self.spi_mem_axi_waddr_err_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,26 @@ impl From<crate::W<SLP_TIMER0_SPEC>> for W {
 #[doc = "Field `SLP_VAL_LO` reader - Need add desc"]
 pub type SLP_VAL_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLP_VAL_LO` writer - Need add desc"]
-pub type SLP_VAL_LO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_TIMER0_SPEC, u32, u32, 32, O>;
+pub type SLP_VAL_LO_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
     pub fn slp_val_lo(&self) -> SLP_VAL_LO_R {
         SLP_VAL_LO_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_TIMER0")
+            .field("slp_val_lo", &format_args!("{}", self.slp_val_lo().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_TIMER0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

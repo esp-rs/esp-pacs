@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00..0x10 - The read and write data register for CHANNEL%s by apb fifo access."]
     pub chdata: [CHDATA; 4],

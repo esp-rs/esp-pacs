@@ -38,12 +38,12 @@ impl From<crate::W<HOST_SLCHOST_RDCLR1_SPEC>> for W {
 pub type HOST_SLCHOST_SLC1_BIT7_CLRADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HOST_SLCHOST_SLC1_BIT7_CLRADDR` writer - "]
 pub type HOST_SLCHOST_SLC1_BIT7_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_RDCLR1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_RDCLR1_SPEC, 9, O, u16, u16>;
 #[doc = "Field `HOST_SLCHOST_SLC1_BIT6_CLRADDR` reader - "]
 pub type HOST_SLCHOST_SLC1_BIT6_CLRADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HOST_SLCHOST_SLC1_BIT6_CLRADDR` writer - "]
 pub type HOST_SLCHOST_SLC1_BIT6_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLCHOST_RDCLR1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, HOST_SLCHOST_RDCLR1_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn host_slchost_slc1_bit6_clraddr(&self) -> HOST_SLCHOST_SLC1_BIT6_CLRADDR_R {
         HOST_SLCHOST_SLC1_BIT6_CLRADDR_R::new(((self.bits >> 9) & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLCHOST_RDCLR1")
+            .field(
+                "host_slchost_slc1_bit7_clraddr",
+                &format_args!("{}", self.host_slchost_slc1_bit7_clraddr().bits()),
+            )
+            .field(
+                "host_slchost_slc1_bit6_clraddr",
+                &format_args!("{}", self.host_slchost_slc1_bit6_clraddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_RDCLR1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

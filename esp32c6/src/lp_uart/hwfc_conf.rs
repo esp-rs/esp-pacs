@@ -35,14 +35,13 @@ impl From<crate::W<HWFC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
-pub type RX_FLOW_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_FLOW_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_FLOW_THRHD` writer - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
-pub type RX_FLOW_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HWFC_CONF_SPEC, u8, u8, 5, O>;
+pub type RX_FLOW_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, HWFC_CONF_SPEC, 5, O>;
 #[doc = "Field `RX_FLOW_EN` reader - This is the flow enable bit for UART receiver."]
-pub type RX_FLOW_EN_R = crate::BitReader<bool>;
+pub type RX_FLOW_EN_R = crate::BitReader;
 #[doc = "Field `RX_FLOW_EN` writer - This is the flow enable bit for UART receiver."]
-pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HWFC_CONF_SPEC, bool, O>;
+pub type RX_FLOW_EN_W<'a, const O: u8> = crate::BitWriter<'a, HWFC_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 3:7 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn rx_flow_en(&self) -> RX_FLOW_EN_R {
         RX_FLOW_EN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HWFC_CONF")
+            .field(
+                "rx_flow_thrhd",
+                &format_args!("{}", self.rx_flow_thrhd().bits()),
+            )
+            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HWFC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

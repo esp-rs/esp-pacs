@@ -22,6 +22,23 @@ impl R {
         RD_WIFI_MAC_CRC_HIGH_R::new(self.bits & 0x00ff_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_RDATA2")
+            .field(
+                "rd_wifi_mac_crc_high",
+                &format_args!("{}", self.rd_wifi_mac_crc_high().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [blk0_rdata2](index.html) module"]
 pub struct BLK0_RDATA2_SPEC;
 impl crate::RegisterSpec for BLK0_RDATA2_SPEC {

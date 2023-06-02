@@ -35,14 +35,28 @@ impl From<crate::W<TX_ERR_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_ERR_CNT` reader - The TX error counter register, reflects value changes under transmission status."]
-pub type TX_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type TX_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `TX_ERR_CNT` writer - The TX error counter register, reflects value changes under transmission status."]
-pub type TX_ERR_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TX_ERR_CNT_SPEC, u8, u8, 8, O>;
+pub type TX_ERR_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, TX_ERR_CNT_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - The TX error counter register, reflects value changes under transmission status."]
     #[inline(always)]
     pub fn tx_err_cnt(&self) -> TX_ERR_CNT_R {
         TX_ERR_CNT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_ERR_CNT")
+            .field("tx_err_cnt", &format_args!("{}", self.tx_err_cnt().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_ERR_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

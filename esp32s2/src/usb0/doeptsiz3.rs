@@ -35,17 +35,17 @@ impl From<crate::W<DOEPTSIZ3_SPEC>> for W {
     }
 }
 #[doc = "Field `XFERSIZE3` reader - "]
-pub type XFERSIZE3_R = crate::FieldReader<u8, u8>;
+pub type XFERSIZE3_R = crate::FieldReader;
 #[doc = "Field `XFERSIZE3` writer - "]
-pub type XFERSIZE3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEPTSIZ3_SPEC, u8, u8, 7, O>;
+pub type XFERSIZE3_W<'a, const O: u8> = crate::FieldWriter<'a, DOEPTSIZ3_SPEC, 7, O>;
 #[doc = "Field `PKTCNT3` reader - "]
-pub type PKTCNT3_R = crate::BitReader<bool>;
+pub type PKTCNT3_R = crate::BitReader;
 #[doc = "Field `PKTCNT3` writer - "]
-pub type PKTCNT3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPTSIZ3_SPEC, bool, O>;
+pub type PKTCNT3_W<'a, const O: u8> = crate::BitWriter<'a, DOEPTSIZ3_SPEC, O>;
 #[doc = "Field `SUPCNT3` reader - "]
-pub type SUPCNT3_R = crate::FieldReader<u8, u8>;
+pub type SUPCNT3_R = crate::FieldReader;
 #[doc = "Field `SUPCNT3` writer - "]
-pub type SUPCNT3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEPTSIZ3_SPEC, u8, u8, 2, O>;
+pub type SUPCNT3_W<'a, const O: u8> = crate::FieldWriter<'a, DOEPTSIZ3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn supcnt3(&self) -> SUPCNT3_R {
         SUPCNT3_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPTSIZ3")
+            .field("xfersize3", &format_args!("{}", self.xfersize3().bits()))
+            .field("pktcnt3", &format_args!("{}", self.pktcnt3().bit()))
+            .field("supcnt3", &format_args!("{}", self.supcnt3().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

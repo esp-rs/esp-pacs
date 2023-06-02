@@ -35,14 +35,31 @@ impl From<crate::W<MEM_PD_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `LSLP_MEM_PD_MASK` reader - Set 1 to mask memory power down."]
-pub type LSLP_MEM_PD_MASK_R = crate::BitReader<bool>;
+pub type LSLP_MEM_PD_MASK_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_PD_MASK` writer - Set 1 to mask memory power down."]
-pub type LSLP_MEM_PD_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_PD_MASK_SPEC, bool, O>;
+pub type LSLP_MEM_PD_MASK_W<'a, const O: u8> = crate::BitWriter<'a, MEM_PD_MASK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to mask memory power down."]
     #[inline(always)]
     pub fn lslp_mem_pd_mask(&self) -> LSLP_MEM_PD_MASK_R {
         LSLP_MEM_PD_MASK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_PD_MASK")
+            .field(
+                "lslp_mem_pd_mask",
+                &format_args!("{}", self.lslp_mem_pd_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_PD_MASK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

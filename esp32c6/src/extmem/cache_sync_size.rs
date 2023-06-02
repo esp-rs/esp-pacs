@@ -38,12 +38,29 @@ impl From<crate::W<CACHE_SYNC_SIZE_SPEC>> for W {
 pub type CACHE_SYNC_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CACHE_SYNC_SIZE` writer - Those bits are used to configure the size of the sync operation, which should be used together with CACHE_SYNC_ADDR_REG"]
 pub type CACHE_SYNC_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_SYNC_SIZE_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, CACHE_SYNC_SIZE_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - Those bits are used to configure the size of the sync operation, which should be used together with CACHE_SYNC_ADDR_REG"]
     #[inline(always)]
     pub fn cache_sync_size(&self) -> CACHE_SYNC_SIZE_R {
         CACHE_SYNC_SIZE_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_SYNC_SIZE")
+            .field(
+                "cache_sync_size",
+                &format_args!("{}", self.cache_sync_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

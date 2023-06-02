@@ -35,45 +35,40 @@ impl From<crate::W<BOD_MODE0_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `BOD_MODE0_CLOSE_FLASH_ENA` reader - need_des"]
-pub type BOD_MODE0_CLOSE_FLASH_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_CLOSE_FLASH_ENA` writer - need_des"]
 pub type BOD_MODE0_CLOSE_FLASH_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_PD_RF_ENA` reader - need_des"]
-pub type BOD_MODE0_PD_RF_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_PD_RF_ENA` writer - need_des"]
-pub type BOD_MODE0_PD_RF_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+pub type BOD_MODE0_PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` reader - need_des"]
 pub type BOD_MODE0_INTR_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` writer - need_des"]
 pub type BOD_MODE0_INTR_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BOD_MODE0_CNTL_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16, u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` reader - need_des"]
 pub type BOD_MODE0_RESET_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` writer - need_des"]
 pub type BOD_MODE0_RESET_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BOD_MODE0_CNTL_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16, u16>;
 #[doc = "Field `BOD_MODE0_CNT_CLR` reader - need_des"]
-pub type BOD_MODE0_CNT_CLR_R = crate::BitReader<bool>;
+pub type BOD_MODE0_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_CNT_CLR` writer - need_des"]
-pub type BOD_MODE0_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+pub type BOD_MODE0_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_INTR_ENA` reader - need_des"]
-pub type BOD_MODE0_INTR_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_INTR_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_INTR_ENA` writer - need_des"]
-pub type BOD_MODE0_INTR_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+pub type BOD_MODE0_INTR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_RESET_SEL` reader - need_des"]
-pub type BOD_MODE0_RESET_SEL_R = crate::BitReader<bool>;
+pub type BOD_MODE0_RESET_SEL_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_RESET_SEL` writer - need_des"]
-pub type BOD_MODE0_RESET_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+pub type BOD_MODE0_RESET_SEL_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_RESET_ENA` reader - need_des"]
-pub type BOD_MODE0_RESET_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_RESET_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_RESET_ENA` writer - need_des"]
-pub type BOD_MODE0_RESET_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BOD_MODE0_CNTL_SPEC, bool, O>;
+pub type BOD_MODE0_RESET_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
@@ -114,6 +109,51 @@ impl R {
     #[inline(always)]
     pub fn bod_mode0_reset_ena(&self) -> BOD_MODE0_RESET_ENA_R {
         BOD_MODE0_RESET_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BOD_MODE0_CNTL")
+            .field(
+                "bod_mode0_close_flash_ena",
+                &format_args!("{}", self.bod_mode0_close_flash_ena().bit()),
+            )
+            .field(
+                "bod_mode0_pd_rf_ena",
+                &format_args!("{}", self.bod_mode0_pd_rf_ena().bit()),
+            )
+            .field(
+                "bod_mode0_intr_wait",
+                &format_args!("{}", self.bod_mode0_intr_wait().bits()),
+            )
+            .field(
+                "bod_mode0_reset_wait",
+                &format_args!("{}", self.bod_mode0_reset_wait().bits()),
+            )
+            .field(
+                "bod_mode0_cnt_clr",
+                &format_args!("{}", self.bod_mode0_cnt_clr().bit()),
+            )
+            .field(
+                "bod_mode0_intr_ena",
+                &format_args!("{}", self.bod_mode0_intr_ena().bit()),
+            )
+            .field(
+                "bod_mode0_reset_sel",
+                &format_args!("{}", self.bod_mode0_reset_sel().bit()),
+            )
+            .field(
+                "bod_mode0_reset_ena",
+                &format_args!("{}", self.bod_mode0_reset_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BOD_MODE0_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

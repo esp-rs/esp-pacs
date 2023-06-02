@@ -22,6 +22,23 @@ impl R {
         IC_PRELOAD_MISS_CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IC_PRELOAD_MISS_CNT")
+            .field(
+                "ic_preload_miss_cnt",
+                &format_args!("{}", self.ic_preload_miss_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IC_PRELOAD_MISS_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ic_preload_miss_cnt](index.html) module"]
 pub struct IC_PRELOAD_MISS_CNT_SPEC;
 impl crate::RegisterSpec for IC_PRELOAD_MISS_CNT_SPEC {

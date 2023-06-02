@@ -35,71 +35,71 @@ impl From<crate::W<GOTGCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `SESREQSCS` reader - "]
-pub type SESREQSCS_R = crate::BitReader<bool>;
+pub type SESREQSCS_R = crate::BitReader;
 #[doc = "Field `SESREQ` reader - "]
-pub type SESREQ_R = crate::BitReader<bool>;
+pub type SESREQ_R = crate::BitReader;
 #[doc = "Field `SESREQ` writer - "]
-pub type SESREQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type SESREQ_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `VBVALIDOVEN` reader - "]
-pub type VBVALIDOVEN_R = crate::BitReader<bool>;
+pub type VBVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `VBVALIDOVEN` writer - "]
-pub type VBVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type VBVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `VBVALIDOVVAL` reader - "]
-pub type VBVALIDOVVAL_R = crate::BitReader<bool>;
+pub type VBVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `VBVALIDOVVAL` writer - "]
-pub type VBVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type VBVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `AVALIDOVEN` reader - "]
-pub type AVALIDOVEN_R = crate::BitReader<bool>;
+pub type AVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `AVALIDOVEN` writer - "]
-pub type AVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type AVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `AVALIDOVVAL` reader - "]
-pub type AVALIDOVVAL_R = crate::BitReader<bool>;
+pub type AVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `AVALIDOVVAL` writer - "]
-pub type AVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type AVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `BVALIDOVEN` reader - "]
-pub type BVALIDOVEN_R = crate::BitReader<bool>;
+pub type BVALIDOVEN_R = crate::BitReader;
 #[doc = "Field `BVALIDOVEN` writer - "]
-pub type BVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type BVALIDOVEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `BVALIDOVVAL` reader - "]
-pub type BVALIDOVVAL_R = crate::BitReader<bool>;
+pub type BVALIDOVVAL_R = crate::BitReader;
 #[doc = "Field `BVALIDOVVAL` writer - "]
-pub type BVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type BVALIDOVVAL_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `HSTNEGSCS` reader - "]
-pub type HSTNEGSCS_R = crate::BitReader<bool>;
+pub type HSTNEGSCS_R = crate::BitReader;
 #[doc = "Field `HNPREQ` reader - "]
-pub type HNPREQ_R = crate::BitReader<bool>;
+pub type HNPREQ_R = crate::BitReader;
 #[doc = "Field `HNPREQ` writer - "]
-pub type HNPREQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type HNPREQ_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `HSTSETHNPEN` reader - "]
-pub type HSTSETHNPEN_R = crate::BitReader<bool>;
+pub type HSTSETHNPEN_R = crate::BitReader;
 #[doc = "Field `HSTSETHNPEN` writer - "]
-pub type HSTSETHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type HSTSETHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `DEVHNPEN` reader - "]
-pub type DEVHNPEN_R = crate::BitReader<bool>;
+pub type DEVHNPEN_R = crate::BitReader;
 #[doc = "Field `DEVHNPEN` writer - "]
-pub type DEVHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type DEVHNPEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `EHEN` reader - "]
-pub type EHEN_R = crate::BitReader<bool>;
+pub type EHEN_R = crate::BitReader;
 #[doc = "Field `EHEN` writer - "]
-pub type EHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type EHEN_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `DBNCEFLTRBYPASS` reader - "]
-pub type DBNCEFLTRBYPASS_R = crate::BitReader<bool>;
+pub type DBNCEFLTRBYPASS_R = crate::BitReader;
 #[doc = "Field `DBNCEFLTRBYPASS` writer - "]
-pub type DBNCEFLTRBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type DBNCEFLTRBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `CONIDSTS` reader - "]
-pub type CONIDSTS_R = crate::BitReader<bool>;
+pub type CONIDSTS_R = crate::BitReader;
 #[doc = "Field `DBNCTIME` reader - "]
-pub type DBNCTIME_R = crate::BitReader<bool>;
+pub type DBNCTIME_R = crate::BitReader;
 #[doc = "Field `ASESVLD` reader - "]
-pub type ASESVLD_R = crate::BitReader<bool>;
+pub type ASESVLD_R = crate::BitReader;
 #[doc = "Field `BSESVLD` reader - "]
-pub type BSESVLD_R = crate::BitReader<bool>;
+pub type BSESVLD_R = crate::BitReader;
 #[doc = "Field `OTGVER` reader - "]
-pub type OTGVER_R = crate::BitReader<bool>;
+pub type OTGVER_R = crate::BitReader;
 #[doc = "Field `OTGVER` writer - "]
-pub type OTGVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, GOTGCTL_SPEC, bool, O>;
+pub type OTGVER_W<'a, const O: u8> = crate::BitWriter<'a, GOTGCTL_SPEC, O>;
 #[doc = "Field `CURMOD` reader - "]
-pub type CURMOD_R = crate::BitReader<bool>;
+pub type CURMOD_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -200,6 +200,45 @@ impl R {
     #[inline(always)]
     pub fn curmod(&self) -> CURMOD_R {
         CURMOD_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOTGCTL")
+            .field("sesreqscs", &format_args!("{}", self.sesreqscs().bit()))
+            .field("sesreq", &format_args!("{}", self.sesreq().bit()))
+            .field("vbvalidoven", &format_args!("{}", self.vbvalidoven().bit()))
+            .field(
+                "vbvalidovval",
+                &format_args!("{}", self.vbvalidovval().bit()),
+            )
+            .field("avalidoven", &format_args!("{}", self.avalidoven().bit()))
+            .field("avalidovval", &format_args!("{}", self.avalidovval().bit()))
+            .field("bvalidoven", &format_args!("{}", self.bvalidoven().bit()))
+            .field("bvalidovval", &format_args!("{}", self.bvalidovval().bit()))
+            .field("hstnegscs", &format_args!("{}", self.hstnegscs().bit()))
+            .field("hnpreq", &format_args!("{}", self.hnpreq().bit()))
+            .field("hstsethnpen", &format_args!("{}", self.hstsethnpen().bit()))
+            .field("devhnpen", &format_args!("{}", self.devhnpen().bit()))
+            .field("ehen", &format_args!("{}", self.ehen().bit()))
+            .field(
+                "dbncefltrbypass",
+                &format_args!("{}", self.dbncefltrbypass().bit()),
+            )
+            .field("conidsts", &format_args!("{}", self.conidsts().bit()))
+            .field("dbnctime", &format_args!("{}", self.dbnctime().bit()))
+            .field("asesvld", &format_args!("{}", self.asesvld().bit()))
+            .field("bsesvld", &format_args!("{}", self.bsesvld().bit()))
+            .field("otgver", &format_args!("{}", self.otgver().bit()))
+            .field("curmod", &format_args!("{}", self.curmod().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

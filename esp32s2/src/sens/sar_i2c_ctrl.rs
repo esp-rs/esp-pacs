@@ -38,16 +38,15 @@ impl From<crate::W<SAR_I2C_CTRL_SPEC>> for W {
 pub type SAR_I2C_CTRL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR_I2C_CTRL` writer - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
 pub type SAR_I2C_CTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_I2C_CTRL_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, SAR_I2C_CTRL_SPEC, 28, O, u32, u32>;
 #[doc = "Field `SAR_I2C_START` reader - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
-pub type SAR_I2C_START_R = crate::BitReader<bool>;
+pub type SAR_I2C_START_R = crate::BitReader;
 #[doc = "Field `SAR_I2C_START` writer - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
-pub type SAR_I2C_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_I2C_CTRL_SPEC, bool, O>;
+pub type SAR_I2C_START_W<'a, const O: u8> = crate::BitWriter<'a, SAR_I2C_CTRL_SPEC, O>;
 #[doc = "Field `SAR_I2C_START_FORCE` reader - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
-pub type SAR_I2C_START_FORCE_R = crate::BitReader<bool>;
+pub type SAR_I2C_START_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR_I2C_START_FORCE` writer - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
-pub type SAR_I2C_START_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_I2C_CTRL_SPEC, bool, O>;
+pub type SAR_I2C_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_I2C_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:27 - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
     #[inline(always)]
@@ -63,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn sar_i2c_start_force(&self) -> SAR_I2C_START_FORCE_R {
         SAR_I2C_START_FORCE_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_I2C_CTRL")
+            .field(
+                "sar_i2c_ctrl",
+                &format_args!("{}", self.sar_i2c_ctrl().bits()),
+            )
+            .field(
+                "sar_i2c_start",
+                &format_args!("{}", self.sar_i2c_start().bit()),
+            )
+            .field(
+                "sar_i2c_start_force",
+                &format_args!("{}", self.sar_i2c_start_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_I2C_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

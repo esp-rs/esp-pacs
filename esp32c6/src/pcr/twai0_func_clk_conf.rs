@@ -35,15 +35,13 @@ impl From<crate::W<TWAI0_FUNC_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TWAI0_FUNC_CLK_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
-pub type TWAI0_FUNC_CLK_SEL_R = crate::BitReader<bool>;
+pub type TWAI0_FUNC_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `TWAI0_FUNC_CLK_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
-pub type TWAI0_FUNC_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TWAI0_FUNC_CLK_CONF_SPEC, bool, O>;
+pub type TWAI0_FUNC_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TWAI0_FUNC_CLK_CONF_SPEC, O>;
 #[doc = "Field `TWAI0_FUNC_CLK_EN` reader - Set 1 to enable twai0 function clock"]
-pub type TWAI0_FUNC_CLK_EN_R = crate::BitReader<bool>;
+pub type TWAI0_FUNC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI0_FUNC_CLK_EN` writer - Set 1 to enable twai0 function clock"]
-pub type TWAI0_FUNC_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TWAI0_FUNC_CLK_CONF_SPEC, bool, O>;
+pub type TWAI0_FUNC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TWAI0_FUNC_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 20 - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn twai0_func_clk_en(&self) -> TWAI0_FUNC_CLK_EN_R {
         TWAI0_FUNC_CLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TWAI0_FUNC_CLK_CONF")
+            .field(
+                "twai0_func_clk_sel",
+                &format_args!("{}", self.twai0_func_clk_sel().bit()),
+            )
+            .field(
+                "twai0_func_clk_en",
+                &format_args!("{}", self.twai0_func_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TWAI0_FUNC_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

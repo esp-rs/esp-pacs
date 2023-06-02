@@ -35,60 +35,51 @@ impl From<crate::W<APP_CACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CACHE_MODE` reader - "]
-pub type APP_CACHE_MODE_R = crate::BitReader<bool>;
+pub type APP_CACHE_MODE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_MODE` writer - "]
-pub type APP_CACHE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_ENABLE` reader - "]
-pub type APP_CACHE_ENABLE_R = crate::BitReader<bool>;
+pub type APP_CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_ENABLE` writer - "]
-pub type APP_CACHE_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_FLUSH_ENA` reader - "]
-pub type APP_CACHE_FLUSH_ENA_R = crate::BitReader<bool>;
+pub type APP_CACHE_FLUSH_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_FLUSH_ENA` writer - "]
-pub type APP_CACHE_FLUSH_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_FLUSH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_FLUSH_DONE` reader - "]
-pub type APP_CACHE_FLUSH_DONE_R = crate::BitReader<bool>;
+pub type APP_CACHE_FLUSH_DONE_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_0_EN` reader - "]
-pub type APP_CACHE_LOCK_0_EN_R = crate::BitReader<bool>;
+pub type APP_CACHE_LOCK_0_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_0_EN` writer - "]
-pub type APP_CACHE_LOCK_0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_LOCK_0_EN_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_LOCK_1_EN` reader - "]
-pub type APP_CACHE_LOCK_1_EN_R = crate::BitReader<bool>;
+pub type APP_CACHE_LOCK_1_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_1_EN` writer - "]
-pub type APP_CACHE_LOCK_1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_LOCK_1_EN_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_LOCK_2_EN` reader - "]
-pub type APP_CACHE_LOCK_2_EN_R = crate::BitReader<bool>;
+pub type APP_CACHE_LOCK_2_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_2_EN` writer - "]
-pub type APP_CACHE_LOCK_2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_LOCK_2_EN_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_LOCK_3_EN` reader - "]
-pub type APP_CACHE_LOCK_3_EN_R = crate::BitReader<bool>;
+pub type APP_CACHE_LOCK_3_EN_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_LOCK_3_EN` writer - "]
-pub type APP_CACHE_LOCK_3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_LOCK_3_EN_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_SINGLE_IRAM_ENA` reader - "]
-pub type APP_SINGLE_IRAM_ENA_R = crate::BitReader<bool>;
+pub type APP_SINGLE_IRAM_ENA_R = crate::BitReader;
 #[doc = "Field `APP_SINGLE_IRAM_ENA` writer - "]
-pub type APP_SINGLE_IRAM_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_SINGLE_IRAM_ENA_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_DRAM_SPLIT` reader - "]
-pub type APP_DRAM_SPLIT_R = crate::BitReader<bool>;
+pub type APP_DRAM_SPLIT_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_SPLIT` writer - "]
-pub type APP_DRAM_SPLIT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_DRAM_SPLIT_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `APP_AHB_SPI_REQ` reader - "]
-pub type APP_AHB_SPI_REQ_R = crate::BitReader<bool>;
+pub type APP_AHB_SPI_REQ_R = crate::BitReader;
 #[doc = "Field `APP_SLAVE_REQ` reader - "]
-pub type APP_SLAVE_REQ_R = crate::BitReader<bool>;
+pub type APP_SLAVE_REQ_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_HL` reader - "]
-pub type APP_DRAM_HL_R = crate::BitReader<bool>;
+pub type APP_DRAM_HL_R = crate::BitReader;
 #[doc = "Field `APP_DRAM_HL` writer - "]
-pub type APP_DRAM_HL_W<'a, const O: u8> = crate::BitWriter<'a, u32, APP_CACHE_CTRL_SPEC, bool, O>;
+pub type APP_DRAM_HL_W<'a, const O: u8> = crate::BitWriter<'a, APP_CACHE_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -154,6 +145,68 @@ impl R {
     #[inline(always)]
     pub fn app_dram_hl(&self) -> APP_DRAM_HL_R {
         APP_DRAM_HL_R::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_CACHE_CTRL")
+            .field(
+                "app_cache_mode",
+                &format_args!("{}", self.app_cache_mode().bit()),
+            )
+            .field(
+                "app_cache_enable",
+                &format_args!("{}", self.app_cache_enable().bit()),
+            )
+            .field(
+                "app_cache_flush_ena",
+                &format_args!("{}", self.app_cache_flush_ena().bit()),
+            )
+            .field(
+                "app_cache_flush_done",
+                &format_args!("{}", self.app_cache_flush_done().bit()),
+            )
+            .field(
+                "app_cache_lock_0_en",
+                &format_args!("{}", self.app_cache_lock_0_en().bit()),
+            )
+            .field(
+                "app_cache_lock_1_en",
+                &format_args!("{}", self.app_cache_lock_1_en().bit()),
+            )
+            .field(
+                "app_cache_lock_2_en",
+                &format_args!("{}", self.app_cache_lock_2_en().bit()),
+            )
+            .field(
+                "app_cache_lock_3_en",
+                &format_args!("{}", self.app_cache_lock_3_en().bit()),
+            )
+            .field(
+                "app_single_iram_ena",
+                &format_args!("{}", self.app_single_iram_ena().bit()),
+            )
+            .field(
+                "app_dram_split",
+                &format_args!("{}", self.app_dram_split().bit()),
+            )
+            .field(
+                "app_ahb_spi_req",
+                &format_args!("{}", self.app_ahb_spi_req().bit()),
+            )
+            .field(
+                "app_slave_req",
+                &format_args!("{}", self.app_slave_req().bit()),
+            )
+            .field("app_dram_hl", &format_args!("{}", self.app_dram_hl().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_CACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

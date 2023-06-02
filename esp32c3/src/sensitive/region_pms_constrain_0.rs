@@ -35,15 +35,32 @@ impl From<crate::W<REGION_PMS_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_LOCK` reader - region_pms_constrain_lock"]
-pub type REGION_PMS_CONSTRAIN_LOCK_R = crate::BitReader<bool>;
+pub type REGION_PMS_CONSTRAIN_LOCK_R = crate::BitReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_LOCK` writer - region_pms_constrain_lock"]
 pub type REGION_PMS_CONSTRAIN_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION_PMS_CONSTRAIN_0_SPEC, bool, O>;
+    crate::BitWriter<'a, REGION_PMS_CONSTRAIN_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - region_pms_constrain_lock"]
     #[inline(always)]
     pub fn region_pms_constrain_lock(&self) -> REGION_PMS_CONSTRAIN_LOCK_R {
         REGION_PMS_CONSTRAIN_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION_PMS_CONSTRAIN_0")
+            .field(
+                "region_pms_constrain_lock",
+                &format_args!("{}", self.region_pms_constrain_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION_PMS_CONSTRAIN_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

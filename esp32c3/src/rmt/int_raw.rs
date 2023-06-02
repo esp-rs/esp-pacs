@@ -35,40 +35,37 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_TX_END_INT_RAW[0-1]` reader - reg_ch%s_tx_end_int_raw."]
-pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_END_INT_RAW[0-1]` writer - reg_ch%s_tx_end_int_raw."]
-pub type CH_TX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_RX_END_INT_RAW[2-3]` reader - reg_ch2_rx_end_int_raw."]
-pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_RAW[2-3]` writer - reg_ch2_rx_end_int_raw."]
-pub type CH_RX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_RX_END_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_ERR_INT_RAW[0-1]` reader - reg_ch%s_err_int_raw."]
-pub type CH_TX_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR_INT_RAW[0-1]` writer - reg_ch%s_err_int_raw."]
-pub type CH_TX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_RX_ERR_INT_RAW[2-3]` reader - reg_ch2_err_int_raw."]
-pub type CH_RX_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_RX_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_RX_ERR_INT_RAW[2-3]` writer - reg_ch2_err_int_raw."]
-pub type CH_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_RX_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-1]` reader - reg_ch%s_tx_thr_event_int_raw."]
-pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-1]` writer - reg_ch%s_tx_thr_event_int_raw."]
-pub type CH_TX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_RAW` reader - reg_ch2_rx_thr_event_int_raw."]
-pub type CH2_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH2_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_RAW` writer - reg_ch2_rx_thr_event_int_raw."]
-pub type CH2_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH2_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_RAW` reader - reg_ch3_rx_thr_event_int_raw."]
-pub type CH3_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH3_RX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_RAW` writer - reg_ch3_rx_thr_event_int_raw."]
-pub type CH3_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH3_RX_THR_EVENT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CH_TX_LOOP_INT_RAW[0-1]` reader - reg_ch%s_tx_loop_int_raw."]
-pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP_INT_RAW[0-1]` writer - reg_ch%s_tx_loop_int_raw."]
-pub type CH_TX_LOOP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CH_TX_LOOP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "reg_ch[0-1]_tx_end_int_raw."]
     #[inline(always)]
@@ -169,6 +166,75 @@ impl R {
     #[inline(always)]
     pub fn ch1_tx_loop_int_raw(&self) -> CH_TX_LOOP_INT_RAW_R {
         CH_TX_LOOP_INT_RAW_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "ch0_tx_end_int_raw",
+                &format_args!("{}", self.ch0_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_raw",
+                &format_args!("{}", self.ch1_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch2_rx_end_int_raw",
+                &format_args!("{}", self.ch2_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch3_rx_end_int_raw",
+                &format_args!("{}", self.ch3_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_err_int_raw",
+                &format_args!("{}", self.ch0_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_err_int_raw",
+                &format_args!("{}", self.ch1_tx_err_int_raw().bit()),
+            )
+            .field(
+                "ch2_rx_err_int_raw",
+                &format_args!("{}", self.ch2_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch3_rx_err_int_raw",
+                &format_args!("{}", self.ch3_rx_err_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch0_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch1_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch2_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch2_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch3_rx_thr_event_int_raw",
+                &format_args!("{}", self.ch3_rx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_raw",
+                &format_args!("{}", self.ch0_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_raw",
+                &format_args!("{}", self.ch1_tx_loop_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

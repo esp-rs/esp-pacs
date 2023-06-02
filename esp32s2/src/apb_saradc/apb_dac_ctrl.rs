@@ -38,28 +38,27 @@ impl From<crate::W<APB_DAC_CTRL_SPEC>> for W {
 pub type DAC_TIMER_TARGET_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DAC_TIMER_TARGET` writer - Set DAC timer target."]
 pub type DAC_TIMER_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_DAC_CTRL_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, APB_DAC_CTRL_SPEC, 12, O, u16, u16>;
 #[doc = "Field `DAC_TIMER_EN` reader - Enable read dac data."]
-pub type DAC_TIMER_EN_R = crate::BitReader<bool>;
+pub type DAC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `DAC_TIMER_EN` writer - Enable read dac data."]
-pub type DAC_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_DAC_CTRL_SPEC, bool, O>;
+pub type DAC_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_DAC_CTRL_SPEC, O>;
 #[doc = "Field `APB_DAC_ALTER_MODE` reader - Enable DAC alter mode."]
-pub type APB_DAC_ALTER_MODE_R = crate::BitReader<bool>;
+pub type APB_DAC_ALTER_MODE_R = crate::BitReader;
 #[doc = "Field `APB_DAC_ALTER_MODE` writer - Enable DAC alter mode."]
-pub type APB_DAC_ALTER_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_DAC_CTRL_SPEC, bool, O>;
+pub type APB_DAC_ALTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, APB_DAC_CTRL_SPEC, O>;
 #[doc = "Field `APB_DAC_TRANS` reader - Enable DMA_DAC."]
-pub type APB_DAC_TRANS_R = crate::BitReader<bool>;
+pub type APB_DAC_TRANS_R = crate::BitReader;
 #[doc = "Field `APB_DAC_TRANS` writer - Enable DMA_DAC."]
-pub type APB_DAC_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_DAC_CTRL_SPEC, bool, O>;
+pub type APB_DAC_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, APB_DAC_CTRL_SPEC, O>;
 #[doc = "Field `DAC_RESET_FIFO` reader - Reset DIG DAC FIFO."]
-pub type DAC_RESET_FIFO_R = crate::BitReader<bool>;
+pub type DAC_RESET_FIFO_R = crate::BitReader;
 #[doc = "Field `DAC_RESET_FIFO` writer - Reset DIG DAC FIFO."]
-pub type DAC_RESET_FIFO_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_DAC_CTRL_SPEC, bool, O>;
+pub type DAC_RESET_FIFO_W<'a, const O: u8> = crate::BitWriter<'a, APB_DAC_CTRL_SPEC, O>;
 #[doc = "Field `APB_DAC_RST` reader - Reset DIG DAC by software."]
-pub type APB_DAC_RST_R = crate::BitReader<bool>;
+pub type APB_DAC_RST_R = crate::BitReader;
 #[doc = "Field `APB_DAC_RST` writer - Reset DIG DAC by software."]
-pub type APB_DAC_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_DAC_CTRL_SPEC, bool, O>;
+pub type APB_DAC_RST_W<'a, const O: u8> = crate::BitWriter<'a, APB_DAC_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - Set DAC timer target."]
     #[inline(always)]
@@ -90,6 +89,40 @@ impl R {
     #[inline(always)]
     pub fn apb_dac_rst(&self) -> APB_DAC_RST_R {
         APB_DAC_RST_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_DAC_CTRL")
+            .field(
+                "dac_timer_target",
+                &format_args!("{}", self.dac_timer_target().bits()),
+            )
+            .field(
+                "dac_timer_en",
+                &format_args!("{}", self.dac_timer_en().bit()),
+            )
+            .field(
+                "apb_dac_alter_mode",
+                &format_args!("{}", self.apb_dac_alter_mode().bit()),
+            )
+            .field(
+                "apb_dac_trans",
+                &format_args!("{}", self.apb_dac_trans().bit()),
+            )
+            .field(
+                "dac_reset_fifo",
+                &format_args!("{}", self.dac_reset_fifo().bit()),
+            )
+            .field("apb_dac_rst", &format_args!("{}", self.apb_dac_rst().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_DAC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

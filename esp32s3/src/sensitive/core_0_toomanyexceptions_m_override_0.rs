@@ -35,10 +35,10 @@ impl From<crate::W<CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK` reader - Set 1 to lock core0 toomanyexception override configuration register"]
-pub type CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R = crate::BitReader<bool>;
+pub type CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R = crate::BitReader;
 #[doc = "Field `CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK` writer - Set 1 to lock core0 toomanyexception override configuration register"]
 pub type CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock core0 toomanyexception override configuration register"]
     #[inline(always)]
@@ -46,6 +46,23 @@ impl R {
         &self,
     ) -> CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R {
         CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0")
+            .field(
+                "core_0_toomanyexceptions_m_override_lock",
+                &format_args!("{}", self.core_0_toomanyexceptions_m_override_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

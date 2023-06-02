@@ -35,34 +35,33 @@ impl From<crate::W<SLAVE1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_ADDR_ERR_CLR` reader - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_ADDR_ERR_CLR_R = crate::BitReader<bool>;
+pub type SLV_ADDR_ERR_CLR_R = crate::BitReader;
 #[doc = "Field `SLV_ADDR_ERR_CLR` writer - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_ADDR_ERR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, O>;
+pub type SLV_ADDR_ERR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
 #[doc = "Field `SLV_CMD_ERR_CLR` reader - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_CMD_ERR_CLR_R = crate::BitReader<bool>;
+pub type SLV_CMD_ERR_CLR_R = crate::BitReader;
 #[doc = "Field `SLV_CMD_ERR_CLR` writer - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
-pub type SLV_CMD_ERR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, O>;
+pub type SLV_CMD_ERR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
 #[doc = "Field `SLV_NO_QPI_EN` reader - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
-pub type SLV_NO_QPI_EN_R = crate::BitReader<bool>;
+pub type SLV_NO_QPI_EN_R = crate::BitReader;
 #[doc = "Field `SLV_NO_QPI_EN` writer - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
-pub type SLV_NO_QPI_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, O>;
+pub type SLV_NO_QPI_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
 #[doc = "Field `SLV_ADDR_ERR` reader - 1: The address value of the last SPI transfer is not supported by SPI slave. 0: The address value is supported or no address value is received."]
-pub type SLV_ADDR_ERR_R = crate::BitReader<bool>;
+pub type SLV_ADDR_ERR_R = crate::BitReader;
 #[doc = "Field `SLV_CMD_ERR` reader - 1: The command value of the last SPI transfer is not supported by SPI slave. 0: The command value is supported or no command value is received."]
-pub type SLV_CMD_ERR_R = crate::BitReader<bool>;
+pub type SLV_CMD_ERR_R = crate::BitReader;
 #[doc = "Field `SLV_WR_DMA_DONE` reader - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_DMA_DONE_R = crate::BitReader<bool>;
+pub type SLV_WR_DMA_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_WR_DMA_DONE` writer - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_DMA_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, O>;
+pub type SLV_WR_DMA_DONE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE1_SPEC, O>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type SLV_LAST_COMMAND_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 8, O>;
+pub type SLV_LAST_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 8, O>;
 #[doc = "Field `SLV_LAST_ADDR` reader - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_R = crate::FieldReader<u8, u8>;
+pub type SLV_LAST_ADDR_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_ADDR` writer - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 8, O>;
+pub type SLV_LAST_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 10 - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
@@ -103,6 +102,48 @@ impl R {
     #[inline(always)]
     pub fn slv_last_addr(&self) -> SLV_LAST_ADDR_R {
         SLV_LAST_ADDR_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE1")
+            .field(
+                "slv_addr_err_clr",
+                &format_args!("{}", self.slv_addr_err_clr().bit()),
+            )
+            .field(
+                "slv_cmd_err_clr",
+                &format_args!("{}", self.slv_cmd_err_clr().bit()),
+            )
+            .field(
+                "slv_no_qpi_en",
+                &format_args!("{}", self.slv_no_qpi_en().bit()),
+            )
+            .field(
+                "slv_addr_err",
+                &format_args!("{}", self.slv_addr_err().bit()),
+            )
+            .field("slv_cmd_err", &format_args!("{}", self.slv_cmd_err().bit()))
+            .field(
+                "slv_wr_dma_done",
+                &format_args!("{}", self.slv_wr_dma_done().bit()),
+            )
+            .field(
+                "slv_last_command",
+                &format_args!("{}", self.slv_last_command().bits()),
+            )
+            .field(
+                "slv_last_addr",
+                &format_args!("{}", self.slv_last_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

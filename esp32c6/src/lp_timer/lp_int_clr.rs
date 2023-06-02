@@ -21,10 +21,15 @@ impl From<crate::W<LP_INT_CLR_SPEC>> for W {
 }
 #[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_CLR` writer - need_des"]
 pub type MAIN_TIMER_OVERFLOW_LP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_CLR_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_LP_INT_CLR` writer - need_des"]
-pub type MAIN_TIMER_LP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_CLR_SPEC, bool, O>;
+pub type MAIN_TIMER_LP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LP_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]

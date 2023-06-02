@@ -35,81 +35,81 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_RESET` reader - "]
-pub type TX_RESET_R = crate::BitReader<bool>;
+pub type TX_RESET_R = crate::BitReader;
 #[doc = "Field `TX_RESET` writer - "]
-pub type TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_RESET` reader - "]
-pub type RX_RESET_R = crate::BitReader<bool>;
+pub type RX_RESET_R = crate::BitReader;
 #[doc = "Field `RX_RESET` writer - "]
-pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_FIFO_RESET` reader - "]
-pub type TX_FIFO_RESET_R = crate::BitReader<bool>;
+pub type TX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_RESET` writer - "]
-pub type TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_FIFO_RESET` reader - "]
-pub type RX_FIFO_RESET_R = crate::BitReader<bool>;
+pub type RX_FIFO_RESET_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_RESET` writer - "]
-pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_FIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_START` reader - "]
-pub type TX_START_R = crate::BitReader<bool>;
+pub type TX_START_R = crate::BitReader;
 #[doc = "Field `TX_START` writer - "]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_START` reader - "]
-pub type RX_START_R = crate::BitReader<bool>;
+pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - "]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_SLAVE_MOD` reader - "]
-pub type TX_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type TX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `TX_SLAVE_MOD` writer - "]
-pub type TX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_SLAVE_MOD` reader - "]
-pub type RX_SLAVE_MOD_R = crate::BitReader<bool>;
+pub type RX_SLAVE_MOD_R = crate::BitReader;
 #[doc = "Field `RX_SLAVE_MOD` writer - "]
-pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_SLAVE_MOD_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_RIGHT_FIRST` reader - "]
-pub type TX_RIGHT_FIRST_R = crate::BitReader<bool>;
+pub type TX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_RIGHT_FIRST` writer - "]
-pub type TX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_RIGHT_FIRST` reader - "]
-pub type RX_RIGHT_FIRST_R = crate::BitReader<bool>;
+pub type RX_RIGHT_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_RIGHT_FIRST` writer - "]
-pub type RX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_RIGHT_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MSB_SHIFT` reader - "]
-pub type TX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type TX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_SHIFT` writer - "]
-pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MSB_SHIFT` reader - "]
-pub type RX_MSB_SHIFT_R = crate::BitReader<bool>;
+pub type RX_MSB_SHIFT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_SHIFT` writer - "]
-pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MSB_SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_SHORT_SYNC` reader - "]
-pub type TX_SHORT_SYNC_R = crate::BitReader<bool>;
+pub type TX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `TX_SHORT_SYNC` writer - "]
-pub type TX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_SHORT_SYNC` reader - "]
-pub type RX_SHORT_SYNC_R = crate::BitReader<bool>;
+pub type RX_SHORT_SYNC_R = crate::BitReader;
 #[doc = "Field `RX_SHORT_SYNC` writer - "]
-pub type RX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_SHORT_SYNC_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MONO` reader - "]
-pub type TX_MONO_R = crate::BitReader<bool>;
+pub type TX_MONO_R = crate::BitReader;
 #[doc = "Field `TX_MONO` writer - "]
-pub type TX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MONO` reader - "]
-pub type RX_MONO_R = crate::BitReader<bool>;
+pub type RX_MONO_R = crate::BitReader;
 #[doc = "Field `RX_MONO` writer - "]
-pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MONO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TX_MSB_RIGHT` reader - "]
-pub type TX_MSB_RIGHT_R = crate::BitReader<bool>;
+pub type TX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `TX_MSB_RIGHT` writer - "]
-pub type TX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `RX_MSB_RIGHT` reader - "]
-pub type RX_MSB_RIGHT_R = crate::BitReader<bool>;
+pub type RX_MSB_RIGHT_R = crate::BitReader;
 #[doc = "Field `RX_MSB_RIGHT` writer - "]
-pub type RX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type RX_MSB_RIGHT_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `SIG_LOOPBACK` reader - "]
-pub type SIG_LOOPBACK_R = crate::BitReader<bool>;
+pub type SIG_LOOPBACK_R = crate::BitReader;
 #[doc = "Field `SIG_LOOPBACK` writer - "]
-pub type SIG_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type SIG_LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -205,6 +205,77 @@ impl R {
     #[inline(always)]
     pub fn sig_loopback(&self) -> SIG_LOOPBACK_R {
         SIG_LOOPBACK_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("tx_reset", &format_args!("{}", self.tx_reset().bit()))
+            .field("rx_reset", &format_args!("{}", self.rx_reset().bit()))
+            .field(
+                "tx_fifo_reset",
+                &format_args!("{}", self.tx_fifo_reset().bit()),
+            )
+            .field(
+                "rx_fifo_reset",
+                &format_args!("{}", self.rx_fifo_reset().bit()),
+            )
+            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
+            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
+            .field(
+                "tx_slave_mod",
+                &format_args!("{}", self.tx_slave_mod().bit()),
+            )
+            .field(
+                "rx_slave_mod",
+                &format_args!("{}", self.rx_slave_mod().bit()),
+            )
+            .field(
+                "tx_right_first",
+                &format_args!("{}", self.tx_right_first().bit()),
+            )
+            .field(
+                "rx_right_first",
+                &format_args!("{}", self.rx_right_first().bit()),
+            )
+            .field(
+                "tx_msb_shift",
+                &format_args!("{}", self.tx_msb_shift().bit()),
+            )
+            .field(
+                "rx_msb_shift",
+                &format_args!("{}", self.rx_msb_shift().bit()),
+            )
+            .field(
+                "tx_short_sync",
+                &format_args!("{}", self.tx_short_sync().bit()),
+            )
+            .field(
+                "rx_short_sync",
+                &format_args!("{}", self.rx_short_sync().bit()),
+            )
+            .field("tx_mono", &format_args!("{}", self.tx_mono().bit()))
+            .field("rx_mono", &format_args!("{}", self.rx_mono().bit()))
+            .field(
+                "tx_msb_right",
+                &format_args!("{}", self.tx_msb_right().bit()),
+            )
+            .field(
+                "rx_msb_right",
+                &format_args!("{}", self.rx_msb_right().bit()),
+            )
+            .field(
+                "sig_loopback",
+                &format_args!("{}", self.sig_loopback().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

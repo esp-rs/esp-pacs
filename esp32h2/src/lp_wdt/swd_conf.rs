@@ -35,24 +35,24 @@ impl From<crate::W<SWD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SWD_RESET_FLAG` reader - need_des"]
-pub type SWD_RESET_FLAG_R = crate::BitReader<bool>;
+pub type SWD_RESET_FLAG_R = crate::BitReader;
 #[doc = "Field `SWD_AUTO_FEED_EN` reader - need_des"]
-pub type SWD_AUTO_FEED_EN_R = crate::BitReader<bool>;
+pub type SWD_AUTO_FEED_EN_R = crate::BitReader;
 #[doc = "Field `SWD_AUTO_FEED_EN` writer - need_des"]
-pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - need_des"]
-pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - need_des"]
 pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - need_des"]
 pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWD_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SWD_DISABLE` reader - need_des"]
-pub type SWD_DISABLE_R = crate::BitReader<bool>;
+pub type SWD_DISABLE_R = crate::BitReader;
 #[doc = "Field `SWD_DISABLE` writer - need_des"]
-pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_FEED` writer - need_des"]
-pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -73,6 +73,32 @@ impl R {
     #[inline(always)]
     pub fn swd_disable(&self) -> SWD_DISABLE_R {
         SWD_DISABLE_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWD_CONF")
+            .field(
+                "swd_reset_flag",
+                &format_args!("{}", self.swd_reset_flag().bit()),
+            )
+            .field(
+                "swd_auto_feed_en",
+                &format_args!("{}", self.swd_auto_feed_en().bit()),
+            )
+            .field(
+                "swd_signal_width",
+                &format_args!("{}", self.swd_signal_width().bits()),
+            )
+            .field("swd_disable", &format_args!("{}", self.swd_disable().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWD_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

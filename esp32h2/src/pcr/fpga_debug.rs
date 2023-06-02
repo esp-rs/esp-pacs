@@ -37,13 +37,26 @@ impl From<crate::W<FPGA_DEBUG_SPEC>> for W {
 #[doc = "Field `FPGA_DEBUG` reader - Only used in fpga debug."]
 pub type FPGA_DEBUG_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `FPGA_DEBUG` writer - Only used in fpga debug."]
-pub type FPGA_DEBUG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FPGA_DEBUG_SPEC, u32, u32, 32, O>;
+pub type FPGA_DEBUG_W<'a, const O: u8> = crate::FieldWriter<'a, FPGA_DEBUG_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Only used in fpga debug."]
     #[inline(always)]
     pub fn fpga_debug(&self) -> FPGA_DEBUG_R {
         FPGA_DEBUG_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FPGA_DEBUG")
+            .field("fpga_debug", &format_args!("{}", self.fpga_debug().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FPGA_DEBUG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

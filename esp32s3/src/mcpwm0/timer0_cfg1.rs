@@ -35,15 +35,13 @@ impl From<crate::W<TIMER0_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_START` reader - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
-pub type TIMER0_START_R = crate::FieldReader<u8, u8>;
+pub type TIMER0_START_R = crate::FieldReader;
 #[doc = "Field `TIMER0_START` writer - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
-pub type TIMER0_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER0_CFG1_SPEC, u8, u8, 3, O>;
+pub type TIMER0_START_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER0_CFG1_SPEC, 3, O>;
 #[doc = "Field `TIMER0_MOD` reader - PWM timer0 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
-pub type TIMER0_MOD_R = crate::FieldReader<u8, u8>;
+pub type TIMER0_MOD_R = crate::FieldReader;
 #[doc = "Field `TIMER0_MOD` writer - PWM timer0 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
-pub type TIMER0_MOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER0_CFG1_SPEC, u8, u8, 2, O>;
+pub type TIMER0_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER0_CFG1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2 - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
@@ -54,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn timer0_mod(&self) -> TIMER0_MOD_R {
         TIMER0_MOD_R::new(((self.bits >> 3) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER0_CFG1")
+            .field(
+                "timer0_start",
+                &format_args!("{}", self.timer0_start().bits()),
+            )
+            .field("timer0_mod", &format_args!("{}", self.timer0_mod().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER0_CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

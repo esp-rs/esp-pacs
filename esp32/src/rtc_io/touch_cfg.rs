@@ -35,26 +35,25 @@ impl From<crate::W<TOUCH_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DCUR` reader - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
-pub type TOUCH_DCUR_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DCUR_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DCUR` writer - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
-pub type TOUCH_DCUR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUCH_CFG_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DCUR_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CFG_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DRANGE` reader - touch sensor saw wave voltage range."]
-pub type TOUCH_DRANGE_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DRANGE_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DRANGE` writer - touch sensor saw wave voltage range."]
-pub type TOUCH_DRANGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_CFG_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DRANGE_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CFG_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DREFL` reader - touch sensor saw wave bottom voltage."]
-pub type TOUCH_DREFL_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DREFL_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFL` writer - touch sensor saw wave bottom voltage."]
-pub type TOUCH_DREFL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUCH_CFG_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DREFL_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CFG_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DREFH` reader - touch sensor saw wave top voltage."]
-pub type TOUCH_DREFH_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DREFH_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DREFH` writer - touch sensor saw wave top voltage."]
-pub type TOUCH_DREFH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUCH_CFG_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DREFH_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CFG_SPEC, 2, O>;
 #[doc = "Field `TOUCH_XPD_BIAS` reader - touch sensor bias power on."]
-pub type TOUCH_XPD_BIAS_R = crate::BitReader<bool>;
+pub type TOUCH_XPD_BIAS_R = crate::BitReader;
 #[doc = "Field `TOUCH_XPD_BIAS` writer - touch sensor bias power on."]
-pub type TOUCH_XPD_BIAS_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_CFG_SPEC, bool, O>;
+pub type TOUCH_XPD_BIAS_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
@@ -80,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn touch_xpd_bias(&self) -> TOUCH_XPD_BIAS_R {
         TOUCH_XPD_BIAS_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_CFG")
+            .field("touch_dcur", &format_args!("{}", self.touch_dcur().bits()))
+            .field(
+                "touch_drange",
+                &format_args!("{}", self.touch_drange().bits()),
+            )
+            .field(
+                "touch_drefl",
+                &format_args!("{}", self.touch_drefl().bits()),
+            )
+            .field(
+                "touch_drefh",
+                &format_args!("{}", self.touch_drefh().bits()),
+            )
+            .field(
+                "touch_xpd_bias",
+                &format_args!("{}", self.touch_xpd_bias().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

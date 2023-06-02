@@ -22,6 +22,23 @@ impl R {
         DBUS1_ACS_WB_CNT_R::new(self.bits & 0x000f_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBUS1_ACS_WB_CNT")
+            .field(
+                "dbus1_acs_wb_cnt",
+                &format_args!("{}", self.dbus1_acs_wb_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBUS1_ACS_WB_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dbus1_acs_wb_cnt](index.html) module"]
 pub struct DBUS1_ACS_WB_CNT_SPEC;
 impl crate::RegisterSpec for DBUS1_ACS_WB_CNT_SPEC {

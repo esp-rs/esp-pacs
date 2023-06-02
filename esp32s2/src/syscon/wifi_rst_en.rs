@@ -37,13 +37,26 @@ impl From<crate::W<WIFI_RST_EN_SPEC>> for W {
 #[doc = "Field `WIFI_RST` reader - "]
 pub type WIFI_RST_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_RST` writer - "]
-pub type WIFI_RST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_RST_EN_SPEC, u32, u32, 32, O>;
+pub type WIFI_RST_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_RST_EN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn wifi_rst(&self) -> WIFI_RST_R {
         WIFI_RST_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI_RST_EN")
+            .field("wifi_rst", &format_args!("{}", self.wifi_rst().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WIFI_RST_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

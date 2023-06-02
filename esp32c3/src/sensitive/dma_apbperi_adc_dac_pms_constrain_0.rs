@@ -35,10 +35,10 @@ impl From<crate::W<DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK` reader - dma_apbperi_adc_dac_pms_constrain_lock"]
-pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK_R = crate::BitReader<bool>;
+pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK` writer - dma_apbperi_adc_dac_pms_constrain_lock"]
 pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - dma_apbperi_adc_dac_pms_constrain_lock"]
     #[inline(always)]
@@ -46,6 +46,23 @@ impl R {
         &self,
     ) -> DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK_R {
         DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0")
+            .field(
+                "dma_apbperi_adc_dac_pms_constrain_lock",
+                &format_args!("{}", self.dma_apbperi_adc_dac_pms_constrain_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

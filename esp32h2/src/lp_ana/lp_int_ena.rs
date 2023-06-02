@@ -35,15 +35,31 @@ impl From<crate::W<LP_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `BOD_MODE0_LP_INT_ENA` reader - need_des"]
-pub type BOD_MODE0_LP_INT_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_LP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_LP_INT_ENA` writer - need_des"]
-pub type BOD_MODE0_LP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+pub type BOD_MODE0_LP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn bod_mode0_lp_int_ena(&self) -> BOD_MODE0_LP_INT_ENA_R {
         BOD_MODE0_LP_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_INT_ENA")
+            .field(
+                "bod_mode0_lp_int_ena",
+                &format_args!("{}", self.bod_mode0_lp_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

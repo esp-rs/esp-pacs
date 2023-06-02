@@ -38,12 +38,29 @@ impl From<crate::W<REGION7_ADDR_START_SPEC>> for W {
 pub type REGION7_ADDR_START_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REGION7_ADDR_START` writer - Start address of region7"]
 pub type REGION7_ADDR_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION7_ADDR_START_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, REGION7_ADDR_START_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start address of region7"]
     #[inline(always)]
     pub fn region7_addr_start(&self) -> REGION7_ADDR_START_R {
         REGION7_ADDR_START_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION7_ADDR_START")
+            .field(
+                "region7_addr_start",
+                &format_args!("{}", self.region7_addr_start().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION7_ADDR_START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

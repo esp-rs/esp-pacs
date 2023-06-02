@@ -35,14 +35,28 @@ impl From<crate::W<RTC_PMS_SPEC>> for W {
     }
 }
 #[doc = "Field `DIS_RTC_CPU` reader - Set 1 to disable rtc coprocessor."]
-pub type DIS_RTC_CPU_R = crate::BitReader<bool>;
+pub type DIS_RTC_CPU_R = crate::BitReader;
 #[doc = "Field `DIS_RTC_CPU` writer - Set 1 to disable rtc coprocessor."]
-pub type DIS_RTC_CPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_PMS_SPEC, bool, O>;
+pub type DIS_RTC_CPU_W<'a, const O: u8> = crate::BitWriter<'a, RTC_PMS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to disable rtc coprocessor."]
     #[inline(always)]
     pub fn dis_rtc_cpu(&self) -> DIS_RTC_CPU_R {
         DIS_RTC_CPU_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_PMS")
+            .field("dis_rtc_cpu", &format_args!("{}", self.dis_rtc_cpu().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_PMS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

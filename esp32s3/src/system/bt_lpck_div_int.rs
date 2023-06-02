@@ -38,12 +38,29 @@ impl From<crate::W<BT_LPCK_DIV_INT_SPEC>> for W {
 pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_NUM` writer - This field is lower power clock frequent division factor"]
 pub type BT_LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BT_LPCK_DIV_INT_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor"]
     #[inline(always)]
     pub fn bt_lpck_div_num(&self) -> BT_LPCK_DIV_NUM_R {
         BT_LPCK_DIV_NUM_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BT_LPCK_DIV_INT")
+            .field(
+                "bt_lpck_div_num",
+                &format_args!("{}", self.bt_lpck_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_INT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

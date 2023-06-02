@@ -38,17 +38,15 @@ impl From<crate::W<PRO_CACHE_LOCK_0_ADDR_SPEC>> for W {
 pub type PRE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRE` writer - "]
 pub type PRE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CACHE_LOCK_0_ADDR_SPEC, u16, u16, 14, O>;
+    crate::FieldWriter<'a, PRO_CACHE_LOCK_0_ADDR_SPEC, 14, O, u16, u16>;
 #[doc = "Field `MIN` reader - "]
-pub type MIN_R = crate::FieldReader<u8, u8>;
+pub type MIN_R = crate::FieldReader;
 #[doc = "Field `MIN` writer - "]
-pub type MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CACHE_LOCK_0_ADDR_SPEC, u8, u8, 4, O>;
+pub type MIN_W<'a, const O: u8> = crate::FieldWriter<'a, PRO_CACHE_LOCK_0_ADDR_SPEC, 4, O>;
 #[doc = "Field `MAX` reader - "]
-pub type MAX_R = crate::FieldReader<u8, u8>;
+pub type MAX_R = crate::FieldReader;
 #[doc = "Field `MAX` writer - "]
-pub type MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CACHE_LOCK_0_ADDR_SPEC, u8, u8, 4, O>;
+pub type MAX_W<'a, const O: u8> = crate::FieldWriter<'a, PRO_CACHE_LOCK_0_ADDR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:13"]
     #[inline(always)]
@@ -64,6 +62,22 @@ impl R {
     #[inline(always)]
     pub fn max(&self) -> MAX_R {
         MAX_R::new(((self.bits >> 18) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CACHE_LOCK_0_ADDR")
+            .field("pre", &format_args!("{}", self.pre().bits()))
+            .field("min", &format_args!("{}", self.min().bits()))
+            .field("max", &format_args!("{}", self.max().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_LOCK_0_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

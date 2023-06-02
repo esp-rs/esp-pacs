@@ -35,14 +35,31 @@ impl From<crate::W<OPTION1_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` reader - Need add desc"]
-pub type FORCE_DOWNLOAD_BOOT_R = crate::BitReader<bool>;
+pub type FORCE_DOWNLOAD_BOOT_R = crate::BitReader;
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` writer - Need add desc"]
-pub type FORCE_DOWNLOAD_BOOT_W<'a, const O: u8> = crate::BitWriter<'a, u32, OPTION1_SPEC, bool, O>;
+pub type FORCE_DOWNLOAD_BOOT_W<'a, const O: u8> = crate::BitWriter<'a, OPTION1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
     pub fn force_download_boot(&self) -> FORCE_DOWNLOAD_BOOT_R {
         FORCE_DOWNLOAD_BOOT_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OPTION1")
+            .field(
+                "force_download_boot",
+                &format_args!("{}", self.force_download_boot().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OPTION1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

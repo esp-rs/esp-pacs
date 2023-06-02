@@ -38,12 +38,29 @@ impl From<crate::W<MEM_END_ADDR_SPEC>> for W {
 pub type MEM_END_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MEM_END_ADDR` writer - The end address of trace memory"]
 pub type MEM_END_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_END_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, MEM_END_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The end address of trace memory"]
     #[inline(always)]
     pub fn mem_end_addr(&self) -> MEM_END_ADDR_R {
         MEM_END_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_END_ADDR")
+            .field(
+                "mem_end_addr",
+                &format_args!("{}", self.mem_end_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_END_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

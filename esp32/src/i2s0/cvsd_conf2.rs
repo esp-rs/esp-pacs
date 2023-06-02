@@ -35,22 +35,21 @@ impl From<crate::W<CVSD_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_K` reader - "]
-pub type CVSD_K_R = crate::FieldReader<u8, u8>;
+pub type CVSD_K_R = crate::FieldReader;
 #[doc = "Field `CVSD_K` writer - "]
-pub type CVSD_K_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CVSD_CONF2_SPEC, u8, u8, 3, O>;
+pub type CVSD_K_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF2_SPEC, 3, O>;
 #[doc = "Field `CVSD_J` reader - "]
-pub type CVSD_J_R = crate::FieldReader<u8, u8>;
+pub type CVSD_J_R = crate::FieldReader;
 #[doc = "Field `CVSD_J` writer - "]
-pub type CVSD_J_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CVSD_CONF2_SPEC, u8, u8, 3, O>;
+pub type CVSD_J_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF2_SPEC, 3, O>;
 #[doc = "Field `CVSD_BETA` reader - "]
 pub type CVSD_BETA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CVSD_BETA` writer - "]
-pub type CVSD_BETA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CVSD_CONF2_SPEC, u16, u16, 10, O>;
+pub type CVSD_BETA_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF2_SPEC, 10, O, u16, u16>;
 #[doc = "Field `CVSD_H` reader - "]
-pub type CVSD_H_R = crate::FieldReader<u8, u8>;
+pub type CVSD_H_R = crate::FieldReader;
 #[doc = "Field `CVSD_H` writer - "]
-pub type CVSD_H_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CVSD_CONF2_SPEC, u8, u8, 3, O>;
+pub type CVSD_H_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF2_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -71,6 +70,23 @@ impl R {
     #[inline(always)]
     pub fn cvsd_h(&self) -> CVSD_H_R {
         CVSD_H_R::new(((self.bits >> 16) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CVSD_CONF2")
+            .field("cvsd_k", &format_args!("{}", self.cvsd_k().bits()))
+            .field("cvsd_j", &format_args!("{}", self.cvsd_j().bits()))
+            .field("cvsd_beta", &format_args!("{}", self.cvsd_beta().bits()))
+            .field("cvsd_h", &format_args!("{}", self.cvsd_h().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CVSD_CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,41 +35,35 @@ impl From<crate::W<SAR_MEAS2_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_CNTL_STATE` reader - saradc2_cntl_fsm"]
-pub type SAR2_CNTL_STATE_R = crate::FieldReader<u8, u8>;
+pub type SAR2_CNTL_STATE_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CAL_EN` reader - rtc control pwdet enable"]
-pub type SAR2_PWDET_CAL_EN_R = crate::BitReader<bool>;
+pub type SAR2_PWDET_CAL_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PWDET_CAL_EN` writer - rtc control pwdet enable"]
-pub type SAR2_PWDET_CAL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, O>;
+pub type SAR2_PWDET_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_CTRL1_SPEC, O>;
 #[doc = "Field `SAR2_PKDET_CAL_EN` reader - rtc control pkdet enable"]
-pub type SAR2_PKDET_CAL_EN_R = crate::BitReader<bool>;
+pub type SAR2_PKDET_CAL_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PKDET_CAL_EN` writer - rtc control pkdet enable"]
-pub type SAR2_PKDET_CAL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, O>;
+pub type SAR2_PKDET_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_CTRL1_SPEC, O>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST"]
-pub type SAR2_EN_TEST_R = crate::BitReader<bool>;
+pub type SAR2_EN_TEST_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST"]
-pub type SAR2_EN_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, O>;
+pub type SAR2_EN_TEST_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_CTRL1_SPEC, O>;
 #[doc = "Field `SAR2_RSTB_FORCE` reader - "]
-pub type SAR2_RSTB_FORCE_R = crate::FieldReader<u8, u8>;
+pub type SAR2_RSTB_FORCE_R = crate::FieldReader;
 #[doc = "Field `SAR2_RSTB_FORCE` writer - "]
-pub type SAR2_RSTB_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 2, O>;
+pub type SAR2_RSTB_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_CTRL1_SPEC, 2, O>;
 #[doc = "Field `SAR2_STANDBY_WAIT` reader - "]
-pub type SAR2_STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_STANDBY_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_STANDBY_WAIT` writer - "]
-pub type SAR2_STANDBY_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, O>;
+pub type SAR2_STANDBY_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_CTRL1_SPEC, 8, O>;
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub type SAR2_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_RSTB_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_RSTB_WAIT` writer - "]
-pub type SAR2_RSTB_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, O>;
+pub type SAR2_RSTB_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_CTRL1_SPEC, 8, O>;
 #[doc = "Field `SAR2_XPD_WAIT` reader - "]
-pub type SAR2_XPD_WAIT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `SAR2_XPD_WAIT` writer - "]
-pub type SAR2_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, O>;
+pub type SAR2_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_CTRL1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:2 - saradc2_cntl_fsm"]
     #[inline(always)]
@@ -110,6 +104,51 @@ impl R {
     #[inline(always)]
     pub fn sar2_xpd_wait(&self) -> SAR2_XPD_WAIT_R {
         SAR2_XPD_WAIT_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS2_CTRL1")
+            .field(
+                "sar2_cntl_state",
+                &format_args!("{}", self.sar2_cntl_state().bits()),
+            )
+            .field(
+                "sar2_pwdet_cal_en",
+                &format_args!("{}", self.sar2_pwdet_cal_en().bit()),
+            )
+            .field(
+                "sar2_pkdet_cal_en",
+                &format_args!("{}", self.sar2_pkdet_cal_en().bit()),
+            )
+            .field(
+                "sar2_en_test",
+                &format_args!("{}", self.sar2_en_test().bit()),
+            )
+            .field(
+                "sar2_rstb_force",
+                &format_args!("{}", self.sar2_rstb_force().bits()),
+            )
+            .field(
+                "sar2_standby_wait",
+                &format_args!("{}", self.sar2_standby_wait().bits()),
+            )
+            .field(
+                "sar2_rstb_wait",
+                &format_args!("{}", self.sar2_rstb_wait().bits()),
+            )
+            .field(
+                "sar2_xpd_wait",
+                &format_args!("{}", self.sar2_xpd_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS2_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

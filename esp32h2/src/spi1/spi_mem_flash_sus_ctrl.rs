@@ -35,60 +35,60 @@ impl From<crate::W<SPI_MEM_FLASH_SUS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_FLASH_PER` reader - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PER_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PER_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PER` writer - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_PER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PES` reader - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PES_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PES_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PES` writer - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
 pub type SPI_MEM_FLASH_PES_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PER_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
-pub type SPI_MEM_FLASH_PER_WAIT_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PER_WAIT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PER_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
 pub type SPI_MEM_FLASH_PER_WAIT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PES_WAIT_EN` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
-pub type SPI_MEM_FLASH_PES_WAIT_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PES_WAIT_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PES_WAIT_EN` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
 pub type SPI_MEM_FLASH_PES_WAIT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_PES_PER_EN` reader - Set this bit to enable PES end triggers PER transfer option. If this bit is 0, application should send PER after PES is done."]
-pub type SPI_MEM_PES_PER_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_PES_PER_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PES_PER_EN` writer - Set this bit to enable PES end triggers PER transfer option. If this bit is 0, application should send PER after PES is done."]
 pub type SPI_MEM_PES_PER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PES_EN` reader - Set this bit to enable Auto-suspending function."]
-pub type SPI_MEM_FLASH_PES_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PES_EN` writer - Set this bit to enable Auto-suspending function."]
 pub type SPI_MEM_FLASH_PES_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_PESR_END_MSK` reader - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
 pub type SPI_MEM_PESR_END_MSK_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_PESR_END_MSK` writer - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
 pub type SPI_MEM_PESR_END_MSK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, 16, O, u16, u16>;
 #[doc = "Field `SPI_FMEM_RD_SUS_2B` reader - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
-pub type SPI_FMEM_RD_SUS_2B_R = crate::BitReader<bool>;
+pub type SPI_FMEM_RD_SUS_2B_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_RD_SUS_2B` writer - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
 pub type SPI_FMEM_RD_SUS_2B_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_PER_END_EN` reader - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
-pub type SPI_MEM_PER_END_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_PER_END_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PER_END_EN` writer - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
 pub type SPI_MEM_PER_END_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_PES_END_EN` reader - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the suspend status of flash. 0: Only need to check WIP is 0."]
-pub type SPI_MEM_PES_END_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_PES_END_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PES_END_EN` writer - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the suspend status of flash. 0: Only need to check WIP is 0."]
 pub type SPI_MEM_PES_END_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_SUS_TIMEOUT_CNT` reader - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
-pub type SPI_MEM_SUS_TIMEOUT_CNT_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SUS_TIMEOUT_CNT_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SUS_TIMEOUT_CNT` writer - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
 pub type SPI_MEM_SUS_TIMEOUT_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_FLASH_SUS_CTRL_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CTRL_SPEC, 7, O>;
 impl R {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
@@ -144,6 +144,63 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_sus_timeout_cnt(&self) -> SPI_MEM_SUS_TIMEOUT_CNT_R {
         SPI_MEM_SUS_TIMEOUT_CNT_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_FLASH_SUS_CTRL")
+            .field(
+                "spi_mem_flash_per",
+                &format_args!("{}", self.spi_mem_flash_per().bit()),
+            )
+            .field(
+                "spi_mem_flash_pes",
+                &format_args!("{}", self.spi_mem_flash_pes().bit()),
+            )
+            .field(
+                "spi_mem_flash_per_wait_en",
+                &format_args!("{}", self.spi_mem_flash_per_wait_en().bit()),
+            )
+            .field(
+                "spi_mem_flash_pes_wait_en",
+                &format_args!("{}", self.spi_mem_flash_pes_wait_en().bit()),
+            )
+            .field(
+                "spi_mem_pes_per_en",
+                &format_args!("{}", self.spi_mem_pes_per_en().bit()),
+            )
+            .field(
+                "spi_mem_flash_pes_en",
+                &format_args!("{}", self.spi_mem_flash_pes_en().bit()),
+            )
+            .field(
+                "spi_mem_pesr_end_msk",
+                &format_args!("{}", self.spi_mem_pesr_end_msk().bits()),
+            )
+            .field(
+                "spi_fmem_rd_sus_2b",
+                &format_args!("{}", self.spi_fmem_rd_sus_2b().bit()),
+            )
+            .field(
+                "spi_mem_per_end_en",
+                &format_args!("{}", self.spi_mem_per_end_en().bit()),
+            )
+            .field(
+                "spi_mem_pes_end_en",
+                &format_args!("{}", self.spi_mem_pes_end_en().bit()),
+            )
+            .field(
+                "spi_mem_sus_timeout_cnt",
+                &format_args!("{}", self.spi_mem_sus_timeout_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_FLASH_SUS_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

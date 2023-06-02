@@ -35,20 +35,20 @@ impl From<crate::W<INTERNAL_SRAM_USAGE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_ICACHE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
-pub type INTERNAL_SRAM_ICACHE_USAGE_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_ICACHE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_ICACHE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
 pub type INTERNAL_SRAM_ICACHE_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_1_SPEC, 2, O>;
 #[doc = "Field `INTERNAL_SRAM_DCACHE_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
-pub type INTERNAL_SRAM_DCACHE_USAGE_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_DCACHE_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_DCACHE_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
 pub type INTERNAL_SRAM_DCACHE_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_1_SPEC, 2, O>;
 #[doc = "Field `INTERNAL_SRAM_CPU_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
-pub type INTERNAL_SRAM_CPU_USAGE_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_CPU_USAGE_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_CPU_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
 pub type INTERNAL_SRAM_CPU_USAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_1_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, INTERNAL_SRAM_USAGE_1_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:1 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn internal_sram_cpu_usage(&self) -> INTERNAL_SRAM_CPU_USAGE_R {
         INTERNAL_SRAM_CPU_USAGE_R::new(((self.bits >> 4) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERNAL_SRAM_USAGE_1")
+            .field(
+                "internal_sram_icache_usage",
+                &format_args!("{}", self.internal_sram_icache_usage().bits()),
+            )
+            .field(
+                "internal_sram_dcache_usage",
+                &format_args!("{}", self.internal_sram_dcache_usage().bits()),
+            )
+            .field(
+                "internal_sram_cpu_usage",
+                &format_args!("{}", self.internal_sram_cpu_usage().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

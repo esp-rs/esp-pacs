@@ -14,45 +14,45 @@ impl From<crate::R<RD_REPEAT_DATA0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_DIS` reader - Represents whether reading of individual eFuse block(block4~block10) is disabled or enabled. 1: disabled. 0: enabled."]
-pub type RD_DIS_R = crate::FieldReader<u8, u8>;
+pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED0_4` reader - Reserved."]
-pub type RPT4_RESERVED0_4_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED0_4_R = crate::BitReader;
 #[doc = "Field `DIS_ICACHE` reader - Represents whether icache is disabled or enabled. 1: disabled. 0: enabled."]
-pub type DIS_ICACHE_R = crate::BitReader<bool>;
+pub type DIS_ICACHE_R = crate::BitReader;
 #[doc = "Field `DIS_USB_JTAG` reader - Represents whether the function of usb switch to jtag is disabled or enabled. 1: disabled. 0: enabled."]
-pub type DIS_USB_JTAG_R = crate::BitReader<bool>;
+pub type DIS_USB_JTAG_R = crate::BitReader;
 #[doc = "Field `POWERGLITCH_EN` reader - Represents whether power glitch function is enabled. 1: enabled. 0: disabled."]
-pub type POWERGLITCH_EN_R = crate::BitReader<bool>;
+pub type POWERGLITCH_EN_R = crate::BitReader;
 #[doc = "Field `DIS_USB_SERIAL_JTAG` reader - Represents whether USB-Serial-JTAG is disabled or enabled. 1: disabled. 0: enabled."]
-pub type DIS_USB_SERIAL_JTAG_R = crate::BitReader<bool>;
+pub type DIS_USB_SERIAL_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_FORCE_DOWNLOAD` reader - Represents whether the function that forces chip into download mode is disabled or enabled. 1: disabled. 0: enabled."]
-pub type DIS_FORCE_DOWNLOAD_R = crate::BitReader<bool>;
+pub type DIS_FORCE_DOWNLOAD_R = crate::BitReader;
 #[doc = "Field `SPI_DOWNLOAD_MSPI_DIS` reader - Represents whether SPI0 controller during boot_mode_download is disabled or enabled. 1: disabled. 0: enabled."]
-pub type SPI_DOWNLOAD_MSPI_DIS_R = crate::BitReader<bool>;
+pub type SPI_DOWNLOAD_MSPI_DIS_R = crate::BitReader;
 #[doc = "Field `DIS_CAN` reader - Represents whether TWAI function is disabled or enabled. 1: disabled. 0: enabled."]
-pub type DIS_CAN_R = crate::BitReader<bool>;
+pub type DIS_CAN_R = crate::BitReader;
 #[doc = "Field `JTAG_SEL_ENABLE` reader - Represents whether the selection between usb_to_jtag and pad_to_jtag through strapping gpio15 when both EFUSE_DIS_PAD_JTAG and EFUSE_DIS_USB_JTAG are equal to 0 is enabled or disabled. 1: enabled. 0: disabled."]
-pub type JTAG_SEL_ENABLE_R = crate::BitReader<bool>;
+pub type JTAG_SEL_ENABLE_R = crate::BitReader;
 #[doc = "Field `SOFT_DIS_JTAG` reader - Represents whether JTAG is disabled in soft way. Odd number: disabled. Even number: enabled."]
-pub type SOFT_DIS_JTAG_R = crate::FieldReader<u8, u8>;
+pub type SOFT_DIS_JTAG_R = crate::FieldReader;
 #[doc = "Field `DIS_PAD_JTAG` reader - Represents whether JTAG is disabled in the hard way(permanently). 1: disabled. 0: enabled."]
-pub type DIS_PAD_JTAG_R = crate::BitReader<bool>;
+pub type DIS_PAD_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT` reader - Represents whether flash encrypt function is disabled or enabled(except in SPI boot mode). 1: disabled. 0: enabled."]
-pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `USB_DREFH` reader - Represents the single-end input threhold vrefh, 1.76 V to 2 V with step of 80 mV."]
-pub type USB_DREFH_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFH_R = crate::FieldReader;
 #[doc = "Field `USB_DREFL` reader - Represents the single-end input threhold vrefl, 1.76 V to 2 V with step of 80 mV."]
-pub type USB_DREFL_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFL_R = crate::FieldReader;
 #[doc = "Field `USB_EXCHG_PINS` reader - Represents whether the D+ and D- pins is exchanged. 1: exchanged. 0: not exchanged."]
-pub type USB_EXCHG_PINS_R = crate::BitReader<bool>;
+pub type USB_EXCHG_PINS_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_AS_GPIO` reader - Represents whether vdd spi pin is functioned as gpio. 1: functioned. 0: not functioned."]
-pub type VDD_SPI_AS_GPIO_R = crate::BitReader<bool>;
+pub type VDD_SPI_AS_GPIO_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED0_2` reader - Reserved."]
-pub type RPT4_RESERVED0_2_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_2_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED0_1` reader - Reserved."]
-pub type RPT4_RESERVED0_1_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED0_1_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED0_0` reader - Reserved."]
-pub type RPT4_RESERVED0_0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_0_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:6 - Represents whether reading of individual eFuse block(block4~block10) is disabled or enabled. 1: disabled. 0: enabled."]
     #[inline(always)]
@@ -153,6 +153,84 @@ impl R {
     #[inline(always)]
     pub fn rpt4_reserved0_0(&self) -> RPT4_RESERVED0_0_R {
         RPT4_RESERVED0_0_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA0")
+            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
+            .field(
+                "rpt4_reserved0_4",
+                &format_args!("{}", self.rpt4_reserved0_4().bit()),
+            )
+            .field("dis_icache", &format_args!("{}", self.dis_icache().bit()))
+            .field(
+                "dis_usb_jtag",
+                &format_args!("{}", self.dis_usb_jtag().bit()),
+            )
+            .field(
+                "powerglitch_en",
+                &format_args!("{}", self.powerglitch_en().bit()),
+            )
+            .field(
+                "dis_usb_serial_jtag",
+                &format_args!("{}", self.dis_usb_serial_jtag().bit()),
+            )
+            .field(
+                "dis_force_download",
+                &format_args!("{}", self.dis_force_download().bit()),
+            )
+            .field(
+                "spi_download_mspi_dis",
+                &format_args!("{}", self.spi_download_mspi_dis().bit()),
+            )
+            .field("dis_can", &format_args!("{}", self.dis_can().bit()))
+            .field(
+                "jtag_sel_enable",
+                &format_args!("{}", self.jtag_sel_enable().bit()),
+            )
+            .field(
+                "soft_dis_jtag",
+                &format_args!("{}", self.soft_dis_jtag().bits()),
+            )
+            .field(
+                "dis_pad_jtag",
+                &format_args!("{}", self.dis_pad_jtag().bit()),
+            )
+            .field(
+                "dis_download_manual_encrypt",
+                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+            )
+            .field("usb_drefh", &format_args!("{}", self.usb_drefh().bits()))
+            .field("usb_drefl", &format_args!("{}", self.usb_drefl().bits()))
+            .field(
+                "usb_exchg_pins",
+                &format_args!("{}", self.usb_exchg_pins().bit()),
+            )
+            .field(
+                "vdd_spi_as_gpio",
+                &format_args!("{}", self.vdd_spi_as_gpio().bit()),
+            )
+            .field(
+                "rpt4_reserved0_2",
+                &format_args!("{}", self.rpt4_reserved0_2().bits()),
+            )
+            .field(
+                "rpt4_reserved0_1",
+                &format_args!("{}", self.rpt4_reserved0_1().bit()),
+            )
+            .field(
+                "rpt4_reserved0_0",
+                &format_args!("{}", self.rpt4_reserved0_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 1.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data0](index.html) module"]

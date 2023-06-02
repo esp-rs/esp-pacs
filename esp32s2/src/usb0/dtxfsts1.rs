@@ -22,6 +22,23 @@ impl R {
         D_INEPTXFSPCAVAIL1_R::new((self.bits & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DTXFSTS1")
+            .field(
+                "d_ineptxfspcavail1",
+                &format_args!("{}", self.d_ineptxfspcavail1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DTXFSTS1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dtxfsts1](index.html) module"]
 pub struct DTXFSTS1_SPEC;
 impl crate::RegisterSpec for DTXFSTS1_SPEC {

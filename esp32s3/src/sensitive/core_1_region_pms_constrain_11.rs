@@ -38,12 +38,29 @@ impl From<crate::W<CORE_1_REGION_PMS_CONSTRAIN_11_SPEC>> for W {
 pub type CORE_1_REGION_PMS_CONSTRAIN_ADDR_8_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_REGION_PMS_CONSTRAIN_ADDR_8` writer - Region 7 end address and Region 8 start address for core1."]
 pub type CORE_1_REGION_PMS_CONSTRAIN_ADDR_8_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_REGION_PMS_CONSTRAIN_11_SPEC, u32, u32, 30, O>;
+    crate::FieldWriter<'a, CORE_1_REGION_PMS_CONSTRAIN_11_SPEC, 30, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:29 - Region 7 end address and Region 8 start address for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_addr_8(&self) -> CORE_1_REGION_PMS_CONSTRAIN_ADDR_8_R {
         CORE_1_REGION_PMS_CONSTRAIN_ADDR_8_R::new(self.bits & 0x3fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_REGION_PMS_CONSTRAIN_11")
+            .field(
+                "core_1_region_pms_constrain_addr_8",
+                &format_args!("{}", self.core_1_region_pms_constrain_addr_8().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_REGION_PMS_CONSTRAIN_11_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

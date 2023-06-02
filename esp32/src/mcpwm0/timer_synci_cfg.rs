@@ -35,35 +35,29 @@ impl From<crate::W<TIMER_SYNCI_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_SYNCISEL` reader - "]
-pub type TIMER0_SYNCISEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER0_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER0_SYNCISEL` writer - "]
-pub type TIMER0_SYNCISEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, O>;
+pub type TIMER0_SYNCISEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_SYNCI_CFG_SPEC, 3, O>;
 #[doc = "Field `TIMER1_SYNCISEL` reader - "]
-pub type TIMER1_SYNCISEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER1_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER1_SYNCISEL` writer - "]
-pub type TIMER1_SYNCISEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, O>;
+pub type TIMER1_SYNCISEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_SYNCI_CFG_SPEC, 3, O>;
 #[doc = "Field `TIMER2_SYNCISEL` reader - "]
-pub type TIMER2_SYNCISEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER2_SYNCISEL_R = crate::FieldReader;
 #[doc = "Field `TIMER2_SYNCISEL` writer - "]
-pub type TIMER2_SYNCISEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, O>;
+pub type TIMER2_SYNCISEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_SYNCI_CFG_SPEC, 3, O>;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` reader - "]
-pub type EXTERNAL_SYNCI0_INVERT_R = crate::BitReader<bool>;
+pub type EXTERNAL_SYNCI0_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` writer - "]
-pub type EXTERNAL_SYNCI0_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, O>;
+pub type EXTERNAL_SYNCI0_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_SYNCI_CFG_SPEC, O>;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` reader - "]
-pub type EXTERNAL_SYNCI1_INVERT_R = crate::BitReader<bool>;
+pub type EXTERNAL_SYNCI1_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` writer - "]
-pub type EXTERNAL_SYNCI1_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, O>;
+pub type EXTERNAL_SYNCI1_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_SYNCI_CFG_SPEC, O>;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` reader - "]
-pub type EXTERNAL_SYNCI2_INVERT_R = crate::BitReader<bool>;
+pub type EXTERNAL_SYNCI2_INVERT_R = crate::BitReader;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` writer - "]
-pub type EXTERNAL_SYNCI2_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, O>;
+pub type EXTERNAL_SYNCI2_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, TIMER_SYNCI_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn external_synci2_invert(&self) -> EXTERNAL_SYNCI2_INVERT_R {
         EXTERNAL_SYNCI2_INVERT_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER_SYNCI_CFG")
+            .field(
+                "timer0_syncisel",
+                &format_args!("{}", self.timer0_syncisel().bits()),
+            )
+            .field(
+                "timer1_syncisel",
+                &format_args!("{}", self.timer1_syncisel().bits()),
+            )
+            .field(
+                "timer2_syncisel",
+                &format_args!("{}", self.timer2_syncisel().bits()),
+            )
+            .field(
+                "external_synci0_invert",
+                &format_args!("{}", self.external_synci0_invert().bit()),
+            )
+            .field(
+                "external_synci1_invert",
+                &format_args!("{}", self.external_synci1_invert().bit()),
+            )
+            .field(
+                "external_synci2_invert",
+                &format_args!("{}", self.external_synci2_invert().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER_SYNCI_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -20,7 +20,13 @@ impl From<crate::W<SET_MESSAGE_END_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_TEXT_END` writer - Start hardware padding."]
-pub type SET_TEXT_END_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_MESSAGE_END_SPEC, bool, O>;
+pub type SET_TEXT_END_W<'a, const O: u8> = crate::BitWriter<'a, SET_MESSAGE_END_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_END_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Start hardware padding."]
     #[inline(always)]

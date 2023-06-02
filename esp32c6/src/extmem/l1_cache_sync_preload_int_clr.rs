@@ -35,33 +35,33 @@ impl From<crate::W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_PLD_DONE_INT_CLR` reader - The bit is used to clear interrupt that occurs only when L1-ICache0 preload-operation is done."]
-pub type L1_ICACHE0_PLD_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_PLD_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_DONE_INT_CLR` reader - The bit is used to clear interrupt that occurs only when L1-ICache1 preload-operation is done."]
-pub type L1_ICACHE1_PLD_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_PLD_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_DONE_INT_CLR` reader - Reserved"]
-pub type L1_ICACHE2_PLD_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_PLD_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_DONE_INT_CLR` reader - Reserved"]
-pub type L1_ICACHE3_PLD_DONE_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_PLD_DONE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_CLR` writer - The bit is used to clear interrupt that occurs only when L1-Cache preload-operation is done."]
 pub type L1_CACHE_PLD_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, O>;
 #[doc = "Field `CACHE_SYNC_DONE_INT_CLR` writer - The bit is used to clear interrupt that occurs only when Cache sync-operation is done."]
 pub type CACHE_SYNC_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, O>;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_INT_CLR` reader - The bit is used to clear interrupt of L1-ICache0 preload-operation error."]
-pub type L1_ICACHE0_PLD_ERR_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_PLD_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_INT_CLR` reader - The bit is used to clear interrupt of L1-ICache1 preload-operation error."]
-pub type L1_ICACHE1_PLD_ERR_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_PLD_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_ERR_INT_CLR` reader - Reserved"]
-pub type L1_ICACHE2_PLD_ERR_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_PLD_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_ERR_INT_CLR` reader - Reserved"]
-pub type L1_ICACHE3_PLD_ERR_INT_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_PLD_ERR_INT_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_CLR` writer - The bit is used to clear interrupt of L1-Cache preload-operation error."]
 pub type L1_CACHE_PLD_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, O>;
 #[doc = "Field `CACHE_SYNC_ERR_INT_CLR` writer - The bit is used to clear interrupt of Cache sync-operation error."]
 pub type CACHE_SYNC_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to clear interrupt that occurs only when L1-ICache0 preload-operation is done."]
     #[inline(always)]
@@ -102,6 +102,51 @@ impl R {
     #[inline(always)]
     pub fn l1_icache3_pld_err_int_clr(&self) -> L1_ICACHE3_PLD_ERR_INT_CLR_R {
         L1_ICACHE3_PLD_ERR_INT_CLR_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_SYNC_PRELOAD_INT_CLR")
+            .field(
+                "l1_icache0_pld_done_int_clr",
+                &format_args!("{}", self.l1_icache0_pld_done_int_clr().bit()),
+            )
+            .field(
+                "l1_icache1_pld_done_int_clr",
+                &format_args!("{}", self.l1_icache1_pld_done_int_clr().bit()),
+            )
+            .field(
+                "l1_icache2_pld_done_int_clr",
+                &format_args!("{}", self.l1_icache2_pld_done_int_clr().bit()),
+            )
+            .field(
+                "l1_icache3_pld_done_int_clr",
+                &format_args!("{}", self.l1_icache3_pld_done_int_clr().bit()),
+            )
+            .field(
+                "l1_icache0_pld_err_int_clr",
+                &format_args!("{}", self.l1_icache0_pld_err_int_clr().bit()),
+            )
+            .field(
+                "l1_icache1_pld_err_int_clr",
+                &format_args!("{}", self.l1_icache1_pld_err_int_clr().bit()),
+            )
+            .field(
+                "l1_icache2_pld_err_int_clr",
+                &format_args!("{}", self.l1_icache2_pld_err_int_clr().bit()),
+            )
+            .field(
+                "l1_icache3_pld_err_int_clr",
+                &format_args!("{}", self.l1_icache3_pld_err_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

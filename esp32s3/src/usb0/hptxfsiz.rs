@@ -37,12 +37,11 @@ impl From<crate::W<HPTXFSIZ_SPEC>> for W {
 #[doc = "Field `PTXFSTADDR` reader - "]
 pub type PTXFSTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PTXFSTADDR` writer - "]
-pub type PTXFSTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HPTXFSIZ_SPEC, u16, u16, 16, O>;
+pub type PTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16, u16>;
 #[doc = "Field `PTXFSIZE` reader - "]
 pub type PTXFSIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PTXFSIZE` writer - "]
-pub type PTXFSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HPTXFSIZ_SPEC, u16, u16, 16, O>;
+pub type PTXFSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -53,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn ptxfsize(&self) -> PTXFSIZE_R {
         PTXFSIZE_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPTXFSIZ")
+            .field("ptxfstaddr", &format_args!("{}", self.ptxfstaddr().bits()))
+            .field("ptxfsize", &format_args!("{}", self.ptxfsize().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HPTXFSIZ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

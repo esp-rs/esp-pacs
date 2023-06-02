@@ -35,25 +35,25 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD` reader - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
-pub type CS_HOLD_R = crate::BitReader<bool>;
+pub type CS_HOLD_R = crate::BitReader;
 #[doc = "Field `CS_HOLD` writer - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
-pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CS_SETUP` reader - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
-pub type CS_SETUP_R = crate::BitReader<bool>;
+pub type CS_SETUP_R = crate::BitReader;
 #[doc = "Field `CS_SETUP` writer - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
-pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - spi clock is disable in dummy phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
-pub type USR_DUMMY_R = crate::BitReader<bool>;
+pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
-pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 impl R {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
@@ -79,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
         USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER")
+            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
+            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
+            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
+            .field(
+                "usr_dummy_idle",
+                &format_args!("{}", self.usr_dummy_idle().bit()),
+            )
+            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

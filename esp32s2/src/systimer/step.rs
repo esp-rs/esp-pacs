@@ -37,13 +37,11 @@ impl From<crate::W<STEP_SPEC>> for W {
 #[doc = "Field `TIMER_XTAL_STEP` reader - Set system timer increment step when using XTAL_CLK."]
 pub type TIMER_XTAL_STEP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER_XTAL_STEP` writer - Set system timer increment step when using XTAL_CLK."]
-pub type TIMER_XTAL_STEP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STEP_SPEC, u16, u16, 10, O>;
+pub type TIMER_XTAL_STEP_W<'a, const O: u8> = crate::FieldWriter<'a, STEP_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TIMER_PLL_STEP` reader - Set system timer increment step when using PLL_CLK"]
 pub type TIMER_PLL_STEP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER_PLL_STEP` writer - Set system timer increment step when using PLL_CLK"]
-pub type TIMER_PLL_STEP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STEP_SPEC, u16, u16, 10, O>;
+pub type TIMER_PLL_STEP_W<'a, const O: u8> = crate::FieldWriter<'a, STEP_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - Set system timer increment step when using XTAL_CLK."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn timer_pll_step(&self) -> TIMER_PLL_STEP_R {
         TIMER_PLL_STEP_R::new(((self.bits >> 10) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STEP")
+            .field(
+                "timer_xtal_step",
+                &format_args!("{}", self.timer_xtal_step().bits()),
+            )
+            .field(
+                "timer_pll_step",
+                &format_args!("{}", self.timer_pll_step().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STEP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,30 +35,30 @@ impl From<crate::W<SWD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SWD_RESET_FLAG` reader - swd reset flag"]
-pub type SWD_RESET_FLAG_R = crate::BitReader<bool>;
+pub type SWD_RESET_FLAG_R = crate::BitReader;
 #[doc = "Field `SWD_FEED_INT` reader - swd interrupt for feeding"]
-pub type SWD_FEED_INT_R = crate::BitReader<bool>;
+pub type SWD_FEED_INT_R = crate::BitReader;
 #[doc = "Field `SWD_BYPASS_RST` reader - bypass super watch dog reset"]
-pub type SWD_BYPASS_RST_R = crate::BitReader<bool>;
+pub type SWD_BYPASS_RST_R = crate::BitReader;
 #[doc = "Field `SWD_BYPASS_RST` writer - bypass super watch dog reset"]
-pub type SWD_BYPASS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_BYPASS_RST_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - adjust signal width send to swd"]
 pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - adjust signal width send to swd"]
 pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWD_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - reset swd reset flag"]
-pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_FEED` writer - Sw feed swd"]
-pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_FEED_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_DISABLE` reader - disabel SWD"]
-pub type SWD_DISABLE_R = crate::BitReader<bool>;
+pub type SWD_DISABLE_R = crate::BitReader;
 #[doc = "Field `SWD_DISABLE` writer - disabel SWD"]
-pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_AUTO_FEED_EN` reader - automatically feed swd when int comes"]
-pub type SWD_AUTO_FEED_EN_R = crate::BitReader<bool>;
+pub type SWD_AUTO_FEED_EN_R = crate::BitReader;
 #[doc = "Field `SWD_AUTO_FEED_EN` writer - automatically feed swd when int comes"]
-pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, O>;
+pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - swd reset flag"]
     #[inline(always)]
@@ -89,6 +89,40 @@ impl R {
     #[inline(always)]
     pub fn swd_auto_feed_en(&self) -> SWD_AUTO_FEED_EN_R {
         SWD_AUTO_FEED_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWD_CONF")
+            .field(
+                "swd_reset_flag",
+                &format_args!("{}", self.swd_reset_flag().bit()),
+            )
+            .field(
+                "swd_feed_int",
+                &format_args!("{}", self.swd_feed_int().bit()),
+            )
+            .field(
+                "swd_bypass_rst",
+                &format_args!("{}", self.swd_bypass_rst().bit()),
+            )
+            .field(
+                "swd_signal_width",
+                &format_args!("{}", self.swd_signal_width().bits()),
+            )
+            .field("swd_disable", &format_args!("{}", self.swd_disable().bit()))
+            .field(
+                "swd_auto_feed_en",
+                &format_args!("{}", self.swd_auto_feed_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWD_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

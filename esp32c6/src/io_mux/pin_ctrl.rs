@@ -35,17 +35,17 @@ impl From<crate::W<PIN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_OUT1` reader - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
-pub type CLK_OUT1_R = crate::FieldReader<u8, u8>;
+pub type CLK_OUT1_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT1` writer - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
-pub type CLK_OUT1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 5, O>;
+pub type CLK_OUT1_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_CTRL_SPEC, 5, O>;
 #[doc = "Field `CLK_OUT2` reader - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
-pub type CLK_OUT2_R = crate::FieldReader<u8, u8>;
+pub type CLK_OUT2_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT2` writer - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
-pub type CLK_OUT2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 5, O>;
+pub type CLK_OUT2_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_CTRL_SPEC, 5, O>;
 #[doc = "Field `CLK_OUT3` reader - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
-pub type CLK_OUT3_R = crate::FieldReader<u8, u8>;
+pub type CLK_OUT3_R = crate::FieldReader;
 #[doc = "Field `CLK_OUT3` writer - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
-pub type CLK_OUT3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_CTRL_SPEC, u8, u8, 5, O>;
+pub type CLK_OUT3_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_CTRL_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn clk_out3(&self) -> CLK_OUT3_R {
         CLK_OUT3_R::new(((self.bits >> 10) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PIN_CTRL")
+            .field("clk_out1", &format_args!("{}", self.clk_out1().bits()))
+            .field("clk_out2", &format_args!("{}", self.clk_out2().bits()))
+            .field("clk_out3", &format_args!("{}", self.clk_out3().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PIN_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

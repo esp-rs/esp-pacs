@@ -35,18 +35,18 @@ impl From<crate::W<L1_CACHE_ACS_FAIL_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_FAIL_INT_ENA` reader - The bit is used to enable interrupt of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache0."]
-pub type L1_ICACHE0_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_FAIL_INT_ENA` reader - The bit is used to enable interrupt of access fail that occurs in L1-ICache1 due to cpu accesses L1-ICache1."]
-pub type L1_ICACHE1_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_FAIL_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE2_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FAIL_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE3_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FAIL_INT_ENA` reader - The bit is used to enable interrupt of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
-pub type L1_CACHE_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_CACHE_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FAIL_INT_ENA` writer - The bit is used to enable interrupt of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
 pub type L1_CACHE_FAIL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_ACS_FAIL_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_ACS_FAIL_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable interrupt of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache0."]
     #[inline(always)]
@@ -72,6 +72,39 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_fail_int_ena(&self) -> L1_CACHE_FAIL_INT_ENA_R {
         L1_CACHE_FAIL_INT_ENA_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_ACS_FAIL_INT_ENA")
+            .field(
+                "l1_icache0_fail_int_ena",
+                &format_args!("{}", self.l1_icache0_fail_int_ena().bit()),
+            )
+            .field(
+                "l1_icache1_fail_int_ena",
+                &format_args!("{}", self.l1_icache1_fail_int_ena().bit()),
+            )
+            .field(
+                "l1_icache2_fail_int_ena",
+                &format_args!("{}", self.l1_icache2_fail_int_ena().bit()),
+            )
+            .field(
+                "l1_icache3_fail_int_ena",
+                &format_args!("{}", self.l1_icache3_fail_int_ena().bit()),
+            )
+            .field(
+                "l1_cache_fail_int_ena",
+                &format_args!("{}", self.l1_cache_fail_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_FAIL_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<LR_VALUE_SPEC>> for W {
 pub type GLOABLE_LR_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `GLOABLE_LR_VALUE` writer - backup gloable value"]
 pub type GLOABLE_LR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LR_VALUE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, LR_VALUE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - backup gloable value"]
     #[inline(always)]
     pub fn gloable_lr_value(&self) -> GLOABLE_LR_VALUE_R {
         GLOABLE_LR_VALUE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LR_VALUE")
+            .field(
+                "gloable_lr_value",
+                &format_args!("{}", self.gloable_lr_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LR_VALUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

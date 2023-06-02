@@ -14,12 +14,29 @@ impl From<crate::R<M2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `M2_EXCEPTION_STATUS` reader - Exception status"]
-pub type M2_EXCEPTION_STATUS_R = crate::FieldReader<u8, u8>;
+pub type M2_EXCEPTION_STATUS_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:1 - Exception status"]
     #[inline(always)]
     pub fn m2_exception_status(&self) -> M2_EXCEPTION_STATUS_R {
         M2_EXCEPTION_STATUS_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("M2_STATUS")
+            .field(
+                "m2_exception_status",
+                &format_args!("{}", self.m2_exception_status().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<M2_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "M2 status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [m2_status](index.html) module"]

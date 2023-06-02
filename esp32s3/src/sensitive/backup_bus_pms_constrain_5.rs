@@ -38,7 +38,7 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC>> for W {
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` writer - BackUp access rtcfast_spltaddr permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC, 11, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:10 - BackUp access rtcfast_spltaddr permission."]
     #[inline(always)]
@@ -46,6 +46,26 @@ impl R {
         &self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
         BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R::new((self.bits & 0x07ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_5")
+            .field(
+                "backup_bus_pms_constrain_rtcfast_spltaddr",
+                &format_args!(
+                    "{}",
+                    self.backup_bus_pms_constrain_rtcfast_spltaddr().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

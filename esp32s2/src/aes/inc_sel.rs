@@ -35,14 +35,28 @@ impl From<crate::W<INC_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `INC_SEL` reader - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
-pub type INC_SEL_R = crate::BitReader<bool>;
+pub type INC_SEL_R = crate::BitReader;
 #[doc = "Field `INC_SEL` writer - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
-pub type INC_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, INC_SEL_SPEC, bool, O>;
+pub type INC_SEL_W<'a, const O: u8> = crate::BitWriter<'a, INC_SEL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
     #[inline(always)]
     pub fn inc_sel(&self) -> INC_SEL_R {
         INC_SEL_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INC_SEL")
+            .field("inc_sel", &format_args!("{}", self.inc_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INC_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

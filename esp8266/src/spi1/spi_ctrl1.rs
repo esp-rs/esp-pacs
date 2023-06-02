@@ -37,15 +37,15 @@ impl From<crate::W<SPI_CTRL1_SPEC>> for W {
 #[doc = "Field `status` reader - In the slave mode, it is the status for master to read out."]
 pub type STATUS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `status` writer - In the slave mode, it is the status for master to read out."]
-pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRL1_SPEC, u16, u16, 16, O>;
+pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `wb_mode` reader - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
-pub type WB_MODE_R = crate::FieldReader<u8, u8>;
+pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `wb_mode` writer - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
-pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRL1_SPEC, u8, u8, 8, O>;
+pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL1_SPEC, 8, O>;
 #[doc = "Field `status_ext` reader - In the slave mode,it is the status for master to read out."]
-pub type STATUS_EXT_R = crate::FieldReader<u8, u8>;
+pub type STATUS_EXT_R = crate::FieldReader;
 #[doc = "Field `status_ext` writer - In the slave mode,it is the status for master to read out."]
-pub type STATUS_EXT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRL1_SPEC, u8, u8, 8, O>;
+pub type STATUS_EXT_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:15 - In the slave mode, it is the status for master to read out."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn status_ext(&self) -> STATUS_EXT_R {
         STATUS_EXT_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CTRL1")
+            .field("status", &format_args!("{}", self.status().bits()))
+            .field("wb_mode", &format_args!("{}", self.wb_mode().bits()))
+            .field("status_ext", &format_args!("{}", self.status_ext().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

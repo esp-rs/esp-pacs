@@ -20,15 +20,21 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_REQ` writer - Set the bit to 1 to allow the driving nodes start transmission."]
-pub type TX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type TX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `ABORT_TX` writer - Set the bit to 1 to cancel a pending transmission request."]
-pub type ABORT_TX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type ABORT_TX_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `RELEASE_BUF` writer - Set the bit to 1 to release the RX buffer."]
-pub type RELEASE_BUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type RELEASE_BUF_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `CLR_OVERRUN` writer - Set the bit to 1 to clear the data overrun status bit."]
-pub type CLR_OVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type CLR_OVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `SELF_RX_REQ` writer - Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously."]
-pub type SELF_RX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type SELF_RX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set the bit to 1 to allow the driving nodes start transmission."]
     #[inline(always)]

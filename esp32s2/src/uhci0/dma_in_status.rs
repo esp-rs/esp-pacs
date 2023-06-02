@@ -14,11 +14,11 @@ impl From<crate::R<DMA_IN_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_FULL` reader - Data-input FIFO full signal."]
-pub type IN_FULL_R = crate::BitReader<bool>;
+pub type IN_FULL_R = crate::BitReader;
 #[doc = "Field `IN_EMPTY` reader - Data-input FIFO empty signal."]
-pub type IN_EMPTY_R = crate::BitReader<bool>;
+pub type IN_EMPTY_R = crate::BitReader;
 #[doc = "Field `RX_ERR_CAUSE` reader - This register indicates the error type when DMA has received a packet with error. 3'b001: Checksum error in the HCI packet; 3'b010: Sequence number error in the HCI packet; 3'b011: CRC bit error in the HCI packet; 3'b100: 0xC0 is found but the received HCI packet is not end; 3'b101: 0xC0 is not found when the HCI packet has been received; 3'b110: CRC check error."]
-pub type RX_ERR_CAUSE_R = crate::FieldReader<u8, u8>;
+pub type RX_ERR_CAUSE_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Data-input FIFO full signal."]
     #[inline(always)]
@@ -34,6 +34,25 @@ impl R {
     #[inline(always)]
     pub fn rx_err_cause(&self) -> RX_ERR_CAUSE_R {
         RX_ERR_CAUSE_R::new(((self.bits >> 4) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_IN_STATUS")
+            .field("in_full", &format_args!("{}", self.in_full().bit()))
+            .field("in_empty", &format_args!("{}", self.in_empty().bit()))
+            .field(
+                "rx_err_cause",
+                &format_args!("{}", self.rx_err_cause().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_IN_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UHCI data-input status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dma_in_status](index.html) module"]

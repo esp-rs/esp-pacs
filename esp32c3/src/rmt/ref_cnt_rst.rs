@@ -20,13 +20,19 @@ impl From<crate::W<REF_CNT_RST_SPEC>> for W {
     }
 }
 #[doc = "Field `CH0` writer - reg_ref_cnt_rst_ch0."]
-pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH1` writer - reg_ref_cnt_rst_ch1."]
-pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH2` writer - reg_ref_cnt_rst_ch2."]
-pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
 #[doc = "Field `CH3` writer - reg_ref_cnt_rst_ch3."]
-pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, u32, REF_CNT_RST_SPEC, bool, O>;
+pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, REF_CNT_RST_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - reg_ref_cnt_rst_ch0."]
     #[inline(always)]

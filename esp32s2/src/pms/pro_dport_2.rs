@@ -38,12 +38,29 @@ impl From<crate::W<PRO_DPORT_2_SPEC>> for W {
 pub type PRO_DPORT_RESERVE_FIFO_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_DPORT_RESERVE_FIFO_0` writer - Configure read-protection address 0."]
 pub type PRO_DPORT_RESERVE_FIFO_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_DPORT_2_SPEC, u32, u32, 18, O>;
+    crate::FieldWriter<'a, PRO_DPORT_2_SPEC, 18, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure read-protection address 0."]
     #[inline(always)]
     pub fn pro_dport_reserve_fifo_0(&self) -> PRO_DPORT_RESERVE_FIFO_0_R {
         PRO_DPORT_RESERVE_FIFO_0_R::new(self.bits & 0x0003_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DPORT_2")
+            .field(
+                "pro_dport_reserve_fifo_0",
+                &format_args!("{}", self.pro_dport_reserve_fifo_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DPORT_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

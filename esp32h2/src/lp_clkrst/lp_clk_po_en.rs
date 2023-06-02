@@ -35,49 +35,49 @@ impl From<crate::W<LP_CLK_PO_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `AON_SLOW_OEN` reader - need_des"]
-pub type AON_SLOW_OEN_R = crate::BitReader<bool>;
+pub type AON_SLOW_OEN_R = crate::BitReader;
 #[doc = "Field `AON_SLOW_OEN` writer - need_des"]
-pub type AON_SLOW_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type AON_SLOW_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `AON_FAST_OEN` reader - need_des"]
-pub type AON_FAST_OEN_R = crate::BitReader<bool>;
+pub type AON_FAST_OEN_R = crate::BitReader;
 #[doc = "Field `AON_FAST_OEN` writer - need_des"]
-pub type AON_FAST_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type AON_FAST_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `SOSC_OEN` reader - need_des"]
-pub type SOSC_OEN_R = crate::BitReader<bool>;
+pub type SOSC_OEN_R = crate::BitReader;
 #[doc = "Field `SOSC_OEN` writer - need_des"]
-pub type SOSC_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type SOSC_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `FOSC_OEN` reader - need_des"]
-pub type FOSC_OEN_R = crate::BitReader<bool>;
+pub type FOSC_OEN_R = crate::BitReader;
 #[doc = "Field `FOSC_OEN` writer - need_des"]
-pub type FOSC_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type FOSC_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `OSC32K_OEN` reader - need_des"]
-pub type OSC32K_OEN_R = crate::BitReader<bool>;
+pub type OSC32K_OEN_R = crate::BitReader;
 #[doc = "Field `OSC32K_OEN` writer - need_des"]
-pub type OSC32K_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type OSC32K_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `XTAL32K_OEN` reader - need_des"]
-pub type XTAL32K_OEN_R = crate::BitReader<bool>;
+pub type XTAL32K_OEN_R = crate::BitReader;
 #[doc = "Field `XTAL32K_OEN` writer - need_des"]
-pub type XTAL32K_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type XTAL32K_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `CORE_EFUSE_OEN` reader - need_des"]
-pub type CORE_EFUSE_OEN_R = crate::BitReader<bool>;
+pub type CORE_EFUSE_OEN_R = crate::BitReader;
 #[doc = "Field `CORE_EFUSE_OEN` writer - need_des"]
-pub type CORE_EFUSE_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type CORE_EFUSE_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `SLOW_OEN` reader - need_des"]
-pub type SLOW_OEN_R = crate::BitReader<bool>;
+pub type SLOW_OEN_R = crate::BitReader;
 #[doc = "Field `SLOW_OEN` writer - need_des"]
-pub type SLOW_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type SLOW_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `FAST_OEN` reader - need_des"]
-pub type FAST_OEN_R = crate::BitReader<bool>;
+pub type FAST_OEN_R = crate::BitReader;
 #[doc = "Field `FAST_OEN` writer - need_des"]
-pub type FAST_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type FAST_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `RNG_OEN` reader - need_des"]
-pub type RNG_OEN_R = crate::BitReader<bool>;
+pub type RNG_OEN_R = crate::BitReader;
 #[doc = "Field `RNG_OEN` writer - need_des"]
-pub type RNG_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type RNG_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 #[doc = "Field `LPBUS_OEN` reader - need_des"]
-pub type LPBUS_OEN_R = crate::BitReader<bool>;
+pub type LPBUS_OEN_R = crate::BitReader;
 #[doc = "Field `LPBUS_OEN` writer - need_des"]
-pub type LPBUS_OEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_PO_EN_SPEC, bool, O>;
+pub type LPBUS_OEN_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_PO_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -133,6 +133,39 @@ impl R {
     #[inline(always)]
     pub fn lpbus_oen(&self) -> LPBUS_OEN_R {
         LPBUS_OEN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_CLK_PO_EN")
+            .field(
+                "aon_slow_oen",
+                &format_args!("{}", self.aon_slow_oen().bit()),
+            )
+            .field(
+                "aon_fast_oen",
+                &format_args!("{}", self.aon_fast_oen().bit()),
+            )
+            .field("sosc_oen", &format_args!("{}", self.sosc_oen().bit()))
+            .field("fosc_oen", &format_args!("{}", self.fosc_oen().bit()))
+            .field("osc32k_oen", &format_args!("{}", self.osc32k_oen().bit()))
+            .field("xtal32k_oen", &format_args!("{}", self.xtal32k_oen().bit()))
+            .field(
+                "core_efuse_oen",
+                &format_args!("{}", self.core_efuse_oen().bit()),
+            )
+            .field("slow_oen", &format_args!("{}", self.slow_oen().bit()))
+            .field("fast_oen", &format_args!("{}", self.fast_oen().bit()))
+            .field("rng_oen", &format_args!("{}", self.rng_oen().bit()))
+            .field("lpbus_oen", &format_args!("{}", self.lpbus_oen().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_CLK_PO_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -16,7 +16,7 @@ impl From<crate::R<RD_REPEAT_ERR4_SPEC>> for R {
 #[doc = "Field `RPT4_RESERVED4_ERR_1` reader - Reserved."]
 pub type RPT4_RESERVED4_ERR_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RPT4_RESERVED4_ERR_0` reader - Reserved."]
-pub type RPT4_RESERVED4_ERR_0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED4_ERR_0_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:23 - Reserved."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn rpt4_reserved4_err_0(&self) -> RPT4_RESERVED4_ERR_0_R {
         RPT4_RESERVED4_ERR_0_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR4")
+            .field(
+                "rpt4_reserved4_err_1",
+                &format_args!("{}", self.rpt4_reserved4_err_1().bits()),
+            )
+            .field(
+                "rpt4_reserved4_err_0",
+                &format_args!("{}", self.rpt4_reserved4_err_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 4 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err4](index.html) module"]

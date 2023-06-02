@@ -38,12 +38,29 @@ impl From<crate::W<LCD_CMD_VAL_SPEC>> for W {
 pub type LCD_CMD_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LCD_CMD_VALUE` writer - The LCD write command value."]
 pub type LCD_CMD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CMD_VAL_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, LCD_CMD_VAL_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The LCD write command value."]
     #[inline(always)]
     pub fn lcd_cmd_value(&self) -> LCD_CMD_VALUE_R {
         LCD_CMD_VALUE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_CMD_VAL")
+            .field(
+                "lcd_cmd_value",
+                &format_args!("{}", self.lcd_cmd_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_CMD_VAL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

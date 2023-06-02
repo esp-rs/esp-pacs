@@ -38,37 +38,31 @@ impl From<crate::W<PRO_AHB_1_SPEC>> for W {
 pub type PRO_AHB_RTCSLOW_0_SPLTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_SPLTADDR` writer - Configure the split address of RTCSlow_0 for PeriBus2 access."]
 pub type PRO_AHB_RTCSLOW_0_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_AHB_1_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, PRO_AHB_1_SPEC, 11, O, u16, u16>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_F` reader - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_F_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_F` writer - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_L_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_R` reader - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_R_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_L_R_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_R` writer - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_L_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_W` reader - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_W_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_L_W_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_L_W` writer - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 low address region."]
-pub type PRO_AHB_RTCSLOW_0_L_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_L_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_F` reader - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_F_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_H_F_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_F` writer - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_H_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_R` reader - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_R_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_H_R_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_R` writer - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_H_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_W` reader - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_W_R = crate::BitReader<bool>;
+pub type PRO_AHB_RTCSLOW_0_H_W_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_0_H_W` writer - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 high address region."]
-pub type PRO_AHB_RTCSLOW_0_H_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_AHB_1_SPEC, bool, O>;
+pub type PRO_AHB_RTCSLOW_0_H_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_AHB_1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10 - Configure the split address of RTCSlow_0 for PeriBus2 access."]
     #[inline(always)]
@@ -104,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn pro_ahb_rtcslow_0_h_w(&self) -> PRO_AHB_RTCSLOW_0_H_W_R {
         PRO_AHB_RTCSLOW_0_H_W_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_AHB_1")
+            .field(
+                "pro_ahb_rtcslow_0_spltaddr",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_spltaddr().bits()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_l_f",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_l_f().bit()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_l_r",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_l_r().bit()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_l_w",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_l_w().bit()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_h_f",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_h_f().bit()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_h_r",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_h_r().bit()),
+            )
+            .field(
+                "pro_ahb_rtcslow_0_h_w",
+                &format_args!("{}", self.pro_ahb_rtcslow_0_h_w().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_AHB_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

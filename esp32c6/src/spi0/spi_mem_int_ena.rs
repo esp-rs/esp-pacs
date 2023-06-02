@@ -35,31 +35,31 @@ impl From<crate::W<SPI_MEM_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_ENA` reader - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
-pub type SPI_MEM_SLV_ST_END_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_SLV_ST_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SLV_ST_END_INT_ENA` writer - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
 pub type SPI_MEM_SLV_ST_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_ENA_SPEC, O>;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_ENA` reader - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
-pub type SPI_MEM_MST_ST_END_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_MST_ST_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_MST_ST_END_INT_ENA` writer - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
 pub type SPI_MEM_MST_ST_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_ENA_SPEC, O>;
 #[doc = "Field `SPI_MEM_ECC_ERR_INT_ENA` reader - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
-pub type SPI_MEM_ECC_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_ECC_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_REJECT_INT_ENA` reader - The enable bit for SPI_MEM_PMS_REJECT_INT interrupt."]
-pub type SPI_MEM_PMS_REJECT_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_REJECT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_REJECT_INT_ENA` writer - The enable bit for SPI_MEM_PMS_REJECT_INT interrupt."]
 pub type SPI_MEM_PMS_REJECT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_ENA_SPEC, O>;
 #[doc = "Field `SPI_MEM_AXI_RADDR_ERR_INT_ENA` reader - The enable bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
-pub type SPI_MEM_AXI_RADDR_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_RADDR_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_RADDR_ERR_INT_ENA` writer - The enable bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
 pub type SPI_MEM_AXI_RADDR_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_INT_ENA_SPEC, O>;
 #[doc = "Field `SPI_MEM_AXI_WR_FLASH_ERR_INT_ENA` reader - The enable bit for SPI_MEM_AXI_WR_FALSH_ERR_INT interrupt."]
-pub type SPI_MEM_AXI_WR_FLASH_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_WR_FLASH_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_AXI_WADDR_ERR_INT__ENA` reader - The enable bit for SPI_MEM_AXI_WADDR_ERR_INT interrupt."]
-pub type SPI_MEM_AXI_WADDR_ERR_INT__ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_AXI_WADDR_ERR_INT__ENA_R = crate::BitReader;
 impl R {
     #[doc = "Bit 3 - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
@@ -95,6 +95,47 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_axi_waddr_err_int__ena(&self) -> SPI_MEM_AXI_WADDR_ERR_INT__ENA_R {
         SPI_MEM_AXI_WADDR_ERR_INT__ENA_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_INT_ENA")
+            .field(
+                "spi_mem_slv_st_end_int_ena",
+                &format_args!("{}", self.spi_mem_slv_st_end_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_mst_st_end_int_ena",
+                &format_args!("{}", self.spi_mem_mst_st_end_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_ecc_err_int_ena",
+                &format_args!("{}", self.spi_mem_ecc_err_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_pms_reject_int_ena",
+                &format_args!("{}", self.spi_mem_pms_reject_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_axi_raddr_err_int_ena",
+                &format_args!("{}", self.spi_mem_axi_raddr_err_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_axi_wr_flash_err_int_ena",
+                &format_args!("{}", self.spi_mem_axi_wr_flash_err_int_ena().bit()),
+            )
+            .field(
+                "spi_mem_axi_waddr_err_int__ena",
+                &format_args!("{}", self.spi_mem_axi_waddr_err_int__ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

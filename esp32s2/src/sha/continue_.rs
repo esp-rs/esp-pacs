@@ -20,7 +20,13 @@ impl From<crate::W<CONTINUE_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTINUE_OP` writer - Write 1 to continue Typical SHA calculation."]
-pub type CONTINUE_OP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONTINUE_SPEC, bool, O>;
+pub type CONTINUE_OP_W<'a, const O: u8> = crate::BitWriter<'a, CONTINUE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to continue Typical SHA calculation."]
     #[inline(always)]

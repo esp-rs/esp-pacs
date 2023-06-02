@@ -20,7 +20,13 @@ impl From<crate::W<ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `ADDRESS` writer - The physical address on the off-chip flash must be 8-word boundary aligned."]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDRESS_SPEC, u8, u8, 8, O>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, ADDRESS_SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ADDRESS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - The physical address on the off-chip flash must be 8-word boundary aligned."]
     #[inline(always)]

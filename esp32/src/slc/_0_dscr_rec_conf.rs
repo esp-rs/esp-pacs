@@ -38,12 +38,29 @@ impl From<crate::W<_0_DSCR_REC_CONF_SPEC>> for W {
 pub type SLC0_RX_DSCR_REC_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0_RX_DSCR_REC_LIM` writer - "]
 pub type SLC0_RX_DSCR_REC_LIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _0_DSCR_REC_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, _0_DSCR_REC_CONF_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]
     pub fn slc0_rx_dscr_rec_lim(&self) -> SLC0_RX_DSCR_REC_LIM_R {
         SLC0_RX_DSCR_REC_LIM_R::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0_DSCR_REC_CONF")
+            .field(
+                "slc0_rx_dscr_rec_lim",
+                &format_args!("{}", self.slc0_rx_dscr_rec_lim().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0_DSCR_REC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,13 @@ impl From<crate::W<USB_DEVICE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_DEVICE_CLK_EN` reader - Set 1 to enable usb_device clock"]
-pub type USB_DEVICE_CLK_EN_R = crate::BitReader<bool>;
+pub type USB_DEVICE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_CLK_EN` writer - Set 1 to enable usb_device clock"]
-pub type USB_DEVICE_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_DEVICE_CONF_SPEC, bool, O>;
+pub type USB_DEVICE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_DEVICE_CONF_SPEC, O>;
 #[doc = "Field `USB_DEVICE_RST_EN` reader - Set 0 to reset usb_device module"]
-pub type USB_DEVICE_RST_EN_R = crate::BitReader<bool>;
+pub type USB_DEVICE_RST_EN_R = crate::BitReader;
 #[doc = "Field `USB_DEVICE_RST_EN` writer - Set 0 to reset usb_device module"]
-pub type USB_DEVICE_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_DEVICE_CONF_SPEC, bool, O>;
+pub type USB_DEVICE_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_DEVICE_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable usb_device clock"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn usb_device_rst_en(&self) -> USB_DEVICE_RST_EN_R {
         USB_DEVICE_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB_DEVICE_CONF")
+            .field(
+                "usb_device_clk_en",
+                &format_args!("{}", self.usb_device_clk_en().bit()),
+            )
+            .field(
+                "usb_device_rst_en",
+                &format_args!("{}", self.usb_device_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USB_DEVICE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

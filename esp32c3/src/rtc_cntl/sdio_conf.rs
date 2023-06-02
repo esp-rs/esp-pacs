@@ -35,69 +35,67 @@ impl From<crate::W<SDIO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_TIMER_TARGET` reader - timer count to apply reg_sdio_dcap after sdio power on"]
-pub type SDIO_TIMER_TARGET_R = crate::FieldReader<u8, u8>;
+pub type SDIO_TIMER_TARGET_R = crate::FieldReader;
 #[doc = "Field `SDIO_TIMER_TARGET` writer - timer count to apply reg_sdio_dcap after sdio power on"]
-pub type SDIO_TIMER_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 8, O>;
+pub type SDIO_TIMER_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 8, O>;
 #[doc = "Field `SDIO_DTHDRV` reader - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current"]
-pub type SDIO_DTHDRV_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DTHDRV_R = crate::FieldReader;
 #[doc = "Field `SDIO_DTHDRV` writer - Tieh = 1 mode drive ability. Initially set to 0 to limit charge current"]
-pub type SDIO_DTHDRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type SDIO_DTHDRV_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `SDIO_DCAP` reader - ability to prevent LDO from overshoot"]
-pub type SDIO_DCAP_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DCAP_R = crate::FieldReader;
 #[doc = "Field `SDIO_DCAP` writer - ability to prevent LDO from overshoot"]
-pub type SDIO_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type SDIO_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `SDIO_INITI` reader - add resistor from ldo output to ground. 0: no res"]
-pub type SDIO_INITI_R = crate::FieldReader<u8, u8>;
+pub type SDIO_INITI_R = crate::FieldReader;
 #[doc = "Field `SDIO_INITI` writer - add resistor from ldo output to ground. 0: no res"]
-pub type SDIO_INITI_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type SDIO_INITI_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `SDIO_EN_INITI` reader - 0 to set init\\[1:0\\]=0"]
-pub type SDIO_EN_INITI_R = crate::BitReader<bool>;
+pub type SDIO_EN_INITI_R = crate::BitReader;
 #[doc = "Field `SDIO_EN_INITI` writer - 0 to set init\\[1:0\\]=0"]
-pub type SDIO_EN_INITI_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_EN_INITI_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `SDIO_DCURLIM` reader - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
-pub type SDIO_DCURLIM_R = crate::FieldReader<u8, u8>;
+pub type SDIO_DCURLIM_R = crate::FieldReader;
 #[doc = "Field `SDIO_DCURLIM` writer - tune current limit threshold when tieh = 0. About 800mA/(8+d)"]
-pub type SDIO_DCURLIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 3, O>;
+pub type SDIO_DCURLIM_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 3, O>;
 #[doc = "Field `SDIO_MODECURLIM` reader - select current limit mode"]
-pub type SDIO_MODECURLIM_R = crate::BitReader<bool>;
+pub type SDIO_MODECURLIM_R = crate::BitReader;
 #[doc = "Field `SDIO_MODECURLIM` writer - select current limit mode"]
-pub type SDIO_MODECURLIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_MODECURLIM_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `SDIO_ENCURLIM` reader - enable current limit"]
-pub type SDIO_ENCURLIM_R = crate::BitReader<bool>;
+pub type SDIO_ENCURLIM_R = crate::BitReader;
 #[doc = "Field `SDIO_ENCURLIM` writer - enable current limit"]
-pub type SDIO_ENCURLIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_ENCURLIM_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `SDIO_REG_PD_EN` reader - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub type SDIO_REG_PD_EN_R = crate::BitReader<bool>;
+pub type SDIO_REG_PD_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_REG_PD_EN` writer - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub type SDIO_REG_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_REG_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `SDIO_FORCE` reader - 1: use SW option to control SDIO_REG"]
-pub type SDIO_FORCE_R = crate::BitReader<bool>;
+pub type SDIO_FORCE_R = crate::BitReader;
 #[doc = "Field `SDIO_FORCE` writer - 1: use SW option to control SDIO_REG"]
-pub type SDIO_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `SDIO_TIEH` reader - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub type SDIO_TIEH_R = crate::BitReader<bool>;
+pub type SDIO_TIEH_R = crate::BitReader;
 #[doc = "Field `SDIO_TIEH` writer - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub type SDIO_TIEH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type SDIO_TIEH_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 #[doc = "Field `_1P8_READY` reader - read only register for REG1P8_READY"]
-pub type _1P8_READY_R = crate::BitReader<bool>;
+pub type _1P8_READY_R = crate::BitReader;
 #[doc = "Field `DREFL_SDIO` reader - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFL_SDIO_R = crate::FieldReader<u8, u8>;
+pub type DREFL_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFL_SDIO` writer - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFL_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type DREFL_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `DREFM_SDIO` reader - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFM_SDIO_R = crate::FieldReader<u8, u8>;
+pub type DREFM_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFM_SDIO` writer - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFM_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type DREFM_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `DREFH_SDIO` reader - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFH_SDIO_R = crate::FieldReader<u8, u8>;
+pub type DREFH_SDIO_R = crate::FieldReader;
 #[doc = "Field `DREFH_SDIO` writer - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub type DREFH_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, O>;
+pub type DREFH_SDIO_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_CONF_SPEC, 2, O>;
 #[doc = "Field `XPD_SDIO` reader - "]
-pub type XPD_SDIO_R = crate::BitReader<bool>;
+pub type XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `XPD_SDIO` writer - "]
-pub type XPD_SDIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, O>;
+pub type XPD_SDIO_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - timer count to apply reg_sdio_dcap after sdio power on"]
     #[inline(always)]
@@ -178,6 +176,56 @@ impl R {
     #[inline(always)]
     pub fn xpd_sdio(&self) -> XPD_SDIO_R {
         XPD_SDIO_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_CONF")
+            .field(
+                "sdio_timer_target",
+                &format_args!("{}", self.sdio_timer_target().bits()),
+            )
+            .field(
+                "sdio_dthdrv",
+                &format_args!("{}", self.sdio_dthdrv().bits()),
+            )
+            .field("sdio_dcap", &format_args!("{}", self.sdio_dcap().bits()))
+            .field("sdio_initi", &format_args!("{}", self.sdio_initi().bits()))
+            .field(
+                "sdio_en_initi",
+                &format_args!("{}", self.sdio_en_initi().bit()),
+            )
+            .field(
+                "sdio_dcurlim",
+                &format_args!("{}", self.sdio_dcurlim().bits()),
+            )
+            .field(
+                "sdio_modecurlim",
+                &format_args!("{}", self.sdio_modecurlim().bit()),
+            )
+            .field(
+                "sdio_encurlim",
+                &format_args!("{}", self.sdio_encurlim().bit()),
+            )
+            .field(
+                "sdio_reg_pd_en",
+                &format_args!("{}", self.sdio_reg_pd_en().bit()),
+            )
+            .field("sdio_force", &format_args!("{}", self.sdio_force().bit()))
+            .field("sdio_tieh", &format_args!("{}", self.sdio_tieh().bit()))
+            .field("_1p8_ready", &format_args!("{}", self._1p8_ready().bit()))
+            .field("drefl_sdio", &format_args!("{}", self.drefl_sdio().bits()))
+            .field("drefm_sdio", &format_args!("{}", self.drefm_sdio().bits()))
+            .field("drefh_sdio", &format_args!("{}", self.drefh_sdio().bits()))
+            .field("xpd_sdio", &format_args!("{}", self.xpd_sdio().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

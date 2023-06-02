@@ -35,45 +35,37 @@ impl From<crate::W<BLK0_WDATA5_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_PAD_CONFIG_CLK` reader - program for SPI_pad_config_clk"]
-pub type SPI_PAD_CONFIG_CLK_R = crate::FieldReader<u8, u8>;
+pub type SPI_PAD_CONFIG_CLK_R = crate::FieldReader;
 #[doc = "Field `SPI_PAD_CONFIG_CLK` writer - program for SPI_pad_config_clk"]
-pub type SPI_PAD_CONFIG_CLK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 5, O>;
+pub type SPI_PAD_CONFIG_CLK_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 5, O>;
 #[doc = "Field `SPI_PAD_CONFIG_Q` reader - program for SPI_pad_config_q"]
-pub type SPI_PAD_CONFIG_Q_R = crate::FieldReader<u8, u8>;
+pub type SPI_PAD_CONFIG_Q_R = crate::FieldReader;
 #[doc = "Field `SPI_PAD_CONFIG_Q` writer - program for SPI_pad_config_q"]
-pub type SPI_PAD_CONFIG_Q_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 5, O>;
+pub type SPI_PAD_CONFIG_Q_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 5, O>;
 #[doc = "Field `SPI_PAD_CONFIG_D` reader - program for SPI_pad_config_d"]
-pub type SPI_PAD_CONFIG_D_R = crate::FieldReader<u8, u8>;
+pub type SPI_PAD_CONFIG_D_R = crate::FieldReader;
 #[doc = "Field `SPI_PAD_CONFIG_D` writer - program for SPI_pad_config_d"]
-pub type SPI_PAD_CONFIG_D_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 5, O>;
+pub type SPI_PAD_CONFIG_D_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 5, O>;
 #[doc = "Field `SPI_PAD_CONFIG_CS0` reader - program for SPI_pad_config_cs0"]
-pub type SPI_PAD_CONFIG_CS0_R = crate::FieldReader<u8, u8>;
+pub type SPI_PAD_CONFIG_CS0_R = crate::FieldReader;
 #[doc = "Field `SPI_PAD_CONFIG_CS0` writer - program for SPI_pad_config_cs0"]
-pub type SPI_PAD_CONFIG_CS0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 5, O>;
+pub type SPI_PAD_CONFIG_CS0_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 5, O>;
 #[doc = "Field `INST_CONFIG` reader - "]
-pub type INST_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type INST_CONFIG_R = crate::FieldReader;
 #[doc = "Field `INST_CONFIG` writer - "]
-pub type INST_CONFIG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 8, O>;
+pub type INST_CONFIG_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 8, O>;
 #[doc = "Field `VOL_LEVEL_HP_INV` reader - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)"]
-pub type VOL_LEVEL_HP_INV_R = crate::FieldReader<u8, u8>;
+pub type VOL_LEVEL_HP_INV_R = crate::FieldReader;
 #[doc = "Field `VOL_LEVEL_HP_INV` writer - This field stores the voltage level for CPU to run at 240 MHz, or for flash/PSRAM to run at 80 MHz.0x0: level 7; 0x1: level 6; 0x2: level 5; 0x3: level 4. (R/W)"]
-pub type VOL_LEVEL_HP_INV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 2, O>;
+pub type VOL_LEVEL_HP_INV_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 2, O>;
 #[doc = "Field `DIG_VOL_L6` reader - "]
-pub type DIG_VOL_L6_R = crate::FieldReader<u8, u8>;
+pub type DIG_VOL_L6_R = crate::FieldReader;
 #[doc = "Field `DIG_VOL_L6` writer - "]
-pub type DIG_VOL_L6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 4, O>;
+pub type DIG_VOL_L6_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 4, O>;
 #[doc = "Field `FLASH_CRYPT_CONFIG` reader - program for flash_crypt_config"]
-pub type FLASH_CRYPT_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type FLASH_CRYPT_CONFIG_R = crate::FieldReader;
 #[doc = "Field `FLASH_CRYPT_CONFIG` writer - program for flash_crypt_config"]
-pub type FLASH_CRYPT_CONFIG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA5_SPEC, u8, u8, 4, O>;
+pub type FLASH_CRYPT_CONFIG_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA5_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:4 - program for SPI_pad_config_clk"]
     #[inline(always)]
@@ -114,6 +106,48 @@ impl R {
     #[inline(always)]
     pub fn flash_crypt_config(&self) -> FLASH_CRYPT_CONFIG_R {
         FLASH_CRYPT_CONFIG_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_WDATA5")
+            .field(
+                "spi_pad_config_clk",
+                &format_args!("{}", self.spi_pad_config_clk().bits()),
+            )
+            .field(
+                "spi_pad_config_q",
+                &format_args!("{}", self.spi_pad_config_q().bits()),
+            )
+            .field(
+                "spi_pad_config_d",
+                &format_args!("{}", self.spi_pad_config_d().bits()),
+            )
+            .field(
+                "spi_pad_config_cs0",
+                &format_args!("{}", self.spi_pad_config_cs0().bits()),
+            )
+            .field(
+                "inst_config",
+                &format_args!("{}", self.inst_config().bits()),
+            )
+            .field(
+                "vol_level_hp_inv",
+                &format_args!("{}", self.vol_level_hp_inv().bits()),
+            )
+            .field("dig_vol_l6", &format_args!("{}", self.dig_vol_l6().bits()))
+            .field(
+                "flash_crypt_config",
+                &format_args!("{}", self.flash_crypt_config().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

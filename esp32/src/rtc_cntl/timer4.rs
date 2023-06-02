@@ -37,21 +37,20 @@ impl From<crate::W<TIMER4_SPEC>> for W {
 #[doc = "Field `WAIT_TIMER` reader - "]
 pub type WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAIT_TIMER` writer - "]
-pub type WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER4_SPEC, u16, u16, 9, O>;
+pub type WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16, u16>;
 #[doc = "Field `POWERUP_TIMER` reader - "]
-pub type POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `POWERUP_TIMER` writer - "]
-pub type POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER4_SPEC, u8, u8, 7, O>;
+pub type POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 7, O>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` reader - "]
 pub type DG_WRAP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` writer - "]
 pub type DG_WRAP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER4_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16, u16>;
 #[doc = "Field `DG_WRAP_POWERUP_TIMER` reader - "]
-pub type DG_WRAP_POWERUP_TIMER_R = crate::FieldReader<u8, u8>;
+pub type DG_WRAP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_WRAP_POWERUP_TIMER` writer - "]
-pub type DG_WRAP_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER4_SPEC, u8, u8, 7, O>;
+pub type DG_WRAP_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -72,6 +71,32 @@ impl R {
     #[inline(always)]
     pub fn dg_wrap_powerup_timer(&self) -> DG_WRAP_POWERUP_TIMER_R {
         DG_WRAP_POWERUP_TIMER_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER4")
+            .field("wait_timer", &format_args!("{}", self.wait_timer().bits()))
+            .field(
+                "powerup_timer",
+                &format_args!("{}", self.powerup_timer().bits()),
+            )
+            .field(
+                "dg_wrap_wait_timer",
+                &format_args!("{}", self.dg_wrap_wait_timer().bits()),
+            )
+            .field(
+                "dg_wrap_powerup_timer",
+                &format_args!("{}", self.dg_wrap_powerup_timer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

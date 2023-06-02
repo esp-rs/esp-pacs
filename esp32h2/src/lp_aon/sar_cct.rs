@@ -35,15 +35,31 @@ impl From<crate::W<SAR_CCT_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - need_des"]
-pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - need_des"]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_CCT_SPEC, u8, u8, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_CCT_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&self) -> SAR2_PWDET_CCT_R {
         SAR2_PWDET_CCT_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_CCT")
+            .field(
+                "sar2_pwdet_cct",
+                &format_args!("{}", self.sar2_pwdet_cct().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_CCT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MODEM_MEM_WP` reader - ."]
-pub type MODEM_MEM_WP_R = crate::FieldReader<u8, u8>;
+pub type MODEM_MEM_WP_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_WP` writer - ."]
-pub type MODEM_MEM_WP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type MODEM_MEM_WP_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `MODEM_MEM_WA` reader - ."]
-pub type MODEM_MEM_WA_R = crate::FieldReader<u8, u8>;
+pub type MODEM_MEM_WA_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_WA` writer - ."]
-pub type MODEM_MEM_WA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type MODEM_MEM_WA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `MODEM_MEM_RA` reader - ."]
-pub type MODEM_MEM_RA_R = crate::FieldReader<u8, u8>;
+pub type MODEM_MEM_RA_R = crate::FieldReader;
 #[doc = "Field `MODEM_MEM_RA` writer - ."]
-pub type MODEM_MEM_RA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 2, O>;
+pub type MODEM_MEM_RA_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2 - ."]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn modem_mem_ra(&self) -> MODEM_MEM_RA_R {
         MODEM_MEM_RA_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CONF")
+            .field(
+                "modem_mem_wp",
+                &format_args!("{}", self.modem_mem_wp().bits()),
+            )
+            .field(
+                "modem_mem_wa",
+                &format_args!("{}", self.modem_mem_wa().bits()),
+            )
+            .field(
+                "modem_mem_ra",
+                &format_args!("{}", self.modem_mem_ra().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

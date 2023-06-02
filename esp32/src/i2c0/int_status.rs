@@ -14,31 +14,31 @@ impl From<crate::R<INT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ST` reader - The masked interrupt status for rxfifo_full_int interrupt."]
-pub type RXFIFO_FULL_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_FULL_INT_ST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_EMPTY_INT_ST` reader - The masked interrupt status for txfifo_empty_int interrupt."]
-pub type TXFIFO_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type TXFIFO_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - The masked interrupt status for rxfifo_ovf_int interrupt."]
-pub type RXFIFO_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `END_DETECT_INT_ST` reader - The masked interrupt status for end_detect_int interrupt."]
-pub type END_DETECT_INT_ST_R = crate::BitReader<bool>;
+pub type END_DETECT_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ST` reader - The masked interrupt status for slave_tran_comp_int interrupt."]
-pub type SLAVE_TRAN_COMP_INT_ST_R = crate::BitReader<bool>;
+pub type SLAVE_TRAN_COMP_INT_ST_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ST` reader - The masked interrupt status for arbitration_lost_int interrupt."]
-pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ST` reader - The masked interrupt status for master_tran_comp_int interrupt."]
-pub type MASTER_TRAN_COMP_INT_ST_R = crate::BitReader<bool>;
+pub type MASTER_TRAN_COMP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ST` reader - The masked interrupt status for trans_complete_int interrupt."]
-pub type TRANS_COMPLETE_INT_ST_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ST` reader - The masked interrupt status for time_out_int interrupt."]
-pub type TIME_OUT_INT_ST_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `TRANS_START_INT_ST` reader - The masked interrupt status for trans_start_int interrupt."]
-pub type TRANS_START_INT_ST_R = crate::BitReader<bool>;
+pub type TRANS_START_INT_ST_R = crate::BitReader;
 #[doc = "Field `ACK_ERR_INT_ST` reader - The masked interrupt status for ack_err_int interrupt."]
-pub type ACK_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type ACK_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_REC_FULL_INT_ST` reader - The masked interrupt status for rx_rec_full_int interrupt."]
-pub type RX_REC_FULL_INT_ST_R = crate::BitReader<bool>;
+pub type RX_REC_FULL_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_SEND_EMPTY_INT_ST` reader - The masked interrupt status for tx_send_empty_int interrupt."]
-pub type TX_SEND_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type TX_SEND_EMPTY_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status for rxfifo_full_int interrupt."]
     #[inline(always)]
@@ -104,6 +104,71 @@ impl R {
     #[inline(always)]
     pub fn tx_send_empty_int_st(&self) -> TX_SEND_EMPTY_INT_ST_R {
         TX_SEND_EMPTY_INT_ST_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_STATUS")
+            .field(
+                "rxfifo_full_int_st",
+                &format_args!("{}", self.rxfifo_full_int_st().bit()),
+            )
+            .field(
+                "txfifo_empty_int_st",
+                &format_args!("{}", self.txfifo_empty_int_st().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_st",
+                &format_args!("{}", self.rxfifo_ovf_int_st().bit()),
+            )
+            .field(
+                "end_detect_int_st",
+                &format_args!("{}", self.end_detect_int_st().bit()),
+            )
+            .field(
+                "slave_tran_comp_int_st",
+                &format_args!("{}", self.slave_tran_comp_int_st().bit()),
+            )
+            .field(
+                "arbitration_lost_int_st",
+                &format_args!("{}", self.arbitration_lost_int_st().bit()),
+            )
+            .field(
+                "master_tran_comp_int_st",
+                &format_args!("{}", self.master_tran_comp_int_st().bit()),
+            )
+            .field(
+                "trans_complete_int_st",
+                &format_args!("{}", self.trans_complete_int_st().bit()),
+            )
+            .field(
+                "time_out_int_st",
+                &format_args!("{}", self.time_out_int_st().bit()),
+            )
+            .field(
+                "trans_start_int_st",
+                &format_args!("{}", self.trans_start_int_st().bit()),
+            )
+            .field(
+                "ack_err_int_st",
+                &format_args!("{}", self.ack_err_int_st().bit()),
+            )
+            .field(
+                "rx_rec_full_int_st",
+                &format_args!("{}", self.rx_rec_full_int_st().bit()),
+            )
+            .field(
+                "tx_send_empty_int_st",
+                &format_args!("{}", self.tx_send_empty_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_status](index.html) module"]

@@ -35,116 +35,113 @@ impl From<crate::W<PERIP_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMERS_CLK_EN` reader - "]
-pub type TIMERS_CLK_EN_R = crate::BitReader<bool>;
+pub type TIMERS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERS_CLK_EN` writer - "]
-pub type TIMERS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type TIMERS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `SPI01_CLK_EN` reader - "]
-pub type SPI01_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI01_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI01_CLK_EN` writer - "]
-pub type SPI01_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type SPI01_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UART_CLK_EN` reader - "]
-pub type UART_CLK_EN_R = crate::BitReader<bool>;
+pub type UART_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_CLK_EN` writer - "]
-pub type UART_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UART_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `WDG_CLK_EN` reader - "]
-pub type WDG_CLK_EN_R = crate::BitReader<bool>;
+pub type WDG_CLK_EN_R = crate::BitReader;
 #[doc = "Field `WDG_CLK_EN` writer - "]
-pub type WDG_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type WDG_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `I2S0_CLK_EN` reader - "]
-pub type I2S0_CLK_EN_R = crate::BitReader<bool>;
+pub type I2S0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S0_CLK_EN` writer - "]
-pub type I2S0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type I2S0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UART1_CLK_EN` reader - "]
-pub type UART1_CLK_EN_R = crate::BitReader<bool>;
+pub type UART1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART1_CLK_EN` writer - "]
-pub type UART1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UART1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `SPI2_CLK_EN` reader - "]
-pub type SPI2_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_CLK_EN` writer - "]
-pub type SPI2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type SPI2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `I2C0_EXT0_CLK_EN` reader - "]
-pub type I2C0_EXT0_CLK_EN_R = crate::BitReader<bool>;
+pub type I2C0_EXT0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C0_EXT0_CLK_EN` writer - "]
-pub type I2C0_EXT0_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type I2C0_EXT0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UHCI0_CLK_EN` reader - "]
-pub type UHCI0_CLK_EN_R = crate::BitReader<bool>;
+pub type UHCI0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI0_CLK_EN` writer - "]
-pub type UHCI0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UHCI0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `RMT_CLK_EN` reader - "]
-pub type RMT_CLK_EN_R = crate::BitReader<bool>;
+pub type RMT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `RMT_CLK_EN` writer - "]
-pub type RMT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type RMT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `PCNT_CLK_EN` reader - "]
-pub type PCNT_CLK_EN_R = crate::BitReader<bool>;
+pub type PCNT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PCNT_CLK_EN` writer - "]
-pub type PCNT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type PCNT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `LEDC_CLK_EN` reader - "]
-pub type LEDC_CLK_EN_R = crate::BitReader<bool>;
+pub type LEDC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LEDC_CLK_EN` writer - "]
-pub type LEDC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type LEDC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UHCI1_CLK_EN` reader - "]
-pub type UHCI1_CLK_EN_R = crate::BitReader<bool>;
+pub type UHCI1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UHCI1_CLK_EN` writer - "]
-pub type UHCI1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UHCI1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `TIMERGROUP_CLK_EN` reader - "]
-pub type TIMERGROUP_CLK_EN_R = crate::BitReader<bool>;
+pub type TIMERGROUP_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP_CLK_EN` writer - "]
-pub type TIMERGROUP_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type TIMERGROUP_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `EFUSE_CLK_EN` reader - "]
-pub type EFUSE_CLK_EN_R = crate::BitReader<bool>;
+pub type EFUSE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `EFUSE_CLK_EN` writer - "]
-pub type EFUSE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type EFUSE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `TIMERGROUP1_CLK_EN` reader - "]
-pub type TIMERGROUP1_CLK_EN_R = crate::BitReader<bool>;
+pub type TIMERGROUP1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TIMERGROUP1_CLK_EN` writer - "]
-pub type TIMERGROUP1_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type TIMERGROUP1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `SPI3_CLK_EN` reader - "]
-pub type SPI3_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI3_CLK_EN` writer - "]
-pub type SPI3_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type SPI3_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `PWM0_CLK_EN` reader - "]
-pub type PWM0_CLK_EN_R = crate::BitReader<bool>;
+pub type PWM0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM0_CLK_EN` writer - "]
-pub type PWM0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type PWM0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `I2C_EXT1_CLK_EN` reader - "]
-pub type I2C_EXT1_CLK_EN_R = crate::BitReader<bool>;
+pub type I2C_EXT1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2C_EXT1_CLK_EN` writer - "]
-pub type I2C_EXT1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type I2C_EXT1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `TWAI_CLK_EN` reader - "]
-pub type TWAI_CLK_EN_R = crate::BitReader<bool>;
+pub type TWAI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI_CLK_EN` writer - "]
-pub type TWAI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type TWAI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `PWM1_CLK_EN` reader - "]
-pub type PWM1_CLK_EN_R = crate::BitReader<bool>;
+pub type PWM1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM1_CLK_EN` writer - "]
-pub type PWM1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type PWM1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `I2S1_CLK_EN` reader - "]
-pub type I2S1_CLK_EN_R = crate::BitReader<bool>;
+pub type I2S1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `I2S1_CLK_EN` writer - "]
-pub type I2S1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type I2S1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `SPI_DMA_CLK_EN` reader - "]
-pub type SPI_DMA_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI_DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_DMA_CLK_EN` writer - "]
-pub type SPI_DMA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type SPI_DMA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UART2_CLK_EN` reader - "]
-pub type UART2_CLK_EN_R = crate::BitReader<bool>;
+pub type UART2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART2_CLK_EN` writer - "]
-pub type UART2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UART2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `UART_MEM_CLK_EN` reader - "]
-pub type UART_MEM_CLK_EN_R = crate::BitReader<bool>;
+pub type UART_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART_MEM_CLK_EN` writer - "]
-pub type UART_MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type UART_MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `PWM2_CLK_EN` reader - "]
-pub type PWM2_CLK_EN_R = crate::BitReader<bool>;
+pub type PWM2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM2_CLK_EN` writer - "]
-pub type PWM2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type PWM2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 #[doc = "Field `PWM3_CLK_EN` reader - "]
-pub type PWM3_CLK_EN_R = crate::BitReader<bool>;
+pub type PWM3_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM3_CLK_EN` writer - "]
-pub type PWM3_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_CLK_EN_SPEC, bool, O>;
+pub type PWM3_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -280,6 +277,85 @@ impl R {
     #[inline(always)]
     pub fn pwm3_clk_en(&self) -> PWM3_CLK_EN_R {
         PWM3_CLK_EN_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_CLK_EN")
+            .field(
+                "timers_clk_en",
+                &format_args!("{}", self.timers_clk_en().bit()),
+            )
+            .field(
+                "spi01_clk_en",
+                &format_args!("{}", self.spi01_clk_en().bit()),
+            )
+            .field("uart_clk_en", &format_args!("{}", self.uart_clk_en().bit()))
+            .field("wdg_clk_en", &format_args!("{}", self.wdg_clk_en().bit()))
+            .field("i2s0_clk_en", &format_args!("{}", self.i2s0_clk_en().bit()))
+            .field(
+                "uart1_clk_en",
+                &format_args!("{}", self.uart1_clk_en().bit()),
+            )
+            .field("spi2_clk_en", &format_args!("{}", self.spi2_clk_en().bit()))
+            .field(
+                "i2c0_ext0_clk_en",
+                &format_args!("{}", self.i2c0_ext0_clk_en().bit()),
+            )
+            .field(
+                "uhci0_clk_en",
+                &format_args!("{}", self.uhci0_clk_en().bit()),
+            )
+            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
+            .field("pcnt_clk_en", &format_args!("{}", self.pcnt_clk_en().bit()))
+            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
+            .field(
+                "uhci1_clk_en",
+                &format_args!("{}", self.uhci1_clk_en().bit()),
+            )
+            .field(
+                "timergroup_clk_en",
+                &format_args!("{}", self.timergroup_clk_en().bit()),
+            )
+            .field(
+                "efuse_clk_en",
+                &format_args!("{}", self.efuse_clk_en().bit()),
+            )
+            .field(
+                "timergroup1_clk_en",
+                &format_args!("{}", self.timergroup1_clk_en().bit()),
+            )
+            .field("spi3_clk_en", &format_args!("{}", self.spi3_clk_en().bit()))
+            .field("pwm0_clk_en", &format_args!("{}", self.pwm0_clk_en().bit()))
+            .field(
+                "i2c_ext1_clk_en",
+                &format_args!("{}", self.i2c_ext1_clk_en().bit()),
+            )
+            .field("twai_clk_en", &format_args!("{}", self.twai_clk_en().bit()))
+            .field("pwm1_clk_en", &format_args!("{}", self.pwm1_clk_en().bit()))
+            .field("i2s1_clk_en", &format_args!("{}", self.i2s1_clk_en().bit()))
+            .field(
+                "spi_dma_clk_en",
+                &format_args!("{}", self.spi_dma_clk_en().bit()),
+            )
+            .field(
+                "uart2_clk_en",
+                &format_args!("{}", self.uart2_clk_en().bit()),
+            )
+            .field(
+                "uart_mem_clk_en",
+                &format_args!("{}", self.uart_mem_clk_en().bit()),
+            )
+            .field("pwm2_clk_en", &format_args!("{}", self.pwm2_clk_en().bit()))
+            .field("pwm3_clk_en", &format_args!("{}", self.pwm3_clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

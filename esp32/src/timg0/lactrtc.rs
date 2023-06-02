@@ -38,12 +38,29 @@ impl From<crate::W<LACTRTC_SPEC>> for W {
 pub type LACT_RTC_STEP_LEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LACT_RTC_STEP_LEN` writer - "]
 pub type LACT_RTC_STEP_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LACTRTC_SPEC, u32, u32, 26, O>;
+    crate::FieldWriter<'a, LACTRTC_SPEC, 26, O, u32, u32>;
 impl R {
     #[doc = "Bits 6:31"]
     #[inline(always)]
     pub fn lact_rtc_step_len(&self) -> LACT_RTC_STEP_LEN_R {
         LACT_RTC_STEP_LEN_R::new((self.bits >> 6) & 0x03ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LACTRTC")
+            .field(
+                "lact_rtc_step_len",
+                &format_args!("{}", self.lact_rtc_step_len().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LACTRTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<INTERRUPT_REG_DATE_SPEC>> for W {
 pub type INTERRUPT_REG_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INTERRUPT_REG_DATE` writer - Version control register"]
 pub type INTERRUPT_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERRUPT_REG_DATE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, INTERRUPT_REG_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Version control register"]
     #[inline(always)]
     pub fn interrupt_reg_date(&self) -> INTERRUPT_REG_DATE_R {
         INTERRUPT_REG_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_REG_DATE")
+            .field(
+                "interrupt_reg_date",
+                &format_args!("{}", self.interrupt_reg_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_REG_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

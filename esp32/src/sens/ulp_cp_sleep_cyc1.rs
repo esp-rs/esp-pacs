@@ -38,12 +38,29 @@ impl From<crate::W<ULP_CP_SLEEP_CYC1_SPEC>> for W {
 pub type SLEEP_CYCLES_S1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLEEP_CYCLES_S1` writer - "]
 pub type SLEEP_CYCLES_S1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ULP_CP_SLEEP_CYC1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, ULP_CP_SLEEP_CYC1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn sleep_cycles_s1(&self) -> SLEEP_CYCLES_S1_R {
         SLEEP_CYCLES_S1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ULP_CP_SLEEP_CYC1")
+            .field(
+                "sleep_cycles_s1",
+                &format_args!("{}", self.sleep_cycles_s1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ULP_CP_SLEEP_CYC1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,18 +35,17 @@ impl From<crate::W<COMB_PVT_HVT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `COMB_PATH_LEN_HVT` reader - ******* Description ***********"]
-pub type COMB_PATH_LEN_HVT_R = crate::FieldReader<u8, u8>;
+pub type COMB_PATH_LEN_HVT_R = crate::FieldReader;
 #[doc = "Field `COMB_PATH_LEN_HVT` writer - ******* Description ***********"]
 pub type COMB_PATH_LEN_HVT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COMB_PVT_HVT_CONF_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, COMB_PVT_HVT_CONF_SPEC, 5, O>;
 #[doc = "Field `COMB_ERR_CNT_CLR_HVT` writer - ******* Description ***********"]
-pub type COMB_ERR_CNT_CLR_HVT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COMB_PVT_HVT_CONF_SPEC, bool, O>;
+pub type COMB_ERR_CNT_CLR_HVT_W<'a, const O: u8> = crate::BitWriter<'a, COMB_PVT_HVT_CONF_SPEC, O>;
 #[doc = "Field `COMB_PVT_MONITOR_EN_HVT` reader - ******* Description ***********"]
-pub type COMB_PVT_MONITOR_EN_HVT_R = crate::BitReader<bool>;
+pub type COMB_PVT_MONITOR_EN_HVT_R = crate::BitReader;
 #[doc = "Field `COMB_PVT_MONITOR_EN_HVT` writer - ******* Description ***********"]
 pub type COMB_PVT_MONITOR_EN_HVT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COMB_PVT_HVT_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, COMB_PVT_HVT_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - ******* Description ***********"]
     #[inline(always)]
@@ -57,6 +56,27 @@ impl R {
     #[inline(always)]
     pub fn comb_pvt_monitor_en_hvt(&self) -> COMB_PVT_MONITOR_EN_HVT_R {
         COMB_PVT_MONITOR_EN_HVT_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COMB_PVT_HVT_CONF")
+            .field(
+                "comb_path_len_hvt",
+                &format_args!("{}", self.comb_path_len_hvt().bits()),
+            )
+            .field(
+                "comb_pvt_monitor_en_hvt",
+                &format_args!("{}", self.comb_pvt_monitor_en_hvt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_HVT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

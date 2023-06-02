@@ -35,24 +35,21 @@ impl From<crate::W<CPU_RESET_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_WDT_CPU_RESET_LENGTH` reader - need_des"]
-pub type RTC_WDT_CPU_RESET_LENGTH_R = crate::FieldReader<u8, u8>;
+pub type RTC_WDT_CPU_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `RTC_WDT_CPU_RESET_LENGTH` writer - need_des"]
-pub type RTC_WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_RESET_SPEC, u8, u8, 3, O>;
+pub type RTC_WDT_CPU_RESET_LENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_RESET_SPEC, 3, O>;
 #[doc = "Field `RTC_WDT_CPU_RESET_EN` reader - need_des"]
-pub type RTC_WDT_CPU_RESET_EN_R = crate::BitReader<bool>;
+pub type RTC_WDT_CPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `RTC_WDT_CPU_RESET_EN` writer - need_des"]
-pub type RTC_WDT_CPU_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_RESET_SPEC, bool, O>;
+pub type RTC_WDT_CPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, CPU_RESET_SPEC, O>;
 #[doc = "Field `CPU_STALL_WAIT` reader - need_des"]
-pub type CPU_STALL_WAIT_R = crate::FieldReader<u8, u8>;
+pub type CPU_STALL_WAIT_R = crate::FieldReader;
 #[doc = "Field `CPU_STALL_WAIT` writer - need_des"]
-pub type CPU_STALL_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_RESET_SPEC, u8, u8, 5, O>;
+pub type CPU_STALL_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_RESET_SPEC, 5, O>;
 #[doc = "Field `CPU_STALL_EN` reader - need_des"]
-pub type CPU_STALL_EN_R = crate::BitReader<bool>;
+pub type CPU_STALL_EN_R = crate::BitReader;
 #[doc = "Field `CPU_STALL_EN` writer - need_des"]
-pub type CPU_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPU_RESET_SPEC, bool, O>;
+pub type CPU_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, CPU_RESET_SPEC, O>;
 impl R {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
@@ -73,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn cpu_stall_en(&self) -> CPU_STALL_EN_R {
         CPU_STALL_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_RESET")
+            .field(
+                "rtc_wdt_cpu_reset_length",
+                &format_args!("{}", self.rtc_wdt_cpu_reset_length().bits()),
+            )
+            .field(
+                "rtc_wdt_cpu_reset_en",
+                &format_args!("{}", self.rtc_wdt_cpu_reset_en().bit()),
+            )
+            .field(
+                "cpu_stall_wait",
+                &format_args!("{}", self.cpu_stall_wait().bits()),
+            )
+            .field(
+                "cpu_stall_en",
+                &format_args!("{}", self.cpu_stall_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_RESET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

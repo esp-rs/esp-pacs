@@ -35,31 +35,27 @@ impl From<crate::W<CPUSDIO_INT1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_INT_H` reader - SDIO's extent GPIO32~39 interrupt"]
-pub type SDIO_INT_H_R = crate::FieldReader<u8, u8>;
+pub type SDIO_INT_H_R = crate::FieldReader;
 #[doc = "Field `PIN_PAD_DRIVER` reader - "]
-pub type PIN_PAD_DRIVER_R = crate::BitReader<bool>;
+pub type PIN_PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PIN_PAD_DRIVER` writer - "]
-pub type PIN_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPUSDIO_INT1_SPEC, bool, O>;
+pub type PIN_PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, CPUSDIO_INT1_SPEC, O>;
 #[doc = "Field `PIN_INT_TYPE` reader - "]
-pub type PIN_INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type PIN_INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `PIN_INT_TYPE` writer - "]
-pub type PIN_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 3, O>;
+pub type PIN_INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, CPUSDIO_INT1_SPEC, 3, O>;
 #[doc = "Field `PIN_WAKEUP_ENABLE` reader - "]
-pub type PIN_WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type PIN_WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `PIN_WAKEUP_ENABLE` writer - "]
-pub type PIN_WAKEUP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPUSDIO_INT1_SPEC, bool, O>;
+pub type PIN_WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CPUSDIO_INT1_SPEC, O>;
 #[doc = "Field `PIN_CONFIG` reader - "]
-pub type PIN_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type PIN_CONFIG_R = crate::FieldReader;
 #[doc = "Field `PIN_CONFIG` writer - "]
-pub type PIN_CONFIG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 2, O>;
+pub type PIN_CONFIG_W<'a, const O: u8> = crate::FieldWriter<'a, CPUSDIO_INT1_SPEC, 2, O>;
 #[doc = "Field `PIN_INT_ENA` reader - "]
-pub type PIN_INT_ENA_R = crate::FieldReader<u8, u8>;
+pub type PIN_INT_ENA_R = crate::FieldReader;
 #[doc = "Field `PIN_INT_ENA` writer - "]
-pub type PIN_INT_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 5, O>;
+pub type PIN_INT_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, CPUSDIO_INT1_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:7 - SDIO's extent GPIO32~39 interrupt"]
     #[inline(always)]
@@ -90,6 +86,37 @@ impl R {
     #[inline(always)]
     pub fn pin_int_ena(&self) -> PIN_INT_ENA_R {
         PIN_INT_ENA_R::new(((self.bits >> 13) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPUSDIO_INT1")
+            .field("sdio_int_h", &format_args!("{}", self.sdio_int_h().bits()))
+            .field(
+                "pin_pad_driver",
+                &format_args!("{}", self.pin_pad_driver().bit()),
+            )
+            .field(
+                "pin_int_type",
+                &format_args!("{}", self.pin_int_type().bits()),
+            )
+            .field(
+                "pin_wakeup_enable",
+                &format_args!("{}", self.pin_wakeup_enable().bit()),
+            )
+            .field("pin_config", &format_args!("{}", self.pin_config().bits()))
+            .field(
+                "pin_int_ena",
+                &format_args!("{}", self.pin_int_ena().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPUSDIO_INT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

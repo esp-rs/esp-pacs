@@ -35,27 +35,27 @@ impl From<crate::W<L1_CACHE_ACS_CNT_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_IBUS0_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L1-ICache0 due to bus0 accesses L1-ICache0."]
-pub type L1_IBUS0_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_IBUS0_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_IBUS1_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L1-ICache1 due to bus1 accesses L1-ICache1."]
-pub type L1_IBUS1_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_IBUS1_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_IBUS2_OVF_INT_ENA` reader - Reserved"]
-pub type L1_IBUS2_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_IBUS2_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_IBUS3_OVF_INT_ENA` reader - Reserved"]
-pub type L1_IBUS3_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_IBUS3_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS0_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus0 accesses L1-DCache."]
-pub type L1_BUS0_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_BUS0_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS0_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus0 accesses L1-DCache."]
 pub type L1_BUS0_OVF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_ACS_CNT_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_ACS_CNT_INT_ENA_SPEC, O>;
 #[doc = "Field `L1_BUS1_OVF_INT_ENA` reader - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus1 accesses L1-DCache."]
-pub type L1_BUS1_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_BUS1_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_BUS1_OVF_INT_ENA` writer - The bit is used to enable interrupt of one of counters overflow that occurs in L1-DCache due to bus1 accesses L1-DCache."]
 pub type L1_BUS1_OVF_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_ACS_CNT_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_ACS_CNT_INT_ENA_SPEC, O>;
 #[doc = "Field `L1_DBUS2_OVF_INT_ENA` reader - Reserved"]
-pub type L1_DBUS2_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_DBUS2_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_DBUS3_OVF_INT_ENA` reader - Reserved"]
-pub type L1_DBUS3_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_DBUS3_OVF_INT_ENA_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable interrupt of one of counters overflow that occurs in L1-ICache0 due to bus0 accesses L1-ICache0."]
     #[inline(always)]
@@ -96,6 +96,51 @@ impl R {
     #[inline(always)]
     pub fn l1_dbus3_ovf_int_ena(&self) -> L1_DBUS3_OVF_INT_ENA_R {
         L1_DBUS3_OVF_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_ACS_CNT_INT_ENA")
+            .field(
+                "l1_ibus0_ovf_int_ena",
+                &format_args!("{}", self.l1_ibus0_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_ibus1_ovf_int_ena",
+                &format_args!("{}", self.l1_ibus1_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_ibus2_ovf_int_ena",
+                &format_args!("{}", self.l1_ibus2_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_ibus3_ovf_int_ena",
+                &format_args!("{}", self.l1_ibus3_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_bus0_ovf_int_ena",
+                &format_args!("{}", self.l1_bus0_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_bus1_ovf_int_ena",
+                &format_args!("{}", self.l1_bus1_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_dbus2_ovf_int_ena",
+                &format_args!("{}", self.l1_dbus2_ovf_int_ena().bit()),
+            )
+            .field(
+                "l1_dbus3_ovf_int_ena",
+                &format_args!("{}", self.l1_dbus3_ovf_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_CNT_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,29 +35,29 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
-pub type TX_PCM_CONF_R = crate::FieldReader<u8, u8>;
+pub type TX_PCM_CONF_R = crate::FieldReader;
 #[doc = "Field `TX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
-pub type TX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 3, O>;
+pub type TX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 3, O>;
 #[doc = "Field `TX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for transmitted data."]
-pub type TX_PCM_BYPASS_R = crate::BitReader<bool>;
+pub type TX_PCM_BYPASS_R = crate::BitReader;
 #[doc = "Field `TX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for transmitted data."]
-pub type TX_PCM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_PCM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `RX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
-pub type RX_PCM_CONF_R = crate::FieldReader<u8, u8>;
+pub type RX_PCM_CONF_R = crate::FieldReader;
 #[doc = "Field `RX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
-pub type RX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 3, O>;
+pub type RX_PCM_CONF_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 3, O>;
 #[doc = "Field `RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
-pub type RX_PCM_BYPASS_R = crate::BitReader<bool>;
+pub type RX_PCM_BYPASS_R = crate::BitReader;
 #[doc = "Field `RX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for received data."]
-pub type RX_PCM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type RX_PCM_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_STOP_EN` reader - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
-pub type TX_STOP_EN_R = crate::BitReader<bool>;
+pub type TX_STOP_EN_R = crate::BitReader;
 #[doc = "Field `TX_STOP_EN` writer - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
-pub type TX_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_ZEROS_RM_EN` reader - Reserved."]
-pub type TX_ZEROS_RM_EN_R = crate::BitReader<bool>;
+pub type TX_ZEROS_RM_EN_R = crate::BitReader;
 #[doc = "Field `TX_ZEROS_RM_EN` writer - Reserved."]
-pub type TX_ZEROS_RM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_ZEROS_RM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
     #[inline(always)]
@@ -88,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn tx_zeros_rm_en(&self) -> TX_ZEROS_RM_EN_R {
         TX_ZEROS_RM_EN_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF1")
+            .field(
+                "tx_pcm_conf",
+                &format_args!("{}", self.tx_pcm_conf().bits()),
+            )
+            .field(
+                "tx_pcm_bypass",
+                &format_args!("{}", self.tx_pcm_bypass().bit()),
+            )
+            .field(
+                "rx_pcm_conf",
+                &format_args!("{}", self.rx_pcm_conf().bits()),
+            )
+            .field(
+                "rx_pcm_bypass",
+                &format_args!("{}", self.rx_pcm_bypass().bit()),
+            )
+            .field("tx_stop_en", &format_args!("{}", self.tx_stop_en().bit()))
+            .field(
+                "tx_zeros_rm_en",
+                &format_args!("{}", self.tx_zeros_rm_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

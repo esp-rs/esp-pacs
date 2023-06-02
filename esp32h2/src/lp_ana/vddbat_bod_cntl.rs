@@ -35,27 +35,25 @@ impl From<crate::W<VDDBAT_BOD_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_FLAG` reader - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_FLAG_R = crate::BitReader<bool>;
+pub type VDDBAT_UNDERVOLTAGE_FLAG_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGER` reader - need_des"]
-pub type VDDBAT_CHARGER_R = crate::BitReader<bool>;
+pub type VDDBAT_CHARGER_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGER` writer - need_des"]
-pub type VDDBAT_CHARGER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, VDDBAT_BOD_CNTL_SPEC, bool, O>;
+pub type VDDBAT_CHARGER_W<'a, const O: u8> = crate::BitWriter<'a, VDDBAT_BOD_CNTL_SPEC, O>;
 #[doc = "Field `VDDBAT_CNT_CLR` reader - need_des"]
-pub type VDDBAT_CNT_CLR_R = crate::BitReader<bool>;
+pub type VDDBAT_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CNT_CLR` writer - need_des"]
-pub type VDDBAT_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, VDDBAT_BOD_CNTL_SPEC, bool, O>;
+pub type VDDBAT_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, VDDBAT_BOD_CNTL_SPEC, O>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` reader - need_des"]
 pub type VDDBAT_UPVOLTAGE_TARGET_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` writer - need_des"]
 pub type VDDBAT_UPVOLTAGE_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, VDDBAT_BOD_CNTL_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16, u16>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` reader - need_des"]
 pub type VDDBAT_UNDERVOLTAGE_TARGET_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` writer - need_des"]
 pub type VDDBAT_UNDERVOLTAGE_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, VDDBAT_BOD_CNTL_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -81,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn vddbat_undervoltage_target(&self) -> VDDBAT_UNDERVOLTAGE_TARGET_R {
         VDDBAT_UNDERVOLTAGE_TARGET_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("VDDBAT_BOD_CNTL")
+            .field(
+                "vddbat_undervoltage_flag",
+                &format_args!("{}", self.vddbat_undervoltage_flag().bit()),
+            )
+            .field(
+                "vddbat_charger",
+                &format_args!("{}", self.vddbat_charger().bit()),
+            )
+            .field(
+                "vddbat_cnt_clr",
+                &format_args!("{}", self.vddbat_cnt_clr().bit()),
+            )
+            .field(
+                "vddbat_upvoltage_target",
+                &format_args!("{}", self.vddbat_upvoltage_target().bits()),
+            )
+            .field(
+                "vddbat_undervoltage_target",
+                &format_args!("{}", self.vddbat_undervoltage_target().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<VDDBAT_BOD_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

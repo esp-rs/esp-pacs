@@ -14,13 +14,13 @@ impl From<crate::R<INT_ST_TIMERS_SPEC>> for R {
     }
 }
 #[doc = "Field `T0_INT_ST` reader - interrupt when timer0 alarm"]
-pub type T0_INT_ST_R = crate::BitReader<bool>;
+pub type T0_INT_ST_R = crate::BitReader;
 #[doc = "Field `T1_INT_ST` reader - interrupt when timer1 alarm"]
-pub type T1_INT_ST_R = crate::BitReader<bool>;
+pub type T1_INT_ST_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ST` reader - Interrupt when an interrupt stage timeout"]
-pub type WDT_INT_ST_R = crate::BitReader<bool>;
+pub type WDT_INT_ST_R = crate::BitReader;
 #[doc = "Field `LACT_INT_ST` reader - "]
-pub type LACT_INT_ST_R = crate::BitReader<bool>;
+pub type LACT_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
@@ -41,6 +41,23 @@ impl R {
     #[inline(always)]
     pub fn lact_int_st(&self) -> LACT_INT_ST_R {
         LACT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST_TIMERS")
+            .field("t0_int_st", &format_args!("{}", self.t0_int_st().bit()))
+            .field("t1_int_st", &format_args!("{}", self.t1_int_st().bit()))
+            .field("wdt_int_st", &format_args!("{}", self.wdt_int_st().bit()))
+            .field("lact_int_st", &format_args!("{}", self.lact_int_st().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_TIMERS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st_timers](index.html) module"]

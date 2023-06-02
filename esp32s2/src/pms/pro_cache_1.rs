@@ -38,12 +38,29 @@ impl From<crate::W<PRO_CACHE_1_SPEC>> for W {
 pub type PRO_CACHE_CONNECT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_CACHE_CONNECT` writer - Configure which SRAM Block will be occupied by Icache or Dcache."]
 pub type PRO_CACHE_CONNECT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_CACHE_1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, PRO_CACHE_1_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
     pub fn pro_cache_connect(&self) -> PRO_CACHE_CONNECT_R {
         PRO_CACHE_CONNECT_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CACHE_1")
+            .field(
+                "pro_cache_connect",
+                &format_args!("{}", self.pro_cache_connect().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

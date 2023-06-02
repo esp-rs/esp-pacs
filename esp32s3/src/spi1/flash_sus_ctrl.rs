@@ -35,19 +35,17 @@ impl From<crate::W<FLASH_SUS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PES_EN` reader - Set this bit to enable auto-suspend function."]
-pub type FLASH_PES_EN_R = crate::BitReader<bool>;
+pub type FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `FLASH_PES_EN` writer - Set this bit to enable auto-suspend function."]
-pub type FLASH_PES_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASH_SUS_CTRL_SPEC, bool, O>;
+pub type FLASH_PES_EN_W<'a, const O: u8> = crate::BitWriter<'a, FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `FLASH_PER_COMMAND` reader - Program/Erase resume command value."]
-pub type FLASH_PER_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PER_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PER_COMMAND` writer - Program/Erase resume command value."]
-pub type FLASH_PER_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_SUS_CTRL_SPEC, u8, u8, 8, O>;
+pub type FLASH_PER_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CTRL_SPEC, 8, O>;
 #[doc = "Field `FLASH_PES_COMMAND` reader - Program/Erase suspend command value."]
-pub type FLASH_PES_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PES_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PES_COMMAND` writer - Program/Erase suspend command value."]
-pub type FLASH_PES_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_SUS_CTRL_SPEC, u8, u8, 8, O>;
+pub type FLASH_PES_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CTRL_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn flash_pes_command(&self) -> FLASH_PES_COMMAND_R {
         FLASH_PES_COMMAND_R::new(((self.bits >> 9) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_SUS_CTRL")
+            .field(
+                "flash_pes_en",
+                &format_args!("{}", self.flash_pes_en().bit()),
+            )
+            .field(
+                "flash_per_command",
+                &format_args!("{}", self.flash_per_command().bits()),
+            )
+            .field(
+                "flash_pes_command",
+                &format_args!("{}", self.flash_pes_command().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_SUS_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
