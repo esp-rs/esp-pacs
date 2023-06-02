@@ -17,4 +17,4 @@ svdtools   = "0.3.0"
 toml_edit  = "0.19.9"
 
 [patch.crates-io]
-svd2rust = { git = "https://github.com/rust-embedded/svd2rust.git", rev = "e6a6d150e480808b870a33a9032d25e3343bb656" }
+svd2rust = { git = "https://github.com/rust-embedded/svd2rust.git", rev = "8f63b565f0a01de62f24f49b8e5d81d6d3c9a3c1" }
