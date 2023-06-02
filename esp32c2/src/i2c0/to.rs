@@ -35,13 +35,13 @@ impl From<crate::W<TO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_OUT_VALUE` reader - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub type TIME_OUT_VALUE_R = crate::FieldReader<u8, u8>;
+pub type TIME_OUT_VALUE_R = crate::FieldReader;
 #[doc = "Field `TIME_OUT_VALUE` writer - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub type TIME_OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TO_SPEC, u8, u8, 5, O>;
+pub type TIME_OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TO_SPEC, 5, O>;
 #[doc = "Field `TIME_OUT_EN` reader - This is the enable bit for time out control."]
-pub type TIME_OUT_EN_R = crate::BitReader<bool>;
+pub type TIME_OUT_EN_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_EN` writer - This is the enable bit for time out control."]
-pub type TIME_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TO_SPEC, bool, O>;
+pub type TIME_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, TO_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn time_out_en(&self) -> TIME_OUT_EN_R {
         TIME_OUT_EN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TO")
+            .field(
+                "time_out_value",
+                &format_args!("{}", self.time_out_value().bits()),
+            )
+            .field("time_out_en", &format_args!("{}", self.time_out_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

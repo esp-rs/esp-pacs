@@ -20,7 +20,13 @@ impl From<crate::W<UNIT0_LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_UNIT0_LOAD` writer - timer unit0 sync enable signal"]
-pub type TIMER_UNIT0_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, UNIT0_LOAD_SPEC, bool, O>;
+pub type TIMER_UNIT0_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, UNIT0_LOAD_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UNIT0_LOAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - timer unit0 sync enable signal"]
     #[inline(always)]

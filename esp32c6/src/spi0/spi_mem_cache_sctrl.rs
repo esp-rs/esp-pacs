@@ -14,27 +14,27 @@ impl From<crate::R<SPI_MEM_CACHE_SCTRL_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_CACHE_USR_SADDR_4BYTE` reader - For SPI0, In the external RAM mode, cache read flash with 4 bytes command, 1: enable, 0:disable."]
-pub type SPI_MEM_CACHE_USR_SADDR_4BYTE_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_USR_SADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_SRAM_DIO` reader - For SPI0, In the external RAM mode, spi dual I/O mode enable, 1: enable, 0:disable"]
-pub type SPI_MEM_USR_SRAM_DIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_SRAM_DIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_SRAM_QIO` reader - For SPI0, In the external RAM mode, spi quad I/O mode enable, 1: enable, 0:disable"]
-pub type SPI_MEM_USR_SRAM_QIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_SRAM_QIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_WR_SRAM_DUMMY` reader - For SPI0, In the external RAM mode, it is the enable bit of dummy phase for write operations."]
-pub type SPI_MEM_USR_WR_SRAM_DUMMY_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_WR_SRAM_DUMMY_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_RD_SRAM_DUMMY` reader - For SPI0, In the external RAM mode, it is the enable bit of dummy phase for read operations."]
-pub type SPI_MEM_USR_RD_SRAM_DUMMY_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_RD_SRAM_DUMMY_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_RCMD` reader - For SPI0, In the external RAM mode cache read external RAM for user define command."]
-pub type SPI_MEM_CACHE_SRAM_USR_RCMD_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_SRAM_USR_RCMD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SRAM_RDUMMY_CYCLELEN` reader - For SPI0, In the external RAM mode, it is the length in bits of read dummy phase. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_SRAM_RDUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SRAM_RDUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SRAM_ADDR_BITLEN` reader - For SPI0, In the external RAM mode, it is the length in bits of address phase. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_SRAM_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SRAM_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_WCMD` reader - For SPI0, In the external RAM mode cache write sram for user define command"]
-pub type SPI_MEM_CACHE_SRAM_USR_WCMD_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_SRAM_USR_WCMD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SRAM_OCT` reader - reserved"]
-pub type SPI_MEM_SRAM_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SRAM_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SRAM_WDUMMY_CYCLELEN` reader - For SPI0, In the external RAM mode, it is the length in bits of write dummy phase. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_SRAM_WDUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SRAM_WDUMMY_CYCLELEN_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - For SPI0, In the external RAM mode, cache read flash with 4 bytes command, 1: enable, 0:disable."]
     #[inline(always)]
@@ -90,6 +90,63 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_sram_wdummy_cyclelen(&self) -> SPI_MEM_SRAM_WDUMMY_CYCLELEN_R {
         SPI_MEM_SRAM_WDUMMY_CYCLELEN_R::new(((self.bits >> 22) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CACHE_SCTRL")
+            .field(
+                "spi_mem_cache_usr_saddr_4byte",
+                &format_args!("{}", self.spi_mem_cache_usr_saddr_4byte().bit()),
+            )
+            .field(
+                "spi_mem_usr_sram_dio",
+                &format_args!("{}", self.spi_mem_usr_sram_dio().bit()),
+            )
+            .field(
+                "spi_mem_usr_sram_qio",
+                &format_args!("{}", self.spi_mem_usr_sram_qio().bit()),
+            )
+            .field(
+                "spi_mem_usr_wr_sram_dummy",
+                &format_args!("{}", self.spi_mem_usr_wr_sram_dummy().bit()),
+            )
+            .field(
+                "spi_mem_usr_rd_sram_dummy",
+                &format_args!("{}", self.spi_mem_usr_rd_sram_dummy().bit()),
+            )
+            .field(
+                "spi_mem_cache_sram_usr_rcmd",
+                &format_args!("{}", self.spi_mem_cache_sram_usr_rcmd().bit()),
+            )
+            .field(
+                "spi_mem_sram_rdummy_cyclelen",
+                &format_args!("{}", self.spi_mem_sram_rdummy_cyclelen().bits()),
+            )
+            .field(
+                "spi_mem_sram_addr_bitlen",
+                &format_args!("{}", self.spi_mem_sram_addr_bitlen().bits()),
+            )
+            .field(
+                "spi_mem_cache_sram_usr_wcmd",
+                &format_args!("{}", self.spi_mem_cache_sram_usr_wcmd().bit()),
+            )
+            .field(
+                "spi_mem_sram_oct",
+                &format_args!("{}", self.spi_mem_sram_oct().bit()),
+            )
+            .field(
+                "spi_mem_sram_wdummy_cyclelen",
+                &format_args!("{}", self.spi_mem_sram_wdummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CACHE_SCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI0 external RAM control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_cache_sctrl](index.html) module"]

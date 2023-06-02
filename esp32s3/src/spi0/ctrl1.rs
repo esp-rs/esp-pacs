@@ -35,13 +35,13 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 2, O>;
+pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 2, O>;
 #[doc = "Field `RXFIFO_RST` reader - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
-pub type RXFIFO_RST_R = crate::BitReader<bool>;
+pub type RXFIFO_RST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_RST` writer - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
-pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL1_SPEC, bool, O>;
+pub type RXFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn rxfifo_rst(&self) -> RXFIFO_RST_R {
         RXFIFO_RST_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .field("rxfifo_rst", &format_args!("{}", self.rxfifo_rst().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

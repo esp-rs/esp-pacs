@@ -37,13 +37,26 @@ impl From<crate::W<RXEOF_NUM_SPEC>> for W {
 #[doc = "Field `RX_EOF_NUM` reader - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
 pub type RX_EOF_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_EOF_NUM` writer - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
-pub type RX_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RXEOF_NUM_SPEC, u16, u16, 12, O>;
+pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
     #[inline(always)]
     pub fn rx_eof_num(&self) -> RX_EOF_NUM_R {
         RX_EOF_NUM_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RXEOF_NUM")
+            .field("rx_eof_num", &format_args!("{}", self.rx_eof_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RXEOF_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

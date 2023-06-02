@@ -35,41 +35,41 @@ impl From<crate::W<GAHBCFG_SPEC>> for W {
     }
 }
 #[doc = "Field `GLBLLNTRMSK` reader - "]
-pub type GLBLLNTRMSK_R = crate::BitReader<bool>;
+pub type GLBLLNTRMSK_R = crate::BitReader;
 #[doc = "Field `GLBLLNTRMSK` writer - "]
-pub type GLBLLNTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type GLBLLNTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `HBSTLEN` reader - "]
-pub type HBSTLEN_R = crate::FieldReader<u8, u8>;
+pub type HBSTLEN_R = crate::FieldReader;
 #[doc = "Field `HBSTLEN` writer - "]
-pub type HBSTLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GAHBCFG_SPEC, u8, u8, 4, O>;
+pub type HBSTLEN_W<'a, const O: u8> = crate::FieldWriter<'a, GAHBCFG_SPEC, 4, O>;
 #[doc = "Field `DMAEN` reader - "]
-pub type DMAEN_R = crate::BitReader<bool>;
+pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - "]
-pub type DMAEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type DMAEN_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `NPTXFEMPLVL` reader - "]
-pub type NPTXFEMPLVL_R = crate::BitReader<bool>;
+pub type NPTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `NPTXFEMPLVL` writer - "]
-pub type NPTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type NPTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `PTXFEMPLVL` reader - "]
-pub type PTXFEMPLVL_R = crate::BitReader<bool>;
+pub type PTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `PTXFEMPLVL` writer - "]
-pub type PTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type PTXFEMPLVL_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `REMMEMSUPP` reader - "]
-pub type REMMEMSUPP_R = crate::BitReader<bool>;
+pub type REMMEMSUPP_R = crate::BitReader;
 #[doc = "Field `REMMEMSUPP` writer - "]
-pub type REMMEMSUPP_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type REMMEMSUPP_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `NOTIALLDMAWRIT` reader - "]
-pub type NOTIALLDMAWRIT_R = crate::BitReader<bool>;
+pub type NOTIALLDMAWRIT_R = crate::BitReader;
 #[doc = "Field `NOTIALLDMAWRIT` writer - "]
-pub type NOTIALLDMAWRIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type NOTIALLDMAWRIT_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `AHBSINGLE` reader - "]
-pub type AHBSINGLE_R = crate::BitReader<bool>;
+pub type AHBSINGLE_R = crate::BitReader;
 #[doc = "Field `AHBSINGLE` writer - "]
-pub type AHBSINGLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type AHBSINGLE_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 #[doc = "Field `INVDESCENDIANESS` reader - "]
-pub type INVDESCENDIANESS_R = crate::BitReader<bool>;
+pub type INVDESCENDIANESS_R = crate::BitReader;
 #[doc = "Field `INVDESCENDIANESS` writer - "]
-pub type INVDESCENDIANESS_W<'a, const O: u8> = crate::BitWriter<'a, u32, GAHBCFG_SPEC, bool, O>;
+pub type INVDESCENDIANESS_W<'a, const O: u8> = crate::BitWriter<'a, GAHBCFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -115,6 +115,34 @@ impl R {
     #[inline(always)]
     pub fn invdescendianess(&self) -> INVDESCENDIANESS_R {
         INVDESCENDIANESS_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GAHBCFG")
+            .field("glbllntrmsk", &format_args!("{}", self.glbllntrmsk().bit()))
+            .field("hbstlen", &format_args!("{}", self.hbstlen().bits()))
+            .field("dmaen", &format_args!("{}", self.dmaen().bit()))
+            .field("nptxfemplvl", &format_args!("{}", self.nptxfemplvl().bit()))
+            .field("ptxfemplvl", &format_args!("{}", self.ptxfemplvl().bit()))
+            .field("remmemsupp", &format_args!("{}", self.remmemsupp().bit()))
+            .field(
+                "notialldmawrit",
+                &format_args!("{}", self.notialldmawrit().bit()),
+            )
+            .field("ahbsingle", &format_args!("{}", self.ahbsingle().bit()))
+            .field(
+                "invdescendianess",
+                &format_args!("{}", self.invdescendianess().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GAHBCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

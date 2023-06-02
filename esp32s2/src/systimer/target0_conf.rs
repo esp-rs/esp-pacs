@@ -38,16 +38,15 @@ impl From<crate::W<TARGET0_CONF_SPEC>> for W {
 pub type TARGET0_PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TARGET0_PERIOD` writer - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
 pub type TARGET0_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TARGET0_CONF_SPEC, u32, u32, 30, O>;
+    crate::FieldWriter<'a, TARGET0_CONF_SPEC, 30, O, u32, u32>;
 #[doc = "Field `TARGET0_PERIOD_MODE` reader - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
-pub type TARGET0_PERIOD_MODE_R = crate::BitReader<bool>;
+pub type TARGET0_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET0_PERIOD_MODE` writer - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
-pub type TARGET0_PERIOD_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TARGET0_CONF_SPEC, bool, O>;
+pub type TARGET0_PERIOD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, TARGET0_CONF_SPEC, O>;
 #[doc = "Field `TARGET0_WORK_EN` reader - System timer target 0 work enable."]
-pub type TARGET0_WORK_EN_R = crate::BitReader<bool>;
+pub type TARGET0_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TARGET0_WORK_EN` writer - System timer target 0 work enable."]
-pub type TARGET0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TARGET0_CONF_SPEC, bool, O>;
+pub type TARGET0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TARGET0_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
     #[inline(always)]
@@ -63,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn target0_work_en(&self) -> TARGET0_WORK_EN_R {
         TARGET0_WORK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TARGET0_CONF")
+            .field(
+                "target0_period",
+                &format_args!("{}", self.target0_period().bits()),
+            )
+            .field(
+                "target0_period_mode",
+                &format_args!("{}", self.target0_period_mode().bit()),
+            )
+            .field(
+                "target0_work_en",
+                &format_args!("{}", self.target0_work_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TARGET0_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

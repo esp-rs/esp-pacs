@@ -35,16 +35,15 @@ impl From<crate::W<DMA_APB_I_2_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APB_I_ILG_CLR` reader - The clear signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_CLR_R = crate::BitReader<bool>;
+pub type DMA_APB_I_ILG_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_ILG_CLR` writer - The clear signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_APB_I_2_SPEC, bool, O>;
+pub type DMA_APB_I_ILG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_2_SPEC, O>;
 #[doc = "Field `DMA_APB_I_ILG_EN` reader - The enable signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_EN_R = crate::BitReader<bool>;
+pub type DMA_APB_I_ILG_EN_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_ILG_EN` writer - The enable signal for internal DMA access interrupt."]
-pub type DMA_APB_I_ILG_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_APB_I_2_SPEC, bool, O>;
+pub type DMA_APB_I_ILG_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_2_SPEC, O>;
 #[doc = "Field `DMA_APB_I_ILG_INTR` reader - Internal DMA access interrupt signal."]
-pub type DMA_APB_I_ILG_INTR_R = crate::BitReader<bool>;
+pub type DMA_APB_I_ILG_INTR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The clear signal for internal DMA access interrupt."]
     #[inline(always)]
@@ -60,6 +59,31 @@ impl R {
     #[inline(always)]
     pub fn dma_apb_i_ilg_intr(&self) -> DMA_APB_I_ILG_INTR_R {
         DMA_APB_I_ILG_INTR_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_APB_I_2")
+            .field(
+                "dma_apb_i_ilg_clr",
+                &format_args!("{}", self.dma_apb_i_ilg_clr().bit()),
+            )
+            .field(
+                "dma_apb_i_ilg_en",
+                &format_args!("{}", self.dma_apb_i_ilg_en().bit()),
+            )
+            .field(
+                "dma_apb_i_ilg_intr",
+                &format_args!("{}", self.dma_apb_i_ilg_intr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_APB_I_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

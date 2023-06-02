@@ -35,34 +35,29 @@ impl From<crate::W<CARRIER2_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER2_EN` reader - "]
-pub type CARRIER2_EN_R = crate::BitReader<bool>;
+pub type CARRIER2_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER2_EN` writer - "]
-pub type CARRIER2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, O>;
+pub type CARRIER2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER2_CFG_SPEC, O>;
 #[doc = "Field `CARRIER2_PRESCALE` reader - "]
-pub type CARRIER2_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type CARRIER2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CARRIER2_PRESCALE` writer - "]
-pub type CARRIER2_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 4, O>;
+pub type CARRIER2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER2_CFG_SPEC, 4, O>;
 #[doc = "Field `CARRIER2_DUTY` reader - "]
-pub type CARRIER2_DUTY_R = crate::FieldReader<u8, u8>;
+pub type CARRIER2_DUTY_R = crate::FieldReader;
 #[doc = "Field `CARRIER2_DUTY` writer - "]
-pub type CARRIER2_DUTY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 3, O>;
+pub type CARRIER2_DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER2_CFG_SPEC, 3, O>;
 #[doc = "Field `CARRIER2_OSHTWTH` reader - "]
-pub type CARRIER2_OSHTWTH_R = crate::FieldReader<u8, u8>;
+pub type CARRIER2_OSHTWTH_R = crate::FieldReader;
 #[doc = "Field `CARRIER2_OSHTWTH` writer - "]
-pub type CARRIER2_OSHTWTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 4, O>;
+pub type CARRIER2_OSHTWTH_W<'a, const O: u8> = crate::FieldWriter<'a, CARRIER2_CFG_SPEC, 4, O>;
 #[doc = "Field `CARRIER2_OUT_INVERT` reader - "]
-pub type CARRIER2_OUT_INVERT_R = crate::BitReader<bool>;
+pub type CARRIER2_OUT_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER2_OUT_INVERT` writer - "]
-pub type CARRIER2_OUT_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, O>;
+pub type CARRIER2_OUT_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER2_CFG_SPEC, O>;
 #[doc = "Field `CARRIER2_IN_INVERT` reader - "]
-pub type CARRIER2_IN_INVERT_R = crate::BitReader<bool>;
+pub type CARRIER2_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CARRIER2_IN_INVERT` writer - "]
-pub type CARRIER2_IN_INVERT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, O>;
+pub type CARRIER2_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CARRIER2_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -93,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn carrier2_in_invert(&self) -> CARRIER2_IN_INVERT_R {
         CARRIER2_IN_INVERT_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CARRIER2_CFG")
+            .field("carrier2_en", &format_args!("{}", self.carrier2_en().bit()))
+            .field(
+                "carrier2_prescale",
+                &format_args!("{}", self.carrier2_prescale().bits()),
+            )
+            .field(
+                "carrier2_duty",
+                &format_args!("{}", self.carrier2_duty().bits()),
+            )
+            .field(
+                "carrier2_oshtwth",
+                &format_args!("{}", self.carrier2_oshtwth().bits()),
+            )
+            .field(
+                "carrier2_out_invert",
+                &format_args!("{}", self.carrier2_out_invert().bit()),
+            )
+            .field(
+                "carrier2_in_invert",
+                &format_args!("{}", self.carrier2_in_invert().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CARRIER2_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

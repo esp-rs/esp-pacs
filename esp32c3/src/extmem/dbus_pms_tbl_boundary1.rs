@@ -38,12 +38,29 @@ impl From<crate::W<DBUS_PMS_TBL_BOUNDARY1_SPEC>> for W {
 pub type DBUS_PMS_BOUNDARY1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DBUS_PMS_BOUNDARY1` writer - The bit is used to configure the dbus permission control section boundary1"]
 pub type DBUS_PMS_BOUNDARY1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBUS_PMS_TBL_BOUNDARY1_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, DBUS_PMS_TBL_BOUNDARY1_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to configure the dbus permission control section boundary1"]
     #[inline(always)]
     pub fn dbus_pms_boundary1(&self) -> DBUS_PMS_BOUNDARY1_R {
         DBUS_PMS_BOUNDARY1_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBUS_PMS_TBL_BOUNDARY1")
+            .field(
+                "dbus_pms_boundary1",
+                &format_args!("{}", self.dbus_pms_boundary1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBUS_PMS_TBL_BOUNDARY1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

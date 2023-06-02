@@ -35,13 +35,13 @@ impl From<crate::W<EDMA_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `EDMA_CLK_ON` reader - Set 1 to enable EDMA clock."]
-pub type EDMA_CLK_ON_R = crate::BitReader<bool>;
+pub type EDMA_CLK_ON_R = crate::BitReader;
 #[doc = "Field `EDMA_CLK_ON` writer - Set 1 to enable EDMA clock."]
-pub type EDMA_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, EDMA_CTRL_SPEC, bool, O>;
+pub type EDMA_CLK_ON_W<'a, const O: u8> = crate::BitWriter<'a, EDMA_CTRL_SPEC, O>;
 #[doc = "Field `EDMA_RESET` reader - Set 1 to let EDMA reset"]
-pub type EDMA_RESET_R = crate::BitReader<bool>;
+pub type EDMA_RESET_R = crate::BitReader;
 #[doc = "Field `EDMA_RESET` writer - Set 1 to let EDMA reset"]
-pub type EDMA_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, EDMA_CTRL_SPEC, bool, O>;
+pub type EDMA_RESET_W<'a, const O: u8> = crate::BitWriter<'a, EDMA_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable EDMA clock."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn edma_reset(&self) -> EDMA_RESET_R {
         EDMA_RESET_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EDMA_CTRL")
+            .field("edma_clk_on", &format_args!("{}", self.edma_clk_on().bit()))
+            .field("edma_reset", &format_args!("{}", self.edma_reset().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EDMA_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

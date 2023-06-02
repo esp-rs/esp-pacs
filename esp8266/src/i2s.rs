@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - I2STXFIFO"]
     pub i2stxfifo: I2STXFIFO,

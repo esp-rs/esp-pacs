@@ -16,7 +16,7 @@ impl From<crate::R<SPI_MEM_SRAM_DWR_CMD_SPEC>> for R {
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_WR_CMD_VALUE` reader - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
 pub type SPI_MEM_CACHE_SRAM_USR_WR_CMD_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_WR_CMD_BITLEN` reader - For SPI0,When cache mode is enable it is the in bits of command phase for sram. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_CACHE_SRAM_USR_WR_CMD_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_CACHE_SRAM_USR_WR_CMD_BITLEN_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15 - For SPI0,When cache mode is enable it is the write command value of command phase for sram."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_cache_sram_usr_wr_cmd_bitlen(&self) -> SPI_MEM_CACHE_SRAM_USR_WR_CMD_BITLEN_R {
         SPI_MEM_CACHE_SRAM_USR_WR_CMD_BITLEN_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_SRAM_DWR_CMD")
+            .field(
+                "spi_mem_cache_sram_usr_wr_cmd_value",
+                &format_args!("{}", self.spi_mem_cache_sram_usr_wr_cmd_value().bits()),
+            )
+            .field(
+                "spi_mem_cache_sram_usr_wr_cmd_bitlen",
+                &format_args!("{}", self.spi_mem_cache_sram_usr_wr_cmd_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SRAM_DWR_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI0 external RAM DDR write command control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_sram_dwr_cmd](index.html) module"]

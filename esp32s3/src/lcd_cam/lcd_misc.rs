@@ -35,46 +35,44 @@ impl From<crate::W<LCD_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_AFIFO_THRESHOLD_NUM` reader - The awfull threshold number of lcd_afifo."]
-pub type LCD_AFIFO_THRESHOLD_NUM_R = crate::FieldReader<u8, u8>;
+pub type LCD_AFIFO_THRESHOLD_NUM_R = crate::FieldReader;
 #[doc = "Field `LCD_AFIFO_THRESHOLD_NUM` writer - The awfull threshold number of lcd_afifo."]
-pub type LCD_AFIFO_THRESHOLD_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u8, u8, 5, O>;
+pub type LCD_AFIFO_THRESHOLD_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_MISC_SPEC, 5, O>;
 #[doc = "Field `LCD_VFK_CYCLELEN` reader - The setup cycle length minus 1 in LCD non-RGB mode."]
-pub type LCD_VFK_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type LCD_VFK_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `LCD_VFK_CYCLELEN` writer - The setup cycle length minus 1 in LCD non-RGB mode."]
-pub type LCD_VFK_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u8, u8, 6, O>;
+pub type LCD_VFK_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_MISC_SPEC, 6, O>;
 #[doc = "Field `LCD_VBK_CYCLELEN` reader - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
 pub type LCD_VBK_CYCLELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_VBK_CYCLELEN` writer - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
 pub type LCD_VBK_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u16, u16, 13, O>;
+    crate::FieldWriter<'a, LCD_MISC_SPEC, 13, O, u16, u16>;
 #[doc = "Field `LCD_NEXT_FRAME_EN` reader - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
-pub type LCD_NEXT_FRAME_EN_R = crate::BitReader<bool>;
+pub type LCD_NEXT_FRAME_EN_R = crate::BitReader;
 #[doc = "Field `LCD_NEXT_FRAME_EN` writer - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
-pub type LCD_NEXT_FRAME_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_NEXT_FRAME_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_BK_EN` reader - 1: Enable blank region when LCD sends data out. 0: No blank region."]
-pub type LCD_BK_EN_R = crate::BitReader<bool>;
+pub type LCD_BK_EN_R = crate::BitReader;
 #[doc = "Field `LCD_BK_EN` writer - 1: Enable blank region when LCD sends data out. 0: No blank region."]
-pub type LCD_BK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_BK_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_AFIFO_RESET` writer - LCD AFIFO reset signal."]
-pub type LCD_AFIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_AFIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_CD_DATA_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_DATA_SET_R = crate::BitReader<bool>;
+pub type LCD_CD_DATA_SET_R = crate::BitReader;
 #[doc = "Field `LCD_CD_DATA_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_DATA_SET_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_CD_DATA_SET_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_CD_DUMMY_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_DUMMY_SET_R = crate::BitReader<bool>;
+pub type LCD_CD_DUMMY_SET_R = crate::BitReader;
 #[doc = "Field `LCD_CD_DUMMY_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_DUMMY_SET_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_CD_DUMMY_SET_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_CD_CMD_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_CMD_SET_R = crate::BitReader<bool>;
+pub type LCD_CD_CMD_SET_R = crate::BitReader;
 #[doc = "Field `LCD_CD_CMD_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
-pub type LCD_CD_CMD_SET_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_CD_CMD_SET_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 #[doc = "Field `LCD_CD_IDLE_EDGE` reader - The default value of LCD_CD."]
-pub type LCD_CD_IDLE_EDGE_R = crate::BitReader<bool>;
+pub type LCD_CD_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `LCD_CD_IDLE_EDGE` writer - The default value of LCD_CD."]
-pub type LCD_CD_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, O>;
+pub type LCD_CD_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_MISC_SPEC, O>;
 impl R {
     #[doc = "Bits 1:5 - The awfull threshold number of lcd_afifo."]
     #[inline(always)]
@@ -120,6 +118,52 @@ impl R {
     #[inline(always)]
     pub fn lcd_cd_idle_edge(&self) -> LCD_CD_IDLE_EDGE_R {
         LCD_CD_IDLE_EDGE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_MISC")
+            .field(
+                "lcd_afifo_threshold_num",
+                &format_args!("{}", self.lcd_afifo_threshold_num().bits()),
+            )
+            .field(
+                "lcd_vfk_cyclelen",
+                &format_args!("{}", self.lcd_vfk_cyclelen().bits()),
+            )
+            .field(
+                "lcd_vbk_cyclelen",
+                &format_args!("{}", self.lcd_vbk_cyclelen().bits()),
+            )
+            .field(
+                "lcd_next_frame_en",
+                &format_args!("{}", self.lcd_next_frame_en().bit()),
+            )
+            .field("lcd_bk_en", &format_args!("{}", self.lcd_bk_en().bit()))
+            .field(
+                "lcd_cd_data_set",
+                &format_args!("{}", self.lcd_cd_data_set().bit()),
+            )
+            .field(
+                "lcd_cd_dummy_set",
+                &format_args!("{}", self.lcd_cd_dummy_set().bit()),
+            )
+            .field(
+                "lcd_cd_cmd_set",
+                &format_args!("{}", self.lcd_cd_cmd_set().bit()),
+            )
+            .field(
+                "lcd_cd_idle_edge",
+                &format_args!("{}", self.lcd_cd_idle_edge().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

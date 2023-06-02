@@ -35,45 +35,37 @@ impl From<crate::W<FRONT_END_MEM_PD_SPEC>> for W {
     }
 }
 #[doc = "Field `AGC_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub type AGC_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type AGC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub type AGC_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type AGC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `AGC_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub type AGC_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type AGC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `AGC_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub type AGC_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type AGC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `PBUS_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub type PBUS_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type PBUS_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub type PBUS_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type PBUS_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `PBUS_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub type PBUS_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type PBUS_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PBUS_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub type PBUS_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type PBUS_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `DC_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub type DC_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type DC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DC_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub type DC_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type DC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `DC_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub type DC_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type DC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DC_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub type DC_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type DC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `FREQ_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub type FREQ_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type FREQ_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FREQ_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub type FREQ_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type FREQ_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 #[doc = "Field `FREQ_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub type FREQ_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type FREQ_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FREQ_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub type FREQ_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, O>;
+pub type FREQ_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, FRONT_END_MEM_PD_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -114,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn freq_mem_force_pd(&self) -> FREQ_MEM_FORCE_PD_R {
         FREQ_MEM_FORCE_PD_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRONT_END_MEM_PD")
+            .field(
+                "agc_mem_force_pu",
+                &format_args!("{}", self.agc_mem_force_pu().bit()),
+            )
+            .field(
+                "agc_mem_force_pd",
+                &format_args!("{}", self.agc_mem_force_pd().bit()),
+            )
+            .field(
+                "pbus_mem_force_pu",
+                &format_args!("{}", self.pbus_mem_force_pu().bit()),
+            )
+            .field(
+                "pbus_mem_force_pd",
+                &format_args!("{}", self.pbus_mem_force_pd().bit()),
+            )
+            .field(
+                "dc_mem_force_pu",
+                &format_args!("{}", self.dc_mem_force_pu().bit()),
+            )
+            .field(
+                "dc_mem_force_pd",
+                &format_args!("{}", self.dc_mem_force_pd().bit()),
+            )
+            .field(
+                "freq_mem_force_pu",
+                &format_args!("{}", self.freq_mem_force_pu().bit()),
+            )
+            .field(
+                "freq_mem_force_pd",
+                &format_args!("{}", self.freq_mem_force_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRONT_END_MEM_PD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

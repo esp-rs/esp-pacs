@@ -35,37 +35,37 @@ impl From<crate::W<UPDATE_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `GLOBAL_UP_EN` reader - The global enable of update of all active registers in MCPWM module"]
-pub type GLOBAL_UP_EN_R = crate::BitReader<bool>;
+pub type GLOBAL_UP_EN_R = crate::BitReader;
 #[doc = "Field `GLOBAL_UP_EN` writer - The global enable of update of all active registers in MCPWM module"]
-pub type GLOBAL_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type GLOBAL_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `GLOBAL_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of all active registers in MCPWM module"]
-pub type GLOBAL_FORCE_UP_R = crate::BitReader<bool>;
+pub type GLOBAL_FORCE_UP_R = crate::BitReader;
 #[doc = "Field `GLOBAL_FORCE_UP` writer - a toggle (software invert its value) will trigger a forced update of all active registers in MCPWM module"]
-pub type GLOBAL_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type GLOBAL_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP0_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 0 are enabled"]
-pub type OP0_UP_EN_R = crate::BitReader<bool>;
+pub type OP0_UP_EN_R = crate::BitReader;
 #[doc = "Field `OP0_UP_EN` writer - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 0 are enabled"]
-pub type OP0_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP0_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP0_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 0"]
-pub type OP0_FORCE_UP_R = crate::BitReader<bool>;
+pub type OP0_FORCE_UP_R = crate::BitReader;
 #[doc = "Field `OP0_FORCE_UP` writer - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 0"]
-pub type OP0_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP0_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP1_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 1 are enabled"]
-pub type OP1_UP_EN_R = crate::BitReader<bool>;
+pub type OP1_UP_EN_R = crate::BitReader;
 #[doc = "Field `OP1_UP_EN` writer - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 1 are enabled"]
-pub type OP1_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP1_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP1_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 1"]
-pub type OP1_FORCE_UP_R = crate::BitReader<bool>;
+pub type OP1_FORCE_UP_R = crate::BitReader;
 #[doc = "Field `OP1_FORCE_UP` writer - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 1"]
-pub type OP1_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP1_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP2_UP_EN` reader - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 2 are enabled"]
-pub type OP2_UP_EN_R = crate::BitReader<bool>;
+pub type OP2_UP_EN_R = crate::BitReader;
 #[doc = "Field `OP2_UP_EN` writer - When set and PWM_GLOBAL_UP_EN is set, update of active registers in PWM operator 2 are enabled"]
-pub type OP2_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP2_UP_EN_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 #[doc = "Field `OP2_FORCE_UP` reader - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 2"]
-pub type OP2_FORCE_UP_R = crate::BitReader<bool>;
+pub type OP2_FORCE_UP_R = crate::BitReader;
 #[doc = "Field `OP2_FORCE_UP` writer - a toggle (software invert its value) will trigger a forced update of active registers in PWM operator 2"]
-pub type OP2_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, UPDATE_CFG_SPEC, bool, O>;
+pub type OP2_FORCE_UP_W<'a, const O: u8> = crate::BitWriter<'a, UPDATE_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The global enable of update of all active registers in MCPWM module"]
     #[inline(always)]
@@ -106,6 +106,42 @@ impl R {
     #[inline(always)]
     pub fn op2_force_up(&self) -> OP2_FORCE_UP_R {
         OP2_FORCE_UP_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UPDATE_CFG")
+            .field(
+                "global_up_en",
+                &format_args!("{}", self.global_up_en().bit()),
+            )
+            .field(
+                "global_force_up",
+                &format_args!("{}", self.global_force_up().bit()),
+            )
+            .field("op0_up_en", &format_args!("{}", self.op0_up_en().bit()))
+            .field(
+                "op0_force_up",
+                &format_args!("{}", self.op0_force_up().bit()),
+            )
+            .field("op1_up_en", &format_args!("{}", self.op1_up_en().bit()))
+            .field(
+                "op1_force_up",
+                &format_args!("{}", self.op1_force_up().bit()),
+            )
+            .field("op2_up_en", &format_args!("{}", self.op2_up_en().bit()))
+            .field(
+                "op2_force_up",
+                &format_args!("{}", self.op2_force_up().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UPDATE_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

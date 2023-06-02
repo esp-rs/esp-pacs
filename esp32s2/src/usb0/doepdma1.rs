@@ -37,12 +37,26 @@ impl From<crate::W<DOEPDMA1_SPEC>> for W {
 #[doc = "Field `DMAADDR1` reader - "]
 pub type DMAADDR1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DMAADDR1` writer - "]
-pub type DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEPDMA1_SPEC, u32, u32, 32, O>;
+pub type DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, DOEPDMA1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn dmaaddr1(&self) -> DMAADDR1_R {
         DMAADDR1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPDMA1")
+            .field("dmaaddr1", &format_args!("{}", self.dmaaddr1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPDMA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

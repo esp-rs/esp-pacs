@@ -35,18 +35,17 @@ impl From<crate::W<WR_TIM_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `THP_A` reader - Configures hold time for efuse program."]
-pub type THP_A_R = crate::FieldReader<u8, u8>;
+pub type THP_A_R = crate::FieldReader;
 #[doc = "Field `THP_A` writer - Configures hold time for efuse program."]
-pub type THP_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_TIM_CONF0_SPEC, u8, u8, 8, O>;
+pub type THP_A_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 8, O>;
 #[doc = "Field `TPGM_INACTIVE` reader - Configures pulse time for burning '0' bit."]
-pub type TPGM_INACTIVE_R = crate::FieldReader<u8, u8>;
+pub type TPGM_INACTIVE_R = crate::FieldReader;
 #[doc = "Field `TPGM_INACTIVE` writer - Configures pulse time for burning '0' bit."]
-pub type TPGM_INACTIVE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WR_TIM_CONF0_SPEC, u8, u8, 8, O>;
+pub type TPGM_INACTIVE_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 8, O>;
 #[doc = "Field `TPGM` reader - Configures pulse time for burning '1' bit."]
 pub type TPGM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TPGM` writer - Configures pulse time for burning '1' bit."]
-pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_TIM_CONF0_SPEC, u16, u16, 16, O>;
+pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:7 - Configures hold time for efuse program."]
     #[inline(always)]
@@ -62,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn tpgm(&self) -> TPGM_R {
         TPGM_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WR_TIM_CONF0")
+            .field("thp_a", &format_args!("{}", self.thp_a().bits()))
+            .field(
+                "tpgm_inactive",
+                &format_args!("{}", self.tpgm_inactive().bits()),
+            )
+            .field("tpgm", &format_args!("{}", self.tpgm().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

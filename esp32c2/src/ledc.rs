@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - Configuration register 0 for channel %s"]
     pub ch0_conf0: CH_CONF0,

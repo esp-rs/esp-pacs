@@ -35,15 +35,28 @@ impl From<crate::W<SPI_MEM_CLOCK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_CLK_EN` reader - Register clock gate enable signal. 1: Enable. 0: Disable."]
-pub type SPI_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_CLK_EN` writer - Register clock gate enable signal. 1: Enable. 0: Disable."]
-pub type SPI_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CLOCK_GATE_SPEC, bool, O>;
+pub type SPI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CLOCK_GATE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
     pub fn spi_clk_en(&self) -> SPI_CLK_EN_R {
         SPI_CLK_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CLOCK_GATE")
+            .field("spi_clk_en", &format_args!("{}", self.spi_clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CLOCK_GATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

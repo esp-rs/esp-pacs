@@ -35,27 +35,27 @@ impl From<crate::W<STATE0_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_CPU_INT` writer - Sends a SW RTC interrupt to CPU."]
-pub type SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - Clears the RTC reject-to-sleep cause."]
-pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge 0: APB to RTC using sync"]
-pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader<bool>;
+pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` writer - 1: APB to RTC using bridge 0: APB to RTC using sync"]
-pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SDIO_ACTIVE_IND` reader - Indicates the SDIO is active."]
-pub type SDIO_ACTIVE_IND_R = crate::BitReader<bool>;
+pub type SDIO_ACTIVE_IND_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` reader - Sleep wakeup bit."]
-pub type SLP_WAKEUP_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` writer - Sleep wakeup bit."]
-pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_REJECT` reader - Sleep reject bit."]
-pub type SLP_REJECT_R = crate::BitReader<bool>;
+pub type SLP_REJECT_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT` writer - Sleep reject bit."]
-pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLEEP_EN` reader - Sends the chip to sleep."]
-pub type SLEEP_EN_R = crate::BitReader<bool>;
+pub type SLEEP_EN_R = crate::BitReader;
 #[doc = "Field `SLEEP_EN` writer - Sends the chip to sleep."]
-pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 impl R {
     #[doc = "Bit 22 - 1: APB to RTC using bridge 0: APB to RTC using sync"]
     #[inline(always)]
@@ -81,6 +81,30 @@ impl R {
     #[inline(always)]
     pub fn sleep_en(&self) -> SLEEP_EN_R {
         SLEEP_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE0")
+            .field(
+                "apb2rtc_bridge_sel",
+                &format_args!("{}", self.apb2rtc_bridge_sel().bit()),
+            )
+            .field(
+                "sdio_active_ind",
+                &format_args!("{}", self.sdio_active_ind().bit()),
+            )
+            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
+            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
+            .field("sleep_en", &format_args!("{}", self.sleep_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

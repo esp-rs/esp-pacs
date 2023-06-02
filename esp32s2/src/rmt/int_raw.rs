@@ -14,15 +14,15 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `CH_TX_END_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmission done."]
-pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when reception done."]
-pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_ERR_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when error occurs."]
-pub type CH_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
-pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP_INT_RAW[0-3]` reader - The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value."]
-pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "The interrupt raw bit for CHANNEL[0-3]. Triggered when transmission done."]
     #[inline(always)]
@@ -148,6 +148,99 @@ impl R {
     #[inline(always)]
     pub fn ch3_tx_loop_int_raw(&self) -> CH_TX_LOOP_INT_RAW_R {
         CH_TX_LOOP_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "ch0_tx_end_int_raw",
+                &format_args!("{}", self.ch0_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_raw",
+                &format_args!("{}", self.ch1_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_end_int_raw",
+                &format_args!("{}", self.ch2_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_end_int_raw",
+                &format_args!("{}", self.ch3_tx_end_int_raw().bit()),
+            )
+            .field(
+                "ch0_rx_end_int_raw",
+                &format_args!("{}", self.ch0_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch1_rx_end_int_raw",
+                &format_args!("{}", self.ch1_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch2_rx_end_int_raw",
+                &format_args!("{}", self.ch2_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch3_rx_end_int_raw",
+                &format_args!("{}", self.ch3_rx_end_int_raw().bit()),
+            )
+            .field(
+                "ch0_err_int_raw",
+                &format_args!("{}", self.ch0_err_int_raw().bit()),
+            )
+            .field(
+                "ch1_err_int_raw",
+                &format_args!("{}", self.ch1_err_int_raw().bit()),
+            )
+            .field(
+                "ch2_err_int_raw",
+                &format_args!("{}", self.ch2_err_int_raw().bit()),
+            )
+            .field(
+                "ch3_err_int_raw",
+                &format_args!("{}", self.ch3_err_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch0_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch1_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch2_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_thr_event_int_raw",
+                &format_args!("{}", self.ch3_tx_thr_event_int_raw().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_raw",
+                &format_args!("{}", self.ch0_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_raw",
+                &format_args!("{}", self.ch1_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch2_tx_loop_int_raw",
+                &format_args!("{}", self.ch2_tx_loop_int_raw().bit()),
+            )
+            .field(
+                "ch3_tx_loop_int_raw",
+                &format_args!("{}", self.ch3_tx_loop_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

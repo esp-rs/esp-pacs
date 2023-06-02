@@ -35,13 +35,13 @@ impl From<crate::W<DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `RDATA` reader - Data received"]
-pub type RDATA_R = crate::FieldReader<u8, u8>;
+pub type RDATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` reader - The data sent by slave"]
-pub type SLAVE_TX_DATA_R = crate::FieldReader<u8, u8>;
+pub type SLAVE_TX_DATA_R = crate::FieldReader;
 #[doc = "Field `SLAVE_TX_DATA` writer - The data sent by slave"]
-pub type SLAVE_TX_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATA_SPEC, u8, u8, 8, O>;
+pub type SLAVE_TX_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, DATA_SPEC, 8, O>;
 #[doc = "Field `DONE` reader - RTC I2C transmission is done."]
-pub type DONE_R = crate::BitReader<bool>;
+pub type DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7 - Data received"]
     #[inline(always)]
@@ -57,6 +57,25 @@ impl R {
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
         DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATA")
+            .field("rdata", &format_args!("{}", self.rdata().bits()))
+            .field(
+                "slave_tx_data",
+                &format_args!("{}", self.slave_tx_data().bits()),
+            )
+            .field("done", &format_args!("{}", self.done().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

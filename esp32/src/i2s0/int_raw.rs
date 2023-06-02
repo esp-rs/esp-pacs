@@ -14,39 +14,39 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_TAKE_DATA_INT_RAW` reader - "]
-pub type RX_TAKE_DATA_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_TAKE_DATA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_PUT_DATA_INT_RAW` reader - "]
-pub type TX_PUT_DATA_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_PUT_DATA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_WFULL_INT_RAW` reader - "]
-pub type RX_WFULL_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_WFULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_REMPTY_INT_RAW` reader - "]
-pub type RX_REMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_REMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_WFULL_INT_RAW` reader - "]
-pub type TX_WFULL_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_WFULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_REMPTY_INT_RAW` reader - "]
-pub type TX_REMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_REMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - "]
-pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - "]
-pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_RAW` reader - "]
-pub type IN_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_RAW` reader - "]
-pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_RAW` reader - "]
-pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_RAW` reader - "]
-pub type OUT_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - "]
-pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR_INT_RAW` reader - "]
-pub type IN_DSCR_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_DSCR_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_DSCR_ERR_INT_RAW` reader - "]
-pub type OUT_DSCR_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_DSCR_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY_INT_RAW` reader - "]
-pub type IN_DSCR_EMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_DSCR_EMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_RAW` reader - "]
-pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -132,6 +132,87 @@ impl R {
     #[inline(always)]
     pub fn out_total_eof_int_raw(&self) -> OUT_TOTAL_EOF_INT_RAW_R {
         OUT_TOTAL_EOF_INT_RAW_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "rx_take_data_int_raw",
+                &format_args!("{}", self.rx_take_data_int_raw().bit()),
+            )
+            .field(
+                "tx_put_data_int_raw",
+                &format_args!("{}", self.tx_put_data_int_raw().bit()),
+            )
+            .field(
+                "rx_wfull_int_raw",
+                &format_args!("{}", self.rx_wfull_int_raw().bit()),
+            )
+            .field(
+                "rx_rempty_int_raw",
+                &format_args!("{}", self.rx_rempty_int_raw().bit()),
+            )
+            .field(
+                "tx_wfull_int_raw",
+                &format_args!("{}", self.tx_wfull_int_raw().bit()),
+            )
+            .field(
+                "tx_rempty_int_raw",
+                &format_args!("{}", self.tx_rempty_int_raw().bit()),
+            )
+            .field(
+                "rx_hung_int_raw",
+                &format_args!("{}", self.rx_hung_int_raw().bit()),
+            )
+            .field(
+                "tx_hung_int_raw",
+                &format_args!("{}", self.tx_hung_int_raw().bit()),
+            )
+            .field(
+                "in_done_int_raw",
+                &format_args!("{}", self.in_done_int_raw().bit()),
+            )
+            .field(
+                "in_suc_eof_int_raw",
+                &format_args!("{}", self.in_suc_eof_int_raw().bit()),
+            )
+            .field(
+                "in_err_eof_int_raw",
+                &format_args!("{}", self.in_err_eof_int_raw().bit()),
+            )
+            .field(
+                "out_done_int_raw",
+                &format_args!("{}", self.out_done_int_raw().bit()),
+            )
+            .field(
+                "out_eof_int_raw",
+                &format_args!("{}", self.out_eof_int_raw().bit()),
+            )
+            .field(
+                "in_dscr_err_int_raw",
+                &format_args!("{}", self.in_dscr_err_int_raw().bit()),
+            )
+            .field(
+                "out_dscr_err_int_raw",
+                &format_args!("{}", self.out_dscr_err_int_raw().bit()),
+            )
+            .field(
+                "in_dscr_empty_int_raw",
+                &format_args!("{}", self.in_dscr_empty_int_raw().bit()),
+            )
+            .field(
+                "out_total_eof_int_raw",
+                &format_args!("{}", self.out_total_eof_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

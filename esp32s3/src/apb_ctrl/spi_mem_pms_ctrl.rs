@@ -35,12 +35,11 @@ impl From<crate::W<SPI_MEM_PMS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_REJECT_INT` reader - ******* Description ***********"]
-pub type SPI_MEM_REJECT_INT_R = crate::BitReader<bool>;
+pub type SPI_MEM_REJECT_INT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_REJECT_CLR` writer - ******* Description ***********"]
-pub type SPI_MEM_REJECT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_PMS_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_REJECT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_PMS_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_REJECT_CDE` reader - ******* Description ***********"]
-pub type SPI_MEM_REJECT_CDE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_REJECT_CDE_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_reject_cde(&self) -> SPI_MEM_REJECT_CDE_R {
         SPI_MEM_REJECT_CDE_R::new(((self.bits >> 2) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_PMS_CTRL")
+            .field(
+                "spi_mem_reject_int",
+                &format_args!("{}", self.spi_mem_reject_int().bit()),
+            )
+            .field(
+                "spi_mem_reject_cde",
+                &format_args!("{}", self.spi_mem_reject_cde().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_PMS_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

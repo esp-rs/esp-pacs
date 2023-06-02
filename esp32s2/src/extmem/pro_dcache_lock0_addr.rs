@@ -38,12 +38,29 @@ impl From<crate::W<PRO_DCACHE_LOCK0_ADDR_SPEC>> for W {
 pub type PRO_DCACHE_LOCK0_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_DCACHE_LOCK0_ADDR` writer - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
 pub type PRO_DCACHE_LOCK0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_DCACHE_LOCK0_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, PRO_DCACHE_LOCK0_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
     #[inline(always)]
     pub fn pro_dcache_lock0_addr(&self) -> PRO_DCACHE_LOCK0_ADDR_R {
         PRO_DCACHE_LOCK0_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DCACHE_LOCK0_ADDR")
+            .field(
+                "pro_dcache_lock0_addr",
+                &format_args!("{}", self.pro_dcache_lock0_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_LOCK0_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

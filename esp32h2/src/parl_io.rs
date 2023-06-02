@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - Parallel RX Sampling mode configuration register."]
     pub rx_mode_cfg: RX_MODE_CFG,

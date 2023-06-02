@@ -35,35 +35,33 @@ impl From<crate::W<RX_CHCONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EN_CH2` reader - Set this bit to enable receiver to receive data on CHANNEL%s."]
-pub type RX_EN_CH2_R = crate::BitReader<bool>;
+pub type RX_EN_CH2_R = crate::BitReader;
 #[doc = "Field `RX_EN_CH2` writer - Set this bit to enable receiver to receive data on CHANNEL%s."]
-pub type RX_EN_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type RX_EN_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `MEM_WR_RST_CH2` writer - Set this bit to reset write ram address for CHANNEL%s by accessing receiver."]
-pub type MEM_WR_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type MEM_WR_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `APB_MEM_RST_CH2` writer - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
-pub type APB_MEM_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type APB_MEM_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `MEM_OWNER_CH2` reader - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
-pub type MEM_OWNER_CH2_R = crate::BitReader<bool>;
+pub type MEM_OWNER_CH2_R = crate::BitReader;
 #[doc = "Field `MEM_OWNER_CH2` writer - This register marks the ownership of CHANNEL%s's ram block. 1'h1: Receiver is using the ram. 1'h0: APB bus is using the ram."]
-pub type MEM_OWNER_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type MEM_OWNER_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_EN_CH2` reader - This is the receive filter's enable bit for CHANNEL%s."]
-pub type RX_FILTER_EN_CH2_R = crate::BitReader<bool>;
+pub type RX_FILTER_EN_CH2_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_EN_CH2` writer - This is the receive filter's enable bit for CHANNEL%s."]
-pub type RX_FILTER_EN_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type RX_FILTER_EN_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_THRES_CH2` reader - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
-pub type RX_FILTER_THRES_CH2_R = crate::FieldReader<u8, u8>;
+pub type RX_FILTER_THRES_CH2_R = crate::FieldReader;
 #[doc = "Field `RX_FILTER_THRES_CH2` writer - Ignores the input pulse when its width is smaller than this register value in APB clock periods (in receive mode)."]
-pub type RX_FILTER_THRES_CH2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CHCONF1_SPEC, u8, u8, 8, O>;
+pub type RX_FILTER_THRES_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF1_SPEC, 8, O>;
 #[doc = "Field `MEM_RX_WRAP_EN_CH2` reader - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
-pub type MEM_RX_WRAP_EN_CH2_R = crate::BitReader<bool>;
+pub type MEM_RX_WRAP_EN_CH2_R = crate::BitReader;
 #[doc = "Field `MEM_RX_WRAP_EN_CH2` writer - This is the channel %s enable bit for wraparound mode: it will resume receiving at the start when the data to be received is more than its memory size."]
-pub type MEM_RX_WRAP_EN_CH2_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type MEM_RX_WRAP_EN_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `AFIFO_RST_CH2` writer - Reserved"]
-pub type AFIFO_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type AFIFO_RST_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 #[doc = "Field `CONF_UPDATE_CH2` writer - synchronization bit for CHANNEL%s"]
-pub type CONF_UPDATE_CH2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CHCONF1_SPEC, bool, O>;
+pub type CONF_UPDATE_CH2_W<'a, const O: u8> = crate::BitWriter<'a, RX_CHCONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable receiver to receive data on CHANNEL%s."]
     #[inline(always)]
@@ -89,6 +87,36 @@ impl R {
     #[inline(always)]
     pub fn mem_rx_wrap_en_ch2(&self) -> MEM_RX_WRAP_EN_CH2_R {
         MEM_RX_WRAP_EN_CH2_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CHCONF1")
+            .field("rx_en_ch2", &format_args!("{}", self.rx_en_ch2().bit()))
+            .field(
+                "mem_owner_ch2",
+                &format_args!("{}", self.mem_owner_ch2().bit()),
+            )
+            .field(
+                "rx_filter_en_ch2",
+                &format_args!("{}", self.rx_filter_en_ch2().bit()),
+            )
+            .field(
+                "rx_filter_thres_ch2",
+                &format_args!("{}", self.rx_filter_thres_ch2().bits()),
+            )
+            .field(
+                "mem_rx_wrap_en_ch2",
+                &format_args!("{}", self.mem_rx_wrap_en_ch2().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CHCONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

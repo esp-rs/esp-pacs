@@ -35,15 +35,32 @@ impl From<crate::W<CORE_0_MESSAGE_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_MAX` reader - This filed is used to set the max value of clear write_buffer"]
-pub type CORE_0_MESSAGE_MAX_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_MESSAGE_MAX_R = crate::FieldReader;
 #[doc = "Field `CORE_0_MESSAGE_MAX` writer - This filed is used to set the max value of clear write_buffer"]
 pub type CORE_0_MESSAGE_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_MESSAGE_MAX_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CORE_0_MESSAGE_MAX_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - This filed is used to set the max value of clear write_buffer"]
     #[inline(always)]
     pub fn core_0_message_max(&self) -> CORE_0_MESSAGE_MAX_R {
         CORE_0_MESSAGE_MAX_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_0_MESSAGE_MAX")
+            .field(
+                "core_0_message_max",
+                &format_args!("{}", self.core_0_message_max().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_MESSAGE_MAX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

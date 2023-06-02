@@ -35,15 +35,31 @@ impl From<crate::W<ECC_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_INTR_MAP` reader - Need add description"]
-pub type ECC_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type ECC_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `ECC_INTR_MAP` writer - Need add description"]
-pub type ECC_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ECC_INTR_MAP_SPEC, u8, u8, 5, O>;
+pub type ECC_INTR_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, ECC_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     pub fn ecc_intr_map(&self) -> ECC_INTR_MAP_R {
         ECC_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECC_INTR_MAP")
+            .field(
+                "ecc_intr_map",
+                &format_args!("{}", self.ecc_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECC_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,17 +38,15 @@ impl From<crate::W<GPIO_RTC_CALIB_VALUE_SPEC>> for W {
 pub type RTC_CALIB_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_CALIB_VALUE` writer - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
 pub type RTC_CALIB_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_RTC_CALIB_VALUE_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, GPIO_RTC_CALIB_VALUE_SPEC, 20, O, u32, u32>;
 #[doc = "Field `RTC_CALIB_RDY_REAL` reader - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_REAL_R = crate::BitReader<bool>;
+pub type RTC_CALIB_RDY_REAL_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_RDY_REAL` writer - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_REAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_RTC_CALIB_VALUE_SPEC, bool, O>;
+pub type RTC_CALIB_RDY_REAL_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_RTC_CALIB_VALUE_SPEC, O>;
 #[doc = "Field `RTC_CALIB_RDY` reader - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_R = crate::BitReader<bool>;
+pub type RTC_CALIB_RDY_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_RDY` writer - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
-pub type RTC_CALIB_RDY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_RTC_CALIB_VALUE_SPEC, bool, O>;
+pub type RTC_CALIB_RDY_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_RTC_CALIB_VALUE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:19 - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn rtc_calib_rdy(&self) -> RTC_CALIB_RDY_R {
         RTC_CALIB_RDY_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_RTC_CALIB_VALUE")
+            .field(
+                "rtc_calib_rdy",
+                &format_args!("{}", self.rtc_calib_rdy().bit()),
+            )
+            .field(
+                "rtc_calib_rdy_real",
+                &format_args!("{}", self.rtc_calib_rdy_real().bit()),
+            )
+            .field(
+                "rtc_calib_value",
+                &format_args!("{}", self.rtc_calib_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_RTC_CALIB_VALUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

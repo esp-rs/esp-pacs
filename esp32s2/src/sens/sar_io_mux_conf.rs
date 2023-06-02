@@ -35,14 +35,13 @@ impl From<crate::W<SAR_IO_MUX_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IOMUX_RESET` reader - Reset IO MUX by software"]
-pub type IOMUX_RESET_R = crate::BitReader<bool>;
+pub type IOMUX_RESET_R = crate::BitReader;
 #[doc = "Field `IOMUX_RESET` writer - Reset IO MUX by software"]
-pub type IOMUX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_IO_MUX_CONF_SPEC, bool, O>;
+pub type IOMUX_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_IO_MUX_CONF_SPEC, O>;
 #[doc = "Field `IOMUX_CLK_GATE_EN` reader - IO MUX clock gate enable bit"]
-pub type IOMUX_CLK_GATE_EN_R = crate::BitReader<bool>;
+pub type IOMUX_CLK_GATE_EN_R = crate::BitReader;
 #[doc = "Field `IOMUX_CLK_GATE_EN` writer - IO MUX clock gate enable bit"]
-pub type IOMUX_CLK_GATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_IO_MUX_CONF_SPEC, bool, O>;
+pub type IOMUX_CLK_GATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_IO_MUX_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn iomux_clk_gate_en(&self) -> IOMUX_CLK_GATE_EN_R {
         IOMUX_CLK_GATE_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_IO_MUX_CONF")
+            .field("iomux_reset", &format_args!("{}", self.iomux_reset().bit()))
+            .field(
+                "iomux_clk_gate_en",
+                &format_args!("{}", self.iomux_clk_gate_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_IO_MUX_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

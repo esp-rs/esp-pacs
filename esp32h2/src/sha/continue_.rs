@@ -20,7 +20,13 @@ impl From<crate::W<CONTINUE_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTINUE` writer - Reserved."]
-pub type CONTINUE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONTINUE_SPEC, u32, u32, 31, O>;
+pub type CONTINUE_W<'a, const O: u8> = crate::FieldWriter<'a, CONTINUE_SPEC, 31, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 1:31 - Reserved."]
     #[inline(always)]

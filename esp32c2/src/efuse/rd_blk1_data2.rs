@@ -22,6 +22,23 @@ impl R {
         SYSTEM_DATA2_R::new(self.bits & 0x00ff_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_BLK1_DATA2")
+            .field(
+                "system_data2",
+                &format_args!("{}", self.system_data2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_BLK1_DATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "BLOCK1 data register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk1_data2](index.html) module"]
 pub struct RD_BLK1_DATA2_SPEC;
 impl crate::RegisterSpec for RD_BLK1_DATA2_SPEC {

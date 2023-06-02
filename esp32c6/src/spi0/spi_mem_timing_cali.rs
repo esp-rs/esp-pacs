@@ -35,24 +35,23 @@ impl From<crate::W<SPI_MEM_TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_TIMING_CLK_ENA` reader - The bit is used to enable timing adjust clock for all reading operations."]
-pub type SPI_MEM_TIMING_CLK_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_TIMING_CLK_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_TIMING_CLK_ENA` writer - The bit is used to enable timing adjust clock for all reading operations."]
 pub type SPI_MEM_TIMING_CLK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_TIMING_CALI_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_TIMING_CALI_SPEC, O>;
 #[doc = "Field `SPI_MEM_TIMING_CALI` reader - The bit is used to enable timing auto-calibration for all reading operations."]
-pub type SPI_MEM_TIMING_CALI_R = crate::BitReader<bool>;
+pub type SPI_MEM_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_TIMING_CALI` writer - The bit is used to enable timing auto-calibration for all reading operations."]
-pub type SPI_MEM_TIMING_CALI_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_TIMING_CALI_SPEC, bool, O>;
+pub type SPI_MEM_TIMING_CALI_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_TIMING_CALI_SPEC, O>;
 #[doc = "Field `SPI_MEM_EXTRA_DUMMY_CYCLELEN` reader - add extra dummy spi clock cycle length for spi clock calibration."]
-pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_EXTRA_DUMMY_CYCLELEN` writer - add extra dummy spi clock cycle length for spi clock calibration."]
 pub type SPI_MEM_EXTRA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_TIMING_CALI_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_MEM_TIMING_CALI_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DLL_TIMING_CALI` reader - Set this bit to enable DLL for timing calibration in DDR mode when accessed to flash."]
-pub type SPI_MEM_DLL_TIMING_CALI_R = crate::BitReader<bool>;
+pub type SPI_MEM_DLL_TIMING_CALI_R = crate::BitReader;
 #[doc = "Field `UPDATE` writer - Set this bit to update delay mode, delay num and extra dummy in MSPI."]
-pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_TIMING_CALI_SPEC, bool, O>;
+pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_TIMING_CALI_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
@@ -73,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_dll_timing_cali(&self) -> SPI_MEM_DLL_TIMING_CALI_R {
         SPI_MEM_DLL_TIMING_CALI_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_TIMING_CALI")
+            .field(
+                "spi_mem_timing_clk_ena",
+                &format_args!("{}", self.spi_mem_timing_clk_ena().bit()),
+            )
+            .field(
+                "spi_mem_timing_cali",
+                &format_args!("{}", self.spi_mem_timing_cali().bit()),
+            )
+            .field(
+                "spi_mem_extra_dummy_cyclelen",
+                &format_args!("{}", self.spi_mem_extra_dummy_cyclelen().bits()),
+            )
+            .field(
+                "spi_mem_dll_timing_cali",
+                &format_args!("{}", self.spi_mem_dll_timing_cali().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_TIMING_CALI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

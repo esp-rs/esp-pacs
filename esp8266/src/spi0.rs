@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
     pub spi_cmd: SPI_CMD,

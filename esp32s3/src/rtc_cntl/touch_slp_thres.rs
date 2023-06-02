@@ -38,17 +38,15 @@ impl From<crate::W<TOUCH_SLP_THRES_SPEC>> for W {
 pub type TOUCH_SLP_TH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_SLP_TH` writer - the threshold for sleep touch pad"]
 pub type TOUCH_SLP_TH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SLP_THRES_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 22, O, u32, u32>;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` reader - sleep pad approach function enable"]
-pub type TOUCH_SLP_APPROACH_EN_R = crate::BitReader<bool>;
+pub type TOUCH_SLP_APPROACH_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` writer - sleep pad approach function enable"]
-pub type TOUCH_SLP_APPROACH_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_SLP_THRES_SPEC, bool, O>;
+pub type TOUCH_SLP_APPROACH_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_SLP_THRES_SPEC, O>;
 #[doc = "Field `TOUCH_SLP_PAD` reader - configure which pad as slp pad"]
-pub type TOUCH_SLP_PAD_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_SLP_PAD_R = crate::FieldReader;
 #[doc = "Field `TOUCH_SLP_PAD` writer - configure which pad as slp pad"]
-pub type TOUCH_SLP_PAD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SLP_THRES_SPEC, u8, u8, 5, O>;
+pub type TOUCH_SLP_PAD_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:21 - the threshold for sleep touch pad"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn touch_slp_pad(&self) -> TOUCH_SLP_PAD_R {
         TOUCH_SLP_PAD_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_SLP_THRES")
+            .field(
+                "touch_slp_th",
+                &format_args!("{}", self.touch_slp_th().bits()),
+            )
+            .field(
+                "touch_slp_approach_en",
+                &format_args!("{}", self.touch_slp_approach_en().bit()),
+            )
+            .field(
+                "touch_slp_pad",
+                &format_args!("{}", self.touch_slp_pad().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_SLP_THRES_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

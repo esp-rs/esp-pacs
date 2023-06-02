@@ -35,13 +35,13 @@ impl From<crate::W<RX_CLK_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_CLK_I_INV` reader - Set this bit to invert the input Rx core clock."]
-pub type RX_CLK_I_INV_R = crate::BitReader<bool>;
+pub type RX_CLK_I_INV_R = crate::BitReader;
 #[doc = "Field `RX_CLK_I_INV` writer - Set this bit to invert the input Rx core clock."]
-pub type RX_CLK_I_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CLK_CFG_SPEC, bool, O>;
+pub type RX_CLK_I_INV_W<'a, const O: u8> = crate::BitWriter<'a, RX_CLK_CFG_SPEC, O>;
 #[doc = "Field `RX_CLK_O_INV` reader - Set this bit to invert the output Rx core clock."]
-pub type RX_CLK_O_INV_R = crate::BitReader<bool>;
+pub type RX_CLK_O_INV_R = crate::BitReader;
 #[doc = "Field `RX_CLK_O_INV` writer - Set this bit to invert the output Rx core clock."]
-pub type RX_CLK_O_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CLK_CFG_SPEC, bool, O>;
+pub type RX_CLK_O_INV_W<'a, const O: u8> = crate::BitWriter<'a, RX_CLK_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - Set this bit to invert the input Rx core clock."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn rx_clk_o_inv(&self) -> RX_CLK_O_INV_R {
         RX_CLK_O_INV_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CLK_CFG")
+            .field(
+                "rx_clk_i_inv",
+                &format_args!("{}", self.rx_clk_i_inv().bit()),
+            )
+            .field(
+                "rx_clk_o_inv",
+                &format_args!("{}", self.rx_clk_o_inv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CLK_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

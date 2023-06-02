@@ -35,50 +35,41 @@ impl From<crate::W<SPI_MEM_DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_DOUT0_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT0_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT0_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT0_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT1_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT1_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT1_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT1_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT1_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT2_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT2_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT2_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT2_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT2_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT3_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT3_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT3_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT3_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
-pub type SPI_MEM_DOUT3_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT4_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT4_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT4_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT4_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT4_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT4_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT5_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT5_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT5_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT5_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT5_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT5_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT6_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT6_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT6_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT6_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT6_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT6_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUT7_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT7_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUT7_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUT7_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUT7_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUT7_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 #[doc = "Field `SPI_MEM_DOUTS_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUTS_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_DOUTS_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_DOUTS_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
-pub type SPI_MEM_DOUTS_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_DOUT_MODE_SPEC, bool, O>;
+pub type SPI_MEM_DOUTS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_DOUT_MODE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_douts_mode(&self) -> SPI_MEM_DOUTS_MODE_R {
         SPI_MEM_DOUTS_MODE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_DOUT_MODE")
+            .field(
+                "spi_mem_dout0_mode",
+                &format_args!("{}", self.spi_mem_dout0_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout1_mode",
+                &format_args!("{}", self.spi_mem_dout1_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout2_mode",
+                &format_args!("{}", self.spi_mem_dout2_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout3_mode",
+                &format_args!("{}", self.spi_mem_dout3_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout4_mode",
+                &format_args!("{}", self.spi_mem_dout4_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout5_mode",
+                &format_args!("{}", self.spi_mem_dout5_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout6_mode",
+                &format_args!("{}", self.spi_mem_dout6_mode().bit()),
+            )
+            .field(
+                "spi_mem_dout7_mode",
+                &format_args!("{}", self.spi_mem_dout7_mode().bit()),
+            )
+            .field(
+                "spi_mem_douts_mode",
+                &format_args!("{}", self.spi_mem_douts_mode().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_DOUT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

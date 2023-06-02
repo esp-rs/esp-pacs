@@ -35,15 +35,32 @@ impl From<crate::W<APP_VECBASE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_OUT_VECBASE_SEL` reader - "]
-pub type APP_OUT_VECBASE_SEL_R = crate::FieldReader<u8, u8>;
+pub type APP_OUT_VECBASE_SEL_R = crate::FieldReader;
 #[doc = "Field `APP_OUT_VECBASE_SEL` writer - "]
 pub type APP_OUT_VECBASE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APP_VECBASE_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, APP_VECBASE_CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn app_out_vecbase_sel(&self) -> APP_OUT_VECBASE_SEL_R {
         APP_OUT_VECBASE_SEL_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_VECBASE_CTRL")
+            .field(
+                "app_out_vecbase_sel",
+                &format_args!("{}", self.app_out_vecbase_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_VECBASE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

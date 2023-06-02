@@ -35,15 +35,31 @@ impl From<crate::W<MSPI_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `MSPI_INTR_MAP` reader - CORE0_MSPI_INTR mapping register"]
-pub type MSPI_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type MSPI_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `MSPI_INTR_MAP` writer - CORE0_MSPI_INTR mapping register"]
-pub type MSPI_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MSPI_INTR_MAP_SPEC, u8, u8, 5, O>;
+pub type MSPI_INTR_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, MSPI_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - CORE0_MSPI_INTR mapping register"]
     #[inline(always)]
     pub fn mspi_intr_map(&self) -> MSPI_INTR_MAP_R {
         MSPI_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MSPI_INTR_MAP")
+            .field(
+                "mspi_intr_map",
+                &format_args!("{}", self.mspi_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MSPI_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

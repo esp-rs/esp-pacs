@@ -35,30 +35,29 @@ impl From<crate::W<HSTIMER_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_RES` reader - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
-pub type DUTY_RES_R = crate::FieldReader<u8, u8>;
+pub type DUTY_RES_R = crate::FieldReader;
 #[doc = "Field `DUTY_RES` writer - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
-pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSTIMER_CONF_SPEC, u8, u8, 5, O>;
+pub type DUTY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, HSTIMER_CONF_SPEC, 5, O>;
 #[doc = "Field `DIV_NUM` reader - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
 pub type DIV_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DIV_NUM` writer - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
-pub type DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HSTIMER_CONF_SPEC, u32, u32, 18, O>;
+pub type DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, HSTIMER_CONF_SPEC, 18, O, u32, u32>;
 #[doc = "Field `PAUSE` reader - This bit is used to pause the counter in high speed timer0"]
-pub type PAUSE_R = crate::BitReader<bool>;
+pub type PAUSE_R = crate::BitReader;
 #[doc = "Field `PAUSE` writer - This bit is used to pause the counter in high speed timer0"]
-pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSTIMER_CONF_SPEC, bool, O>;
+pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, HSTIMER_CONF_SPEC, O>;
 #[doc = "Field `RST` reader - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
-pub type RST_R = crate::BitReader<bool>;
+pub type RST_R = crate::BitReader;
 #[doc = "Field `RST` writer - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
-pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSTIMER_CONF_SPEC, bool, O>;
+pub type RST_W<'a, const O: u8> = crate::BitWriter<'a, HSTIMER_CONF_SPEC, O>;
 #[doc = "Field `TICK_SEL` reader - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
-pub type TICK_SEL_R = crate::BitReader<bool>;
+pub type TICK_SEL_R = crate::BitReader;
 #[doc = "Field `TICK_SEL` writer - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
-pub type TICK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSTIMER_CONF_SPEC, bool, O>;
+pub type TICK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, HSTIMER_CONF_SPEC, O>;
 #[doc = "Field `LIM` reader - "]
-pub type LIM_R = crate::FieldReader<u8, u8>;
+pub type LIM_R = crate::FieldReader;
 #[doc = "Field `LIM` writer - "]
-pub type LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSTIMER_CONF_SPEC, u8, u8, 5, O>;
+pub type LIM_W<'a, const O: u8> = crate::FieldWriter<'a, HSTIMER_CONF_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
@@ -89,6 +88,25 @@ impl R {
     #[inline(always)]
     pub fn lim(&self) -> LIM_R {
         LIM_R::new(((self.bits >> 31) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HSTIMER_CONF")
+            .field("duty_res", &format_args!("{}", self.duty_res().bits()))
+            .field("div_num", &format_args!("{}", self.div_num().bits()))
+            .field("pause", &format_args!("{}", self.pause().bit()))
+            .field("rst", &format_args!("{}", self.rst().bit()))
+            .field("tick_sel", &format_args!("{}", self.tick_sel().bit()))
+            .field("lim", &format_args!("{}", self.lim().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HSTIMER_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

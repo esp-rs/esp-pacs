@@ -35,14 +35,31 @@ impl From<crate::W<MAC_DUMP_0_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_DUMP_LOCK` reader - Lock register. Setting to 1 locks MAC dump permission control registers."]
-pub type MAC_DUMP_LOCK_R = crate::BitReader<bool>;
+pub type MAC_DUMP_LOCK_R = crate::BitReader;
 #[doc = "Field `MAC_DUMP_LOCK` writer - Lock register. Setting to 1 locks MAC dump permission control registers."]
-pub type MAC_DUMP_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAC_DUMP_0_SPEC, bool, O>;
+pub type MAC_DUMP_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, MAC_DUMP_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks MAC dump permission control registers."]
     #[inline(always)]
     pub fn mac_dump_lock(&self) -> MAC_DUMP_LOCK_R {
         MAC_DUMP_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MAC_DUMP_0")
+            .field(
+                "mac_dump_lock",
+                &format_args!("{}", self.mac_dump_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MAC_DUMP_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

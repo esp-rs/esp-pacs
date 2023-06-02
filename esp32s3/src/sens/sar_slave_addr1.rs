@@ -38,14 +38,14 @@ impl From<crate::W<SAR_SLAVE_ADDR1_SPEC>> for W {
 pub type SAR_I2C_SLAVE_ADDR1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR1` writer - configure i2c slave address1"]
 pub type SAR_I2C_SLAVE_ADDR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR1_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` reader - configure i2c slave address0"]
 pub type SAR_I2C_SLAVE_ADDR0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` writer - configure i2c slave address0"]
 pub type SAR_I2C_SLAVE_ADDR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR1_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SAR_SARADC_MEAS_STATUS` reader - no public"]
-pub type SAR_SARADC_MEAS_STATUS_R = crate::FieldReader<u8, u8>;
+pub type SAR_SARADC_MEAS_STATUS_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:10 - configure i2c slave address1"]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn sar_saradc_meas_status(&self) -> SAR_SARADC_MEAS_STATUS_R {
         SAR_SARADC_MEAS_STATUS_R::new(((self.bits >> 22) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_SLAVE_ADDR1")
+            .field(
+                "sar_i2c_slave_addr1",
+                &format_args!("{}", self.sar_i2c_slave_addr1().bits()),
+            )
+            .field(
+                "sar_i2c_slave_addr0",
+                &format_args!("{}", self.sar_i2c_slave_addr0().bits()),
+            )
+            .field(
+                "sar_saradc_meas_status",
+                &format_args!("{}", self.sar_saradc_meas_status().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

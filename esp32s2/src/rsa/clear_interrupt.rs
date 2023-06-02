@@ -20,8 +20,13 @@ impl From<crate::W<CLEAR_INTERRUPT_SPEC>> for W {
     }
 }
 #[doc = "Field `CLEAR_INTERRUPT` writer - Set this bit to 1 to clear the RSA interrupts."]
-pub type CLEAR_INTERRUPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLEAR_INTERRUPT_SPEC, bool, O>;
+pub type CLEAR_INTERRUPT_W<'a, const O: u8> = crate::BitWriter<'a, CLEAR_INTERRUPT_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLEAR_INTERRUPT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to clear the RSA interrupts."]
     #[inline(always)]

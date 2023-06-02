@@ -14,9 +14,9 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `DONE_INT_ST` reader - backup done flag"]
-pub type DONE_INT_ST_R = crate::BitReader<bool>;
+pub type DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `ERROR_INT_ST` reader - error flag"]
-pub type ERROR_INT_ST_R = crate::BitReader<bool>;
+pub type ERROR_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
@@ -27,6 +27,24 @@ impl R {
     #[inline(always)]
     pub fn error_int_st(&self) -> ERROR_INT_ST_R {
         ERROR_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field("done_int_st", &format_args!("{}", self.done_int_st().bit()))
+            .field(
+                "error_int_st",
+                &format_args!("{}", self.error_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Read only register for error and done\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

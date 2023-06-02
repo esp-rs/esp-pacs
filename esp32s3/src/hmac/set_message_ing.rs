@@ -20,7 +20,13 @@ impl From<crate::W<SET_MESSAGE_ING_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_TEXT_ING` writer - Continue typical hmac."]
-pub type SET_TEXT_ING_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_MESSAGE_ING_SPEC, bool, O>;
+pub type SET_TEXT_ING_W<'a, const O: u8> = crate::BitWriter<'a, SET_MESSAGE_ING_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Continue typical hmac."]
     #[inline(always)]

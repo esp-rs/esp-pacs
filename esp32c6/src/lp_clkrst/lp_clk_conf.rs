@@ -35,19 +35,17 @@ impl From<crate::W<LP_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLOW_CLK_SEL` reader - need_des"]
-pub type SLOW_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type SLOW_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SLOW_CLK_SEL` writer - need_des"]
-pub type SLOW_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LP_CLK_CONF_SPEC, u8, u8, 2, O>;
+pub type SLOW_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CLK_CONF_SPEC, 2, O>;
 #[doc = "Field `FAST_CLK_SEL` reader - need_des"]
-pub type FAST_CLK_SEL_R = crate::BitReader<bool>;
+pub type FAST_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_SEL` writer - need_des"]
-pub type FAST_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CLK_CONF_SPEC, bool, O>;
+pub type FAST_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `LP_PERI_DIV_NUM` reader - need_des"]
-pub type LP_PERI_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type LP_PERI_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LP_PERI_DIV_NUM` writer - need_des"]
-pub type LP_PERI_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LP_CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type LP_PERI_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CLK_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn lp_peri_div_num(&self) -> LP_PERI_DIV_NUM_R {
         LP_PERI_DIV_NUM_R::new(((self.bits >> 3) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_CLK_CONF")
+            .field(
+                "slow_clk_sel",
+                &format_args!("{}", self.slow_clk_sel().bits()),
+            )
+            .field(
+                "fast_clk_sel",
+                &format_args!("{}", self.fast_clk_sel().bit()),
+            )
+            .field(
+                "lp_peri_div_num",
+                &format_args!("{}", self.lp_peri_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

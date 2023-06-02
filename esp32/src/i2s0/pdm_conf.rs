@@ -35,60 +35,54 @@ impl From<crate::W<PDM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_EN` reader - "]
-pub type TX_PDM_EN_R = crate::BitReader<bool>;
+pub type TX_PDM_EN_R = crate::BitReader;
 #[doc = "Field `TX_PDM_EN` writer - "]
-pub type TX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type TX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 #[doc = "Field `RX_PDM_EN` reader - "]
-pub type RX_PDM_EN_R = crate::BitReader<bool>;
+pub type RX_PDM_EN_R = crate::BitReader;
 #[doc = "Field `RX_PDM_EN` writer - "]
-pub type RX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type RX_PDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 #[doc = "Field `PCM2PDM_CONV_EN` reader - "]
-pub type PCM2PDM_CONV_EN_R = crate::BitReader<bool>;
+pub type PCM2PDM_CONV_EN_R = crate::BitReader;
 #[doc = "Field `PCM2PDM_CONV_EN` writer - "]
-pub type PCM2PDM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type PCM2PDM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 #[doc = "Field `PDM2PCM_CONV_EN` reader - "]
-pub type PDM2PCM_CONV_EN_R = crate::BitReader<bool>;
+pub type PDM2PCM_CONV_EN_R = crate::BitReader;
 #[doc = "Field `PDM2PCM_CONV_EN` writer - "]
-pub type PDM2PCM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type PDM2PCM_CONV_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 #[doc = "Field `TX_PDM_SINC_OSR2` reader - "]
-pub type TX_PDM_SINC_OSR2_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_SINC_OSR2_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SINC_OSR2` writer - "]
-pub type TX_PDM_SINC_OSR2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 4, O>;
+pub type TX_PDM_SINC_OSR2_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 4, O>;
 #[doc = "Field `TX_PDM_PRESCALE` reader - "]
-pub type TX_PDM_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_PRESCALE` writer - "]
-pub type TX_PDM_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 8, O>;
+pub type TX_PDM_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 8, O>;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` reader - "]
-pub type TX_PDM_HP_IN_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_HP_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` writer - "]
-pub type TX_PDM_HP_IN_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 2, O>;
+pub type TX_PDM_HP_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` reader - "]
-pub type TX_PDM_LP_IN_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_LP_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` writer - "]
-pub type TX_PDM_LP_IN_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 2, O>;
+pub type TX_PDM_LP_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` reader - "]
-pub type TX_PDM_SINC_IN_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_SINC_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` writer - "]
-pub type TX_PDM_SINC_IN_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 2, O>;
+pub type TX_PDM_SINC_IN_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` reader - "]
-pub type TX_PDM_SIGMADELTA_IN_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type TX_PDM_SIGMADELTA_IN_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` writer - "]
 pub type TX_PDM_SIGMADELTA_IN_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PDM_CONF_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, PDM_CONF_SPEC, 2, O>;
 #[doc = "Field `RX_PDM_SINC_DSR_16_EN` reader - "]
-pub type RX_PDM_SINC_DSR_16_EN_R = crate::BitReader<bool>;
+pub type RX_PDM_SINC_DSR_16_EN_R = crate::BitReader;
 #[doc = "Field `RX_PDM_SINC_DSR_16_EN` writer - "]
-pub type RX_PDM_SINC_DSR_16_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type RX_PDM_SINC_DSR_16_EN_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 #[doc = "Field `TX_PDM_HP_BYPASS` reader - "]
-pub type TX_PDM_HP_BYPASS_R = crate::BitReader<bool>;
+pub type TX_PDM_HP_BYPASS_R = crate::BitReader;
 #[doc = "Field `TX_PDM_HP_BYPASS` writer - "]
-pub type TX_PDM_HP_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PDM_CONF_SPEC, bool, O>;
+pub type TX_PDM_HP_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, PDM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -149,6 +143,61 @@ impl R {
     #[inline(always)]
     pub fn tx_pdm_hp_bypass(&self) -> TX_PDM_HP_BYPASS_R {
         TX_PDM_HP_BYPASS_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PDM_CONF")
+            .field("tx_pdm_en", &format_args!("{}", self.tx_pdm_en().bit()))
+            .field("rx_pdm_en", &format_args!("{}", self.rx_pdm_en().bit()))
+            .field(
+                "pcm2pdm_conv_en",
+                &format_args!("{}", self.pcm2pdm_conv_en().bit()),
+            )
+            .field(
+                "pdm2pcm_conv_en",
+                &format_args!("{}", self.pdm2pcm_conv_en().bit()),
+            )
+            .field(
+                "tx_pdm_sinc_osr2",
+                &format_args!("{}", self.tx_pdm_sinc_osr2().bits()),
+            )
+            .field(
+                "tx_pdm_prescale",
+                &format_args!("{}", self.tx_pdm_prescale().bits()),
+            )
+            .field(
+                "tx_pdm_hp_in_shift",
+                &format_args!("{}", self.tx_pdm_hp_in_shift().bits()),
+            )
+            .field(
+                "tx_pdm_lp_in_shift",
+                &format_args!("{}", self.tx_pdm_lp_in_shift().bits()),
+            )
+            .field(
+                "tx_pdm_sinc_in_shift",
+                &format_args!("{}", self.tx_pdm_sinc_in_shift().bits()),
+            )
+            .field(
+                "tx_pdm_sigmadelta_in_shift",
+                &format_args!("{}", self.tx_pdm_sigmadelta_in_shift().bits()),
+            )
+            .field(
+                "rx_pdm_sinc_dsr_16_en",
+                &format_args!("{}", self.rx_pdm_sinc_dsr_16_en().bit()),
+            )
+            .field(
+                "tx_pdm_hp_bypass",
+                &format_args!("{}", self.tx_pdm_hp_bypass().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PDM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

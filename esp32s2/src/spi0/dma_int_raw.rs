@@ -35,47 +35,47 @@ impl From<crate::W<DMA_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_RAW` reader - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
-pub type INLINK_DSCR_EMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_EMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for outlink descriptor error. Can be configured in CONF state."]
-pub type OUTLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
+pub type OUTLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for inlink descriptor error. Can be configured in CONF state."]
-pub type INLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
+pub type INLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_DONE_INT_RAW` reader - The raw bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
-pub type IN_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF_INT_RAW` reader - The raw bit for receiving error. Can be configured in CONF state."]
-pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF_INT_RAW` reader - The raw bit for completing receiving all the packets from host. Can be configured in CONF state."]
-pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_DONE_INT_RAW` reader - The raw bit for completing usage of a outlink descriptor. Can be configured in CONF state."]
-pub type OUT_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - The raw bit for sending a packet to host done. Can be configured in CONF state."]
-pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUT_TOTAL_EOF_INT_RAW` reader - The raw bit for sending all the packets to host done. Can be configured in CONF state."]
-pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `INFIFO_FULL_ERR_INT_RAW` reader - 1:SPI_DMA_INFIFO_FULL and spi_push_data_prep are valid, which means that DMA Rx buffer is full but push is valid. 0: Others. Can not be changed by CONF_buf."]
-pub type INFIFO_FULL_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type INFIFO_FULL_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_EMPTY_ERR_INT_RAW` reader - 1:SPI_DMA_OUTFIFO_EMPTY and spi_pop_data_prep are valid, which means that there is no data to pop but pop is valid. 0: Others. Can not be changed by CONF_buf."]
-pub type OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_RAW` reader - The raw bit for SPI slave CMD6 interrupt."]
-pub type SLV_CMD6_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD6_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD6_INT_RAW` writer - The raw bit for SPI slave CMD6 interrupt."]
-pub type SLV_CMD6_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD6_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD7_INT_RAW` reader - The raw bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD7_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD7_INT_RAW` writer - The raw bit for SPI slave CMD7 interrupt."]
-pub type SLV_CMD7_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD7_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD8_INT_RAW` reader - The raw bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD8_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD8_INT_RAW` writer - The raw bit for SPI slave CMD8 interrupt."]
-pub type SLV_CMD8_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD8_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD9_INT_RAW` reader - The raw bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD9_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD9_INT_RAW` writer - The raw bit for SPI slave CMD9 interrupt."]
-pub type SLV_CMD9_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD9_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMDA_INT_RAW` reader - The raw bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMDA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMDA_INT_RAW` writer - The raw bit for SPI slave CMDA interrupt."]
-pub type SLV_CMDA_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMDA_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
@@ -156,6 +156,83 @@ impl R {
     #[inline(always)]
     pub fn slv_cmda_int_raw(&self) -> SLV_CMDA_INT_RAW_R {
         SLV_CMDA_INT_RAW_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_INT_RAW")
+            .field(
+                "inlink_dscr_empty_int_raw",
+                &format_args!("{}", self.inlink_dscr_empty_int_raw().bit()),
+            )
+            .field(
+                "outlink_dscr_error_int_raw",
+                &format_args!("{}", self.outlink_dscr_error_int_raw().bit()),
+            )
+            .field(
+                "inlink_dscr_error_int_raw",
+                &format_args!("{}", self.inlink_dscr_error_int_raw().bit()),
+            )
+            .field(
+                "in_done_int_raw",
+                &format_args!("{}", self.in_done_int_raw().bit()),
+            )
+            .field(
+                "in_err_eof_int_raw",
+                &format_args!("{}", self.in_err_eof_int_raw().bit()),
+            )
+            .field(
+                "in_suc_eof_int_raw",
+                &format_args!("{}", self.in_suc_eof_int_raw().bit()),
+            )
+            .field(
+                "out_done_int_raw",
+                &format_args!("{}", self.out_done_int_raw().bit()),
+            )
+            .field(
+                "out_eof_int_raw",
+                &format_args!("{}", self.out_eof_int_raw().bit()),
+            )
+            .field(
+                "out_total_eof_int_raw",
+                &format_args!("{}", self.out_total_eof_int_raw().bit()),
+            )
+            .field(
+                "infifo_full_err_int_raw",
+                &format_args!("{}", self.infifo_full_err_int_raw().bit()),
+            )
+            .field(
+                "outfifo_empty_err_int_raw",
+                &format_args!("{}", self.outfifo_empty_err_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd6_int_raw",
+                &format_args!("{}", self.slv_cmd6_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd7_int_raw",
+                &format_args!("{}", self.slv_cmd7_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd8_int_raw",
+                &format_args!("{}", self.slv_cmd8_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd9_int_raw",
+                &format_args!("{}", self.slv_cmd9_int_raw().bit()),
+            )
+            .field(
+                "slv_cmda_int_raw",
+                &format_args!("{}", self.slv_cmda_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

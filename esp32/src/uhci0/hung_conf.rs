@@ -35,33 +35,29 @@ impl From<crate::W<HUNG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TXFIFO_TIMEOUT` reader - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
-pub type TXFIFO_TIMEOUT_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT` writer - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
-pub type TXFIFO_TIMEOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HUNG_CONF_SPEC, u8, u8, 8, O>;
+pub type TXFIFO_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 8, O>;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` reader - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
-pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_TIMEOUT_SHIFT` writer - The tick count is cleared when its value >=(17'd8000>>reg_txfifo_timeout_shift)"]
-pub type TXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HUNG_CONF_SPEC, u8, u8, 3, O>;
+pub type TXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 3, O>;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` reader - The enable bit for txfifo receive data timeout"]
-pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader<bool>;
+pub type TXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `TXFIFO_TIMEOUT_ENA` writer - The enable bit for txfifo receive data timeout"]
-pub type TXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HUNG_CONF_SPEC, bool, O>;
+pub type TXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HUNG_CONF_SPEC, O>;
 #[doc = "Field `RXFIFO_TIMEOUT` reader - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
-pub type RXFIFO_TIMEOUT_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT` writer - This register stores the timeout value.when DMA takes more time than this register value to read a data from RAM it will produce uhci_rx_hung_int interrupt."]
-pub type RXFIFO_TIMEOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HUNG_CONF_SPEC, u8, u8, 8, O>;
+pub type RXFIFO_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 8, O>;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` reader - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
-pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_TIMEOUT_SHIFT` writer - The tick count is cleared when its value >=(17'd8000>>reg_rxfifo_timeout_shift)"]
-pub type RXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HUNG_CONF_SPEC, u8, u8, 3, O>;
+pub type RXFIFO_TIMEOUT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, HUNG_CONF_SPEC, 3, O>;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` reader - This is the enable bit for DMA send data timeout"]
-pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader<bool>;
+pub type RXFIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TIMEOUT_ENA` writer - This is the enable bit for DMA send data timeout"]
-pub type RXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HUNG_CONF_SPEC, bool, O>;
+pub type RXFIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, HUNG_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - This register stores the timeout value.when DMA takes more time than this register value to receive a data it will produce uhci_tx_hung_int interrupt."]
     #[inline(always)]
@@ -92,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn rxfifo_timeout_ena(&self) -> RXFIFO_TIMEOUT_ENA_R {
         RXFIFO_TIMEOUT_ENA_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HUNG_CONF")
+            .field(
+                "txfifo_timeout",
+                &format_args!("{}", self.txfifo_timeout().bits()),
+            )
+            .field(
+                "txfifo_timeout_shift",
+                &format_args!("{}", self.txfifo_timeout_shift().bits()),
+            )
+            .field(
+                "txfifo_timeout_ena",
+                &format_args!("{}", self.txfifo_timeout_ena().bit()),
+            )
+            .field(
+                "rxfifo_timeout",
+                &format_args!("{}", self.rxfifo_timeout().bits()),
+            )
+            .field(
+                "rxfifo_timeout_shift",
+                &format_args!("{}", self.rxfifo_timeout_shift().bits()),
+            )
+            .field(
+                "rxfifo_timeout_ena",
+                &format_args!("{}", self.rxfifo_timeout_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HUNG_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

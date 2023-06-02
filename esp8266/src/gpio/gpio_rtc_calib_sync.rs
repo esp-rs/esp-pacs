@@ -38,12 +38,11 @@ impl From<crate::W<GPIO_RTC_CALIB_SYNC_SPEC>> for W {
 pub type RTC_PERIOD_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_PERIOD_NUM` writer - The cycle number of RTC-clock during RTC-clock-calibration"]
 pub type RTC_PERIOD_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_RTC_CALIB_SYNC_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, GPIO_RTC_CALIB_SYNC_SPEC, 10, O, u16, u16>;
 #[doc = "Field `RTC_CALIB_START` reader - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
-pub type RTC_CALIB_START_R = crate::BitReader<bool>;
+pub type RTC_CALIB_START_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_START` writer - Positvie edge of this bit will trigger the RTC-clock-calibration process."]
-pub type RTC_CALIB_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_RTC_CALIB_SYNC_SPEC, bool, O>;
+pub type RTC_CALIB_START_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_RTC_CALIB_SYNC_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - The cycle number of RTC-clock during RTC-clock-calibration"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn rtc_calib_start(&self) -> RTC_CALIB_START_R {
         RTC_CALIB_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_RTC_CALIB_SYNC")
+            .field(
+                "rtc_calib_start",
+                &format_args!("{}", self.rtc_calib_start().bit()),
+            )
+            .field(
+                "rtc_period_num",
+                &format_args!("{}", self.rtc_period_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_RTC_CALIB_SYNC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,13 @@ impl From<crate::W<SLV_WRBUF_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_WR_BUF_DONE` reader - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_BUF_DONE_R = crate::BitReader<bool>;
+pub type SLV_WR_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_WR_BUF_DONE` writer - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
-pub type SLV_WR_BUF_DONE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLV_WRBUF_DLEN_SPEC, bool, O>;
+pub type SLV_WR_BUF_DONE_W<'a, const O: u8> = crate::BitWriter<'a, SLV_WRBUF_DLEN_SPEC, O>;
 #[doc = "Field `CONF_BASE_BITLEN` reader - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
-pub type CONF_BASE_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type CONF_BASE_BITLEN_R = crate::FieldReader;
 #[doc = "Field `CONF_BASE_BITLEN` writer - The basic spi_clk cycles of CONF state. The real cycle length of CONF state, if SPI_USR_CONF is enabled, is SPI_CONF_BASE_BITLEN\\[6:0\\] + SPI_CONF_BITLEN\\[23:0\\]."]
-pub type CONF_BASE_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_WRBUF_DLEN_SPEC, u8, u8, 7, O>;
+pub type CONF_BASE_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_WRBUF_DLEN_SPEC, 7, O>;
 impl R {
     #[doc = "Bit 24 - The interrupt raw bit for the completion of write-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn conf_base_bitlen(&self) -> CONF_BASE_BITLEN_R {
         CONF_BASE_BITLEN_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLV_WRBUF_DLEN")
+            .field(
+                "slv_wr_buf_done",
+                &format_args!("{}", self.slv_wr_buf_done().bit()),
+            )
+            .field(
+                "conf_base_bitlen",
+                &format_args!("{}", self.conf_base_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLV_WRBUF_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

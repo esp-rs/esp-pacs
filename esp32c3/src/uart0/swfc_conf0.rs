@@ -38,11 +38,11 @@ impl From<crate::W<SWFC_CONF0_SPEC>> for W {
 pub type XOFF_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
 pub type XOFF_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWFC_CONF0_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SWFC_CONF0_SPEC, 9, O, u16, u16>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_R = crate::FieldReader<u8, u8>;
+pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]
-pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SWFC_CONF0_SPEC, u8, u8, 8, O>;
+pub type XOFF_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:8 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
@@ -53,6 +53,24 @@ impl R {
     #[inline(always)]
     pub fn xoff_char(&self) -> XOFF_CHAR_R {
         XOFF_CHAR_R::new(((self.bits >> 9) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWFC_CONF0")
+            .field(
+                "xoff_threshold",
+                &format_args!("{}", self.xoff_threshold().bits()),
+            )
+            .field("xoff_char", &format_args!("{}", self.xoff_char().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

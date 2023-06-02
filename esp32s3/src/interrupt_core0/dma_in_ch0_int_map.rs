@@ -35,15 +35,32 @@ impl From<crate::W<DMA_IN_CH0_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_IN_CH0_INT_MAP` reader - this register used to map dma_in_ch0 interrupt to one of core0's external interrupt"]
-pub type DMA_IN_CH0_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type DMA_IN_CH0_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `DMA_IN_CH0_INT_MAP` writer - this register used to map dma_in_ch0 interrupt to one of core0's external interrupt"]
 pub type DMA_IN_CH0_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_IN_CH0_INT_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, DMA_IN_CH0_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map dma_in_ch0 interrupt to one of core0's external interrupt"]
     #[inline(always)]
     pub fn dma_in_ch0_int_map(&self) -> DMA_IN_CH0_INT_MAP_R {
         DMA_IN_CH0_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_IN_CH0_INT_MAP")
+            .field(
+                "dma_in_ch0_int_map",
+                &format_args!("{}", self.dma_in_ch0_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_IN_CH0_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

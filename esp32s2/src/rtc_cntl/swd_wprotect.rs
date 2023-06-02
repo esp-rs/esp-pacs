@@ -37,13 +37,26 @@ impl From<crate::W<SWD_WPROTECT_SPEC>> for W {
 #[doc = "Field `SWD_WKEY` reader - Sets the write protection key of the super watchdog."]
 pub type SWD_WKEY_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SWD_WKEY` writer - Sets the write protection key of the super watchdog."]
-pub type SWD_WKEY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SWD_WPROTECT_SPEC, u32, u32, 32, O>;
+pub type SWD_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_WPROTECT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Sets the write protection key of the super watchdog."]
     #[inline(always)]
     pub fn swd_wkey(&self) -> SWD_WKEY_R {
         SWD_WKEY_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWD_WPROTECT")
+            .field("swd_wkey", &format_args!("{}", self.swd_wkey().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SWD_WPROTECT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

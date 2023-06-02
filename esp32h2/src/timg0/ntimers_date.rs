@@ -38,12 +38,29 @@ impl From<crate::W<NTIMERS_DATE_SPEC>> for W {
 pub type NTIMGS_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `NTIMGS_DATE` writer - Timer version control register"]
 pub type NTIMGS_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, NTIMERS_DATE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, NTIMERS_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Timer version control register"]
     #[inline(always)]
     pub fn ntimgs_date(&self) -> NTIMGS_DATE_R {
         NTIMGS_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("NTIMERS_DATE")
+            .field(
+                "ntimgs_date",
+                &format_args!("{}", self.ntimgs_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<NTIMERS_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

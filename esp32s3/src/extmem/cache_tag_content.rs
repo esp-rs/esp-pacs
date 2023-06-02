@@ -38,12 +38,29 @@ impl From<crate::W<CACHE_TAG_CONTENT_SPEC>> for W {
 pub type CACHE_TAG_CONTENT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CACHE_TAG_CONTENT` writer - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
 pub type CACHE_TAG_CONTENT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_TAG_CONTENT_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CACHE_TAG_CONTENT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
     #[inline(always)]
     pub fn cache_tag_content(&self) -> CACHE_TAG_CONTENT_R {
         CACHE_TAG_CONTENT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_TAG_CONTENT")
+            .field(
+                "cache_tag_content",
+                &format_args!("{}", self.cache_tag_content().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_CONTENT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

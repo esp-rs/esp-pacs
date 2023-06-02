@@ -38,12 +38,29 @@ impl From<crate::W<I2SRXEOF_NUM_SPEC>> for W {
 pub type I2S_I2S_RX_EOF_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `I2S_I2S_RX_EOF_NUM` writer - "]
 pub type I2S_I2S_RX_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2SRXEOF_NUM_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, I2SRXEOF_NUM_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn i2s_i2s_rx_eof_num(&self) -> I2S_I2S_RX_EOF_NUM_R {
         I2S_I2S_RX_EOF_NUM_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SRXEOF_NUM")
+            .field(
+                "i2s_i2s_rx_eof_num",
+                &format_args!("{}", self.i2s_i2s_rx_eof_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2SRXEOF_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

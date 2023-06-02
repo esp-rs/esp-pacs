@@ -35,53 +35,53 @@ impl From<crate::W<DCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `RMTWKUPSIG` reader - "]
-pub type RMTWKUPSIG_R = crate::BitReader<bool>;
+pub type RMTWKUPSIG_R = crate::BitReader;
 #[doc = "Field `RMTWKUPSIG` writer - "]
-pub type RMTWKUPSIG_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type RMTWKUPSIG_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `SFTDISCON` reader - "]
-pub type SFTDISCON_R = crate::BitReader<bool>;
+pub type SFTDISCON_R = crate::BitReader;
 #[doc = "Field `SFTDISCON` writer - "]
-pub type SFTDISCON_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type SFTDISCON_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `GNPINNAKSTS` reader - "]
-pub type GNPINNAKSTS_R = crate::BitReader<bool>;
+pub type GNPINNAKSTS_R = crate::BitReader;
 #[doc = "Field `GOUTNAKSTS` reader - "]
-pub type GOUTNAKSTS_R = crate::BitReader<bool>;
+pub type GOUTNAKSTS_R = crate::BitReader;
 #[doc = "Field `TSTCTL` reader - "]
-pub type TSTCTL_R = crate::FieldReader<u8, u8>;
+pub type TSTCTL_R = crate::FieldReader;
 #[doc = "Field `TSTCTL` writer - "]
-pub type TSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCTL_SPEC, u8, u8, 3, O>;
+pub type TSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, DCTL_SPEC, 3, O>;
 #[doc = "Field `SGNPINNAK` writer - "]
-pub type SGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type SGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `CGNPINNAK` writer - "]
-pub type CGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type CGNPINNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `SGOUTNAK` writer - "]
-pub type SGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type SGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `CGOUTNAK` writer - "]
-pub type CGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type CGOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `PWRONPRGDONE` reader - "]
-pub type PWRONPRGDONE_R = crate::BitReader<bool>;
+pub type PWRONPRGDONE_R = crate::BitReader;
 #[doc = "Field `PWRONPRGDONE` writer - "]
-pub type PWRONPRGDONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type PWRONPRGDONE_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `GMC` reader - "]
-pub type GMC_R = crate::FieldReader<u8, u8>;
+pub type GMC_R = crate::FieldReader;
 #[doc = "Field `GMC` writer - "]
-pub type GMC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCTL_SPEC, u8, u8, 2, O>;
+pub type GMC_W<'a, const O: u8> = crate::FieldWriter<'a, DCTL_SPEC, 2, O>;
 #[doc = "Field `IGNRFRMNUM` reader - "]
-pub type IGNRFRMNUM_R = crate::BitReader<bool>;
+pub type IGNRFRMNUM_R = crate::BitReader;
 #[doc = "Field `IGNRFRMNUM` writer - "]
-pub type IGNRFRMNUM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type IGNRFRMNUM_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `NAKONBBLE` reader - "]
-pub type NAKONBBLE_R = crate::BitReader<bool>;
+pub type NAKONBBLE_R = crate::BitReader;
 #[doc = "Field `NAKONBBLE` writer - "]
-pub type NAKONBBLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type NAKONBBLE_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `ENCOUNTONBNA` reader - "]
-pub type ENCOUNTONBNA_R = crate::BitReader<bool>;
+pub type ENCOUNTONBNA_R = crate::BitReader;
 #[doc = "Field `ENCOUNTONBNA` writer - "]
-pub type ENCOUNTONBNA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type ENCOUNTONBNA_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 #[doc = "Field `DEEPSLEEPBESLREJECT` reader - "]
-pub type DEEPSLEEPBESLREJECT_R = crate::BitReader<bool>;
+pub type DEEPSLEEPBESLREJECT_R = crate::BitReader;
 #[doc = "Field `DEEPSLEEPBESLREJECT` writer - "]
-pub type DEEPSLEEPBESLREJECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCTL_SPEC, bool, O>;
+pub type DEEPSLEEPBESLREJECT_W<'a, const O: u8> = crate::BitWriter<'a, DCTL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -137,6 +137,39 @@ impl R {
     #[inline(always)]
     pub fn deepsleepbeslreject(&self) -> DEEPSLEEPBESLREJECT_R {
         DEEPSLEEPBESLREJECT_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCTL")
+            .field("rmtwkupsig", &format_args!("{}", self.rmtwkupsig().bit()))
+            .field("sftdiscon", &format_args!("{}", self.sftdiscon().bit()))
+            .field("gnpinnaksts", &format_args!("{}", self.gnpinnaksts().bit()))
+            .field("goutnaksts", &format_args!("{}", self.goutnaksts().bit()))
+            .field("tstctl", &format_args!("{}", self.tstctl().bits()))
+            .field(
+                "pwronprgdone",
+                &format_args!("{}", self.pwronprgdone().bit()),
+            )
+            .field("gmc", &format_args!("{}", self.gmc().bits()))
+            .field("ignrfrmnum", &format_args!("{}", self.ignrfrmnum().bit()))
+            .field("nakonbble", &format_args!("{}", self.nakonbble().bit()))
+            .field(
+                "encountonbna",
+                &format_args!("{}", self.encountonbna().bit()),
+            )
+            .field(
+                "deepsleepbeslreject",
+                &format_args!("{}", self.deepsleepbeslreject().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

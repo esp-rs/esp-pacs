@@ -22,6 +22,23 @@ impl R {
         L1_CACHE_AUTOLOAD_SCT3_SIZE_R::new(self.bits & 0x0fff_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_AUTOLOAD_SCT3_SIZE")
+            .field(
+                "l1_cache_autoload_sct3_size",
+                &format_args!("{}", self.l1_cache_autoload_sct3_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_AUTOLOAD_SCT3_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "L1 Cache autoload section 1 size configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_autoload_sct3_size](index.html) module"]
 pub struct L1_CACHE_AUTOLOAD_SCT3_SIZE_SPEC;
 impl crate::RegisterSpec for L1_CACHE_AUTOLOAD_SCT3_SIZE_SPEC {

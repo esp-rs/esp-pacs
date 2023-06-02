@@ -38,12 +38,29 @@ impl From<crate::W<APB_CTRL_DATE_SPEC>> for W {
 pub type APB_CTRL_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `APB_CTRL_DATE` writer - Version control register"]
 pub type APB_CTRL_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_CTRL_DATE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, APB_CTRL_DATE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Version control register"]
     #[inline(always)]
     pub fn apb_ctrl_date(&self) -> APB_CTRL_DATE_R {
         APB_CTRL_DATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_CTRL_DATE")
+            .field(
+                "apb_ctrl_date",
+                &format_args!("{}", self.apb_ctrl_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_CTRL_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

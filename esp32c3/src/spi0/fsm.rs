@@ -35,14 +35,13 @@ impl From<crate::W<FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `CSPI_ST` reader - The current status of SPI0 slave FSM: spi0_slv_st. 0: idle state, 1: preparation state, 2: send command state, 3: send address state, 4: wait state, 5: read data state, 6:write data state, 7: done state, 8: read data end state."]
-pub type CSPI_ST_R = crate::FieldReader<u8, u8>;
+pub type CSPI_ST_R = crate::FieldReader;
 #[doc = "Field `EM_ST` reader - The current status of SPI0 master FSM: spi0_mst_st. 0: idle state, 1:EM_CACHE_GRANT , 2: program/erase suspend state, 3: SPI0 read data state, 4: wait cache/EDMA sent data is stored in SPI0 TX FIFO, 5: SPI0 write data state."]
-pub type EM_ST_R = crate::FieldReader<u8, u8>;
+pub type EM_ST_R = crate::FieldReader;
 #[doc = "Field `CSPI_LOCK_DELAY_TIME` reader - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
-pub type CSPI_LOCK_DELAY_TIME_R = crate::FieldReader<u8, u8>;
+pub type CSPI_LOCK_DELAY_TIME_R = crate::FieldReader;
 #[doc = "Field `CSPI_LOCK_DELAY_TIME` writer - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
-pub type CSPI_LOCK_DELAY_TIME_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FSM_SPEC, u8, u8, 5, O>;
+pub type CSPI_LOCK_DELAY_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:3 - The current status of SPI0 slave FSM: spi0_slv_st. 0: idle state, 1: preparation state, 2: send command state, 3: send address state, 4: wait state, 5: read data state, 6:write data state, 7: done state, 8: read data end state."]
     #[inline(always)]
@@ -58,6 +57,25 @@ impl R {
     #[inline(always)]
     pub fn cspi_lock_delay_time(&self) -> CSPI_LOCK_DELAY_TIME_R {
         CSPI_LOCK_DELAY_TIME_R::new(((self.bits >> 7) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM")
+            .field("cspi_st", &format_args!("{}", self.cspi_st().bits()))
+            .field("em_st", &format_args!("{}", self.em_st().bits()))
+            .field(
+                "cspi_lock_delay_time",
+                &format_args!("{}", self.cspi_lock_delay_time().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FSM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

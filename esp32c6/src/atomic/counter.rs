@@ -37,13 +37,29 @@ impl From<crate::W<COUNTER_SPEC>> for W {
 #[doc = "Field `WAIT_COUNTER` reader - delay counter"]
 pub type WAIT_COUNTER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAIT_COUNTER` writer - delay counter"]
-pub type WAIT_COUNTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COUNTER_SPEC, u16, u16, 16, O>;
+pub type WAIT_COUNTER_W<'a, const O: u8> = crate::FieldWriter<'a, COUNTER_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - delay counter"]
     #[inline(always)]
     pub fn wait_counter(&self) -> WAIT_COUNTER_R {
         WAIT_COUNTER_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COUNTER")
+            .field(
+                "wait_counter",
+                &format_args!("{}", self.wait_counter().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COUNTER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

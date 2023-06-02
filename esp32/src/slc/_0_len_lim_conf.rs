@@ -38,12 +38,29 @@ impl From<crate::W<_0_LEN_LIM_CONF_SPEC>> for W {
 pub type SLC0_LEN_LIM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC0_LEN_LIM` writer - "]
 pub type SLC0_LEN_LIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _0_LEN_LIM_CONF_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, _0_LEN_LIM_CONF_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc0_len_lim(&self) -> SLC0_LEN_LIM_R {
         SLC0_LEN_LIM_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0_LEN_LIM_CONF")
+            .field(
+                "slc0_len_lim",
+                &format_args!("{}", self.slc0_len_lim().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0_LEN_LIM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

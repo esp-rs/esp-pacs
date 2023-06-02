@@ -14,23 +14,23 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `SLAVE_TRAN_COMP_INT_RAW` reader - slave transit complete interrupt raw"]
-pub type SLAVE_TRAN_COMP_INT_RAW_R = crate::BitReader<bool>;
+pub type SLAVE_TRAN_COMP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - arbitration lost interrupt raw"]
-pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MASTER_TRAN_COMP_INT_RAW` reader - master transit complete interrupt raw"]
-pub type MASTER_TRAN_COMP_INT_RAW_R = crate::BitReader<bool>;
+pub type MASTER_TRAN_COMP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - transit complete interrupt raw"]
-pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_RAW` reader - time out interrupt raw"]
-pub type TIME_OUT_INT_RAW_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ACK_ERR_INT_RAW` reader - ack error interrupt raw"]
-pub type ACK_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type ACK_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_DATA_INT_RAW` reader - receive data interrupt raw"]
-pub type RX_DATA_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_DATA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_DATA_INT_RAW` reader - transit data interrupt raw"]
-pub type TX_DATA_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_DATA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DETECT_START_INT_RAW` reader - detect start interrupt raw"]
-pub type DETECT_START_INT_RAW_R = crate::BitReader<bool>;
+pub type DETECT_START_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - slave transit complete interrupt raw"]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn detect_start_int_raw(&self) -> DETECT_START_INT_RAW_R {
         DETECT_START_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "slave_tran_comp_int_raw",
+                &format_args!("{}", self.slave_tran_comp_int_raw().bit()),
+            )
+            .field(
+                "arbitration_lost_int_raw",
+                &format_args!("{}", self.arbitration_lost_int_raw().bit()),
+            )
+            .field(
+                "master_tran_comp_int_raw",
+                &format_args!("{}", self.master_tran_comp_int_raw().bit()),
+            )
+            .field(
+                "trans_complete_int_raw",
+                &format_args!("{}", self.trans_complete_int_raw().bit()),
+            )
+            .field(
+                "time_out_int_raw",
+                &format_args!("{}", self.time_out_int_raw().bit()),
+            )
+            .field(
+                "ack_err_int_raw",
+                &format_args!("{}", self.ack_err_int_raw().bit()),
+            )
+            .field(
+                "rx_data_int_raw",
+                &format_args!("{}", self.rx_data_int_raw().bit()),
+            )
+            .field(
+                "tx_data_int_raw",
+                &format_args!("{}", self.tx_data_int_raw().bit()),
+            )
+            .field(
+                "detect_start_int_raw",
+                &format_args!("{}", self.detect_start_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "interrupt raw register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

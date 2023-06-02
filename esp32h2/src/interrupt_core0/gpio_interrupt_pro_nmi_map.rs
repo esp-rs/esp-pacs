@@ -35,15 +35,32 @@ impl From<crate::W<GPIO_INTERRUPT_PRO_NMI_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_INTERRUPT_PRO_NMI_MAP` reader - CORE0_GPIO_INTERRUPT_PRO_NMI mapping register"]
-pub type GPIO_INTERRUPT_PRO_NMI_MAP_R = crate::FieldReader<u8, u8>;
+pub type GPIO_INTERRUPT_PRO_NMI_MAP_R = crate::FieldReader;
 #[doc = "Field `GPIO_INTERRUPT_PRO_NMI_MAP` writer - CORE0_GPIO_INTERRUPT_PRO_NMI mapping register"]
 pub type GPIO_INTERRUPT_PRO_NMI_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_INTERRUPT_PRO_NMI_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, GPIO_INTERRUPT_PRO_NMI_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - CORE0_GPIO_INTERRUPT_PRO_NMI mapping register"]
     #[inline(always)]
     pub fn gpio_interrupt_pro_nmi_map(&self) -> GPIO_INTERRUPT_PRO_NMI_MAP_R {
         GPIO_INTERRUPT_PRO_NMI_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_INTERRUPT_PRO_NMI_MAP")
+            .field(
+                "gpio_interrupt_pro_nmi_map",
+                &format_args!("{}", self.gpio_interrupt_pro_nmi_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_INTERRUPT_PRO_NMI_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,113 +35,113 @@ impl From<crate::W<GINTMSK_SPEC>> for W {
     }
 }
 #[doc = "Field `MODEMISMSK` reader - "]
-pub type MODEMISMSK_R = crate::BitReader<bool>;
+pub type MODEMISMSK_R = crate::BitReader;
 #[doc = "Field `MODEMISMSK` writer - "]
-pub type MODEMISMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type MODEMISMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `OTGINTMSK` reader - "]
-pub type OTGINTMSK_R = crate::BitReader<bool>;
+pub type OTGINTMSK_R = crate::BitReader;
 #[doc = "Field `OTGINTMSK` writer - "]
-pub type OTGINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type OTGINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `SOFMSK` reader - "]
-pub type SOFMSK_R = crate::BitReader<bool>;
+pub type SOFMSK_R = crate::BitReader;
 #[doc = "Field `SOFMSK` writer - "]
-pub type SOFMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type SOFMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `RXFLVIMSK` reader - "]
-pub type RXFLVIMSK_R = crate::BitReader<bool>;
+pub type RXFLVIMSK_R = crate::BitReader;
 #[doc = "Field `RXFLVIMSK` writer - "]
-pub type RXFLVIMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type RXFLVIMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `NPTXFEMPMSK` reader - "]
-pub type NPTXFEMPMSK_R = crate::BitReader<bool>;
+pub type NPTXFEMPMSK_R = crate::BitReader;
 #[doc = "Field `NPTXFEMPMSK` writer - "]
-pub type NPTXFEMPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type NPTXFEMPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `GINNAKEFFMSK` reader - "]
-pub type GINNAKEFFMSK_R = crate::BitReader<bool>;
+pub type GINNAKEFFMSK_R = crate::BitReader;
 #[doc = "Field `GINNAKEFFMSK` writer - "]
-pub type GINNAKEFFMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type GINNAKEFFMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `GOUTNACKEFFMSK` reader - "]
-pub type GOUTNACKEFFMSK_R = crate::BitReader<bool>;
+pub type GOUTNACKEFFMSK_R = crate::BitReader;
 #[doc = "Field `GOUTNACKEFFMSK` writer - "]
-pub type GOUTNACKEFFMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type GOUTNACKEFFMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `ERLYSUSPMSK` reader - "]
-pub type ERLYSUSPMSK_R = crate::BitReader<bool>;
+pub type ERLYSUSPMSK_R = crate::BitReader;
 #[doc = "Field `ERLYSUSPMSK` writer - "]
-pub type ERLYSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type ERLYSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `USBSUSPMSK` reader - "]
-pub type USBSUSPMSK_R = crate::BitReader<bool>;
+pub type USBSUSPMSK_R = crate::BitReader;
 #[doc = "Field `USBSUSPMSK` writer - "]
-pub type USBSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type USBSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `USBRSTMSK` reader - "]
-pub type USBRSTMSK_R = crate::BitReader<bool>;
+pub type USBRSTMSK_R = crate::BitReader;
 #[doc = "Field `USBRSTMSK` writer - "]
-pub type USBRSTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type USBRSTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `ENUMDONEMSK` reader - "]
-pub type ENUMDONEMSK_R = crate::BitReader<bool>;
+pub type ENUMDONEMSK_R = crate::BitReader;
 #[doc = "Field `ENUMDONEMSK` writer - "]
-pub type ENUMDONEMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type ENUMDONEMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `ISOOUTDROPMSK` reader - "]
-pub type ISOOUTDROPMSK_R = crate::BitReader<bool>;
+pub type ISOOUTDROPMSK_R = crate::BitReader;
 #[doc = "Field `ISOOUTDROPMSK` writer - "]
-pub type ISOOUTDROPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type ISOOUTDROPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `EOPFMSK` reader - "]
-pub type EOPFMSK_R = crate::BitReader<bool>;
+pub type EOPFMSK_R = crate::BitReader;
 #[doc = "Field `EOPFMSK` writer - "]
-pub type EOPFMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type EOPFMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `EPMISMSK` reader - "]
-pub type EPMISMSK_R = crate::BitReader<bool>;
+pub type EPMISMSK_R = crate::BitReader;
 #[doc = "Field `EPMISMSK` writer - "]
-pub type EPMISMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type EPMISMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `IEPINTMSK` reader - "]
-pub type IEPINTMSK_R = crate::BitReader<bool>;
+pub type IEPINTMSK_R = crate::BitReader;
 #[doc = "Field `IEPINTMSK` writer - "]
-pub type IEPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type IEPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `OEPINTMSK` reader - "]
-pub type OEPINTMSK_R = crate::BitReader<bool>;
+pub type OEPINTMSK_R = crate::BitReader;
 #[doc = "Field `OEPINTMSK` writer - "]
-pub type OEPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type OEPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `INCOMPISOINMSK` reader - "]
-pub type INCOMPISOINMSK_R = crate::BitReader<bool>;
+pub type INCOMPISOINMSK_R = crate::BitReader;
 #[doc = "Field `INCOMPISOINMSK` writer - "]
-pub type INCOMPISOINMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type INCOMPISOINMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `INCOMPIPMSK` reader - "]
-pub type INCOMPIPMSK_R = crate::BitReader<bool>;
+pub type INCOMPIPMSK_R = crate::BitReader;
 #[doc = "Field `INCOMPIPMSK` writer - "]
-pub type INCOMPIPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type INCOMPIPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `FETSUSPMSK` reader - "]
-pub type FETSUSPMSK_R = crate::BitReader<bool>;
+pub type FETSUSPMSK_R = crate::BitReader;
 #[doc = "Field `FETSUSPMSK` writer - "]
-pub type FETSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type FETSUSPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `RESETDETMSK` reader - "]
-pub type RESETDETMSK_R = crate::BitReader<bool>;
+pub type RESETDETMSK_R = crate::BitReader;
 #[doc = "Field `RESETDETMSK` writer - "]
-pub type RESETDETMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type RESETDETMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `PRTLNTMSK` reader - "]
-pub type PRTLNTMSK_R = crate::BitReader<bool>;
+pub type PRTLNTMSK_R = crate::BitReader;
 #[doc = "Field `PRTLNTMSK` writer - "]
-pub type PRTLNTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type PRTLNTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `HCHINTMSK` reader - "]
-pub type HCHINTMSK_R = crate::BitReader<bool>;
+pub type HCHINTMSK_R = crate::BitReader;
 #[doc = "Field `HCHINTMSK` writer - "]
-pub type HCHINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type HCHINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `PTXFEMPMSK` reader - "]
-pub type PTXFEMPMSK_R = crate::BitReader<bool>;
+pub type PTXFEMPMSK_R = crate::BitReader;
 #[doc = "Field `PTXFEMPMSK` writer - "]
-pub type PTXFEMPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type PTXFEMPMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `CONIDSTSCHNGMSK` reader - "]
-pub type CONIDSTSCHNGMSK_R = crate::BitReader<bool>;
+pub type CONIDSTSCHNGMSK_R = crate::BitReader;
 #[doc = "Field `CONIDSTSCHNGMSK` writer - "]
-pub type CONIDSTSCHNGMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type CONIDSTSCHNGMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `DISCONNINTMSK` reader - "]
-pub type DISCONNINTMSK_R = crate::BitReader<bool>;
+pub type DISCONNINTMSK_R = crate::BitReader;
 #[doc = "Field `DISCONNINTMSK` writer - "]
-pub type DISCONNINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type DISCONNINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `SESSREQINTMSK` reader - "]
-pub type SESSREQINTMSK_R = crate::BitReader<bool>;
+pub type SESSREQINTMSK_R = crate::BitReader;
 #[doc = "Field `SESSREQINTMSK` writer - "]
-pub type SESSREQINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type SESSREQINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 #[doc = "Field `WKUPINTMSK` reader - "]
-pub type WKUPINTMSK_R = crate::BitReader<bool>;
+pub type WKUPINTMSK_R = crate::BitReader;
 #[doc = "Field `WKUPINTMSK` writer - "]
-pub type WKUPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, GINTMSK_SPEC, bool, O>;
+pub type WKUPINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, GINTMSK_SPEC, O>;
 impl R {
     #[doc = "Bit 1"]
     #[inline(always)]
@@ -277,6 +277,67 @@ impl R {
     #[inline(always)]
     pub fn wkupintmsk(&self) -> WKUPINTMSK_R {
         WKUPINTMSK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GINTMSK")
+            .field("modemismsk", &format_args!("{}", self.modemismsk().bit()))
+            .field("otgintmsk", &format_args!("{}", self.otgintmsk().bit()))
+            .field("sofmsk", &format_args!("{}", self.sofmsk().bit()))
+            .field("rxflvimsk", &format_args!("{}", self.rxflvimsk().bit()))
+            .field("nptxfempmsk", &format_args!("{}", self.nptxfempmsk().bit()))
+            .field(
+                "ginnakeffmsk",
+                &format_args!("{}", self.ginnakeffmsk().bit()),
+            )
+            .field(
+                "goutnackeffmsk",
+                &format_args!("{}", self.goutnackeffmsk().bit()),
+            )
+            .field("erlysuspmsk", &format_args!("{}", self.erlysuspmsk().bit()))
+            .field("usbsuspmsk", &format_args!("{}", self.usbsuspmsk().bit()))
+            .field("usbrstmsk", &format_args!("{}", self.usbrstmsk().bit()))
+            .field("enumdonemsk", &format_args!("{}", self.enumdonemsk().bit()))
+            .field(
+                "isooutdropmsk",
+                &format_args!("{}", self.isooutdropmsk().bit()),
+            )
+            .field("eopfmsk", &format_args!("{}", self.eopfmsk().bit()))
+            .field("epmismsk", &format_args!("{}", self.epmismsk().bit()))
+            .field("iepintmsk", &format_args!("{}", self.iepintmsk().bit()))
+            .field("oepintmsk", &format_args!("{}", self.oepintmsk().bit()))
+            .field(
+                "incompisoinmsk",
+                &format_args!("{}", self.incompisoinmsk().bit()),
+            )
+            .field("incompipmsk", &format_args!("{}", self.incompipmsk().bit()))
+            .field("fetsuspmsk", &format_args!("{}", self.fetsuspmsk().bit()))
+            .field("resetdetmsk", &format_args!("{}", self.resetdetmsk().bit()))
+            .field("prtlntmsk", &format_args!("{}", self.prtlntmsk().bit()))
+            .field("hchintmsk", &format_args!("{}", self.hchintmsk().bit()))
+            .field("ptxfempmsk", &format_args!("{}", self.ptxfempmsk().bit()))
+            .field(
+                "conidstschngmsk",
+                &format_args!("{}", self.conidstschngmsk().bit()),
+            )
+            .field(
+                "disconnintmsk",
+                &format_args!("{}", self.disconnintmsk().bit()),
+            )
+            .field(
+                "sessreqintmsk",
+                &format_args!("{}", self.sessreqintmsk().bit()),
+            )
+            .field("wkupintmsk", &format_args!("{}", self.wkupintmsk().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GINTMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

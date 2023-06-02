@@ -35,15 +35,15 @@ impl From<crate::W<IBUS_PMS_TBL_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub type IBUS_PMS_SCT1_ATTR_R = crate::FieldReader<u8, u8>;
+pub type IBUS_PMS_SCT1_ATTR_R = crate::FieldReader;
 #[doc = "Field `IBUS_PMS_SCT1_ATTR` writer - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
 pub type IBUS_PMS_SCT1_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IBUS_PMS_TBL_ATTR_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, IBUS_PMS_TBL_ATTR_SPEC, 4, O>;
 #[doc = "Field `IBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
-pub type IBUS_PMS_SCT2_ATTR_R = crate::FieldReader<u8, u8>;
+pub type IBUS_PMS_SCT2_ATTR_R = crate::FieldReader;
 #[doc = "Field `IBUS_PMS_SCT2_ATTR` writer - The bit is used to configure attribute of the ibus permission control section2, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
 pub type IBUS_PMS_SCT2_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IBUS_PMS_TBL_ATTR_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, IBUS_PMS_TBL_ATTR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - The bit is used to configure attribute of the ibus permission control section1, bit0: fetch in world0, bit1: load in world0, bit2: fetch in world1, bit3: load in world1"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn ibus_pms_sct2_attr(&self) -> IBUS_PMS_SCT2_ATTR_R {
         IBUS_PMS_SCT2_ATTR_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IBUS_PMS_TBL_ATTR")
+            .field(
+                "ibus_pms_sct1_attr",
+                &format_args!("{}", self.ibus_pms_sct1_attr().bits()),
+            )
+            .field(
+                "ibus_pms_sct2_attr",
+                &format_args!("{}", self.ibus_pms_sct2_attr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IBUS_PMS_TBL_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

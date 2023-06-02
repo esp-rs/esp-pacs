@@ -38,12 +38,29 @@ impl From<crate::W<L1_CACHE_AUTOLOAD_SCT1_SIZE_SPEC>> for W {
 pub type L1_CACHE_AUTOLOAD_SCT1_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT1_SIZE` writer - Those bits are used to configure the size of the second section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT1_ADDR and L1_CACHE_AUTOLOAD_SCT1_ENA."]
 pub type L1_CACHE_AUTOLOAD_SCT1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, L1_CACHE_AUTOLOAD_SCT1_SIZE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, L1_CACHE_AUTOLOAD_SCT1_SIZE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the second section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT1_ADDR and L1_CACHE_AUTOLOAD_SCT1_ENA."]
     #[inline(always)]
     pub fn l1_cache_autoload_sct1_size(&self) -> L1_CACHE_AUTOLOAD_SCT1_SIZE_R {
         L1_CACHE_AUTOLOAD_SCT1_SIZE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_AUTOLOAD_SCT1_SIZE")
+            .field(
+                "l1_cache_autoload_sct1_size",
+                &format_args!("{}", self.l1_cache_autoload_sct1_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_AUTOLOAD_SCT1_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

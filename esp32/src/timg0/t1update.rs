@@ -20,7 +20,13 @@ impl From<crate::W<T1UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `UPDATE` writer - Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)"]
-pub type UPDATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T1UPDATE_SPEC, u32, u32, 32, O>;
+pub type UPDATE_W<'a, const O: u8> = crate::FieldWriter<'a, T1UPDATE_SPEC, 32, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T1UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)"]
     #[inline(always)]

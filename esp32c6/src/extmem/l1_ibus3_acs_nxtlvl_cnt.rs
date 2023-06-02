@@ -22,6 +22,23 @@ impl R {
         L1_IBUS3_NXTLVL_CNT_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_IBUS3_ACS_NXTLVL_CNT")
+            .field(
+                "l1_ibus3_nxtlvl_cnt",
+                &format_args!("{}", self.l1_ibus3_nxtlvl_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_IBUS3_ACS_NXTLVL_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "L1-ICache bus3 Next-Level-Access Counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_ibus3_acs_nxtlvl_cnt](index.html) module"]
 pub struct L1_IBUS3_ACS_NXTLVL_CNT_SPEC;
 impl crate::RegisterSpec for L1_IBUS3_ACS_NXTLVL_CNT_SPEC {

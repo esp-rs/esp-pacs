@@ -35,31 +35,31 @@ impl From<crate::W<SPI_MEM_MMU_POWER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MMU_MEM_FORCE_ON` reader - Set this bit to enable mmu-memory clock force on"]
-pub type SPI_MMU_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type SPI_MMU_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_ON` writer - Set this bit to enable mmu-memory clock force on"]
 pub type SPI_MMU_MEM_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_MMU_POWER_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PD` reader - Set this bit to force mmu-memory powerdown"]
-pub type SPI_MMU_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type SPI_MMU_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PD` writer - Set this bit to force mmu-memory powerdown"]
 pub type SPI_MMU_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_MMU_POWER_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PU` reader - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
-pub type SPI_MMU_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type SPI_MMU_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `SPI_MMU_MEM_FORCE_PU` writer - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
 pub type SPI_MMU_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_MMU_POWER_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MMU_PAGE_SIZE` reader - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
-pub type SPI_MMU_PAGE_SIZE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MMU_PAGE_SIZE_R = crate::FieldReader;
 #[doc = "Field `SPI_MMU_PAGE_SIZE` writer - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
 pub type SPI_MMU_PAGE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_MMU_POWER_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SPI_MEM_MMU_POWER_CTRL_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_AUX_CTRL` reader - MMU PSRAM aux control register"]
 pub type SPI_MEM_AUX_CTRL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_MEM_RDN_ENA` reader - ECO register enable bit"]
-pub type SPI_MEM_RDN_ENA_R = crate::BitReader<bool>;
+pub type SPI_MEM_RDN_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RDN_RESULT` reader - MSPI module clock domain and AXI clock domain ECO register result register"]
-pub type SPI_MEM_RDN_RESULT_R = crate::BitReader<bool>;
+pub type SPI_MEM_RDN_RESULT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable mmu-memory clock force on"]
     #[inline(always)]
@@ -95,6 +95,47 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_rdn_result(&self) -> SPI_MEM_RDN_RESULT_R {
         SPI_MEM_RDN_RESULT_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_MMU_POWER_CTRL")
+            .field(
+                "spi_mmu_mem_force_on",
+                &format_args!("{}", self.spi_mmu_mem_force_on().bit()),
+            )
+            .field(
+                "spi_mmu_mem_force_pd",
+                &format_args!("{}", self.spi_mmu_mem_force_pd().bit()),
+            )
+            .field(
+                "spi_mmu_mem_force_pu",
+                &format_args!("{}", self.spi_mmu_mem_force_pu().bit()),
+            )
+            .field(
+                "spi_mmu_page_size",
+                &format_args!("{}", self.spi_mmu_page_size().bits()),
+            )
+            .field(
+                "spi_mem_aux_ctrl",
+                &format_args!("{}", self.spi_mem_aux_ctrl().bits()),
+            )
+            .field(
+                "spi_mem_rdn_ena",
+                &format_args!("{}", self.spi_mem_rdn_ena().bit()),
+            )
+            .field(
+                "spi_mem_rdn_result",
+                &format_args!("{}", self.spi_mem_rdn_result().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MMU_POWER_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

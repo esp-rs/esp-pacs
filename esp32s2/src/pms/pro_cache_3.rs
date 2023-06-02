@@ -22,6 +22,23 @@ impl R {
         PRO_CACHE_ILG_ST_I_R::new(self.bits & 0x0001_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CACHE_3")
+            .field(
+                "pro_cache_ilg_st_i",
+                &format_args!("{}", self.pro_cache_ilg_st_i().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Icache status register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pro_cache_3](index.html) module"]
 pub struct PRO_CACHE_3_SPEC;
 impl crate::RegisterSpec for PRO_CACHE_3_SPEC {

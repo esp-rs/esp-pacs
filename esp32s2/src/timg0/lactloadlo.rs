@@ -37,13 +37,29 @@ impl From<crate::W<LACTLOADLO_SPEC>> for W {
 #[doc = "Field `LACT_LOAD_LO` reader - Reserved."]
 pub type LACT_LOAD_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LACT_LOAD_LO` writer - Reserved."]
-pub type LACT_LOAD_LO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LACTLOADLO_SPEC, u32, u32, 32, O>;
+pub type LACT_LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, LACTLOADLO_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
     pub fn lact_load_lo(&self) -> LACT_LOAD_LO_R {
         LACT_LOAD_LO_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LACTLOADLO")
+            .field(
+                "lact_load_lo",
+                &format_args!("{}", self.lact_load_lo().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LACTLOADLO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

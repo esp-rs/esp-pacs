@@ -38,12 +38,29 @@ impl From<crate::W<SPI_MEM_MMU_ITEM_INDEX_SPEC>> for W {
 pub type SPI_MMU_ITEM_INDEX_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MMU_ITEM_INDEX` writer - MSPI-MMU item index"]
 pub type SPI_MMU_ITEM_INDEX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_MMU_ITEM_INDEX_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_MEM_MMU_ITEM_INDEX_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - MSPI-MMU item index"]
     #[inline(always)]
     pub fn spi_mmu_item_index(&self) -> SPI_MMU_ITEM_INDEX_R {
         SPI_MMU_ITEM_INDEX_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_MMU_ITEM_INDEX")
+            .field(
+                "spi_mmu_item_index",
+                &format_args!("{}", self.spi_mmu_item_index().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MMU_ITEM_INDEX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

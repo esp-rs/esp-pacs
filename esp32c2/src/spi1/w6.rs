@@ -37,12 +37,26 @@ impl From<crate::W<W6_SPEC>> for W {
 #[doc = "Field `BUF6` reader - data buffer"]
 pub type BUF6_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BUF6` writer - data buffer"]
-pub type BUF6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, W6_SPEC, u32, u32, 32, O>;
+pub type BUF6_W<'a, const O: u8> = crate::FieldWriter<'a, W6_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     pub fn buf6(&self) -> BUF6_R {
         BUF6_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("W6")
+            .field("buf6", &format_args!("{}", self.buf6().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<W6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

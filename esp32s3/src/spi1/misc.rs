@@ -35,25 +35,25 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CS0_DIS` reader - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub type CS0_DIS_R = crate::BitReader<bool>;
+pub type CS0_DIS_R = crate::BitReader;
 #[doc = "Field `CS0_DIS` writer - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub type CS0_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CS0_DIS_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CS1_DIS` reader - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub type CS1_DIS_R = crate::BitReader<bool>;
+pub type CS1_DIS_R = crate::BitReader;
 #[doc = "Field `CS1_DIS` writer - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub type CS1_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CS1_DIS_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
-pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
+pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
-pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
+pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `AUTO_PER` reader - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
-pub type AUTO_PER_R = crate::BitReader<bool>;
+pub type AUTO_PER_R = crate::BitReader;
 #[doc = "Field `AUTO_PER` writer - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
-pub type AUTO_PER_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type AUTO_PER_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
     #[inline(always)]
@@ -79,6 +79,30 @@ impl R {
     #[inline(always)]
     pub fn auto_per(&self) -> AUTO_PER_R {
         AUTO_PER_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC")
+            .field("cs0_dis", &format_args!("{}", self.cs0_dis().bit()))
+            .field("cs1_dis", &format_args!("{}", self.cs1_dis().bit()))
+            .field(
+                "ck_idle_edge",
+                &format_args!("{}", self.ck_idle_edge().bit()),
+            )
+            .field(
+                "cs_keep_active",
+                &format_args!("{}", self.cs_keep_active().bit()),
+            )
+            .field("auto_per", &format_args!("{}", self.auto_per().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

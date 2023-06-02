@@ -21,67 +21,64 @@ impl From<crate::W<INT_ENA_RTC_W1TS_SPEC>> for W {
 }
 #[doc = "Field `SLP_WAKEUP_INT_ENA_W1TS` writer - enable sleep wakeup interrupt"]
 pub type SLP_WAKEUP_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_ENA_W1TS` writer - enable sleep reject interrupt"]
 pub type SLP_REJECT_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `SDIO_IDLE_INT_ENA_W1TS` writer - enable SDIO idle interrupt"]
-pub type SDIO_IDLE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type SDIO_IDLE_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `WDT_INT_ENA_W1TS` writer - enable RTC WDT interrupt"]
-pub type WDT_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type WDT_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_SCAN_DONE_INT_ENA_W1TS` writer - enable touch scan done interrupt"]
 pub type TOUCH_SCAN_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `ULP_CP_INT_ENA_W1TS` writer - enable ULP-coprocessor interrupt"]
-pub type ULP_CP_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type ULP_CP_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_DONE_INT_ENA_W1TS` writer - enable touch done interrupt"]
 pub type TOUCH_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_ACTIVE_INT_ENA_W1TS` writer - enable touch active interrupt"]
 pub type TOUCH_ACTIVE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_INACTIVE_INT_ENA_W1TS` writer - enable touch inactive interrupt"]
 pub type TOUCH_INACTIVE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_ENA_W1TS` writer - enable brown out interrupt"]
-pub type BROWN_OUT_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type BROWN_OUT_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_ENA_W1TS` writer - enable RTC main timer interrupt"]
 pub type MAIN_TIMER_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `SARADC1_INT_ENA_W1TS` writer - enable saradc1 interrupt"]
-pub type SARADC1_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type SARADC1_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TSENS_INT_ENA_W1TS` writer - enable tsens interrupt"]
-pub type TSENS_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type TSENS_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `COCPU_INT_ENA_W1TS` writer - enable riscV cocpu interrupt"]
-pub type COCPU_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type COCPU_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `SARADC2_INT_ENA_W1TS` writer - enable saradc2 interrupt"]
-pub type SARADC2_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type SARADC2_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `SWD_INT_ENA_W1TS` writer - enable super watch dog interrupt"]
-pub type SWD_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+pub type SWD_INT_ENA_W1TS_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `XTAL32K_DEAD_INT_ENA_W1TS` writer - enable xtal32k_dead interrupt"]
 pub type XTAL32K_DEAD_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `COCPU_TRAP_INT_ENA_W1TS` writer - enable cocpu trap interrupt"]
 pub type COCPU_TRAP_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_TIMEOUT_INT_ENA_W1TS` writer - enable touch timeout interrupt"]
 pub type TOUCH_TIMEOUT_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_ENA_W1TS` writer - enbale gitch det interrupt"]
 pub type GLITCH_DET_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
 #[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_ENA_W1TS` writer - enbale touch approach_loop done interrupt"]
 pub type TOUCH_APPROACH_LOOP_DONE_INT_ENA_W1TS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TS_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TS_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_RTC_W1TS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]

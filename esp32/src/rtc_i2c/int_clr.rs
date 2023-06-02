@@ -35,27 +35,23 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` reader - "]
-pub type SLAVE_TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
+pub type SLAVE_TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` writer - "]
-pub type SLAVE_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SLAVE_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` reader - "]
-pub type ARBITRATION_LOST_INT_CLR_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_CLR_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` writer - "]
-pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` reader - "]
-pub type MASTER_TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
+pub type MASTER_TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` writer - "]
-pub type MASTER_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type MASTER_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` reader - "]
-pub type TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_CLR_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` writer - "]
-pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_CLR` writer - "]
-pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 impl R {
     #[doc = "Bit 4"]
     #[inline(always)]
@@ -76,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn trans_complete_int_clr(&self) -> TRANS_COMPLETE_INT_CLR_R {
         TRANS_COMPLETE_INT_CLR_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_CLR")
+            .field(
+                "slave_trans_complete_int_clr",
+                &format_args!("{}", self.slave_trans_complete_int_clr().bit()),
+            )
+            .field(
+                "arbitration_lost_int_clr",
+                &format_args!("{}", self.arbitration_lost_int_clr().bit()),
+            )
+            .field(
+                "master_trans_complete_int_clr",
+                &format_args!("{}", self.master_trans_complete_int_clr().bit()),
+            )
+            .field(
+                "trans_complete_int_clr",
+                &format_args!("{}", self.trans_complete_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

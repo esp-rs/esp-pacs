@@ -35,38 +35,33 @@ impl From<crate::W<INT_CLR_RTC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_CLR` reader - Clear sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_CLR_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP_INT_CLR` writer - Clear sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_CLR` reader - Clear sleep reject interrupt state"]
-pub type SLP_REJECT_INT_CLR_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_CLR` writer - Clear sleep reject interrupt state"]
-pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `WDT_INT_CLR` reader - Clear RTC WDT interrupt state"]
-pub type WDT_INT_CLR_R = crate::BitReader<bool>;
+pub type WDT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_CLR` reader - Clear brown out interrupt state"]
-pub type BROWN_OUT_INT_CLR_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_CLR_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
-pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_CLR` reader - Clear RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_CLR_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_CLR_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SWD_INT_CLR` reader - Clear super watch dog interrupt state"]
-pub type SWD_INT_CLR_R = crate::BitReader<bool>;
+pub type SWD_INT_CLR_R = crate::BitReader;
 #[doc = "Field `SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
-pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `BBPLL_CAL_INT_CLR` reader - Need add desc"]
-pub type BBPLL_CAL_INT_CLR_R = crate::BitReader<bool>;
+pub type BBPLL_CAL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `BBPLL_CAL_INT_CLR` writer - Need add desc"]
-pub type BBPLL_CAL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type BBPLL_CAL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
@@ -102,6 +97,41 @@ impl R {
     #[inline(always)]
     pub fn bbpll_cal_int_clr(&self) -> BBPLL_CAL_INT_CLR_R {
         BBPLL_CAL_INT_CLR_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_CLR_RTC")
+            .field(
+                "slp_wakeup_int_clr",
+                &format_args!("{}", self.slp_wakeup_int_clr().bit()),
+            )
+            .field(
+                "slp_reject_int_clr",
+                &format_args!("{}", self.slp_reject_int_clr().bit()),
+            )
+            .field("wdt_int_clr", &format_args!("{}", self.wdt_int_clr().bit()))
+            .field(
+                "brown_out_int_clr",
+                &format_args!("{}", self.brown_out_int_clr().bit()),
+            )
+            .field(
+                "main_timer_int_clr",
+                &format_args!("{}", self.main_timer_int_clr().bit()),
+            )
+            .field("swd_int_clr", &format_args!("{}", self.swd_int_clr().bit()))
+            .field(
+                "bbpll_cal_int_clr",
+                &format_args!("{}", self.bbpll_cal_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_RTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

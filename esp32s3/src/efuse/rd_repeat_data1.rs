@@ -14,39 +14,39 @@ impl From<crate::R<RD_REPEAT_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `VDD_SPI_DREFM` reader - SPI regulator medium voltage reference."]
-pub type VDD_SPI_DREFM_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DREFM_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_DREFL` reader - SPI regulator low voltage reference."]
-pub type VDD_SPI_DREFL_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DREFL_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_XPD` reader - SPI regulator power up signal."]
-pub type VDD_SPI_XPD_R = crate::BitReader<bool>;
+pub type VDD_SPI_XPD_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_TIEH` reader - SPI regulator output is short connected to VDD3P3_RTC_IO."]
-pub type VDD_SPI_TIEH_R = crate::BitReader<bool>;
+pub type VDD_SPI_TIEH_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_FORCE` reader - Set this bit and force to use the configuration of eFuse to configure VDD_SPI."]
-pub type VDD_SPI_FORCE_R = crate::BitReader<bool>;
+pub type VDD_SPI_FORCE_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_EN_INIT` reader - Set SPI regulator to 0 to configure init\\[1:0\\]=0."]
-pub type VDD_SPI_EN_INIT_R = crate::BitReader<bool>;
+pub type VDD_SPI_EN_INIT_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_ENCURLIM` reader - Set SPI regulator to 1 to enable output current limit."]
-pub type VDD_SPI_ENCURLIM_R = crate::BitReader<bool>;
+pub type VDD_SPI_ENCURLIM_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_DCURLIM` reader - Tunes the current limit threshold of SPI regulator when tieh=0, about 800 mA/(8+d)."]
-pub type VDD_SPI_DCURLIM_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DCURLIM_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_INIT` reader - Adds resistor from LDO output to ground. 0: no resistance 1: 6 K 2: 4 K 3: 2 K."]
-pub type VDD_SPI_INIT_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_INIT_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_DCAP` reader - Prevents SPI regulator from overshoot."]
-pub type VDD_SPI_DCAP_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DCAP_R = crate::FieldReader;
 #[doc = "Field `WDT_DELAY_SEL` reader - Selects RTC watchdog timeout threshold, in unit of slow clock cycle. 0: 40000. 1: 80000. 2: 160000. 3:320000."]
-pub type WDT_DELAY_SEL_R = crate::FieldReader<u8, u8>;
+pub type WDT_DELAY_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT` reader - Set this bit to enable SPI boot encrypt/decrypt. Odd number of 1: enable. even number of 1: disable."]
-pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
+pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE0` reader - Set this bit to enable revoking first secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE1` reader - Set this bit to enable revoking second secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE2` reader - Set this bit to enable revoking third secure boot key."]
-pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader;
 #[doc = "Field `KEY_PURPOSE_0` reader - Purpose of Key0."]
-pub type KEY_PURPOSE_0_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_0_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_1` reader - Purpose of Key1."]
-pub type KEY_PURPOSE_1_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_1_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:1 - SPI regulator medium voltage reference."]
     #[inline(always)]
@@ -132,6 +132,84 @@ impl R {
     #[inline(always)]
     pub fn key_purpose_1(&self) -> KEY_PURPOSE_1_R {
         KEY_PURPOSE_1_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA1")
+            .field(
+                "vdd_spi_drefm",
+                &format_args!("{}", self.vdd_spi_drefm().bits()),
+            )
+            .field(
+                "vdd_spi_drefl",
+                &format_args!("{}", self.vdd_spi_drefl().bits()),
+            )
+            .field("vdd_spi_xpd", &format_args!("{}", self.vdd_spi_xpd().bit()))
+            .field(
+                "vdd_spi_tieh",
+                &format_args!("{}", self.vdd_spi_tieh().bit()),
+            )
+            .field(
+                "vdd_spi_force",
+                &format_args!("{}", self.vdd_spi_force().bit()),
+            )
+            .field(
+                "vdd_spi_en_init",
+                &format_args!("{}", self.vdd_spi_en_init().bit()),
+            )
+            .field(
+                "vdd_spi_encurlim",
+                &format_args!("{}", self.vdd_spi_encurlim().bit()),
+            )
+            .field(
+                "vdd_spi_dcurlim",
+                &format_args!("{}", self.vdd_spi_dcurlim().bits()),
+            )
+            .field(
+                "vdd_spi_init",
+                &format_args!("{}", self.vdd_spi_init().bits()),
+            )
+            .field(
+                "vdd_spi_dcap",
+                &format_args!("{}", self.vdd_spi_dcap().bits()),
+            )
+            .field(
+                "wdt_delay_sel",
+                &format_args!("{}", self.wdt_delay_sel().bits()),
+            )
+            .field(
+                "spi_boot_crypt_cnt",
+                &format_args!("{}", self.spi_boot_crypt_cnt().bits()),
+            )
+            .field(
+                "secure_boot_key_revoke0",
+                &format_args!("{}", self.secure_boot_key_revoke0().bit()),
+            )
+            .field(
+                "secure_boot_key_revoke1",
+                &format_args!("{}", self.secure_boot_key_revoke1().bit()),
+            )
+            .field(
+                "secure_boot_key_revoke2",
+                &format_args!("{}", self.secure_boot_key_revoke2().bit()),
+            )
+            .field(
+                "key_purpose_0",
+                &format_args!("{}", self.key_purpose_0().bits()),
+            )
+            .field(
+                "key_purpose_1",
+                &format_args!("{}", self.key_purpose_1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data1](index.html) module"]

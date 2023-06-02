@@ -35,50 +35,41 @@ impl From<crate::W<SPI_MEM_DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_DIN0_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN0_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN0_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN0_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN1_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN1_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN1_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN1_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN2_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN2_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN2_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN2_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN3_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN3_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN3_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN3_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN4_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN4_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN4_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN4_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN4_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN5_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN5_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN5_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN5_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN5_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN6_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN6_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN6_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN6_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN6_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DIN7_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN7_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN7_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN7_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DIN7_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DIN7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_DINS_NUM` reader - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DINS_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DINS_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DINS_NUM` writer - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
-pub type SPI_MEM_DINS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_MEM_DINS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the input signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,..."]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_dins_num(&self) -> SPI_MEM_DINS_NUM_R {
         SPI_MEM_DINS_NUM_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_DIN_NUM")
+            .field(
+                "spi_mem_din0_num",
+                &format_args!("{}", self.spi_mem_din0_num().bits()),
+            )
+            .field(
+                "spi_mem_din1_num",
+                &format_args!("{}", self.spi_mem_din1_num().bits()),
+            )
+            .field(
+                "spi_mem_din2_num",
+                &format_args!("{}", self.spi_mem_din2_num().bits()),
+            )
+            .field(
+                "spi_mem_din3_num",
+                &format_args!("{}", self.spi_mem_din3_num().bits()),
+            )
+            .field(
+                "spi_mem_din4_num",
+                &format_args!("{}", self.spi_mem_din4_num().bits()),
+            )
+            .field(
+                "spi_mem_din5_num",
+                &format_args!("{}", self.spi_mem_din5_num().bits()),
+            )
+            .field(
+                "spi_mem_din6_num",
+                &format_args!("{}", self.spi_mem_din6_num().bits()),
+            )
+            .field(
+                "spi_mem_din7_num",
+                &format_args!("{}", self.spi_mem_din7_num().bits()),
+            )
+            .field(
+                "spi_mem_dins_num",
+                &format_args!("{}", self.spi_mem_dins_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_DIN_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

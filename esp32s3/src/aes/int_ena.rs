@@ -35,14 +35,28 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_ENA` reader - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
-pub type INT_ENA_R = crate::BitReader<bool>;
+pub type INT_ENA_R = crate::BitReader;
 #[doc = "Field `INT_ENA` writer - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
-pub type INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
     #[inline(always)]
     pub fn int_ena(&self) -> INT_ENA_R {
         INT_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field("int_ena", &format_args!("{}", self.int_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

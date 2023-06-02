@@ -38,12 +38,29 @@ impl From<crate::W<AT_CMD_PRECNT_SPEC>> for W {
 pub type PRE_IDLE_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRE_IDLE_NUM` writer - This register is used to configure the idle duration time before the first at_cmd is received by receiver. when the the duration is less than this register value it will not take the next data received as at_cmd char."]
 pub type PRE_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AT_CMD_PRECNT_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, AT_CMD_PRECNT_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - This register is used to configure the idle duration time before the first at_cmd is received by receiver. when the the duration is less than this register value it will not take the next data received as at_cmd char."]
     #[inline(always)]
     pub fn pre_idle_num(&self) -> PRE_IDLE_NUM_R {
         PRE_IDLE_NUM_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AT_CMD_PRECNT")
+            .field(
+                "pre_idle_num",
+                &format_args!("{}", self.pre_idle_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AT_CMD_PRECNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

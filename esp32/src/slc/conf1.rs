@@ -35,61 +35,61 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_CHECK_OWNER` reader - "]
-pub type SLC0_CHECK_OWNER_R = crate::BitReader<bool>;
+pub type SLC0_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC0_CHECK_OWNER` writer - "]
-pub type SLC0_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` reader - "]
-pub type SLC0_TX_CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type SLC0_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` writer - "]
-pub type SLC0_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` reader - "]
-pub type SLC0_RX_CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type SLC0_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` writer - "]
-pub type SLC0_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CMD_HOLD_EN` reader - "]
-pub type CMD_HOLD_EN_R = crate::BitReader<bool>;
+pub type CMD_HOLD_EN_R = crate::BitReader;
 #[doc = "Field `CMD_HOLD_EN` writer - "]
-pub type CMD_HOLD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CMD_HOLD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` reader - "]
-pub type SLC0_LEN_AUTO_CLR_R = crate::BitReader<bool>;
+pub type SLC0_LEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` writer - "]
-pub type SLC0_LEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_LEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC0_TX_STITCH_EN` reader - "]
-pub type SLC0_TX_STITCH_EN_R = crate::BitReader<bool>;
+pub type SLC0_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_STITCH_EN` writer - "]
-pub type SLC0_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC0_RX_STITCH_EN` reader - "]
-pub type SLC0_RX_STITCH_EN_R = crate::BitReader<bool>;
+pub type SLC0_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_STITCH_EN` writer - "]
-pub type SLC0_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC0_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC1_CHECK_OWNER` reader - "]
-pub type SLC1_CHECK_OWNER_R = crate::BitReader<bool>;
+pub type SLC1_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `SLC1_CHECK_OWNER` writer - "]
-pub type SLC1_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC1_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` reader - "]
-pub type SLC1_TX_CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type SLC1_TX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` writer - "]
-pub type SLC1_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC1_TX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` reader - "]
-pub type SLC1_RX_CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type SLC1_RX_CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` writer - "]
-pub type SLC1_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC1_RX_CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `HOST_INT_LEVEL_SEL` reader - "]
-pub type HOST_INT_LEVEL_SEL_R = crate::BitReader<bool>;
+pub type HOST_INT_LEVEL_SEL_R = crate::BitReader;
 #[doc = "Field `HOST_INT_LEVEL_SEL` writer - "]
-pub type HOST_INT_LEVEL_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type HOST_INT_LEVEL_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC1_TX_STITCH_EN` reader - "]
-pub type SLC1_TX_STITCH_EN_R = crate::BitReader<bool>;
+pub type SLC1_TX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_STITCH_EN` writer - "]
-pub type SLC1_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC1_TX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SLC1_RX_STITCH_EN` reader - "]
-pub type SLC1_RX_STITCH_EN_R = crate::BitReader<bool>;
+pub type SLC1_RX_STITCH_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_STITCH_EN` writer - "]
-pub type SLC1_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SLC1_RX_STITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - "]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,6 +160,69 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF1")
+            .field(
+                "slc0_check_owner",
+                &format_args!("{}", self.slc0_check_owner().bit()),
+            )
+            .field(
+                "slc0_tx_check_sum_en",
+                &format_args!("{}", self.slc0_tx_check_sum_en().bit()),
+            )
+            .field(
+                "slc0_rx_check_sum_en",
+                &format_args!("{}", self.slc0_rx_check_sum_en().bit()),
+            )
+            .field("cmd_hold_en", &format_args!("{}", self.cmd_hold_en().bit()))
+            .field(
+                "slc0_len_auto_clr",
+                &format_args!("{}", self.slc0_len_auto_clr().bit()),
+            )
+            .field(
+                "slc0_tx_stitch_en",
+                &format_args!("{}", self.slc0_tx_stitch_en().bit()),
+            )
+            .field(
+                "slc0_rx_stitch_en",
+                &format_args!("{}", self.slc0_rx_stitch_en().bit()),
+            )
+            .field(
+                "slc1_check_owner",
+                &format_args!("{}", self.slc1_check_owner().bit()),
+            )
+            .field(
+                "slc1_tx_check_sum_en",
+                &format_args!("{}", self.slc1_tx_check_sum_en().bit()),
+            )
+            .field(
+                "slc1_rx_check_sum_en",
+                &format_args!("{}", self.slc1_rx_check_sum_en().bit()),
+            )
+            .field(
+                "host_int_level_sel",
+                &format_args!("{}", self.host_int_level_sel().bit()),
+            )
+            .field(
+                "slc1_tx_stitch_en",
+                &format_args!("{}", self.slc1_tx_stitch_en().bit()),
+            )
+            .field(
+                "slc1_rx_stitch_en",
+                &format_args!("{}", self.slc1_rx_stitch_en().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

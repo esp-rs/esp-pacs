@@ -20,9 +20,15 @@ impl From<crate::W<RST_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RST_COEX` writer - "]
-pub type RST_COEX_W<'a, const O: u8> = crate::BitWriter<'a, u32, RST_CONF_SPEC, bool, O>;
+pub type RST_COEX_W<'a, const O: u8> = crate::BitWriter<'a, RST_CONF_SPEC, O>;
 #[doc = "Field `RST_I2C_MST` writer - "]
-pub type RST_I2C_MST_W<'a, const O: u8> = crate::BitWriter<'a, u32, RST_CONF_SPEC, bool, O>;
+pub type RST_I2C_MST_W<'a, const O: u8> = crate::BitWriter<'a, RST_CONF_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RST_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]

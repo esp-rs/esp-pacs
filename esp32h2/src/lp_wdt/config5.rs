@@ -35,19 +35,17 @@ impl From<crate::W<CONFIG5_SPEC>> for W {
     }
 }
 #[doc = "Field `CHIP_RESET_TARGET` reader - need_des"]
-pub type CHIP_RESET_TARGET_R = crate::FieldReader<u8, u8>;
+pub type CHIP_RESET_TARGET_R = crate::FieldReader;
 #[doc = "Field `CHIP_RESET_TARGET` writer - need_des"]
-pub type CHIP_RESET_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG5_SPEC, u8, u8, 8, O>;
+pub type CHIP_RESET_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG5_SPEC, 8, O>;
 #[doc = "Field `CHIP_RESET_EN` reader - need_des"]
-pub type CHIP_RESET_EN_R = crate::BitReader<bool>;
+pub type CHIP_RESET_EN_R = crate::BitReader;
 #[doc = "Field `CHIP_RESET_EN` writer - need_des"]
-pub type CHIP_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONFIG5_SPEC, bool, O>;
+pub type CHIP_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONFIG5_SPEC, O>;
 #[doc = "Field `CHIP_RESET_KEY` reader - need_des"]
-pub type CHIP_RESET_KEY_R = crate::FieldReader<u8, u8>;
+pub type CHIP_RESET_KEY_R = crate::FieldReader;
 #[doc = "Field `CHIP_RESET_KEY` writer - need_des"]
-pub type CHIP_RESET_KEY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CONFIG5_SPEC, u8, u8, 8, O>;
+pub type CHIP_RESET_KEY_W<'a, const O: u8> = crate::FieldWriter<'a, CONFIG5_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn chip_reset_key(&self) -> CHIP_RESET_KEY_R {
         CHIP_RESET_KEY_R::new(((self.bits >> 9) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONFIG5")
+            .field(
+                "chip_reset_target",
+                &format_args!("{}", self.chip_reset_target().bits()),
+            )
+            .field(
+                "chip_reset_en",
+                &format_args!("{}", self.chip_reset_en().bit()),
+            )
+            .field(
+                "chip_reset_key",
+                &format_args!("{}", self.chip_reset_key().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONFIG5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

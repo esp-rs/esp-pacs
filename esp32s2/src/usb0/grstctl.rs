@@ -35,33 +35,33 @@ impl From<crate::W<GRSTCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `CSFTRST` reader - "]
-pub type CSFTRST_R = crate::BitReader<bool>;
+pub type CSFTRST_R = crate::BitReader;
 #[doc = "Field `CSFTRST` writer - "]
-pub type CSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+pub type CSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
 #[doc = "Field `PIUFSSFTRST` reader - "]
-pub type PIUFSSFTRST_R = crate::BitReader<bool>;
+pub type PIUFSSFTRST_R = crate::BitReader;
 #[doc = "Field `PIUFSSFTRST` writer - "]
-pub type PIUFSSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+pub type PIUFSSFTRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
 #[doc = "Field `FRMCNTRRST` reader - "]
-pub type FRMCNTRRST_R = crate::BitReader<bool>;
+pub type FRMCNTRRST_R = crate::BitReader;
 #[doc = "Field `FRMCNTRRST` writer - "]
-pub type FRMCNTRRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+pub type FRMCNTRRST_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
 #[doc = "Field `RXFFLSH` reader - "]
-pub type RXFFLSH_R = crate::BitReader<bool>;
+pub type RXFFLSH_R = crate::BitReader;
 #[doc = "Field `RXFFLSH` writer - "]
-pub type RXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+pub type RXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
 #[doc = "Field `TXFFLSH` reader - "]
-pub type TXFFLSH_R = crate::BitReader<bool>;
+pub type TXFFLSH_R = crate::BitReader;
 #[doc = "Field `TXFFLSH` writer - "]
-pub type TXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSTCTL_SPEC, bool, O>;
+pub type TXFFLSH_W<'a, const O: u8> = crate::BitWriter<'a, GRSTCTL_SPEC, O>;
 #[doc = "Field `TXFNUM` reader - "]
-pub type TXFNUM_R = crate::FieldReader<u8, u8>;
+pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - "]
-pub type TXFNUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GRSTCTL_SPEC, u8, u8, 5, O>;
+pub type TXFNUM_W<'a, const O: u8> = crate::FieldWriter<'a, GRSTCTL_SPEC, 5, O>;
 #[doc = "Field `DMAREQ` reader - "]
-pub type DMAREQ_R = crate::BitReader<bool>;
+pub type DMAREQ_R = crate::BitReader;
 #[doc = "Field `AHBIDLE` reader - "]
-pub type AHBIDLE_R = crate::BitReader<bool>;
+pub type AHBIDLE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -102,6 +102,27 @@ impl R {
     #[inline(always)]
     pub fn ahbidle(&self) -> AHBIDLE_R {
         AHBIDLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GRSTCTL")
+            .field("csftrst", &format_args!("{}", self.csftrst().bit()))
+            .field("piufssftrst", &format_args!("{}", self.piufssftrst().bit()))
+            .field("frmcntrrst", &format_args!("{}", self.frmcntrrst().bit()))
+            .field("rxfflsh", &format_args!("{}", self.rxfflsh().bit()))
+            .field("txfflsh", &format_args!("{}", self.txfflsh().bit()))
+            .field("txfnum", &format_args!("{}", self.txfnum().bits()))
+            .field("dmareq", &format_args!("{}", self.dmareq().bit()))
+            .field("ahbidle", &format_args!("{}", self.ahbidle().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GRSTCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

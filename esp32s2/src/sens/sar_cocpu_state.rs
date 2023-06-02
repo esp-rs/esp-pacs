@@ -35,18 +35,17 @@ impl From<crate::W<SAR_COCPU_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `COCPU_DBG_TRIGGER` writer - Trigger ULP-RISCV debug registers"]
-pub type COCPU_DBG_TRIGGER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_STATE_SPEC, bool, O>;
+pub type COCPU_DBG_TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_STATE_SPEC, O>;
 #[doc = "Field `COCPU_CLK_EN` reader - Check ULP-RISCV whether clk on"]
-pub type COCPU_CLK_EN_R = crate::BitReader<bool>;
+pub type COCPU_CLK_EN_R = crate::BitReader;
 #[doc = "Field `COCPU_RESET_N` reader - Check ULP-RISCV whether in reset state"]
-pub type COCPU_RESET_N_R = crate::BitReader<bool>;
+pub type COCPU_RESET_N_R = crate::BitReader;
 #[doc = "Field `COCPU_EOI` reader - Check ULP-RISCV whether in interrupt state"]
-pub type COCPU_EOI_R = crate::BitReader<bool>;
+pub type COCPU_EOI_R = crate::BitReader;
 #[doc = "Field `COCPU_TRAP` reader - Check ULP-RISCV whether in trap state"]
-pub type COCPU_TRAP_R = crate::BitReader<bool>;
+pub type COCPU_TRAP_R = crate::BitReader;
 #[doc = "Field `COCPU_EBREAK` reader - Check ULP-RISCV whether in ebreak"]
-pub type COCPU_EBREAK_R = crate::BitReader<bool>;
+pub type COCPU_EBREAK_R = crate::BitReader;
 impl R {
     #[doc = "Bit 26 - Check ULP-RISCV whether clk on"]
     #[inline(always)]
@@ -72,6 +71,33 @@ impl R {
     #[inline(always)]
     pub fn cocpu_ebreak(&self) -> COCPU_EBREAK_R {
         COCPU_EBREAK_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_COCPU_STATE")
+            .field(
+                "cocpu_clk_en",
+                &format_args!("{}", self.cocpu_clk_en().bit()),
+            )
+            .field(
+                "cocpu_reset_n",
+                &format_args!("{}", self.cocpu_reset_n().bit()),
+            )
+            .field("cocpu_eoi", &format_args!("{}", self.cocpu_eoi().bit()))
+            .field("cocpu_trap", &format_args!("{}", self.cocpu_trap().bit()))
+            .field(
+                "cocpu_ebreak",
+                &format_args!("{}", self.cocpu_ebreak().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

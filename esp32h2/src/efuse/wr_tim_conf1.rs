@@ -35,18 +35,17 @@ impl From<crate::W<WR_TIM_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TSUP_A` reader - Configures the programming setup time."]
-pub type TSUP_A_R = crate::FieldReader<u8, u8>;
+pub type TSUP_A_R = crate::FieldReader;
 #[doc = "Field `TSUP_A` writer - Configures the programming setup time."]
-pub type TSUP_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_TIM_CONF1_SPEC, u8, u8, 8, O>;
+pub type TSUP_A_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF1_SPEC, 8, O>;
 #[doc = "Field `PWR_ON_NUM` reader - Configures the power up time for VDDQ."]
 pub type PWR_ON_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PWR_ON_NUM` writer - Configures the power up time for VDDQ."]
-pub type PWR_ON_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WR_TIM_CONF1_SPEC, u16, u16, 16, O>;
+pub type PWR_ON_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `THP_A` reader - Configures the programming hold time."]
-pub type THP_A_R = crate::FieldReader<u8, u8>;
+pub type THP_A_R = crate::FieldReader;
 #[doc = "Field `THP_A` writer - Configures the programming hold time."]
-pub type THP_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_TIM_CONF1_SPEC, u8, u8, 8, O>;
+pub type THP_A_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Configures the programming setup time."]
     #[inline(always)]
@@ -62,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn thp_a(&self) -> THP_A_R {
         THP_A_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WR_TIM_CONF1")
+            .field("tsup_a", &format_args!("{}", self.tsup_a().bits()))
+            .field("pwr_on_num", &format_args!("{}", self.pwr_on_num().bits()))
+            .field("thp_a", &format_args!("{}", self.thp_a().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WR_TIM_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

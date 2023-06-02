@@ -35,29 +35,29 @@ impl From<crate::W<PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_PIN0_HOLD` reader - Need add desc"]
-pub type GPIO_PIN0_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN0_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_HOLD` writer - Need add desc"]
-pub type GPIO_PIN0_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN0_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 #[doc = "Field `GPIO_PIN1_HOLD` reader - Need add desc"]
-pub type GPIO_PIN1_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN1_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_HOLD` writer - Need add desc"]
-pub type GPIO_PIN1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 #[doc = "Field `GPIO_PIN2_HOLD` reader - Need add desc"]
-pub type GPIO_PIN2_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN2_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_HOLD` writer - Need add desc"]
-pub type GPIO_PIN2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 #[doc = "Field `GPIO_PIN3_HOLD` reader - Need add desc"]
-pub type GPIO_PIN3_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN3_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_HOLD` writer - Need add desc"]
-pub type GPIO_PIN3_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN3_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 #[doc = "Field `GPIO_PIN4_HOLD` reader - Need add desc"]
-pub type GPIO_PIN4_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN4_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_HOLD` writer - Need add desc"]
-pub type GPIO_PIN4_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN4_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 #[doc = "Field `GPIO_PIN5_HOLD` reader - Need add desc"]
-pub type GPIO_PIN5_HOLD_R = crate::BitReader<bool>;
+pub type GPIO_PIN5_HOLD_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_HOLD` writer - Need add desc"]
-pub type GPIO_PIN5_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, O>;
+pub type GPIO_PIN5_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, PAD_HOLD_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
@@ -88,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn gpio_pin5_hold(&self) -> GPIO_PIN5_HOLD_R {
         GPIO_PIN5_HOLD_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PAD_HOLD")
+            .field(
+                "gpio_pin0_hold",
+                &format_args!("{}", self.gpio_pin0_hold().bit()),
+            )
+            .field(
+                "gpio_pin1_hold",
+                &format_args!("{}", self.gpio_pin1_hold().bit()),
+            )
+            .field(
+                "gpio_pin2_hold",
+                &format_args!("{}", self.gpio_pin2_hold().bit()),
+            )
+            .field(
+                "gpio_pin3_hold",
+                &format_args!("{}", self.gpio_pin3_hold().bit()),
+            )
+            .field(
+                "gpio_pin4_hold",
+                &format_args!("{}", self.gpio_pin4_hold().bit()),
+            )
+            .field(
+                "gpio_pin5_hold",
+                &format_args!("{}", self.gpio_pin5_hold().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PAD_HOLD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

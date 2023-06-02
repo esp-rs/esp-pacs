@@ -14,21 +14,21 @@ impl From<crate::R<INTR_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO0_INT_ST` reader - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO0_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO0_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO1_INT_ST` reader - This is the status bit for DEDIC_GPIO1_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO1_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO1_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO2_INT_ST` reader - This is the status bit for DEDIC_GPIO2_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO2_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO2_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO3_INT_ST` reader - This is the status bit for DEDIC_GPIO3_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO3_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO3_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO4_INT_ST` reader - This is the status bit for DEDIC_GPIO4_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO4_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO4_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO5_INT_ST` reader - This is the status bit for DEDIC_GPIO5_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO5_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO5_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO6_INT_ST` reader - This is the status bit for DEDIC_GPIO6_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO6_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO6_INT_ST_R = crate::BitReader;
 #[doc = "Field `GPIO7_INT_ST` reader - This is the status bit for DEDIC_GPIO7_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub type GPIO7_INT_ST_R = crate::BitReader<bool>;
+pub type GPIO7_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]
@@ -69,6 +69,51 @@ impl R {
     #[inline(always)]
     pub fn gpio7_int_st(&self) -> GPIO7_INT_ST_R {
         GPIO7_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_ST")
+            .field(
+                "gpio0_int_st",
+                &format_args!("{}", self.gpio0_int_st().bit()),
+            )
+            .field(
+                "gpio1_int_st",
+                &format_args!("{}", self.gpio1_int_st().bit()),
+            )
+            .field(
+                "gpio2_int_st",
+                &format_args!("{}", self.gpio2_int_st().bit()),
+            )
+            .field(
+                "gpio3_int_st",
+                &format_args!("{}", self.gpio3_int_st().bit()),
+            )
+            .field(
+                "gpio4_int_st",
+                &format_args!("{}", self.gpio4_int_st().bit()),
+            )
+            .field(
+                "gpio5_int_st",
+                &format_args!("{}", self.gpio5_int_st().bit()),
+            )
+            .field(
+                "gpio6_int_st",
+                &format_args!("{}", self.gpio6_int_st().bit()),
+            )
+            .field(
+                "gpio7_int_st",
+                &format_args!("{}", self.gpio7_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_st](index.html) module"]

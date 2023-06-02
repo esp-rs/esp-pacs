@@ -37,13 +37,26 @@ impl From<crate::W<GPIO_HOLD1_SPEC>> for W {
 #[doc = "Field `GPIO_HOLD1` reader - need_des"]
 pub type GPIO_HOLD1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `GPIO_HOLD1` writer - need_des"]
-pub type GPIO_HOLD1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_HOLD1_SPEC, u32, u32, 32, O>;
+pub type GPIO_HOLD1_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_HOLD1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn gpio_hold1(&self) -> GPIO_HOLD1_R {
         GPIO_HOLD1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_HOLD1")
+            .field("gpio_hold1", &format_args!("{}", self.gpio_hold1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_HOLD1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

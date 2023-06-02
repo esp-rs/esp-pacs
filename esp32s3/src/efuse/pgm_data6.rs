@@ -37,13 +37,26 @@ impl From<crate::W<PGM_DATA6_SPEC>> for W {
 #[doc = "Field `PGM_DATA_6` reader - The content of the 6th 32-bit data to be programmed."]
 pub type PGM_DATA_6_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PGM_DATA_6` writer - The content of the 6th 32-bit data to be programmed."]
-pub type PGM_DATA_6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PGM_DATA6_SPEC, u32, u32, 32, O>;
+pub type PGM_DATA_6_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA6_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of the 6th 32-bit data to be programmed."]
     #[inline(always)]
     pub fn pgm_data_6(&self) -> PGM_DATA_6_R {
         PGM_DATA_6_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PGM_DATA6")
+            .field("pgm_data_6", &format_args!("{}", self.pgm_data_6().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PGM_DATA6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

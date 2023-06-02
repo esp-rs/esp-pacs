@@ -35,20 +35,18 @@ impl From<crate::W<SDIO_SLAVE_LDO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LDO_READY_CTL_IN_EN` reader - control ldo ready signal by sdio slave itself"]
-pub type LDO_READY_CTL_IN_EN_R = crate::BitReader<bool>;
+pub type LDO_READY_CTL_IN_EN_R = crate::BitReader;
 #[doc = "Field `LDO_READY_CTL_IN_EN` writer - control ldo ready signal by sdio slave itself"]
-pub type LDO_READY_CTL_IN_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SDIO_SLAVE_LDO_CONF_SPEC, bool, O>;
+pub type LDO_READY_CTL_IN_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_SLAVE_LDO_CONF_SPEC, O>;
 #[doc = "Field `LDO_READY_THRES` reader - configure ldo ready counting threshold value, the actual counting target is 2^(ldo_ready_thres)-1"]
-pub type LDO_READY_THRES_R = crate::FieldReader<u8, u8>;
+pub type LDO_READY_THRES_R = crate::FieldReader;
 #[doc = "Field `LDO_READY_THRES` writer - configure ldo ready counting threshold value, the actual counting target is 2^(ldo_ready_thres)-1"]
 pub type LDO_READY_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDIO_SLAVE_LDO_CONF_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, SDIO_SLAVE_LDO_CONF_SPEC, 5, O>;
 #[doc = "Field `LDO_READY_IGNORE_EN` reader - ignore ldo ready signal"]
-pub type LDO_READY_IGNORE_EN_R = crate::BitReader<bool>;
+pub type LDO_READY_IGNORE_EN_R = crate::BitReader;
 #[doc = "Field `LDO_READY_IGNORE_EN` writer - ignore ldo ready signal"]
-pub type LDO_READY_IGNORE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SDIO_SLAVE_LDO_CONF_SPEC, bool, O>;
+pub type LDO_READY_IGNORE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_SLAVE_LDO_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - control ldo ready signal by sdio slave itself"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn ldo_ready_ignore_en(&self) -> LDO_READY_IGNORE_EN_R {
         LDO_READY_IGNORE_EN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_SLAVE_LDO_CONF")
+            .field(
+                "ldo_ready_ctl_in_en",
+                &format_args!("{}", self.ldo_ready_ctl_in_en().bit()),
+            )
+            .field(
+                "ldo_ready_thres",
+                &format_args!("{}", self.ldo_ready_thres().bits()),
+            )
+            .field(
+                "ldo_ready_ignore_en",
+                &format_args!("{}", self.ldo_ready_ignore_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_LDO_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,13 +35,13 @@ impl From<crate::W<PARL_IO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PARL_CLK_EN` reader - Set 1 to enable parl apb clock"]
-pub type PARL_CLK_EN_R = crate::BitReader<bool>;
+pub type PARL_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PARL_CLK_EN` writer - Set 1 to enable parl apb clock"]
-pub type PARL_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PARL_IO_CONF_SPEC, bool, O>;
+pub type PARL_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PARL_IO_CONF_SPEC, O>;
 #[doc = "Field `PARL_RST_EN` reader - Set 0 to reset parl apb reg"]
-pub type PARL_RST_EN_R = crate::BitReader<bool>;
+pub type PARL_RST_EN_R = crate::BitReader;
 #[doc = "Field `PARL_RST_EN` writer - Set 0 to reset parl apb reg"]
-pub type PARL_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PARL_IO_CONF_SPEC, bool, O>;
+pub type PARL_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, PARL_IO_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable parl apb clock"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn parl_rst_en(&self) -> PARL_RST_EN_R {
         PARL_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PARL_IO_CONF")
+            .field("parl_clk_en", &format_args!("{}", self.parl_clk_en().bit()))
+            .field("parl_rst_en", &format_args!("{}", self.parl_rst_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PARL_IO_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

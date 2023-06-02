@@ -35,21 +35,21 @@ impl From<crate::W<CFG_DATA7_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_STATE` reader - "]
-pub type PIN_STATE_R = crate::FieldReader<u8, u8>;
+pub type PIN_STATE_R = crate::FieldReader;
 #[doc = "Field `PIN_STATE` writer - "]
-pub type PIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, O>;
+pub type PIN_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA7_SPEC, 8, O>;
 #[doc = "Field `CHIP_STATE` reader - "]
-pub type CHIP_STATE_R = crate::FieldReader<u8, u8>;
+pub type CHIP_STATE_R = crate::FieldReader;
 #[doc = "Field `CHIP_STATE` writer - "]
-pub type CHIP_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, O>;
+pub type CHIP_STATE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA7_SPEC, 8, O>;
 #[doc = "Field `SDIO_RST` reader - "]
-pub type SDIO_RST_R = crate::BitReader<bool>;
+pub type SDIO_RST_R = crate::BitReader;
 #[doc = "Field `SDIO_RST` writer - "]
-pub type SDIO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 #[doc = "Field `SDIO_IOREADY0` reader - "]
-pub type SDIO_IOREADY0_R = crate::BitReader<bool>;
+pub type SDIO_IOREADY0_R = crate::BitReader;
 #[doc = "Field `SDIO_IOREADY0` writer - "]
-pub type SDIO_IOREADY0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, O>;
+pub type SDIO_IOREADY0_W<'a, const O: u8> = crate::BitWriter<'a, CFG_DATA7_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -70,6 +70,26 @@ impl R {
     #[inline(always)]
     pub fn sdio_ioready0(&self) -> SDIO_IOREADY0_R {
         SDIO_IOREADY0_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_DATA7")
+            .field("pin_state", &format_args!("{}", self.pin_state().bits()))
+            .field("chip_state", &format_args!("{}", self.chip_state().bits()))
+            .field("sdio_rst", &format_args!("{}", self.sdio_rst().bit()))
+            .field(
+                "sdio_ioready0",
+                &format_args!("{}", self.sdio_ioready0().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_DATA7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

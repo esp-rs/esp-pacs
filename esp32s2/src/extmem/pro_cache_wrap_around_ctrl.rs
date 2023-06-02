@@ -35,15 +35,15 @@ impl From<crate::W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_FLASH_WRAP_AROUND` reader - The bit is used to enable wrap around mode when read data from flash."]
-pub type PRO_CACHE_FLASH_WRAP_AROUND_R = crate::BitReader<bool>;
+pub type PRO_CACHE_FLASH_WRAP_AROUND_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_FLASH_WRAP_AROUND` writer - The bit is used to enable wrap around mode when read data from flash."]
 pub type PRO_CACHE_FLASH_WRAP_AROUND_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_WRAP_AROUND_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CACHE_WRAP_AROUND_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_SRAM_RD_WRAP_AROUND` reader - The bit is used to enable wrap around mode when read data from spiram."]
-pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_R = crate::BitReader<bool>;
+pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_SRAM_RD_WRAP_AROUND` writer - The bit is used to enable wrap around mode when read data from spiram."]
 pub type PRO_CACHE_SRAM_RD_WRAP_AROUND_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_WRAP_AROUND_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CACHE_WRAP_AROUND_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn pro_cache_sram_rd_wrap_around(&self) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_R {
         PRO_CACHE_SRAM_RD_WRAP_AROUND_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CACHE_WRAP_AROUND_CTRL")
+            .field(
+                "pro_cache_flash_wrap_around",
+                &format_args!("{}", self.pro_cache_flash_wrap_around().bit()),
+            )
+            .field(
+                "pro_cache_sram_rd_wrap_around",
+                &format_args!("{}", self.pro_cache_sram_rd_wrap_around().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,15 +38,14 @@ impl From<crate::W<SAR_MEM_WR_CTRL_SPEC>> for W {
 pub type MEM_WR_ADDR_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_WR_ADDR_INIT` writer - "]
 pub type MEM_WR_ADDR_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEM_WR_CTRL_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16, u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` reader - "]
 pub type MEM_WR_ADDR_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` writer - "]
 pub type MEM_WR_ADDR_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEM_WR_CTRL_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16, u16>;
 #[doc = "Field `RTC_MEM_WR_OFFST_CLR` writer - "]
-pub type RTC_MEM_WR_OFFST_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEM_WR_CTRL_SPEC, bool, O>;
+pub type RTC_MEM_WR_OFFST_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEM_WR_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -57,6 +56,27 @@ impl R {
     #[inline(always)]
     pub fn mem_wr_addr_size(&self) -> MEM_WR_ADDR_SIZE_R {
         MEM_WR_ADDR_SIZE_R::new(((self.bits >> 11) & 0x07ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEM_WR_CTRL")
+            .field(
+                "mem_wr_addr_init",
+                &format_args!("{}", self.mem_wr_addr_init().bits()),
+            )
+            .field(
+                "mem_wr_addr_size",
+                &format_args!("{}", self.mem_wr_addr_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEM_WR_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

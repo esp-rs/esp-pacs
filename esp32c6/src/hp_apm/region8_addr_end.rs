@@ -38,12 +38,29 @@ impl From<crate::W<REGION8_ADDR_END_SPEC>> for W {
 pub type REGION8_ADDR_END_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REGION8_ADDR_END` writer - End address of region8"]
 pub type REGION8_ADDR_END_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION8_ADDR_END_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, REGION8_ADDR_END_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - End address of region8"]
     #[inline(always)]
     pub fn region8_addr_end(&self) -> REGION8_ADDR_END_R {
         REGION8_ADDR_END_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION8_ADDR_END")
+            .field(
+                "region8_addr_end",
+                &format_args!("{}", self.region8_addr_end().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION8_ADDR_END_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

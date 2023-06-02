@@ -35,15 +35,13 @@ impl From<crate::W<CACHE_TAG_OBJECT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_TAG_OBJECT` reader - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type ICACHE_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type ICACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `ICACHE_TAG_OBJECT` writer - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type ICACHE_TAG_OBJECT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_OBJECT_CTRL_SPEC, bool, O>;
+pub type ICACHE_TAG_OBJECT_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_OBJECT_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_TAG_OBJECT` reader - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type DCACHE_TAG_OBJECT_R = crate::BitReader<bool>;
+pub type DCACHE_TAG_OBJECT_R = crate::BitReader;
 #[doc = "Field `DCACHE_TAG_OBJECT` writer - Set this bit to set dcache tag memory as object. This bit should be onehot with the others fields inside this register."]
-pub type DCACHE_TAG_OBJECT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_TAG_OBJECT_CTRL_SPEC, bool, O>;
+pub type DCACHE_TAG_OBJECT_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_TAG_OBJECT_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to set icache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn dcache_tag_object(&self) -> DCACHE_TAG_OBJECT_R {
         DCACHE_TAG_OBJECT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_TAG_OBJECT_CTRL")
+            .field(
+                "icache_tag_object",
+                &format_args!("{}", self.icache_tag_object().bit()),
+            )
+            .field(
+                "dcache_tag_object",
+                &format_args!("{}", self.dcache_tag_object().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_OBJECT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

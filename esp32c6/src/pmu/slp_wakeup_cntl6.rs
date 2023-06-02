@@ -38,12 +38,12 @@ impl From<crate::W<SLP_WAKEUP_CNTL6_SPEC>> for W {
 pub type SOC_WAKEUP_WAIT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SOC_WAKEUP_WAIT` writer - need_des"]
 pub type SOC_WAKEUP_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL6_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL6_SPEC, 20, O, u32, u32>;
 #[doc = "Field `SOC_WAKEUP_WAIT_CFG` reader - need_des"]
-pub type SOC_WAKEUP_WAIT_CFG_R = crate::FieldReader<u8, u8>;
+pub type SOC_WAKEUP_WAIT_CFG_R = crate::FieldReader;
 #[doc = "Field `SOC_WAKEUP_WAIT_CFG` writer - need_des"]
 pub type SOC_WAKEUP_WAIT_CFG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_WAKEUP_CNTL6_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL6_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:19 - need_des"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn soc_wakeup_wait_cfg(&self) -> SOC_WAKEUP_WAIT_CFG_R {
         SOC_WAKEUP_WAIT_CFG_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_WAKEUP_CNTL6")
+            .field(
+                "soc_wakeup_wait",
+                &format_args!("{}", self.soc_wakeup_wait().bits()),
+            )
+            .field(
+                "soc_wakeup_wait_cfg",
+                &format_args!("{}", self.soc_wakeup_wait_cfg().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

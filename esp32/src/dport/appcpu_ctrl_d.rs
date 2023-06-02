@@ -38,12 +38,29 @@ impl From<crate::W<APPCPU_CTRL_D_SPEC>> for W {
 pub type APPCPU_BOOT_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `APPCPU_BOOT_ADDR` writer - "]
 pub type APPCPU_BOOT_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APPCPU_CTRL_D_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, APPCPU_CTRL_D_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn appcpu_boot_addr(&self) -> APPCPU_BOOT_ADDR_R {
         APPCPU_BOOT_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APPCPU_CTRL_D")
+            .field(
+                "appcpu_boot_addr",
+                &format_args!("{}", self.appcpu_boot_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_D_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

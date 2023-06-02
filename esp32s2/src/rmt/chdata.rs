@@ -37,12 +37,26 @@ impl From<crate::W<CHDATA_SPEC>> for W {
 #[doc = "Field `CH_DATA` reader - The read and write data register for CHANNEL%s by apb fifo access."]
 pub type CH_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CH_DATA` writer - The read and write data register for CHANNEL%s by apb fifo access."]
-pub type CH_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CHDATA_SPEC, u32, u32, 32, O>;
+pub type CH_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]
     pub fn ch_data(&self) -> CH_DATA_R {
         CH_DATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CHDATA")
+            .field("ch_data", &format_args!("{}", self.ch_data().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CHDATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

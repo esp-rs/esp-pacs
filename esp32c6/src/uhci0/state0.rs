@@ -14,9 +14,9 @@ impl From<crate::R<STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_ERR_CAUSE` reader - Indicates the error types when DMA receives the error frame. 3'b001: UHCI packet checksum error. 3'b010: UHCI packet sequence number error. 3'b011: UHCI packet CRC bit error. 3'b100: find 0xC0, but received packet is uncompleted. 3'b101: 0xC0 is not found, but received packet is completed. 3'b110: CRC check error."]
-pub type RX_ERR_CAUSE_R = crate::FieldReader<u8, u8>;
+pub type RX_ERR_CAUSE_R = crate::FieldReader;
 #[doc = "Field `DECODE_STATE` reader - Indicates UHCI decoder status."]
-pub type DECODE_STATE_R = crate::FieldReader<u8, u8>;
+pub type DECODE_STATE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:2 - Indicates the error types when DMA receives the error frame. 3'b001: UHCI packet checksum error. 3'b010: UHCI packet sequence number error. 3'b011: UHCI packet CRC bit error. 3'b100: find 0xC0, but received packet is uncompleted. 3'b101: 0xC0 is not found, but received packet is completed. 3'b110: CRC check error."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn decode_state(&self) -> DECODE_STATE_R {
         DECODE_STATE_R::new(((self.bits >> 3) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE0")
+            .field(
+                "rx_err_cause",
+                &format_args!("{}", self.rx_err_cause().bits()),
+            )
+            .field(
+                "decode_state",
+                &format_args!("{}", self.decode_state().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UHCI Receive Status Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0](index.html) module"]

@@ -14,41 +14,41 @@ impl From<crate::R<GHWCFG4_SPEC>> for R {
     }
 }
 #[doc = "Field `G_NUMDEVPERIOEPS` reader - "]
-pub type G_NUMDEVPERIOEPS_R = crate::FieldReader<u8, u8>;
+pub type G_NUMDEVPERIOEPS_R = crate::FieldReader;
 #[doc = "Field `G_PARTIALPWRDN` reader - "]
-pub type G_PARTIALPWRDN_R = crate::BitReader<bool>;
+pub type G_PARTIALPWRDN_R = crate::BitReader;
 #[doc = "Field `G_AHBFREQ` reader - "]
-pub type G_AHBFREQ_R = crate::BitReader<bool>;
+pub type G_AHBFREQ_R = crate::BitReader;
 #[doc = "Field `G_HIBERNATION` reader - "]
-pub type G_HIBERNATION_R = crate::BitReader<bool>;
+pub type G_HIBERNATION_R = crate::BitReader;
 #[doc = "Field `G_EXTENDEDHIBERNATION` reader - "]
-pub type G_EXTENDEDHIBERNATION_R = crate::BitReader<bool>;
+pub type G_EXTENDEDHIBERNATION_R = crate::BitReader;
 #[doc = "Field `G_ACGSUPT` reader - "]
-pub type G_ACGSUPT_R = crate::BitReader<bool>;
+pub type G_ACGSUPT_R = crate::BitReader;
 #[doc = "Field `G_ENHANCEDLPMSUPT` reader - "]
-pub type G_ENHANCEDLPMSUPT_R = crate::BitReader<bool>;
+pub type G_ENHANCEDLPMSUPT_R = crate::BitReader;
 #[doc = "Field `G_PHYDATAWIDTH` reader - "]
-pub type G_PHYDATAWIDTH_R = crate::FieldReader<u8, u8>;
+pub type G_PHYDATAWIDTH_R = crate::FieldReader;
 #[doc = "Field `G_NUMCTLEPS` reader - "]
-pub type G_NUMCTLEPS_R = crate::FieldReader<u8, u8>;
+pub type G_NUMCTLEPS_R = crate::FieldReader;
 #[doc = "Field `G_IDDQFLTR` reader - "]
-pub type G_IDDQFLTR_R = crate::BitReader<bool>;
+pub type G_IDDQFLTR_R = crate::BitReader;
 #[doc = "Field `G_VBUSVALIDFLTR` reader - "]
-pub type G_VBUSVALIDFLTR_R = crate::BitReader<bool>;
+pub type G_VBUSVALIDFLTR_R = crate::BitReader;
 #[doc = "Field `G_AVALIDFLTR` reader - "]
-pub type G_AVALIDFLTR_R = crate::BitReader<bool>;
+pub type G_AVALIDFLTR_R = crate::BitReader;
 #[doc = "Field `G_BVALIDFLTR` reader - "]
-pub type G_BVALIDFLTR_R = crate::BitReader<bool>;
+pub type G_BVALIDFLTR_R = crate::BitReader;
 #[doc = "Field `G_SESSENDFLTR` reader - "]
-pub type G_SESSENDFLTR_R = crate::BitReader<bool>;
+pub type G_SESSENDFLTR_R = crate::BitReader;
 #[doc = "Field `G_DEDFIFOMODE` reader - "]
-pub type G_DEDFIFOMODE_R = crate::BitReader<bool>;
+pub type G_DEDFIFOMODE_R = crate::BitReader;
 #[doc = "Field `G_INEPS` reader - "]
-pub type G_INEPS_R = crate::FieldReader<u8, u8>;
+pub type G_INEPS_R = crate::FieldReader;
 #[doc = "Field `G_DESCDMAENABLED` reader - "]
-pub type G_DESCDMAENABLED_R = crate::BitReader<bool>;
+pub type G_DESCDMAENABLED_R = crate::BitReader;
 #[doc = "Field `G_DESCDMA` reader - "]
-pub type G_DESCDMA_R = crate::BitReader<bool>;
+pub type G_DESCDMA_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -139,6 +139,76 @@ impl R {
     #[inline(always)]
     pub fn g_descdma(&self) -> G_DESCDMA_R {
         G_DESCDMA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GHWCFG4")
+            .field(
+                "g_numdevperioeps",
+                &format_args!("{}", self.g_numdevperioeps().bits()),
+            )
+            .field(
+                "g_partialpwrdn",
+                &format_args!("{}", self.g_partialpwrdn().bit()),
+            )
+            .field("g_ahbfreq", &format_args!("{}", self.g_ahbfreq().bit()))
+            .field(
+                "g_hibernation",
+                &format_args!("{}", self.g_hibernation().bit()),
+            )
+            .field(
+                "g_extendedhibernation",
+                &format_args!("{}", self.g_extendedhibernation().bit()),
+            )
+            .field("g_acgsupt", &format_args!("{}", self.g_acgsupt().bit()))
+            .field(
+                "g_enhancedlpmsupt",
+                &format_args!("{}", self.g_enhancedlpmsupt().bit()),
+            )
+            .field(
+                "g_phydatawidth",
+                &format_args!("{}", self.g_phydatawidth().bits()),
+            )
+            .field(
+                "g_numctleps",
+                &format_args!("{}", self.g_numctleps().bits()),
+            )
+            .field("g_iddqfltr", &format_args!("{}", self.g_iddqfltr().bit()))
+            .field(
+                "g_vbusvalidfltr",
+                &format_args!("{}", self.g_vbusvalidfltr().bit()),
+            )
+            .field(
+                "g_avalidfltr",
+                &format_args!("{}", self.g_avalidfltr().bit()),
+            )
+            .field(
+                "g_bvalidfltr",
+                &format_args!("{}", self.g_bvalidfltr().bit()),
+            )
+            .field(
+                "g_sessendfltr",
+                &format_args!("{}", self.g_sessendfltr().bit()),
+            )
+            .field(
+                "g_dedfifomode",
+                &format_args!("{}", self.g_dedfifomode().bit()),
+            )
+            .field("g_ineps", &format_args!("{}", self.g_ineps().bits()))
+            .field(
+                "g_descdmaenabled",
+                &format_args!("{}", self.g_descdmaenabled().bit()),
+            )
+            .field("g_descdma", &format_args!("{}", self.g_descdma().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GHWCFG4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ghwcfg4](index.html) module"]

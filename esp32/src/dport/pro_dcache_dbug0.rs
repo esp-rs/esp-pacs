@@ -35,26 +35,25 @@ impl From<crate::W<PRO_DCACHE_DBUG0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_SLAVE_WDATA` reader - "]
-pub type PRO_SLAVE_WDATA_R = crate::BitReader<bool>;
+pub type PRO_SLAVE_WDATA_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_WDATA` writer - "]
-pub type PRO_SLAVE_WDATA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG0_SPEC, bool, O>;
+pub type PRO_SLAVE_WDATA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_DCACHE_DBUG0_SPEC, O>;
 #[doc = "Field `PRO_CACHE_MMU_IA` reader - "]
-pub type PRO_CACHE_MMU_IA_R = crate::BitReader<bool>;
+pub type PRO_CACHE_MMU_IA_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_IA` reader - "]
-pub type PRO_CACHE_IA_R = crate::FieldReader<u8, u8>;
+pub type PRO_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `PRO_CACHE_STATE` reader - "]
 pub type PRO_CACHE_STATE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_WR_BAK_TO_READ` reader - "]
-pub type PRO_WR_BAK_TO_READ_R = crate::BitReader<bool>;
+pub type PRO_WR_BAK_TO_READ_R = crate::BitReader;
 #[doc = "Field `PRO_TX_END` reader - "]
-pub type PRO_TX_END_R = crate::BitReader<bool>;
+pub type PRO_TX_END_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_WR` reader - "]
-pub type PRO_SLAVE_WR_R = crate::BitReader<bool>;
+pub type PRO_SLAVE_WR_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_WDATA_V` reader - "]
-pub type PRO_SLAVE_WDATA_V_R = crate::BitReader<bool>;
+pub type PRO_SLAVE_WDATA_V_R = crate::BitReader;
 #[doc = "Field `PRO_RX_END` reader - "]
-pub type PRO_RX_END_R = crate::BitReader<bool>;
+pub type PRO_RX_END_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -100,6 +99,49 @@ impl R {
     #[inline(always)]
     pub fn pro_rx_end(&self) -> PRO_RX_END_R {
         PRO_RX_END_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DCACHE_DBUG0")
+            .field(
+                "pro_slave_wdata",
+                &format_args!("{}", self.pro_slave_wdata().bit()),
+            )
+            .field(
+                "pro_cache_mmu_ia",
+                &format_args!("{}", self.pro_cache_mmu_ia().bit()),
+            )
+            .field(
+                "pro_cache_ia",
+                &format_args!("{}", self.pro_cache_ia().bits()),
+            )
+            .field(
+                "pro_cache_state",
+                &format_args!("{}", self.pro_cache_state().bits()),
+            )
+            .field(
+                "pro_wr_bak_to_read",
+                &format_args!("{}", self.pro_wr_bak_to_read().bit()),
+            )
+            .field("pro_tx_end", &format_args!("{}", self.pro_tx_end().bit()))
+            .field(
+                "pro_slave_wr",
+                &format_args!("{}", self.pro_slave_wr().bit()),
+            )
+            .field(
+                "pro_slave_wdata_v",
+                &format_args!("{}", self.pro_slave_wdata_v().bit()),
+            )
+            .field("pro_rx_end", &format_args!("{}", self.pro_rx_end().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

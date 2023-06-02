@@ -35,12 +35,11 @@ impl From<crate::W<ICACHE_SYNC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type ICACHE_INVALIDATE_ENA_R = crate::BitReader<bool>;
+pub type ICACHE_INVALIDATE_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub type ICACHE_INVALIDATE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_SYNC_CTRL_SPEC, bool, O>;
+pub type ICACHE_INVALIDATE_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_SYNC_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_SYNC_DONE` reader - The bit is used to indicate invalidate operation is finished."]
-pub type ICACHE_SYNC_DONE_R = crate::BitReader<bool>;
+pub type ICACHE_SYNC_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
@@ -51,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn icache_sync_done(&self) -> ICACHE_SYNC_DONE_R {
         ICACHE_SYNC_DONE_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_SYNC_CTRL")
+            .field(
+                "icache_invalidate_ena",
+                &format_args!("{}", self.icache_invalidate_ena().bit()),
+            )
+            .field(
+                "icache_sync_done",
+                &format_args!("{}", self.icache_sync_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_SYNC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

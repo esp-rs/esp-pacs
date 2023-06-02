@@ -38,20 +38,17 @@ impl From<crate::W<ULP_CP_TIMER_SPEC>> for W {
 pub type ULP_CP_PC_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ULP_CP_PC_INIT` writer - ULP-coprocessor PC initial address"]
 pub type ULP_CP_PC_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ULP_CP_TIMER_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, ULP_CP_TIMER_SPEC, 11, O, u16, u16>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` reader - ULP-coprocessor wakeup by GPIO enable"]
-pub type ULP_CP_GPIO_WAKEUP_ENA_R = crate::BitReader<bool>;
+pub type ULP_CP_GPIO_WAKEUP_ENA_R = crate::BitReader;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` writer - ULP-coprocessor wakeup by GPIO enable"]
-pub type ULP_CP_GPIO_WAKEUP_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, O>;
+pub type ULP_CP_GPIO_WAKEUP_ENA_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_TIMER_SPEC, O>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_CLR` writer - ULP-coprocessor wakeup by GPIO state clear"]
-pub type ULP_CP_GPIO_WAKEUP_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, O>;
+pub type ULP_CP_GPIO_WAKEUP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_TIMER_SPEC, O>;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` reader - ULP-coprocessor timer enable bit"]
-pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader<bool>;
+pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` writer - ULP-coprocessor timer enable bit"]
-pub type ULP_CP_SLP_TIMER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, O>;
+pub type ULP_CP_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_TIMER_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10 - ULP-coprocessor PC initial address"]
     #[inline(always)]
@@ -67,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn ulp_cp_slp_timer_en(&self) -> ULP_CP_SLP_TIMER_EN_R {
         ULP_CP_SLP_TIMER_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ULP_CP_TIMER")
+            .field(
+                "ulp_cp_pc_init",
+                &format_args!("{}", self.ulp_cp_pc_init().bits()),
+            )
+            .field(
+                "ulp_cp_gpio_wakeup_ena",
+                &format_args!("{}", self.ulp_cp_gpio_wakeup_ena().bit()),
+            )
+            .field(
+                "ulp_cp_slp_timer_en",
+                &format_args!("{}", self.ulp_cp_slp_timer_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ULP_CP_TIMER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

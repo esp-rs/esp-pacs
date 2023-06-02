@@ -35,15 +35,15 @@ impl From<crate::W<CORE_0_MONTR_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` reader - enbale sp underlow monitor"]
-pub type CORE_0_SP_SPILL_MIN_ENA_R = crate::BitReader<bool>;
+pub type CORE_0_SP_SPILL_MIN_ENA_R = crate::BitReader;
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` writer - enbale sp underlow monitor"]
 pub type CORE_0_SP_SPILL_MIN_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_0_MONTR_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_0_MONTR_ENA_SPEC, O>;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` reader - enbale sp overflow monitor"]
-pub type CORE_0_SP_SPILL_MAX_ENA_R = crate::BitReader<bool>;
+pub type CORE_0_SP_SPILL_MAX_ENA_R = crate::BitReader;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` writer - enbale sp overflow monitor"]
 pub type CORE_0_SP_SPILL_MAX_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_0_MONTR_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_0_MONTR_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - enbale sp underlow monitor"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn core_0_sp_spill_max_ena(&self) -> CORE_0_SP_SPILL_MAX_ENA_R {
         CORE_0_SP_SPILL_MAX_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_MONTR_ENA")
+            .field(
+                "core_0_sp_spill_min_ena",
+                &format_args!("{}", self.core_0_sp_spill_min_ena().bit()),
+            )
+            .field(
+                "core_0_sp_spill_max_ena",
+                &format_args!("{}", self.core_0_sp_spill_max_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_MONTR_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

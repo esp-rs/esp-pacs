@@ -35,69 +35,61 @@ impl From<crate::W<TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BCK_IN_DELAY` reader - "]
-pub type TX_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type TX_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_IN_DELAY` writer - "]
-pub type TX_BCK_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_BCK_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_WS_IN_DELAY` reader - "]
-pub type TX_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type TX_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_WS_IN_DELAY` writer - "]
-pub type TX_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_BCK_IN_DELAY` reader - "]
-pub type RX_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type RX_BCK_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_IN_DELAY` writer - "]
-pub type RX_BCK_IN_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_BCK_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_WS_IN_DELAY` reader - "]
-pub type RX_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type RX_WS_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_WS_IN_DELAY` writer - "]
-pub type RX_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_WS_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_SD_IN_DELAY` reader - "]
-pub type RX_SD_IN_DELAY_R = crate::FieldReader<u8, u8>;
+pub type RX_SD_IN_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_SD_IN_DELAY` writer - "]
-pub type RX_SD_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_SD_IN_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_BCK_OUT_DELAY` reader - "]
-pub type TX_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type TX_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_BCK_OUT_DELAY` writer - "]
-pub type TX_BCK_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_BCK_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_WS_OUT_DELAY` reader - "]
-pub type TX_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type TX_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_WS_OUT_DELAY` writer - "]
-pub type TX_WS_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_WS_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_SD_OUT_DELAY` reader - "]
-pub type TX_SD_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type TX_SD_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `TX_SD_OUT_DELAY` writer - "]
-pub type TX_SD_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type TX_SD_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_WS_OUT_DELAY` reader - "]
-pub type RX_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type RX_WS_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_WS_OUT_DELAY` writer - "]
-pub type RX_WS_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_WS_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_BCK_OUT_DELAY` reader - "]
-pub type RX_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
+pub type RX_BCK_OUT_DELAY_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_OUT_DELAY` writer - "]
-pub type RX_BCK_OUT_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_BCK_OUT_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_DSYNC_SW` reader - "]
-pub type TX_DSYNC_SW_R = crate::BitReader<bool>;
+pub type TX_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `TX_DSYNC_SW` writer - "]
-pub type TX_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, O>;
+pub type TX_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, TIMING_SPEC, O>;
 #[doc = "Field `RX_DSYNC_SW` reader - "]
-pub type RX_DSYNC_SW_R = crate::BitReader<bool>;
+pub type RX_DSYNC_SW_R = crate::BitReader;
 #[doc = "Field `RX_DSYNC_SW` writer - "]
-pub type RX_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, O>;
+pub type RX_DSYNC_SW_W<'a, const O: u8> = crate::BitWriter<'a, TIMING_SPEC, O>;
 #[doc = "Field `DATA_ENABLE_DELAY` reader - "]
-pub type DATA_ENABLE_DELAY_R = crate::FieldReader<u8, u8>;
+pub type DATA_ENABLE_DELAY_R = crate::FieldReader;
 #[doc = "Field `DATA_ENABLE_DELAY` writer - "]
-pub type DATA_ENABLE_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, O>;
+pub type DATA_ENABLE_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, TIMING_SPEC, 2, O>;
 #[doc = "Field `TX_BCK_IN_INV` reader - "]
-pub type TX_BCK_IN_INV_R = crate::BitReader<bool>;
+pub type TX_BCK_IN_INV_R = crate::BitReader;
 #[doc = "Field `TX_BCK_IN_INV` writer - "]
-pub type TX_BCK_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, O>;
+pub type TX_BCK_IN_INV_W<'a, const O: u8> = crate::BitWriter<'a, TIMING_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -168,6 +160,69 @@ impl R {
     #[inline(always)]
     pub fn tx_bck_in_inv(&self) -> TX_BCK_IN_INV_R {
         TX_BCK_IN_INV_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMING")
+            .field(
+                "tx_bck_in_delay",
+                &format_args!("{}", self.tx_bck_in_delay().bits()),
+            )
+            .field(
+                "tx_ws_in_delay",
+                &format_args!("{}", self.tx_ws_in_delay().bits()),
+            )
+            .field(
+                "rx_bck_in_delay",
+                &format_args!("{}", self.rx_bck_in_delay().bits()),
+            )
+            .field(
+                "rx_ws_in_delay",
+                &format_args!("{}", self.rx_ws_in_delay().bits()),
+            )
+            .field(
+                "rx_sd_in_delay",
+                &format_args!("{}", self.rx_sd_in_delay().bits()),
+            )
+            .field(
+                "tx_bck_out_delay",
+                &format_args!("{}", self.tx_bck_out_delay().bits()),
+            )
+            .field(
+                "tx_ws_out_delay",
+                &format_args!("{}", self.tx_ws_out_delay().bits()),
+            )
+            .field(
+                "tx_sd_out_delay",
+                &format_args!("{}", self.tx_sd_out_delay().bits()),
+            )
+            .field(
+                "rx_ws_out_delay",
+                &format_args!("{}", self.rx_ws_out_delay().bits()),
+            )
+            .field(
+                "rx_bck_out_delay",
+                &format_args!("{}", self.rx_bck_out_delay().bits()),
+            )
+            .field("tx_dsync_sw", &format_args!("{}", self.tx_dsync_sw().bit()))
+            .field("rx_dsync_sw", &format_args!("{}", self.rx_dsync_sw().bit()))
+            .field(
+                "data_enable_delay",
+                &format_args!("{}", self.data_enable_delay().bits()),
+            )
+            .field(
+                "tx_bck_in_inv",
+                &format_args!("{}", self.tx_bck_in_inv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

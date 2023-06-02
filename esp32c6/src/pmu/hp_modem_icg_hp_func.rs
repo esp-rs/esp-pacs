@@ -38,12 +38,29 @@ impl From<crate::W<HP_MODEM_ICG_HP_FUNC_SPEC>> for W {
 pub type HP_MODEM_DIG_ICG_FUNC_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HP_MODEM_DIG_ICG_FUNC_EN` writer - need_des"]
 pub type HP_MODEM_DIG_ICG_FUNC_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_MODEM_ICG_HP_FUNC_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, HP_MODEM_ICG_HP_FUNC_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn hp_modem_dig_icg_func_en(&self) -> HP_MODEM_DIG_ICG_FUNC_EN_R {
         HP_MODEM_DIG_ICG_FUNC_EN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_MODEM_ICG_HP_FUNC")
+            .field(
+                "hp_modem_dig_icg_func_en",
+                &format_args!("{}", self.hp_modem_dig_icg_func_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_ICG_HP_FUNC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

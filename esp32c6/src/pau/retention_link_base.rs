@@ -38,12 +38,29 @@ impl From<crate::W<RETENTION_LINK_BASE_SPEC>> for W {
 pub type LINK_BASE_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LINK_BASE_ADDR` writer - retention dma link base"]
 pub type LINK_BASE_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_LINK_BASE_SPEC, u32, u32, 27, O>;
+    crate::FieldWriter<'a, RETENTION_LINK_BASE_SPEC, 27, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:26 - retention dma link base"]
     #[inline(always)]
     pub fn link_base_addr(&self) -> LINK_BASE_ADDR_R {
         LINK_BASE_ADDR_R::new(self.bits & 0x07ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_LINK_BASE")
+            .field(
+                "link_base_addr",
+                &format_args!("{}", self.link_base_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_LINK_BASE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

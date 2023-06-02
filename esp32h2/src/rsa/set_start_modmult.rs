@@ -20,8 +20,13 @@ impl From<crate::W<SET_START_MODMULT_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_START_MODMULT` writer - Configure whether or not to start the modular multiplication. 0: No effect 1: Start"]
-pub type SET_START_MODMULT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SET_START_MODMULT_SPEC, bool, O>;
+pub type SET_START_MODMULT_W<'a, const O: u8> = crate::BitWriter<'a, SET_START_MODMULT_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_START_MODMULT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Configure whether or not to start the modular multiplication. 0: No effect 1: Start"]
     #[inline(always)]

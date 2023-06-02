@@ -35,15 +35,15 @@ impl From<crate::W<DCACHE_PRELOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function."]
-pub type DCACHE_PRELOCK_SCT0_EN_R = crate::BitReader<bool>;
+pub type DCACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOCK_SCT0_EN` writer - The bit is used to enable the first section of prelock function."]
 pub type DCACHE_PRELOCK_SCT0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_PRELOCK_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_PRELOCK_CTRL_SPEC, O>;
 #[doc = "Field `DCACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function."]
-pub type DCACHE_PRELOCK_SCT1_EN_R = crate::BitReader<bool>;
+pub type DCACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `DCACHE_PRELOCK_SCT1_EN` writer - The bit is used to enable the second section of prelock function."]
 pub type DCACHE_PRELOCK_SCT1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_PRELOCK_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, DCACHE_PRELOCK_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn dcache_prelock_sct1_en(&self) -> DCACHE_PRELOCK_SCT1_EN_R {
         DCACHE_PRELOCK_SCT1_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_PRELOCK_CTRL")
+            .field(
+                "dcache_prelock_sct0_en",
+                &format_args!("{}", self.dcache_prelock_sct0_en().bit()),
+            )
+            .field(
+                "dcache_prelock_sct1_en",
+                &format_args!("{}", self.dcache_prelock_sct1_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOCK_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

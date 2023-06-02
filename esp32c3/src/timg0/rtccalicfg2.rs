@@ -35,17 +35,17 @@ impl From<crate::W<RTCCALICFG2_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_CALI_TIMEOUT` reader - timeoutindicator"]
-pub type RTC_CALI_TIMEOUT_R = crate::BitReader<bool>;
+pub type RTC_CALI_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_TIMEOUT_RST_CNT` reader - reg_rtc_cali_timeout_rst_cnt.Cyclesthatreleasecalibrationtimeoutreset"]
-pub type RTC_CALI_TIMEOUT_RST_CNT_R = crate::FieldReader<u8, u8>;
+pub type RTC_CALI_TIMEOUT_RST_CNT_R = crate::FieldReader;
 #[doc = "Field `RTC_CALI_TIMEOUT_RST_CNT` writer - reg_rtc_cali_timeout_rst_cnt.Cyclesthatreleasecalibrationtimeoutreset"]
 pub type RTC_CALI_TIMEOUT_RST_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTCCALICFG2_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, RTCCALICFG2_SPEC, 4, O>;
 #[doc = "Field `RTC_CALI_TIMEOUT_THRES` reader - reg_rtc_cali_timeout_thres.timeoutifcalivaluecountsoverthreshold"]
 pub type RTC_CALI_TIMEOUT_THRES_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_CALI_TIMEOUT_THRES` writer - reg_rtc_cali_timeout_thres.timeoutifcalivaluecountsoverthreshold"]
 pub type RTC_CALI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTCCALICFG2_SPEC, u32, u32, 25, O>;
+    crate::FieldWriter<'a, RTCCALICFG2_SPEC, 25, O, u32, u32>;
 impl R {
     #[doc = "Bit 0 - timeoutindicator"]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn rtc_cali_timeout_thres(&self) -> RTC_CALI_TIMEOUT_THRES_R {
         RTC_CALI_TIMEOUT_THRES_R::new((self.bits >> 7) & 0x01ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTCCALICFG2")
+            .field(
+                "rtc_cali_timeout",
+                &format_args!("{}", self.rtc_cali_timeout().bit()),
+            )
+            .field(
+                "rtc_cali_timeout_rst_cnt",
+                &format_args!("{}", self.rtc_cali_timeout_rst_cnt().bits()),
+            )
+            .field(
+                "rtc_cali_timeout_thres",
+                &format_args!("{}", self.rtc_cali_timeout_thres().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

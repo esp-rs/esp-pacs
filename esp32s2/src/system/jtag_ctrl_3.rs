@@ -21,7 +21,13 @@ impl From<crate::W<JTAG_CTRL_3_SPEC>> for W {
 }
 #[doc = "Field `CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_3` writer - Stores the 96 to 127 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
 pub type CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, JTAG_CTRL_3_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, JTAG_CTRL_3_SPEC, 32, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<JTAG_CTRL_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Stores the 96 to 127 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
     #[inline(always)]

@@ -38,12 +38,29 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
 pub type RTC_GPIO_ENABLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_GPIO_ENABLE` writer - RTC GPIO 0 ~ 21 enable"]
 pub type RTC_GPIO_ENABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_GPIO_ENABLE_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, RTC_GPIO_ENABLE_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
     pub fn rtc_gpio_enable(&self) -> RTC_GPIO_ENABLE_R {
         RTC_GPIO_ENABLE_R::new((self.bits >> 10) & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_GPIO_ENABLE")
+            .field(
+                "rtc_gpio_enable",
+                &format_args!("{}", self.rtc_gpio_enable().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_ENABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

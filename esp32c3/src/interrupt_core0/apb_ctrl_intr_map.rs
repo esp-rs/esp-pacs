@@ -35,15 +35,32 @@ impl From<crate::W<APB_CTRL_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_CTRL_INTR_MAP` reader - reg_core0_apb_ctrl_intr_map"]
-pub type APB_CTRL_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type APB_CTRL_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `APB_CTRL_INTR_MAP` writer - reg_core0_apb_ctrl_intr_map"]
 pub type APB_CTRL_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_CTRL_INTR_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, APB_CTRL_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_apb_ctrl_intr_map"]
     #[inline(always)]
     pub fn apb_ctrl_intr_map(&self) -> APB_CTRL_INTR_MAP_R {
         APB_CTRL_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_CTRL_INTR_MAP")
+            .field(
+                "apb_ctrl_intr_map",
+                &format_args!("{}", self.apb_ctrl_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_CTRL_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

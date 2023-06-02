@@ -37,11 +37,11 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
 #[doc = "Field `STATUS` reader - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
 pub type STATUS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATUS` writer - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
-pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RD_STATUS_SPEC, u16, u16, 16, O>;
+pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 16, O, u16, u16>;
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
-pub type WB_MODE_R = crate::FieldReader<u8, u8>;
+pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode it is combined with SPI_MEM_FASTRD_MODE bit."]
-pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RD_STATUS_SPEC, u8, u8, 8, O>;
+pub type WB_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:15 - The value is stored when set SPI_MEM_FLASH_RDSR bit and SPI_MEM_FLASH_RES bit."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn wb_mode(&self) -> WB_MODE_R {
         WB_MODE_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_STATUS")
+            .field("status", &format_args!("{}", self.status().bits()))
+            .field("wb_mode", &format_args!("{}", self.wb_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

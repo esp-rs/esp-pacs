@@ -35,14 +35,28 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MODE` reader - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. &amp; 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &amp;"]
-pub type MODE_R = crate::FieldReader<u8, u8>;
+pub type MODE_R = crate::FieldReader;
 #[doc = "Field `MODE` writer - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. &amp; 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &amp;"]
-pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MODE_SPEC, u8, u8, 3, O>;
+pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. &amp; 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &amp;"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
         MODE_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODE")
+            .field("mode", &format_args!("{}", self.mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

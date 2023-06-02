@@ -35,53 +35,49 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_DATA_DUMP_MUX` reader - "]
-pub type CLK_DATA_DUMP_MUX_R = crate::BitReader<bool>;
+pub type CLK_DATA_DUMP_MUX_R = crate::BitReader;
 #[doc = "Field `CLK_DATA_DUMP_MUX` writer - "]
-pub type CLK_DATA_DUMP_MUX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_DATA_DUMP_MUX_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_ETM_EN` reader - "]
-pub type CLK_ETM_EN_R = crate::BitReader<bool>;
+pub type CLK_ETM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ETM_EN` writer - "]
-pub type CLK_ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_ZB_APB_EN` reader - "]
-pub type CLK_ZB_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_ZB_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ZB_APB_EN` writer - "]
-pub type CLK_ZB_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_ZB_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_ZB_MAC_EN` reader - "]
-pub type CLK_ZB_MAC_EN_R = crate::BitReader<bool>;
+pub type CLK_ZB_MAC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_ZB_MAC_EN` writer - "]
-pub type CLK_ZB_MAC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_ZB_MAC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_MODEM_SEC_ECB_EN` reader - "]
-pub type CLK_MODEM_SEC_ECB_EN_R = crate::BitReader<bool>;
+pub type CLK_MODEM_SEC_ECB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_ECB_EN` writer - "]
-pub type CLK_MODEM_SEC_ECB_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_MODEM_SEC_ECB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_MODEM_SEC_CCM_EN` reader - "]
-pub type CLK_MODEM_SEC_CCM_EN_R = crate::BitReader<bool>;
+pub type CLK_MODEM_SEC_CCM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_CCM_EN` writer - "]
-pub type CLK_MODEM_SEC_CCM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_MODEM_SEC_CCM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_MODEM_SEC_BAH_EN` reader - "]
-pub type CLK_MODEM_SEC_BAH_EN_R = crate::BitReader<bool>;
+pub type CLK_MODEM_SEC_BAH_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_BAH_EN` writer - "]
-pub type CLK_MODEM_SEC_BAH_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_MODEM_SEC_BAH_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_MODEM_SEC_APB_EN` reader - "]
-pub type CLK_MODEM_SEC_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_MODEM_SEC_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_APB_EN` writer - "]
-pub type CLK_MODEM_SEC_APB_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_MODEM_SEC_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_MODEM_SEC_EN` reader - "]
-pub type CLK_MODEM_SEC_EN_R = crate::BitReader<bool>;
+pub type CLK_MODEM_SEC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_MODEM_SEC_EN` writer - "]
-pub type CLK_MODEM_SEC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_MODEM_SEC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_BLE_TIMER_EN` reader - "]
-pub type CLK_BLE_TIMER_EN_R = crate::BitReader<bool>;
+pub type CLK_BLE_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BLE_TIMER_EN` writer - "]
-pub type CLK_BLE_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_BLE_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_DATA_DUMP_EN` reader - "]
-pub type CLK_DATA_DUMP_EN_R = crate::BitReader<bool>;
+pub type CLK_DATA_DUMP_EN_R = crate::BitReader;
 #[doc = "Field `CLK_DATA_DUMP_EN` writer - "]
-pub type CLK_DATA_DUMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_DATA_DUMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 21"]
     #[inline(always)]
@@ -137,6 +133,60 @@ impl R {
     #[inline(always)]
     pub fn clk_data_dump_en(&self) -> CLK_DATA_DUMP_EN_R {
         CLK_DATA_DUMP_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field(
+                "clk_data_dump_mux",
+                &format_args!("{}", self.clk_data_dump_mux().bit()),
+            )
+            .field("clk_etm_en", &format_args!("{}", self.clk_etm_en().bit()))
+            .field(
+                "clk_zb_apb_en",
+                &format_args!("{}", self.clk_zb_apb_en().bit()),
+            )
+            .field(
+                "clk_zb_mac_en",
+                &format_args!("{}", self.clk_zb_mac_en().bit()),
+            )
+            .field(
+                "clk_modem_sec_ecb_en",
+                &format_args!("{}", self.clk_modem_sec_ecb_en().bit()),
+            )
+            .field(
+                "clk_modem_sec_ccm_en",
+                &format_args!("{}", self.clk_modem_sec_ccm_en().bit()),
+            )
+            .field(
+                "clk_modem_sec_bah_en",
+                &format_args!("{}", self.clk_modem_sec_bah_en().bit()),
+            )
+            .field(
+                "clk_modem_sec_apb_en",
+                &format_args!("{}", self.clk_modem_sec_apb_en().bit()),
+            )
+            .field(
+                "clk_modem_sec_en",
+                &format_args!("{}", self.clk_modem_sec_en().bit()),
+            )
+            .field(
+                "clk_ble_timer_en",
+                &format_args!("{}", self.clk_ble_timer_en().bit()),
+            )
+            .field(
+                "clk_data_dump_en",
+                &format_args!("{}", self.clk_data_dump_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

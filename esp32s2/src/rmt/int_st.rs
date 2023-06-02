@@ -14,15 +14,15 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CH_TX_END_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_TX_END_INT."]
-pub type CH_TX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_RX_END_INT."]
-pub type CH_RX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_ERR_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_ERR_INT."]
-pub type CH_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type CH_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_TX_THR_EVENT_INT."]
-pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP_INT_ST[0-3]` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
-pub type CH_TX_LOOP_INT_ST_R = crate::BitReader<bool>;
+pub type CH_TX_LOOP_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "The masked interrupt status bit for CH[0-3]_TX_END_INT."]
     #[inline(always)]
@@ -148,6 +148,99 @@ impl R {
     #[inline(always)]
     pub fn ch3_tx_loop_int_st(&self) -> CH_TX_LOOP_INT_ST_R {
         CH_TX_LOOP_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "ch0_tx_end_int_st",
+                &format_args!("{}", self.ch0_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_st",
+                &format_args!("{}", self.ch1_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch2_tx_end_int_st",
+                &format_args!("{}", self.ch2_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch3_tx_end_int_st",
+                &format_args!("{}", self.ch3_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch0_rx_end_int_st",
+                &format_args!("{}", self.ch0_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch1_rx_end_int_st",
+                &format_args!("{}", self.ch1_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch2_rx_end_int_st",
+                &format_args!("{}", self.ch2_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch3_rx_end_int_st",
+                &format_args!("{}", self.ch3_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch0_err_int_st",
+                &format_args!("{}", self.ch0_err_int_st().bit()),
+            )
+            .field(
+                "ch1_err_int_st",
+                &format_args!("{}", self.ch1_err_int_st().bit()),
+            )
+            .field(
+                "ch2_err_int_st",
+                &format_args!("{}", self.ch2_err_int_st().bit()),
+            )
+            .field(
+                "ch3_err_int_st",
+                &format_args!("{}", self.ch3_err_int_st().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_st",
+                &format_args!("{}", self.ch0_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_st",
+                &format_args!("{}", self.ch1_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch2_tx_thr_event_int_st",
+                &format_args!("{}", self.ch2_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch3_tx_thr_event_int_st",
+                &format_args!("{}", self.ch3_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_st",
+                &format_args!("{}", self.ch0_tx_loop_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_st",
+                &format_args!("{}", self.ch1_tx_loop_int_st().bit()),
+            )
+            .field(
+                "ch2_tx_loop_int_st",
+                &format_args!("{}", self.ch2_tx_loop_int_st().bit()),
+            )
+            .field(
+                "ch3_tx_loop_int_st",
+                &format_args!("{}", self.ch3_tx_loop_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

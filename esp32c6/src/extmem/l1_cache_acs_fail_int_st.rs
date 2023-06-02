@@ -14,15 +14,15 @@ impl From<crate::R<L1_CACHE_ACS_FAIL_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_ICACHE0_FAIL_INT_ST` reader - The bit indicates the interrupt status of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache."]
-pub type L1_ICACHE0_FAIL_INT_ST_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_FAIL_INT_ST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_FAIL_INT_ST` reader - The bit indicates the interrupt status of access fail that occurs in L1-ICache1 due to cpu accesses L1-ICache."]
-pub type L1_ICACHE1_FAIL_INT_ST_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_FAIL_INT_ST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_FAIL_INT_ST` reader - Reserved"]
-pub type L1_ICACHE2_FAIL_INT_ST_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_FAIL_INT_ST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FAIL_INT_ST` reader - Reserved"]
-pub type L1_ICACHE3_FAIL_INT_ST_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_FAIL_INT_ST_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FAIL_INT_ST` reader - The bit indicates the interrupt status of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
-pub type L1_CACHE_FAIL_INT_ST_R = crate::BitReader<bool>;
+pub type L1_CACHE_FAIL_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit indicates the interrupt status of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache."]
     #[inline(always)]
@@ -48,6 +48,39 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_fail_int_st(&self) -> L1_CACHE_FAIL_INT_ST_R {
         L1_CACHE_FAIL_INT_ST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_ACS_FAIL_INT_ST")
+            .field(
+                "l1_icache0_fail_int_st",
+                &format_args!("{}", self.l1_icache0_fail_int_st().bit()),
+            )
+            .field(
+                "l1_icache1_fail_int_st",
+                &format_args!("{}", self.l1_icache1_fail_int_st().bit()),
+            )
+            .field(
+                "l1_icache2_fail_int_st",
+                &format_args!("{}", self.l1_icache2_fail_int_st().bit()),
+            )
+            .field(
+                "l1_icache3_fail_int_st",
+                &format_args!("{}", self.l1_icache3_fail_int_st().bit()),
+            )
+            .field(
+                "l1_cache_fail_int_st",
+                &format_args!("{}", self.l1_cache_fail_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_FAIL_INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Cache Access Fail Interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_cache_acs_fail_int_st](index.html) module"]

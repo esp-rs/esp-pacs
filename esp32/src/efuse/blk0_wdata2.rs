@@ -38,12 +38,29 @@ impl From<crate::W<BLK0_WDATA2_SPEC>> for W {
 pub type WIFI_MAC_CRC_HIGH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_MAC_CRC_HIGH` writer - program for high 24bit WIFI_MAC_Address"]
 pub type WIFI_MAC_CRC_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_WDATA2_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, BLK0_WDATA2_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - program for high 24bit WIFI_MAC_Address"]
     #[inline(always)]
     pub fn wifi_mac_crc_high(&self) -> WIFI_MAC_CRC_HIGH_R {
         WIFI_MAC_CRC_HIGH_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_WDATA2")
+            .field(
+                "wifi_mac_crc_high",
+                &format_args!("{}", self.wifi_mac_crc_high().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

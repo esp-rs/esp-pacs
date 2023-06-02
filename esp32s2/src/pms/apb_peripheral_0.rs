@@ -35,15 +35,31 @@ impl From<crate::W<APB_PERIPHERAL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_PERIPHERAL_LOCK` reader - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
-pub type APB_PERIPHERAL_LOCK_R = crate::BitReader<bool>;
+pub type APB_PERIPHERAL_LOCK_R = crate::BitReader;
 #[doc = "Field `APB_PERIPHERAL_LOCK` writer - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
-pub type APB_PERIPHERAL_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_PERIPHERAL_0_SPEC, bool, O>;
+pub type APB_PERIPHERAL_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, APB_PERIPHERAL_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
     pub fn apb_peripheral_lock(&self) -> APB_PERIPHERAL_LOCK_R {
         APB_PERIPHERAL_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_PERIPHERAL_0")
+            .field(
+                "apb_peripheral_lock",
+                &format_args!("{}", self.apb_peripheral_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

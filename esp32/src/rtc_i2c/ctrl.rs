@@ -35,29 +35,29 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - SDA is push-pull (1) or open-drain (0)"]
-pub type SDA_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - SDA is push-pull (1) or open-drain (0)"]
-pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SCL_FORCE_OUT` reader - SCL is push-pull (1) or open-drain (0)"]
-pub type SCL_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - SCL is push-pull (1) or open-drain (0)"]
-pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `MS_MODE` reader - Master (1) or slave (0)"]
-pub type MS_MODE_R = crate::BitReader<bool>;
+pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - Master (1) or slave (0)"]
-pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `TRANS_START` reader - Force to generate start condition"]
-pub type TRANS_START_R = crate::BitReader<bool>;
+pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - Force to generate start condition"]
-pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `TX_LSB_FIRST` reader - Send LSB first"]
-pub type TX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - Send LSB first"]
-pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `RX_LSB_FIRST` reader - Receive LSB first"]
-pub type RX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - Receive LSB first"]
-pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
@@ -88,6 +88,37 @@ impl R {
     #[inline(always)]
     pub fn rx_lsb_first(&self) -> RX_LSB_FIRST_R {
         RX_LSB_FIRST_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field(
+                "sda_force_out",
+                &format_args!("{}", self.sda_force_out().bit()),
+            )
+            .field(
+                "scl_force_out",
+                &format_args!("{}", self.scl_force_out().bit()),
+            )
+            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
+            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
+            .field(
+                "tx_lsb_first",
+                &format_args!("{}", self.tx_lsb_first().bit()),
+            )
+            .field(
+                "rx_lsb_first",
+                &format_args!("{}", self.rx_lsb_first().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

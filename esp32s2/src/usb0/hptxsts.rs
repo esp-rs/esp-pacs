@@ -16,9 +16,9 @@ impl From<crate::R<HPTXSTS_SPEC>> for R {
 #[doc = "Field `PTXFSPCAVAIL` reader - "]
 pub type PTXFSPCAVAIL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PTXQSPCAVAIL` reader - "]
-pub type PTXQSPCAVAIL_R = crate::FieldReader<u8, u8>;
+pub type PTXQSPCAVAIL_R = crate::FieldReader;
 #[doc = "Field `PTXQTOP` reader - "]
-pub type PTXQTOP_R = crate::FieldReader<u8, u8>;
+pub type PTXQTOP_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -34,6 +34,28 @@ impl R {
     #[inline(always)]
     pub fn ptxqtop(&self) -> PTXQTOP_R {
         PTXQTOP_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPTXSTS")
+            .field(
+                "ptxfspcavail",
+                &format_args!("{}", self.ptxfspcavail().bits()),
+            )
+            .field(
+                "ptxqspcavail",
+                &format_args!("{}", self.ptxqspcavail().bits()),
+            )
+            .field("ptxqtop", &format_args!("{}", self.ptxqtop().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HPTXSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hptxsts](index.html) module"]

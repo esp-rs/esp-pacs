@@ -14,19 +14,19 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_INT_ST` reader - Receive interrupt. If this bit is set to 1, it indicates there are messages to be handled in the RX FIFO."]
-pub type RX_INT_ST_R = crate::BitReader<bool>;
+pub type RX_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_INT_ST` reader - Transmit interrupt. If this bit is set to 1, it indicates the message transmitting mis- sion is finished and a new transmission is able to execute."]
-pub type TX_INT_ST_R = crate::BitReader<bool>;
+pub type TX_INT_ST_R = crate::BitReader;
 #[doc = "Field `ERR_WARN_INT_ST` reader - Error warning interrupt. If this bit is set to 1, it indicates the error status signal and the bus-off status signal of Status register have changed (e.g., switched from 0 to 1 or from 1 to 0)."]
-pub type ERR_WARN_INT_ST_R = crate::BitReader<bool>;
+pub type ERR_WARN_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVERRUN_INT_ST` reader - Data overrun interrupt. If this bit is set to 1, it indicates a data overrun interrupt is generated in the RX FIFO."]
-pub type OVERRUN_INT_ST_R = crate::BitReader<bool>;
+pub type OVERRUN_INT_ST_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ST` reader - Error passive interrupt. If this bit is set to 1, it indicates the TWAI Controller is switched between error active status and error passive status due to the change of error counters."]
-pub type ERR_PASSIVE_INT_ST_R = crate::BitReader<bool>;
+pub type ERR_PASSIVE_INT_ST_R = crate::BitReader;
 #[doc = "Field `ARB_LOST_INT_ST` reader - Arbitration lost interrupt. If this bit is set to 1, it indicates an arbitration lost interrupt is generated."]
-pub type ARB_LOST_INT_ST_R = crate::BitReader<bool>;
+pub type ARB_LOST_INT_ST_R = crate::BitReader;
 #[doc = "Field `BUS_ERR_INT_ST` reader - Error interrupt. If this bit is set to 1, it indicates an error is detected on the bus."]
-pub type BUS_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type BUS_ERR_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Receive interrupt. If this bit is set to 1, it indicates there are messages to be handled in the RX FIFO."]
     #[inline(always)]
@@ -62,6 +62,41 @@ impl R {
     #[inline(always)]
     pub fn bus_err_int_st(&self) -> BUS_ERR_INT_ST_R {
         BUS_ERR_INT_ST_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field("rx_int_st", &format_args!("{}", self.rx_int_st().bit()))
+            .field("tx_int_st", &format_args!("{}", self.tx_int_st().bit()))
+            .field(
+                "err_warn_int_st",
+                &format_args!("{}", self.err_warn_int_st().bit()),
+            )
+            .field(
+                "overrun_int_st",
+                &format_args!("{}", self.overrun_int_st().bit()),
+            )
+            .field(
+                "err_passive_int_st",
+                &format_args!("{}", self.err_passive_int_st().bit()),
+            )
+            .field(
+                "arb_lost_int_st",
+                &format_args!("{}", self.arb_lost_int_st().bit()),
+            )
+            .field(
+                "bus_err_int_st",
+                &format_args!("{}", self.bus_err_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Interrupt Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

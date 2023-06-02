@@ -38,22 +38,21 @@ impl From<crate::W<RETENTION_CTRL3_SPEC>> for W {
 pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_SIZE` writer - ******* Description ***********"]
 pub type RET_DCACHE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` reader - ******* Description ***********"]
 pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` writer - ******* Description ***********"]
 pub type RET_DCACHE_VLD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` reader - ******* Description ***********"]
 pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` writer - ******* Description ***********"]
 pub type RET_DCACHE_START_POINT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `RET_DCACHE_ENABLE` reader - ******* Description ***********"]
-pub type RET_DCACHE_ENABLE_R = crate::BitReader<bool>;
+pub type RET_DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `RET_DCACHE_ENABLE` writer - ******* Description ***********"]
-pub type RET_DCACHE_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RETENTION_CTRL3_SPEC, bool, O>;
+pub type RET_DCACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL3_SPEC, O>;
 impl R {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
@@ -74,6 +73,35 @@ impl R {
     #[inline(always)]
     pub fn ret_dcache_enable(&self) -> RET_DCACHE_ENABLE_R {
         RET_DCACHE_ENABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_CTRL3")
+            .field(
+                "ret_dcache_size",
+                &format_args!("{}", self.ret_dcache_size().bits()),
+            )
+            .field(
+                "ret_dcache_vld_size",
+                &format_args!("{}", self.ret_dcache_vld_size().bits()),
+            )
+            .field(
+                "ret_dcache_start_point",
+                &format_args!("{}", self.ret_dcache_start_point().bits()),
+            )
+            .field(
+                "ret_dcache_enable",
+                &format_args!("{}", self.ret_dcache_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

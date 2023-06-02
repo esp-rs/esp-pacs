@@ -35,14 +35,13 @@ impl From<crate::W<LEDC_SCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LEDC_SCLK_SEL` reader - set this field to select clock-source. 0(default): do not select anyone clock, 1: 80MHz, 2: FOSC, 3: XTAL."]
-pub type LEDC_SCLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type LEDC_SCLK_SEL_R = crate::FieldReader;
 #[doc = "Field `LEDC_SCLK_SEL` writer - set this field to select clock-source. 0(default): do not select anyone clock, 1: 80MHz, 2: FOSC, 3: XTAL."]
-pub type LEDC_SCLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LEDC_SCLK_CONF_SPEC, u8, u8, 2, O>;
+pub type LEDC_SCLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, LEDC_SCLK_CONF_SPEC, 2, O>;
 #[doc = "Field `LEDC_SCLK_EN` reader - Set 1 to enable ledc function clock"]
-pub type LEDC_SCLK_EN_R = crate::BitReader<bool>;
+pub type LEDC_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `LEDC_SCLK_EN` writer - Set 1 to enable ledc function clock"]
-pub type LEDC_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LEDC_SCLK_CONF_SPEC, bool, O>;
+pub type LEDC_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, LEDC_SCLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): do not select anyone clock, 1: 80MHz, 2: FOSC, 3: XTAL."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn ledc_sclk_en(&self) -> LEDC_SCLK_EN_R {
         LEDC_SCLK_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LEDC_SCLK_CONF")
+            .field(
+                "ledc_sclk_sel",
+                &format_args!("{}", self.ledc_sclk_sel().bits()),
+            )
+            .field(
+                "ledc_sclk_en",
+                &format_args!("{}", self.ledc_sclk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LEDC_SCLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

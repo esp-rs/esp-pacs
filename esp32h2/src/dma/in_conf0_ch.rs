@@ -35,29 +35,29 @@ impl From<crate::W<IN_CONF0_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub type IN_RST_R = crate::BitReader<bool>;
+pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 #[doc = "Field `IN_LOOP_TEST` reader - reserved"]
-pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
+pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - reserved"]
-pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 #[doc = "Field `INDSCR_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 #[doc = "Field `IN_DATA_BURST_EN` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub type IN_DATA_BURST_EN_R = crate::BitReader<bool>;
+pub type IN_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `IN_DATA_BURST_EN` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub type IN_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type IN_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 #[doc = "Field `MEM_TRANS_EN` reader - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub type MEM_TRANS_EN_R = crate::BitReader<bool>;
+pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 #[doc = "Field `IN_ETM_EN` reader - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
-pub type IN_ETM_EN_R = crate::BitReader<bool>;
+pub type IN_ETM_EN_R = crate::BitReader;
 #[doc = "Field `IN_ETM_EN` writer - Set this bit to 1 to enable etm control mode, dma Rx channel 0 is triggered by etm task."]
-pub type IN_ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, O>;
+pub type IN_ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF0_CH_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
@@ -88,6 +88,37 @@ impl R {
     #[inline(always)]
     pub fn in_etm_en(&self) -> IN_ETM_EN_R {
         IN_ETM_EN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_CONF0_CH")
+            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
+            .field(
+                "in_loop_test",
+                &format_args!("{}", self.in_loop_test().bit()),
+            )
+            .field(
+                "indscr_burst_en",
+                &format_args!("{}", self.indscr_burst_en().bit()),
+            )
+            .field(
+                "in_data_burst_en",
+                &format_args!("{}", self.in_data_burst_en().bit()),
+            )
+            .field(
+                "mem_trans_en",
+                &format_args!("{}", self.mem_trans_en().bit()),
+            )
+            .field("in_etm_en", &format_args!("{}", self.in_etm_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_CONF0_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

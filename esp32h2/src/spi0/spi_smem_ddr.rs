@@ -14,37 +14,37 @@ impl From<crate::R<SPI_SMEM_DDR_SPEC>> for R {
     }
 }
 #[doc = "Field `EN` reader - 1: in DDR mode, 0 in SDR mode"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_VAR_DUMMY` reader - Set the bit to enable variable dummy cycle in spi DDR mode."]
-pub type SPI_SMEM_VAR_DUMMY_R = crate::BitReader<bool>;
+pub type SPI_SMEM_VAR_DUMMY_R = crate::BitReader;
 #[doc = "Field `RDAT_SWP` reader - Set the bit to reorder rx data of the word in spi DDR mode."]
-pub type RDAT_SWP_R = crate::BitReader<bool>;
+pub type RDAT_SWP_R = crate::BitReader;
 #[doc = "Field `WDAT_SWP` reader - Set the bit to reorder tx data of the word in spi DDR mode."]
-pub type WDAT_SWP_R = crate::BitReader<bool>;
+pub type WDAT_SWP_R = crate::BitReader;
 #[doc = "Field `CMD_DIS` reader - the bit is used to disable dual edge in command phase when DDR mode."]
-pub type CMD_DIS_R = crate::BitReader<bool>;
+pub type CMD_DIS_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_OUTMINBYTELEN` reader - It is the minimum output data length in the DDR psram."]
-pub type SPI_SMEM_OUTMINBYTELEN_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_OUTMINBYTELEN_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_TX_DDR_MSK_EN` reader - Set this bit to mask the first or the last byte in SPI0 ECC DDR write mode, when accesses to external RAM."]
-pub type SPI_SMEM_TX_DDR_MSK_EN_R = crate::BitReader<bool>;
+pub type SPI_SMEM_TX_DDR_MSK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_RX_DDR_MSK_EN` reader - Set this bit to mask the first or the last byte in SPI0 ECC DDR read mode, when accesses to external RAM."]
-pub type SPI_SMEM_RX_DDR_MSK_EN_R = crate::BitReader<bool>;
+pub type SPI_SMEM_RX_DDR_MSK_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_USR_DDR_DQS_THD` reader - The delay number of data strobe which from memory based on SPI clock."]
-pub type SPI_SMEM_USR_DDR_DQS_THD_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_USR_DDR_DQS_THD_R = crate::FieldReader;
 #[doc = "Field `DQS_LOOP` reader - 1: Do not need the input of SPI_DQS signal, SPI0 starts to receive data when spi0_slv_st is in SPI_MEM_DIN state. It is used when there is no SPI_DQS signal or SPI_DQS signal is not stable. 0: SPI0 starts to store data at the positive and negative edge of SPI_DQS."]
-pub type DQS_LOOP_R = crate::BitReader<bool>;
+pub type DQS_LOOP_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_CLK_DIFF_EN` reader - Set this bit to enable the differential SPI_CLK#."]
-pub type SPI_SMEM_CLK_DIFF_EN_R = crate::BitReader<bool>;
+pub type SPI_SMEM_CLK_DIFF_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DQS_CA_IN` reader - Set this bit to enable the input of SPI_DQS signal in SPI phases of CMD and ADDR."]
-pub type SPI_SMEM_DQS_CA_IN_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DQS_CA_IN_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_HYPERBUS_DUMMY_2X` reader - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
-pub type SPI_SMEM_HYPERBUS_DUMMY_2X_R = crate::BitReader<bool>;
+pub type SPI_SMEM_HYPERBUS_DUMMY_2X_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_CLK_DIFF_INV` reader - Set this bit to invert SPI_DIFF when accesses to external RAM. ."]
-pub type SPI_SMEM_CLK_DIFF_INV_R = crate::BitReader<bool>;
+pub type SPI_SMEM_CLK_DIFF_INV_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_OCTA_RAM_ADDR` reader - Set this bit to enable octa_ram address out when accesses to external RAM, which means ADDR_OUT\\[31:0\\] = {spi_usr_addr_value\\[25:4\\], 6'd0, spi_usr_addr_value\\[3:1\\], 1'b0}."]
-pub type SPI_SMEM_OCTA_RAM_ADDR_R = crate::BitReader<bool>;
+pub type SPI_SMEM_OCTA_RAM_ADDR_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_HYPERBUS_CA` reader - Set this bit to enable HyperRAM address out when accesses to external RAM, which means ADDR_OUT\\[31:0\\] = {spi_usr_addr_value\\[19:4\\], 13'd0, spi_usr_addr_value\\[3:1\\]}."]
-pub type SPI_SMEM_HYPERBUS_CA_R = crate::BitReader<bool>;
+pub type SPI_SMEM_HYPERBUS_CA_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - 1: in DDR mode, 0 in SDR mode"]
     #[inline(always)]
@@ -125,6 +125,68 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_hyperbus_ca(&self) -> SPI_SMEM_HYPERBUS_CA_R {
         SPI_SMEM_HYPERBUS_CA_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_DDR")
+            .field("en", &format_args!("{}", self.en().bit()))
+            .field(
+                "spi_smem_var_dummy",
+                &format_args!("{}", self.spi_smem_var_dummy().bit()),
+            )
+            .field("rdat_swp", &format_args!("{}", self.rdat_swp().bit()))
+            .field("wdat_swp", &format_args!("{}", self.wdat_swp().bit()))
+            .field("cmd_dis", &format_args!("{}", self.cmd_dis().bit()))
+            .field(
+                "spi_smem_outminbytelen",
+                &format_args!("{}", self.spi_smem_outminbytelen().bits()),
+            )
+            .field(
+                "spi_smem_tx_ddr_msk_en",
+                &format_args!("{}", self.spi_smem_tx_ddr_msk_en().bit()),
+            )
+            .field(
+                "spi_smem_rx_ddr_msk_en",
+                &format_args!("{}", self.spi_smem_rx_ddr_msk_en().bit()),
+            )
+            .field(
+                "spi_smem_usr_ddr_dqs_thd",
+                &format_args!("{}", self.spi_smem_usr_ddr_dqs_thd().bits()),
+            )
+            .field("dqs_loop", &format_args!("{}", self.dqs_loop().bit()))
+            .field(
+                "spi_smem_clk_diff_en",
+                &format_args!("{}", self.spi_smem_clk_diff_en().bit()),
+            )
+            .field(
+                "spi_smem_dqs_ca_in",
+                &format_args!("{}", self.spi_smem_dqs_ca_in().bit()),
+            )
+            .field(
+                "spi_smem_hyperbus_dummy_2x",
+                &format_args!("{}", self.spi_smem_hyperbus_dummy_2x().bit()),
+            )
+            .field(
+                "spi_smem_clk_diff_inv",
+                &format_args!("{}", self.spi_smem_clk_diff_inv().bit()),
+            )
+            .field(
+                "spi_smem_octa_ram_addr",
+                &format_args!("{}", self.spi_smem_octa_ram_addr().bit()),
+            )
+            .field(
+                "spi_smem_hyperbus_ca",
+                &format_args!("{}", self.spi_smem_hyperbus_ca().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI0 external RAM DDR mode control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_ddr](index.html) module"]

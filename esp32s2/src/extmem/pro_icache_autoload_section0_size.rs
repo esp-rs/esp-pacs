@@ -38,12 +38,29 @@ impl From<crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC>> for W {
 pub type PRO_ICACHE_AUTOLOAD_SCT0_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_SIZE` writer - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
     #[inline(always)]
     pub fn pro_icache_autoload_sct0_size(&self) -> PRO_ICACHE_AUTOLOAD_SCT0_SIZE_R {
         PRO_ICACHE_AUTOLOAD_SCT0_SIZE_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_ICACHE_AUTOLOAD_SECTION0_SIZE")
+            .field(
+                "pro_icache_autoload_sct0_size",
+                &format_args!("{}", self.pro_icache_autoload_sct0_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

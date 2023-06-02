@@ -37,12 +37,11 @@ impl From<crate::W<SLAVE_ADDR_SPEC>> for W {
 #[doc = "Field `SLAVE_ADDR` reader - When configured as an I2C Slave, this field is used to configure the slave address."]
 pub type SLAVE_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLAVE_ADDR` writer - When configured as an I2C Slave, this field is used to configure the slave address."]
-pub type SLAVE_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLAVE_ADDR_SPEC, u16, u16, 15, O>;
+pub type SLAVE_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_ADDR_SPEC, 15, O, u16, u16>;
 #[doc = "Field `ADDR_10BIT_EN` reader - This field is used to enable the slave 10-bit addressing mode in master mode."]
-pub type ADDR_10BIT_EN_R = crate::BitReader<bool>;
+pub type ADDR_10BIT_EN_R = crate::BitReader;
 #[doc = "Field `ADDR_10BIT_EN` writer - This field is used to enable the slave 10-bit addressing mode in master mode."]
-pub type ADDR_10BIT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLAVE_ADDR_SPEC, bool, O>;
+pub type ADDR_10BIT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_ADDR_SPEC, O>;
 impl R {
     #[doc = "Bits 0:14 - When configured as an I2C Slave, this field is used to configure the slave address."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn addr_10bit_en(&self) -> ADDR_10BIT_EN_R {
         ADDR_10BIT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE_ADDR")
+            .field("slave_addr", &format_args!("{}", self.slave_addr().bits()))
+            .field(
+                "addr_10bit_en",
+                &format_args!("{}", self.addr_10bit_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

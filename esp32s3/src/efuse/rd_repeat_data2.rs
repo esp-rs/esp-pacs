@@ -14,31 +14,31 @@ impl From<crate::R<RD_REPEAT_DATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY_PURPOSE_2` reader - Purpose of Key2."]
-pub type KEY_PURPOSE_2_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_2_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_3` reader - Purpose of Key3."]
-pub type KEY_PURPOSE_3_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_3_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_4` reader - Purpose of Key4."]
-pub type KEY_PURPOSE_4_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_4_R = crate::FieldReader;
 #[doc = "Field `KEY_PURPOSE_5` reader - Purpose of Key5."]
-pub type KEY_PURPOSE_5_R = crate::FieldReader<u8, u8>;
+pub type KEY_PURPOSE_5_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED0` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_EN` reader - Set this bit to enable secure boot."]
-pub type SECURE_BOOT_EN_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_EN_R = crate::BitReader;
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE` reader - Set this bit to enable revoking aggressive secure boot."]
-pub type SECURE_BOOT_AGGRESSIVE_REVOKE_R = crate::BitReader<bool>;
+pub type SECURE_BOOT_AGGRESSIVE_REVOKE_R = crate::BitReader;
 #[doc = "Field `DIS_USB_JTAG` reader - Set this bit to disable function of usb switch to jtag in module of usb device."]
-pub type DIS_USB_JTAG_R = crate::BitReader<bool>;
+pub type DIS_USB_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_USB_DEVICE` reader - Set this bit to disable usb device."]
-pub type DIS_USB_DEVICE_R = crate::BitReader<bool>;
+pub type DIS_USB_DEVICE_R = crate::BitReader;
 #[doc = "Field `STRAP_JTAG_SEL` reader - Set this bit to enable selection between usb_to_jtag and pad_to_jtag through strapping gpio10 when both reg_dis_usb_jtag and reg_dis_pad_jtag are equal to 0."]
-pub type STRAP_JTAG_SEL_R = crate::BitReader<bool>;
+pub type STRAP_JTAG_SEL_R = crate::BitReader;
 #[doc = "Field `USB_PHY_SEL` reader - This bit is used to switch internal PHY and external PHY for USB OTG and USB Device. 0: internal PHY is assigned to USB Device while external PHY is assigned to USB OTG. 1: internal PHY is assigned to USB OTG while external PHY is assigned to USB Device."]
-pub type USB_PHY_SEL_R = crate::BitReader<bool>;
+pub type USB_PHY_SEL_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_DSENSE` reader - Sample delay configuration of power glitch."]
-pub type POWER_GLITCH_DSENSE_R = crate::FieldReader<u8, u8>;
+pub type POWER_GLITCH_DSENSE_R = crate::FieldReader;
 #[doc = "Field `FLASH_TPUW` reader - Configures flash waiting time after power-up, in unit of ms. If the value is less than 15, the waiting time is the configurable value. Otherwise, the waiting time is twice the configurable value."]
-pub type FLASH_TPUW_R = crate::FieldReader<u8, u8>;
+pub type FLASH_TPUW_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Purpose of Key2."]
     #[inline(always)]
@@ -104,6 +104,65 @@ impl R {
     #[inline(always)]
     pub fn flash_tpuw(&self) -> FLASH_TPUW_R {
         FLASH_TPUW_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA2")
+            .field(
+                "key_purpose_2",
+                &format_args!("{}", self.key_purpose_2().bits()),
+            )
+            .field(
+                "key_purpose_3",
+                &format_args!("{}", self.key_purpose_3().bits()),
+            )
+            .field(
+                "key_purpose_4",
+                &format_args!("{}", self.key_purpose_4().bits()),
+            )
+            .field(
+                "key_purpose_5",
+                &format_args!("{}", self.key_purpose_5().bits()),
+            )
+            .field(
+                "rpt4_reserved0",
+                &format_args!("{}", self.rpt4_reserved0().bits()),
+            )
+            .field(
+                "secure_boot_en",
+                &format_args!("{}", self.secure_boot_en().bit()),
+            )
+            .field(
+                "secure_boot_aggressive_revoke",
+                &format_args!("{}", self.secure_boot_aggressive_revoke().bit()),
+            )
+            .field(
+                "dis_usb_jtag",
+                &format_args!("{}", self.dis_usb_jtag().bit()),
+            )
+            .field(
+                "dis_usb_device",
+                &format_args!("{}", self.dis_usb_device().bit()),
+            )
+            .field(
+                "strap_jtag_sel",
+                &format_args!("{}", self.strap_jtag_sel().bit()),
+            )
+            .field("usb_phy_sel", &format_args!("{}", self.usb_phy_sel().bit()))
+            .field(
+                "power_glitch_dsense",
+                &format_args!("{}", self.power_glitch_dsense().bits()),
+            )
+            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "BLOCK0 data register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data2](index.html) module"]

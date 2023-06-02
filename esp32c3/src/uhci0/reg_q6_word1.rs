@@ -38,12 +38,29 @@ impl From<crate::W<REG_Q6_WORD1_SPEC>> for W {
 pub type SEND_Q6_WORD1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SEND_Q6_WORD1` writer - a"]
 pub type SEND_Q6_WORD1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REG_Q6_WORD1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, REG_Q6_WORD1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - a"]
     #[inline(always)]
     pub fn send_q6_word1(&self) -> SEND_Q6_WORD1_R {
         SEND_Q6_WORD1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REG_Q6_WORD1")
+            .field(
+                "send_q6_word1",
+                &format_args!("{}", self.send_q6_word1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REG_Q6_WORD1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

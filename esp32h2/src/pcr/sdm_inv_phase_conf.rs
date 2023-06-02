@@ -35,15 +35,15 @@ impl From<crate::W<SDM_INV_PHASE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_SDM_INV_PHASE_ENA` reader - xxxx"]
-pub type CLK_SDM_INV_PHASE_ENA_R = crate::BitReader<bool>;
+pub type CLK_SDM_INV_PHASE_ENA_R = crate::BitReader;
 #[doc = "Field `CLK_SDM_INV_PHASE_ENA` writer - xxxx"]
 pub type CLK_SDM_INV_PHASE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SDM_INV_PHASE_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, SDM_INV_PHASE_CONF_SPEC, O>;
 #[doc = "Field `CLK_SDM_INV_PHASE_SEL` reader - xxxx"]
-pub type CLK_SDM_INV_PHASE_SEL_R = crate::FieldReader<u8, u8>;
+pub type CLK_SDM_INV_PHASE_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_SDM_INV_PHASE_SEL` writer - xxxx"]
 pub type CLK_SDM_INV_PHASE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDM_INV_PHASE_CONF_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SDM_INV_PHASE_CONF_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn clk_sdm_inv_phase_sel(&self) -> CLK_SDM_INV_PHASE_SEL_R {
         CLK_SDM_INV_PHASE_SEL_R::new(((self.bits >> 1) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDM_INV_PHASE_CONF")
+            .field(
+                "clk_sdm_inv_phase_ena",
+                &format_args!("{}", self.clk_sdm_inv_phase_ena().bit()),
+            )
+            .field(
+                "clk_sdm_inv_phase_sel",
+                &format_args!("{}", self.clk_sdm_inv_phase_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDM_INV_PHASE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

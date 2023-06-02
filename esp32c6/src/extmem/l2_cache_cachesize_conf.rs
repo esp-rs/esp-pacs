@@ -14,31 +14,31 @@ impl From<crate::R<L2_CACHE_CACHESIZE_CONF_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_CACHESIZE_1K` reader - The field is used to configure cachesize of L2-Cache as 1k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_1K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_1K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_2K` reader - The field is used to configure cachesize of L2-Cache as 2k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_2K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_2K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_4K` reader - The field is used to configure cachesize of L2-Cache as 4k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_4K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_4K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_8K` reader - The field is used to configure cachesize of L2-Cache as 8k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_8K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_8K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_16K` reader - The field is used to configure cachesize of L2-Cache as 16k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_16K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_16K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_32K` reader - The field is used to configure cachesize of L2-Cache as 32k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_32K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_32K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_64K` reader - The field is used to configure cachesize of L2-Cache as 64k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_64K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_64K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_128K` reader - The field is used to configure cachesize of L2-Cache as 128k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_128K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_128K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_256K` reader - The field is used to configure cachesize of L2-Cache as 256k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_256K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_256K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_512K` reader - The field is used to configure cachesize of L2-Cache as 512k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_512K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_512K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_1024K` reader - The field is used to configure cachesize of L2-Cache as 1024k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_1024K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_1024K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_2048K` reader - The field is used to configure cachesize of L2-Cache as 2048k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_2048K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_2048K_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_CACHESIZE_4096K` reader - The field is used to configure cachesize of L2-Cache as 4096k bytes. This field and all other fields within this register is onehot."]
-pub type L2_CACHE_CACHESIZE_4096K_R = crate::BitReader<bool>;
+pub type L2_CACHE_CACHESIZE_4096K_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The field is used to configure cachesize of L2-Cache as 1k bytes. This field and all other fields within this register is onehot."]
     #[inline(always)]
@@ -104,6 +104,71 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_cachesize_4096k(&self) -> L2_CACHE_CACHESIZE_4096K_R {
         L2_CACHE_CACHESIZE_4096K_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_CACHESIZE_CONF")
+            .field(
+                "l2_cache_cachesize_1k",
+                &format_args!("{}", self.l2_cache_cachesize_1k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_2k",
+                &format_args!("{}", self.l2_cache_cachesize_2k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_4k",
+                &format_args!("{}", self.l2_cache_cachesize_4k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_8k",
+                &format_args!("{}", self.l2_cache_cachesize_8k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_16k",
+                &format_args!("{}", self.l2_cache_cachesize_16k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_32k",
+                &format_args!("{}", self.l2_cache_cachesize_32k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_64k",
+                &format_args!("{}", self.l2_cache_cachesize_64k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_128k",
+                &format_args!("{}", self.l2_cache_cachesize_128k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_256k",
+                &format_args!("{}", self.l2_cache_cachesize_256k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_512k",
+                &format_args!("{}", self.l2_cache_cachesize_512k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_1024k",
+                &format_args!("{}", self.l2_cache_cachesize_1024k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_2048k",
+                &format_args!("{}", self.l2_cache_cachesize_2048k().bit()),
+            )
+            .field(
+                "l2_cache_cachesize_4096k",
+                &format_args!("{}", self.l2_cache_cachesize_4096k().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_CACHESIZE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "L2 Cache CacheSize mode configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_cachesize_conf](index.html) module"]

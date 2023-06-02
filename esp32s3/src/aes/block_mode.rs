@@ -35,14 +35,28 @@ impl From<crate::W<BLOCK_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_MODE` reader - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
-pub type BLOCK_MODE_R = crate::FieldReader<u8, u8>;
+pub type BLOCK_MODE_R = crate::FieldReader;
 #[doc = "Field `BLOCK_MODE` writer - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
-pub type BLOCK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLOCK_MODE_SPEC, u8, u8, 3, O>;
+pub type BLOCK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, BLOCK_MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
     pub fn block_mode(&self) -> BLOCK_MODE_R {
         BLOCK_MODE_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLOCK_MODE")
+            .field("block_mode", &format_args!("{}", self.block_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLOCK_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,18 +35,18 @@ impl From<crate::W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l1 icache0 where the unallocate request is responsed but not completed."]
-pub type L1_ICACHE0_UNALLOC_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l1 icache1 where the unallocate request is responsed but not completed."]
-pub type L1_ICACHE1_UNALLOC_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_UNALLOC_CLR` reader - Reserved"]
-pub type L1_ICACHE2_UNALLOC_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_UNALLOC_CLR` reader - Reserved"]
-pub type L1_ICACHE3_UNALLOC_CLR_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l1 cache where the unallocate request is responsed but not completed."]
-pub type L1_CACHE_UNALLOC_CLR_R = crate::BitReader<bool>;
+pub type L1_CACHE_UNALLOC_CLR_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_UNALLOC_CLR` writer - The bit is used to clear the unallocate request buffer of l1 cache where the unallocate request is responsed but not completed."]
 pub type L1_CACHE_UNALLOC_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_UNALLOCATE_BUFFER_CLEAR_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_UNALLOCATE_BUFFER_CLEAR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to clear the unallocate request buffer of l1 icache0 where the unallocate request is responsed but not completed."]
     #[inline(always)]
@@ -72,6 +72,39 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_unalloc_clr(&self) -> L1_CACHE_UNALLOC_CLR_R {
         L1_CACHE_UNALLOC_CLR_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_UNALLOCATE_BUFFER_CLEAR")
+            .field(
+                "l1_icache0_unalloc_clr",
+                &format_args!("{}", self.l1_icache0_unalloc_clr().bit()),
+            )
+            .field(
+                "l1_icache1_unalloc_clr",
+                &format_args!("{}", self.l1_icache1_unalloc_clr().bit()),
+            )
+            .field(
+                "l1_icache2_unalloc_clr",
+                &format_args!("{}", self.l1_icache2_unalloc_clr().bit()),
+            )
+            .field(
+                "l1_icache3_unalloc_clr",
+                &format_args!("{}", self.l1_icache3_unalloc_clr().bit()),
+            )
+            .field(
+                "l1_cache_unalloc_clr",
+                &format_args!("{}", self.l1_cache_unalloc_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

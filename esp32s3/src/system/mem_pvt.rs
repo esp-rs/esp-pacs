@@ -35,21 +35,21 @@ impl From<crate::W<MEM_PVT_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_PATH_LEN` reader - ******* Description ***********"]
-pub type MEM_PATH_LEN_R = crate::FieldReader<u8, u8>;
+pub type MEM_PATH_LEN_R = crate::FieldReader;
 #[doc = "Field `MEM_PATH_LEN` writer - ******* Description ***********"]
-pub type MEM_PATH_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_PVT_SPEC, u8, u8, 4, O>;
+pub type MEM_PATH_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_PVT_SPEC, 4, O>;
 #[doc = "Field `MEM_ERR_CNT_CLR` writer - ******* Description ***********"]
-pub type MEM_ERR_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_PVT_SPEC, bool, O>;
+pub type MEM_ERR_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, MEM_PVT_SPEC, O>;
 #[doc = "Field `MONITOR_EN` reader - ******* Description ***********"]
-pub type MONITOR_EN_R = crate::BitReader<bool>;
+pub type MONITOR_EN_R = crate::BitReader;
 #[doc = "Field `MONITOR_EN` writer - ******* Description ***********"]
-pub type MONITOR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_PVT_SPEC, bool, O>;
+pub type MONITOR_EN_W<'a, const O: u8> = crate::BitWriter<'a, MEM_PVT_SPEC, O>;
 #[doc = "Field `MEM_TIMING_ERR_CNT` reader - ******* Description ***********"]
 pub type MEM_TIMING_ERR_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_VT_SEL` reader - ******* Description ***********"]
-pub type MEM_VT_SEL_R = crate::FieldReader<u8, u8>;
+pub type MEM_VT_SEL_R = crate::FieldReader;
 #[doc = "Field `MEM_VT_SEL` writer - ******* Description ***********"]
-pub type MEM_VT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_PVT_SPEC, u8, u8, 2, O>;
+pub type MEM_VT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_PVT_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:3 - ******* Description ***********"]
     #[inline(always)]
@@ -70,6 +70,29 @@ impl R {
     #[inline(always)]
     pub fn mem_vt_sel(&self) -> MEM_VT_SEL_R {
         MEM_VT_SEL_R::new(((self.bits >> 22) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_PVT")
+            .field(
+                "mem_path_len",
+                &format_args!("{}", self.mem_path_len().bits()),
+            )
+            .field("monitor_en", &format_args!("{}", self.monitor_en().bit()))
+            .field(
+                "mem_timing_err_cnt",
+                &format_args!("{}", self.mem_timing_err_cnt().bits()),
+            )
+            .field("mem_vt_sel", &format_args!("{}", self.mem_vt_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_PVT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

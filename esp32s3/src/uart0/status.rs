@@ -16,19 +16,19 @@ impl From<crate::R<STATUS_SPEC>> for R {
 #[doc = "Field `RXFIFO_CNT` reader - Stores the byte number of valid data in Rx-FIFO."]
 pub type RXFIFO_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DSRN` reader - The register represent the level value of the internal uart dsr signal."]
-pub type DSRN_R = crate::BitReader<bool>;
+pub type DSRN_R = crate::BitReader;
 #[doc = "Field `CTSN` reader - This register represent the level value of the internal uart cts signal."]
-pub type CTSN_R = crate::BitReader<bool>;
+pub type CTSN_R = crate::BitReader;
 #[doc = "Field `RXD` reader - This register represent the level value of the internal uart rxd signal."]
-pub type RXD_R = crate::BitReader<bool>;
+pub type RXD_R = crate::BitReader;
 #[doc = "Field `TXFIFO_CNT` reader - Stores the byte number of data in Tx-FIFO."]
 pub type TXFIFO_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DTRN` reader - This bit represents the level of the internal uart dtr signal."]
-pub type DTRN_R = crate::BitReader<bool>;
+pub type DTRN_R = crate::BitReader;
 #[doc = "Field `RTSN` reader - This bit represents the level of the internal uart rts signal."]
-pub type RTSN_R = crate::BitReader<bool>;
+pub type RTSN_R = crate::BitReader;
 #[doc = "Field `TXD` reader - This bit represents the level of the internal uart txd signal."]
-pub type TXD_R = crate::BitReader<bool>;
+pub type TXD_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:9 - Stores the byte number of valid data in Rx-FIFO."]
     #[inline(always)]
@@ -69,6 +69,27 @@ impl R {
     #[inline(always)]
     pub fn txd(&self) -> TXD_R {
         TXD_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATUS")
+            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
+            .field("dsrn", &format_args!("{}", self.dsrn().bit()))
+            .field("ctsn", &format_args!("{}", self.ctsn().bit()))
+            .field("rxd", &format_args!("{}", self.rxd().bit()))
+            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
+            .field("dtrn", &format_args!("{}", self.dtrn().bit()))
+            .field("rtsn", &format_args!("{}", self.rtsn().bit()))
+            .field("txd", &format_args!("{}", self.txd().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UART status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](index.html) module"]

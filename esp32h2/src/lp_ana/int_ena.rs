@@ -35,29 +35,26 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_INT_ENA` reader - need_des"]
-pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_R = crate::BitReader<bool>;
+pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA` reader - need_des"]
-pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_R = crate::BitReader<bool>;
+pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA` writer - need_des"]
 pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_INT_ENA` reader - need_des"]
-pub type VDDBAT_UPVOLTAGE_INT_ENA_R = crate::BitReader<bool>;
+pub type VDDBAT_UPVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UPVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_UPVOLTAGE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type VDDBAT_UPVOLTAGE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_INT_ENA` reader - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_INT_ENA_R = crate::BitReader<bool>;
+pub type VDDBAT_UNDERVOLTAGE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_INT_ENA` writer - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type VDDBAT_UNDERVOLTAGE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `BOD_MODE0_INT_ENA` reader - need_des"]
-pub type BOD_MODE0_INT_ENA_R = crate::BitReader<bool>;
+pub type BOD_MODE0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_INT_ENA` writer - need_des"]
-pub type BOD_MODE0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type BOD_MODE0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -83,6 +80,39 @@ impl R {
     #[inline(always)]
     pub fn bod_mode0_int_ena(&self) -> BOD_MODE0_INT_ENA_R {
         BOD_MODE0_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "vddbat_charge_upvoltage_int_ena",
+                &format_args!("{}", self.vddbat_charge_upvoltage_int_ena().bit()),
+            )
+            .field(
+                "vddbat_charge_undervoltage_int_ena",
+                &format_args!("{}", self.vddbat_charge_undervoltage_int_ena().bit()),
+            )
+            .field(
+                "vddbat_upvoltage_int_ena",
+                &format_args!("{}", self.vddbat_upvoltage_int_ena().bit()),
+            )
+            .field(
+                "vddbat_undervoltage_int_ena",
+                &format_args!("{}", self.vddbat_undervoltage_int_ena().bit()),
+            )
+            .field(
+                "bod_mode0_int_ena",
+                &format_args!("{}", self.bod_mode0_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

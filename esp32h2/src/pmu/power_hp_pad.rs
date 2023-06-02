@@ -35,15 +35,13 @@ impl From<crate::W<POWER_HP_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_HP_PAD_NO_ISO_ALL` reader - need_des"]
-pub type FORCE_HP_PAD_NO_ISO_ALL_R = crate::BitReader<bool>;
+pub type FORCE_HP_PAD_NO_ISO_ALL_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_PAD_NO_ISO_ALL` writer - need_des"]
-pub type FORCE_HP_PAD_NO_ISO_ALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_HP_PAD_SPEC, bool, O>;
+pub type FORCE_HP_PAD_NO_ISO_ALL_W<'a, const O: u8> = crate::BitWriter<'a, POWER_HP_PAD_SPEC, O>;
 #[doc = "Field `FORCE_HP_PAD_ISO_ALL` reader - need_des"]
-pub type FORCE_HP_PAD_ISO_ALL_R = crate::BitReader<bool>;
+pub type FORCE_HP_PAD_ISO_ALL_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_PAD_ISO_ALL` writer - need_des"]
-pub type FORCE_HP_PAD_ISO_ALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_HP_PAD_SPEC, bool, O>;
+pub type FORCE_HP_PAD_ISO_ALL_W<'a, const O: u8> = crate::BitWriter<'a, POWER_HP_PAD_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn force_hp_pad_iso_all(&self) -> FORCE_HP_PAD_ISO_ALL_R {
         FORCE_HP_PAD_ISO_ALL_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_HP_PAD")
+            .field(
+                "force_hp_pad_no_iso_all",
+                &format_args!("{}", self.force_hp_pad_no_iso_all().bit()),
+            )
+            .field(
+                "force_hp_pad_iso_all",
+                &format_args!("{}", self.force_hp_pad_iso_all().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_HP_PAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,47 +35,41 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_PD` reader - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
-pub type MEM_PD_R = crate::BitReader<bool>;
+pub type MEM_PD_R = crate::BitReader;
 #[doc = "Field `MEM_PD` writer - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
-pub type MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 #[doc = "Field `RX_SIZE` reader - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
-pub type RX_SIZE_R = crate::FieldReader<u8, u8>;
+pub type RX_SIZE_R = crate::FieldReader;
 #[doc = "Field `RX_SIZE` writer - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
-pub type RX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 4, O>;
+pub type RX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 4, O>;
 #[doc = "Field `TX_SIZE` reader - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
-pub type TX_SIZE_R = crate::FieldReader<u8, u8>;
+pub type TX_SIZE_R = crate::FieldReader;
 #[doc = "Field `TX_SIZE` writer - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
-pub type TX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 4, O>;
+pub type TX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 4, O>;
 #[doc = "Field `RX_FLOW_THRHD_H3` reader - refer to the rx_flow_thrhd's describtion."]
-pub type RX_FLOW_THRHD_H3_R = crate::FieldReader<u8, u8>;
+pub type RX_FLOW_THRHD_H3_R = crate::FieldReader;
 #[doc = "Field `RX_FLOW_THRHD_H3` writer - refer to the rx_flow_thrhd's describtion."]
-pub type RX_FLOW_THRHD_H3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_FLOW_THRHD_H3_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `RX_TOUT_THRHD_H3` reader - refer to the rx_tout_thrhd's describtion."]
-pub type RX_TOUT_THRHD_H3_R = crate::FieldReader<u8, u8>;
+pub type RX_TOUT_THRHD_H3_R = crate::FieldReader;
 #[doc = "Field `RX_TOUT_THRHD_H3` writer - refer to the rx_tout_thrhd's describtion."]
-pub type RX_TOUT_THRHD_H3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_TOUT_THRHD_H3_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `XON_THRESHOLD_H2` reader - refer to the uart_xon_threshold's describtion."]
-pub type XON_THRESHOLD_H2_R = crate::FieldReader<u8, u8>;
+pub type XON_THRESHOLD_H2_R = crate::FieldReader;
 #[doc = "Field `XON_THRESHOLD_H2` writer - refer to the uart_xon_threshold's describtion."]
-pub type XON_THRESHOLD_H2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 2, O>;
+pub type XON_THRESHOLD_H2_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 2, O>;
 #[doc = "Field `XOFF_THRESHOLD_H2` reader - refer to the uart_xoff_threshold's describtion."]
-pub type XOFF_THRESHOLD_H2_R = crate::FieldReader<u8, u8>;
+pub type XOFF_THRESHOLD_H2_R = crate::FieldReader;
 #[doc = "Field `XOFF_THRESHOLD_H2` writer - refer to the uart_xoff_threshold's describtion."]
-pub type XOFF_THRESHOLD_H2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 2, O>;
+pub type XOFF_THRESHOLD_H2_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 2, O>;
 #[doc = "Field `RX_MEM_FULL_THRHD` reader - refer to the rxfifo_full_thrhd's describtion."]
-pub type RX_MEM_FULL_THRHD_R = crate::FieldReader<u8, u8>;
+pub type RX_MEM_FULL_THRHD_R = crate::FieldReader;
 #[doc = "Field `RX_MEM_FULL_THRHD` writer - refer to the rxfifo_full_thrhd's describtion."]
-pub type RX_MEM_FULL_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_MEM_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `TX_MEM_EMPTY_THRHD` reader - refer to txfifo_empty_thrhd 's describtion."]
-pub type TX_MEM_EMPTY_THRHD_R = crate::FieldReader<u8, u8>;
+pub type TX_MEM_EMPTY_THRHD_R = crate::FieldReader;
 #[doc = "Field `TX_MEM_EMPTY_THRHD` writer - refer to txfifo_empty_thrhd 's describtion."]
-pub type TX_MEM_EMPTY_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type TX_MEM_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
     #[inline(always)]
@@ -121,6 +115,46 @@ impl R {
     #[inline(always)]
     pub fn tx_mem_empty_thrhd(&self) -> TX_MEM_EMPTY_THRHD_R {
         TX_MEM_EMPTY_THRHD_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CONF")
+            .field("mem_pd", &format_args!("{}", self.mem_pd().bit()))
+            .field("rx_size", &format_args!("{}", self.rx_size().bits()))
+            .field("tx_size", &format_args!("{}", self.tx_size().bits()))
+            .field(
+                "rx_flow_thrhd_h3",
+                &format_args!("{}", self.rx_flow_thrhd_h3().bits()),
+            )
+            .field(
+                "rx_tout_thrhd_h3",
+                &format_args!("{}", self.rx_tout_thrhd_h3().bits()),
+            )
+            .field(
+                "xon_threshold_h2",
+                &format_args!("{}", self.xon_threshold_h2().bits()),
+            )
+            .field(
+                "xoff_threshold_h2",
+                &format_args!("{}", self.xoff_threshold_h2().bits()),
+            )
+            .field(
+                "rx_mem_full_thrhd",
+                &format_args!("{}", self.rx_mem_full_thrhd().bits()),
+            )
+            .field(
+                "tx_mem_empty_thrhd",
+                &format_args!("{}", self.tx_mem_empty_thrhd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

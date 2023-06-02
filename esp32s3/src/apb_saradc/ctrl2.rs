@@ -35,35 +35,34 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` reader - enable apb saradc limit the sample num"]
-pub type SARADC_MEAS_NUM_LIMIT_R = crate::BitReader<bool>;
+pub type SARADC_MEAS_NUM_LIMIT_R = crate::BitReader;
 #[doc = "Field `SARADC_MEAS_NUM_LIMIT` writer - enable apb saradc limit the sample num"]
-pub type SARADC_MEAS_NUM_LIMIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SARADC_MEAS_NUM_LIMIT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` reader - max conversion number"]
-pub type SARADC_MAX_MEAS_NUM_R = crate::FieldReader<u8, u8>;
+pub type SARADC_MAX_MEAS_NUM_R = crate::FieldReader;
 #[doc = "Field `SARADC_MAX_MEAS_NUM` writer - max conversion number"]
-pub type SARADC_MAX_MEAS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 8, O>;
+pub type SARADC_MAX_MEAS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 8, O>;
 #[doc = "Field `SARADC_SAR1_INV` reader - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR1_INV_R = crate::BitReader<bool>;
+pub type SARADC_SAR1_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR1_INV` writer - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR1_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SARADC_SAR1_INV_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_SAR2_INV` reader - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR2_INV_R = crate::BitReader<bool>;
+pub type SARADC_SAR2_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR2_INV` writer - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
-pub type SARADC_SAR2_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SARADC_SAR2_INV_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_TIMER_SEL` reader - 1: select saradc timer 0: i2s_ws trigger"]
-pub type SARADC_TIMER_SEL_R = crate::BitReader<bool>;
+pub type SARADC_TIMER_SEL_R = crate::BitReader;
 #[doc = "Field `SARADC_TIMER_SEL` writer - 1: select saradc timer 0: i2s_ws trigger"]
-pub type SARADC_TIMER_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SARADC_TIMER_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_TIMER_TARGET` reader - to set saradc timer target"]
 pub type SARADC_TIMER_TARGET_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SARADC_TIMER_TARGET` writer - to set saradc timer target"]
 pub type SARADC_TIMER_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL2_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, CTRL2_SPEC, 12, O, u16, u16>;
 #[doc = "Field `SARADC_TIMER_EN` reader - to enable saradc timer trigger"]
-pub type SARADC_TIMER_EN_R = crate::BitReader<bool>;
+pub type SARADC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_TIMER_EN` writer - to enable saradc timer trigger"]
-pub type SARADC_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SARADC_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - enable apb saradc limit the sample num"]
     #[inline(always)]
@@ -99,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn saradc_timer_en(&self) -> SARADC_TIMER_EN_R {
         SARADC_TIMER_EN_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field(
+                "saradc_meas_num_limit",
+                &format_args!("{}", self.saradc_meas_num_limit().bit()),
+            )
+            .field(
+                "saradc_max_meas_num",
+                &format_args!("{}", self.saradc_max_meas_num().bits()),
+            )
+            .field(
+                "saradc_sar1_inv",
+                &format_args!("{}", self.saradc_sar1_inv().bit()),
+            )
+            .field(
+                "saradc_sar2_inv",
+                &format_args!("{}", self.saradc_sar2_inv().bit()),
+            )
+            .field(
+                "saradc_timer_sel",
+                &format_args!("{}", self.saradc_timer_sel().bit()),
+            )
+            .field(
+                "saradc_timer_target",
+                &format_args!("{}", self.saradc_timer_target().bits()),
+            )
+            .field(
+                "saradc_timer_en",
+                &format_args!("{}", self.saradc_timer_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

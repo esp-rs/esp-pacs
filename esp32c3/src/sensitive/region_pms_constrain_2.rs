@@ -35,40 +35,40 @@ impl From<crate::W<REGION_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_0` reader - region_pms_constrain_world_1_area_0"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_0` writer - region_pms_constrain_world_1_area_0"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_1` reader - region_pms_constrain_world_1_area_1"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_1` writer - region_pms_constrain_world_1_area_1"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_2` reader - region_pms_constrain_world_1_area_2"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_2` writer - region_pms_constrain_world_1_area_2"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_3` reader - region_pms_constrain_world_1_area_3"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_3` writer - region_pms_constrain_world_1_area_3"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_4` reader - region_pms_constrain_world_1_area_4"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_4` writer - region_pms_constrain_world_1_area_4"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_5` reader - region_pms_constrain_world_1_area_5"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_5` writer - region_pms_constrain_world_1_area_5"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_6` reader - region_pms_constrain_world_1_area_6"]
-pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R = crate::FieldReader<u8, u8>;
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R = crate::FieldReader;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_6` writer - region_pms_constrain_world_1_area_6"]
 pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, REGION_PMS_CONSTRAIN_2_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - region_pms_constrain_world_1_area_0"]
     #[inline(always)]
@@ -104,6 +104,47 @@ impl R {
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_6(&self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
         REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R::new(((self.bits >> 12) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION_PMS_CONSTRAIN_2")
+            .field(
+                "region_pms_constrain_world_1_area_0",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_0().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_1",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_1().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_2",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_2().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_3",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_3().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_4",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_4().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_5",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_5().bits()),
+            )
+            .field(
+                "region_pms_constrain_world_1_area_6",
+                &format_args!("{}", self.region_pms_constrain_world_1_area_6().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION_PMS_CONSTRAIN_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,135 +35,115 @@ impl From<crate::W<EVT_TASK_EN0_SPEC>> for W {
     }
 }
 #[doc = "Field `EVT_DUTY_CHNG_END_CH0_EN` reader - Ledc ch0 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH0_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH0_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH0_EN` writer - Ledc ch0 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH1_EN` reader - Ledc ch1 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH1_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH1_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH1_EN` writer - Ledc ch1 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH2_EN` reader - Ledc ch2 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH2_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH2_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH2_EN` writer - Ledc ch2 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH3_EN` reader - Ledc ch3 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH3_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH3_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH3_EN` writer - Ledc ch3 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH4_EN` reader - Ledc ch4 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH4_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH4_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH4_EN` writer - Ledc ch4 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH4_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH5_EN` reader - Ledc ch5 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH5_EN_R = crate::BitReader<bool>;
+pub type EVT_DUTY_CHNG_END_CH5_EN_R = crate::BitReader;
 #[doc = "Field `EVT_DUTY_CHNG_END_CH5_EN` writer - Ledc ch5 duty change end event enable register, write 1 to enable this event."]
-pub type EVT_DUTY_CHNG_END_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_DUTY_CHNG_END_CH5_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH0_EN` reader - Ledc ch0 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH0_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH0_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH0_EN` writer - Ledc ch0 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH1_EN` reader - Ledc ch1 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH1_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH1_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH1_EN` writer - Ledc ch1 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH2_EN` reader - Ledc ch2 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH2_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH2_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH2_EN` writer - Ledc ch2 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH3_EN` reader - Ledc ch3 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH3_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH3_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH3_EN` writer - Ledc ch3 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH4_EN` reader - Ledc ch4 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH4_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH4_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH4_EN` writer - Ledc ch4 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH4_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH5_EN` reader - Ledc ch5 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH5_EN_R = crate::BitReader<bool>;
+pub type EVT_OVF_CNT_PLS_CH5_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OVF_CNT_PLS_CH5_EN` writer - Ledc ch5 overflow count pulse event enable register, write 1 to enable this event."]
-pub type EVT_OVF_CNT_PLS_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_OVF_CNT_PLS_CH5_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME_OVF_TIMER0_EN` reader - Ledc timer0 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER0_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME_OVF_TIMER0_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME_OVF_TIMER0_EN` writer - Ledc timer0 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME_OVF_TIMER0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME_OVF_TIMER1_EN` reader - Ledc timer1 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER1_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME_OVF_TIMER1_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME_OVF_TIMER1_EN` writer - Ledc timer1 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME_OVF_TIMER1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME_OVF_TIMER2_EN` reader - Ledc timer2 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER2_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME_OVF_TIMER2_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME_OVF_TIMER2_EN` writer - Ledc timer2 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME_OVF_TIMER2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME_OVF_TIMER3_EN` reader - Ledc timer3 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER3_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME_OVF_TIMER3_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME_OVF_TIMER3_EN` writer - Ledc timer3 overflow event enable register, write 1 to enable this event."]
-pub type EVT_TIME_OVF_TIMER3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME_OVF_TIMER3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME0_CMP_EN` reader - Ledc timer0 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME0_CMP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME0_CMP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME0_CMP_EN` writer - Ledc timer0 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME0_CMP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME0_CMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME1_CMP_EN` reader - Ledc timer1 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME1_CMP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME1_CMP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME1_CMP_EN` writer - Ledc timer1 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME1_CMP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME1_CMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME2_CMP_EN` reader - Ledc timer2 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME2_CMP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME2_CMP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME2_CMP_EN` writer - Ledc timer2 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME2_CMP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME2_CMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `EVT_TIME3_CMP_EN` reader - Ledc timer3 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME3_CMP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIME3_CMP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIME3_CMP_EN` writer - Ledc timer3 compare event enable register, write 1 to enable this event."]
-pub type EVT_TIME3_CMP_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+pub type EVT_TIME3_CMP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH0_EN` reader - Ledc ch0 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH0_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH0_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH0_EN` writer - Ledc ch0 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH1_EN` reader - Ledc ch1 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH1_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH1_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH1_EN` writer - Ledc ch1 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH2_EN` reader - Ledc ch2 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH2_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH2_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH2_EN` writer - Ledc ch2 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH3_EN` reader - Ledc ch3 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH3_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH3_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH3_EN` writer - Ledc ch3 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH4_EN` reader - Ledc ch4 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH4_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH4_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH4_EN` writer - Ledc ch4 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH5_EN` reader - Ledc ch5 duty scale update task enable register, write 1 to enable this task."]
-pub type TASK_DUTY_SCALE_UPDATE_CH5_EN_R = crate::BitReader<bool>;
+pub type TASK_DUTY_SCALE_UPDATE_CH5_EN_R = crate::BitReader;
 #[doc = "Field `TASK_DUTY_SCALE_UPDATE_CH5_EN` writer - Ledc ch5 duty scale update task enable register, write 1 to enable this task."]
 pub type TASK_DUTY_SCALE_UPDATE_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN0_SPEC, bool, O>;
+    crate::BitWriter<'a, EVT_TASK_EN0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Ledc ch0 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
@@ -294,6 +274,123 @@ impl R {
     #[inline(always)]
     pub fn task_duty_scale_update_ch5_en(&self) -> TASK_DUTY_SCALE_UPDATE_CH5_EN_R {
         TASK_DUTY_SCALE_UPDATE_CH5_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EVT_TASK_EN0")
+            .field(
+                "evt_duty_chng_end_ch0_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch0_en().bit()),
+            )
+            .field(
+                "evt_duty_chng_end_ch1_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch1_en().bit()),
+            )
+            .field(
+                "evt_duty_chng_end_ch2_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch2_en().bit()),
+            )
+            .field(
+                "evt_duty_chng_end_ch3_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch3_en().bit()),
+            )
+            .field(
+                "evt_duty_chng_end_ch4_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch4_en().bit()),
+            )
+            .field(
+                "evt_duty_chng_end_ch5_en",
+                &format_args!("{}", self.evt_duty_chng_end_ch5_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch0_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch0_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch1_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch1_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch2_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch2_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch3_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch3_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch4_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch4_en().bit()),
+            )
+            .field(
+                "evt_ovf_cnt_pls_ch5_en",
+                &format_args!("{}", self.evt_ovf_cnt_pls_ch5_en().bit()),
+            )
+            .field(
+                "evt_time_ovf_timer0_en",
+                &format_args!("{}", self.evt_time_ovf_timer0_en().bit()),
+            )
+            .field(
+                "evt_time_ovf_timer1_en",
+                &format_args!("{}", self.evt_time_ovf_timer1_en().bit()),
+            )
+            .field(
+                "evt_time_ovf_timer2_en",
+                &format_args!("{}", self.evt_time_ovf_timer2_en().bit()),
+            )
+            .field(
+                "evt_time_ovf_timer3_en",
+                &format_args!("{}", self.evt_time_ovf_timer3_en().bit()),
+            )
+            .field(
+                "evt_time0_cmp_en",
+                &format_args!("{}", self.evt_time0_cmp_en().bit()),
+            )
+            .field(
+                "evt_time1_cmp_en",
+                &format_args!("{}", self.evt_time1_cmp_en().bit()),
+            )
+            .field(
+                "evt_time2_cmp_en",
+                &format_args!("{}", self.evt_time2_cmp_en().bit()),
+            )
+            .field(
+                "evt_time3_cmp_en",
+                &format_args!("{}", self.evt_time3_cmp_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch0_en",
+                &format_args!("{}", self.task_duty_scale_update_ch0_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch1_en",
+                &format_args!("{}", self.task_duty_scale_update_ch1_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch2_en",
+                &format_args!("{}", self.task_duty_scale_update_ch2_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch3_en",
+                &format_args!("{}", self.task_duty_scale_update_ch3_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch4_en",
+                &format_args!("{}", self.task_duty_scale_update_ch4_en().bit()),
+            )
+            .field(
+                "task_duty_scale_update_ch5_en",
+                &format_args!("{}", self.task_duty_scale_update_ch5_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EVT_TASK_EN0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,87 +35,75 @@ impl From<crate::W<EXT_XTL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_WDT_EN` reader - xtal 32k watch dog enable"]
-pub type XTAL32K_WDT_EN_R = crate::BitReader<bool>;
+pub type XTAL32K_WDT_EN_R = crate::BitReader;
 #[doc = "Field `XTAL32K_WDT_EN` writer - xtal 32k watch dog enable"]
-pub type XTAL32K_WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_WDT_CLK_FO` reader - xtal 32k watch dog clock force on"]
-pub type XTAL32K_WDT_CLK_FO_R = crate::BitReader<bool>;
+pub type XTAL32K_WDT_CLK_FO_R = crate::BitReader;
 #[doc = "Field `XTAL32K_WDT_CLK_FO` writer - xtal 32k watch dog clock force on"]
-pub type XTAL32K_WDT_CLK_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_WDT_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_WDT_RESET` reader - xtal 32k watch dog sw reset"]
-pub type XTAL32K_WDT_RESET_R = crate::BitReader<bool>;
+pub type XTAL32K_WDT_RESET_R = crate::BitReader;
 #[doc = "Field `XTAL32K_WDT_RESET` writer - xtal 32k watch dog sw reset"]
-pub type XTAL32K_WDT_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_WDT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_EXT_CLK_FO` reader - xtal 32k external xtal clock force on"]
-pub type XTAL32K_EXT_CLK_FO_R = crate::BitReader<bool>;
+pub type XTAL32K_EXT_CLK_FO_R = crate::BitReader;
 #[doc = "Field `XTAL32K_EXT_CLK_FO` writer - xtal 32k external xtal clock force on"]
-pub type XTAL32K_EXT_CLK_FO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_EXT_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_AUTO_BACKUP` reader - xtal 32k switch to back up clock when xtal is dead"]
-pub type XTAL32K_AUTO_BACKUP_R = crate::BitReader<bool>;
+pub type XTAL32K_AUTO_BACKUP_R = crate::BitReader;
 #[doc = "Field `XTAL32K_AUTO_BACKUP` writer - xtal 32k switch to back up clock when xtal is dead"]
-pub type XTAL32K_AUTO_BACKUP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_AUTO_BACKUP_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_AUTO_RESTART` reader - xtal 32k restart xtal when xtal is dead"]
-pub type XTAL32K_AUTO_RESTART_R = crate::BitReader<bool>;
+pub type XTAL32K_AUTO_RESTART_R = crate::BitReader;
 #[doc = "Field `XTAL32K_AUTO_RESTART` writer - xtal 32k restart xtal when xtal is dead"]
-pub type XTAL32K_AUTO_RESTART_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_AUTO_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_AUTO_RETURN` reader - xtal 32k switch back xtal when xtal is restarted"]
-pub type XTAL32K_AUTO_RETURN_R = crate::BitReader<bool>;
+pub type XTAL32K_AUTO_RETURN_R = crate::BitReader;
 #[doc = "Field `XTAL32K_AUTO_RETURN` writer - xtal 32k switch back xtal when xtal is restarted"]
-pub type XTAL32K_AUTO_RETURN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_AUTO_RETURN_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTAL32K_XPD_FORCE` reader - Xtal 32k xpd control by sw or fsm"]
-pub type XTAL32K_XPD_FORCE_R = crate::BitReader<bool>;
+pub type XTAL32K_XPD_FORCE_R = crate::BitReader;
 #[doc = "Field `XTAL32K_XPD_FORCE` writer - Xtal 32k xpd control by sw or fsm"]
-pub type XTAL32K_XPD_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_XPD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `ENCKINIT_XTAL_32K` reader - apply an internal clock to help xtal 32k to start"]
-pub type ENCKINIT_XTAL_32K_R = crate::BitReader<bool>;
+pub type ENCKINIT_XTAL_32K_R = crate::BitReader;
 #[doc = "Field `ENCKINIT_XTAL_32K` writer - apply an internal clock to help xtal 32k to start"]
-pub type ENCKINIT_XTAL_32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type ENCKINIT_XTAL_32K_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `DBUF_XTAL_32K` reader - 0: single-end buffer 1: differential buffer"]
-pub type DBUF_XTAL_32K_R = crate::BitReader<bool>;
+pub type DBUF_XTAL_32K_R = crate::BitReader;
 #[doc = "Field `DBUF_XTAL_32K` writer - 0: single-end buffer 1: differential buffer"]
-pub type DBUF_XTAL_32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type DBUF_XTAL_32K_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `DGM_XTAL_32K` reader - xtal_32k gm control"]
-pub type DGM_XTAL_32K_R = crate::FieldReader<u8, u8>;
+pub type DGM_XTAL_32K_R = crate::FieldReader;
 #[doc = "Field `DGM_XTAL_32K` writer - xtal_32k gm control"]
-pub type DGM_XTAL_32K_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EXT_XTL_CONF_SPEC, u8, u8, 3, O>;
+pub type DGM_XTAL_32K_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_XTL_CONF_SPEC, 3, O>;
 #[doc = "Field `DRES_XTAL_32K` reader - DRES_XTAL_32K"]
-pub type DRES_XTAL_32K_R = crate::FieldReader<u8, u8>;
+pub type DRES_XTAL_32K_R = crate::FieldReader;
 #[doc = "Field `DRES_XTAL_32K` writer - DRES_XTAL_32K"]
-pub type DRES_XTAL_32K_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EXT_XTL_CONF_SPEC, u8, u8, 3, O>;
+pub type DRES_XTAL_32K_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_XTL_CONF_SPEC, 3, O>;
 #[doc = "Field `XPD_XTAL_32K` reader - XPD_XTAL_32K"]
-pub type XPD_XTAL_32K_R = crate::BitReader<bool>;
+pub type XPD_XTAL_32K_R = crate::BitReader;
 #[doc = "Field `XPD_XTAL_32K` writer - XPD_XTAL_32K"]
-pub type XPD_XTAL_32K_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XPD_XTAL_32K_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `DAC_XTAL_32K` reader - DAC_XTAL_32K"]
-pub type DAC_XTAL_32K_R = crate::FieldReader<u8, u8>;
+pub type DAC_XTAL_32K_R = crate::FieldReader;
 #[doc = "Field `DAC_XTAL_32K` writer - DAC_XTAL_32K"]
-pub type DAC_XTAL_32K_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EXT_XTL_CONF_SPEC, u8, u8, 3, O>;
+pub type DAC_XTAL_32K_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_XTL_CONF_SPEC, 3, O>;
 #[doc = "Field `WDT_STATE` reader - state of 32k_wdt"]
-pub type WDT_STATE_R = crate::FieldReader<u8, u8>;
+pub type WDT_STATE_R = crate::FieldReader;
 #[doc = "Field `XTAL32K_GPIO_SEL` reader - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
-pub type XTAL32K_GPIO_SEL_R = crate::BitReader<bool>;
+pub type XTAL32K_GPIO_SEL_R = crate::BitReader;
 #[doc = "Field `XTAL32K_GPIO_SEL` writer - XTAL_32K sel. 0: external XTAL_32K, 1: CLK from RTC pad X32P_C"]
-pub type XTAL32K_GPIO_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTAL32K_GPIO_SEL_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level, 1: power down XTAL at low level"]
-pub type XTL_EXT_CTR_LV_R = crate::BitReader<bool>;
+pub type XTL_EXT_CTR_LV_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_LV` writer - 0: power down XTAL at high level, 1: power down XTAL at low level"]
-pub type XTL_EXT_CTR_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTL_EXT_CTR_LV_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTL_EXT_CTR_EN` reader - Reserved register"]
-pub type XTL_EXT_CTR_EN_R = crate::BitReader<bool>;
+pub type XTL_EXT_CTR_EN_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_EN` writer - Reserved register"]
-pub type XTL_EXT_CTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTL_EXT_CTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - xtal 32k watch dog enable"]
     #[inline(always)]
@@ -206,6 +194,88 @@ impl R {
     #[inline(always)]
     pub fn xtl_ext_ctr_en(&self) -> XTL_EXT_CTR_EN_R {
         XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_XTL_CONF")
+            .field(
+                "xtal32k_wdt_en",
+                &format_args!("{}", self.xtal32k_wdt_en().bit()),
+            )
+            .field(
+                "xtal32k_wdt_clk_fo",
+                &format_args!("{}", self.xtal32k_wdt_clk_fo().bit()),
+            )
+            .field(
+                "xtal32k_wdt_reset",
+                &format_args!("{}", self.xtal32k_wdt_reset().bit()),
+            )
+            .field(
+                "xtal32k_ext_clk_fo",
+                &format_args!("{}", self.xtal32k_ext_clk_fo().bit()),
+            )
+            .field(
+                "xtal32k_auto_backup",
+                &format_args!("{}", self.xtal32k_auto_backup().bit()),
+            )
+            .field(
+                "xtal32k_auto_restart",
+                &format_args!("{}", self.xtal32k_auto_restart().bit()),
+            )
+            .field(
+                "xtal32k_auto_return",
+                &format_args!("{}", self.xtal32k_auto_return().bit()),
+            )
+            .field(
+                "xtal32k_xpd_force",
+                &format_args!("{}", self.xtal32k_xpd_force().bit()),
+            )
+            .field(
+                "enckinit_xtal_32k",
+                &format_args!("{}", self.enckinit_xtal_32k().bit()),
+            )
+            .field(
+                "dbuf_xtal_32k",
+                &format_args!("{}", self.dbuf_xtal_32k().bit()),
+            )
+            .field(
+                "dgm_xtal_32k",
+                &format_args!("{}", self.dgm_xtal_32k().bits()),
+            )
+            .field(
+                "dres_xtal_32k",
+                &format_args!("{}", self.dres_xtal_32k().bits()),
+            )
+            .field(
+                "xpd_xtal_32k",
+                &format_args!("{}", self.xpd_xtal_32k().bit()),
+            )
+            .field(
+                "dac_xtal_32k",
+                &format_args!("{}", self.dac_xtal_32k().bits()),
+            )
+            .field("wdt_state", &format_args!("{}", self.wdt_state().bits()))
+            .field(
+                "xtal32k_gpio_sel",
+                &format_args!("{}", self.xtal32k_gpio_sel().bit()),
+            )
+            .field(
+                "xtl_ext_ctr_lv",
+                &format_args!("{}", self.xtl_ext_ctr_lv().bit()),
+            )
+            .field(
+                "xtl_ext_ctr_en",
+                &format_args!("{}", self.xtl_ext_ctr_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_XTL_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

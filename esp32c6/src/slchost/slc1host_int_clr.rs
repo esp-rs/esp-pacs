@@ -21,82 +21,82 @@ impl From<crate::W<SLC1HOST_INT_CLR_SPEC>> for W {
 }
 #[doc = "Field `SLC1_TOHOST_BIT0_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT1_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT2_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT3_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT4_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT4_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT5_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT5_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT6_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT6_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT7_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT7_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN0_1TO0_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOKEN0_1TO0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_1TO0_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOKEN1_1TO0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN0_0TO1_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOKEN0_0TO1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_0TO1_INT_CLR` writer - *******Description***********"]
 pub type SLC1_TOKEN1_0TO1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_SOF_INT_CLR` writer - *******Description***********"]
 pub type SLC1HOST_RX_SOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_EOF_INT_CLR` writer - *******Description***********"]
 pub type SLC1HOST_RX_EOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_START_INT_CLR` writer - *******Description***********"]
 pub type SLC1HOST_RX_START_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1HOST_TX_START_INT_CLR` writer - *******Description***********"]
 pub type SLC1HOST_TX_START_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_RX_UDF_INT_CLR` writer - *******Description***********"]
-pub type SLC1_RX_UDF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_RX_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_TX_OVF_INT_CLR` writer - *******Description***********"]
-pub type SLC1_TX_OVF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_TX_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_RX_PF_VALID_INT_CLR` writer - *******Description***********"]
 pub type SLC1_RX_PF_VALID_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT0_INT_CLR` writer - *******Description***********"]
-pub type SLC1_EXT_BIT0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_EXT_BIT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT1_INT_CLR` writer - *******Description***********"]
-pub type SLC1_EXT_BIT1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_EXT_BIT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT2_INT_CLR` writer - *******Description***********"]
-pub type SLC1_EXT_BIT2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_EXT_BIT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT3_INT_CLR` writer - *******Description***********"]
-pub type SLC1_EXT_BIT3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+pub type SLC1_EXT_BIT3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_WIFI_RX_NEW_PACKET_INT_CLR` writer - *******Description***********"]
 pub type SLC1_WIFI_RX_NEW_PACKET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_HOST_RD_RETRY_INT_CLR` writer - *******Description***********"]
 pub type SLC1_HOST_RD_RETRY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
 #[doc = "Field `SLC1_BT_RX_NEW_PACKET_INT_CLR` writer - *******Description***********"]
 pub type SLC1_BT_RX_NEW_PACKET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC1HOST_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]

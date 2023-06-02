@@ -38,12 +38,29 @@ impl From<crate::W<SPI_FMEM_PMS_SIZE_SPEC>> for W {
 pub type SPI_FMEM_PMS_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SPI_FMEM_PMS_SIZE` writer - SPI1 flash ACE section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
 pub type SPI_FMEM_PMS_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_FMEM_PMS_SIZE_SPEC, u16, u16, 14, O>;
+    crate::FieldWriter<'a, SPI_FMEM_PMS_SIZE_SPEC, 14, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:13 - SPI1 flash ACE section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
     #[inline(always)]
     pub fn spi_fmem_pms_size(&self) -> SPI_FMEM_PMS_SIZE_R {
         SPI_FMEM_PMS_SIZE_R::new((self.bits & 0x3fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_FMEM_PMS_SIZE")
+            .field(
+                "spi_fmem_pms_size",
+                &format_args!("{}", self.spi_fmem_pms_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_FMEM_PMS_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

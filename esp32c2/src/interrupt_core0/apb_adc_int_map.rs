@@ -35,15 +35,31 @@ impl From<crate::W<APB_ADC_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_ADC_INT_MAP` reader - Need add description"]
-pub type APB_ADC_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type APB_ADC_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `APB_ADC_INT_MAP` writer - Need add description"]
-pub type APB_ADC_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_INT_MAP_SPEC, u8, u8, 5, O>;
+pub type APB_ADC_INT_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADC_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     pub fn apb_adc_int_map(&self) -> APB_ADC_INT_MAP_R {
         APB_ADC_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_ADC_INT_MAP")
+            .field(
+                "apb_adc_int_map",
+                &format_args!("{}", self.apb_adc_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_ADC_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

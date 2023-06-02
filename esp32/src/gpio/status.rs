@@ -37,12 +37,26 @@ impl From<crate::W<STATUS_SPEC>> for W {
 #[doc = "Field `INT` reader - GPIO0~31 interrupt status"]
 pub type INT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INT` writer - GPIO0~31 interrupt status"]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STATUS_SPEC, u32, u32, 32, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO0~31 interrupt status"]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATUS")
+            .field("int", &format_args!("{}", self.int().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

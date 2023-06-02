@@ -37,13 +37,29 @@ impl From<crate::W<TIMERS_DATE_SPEC>> for W {
 #[doc = "Field `TIMERS_DATE` reader - Version control register."]
 pub type TIMERS_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMERS_DATE` writer - Version control register."]
-pub type TIMERS_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMERS_DATE_SPEC, u32, u32, 28, O>;
+pub type TIMERS_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMERS_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
     pub fn timers_date(&self) -> TIMERS_DATE_R {
         TIMERS_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMERS_DATE")
+            .field(
+                "timers_date",
+                &format_args!("{}", self.timers_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMERS_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

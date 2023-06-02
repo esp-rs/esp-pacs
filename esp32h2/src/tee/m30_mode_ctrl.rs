@@ -35,15 +35,28 @@ impl From<crate::W<M30_MODE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `M30_MODE` reader - M30 security level mode: 2'd3: ree_mode2. 2'd2: ree_mode1. 2'd1: ree_mode0. 2'd0: tee_mode"]
-pub type M30_MODE_R = crate::FieldReader<u8, u8>;
+pub type M30_MODE_R = crate::FieldReader;
 #[doc = "Field `M30_MODE` writer - M30 security level mode: 2'd3: ree_mode2. 2'd2: ree_mode1. 2'd1: ree_mode0. 2'd0: tee_mode"]
-pub type M30_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, M30_MODE_CTRL_SPEC, u8, u8, 2, O>;
+pub type M30_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, M30_MODE_CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - M30 security level mode: 2'd3: ree_mode2. 2'd2: ree_mode1. 2'd1: ree_mode0. 2'd0: tee_mode"]
     #[inline(always)]
     pub fn m30_mode(&self) -> M30_MODE_R {
         M30_MODE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("M30_MODE_CTRL")
+            .field("m30_mode", &format_args!("{}", self.m30_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<M30_MODE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

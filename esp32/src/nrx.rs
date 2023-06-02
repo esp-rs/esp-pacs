@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     _reserved0: [u8; 0xd4],
     #[doc = "0xd4 - WiFi RX control register"]

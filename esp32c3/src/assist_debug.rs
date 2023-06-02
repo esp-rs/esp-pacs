@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - ASSIST_DEBUG_C0RE_0_MONTR_ENA_REG"]
     pub core_0_montr_ena: CORE_0_MONTR_ENA,

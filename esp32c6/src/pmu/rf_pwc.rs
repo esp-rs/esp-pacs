@@ -35,29 +35,29 @@ impl From<crate::W<RF_PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `PERIF_I2C_RSTB` reader - need_des"]
-pub type PERIF_I2C_RSTB_R = crate::BitReader<bool>;
+pub type PERIF_I2C_RSTB_R = crate::BitReader;
 #[doc = "Field `PERIF_I2C_RSTB` writer - need_des"]
-pub type PERIF_I2C_RSTB_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type PERIF_I2C_RSTB_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 #[doc = "Field `XPD_PERIF_I2C` reader - need_des"]
-pub type XPD_PERIF_I2C_R = crate::BitReader<bool>;
+pub type XPD_PERIF_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_PERIF_I2C` writer - need_des"]
-pub type XPD_PERIF_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type XPD_PERIF_I2C_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 #[doc = "Field `XPD_TXRF_I2C` reader - need_des"]
-pub type XPD_TXRF_I2C_R = crate::BitReader<bool>;
+pub type XPD_TXRF_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_TXRF_I2C` writer - need_des"]
-pub type XPD_TXRF_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type XPD_TXRF_I2C_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 #[doc = "Field `XPD_RFRX_PBUS` reader - need_des"]
-pub type XPD_RFRX_PBUS_R = crate::BitReader<bool>;
+pub type XPD_RFRX_PBUS_R = crate::BitReader;
 #[doc = "Field `XPD_RFRX_PBUS` writer - need_des"]
-pub type XPD_RFRX_PBUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type XPD_RFRX_PBUS_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 #[doc = "Field `XPD_CKGEN_I2C` reader - need_des"]
-pub type XPD_CKGEN_I2C_R = crate::BitReader<bool>;
+pub type XPD_CKGEN_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_CKGEN_I2C` writer - need_des"]
-pub type XPD_CKGEN_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type XPD_CKGEN_I2C_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 #[doc = "Field `XPD_PLL_I2C` reader - need_des"]
-pub type XPD_PLL_I2C_R = crate::BitReader<bool>;
+pub type XPD_PLL_I2C_R = crate::BitReader;
 #[doc = "Field `XPD_PLL_I2C` writer - need_des"]
-pub type XPD_PLL_I2C_W<'a, const O: u8> = crate::BitWriter<'a, u32, RF_PWC_SPEC, bool, O>;
+pub type XPD_PLL_I2C_W<'a, const O: u8> = crate::BitWriter<'a, RF_PWC_SPEC, O>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -88,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn xpd_pll_i2c(&self) -> XPD_PLL_I2C_R {
         XPD_PLL_I2C_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RF_PWC")
+            .field(
+                "perif_i2c_rstb",
+                &format_args!("{}", self.perif_i2c_rstb().bit()),
+            )
+            .field(
+                "xpd_perif_i2c",
+                &format_args!("{}", self.xpd_perif_i2c().bit()),
+            )
+            .field(
+                "xpd_txrf_i2c",
+                &format_args!("{}", self.xpd_txrf_i2c().bit()),
+            )
+            .field(
+                "xpd_rfrx_pbus",
+                &format_args!("{}", self.xpd_rfrx_pbus().bit()),
+            )
+            .field(
+                "xpd_ckgen_i2c",
+                &format_args!("{}", self.xpd_ckgen_i2c().bit()),
+            )
+            .field("xpd_pll_i2c", &format_args!("{}", self.xpd_pll_i2c().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RF_PWC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

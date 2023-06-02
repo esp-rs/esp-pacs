@@ -35,15 +35,15 @@ impl From<crate::W<ECDSA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ECDSA_CLK_EN` reader - Set 1 to enable ecdsa clock"]
-pub type ECDSA_CLK_EN_R = crate::BitReader<bool>;
+pub type ECDSA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ECDSA_CLK_EN` writer - Set 1 to enable ecdsa clock"]
-pub type ECDSA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECDSA_CONF_SPEC, bool, O>;
+pub type ECDSA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, ECDSA_CONF_SPEC, O>;
 #[doc = "Field `ECDSA_RST_EN` reader - Set 0 to reset ecdsa module"]
-pub type ECDSA_RST_EN_R = crate::BitReader<bool>;
+pub type ECDSA_RST_EN_R = crate::BitReader;
 #[doc = "Field `ECDSA_RST_EN` writer - Set 0 to reset ecdsa module"]
-pub type ECDSA_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECDSA_CONF_SPEC, bool, O>;
+pub type ECDSA_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, ECDSA_CONF_SPEC, O>;
 #[doc = "Field `ECDSA_READY` reader - Query this field after reset ecdsa module"]
-pub type ECDSA_READY_R = crate::BitReader<bool>;
+pub type ECDSA_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable ecdsa clock"]
     #[inline(always)]
@@ -59,6 +59,28 @@ impl R {
     #[inline(always)]
     pub fn ecdsa_ready(&self) -> ECDSA_READY_R {
         ECDSA_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECDSA_CONF")
+            .field(
+                "ecdsa_clk_en",
+                &format_args!("{}", self.ecdsa_clk_en().bit()),
+            )
+            .field(
+                "ecdsa_rst_en",
+                &format_args!("{}", self.ecdsa_rst_en().bit()),
+            )
+            .field("ecdsa_ready", &format_args!("{}", self.ecdsa_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECDSA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

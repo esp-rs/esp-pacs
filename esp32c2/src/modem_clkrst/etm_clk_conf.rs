@@ -35,13 +35,13 @@ impl From<crate::W<ETM_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_CLK_SEL` reader - ."]
-pub type ETM_CLK_SEL_R = crate::BitReader<bool>;
+pub type ETM_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `ETM_CLK_SEL` writer - ."]
-pub type ETM_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, ETM_CLK_CONF_SPEC, bool, O>;
+pub type ETM_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CLK_CONF_SPEC, O>;
 #[doc = "Field `ETM_CLK_ACTIVE` reader - ."]
-pub type ETM_CLK_ACTIVE_R = crate::BitReader<bool>;
+pub type ETM_CLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `ETM_CLK_ACTIVE` writer - ."]
-pub type ETM_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ETM_CLK_CONF_SPEC, bool, O>;
+pub type ETM_CLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn etm_clk_active(&self) -> ETM_CLK_ACTIVE_R {
         ETM_CLK_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ETM_CLK_CONF")
+            .field("etm_clk_sel", &format_args!("{}", self.etm_clk_sel().bit()))
+            .field(
+                "etm_clk_active",
+                &format_args!("{}", self.etm_clk_active().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ETM_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

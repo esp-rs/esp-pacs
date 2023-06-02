@@ -35,18 +35,15 @@ impl From<crate::W<RESET_CAUSE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE` reader - need_des"]
-pub type RESET_CAUSE_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_R = crate::FieldReader;
 #[doc = "Field `CORE0_RESET_FLAG` reader - need_des"]
-pub type CORE0_RESET_FLAG_R = crate::BitReader<bool>;
+pub type CORE0_RESET_FLAG_R = crate::BitReader;
 #[doc = "Field `CORE0_RESET_CAUSE_CLR` writer - need_des"]
-pub type CORE0_RESET_CAUSE_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_CAUSE_SPEC, bool, O>;
+pub type CORE0_RESET_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_CAUSE_SPEC, O>;
 #[doc = "Field `CORE0_RESET_FLAG_SET` writer - need_des"]
-pub type CORE0_RESET_FLAG_SET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_CAUSE_SPEC, bool, O>;
+pub type CORE0_RESET_FLAG_SET_W<'a, const O: u8> = crate::BitWriter<'a, RESET_CAUSE_SPEC, O>;
 #[doc = "Field `CORE0_RESET_FLAG_CLR` writer - need_des"]
-pub type CORE0_RESET_FLAG_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_CAUSE_SPEC, bool, O>;
+pub type CORE0_RESET_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_CAUSE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
@@ -57,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn core0_reset_flag(&self) -> CORE0_RESET_FLAG_R {
         CORE0_RESET_FLAG_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_CAUSE")
+            .field(
+                "reset_cause",
+                &format_args!("{}", self.reset_cause().bits()),
+            )
+            .field(
+                "core0_reset_flag",
+                &format_args!("{}", self.core0_reset_flag().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_CAUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

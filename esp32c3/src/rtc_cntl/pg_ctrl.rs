@@ -35,29 +35,25 @@ impl From<crate::W<PG_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `POWER_GLITCH_DSENSE` reader - power glitch desense"]
-pub type POWER_GLITCH_DSENSE_R = crate::FieldReader<u8, u8>;
+pub type POWER_GLITCH_DSENSE_R = crate::FieldReader;
 #[doc = "Field `POWER_GLITCH_DSENSE` writer - power glitch desense"]
-pub type POWER_GLITCH_DSENSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PG_CTRL_SPEC, u8, u8, 2, O>;
+pub type POWER_GLITCH_DSENSE_W<'a, const O: u8> = crate::FieldWriter<'a, PG_CTRL_SPEC, 2, O>;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` reader - force disable power glitch"]
-pub type POWER_GLITCH_FORCE_PD_R = crate::BitReader<bool>;
+pub type POWER_GLITCH_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` writer - force disable power glitch"]
-pub type POWER_GLITCH_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, O>;
+pub type POWER_GLITCH_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PG_CTRL_SPEC, O>;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` reader - force enable power glitch"]
-pub type POWER_GLITCH_FORCE_PU_R = crate::BitReader<bool>;
+pub type POWER_GLITCH_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` writer - force enable power glitch"]
-pub type POWER_GLITCH_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, O>;
+pub type POWER_GLITCH_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PG_CTRL_SPEC, O>;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` reader - use efuse value control power glitch enable"]
-pub type POWER_GLITCH_EFUSE_SEL_R = crate::BitReader<bool>;
+pub type POWER_GLITCH_EFUSE_SEL_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` writer - use efuse value control power glitch enable"]
-pub type POWER_GLITCH_EFUSE_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, O>;
+pub type POWER_GLITCH_EFUSE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, PG_CTRL_SPEC, O>;
 #[doc = "Field `POWER_GLITCH_EN` reader - enable power glitch"]
-pub type POWER_GLITCH_EN_R = crate::BitReader<bool>;
+pub type POWER_GLITCH_EN_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_EN` writer - enable power glitch"]
-pub type POWER_GLITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, O>;
+pub type POWER_GLITCH_EN_W<'a, const O: u8> = crate::BitWriter<'a, PG_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
@@ -83,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn power_glitch_en(&self) -> POWER_GLITCH_EN_R {
         POWER_GLITCH_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PG_CTRL")
+            .field(
+                "power_glitch_dsense",
+                &format_args!("{}", self.power_glitch_dsense().bits()),
+            )
+            .field(
+                "power_glitch_force_pd",
+                &format_args!("{}", self.power_glitch_force_pd().bit()),
+            )
+            .field(
+                "power_glitch_force_pu",
+                &format_args!("{}", self.power_glitch_force_pu().bit()),
+            )
+            .field(
+                "power_glitch_efuse_sel",
+                &format_args!("{}", self.power_glitch_efuse_sel().bit()),
+            )
+            .field(
+                "power_glitch_en",
+                &format_args!("{}", self.power_glitch_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PG_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

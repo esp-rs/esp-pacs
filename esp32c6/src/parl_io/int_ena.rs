@@ -35,19 +35,17 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_FIFO_REMPTY_INT_ENA` reader - Write 1 to enable TX_FIFO_REMPTY_INTR."]
-pub type TX_FIFO_REMPTY_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_FIFO_REMPTY_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_REMPTY_INT_ENA` writer - Write 1 to enable TX_FIFO_REMPTY_INTR."]
-pub type TX_FIFO_REMPTY_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_FIFO_REMPTY_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RX_FIFO_WFULL_INT_ENA` reader - Write 1 to enable RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_FIFO_WFULL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_WFULL_INT_ENA` writer - Write 1 to enable RX_FIFO_WFULL_INTR."]
-pub type RX_FIFO_WFULL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_FIFO_WFULL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_EOF_INT_ENA` reader - Write 1 to enable TX_EOF_INTR."]
-pub type TX_EOF_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_EOF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_EOF_INT_ENA` writer - Write 1 to enable TX_EOF_INTR."]
-pub type TX_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_EOF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INTR."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn tx_eof_int_ena(&self) -> TX_EOF_INT_ENA_R {
         TX_EOF_INT_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "tx_fifo_rempty_int_ena",
+                &format_args!("{}", self.tx_fifo_rempty_int_ena().bit()),
+            )
+            .field(
+                "rx_fifo_wfull_int_ena",
+                &format_args!("{}", self.rx_fifo_wfull_int_ena().bit()),
+            )
+            .field(
+                "tx_eof_int_ena",
+                &format_args!("{}", self.tx_eof_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

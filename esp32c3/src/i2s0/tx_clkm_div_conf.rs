@@ -38,22 +38,21 @@ impl From<crate::W<TX_CLKM_DIV_CONF_SPEC>> for W {
 pub type TX_CLKM_DIV_Z_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_Z` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b)."]
 pub type TX_CLKM_DIV_Z_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CLKM_DIV_CONF_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_Y` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b))."]
 pub type TX_CLKM_DIV_Y_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_Y` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b))."]
 pub type TX_CLKM_DIV_Y_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CLKM_DIV_CONF_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_X` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1."]
 pub type TX_CLKM_DIV_X_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_X` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1."]
 pub type TX_CLKM_DIV_X_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_CLKM_DIV_CONF_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
 #[doc = "Field `TX_CLKM_DIV_YN1` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1."]
-pub type TX_CLKM_DIV_YN1_R = crate::BitReader<bool>;
+pub type TX_CLKM_DIV_YN1_R = crate::BitReader;
 #[doc = "Field `TX_CLKM_DIV_YN1` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1."]
-pub type TX_CLKM_DIV_YN1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TX_CLKM_DIV_CONF_SPEC, bool, O>;
+pub type TX_CLKM_DIV_YN1_W<'a, const O: u8> = crate::BitWriter<'a, TX_CLKM_DIV_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8 - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b)."]
     #[inline(always)]
@@ -74,6 +73,35 @@ impl R {
     #[inline(always)]
     pub fn tx_clkm_div_yn1(&self) -> TX_CLKM_DIV_YN1_R {
         TX_CLKM_DIV_YN1_R::new(((self.bits >> 27) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_CLKM_DIV_CONF")
+            .field(
+                "tx_clkm_div_z",
+                &format_args!("{}", self.tx_clkm_div_z().bits()),
+            )
+            .field(
+                "tx_clkm_div_y",
+                &format_args!("{}", self.tx_clkm_div_y().bits()),
+            )
+            .field(
+                "tx_clkm_div_x",
+                &format_args!("{}", self.tx_clkm_div_x().bits()),
+            )
+            .field(
+                "tx_clkm_div_yn1",
+                &format_args!("{}", self.tx_clkm_div_yn1().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_CLKM_DIV_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

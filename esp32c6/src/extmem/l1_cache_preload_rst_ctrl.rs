@@ -35,18 +35,18 @@ impl From<crate::W<L1_CACHE_PRELOAD_RST_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_PLD_RST` reader - set this bit to reset preload-logic inside L1-ICache0. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
-pub type L1_ICACHE0_PLD_RST_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_RST` reader - set this bit to reset preload-logic inside L1-ICache1. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
-pub type L1_ICACHE1_PLD_RST_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_RST` reader - Reserved"]
-pub type L1_ICACHE2_PLD_RST_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_RST` reader - Reserved"]
-pub type L1_ICACHE3_PLD_RST_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_RST` reader - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
-pub type L1_CACHE_PLD_RST_R = crate::BitReader<bool>;
+pub type L1_CACHE_PLD_RST_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_RST` writer - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
 pub type L1_CACHE_PLD_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_PRELOAD_RST_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_PRELOAD_RST_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - set this bit to reset preload-logic inside L1-ICache0. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
@@ -72,6 +72,39 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_pld_rst(&self) -> L1_CACHE_PLD_RST_R {
         L1_CACHE_PLD_RST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_PRELOAD_RST_CTRL")
+            .field(
+                "l1_icache0_pld_rst",
+                &format_args!("{}", self.l1_icache0_pld_rst().bit()),
+            )
+            .field(
+                "l1_icache1_pld_rst",
+                &format_args!("{}", self.l1_icache1_pld_rst().bit()),
+            )
+            .field(
+                "l1_icache2_pld_rst",
+                &format_args!("{}", self.l1_icache2_pld_rst().bit()),
+            )
+            .field(
+                "l1_icache3_pld_rst",
+                &format_args!("{}", self.l1_icache3_pld_rst().bit()),
+            )
+            .field(
+                "l1_cache_pld_rst",
+                &format_args!("{}", self.l1_cache_pld_rst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOAD_RST_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

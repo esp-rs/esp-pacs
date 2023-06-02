@@ -35,34 +35,33 @@ impl From<crate::W<MULT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `START` reader - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
-pub type START_R = crate::BitReader<bool>;
+pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 #[doc = "Field `RESET` writer - Write 1 to reset ECC Accelerator."]
-pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 #[doc = "Field `KEY_LENGTH` reader - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
-pub type KEY_LENGTH_R = crate::BitReader<bool>;
+pub type KEY_LENGTH_R = crate::BitReader;
 #[doc = "Field `KEY_LENGTH` writer - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
-pub type KEY_LENGTH_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type KEY_LENGTH_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 #[doc = "Field `SECURITY_MODE` reader - Reserved"]
-pub type SECURITY_MODE_R = crate::BitReader<bool>;
+pub type SECURITY_MODE_R = crate::BitReader;
 #[doc = "Field `SECURITY_MODE` writer - Reserved"]
-pub type SECURITY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type SECURITY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - Write 1 to force on register clock gate."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Write 1 to force on register clock gate."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 #[doc = "Field `WORK_MODE` reader - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
-pub type WORK_MODE_R = crate::FieldReader<u8, u8>;
+pub type WORK_MODE_R = crate::FieldReader;
 #[doc = "Field `WORK_MODE` writer - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
-pub type WORK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MULT_CONF_SPEC, u8, u8, 3, O>;
+pub type WORK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, MULT_CONF_SPEC, 3, O>;
 #[doc = "Field `VERIFICATION_RESULT` reader - The verification result bit of ECC Accelerator, only valid when calculation is done."]
-pub type VERIFICATION_RESULT_R = crate::BitReader<bool>;
+pub type VERIFICATION_RESULT_R = crate::BitReader;
 #[doc = "Field `MEM_CLOCK_GATE_FORCE_ON` reader - ECC memory clock gate force on register"]
-pub type MEM_CLOCK_GATE_FORCE_ON_R = crate::BitReader<bool>;
+pub type MEM_CLOCK_GATE_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLOCK_GATE_FORCE_ON` writer - ECC memory clock gate force on register"]
-pub type MEM_CLOCK_GATE_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MULT_CONF_SPEC, bool, O>;
+pub type MEM_CLOCK_GATE_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, MULT_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
     #[inline(always)]
@@ -98,6 +97,35 @@ impl R {
     #[inline(always)]
     pub fn mem_clock_gate_force_on(&self) -> MEM_CLOCK_GATE_FORCE_ON_R {
         MEM_CLOCK_GATE_FORCE_ON_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MULT_CONF")
+            .field("start", &format_args!("{}", self.start().bit()))
+            .field("key_length", &format_args!("{}", self.key_length().bit()))
+            .field(
+                "security_mode",
+                &format_args!("{}", self.security_mode().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("work_mode", &format_args!("{}", self.work_mode().bits()))
+            .field(
+                "verification_result",
+                &format_args!("{}", self.verification_result().bit()),
+            )
+            .field(
+                "mem_clock_gate_force_on",
+                &format_args!("{}", self.mem_clock_gate_force_on().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MULT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

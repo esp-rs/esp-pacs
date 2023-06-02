@@ -35,25 +35,25 @@ impl From<crate::W<PLL_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK` reader - Block"]
-pub type BLOCK_R = crate::FieldReader<u8, u8>;
+pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `BLOCK` writer - Block"]
-pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLL_SPEC, u8, u8, 8, O>;
+pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
 #[doc = "Field `ADDR` reader - Address"]
-pub type ADDR_R = crate::FieldReader<u8, u8>;
+pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - Address"]
-pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLL_SPEC, u8, u8, 8, O>;
+pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
 #[doc = "Field `DATA` reader - Data"]
-pub type DATA_R = crate::FieldReader<u8, u8>;
+pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Data"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLL_SPEC, u8, u8, 8, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, PLL_SPEC, 8, O>;
 #[doc = "Field `WRITE` reader - Write"]
-pub type WRITE_R = crate::BitReader<bool>;
+pub type WRITE_R = crate::BitReader;
 #[doc = "Field `WRITE` writer - Write"]
-pub type WRITE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PLL_SPEC, bool, O>;
+pub type WRITE_W<'a, const O: u8> = crate::BitWriter<'a, PLL_SPEC, O>;
 #[doc = "Field `BUSY` reader - Ready"]
-pub type BUSY_R = crate::BitReader<bool>;
+pub type BUSY_R = crate::BitReader;
 #[doc = "Field `BUSY` writer - Ready"]
-pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, PLL_SPEC, bool, O>;
+pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, PLL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - Block"]
     #[inline(always)]
@@ -79,6 +79,24 @@ impl R {
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
         BUSY_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLL")
+            .field("block", &format_args!("{}", self.block().bits()))
+            .field("addr", &format_args!("{}", self.addr().bits()))
+            .field("data", &format_args!("{}", self.data().bits()))
+            .field("write", &format_args!("{}", self.write().bit()))
+            .field("busy", &format_args!("{}", self.busy().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

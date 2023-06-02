@@ -35,15 +35,13 @@ impl From<crate::W<EDMA_PMS_ADC_DAC_SPEC>> for W {
     }
 }
 #[doc = "Field `ATTR1` reader - This field is used to configure the permission of ADC/DAC accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR1_R = crate::FieldReader<u8, u8>;
+pub type ATTR1_R = crate::FieldReader;
 #[doc = "Field `ATTR1` writer - This field is used to configure the permission of ADC/DAC accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EDMA_PMS_ADC_DAC_SPEC, u8, u8, 2, O>;
+pub type ATTR1_W<'a, const O: u8> = crate::FieldWriter<'a, EDMA_PMS_ADC_DAC_SPEC, 2, O>;
 #[doc = "Field `ATTR2` reader - This field is used to configure the permission of ADC/DAC accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR2_R = crate::FieldReader<u8, u8>;
+pub type ATTR2_R = crate::FieldReader;
 #[doc = "Field `ATTR2` writer - This field is used to configure the permission of ADC/DAC accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub type ATTR2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EDMA_PMS_ADC_DAC_SPEC, u8, u8, 2, O>;
+pub type ATTR2_W<'a, const O: u8> = crate::FieldWriter<'a, EDMA_PMS_ADC_DAC_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to configure the permission of ADC/DAC accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
@@ -54,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn attr2(&self) -> ATTR2_R {
         ATTR2_R::new(((self.bits >> 2) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EDMA_PMS_ADC_DAC")
+            .field("attr1", &format_args!("{}", self.attr1().bits()))
+            .field("attr2", &format_args!("{}", self.attr2().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_ADC_DAC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

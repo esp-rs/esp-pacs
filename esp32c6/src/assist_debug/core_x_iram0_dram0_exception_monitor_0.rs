@@ -38,12 +38,29 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC>> for W {
 pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0` writer - reg_core_x_iram0_dram0_limit_cycle_0"]
 pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - reg_core_x_iram0_dram0_limit_cycle_0"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_limit_cycle_0(&self) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R {
         CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0")
+            .field(
+                "core_x_iram0_dram0_limit_cycle_0",
+                &format_args!("{}", self.core_x_iram0_dram0_limit_cycle_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

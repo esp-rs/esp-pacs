@@ -35,15 +35,13 @@ impl From<crate::W<DCACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_SHUT_CORE0_BUS` reader - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
-pub type DCACHE_SHUT_CORE0_BUS_R = crate::BitReader<bool>;
+pub type DCACHE_SHUT_CORE0_BUS_R = crate::BitReader;
 #[doc = "Field `DCACHE_SHUT_CORE0_BUS` writer - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
-pub type DCACHE_SHUT_CORE0_BUS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_CTRL1_SPEC, bool, O>;
+pub type DCACHE_SHUT_CORE0_BUS_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_CTRL1_SPEC, O>;
 #[doc = "Field `DCACHE_SHUT_CORE1_BUS` reader - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
-pub type DCACHE_SHUT_CORE1_BUS_R = crate::BitReader<bool>;
+pub type DCACHE_SHUT_CORE1_BUS_R = crate::BitReader;
 #[doc = "Field `DCACHE_SHUT_CORE1_BUS` writer - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
-pub type DCACHE_SHUT_CORE1_BUS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DCACHE_CTRL1_SPEC, bool, O>;
+pub type DCACHE_SHUT_CORE1_BUS_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn dcache_shut_core1_bus(&self) -> DCACHE_SHUT_CORE1_BUS_R {
         DCACHE_SHUT_CORE1_BUS_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_CTRL1")
+            .field(
+                "dcache_shut_core0_bus",
+                &format_args!("{}", self.dcache_shut_core0_bus().bit()),
+            )
+            .field(
+                "dcache_shut_core1_bus",
+                &format_args!("{}", self.dcache_shut_core1_bus().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

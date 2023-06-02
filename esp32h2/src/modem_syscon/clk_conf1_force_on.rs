@@ -35,13 +35,13 @@ impl From<crate::W<CLK_CONF1_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_FE_FO` reader - ."]
-pub type CLK_FE_FO_R = crate::BitReader<bool>;
+pub type CLK_FE_FO_R = crate::BitReader;
 #[doc = "Field `CLK_FE_FO` writer - ."]
-pub type CLK_FE_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_FORCE_ON_SPEC, bool, O>;
+pub type CLK_FE_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_FORCE_ON_SPEC, O>;
 #[doc = "Field `CLK_BT_FO` reader - ."]
-pub type CLK_BT_FO_R = crate::BitReader<bool>;
+pub type CLK_BT_FO_R = crate::BitReader;
 #[doc = "Field `CLK_BT_FO` writer - ."]
-pub type CLK_BT_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_FORCE_ON_SPEC, bool, O>;
+pub type CLK_BT_FO_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_FORCE_ON_SPEC, O>;
 impl R {
     #[doc = "Bit 16 - ."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn clk_bt_fo(&self) -> CLK_BT_FO_R {
         CLK_BT_FO_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF1_FORCE_ON")
+            .field("clk_fe_fo", &format_args!("{}", self.clk_fe_fo().bit()))
+            .field("clk_bt_fo", &format_args!("{}", self.clk_bt_fo().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_FORCE_ON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,19 +35,17 @@ impl From<crate::W<ESC_CONF3_SPEC>> for W {
     }
 }
 #[doc = "Field `ESC_SEQ2` reader - a"]
-pub type ESC_SEQ2_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ2_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ2` writer - a"]
-pub type ESC_SEQ2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESC_CONF3_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ2_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF3_SPEC, 8, O>;
 #[doc = "Field `ESC_SEQ2_CHAR0` reader - a"]
-pub type ESC_SEQ2_CHAR0_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ2_CHAR0_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ2_CHAR0` writer - a"]
-pub type ESC_SEQ2_CHAR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF3_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ2_CHAR0_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF3_SPEC, 8, O>;
 #[doc = "Field `ESC_SEQ2_CHAR1` reader - a"]
-pub type ESC_SEQ2_CHAR1_R = crate::FieldReader<u8, u8>;
+pub type ESC_SEQ2_CHAR1_R = crate::FieldReader;
 #[doc = "Field `ESC_SEQ2_CHAR1` writer - a"]
-pub type ESC_SEQ2_CHAR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF3_SPEC, u8, u8, 8, O>;
+pub type ESC_SEQ2_CHAR1_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF3_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - a"]
     #[inline(always)]
@@ -63,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn esc_seq2_char1(&self) -> ESC_SEQ2_CHAR1_R {
         ESC_SEQ2_CHAR1_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESC_CONF3")
+            .field("esc_seq2", &format_args!("{}", self.esc_seq2().bits()))
+            .field(
+                "esc_seq2_char0",
+                &format_args!("{}", self.esc_seq2_char0().bits()),
+            )
+            .field(
+                "esc_seq2_char1",
+                &format_args!("{}", self.esc_seq2_char1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ESC_CONF3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,47 +14,47 @@ impl From<crate::R<INT_ST_RTC_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ST` reader - sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_ST_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_ST_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_ST` reader - sleep reject interrupt state"]
-pub type SLP_REJECT_INT_ST_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_ST_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_ST` reader - SDIO idle interrupt state"]
-pub type SDIO_IDLE_INT_ST_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_ST_R = crate::BitReader;
 #[doc = "Field `WDT_INT_ST` reader - RTC WDT interrupt state"]
-pub type WDT_INT_ST_R = crate::BitReader<bool>;
+pub type WDT_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_SCAN_DONE_INT_ST` reader - enable touch scan done interrupt raw"]
-pub type TOUCH_SCAN_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_SCAN_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `ULP_CP_INT_ST` reader - ULP-coprocessor interrupt state"]
-pub type ULP_CP_INT_ST_R = crate::BitReader<bool>;
+pub type ULP_CP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_DONE_INT_ST` reader - touch done interrupt state"]
-pub type TOUCH_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_ACTIVE_INT_ST` reader - touch active interrupt state"]
-pub type TOUCH_ACTIVE_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_ACTIVE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_INACTIVE_INT_ST` reader - touch inactive interrupt state"]
-pub type TOUCH_INACTIVE_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_INACTIVE_INT_ST_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ST` reader - brown out interrupt state"]
-pub type BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_ST_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_ST_R = crate::BitReader;
 #[doc = "Field `SARADC1_INT_ST` reader - saradc1 interrupt state"]
-pub type SARADC1_INT_ST_R = crate::BitReader<bool>;
+pub type SARADC1_INT_ST_R = crate::BitReader;
 #[doc = "Field `TSENS_INT_ST` reader - tsens interrupt state"]
-pub type TSENS_INT_ST_R = crate::BitReader<bool>;
+pub type TSENS_INT_ST_R = crate::BitReader;
 #[doc = "Field `COCPU_INT_ST` reader - riscV cocpu interrupt state"]
-pub type COCPU_INT_ST_R = crate::BitReader<bool>;
+pub type COCPU_INT_ST_R = crate::BitReader;
 #[doc = "Field `SARADC2_INT_ST` reader - saradc2 interrupt state"]
-pub type SARADC2_INT_ST_R = crate::BitReader<bool>;
+pub type SARADC2_INT_ST_R = crate::BitReader;
 #[doc = "Field `SWD_INT_ST` reader - super watch dog interrupt state"]
-pub type SWD_INT_ST_R = crate::BitReader<bool>;
+pub type SWD_INT_ST_R = crate::BitReader;
 #[doc = "Field `XTAL32K_DEAD_INT_ST` reader - xtal32k dead detection interrupt state"]
-pub type XTAL32K_DEAD_INT_ST_R = crate::BitReader<bool>;
+pub type XTAL32K_DEAD_INT_ST_R = crate::BitReader;
 #[doc = "Field `COCPU_TRAP_INT_ST` reader - cocpu trap interrupt state"]
-pub type COCPU_TRAP_INT_ST_R = crate::BitReader<bool>;
+pub type COCPU_TRAP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_TIMEOUT_INT_ST` reader - Touch timeout interrupt state"]
-pub type TOUCH_TIMEOUT_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_TIMEOUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `GLITCH_DET_INT_ST` reader - glitch_det_interrupt state"]
-pub type GLITCH_DET_INT_ST_R = crate::BitReader<bool>;
+pub type GLITCH_DET_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOUCH_APPROACH_LOOP_DONE_INT_ST` reader - touch approach mode loop interrupt state"]
-pub type TOUCH_APPROACH_LOOP_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TOUCH_APPROACH_LOOP_DONE_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]
@@ -160,6 +160,97 @@ impl R {
     #[inline(always)]
     pub fn touch_approach_loop_done_int_st(&self) -> TOUCH_APPROACH_LOOP_DONE_INT_ST_R {
         TOUCH_APPROACH_LOOP_DONE_INT_ST_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST_RTC")
+            .field(
+                "slp_wakeup_int_st",
+                &format_args!("{}", self.slp_wakeup_int_st().bit()),
+            )
+            .field(
+                "slp_reject_int_st",
+                &format_args!("{}", self.slp_reject_int_st().bit()),
+            )
+            .field(
+                "sdio_idle_int_st",
+                &format_args!("{}", self.sdio_idle_int_st().bit()),
+            )
+            .field("wdt_int_st", &format_args!("{}", self.wdt_int_st().bit()))
+            .field(
+                "touch_scan_done_int_st",
+                &format_args!("{}", self.touch_scan_done_int_st().bit()),
+            )
+            .field(
+                "ulp_cp_int_st",
+                &format_args!("{}", self.ulp_cp_int_st().bit()),
+            )
+            .field(
+                "touch_done_int_st",
+                &format_args!("{}", self.touch_done_int_st().bit()),
+            )
+            .field(
+                "touch_active_int_st",
+                &format_args!("{}", self.touch_active_int_st().bit()),
+            )
+            .field(
+                "touch_inactive_int_st",
+                &format_args!("{}", self.touch_inactive_int_st().bit()),
+            )
+            .field(
+                "brown_out_int_st",
+                &format_args!("{}", self.brown_out_int_st().bit()),
+            )
+            .field(
+                "main_timer_int_st",
+                &format_args!("{}", self.main_timer_int_st().bit()),
+            )
+            .field(
+                "saradc1_int_st",
+                &format_args!("{}", self.saradc1_int_st().bit()),
+            )
+            .field(
+                "tsens_int_st",
+                &format_args!("{}", self.tsens_int_st().bit()),
+            )
+            .field(
+                "cocpu_int_st",
+                &format_args!("{}", self.cocpu_int_st().bit()),
+            )
+            .field(
+                "saradc2_int_st",
+                &format_args!("{}", self.saradc2_int_st().bit()),
+            )
+            .field("swd_int_st", &format_args!("{}", self.swd_int_st().bit()))
+            .field(
+                "xtal32k_dead_int_st",
+                &format_args!("{}", self.xtal32k_dead_int_st().bit()),
+            )
+            .field(
+                "cocpu_trap_int_st",
+                &format_args!("{}", self.cocpu_trap_int_st().bit()),
+            )
+            .field(
+                "touch_timeout_int_st",
+                &format_args!("{}", self.touch_timeout_int_st().bit()),
+            )
+            .field(
+                "glitch_det_int_st",
+                &format_args!("{}", self.glitch_det_int_st().bit()),
+            )
+            .field(
+                "touch_approach_loop_done_int_st",
+                &format_args!("{}", self.touch_approach_loop_done_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_RTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "rtc interrupt register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st_rtc](index.html) module"]

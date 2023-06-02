@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x0c],
     #[doc = "0x0c - I2S interrupt raw register, valid in level."]

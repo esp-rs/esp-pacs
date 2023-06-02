@@ -38,12 +38,29 @@ impl From<crate::W<SPI_MEM_XTS_DATE_SPEC>> for W {
 pub type SPI_XTS_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_XTS_DATE` writer - This bits stores the last modified-time of manual encryption feature."]
 pub type SPI_XTS_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_XTS_DATE_SPEC, u32, u32, 30, O>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_DATE_SPEC, 30, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
     #[inline(always)]
     pub fn spi_xts_date(&self) -> SPI_XTS_DATE_R {
         SPI_XTS_DATE_R::new(self.bits & 0x3fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_XTS_DATE")
+            .field(
+                "spi_xts_date",
+                &format_args!("{}", self.spi_xts_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<I2SCONF_SIGLE_DATA_SPEC>> for W {
 pub type I2S_I2S_SIGLE_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `I2S_I2S_SIGLE_DATA` writer - "]
 pub type I2S_I2S_SIGLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2SCONF_SIGLE_DATA_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, I2SCONF_SIGLE_DATA_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn i2s_i2s_sigle_data(&self) -> I2S_I2S_SIGLE_DATA_R {
         I2S_I2S_SIGLE_DATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SCONF_SIGLE_DATA")
+            .field(
+                "i2s_i2s_sigle_data",
+                &format_args!("{}", self.i2s_i2s_sigle_data().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2SCONF_SIGLE_DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

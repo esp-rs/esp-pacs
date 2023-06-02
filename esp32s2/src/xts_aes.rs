@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x0100],
     #[doc = "0x100..0x140 - Plaintext register %s"]

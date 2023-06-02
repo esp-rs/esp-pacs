@@ -35,15 +35,32 @@ impl From<crate::W<CORE_0_SP_UNSTABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_SP_UNSTABLE` reader - unstable period when window change,during this period no check stackpointer"]
-pub type CORE_0_SP_UNSTABLE_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_SP_UNSTABLE_R = crate::FieldReader;
 #[doc = "Field `CORE_0_SP_UNSTABLE` writer - unstable period when window change,during this period no check stackpointer"]
 pub type CORE_0_SP_UNSTABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_SP_UNSTABLE_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, CORE_0_SP_UNSTABLE_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - unstable period when window change,during this period no check stackpointer"]
     #[inline(always)]
     pub fn core_0_sp_unstable(&self) -> CORE_0_SP_UNSTABLE_R {
         CORE_0_SP_UNSTABLE_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_SP_UNSTABLE")
+            .field(
+                "core_0_sp_unstable",
+                &format_args!("{}", self.core_0_sp_unstable().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_SP_UNSTABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

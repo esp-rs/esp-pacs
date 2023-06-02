@@ -38,12 +38,29 @@ impl From<crate::W<DCACHE_AUTOLOAD_SCT1_SIZE_SPEC>> for W {
 pub type DCACHE_AUTOLOAD_SCT1_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT1_SIZE` writer - The bits are used to configure the length of the second section for autoload operation. It should be combined with dcache_autoload_sct1_ena."]
 pub type DCACHE_AUTOLOAD_SCT1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_SCT1_SIZE_SPEC, u32, u32, 27, O>;
+    crate::FieldWriter<'a, DCACHE_AUTOLOAD_SCT1_SIZE_SPEC, 27, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the second section for autoload operation. It should be combined with dcache_autoload_sct1_ena."]
     #[inline(always)]
     pub fn dcache_autoload_sct1_size(&self) -> DCACHE_AUTOLOAD_SCT1_SIZE_R {
         DCACHE_AUTOLOAD_SCT1_SIZE_R::new(self.bits & 0x07ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_AUTOLOAD_SCT1_SIZE")
+            .field(
+                "dcache_autoload_sct1_size",
+                &format_args!("{}", self.dcache_autoload_sct1_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_AUTOLOAD_SCT1_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

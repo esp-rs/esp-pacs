@@ -37,18 +37,17 @@ impl From<crate::W<SPI_MEM_PMS_REJECT_SPEC>> for W {
 #[doc = "Field `SPI_MEM_REJECT_ADDR` reader - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
 pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MEM_PM_EN` reader - Set this bit to enable SPI0/1 transfer permission control function."]
-pub type SPI_MEM_PM_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_PM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PM_EN` writer - Set this bit to enable SPI0/1 transfer permission control function."]
-pub type SPI_MEM_PM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_PMS_REJECT_SPEC, bool, O>;
+pub type SPI_MEM_PM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_PMS_REJECT_SPEC, O>;
 #[doc = "Field `SPI_MEM_PMS_LD` reader - 1: SPI1 write access error. 0: No write access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
-pub type SPI_MEM_PMS_LD_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_LD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_ST` reader - 1: SPI1 read access error. 0: No read access error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
-pub type SPI_MEM_PMS_ST_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_ST_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_MULTI_HIT` reader - 1: SPI1 access is rejected because of address miss. 0: No address miss error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
-pub type SPI_MEM_PMS_MULTI_HIT_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_MULTI_HIT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PMS_IVD` reader - 1: SPI1 access is rejected because of address multi-hit. 0: No address multi-hit error. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
-pub type SPI_MEM_PMS_IVD_R = crate::BitReader<bool>;
+pub type SPI_MEM_PMS_IVD_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:25 - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
     #[inline(always)]
@@ -79,6 +78,43 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_pms_ivd(&self) -> SPI_MEM_PMS_IVD_R {
         SPI_MEM_PMS_IVD_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_PMS_REJECT")
+            .field(
+                "spi_mem_reject_addr",
+                &format_args!("{}", self.spi_mem_reject_addr().bits()),
+            )
+            .field(
+                "spi_mem_pm_en",
+                &format_args!("{}", self.spi_mem_pm_en().bit()),
+            )
+            .field(
+                "spi_mem_pms_ld",
+                &format_args!("{}", self.spi_mem_pms_ld().bit()),
+            )
+            .field(
+                "spi_mem_pms_st",
+                &format_args!("{}", self.spi_mem_pms_st().bit()),
+            )
+            .field(
+                "spi_mem_pms_multi_hit",
+                &format_args!("{}", self.spi_mem_pms_multi_hit().bit()),
+            )
+            .field(
+                "spi_mem_pms_ivd",
+                &format_args!("{}", self.spi_mem_pms_ivd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_PMS_REJECT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

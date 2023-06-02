@@ -35,15 +35,13 @@ impl From<crate::W<SENSOR_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - reg_sar2_pwdet_cct"]
-pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - reg_sar2_pwdet_cct"]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_CTRL_SPEC, u8, u8, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_CTRL_SPEC, 3, O>;
 #[doc = "Field `FORCE_XPD_SAR` reader - force power up SAR"]
-pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
+pub type FORCE_XPD_SAR_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_SAR` writer - force power up SAR"]
-pub type FORCE_XPD_SAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSOR_CTRL_SPEC, u8, u8, 2, O>;
+pub type FORCE_XPD_SAR_W<'a, const O: u8> = crate::FieldWriter<'a, SENSOR_CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn force_xpd_sar(&self) -> FORCE_XPD_SAR_R {
         FORCE_XPD_SAR_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SENSOR_CTRL")
+            .field(
+                "sar2_pwdet_cct",
+                &format_args!("{}", self.sar2_pwdet_cct().bits()),
+            )
+            .field(
+                "force_xpd_sar",
+                &format_args!("{}", self.force_xpd_sar().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SENSOR_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

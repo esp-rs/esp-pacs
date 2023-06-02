@@ -20,7 +20,13 @@ impl From<crate::W<RELEASE_SPEC>> for W {
     }
 }
 #[doc = "Field `RELEASE` writer - Write 1 to grant SPI1 access to encrypted result."]
-pub type RELEASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, RELEASE_SPEC, bool, O>;
+pub type RELEASE_W<'a, const O: u8> = crate::BitWriter<'a, RELEASE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RELEASE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to grant SPI1 access to encrypted result."]
     #[inline(always)]

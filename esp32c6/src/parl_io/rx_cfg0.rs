@@ -35,53 +35,49 @@ impl From<crate::W<RX_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EOF_GEN_SEL` reader - Write 0 to select eof generated manchnism by configured data byte length. Write 1 to select eof generated manchnism by external enable signal."]
-pub type RX_EOF_GEN_SEL_R = crate::BitReader<bool>;
+pub type RX_EOF_GEN_SEL_R = crate::BitReader;
 #[doc = "Field `RX_EOF_GEN_SEL` writer - Write 0 to select eof generated manchnism by configured data byte length. Write 1 to select eof generated manchnism by external enable signal."]
-pub type RX_EOF_GEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_EOF_GEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_START` reader - Write 1 to start rx global data sampling."]
-pub type RX_START_R = crate::BitReader<bool>;
+pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - Write 1 to start rx global data sampling."]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_DATA_BYTELEN` reader - Configures rx receieved data byte length."]
 pub type RX_DATA_BYTELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_DATA_BYTELEN` writer - Configures rx receieved data byte length."]
-pub type RX_DATA_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CFG0_SPEC, u16, u16, 16, O>;
+pub type RX_DATA_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG0_SPEC, 16, O, u16, u16>;
 #[doc = "Field `RX_SW_EN` reader - Write 1 to enable software data sampling."]
-pub type RX_SW_EN_R = crate::BitReader<bool>;
+pub type RX_SW_EN_R = crate::BitReader;
 #[doc = "Field `RX_SW_EN` writer - Write 1 to enable software data sampling."]
-pub type RX_SW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_SW_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` reader - Pulse submode selection. 0000: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 0001: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 0010: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 0011: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 0100: positive pulse start(data bit included) &amp;&amp; length end 0101: positive pulse start(data bit excluded) &amp;&amp; length end 0110: negative pulse start(data bit included) &amp;&amp; negative pulse end(data bit included) 0111: negative pulse start(data bit included) &amp;&amp; negative pulse end (data bit excluded) 1000: negative pulse start(data bit excluded) &amp;&amp; negative pulse end (data bit included) 1001: negative pulse start(data bit excluded) &amp;&amp; negative pulse end (data bit excluded) 1010: negative pulse start(data bit included) &amp;&amp; length end 1011: negative pulse start(data bit excluded) &amp;&amp; length end"]
-pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` writer - Pulse submode selection. 0000: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 0001: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 0010: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 0011: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 0100: positive pulse start(data bit included) &amp;&amp; length end 0101: positive pulse start(data bit excluded) &amp;&amp; length end 0110: negative pulse start(data bit included) &amp;&amp; negative pulse end(data bit included) 0111: negative pulse start(data bit included) &amp;&amp; negative pulse end (data bit excluded) 1000: negative pulse start(data bit excluded) &amp;&amp; negative pulse end (data bit included) 1001: negative pulse start(data bit excluded) &amp;&amp; negative pulse end (data bit excluded) 1010: negative pulse start(data bit included) &amp;&amp; length end 1011: negative pulse start(data bit excluded) &amp;&amp; length end"]
-pub type RX_PULSE_SUBMODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CFG0_SPEC, u8, u8, 4, O>;
+pub type RX_PULSE_SUBMODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG0_SPEC, 4, O>;
 #[doc = "Field `RX_LEVEL_SUBMODE_SEL` reader - Write 0 to sample data at high level of external enable signal. Write 1 to sample data at low level of external enable signal."]
-pub type RX_LEVEL_SUBMODE_SEL_R = crate::BitReader<bool>;
+pub type RX_LEVEL_SUBMODE_SEL_R = crate::BitReader;
 #[doc = "Field `RX_LEVEL_SUBMODE_SEL` writer - Write 0 to sample data at high level of external enable signal. Write 1 to sample data at low level of external enable signal."]
-pub type RX_LEVEL_SUBMODE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_LEVEL_SUBMODE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_SMP_MODE_SEL` reader - Rx data sampling mode selection. 000: external level enable mode 001: external pulse enable mode 010: internal software enable mode"]
-pub type RX_SMP_MODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_SMP_MODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_SMP_MODE_SEL` writer - Rx data sampling mode selection. 000: external level enable mode 001: external pulse enable mode 010: internal software enable mode"]
-pub type RX_SMP_MODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CFG0_SPEC, u8, u8, 2, O>;
+pub type RX_SMP_MODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG0_SPEC, 2, O>;
 #[doc = "Field `RX_CLK_EDGE_SEL` reader - Write 0 to enable sampling data on the rising edge of rx clock. Write 0 to enable sampling data on the falling edge of rx clock."]
-pub type RX_CLK_EDGE_SEL_R = crate::BitReader<bool>;
+pub type RX_CLK_EDGE_SEL_R = crate::BitReader;
 #[doc = "Field `RX_CLK_EDGE_SEL` writer - Write 0 to enable sampling data on the rising edge of rx clock. Write 0 to enable sampling data on the falling edge of rx clock."]
-pub type RX_CLK_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_CLK_EDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_BIT_PACK_ORDER` reader - Write 0 to pack bits into 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to pack bits into 1byte from LSB when data bus width is 4/2/1 bits."]
-pub type RX_BIT_PACK_ORDER_R = crate::BitReader<bool>;
+pub type RX_BIT_PACK_ORDER_R = crate::BitReader;
 #[doc = "Field `RX_BIT_PACK_ORDER` writer - Write 0 to pack bits into 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to pack bits into 1byte from LSB when data bus width is 4/2/1 bits."]
-pub type RX_BIT_PACK_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_BIT_PACK_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 #[doc = "Field `RX_BUS_WID_SEL` reader - Rx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
-pub type RX_BUS_WID_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_BUS_WID_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_BUS_WID_SEL` writer - Rx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
-pub type RX_BUS_WID_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_CFG0_SPEC, u8, u8, 3, O>;
+pub type RX_BUS_WID_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG0_SPEC, 3, O>;
 #[doc = "Field `RX_FIFO_SRST` reader - Write 1 to enable soft reset of async fifo in rx module."]
-pub type RX_FIFO_SRST_R = crate::BitReader<bool>;
+pub type RX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_SRST` writer - Write 1 to enable soft reset of async fifo in rx module."]
-pub type RX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_CFG0_SPEC, bool, O>;
+pub type RX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, RX_CFG0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Write 0 to select eof generated manchnism by configured data byte length. Write 1 to select eof generated manchnism by external enable signal."]
     #[inline(always)]
@@ -137,6 +133,57 @@ impl R {
     #[inline(always)]
     pub fn rx_fifo_srst(&self) -> RX_FIFO_SRST_R {
         RX_FIFO_SRST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_CFG0")
+            .field(
+                "rx_eof_gen_sel",
+                &format_args!("{}", self.rx_eof_gen_sel().bit()),
+            )
+            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
+            .field(
+                "rx_data_bytelen",
+                &format_args!("{}", self.rx_data_bytelen().bits()),
+            )
+            .field("rx_sw_en", &format_args!("{}", self.rx_sw_en().bit()))
+            .field(
+                "rx_pulse_submode_sel",
+                &format_args!("{}", self.rx_pulse_submode_sel().bits()),
+            )
+            .field(
+                "rx_level_submode_sel",
+                &format_args!("{}", self.rx_level_submode_sel().bit()),
+            )
+            .field(
+                "rx_smp_mode_sel",
+                &format_args!("{}", self.rx_smp_mode_sel().bits()),
+            )
+            .field(
+                "rx_clk_edge_sel",
+                &format_args!("{}", self.rx_clk_edge_sel().bit()),
+            )
+            .field(
+                "rx_bit_pack_order",
+                &format_args!("{}", self.rx_bit_pack_order().bit()),
+            )
+            .field(
+                "rx_bus_wid_sel",
+                &format_args!("{}", self.rx_bus_wid_sel().bits()),
+            )
+            .field(
+                "rx_fifo_srst",
+                &format_args!("{}", self.rx_fifo_srst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_CFG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

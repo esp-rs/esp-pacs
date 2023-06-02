@@ -35,30 +35,28 @@ impl From<crate::W<MODEM_LP_TIMER_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_TIMER_SEL_RTC_SLOW` reader - ."]
-pub type LP_TIMER_SEL_RTC_SLOW_R = crate::BitReader<bool>;
+pub type LP_TIMER_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_RTC_SLOW` writer - ."]
 pub type LP_TIMER_SEL_RTC_SLOW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MODEM_LP_TIMER_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, MODEM_LP_TIMER_CONF_SPEC, O>;
 #[doc = "Field `LP_TIMER_SEL_8M` reader - ."]
-pub type LP_TIMER_SEL_8M_R = crate::BitReader<bool>;
+pub type LP_TIMER_SEL_8M_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_8M` writer - ."]
-pub type LP_TIMER_SEL_8M_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MODEM_LP_TIMER_CONF_SPEC, bool, O>;
+pub type LP_TIMER_SEL_8M_W<'a, const O: u8> = crate::BitWriter<'a, MODEM_LP_TIMER_CONF_SPEC, O>;
 #[doc = "Field `LP_TIMER_SEL_XTAL` reader - ."]
-pub type LP_TIMER_SEL_XTAL_R = crate::BitReader<bool>;
+pub type LP_TIMER_SEL_XTAL_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_XTAL` writer - ."]
-pub type LP_TIMER_SEL_XTAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MODEM_LP_TIMER_CONF_SPEC, bool, O>;
+pub type LP_TIMER_SEL_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, MODEM_LP_TIMER_CONF_SPEC, O>;
 #[doc = "Field `LP_TIMER_SEL_XTAL32K` reader - ."]
-pub type LP_TIMER_SEL_XTAL32K_R = crate::BitReader<bool>;
+pub type LP_TIMER_SEL_XTAL32K_R = crate::BitReader;
 #[doc = "Field `LP_TIMER_SEL_XTAL32K` writer - ."]
 pub type LP_TIMER_SEL_XTAL32K_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MODEM_LP_TIMER_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, MODEM_LP_TIMER_CONF_SPEC, O>;
 #[doc = "Field `LP_TIMER_CLK_DIV_NUM` reader - ."]
-pub type LP_TIMER_CLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type LP_TIMER_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `LP_TIMER_CLK_DIV_NUM` writer - ."]
 pub type LP_TIMER_CLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MODEM_LP_TIMER_CONF_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, MODEM_LP_TIMER_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
@@ -84,6 +82,39 @@ impl R {
     #[inline(always)]
     pub fn lp_timer_clk_div_num(&self) -> LP_TIMER_CLK_DIV_NUM_R {
         LP_TIMER_CLK_DIV_NUM_R::new(((self.bits >> 4) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_LP_TIMER_CONF")
+            .field(
+                "lp_timer_sel_rtc_slow",
+                &format_args!("{}", self.lp_timer_sel_rtc_slow().bit()),
+            )
+            .field(
+                "lp_timer_sel_8m",
+                &format_args!("{}", self.lp_timer_sel_8m().bit()),
+            )
+            .field(
+                "lp_timer_sel_xtal",
+                &format_args!("{}", self.lp_timer_sel_xtal().bit()),
+            )
+            .field(
+                "lp_timer_sel_xtal32k",
+                &format_args!("{}", self.lp_timer_sel_xtal32k().bit()),
+            )
+            .field(
+                "lp_timer_clk_div_num",
+                &format_args!("{}", self.lp_timer_clk_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODEM_LP_TIMER_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

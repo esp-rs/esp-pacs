@@ -35,40 +35,39 @@ impl From<crate::W<STATE0_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_WAKEUP_FORCE_EN` reader - touch controller force wake up"]
-pub type TOUCH_WAKEUP_FORCE_EN_R = crate::BitReader<bool>;
+pub type TOUCH_WAKEUP_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_WAKEUP_FORCE_EN` writer - touch controller force wake up"]
-pub type TOUCH_WAKEUP_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type TOUCH_WAKEUP_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `ULP_CP_WAKEUP_FORCE_EN` reader - ULP-coprocessor force wake up"]
-pub type ULP_CP_WAKEUP_FORCE_EN_R = crate::BitReader<bool>;
+pub type ULP_CP_WAKEUP_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `ULP_CP_WAKEUP_FORCE_EN` writer - ULP-coprocessor force wake up"]
-pub type ULP_CP_WAKEUP_FORCE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type ULP_CP_WAKEUP_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge 0: APB to RTC using sync"]
-pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader<bool>;
+pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` writer - 1: APB to RTC using bridge 0: APB to RTC using sync"]
-pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` reader - touch timer enable bit"]
-pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader<bool>;
+pub type TOUCH_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_TIMER_EN` writer - touch timer enable bit"]
-pub type TOUCH_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type TOUCH_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` reader - ULP-coprocessor timer enable bit"]
-pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader<bool>;
+pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` writer - ULP-coprocessor timer enable bit"]
-pub type ULP_CP_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type ULP_CP_SLP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SDIO_ACTIVE_IND` reader - SDIO active indication"]
-pub type SDIO_ACTIVE_IND_R = crate::BitReader<bool>;
+pub type SDIO_ACTIVE_IND_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` reader - sleep wakeup bit"]
-pub type SLP_WAKEUP_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` writer - sleep wakeup bit"]
-pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_REJECT` reader - sleep reject bit"]
-pub type SLP_REJECT_R = crate::BitReader<bool>;
+pub type SLP_REJECT_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT` writer - sleep reject bit"]
-pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLEEP_EN` reader - sleep enable bit"]
-pub type SLEEP_EN_R = crate::BitReader<bool>;
+pub type SLEEP_EN_R = crate::BitReader;
 #[doc = "Field `SLEEP_EN` writer - sleep enable bit"]
-pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 impl R {
     #[doc = "Bit 20 - touch controller force wake up"]
     #[inline(always)]
@@ -114,6 +113,46 @@ impl R {
     #[inline(always)]
     pub fn sleep_en(&self) -> SLEEP_EN_R {
         SLEEP_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE0")
+            .field(
+                "touch_wakeup_force_en",
+                &format_args!("{}", self.touch_wakeup_force_en().bit()),
+            )
+            .field(
+                "ulp_cp_wakeup_force_en",
+                &format_args!("{}", self.ulp_cp_wakeup_force_en().bit()),
+            )
+            .field(
+                "apb2rtc_bridge_sel",
+                &format_args!("{}", self.apb2rtc_bridge_sel().bit()),
+            )
+            .field(
+                "touch_slp_timer_en",
+                &format_args!("{}", self.touch_slp_timer_en().bit()),
+            )
+            .field(
+                "ulp_cp_slp_timer_en",
+                &format_args!("{}", self.ulp_cp_slp_timer_en().bit()),
+            )
+            .field(
+                "sdio_active_ind",
+                &format_args!("{}", self.sdio_active_ind().bit()),
+            )
+            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
+            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
+            .field("sleep_en", &format_args!("{}", self.sleep_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

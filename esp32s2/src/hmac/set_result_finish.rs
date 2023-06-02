@@ -20,8 +20,13 @@ impl From<crate::W<SET_RESULT_FINISH_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_RESULT_END` writer - Set this bit to end upstream and clear the calculation result."]
-pub type SET_RESULT_END_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SET_RESULT_FINISH_SPEC, bool, O>;
+pub type SET_RESULT_END_W<'a, const O: u8> = crate::BitWriter<'a, SET_RESULT_FINISH_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_RESULT_FINISH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to end upstream and clear the calculation result."]
     #[inline(always)]

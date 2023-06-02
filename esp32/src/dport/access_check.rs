@@ -14,9 +14,9 @@ impl From<crate::R<ACCESS_CHECK_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO` reader - "]
-pub type PRO_R = crate::BitReader<bool>;
+pub type PRO_R = crate::BitReader;
 #[doc = "Field `APP` reader - "]
-pub type APP_R = crate::BitReader<bool>;
+pub type APP_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -27,6 +27,21 @@ impl R {
     #[inline(always)]
     pub fn app(&self) -> APP_R {
         APP_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ACCESS_CHECK")
+            .field("pro", &format_args!("{}", self.pro().bit()))
+            .field("app", &format_args!("{}", self.app().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ACCESS_CHECK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [access_check](index.html) module"]

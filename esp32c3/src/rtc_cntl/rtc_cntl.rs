@@ -35,29 +35,29 @@ impl From<crate::W<RTC_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_REG_CAL_EN` reader - software enable digital regulator cali"]
-pub type DIG_REG_CAL_EN_R = crate::BitReader<bool>;
+pub type DIG_REG_CAL_EN_R = crate::BitReader;
 #[doc = "Field `DIG_REG_CAL_EN` writer - software enable digital regulator cali"]
-pub type DIG_REG_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_CNTL_SPEC, bool, O>;
+pub type DIG_REG_CAL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RTC_CNTL_SPEC, O>;
 #[doc = "Field `SCK_DCAP` reader - SCK_DCAP"]
-pub type SCK_DCAP_R = crate::FieldReader<u8, u8>;
+pub type SCK_DCAP_R = crate::FieldReader;
 #[doc = "Field `SCK_DCAP` writer - SCK_DCAP"]
-pub type SCK_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RTC_CNTL_SPEC, u8, u8, 8, O>;
+pub type SCK_DCAP_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_CNTL_SPEC, 8, O>;
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_R = crate::BitReader<bool>;
+pub type DBOOST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub type DBOOST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_CNTL_SPEC, bool, O>;
+pub type DBOOST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, RTC_CNTL_SPEC, O>;
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_R = crate::BitReader<bool>;
+pub type DBOOST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub type DBOOST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_CNTL_SPEC, bool, O>;
+pub type DBOOST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, RTC_CNTL_SPEC, O>;
 #[doc = "Field `REGULATOR_FORCE_PD` reader - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub type REGULATOR_FORCE_PD_R = crate::BitReader<bool>;
+pub type REGULATOR_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PD` writer - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
-pub type REGULATOR_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_CNTL_SPEC, bool, O>;
+pub type REGULATOR_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, RTC_CNTL_SPEC, O>;
 #[doc = "Field `REGULATOR_FORCE_PU` reader - RTC_REG force power up"]
-pub type REGULATOR_FORCE_PU_R = crate::BitReader<bool>;
+pub type REGULATOR_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `REGULATOR_FORCE_PU` writer - RTC_REG force power up"]
-pub type REGULATOR_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, RTC_CNTL_SPEC, bool, O>;
+pub type REGULATOR_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, RTC_CNTL_SPEC, O>;
 impl R {
     #[doc = "Bit 7 - software enable digital regulator cali"]
     #[inline(always)]
@@ -88,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn regulator_force_pu(&self) -> REGULATOR_FORCE_PU_R {
         REGULATOR_FORCE_PU_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_CNTL")
+            .field(
+                "dig_reg_cal_en",
+                &format_args!("{}", self.dig_reg_cal_en().bit()),
+            )
+            .field("sck_dcap", &format_args!("{}", self.sck_dcap().bits()))
+            .field(
+                "dboost_force_pd",
+                &format_args!("{}", self.dboost_force_pd().bit()),
+            )
+            .field(
+                "dboost_force_pu",
+                &format_args!("{}", self.dboost_force_pu().bit()),
+            )
+            .field(
+                "regulator_force_pd",
+                &format_args!("{}", self.regulator_force_pd().bit()),
+            )
+            .field(
+                "regulator_force_pu",
+                &format_args!("{}", self.regulator_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

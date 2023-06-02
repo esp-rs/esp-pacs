@@ -35,13 +35,13 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 25 - Set this bit to force power down UART memory."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn mem_force_pu(&self) -> MEM_FORCE_PU_R {
         MEM_FORCE_PU_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CONF")
+            .field(
+                "mem_force_pd",
+                &format_args!("{}", self.mem_force_pd().bit()),
+            )
+            .field(
+                "mem_force_pu",
+                &format_args!("{}", self.mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

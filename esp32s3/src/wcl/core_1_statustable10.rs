@@ -35,20 +35,19 @@ impl From<crate::W<CORE_1_STATUSTABLE10_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_FROM_WORLD_10` reader - This bit is used to confirm world before enter entry 10"]
-pub type CORE_1_FROM_WORLD_10_R = crate::BitReader<bool>;
+pub type CORE_1_FROM_WORLD_10_R = crate::BitReader;
 #[doc = "Field `CORE_1_FROM_WORLD_10` writer - This bit is used to confirm world before enter entry 10"]
 pub type CORE_1_FROM_WORLD_10_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_STATUSTABLE10_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_STATUSTABLE10_SPEC, O>;
 #[doc = "Field `CORE_1_FROM_ENTRY_10` reader - This filed is used to confirm in which entry before enter entry 10"]
-pub type CORE_1_FROM_ENTRY_10_R = crate::FieldReader<u8, u8>;
+pub type CORE_1_FROM_ENTRY_10_R = crate::FieldReader;
 #[doc = "Field `CORE_1_FROM_ENTRY_10` writer - This filed is used to confirm in which entry before enter entry 10"]
 pub type CORE_1_FROM_ENTRY_10_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_STATUSTABLE10_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CORE_1_STATUSTABLE10_SPEC, 4, O>;
 #[doc = "Field `CORE_1_CURRENT_10` reader - This bit is used to confirm whether the current state is in entry 10"]
-pub type CORE_1_CURRENT_10_R = crate::BitReader<bool>;
+pub type CORE_1_CURRENT_10_R = crate::BitReader;
 #[doc = "Field `CORE_1_CURRENT_10` writer - This bit is used to confirm whether the current state is in entry 10"]
-pub type CORE_1_CURRENT_10_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_STATUSTABLE10_SPEC, bool, O>;
+pub type CORE_1_CURRENT_10_W<'a, const O: u8> = crate::BitWriter<'a, CORE_1_STATUSTABLE10_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 10"]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn core_1_current_10(&self) -> CORE_1_CURRENT_10_R {
         CORE_1_CURRENT_10_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_1_STATUSTABLE10")
+            .field(
+                "core_1_from_world_10",
+                &format_args!("{}", self.core_1_from_world_10().bit()),
+            )
+            .field(
+                "core_1_from_entry_10",
+                &format_args!("{}", self.core_1_from_entry_10().bits()),
+            )
+            .field(
+                "core_1_current_10",
+                &format_args!("{}", self.core_1_current_10().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_STATUSTABLE10_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

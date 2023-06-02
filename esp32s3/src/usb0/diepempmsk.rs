@@ -38,12 +38,29 @@ impl From<crate::W<DIEPEMPMSK_SPEC>> for W {
 pub type D_INEPTXFEMPMSK_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `D_INEPTXFEMPMSK` writer - "]
 pub type D_INEPTXFEMPMSK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIEPEMPMSK_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, DIEPEMPMSK_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn d_ineptxfempmsk(&self) -> D_INEPTXFEMPMSK_R {
         D_INEPTXFEMPMSK_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPEMPMSK")
+            .field(
+                "d_ineptxfempmsk",
+                &format_args!("{}", self.d_ineptxfempmsk().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIEPEMPMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

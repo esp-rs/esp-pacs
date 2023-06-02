@@ -35,60 +35,53 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_TX_END_INT_ENA[0-3]` reader - The interrupt enable bit for CH%s_TX_END_INT."]
-pub type CH_TX_END_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_TX_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_TX_END_INT_ENA[0-3]` writer - The interrupt enable bit for CH%s_TX_END_INT."]
-pub type CH_TX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_TX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH_TX_ERR_INT_ENA[0-3]` reader - The interrupt enable bit for CH%s_ERR_INT."]
-pub type CH_TX_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_TX_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR_INT_ENA[0-3]` writer - The interrupt enable bit for CH%s_ERR_INT."]
-pub type CH_TX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_TX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH_TX_THR_EVENT_INT_ENA[0-3]` reader - The interrupt enable bit for CH%s_TX_THR_EVENT_INT."]
-pub type CH_TX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_TX_THR_EVENT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT_INT_ENA[0-3]` writer - The interrupt enable bit for CH%s_TX_THR_EVENT_INT."]
-pub type CH_TX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_TX_THR_EVENT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH_TX_LOOP_INT_ENA[0-3]` reader - The interrupt enable bit for CH%s_TX_LOOP_INT."]
-pub type CH_TX_LOOP_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_TX_LOOP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_TX_LOOP_INT_ENA[0-3]` writer - The interrupt enable bit for CH%s_TX_LOOP_INT."]
-pub type CH_TX_LOOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_TX_LOOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH_RX_END_INT_ENA[4-7]` reader - The interrupt enable bit for CH4_RX_END_INT."]
-pub type CH_RX_END_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_RX_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_RX_END_INT_ENA[4-7]` writer - The interrupt enable bit for CH4_RX_END_INT."]
-pub type CH_RX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_RX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH_RX_ERR_INT_ENA[4-7]` reader - The interrupt enable bit for CH4_ERR_INT."]
-pub type CH_RX_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type CH_RX_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH_RX_ERR_INT_ENA[4-7]` writer - The interrupt enable bit for CH4_ERR_INT."]
-pub type CH_RX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH_RX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH4_RX_THR_EVENT_INT_ENA` reader - The interrupt enable bit for CH4_RX_THR_EVENT_INT."]
-pub type CH4_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
+pub type CH4_RX_THR_EVENT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH4_RX_THR_EVENT_INT_ENA` writer - The interrupt enable bit for CH4_RX_THR_EVENT_INT."]
-pub type CH4_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH4_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH5_RX_THR_EVENT_INT_ENA` reader - The interrupt enable bit for CH5_RX_THR_EVENT_INT."]
-pub type CH5_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
+pub type CH5_RX_THR_EVENT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH5_RX_THR_EVENT_INT_ENA` writer - The interrupt enable bit for CH5_RX_THR_EVENT_INT."]
-pub type CH5_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH5_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH6_RX_THR_EVENT_INT_ENA` reader - The interrupt enable bit for CH6_RX_THR_EVENT_INT."]
-pub type CH6_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
+pub type CH6_RX_THR_EVENT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH6_RX_THR_EVENT_INT_ENA` writer - The interrupt enable bit for CH6_RX_THR_EVENT_INT."]
-pub type CH6_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH6_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `CH7_RX_THR_EVENT_INT_ENA` reader - The interrupt enable bit for CH7_RX_THR_EVENT_INT."]
-pub type CH7_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
+pub type CH7_RX_THR_EVENT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CH7_RX_THR_EVENT_INT_ENA` writer - The interrupt enable bit for CH7_RX_THR_EVENT_INT."]
-pub type CH7_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type CH7_RX_THR_EVENT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_ENA` reader - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH3_DMA_ACCESS_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL_INT_ENA` writer - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
-pub type TX_CH3_DMA_ACCESS_FAIL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_CH3_DMA_ACCESS_FAIL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_ENA` reader - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH7_DMA_ACCESS_FAIL_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_CH7_DMA_ACCESS_FAIL_INT_ENA` writer - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
-pub type RX_CH7_DMA_ACCESS_FAIL_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_CH7_DMA_ACCESS_FAIL_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "The interrupt enable bit for CH[0-3]_TX_END_INT."]
     #[inline(always)]
@@ -269,6 +262,139 @@ impl R {
     #[inline(always)]
     pub fn rx_ch7_dma_access_fail_int_ena(&self) -> RX_CH7_DMA_ACCESS_FAIL_INT_ENA_R {
         RX_CH7_DMA_ACCESS_FAIL_INT_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "ch0_tx_end_int_ena",
+                &format_args!("{}", self.ch0_tx_end_int_ena().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_ena",
+                &format_args!("{}", self.ch1_tx_end_int_ena().bit()),
+            )
+            .field(
+                "ch2_tx_end_int_ena",
+                &format_args!("{}", self.ch2_tx_end_int_ena().bit()),
+            )
+            .field(
+                "ch3_tx_end_int_ena",
+                &format_args!("{}", self.ch3_tx_end_int_ena().bit()),
+            )
+            .field(
+                "ch0_tx_err_int_ena",
+                &format_args!("{}", self.ch0_tx_err_int_ena().bit()),
+            )
+            .field(
+                "ch1_tx_err_int_ena",
+                &format_args!("{}", self.ch1_tx_err_int_ena().bit()),
+            )
+            .field(
+                "ch2_tx_err_int_ena",
+                &format_args!("{}", self.ch2_tx_err_int_ena().bit()),
+            )
+            .field(
+                "ch3_tx_err_int_ena",
+                &format_args!("{}", self.ch3_tx_err_int_ena().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_ena",
+                &format_args!("{}", self.ch0_tx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_ena",
+                &format_args!("{}", self.ch1_tx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch2_tx_thr_event_int_ena",
+                &format_args!("{}", self.ch2_tx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch3_tx_thr_event_int_ena",
+                &format_args!("{}", self.ch3_tx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_ena",
+                &format_args!("{}", self.ch0_tx_loop_int_ena().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_ena",
+                &format_args!("{}", self.ch1_tx_loop_int_ena().bit()),
+            )
+            .field(
+                "ch2_tx_loop_int_ena",
+                &format_args!("{}", self.ch2_tx_loop_int_ena().bit()),
+            )
+            .field(
+                "ch3_tx_loop_int_ena",
+                &format_args!("{}", self.ch3_tx_loop_int_ena().bit()),
+            )
+            .field(
+                "ch4_rx_end_int_ena",
+                &format_args!("{}", self.ch4_rx_end_int_ena().bit()),
+            )
+            .field(
+                "ch5_rx_end_int_ena",
+                &format_args!("{}", self.ch5_rx_end_int_ena().bit()),
+            )
+            .field(
+                "ch6_rx_end_int_ena",
+                &format_args!("{}", self.ch6_rx_end_int_ena().bit()),
+            )
+            .field(
+                "ch7_rx_end_int_ena",
+                &format_args!("{}", self.ch7_rx_end_int_ena().bit()),
+            )
+            .field(
+                "ch4_rx_err_int_ena",
+                &format_args!("{}", self.ch4_rx_err_int_ena().bit()),
+            )
+            .field(
+                "ch5_rx_err_int_ena",
+                &format_args!("{}", self.ch5_rx_err_int_ena().bit()),
+            )
+            .field(
+                "ch6_rx_err_int_ena",
+                &format_args!("{}", self.ch6_rx_err_int_ena().bit()),
+            )
+            .field(
+                "ch7_rx_err_int_ena",
+                &format_args!("{}", self.ch7_rx_err_int_ena().bit()),
+            )
+            .field(
+                "ch4_rx_thr_event_int_ena",
+                &format_args!("{}", self.ch4_rx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch5_rx_thr_event_int_ena",
+                &format_args!("{}", self.ch5_rx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch6_rx_thr_event_int_ena",
+                &format_args!("{}", self.ch6_rx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "ch7_rx_thr_event_int_ena",
+                &format_args!("{}", self.ch7_rx_thr_event_int_ena().bit()),
+            )
+            .field(
+                "tx_ch3_dma_access_fail_int_ena",
+                &format_args!("{}", self.tx_ch3_dma_access_fail_int_ena().bit()),
+            )
+            .field(
+                "rx_ch7_dma_access_fail_int_ena",
+                &format_args!("{}", self.rx_ch7_dma_access_fail_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

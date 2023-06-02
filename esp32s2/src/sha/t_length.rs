@@ -35,14 +35,28 @@ impl From<crate::W<T_LENGTH_SPEC>> for W {
     }
 }
 #[doc = "Field `T_LENGTH` reader - Defines t_length for calculating the initial Hash value for SHA-512/t."]
-pub type T_LENGTH_R = crate::FieldReader<u8, u8>;
+pub type T_LENGTH_R = crate::FieldReader;
 #[doc = "Field `T_LENGTH` writer - Defines t_length for calculating the initial Hash value for SHA-512/t."]
-pub type T_LENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T_LENGTH_SPEC, u8, u8, 6, O>;
+pub type T_LENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, T_LENGTH_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - Defines t_length for calculating the initial Hash value for SHA-512/t."]
     #[inline(always)]
     pub fn t_length(&self) -> T_LENGTH_R {
         T_LENGTH_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T_LENGTH")
+            .field("t_length", &format_args!("{}", self.t_length().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T_LENGTH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

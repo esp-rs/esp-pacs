@@ -35,14 +35,28 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SWAP` reader - "]
-pub type SPI_SWAP_R = crate::BitReader<bool>;
+pub type SPI_SWAP_R = crate::BitReader;
 #[doc = "Field `SPI_SWAP` writer - "]
-pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type SPI_SWAP_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn spi_swap(&self) -> SPI_SWAP_R {
         SPI_SWAP_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC")
+            .field("spi_swap", &format_args!("{}", self.spi_swap().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

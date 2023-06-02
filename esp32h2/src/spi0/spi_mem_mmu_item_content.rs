@@ -38,12 +38,29 @@ impl From<crate::W<SPI_MEM_MMU_ITEM_CONTENT_SPEC>> for W {
 pub type SPI_MMU_ITEM_CONTENT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MMU_ITEM_CONTENT` writer - MSPI-MMU item content"]
 pub type SPI_MMU_ITEM_CONTENT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_MMU_ITEM_CONTENT_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_MEM_MMU_ITEM_CONTENT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - MSPI-MMU item content"]
     #[inline(always)]
     pub fn spi_mmu_item_content(&self) -> SPI_MMU_ITEM_CONTENT_R {
         SPI_MMU_ITEM_CONTENT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_MMU_ITEM_CONTENT")
+            .field(
+                "spi_mmu_item_content",
+                &format_args!("{}", self.spi_mmu_item_content().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_MMU_ITEM_CONTENT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

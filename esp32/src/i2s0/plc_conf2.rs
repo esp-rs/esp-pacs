@@ -35,14 +35,13 @@ impl From<crate::W<PLC_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_SEG_MOD` reader - "]
-pub type CVSD_SEG_MOD_R = crate::FieldReader<u8, u8>;
+pub type CVSD_SEG_MOD_R = crate::FieldReader;
 #[doc = "Field `CVSD_SEG_MOD` writer - "]
-pub type CVSD_SEG_MOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF2_SPEC, u8, u8, 2, O>;
+pub type CVSD_SEG_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF2_SPEC, 2, O>;
 #[doc = "Field `MIN_PERIOD` reader - "]
-pub type MIN_PERIOD_R = crate::FieldReader<u8, u8>;
+pub type MIN_PERIOD_R = crate::FieldReader;
 #[doc = "Field `MIN_PERIOD` writer - "]
-pub type MIN_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_CONF2_SPEC, u8, u8, 5, O>;
+pub type MIN_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF2_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn min_period(&self) -> MIN_PERIOD_R {
         MIN_PERIOD_R::new(((self.bits >> 2) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLC_CONF2")
+            .field(
+                "cvsd_seg_mod",
+                &format_args!("{}", self.cvsd_seg_mod().bits()),
+            )
+            .field("min_period", &format_args!("{}", self.min_period().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLC_CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

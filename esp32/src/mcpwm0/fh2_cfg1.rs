@@ -35,21 +35,21 @@ impl From<crate::W<FH2_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `FH2_CLR_OST` reader - "]
-pub type FH2_CLR_OST_R = crate::BitReader<bool>;
+pub type FH2_CLR_OST_R = crate::BitReader;
 #[doc = "Field `FH2_CLR_OST` writer - "]
-pub type FH2_CLR_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, FH2_CFG1_SPEC, bool, O>;
+pub type FH2_CLR_OST_W<'a, const O: u8> = crate::BitWriter<'a, FH2_CFG1_SPEC, O>;
 #[doc = "Field `FH2_CBCPULSE` reader - "]
-pub type FH2_CBCPULSE_R = crate::FieldReader<u8, u8>;
+pub type FH2_CBCPULSE_R = crate::FieldReader;
 #[doc = "Field `FH2_CBCPULSE` writer - "]
-pub type FH2_CBCPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FH2_CFG1_SPEC, u8, u8, 2, O>;
+pub type FH2_CBCPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, FH2_CFG1_SPEC, 2, O>;
 #[doc = "Field `FH2_FORCE_CBC` reader - "]
-pub type FH2_FORCE_CBC_R = crate::BitReader<bool>;
+pub type FH2_FORCE_CBC_R = crate::BitReader;
 #[doc = "Field `FH2_FORCE_CBC` writer - "]
-pub type FH2_FORCE_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, FH2_CFG1_SPEC, bool, O>;
+pub type FH2_FORCE_CBC_W<'a, const O: u8> = crate::BitWriter<'a, FH2_CFG1_SPEC, O>;
 #[doc = "Field `FH2_FORCE_OST` reader - "]
-pub type FH2_FORCE_OST_R = crate::BitReader<bool>;
+pub type FH2_FORCE_OST_R = crate::BitReader;
 #[doc = "Field `FH2_FORCE_OST` writer - "]
-pub type FH2_FORCE_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, FH2_CFG1_SPEC, bool, O>;
+pub type FH2_FORCE_OST_W<'a, const O: u8> = crate::BitWriter<'a, FH2_CFG1_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -70,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn fh2_force_ost(&self) -> FH2_FORCE_OST_R {
         FH2_FORCE_OST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FH2_CFG1")
+            .field("fh2_clr_ost", &format_args!("{}", self.fh2_clr_ost().bit()))
+            .field(
+                "fh2_cbcpulse",
+                &format_args!("{}", self.fh2_cbcpulse().bits()),
+            )
+            .field(
+                "fh2_force_cbc",
+                &format_args!("{}", self.fh2_force_cbc().bit()),
+            )
+            .field(
+                "fh2_force_ost",
+                &format_args!("{}", self.fh2_force_ost().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FH2_CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

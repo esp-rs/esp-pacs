@@ -35,62 +35,58 @@ impl From<crate::W<DMA_TX_I_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_TX_I_SRAM_0_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 0."]
-pub type DMA_TX_I_SRAM_0_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_0_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_0_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 0."]
-pub type DMA_TX_I_SRAM_0_R_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_0_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_0_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 0."]
-pub type DMA_TX_I_SRAM_0_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_0_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_0_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 0."]
-pub type DMA_TX_I_SRAM_0_W_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_0_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_1_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 1."]
-pub type DMA_TX_I_SRAM_1_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_1_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_1_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 1."]
-pub type DMA_TX_I_SRAM_1_R_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_1_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_1_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 1."]
-pub type DMA_TX_I_SRAM_1_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_1_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_1_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 1."]
-pub type DMA_TX_I_SRAM_1_W_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_1_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_2_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 2."]
-pub type DMA_TX_I_SRAM_2_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_2_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_2_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 2."]
-pub type DMA_TX_I_SRAM_2_R_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_2_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_2_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 2."]
-pub type DMA_TX_I_SRAM_2_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_2_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_2_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 2."]
-pub type DMA_TX_I_SRAM_2_W_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_2_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_3_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 3."]
-pub type DMA_TX_I_SRAM_3_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_3_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_3_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 3."]
-pub type DMA_TX_I_SRAM_3_R_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_3_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_3_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 3."]
-pub type DMA_TX_I_SRAM_3_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_3_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_3_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 3."]
-pub type DMA_TX_I_SRAM_3_W_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_3_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_4_SPLTADDR` reader - Configure the split address of SRAM Block 4-21 for TX Copy DMA access."]
 pub type DMA_TX_I_SRAM_4_SPLTADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DMA_TX_I_SRAM_4_SPLTADDR` writer - Configure the split address of SRAM Block 4-21 for TX Copy DMA access."]
 pub type DMA_TX_I_SRAM_4_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_TX_I_1_SPEC, u32, u32, 17, O>;
+    crate::FieldWriter<'a, DMA_TX_I_1_SPEC, 17, O, u32, u32>;
 #[doc = "Field `DMA_TX_I_SRAM_4_L_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 low address region."]
-pub type DMA_TX_I_SRAM_4_L_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_4_L_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_4_L_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 low address region."]
-pub type DMA_TX_I_SRAM_4_L_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_4_L_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_4_L_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 low address region."]
-pub type DMA_TX_I_SRAM_4_L_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_4_L_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_4_L_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 low address region."]
-pub type DMA_TX_I_SRAM_4_L_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_4_L_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_4_H_R` reader - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 high address region."]
-pub type DMA_TX_I_SRAM_4_H_R_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_4_H_R_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_4_H_R` writer - Setting to 1 grants TX Copy DMA permission to read SRAM Block 4-21 high address region."]
-pub type DMA_TX_I_SRAM_4_H_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_4_H_R_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 #[doc = "Field `DMA_TX_I_SRAM_4_H_W` reader - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 high address region."]
-pub type DMA_TX_I_SRAM_4_H_W_R = crate::BitReader<bool>;
+pub type DMA_TX_I_SRAM_4_H_W_R = crate::BitReader;
 #[doc = "Field `DMA_TX_I_SRAM_4_H_W` writer - Setting to 1 grants TX Copy DMA permission to write SRAM Block 4-21 high address region."]
-pub type DMA_TX_I_SRAM_4_H_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_TX_I_1_SPEC, bool, O>;
+pub type DMA_TX_I_SRAM_4_H_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_TX_I_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 grants TX Copy DMA permission to read SRAM Block 0."]
     #[inline(always)]
@@ -156,6 +152,71 @@ impl R {
     #[inline(always)]
     pub fn dma_tx_i_sram_4_h_w(&self) -> DMA_TX_I_SRAM_4_H_W_R {
         DMA_TX_I_SRAM_4_H_W_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_TX_I_1")
+            .field(
+                "dma_tx_i_sram_0_r",
+                &format_args!("{}", self.dma_tx_i_sram_0_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_0_w",
+                &format_args!("{}", self.dma_tx_i_sram_0_w().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_1_r",
+                &format_args!("{}", self.dma_tx_i_sram_1_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_1_w",
+                &format_args!("{}", self.dma_tx_i_sram_1_w().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_2_r",
+                &format_args!("{}", self.dma_tx_i_sram_2_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_2_w",
+                &format_args!("{}", self.dma_tx_i_sram_2_w().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_3_r",
+                &format_args!("{}", self.dma_tx_i_sram_3_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_3_w",
+                &format_args!("{}", self.dma_tx_i_sram_3_w().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_4_spltaddr",
+                &format_args!("{}", self.dma_tx_i_sram_4_spltaddr().bits()),
+            )
+            .field(
+                "dma_tx_i_sram_4_l_r",
+                &format_args!("{}", self.dma_tx_i_sram_4_l_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_4_l_w",
+                &format_args!("{}", self.dma_tx_i_sram_4_l_w().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_4_h_r",
+                &format_args!("{}", self.dma_tx_i_sram_4_h_r().bit()),
+            )
+            .field(
+                "dma_tx_i_sram_4_h_w",
+                &format_args!("{}", self.dma_tx_i_sram_4_h_w().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_TX_I_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

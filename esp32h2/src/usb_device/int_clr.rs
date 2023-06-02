@@ -20,46 +20,43 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `JTAG_IN_FLUSH_INT_CLR` writer - Set this bit to clear the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
-pub type JTAG_IN_FLUSH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type JTAG_IN_FLUSH_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SOF_INT_CLR` writer - Set this bit to clear the USB_DEVICE_JTAG_SOF_INT interrupt."]
-pub type SOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_CLR` writer - Set this bit to clear the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
-pub type SERIAL_OUT_RECV_PKT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SERIAL_OUT_RECV_PKT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_CLR` writer - Set this bit to clear the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
-pub type SERIAL_IN_EMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SERIAL_IN_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `PID_ERR_INT_CLR` writer - Set this bit to clear the USB_DEVICE_PID_ERR_INT interrupt."]
-pub type PID_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type PID_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CRC5_ERR_INT_CLR` writer - Set this bit to clear the USB_DEVICE_CRC5_ERR_INT interrupt."]
-pub type CRC5_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CRC5_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CRC16_ERR_INT_CLR` writer - Set this bit to clear the USB_DEVICE_CRC16_ERR_INT interrupt."]
-pub type CRC16_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CRC16_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `STUFF_ERR_INT_CLR` writer - Set this bit to clear the USB_DEVICE_STUFF_ERR_INT interrupt."]
-pub type STUFF_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type STUFF_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_CLR` writer - Set this bit to clear the USB_DEVICE_IN_TOKEN_IN_EP1_INT interrupt."]
-pub type IN_TOKEN_REC_IN_EP1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_TOKEN_REC_IN_EP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `USB_BUS_RESET_INT_CLR` writer - Set this bit to clear the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
-pub type USB_BUS_RESET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type USB_BUS_RESET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_CLR` writer - Set this bit to clear the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
-pub type OUT_EP1_ZERO_PAYLOAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_EP1_ZERO_PAYLOAD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_CLR` writer - Set this bit to clear the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
-pub type OUT_EP2_ZERO_PAYLOAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_EP2_ZERO_PAYLOAD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RTS_CHG_INT_CLR` writer - Set this bit to clear the USB_DEVICE_RTS_CHG_INT interrupt."]
-pub type RTS_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RTS_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DTR_CHG_INT_CLR` writer - Set this bit to clear the USB_DEVICE_DTR_CHG_INT interrupt."]
-pub type DTR_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DTR_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `GET_LINE_CODE_INT_CLR` writer - Set this bit to clear the USB_DEVICE_GET_LINE_CODE_INT interrupt."]
-pub type GET_LINE_CODE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type GET_LINE_CODE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SET_LINE_CODE_INT_CLR` writer - Set this bit to clear the USB_DEVICE_SET_LINE_CODE_INT interrupt."]
-pub type SET_LINE_CODE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SET_LINE_CODE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]

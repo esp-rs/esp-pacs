@@ -20,7 +20,13 @@ impl From<crate::W<SET_PARA_FINISH_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_PARA_END` writer - Finish hmac configuration."]
-pub type SET_PARA_END_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_PARA_FINISH_SPEC, bool, O>;
+pub type SET_PARA_END_W<'a, const O: u8> = crate::BitWriter<'a, SET_PARA_FINISH_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_PARA_FINISH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Finish hmac configuration."]
     #[inline(always)]

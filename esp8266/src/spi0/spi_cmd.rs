@@ -35,61 +35,61 @@ impl From<crate::W<SPI_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_usr` reader - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
-pub type SPI_USR_R = crate::BitReader<bool>;
+pub type SPI_USR_R = crate::BitReader;
 #[doc = "Field `spi_usr` writer - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
-pub type SPI_USR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_USR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_hpm` reader - "]
-pub type SPI_HPM_R = crate::BitReader<bool>;
+pub type SPI_HPM_R = crate::BitReader;
 #[doc = "Field `spi_hpm` writer - "]
-pub type SPI_HPM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_HPM_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_res` reader - "]
-pub type SPI_RES_R = crate::BitReader<bool>;
+pub type SPI_RES_R = crate::BitReader;
 #[doc = "Field `spi_res` writer - "]
-pub type SPI_RES_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_RES_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_dp` reader - "]
-pub type SPI_DP_R = crate::BitReader<bool>;
+pub type SPI_DP_R = crate::BitReader;
 #[doc = "Field `spi_dp` writer - "]
-pub type SPI_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_DP_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_ce` reader - "]
-pub type SPI_CE_R = crate::BitReader<bool>;
+pub type SPI_CE_R = crate::BitReader;
 #[doc = "Field `spi_ce` writer - "]
-pub type SPI_CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_CE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_be` reader - "]
-pub type SPI_BE_R = crate::BitReader<bool>;
+pub type SPI_BE_R = crate::BitReader;
 #[doc = "Field `spi_be` writer - "]
-pub type SPI_BE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_BE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_se` reader - "]
-pub type SPI_SE_R = crate::BitReader<bool>;
+pub type SPI_SE_R = crate::BitReader;
 #[doc = "Field `spi_se` writer - "]
-pub type SPI_SE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_SE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_pp` reader - "]
-pub type SPI_PP_R = crate::BitReader<bool>;
+pub type SPI_PP_R = crate::BitReader;
 #[doc = "Field `spi_pp` writer - "]
-pub type SPI_PP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_PP_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_write_sr` reader - "]
-pub type SPI_WRITE_SR_R = crate::BitReader<bool>;
+pub type SPI_WRITE_SR_R = crate::BitReader;
 #[doc = "Field `spi_write_sr` writer - "]
-pub type SPI_WRITE_SR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_WRITE_SR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_read_sr` reader - "]
-pub type SPI_READ_SR_R = crate::BitReader<bool>;
+pub type SPI_READ_SR_R = crate::BitReader;
 #[doc = "Field `spi_read_sr` writer - "]
-pub type SPI_READ_SR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_READ_SR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_read_id` reader - "]
-pub type SPI_READ_ID_R = crate::BitReader<bool>;
+pub type SPI_READ_ID_R = crate::BitReader;
 #[doc = "Field `spi_read_id` writer - "]
-pub type SPI_READ_ID_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_READ_ID_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_write_disable` reader - "]
-pub type SPI_WRITE_DISABLE_R = crate::BitReader<bool>;
+pub type SPI_WRITE_DISABLE_R = crate::BitReader;
 #[doc = "Field `spi_write_disable` writer - "]
-pub type SPI_WRITE_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_WRITE_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_write_enable` reader - "]
-pub type SPI_WRITE_ENABLE_R = crate::BitReader<bool>;
+pub type SPI_WRITE_ENABLE_R = crate::BitReader;
 #[doc = "Field `spi_write_enable` writer - "]
-pub type SPI_WRITE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_WRITE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 #[doc = "Field `spi_read` reader - "]
-pub type SPI_READ_R = crate::BitReader<bool>;
+pub type SPI_READ_R = crate::BitReader;
 #[doc = "Field `spi_read` writer - "]
-pub type SPI_READ_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CMD_SPEC, bool, O>;
+pub type SPI_READ_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CMD_SPEC, O>;
 impl R {
     #[doc = "Bit 18 - In the master mode, it is the start bit of a single operation. Self-clear by hardware"]
     #[inline(always)]
@@ -160,6 +160,42 @@ impl R {
     #[inline(always)]
     pub fn spi_read(&self) -> SPI_READ_R {
         SPI_READ_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CMD")
+            .field("spi_usr", &format_args!("{}", self.spi_usr().bit()))
+            .field("spi_read", &format_args!("{}", self.spi_read().bit()))
+            .field(
+                "spi_write_enable",
+                &format_args!("{}", self.spi_write_enable().bit()),
+            )
+            .field(
+                "spi_write_disable",
+                &format_args!("{}", self.spi_write_disable().bit()),
+            )
+            .field("spi_read_id", &format_args!("{}", self.spi_read_id().bit()))
+            .field("spi_read_sr", &format_args!("{}", self.spi_read_sr().bit()))
+            .field(
+                "spi_write_sr",
+                &format_args!("{}", self.spi_write_sr().bit()),
+            )
+            .field("spi_pp", &format_args!("{}", self.spi_pp().bit()))
+            .field("spi_se", &format_args!("{}", self.spi_se().bit()))
+            .field("spi_be", &format_args!("{}", self.spi_be().bit()))
+            .field("spi_ce", &format_args!("{}", self.spi_ce().bit()))
+            .field("spi_dp", &format_args!("{}", self.spi_dp().bit()))
+            .field("spi_res", &format_args!("{}", self.spi_res().bit()))
+            .field("spi_hpm", &format_args!("{}", self.spi_hpm().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

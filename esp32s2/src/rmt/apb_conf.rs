@@ -35,29 +35,29 @@ impl From<crate::W<APB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub type APB_FIFO_MASK_R = crate::BitReader<bool>;
+pub type APB_FIFO_MASK_R = crate::BitReader;
 #[doc = "Field `APB_FIFO_MASK` writer - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type APB_FIFO_MASK_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
+pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit to enable the clock for RMT memory."]
-pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit to enable the clock for RMT memory."]
-pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
@@ -88,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_CONF")
+            .field(
+                "apb_fifo_mask",
+                &format_args!("{}", self.apb_fifo_mask().bit()),
+            )
+            .field(
+                "mem_tx_wrap_en",
+                &format_args!("{}", self.mem_tx_wrap_en().bit()),
+            )
+            .field(
+                "mem_clk_force_on",
+                &format_args!("{}", self.mem_clk_force_on().bit()),
+            )
+            .field(
+                "mem_force_pd",
+                &format_args!("{}", self.mem_force_pd().bit()),
+            )
+            .field(
+                "mem_force_pu",
+                &format_args!("{}", self.mem_force_pu().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

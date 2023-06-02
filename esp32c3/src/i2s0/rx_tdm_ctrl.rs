@@ -35,82 +35,73 @@ impl From<crate::W<RX_TDM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_TDM_PDM_CHAN0_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN0_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN0_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN0_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN0_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN1_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN1_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN1_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN1_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN1_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN2_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 2. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN2_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN2_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN2_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 2. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN2_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN3_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 3. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN3_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN3_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN3_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 3. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN3_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN4_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 4. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN4_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN4_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN4_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 4. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN4_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN5_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 5. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN5_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN5_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN5_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 5. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN5_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN6_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 6. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN6_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN6_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN6_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 6. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN6_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN6_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_PDM_CHAN7_EN` reader - 1: Enable the valid data input of I2S RX TDM or PDM channel 7. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN7_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_PDM_CHAN7_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_PDM_CHAN7_EN` writer - 1: Enable the valid data input of I2S RX TDM or PDM channel 7. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_PDM_CHAN7_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_PDM_CHAN7_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN8_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 8. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN8_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN8_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN8_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 8. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN8_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN8_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN9_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 9. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN9_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN9_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN9_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 9. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN9_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN9_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN10_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 10. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN10_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN10_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN10_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 10. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN10_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN10_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN11_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 11. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN11_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN11_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN11_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 11. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN11_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN11_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN12_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 12. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN12_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN12_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN12_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 12. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN12_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN12_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN13_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 13. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN13_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN13_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN13_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 13. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN13_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN13_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN14_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 14. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN14_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN14_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN14_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 14. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN14_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN14_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_CHAN15_EN` reader - 1: Enable the valid data input of I2S RX TDM channel 15. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN15_EN_R = crate::BitReader<bool>;
+pub type RX_TDM_CHAN15_EN_R = crate::BitReader;
 #[doc = "Field `RX_TDM_CHAN15_EN` writer - 1: Enable the valid data input of I2S RX TDM channel 15. 0: Disable, just input 0 in this channel."]
-pub type RX_TDM_CHAN15_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_TDM_CTRL_SPEC, bool, O>;
+pub type RX_TDM_CHAN15_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_TDM_CTRL_SPEC, O>;
 #[doc = "Field `RX_TDM_TOT_CHAN_NUM` reader - The total channel number of I2S TX TDM mode."]
-pub type RX_TDM_TOT_CHAN_NUM_R = crate::FieldReader<u8, u8>;
+pub type RX_TDM_TOT_CHAN_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_TDM_TOT_CHAN_NUM` writer - The total channel number of I2S TX TDM mode."]
-pub type RX_TDM_TOT_CHAN_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_TDM_CTRL_SPEC, u8, u8, 4, O>;
+pub type RX_TDM_TOT_CHAN_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TDM_CTRL_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 0 - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
@@ -196,6 +187,87 @@ impl R {
     #[inline(always)]
     pub fn rx_tdm_tot_chan_num(&self) -> RX_TDM_TOT_CHAN_NUM_R {
         RX_TDM_TOT_CHAN_NUM_R::new(((self.bits >> 16) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_TDM_CTRL")
+            .field(
+                "rx_tdm_pdm_chan0_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan0_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan1_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan1_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan2_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan2_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan3_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan3_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan4_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan4_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan5_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan5_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan6_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan6_en().bit()),
+            )
+            .field(
+                "rx_tdm_pdm_chan7_en",
+                &format_args!("{}", self.rx_tdm_pdm_chan7_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan8_en",
+                &format_args!("{}", self.rx_tdm_chan8_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan9_en",
+                &format_args!("{}", self.rx_tdm_chan9_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan10_en",
+                &format_args!("{}", self.rx_tdm_chan10_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan11_en",
+                &format_args!("{}", self.rx_tdm_chan11_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan12_en",
+                &format_args!("{}", self.rx_tdm_chan12_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan13_en",
+                &format_args!("{}", self.rx_tdm_chan13_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan14_en",
+                &format_args!("{}", self.rx_tdm_chan14_en().bit()),
+            )
+            .field(
+                "rx_tdm_chan15_en",
+                &format_args!("{}", self.rx_tdm_chan15_en().bit()),
+            )
+            .field(
+                "rx_tdm_tot_chan_num",
+                &format_args!("{}", self.rx_tdm_tot_chan_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_TDM_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,14 +35,31 @@ impl From<crate::W<OCCUPY_1_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_CACHE` reader - Configure whether SRAM Block 0-3 is used as cache memory."]
-pub type OCCUPY_CACHE_R = crate::FieldReader<u8, u8>;
+pub type OCCUPY_CACHE_R = crate::FieldReader;
 #[doc = "Field `OCCUPY_CACHE` writer - Configure whether SRAM Block 0-3 is used as cache memory."]
-pub type OCCUPY_CACHE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OCCUPY_1_SPEC, u8, u8, 4, O>;
+pub type OCCUPY_CACHE_W<'a, const O: u8> = crate::FieldWriter<'a, OCCUPY_1_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 0-3 is used as cache memory."]
     #[inline(always)]
     pub fn occupy_cache(&self) -> OCCUPY_CACHE_R {
         OCCUPY_CACHE_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OCCUPY_1")
+            .field(
+                "occupy_cache",
+                &format_args!("{}", self.occupy_cache().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OCCUPY_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

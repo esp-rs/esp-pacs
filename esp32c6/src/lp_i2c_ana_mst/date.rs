@@ -38,12 +38,11 @@ impl From<crate::W<DATE_SPEC>> for W {
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, DATE_SPEC, 28, O, u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` reader - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R = crate::BitReader<bool>;
+pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` writer - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DATE_SPEC, bool, O>;
+pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, DATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:27 - need_des"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c_mat_clk_en(&self) -> LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R {
         LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATE")
+            .field(
+                "lp_i2c_ana_mast_i2c_mat_date",
+                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mat_date().bits()),
+            )
+            .field(
+                "lp_i2c_ana_mast_i2c_mat_clk_en",
+                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mat_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

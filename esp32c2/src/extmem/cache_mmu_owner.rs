@@ -35,15 +35,31 @@ impl From<crate::W<CACHE_MMU_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
-pub type CACHE_MMU_OWNER_R = crate::FieldReader<u8, u8>;
+pub type CACHE_MMU_OWNER_R = crate::FieldReader;
 #[doc = "Field `CACHE_MMU_OWNER` writer - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
-pub type CACHE_MMU_OWNER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_MMU_OWNER_SPEC, u8, u8, 4, O>;
+pub type CACHE_MMU_OWNER_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_MMU_OWNER_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
     #[inline(always)]
     pub fn cache_mmu_owner(&self) -> CACHE_MMU_OWNER_R {
         CACHE_MMU_OWNER_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_MMU_OWNER")
+            .field(
+                "cache_mmu_owner",
+                &format_args!("{}", self.cache_mmu_owner().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_OWNER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

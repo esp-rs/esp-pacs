@@ -20,47 +20,47 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_WM_INT_CLR` writer - reg_rxfifo_wm_int_clr"]
-pub type RXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TXFIFO_WM_INT_CLR` writer - reg_txfifo_wm_int_clr"]
-pub type TXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RXFIFO_OVF_INT_CLR` writer - reg_rxfifo_ovf_int_clr"]
-pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `END_DETECT_INT_CLR` writer - reg_end_detect_int_clr"]
-pub type END_DETECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type END_DETECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `BYTE_TRANS_DONE_INT_CLR` writer - reg_byte_trans_done_int_clr"]
-pub type BYTE_TRANS_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type BYTE_TRANS_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` writer - reg_arbitration_lost_int_clr"]
-pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `MST_TXFIFO_UDF_INT_CLR` writer - reg_mst_txfifo_udf_int_clr"]
-pub type MST_TXFIFO_UDF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type MST_TXFIFO_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` writer - reg_trans_complete_int_clr"]
-pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_CLR` writer - reg_time_out_int_clr"]
-pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_START_INT_CLR` writer - reg_trans_start_int_clr"]
-pub type TRANS_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TRANS_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `NACK_INT_CLR` writer - reg_nack_int_clr"]
-pub type NACK_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type NACK_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TXFIFO_OVF_INT_CLR` writer - reg_txfifo_ovf_int_clr"]
-pub type TXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RXFIFO_UDF_INT_CLR` writer - reg_rxfifo_udf_int_clr"]
-pub type RXFIFO_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SCL_ST_TO_INT_CLR` writer - reg_scl_st_to_int_clr"]
-pub type SCL_ST_TO_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SCL_ST_TO_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SCL_MAIN_ST_TO_INT_CLR` writer - reg_scl_main_st_to_int_clr"]
-pub type SCL_MAIN_ST_TO_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SCL_MAIN_ST_TO_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DET_START_INT_CLR` writer - reg_det_start_int_clr"]
-pub type DET_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DET_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SLAVE_STRETCH_INT_CLR` writer - reg_slave_stretch_int_clr"]
-pub type SLAVE_STRETCH_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SLAVE_STRETCH_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `GENERAL_CALL_INT_CLR` writer - reg_general_call_int_clr"]
-pub type GENERAL_CALL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type GENERAL_CALL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - reg_rxfifo_wm_int_clr"]
     #[inline(always)]

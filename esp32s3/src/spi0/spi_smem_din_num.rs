@@ -35,50 +35,41 @@ impl From<crate::W<SPI_SMEM_DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_DIN0_NUM` reader - SPI_D input delay number."]
-pub type SPI_SMEM_DIN0_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN0_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN0_NUM` writer - SPI_D input delay number."]
-pub type SPI_SMEM_DIN0_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN0_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN1_NUM` reader - SPI_Q input delay number."]
-pub type SPI_SMEM_DIN1_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN1_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN1_NUM` writer - SPI_Q input delay number."]
-pub type SPI_SMEM_DIN1_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN1_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN2_NUM` reader - SPI_WP input delay number."]
-pub type SPI_SMEM_DIN2_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN2_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN2_NUM` writer - SPI_WP input delay number."]
-pub type SPI_SMEM_DIN2_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN2_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN3_NUM` reader - SPI_HD input delay number."]
-pub type SPI_SMEM_DIN3_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN3_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN3_NUM` writer - SPI_HD input delay number."]
-pub type SPI_SMEM_DIN3_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN3_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN4_NUM` reader - SPI_IO4 input delay number."]
-pub type SPI_SMEM_DIN4_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN4_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN4_NUM` writer - SPI_IO4 input delay number."]
-pub type SPI_SMEM_DIN4_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN4_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN5_NUM` reader - SPI_IO5 input delay number."]
-pub type SPI_SMEM_DIN5_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN5_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN5_NUM` writer - SPI_IO5 input delay number."]
-pub type SPI_SMEM_DIN5_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN5_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN6_NUM` reader - SPI_IO6 input delay number."]
-pub type SPI_SMEM_DIN6_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN6_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN6_NUM` writer - SPI_IO6 input delay number."]
-pub type SPI_SMEM_DIN6_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN6_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DIN7_NUM` reader - SPI_IO7 input delay number."]
-pub type SPI_SMEM_DIN7_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN7_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN7_NUM` writer - SPI_IO7 input delay number."]
-pub type SPI_SMEM_DIN7_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DIN7_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 #[doc = "Field `SPI_SMEM_DINS_NUM` reader - SPI_DQS input delay number."]
-pub type SPI_SMEM_DINS_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DINS_NUM_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DINS_NUM` writer - SPI_DQS input delay number."]
-pub type SPI_SMEM_DINS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, O>;
+pub type SPI_SMEM_DINS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_DIN_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_dins_num(&self) -> SPI_SMEM_DINS_NUM_R {
         SPI_SMEM_DINS_NUM_R::new(((self.bits >> 16) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_DIN_NUM")
+            .field(
+                "spi_smem_din0_num",
+                &format_args!("{}", self.spi_smem_din0_num().bits()),
+            )
+            .field(
+                "spi_smem_din1_num",
+                &format_args!("{}", self.spi_smem_din1_num().bits()),
+            )
+            .field(
+                "spi_smem_din2_num",
+                &format_args!("{}", self.spi_smem_din2_num().bits()),
+            )
+            .field(
+                "spi_smem_din3_num",
+                &format_args!("{}", self.spi_smem_din3_num().bits()),
+            )
+            .field(
+                "spi_smem_din4_num",
+                &format_args!("{}", self.spi_smem_din4_num().bits()),
+            )
+            .field(
+                "spi_smem_din5_num",
+                &format_args!("{}", self.spi_smem_din5_num().bits()),
+            )
+            .field(
+                "spi_smem_din6_num",
+                &format_args!("{}", self.spi_smem_din6_num().bits()),
+            )
+            .field(
+                "spi_smem_din7_num",
+                &format_args!("{}", self.spi_smem_din7_num().bits()),
+            )
+            .field(
+                "spi_smem_dins_num",
+                &format_args!("{}", self.spi_smem_dins_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

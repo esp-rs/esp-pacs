@@ -35,21 +35,21 @@ impl From<crate::W<CLKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_DIVIDER0` reader - Clock divider0 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER0_R = crate::FieldReader<u8, u8>;
+pub type CLK_DIVIDER0_R = crate::FieldReader;
 #[doc = "Field `CLK_DIVIDER0` writer - Clock divider0 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u8, u8, 8, O>;
+pub type CLK_DIVIDER0_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 8, O>;
 #[doc = "Field `CLK_DIVIDER1` reader - Clock divider1 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER1_R = crate::FieldReader<u8, u8>;
+pub type CLK_DIVIDER1_R = crate::FieldReader;
 #[doc = "Field `CLK_DIVIDER1` writer - Clock divider1 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u8, u8, 8, O>;
+pub type CLK_DIVIDER1_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 8, O>;
 #[doc = "Field `CLK_DIVIDER2` reader - Clock divider2 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER2_R = crate::FieldReader<u8, u8>;
+pub type CLK_DIVIDER2_R = crate::FieldReader;
 #[doc = "Field `CLK_DIVIDER2` writer - Clock divider2 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u8, u8, 8, O>;
+pub type CLK_DIVIDER2_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 8, O>;
 #[doc = "Field `CLK_DIVIDER3` reader - Clock divider3 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER3_R = crate::FieldReader<u8, u8>;
+pub type CLK_DIVIDER3_R = crate::FieldReader;
 #[doc = "Field `CLK_DIVIDER3` writer - Clock divider3 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
-pub type CLK_DIVIDER3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLKDIV_SPEC, u8, u8, 8, O>;
+pub type CLK_DIVIDER3_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Clock divider0 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn clk_divider3(&self) -> CLK_DIVIDER3_R {
         CLK_DIVIDER3_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKDIV")
+            .field(
+                "clk_divider0",
+                &format_args!("{}", self.clk_divider0().bits()),
+            )
+            .field(
+                "clk_divider1",
+                &format_args!("{}", self.clk_divider1().bits()),
+            )
+            .field(
+                "clk_divider2",
+                &format_args!("{}", self.clk_divider2().bits()),
+            )
+            .field(
+                "clk_divider3",
+                &format_args!("{}", self.clk_divider3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

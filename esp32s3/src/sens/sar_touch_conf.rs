@@ -38,34 +38,32 @@ impl From<crate::W<SAR_TOUCH_CONF_SPEC>> for W {
 pub type SAR_TOUCH_OUTEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_TOUCH_OUTEN` writer - touch controller output enable"]
 pub type SAR_TOUCH_OUTEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CONF_SPEC, u16, u16, 15, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 15, O, u16, u16>;
 #[doc = "Field `SAR_TOUCH_STATUS_CLR` writer - clear all touch active status"]
-pub type SAR_TOUCH_STATUS_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TOUCH_CONF_SPEC, bool, O>;
+pub type SAR_TOUCH_STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CONF_SPEC, O>;
 #[doc = "Field `SAR_TOUCH_DATA_SEL` reader - 3: smooth data 2: baseline 1,0: raw_data"]
-pub type SAR_TOUCH_DATA_SEL_R = crate::FieldReader<u8, u8>;
+pub type SAR_TOUCH_DATA_SEL_R = crate::FieldReader;
 #[doc = "Field `SAR_TOUCH_DATA_SEL` writer - 3: smooth data 2: baseline 1,0: raw_data"]
-pub type SAR_TOUCH_DATA_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CONF_SPEC, u8, u8, 2, O>;
+pub type SAR_TOUCH_DATA_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 2, O>;
 #[doc = "Field `SAR_TOUCH_DENOISE_END` reader - touch_denoise_done"]
-pub type SAR_TOUCH_DENOISE_END_R = crate::BitReader<bool>;
+pub type SAR_TOUCH_DENOISE_END_R = crate::BitReader;
 #[doc = "Field `SAR_TOUCH_UNIT_END` reader - touch_unit_done"]
-pub type SAR_TOUCH_UNIT_END_R = crate::BitReader<bool>;
+pub type SAR_TOUCH_UNIT_END_R = crate::BitReader;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD2` reader - indicate which pad is approach pad2"]
-pub type SAR_TOUCH_APPROACH_PAD2_R = crate::FieldReader<u8, u8>;
+pub type SAR_TOUCH_APPROACH_PAD2_R = crate::FieldReader;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD2` writer - indicate which pad is approach pad2"]
 pub type SAR_TOUCH_APPROACH_PAD2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CONF_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 4, O>;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD1` reader - indicate which pad is approach pad1"]
-pub type SAR_TOUCH_APPROACH_PAD1_R = crate::FieldReader<u8, u8>;
+pub type SAR_TOUCH_APPROACH_PAD1_R = crate::FieldReader;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD1` writer - indicate which pad is approach pad1"]
 pub type SAR_TOUCH_APPROACH_PAD1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CONF_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 4, O>;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD0` reader - indicate which pad is approach pad0"]
-pub type SAR_TOUCH_APPROACH_PAD0_R = crate::FieldReader<u8, u8>;
+pub type SAR_TOUCH_APPROACH_PAD0_R = crate::FieldReader;
 #[doc = "Field `SAR_TOUCH_APPROACH_PAD0` writer - indicate which pad is approach pad0"]
 pub type SAR_TOUCH_APPROACH_PAD0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CONF_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:14 - touch controller output enable"]
     #[inline(always)]
@@ -101,6 +99,47 @@ impl R {
     #[inline(always)]
     pub fn sar_touch_approach_pad0(&self) -> SAR_TOUCH_APPROACH_PAD0_R {
         SAR_TOUCH_APPROACH_PAD0_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_CONF")
+            .field(
+                "sar_touch_outen",
+                &format_args!("{}", self.sar_touch_outen().bits()),
+            )
+            .field(
+                "sar_touch_data_sel",
+                &format_args!("{}", self.sar_touch_data_sel().bits()),
+            )
+            .field(
+                "sar_touch_denoise_end",
+                &format_args!("{}", self.sar_touch_denoise_end().bit()),
+            )
+            .field(
+                "sar_touch_unit_end",
+                &format_args!("{}", self.sar_touch_unit_end().bit()),
+            )
+            .field(
+                "sar_touch_approach_pad2",
+                &format_args!("{}", self.sar_touch_approach_pad2().bits()),
+            )
+            .field(
+                "sar_touch_approach_pad1",
+                &format_args!("{}", self.sar_touch_approach_pad1().bits()),
+            )
+            .field(
+                "sar_touch_approach_pad0",
+                &format_args!("{}", self.sar_touch_approach_pad0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

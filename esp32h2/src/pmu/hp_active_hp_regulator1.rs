@@ -38,12 +38,29 @@ impl From<crate::W<HP_ACTIVE_HP_REGULATOR1_SPEC>> for W {
 pub type HP_ACTIVE_HP_REGULATOR_DRV_B_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HP_ACTIVE_HP_REGULATOR_DRV_B` writer - need_des"]
 pub type HP_ACTIVE_HP_REGULATOR_DRV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_ACTIVE_HP_REGULATOR1_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, HP_ACTIVE_HP_REGULATOR1_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 8:31 - need_des"]
     #[inline(always)]
     pub fn hp_active_hp_regulator_drv_b(&self) -> HP_ACTIVE_HP_REGULATOR_DRV_B_R {
         HP_ACTIVE_HP_REGULATOR_DRV_B_R::new((self.bits >> 8) & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_ACTIVE_HP_REGULATOR1")
+            .field(
+                "hp_active_hp_regulator_drv_b",
+                &format_args!("{}", self.hp_active_hp_regulator_drv_b().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_REGULATOR1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

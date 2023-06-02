@@ -35,21 +35,21 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_MODE` reader - 1: reset, detection of a set reset mode bit results in aborting the current transmission/reception of a message and entering the reset mode. 0: normal, on the '1-to-0' transition of the reset mode bit, the TWAI controller returns to the operating mode."]
-pub type RESET_MODE_R = crate::BitReader<bool>;
+pub type RESET_MODE_R = crate::BitReader;
 #[doc = "Field `RESET_MODE` writer - 1: reset, detection of a set reset mode bit results in aborting the current transmission/reception of a message and entering the reset mode. 0: normal, on the '1-to-0' transition of the reset mode bit, the TWAI controller returns to the operating mode."]
-pub type RESET_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODE_SPEC, bool, O>;
+pub type RESET_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MODE_SPEC, O>;
 #[doc = "Field `LISTEN_ONLY_MODE` reader - 1: listen only, in this mode the TWAI controller would give no acknowledge to the TWAI-bus, even if a message is received successfully. The error counters are stopped at the current value. 0: normal."]
-pub type LISTEN_ONLY_MODE_R = crate::BitReader<bool>;
+pub type LISTEN_ONLY_MODE_R = crate::BitReader;
 #[doc = "Field `LISTEN_ONLY_MODE` writer - 1: listen only, in this mode the TWAI controller would give no acknowledge to the TWAI-bus, even if a message is received successfully. The error counters are stopped at the current value. 0: normal."]
-pub type LISTEN_ONLY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODE_SPEC, bool, O>;
+pub type LISTEN_ONLY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MODE_SPEC, O>;
 #[doc = "Field `SELF_TEST_MODE` reader - 1: self test, in this mode a full node test is possible without any other active node on the bus using the self reception request command. The TWAI controller will perform a successful transmission, even if there is no acknowledge received. 0: normal, an acknowledge is required for successful transmission."]
-pub type SELF_TEST_MODE_R = crate::BitReader<bool>;
+pub type SELF_TEST_MODE_R = crate::BitReader;
 #[doc = "Field `SELF_TEST_MODE` writer - 1: self test, in this mode a full node test is possible without any other active node on the bus using the self reception request command. The TWAI controller will perform a successful transmission, even if there is no acknowledge received. 0: normal, an acknowledge is required for successful transmission."]
-pub type SELF_TEST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODE_SPEC, bool, O>;
+pub type SELF_TEST_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MODE_SPEC, O>;
 #[doc = "Field `RX_FILTER_MODE` reader - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
-pub type RX_FILTER_MODE_R = crate::BitReader<bool>;
+pub type RX_FILTER_MODE_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_MODE` writer - 1:single, the single acceptance filter option is enabled (one filter with the length of 32 bit is active). 0:dual, the dual acceptance filter option is enabled (two filters, each with the length of 16 bit are active)."]
-pub type RX_FILTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MODE_SPEC, bool, O>;
+pub type RX_FILTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, MODE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: reset, detection of a set reset mode bit results in aborting the current transmission/reception of a message and entering the reset mode. 0: normal, on the '1-to-0' transition of the reset mode bit, the TWAI controller returns to the operating mode."]
     #[inline(always)]
@@ -70,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn rx_filter_mode(&self) -> RX_FILTER_MODE_R {
         RX_FILTER_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODE")
+            .field("reset_mode", &format_args!("{}", self.reset_mode().bit()))
+            .field(
+                "listen_only_mode",
+                &format_args!("{}", self.listen_only_mode().bit()),
+            )
+            .field(
+                "self_test_mode",
+                &format_args!("{}", self.self_test_mode().bit()),
+            )
+            .field(
+                "rx_filter_mode",
+                &format_args!("{}", self.rx_filter_mode().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

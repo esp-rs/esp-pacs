@@ -21,7 +21,13 @@ impl From<crate::W<CORE_1_NMI_MASK_DISABLE_SPEC>> for W {
 }
 #[doc = "Field `CORE_1_NMI_MASK_DISABLE` writer - this field is used to disable NMI mask, it will not take effect immediately,only when the CPU executes to the trigger address will it start to cancel NMI mask"]
 pub type CORE_1_NMI_MASK_DISABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_NMI_MASK_DISABLE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CORE_1_NMI_MASK_DISABLE_SPEC, 32, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_NMI_MASK_DISABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - this field is used to disable NMI mask, it will not take effect immediately,only when the CPU executes to the trigger address will it start to cancel NMI mask"]
     #[inline(always)]

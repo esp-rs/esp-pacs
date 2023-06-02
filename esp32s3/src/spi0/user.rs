@@ -35,25 +35,25 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD` reader - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
-pub type CS_HOLD_R = crate::BitReader<bool>;
+pub type CS_HOLD_R = crate::BitReader;
 #[doc = "Field `CS_HOLD` writer - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
-pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CS_SETUP` reader - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
-pub type CS_SETUP_R = crate::BitReader<bool>;
+pub type CS_SETUP_R = crate::BitReader;
 #[doc = "Field `CS_SETUP` writer - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
-pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CS_SETUP_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `CK_OUT_EDGE` reader - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
-pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
-pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the DUMMY phase of an SPI transfer."]
-pub type USR_DUMMY_R = crate::BitReader<bool>;
+pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the DUMMY phase of an SPI transfer."]
-pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 impl R {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
@@ -79,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn usr_dummy(&self) -> USR_DUMMY_R {
         USR_DUMMY_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER")
+            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
+            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
+            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
+            .field(
+                "usr_dummy_idle",
+                &format_args!("{}", self.usr_dummy_idle().bit()),
+            )
+            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

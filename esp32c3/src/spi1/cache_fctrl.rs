@@ -35,34 +35,33 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_USR_ADDR_4BYTE` reader - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type CACHE_USR_ADDR_4BYTE_R = crate::BitReader<bool>;
+pub type CACHE_USR_ADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `CACHE_USR_ADDR_4BYTE` writer - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type CACHE_USR_ADDR_4BYTE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type CACHE_USR_ADDR_4BYTE_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FDIN_DUAL` reader - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDIN_DUAL_R = crate::BitReader<bool>;
+pub type FDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `FDIN_DUAL` writer - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FDOUT_DUAL` reader - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDOUT_DUAL_R = crate::BitReader<bool>;
+pub type FDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `FDOUT_DUAL` writer - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FADDR_DUAL` reader - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FADDR_DUAL_R = crate::BitReader<bool>;
+pub type FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `FADDR_DUAL` writer - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type FADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FDIN_QUAD` reader - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDIN_QUAD_R = crate::BitReader<bool>;
+pub type FDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `FDIN_QUAD` writer - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FDOUT_QUAD` reader - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDOUT_QUAD_R = crate::BitReader<bool>;
+pub type FDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `FDOUT_QUAD` writer - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `FADDR_QUAD` reader - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FADDR_QUAD_R = crate::BitReader<bool>;
+pub type FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `FADDR_QUAD` writer - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, O>;
+pub type FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_FCTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
@@ -98,6 +97,29 @@ impl R {
     #[inline(always)]
     pub fn faddr_quad(&self) -> FADDR_QUAD_R {
         FADDR_QUAD_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_FCTRL")
+            .field(
+                "cache_usr_addr_4byte",
+                &format_args!("{}", self.cache_usr_addr_4byte().bit()),
+            )
+            .field("fdin_dual", &format_args!("{}", self.fdin_dual().bit()))
+            .field("fdout_dual", &format_args!("{}", self.fdout_dual().bit()))
+            .field("faddr_dual", &format_args!("{}", self.faddr_dual().bit()))
+            .field("fdin_quad", &format_args!("{}", self.fdin_quad().bit()))
+            .field("fdout_quad", &format_args!("{}", self.fdout_quad().bit()))
+            .field("faddr_quad", &format_args!("{}", self.faddr_quad().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_FCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

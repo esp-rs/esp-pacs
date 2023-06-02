@@ -22,6 +22,23 @@ impl R {
         TIMER_UNIT0_VALUE_LO_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UNIT0_VALUE_LO")
+            .field(
+                "timer_unit0_value_lo",
+                &format_args!("{}", self.timer_unit0_value_lo().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UNIT0_VALUE_LO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "system timer unit0 value low register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [unit0_value_lo](index.html) module"]
 pub struct UNIT0_VALUE_LO_SPEC;
 impl crate::RegisterSpec for UNIT0_VALUE_LO_SPEC {

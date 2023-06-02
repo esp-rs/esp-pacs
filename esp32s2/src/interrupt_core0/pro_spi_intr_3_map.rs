@@ -35,15 +35,32 @@ impl From<crate::W<PRO_SPI_INTR_3_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_SPI_INTR_3_MAP` reader - This register is used to map SPI_INTR_3 interrupt signal to one of the CPU interrupts."]
-pub type PRO_SPI_INTR_3_MAP_R = crate::FieldReader<u8, u8>;
+pub type PRO_SPI_INTR_3_MAP_R = crate::FieldReader;
 #[doc = "Field `PRO_SPI_INTR_3_MAP` writer - This register is used to map SPI_INTR_3 interrupt signal to one of the CPU interrupts."]
 pub type PRO_SPI_INTR_3_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_SPI_INTR_3_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, PRO_SPI_INTR_3_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - This register is used to map SPI_INTR_3 interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
     pub fn pro_spi_intr_3_map(&self) -> PRO_SPI_INTR_3_MAP_R {
         PRO_SPI_INTR_3_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_SPI_INTR_3_MAP")
+            .field(
+                "pro_spi_intr_3_map",
+                &format_args!("{}", self.pro_spi_intr_3_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_SPI_INTR_3_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

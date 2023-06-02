@@ -35,37 +35,37 @@ impl From<crate::W<CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CAMERA_EN` reader - "]
-pub type CAMERA_EN_R = crate::BitReader<bool>;
+pub type CAMERA_EN_R = crate::BitReader;
 #[doc = "Field `CAMERA_EN` writer - "]
-pub type CAMERA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type CAMERA_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `LCD_TX_WRX2_EN` reader - "]
-pub type LCD_TX_WRX2_EN_R = crate::BitReader<bool>;
+pub type LCD_TX_WRX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_WRX2_EN` writer - "]
-pub type LCD_TX_WRX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type LCD_TX_WRX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `LCD_TX_SDX2_EN` reader - "]
-pub type LCD_TX_SDX2_EN_R = crate::BitReader<bool>;
+pub type LCD_TX_SDX2_EN_R = crate::BitReader;
 #[doc = "Field `LCD_TX_SDX2_EN` writer - "]
-pub type LCD_TX_SDX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type LCD_TX_SDX2_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - "]
-pub type DATA_ENABLE_TEST_EN_R = crate::BitReader<bool>;
+pub type DATA_ENABLE_TEST_EN_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE_TEST_EN` writer - "]
-pub type DATA_ENABLE_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type DATA_ENABLE_TEST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `DATA_ENABLE` reader - "]
-pub type DATA_ENABLE_R = crate::BitReader<bool>;
+pub type DATA_ENABLE_R = crate::BitReader;
 #[doc = "Field `DATA_ENABLE` writer - "]
-pub type DATA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type DATA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `LCD_EN` reader - "]
-pub type LCD_EN_R = crate::BitReader<bool>;
+pub type LCD_EN_R = crate::BitReader;
 #[doc = "Field `LCD_EN` writer - "]
-pub type LCD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type LCD_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `EXT_ADC_START_EN` reader - "]
-pub type EXT_ADC_START_EN_R = crate::BitReader<bool>;
+pub type EXT_ADC_START_EN_R = crate::BitReader;
 #[doc = "Field `EXT_ADC_START_EN` writer - "]
-pub type EXT_ADC_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type EXT_ADC_START_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 #[doc = "Field `INTER_VALID_EN` reader - "]
-pub type INTER_VALID_EN_R = crate::BitReader<bool>;
+pub type INTER_VALID_EN_R = crate::BitReader;
 #[doc = "Field `INTER_VALID_EN` writer - "]
-pub type INTER_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, O>;
+pub type INTER_VALID_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF2_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -106,6 +106,42 @@ impl R {
     #[inline(always)]
     pub fn inter_valid_en(&self) -> INTER_VALID_EN_R {
         INTER_VALID_EN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF2")
+            .field("camera_en", &format_args!("{}", self.camera_en().bit()))
+            .field(
+                "lcd_tx_wrx2_en",
+                &format_args!("{}", self.lcd_tx_wrx2_en().bit()),
+            )
+            .field(
+                "lcd_tx_sdx2_en",
+                &format_args!("{}", self.lcd_tx_sdx2_en().bit()),
+            )
+            .field(
+                "data_enable_test_en",
+                &format_args!("{}", self.data_enable_test_en().bit()),
+            )
+            .field("data_enable", &format_args!("{}", self.data_enable().bit()))
+            .field("lcd_en", &format_args!("{}", self.lcd_en().bit()))
+            .field(
+                "ext_adc_start_en",
+                &format_args!("{}", self.ext_adc_start_en().bit()),
+            )
+            .field(
+                "inter_valid_en",
+                &format_args!("{}", self.inter_valid_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,65 +35,53 @@ impl From<crate::W<PRO_IRAM0_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_0_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_0_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_0_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_0_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_0_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_0_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_0_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_0_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_0_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_0_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_0_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 0."]
-pub type PRO_IRAM0_SRAM_0_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_0_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_1_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_1_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_1_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_1_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_1_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_1_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_1_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_1_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_1_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_1_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_1_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 1."]
-pub type PRO_IRAM0_SRAM_1_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_1_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_2_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_2_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_2_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_2_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_2_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_2_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_2_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_2_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_2_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_2_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_2_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 2."]
-pub type PRO_IRAM0_SRAM_2_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_2_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_3_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_3_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_3_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_3_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_3_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_3_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_3_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_3_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_3_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_3_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_3_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 3."]
-pub type PRO_IRAM0_SRAM_3_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_1_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_3_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
     #[inline(always)]
@@ -154,6 +142,67 @@ impl R {
     #[inline(always)]
     pub fn pro_iram0_sram_3_w(&self) -> PRO_IRAM0_SRAM_3_W_R {
         PRO_IRAM0_SRAM_3_W_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_IRAM0_1")
+            .field(
+                "pro_iram0_sram_0_f",
+                &format_args!("{}", self.pro_iram0_sram_0_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_0_r",
+                &format_args!("{}", self.pro_iram0_sram_0_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_0_w",
+                &format_args!("{}", self.pro_iram0_sram_0_w().bit()),
+            )
+            .field(
+                "pro_iram0_sram_1_f",
+                &format_args!("{}", self.pro_iram0_sram_1_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_1_r",
+                &format_args!("{}", self.pro_iram0_sram_1_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_1_w",
+                &format_args!("{}", self.pro_iram0_sram_1_w().bit()),
+            )
+            .field(
+                "pro_iram0_sram_2_f",
+                &format_args!("{}", self.pro_iram0_sram_2_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_2_r",
+                &format_args!("{}", self.pro_iram0_sram_2_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_2_w",
+                &format_args!("{}", self.pro_iram0_sram_2_w().bit()),
+            )
+            .field(
+                "pro_iram0_sram_3_f",
+                &format_args!("{}", self.pro_iram0_sram_3_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_3_r",
+                &format_args!("{}", self.pro_iram0_sram_3_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_3_w",
+                &format_args!("{}", self.pro_iram0_sram_3_w().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_IRAM0_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

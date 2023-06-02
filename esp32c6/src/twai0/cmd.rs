@@ -20,15 +20,21 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_REQ` writer - 1: present, a message shall be transmitted. 0: absent"]
-pub type TX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type TX_REQ_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `ABORT_TX` writer - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
-pub type ABORT_TX_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type ABORT_TX_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `RELEASE_BUF` writer - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
-pub type RELEASE_BUF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type RELEASE_BUF_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `CLEAR_DATA_OVERRUN` writer - 1: clear, the data overrun status bit is cleared. 0: no action."]
-pub type CLEAR_DATA_OVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type CLEAR_DATA_OVERRUN_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `SELF_RX_REQUEST` writer - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
-pub type SELF_RX_REQUEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type SELF_RX_REQUEST_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - 1: present, a message shall be transmitted. 0: absent"]
     #[inline(always)]

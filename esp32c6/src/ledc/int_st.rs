@@ -14,37 +14,37 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER0_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
-pub type TIMER0_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER0_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER1_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER1_OVF_INT interrupt when LEDC_TIMER1_OVF_INT_ENA is set to 1."]
-pub type TIMER1_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER1_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER2_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER2_OVF_INT interrupt when LEDC_TIMER2_OVF_INT_ENA is set to 1."]
-pub type TIMER2_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER2_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER3_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER3_OVF_INT interrupt when LEDC_TIMER3_OVF_INT_ENA is set to 1."]
-pub type TIMER3_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER3_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH0_INT interrupt when LEDC_DUTY_CHNG_END_CH0_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH0_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH0_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH1_INT interrupt when LEDC_DUTY_CHNG_END_CH1_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH1_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH1_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH2_INT interrupt when LEDC_DUTY_CHNG_END_CH2_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH2_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH2_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH3_INT interrupt when LEDC_DUTY_CHNG_END_CH3_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH3_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH3_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH4_INT interrupt when LEDC_DUTY_CHNG_END_CH4_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH4_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH4_INT_ST_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH5_INT interrupt when LEDC_DUTY_CHNG_END_CH5_INT_ENA is set to 1."]
-pub type DUTY_CHNG_END_CH5_INT_ST_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_CH5_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH0_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH0_INT interrupt when LEDC_OVF_CNT_CH0_INT_ENA is set to 1."]
-pub type OVF_CNT_CH0_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH0_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH1_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH1_INT interrupt when LEDC_OVF_CNT_CH1_INT_ENA is set to 1."]
-pub type OVF_CNT_CH1_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH1_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH2_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH2_INT interrupt when LEDC_OVF_CNT_CH2_INT_ENA is set to 1."]
-pub type OVF_CNT_CH2_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH2_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH3_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH3_INT interrupt when LEDC_OVF_CNT_CH3_INT_ENA is set to 1."]
-pub type OVF_CNT_CH3_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH3_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH4_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH4_INT interrupt when LEDC_OVF_CNT_CH4_INT_ENA is set to 1."]
-pub type OVF_CNT_CH4_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH4_INT_ST_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_CH5_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH5_INT interrupt when LEDC_OVF_CNT_CH5_INT_ENA is set to 1."]
-pub type OVF_CNT_CH5_INT_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_CH5_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
     #[inline(always)]
@@ -125,6 +125,83 @@ impl R {
     #[inline(always)]
     pub fn ovf_cnt_ch5_int_st(&self) -> OVF_CNT_CH5_INT_ST_R {
         OVF_CNT_CH5_INT_ST_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "timer0_ovf_int_st",
+                &format_args!("{}", self.timer0_ovf_int_st().bit()),
+            )
+            .field(
+                "timer1_ovf_int_st",
+                &format_args!("{}", self.timer1_ovf_int_st().bit()),
+            )
+            .field(
+                "timer2_ovf_int_st",
+                &format_args!("{}", self.timer2_ovf_int_st().bit()),
+            )
+            .field(
+                "timer3_ovf_int_st",
+                &format_args!("{}", self.timer3_ovf_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch0_int_st",
+                &format_args!("{}", self.duty_chng_end_ch0_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch1_int_st",
+                &format_args!("{}", self.duty_chng_end_ch1_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch2_int_st",
+                &format_args!("{}", self.duty_chng_end_ch2_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch3_int_st",
+                &format_args!("{}", self.duty_chng_end_ch3_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch4_int_st",
+                &format_args!("{}", self.duty_chng_end_ch4_int_st().bit()),
+            )
+            .field(
+                "duty_chng_end_ch5_int_st",
+                &format_args!("{}", self.duty_chng_end_ch5_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch0_int_st",
+                &format_args!("{}", self.ovf_cnt_ch0_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch1_int_st",
+                &format_args!("{}", self.ovf_cnt_ch1_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch2_int_st",
+                &format_args!("{}", self.ovf_cnt_ch2_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch3_int_st",
+                &format_args!("{}", self.ovf_cnt_ch3_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch4_int_st",
+                &format_args!("{}", self.ovf_cnt_ch4_int_st().bit()),
+            )
+            .field(
+                "ovf_cnt_ch5_int_st",
+                &format_args!("{}", self.ovf_cnt_ch5_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

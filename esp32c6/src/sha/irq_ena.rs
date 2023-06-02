@@ -35,14 +35,31 @@ impl From<crate::W<IRQ_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT_ENA` reader - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
-pub type INTERRUPT_ENA_R = crate::BitReader<bool>;
+pub type INTERRUPT_ENA_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ENA` writer - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
-pub type INTERRUPT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_ENA_SPEC, bool, O>;
+pub type INTERRUPT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Sha interrupt enable register. 1'b0: disable(default). 1'b1: enable."]
     #[inline(always)]
     pub fn interrupt_ena(&self) -> INTERRUPT_ENA_R {
         INTERRUPT_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IRQ_ENA")
+            .field(
+                "interrupt_ena",
+                &format_args!("{}", self.interrupt_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IRQ_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

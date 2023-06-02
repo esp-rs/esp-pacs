@@ -14,33 +14,33 @@ impl From<crate::R<GHWCFG2_SPEC>> for R {
     }
 }
 #[doc = "Field `OTGMODE` reader - "]
-pub type OTGMODE_R = crate::FieldReader<u8, u8>;
+pub type OTGMODE_R = crate::FieldReader;
 #[doc = "Field `OTGARCH` reader - "]
-pub type OTGARCH_R = crate::FieldReader<u8, u8>;
+pub type OTGARCH_R = crate::FieldReader;
 #[doc = "Field `SINGPNT` reader - "]
-pub type SINGPNT_R = crate::BitReader<bool>;
+pub type SINGPNT_R = crate::BitReader;
 #[doc = "Field `HSPHYTYPE` reader - "]
-pub type HSPHYTYPE_R = crate::FieldReader<u8, u8>;
+pub type HSPHYTYPE_R = crate::FieldReader;
 #[doc = "Field `FSPHYTYPE` reader - "]
-pub type FSPHYTYPE_R = crate::FieldReader<u8, u8>;
+pub type FSPHYTYPE_R = crate::FieldReader;
 #[doc = "Field `NUMDEVEPS` reader - "]
-pub type NUMDEVEPS_R = crate::FieldReader<u8, u8>;
+pub type NUMDEVEPS_R = crate::FieldReader;
 #[doc = "Field `NUMHSTCHNL` reader - "]
-pub type NUMHSTCHNL_R = crate::FieldReader<u8, u8>;
+pub type NUMHSTCHNL_R = crate::FieldReader;
 #[doc = "Field `PERIOSUPPORT` reader - "]
-pub type PERIOSUPPORT_R = crate::BitReader<bool>;
+pub type PERIOSUPPORT_R = crate::BitReader;
 #[doc = "Field `DYNFIFOSIZING` reader - "]
-pub type DYNFIFOSIZING_R = crate::BitReader<bool>;
+pub type DYNFIFOSIZING_R = crate::BitReader;
 #[doc = "Field `MULTIPROCINTRPT` reader - "]
-pub type MULTIPROCINTRPT_R = crate::BitReader<bool>;
+pub type MULTIPROCINTRPT_R = crate::BitReader;
 #[doc = "Field `NPTXQDEPTH` reader - "]
-pub type NPTXQDEPTH_R = crate::FieldReader<u8, u8>;
+pub type NPTXQDEPTH_R = crate::FieldReader;
 #[doc = "Field `PTXQDEPTH` reader - "]
-pub type PTXQDEPTH_R = crate::FieldReader<u8, u8>;
+pub type PTXQDEPTH_R = crate::FieldReader;
 #[doc = "Field `TKNQDEPTH` reader - "]
-pub type TKNQDEPTH_R = crate::FieldReader<u8, u8>;
+pub type TKNQDEPTH_R = crate::FieldReader;
 #[doc = "Field `OTG_ENABLE_IC_USB` reader - "]
-pub type OTG_ENABLE_IC_USB_R = crate::BitReader<bool>;
+pub type OTG_ENABLE_IC_USB_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -111,6 +111,45 @@ impl R {
     #[inline(always)]
     pub fn otg_enable_ic_usb(&self) -> OTG_ENABLE_IC_USB_R {
         OTG_ENABLE_IC_USB_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GHWCFG2")
+            .field("otgmode", &format_args!("{}", self.otgmode().bits()))
+            .field("otgarch", &format_args!("{}", self.otgarch().bits()))
+            .field("singpnt", &format_args!("{}", self.singpnt().bit()))
+            .field("hsphytype", &format_args!("{}", self.hsphytype().bits()))
+            .field("fsphytype", &format_args!("{}", self.fsphytype().bits()))
+            .field("numdeveps", &format_args!("{}", self.numdeveps().bits()))
+            .field("numhstchnl", &format_args!("{}", self.numhstchnl().bits()))
+            .field(
+                "periosupport",
+                &format_args!("{}", self.periosupport().bit()),
+            )
+            .field(
+                "dynfifosizing",
+                &format_args!("{}", self.dynfifosizing().bit()),
+            )
+            .field(
+                "multiprocintrpt",
+                &format_args!("{}", self.multiprocintrpt().bit()),
+            )
+            .field("nptxqdepth", &format_args!("{}", self.nptxqdepth().bits()))
+            .field("ptxqdepth", &format_args!("{}", self.ptxqdepth().bits()))
+            .field("tknqdepth", &format_args!("{}", self.tknqdepth().bits()))
+            .field(
+                "otg_enable_ic_usb",
+                &format_args!("{}", self.otg_enable_ic_usb().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GHWCFG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ghwcfg2](index.html) module"]

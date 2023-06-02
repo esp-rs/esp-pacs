@@ -35,45 +35,41 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` reader - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
-pub type SLAVE_TRAN_COMP_INT_ENA_R = crate::BitReader<bool>;
+pub type SLAVE_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` writer - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
-pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SLAVE_TRAN_COMP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
-pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - RTC_I2C_ARBITRATION_LOST_INT interrupt enable bit"]
-pub type ARBITRATION_LOST_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` reader - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
-pub type MASTER_TRAN_COMP_INT_ENA_R = crate::BitReader<bool>;
+pub type MASTER_TRAN_COMP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` writer - RTC_I2C_MASTER_TRAN_COMP_INT interrupt enable bit"]
-pub type MASTER_TRAN_COMP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type MASTER_TRAN_COMP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
-pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` writer - RTC_I2C_TRANS_COMPLETE_INT interrupt enable bit"]
-pub type TRANS_COMPLETE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_ENA` reader - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
-pub type TIME_OUT_INT_ENA_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_INT_ENA` writer - RTC_I2C_TIME_OUT_INT interrupt enable bit"]
-pub type TIME_OUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TIME_OUT_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ACK_ERR_INT_ENA` reader - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
-pub type ACK_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type ACK_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ACK_ERR_INT_ENA` writer - RTC_I2C_ACK_ERR_INT interrupt enable bit"]
-pub type ACK_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ACK_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RX_DATA_INT_ENA` reader - RTC_I2C_RX_DATA_INT interrupt enable bit"]
-pub type RX_DATA_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_DATA_INT_ENA` writer - RTC_I2C_RX_DATA_INT interrupt enable bit"]
-pub type RX_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_DATA_INT_ENA` reader - RTC_I2C_TX_DATA_INT interrupt enable bit"]
-pub type TX_DATA_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_DATA_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_DATA_INT_ENA` writer - RTC_I2C_TX_DATA_INT interrupt enable bit"]
-pub type TX_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_DATA_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DETECT_START_INT_ENA` reader - RTC_I2C_DETECT_START_INT interrupt enable bit"]
-pub type DETECT_START_INT_ENA_R = crate::BitReader<bool>;
+pub type DETECT_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DETECT_START_INT_ENA` writer - RTC_I2C_DETECT_START_INT interrupt enable bit"]
-pub type DETECT_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DETECT_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - RTC_I2C_SLAVE_TRAN_COMP_INT interrupt enable bit"]
     #[inline(always)]
@@ -119,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn detect_start_int_ena(&self) -> DETECT_START_INT_ENA_R {
         DETECT_START_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "slave_tran_comp_int_ena",
+                &format_args!("{}", self.slave_tran_comp_int_ena().bit()),
+            )
+            .field(
+                "arbitration_lost_int_ena",
+                &format_args!("{}", self.arbitration_lost_int_ena().bit()),
+            )
+            .field(
+                "master_tran_comp_int_ena",
+                &format_args!("{}", self.master_tran_comp_int_ena().bit()),
+            )
+            .field(
+                "trans_complete_int_ena",
+                &format_args!("{}", self.trans_complete_int_ena().bit()),
+            )
+            .field(
+                "time_out_int_ena",
+                &format_args!("{}", self.time_out_int_ena().bit()),
+            )
+            .field(
+                "ack_err_int_ena",
+                &format_args!("{}", self.ack_err_int_ena().bit()),
+            )
+            .field(
+                "rx_data_int_ena",
+                &format_args!("{}", self.rx_data_int_ena().bit()),
+            )
+            .field(
+                "tx_data_int_ena",
+                &format_args!("{}", self.tx_data_int_ena().bit()),
+            )
+            .field(
+                "detect_start_int_ena",
+                &format_args!("{}", self.detect_start_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

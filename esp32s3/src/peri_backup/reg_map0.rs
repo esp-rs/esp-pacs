@@ -37,12 +37,26 @@ impl From<crate::W<REG_MAP0_SPEC>> for W {
 #[doc = "Field `MAP0` reader - x"]
 pub type MAP0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MAP0` writer - x"]
-pub type MAP0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, REG_MAP0_SPEC, u32, u32, 32, O>;
+pub type MAP0_W<'a, const O: u8> = crate::FieldWriter<'a, REG_MAP0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     pub fn map0(&self) -> MAP0_R {
         MAP0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REG_MAP0")
+            .field("map0", &format_args!("{}", self.map0().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REG_MAP0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

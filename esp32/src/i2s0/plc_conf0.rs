@@ -35,31 +35,29 @@ impl From<crate::W<PLC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `GOOD_PACK_MAX` reader - "]
-pub type GOOD_PACK_MAX_R = crate::FieldReader<u8, u8>;
+pub type GOOD_PACK_MAX_R = crate::FieldReader;
 #[doc = "Field `GOOD_PACK_MAX` writer - "]
-pub type GOOD_PACK_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 6, O>;
+pub type GOOD_PACK_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 6, O>;
 #[doc = "Field `N_ERR_SEG` reader - "]
-pub type N_ERR_SEG_R = crate::FieldReader<u8, u8>;
+pub type N_ERR_SEG_R = crate::FieldReader;
 #[doc = "Field `N_ERR_SEG` writer - "]
-pub type N_ERR_SEG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 3, O>;
+pub type N_ERR_SEG_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
 #[doc = "Field `SHIFT_RATE` reader - "]
-pub type SHIFT_RATE_R = crate::FieldReader<u8, u8>;
+pub type SHIFT_RATE_R = crate::FieldReader;
 #[doc = "Field `SHIFT_RATE` writer - "]
-pub type SHIFT_RATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 3, O>;
+pub type SHIFT_RATE_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
 #[doc = "Field `MAX_SLIDE_SAMPLE` reader - "]
-pub type MAX_SLIDE_SAMPLE_R = crate::FieldReader<u8, u8>;
+pub type MAX_SLIDE_SAMPLE_R = crate::FieldReader;
 #[doc = "Field `MAX_SLIDE_SAMPLE` writer - "]
-pub type MAX_SLIDE_SAMPLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 8, O>;
+pub type MAX_SLIDE_SAMPLE_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 8, O>;
 #[doc = "Field `PACK_LEN_8K` reader - "]
-pub type PACK_LEN_8K_R = crate::FieldReader<u8, u8>;
+pub type PACK_LEN_8K_R = crate::FieldReader;
 #[doc = "Field `PACK_LEN_8K` writer - "]
-pub type PACK_LEN_8K_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 5, O>;
+pub type PACK_LEN_8K_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 5, O>;
 #[doc = "Field `N_MIN_ERR` reader - "]
-pub type N_MIN_ERR_R = crate::FieldReader<u8, u8>;
+pub type N_MIN_ERR_R = crate::FieldReader;
 #[doc = "Field `N_MIN_ERR` writer - "]
-pub type N_MIN_ERR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLC_CONF0_SPEC, u8, u8, 3, O>;
+pub type N_MIN_ERR_W<'a, const O: u8> = crate::FieldWriter<'a, PLC_CONF0_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -90,6 +88,34 @@ impl R {
     #[inline(always)]
     pub fn n_min_err(&self) -> N_MIN_ERR_R {
         N_MIN_ERR_R::new(((self.bits >> 25) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLC_CONF0")
+            .field(
+                "good_pack_max",
+                &format_args!("{}", self.good_pack_max().bits()),
+            )
+            .field("n_err_seg", &format_args!("{}", self.n_err_seg().bits()))
+            .field("shift_rate", &format_args!("{}", self.shift_rate().bits()))
+            .field(
+                "max_slide_sample",
+                &format_args!("{}", self.max_slide_sample().bits()),
+            )
+            .field(
+                "pack_len_8k",
+                &format_args!("{}", self.pack_len_8k().bits()),
+            )
+            .field("n_min_err", &format_args!("{}", self.n_min_err().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLC_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

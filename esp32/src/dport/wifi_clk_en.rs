@@ -37,23 +37,20 @@ impl From<crate::W<WIFI_CLK_EN_SPEC>> for W {
 #[doc = "Field `WIFI_CLK_EN` reader - "]
 pub type WIFI_CLK_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_CLK_EN` writer - "]
-pub type WIFI_CLK_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u32, u32, 32, O>;
+pub type WIFI_CLK_EN_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_CLK_EN_SPEC, 32, O, u32, u32>;
 #[doc = "Field `WIFI_CLK_WIFI_EN` reader - "]
-pub type WIFI_CLK_WIFI_EN_R = crate::FieldReader<u8, u8>;
+pub type WIFI_CLK_WIFI_EN_R = crate::FieldReader;
 #[doc = "Field `WIFI_CLK_WIFI_EN` writer - "]
-pub type WIFI_CLK_WIFI_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 3, O>;
+pub type WIFI_CLK_WIFI_EN_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_CLK_EN_SPEC, 3, O>;
 #[doc = "Field `WIFI_CLK_WIFI_BT_COMMON` reader - "]
-pub type WIFI_CLK_WIFI_BT_COMMON_R = crate::FieldReader<u8, u8>;
+pub type WIFI_CLK_WIFI_BT_COMMON_R = crate::FieldReader;
 #[doc = "Field `WIFI_CLK_WIFI_BT_COMMON` writer - "]
 pub type WIFI_CLK_WIFI_BT_COMMON_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, WIFI_CLK_EN_SPEC, 6, O>;
 #[doc = "Field `WIFI_CLK_BT_EN` reader - "]
-pub type WIFI_CLK_BT_EN_R = crate::FieldReader<u8, u8>;
+pub type WIFI_CLK_BT_EN_R = crate::FieldReader;
 #[doc = "Field `WIFI_CLK_BT_EN` writer - "]
-pub type WIFI_CLK_BT_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 3, O>;
+pub type WIFI_CLK_BT_EN_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_CLK_EN_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -74,6 +71,35 @@ impl R {
     #[inline(always)]
     pub fn wifi_clk_bt_en(&self) -> WIFI_CLK_BT_EN_R {
         WIFI_CLK_BT_EN_R::new(((self.bits >> 11) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI_CLK_EN")
+            .field(
+                "wifi_clk_en",
+                &format_args!("{}", self.wifi_clk_en().bits()),
+            )
+            .field(
+                "wifi_clk_wifi_en",
+                &format_args!("{}", self.wifi_clk_wifi_en().bits()),
+            )
+            .field(
+                "wifi_clk_wifi_bt_common",
+                &format_args!("{}", self.wifi_clk_wifi_bt_common().bits()),
+            )
+            .field(
+                "wifi_clk_bt_en",
+                &format_args!("{}", self.wifi_clk_bt_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WIFI_CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

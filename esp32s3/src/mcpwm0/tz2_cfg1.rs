@@ -35,21 +35,21 @@ impl From<crate::W<TZ2_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TZ2_CLR_OST` reader - a rising edge will clear on going one-shot mode action"]
-pub type TZ2_CLR_OST_R = crate::BitReader<bool>;
+pub type TZ2_CLR_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_CLR_OST` writer - a rising edge will clear on going one-shot mode action"]
-pub type TZ2_CLR_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, O>;
+pub type TZ2_CLR_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG1_SPEC, O>;
 #[doc = "Field `TZ2_CBCPULSE` reader - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
-pub type TZ2_CBCPULSE_R = crate::FieldReader<u8, u8>;
+pub type TZ2_CBCPULSE_R = crate::FieldReader;
 #[doc = "Field `TZ2_CBCPULSE` writer - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
-pub type TZ2_CBCPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ2_CFG1_SPEC, u8, u8, 2, O>;
+pub type TZ2_CBCPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, TZ2_CFG1_SPEC, 2, O>;
 #[doc = "Field `TZ2_FORCE_CBC` reader - a toggle trigger a cycle-by-cycle mode action"]
-pub type TZ2_FORCE_CBC_R = crate::BitReader<bool>;
+pub type TZ2_FORCE_CBC_R = crate::BitReader;
 #[doc = "Field `TZ2_FORCE_CBC` writer - a toggle trigger a cycle-by-cycle mode action"]
-pub type TZ2_FORCE_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, O>;
+pub type TZ2_FORCE_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG1_SPEC, O>;
 #[doc = "Field `TZ2_FORCE_OST` reader - a toggle (software negate its value) triggers a one-shot mode action"]
-pub type TZ2_FORCE_OST_R = crate::BitReader<bool>;
+pub type TZ2_FORCE_OST_R = crate::BitReader;
 #[doc = "Field `TZ2_FORCE_OST` writer - a toggle (software negate its value) triggers a one-shot mode action"]
-pub type TZ2_FORCE_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, O>;
+pub type TZ2_FORCE_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ2_CFG1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
@@ -70,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn tz2_force_ost(&self) -> TZ2_FORCE_OST_R {
         TZ2_FORCE_OST_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TZ2_CFG1")
+            .field("tz2_clr_ost", &format_args!("{}", self.tz2_clr_ost().bit()))
+            .field(
+                "tz2_cbcpulse",
+                &format_args!("{}", self.tz2_cbcpulse().bits()),
+            )
+            .field(
+                "tz2_force_cbc",
+                &format_args!("{}", self.tz2_force_cbc().bit()),
+            )
+            .field(
+                "tz2_force_ost",
+                &format_args!("{}", self.tz2_force_ost().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TZ2_CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

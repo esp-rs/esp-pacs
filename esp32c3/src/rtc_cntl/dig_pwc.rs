@@ -35,90 +35,89 @@ impl From<crate::W<DIG_PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `VDD_SPI_PWR_DRV` reader - vdd_spi drv's software value"]
-pub type VDD_SPI_PWR_DRV_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_PWR_DRV_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_PWR_DRV` writer - vdd_spi drv's software value"]
-pub type VDD_SPI_PWR_DRV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIG_PWC_SPEC, u8, u8, 2, O>;
+pub type VDD_SPI_PWR_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, DIG_PWC_SPEC, 2, O>;
 #[doc = "Field `VDD_SPI_PWR_FORCE` reader - vdd_spi drv use software value"]
-pub type VDD_SPI_PWR_FORCE_R = crate::BitReader<bool>;
+pub type VDD_SPI_PWR_FORCE_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_PWR_FORCE` writer - vdd_spi drv use software value"]
-pub type VDD_SPI_PWR_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type VDD_SPI_PWR_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `LSLP_MEM_FORCE_PD` reader - memories in digital core force PD in sleep"]
-pub type LSLP_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type LSLP_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_FORCE_PD` writer - memories in digital core force PD in sleep"]
-pub type LSLP_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type LSLP_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `LSLP_MEM_FORCE_PU` reader - memories in digital core force PU in sleep"]
-pub type LSLP_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type LSLP_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_FORCE_PU` writer - memories in digital core force PU in sleep"]
-pub type LSLP_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type LSLP_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `BT_FORCE_PD` reader - bt force power down"]
-pub type BT_FORCE_PD_R = crate::BitReader<bool>;
+pub type BT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `BT_FORCE_PD` writer - bt force power down"]
-pub type BT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type BT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `BT_FORCE_PU` reader - bt force power up"]
-pub type BT_FORCE_PU_R = crate::BitReader<bool>;
+pub type BT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `BT_FORCE_PU` writer - bt force power up"]
-pub type BT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type BT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_PERI_FORCE_PD` reader - digital peri force power down"]
-pub type DG_PERI_FORCE_PD_R = crate::BitReader<bool>;
+pub type DG_PERI_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DG_PERI_FORCE_PD` writer - digital peri force power down"]
-pub type DG_PERI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_PERI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_PERI_FORCE_PU` reader - digital peri force power up"]
-pub type DG_PERI_FORCE_PU_R = crate::BitReader<bool>;
+pub type DG_PERI_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DG_PERI_FORCE_PU` writer - digital peri force power up"]
-pub type DG_PERI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_PERI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_LPD` reader - fastmemory retention mode in sleep"]
-pub type FASTMEM_FORCE_LPD_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_LPD_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPD` writer - fastmemory retention mode in sleep"]
-pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_LPD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `FASTMEM_FORCE_LPU` reader - fastmemory donlt entry retention mode in sleep"]
-pub type FASTMEM_FORCE_LPU_R = crate::BitReader<bool>;
+pub type FASTMEM_FORCE_LPU_R = crate::BitReader;
 #[doc = "Field `FASTMEM_FORCE_LPU` writer - fastmemory donlt entry retention mode in sleep"]
-pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type FASTMEM_FORCE_LPU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_PD` reader - wifi force power down"]
-pub type WIFI_FORCE_PD_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_PD` writer - wifi force power down"]
-pub type WIFI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_PU` reader - wifi force power up"]
-pub type WIFI_FORCE_PU_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_PU` writer - wifi force power up"]
-pub type WIFI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_PD` reader - digital core force power down"]
-pub type DG_WRAP_FORCE_PD_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_PD` writer - digital core force power down"]
-pub type DG_WRAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_PU` reader - digital core force power up"]
-pub type DG_WRAP_FORCE_PU_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_PU` writer - digital core force power up"]
-pub type DG_WRAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `CPU_TOP_FORCE_PD` reader - cpu core force power down"]
-pub type CPU_TOP_FORCE_PD_R = crate::BitReader<bool>;
+pub type CPU_TOP_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CPU_TOP_FORCE_PD` writer - cpu core force power down"]
-pub type CPU_TOP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type CPU_TOP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `CPU_TOP_FORCE_PU` reader - cpu force power up"]
-pub type CPU_TOP_FORCE_PU_R = crate::BitReader<bool>;
+pub type CPU_TOP_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CPU_TOP_FORCE_PU` writer - cpu force power up"]
-pub type CPU_TOP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type CPU_TOP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `BT_PD_EN` reader - enable power down bt in sleep"]
-pub type BT_PD_EN_R = crate::BitReader<bool>;
+pub type BT_PD_EN_R = crate::BitReader;
 #[doc = "Field `BT_PD_EN` writer - enable power down bt in sleep"]
-pub type BT_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type BT_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_PERI_PD_EN` reader - enable power down digital peri in sleep"]
-pub type DG_PERI_PD_EN_R = crate::BitReader<bool>;
+pub type DG_PERI_PD_EN_R = crate::BitReader;
 #[doc = "Field `DG_PERI_PD_EN` writer - enable power down digital peri in sleep"]
-pub type DG_PERI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_PERI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `CPU_TOP_PD_EN` reader - enable power down cpu in sleep"]
-pub type CPU_TOP_PD_EN_R = crate::BitReader<bool>;
+pub type CPU_TOP_PD_EN_R = crate::BitReader;
 #[doc = "Field `CPU_TOP_PD_EN` writer - enable power down cpu in sleep"]
-pub type CPU_TOP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type CPU_TOP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_PD_EN` reader - enable power down wifi in sleep"]
-pub type WIFI_PD_EN_R = crate::BitReader<bool>;
+pub type WIFI_PD_EN_R = crate::BitReader;
 #[doc = "Field `WIFI_PD_EN` writer - enable power down wifi in sleep"]
-pub type WIFI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_PD_EN` reader - enable power down digital wrap in sleep"]
-pub type DG_WRAP_PD_EN_R = crate::BitReader<bool>;
+pub type DG_WRAP_PD_EN_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_PD_EN` writer - enable power down digital wrap in sleep"]
-pub type DG_WRAP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - vdd_spi drv's software value"]
     #[inline(always)]
@@ -224,6 +223,91 @@ impl R {
     #[inline(always)]
     pub fn dg_wrap_pd_en(&self) -> DG_WRAP_PD_EN_R {
         DG_WRAP_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIG_PWC")
+            .field(
+                "vdd_spi_pwr_drv",
+                &format_args!("{}", self.vdd_spi_pwr_drv().bits()),
+            )
+            .field(
+                "vdd_spi_pwr_force",
+                &format_args!("{}", self.vdd_spi_pwr_force().bit()),
+            )
+            .field(
+                "lslp_mem_force_pd",
+                &format_args!("{}", self.lslp_mem_force_pd().bit()),
+            )
+            .field(
+                "lslp_mem_force_pu",
+                &format_args!("{}", self.lslp_mem_force_pu().bit()),
+            )
+            .field("bt_force_pd", &format_args!("{}", self.bt_force_pd().bit()))
+            .field("bt_force_pu", &format_args!("{}", self.bt_force_pu().bit()))
+            .field(
+                "dg_peri_force_pd",
+                &format_args!("{}", self.dg_peri_force_pd().bit()),
+            )
+            .field(
+                "dg_peri_force_pu",
+                &format_args!("{}", self.dg_peri_force_pu().bit()),
+            )
+            .field(
+                "fastmem_force_lpd",
+                &format_args!("{}", self.fastmem_force_lpd().bit()),
+            )
+            .field(
+                "fastmem_force_lpu",
+                &format_args!("{}", self.fastmem_force_lpu().bit()),
+            )
+            .field(
+                "wifi_force_pd",
+                &format_args!("{}", self.wifi_force_pd().bit()),
+            )
+            .field(
+                "wifi_force_pu",
+                &format_args!("{}", self.wifi_force_pu().bit()),
+            )
+            .field(
+                "dg_wrap_force_pd",
+                &format_args!("{}", self.dg_wrap_force_pd().bit()),
+            )
+            .field(
+                "dg_wrap_force_pu",
+                &format_args!("{}", self.dg_wrap_force_pu().bit()),
+            )
+            .field(
+                "cpu_top_force_pd",
+                &format_args!("{}", self.cpu_top_force_pd().bit()),
+            )
+            .field(
+                "cpu_top_force_pu",
+                &format_args!("{}", self.cpu_top_force_pu().bit()),
+            )
+            .field("bt_pd_en", &format_args!("{}", self.bt_pd_en().bit()))
+            .field(
+                "dg_peri_pd_en",
+                &format_args!("{}", self.dg_peri_pd_en().bit()),
+            )
+            .field(
+                "cpu_top_pd_en",
+                &format_args!("{}", self.cpu_top_pd_en().bit()),
+            )
+            .field("wifi_pd_en", &format_args!("{}", self.wifi_pd_en().bit()))
+            .field(
+                "dg_wrap_pd_en",
+                &format_args!("{}", self.dg_wrap_pd_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIG_PWC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

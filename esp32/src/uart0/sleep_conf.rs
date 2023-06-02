@@ -38,12 +38,29 @@ impl From<crate::W<SLEEP_CONF_SPEC>> for W {
 pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
 pub type ACTIVE_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLEEP_CONF_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SLEEP_CONF_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
     #[inline(always)]
     pub fn active_threshold(&self) -> ACTIVE_THRESHOLD_R {
         ACTIVE_THRESHOLD_R::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLEEP_CONF")
+            .field(
+                "active_threshold",
+                &format_args!("{}", self.active_threshold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

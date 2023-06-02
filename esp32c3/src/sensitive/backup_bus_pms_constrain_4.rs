@@ -35,35 +35,35 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP` reader - backup_bus_pms_constrain_usb_wrap"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP` writer - backup_bus_pms_constrain_usb_wrap"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI` reader - backup_bus_pms_constrain_crypto_peri"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI` writer - backup_bus_pms_constrain_crypto_peri"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA` reader - backup_bus_pms_constrain_crypto_dma"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA` writer - backup_bus_pms_constrain_crypto_dma"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_ADC` reader - backup_bus_pms_constrain_apb_adc"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_ADC` writer - backup_bus_pms_constrain_apb_adc"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT_PWR` reader - backup_bus_pms_constrain_bt_pwr"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT_PWR` writer - backup_bus_pms_constrain_bt_pwr"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE` reader - backup_bus_pms_constrain_usb_device"]
-pub type BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE` writer - backup_bus_pms_constrain_usb_device"]
 pub type BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 2:3 - backup_bus_pms_constrain_usb_wrap"]
     #[inline(always)]
@@ -94,6 +94,43 @@ impl R {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb_device(&self) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R {
         BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_R::new(((self.bits >> 14) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_4")
+            .field(
+                "backup_bus_pms_constrain_usb_wrap",
+                &format_args!("{}", self.backup_bus_pms_constrain_usb_wrap().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_crypto_peri",
+                &format_args!("{}", self.backup_bus_pms_constrain_crypto_peri().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_crypto_dma",
+                &format_args!("{}", self.backup_bus_pms_constrain_crypto_dma().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_apb_adc",
+                &format_args!("{}", self.backup_bus_pms_constrain_apb_adc().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_bt_pwr",
+                &format_args!("{}", self.backup_bus_pms_constrain_bt_pwr().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_usb_device",
+                &format_args!("{}", self.backup_bus_pms_constrain_usb_device().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

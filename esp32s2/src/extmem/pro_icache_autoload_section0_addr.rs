@@ -38,12 +38,29 @@ impl From<crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC>> for W {
 pub type PRO_ICACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_ADDR` writer - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
     #[inline(always)]
     pub fn pro_icache_autoload_sct0_addr(&self) -> PRO_ICACHE_AUTOLOAD_SCT0_ADDR_R {
         PRO_ICACHE_AUTOLOAD_SCT0_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_ICACHE_AUTOLOAD_SECTION0_ADDR")
+            .field(
+                "pro_icache_autoload_sct0_addr",
+                &format_args!("{}", self.pro_icache_autoload_sct0_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_AUTOLOAD_SECTION0_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

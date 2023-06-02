@@ -35,14 +35,31 @@ impl From<crate::W<PRO_TRACE_0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_TRACE_LOCK` reader - Lock register. Setting to 1 locks trace function permission control registers."]
-pub type PRO_TRACE_LOCK_R = crate::BitReader<bool>;
+pub type PRO_TRACE_LOCK_R = crate::BitReader;
 #[doc = "Field `PRO_TRACE_LOCK` writer - Lock register. Setting to 1 locks trace function permission control registers."]
-pub type PRO_TRACE_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, PRO_TRACE_0_SPEC, bool, O>;
+pub type PRO_TRACE_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, PRO_TRACE_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks trace function permission control registers."]
     #[inline(always)]
     pub fn pro_trace_lock(&self) -> PRO_TRACE_LOCK_R {
         PRO_TRACE_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_TRACE_0")
+            .field(
+                "pro_trace_lock",
+                &format_args!("{}", self.pro_trace_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_TRACE_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

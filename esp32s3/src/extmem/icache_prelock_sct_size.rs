@@ -38,12 +38,12 @@ impl From<crate::W<ICACHE_PRELOCK_SCT_SIZE_SPEC>> for W {
 pub type ICACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT1_SIZE` writer - The bits are used to configure the second length of data locking, which is combined with ICACHE_PRELOCK_SCT1_ADDR_REG"]
 pub type ICACHE_PRELOCK_SCT1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ICACHE_PRELOCK_SCT_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16, u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT0_SIZE` reader - The bits are used to configure the first length of data locking, which is combined with ICACHE_PRELOCK_SCT0_ADDR_REG"]
 pub type ICACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT0_SIZE` writer - The bits are used to configure the first length of data locking, which is combined with ICACHE_PRELOCK_SCT0_ADDR_REG"]
 pub type ICACHE_PRELOCK_SCT0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ICACHE_PRELOCK_SCT_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with ICACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn icache_prelock_sct0_size(&self) -> ICACHE_PRELOCK_SCT0_SIZE_R {
         ICACHE_PRELOCK_SCT0_SIZE_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_PRELOCK_SCT_SIZE")
+            .field(
+                "icache_prelock_sct1_size",
+                &format_args!("{}", self.icache_prelock_sct1_size().bits()),
+            )
+            .field(
+                "icache_prelock_sct0_size",
+                &format_args!("{}", self.icache_prelock_sct0_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOCK_SCT_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

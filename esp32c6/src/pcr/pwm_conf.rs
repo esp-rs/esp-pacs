@@ -35,13 +35,13 @@ impl From<crate::W<PWM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PWM_CLK_EN` reader - Set 1 to enable pwm clock"]
-pub type PWM_CLK_EN_R = crate::BitReader<bool>;
+pub type PWM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM_CLK_EN` writer - Set 1 to enable pwm clock"]
-pub type PWM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM_CONF_SPEC, bool, O>;
+pub type PWM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWM_CONF_SPEC, O>;
 #[doc = "Field `PWM_RST_EN` reader - Set 0 to reset pwm module"]
-pub type PWM_RST_EN_R = crate::BitReader<bool>;
+pub type PWM_RST_EN_R = crate::BitReader;
 #[doc = "Field `PWM_RST_EN` writer - Set 0 to reset pwm module"]
-pub type PWM_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWM_CONF_SPEC, bool, O>;
+pub type PWM_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, PWM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable pwm clock"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn pwm_rst_en(&self) -> PWM_RST_EN_R {
         PWM_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PWM_CONF")
+            .field("pwm_clk_en", &format_args!("{}", self.pwm_clk_en().bit()))
+            .field("pwm_rst_en", &format_args!("{}", self.pwm_rst_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PWM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

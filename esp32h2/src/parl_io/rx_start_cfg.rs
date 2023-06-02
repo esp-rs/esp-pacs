@@ -35,14 +35,28 @@ impl From<crate::W<RX_START_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_START` reader - Set this bit to start rx data sampling."]
-pub type RX_START_R = crate::BitReader<bool>;
+pub type RX_START_R = crate::BitReader;
 #[doc = "Field `RX_START` writer - Set this bit to start rx data sampling."]
-pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_START_CFG_SPEC, bool, O>;
+pub type RX_START_W<'a, const O: u8> = crate::BitWriter<'a, RX_START_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - Set this bit to start rx data sampling."]
     #[inline(always)]
     pub fn rx_start(&self) -> RX_START_R {
         RX_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_START_CFG")
+            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_START_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,69 +35,69 @@ impl From<crate::W<TZ0_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `TZ0_SW_CBC` reader - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_SW_CBC_R = crate::BitReader<bool>;
+pub type TZ0_SW_CBC_R = crate::BitReader;
 #[doc = "Field `TZ0_SW_CBC` writer - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_SW_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_SW_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F2_CBC` reader - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F2_CBC_R = crate::BitReader<bool>;
+pub type TZ0_F2_CBC_R = crate::BitReader;
 #[doc = "Field `TZ0_F2_CBC` writer - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F2_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F2_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F1_CBC` reader - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F1_CBC_R = crate::BitReader<bool>;
+pub type TZ0_F1_CBC_R = crate::BitReader;
 #[doc = "Field `TZ0_F1_CBC` writer - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F1_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F1_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F0_CBC` reader - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F0_CBC_R = crate::BitReader<bool>;
+pub type TZ0_F0_CBC_R = crate::BitReader;
 #[doc = "Field `TZ0_F0_CBC` writer - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
-pub type TZ0_F0_CBC_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F0_CBC_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_SW_OST` reader - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_SW_OST_R = crate::BitReader<bool>;
+pub type TZ0_SW_OST_R = crate::BitReader;
 #[doc = "Field `TZ0_SW_OST` writer - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_SW_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_SW_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F2_OST` reader - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F2_OST_R = crate::BitReader<bool>;
+pub type TZ0_F2_OST_R = crate::BitReader;
 #[doc = "Field `TZ0_F2_OST` writer - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F2_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F2_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F1_OST` reader - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F1_OST_R = crate::BitReader<bool>;
+pub type TZ0_F1_OST_R = crate::BitReader;
 #[doc = "Field `TZ0_F1_OST` writer - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F1_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F1_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_F0_OST` reader - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F0_OST_R = crate::BitReader<bool>;
+pub type TZ0_F0_OST_R = crate::BitReader;
 #[doc = "Field `TZ0_F0_OST` writer - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
-pub type TZ0_F0_OST_W<'a, const O: u8> = crate::BitWriter<'a, u32, TZ0_CFG0_SPEC, bool, O>;
+pub type TZ0_F0_OST_W<'a, const O: u8> = crate::BitWriter<'a, TZ0_CFG0_SPEC, O>;
 #[doc = "Field `TZ0_A_CBC_D` reader - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_CBC_D_R = crate::FieldReader<u8, u8>;
+pub type TZ0_A_CBC_D_R = crate::FieldReader;
 #[doc = "Field `TZ0_A_CBC_D` writer - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_A_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_A_CBC_U` reader - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_CBC_U_R = crate::FieldReader<u8, u8>;
+pub type TZ0_A_CBC_U_R = crate::FieldReader;
 #[doc = "Field `TZ0_A_CBC_U` writer - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_A_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_A_OST_D` reader - One-shot mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_OST_D_R = crate::FieldReader<u8, u8>;
+pub type TZ0_A_OST_D_R = crate::FieldReader;
 #[doc = "Field `TZ0_A_OST_D` writer - One-shot mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_A_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_A_OST_U` reader - One-shot mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_OST_U_R = crate::FieldReader<u8, u8>;
+pub type TZ0_A_OST_U_R = crate::FieldReader;
 #[doc = "Field `TZ0_A_OST_U` writer - One-shot mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_A_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_A_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_B_CBC_D` reader - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_CBC_D_R = crate::FieldReader<u8, u8>;
+pub type TZ0_B_CBC_D_R = crate::FieldReader;
 #[doc = "Field `TZ0_B_CBC_D` writer - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_B_CBC_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_B_CBC_U` reader - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_CBC_U_R = crate::FieldReader<u8, u8>;
+pub type TZ0_B_CBC_U_R = crate::FieldReader;
 #[doc = "Field `TZ0_B_CBC_U` writer - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_B_CBC_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_B_OST_D` reader - One-shot mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_OST_D_R = crate::FieldReader<u8, u8>;
+pub type TZ0_B_OST_D_R = crate::FieldReader;
 #[doc = "Field `TZ0_B_OST_D` writer - One-shot mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_B_OST_D_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 #[doc = "Field `TZ0_B_OST_U` reader - One-shot mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_OST_U_R = crate::FieldReader<u8, u8>;
+pub type TZ0_B_OST_U_R = crate::FieldReader;
 #[doc = "Field `TZ0_B_OST_U` writer - One-shot mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
-pub type TZ0_B_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TZ0_CFG0_SPEC, u8, u8, 2, O>;
+pub type TZ0_B_OST_U_W<'a, const O: u8> = crate::FieldWriter<'a, TZ0_CFG0_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0 - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
@@ -178,6 +178,59 @@ impl R {
     #[inline(always)]
     pub fn tz0_b_ost_u(&self) -> TZ0_B_OST_U_R {
         TZ0_B_OST_U_R::new(((self.bits >> 22) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TZ0_CFG0")
+            .field("tz0_sw_cbc", &format_args!("{}", self.tz0_sw_cbc().bit()))
+            .field("tz0_f2_cbc", &format_args!("{}", self.tz0_f2_cbc().bit()))
+            .field("tz0_f1_cbc", &format_args!("{}", self.tz0_f1_cbc().bit()))
+            .field("tz0_f0_cbc", &format_args!("{}", self.tz0_f0_cbc().bit()))
+            .field("tz0_sw_ost", &format_args!("{}", self.tz0_sw_ost().bit()))
+            .field("tz0_f2_ost", &format_args!("{}", self.tz0_f2_ost().bit()))
+            .field("tz0_f1_ost", &format_args!("{}", self.tz0_f1_ost().bit()))
+            .field("tz0_f0_ost", &format_args!("{}", self.tz0_f0_ost().bit()))
+            .field(
+                "tz0_a_cbc_d",
+                &format_args!("{}", self.tz0_a_cbc_d().bits()),
+            )
+            .field(
+                "tz0_a_cbc_u",
+                &format_args!("{}", self.tz0_a_cbc_u().bits()),
+            )
+            .field(
+                "tz0_a_ost_d",
+                &format_args!("{}", self.tz0_a_ost_d().bits()),
+            )
+            .field(
+                "tz0_a_ost_u",
+                &format_args!("{}", self.tz0_a_ost_u().bits()),
+            )
+            .field(
+                "tz0_b_cbc_d",
+                &format_args!("{}", self.tz0_b_cbc_d().bits()),
+            )
+            .field(
+                "tz0_b_cbc_u",
+                &format_args!("{}", self.tz0_b_cbc_u().bits()),
+            )
+            .field(
+                "tz0_b_ost_d",
+                &format_args!("{}", self.tz0_b_ost_d().bits()),
+            )
+            .field(
+                "tz0_b_ost_u",
+                &format_args!("{}", self.tz0_b_ost_u().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TZ0_CFG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

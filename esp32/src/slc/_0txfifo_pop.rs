@@ -37,9 +37,9 @@ impl From<crate::W<_0TXFIFO_POP_SPEC>> for W {
 #[doc = "Field `SLC0_TXFIFO_RDATA` reader - "]
 pub type SLC0_TXFIFO_RDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0_TXFIFO_POP` reader - "]
-pub type SLC0_TXFIFO_POP_R = crate::BitReader<bool>;
+pub type SLC0_TXFIFO_POP_R = crate::BitReader;
 #[doc = "Field `SLC0_TXFIFO_POP` writer - "]
-pub type SLC0_TXFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, u32, _0TXFIFO_POP_SPEC, bool, O>;
+pub type SLC0_TXFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, _0TXFIFO_POP_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -50,6 +50,27 @@ impl R {
     #[inline(always)]
     pub fn slc0_txfifo_pop(&self) -> SLC0_TXFIFO_POP_R {
         SLC0_TXFIFO_POP_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0TXFIFO_POP")
+            .field(
+                "slc0_txfifo_rdata",
+                &format_args!("{}", self.slc0_txfifo_rdata().bits()),
+            )
+            .field(
+                "slc0_txfifo_pop",
+                &format_args!("{}", self.slc0_txfifo_pop().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0TXFIFO_POP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

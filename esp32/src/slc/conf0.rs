@@ -35,133 +35,133 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TX_RST` reader - "]
-pub type SLC0_TX_RST_R = crate::BitReader<bool>;
+pub type SLC0_TX_RST_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_RST` writer - "]
-pub type SLC0_TX_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TX_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RX_RST` reader - "]
-pub type SLC0_RX_RST_R = crate::BitReader<bool>;
+pub type SLC0_RX_RST_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_RST` writer - "]
-pub type SLC0_RX_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RX_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `AHBM_FIFO_RST` reader - "]
-pub type AHBM_FIFO_RST_R = crate::BitReader<bool>;
+pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - "]
-pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `AHBM_RST` reader - "]
-pub type AHBM_RST_R = crate::BitReader<bool>;
+pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - "]
-pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TX_LOOP_TEST` reader - "]
-pub type SLC0_TX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC0_TX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_LOOP_TEST` writer - "]
-pub type SLC0_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RX_LOOP_TEST` reader - "]
-pub type SLC0_RX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC0_RX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_LOOP_TEST` writer - "]
-pub type SLC0_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RX_AUTO_WRBACK` reader - "]
-pub type SLC0_RX_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type SLC0_RX_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_AUTO_WRBACK` writer - "]
-pub type SLC0_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RX_NO_RESTART_CLR` reader - "]
-pub type SLC0_RX_NO_RESTART_CLR_R = crate::BitReader<bool>;
+pub type SLC0_RX_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_NO_RESTART_CLR` writer - "]
-pub type SLC0_RX_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RX_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RXDSCR_BURST_EN` reader - "]
-pub type SLC0_RXDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC0_RXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RXDSCR_BURST_EN` writer - "]
-pub type SLC0_RXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RXDATA_BURST_EN` reader - "]
-pub type SLC0_RXDATA_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC0_RXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RXDATA_BURST_EN` writer - "]
-pub type SLC0_RXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_RXLINK_AUTO_RET` reader - "]
-pub type SLC0_RXLINK_AUTO_RET_R = crate::BitReader<bool>;
+pub type SLC0_RXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC0_RXLINK_AUTO_RET` writer - "]
-pub type SLC0_RXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_RXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TXLINK_AUTO_RET` reader - "]
-pub type SLC0_TXLINK_AUTO_RET_R = crate::BitReader<bool>;
+pub type SLC0_TXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC0_TXLINK_AUTO_RET` writer - "]
-pub type SLC0_TXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TXDSCR_BURST_EN` reader - "]
-pub type SLC0_TXDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC0_TXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TXDSCR_BURST_EN` writer - "]
-pub type SLC0_TXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TXDATA_BURST_EN` reader - "]
-pub type SLC0_TXDATA_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC0_TXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TXDATA_BURST_EN` writer - "]
-pub type SLC0_TXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TOKEN_AUTO_CLR` reader - "]
-pub type SLC0_TOKEN_AUTO_CLR_R = crate::BitReader<bool>;
+pub type SLC0_TOKEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC0_TOKEN_AUTO_CLR` writer - "]
-pub type SLC0_TOKEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TOKEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_TOKEN_SEL` reader - "]
-pub type SLC0_TOKEN_SEL_R = crate::BitReader<bool>;
+pub type SLC0_TOKEN_SEL_R = crate::BitReader;
 #[doc = "Field `SLC0_TOKEN_SEL` writer - "]
-pub type SLC0_TOKEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_TOKEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TX_RST` reader - "]
-pub type SLC1_TX_RST_R = crate::BitReader<bool>;
+pub type SLC1_TX_RST_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_RST` writer - "]
-pub type SLC1_TX_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TX_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RX_RST` reader - "]
-pub type SLC1_RX_RST_R = crate::BitReader<bool>;
+pub type SLC1_RX_RST_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_RST` writer - "]
-pub type SLC1_RX_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RX_RST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC0_WR_RETRY_MASK_EN` reader - "]
-pub type SLC0_WR_RETRY_MASK_EN_R = crate::BitReader<bool>;
+pub type SLC0_WR_RETRY_MASK_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_WR_RETRY_MASK_EN` writer - "]
-pub type SLC0_WR_RETRY_MASK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC0_WR_RETRY_MASK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_WR_RETRY_MASK_EN` reader - "]
-pub type SLC1_WR_RETRY_MASK_EN_R = crate::BitReader<bool>;
+pub type SLC1_WR_RETRY_MASK_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_WR_RETRY_MASK_EN` writer - "]
-pub type SLC1_WR_RETRY_MASK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_WR_RETRY_MASK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TX_LOOP_TEST` reader - "]
-pub type SLC1_TX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC1_TX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_LOOP_TEST` writer - "]
-pub type SLC1_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RX_LOOP_TEST` reader - "]
-pub type SLC1_RX_LOOP_TEST_R = crate::BitReader<bool>;
+pub type SLC1_RX_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_LOOP_TEST` writer - "]
-pub type SLC1_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RX_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RX_AUTO_WRBACK` reader - "]
-pub type SLC1_RX_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type SLC1_RX_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_AUTO_WRBACK` writer - "]
-pub type SLC1_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RX_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RX_NO_RESTART_CLR` reader - "]
-pub type SLC1_RX_NO_RESTART_CLR_R = crate::BitReader<bool>;
+pub type SLC1_RX_NO_RESTART_CLR_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_NO_RESTART_CLR` writer - "]
-pub type SLC1_RX_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RX_NO_RESTART_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RXDSCR_BURST_EN` reader - "]
-pub type SLC1_RXDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC1_RXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RXDSCR_BURST_EN` writer - "]
-pub type SLC1_RXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RXDATA_BURST_EN` reader - "]
-pub type SLC1_RXDATA_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC1_RXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RXDATA_BURST_EN` writer - "]
-pub type SLC1_RXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_RXLINK_AUTO_RET` reader - "]
-pub type SLC1_RXLINK_AUTO_RET_R = crate::BitReader<bool>;
+pub type SLC1_RXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC1_RXLINK_AUTO_RET` writer - "]
-pub type SLC1_RXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_RXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TXLINK_AUTO_RET` reader - "]
-pub type SLC1_TXLINK_AUTO_RET_R = crate::BitReader<bool>;
+pub type SLC1_TXLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `SLC1_TXLINK_AUTO_RET` writer - "]
-pub type SLC1_TXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TXLINK_AUTO_RET_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TXDSCR_BURST_EN` reader - "]
-pub type SLC1_TXDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC1_TXDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TXDSCR_BURST_EN` writer - "]
-pub type SLC1_TXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TXDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TXDATA_BURST_EN` reader - "]
-pub type SLC1_TXDATA_BURST_EN_R = crate::BitReader<bool>;
+pub type SLC1_TXDATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_TXDATA_BURST_EN` writer - "]
-pub type SLC1_TXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TXDATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN_AUTO_CLR` reader - "]
-pub type SLC1_TOKEN_AUTO_CLR_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN_AUTO_CLR_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_AUTO_CLR` writer - "]
-pub type SLC1_TOKEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TOKEN_AUTO_CLR_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN_SEL` reader - "]
-pub type SLC1_TOKEN_SEL_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN_SEL_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_SEL` writer - "]
-pub type SLC1_TOKEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, O>;
+pub type SLC1_TOKEN_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -322,6 +322,132 @@ impl R {
     #[inline(always)]
     pub fn slc1_token_sel(&self) -> SLC1_TOKEN_SEL_R {
         SLC1_TOKEN_SEL_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF0")
+            .field("slc0_tx_rst", &format_args!("{}", self.slc0_tx_rst().bit()))
+            .field("slc0_rx_rst", &format_args!("{}", self.slc0_rx_rst().bit()))
+            .field(
+                "ahbm_fifo_rst",
+                &format_args!("{}", self.ahbm_fifo_rst().bit()),
+            )
+            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
+            .field(
+                "slc0_tx_loop_test",
+                &format_args!("{}", self.slc0_tx_loop_test().bit()),
+            )
+            .field(
+                "slc0_rx_loop_test",
+                &format_args!("{}", self.slc0_rx_loop_test().bit()),
+            )
+            .field(
+                "slc0_rx_auto_wrback",
+                &format_args!("{}", self.slc0_rx_auto_wrback().bit()),
+            )
+            .field(
+                "slc0_rx_no_restart_clr",
+                &format_args!("{}", self.slc0_rx_no_restart_clr().bit()),
+            )
+            .field(
+                "slc0_rxdscr_burst_en",
+                &format_args!("{}", self.slc0_rxdscr_burst_en().bit()),
+            )
+            .field(
+                "slc0_rxdata_burst_en",
+                &format_args!("{}", self.slc0_rxdata_burst_en().bit()),
+            )
+            .field(
+                "slc0_rxlink_auto_ret",
+                &format_args!("{}", self.slc0_rxlink_auto_ret().bit()),
+            )
+            .field(
+                "slc0_txlink_auto_ret",
+                &format_args!("{}", self.slc0_txlink_auto_ret().bit()),
+            )
+            .field(
+                "slc0_txdscr_burst_en",
+                &format_args!("{}", self.slc0_txdscr_burst_en().bit()),
+            )
+            .field(
+                "slc0_txdata_burst_en",
+                &format_args!("{}", self.slc0_txdata_burst_en().bit()),
+            )
+            .field(
+                "slc0_token_auto_clr",
+                &format_args!("{}", self.slc0_token_auto_clr().bit()),
+            )
+            .field(
+                "slc0_token_sel",
+                &format_args!("{}", self.slc0_token_sel().bit()),
+            )
+            .field("slc1_tx_rst", &format_args!("{}", self.slc1_tx_rst().bit()))
+            .field("slc1_rx_rst", &format_args!("{}", self.slc1_rx_rst().bit()))
+            .field(
+                "slc0_wr_retry_mask_en",
+                &format_args!("{}", self.slc0_wr_retry_mask_en().bit()),
+            )
+            .field(
+                "slc1_wr_retry_mask_en",
+                &format_args!("{}", self.slc1_wr_retry_mask_en().bit()),
+            )
+            .field(
+                "slc1_tx_loop_test",
+                &format_args!("{}", self.slc1_tx_loop_test().bit()),
+            )
+            .field(
+                "slc1_rx_loop_test",
+                &format_args!("{}", self.slc1_rx_loop_test().bit()),
+            )
+            .field(
+                "slc1_rx_auto_wrback",
+                &format_args!("{}", self.slc1_rx_auto_wrback().bit()),
+            )
+            .field(
+                "slc1_rx_no_restart_clr",
+                &format_args!("{}", self.slc1_rx_no_restart_clr().bit()),
+            )
+            .field(
+                "slc1_rxdscr_burst_en",
+                &format_args!("{}", self.slc1_rxdscr_burst_en().bit()),
+            )
+            .field(
+                "slc1_rxdata_burst_en",
+                &format_args!("{}", self.slc1_rxdata_burst_en().bit()),
+            )
+            .field(
+                "slc1_rxlink_auto_ret",
+                &format_args!("{}", self.slc1_rxlink_auto_ret().bit()),
+            )
+            .field(
+                "slc1_txlink_auto_ret",
+                &format_args!("{}", self.slc1_txlink_auto_ret().bit()),
+            )
+            .field(
+                "slc1_txdscr_burst_en",
+                &format_args!("{}", self.slc1_txdscr_burst_en().bit()),
+            )
+            .field(
+                "slc1_txdata_burst_en",
+                &format_args!("{}", self.slc1_txdata_burst_en().bit()),
+            )
+            .field(
+                "slc1_token_auto_clr",
+                &format_args!("{}", self.slc1_token_auto_clr().bit()),
+            )
+            .field(
+                "slc1_token_sel",
+                &format_args!("{}", self.slc1_token_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

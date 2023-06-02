@@ -38,12 +38,29 @@ impl From<crate::W<UNIT0_LOAD_HI_SPEC>> for W {
 pub type TIMER_UNIT0_LOAD_HI_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER_UNIT0_LOAD_HI` writer - timer unit0 load high 32 bit"]
 pub type TIMER_UNIT0_LOAD_HI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UNIT0_LOAD_HI_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, UNIT0_LOAD_HI_SPEC, 20, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - timer unit0 load high 32 bit"]
     #[inline(always)]
     pub fn timer_unit0_load_hi(&self) -> TIMER_UNIT0_LOAD_HI_R {
         TIMER_UNIT0_LOAD_HI_R::new(self.bits & 0x000f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UNIT0_LOAD_HI")
+            .field(
+                "timer_unit0_load_hi",
+                &format_args!("{}", self.timer_unit0_load_hi().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UNIT0_LOAD_HI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

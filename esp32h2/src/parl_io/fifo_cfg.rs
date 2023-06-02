@@ -35,13 +35,13 @@ impl From<crate::W<FIFO_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_FIFO_SRST` reader - Set this bit to reset async fifo in tx module."]
-pub type TX_FIFO_SRST_R = crate::BitReader<bool>;
+pub type TX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_SRST` writer - Set this bit to reset async fifo in tx module."]
-pub type TX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CFG_SPEC, bool, O>;
+pub type TX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CFG_SPEC, O>;
 #[doc = "Field `RX_FIFO_SRST` reader - Set this bit to reset async fifo in rx module."]
-pub type RX_FIFO_SRST_R = crate::BitReader<bool>;
+pub type RX_FIFO_SRST_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_SRST` writer - Set this bit to reset async fifo in rx module."]
-pub type RX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CFG_SPEC, bool, O>;
+pub type RX_FIFO_SRST_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn rx_fifo_srst(&self) -> RX_FIFO_SRST_R {
         RX_FIFO_SRST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO_CFG")
+            .field(
+                "tx_fifo_srst",
+                &format_args!("{}", self.tx_fifo_srst().bit()),
+            )
+            .field(
+                "rx_fifo_srst",
+                &format_args!("{}", self.rx_fifo_srst().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

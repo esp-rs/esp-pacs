@@ -35,15 +35,31 @@ impl From<crate::W<MSPI_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MSPI_FAST_DIV_NUM` reader - Set as one within (0,1,2) to generate div1(default)/div2/div4 of low-speed clock-source to drive clk_mspi_fast. Only avaiable whe the clck-source is a low-speed clock-source such as XTAL/FOSC."]
-pub type MSPI_FAST_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type MSPI_FAST_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `MSPI_FAST_DIV_NUM` writer - Set as one within (0,1,2) to generate div1(default)/div2/div4 of low-speed clock-source to drive clk_mspi_fast. Only avaiable whe the clck-source is a low-speed clock-source such as XTAL/FOSC."]
-pub type MSPI_FAST_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MSPI_CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type MSPI_FAST_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, MSPI_CLK_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Set as one within (0,1,2) to generate div1(default)/div2/div4 of low-speed clock-source to drive clk_mspi_fast. Only avaiable whe the clck-source is a low-speed clock-source such as XTAL/FOSC."]
     #[inline(always)]
     pub fn mspi_fast_div_num(&self) -> MSPI_FAST_DIV_NUM_R {
         MSPI_FAST_DIV_NUM_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MSPI_CLK_CONF")
+            .field(
+                "mspi_fast_div_num",
+                &format_args!("{}", self.mspi_fast_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MSPI_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -22,6 +22,23 @@ impl R {
         TIMER_VALUE0_LOW_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIME_LOW0")
+            .field(
+                "timer_value0_low",
+                &format_args!("{}", self.timer_value0_low().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIME_LOW0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "read rtc_main timer low bits\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [time_low0](index.html) module"]
 pub struct TIME_LOW0_SPEC;
 impl crate::RegisterSpec for TIME_LOW0_SPEC {

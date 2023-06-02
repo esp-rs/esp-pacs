@@ -14,12 +14,26 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_IDLE` reader - 1: I2S TX is in idle state. 0: I2S TX is at work."]
-pub type TX_IDLE_R = crate::BitReader<bool>;
+pub type TX_IDLE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - 1: I2S TX is in idle state. 0: I2S TX is at work."]
     #[inline(always)]
     pub fn tx_idle(&self) -> TX_IDLE_R {
         TX_IDLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE")
+            .field("tx_idle", &format_args!("{}", self.tx_idle().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "I2S TX status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state](index.html) module"]

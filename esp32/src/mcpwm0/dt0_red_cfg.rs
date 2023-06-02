@@ -37,13 +37,26 @@ impl From<crate::W<DT0_RED_CFG_SPEC>> for W {
 #[doc = "Field `DT0_RED` reader - "]
 pub type DT0_RED_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DT0_RED` writer - "]
-pub type DT0_RED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT0_RED_CFG_SPEC, u16, u16, 16, O>;
+pub type DT0_RED_W<'a, const O: u8> = crate::FieldWriter<'a, DT0_RED_CFG_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn dt0_red(&self) -> DT0_RED_R {
         DT0_RED_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DT0_RED_CFG")
+            .field("dt0_red", &format_args!("{}", self.dt0_red().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DT0_RED_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

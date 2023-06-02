@@ -38,17 +38,16 @@ impl From<crate::W<SAR_TSENS_CTRL2_SPEC>> for W {
 pub type SAR_TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_TSENS_XPD_WAIT` writer - no public"]
 pub type SAR_TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 12, O, u16, u16>;
 #[doc = "Field `SAR_TSENS_XPD_FORCE` reader - no public"]
-pub type SAR_TSENS_XPD_FORCE_R = crate::FieldReader<u8, u8>;
+pub type SAR_TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `SAR_TSENS_XPD_FORCE` writer - no public"]
 pub type SAR_TSENS_XPD_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 2, O>;
 #[doc = "Field `SAR_TSENS_CLK_INV` reader - no public"]
-pub type SAR_TSENS_CLK_INV_R = crate::BitReader<bool>;
+pub type SAR_TSENS_CLK_INV_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_CLK_INV` writer - no public"]
-pub type SAR_TSENS_CLK_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_TSENS_CTRL2_SPEC, bool, O>;
+pub type SAR_TSENS_CLK_INV_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TSENS_CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - no public"]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn sar_tsens_clk_inv(&self) -> SAR_TSENS_CLK_INV_R {
         SAR_TSENS_CLK_INV_R::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TSENS_CTRL2")
+            .field(
+                "sar_tsens_xpd_wait",
+                &format_args!("{}", self.sar_tsens_xpd_wait().bits()),
+            )
+            .field(
+                "sar_tsens_xpd_force",
+                &format_args!("{}", self.sar_tsens_xpd_force().bits()),
+            )
+            .field(
+                "sar_tsens_clk_inv",
+                &format_args!("{}", self.sar_tsens_clk_inv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,11 @@ impl From<crate::W<SLC_RX_FIFO_PUSH_SPEC>> for W {
 pub type SLC_RXFIFO_WDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC_RXFIFO_WDATA` writer - "]
 pub type SLC_RXFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_RX_FIFO_PUSH_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SLC_RX_FIFO_PUSH_SPEC, 9, O, u16, u16>;
 #[doc = "Field `SLC_RXFIFO_PUSH` reader - "]
-pub type SLC_RXFIFO_PUSH_R = crate::BitReader<bool>;
+pub type SLC_RXFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `SLC_RXFIFO_PUSH` writer - "]
-pub type SLC_RXFIFO_PUSH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC_RX_FIFO_PUSH_SPEC, bool, O>;
+pub type SLC_RXFIFO_PUSH_W<'a, const O: u8> = crate::BitWriter<'a, SLC_RX_FIFO_PUSH_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn slc_rxfifo_push(&self) -> SLC_RXFIFO_PUSH_R {
         SLC_RXFIFO_PUSH_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_RX_FIFO_PUSH")
+            .field(
+                "slc_rxfifo_push",
+                &format_args!("{}", self.slc_rxfifo_push().bit()),
+            )
+            .field(
+                "slc_rxfifo_wdata",
+                &format_args!("{}", self.slc_rxfifo_wdata().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_RX_FIFO_PUSH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

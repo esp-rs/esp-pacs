@@ -35,17 +35,17 @@ impl From<crate::W<MSPI_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MSPI_CLK_EN` reader - Set 1 to enable mspi clock, include mspi pll clock"]
-pub type MSPI_CLK_EN_R = crate::BitReader<bool>;
+pub type MSPI_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_CLK_EN` writer - Set 1 to enable mspi clock, include mspi pll clock"]
-pub type MSPI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSPI_CONF_SPEC, bool, O>;
+pub type MSPI_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, MSPI_CONF_SPEC, O>;
 #[doc = "Field `MSPI_RST_EN` reader - Set 0 to reset mspi module"]
-pub type MSPI_RST_EN_R = crate::BitReader<bool>;
+pub type MSPI_RST_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_RST_EN` writer - Set 0 to reset mspi module"]
-pub type MSPI_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSPI_CONF_SPEC, bool, O>;
+pub type MSPI_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, MSPI_CONF_SPEC, O>;
 #[doc = "Field `MSPI_PLL_CLK_EN` reader - Set 1 to enable mspi pll clock"]
-pub type MSPI_PLL_CLK_EN_R = crate::BitReader<bool>;
+pub type MSPI_PLL_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MSPI_PLL_CLK_EN` writer - Set 1 to enable mspi pll clock"]
-pub type MSPI_PLL_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MSPI_CONF_SPEC, bool, O>;
+pub type MSPI_PLL_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, MSPI_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable mspi clock, include mspi pll clock"]
     #[inline(always)]
@@ -61,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn mspi_pll_clk_en(&self) -> MSPI_PLL_CLK_EN_R {
         MSPI_PLL_CLK_EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MSPI_CONF")
+            .field("mspi_clk_en", &format_args!("{}", self.mspi_clk_en().bit()))
+            .field("mspi_rst_en", &format_args!("{}", self.mspi_rst_en().bit()))
+            .field(
+                "mspi_pll_clk_en",
+                &format_args!("{}", self.mspi_pll_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MSPI_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

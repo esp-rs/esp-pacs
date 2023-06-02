@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - mac interrupt configuration register"]
     pub pro_mac_intr_map: PRO_MAC_INTR_MAP,

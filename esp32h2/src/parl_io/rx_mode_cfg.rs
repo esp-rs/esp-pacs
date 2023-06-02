@@ -35,28 +35,25 @@ impl From<crate::W<RX_MODE_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EXT_EN_SEL` reader - Configures rx external enable signal selection from IO PAD."]
-pub type RX_EXT_EN_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_EXT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_EXT_EN_SEL` writer - Configures rx external enable signal selection from IO PAD."]
-pub type RX_EXT_EN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_MODE_CFG_SPEC, u8, u8, 4, O>;
+pub type RX_EXT_EN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_MODE_CFG_SPEC, 4, O>;
 #[doc = "Field `RX_SW_EN` reader - Set this bit to enable data sampling by software."]
-pub type RX_SW_EN_R = crate::BitReader<bool>;
+pub type RX_SW_EN_R = crate::BitReader;
 #[doc = "Field `RX_SW_EN` writer - Set this bit to enable data sampling by software."]
-pub type RX_SW_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_MODE_CFG_SPEC, bool, O>;
+pub type RX_SW_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_MODE_CFG_SPEC, O>;
 #[doc = "Field `RX_EXT_EN_INV` reader - Set this bit to invert the external enable signal."]
-pub type RX_EXT_EN_INV_R = crate::BitReader<bool>;
+pub type RX_EXT_EN_INV_R = crate::BitReader;
 #[doc = "Field `RX_EXT_EN_INV` writer - Set this bit to invert the external enable signal."]
-pub type RX_EXT_EN_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, RX_MODE_CFG_SPEC, bool, O>;
+pub type RX_EXT_EN_INV_W<'a, const O: u8> = crate::BitWriter<'a, RX_MODE_CFG_SPEC, O>;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` reader - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
-pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_PULSE_SUBMODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_PULSE_SUBMODE_SEL` writer - Configures the rxd pulse sampling submode. 4'd0: positive pulse start(data bit included) &amp;&amp; positive pulse end(data bit included) 4'd1: positive pulse start(data bit included) &amp;&amp; positive pulse end (data bit excluded) 4'd2: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit included) 4'd3: positive pulse start(data bit excluded) &amp;&amp; positive pulse end (data bit excluded) 4'd4: positive pulse start(data bit included) &amp;&amp; length end 4'd5: positive pulse start(data bit excluded) &amp;&amp; length end"]
-pub type RX_PULSE_SUBMODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_MODE_CFG_SPEC, u8, u8, 3, O>;
+pub type RX_PULSE_SUBMODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_MODE_CFG_SPEC, 3, O>;
 #[doc = "Field `RX_SMP_MODE_SEL` reader - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
-pub type RX_SMP_MODE_SEL_R = crate::FieldReader<u8, u8>;
+pub type RX_SMP_MODE_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_SMP_MODE_SEL` writer - Configures the rxd sampling mode. 2'b00: external level enable mode 2'b01: external pulse enable mode 2'b10: internal software enable mode"]
-pub type RX_SMP_MODE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_MODE_CFG_SPEC, u8, u8, 2, O>;
+pub type RX_SMP_MODE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_MODE_CFG_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 21:24 - Configures rx external enable signal selection from IO PAD."]
     #[inline(always)]
@@ -82,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn rx_smp_mode_sel(&self) -> RX_SMP_MODE_SEL_R {
         RX_SMP_MODE_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_MODE_CFG")
+            .field(
+                "rx_ext_en_sel",
+                &format_args!("{}", self.rx_ext_en_sel().bits()),
+            )
+            .field("rx_sw_en", &format_args!("{}", self.rx_sw_en().bit()))
+            .field(
+                "rx_ext_en_inv",
+                &format_args!("{}", self.rx_ext_en_inv().bit()),
+            )
+            .field(
+                "rx_pulse_submode_sel",
+                &format_args!("{}", self.rx_pulse_submode_sel().bits()),
+            )
+            .field(
+                "rx_smp_mode_sel",
+                &format_args!("{}", self.rx_smp_mode_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_MODE_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

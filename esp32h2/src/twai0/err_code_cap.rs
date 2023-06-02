@@ -14,11 +14,11 @@ impl From<crate::R<ERR_CODE_CAP_SPEC>> for R {
     }
 }
 #[doc = "Field `ERR_CAPTURE_CODE_SEGMENT` reader - This register contains information about the location of errors on the bus."]
-pub type ERR_CAPTURE_CODE_SEGMENT_R = crate::FieldReader<u8, u8>;
+pub type ERR_CAPTURE_CODE_SEGMENT_R = crate::FieldReader;
 #[doc = "Field `ERR_CAPTURE_CODE_DIRECTION` reader - 1: RX, error occurred during reception. 0: TX, error occurred during transmission."]
-pub type ERR_CAPTURE_CODE_DIRECTION_R = crate::BitReader<bool>;
+pub type ERR_CAPTURE_CODE_DIRECTION_R = crate::BitReader;
 #[doc = "Field `ERR_CAPTURE_CODE_TYPE` reader - 00: bit error. 01: form error. 10:stuff error. 11:other type of error."]
-pub type ERR_CAPTURE_CODE_TYPE_R = crate::FieldReader<u8, u8>;
+pub type ERR_CAPTURE_CODE_TYPE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4 - This register contains information about the location of errors on the bus."]
     #[inline(always)]
@@ -34,6 +34,31 @@ impl R {
     #[inline(always)]
     pub fn err_capture_code_type(&self) -> ERR_CAPTURE_CODE_TYPE_R {
         ERR_CAPTURE_CODE_TYPE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ERR_CODE_CAP")
+            .field(
+                "err_capture_code_segment",
+                &format_args!("{}", self.err_capture_code_segment().bits()),
+            )
+            .field(
+                "err_capture_code_direction",
+                &format_args!("{}", self.err_capture_code_direction().bit()),
+            )
+            .field(
+                "err_capture_code_type",
+                &format_args!("{}", self.err_capture_code_type().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ERR_CODE_CAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "TWAI error info capture register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [err_code_cap](index.html) module"]

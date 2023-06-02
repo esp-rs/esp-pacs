@@ -22,6 +22,23 @@ impl R {
         SOF_FRAME_INDEX_R::new((self.bits & 0x07ff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRAM_NUM")
+            .field(
+                "sof_frame_index",
+                &format_args!("{}", self.sof_frame_index().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRAM_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "SOF frame number\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fram_num](index.html) module"]
 pub struct FRAM_NUM_SPEC;
 impl crate::RegisterSpec for FRAM_NUM_SPEC {

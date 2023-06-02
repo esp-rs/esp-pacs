@@ -35,47 +35,41 @@ impl From<crate::W<CLK_EDGE_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `CCLKIN_EDGE_DRV_SEL` reader - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_DRV_SEL_R = crate::FieldReader<u8, u8>;
+pub type CCLKIN_EDGE_DRV_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_DRV_SEL` writer - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_DRV_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 3, O>;
+pub type CCLKIN_EDGE_DRV_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 3, O>;
 #[doc = "Field `CCLKIN_EDGE_SAM_SEL` reader - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SAM_SEL_R = crate::FieldReader<u8, u8>;
+pub type CCLKIN_EDGE_SAM_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_SAM_SEL` writer - It's used to select the clock phase of the input signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SAM_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 3, O>;
+pub type CCLKIN_EDGE_SAM_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 3, O>;
 #[doc = "Field `CCLKIN_EDGE_SLF_SEL` reader - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SLF_SEL_R = crate::FieldReader<u8, u8>;
+pub type CCLKIN_EDGE_SLF_SEL_R = crate::FieldReader;
 #[doc = "Field `CCLKIN_EDGE_SLF_SEL` writer - It's used to select the clock phase of the internal signal from phase 0, phase 90, phase 180, phase 270."]
-pub type CCLKIN_EDGE_SLF_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 3, O>;
+pub type CCLKIN_EDGE_SLF_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 3, O>;
 #[doc = "Field `CCLLKIN_EDGE_H` reader - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
-pub type CCLLKIN_EDGE_H_R = crate::FieldReader<u8, u8>;
+pub type CCLLKIN_EDGE_H_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_H` writer - The high level of the divider clock. The value should be smaller than CCLKIN_EDGE_L."]
-pub type CCLLKIN_EDGE_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 4, O>;
+pub type CCLLKIN_EDGE_H_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 4, O>;
 #[doc = "Field `CCLLKIN_EDGE_L` reader - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
-pub type CCLLKIN_EDGE_L_R = crate::FieldReader<u8, u8>;
+pub type CCLLKIN_EDGE_L_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_L` writer - The low level of the divider clock. The value should be larger than CCLKIN_EDGE_H."]
-pub type CCLLKIN_EDGE_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 4, O>;
+pub type CCLLKIN_EDGE_L_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 4, O>;
 #[doc = "Field `CCLLKIN_EDGE_N` reader - The value should be equal to CCLKIN_EDGE_L."]
-pub type CCLLKIN_EDGE_N_R = crate::FieldReader<u8, u8>;
+pub type CCLLKIN_EDGE_N_R = crate::FieldReader;
 #[doc = "Field `CCLLKIN_EDGE_N` writer - The value should be equal to CCLKIN_EDGE_L."]
-pub type CCLLKIN_EDGE_N_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_EDGE_SEL_SPEC, u8, u8, 4, O>;
+pub type CCLLKIN_EDGE_N_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_EDGE_SEL_SPEC, 4, O>;
 #[doc = "Field `ESDIO_MODE` reader - Enable esdio mode."]
-pub type ESDIO_MODE_R = crate::BitReader<bool>;
+pub type ESDIO_MODE_R = crate::BitReader;
 #[doc = "Field `ESDIO_MODE` writer - Enable esdio mode."]
-pub type ESDIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EDGE_SEL_SPEC, bool, O>;
+pub type ESDIO_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EDGE_SEL_SPEC, O>;
 #[doc = "Field `ESD_MODE` reader - Enable esd mode."]
-pub type ESD_MODE_R = crate::BitReader<bool>;
+pub type ESD_MODE_R = crate::BitReader;
 #[doc = "Field `ESD_MODE` writer - Enable esd mode."]
-pub type ESD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EDGE_SEL_SPEC, bool, O>;
+pub type ESD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EDGE_SEL_SPEC, O>;
 #[doc = "Field `CCLK_EN` reader - Sdio clock enable"]
-pub type CCLK_EN_R = crate::BitReader<bool>;
+pub type CCLK_EN_R = crate::BitReader;
 #[doc = "Field `CCLK_EN` writer - Sdio clock enable"]
-pub type CCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_EDGE_SEL_SPEC, bool, O>;
+pub type CCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_EDGE_SEL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - It's used to select the clock phase of the output signal from phase 0, phase 90, phase 180, phase 270."]
     #[inline(always)]
@@ -121,6 +115,46 @@ impl R {
     #[inline(always)]
     pub fn cclk_en(&self) -> CCLK_EN_R {
         CCLK_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_EDGE_SEL")
+            .field(
+                "cclkin_edge_drv_sel",
+                &format_args!("{}", self.cclkin_edge_drv_sel().bits()),
+            )
+            .field(
+                "cclkin_edge_sam_sel",
+                &format_args!("{}", self.cclkin_edge_sam_sel().bits()),
+            )
+            .field(
+                "cclkin_edge_slf_sel",
+                &format_args!("{}", self.cclkin_edge_slf_sel().bits()),
+            )
+            .field(
+                "ccllkin_edge_h",
+                &format_args!("{}", self.ccllkin_edge_h().bits()),
+            )
+            .field(
+                "ccllkin_edge_l",
+                &format_args!("{}", self.ccllkin_edge_l().bits()),
+            )
+            .field(
+                "ccllkin_edge_n",
+                &format_args!("{}", self.ccllkin_edge_n().bits()),
+            )
+            .field("esdio_mode", &format_args!("{}", self.esdio_mode().bit()))
+            .field("esd_mode", &format_args!("{}", self.esd_mode().bit()))
+            .field("cclk_en", &format_args!("{}", self.cclk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_EDGE_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

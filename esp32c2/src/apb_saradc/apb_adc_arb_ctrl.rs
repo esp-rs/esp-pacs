@@ -35,45 +35,40 @@ impl From<crate::W<APB_ADC_ARB_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC_ARB_APB_FORCE` reader - adc2 arbiter force to enableapb controller"]
-pub type ADC_ARB_APB_FORCE_R = crate::BitReader<bool>;
+pub type ADC_ARB_APB_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_APB_FORCE` writer - adc2 arbiter force to enableapb controller"]
-pub type ADC_ARB_APB_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_APB_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_ARB_CTRL_SPEC, O>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` reader - adc2 arbiter force to enable rtc controller"]
-pub type ADC_ARB_RTC_FORCE_R = crate::BitReader<bool>;
+pub type ADC_ARB_RTC_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_RTC_FORCE` writer - adc2 arbiter force to enable rtc controller"]
-pub type ADC_ARB_RTC_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_RTC_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_ARB_CTRL_SPEC, O>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` reader - adc2 arbiter force to enable wifi controller"]
-pub type ADC_ARB_WIFI_FORCE_R = crate::BitReader<bool>;
+pub type ADC_ARB_WIFI_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` writer - adc2 arbiter force to enable wifi controller"]
-pub type ADC_ARB_WIFI_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_WIFI_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_ARB_CTRL_SPEC, O>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` reader - adc2 arbiter force grant"]
-pub type ADC_ARB_GRANT_FORCE_R = crate::BitReader<bool>;
+pub type ADC_ARB_GRANT_FORCE_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` writer - adc2 arbiter force grant"]
-pub type ADC_ARB_GRANT_FORCE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_GRANT_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_ARB_CTRL_SPEC, O>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` reader - Set adc2 arbiterapb priority"]
-pub type ADC_ARB_APB_PRIORITY_R = crate::FieldReader<u8, u8>;
+pub type ADC_ARB_APB_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` writer - Set adc2 arbiterapb priority"]
 pub type ADC_ARB_APB_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, APB_ADC_ARB_CTRL_SPEC, 2, O>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` reader - Set adc2 arbiter rtc priority"]
-pub type ADC_ARB_RTC_PRIORITY_R = crate::FieldReader<u8, u8>;
+pub type ADC_ARB_RTC_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` writer - Set adc2 arbiter rtc priority"]
 pub type ADC_ARB_RTC_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, APB_ADC_ARB_CTRL_SPEC, 2, O>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` reader - Set adc2 arbiter wifi priority"]
-pub type ADC_ARB_WIFI_PRIORITY_R = crate::FieldReader<u8, u8>;
+pub type ADC_ARB_WIFI_PRIORITY_R = crate::FieldReader;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` writer - Set adc2 arbiter wifi priority"]
 pub type ADC_ARB_WIFI_PRIORITY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, APB_ADC_ARB_CTRL_SPEC, 2, O>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` reader - adc2 arbiter uses fixed priority"]
-pub type ADC_ARB_FIX_PRIORITY_R = crate::BitReader<bool>;
+pub type ADC_ARB_FIX_PRIORITY_R = crate::BitReader;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` writer - adc2 arbiter uses fixed priority"]
-pub type ADC_ARB_FIX_PRIORITY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APB_ADC_ARB_CTRL_SPEC, bool, O>;
+pub type ADC_ARB_FIX_PRIORITY_W<'a, const O: u8> = crate::BitWriter<'a, APB_ADC_ARB_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
@@ -114,6 +109,51 @@ impl R {
     #[inline(always)]
     pub fn adc_arb_fix_priority(&self) -> ADC_ARB_FIX_PRIORITY_R {
         ADC_ARB_FIX_PRIORITY_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_ADC_ARB_CTRL")
+            .field(
+                "adc_arb_apb_force",
+                &format_args!("{}", self.adc_arb_apb_force().bit()),
+            )
+            .field(
+                "adc_arb_rtc_force",
+                &format_args!("{}", self.adc_arb_rtc_force().bit()),
+            )
+            .field(
+                "adc_arb_wifi_force",
+                &format_args!("{}", self.adc_arb_wifi_force().bit()),
+            )
+            .field(
+                "adc_arb_grant_force",
+                &format_args!("{}", self.adc_arb_grant_force().bit()),
+            )
+            .field(
+                "adc_arb_apb_priority",
+                &format_args!("{}", self.adc_arb_apb_priority().bits()),
+            )
+            .field(
+                "adc_arb_rtc_priority",
+                &format_args!("{}", self.adc_arb_rtc_priority().bits()),
+            )
+            .field(
+                "adc_arb_wifi_priority",
+                &format_args!("{}", self.adc_arb_wifi_priority().bits()),
+            )
+            .field(
+                "adc_arb_fix_priority",
+                &format_args!("{}", self.adc_arb_fix_priority().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB_ADC_ARB_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

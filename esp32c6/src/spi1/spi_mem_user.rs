@@ -35,64 +35,53 @@ impl From<crate::W<SPI_MEM_USER_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type SPI_MEM_CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type SPI_MEM_CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CK_OUT_EDGE` writer - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type SPI_MEM_CK_OUT_EDGE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_FWRITE_DUAL` reader - In the write operations read-data phase apply 2 signals"]
-pub type SPI_MEM_FWRITE_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FWRITE_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FWRITE_DUAL` writer - In the write operations read-data phase apply 2 signals"]
-pub type SPI_MEM_FWRITE_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_FWRITE_QUAD` reader - In the write operations read-data phase apply 4 signals"]
-pub type SPI_MEM_FWRITE_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FWRITE_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FWRITE_QUAD` writer - In the write operations read-data phase apply 4 signals"]
-pub type SPI_MEM_FWRITE_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_FWRITE_DIO` reader - In the write operations address phase and read-data phase apply 2 signals."]
-pub type SPI_MEM_FWRITE_DIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_FWRITE_DIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FWRITE_DIO` writer - In the write operations address phase and read-data phase apply 2 signals."]
-pub type SPI_MEM_FWRITE_DIO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_FWRITE_DIO_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_FWRITE_QIO` reader - In the write operations address phase and read-data phase apply 4 signals."]
-pub type SPI_MEM_FWRITE_QIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_FWRITE_QIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FWRITE_QIO` writer - In the write operations address phase and read-data phase apply 4 signals."]
-pub type SPI_MEM_FWRITE_QIO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_FWRITE_QIO_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type SPI_MEM_USR_MISO_HIGHPART_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_MISO_HIGHPART_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type SPI_MEM_USR_MOSI_HIGHPART_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_MOSI_HIGHPART_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY_IDLE` reader - SPI clock is disable in dummy phase when the bit is enable."]
-pub type SPI_MEM_USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY_IDLE` writer - SPI clock is disable in dummy phase when the bit is enable."]
-pub type SPI_MEM_USR_DUMMY_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_MOSI` reader - This bit enable the write-data phase of an operation."]
-pub type SPI_MEM_USR_MOSI_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_MOSI_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_MOSI` writer - This bit enable the write-data phase of an operation."]
-pub type SPI_MEM_USR_MOSI_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_MISO` reader - This bit enable the read-data phase of an operation."]
-pub type SPI_MEM_USR_MISO_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_MISO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_MISO` writer - This bit enable the read-data phase of an operation."]
-pub type SPI_MEM_USR_MISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
-pub type SPI_MEM_USR_DUMMY_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
-pub type SPI_MEM_USR_DUMMY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_ADDR` reader - This bit enable the address phase of an operation."]
-pub type SPI_MEM_USR_ADDR_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_ADDR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_ADDR` writer - This bit enable the address phase of an operation."]
-pub type SPI_MEM_USR_ADDR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR_COMMAND` reader - This bit enable the command phase of an operation."]
-pub type SPI_MEM_USR_COMMAND_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_COMMAND_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR_COMMAND` writer - This bit enable the command phase of an operation."]
-pub type SPI_MEM_USR_COMMAND_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_USER_SPEC, bool, O>;
+pub type SPI_MEM_USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_USER_SPEC, O>;
 impl R {
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
@@ -158,6 +147,71 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_usr_command(&self) -> SPI_MEM_USR_COMMAND_R {
         SPI_MEM_USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_USER")
+            .field(
+                "spi_mem_ck_out_edge",
+                &format_args!("{}", self.spi_mem_ck_out_edge().bit()),
+            )
+            .field(
+                "spi_mem_fwrite_dual",
+                &format_args!("{}", self.spi_mem_fwrite_dual().bit()),
+            )
+            .field(
+                "spi_mem_fwrite_quad",
+                &format_args!("{}", self.spi_mem_fwrite_quad().bit()),
+            )
+            .field(
+                "spi_mem_fwrite_dio",
+                &format_args!("{}", self.spi_mem_fwrite_dio().bit()),
+            )
+            .field(
+                "spi_mem_fwrite_qio",
+                &format_args!("{}", self.spi_mem_fwrite_qio().bit()),
+            )
+            .field(
+                "spi_mem_usr_miso_highpart",
+                &format_args!("{}", self.spi_mem_usr_miso_highpart().bit()),
+            )
+            .field(
+                "spi_mem_usr_mosi_highpart",
+                &format_args!("{}", self.spi_mem_usr_mosi_highpart().bit()),
+            )
+            .field(
+                "spi_mem_usr_dummy_idle",
+                &format_args!("{}", self.spi_mem_usr_dummy_idle().bit()),
+            )
+            .field(
+                "spi_mem_usr_mosi",
+                &format_args!("{}", self.spi_mem_usr_mosi().bit()),
+            )
+            .field(
+                "spi_mem_usr_miso",
+                &format_args!("{}", self.spi_mem_usr_miso().bit()),
+            )
+            .field(
+                "spi_mem_usr_dummy",
+                &format_args!("{}", self.spi_mem_usr_dummy().bit()),
+            )
+            .field(
+                "spi_mem_usr_addr",
+                &format_args!("{}", self.spi_mem_usr_addr().bit()),
+            )
+            .field(
+                "spi_mem_usr_command",
+                &format_args!("{}", self.spi_mem_usr_command().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

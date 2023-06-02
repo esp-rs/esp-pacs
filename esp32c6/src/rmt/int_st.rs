@@ -14,33 +14,33 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CH0_TX_END_INT_ST` reader - The masked interrupt status bit for CH0_TX_END_INT."]
-pub type CH0_TX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH0_TX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH1_TX_END_INT_ST` reader - The masked interrupt status bit for CH1_TX_END_INT."]
-pub type CH1_TX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH1_TX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH2_RX_END_INT_ST` reader - The masked interrupt status bit for CH2_RX_END_INT."]
-pub type CH2_RX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH2_RX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH3_RX_END_INT_ST` reader - The masked interrupt status bit for CH3_RX_END_INT."]
-pub type CH3_RX_END_INT_ST_R = crate::BitReader<bool>;
+pub type CH3_RX_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_CH0_ERR_INT_ST` reader - The masked interrupt status bit for CH4_ERR_INT."]
-pub type RX_CH0_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RX_CH0_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_CH1_ERR_INT_ST` reader - The masked interrupt status bit for CH5_ERR_INT."]
-pub type RX_CH1_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RX_CH1_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_CH2_ERR_INT_ST` reader - The masked interrupt status bit for CH6_ERR_INT."]
-pub type RX_CH2_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RX_CH2_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RX_CH3_ERR_INT_ST` reader - The masked interrupt status bit for CH7_ERR_INT."]
-pub type RX_CH3_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RX_CH3_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH0_TX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
-pub type CH0_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH0_TX_THR_EVENT_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH1_TX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH1_TX_THR_EVENT_INT."]
-pub type CH1_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH1_TX_THR_EVENT_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH2_RX_THR_EVENT_INT."]
-pub type CH2_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH2_RX_THR_EVENT_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH3_RX_THR_EVENT_INT."]
-pub type CH3_RX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
+pub type CH3_RX_THR_EVENT_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH0_TX_LOOP_INT_ST` reader - The masked interrupt status bit for CH0_TX_LOOP_INT."]
-pub type CH0_TX_LOOP_INT_ST_R = crate::BitReader<bool>;
+pub type CH0_TX_LOOP_INT_ST_R = crate::BitReader;
 #[doc = "Field `CH1_TX_LOOP_INT_ST` reader - The masked interrupt status bit for CH1_TX_LOOP_INT."]
-pub type CH1_TX_LOOP_INT_ST_R = crate::BitReader<bool>;
+pub type CH1_TX_LOOP_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
     #[inline(always)]
@@ -111,6 +111,75 @@ impl R {
     #[inline(always)]
     pub fn ch1_tx_loop_int_st(&self) -> CH1_TX_LOOP_INT_ST_R {
         CH1_TX_LOOP_INT_ST_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "ch0_tx_end_int_st",
+                &format_args!("{}", self.ch0_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_end_int_st",
+                &format_args!("{}", self.ch1_tx_end_int_st().bit()),
+            )
+            .field(
+                "ch2_rx_end_int_st",
+                &format_args!("{}", self.ch2_rx_end_int_st().bit()),
+            )
+            .field(
+                "ch3_rx_end_int_st",
+                &format_args!("{}", self.ch3_rx_end_int_st().bit()),
+            )
+            .field(
+                "rx_ch0_err_int_st",
+                &format_args!("{}", self.rx_ch0_err_int_st().bit()),
+            )
+            .field(
+                "rx_ch1_err_int_st",
+                &format_args!("{}", self.rx_ch1_err_int_st().bit()),
+            )
+            .field(
+                "rx_ch2_err_int_st",
+                &format_args!("{}", self.rx_ch2_err_int_st().bit()),
+            )
+            .field(
+                "rx_ch3_err_int_st",
+                &format_args!("{}", self.rx_ch3_err_int_st().bit()),
+            )
+            .field(
+                "ch0_tx_thr_event_int_st",
+                &format_args!("{}", self.ch0_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_thr_event_int_st",
+                &format_args!("{}", self.ch1_tx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch2_rx_thr_event_int_st",
+                &format_args!("{}", self.ch2_rx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch3_rx_thr_event_int_st",
+                &format_args!("{}", self.ch3_rx_thr_event_int_st().bit()),
+            )
+            .field(
+                "ch0_tx_loop_int_st",
+                &format_args!("{}", self.ch0_tx_loop_int_st().bit()),
+            )
+            .field(
+                "ch1_tx_loop_int_st",
+                &format_args!("{}", self.ch1_tx_loop_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

@@ -35,45 +35,37 @@ impl From<crate::W<INTR_RCGN_SPEC>> for W {
     }
 }
 #[doc = "Field `INTR_MODE_CH0` reader - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH0_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH0_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH0` writer - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH0_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH1` reader - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH1_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH1_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH1` writer - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH1_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH2` reader - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH2_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH2_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH2` writer - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH3` reader - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH3_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH3_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH3` writer - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH3_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH4` reader - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH4_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH4_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH4` writer - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH4_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH5` reader - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH5_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH5_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH5` writer - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH5_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH6` reader - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH6_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH6_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH6` writer - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH6_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 #[doc = "Field `INTR_MODE_CH7` reader - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH7_R = crate::FieldReader<u8, u8>;
+pub type INTR_MODE_CH7_R = crate::FieldReader;
 #[doc = "Field `INTR_MODE_CH7` writer - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
-pub type INTR_MODE_CH7_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTR_RCGN_SPEC, u8, u8, 3, O>;
+pub type INTR_MODE_CH7_W<'a, const O: u8> = crate::FieldWriter<'a, INTR_RCGN_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
@@ -114,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn intr_mode_ch7(&self) -> INTR_MODE_CH7_R {
         INTR_MODE_CH7_R::new(((self.bits >> 21) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_RCGN")
+            .field(
+                "intr_mode_ch0",
+                &format_args!("{}", self.intr_mode_ch0().bits()),
+            )
+            .field(
+                "intr_mode_ch1",
+                &format_args!("{}", self.intr_mode_ch1().bits()),
+            )
+            .field(
+                "intr_mode_ch2",
+                &format_args!("{}", self.intr_mode_ch2().bits()),
+            )
+            .field(
+                "intr_mode_ch3",
+                &format_args!("{}", self.intr_mode_ch3().bits()),
+            )
+            .field(
+                "intr_mode_ch4",
+                &format_args!("{}", self.intr_mode_ch4().bits()),
+            )
+            .field(
+                "intr_mode_ch5",
+                &format_args!("{}", self.intr_mode_ch5().bits()),
+            )
+            .field(
+                "intr_mode_ch6",
+                &format_args!("{}", self.intr_mode_ch6().bits()),
+            )
+            .field(
+                "intr_mode_ch7",
+                &format_args!("{}", self.intr_mode_ch7().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_RCGN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

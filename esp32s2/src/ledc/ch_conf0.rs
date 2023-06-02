@@ -35,31 +35,31 @@ impl From<crate::W<CH_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL` reader - This field is used to select one of timers for channel %s. 0: select timer 0. 1: select timer 1. 2: select timer 2. 3: select timer 3."]
-pub type TIMER_SEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER_SEL` writer - This field is used to select one of timers for channel %s. 0: select timer 0. 1: select timer 1. 2: select timer 2. 3: select timer 3."]
-pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONF0_SPEC, u8, u8, 2, O>;
+pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF0_SPEC, 2, O>;
 #[doc = "Field `SIG_OUT_EN` reader - Set this bit to enable signal output on channel %s."]
-pub type SIG_OUT_EN_R = crate::BitReader<bool>;
+pub type SIG_OUT_EN_R = crate::BitReader;
 #[doc = "Field `SIG_OUT_EN` writer - Set this bit to enable signal output on channel %s."]
-pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
+pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_LV` reader - This bit is used to control the output value when channel %s is inactive."]
-pub type IDLE_LV_R = crate::BitReader<bool>;
+pub type IDLE_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_LV` writer - This bit is used to control the output value when channel %s is inactive."]
-pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
+pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF0_SPEC, O>;
 #[doc = "Field `PARA_UP` writer - This bit is used to update register LEDC_CH%s_HPOINT and LEDC_CH%s_DUTY for channel %s."]
-pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
+pub type PARA_UP_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF0_SPEC, O>;
 #[doc = "Field `OVF_NUM` reader - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
 pub type OVF_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OVF_NUM` writer - This register is used to configure the maximum times of overflow minus 1. The LEDC_OVF_CNT_CH%s_INT interrupt will be triggered when channel %s overflows for (LEDC_OVF_NUM_CH%s + 1) times."]
-pub type OVF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_CONF0_SPEC, u16, u16, 10, O>;
+pub type OVF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF0_SPEC, 10, O, u16, u16>;
 #[doc = "Field `OVF_CNT_EN` reader - This bit is used to enable the ovf_cnt of channel %s."]
-pub type OVF_CNT_EN_R = crate::BitReader<bool>;
+pub type OVF_CNT_EN_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_EN` writer - This bit is used to enable the ovf_cnt of channel %s."]
-pub type OVF_CNT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
+pub type OVF_CNT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF0_SPEC, O>;
 #[doc = "Field `OVF_CNT_RESET` writer - Set this bit to reset the ovf_cnt of channel %s."]
-pub type OVF_CNT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF0_SPEC, bool, O>;
+pub type OVF_CNT_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF0_SPEC, O>;
 #[doc = "Field `OVF_CNT_RESET_ST` reader - This is the status bit of LEDC_OVF_CNT_RESET_CH%s."]
-pub type OVF_CNT_RESET_ST_R = crate::BitReader<bool>;
+pub type OVF_CNT_RESET_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1 - This field is used to select one of timers for channel %s. 0: select timer 0. 1: select timer 1. 2: select timer 2. 3: select timer 3."]
     #[inline(always)]
@@ -90,6 +90,28 @@ impl R {
     #[inline(always)]
     pub fn ovf_cnt_reset_st(&self) -> OVF_CNT_RESET_ST_R {
         OVF_CNT_RESET_ST_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_CONF0")
+            .field("timer_sel", &format_args!("{}", self.timer_sel().bits()))
+            .field("sig_out_en", &format_args!("{}", self.sig_out_en().bit()))
+            .field("idle_lv", &format_args!("{}", self.idle_lv().bit()))
+            .field("ovf_num", &format_args!("{}", self.ovf_num().bits()))
+            .field("ovf_cnt_en", &format_args!("{}", self.ovf_cnt_en().bit()))
+            .field(
+                "ovf_cnt_reset_st",
+                &format_args!("{}", self.ovf_cnt_reset_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,57 +35,49 @@ impl From<crate::W<RESET_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
-pub type RESET_CAUSE_PROCPU_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_PROCPU_R = crate::FieldReader;
 #[doc = "Field `RESET_CAUSE_APPCPU` reader - reset cause of APP CPU"]
-pub type RESET_CAUSE_APPCPU_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_APPCPU_R = crate::FieldReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` reader - APP CPU state vector sel"]
-pub type APPCPU_STAT_VECTOR_SEL_R = crate::BitReader<bool>;
+pub type APPCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `APPCPU_STAT_VECTOR_SEL` writer - APP CPU state vector sel"]
-pub type APPCPU_STAT_VECTOR_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type APPCPU_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` reader - PRO CPU state vector sel"]
-pub type PROCPU_STAT_VECTOR_SEL_R = crate::BitReader<bool>;
+pub type PROCPU_STAT_VECTOR_SEL_R = crate::BitReader;
 #[doc = "Field `PROCPU_STAT_VECTOR_SEL` writer - PRO CPU state vector sel"]
-pub type PROCPU_STAT_VECTOR_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type PROCPU_STAT_VECTOR_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `RESET_FLAG_PROCPU` reader - PRO CPU reset_flag"]
-pub type RESET_FLAG_PROCPU_R = crate::BitReader<bool>;
+pub type RESET_FLAG_PROCPU_R = crate::BitReader;
 #[doc = "Field `RESET_FLAG_APPCPU` reader - APP CPU reset flag"]
-pub type RESET_FLAG_APPCPU_R = crate::BitReader<bool>;
+pub type RESET_FLAG_APPCPU_R = crate::BitReader;
 #[doc = "Field `RESET_FLAG_PROCPU_CLR` writer - clear PRO CPU reset_flag"]
-pub type RESET_FLAG_PROCPU_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type RESET_FLAG_PROCPU_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `RESET_FLAG_APPCPU_CLR` writer - clear APP CPU reset flag"]
-pub type RESET_FLAG_APPCPU_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type RESET_FLAG_APPCPU_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `APPCPU_OCD_HALT_ON_RESET` reader - APPCPU OcdHaltOnReset"]
-pub type APPCPU_OCD_HALT_ON_RESET_R = crate::BitReader<bool>;
+pub type APPCPU_OCD_HALT_ON_RESET_R = crate::BitReader;
 #[doc = "Field `APPCPU_OCD_HALT_ON_RESET` writer - APPCPU OcdHaltOnReset"]
-pub type APPCPU_OCD_HALT_ON_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type APPCPU_OCD_HALT_ON_RESET_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `PROCPU_OCD_HALT_ON_RESET` reader - PROCPU OcdHaltOnReset"]
-pub type PROCPU_OCD_HALT_ON_RESET_R = crate::BitReader<bool>;
+pub type PROCPU_OCD_HALT_ON_RESET_R = crate::BitReader;
 #[doc = "Field `PROCPU_OCD_HALT_ON_RESET` writer - PROCPU OcdHaltOnReset"]
-pub type PROCPU_OCD_HALT_ON_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type PROCPU_OCD_HALT_ON_RESET_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `RESET_FLAG_JTAG_PROCPU` reader - jtag reset flag"]
-pub type RESET_FLAG_JTAG_PROCPU_R = crate::BitReader<bool>;
+pub type RESET_FLAG_JTAG_PROCPU_R = crate::BitReader;
 #[doc = "Field `RESET_FLAG_JTAG_APPCPU` reader - jtag reset flag"]
-pub type RESET_FLAG_JTAG_APPCPU_R = crate::BitReader<bool>;
+pub type RESET_FLAG_JTAG_APPCPU_R = crate::BitReader;
 #[doc = "Field `RESET_FLAG_JTAG_PROCPU_CLR` writer - clear jtag reset flag"]
-pub type RESET_FLAG_JTAG_PROCPU_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type RESET_FLAG_JTAG_PROCPU_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `RESET_FLAG_JTAG_APPCPU_CLR` writer - clear jtag reset flag"]
-pub type RESET_FLAG_JTAG_APPCPU_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type RESET_FLAG_JTAG_APPCPU_CLR_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `APP_DRESET_MASK` reader - bypass cpu1 dreset"]
-pub type APP_DRESET_MASK_R = crate::BitReader<bool>;
+pub type APP_DRESET_MASK_R = crate::BitReader;
 #[doc = "Field `APP_DRESET_MASK` writer - bypass cpu1 dreset"]
-pub type APP_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type APP_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `PRO_DRESET_MASK` reader - bypass cpu0 dreset"]
-pub type PRO_DRESET_MASK_R = crate::BitReader<bool>;
+pub type PRO_DRESET_MASK_R = crate::BitReader;
 #[doc = "Field `PRO_DRESET_MASK` writer - bypass cpu0 dreset"]
-pub type PRO_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type PRO_DRESET_MASK_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -146,6 +138,67 @@ impl R {
     #[inline(always)]
     pub fn pro_dreset_mask(&self) -> PRO_DRESET_MASK_R {
         PRO_DRESET_MASK_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_STATE")
+            .field(
+                "reset_cause_procpu",
+                &format_args!("{}", self.reset_cause_procpu().bits()),
+            )
+            .field(
+                "reset_cause_appcpu",
+                &format_args!("{}", self.reset_cause_appcpu().bits()),
+            )
+            .field(
+                "appcpu_stat_vector_sel",
+                &format_args!("{}", self.appcpu_stat_vector_sel().bit()),
+            )
+            .field(
+                "procpu_stat_vector_sel",
+                &format_args!("{}", self.procpu_stat_vector_sel().bit()),
+            )
+            .field(
+                "reset_flag_procpu",
+                &format_args!("{}", self.reset_flag_procpu().bit()),
+            )
+            .field(
+                "reset_flag_appcpu",
+                &format_args!("{}", self.reset_flag_appcpu().bit()),
+            )
+            .field(
+                "appcpu_ocd_halt_on_reset",
+                &format_args!("{}", self.appcpu_ocd_halt_on_reset().bit()),
+            )
+            .field(
+                "procpu_ocd_halt_on_reset",
+                &format_args!("{}", self.procpu_ocd_halt_on_reset().bit()),
+            )
+            .field(
+                "reset_flag_jtag_procpu",
+                &format_args!("{}", self.reset_flag_jtag_procpu().bit()),
+            )
+            .field(
+                "reset_flag_jtag_appcpu",
+                &format_args!("{}", self.reset_flag_jtag_appcpu().bit()),
+            )
+            .field(
+                "app_dreset_mask",
+                &format_args!("{}", self.app_dreset_mask().bit()),
+            )
+            .field(
+                "pro_dreset_mask",
+                &format_args!("{}", self.pro_dreset_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

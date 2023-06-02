@@ -37,11 +37,11 @@ impl From<crate::W<CONF_SPEC>> for W {
 #[doc = "Field `OP_CODE` reader - efuse operation code"]
 pub type OP_CODE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OP_CODE` writer - efuse operation code"]
-pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CONF_SPEC, u16, u16, 16, O>;
+pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16, u16>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
-pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader<bool>;
+pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` writer - "]
-pub type FORCE_NO_WR_RD_DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type FORCE_NO_WR_RD_DIS_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - efuse operation code"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn force_no_wr_rd_dis(&self) -> FORCE_NO_WR_RD_DIS_R {
         FORCE_NO_WR_RD_DIS_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field("op_code", &format_args!("{}", self.op_code().bits()))
+            .field(
+                "force_no_wr_rd_dis",
+                &format_args!("{}", self.force_no_wr_rd_dis().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

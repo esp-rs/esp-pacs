@@ -35,16 +35,16 @@ impl From<crate::W<L2_CACHE_PRELOAD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L2_CACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
-pub type L2_CACHE_PRELOAD_ENA_R = crate::BitReader<bool>;
+pub type L2_CACHE_PRELOAD_ENA_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
 pub type L2_CACHE_PRELOAD_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L2_CACHE_PRELOAD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L2_CACHE_PRELOAD_CTRL_SPEC, O>;
 #[doc = "Field `L2_CACHE_PRELOAD_DONE` reader - The bit is used to indicate whether preload operation is finished or not. 0: not finished. 1: finished."]
-pub type L2_CACHE_PRELOAD_DONE_R = crate::BitReader<bool>;
+pub type L2_CACHE_PRELOAD_DONE_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOAD_ORDER` reader - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
-pub type L2_CACHE_PRELOAD_ORDER_R = crate::BitReader<bool>;
+pub type L2_CACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `L2_CACHE_PRELOAD_RGID` reader - The bit is used to set the gid of l2 cache preload."]
-pub type L2_CACHE_PRELOAD_RGID_R = crate::FieldReader<u8, u8>;
+pub type L2_CACHE_PRELOAD_RGID_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L2-Cache. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
@@ -65,6 +65,35 @@ impl R {
     #[inline(always)]
     pub fn l2_cache_preload_rgid(&self) -> L2_CACHE_PRELOAD_RGID_R {
         L2_CACHE_PRELOAD_RGID_R::new(((self.bits >> 3) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_PRELOAD_CTRL")
+            .field(
+                "l2_cache_preload_ena",
+                &format_args!("{}", self.l2_cache_preload_ena().bit()),
+            )
+            .field(
+                "l2_cache_preload_done",
+                &format_args!("{}", self.l2_cache_preload_done().bit()),
+            )
+            .field(
+                "l2_cache_preload_order",
+                &format_args!("{}", self.l2_cache_preload_order().bit()),
+            )
+            .field(
+                "l2_cache_preload_rgid",
+                &format_args!("{}", self.l2_cache_preload_rgid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOAD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

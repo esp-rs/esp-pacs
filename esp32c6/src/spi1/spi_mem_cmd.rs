@@ -35,77 +35,69 @@ impl From<crate::W<SPI_MEM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_MST_ST` reader - The current status of SPI1 master FSM."]
-pub type SPI_MEM_MST_ST_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_MST_ST_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SLV_ST` reader - The current status of SPI1 slave FSM: mspi_st. 0: idle state, 1: preparation state, 2: send command state, 3: send address state, 4: wait state, 5: read data state, 6:write data state, 7: done state, 8: read data end state."]
-pub type SPI_MEM_SLV_ST_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SLV_ST_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_FLASH_PE` reader - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PE_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PE` writer - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_PE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_USR_R = crate::BitReader<bool>;
+pub type SPI_MEM_USR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_USR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_USR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_HPM` reader - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_HPM_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_HPM_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_HPM` writer - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_HPM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_HPM_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_RES` reader - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RES_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_RES_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RES` writer - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RES_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_RES_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_DP` reader - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_DP_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_DP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_DP` writer - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_DP_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_CE` reader - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_CE_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_CE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_CE` writer - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_CE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_BE` reader - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_BE_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_BE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_BE` writer - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_BE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_BE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_SE` reader - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_SE_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_SE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_SE` writer - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_SE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_SE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PP` reader - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PP_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_PP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_PP` writer - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub type SPI_MEM_FLASH_PP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_PP_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_WRSR` reader - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRSR_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_WRSR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WRSR` writer - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRSR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_WRSR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_RDSR` reader - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDSR_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_RDSR_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RDSR` writer - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDSR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_RDSR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_RDID` reader - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDID_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_RDID_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_RDID` writer - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_RDID_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_RDID_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_WRDI` reader - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRDI_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_WRDI_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WRDI` writer - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WRDI_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_WRDI_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_WREN` reader - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WREN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_WREN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_WREN` writer - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_WREN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_WREN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_READ` reader - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_READ_R = crate::BitReader<bool>;
+pub type SPI_MEM_FLASH_READ_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FLASH_READ` writer - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type SPI_MEM_FLASH_READ_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_FLASH_READ_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CMD_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - The current status of SPI1 master FSM."]
     #[inline(always)]
@@ -191,6 +183,84 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_flash_read(&self) -> SPI_MEM_FLASH_READ_R {
         SPI_MEM_FLASH_READ_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CMD")
+            .field(
+                "spi_mem_mst_st",
+                &format_args!("{}", self.spi_mem_mst_st().bits()),
+            )
+            .field(
+                "spi_mem_slv_st",
+                &format_args!("{}", self.spi_mem_slv_st().bits()),
+            )
+            .field(
+                "spi_mem_flash_pe",
+                &format_args!("{}", self.spi_mem_flash_pe().bit()),
+            )
+            .field("spi_mem_usr", &format_args!("{}", self.spi_mem_usr().bit()))
+            .field(
+                "spi_mem_flash_hpm",
+                &format_args!("{}", self.spi_mem_flash_hpm().bit()),
+            )
+            .field(
+                "spi_mem_flash_res",
+                &format_args!("{}", self.spi_mem_flash_res().bit()),
+            )
+            .field(
+                "spi_mem_flash_dp",
+                &format_args!("{}", self.spi_mem_flash_dp().bit()),
+            )
+            .field(
+                "spi_mem_flash_ce",
+                &format_args!("{}", self.spi_mem_flash_ce().bit()),
+            )
+            .field(
+                "spi_mem_flash_be",
+                &format_args!("{}", self.spi_mem_flash_be().bit()),
+            )
+            .field(
+                "spi_mem_flash_se",
+                &format_args!("{}", self.spi_mem_flash_se().bit()),
+            )
+            .field(
+                "spi_mem_flash_pp",
+                &format_args!("{}", self.spi_mem_flash_pp().bit()),
+            )
+            .field(
+                "spi_mem_flash_wrsr",
+                &format_args!("{}", self.spi_mem_flash_wrsr().bit()),
+            )
+            .field(
+                "spi_mem_flash_rdsr",
+                &format_args!("{}", self.spi_mem_flash_rdsr().bit()),
+            )
+            .field(
+                "spi_mem_flash_rdid",
+                &format_args!("{}", self.spi_mem_flash_rdid().bit()),
+            )
+            .field(
+                "spi_mem_flash_wrdi",
+                &format_args!("{}", self.spi_mem_flash_wrdi().bit()),
+            )
+            .field(
+                "spi_mem_flash_wren",
+                &format_args!("{}", self.spi_mem_flash_wren().bit()),
+            )
+            .field(
+                "spi_mem_flash_read",
+                &format_args!("{}", self.spi_mem_flash_read().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,12 @@ impl From<crate::W<I2C_SCL_HIGH_PERIOD_SPEC>> for W {
 pub type I2C_SCL_HIGH_PERIOD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_SCL_HIGH_PERIOD` writer - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_HIGH_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_SCL_HIGH_PERIOD_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, I2C_SCL_HIGH_PERIOD_SPEC, 9, O, u16, u16>;
 #[doc = "Field `I2C_SCL_WAIT_HIGH_PERIOD` reader - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
-pub type I2C_SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader;
 #[doc = "Field `I2C_SCL_WAIT_HIGH_PERIOD` writer - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_WAIT_HIGH_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_SCL_HIGH_PERIOD_SPEC, u8, u8, 7, O>;
+    crate::FieldWriter<'a, I2C_SCL_HIGH_PERIOD_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn i2c_scl_wait_high_period(&self) -> I2C_SCL_WAIT_HIGH_PERIOD_R {
         I2C_SCL_WAIT_HIGH_PERIOD_R::new(((self.bits >> 9) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_SCL_HIGH_PERIOD")
+            .field(
+                "i2c_scl_high_period",
+                &format_args!("{}", self.i2c_scl_high_period().bits()),
+            )
+            .field(
+                "i2c_scl_wait_high_period",
+                &format_args!("{}", self.i2c_scl_wait_high_period().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_SCL_HIGH_PERIOD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,30 +35,29 @@ impl From<crate::W<AHB_LITE_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO` reader - "]
-pub type PRO_R = crate::BitReader<bool>;
+pub type PRO_R = crate::BitReader;
 #[doc = "Field `PRO` writer - "]
-pub type PRO_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, O>;
+pub type PRO_W<'a, const O: u8> = crate::BitWriter<'a, AHB_LITE_MASK_SPEC, O>;
 #[doc = "Field `APP` reader - "]
-pub type APP_R = crate::BitReader<bool>;
+pub type APP_R = crate::BitReader;
 #[doc = "Field `APP` writer - "]
-pub type APP_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, O>;
+pub type APP_W<'a, const O: u8> = crate::BitWriter<'a, AHB_LITE_MASK_SPEC, O>;
 #[doc = "Field `SDIO` reader - "]
-pub type SDIO_R = crate::BitReader<bool>;
+pub type SDIO_R = crate::BitReader;
 #[doc = "Field `SDIO` writer - "]
-pub type SDIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, O>;
+pub type SDIO_W<'a, const O: u8> = crate::BitWriter<'a, AHB_LITE_MASK_SPEC, O>;
 #[doc = "Field `PRODPORT` reader - "]
-pub type PRODPORT_R = crate::BitReader<bool>;
+pub type PRODPORT_R = crate::BitReader;
 #[doc = "Field `PRODPORT` writer - "]
-pub type PRODPORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, O>;
+pub type PRODPORT_W<'a, const O: u8> = crate::BitWriter<'a, AHB_LITE_MASK_SPEC, O>;
 #[doc = "Field `APPDPORT` reader - "]
-pub type APPDPORT_R = crate::BitReader<bool>;
+pub type APPDPORT_R = crate::BitReader;
 #[doc = "Field `APPDPORT` writer - "]
-pub type APPDPORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, O>;
+pub type APPDPORT_W<'a, const O: u8> = crate::BitWriter<'a, AHB_LITE_MASK_SPEC, O>;
 #[doc = "Field `AHB_LITE_SDHOST_PID` reader - "]
-pub type AHB_LITE_SDHOST_PID_R = crate::FieldReader<u8, u8>;
+pub type AHB_LITE_SDHOST_PID_R = crate::FieldReader;
 #[doc = "Field `AHB_LITE_SDHOST_PID` writer - "]
-pub type AHB_LITE_SDHOST_PID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHB_LITE_MASK_SPEC, u8, u8, 3, O>;
+pub type AHB_LITE_SDHOST_PID_W<'a, const O: u8> = crate::FieldWriter<'a, AHB_LITE_MASK_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -89,6 +88,28 @@ impl R {
     #[inline(always)]
     pub fn ahb_lite_sdhost_pid(&self) -> AHB_LITE_SDHOST_PID_R {
         AHB_LITE_SDHOST_PID_R::new(((self.bits >> 11) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHB_LITE_MASK")
+            .field("pro", &format_args!("{}", self.pro().bit()))
+            .field("app", &format_args!("{}", self.app().bit()))
+            .field("sdio", &format_args!("{}", self.sdio().bit()))
+            .field("prodport", &format_args!("{}", self.prodport().bit()))
+            .field("appdport", &format_args!("{}", self.appdport().bit()))
+            .field(
+                "ahb_lite_sdhost_pid",
+                &format_args!("{}", self.ahb_lite_sdhost_pid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHB_LITE_MASK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

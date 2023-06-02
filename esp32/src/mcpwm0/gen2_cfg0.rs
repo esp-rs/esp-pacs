@@ -35,18 +35,17 @@ impl From<crate::W<GEN2_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN2_CFG_UPMETHOD` reader - "]
-pub type GEN2_CFG_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type GEN2_CFG_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `GEN2_CFG_UPMETHOD` writer - "]
-pub type GEN2_CFG_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GEN2_CFG0_SPEC, u8, u8, 4, O>;
+pub type GEN2_CFG_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_CFG0_SPEC, 4, O>;
 #[doc = "Field `GEN2_T0_SEL` reader - "]
-pub type GEN2_T0_SEL_R = crate::FieldReader<u8, u8>;
+pub type GEN2_T0_SEL_R = crate::FieldReader;
 #[doc = "Field `GEN2_T0_SEL` writer - "]
-pub type GEN2_T0_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN2_CFG0_SPEC, u8, u8, 3, O>;
+pub type GEN2_T0_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_CFG0_SPEC, 3, O>;
 #[doc = "Field `GEN2_T1_SEL` reader - "]
-pub type GEN2_T1_SEL_R = crate::FieldReader<u8, u8>;
+pub type GEN2_T1_SEL_R = crate::FieldReader;
 #[doc = "Field `GEN2_T1_SEL` writer - "]
-pub type GEN2_T1_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN2_CFG0_SPEC, u8, u8, 3, O>;
+pub type GEN2_T1_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_CFG0_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -62,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn gen2_t1_sel(&self) -> GEN2_T1_SEL_R {
         GEN2_T1_SEL_R::new(((self.bits >> 7) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GEN2_CFG0")
+            .field(
+                "gen2_cfg_upmethod",
+                &format_args!("{}", self.gen2_cfg_upmethod().bits()),
+            )
+            .field(
+                "gen2_t0_sel",
+                &format_args!("{}", self.gen2_t0_sel().bits()),
+            )
+            .field(
+                "gen2_t1_sel",
+                &format_args!("{}", self.gen2_t1_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GEN2_CFG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

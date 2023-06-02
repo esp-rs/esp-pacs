@@ -22,6 +22,23 @@ impl R {
         DC_PRELOAD_EVICT_CNT_R::new((self.bits & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DC_PRELOAD_EVICT_CNT")
+            .field(
+                "dc_preload_evict_cnt",
+                &format_args!("{}", self.dc_preload_evict_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DC_PRELOAD_EVICT_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "register description\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dc_preload_evict_cnt](index.html) module"]
 pub struct DC_PRELOAD_EVICT_CNT_SPEC;
 impl crate::RegisterSpec for DC_PRELOAD_EVICT_CNT_SPEC {

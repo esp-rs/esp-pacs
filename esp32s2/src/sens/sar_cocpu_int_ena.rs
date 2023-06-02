@@ -35,50 +35,44 @@ impl From<crate::W<SAR_COCPU_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `COCPU_TOUCH_DONE_INT_ENA` reader - TOUCH_DONE_INT interrupt enable bit"]
-pub type COCPU_TOUCH_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_TOUCH_DONE_INT_ENA` writer - TOUCH_DONE_INT interrupt enable bit"]
 pub type COCPU_TOUCH_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_TOUCH_INACTIVE_INT_ENA` reader - TOUCH_INACTIVE_INT interrupt enable bit"]
-pub type COCPU_TOUCH_INACTIVE_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_INACTIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_TOUCH_INACTIVE_INT_ENA` writer - TOUCH_INACTIVE_INT interrupt enable bit"]
 pub type COCPU_TOUCH_INACTIVE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_TOUCH_ACTIVE_INT_ENA` reader - TOUCH_ACTIVE_INT interrupt enable bit"]
-pub type COCPU_TOUCH_ACTIVE_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_ACTIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_TOUCH_ACTIVE_INT_ENA` writer - TOUCH_ACTIVE_INT interrupt enable bit"]
 pub type COCPU_TOUCH_ACTIVE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_SARADC1_INT_ENA` reader - SARADC1_DONE_INT interrupt enable bit"]
-pub type COCPU_SARADC1_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_SARADC1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_SARADC1_INT_ENA` writer - SARADC1_DONE_INT interrupt enable bit"]
-pub type COCPU_SARADC1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_SARADC1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_SARADC2_INT_ENA` reader - SARADC2_DONE_INT interrupt enable bit"]
-pub type COCPU_SARADC2_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_SARADC2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_SARADC2_INT_ENA` writer - SARADC2_DONE_INT interrupt enable bit"]
-pub type COCPU_SARADC2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_SARADC2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_TSENS_INT_ENA` reader - TSENS_DONE_INT interrupt enable bit"]
-pub type COCPU_TSENS_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_TSENS_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_TSENS_INT_ENA` writer - TSENS_DONE_INT interrupt enable bit"]
-pub type COCPU_TSENS_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_TSENS_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_START_INT_ENA` reader - RISCV_START_INT interrupt enable bit"]
-pub type COCPU_START_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_START_INT_ENA` writer - RISCV_START_INT interrupt enable bit"]
-pub type COCPU_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_SW_INT_ENA` reader - SW_INT interrupt enable bit"]
-pub type COCPU_SW_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_SW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_SW_INT_ENA` writer - SW_INT interrupt enable bit"]
-pub type COCPU_SW_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_SW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 #[doc = "Field `COCPU_SWD_INT_ENA` reader - SWD_INT interrupt enable bit"]
-pub type COCPU_SWD_INT_ENA_R = crate::BitReader<bool>;
+pub type COCPU_SWD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `COCPU_SWD_INT_ENA` writer - SWD_INT interrupt enable bit"]
-pub type COCPU_SWD_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_COCPU_INT_ENA_SPEC, bool, O>;
+pub type COCPU_SWD_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, SAR_COCPU_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt enable bit"]
     #[inline(always)]
@@ -124,6 +118,55 @@ impl R {
     #[inline(always)]
     pub fn cocpu_swd_int_ena(&self) -> COCPU_SWD_INT_ENA_R {
         COCPU_SWD_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_COCPU_INT_ENA")
+            .field(
+                "cocpu_touch_done_int_ena",
+                &format_args!("{}", self.cocpu_touch_done_int_ena().bit()),
+            )
+            .field(
+                "cocpu_touch_inactive_int_ena",
+                &format_args!("{}", self.cocpu_touch_inactive_int_ena().bit()),
+            )
+            .field(
+                "cocpu_touch_active_int_ena",
+                &format_args!("{}", self.cocpu_touch_active_int_ena().bit()),
+            )
+            .field(
+                "cocpu_saradc1_int_ena",
+                &format_args!("{}", self.cocpu_saradc1_int_ena().bit()),
+            )
+            .field(
+                "cocpu_saradc2_int_ena",
+                &format_args!("{}", self.cocpu_saradc2_int_ena().bit()),
+            )
+            .field(
+                "cocpu_tsens_int_ena",
+                &format_args!("{}", self.cocpu_tsens_int_ena().bit()),
+            )
+            .field(
+                "cocpu_start_int_ena",
+                &format_args!("{}", self.cocpu_start_int_ena().bit()),
+            )
+            .field(
+                "cocpu_sw_int_ena",
+                &format_args!("{}", self.cocpu_sw_int_ena().bit()),
+            )
+            .field(
+                "cocpu_swd_int_ena",
+                &format_args!("{}", self.cocpu_swd_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

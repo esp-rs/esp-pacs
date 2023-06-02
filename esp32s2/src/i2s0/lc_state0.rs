@@ -16,15 +16,15 @@ impl From<crate::R<LC_STATE0_SPEC>> for R {
 #[doc = "Field `OUTLINK_DSCR_ADDR` reader - I2S DMA out descriptor address."]
 pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUT_DSCR_STATE` reader - I2S DMA out descriptor state."]
-pub type OUT_DSCR_STATE_R = crate::FieldReader<u8, u8>;
+pub type OUT_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `OUT_STATE` reader - I2S DMA out data state."]
-pub type OUT_STATE_R = crate::FieldReader<u8, u8>;
+pub type OUT_STATE_R = crate::FieldReader;
 #[doc = "Field `OUTFIFO_CNT` reader - The remains of I2S DMA outfifo data."]
-pub type OUTFIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type OUTFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `OUT_FULL` reader - I2S DMA outfifo is full."]
-pub type OUT_FULL_R = crate::BitReader<bool>;
+pub type OUT_FULL_R = crate::BitReader;
 #[doc = "Field `OUT_EMPTY` reader - I2S DMA outfifo is empty."]
-pub type OUT_EMPTY_R = crate::BitReader<bool>;
+pub type OUT_EMPTY_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:17 - I2S DMA out descriptor address."]
     #[inline(always)]
@@ -55,6 +55,34 @@ impl R {
     #[inline(always)]
     pub fn out_empty(&self) -> OUT_EMPTY_R {
         OUT_EMPTY_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LC_STATE0")
+            .field(
+                "outlink_dscr_addr",
+                &format_args!("{}", self.outlink_dscr_addr().bits()),
+            )
+            .field(
+                "out_dscr_state",
+                &format_args!("{}", self.out_dscr_state().bits()),
+            )
+            .field("out_state", &format_args!("{}", self.out_state().bits()))
+            .field(
+                "outfifo_cnt",
+                &format_args!("{}", self.outfifo_cnt().bits()),
+            )
+            .field("out_full", &format_args!("{}", self.out_full().bit()))
+            .field("out_empty", &format_args!("{}", self.out_empty().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "I2S DMA TX status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [lc_state0](index.html) module"]

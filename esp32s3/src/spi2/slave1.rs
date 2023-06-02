@@ -37,17 +37,15 @@ impl From<crate::W<SLAVE1_SPEC>> for W {
 #[doc = "Field `SLV_DATA_BITLEN` reader - The transferred data bit length in SPI slave FD and HD mode."]
 pub type SLV_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_DATA_BITLEN` writer - The transferred data bit length in SPI slave FD and HD mode."]
-pub type SLV_DATA_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLAVE1_SPEC, u32, u32, 18, O>;
+pub type SLV_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 18, O, u32, u32>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type SLV_LAST_COMMAND_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]
-pub type SLV_LAST_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 8, O>;
+pub type SLV_LAST_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 8, O>;
 #[doc = "Field `SLV_LAST_ADDR` reader - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_R = crate::FieldReader<u8, u8>;
+pub type SLV_LAST_ADDR_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_ADDR` writer - In the slave mode it is the value of address."]
-pub type SLV_LAST_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 6, O>;
+pub type SLV_LAST_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
@@ -63,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn slv_last_addr(&self) -> SLV_LAST_ADDR_R {
         SLV_LAST_ADDR_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE1")
+            .field(
+                "slv_data_bitlen",
+                &format_args!("{}", self.slv_data_bitlen().bits()),
+            )
+            .field(
+                "slv_last_command",
+                &format_args!("{}", self.slv_last_command().bits()),
+            )
+            .field(
+                "slv_last_addr",
+                &format_args!("{}", self.slv_last_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

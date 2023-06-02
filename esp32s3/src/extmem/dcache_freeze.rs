@@ -35,15 +35,15 @@ impl From<crate::W<DCACHE_FREEZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ENA` reader - The bit is used to enable dcache freeze mode"]
-pub type ENA_R = crate::BitReader<bool>;
+pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - The bit is used to enable dcache freeze mode"]
-pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCACHE_FREEZE_SPEC, bool, O>;
+pub type ENA_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_FREEZE_SPEC, O>;
 #[doc = "Field `MODE` reader - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub type MODE_R = crate::BitReader<bool>;
+pub type MODE_R = crate::BitReader;
 #[doc = "Field `MODE` writer - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCACHE_FREEZE_SPEC, bool, O>;
+pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, DCACHE_FREEZE_SPEC, O>;
 #[doc = "Field `DONE` reader - The bit is used to indicate dcache freeze success"]
-pub type DONE_R = crate::BitReader<bool>;
+pub type DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable dcache freeze mode"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
         DONE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_FREEZE")
+            .field("ena", &format_args!("{}", self.ena().bit()))
+            .field("mode", &format_args!("{}", self.mode().bit()))
+            .field("done", &format_args!("{}", self.done().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_FREEZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

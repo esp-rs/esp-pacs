@@ -38,12 +38,29 @@ impl From<crate::W<WIFI_BB_CFG_2_SPEC>> for W {
 pub type WIFI_BB_CFG_2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_BB_CFG_2` writer - "]
 pub type WIFI_BB_CFG_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIFI_BB_CFG_2_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, WIFI_BB_CFG_2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn wifi_bb_cfg_2(&self) -> WIFI_BB_CFG_2_R {
         WIFI_BB_CFG_2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIFI_BB_CFG_2")
+            .field(
+                "wifi_bb_cfg_2",
+                &format_args!("{}", self.wifi_bb_cfg_2().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WIFI_BB_CFG_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,15 +14,15 @@ impl From<crate::R<GRXSTSR_SPEC>> for R {
     }
 }
 #[doc = "Field `G_CHNUM` reader - "]
-pub type G_CHNUM_R = crate::FieldReader<u8, u8>;
+pub type G_CHNUM_R = crate::FieldReader;
 #[doc = "Field `G_BCNT` reader - "]
 pub type G_BCNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `G_DPID` reader - "]
-pub type G_DPID_R = crate::FieldReader<u8, u8>;
+pub type G_DPID_R = crate::FieldReader;
 #[doc = "Field `G_PKTSTS` reader - "]
-pub type G_PKTSTS_R = crate::FieldReader<u8, u8>;
+pub type G_PKTSTS_R = crate::FieldReader;
 #[doc = "Field `G_FN` reader - "]
-pub type G_FN_R = crate::FieldReader<u8, u8>;
+pub type G_FN_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -48,6 +48,24 @@ impl R {
     #[inline(always)]
     pub fn g_fn(&self) -> G_FN_R {
         G_FN_R::new(((self.bits >> 21) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GRXSTSR")
+            .field("g_chnum", &format_args!("{}", self.g_chnum().bits()))
+            .field("g_bcnt", &format_args!("{}", self.g_bcnt().bits()))
+            .field("g_dpid", &format_args!("{}", self.g_dpid().bits()))
+            .field("g_pktsts", &format_args!("{}", self.g_pktsts().bits()))
+            .field("g_fn", &format_args!("{}", self.g_fn().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grxstsr](index.html) module"]

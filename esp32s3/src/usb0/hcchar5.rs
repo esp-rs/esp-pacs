@@ -37,43 +37,43 @@ impl From<crate::W<HCCHAR5_SPEC>> for W {
 #[doc = "Field `H_MPS5` reader - "]
 pub type H_MPS5_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `H_MPS5` writer - "]
-pub type H_MPS5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR5_SPEC, u16, u16, 11, O>;
+pub type H_MPS5_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR5_SPEC, 11, O, u16, u16>;
 #[doc = "Field `H_EPNUM5` reader - "]
-pub type H_EPNUM5_R = crate::FieldReader<u8, u8>;
+pub type H_EPNUM5_R = crate::FieldReader;
 #[doc = "Field `H_EPNUM5` writer - "]
-pub type H_EPNUM5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR5_SPEC, u8, u8, 4, O>;
+pub type H_EPNUM5_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR5_SPEC, 4, O>;
 #[doc = "Field `H_EPDIR5` reader - "]
-pub type H_EPDIR5_R = crate::BitReader<bool>;
+pub type H_EPDIR5_R = crate::BitReader;
 #[doc = "Field `H_EPDIR5` writer - "]
-pub type H_EPDIR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_EPDIR5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 #[doc = "Field `H_LSPDDEV5` reader - "]
-pub type H_LSPDDEV5_R = crate::BitReader<bool>;
+pub type H_LSPDDEV5_R = crate::BitReader;
 #[doc = "Field `H_LSPDDEV5` writer - "]
-pub type H_LSPDDEV5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_LSPDDEV5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 #[doc = "Field `H_EPTYPE5` reader - "]
-pub type H_EPTYPE5_R = crate::FieldReader<u8, u8>;
+pub type H_EPTYPE5_R = crate::FieldReader;
 #[doc = "Field `H_EPTYPE5` writer - "]
-pub type H_EPTYPE5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR5_SPEC, u8, u8, 2, O>;
+pub type H_EPTYPE5_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR5_SPEC, 2, O>;
 #[doc = "Field `H_EC5` reader - "]
-pub type H_EC5_R = crate::BitReader<bool>;
+pub type H_EC5_R = crate::BitReader;
 #[doc = "Field `H_EC5` writer - "]
-pub type H_EC5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_EC5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 #[doc = "Field `H_DEVADDR5` reader - "]
-pub type H_DEVADDR5_R = crate::FieldReader<u8, u8>;
+pub type H_DEVADDR5_R = crate::FieldReader;
 #[doc = "Field `H_DEVADDR5` writer - "]
-pub type H_DEVADDR5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HCCHAR5_SPEC, u8, u8, 7, O>;
+pub type H_DEVADDR5_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR5_SPEC, 7, O>;
 #[doc = "Field `H_ODDFRM5` reader - "]
-pub type H_ODDFRM5_R = crate::BitReader<bool>;
+pub type H_ODDFRM5_R = crate::BitReader;
 #[doc = "Field `H_ODDFRM5` writer - "]
-pub type H_ODDFRM5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_ODDFRM5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 #[doc = "Field `H_CHDIS5` reader - "]
-pub type H_CHDIS5_R = crate::BitReader<bool>;
+pub type H_CHDIS5_R = crate::BitReader;
 #[doc = "Field `H_CHDIS5` writer - "]
-pub type H_CHDIS5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_CHDIS5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 #[doc = "Field `H_CHENA5` reader - "]
-pub type H_CHENA5_R = crate::BitReader<bool>;
+pub type H_CHENA5_R = crate::BitReader;
 #[doc = "Field `H_CHENA5` writer - "]
-pub type H_CHENA5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCCHAR5_SPEC, bool, O>;
+pub type H_CHENA5_W<'a, const O: u8> = crate::BitWriter<'a, HCCHAR5_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -124,6 +124,29 @@ impl R {
     #[inline(always)]
     pub fn h_chena5(&self) -> H_CHENA5_R {
         H_CHENA5_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCCHAR5")
+            .field("h_mps5", &format_args!("{}", self.h_mps5().bits()))
+            .field("h_epnum5", &format_args!("{}", self.h_epnum5().bits()))
+            .field("h_epdir5", &format_args!("{}", self.h_epdir5().bit()))
+            .field("h_lspddev5", &format_args!("{}", self.h_lspddev5().bit()))
+            .field("h_eptype5", &format_args!("{}", self.h_eptype5().bits()))
+            .field("h_ec5", &format_args!("{}", self.h_ec5().bit()))
+            .field("h_devaddr5", &format_args!("{}", self.h_devaddr5().bits()))
+            .field("h_oddfrm5", &format_args!("{}", self.h_oddfrm5().bit()))
+            .field("h_chdis5", &format_args!("{}", self.h_chdis5().bit()))
+            .field("h_chena5", &format_args!("{}", self.h_chena5().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCCHAR5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

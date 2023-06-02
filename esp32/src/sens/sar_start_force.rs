@@ -35,56 +35,49 @@ impl From<crate::W<SAR_START_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR1_BIT_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type SAR1_BIT_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SAR1_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR1_BIT_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 2, O>;
+pub type SAR1_BIT_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_START_FORCE_SPEC, 2, O>;
 #[doc = "Field `SAR2_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR2_BIT_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type SAR2_BIT_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SAR2_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub type SAR2_BIT_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 2, O>;
+pub type SAR2_BIT_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_START_FORCE_SPEC, 2, O>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub type SAR2_EN_TEST_R = crate::BitReader<bool>;
+pub type SAR2_EN_TEST_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub type SAR2_EN_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type SAR2_EN_TEST_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
+pub type SAR2_PWDET_CCT_R = crate::FieldReader;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub type SAR2_PWDET_CCT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 3, O>;
+pub type SAR2_PWDET_CCT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_START_FORCE_SPEC, 3, O>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader<bool>;
+pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub type ULP_CP_FORCE_START_TOP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type ULP_CP_FORCE_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub type ULP_CP_START_TOP_R = crate::BitReader<bool>;
+pub type ULP_CP_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub type ULP_CP_START_TOP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type ULP_CP_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `SARCLK_EN` reader - "]
-pub type SARCLK_EN_R = crate::BitReader<bool>;
+pub type SARCLK_EN_R = crate::BitReader;
 #[doc = "Field `SARCLK_EN` writer - "]
-pub type SARCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type SARCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `PC_INIT` reader - initialized PC for ULP-coprocessor"]
 pub type PC_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PC_INIT` writer - initialized PC for ULP-coprocessor"]
-pub type PC_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u16, u16, 11, O>;
+pub type PC_INIT_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_START_FORCE_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SAR2_STOP` reader - stop SAR ADC2 conversion"]
-pub type SAR2_STOP_R = crate::BitReader<bool>;
+pub type SAR2_STOP_R = crate::BitReader;
 #[doc = "Field `SAR2_STOP` writer - stop SAR ADC2 conversion"]
-pub type SAR2_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type SAR2_STOP_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `SAR1_STOP` reader - stop SAR ADC1 conversion"]
-pub type SAR1_STOP_R = crate::BitReader<bool>;
+pub type SAR1_STOP_R = crate::BitReader;
 #[doc = "Field `SAR1_STOP` writer - stop SAR ADC1 conversion"]
-pub type SAR1_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type SAR1_STOP_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 #[doc = "Field `SAR2_PWDET_EN` reader - N/A"]
-pub type SAR2_PWDET_EN_R = crate::BitReader<bool>;
+pub type SAR2_PWDET_EN_R = crate::BitReader;
 #[doc = "Field `SAR2_PWDET_EN` writer - N/A"]
-pub type SAR2_PWDET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, O>;
+pub type SAR2_PWDET_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_START_FORCE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
@@ -140,6 +133,51 @@ impl R {
     #[inline(always)]
     pub fn sar2_pwdet_en(&self) -> SAR2_PWDET_EN_R {
         SAR2_PWDET_EN_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_START_FORCE")
+            .field(
+                "sar1_bit_width",
+                &format_args!("{}", self.sar1_bit_width().bits()),
+            )
+            .field(
+                "sar2_bit_width",
+                &format_args!("{}", self.sar2_bit_width().bits()),
+            )
+            .field(
+                "sar2_en_test",
+                &format_args!("{}", self.sar2_en_test().bit()),
+            )
+            .field(
+                "sar2_pwdet_cct",
+                &format_args!("{}", self.sar2_pwdet_cct().bits()),
+            )
+            .field(
+                "ulp_cp_force_start_top",
+                &format_args!("{}", self.ulp_cp_force_start_top().bit()),
+            )
+            .field(
+                "ulp_cp_start_top",
+                &format_args!("{}", self.ulp_cp_start_top().bit()),
+            )
+            .field("sarclk_en", &format_args!("{}", self.sarclk_en().bit()))
+            .field("pc_init", &format_args!("{}", self.pc_init().bits()))
+            .field("sar2_stop", &format_args!("{}", self.sar2_stop().bit()))
+            .field("sar1_stop", &format_args!("{}", self.sar1_stop().bit()))
+            .field(
+                "sar2_pwdet_en",
+                &format_args!("{}", self.sar2_pwdet_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_START_FORCE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

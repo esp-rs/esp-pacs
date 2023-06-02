@@ -35,15 +35,32 @@ impl From<crate::W<EXT_MEM_WRITEBACK_BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `WRITEBACK_BYPASS` reader - Set 1 to bypass cache writeback request to external memory so that spi will not check its attribute."]
-pub type WRITEBACK_BYPASS_R = crate::BitReader<bool>;
+pub type WRITEBACK_BYPASS_R = crate::BitReader;
 #[doc = "Field `WRITEBACK_BYPASS` writer - Set 1 to bypass cache writeback request to external memory so that spi will not check its attribute."]
 pub type WRITEBACK_BYPASS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXT_MEM_WRITEBACK_BYPASS_SPEC, bool, O>;
+    crate::BitWriter<'a, EXT_MEM_WRITEBACK_BYPASS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to bypass cache writeback request to external memory so that spi will not check its attribute."]
     #[inline(always)]
     pub fn writeback_bypass(&self) -> WRITEBACK_BYPASS_R {
         WRITEBACK_BYPASS_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_MEM_WRITEBACK_BYPASS")
+            .field(
+                "writeback_bypass",
+                &format_args!("{}", self.writeback_bypass().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_MEM_WRITEBACK_BYPASS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

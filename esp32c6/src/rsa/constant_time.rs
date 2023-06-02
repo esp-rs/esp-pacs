@@ -35,14 +35,31 @@ impl From<crate::W<CONSTANT_TIME_SPEC>> for W {
     }
 }
 #[doc = "Field `CONSTANT_TIME` reader - Configure this bit to 0 for acceleration. 0: with acceleration, 1: without acceleration(defalut)."]
-pub type CONSTANT_TIME_R = crate::BitReader<bool>;
+pub type CONSTANT_TIME_R = crate::BitReader;
 #[doc = "Field `CONSTANT_TIME` writer - Configure this bit to 0 for acceleration. 0: with acceleration, 1: without acceleration(defalut)."]
-pub type CONSTANT_TIME_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONSTANT_TIME_SPEC, bool, O>;
+pub type CONSTANT_TIME_W<'a, const O: u8> = crate::BitWriter<'a, CONSTANT_TIME_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Configure this bit to 0 for acceleration. 0: with acceleration, 1: without acceleration(defalut)."]
     #[inline(always)]
     pub fn constant_time(&self) -> CONSTANT_TIME_R {
         CONSTANT_TIME_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONSTANT_TIME")
+            .field(
+                "constant_time",
+                &format_args!("{}", self.constant_time().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONSTANT_TIME_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

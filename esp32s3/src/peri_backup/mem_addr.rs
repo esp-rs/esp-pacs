@@ -37,13 +37,29 @@ impl From<crate::W<MEM_ADDR_SPEC>> for W {
 #[doc = "Field `MEM_START_ADDR` reader - x"]
 pub type MEM_START_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MEM_START_ADDR` writer - x"]
-pub type MEM_START_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_ADDR_SPEC, u32, u32, 32, O>;
+pub type MEM_START_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     pub fn mem_start_addr(&self) -> MEM_START_ADDR_R {
         MEM_START_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_ADDR")
+            .field(
+                "mem_start_addr",
+                &format_args!("{}", self.mem_start_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

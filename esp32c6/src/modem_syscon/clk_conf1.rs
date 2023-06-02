@@ -35,105 +35,101 @@ impl From<crate::W<CLK_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_WIFIBB_22M_EN` reader - "]
-pub type CLK_WIFIBB_22M_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_22M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_22M_EN` writer - "]
-pub type CLK_WIFIBB_22M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_22M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_40M_EN` reader - "]
-pub type CLK_WIFIBB_40M_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_40M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40M_EN` writer - "]
-pub type CLK_WIFIBB_40M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_40M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_44M_EN` reader - "]
-pub type CLK_WIFIBB_44M_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_44M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_44M_EN` writer - "]
-pub type CLK_WIFIBB_44M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_44M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_80M_EN` reader - "]
-pub type CLK_WIFIBB_80M_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_80M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80M_EN` writer - "]
-pub type CLK_WIFIBB_80M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_80M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_40X_EN` reader - "]
-pub type CLK_WIFIBB_40X_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_40X_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40X_EN` writer - "]
-pub type CLK_WIFIBB_40X_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_40X_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_80X_EN` reader - "]
-pub type CLK_WIFIBB_80X_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_80X_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80X_EN` writer - "]
-pub type CLK_WIFIBB_80X_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_80X_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_40X1_EN` reader - "]
-pub type CLK_WIFIBB_40X1_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_40X1_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_40X1_EN` writer - "]
-pub type CLK_WIFIBB_40X1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_40X1_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_80X1_EN` reader - "]
-pub type CLK_WIFIBB_80X1_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_80X1_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_80X1_EN` writer - "]
-pub type CLK_WIFIBB_80X1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_80X1_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_160X1_EN` reader - "]
-pub type CLK_WIFIBB_160X1_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_160X1_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_160X1_EN` writer - "]
-pub type CLK_WIFIBB_160X1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_160X1_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIMAC_EN` reader - "]
-pub type CLK_WIFIMAC_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIMAC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIMAC_EN` writer - "]
-pub type CLK_WIFIMAC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIMAC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFI_APB_EN` reader - "]
-pub type CLK_WIFI_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFI_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFI_APB_EN` writer - "]
-pub type CLK_WIFI_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFI_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_20M_EN` reader - "]
-pub type CLK_FE_20M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_20M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_20M_EN` writer - "]
-pub type CLK_FE_20M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_20M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_40M_EN` reader - "]
-pub type CLK_FE_40M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_40M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_40M_EN` writer - "]
-pub type CLK_FE_40M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_40M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_80M_EN` reader - "]
-pub type CLK_FE_80M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_80M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_80M_EN` writer - "]
-pub type CLK_FE_80M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_80M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_160M_EN` reader - "]
-pub type CLK_FE_160M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_160M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_160M_EN` writer - "]
-pub type CLK_FE_160M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_160M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_CAL_160M_EN` reader - "]
-pub type CLK_FE_CAL_160M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_CAL_160M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_CAL_160M_EN` writer - "]
-pub type CLK_FE_CAL_160M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_CAL_160M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_APB_EN` reader - "]
-pub type CLK_FE_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_APB_EN` writer - "]
-pub type CLK_FE_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_BT_APB_EN` reader - "]
-pub type CLK_BT_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_BT_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_APB_EN` writer - "]
-pub type CLK_BT_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_BT_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_BT_EN` reader - "]
-pub type CLK_BT_EN_R = crate::BitReader<bool>;
+pub type CLK_BT_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_EN` writer - "]
-pub type CLK_BT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_BT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_WIFIBB_480M_EN` reader - "]
-pub type CLK_WIFIBB_480M_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIBB_480M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIBB_480M_EN` writer - "]
-pub type CLK_WIFIBB_480M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_WIFIBB_480M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_480M_EN` reader - "]
-pub type CLK_FE_480M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_480M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_480M_EN` writer - "]
-pub type CLK_FE_480M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_480M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_ANAMODE_40M_EN` reader - "]
-pub type CLK_FE_ANAMODE_40M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_ANAMODE_40M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_40M_EN` writer - "]
-pub type CLK_FE_ANAMODE_40M_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_ANAMODE_40M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_ANAMODE_80M_EN` reader - "]
-pub type CLK_FE_ANAMODE_80M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_ANAMODE_80M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_80M_EN` writer - "]
-pub type CLK_FE_ANAMODE_80M_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_ANAMODE_80M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_ANAMODE_160M_EN` reader - "]
-pub type CLK_FE_ANAMODE_160M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_ANAMODE_160M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ANAMODE_160M_EN` writer - "]
-pub type CLK_FE_ANAMODE_160M_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_ANAMODE_160M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -254,6 +250,112 @@ impl R {
     #[inline(always)]
     pub fn clk_fe_anamode_160m_en(&self) -> CLK_FE_ANAMODE_160M_EN_R {
         CLK_FE_ANAMODE_160M_EN_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF1")
+            .field(
+                "clk_wifibb_22m_en",
+                &format_args!("{}", self.clk_wifibb_22m_en().bit()),
+            )
+            .field(
+                "clk_wifibb_40m_en",
+                &format_args!("{}", self.clk_wifibb_40m_en().bit()),
+            )
+            .field(
+                "clk_wifibb_44m_en",
+                &format_args!("{}", self.clk_wifibb_44m_en().bit()),
+            )
+            .field(
+                "clk_wifibb_80m_en",
+                &format_args!("{}", self.clk_wifibb_80m_en().bit()),
+            )
+            .field(
+                "clk_wifibb_40x_en",
+                &format_args!("{}", self.clk_wifibb_40x_en().bit()),
+            )
+            .field(
+                "clk_wifibb_80x_en",
+                &format_args!("{}", self.clk_wifibb_80x_en().bit()),
+            )
+            .field(
+                "clk_wifibb_40x1_en",
+                &format_args!("{}", self.clk_wifibb_40x1_en().bit()),
+            )
+            .field(
+                "clk_wifibb_80x1_en",
+                &format_args!("{}", self.clk_wifibb_80x1_en().bit()),
+            )
+            .field(
+                "clk_wifibb_160x1_en",
+                &format_args!("{}", self.clk_wifibb_160x1_en().bit()),
+            )
+            .field(
+                "clk_wifimac_en",
+                &format_args!("{}", self.clk_wifimac_en().bit()),
+            )
+            .field(
+                "clk_wifi_apb_en",
+                &format_args!("{}", self.clk_wifi_apb_en().bit()),
+            )
+            .field(
+                "clk_fe_20m_en",
+                &format_args!("{}", self.clk_fe_20m_en().bit()),
+            )
+            .field(
+                "clk_fe_40m_en",
+                &format_args!("{}", self.clk_fe_40m_en().bit()),
+            )
+            .field(
+                "clk_fe_80m_en",
+                &format_args!("{}", self.clk_fe_80m_en().bit()),
+            )
+            .field(
+                "clk_fe_160m_en",
+                &format_args!("{}", self.clk_fe_160m_en().bit()),
+            )
+            .field(
+                "clk_fe_cal_160m_en",
+                &format_args!("{}", self.clk_fe_cal_160m_en().bit()),
+            )
+            .field(
+                "clk_fe_apb_en",
+                &format_args!("{}", self.clk_fe_apb_en().bit()),
+            )
+            .field(
+                "clk_bt_apb_en",
+                &format_args!("{}", self.clk_bt_apb_en().bit()),
+            )
+            .field("clk_bt_en", &format_args!("{}", self.clk_bt_en().bit()))
+            .field(
+                "clk_wifibb_480m_en",
+                &format_args!("{}", self.clk_wifibb_480m_en().bit()),
+            )
+            .field(
+                "clk_fe_480m_en",
+                &format_args!("{}", self.clk_fe_480m_en().bit()),
+            )
+            .field(
+                "clk_fe_anamode_40m_en",
+                &format_args!("{}", self.clk_fe_anamode_40m_en().bit()),
+            )
+            .field(
+                "clk_fe_anamode_80m_en",
+                &format_args!("{}", self.clk_fe_anamode_80m_en().bit()),
+            )
+            .field(
+                "clk_fe_anamode_160m_en",
+                &format_args!("{}", self.clk_fe_anamode_160m_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

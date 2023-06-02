@@ -35,15 +35,31 @@ impl From<crate::W<ROM_MPU_TABLE3_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_MPU_TABLE3` reader - "]
-pub type ROM_MPU_TABLE3_R = crate::FieldReader<u8, u8>;
+pub type ROM_MPU_TABLE3_R = crate::FieldReader;
 #[doc = "Field `ROM_MPU_TABLE3` writer - "]
-pub type ROM_MPU_TABLE3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROM_MPU_TABLE3_SPEC, u8, u8, 2, O>;
+pub type ROM_MPU_TABLE3_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_MPU_TABLE3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn rom_mpu_table3(&self) -> ROM_MPU_TABLE3_R {
         ROM_MPU_TABLE3_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_MPU_TABLE3")
+            .field(
+                "rom_mpu_table3",
+                &format_args!("{}", self.rom_mpu_table3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_MPU_TABLE3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

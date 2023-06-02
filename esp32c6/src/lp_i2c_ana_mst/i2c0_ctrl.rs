@@ -38,9 +38,9 @@ impl From<crate::W<I2C0_CTRL_SPEC>> for W {
 pub type LP_I2C_ANA_MAST_I2C0_CTRL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CTRL` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_CTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C0_CTRL_SPEC, u32, u32, 25, O>;
+    crate::FieldWriter<'a, I2C0_CTRL_SPEC, 25, O, u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_BUSY` reader - need_des"]
-pub type LP_I2C_ANA_MAST_I2C0_BUSY_R = crate::BitReader<bool>;
+pub type LP_I2C_ANA_MAST_I2C0_BUSY_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:24 - need_des"]
     #[inline(always)]
@@ -51,6 +51,27 @@ impl R {
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c0_busy(&self) -> LP_I2C_ANA_MAST_I2C0_BUSY_R {
         LP_I2C_ANA_MAST_I2C0_BUSY_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C0_CTRL")
+            .field(
+                "lp_i2c_ana_mast_i2c0_ctrl",
+                &format_args!("{}", self.lp_i2c_ana_mast_i2c0_ctrl().bits()),
+            )
+            .field(
+                "lp_i2c_ana_mast_i2c0_busy",
+                &format_args!("{}", self.lp_i2c_ana_mast_i2c0_busy().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C0_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

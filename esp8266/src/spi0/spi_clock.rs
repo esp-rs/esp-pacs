@@ -35,29 +35,26 @@ impl From<crate::W<SPI_CLOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_clkcnt_L` reader - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_L_R = crate::FieldReader<u8, u8>;
+pub type SPI_CLKCNT_L_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_L` writer - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_L_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CLOCK_SPEC, u8, u8, 6, O>;
+pub type SPI_CLKCNT_L_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CLOCK_SPEC, 6, O>;
 #[doc = "Field `spi_clkcnt_H` reader - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_H_R = crate::FieldReader<u8, u8>;
+pub type SPI_CLKCNT_H_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_H` writer - In the master mode, it must be floor((spi_clkcnt_N+1)/2-1). In the slave mode, it must be 0."]
-pub type SPI_CLKCNT_H_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CLOCK_SPEC, u8, u8, 6, O>;
+pub type SPI_CLKCNT_H_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CLOCK_SPEC, 6, O>;
 #[doc = "Field `spi_clkcnt_N` reader - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
-pub type SPI_CLKCNT_N_R = crate::FieldReader<u8, u8>;
+pub type SPI_CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_N` writer - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
-pub type SPI_CLKCNT_N_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CLOCK_SPEC, u8, u8, 6, O>;
+pub type SPI_CLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CLOCK_SPEC, 6, O>;
 #[doc = "Field `spi_clkdiv_pre` reader - In the master mode, it is pre-divider of spi_clk."]
 pub type SPI_CLKDIV_PRE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `spi_clkdiv_pre` writer - In the master mode, it is pre-divider of spi_clk."]
 pub type SPI_CLKDIV_PRE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CLOCK_SPEC, u16, u16, 13, O>;
+    crate::FieldWriter<'a, SPI_CLOCK_SPEC, 13, O, u16, u16>;
 #[doc = "Field `spi_clk_equ_sysclk` reader - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
-pub type SPI_CLK_EQU_SYSCLK_R = crate::BitReader<bool>;
+pub type SPI_CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `spi_clk_equ_sysclk` writer - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
-pub type SPI_CLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CLOCK_SPEC, bool, O>;
+pub type SPI_CLK_EQU_SYSCLK_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CLOCK_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - In the master mode, it must be eqaul to spi_clkcnt_N. In the slave mode, it must be 0."]
     #[inline(always)]
@@ -83,6 +80,39 @@ impl R {
     #[inline(always)]
     pub fn spi_clk_equ_sysclk(&self) -> SPI_CLK_EQU_SYSCLK_R {
         SPI_CLK_EQU_SYSCLK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CLOCK")
+            .field(
+                "spi_clk_equ_sysclk",
+                &format_args!("{}", self.spi_clk_equ_sysclk().bit()),
+            )
+            .field(
+                "spi_clkdiv_pre",
+                &format_args!("{}", self.spi_clkdiv_pre().bits()),
+            )
+            .field(
+                "spi_clkcnt_n",
+                &format_args!("{}", self.spi_clkcnt_n().bits()),
+            )
+            .field(
+                "spi_clkcnt_h",
+                &format_args!("{}", self.spi_clkcnt_h().bits()),
+            )
+            .field(
+                "spi_clkcnt_l",
+                &format_args!("{}", self.spi_clkcnt_l().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CLOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

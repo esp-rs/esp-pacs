@@ -35,35 +35,35 @@ impl From<crate::W<CACHE_SOURCE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IRAM1` reader - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_R = crate::BitReader<bool>;
+pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IRAM1` writer - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_IRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IROM0` reader - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_IROM0_R = crate::BitReader<bool>;
+pub type PRO_CACHE_I_SOURCE_PRO_IROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_IROM0` writer - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_IROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_DROM0` reader - xx"]
-pub type PRO_CACHE_I_SOURCE_PRO_DROM0_R = crate::BitReader<bool>;
+pub type PRO_CACHE_I_SOURCE_PRO_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_I_SOURCE_PRO_DROM0` writer - xx"]
 pub type PRO_CACHE_I_SOURCE_PRO_DROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DRAM0` reader - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_R = crate::BitReader<bool>;
+pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DRAM0` writer - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DRAM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DPORT` reader - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DPORT_R = crate::BitReader<bool>;
+pub type PRO_CACHE_D_SOURCE_PRO_DPORT_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DPORT` writer - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DPORT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DROM0` reader - xx"]
-pub type PRO_CACHE_D_SOURCE_PRO_DROM0_R = crate::BitReader<bool>;
+pub type PRO_CACHE_D_SOURCE_PRO_DROM0_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_D_SOURCE_PRO_DROM0` writer - xx"]
 pub type PRO_CACHE_D_SOURCE_PRO_DROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_SOURCE_1_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_SOURCE_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - xx"]
     #[inline(always)]
@@ -94,6 +94,43 @@ impl R {
     #[inline(always)]
     pub fn pro_cache_d_source_pro_drom0(&self) -> PRO_CACHE_D_SOURCE_PRO_DROM0_R {
         PRO_CACHE_D_SOURCE_PRO_DROM0_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_SOURCE_1")
+            .field(
+                "pro_cache_i_source_pro_iram1",
+                &format_args!("{}", self.pro_cache_i_source_pro_iram1().bit()),
+            )
+            .field(
+                "pro_cache_i_source_pro_irom0",
+                &format_args!("{}", self.pro_cache_i_source_pro_irom0().bit()),
+            )
+            .field(
+                "pro_cache_i_source_pro_drom0",
+                &format_args!("{}", self.pro_cache_i_source_pro_drom0().bit()),
+            )
+            .field(
+                "pro_cache_d_source_pro_dram0",
+                &format_args!("{}", self.pro_cache_d_source_pro_dram0().bit()),
+            )
+            .field(
+                "pro_cache_d_source_pro_dport",
+                &format_args!("{}", self.pro_cache_d_source_pro_dport().bit()),
+            )
+            .field(
+                "pro_cache_d_source_pro_drom0",
+                &format_args!("{}", self.pro_cache_d_source_pro_drom0().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_SOURCE_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,13 +35,13 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `DONE_INT_RAW` reader - backup done flag"]
-pub type DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DONE_INT_RAW` writer - backup done flag"]
-pub type DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `ERROR_INT_RAW` reader - error flag"]
-pub type ERROR_INT_RAW_R = crate::BitReader<bool>;
+pub type ERROR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ERROR_INT_RAW` writer - error flag"]
-pub type ERROR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type ERROR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - backup done flag"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn error_int_raw(&self) -> ERROR_INT_RAW_R {
         ERROR_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "done_int_raw",
+                &format_args!("{}", self.done_int_raw().bit()),
+            )
+            .field(
+                "error_int_raw",
+                &format_args!("{}", self.error_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

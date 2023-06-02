@@ -35,15 +35,31 @@ impl From<crate::W<SHROM_MPU_TABLE4_SPEC>> for W {
     }
 }
 #[doc = "Field `SHROM_MPU_TABLE4` reader - "]
-pub type SHROM_MPU_TABLE4_R = crate::FieldReader<u8, u8>;
+pub type SHROM_MPU_TABLE4_R = crate::FieldReader;
 #[doc = "Field `SHROM_MPU_TABLE4` writer - "]
-pub type SHROM_MPU_TABLE4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SHROM_MPU_TABLE4_SPEC, u8, u8, 2, O>;
+pub type SHROM_MPU_TABLE4_W<'a, const O: u8> = crate::FieldWriter<'a, SHROM_MPU_TABLE4_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn shrom_mpu_table4(&self) -> SHROM_MPU_TABLE4_R {
         SHROM_MPU_TABLE4_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SHROM_MPU_TABLE4")
+            .field(
+                "shrom_mpu_table4",
+                &format_args!("{}", self.shrom_mpu_table4().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SHROM_MPU_TABLE4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

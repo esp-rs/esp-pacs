@@ -35,46 +35,45 @@ impl From<crate::W<PERIP_RST_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_AES_RST` reader - reg_crypto_aes_rst"]
-pub type CRYPTO_AES_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_AES_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_RST` writer - reg_crypto_aes_rst"]
-pub type CRYPTO_AES_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_AES_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_SHA_RST` reader - reg_crypto_sha_rst"]
-pub type CRYPTO_SHA_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_SHA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_RST` writer - reg_crypto_sha_rst"]
-pub type CRYPTO_SHA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_SHA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_RSA_RST` reader - reg_crypto_rsa_rst"]
-pub type CRYPTO_RSA_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_RSA_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_RST` writer - reg_crypto_rsa_rst"]
-pub type CRYPTO_RSA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_RSA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_DS_RST` reader - reg_crypto_ds_rst"]
-pub type CRYPTO_DS_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_DS_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_RST` writer - reg_crypto_ds_rst"]
-pub type CRYPTO_DS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_DS_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_HMAC_RST` reader - reg_crypto_hmac_rst"]
-pub type CRYPTO_HMAC_RST_R = crate::BitReader<bool>;
+pub type CRYPTO_HMAC_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_RST` writer - reg_crypto_hmac_rst"]
-pub type CRYPTO_HMAC_RST_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type CRYPTO_HMAC_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `DMA_RST` reader - reg_dma_rst"]
-pub type DMA_RST_R = crate::BitReader<bool>;
+pub type DMA_RST_R = crate::BitReader;
 #[doc = "Field `DMA_RST` writer - reg_dma_rst"]
-pub type DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type DMA_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `SDIO_HOST_RST` reader - reg_sdio_host_rst"]
-pub type SDIO_HOST_RST_R = crate::BitReader<bool>;
+pub type SDIO_HOST_RST_R = crate::BitReader;
 #[doc = "Field `SDIO_HOST_RST` writer - reg_sdio_host_rst"]
-pub type SDIO_HOST_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type SDIO_HOST_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `LCD_CAM_RST` reader - reg_lcd_cam_rst"]
-pub type LCD_CAM_RST_R = crate::BitReader<bool>;
+pub type LCD_CAM_RST_R = crate::BitReader;
 #[doc = "Field `LCD_CAM_RST` writer - reg_lcd_cam_rst"]
-pub type LCD_CAM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type LCD_CAM_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `UART2_RST` reader - reg_uart2_rst"]
-pub type UART2_RST_R = crate::BitReader<bool>;
+pub type UART2_RST_R = crate::BitReader;
 #[doc = "Field `UART2_RST` writer - reg_uart2_rst"]
-pub type UART2_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type UART2_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 #[doc = "Field `TSENS_RST` reader - reg_tsens_rst"]
-pub type TSENS_RST_R = crate::BitReader<bool>;
+pub type TSENS_RST_R = crate::BitReader;
 #[doc = "Field `TSENS_RST` writer - reg_tsens_rst"]
-pub type TSENS_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, O>;
+pub type TSENS_RST_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_RST_EN1_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - reg_crypto_aes_rst"]
     #[inline(always)]
@@ -125,6 +124,47 @@ impl R {
     #[inline(always)]
     pub fn tsens_rst(&self) -> TSENS_RST_R {
         TSENS_RST_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_RST_EN1")
+            .field(
+                "crypto_aes_rst",
+                &format_args!("{}", self.crypto_aes_rst().bit()),
+            )
+            .field(
+                "crypto_sha_rst",
+                &format_args!("{}", self.crypto_sha_rst().bit()),
+            )
+            .field(
+                "crypto_rsa_rst",
+                &format_args!("{}", self.crypto_rsa_rst().bit()),
+            )
+            .field(
+                "crypto_ds_rst",
+                &format_args!("{}", self.crypto_ds_rst().bit()),
+            )
+            .field(
+                "crypto_hmac_rst",
+                &format_args!("{}", self.crypto_hmac_rst().bit()),
+            )
+            .field("dma_rst", &format_args!("{}", self.dma_rst().bit()))
+            .field(
+                "sdio_host_rst",
+                &format_args!("{}", self.sdio_host_rst().bit()),
+            )
+            .field("lcd_cam_rst", &format_args!("{}", self.lcd_cam_rst().bit()))
+            .field("uart2_rst", &format_args!("{}", self.uart2_rst().bit()))
+            .field("tsens_rst", &format_args!("{}", self.tsens_rst().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

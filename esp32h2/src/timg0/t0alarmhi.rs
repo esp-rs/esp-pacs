@@ -37,12 +37,26 @@ impl From<crate::W<T0ALARMHI_SPEC>> for W {
 #[doc = "Field `ALARM_HI` reader - Timer %s alarm trigger time-base counter value, high 22 bits."]
 pub type ALARM_HI_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ALARM_HI` writer - Timer %s alarm trigger time-base counter value, high 22 bits."]
-pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0ALARMHI_SPEC, u32, u32, 22, O>;
+pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0ALARMHI_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - Timer %s alarm trigger time-base counter value, high 22 bits."]
     #[inline(always)]
     pub fn alarm_hi(&self) -> ALARM_HI_R {
         ALARM_HI_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T0ALARMHI")
+            .field("alarm_hi", &format_args!("{}", self.alarm_hi().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T0ALARMHI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

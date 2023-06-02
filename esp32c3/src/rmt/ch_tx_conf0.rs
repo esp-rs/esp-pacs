@@ -35,55 +35,55 @@ impl From<crate::W<CH_TX_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_START` writer - reg_tx_start_ch0."]
-pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_START_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `MEM_RD_RST` writer - reg_mem_rd_rst_ch0."]
-pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type MEM_RD_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `APB_MEM_RST` writer - reg_apb_mem_rst_ch0."]
-pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `TX_CONTI_MODE` reader - reg_tx_conti_mode_ch0."]
-pub type TX_CONTI_MODE_R = crate::BitReader<bool>;
+pub type TX_CONTI_MODE_R = crate::BitReader;
 #[doc = "Field `TX_CONTI_MODE` writer - reg_tx_conti_mode_ch0."]
-pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_CONTI_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - reg_mem_tx_wrap_en_ch0."]
-pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
+pub type MEM_TX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - reg_mem_tx_wrap_en_ch0."]
-pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type MEM_TX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_OUT_LV` reader - reg_idle_out_lv_ch0."]
-pub type IDLE_OUT_LV_R = crate::BitReader<bool>;
+pub type IDLE_OUT_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_LV` writer - reg_idle_out_lv_ch0."]
-pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type IDLE_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_OUT_EN` reader - reg_idle_out_en_ch0."]
-pub type IDLE_OUT_EN_R = crate::BitReader<bool>;
+pub type IDLE_OUT_EN_R = crate::BitReader;
 #[doc = "Field `IDLE_OUT_EN` writer - reg_idle_out_en_ch0."]
-pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type IDLE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `TX_STOP` reader - reg_tx_stop_ch0."]
-pub type TX_STOP_R = crate::BitReader<bool>;
+pub type TX_STOP_R = crate::BitReader;
 #[doc = "Field `TX_STOP` writer - reg_tx_stop_ch0."]
-pub type TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch0."]
-pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
+pub type DIV_CNT_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch0."]
-pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 8, O>;
+pub type DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_CONF0_SPEC, 8, O>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch0."]
-pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
+pub type MEM_SIZE_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch0."]
-pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 3, O>;
+pub type MEM_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_CONF0_SPEC, 3, O>;
 #[doc = "Field `CARRIER_EFF_EN` reader - reg_carrier_eff_en_ch0."]
-pub type CARRIER_EFF_EN_R = crate::BitReader<bool>;
+pub type CARRIER_EFF_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EFF_EN` writer - reg_carrier_eff_en_ch0."]
-pub type CARRIER_EFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_EFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch0."]
-pub type CARRIER_EN_R = crate::BitReader<bool>;
+pub type CARRIER_EN_R = crate::BitReader;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch0."]
-pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch0."]
-pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
+pub type CARRIER_OUT_LV_R = crate::BitReader;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch0."]
-pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CARRIER_OUT_LV_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `AFIFO_RST` writer - reg_afifo_rst_ch0."]
-pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 #[doc = "Field `CONF_UPDATE` writer - reg_reg_conf_update_ch0."]
-pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, O>;
+pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, CH_TX_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 3 - reg_tx_conti_mode_ch0."]
     #[inline(always)]
@@ -134,6 +134,41 @@ impl R {
     #[inline(always)]
     pub fn carrier_out_lv(&self) -> CARRIER_OUT_LV_R {
         CARRIER_OUT_LV_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_TX_CONF0")
+            .field(
+                "tx_conti_mode",
+                &format_args!("{}", self.tx_conti_mode().bit()),
+            )
+            .field(
+                "mem_tx_wrap_en",
+                &format_args!("{}", self.mem_tx_wrap_en().bit()),
+            )
+            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
+            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
+            .field("tx_stop", &format_args!("{}", self.tx_stop().bit()))
+            .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
+            .field("mem_size", &format_args!("{}", self.mem_size().bits()))
+            .field(
+                "carrier_eff_en",
+                &format_args!("{}", self.carrier_eff_en().bit()),
+            )
+            .field("carrier_en", &format_args!("{}", self.carrier_en().bit()))
+            .field(
+                "carrier_out_lv",
+                &format_args!("{}", self.carrier_out_lv().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_TX_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

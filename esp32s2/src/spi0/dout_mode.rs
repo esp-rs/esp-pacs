@@ -35,37 +35,37 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT0_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT0_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT0_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT1_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT1_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT1_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT1_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT2_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT2_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT2_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT2_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT3_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT3_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT3_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT3_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT3_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT3_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT4_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT4_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT4_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT4_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT4_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT4_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT5_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT5_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT5_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT5_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT5_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT5_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT6_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT6_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT6_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT6_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT6_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT6_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 #[doc = "Field `DOUT7_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT7_MODE_R = crate::FieldReader<u8, u8>;
+pub type DOUT7_MODE_R = crate::FieldReader;
 #[doc = "Field `DOUT7_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub type DOUT7_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, O>;
+pub type DOUT7_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, DOUT_MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
@@ -106,6 +106,27 @@ impl R {
     #[inline(always)]
     pub fn dout7_mode(&self) -> DOUT7_MODE_R {
         DOUT7_MODE_R::new(((self.bits >> 21) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOUT_MODE")
+            .field("dout0_mode", &format_args!("{}", self.dout0_mode().bits()))
+            .field("dout1_mode", &format_args!("{}", self.dout1_mode().bits()))
+            .field("dout2_mode", &format_args!("{}", self.dout2_mode().bits()))
+            .field("dout3_mode", &format_args!("{}", self.dout3_mode().bits()))
+            .field("dout4_mode", &format_args!("{}", self.dout4_mode().bits()))
+            .field("dout5_mode", &format_args!("{}", self.dout5_mode().bits()))
+            .field("dout6_mode", &format_args!("{}", self.dout6_mode().bits()))
+            .field("dout7_mode", &format_args!("{}", self.dout7_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOUT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

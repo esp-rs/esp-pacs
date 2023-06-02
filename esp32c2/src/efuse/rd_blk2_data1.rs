@@ -16,15 +16,15 @@ impl From<crate::R<RD_BLK2_DATA1_SPEC>> for R {
 #[doc = "Field `MAC_ID_HIGH` reader - Store the bit \\[31:47\\] of MAC."]
 pub type MAC_ID_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAFER_VERSION` reader - Store wafer version."]
-pub type WAFER_VERSION_R = crate::FieldReader<u8, u8>;
+pub type WAFER_VERSION_R = crate::FieldReader;
 #[doc = "Field `PKG_VERSION` reader - Store package version."]
-pub type PKG_VERSION_R = crate::FieldReader<u8, u8>;
+pub type PKG_VERSION_R = crate::FieldReader;
 #[doc = "Field `BLK2_EFUSE_VERSION` reader - Store efuse version."]
-pub type BLK2_EFUSE_VERSION_R = crate::FieldReader<u8, u8>;
+pub type BLK2_EFUSE_VERSION_R = crate::FieldReader;
 #[doc = "Field `RF_REF_I_BIAS_CONFIG` reader - Store rf configuration parameters."]
-pub type RF_REF_I_BIAS_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type RF_REF_I_BIAS_CONFIG_R = crate::FieldReader;
 #[doc = "Field `LDO_VOL_BIAS_CONFIG_LOW` reader - Store the bit \\[0:2\\] of ido configuration parameters."]
-pub type LDO_VOL_BIAS_CONFIG_LOW_R = crate::FieldReader<u8, u8>;
+pub type LDO_VOL_BIAS_CONFIG_LOW_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:15 - Store the bit \\[31:47\\] of MAC."]
     #[inline(always)]
@@ -55,6 +55,43 @@ impl R {
     #[inline(always)]
     pub fn ldo_vol_bias_config_low(&self) -> LDO_VOL_BIAS_CONFIG_LOW_R {
         LDO_VOL_BIAS_CONFIG_LOW_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_BLK2_DATA1")
+            .field(
+                "mac_id_high",
+                &format_args!("{}", self.mac_id_high().bits()),
+            )
+            .field(
+                "wafer_version",
+                &format_args!("{}", self.wafer_version().bits()),
+            )
+            .field(
+                "pkg_version",
+                &format_args!("{}", self.pkg_version().bits()),
+            )
+            .field(
+                "blk2_efuse_version",
+                &format_args!("{}", self.blk2_efuse_version().bits()),
+            )
+            .field(
+                "rf_ref_i_bias_config",
+                &format_args!("{}", self.rf_ref_i_bias_config().bits()),
+            )
+            .field(
+                "ldo_vol_bias_config_low",
+                &format_args!("{}", self.ldo_vol_bias_config_low().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_BLK2_DATA1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Register 1 of BLOCK2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk2_data1](index.html) module"]

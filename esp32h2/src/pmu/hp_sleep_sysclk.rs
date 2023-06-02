@@ -35,30 +35,29 @@ impl From<crate::W<HP_SLEEP_SYSCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_SLEEP_DIG_SYS_CLK_NO_DIV` reader - need_des"]
-pub type HP_SLEEP_DIG_SYS_CLK_NO_DIV_R = crate::BitReader<bool>;
+pub type HP_SLEEP_DIG_SYS_CLK_NO_DIV_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_DIG_SYS_CLK_NO_DIV` writer - need_des"]
 pub type HP_SLEEP_DIG_SYS_CLK_NO_DIV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_SYSCLK_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `HP_SLEEP_ICG_SYS_CLOCK_EN` reader - need_des"]
-pub type HP_SLEEP_ICG_SYS_CLOCK_EN_R = crate::BitReader<bool>;
+pub type HP_SLEEP_ICG_SYS_CLOCK_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_ICG_SYS_CLOCK_EN` writer - need_des"]
 pub type HP_SLEEP_ICG_SYS_CLOCK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_SYSCLK_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `HP_SLEEP_SYS_CLK_SLP_SEL` reader - need_des"]
-pub type HP_SLEEP_SYS_CLK_SLP_SEL_R = crate::BitReader<bool>;
+pub type HP_SLEEP_SYS_CLK_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_SYS_CLK_SLP_SEL` writer - need_des"]
 pub type HP_SLEEP_SYS_CLK_SLP_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_SYSCLK_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `HP_SLEEP_ICG_SLP_SEL` reader - need_des"]
-pub type HP_SLEEP_ICG_SLP_SEL_R = crate::BitReader<bool>;
+pub type HP_SLEEP_ICG_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_ICG_SLP_SEL` writer - need_des"]
-pub type HP_SLEEP_ICG_SLP_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_SYSCLK_SPEC, bool, O>;
+pub type HP_SLEEP_ICG_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, HP_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `HP_SLEEP_DIG_SYS_CLK_SEL` reader - need_des"]
-pub type HP_SLEEP_DIG_SYS_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type HP_SLEEP_DIG_SYS_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_DIG_SYS_CLK_SEL` writer - need_des"]
 pub type HP_SLEEP_DIG_SYS_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_SYSCLK_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_SYSCLK_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -84,6 +83,39 @@ impl R {
     #[inline(always)]
     pub fn hp_sleep_dig_sys_clk_sel(&self) -> HP_SLEEP_DIG_SYS_CLK_SEL_R {
         HP_SLEEP_DIG_SYS_CLK_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_SLEEP_SYSCLK")
+            .field(
+                "hp_sleep_dig_sys_clk_no_div",
+                &format_args!("{}", self.hp_sleep_dig_sys_clk_no_div().bit()),
+            )
+            .field(
+                "hp_sleep_icg_sys_clock_en",
+                &format_args!("{}", self.hp_sleep_icg_sys_clock_en().bit()),
+            )
+            .field(
+                "hp_sleep_sys_clk_slp_sel",
+                &format_args!("{}", self.hp_sleep_sys_clk_slp_sel().bit()),
+            )
+            .field(
+                "hp_sleep_icg_slp_sel",
+                &format_args!("{}", self.hp_sleep_icg_slp_sel().bit()),
+            )
+            .field(
+                "hp_sleep_dig_sys_clk_sel",
+                &format_args!("{}", self.hp_sleep_dig_sys_clk_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_SYSCLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

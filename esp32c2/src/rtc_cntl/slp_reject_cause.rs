@@ -38,12 +38,29 @@ impl From<crate::W<SLP_REJECT_CAUSE_SPEC>> for W {
 pub type REJECT_CAUSE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REJECT_CAUSE` writer - sleep reject cause"]
 pub type REJECT_CAUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_REJECT_CAUSE_SPEC, u32, u32, 18, O>;
+    crate::FieldWriter<'a, SLP_REJECT_CAUSE_SPEC, 18, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]
     pub fn reject_cause(&self) -> REJECT_CAUSE_R {
         REJECT_CAUSE_R::new(self.bits & 0x0003_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_REJECT_CAUSE")
+            .field(
+                "reject_cause",
+                &format_args!("{}", self.reject_cause().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CAUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

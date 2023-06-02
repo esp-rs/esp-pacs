@@ -37,15 +37,15 @@ impl From<crate::W<EXT0_SPEC>> for W {
 #[doc = "Field `T_PP_TIME` reader - page program delay time by system clock."]
 pub type T_PP_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `T_PP_TIME` writer - page program delay time by system clock."]
-pub type T_PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT0_SPEC, u16, u16, 12, O>;
+pub type T_PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT0_SPEC, 12, O, u16, u16>;
 #[doc = "Field `T_PP_SHIFT` reader - page program delay time shift ."]
-pub type T_PP_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type T_PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_PP_SHIFT` writer - page program delay time shift ."]
-pub type T_PP_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT0_SPEC, u8, u8, 4, O>;
+pub type T_PP_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, EXT0_SPEC, 4, O>;
 #[doc = "Field `T_PP_ENA` reader - page program delay enable."]
-pub type T_PP_ENA_R = crate::BitReader<bool>;
+pub type T_PP_ENA_R = crate::BitReader;
 #[doc = "Field `T_PP_ENA` writer - page program delay enable."]
-pub type T_PP_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT0_SPEC, bool, O>;
+pub type T_PP_ENA_W<'a, const O: u8> = crate::BitWriter<'a, EXT0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - page program delay time by system clock."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn t_pp_ena(&self) -> T_PP_ENA_R {
         T_PP_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT0")
+            .field("t_pp_time", &format_args!("{}", self.t_pp_time().bits()))
+            .field("t_pp_shift", &format_args!("{}", self.t_pp_shift().bits()))
+            .field("t_pp_ena", &format_args!("{}", self.t_pp_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

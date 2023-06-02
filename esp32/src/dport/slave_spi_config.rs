@@ -35,25 +35,21 @@ impl From<crate::W<SLAVE_SPI_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_SPI_MASK_PRO` reader - "]
-pub type SLAVE_SPI_MASK_PRO_R = crate::BitReader<bool>;
+pub type SLAVE_SPI_MASK_PRO_R = crate::BitReader;
 #[doc = "Field `SLAVE_SPI_MASK_PRO` writer - "]
-pub type SLAVE_SPI_MASK_PRO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, O>;
+pub type SLAVE_SPI_MASK_PRO_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPI_CONFIG_SPEC, O>;
 #[doc = "Field `SLAVE_SPI_MASK_APP` reader - "]
-pub type SLAVE_SPI_MASK_APP_R = crate::BitReader<bool>;
+pub type SLAVE_SPI_MASK_APP_R = crate::BitReader;
 #[doc = "Field `SLAVE_SPI_MASK_APP` writer - "]
-pub type SLAVE_SPI_MASK_APP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, O>;
+pub type SLAVE_SPI_MASK_APP_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPI_CONFIG_SPEC, O>;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` reader - "]
-pub type SPI_ENCRYPT_ENABLE_R = crate::BitReader<bool>;
+pub type SPI_ENCRYPT_ENABLE_R = crate::BitReader;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` writer - "]
-pub type SPI_ENCRYPT_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, O>;
+pub type SPI_ENCRYPT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPI_CONFIG_SPEC, O>;
 #[doc = "Field `SPI_DECRYPT_ENABLE` reader - "]
-pub type SPI_DECRYPT_ENABLE_R = crate::BitReader<bool>;
+pub type SPI_DECRYPT_ENABLE_R = crate::BitReader;
 #[doc = "Field `SPI_DECRYPT_ENABLE` writer - "]
-pub type SPI_DECRYPT_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, O>;
+pub type SPI_DECRYPT_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SLAVE_SPI_CONFIG_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn spi_decrypt_enable(&self) -> SPI_DECRYPT_ENABLE_R {
         SPI_DECRYPT_ENABLE_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLAVE_SPI_CONFIG")
+            .field(
+                "slave_spi_mask_pro",
+                &format_args!("{}", self.slave_spi_mask_pro().bit()),
+            )
+            .field(
+                "slave_spi_mask_app",
+                &format_args!("{}", self.slave_spi_mask_app().bit()),
+            )
+            .field(
+                "spi_encrypt_enable",
+                &format_args!("{}", self.spi_encrypt_enable().bit()),
+            )
+            .field(
+                "spi_decrypt_enable",
+                &format_args!("{}", self.spi_decrypt_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPI_CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,27 +14,27 @@ impl From<crate::R<SR_SPEC>> for R {
     }
 }
 #[doc = "Field `ACK_REC` reader - This register stores the value of ACK bit."]
-pub type ACK_REC_R = crate::BitReader<bool>;
+pub type ACK_REC_R = crate::BitReader;
 #[doc = "Field `SLAVE_RW` reader - when in slave mode 1: master read slave 0: master write slave."]
-pub type SLAVE_RW_R = crate::BitReader<bool>;
+pub type SLAVE_RW_R = crate::BitReader;
 #[doc = "Field `TIME_OUT` reader - when I2C takes more than time_out_reg clocks to receive a data then this register changes to high level."]
-pub type TIME_OUT_R = crate::BitReader<bool>;
+pub type TIME_OUT_R = crate::BitReader;
 #[doc = "Field `ARB_LOST` reader - when I2C lost control of SDA line this register changes to high level."]
-pub type ARB_LOST_R = crate::BitReader<bool>;
+pub type ARB_LOST_R = crate::BitReader;
 #[doc = "Field `BUS_BUSY` reader - 1:I2C bus is busy transferring data. 0:I2C bus is in idle state."]
-pub type BUS_BUSY_R = crate::BitReader<bool>;
+pub type BUS_BUSY_R = crate::BitReader;
 #[doc = "Field `SLAVE_ADDRESSED` reader - when configured as i2c slave and the address send by master is equal to slave's address then this bit will be high level."]
-pub type SLAVE_ADDRESSED_R = crate::BitReader<bool>;
+pub type SLAVE_ADDRESSED_R = crate::BitReader;
 #[doc = "Field `BYTE_TRANS` reader - This register changes to high level when one byte is transferred."]
-pub type BYTE_TRANS_R = crate::BitReader<bool>;
+pub type BYTE_TRANS_R = crate::BitReader;
 #[doc = "Field `RXFIFO_CNT` reader - This register represent the amount of data need to send."]
-pub type RXFIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_CNT` reader - This register stores the amount of received data in ram."]
-pub type TXFIFO_CNT_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_CNT_R = crate::FieldReader;
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - This register stores the value of state machine for i2c module. 3'h0: SCL_MAIN_IDLE 3'h1: SCL_ADDRESS_SHIFT 3'h2: SCL_ACK_ADDRESS 3'h3: SCL_RX_DATA 3'h4 SCL_TX_DATA 3'h5:SCL_SEND_ACK 3'h6:SCL_WAIT_ACK"]
-pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader;
 #[doc = "Field `SCL_STATE_LAST` reader - This register stores the value of state machine to produce SCL. 3'h0: SCL_IDLE 3'h1:SCL_START 3'h2:SCL_LOW_EDGE 3'h3: SCL_LOW 3'h4:SCL_HIGH_EDGE 3'h5:SCL_HIGH 3'h6:SCL_STOP"]
-pub type SCL_STATE_LAST_R = crate::FieldReader<u8, u8>;
+pub type SCL_STATE_LAST_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - This register stores the value of ACK bit."]
     #[inline(always)]
@@ -90,6 +90,39 @@ impl R {
     #[inline(always)]
     pub fn scl_state_last(&self) -> SCL_STATE_LAST_R {
         SCL_STATE_LAST_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SR")
+            .field("ack_rec", &format_args!("{}", self.ack_rec().bit()))
+            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
+            .field("time_out", &format_args!("{}", self.time_out().bit()))
+            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
+            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
+            .field(
+                "slave_addressed",
+                &format_args!("{}", self.slave_addressed().bit()),
+            )
+            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
+            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
+            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
+            .field(
+                "scl_main_state_last",
+                &format_args!("{}", self.scl_main_state_last().bits()),
+            )
+            .field(
+                "scl_state_last",
+                &format_args!("{}", self.scl_state_last().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]

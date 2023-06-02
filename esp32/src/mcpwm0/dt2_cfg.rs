@@ -35,55 +35,53 @@ impl From<crate::W<DT2_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DT2_FED_UPMETHOD` reader - "]
-pub type DT2_FED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DT2_FED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DT2_FED_UPMETHOD` writer - "]
-pub type DT2_FED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT2_CFG_SPEC, u8, u8, 4, O>;
+pub type DT2_FED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT2_CFG_SPEC, 4, O>;
 #[doc = "Field `DT2_RED_UPMETHOD` reader - "]
-pub type DT2_RED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DT2_RED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DT2_RED_UPMETHOD` writer - "]
-pub type DT2_RED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DT2_CFG_SPEC, u8, u8, 4, O>;
+pub type DT2_RED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DT2_CFG_SPEC, 4, O>;
 #[doc = "Field `DT2_DEB_MODE` reader - "]
-pub type DT2_DEB_MODE_R = crate::BitReader<bool>;
+pub type DT2_DEB_MODE_R = crate::BitReader;
 #[doc = "Field `DT2_DEB_MODE` writer - "]
-pub type DT2_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_A_OUTSWAP` reader - "]
-pub type DT2_A_OUTSWAP_R = crate::BitReader<bool>;
+pub type DT2_A_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DT2_A_OUTSWAP` writer - "]
-pub type DT2_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_B_OUTSWAP` reader - "]
-pub type DT2_B_OUTSWAP_R = crate::BitReader<bool>;
+pub type DT2_B_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DT2_B_OUTSWAP` writer - "]
-pub type DT2_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_RED_INSEL` reader - "]
-pub type DT2_RED_INSEL_R = crate::BitReader<bool>;
+pub type DT2_RED_INSEL_R = crate::BitReader;
 #[doc = "Field `DT2_RED_INSEL` writer - "]
-pub type DT2_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_FED_INSEL` reader - "]
-pub type DT2_FED_INSEL_R = crate::BitReader<bool>;
+pub type DT2_FED_INSEL_R = crate::BitReader;
 #[doc = "Field `DT2_FED_INSEL` writer - "]
-pub type DT2_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_RED_OUTINVERT` reader - "]
-pub type DT2_RED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DT2_RED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DT2_RED_OUTINVERT` writer - "]
-pub type DT2_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_FED_OUTINVERT` reader - "]
-pub type DT2_FED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DT2_FED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DT2_FED_OUTINVERT` writer - "]
-pub type DT2_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_A_OUTBYPASS` reader - "]
-pub type DT2_A_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DT2_A_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DT2_A_OUTBYPASS` writer - "]
-pub type DT2_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_B_OUTBYPASS` reader - "]
-pub type DT2_B_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DT2_B_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DT2_B_OUTBYPASS` writer - "]
-pub type DT2_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 #[doc = "Field `DT2_CLK_SEL` reader - "]
-pub type DT2_CLK_SEL_R = crate::BitReader<bool>;
+pub type DT2_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `DT2_CLK_SEL` writer - "]
-pub type DT2_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DT2_CFG_SPEC, bool, O>;
+pub type DT2_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DT2_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -144,6 +142,64 @@ impl R {
     #[inline(always)]
     pub fn dt2_clk_sel(&self) -> DT2_CLK_SEL_R {
         DT2_CLK_SEL_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DT2_CFG")
+            .field(
+                "dt2_fed_upmethod",
+                &format_args!("{}", self.dt2_fed_upmethod().bits()),
+            )
+            .field(
+                "dt2_red_upmethod",
+                &format_args!("{}", self.dt2_red_upmethod().bits()),
+            )
+            .field(
+                "dt2_deb_mode",
+                &format_args!("{}", self.dt2_deb_mode().bit()),
+            )
+            .field(
+                "dt2_a_outswap",
+                &format_args!("{}", self.dt2_a_outswap().bit()),
+            )
+            .field(
+                "dt2_b_outswap",
+                &format_args!("{}", self.dt2_b_outswap().bit()),
+            )
+            .field(
+                "dt2_red_insel",
+                &format_args!("{}", self.dt2_red_insel().bit()),
+            )
+            .field(
+                "dt2_fed_insel",
+                &format_args!("{}", self.dt2_fed_insel().bit()),
+            )
+            .field(
+                "dt2_red_outinvert",
+                &format_args!("{}", self.dt2_red_outinvert().bit()),
+            )
+            .field(
+                "dt2_fed_outinvert",
+                &format_args!("{}", self.dt2_fed_outinvert().bit()),
+            )
+            .field(
+                "dt2_a_outbypass",
+                &format_args!("{}", self.dt2_a_outbypass().bit()),
+            )
+            .field(
+                "dt2_b_outbypass",
+                &format_args!("{}", self.dt2_b_outbypass().bit()),
+            )
+            .field("dt2_clk_sel", &format_args!("{}", self.dt2_clk_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DT2_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

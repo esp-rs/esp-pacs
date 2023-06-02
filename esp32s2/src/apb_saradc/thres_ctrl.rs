@@ -35,35 +35,33 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Clock gate enable."]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Clock gate enable."]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC2_THRES_MODE_R = crate::BitReader<bool>;
+pub type ADC2_THRES_MODE_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC2_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type ADC2_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC1_THRES_MODE_R = crate::BitReader<bool>;
+pub type ADC1_THRES_MODE_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
-pub type ADC1_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type ADC1_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
 pub type ADC2_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC2_THRES` writer - ADC2 threshold."]
-pub type ADC2_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES_CTRL_SPEC, u16, u16, 13, O>;
+pub type ADC2_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16, u16>;
 #[doc = "Field `ADC1_THRES` reader - ADC1 threshold."]
 pub type ADC1_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC1_THRES` writer - ADC1 threshold."]
-pub type ADC1_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES_CTRL_SPEC, u16, u16, 13, O>;
+pub type ADC1_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16, u16>;
 #[doc = "Field `ADC2_THRES_EN` reader - Enable ADC2 threshold monitor."]
-pub type ADC2_THRES_EN_R = crate::BitReader<bool>;
+pub type ADC2_THRES_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_EN` writer - Enable ADC2 threshold monitor."]
-pub type ADC2_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type ADC2_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `ADC1_THRES_EN` reader - Enable ADC1 threshold monitor."]
-pub type ADC1_THRES_EN_R = crate::BitReader<bool>;
+pub type ADC1_THRES_EN_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_EN` writer - Enable ADC1 threshold monitor."]
-pub type ADC1_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type ADC1_THRES_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
@@ -99,6 +97,38 @@ impl R {
     #[inline(always)]
     pub fn adc1_thres_en(&self) -> ADC1_THRES_EN_R {
         ADC1_THRES_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("THRES_CTRL")
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "adc2_thres_mode",
+                &format_args!("{}", self.adc2_thres_mode().bit()),
+            )
+            .field(
+                "adc1_thres_mode",
+                &format_args!("{}", self.adc1_thres_mode().bit()),
+            )
+            .field("adc2_thres", &format_args!("{}", self.adc2_thres().bits()))
+            .field("adc1_thres", &format_args!("{}", self.adc1_thres().bits()))
+            .field(
+                "adc2_thres_en",
+                &format_args!("{}", self.adc2_thres_en().bit()),
+            )
+            .field(
+                "adc1_thres_en",
+                &format_args!("{}", self.adc1_thres_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,45 +35,37 @@ impl From<crate::W<POWER_PD_TOP_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_TOP_RESET` reader - need_des"]
-pub type FORCE_TOP_RESET_R = crate::BitReader<bool>;
+pub type FORCE_TOP_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_RESET` writer - need_des"]
-pub type FORCE_TOP_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_TOP_ISO` reader - need_des"]
-pub type FORCE_TOP_ISO_R = crate::BitReader<bool>;
+pub type FORCE_TOP_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_ISO` writer - need_des"]
-pub type FORCE_TOP_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_ISO_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_TOP_PU` reader - need_des"]
-pub type FORCE_TOP_PU_R = crate::BitReader<bool>;
+pub type FORCE_TOP_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_PU` writer - need_des"]
-pub type FORCE_TOP_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_PU_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_TOP_NO_RESET` reader - need_des"]
-pub type FORCE_TOP_NO_RESET_R = crate::BitReader<bool>;
+pub type FORCE_TOP_NO_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_NO_RESET` writer - need_des"]
-pub type FORCE_TOP_NO_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_NO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_TOP_NO_ISO` reader - need_des"]
-pub type FORCE_TOP_NO_ISO_R = crate::BitReader<bool>;
+pub type FORCE_TOP_NO_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_NO_ISO` writer - need_des"]
-pub type FORCE_TOP_NO_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_NO_ISO_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_TOP_PD` reader - need_des"]
-pub type FORCE_TOP_PD_R = crate::BitReader<bool>;
+pub type FORCE_TOP_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_TOP_PD` writer - need_des"]
-pub type FORCE_TOP_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, bool, O>;
+pub type FORCE_TOP_PD_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_TOP_CNTL_SPEC, O>;
 #[doc = "Field `PD_TOP_MASK` reader - need_des"]
-pub type PD_TOP_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_TOP_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_TOP_MASK` writer - need_des"]
-pub type PD_TOP_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, u8, u8, 5, O>;
+pub type PD_TOP_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_TOP_CNTL_SPEC, 5, O>;
 #[doc = "Field `PD_TOP_PD_MASK` reader - need_des"]
-pub type PD_TOP_PD_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_TOP_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_TOP_PD_MASK` writer - need_des"]
-pub type PD_TOP_PD_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_TOP_CNTL_SPEC, u8, u8, 5, O>;
+pub type PD_TOP_PD_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_TOP_CNTL_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -114,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn pd_top_pd_mask(&self) -> PD_TOP_PD_MASK_R {
         PD_TOP_PD_MASK_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_PD_TOP_CNTL")
+            .field(
+                "force_top_reset",
+                &format_args!("{}", self.force_top_reset().bit()),
+            )
+            .field(
+                "force_top_iso",
+                &format_args!("{}", self.force_top_iso().bit()),
+            )
+            .field(
+                "force_top_pu",
+                &format_args!("{}", self.force_top_pu().bit()),
+            )
+            .field(
+                "force_top_no_reset",
+                &format_args!("{}", self.force_top_no_reset().bit()),
+            )
+            .field(
+                "force_top_no_iso",
+                &format_args!("{}", self.force_top_no_iso().bit()),
+            )
+            .field(
+                "force_top_pd",
+                &format_args!("{}", self.force_top_pd().bit()),
+            )
+            .field(
+                "pd_top_mask",
+                &format_args!("{}", self.pd_top_mask().bits()),
+            )
+            .field(
+                "pd_top_pd_mask",
+                &format_args!("{}", self.pd_top_pd_mask().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_PD_TOP_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

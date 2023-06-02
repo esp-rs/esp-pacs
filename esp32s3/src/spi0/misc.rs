@@ -35,21 +35,21 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `FSUB_PIN` reader - Flash is connected to SPI SUBPIN bus."]
-pub type FSUB_PIN_R = crate::BitReader<bool>;
+pub type FSUB_PIN_R = crate::BitReader;
 #[doc = "Field `FSUB_PIN` writer - Flash is connected to SPI SUBPIN bus."]
-pub type FSUB_PIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type FSUB_PIN_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `SSUB_PIN` reader - Ext_RAM is connected to SPI SUBPIN bus."]
-pub type SSUB_PIN_R = crate::BitReader<bool>;
+pub type SSUB_PIN_R = crate::BitReader;
 #[doc = "Field `SSUB_PIN` writer - Ext_RAM is connected to SPI SUBPIN bus."]
-pub type SSUB_PIN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type SSUB_PIN_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
-pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
+pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
-pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CK_IDLE_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
+pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
-pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MISC_SPEC, bool, O>;
+pub type CS_KEEP_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
@@ -70,6 +70,29 @@ impl R {
     #[inline(always)]
     pub fn cs_keep_active(&self) -> CS_KEEP_ACTIVE_R {
         CS_KEEP_ACTIVE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC")
+            .field("fsub_pin", &format_args!("{}", self.fsub_pin().bit()))
+            .field("ssub_pin", &format_args!("{}", self.ssub_pin().bit()))
+            .field(
+                "ck_idle_edge",
+                &format_args!("{}", self.ck_idle_edge().bit()),
+            )
+            .field(
+                "cs_keep_active",
+                &format_args!("{}", self.cs_keep_active().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

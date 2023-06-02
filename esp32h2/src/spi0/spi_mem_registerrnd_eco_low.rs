@@ -22,6 +22,23 @@ impl R {
         SPI_MEM_REGISTERRND_ECO_LOW_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_REGISTERRND_ECO_LOW")
+            .field(
+                "spi_mem_registerrnd_eco_low",
+                &format_args!("{}", self.spi_mem_registerrnd_eco_low().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_REGISTERRND_ECO_LOW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "MSPI ECO low register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_registerrnd_eco_low](index.html) module"]
 pub struct SPI_MEM_REGISTERRND_ECO_LOW_SPEC;
 impl crate::RegisterSpec for SPI_MEM_REGISTERRND_ECO_LOW_SPEC {

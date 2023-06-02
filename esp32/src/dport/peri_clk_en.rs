@@ -37,13 +37,29 @@ impl From<crate::W<PERI_CLK_EN_SPEC>> for W {
 #[doc = "Field `PERI_CLK_EN` reader - "]
 pub type PERI_CLK_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERI_CLK_EN` writer - "]
-pub type PERI_CLK_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERI_CLK_EN_SPEC, u32, u32, 32, O>;
+pub type PERI_CLK_EN_W<'a, const O: u8> = crate::FieldWriter<'a, PERI_CLK_EN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn peri_clk_en(&self) -> PERI_CLK_EN_R {
         PERI_CLK_EN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERI_CLK_EN")
+            .field(
+                "peri_clk_en",
+                &format_args!("{}", self.peri_clk_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

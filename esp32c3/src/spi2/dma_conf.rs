@@ -35,38 +35,35 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` reader - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub type DMA_SLV_SEG_TRANS_EN_R = crate::BitReader<bool>;
+pub type DMA_SLV_SEG_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` writer - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub type DMA_SLV_SEG_TRANS_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_SLV_SEG_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
-pub type SLV_RX_SEG_TRANS_CLR_EN_R = crate::BitReader<bool>;
+pub type SLV_RX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_infifo_full_vld is cleared by spi slave cmd 5. 0: spi_dma_infifo_full_vld is cleared by spi_trans_done."]
-pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
-pub type SLV_TX_SEG_TRANS_CLR_EN_R = crate::BitReader<bool>;
+pub type SLV_TX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_outfifo_empty_vld is cleared by spi slave cmd 6. 0: spi_dma_outfifo_empty_vld is cleared by spi_trans_done."]
-pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `RX_EOF_EN` reader - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
-pub type RX_EOF_EN_R = crate::BitReader<bool>;
+pub type RX_EOF_EN_R = crate::BitReader;
 #[doc = "Field `RX_EOF_EN` writer - 1: spi_dma_inlink_eof is set when the number of dma pushed data bytes is equal to the value of spi_slv/mst_dma_rd_bytelen\\[19:0\\] in spi dma transition. 0: spi_dma_inlink_eof is set by spi_trans_done in non-seg-trans or spi_dma_seg_trans_done in seg-trans."]
-pub type RX_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type RX_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_RX_ENA` reader - Set this bit to enable SPI DMA controlled receive data mode."]
-pub type DMA_RX_ENA_R = crate::BitReader<bool>;
+pub type DMA_RX_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_RX_ENA` writer - Set this bit to enable SPI DMA controlled receive data mode."]
-pub type DMA_RX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_RX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_TX_ENA` reader - Set this bit to enable SPI DMA controlled send data mode."]
-pub type DMA_TX_ENA_R = crate::BitReader<bool>;
+pub type DMA_TX_ENA_R = crate::BitReader;
 #[doc = "Field `DMA_TX_ENA` writer - Set this bit to enable SPI DMA controlled send data mode."]
-pub type DMA_TX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_TX_ENA_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `RX_AFIFO_RST` writer - Set this bit to reset RX AFIFO, which is used to receive data in SPI master and slave mode transfer."]
-pub type RX_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type RX_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `BUF_AFIFO_RST` writer - Set this bit to reset BUF TX AFIFO, which is used send data out in SPI slave CPU controlled mode transfer and master mode transfer."]
-pub type BUF_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type BUF_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_AFIFO_RST` writer - Set this bit to reset DMA TX AFIFO, which is used to send data out in SPI slave DMA controlled mode transfer."]
-pub type DMA_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
@@ -97,6 +94,34 @@ impl R {
     #[inline(always)]
     pub fn dma_tx_ena(&self) -> DMA_TX_ENA_R {
         DMA_TX_ENA_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_CONF")
+            .field(
+                "dma_slv_seg_trans_en",
+                &format_args!("{}", self.dma_slv_seg_trans_en().bit()),
+            )
+            .field(
+                "slv_rx_seg_trans_clr_en",
+                &format_args!("{}", self.slv_rx_seg_trans_clr_en().bit()),
+            )
+            .field(
+                "slv_tx_seg_trans_clr_en",
+                &format_args!("{}", self.slv_tx_seg_trans_clr_en().bit()),
+            )
+            .field("rx_eof_en", &format_args!("{}", self.rx_eof_en().bit()))
+            .field("dma_rx_ena", &format_args!("{}", self.dma_rx_ena().bit()))
+            .field("dma_tx_ena", &format_args!("{}", self.dma_tx_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

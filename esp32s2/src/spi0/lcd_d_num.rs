@@ -35,25 +35,25 @@ impl From<crate::W<LCD_D_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `D_DQS_NUM` reader - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DQS_NUM_R = crate::FieldReader<u8, u8>;
+pub type D_DQS_NUM_R = crate::FieldReader;
 #[doc = "Field `D_DQS_NUM` writer - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DQS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, O>;
+pub type D_DQS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_NUM_SPEC, 2, O>;
 #[doc = "Field `D_CD_NUM` reader - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_CD_NUM_R = crate::FieldReader<u8, u8>;
+pub type D_CD_NUM_R = crate::FieldReader;
 #[doc = "Field `D_CD_NUM` writer - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_CD_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, O>;
+pub type D_CD_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_NUM_SPEC, 2, O>;
 #[doc = "Field `D_DE_NUM` reader - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DE_NUM_R = crate::FieldReader<u8, u8>;
+pub type D_DE_NUM_R = crate::FieldReader;
 #[doc = "Field `D_DE_NUM` writer - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_DE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, O>;
+pub type D_DE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_NUM_SPEC, 2, O>;
 #[doc = "Field `D_HSYNC_NUM` reader - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_HSYNC_NUM_R = crate::FieldReader<u8, u8>;
+pub type D_HSYNC_NUM_R = crate::FieldReader;
 #[doc = "Field `D_HSYNC_NUM` writer - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_HSYNC_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, O>;
+pub type D_HSYNC_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_NUM_SPEC, 2, O>;
 #[doc = "Field `D_VSYNC_NUM` reader - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_VSYNC_NUM_R = crate::FieldReader<u8, u8>;
+pub type D_VSYNC_NUM_R = crate::FieldReader;
 #[doc = "Field `D_VSYNC_NUM` writer - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub type D_VSYNC_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, O>;
+pub type D_VSYNC_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_D_NUM_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -79,6 +79,30 @@ impl R {
     #[inline(always)]
     pub fn d_vsync_num(&self) -> D_VSYNC_NUM_R {
         D_VSYNC_NUM_R::new(((self.bits >> 8) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_D_NUM")
+            .field("d_dqs_num", &format_args!("{}", self.d_dqs_num().bits()))
+            .field("d_cd_num", &format_args!("{}", self.d_cd_num().bits()))
+            .field("d_de_num", &format_args!("{}", self.d_de_num().bits()))
+            .field(
+                "d_hsync_num",
+                &format_args!("{}", self.d_hsync_num().bits()),
+            )
+            .field(
+                "d_vsync_num",
+                &format_args!("{}", self.d_vsync_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_D_NUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

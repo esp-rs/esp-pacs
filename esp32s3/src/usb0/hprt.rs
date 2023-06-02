@@ -35,49 +35,49 @@ impl From<crate::W<HPRT_SPEC>> for W {
     }
 }
 #[doc = "Field `PRTCONNSTS` reader - "]
-pub type PRTCONNSTS_R = crate::BitReader<bool>;
+pub type PRTCONNSTS_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` reader - "]
-pub type PRTCONNDET_R = crate::BitReader<bool>;
+pub type PRTCONNDET_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` writer - "]
-pub type PRTCONNDET_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTCONNDET_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTENA` reader - "]
-pub type PRTENA_R = crate::BitReader<bool>;
+pub type PRTENA_R = crate::BitReader;
 #[doc = "Field `PRTENA` writer - "]
-pub type PRTENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTENA_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTENCHNG` reader - "]
-pub type PRTENCHNG_R = crate::BitReader<bool>;
+pub type PRTENCHNG_R = crate::BitReader;
 #[doc = "Field `PRTENCHNG` writer - "]
-pub type PRTENCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTENCHNG_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTOVRCURRACT` reader - "]
-pub type PRTOVRCURRACT_R = crate::BitReader<bool>;
+pub type PRTOVRCURRACT_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` reader - "]
-pub type PRTOVRCURRCHNG_R = crate::BitReader<bool>;
+pub type PRTOVRCURRCHNG_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` writer - "]
-pub type PRTOVRCURRCHNG_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTOVRCURRCHNG_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTRES` reader - "]
-pub type PRTRES_R = crate::BitReader<bool>;
+pub type PRTRES_R = crate::BitReader;
 #[doc = "Field `PRTRES` writer - "]
-pub type PRTRES_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTRES_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTSUSP` reader - "]
-pub type PRTSUSP_R = crate::BitReader<bool>;
+pub type PRTSUSP_R = crate::BitReader;
 #[doc = "Field `PRTSUSP` writer - "]
-pub type PRTSUSP_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTSUSP_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTRST` reader - "]
-pub type PRTRST_R = crate::BitReader<bool>;
+pub type PRTRST_R = crate::BitReader;
 #[doc = "Field `PRTRST` writer - "]
-pub type PRTRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTRST_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTLNSTS` reader - "]
-pub type PRTLNSTS_R = crate::FieldReader<u8, u8>;
+pub type PRTLNSTS_R = crate::FieldReader;
 #[doc = "Field `PRTPWR` reader - "]
-pub type PRTPWR_R = crate::BitReader<bool>;
+pub type PRTPWR_R = crate::BitReader;
 #[doc = "Field `PRTPWR` writer - "]
-pub type PRTPWR_W<'a, const O: u8> = crate::BitWriter<'a, u32, HPRT_SPEC, bool, O>;
+pub type PRTPWR_W<'a, const O: u8> = crate::BitWriter<'a, HPRT_SPEC, O>;
 #[doc = "Field `PRTTSTCTL` reader - "]
-pub type PRTTSTCTL_R = crate::FieldReader<u8, u8>;
+pub type PRTTSTCTL_R = crate::FieldReader;
 #[doc = "Field `PRTTSTCTL` writer - "]
-pub type PRTTSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HPRT_SPEC, u8, u8, 4, O>;
+pub type PRTTSTCTL_W<'a, const O: u8> = crate::FieldWriter<'a, HPRT_SPEC, 4, O>;
 #[doc = "Field `PRTSPD` reader - "]
-pub type PRTSPD_R = crate::FieldReader<u8, u8>;
+pub type PRTSPD_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -143,6 +143,38 @@ impl R {
     #[inline(always)]
     pub fn prtspd(&self) -> PRTSPD_R {
         PRTSPD_R::new(((self.bits >> 17) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPRT")
+            .field("prtconnsts", &format_args!("{}", self.prtconnsts().bit()))
+            .field("prtconndet", &format_args!("{}", self.prtconndet().bit()))
+            .field("prtena", &format_args!("{}", self.prtena().bit()))
+            .field("prtenchng", &format_args!("{}", self.prtenchng().bit()))
+            .field(
+                "prtovrcurract",
+                &format_args!("{}", self.prtovrcurract().bit()),
+            )
+            .field(
+                "prtovrcurrchng",
+                &format_args!("{}", self.prtovrcurrchng().bit()),
+            )
+            .field("prtres", &format_args!("{}", self.prtres().bit()))
+            .field("prtsusp", &format_args!("{}", self.prtsusp().bit()))
+            .field("prtrst", &format_args!("{}", self.prtrst().bit()))
+            .field("prtlnsts", &format_args!("{}", self.prtlnsts().bits()))
+            .field("prtpwr", &format_args!("{}", self.prtpwr().bit()))
+            .field("prttstctl", &format_args!("{}", self.prttstctl().bits()))
+            .field("prtspd", &format_args!("{}", self.prtspd().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HPRT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

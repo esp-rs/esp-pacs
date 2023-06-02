@@ -37,13 +37,29 @@ impl From<crate::W<LACTLOADHI_SPEC>> for W {
 #[doc = "Field `LACT_LOAD_HI` reader - "]
 pub type LACT_LOAD_HI_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LACT_LOAD_HI` writer - "]
-pub type LACT_LOAD_HI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LACTLOADHI_SPEC, u32, u32, 32, O>;
+pub type LACT_LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, LACTLOADHI_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn lact_load_hi(&self) -> LACT_LOAD_HI_R {
         LACT_LOAD_HI_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LACTLOADHI")
+            .field(
+                "lact_load_hi",
+                &format_args!("{}", self.lact_load_hi().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LACTLOADHI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

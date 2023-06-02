@@ -35,14 +35,28 @@ impl From<crate::W<IN_PRI_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_PRI` reader - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
-pub type RX_PRI_R = crate::FieldReader<u8, u8>;
+pub type RX_PRI_R = crate::FieldReader;
 #[doc = "Field `RX_PRI` writer - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
-pub type RX_PRI_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IN_PRI_CH_SPEC, u8, u8, 4, O>;
+pub type RX_PRI_W<'a, const O: u8> = crate::FieldWriter<'a, IN_PRI_CH_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
     pub fn rx_pri(&self) -> RX_PRI_R {
         RX_PRI_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_PRI_CH")
+            .field("rx_pri", &format_args!("{}", self.rx_pri().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_PRI_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

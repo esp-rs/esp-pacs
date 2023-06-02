@@ -35,15 +35,15 @@ impl From<crate::W<FILTER_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_FILTER_FACTOR1` reader - Factor of saradc filter1"]
-pub type APB_SARADC_FILTER_FACTOR1_R = crate::FieldReader<u8, u8>;
+pub type APB_SARADC_FILTER_FACTOR1_R = crate::FieldReader;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR1` writer - Factor of saradc filter1"]
 pub type APB_SARADC_FILTER_FACTOR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, FILTER_CTRL1_SPEC, 3, O>;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR0` reader - Factor of saradc filter0"]
-pub type APB_SARADC_FILTER_FACTOR0_R = crate::FieldReader<u8, u8>;
+pub type APB_SARADC_FILTER_FACTOR0_R = crate::FieldReader;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR0` writer - Factor of saradc filter0"]
 pub type APB_SARADC_FILTER_FACTOR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, FILTER_CTRL1_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 26:28 - Factor of saradc filter1"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn apb_saradc_filter_factor0(&self) -> APB_SARADC_FILTER_FACTOR0_R {
         APB_SARADC_FILTER_FACTOR0_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FILTER_CTRL1")
+            .field(
+                "apb_saradc_filter_factor1",
+                &format_args!("{}", self.apb_saradc_filter_factor1().bits()),
+            )
+            .field(
+                "apb_saradc_filter_factor0",
+                &format_args!("{}", self.apb_saradc_filter_factor0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

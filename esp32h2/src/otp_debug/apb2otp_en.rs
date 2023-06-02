@@ -35,14 +35,28 @@ impl From<crate::W<APB2OTP_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `APB2OTP_EN` reader - Debug mode enable signal."]
-pub type APB2OTP_EN_R = crate::BitReader<bool>;
+pub type APB2OTP_EN_R = crate::BitReader;
 #[doc = "Field `APB2OTP_EN` writer - Debug mode enable signal."]
-pub type APB2OTP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, APB2OTP_EN_SPEC, bool, O>;
+pub type APB2OTP_EN_W<'a, const O: u8> = crate::BitWriter<'a, APB2OTP_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Debug mode enable signal."]
     #[inline(always)]
     pub fn apb2otp_en(&self) -> APB2OTP_EN_R {
         APB2OTP_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2OTP_EN")
+            .field("apb2otp_en", &format_args!("{}", self.apb2otp_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APB2OTP_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,27 +35,23 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_RAW` reader - Slave accepted 1 byte and address matched"]
-pub type SLAVE_TRANS_COMPLETE_INT_RAW_R = crate::BitReader<bool>;
+pub type SLAVE_TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_RAW` writer - Slave accepted 1 byte and address matched"]
-pub type SLAVE_TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SLAVE_TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - Master lost arbitration"]
-pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader<bool>;
+pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` writer - Master lost arbitration"]
-pub type ARBITRATION_LOST_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_RAW` reader - "]
-pub type MASTER_TRANS_COMPLETE_INT_RAW_R = crate::BitReader<bool>;
+pub type MASTER_TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_RAW` writer - "]
-pub type MASTER_TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type MASTER_TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - Stop condition has been detected interrupt raw status"]
-pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` writer - Stop condition has been detected interrupt raw status"]
-pub type TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_RAW` reader - time out interrupt raw status"]
-pub type TIME_OUT_INT_RAW_R = crate::BitReader<bool>;
+pub type TIME_OUT_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 3 - Slave accepted 1 byte and address matched"]
     #[inline(always)]
@@ -81,6 +77,39 @@ impl R {
     #[inline(always)]
     pub fn time_out_int_raw(&self) -> TIME_OUT_INT_RAW_R {
         TIME_OUT_INT_RAW_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "slave_trans_complete_int_raw",
+                &format_args!("{}", self.slave_trans_complete_int_raw().bit()),
+            )
+            .field(
+                "arbitration_lost_int_raw",
+                &format_args!("{}", self.arbitration_lost_int_raw().bit()),
+            )
+            .field(
+                "master_trans_complete_int_raw",
+                &format_args!("{}", self.master_trans_complete_int_raw().bit()),
+            )
+            .field(
+                "trans_complete_int_raw",
+                &format_args!("{}", self.trans_complete_int_raw().bit()),
+            )
+            .field(
+                "time_out_int_raw",
+                &format_args!("{}", self.time_out_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

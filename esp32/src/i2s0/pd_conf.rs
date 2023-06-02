@@ -35,21 +35,21 @@ impl From<crate::W<PD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_FORCE_PD` reader - "]
-pub type FIFO_FORCE_PD_R = crate::BitReader<bool>;
+pub type FIFO_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PD` writer - "]
-pub type FIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type FIFO_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `FIFO_FORCE_PU` reader - "]
-pub type FIFO_FORCE_PU_R = crate::BitReader<bool>;
+pub type FIFO_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FIFO_FORCE_PU` writer - "]
-pub type FIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type FIFO_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `PLC_MEM_FORCE_PD` reader - "]
-pub type PLC_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type PLC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PD` writer - "]
-pub type PLC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type PLC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 #[doc = "Field `PLC_MEM_FORCE_PU` reader - "]
-pub type PLC_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type PLC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `PLC_MEM_FORCE_PU` writer - "]
-pub type PLC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, PD_CONF_SPEC, bool, O>;
+pub type PLC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, PD_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn plc_mem_force_pu(&self) -> PLC_MEM_FORCE_PU_R {
         PLC_MEM_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PD_CONF")
+            .field(
+                "fifo_force_pd",
+                &format_args!("{}", self.fifo_force_pd().bit()),
+            )
+            .field(
+                "fifo_force_pu",
+                &format_args!("{}", self.fifo_force_pu().bit()),
+            )
+            .field(
+                "plc_mem_force_pd",
+                &format_args!("{}", self.plc_mem_force_pd().bit()),
+            )
+            .field(
+                "plc_mem_force_pu",
+                &format_args!("{}", self.plc_mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

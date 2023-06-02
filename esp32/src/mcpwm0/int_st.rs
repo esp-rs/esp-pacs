@@ -14,65 +14,65 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER0_STOP_INT_ST` reader - "]
-pub type TIMER0_STOP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER0_STOP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER1_STOP_INT_ST` reader - "]
-pub type TIMER1_STOP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER1_STOP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER2_STOP_INT_ST` reader - "]
-pub type TIMER2_STOP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER2_STOP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER0_TEZ_INT_ST` reader - "]
-pub type TIMER0_TEZ_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER0_TEZ_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER1_TEZ_INT_ST` reader - "]
-pub type TIMER1_TEZ_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER1_TEZ_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER2_TEZ_INT_ST` reader - "]
-pub type TIMER2_TEZ_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER2_TEZ_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER0_TEP_INT_ST` reader - "]
-pub type TIMER0_TEP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER0_TEP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER1_TEP_INT_ST` reader - "]
-pub type TIMER1_TEP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER1_TEP_INT_ST_R = crate::BitReader;
 #[doc = "Field `TIMER2_TEP_INT_ST` reader - "]
-pub type TIMER2_TEP_INT_ST_R = crate::BitReader<bool>;
+pub type TIMER2_TEP_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT0_INT_ST` reader - "]
-pub type FAULT0_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT0_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT1_INT_ST` reader - "]
-pub type FAULT1_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT1_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT2_INT_ST` reader - "]
-pub type FAULT2_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT2_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT0_CLR_INT_ST` reader - "]
-pub type FAULT0_CLR_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT0_CLR_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT1_CLR_INT_ST` reader - "]
-pub type FAULT1_CLR_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT1_CLR_INT_ST_R = crate::BitReader;
 #[doc = "Field `FAULT2_CLR_INT_ST` reader - "]
-pub type FAULT2_CLR_INT_ST_R = crate::BitReader<bool>;
+pub type FAULT2_CLR_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP0_TEA_INT_ST` reader - "]
-pub type OP0_TEA_INT_ST_R = crate::BitReader<bool>;
+pub type OP0_TEA_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP1_TEA_INT_ST` reader - "]
-pub type OP1_TEA_INT_ST_R = crate::BitReader<bool>;
+pub type OP1_TEA_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP2_TEA_INT_ST` reader - "]
-pub type OP2_TEA_INT_ST_R = crate::BitReader<bool>;
+pub type OP2_TEA_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP0_TEB_INT_ST` reader - "]
-pub type OP0_TEB_INT_ST_R = crate::BitReader<bool>;
+pub type OP0_TEB_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP1_TEB_INT_ST` reader - "]
-pub type OP1_TEB_INT_ST_R = crate::BitReader<bool>;
+pub type OP1_TEB_INT_ST_R = crate::BitReader;
 #[doc = "Field `OP2_TEB_INT_ST` reader - "]
-pub type OP2_TEB_INT_ST_R = crate::BitReader<bool>;
+pub type OP2_TEB_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH0_CBC_INT_ST` reader - "]
-pub type FH0_CBC_INT_ST_R = crate::BitReader<bool>;
+pub type FH0_CBC_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH1_CBC_INT_ST` reader - "]
-pub type FH1_CBC_INT_ST_R = crate::BitReader<bool>;
+pub type FH1_CBC_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH2_CBC_INT_ST` reader - "]
-pub type FH2_CBC_INT_ST_R = crate::BitReader<bool>;
+pub type FH2_CBC_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH0_OST_INT_ST` reader - "]
-pub type FH0_OST_INT_ST_R = crate::BitReader<bool>;
+pub type FH0_OST_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH1_OST_INT_ST` reader - "]
-pub type FH1_OST_INT_ST_R = crate::BitReader<bool>;
+pub type FH1_OST_INT_ST_R = crate::BitReader;
 #[doc = "Field `FH2_OST_INT_ST` reader - "]
-pub type FH2_OST_INT_ST_R = crate::BitReader<bool>;
+pub type FH2_OST_INT_ST_R = crate::BitReader;
 #[doc = "Field `CAP0_INT_ST` reader - "]
-pub type CAP0_INT_ST_R = crate::BitReader<bool>;
+pub type CAP0_INT_ST_R = crate::BitReader;
 #[doc = "Field `CAP1_INT_ST` reader - "]
-pub type CAP1_INT_ST_R = crate::BitReader<bool>;
+pub type CAP1_INT_ST_R = crate::BitReader;
 #[doc = "Field `CAP2_INT_ST` reader - "]
-pub type CAP2_INT_ST_R = crate::BitReader<bool>;
+pub type CAP2_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -223,6 +223,130 @@ impl R {
     #[inline(always)]
     pub fn cap2_int_st(&self) -> CAP2_INT_ST_R {
         CAP2_INT_ST_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "timer0_stop_int_st",
+                &format_args!("{}", self.timer0_stop_int_st().bit()),
+            )
+            .field(
+                "timer1_stop_int_st",
+                &format_args!("{}", self.timer1_stop_int_st().bit()),
+            )
+            .field(
+                "timer2_stop_int_st",
+                &format_args!("{}", self.timer2_stop_int_st().bit()),
+            )
+            .field(
+                "timer0_tez_int_st",
+                &format_args!("{}", self.timer0_tez_int_st().bit()),
+            )
+            .field(
+                "timer1_tez_int_st",
+                &format_args!("{}", self.timer1_tez_int_st().bit()),
+            )
+            .field(
+                "timer2_tez_int_st",
+                &format_args!("{}", self.timer2_tez_int_st().bit()),
+            )
+            .field(
+                "timer0_tep_int_st",
+                &format_args!("{}", self.timer0_tep_int_st().bit()),
+            )
+            .field(
+                "timer1_tep_int_st",
+                &format_args!("{}", self.timer1_tep_int_st().bit()),
+            )
+            .field(
+                "timer2_tep_int_st",
+                &format_args!("{}", self.timer2_tep_int_st().bit()),
+            )
+            .field(
+                "fault0_int_st",
+                &format_args!("{}", self.fault0_int_st().bit()),
+            )
+            .field(
+                "fault1_int_st",
+                &format_args!("{}", self.fault1_int_st().bit()),
+            )
+            .field(
+                "fault2_int_st",
+                &format_args!("{}", self.fault2_int_st().bit()),
+            )
+            .field(
+                "fault0_clr_int_st",
+                &format_args!("{}", self.fault0_clr_int_st().bit()),
+            )
+            .field(
+                "fault1_clr_int_st",
+                &format_args!("{}", self.fault1_clr_int_st().bit()),
+            )
+            .field(
+                "fault2_clr_int_st",
+                &format_args!("{}", self.fault2_clr_int_st().bit()),
+            )
+            .field(
+                "op0_tea_int_st",
+                &format_args!("{}", self.op0_tea_int_st().bit()),
+            )
+            .field(
+                "op1_tea_int_st",
+                &format_args!("{}", self.op1_tea_int_st().bit()),
+            )
+            .field(
+                "op2_tea_int_st",
+                &format_args!("{}", self.op2_tea_int_st().bit()),
+            )
+            .field(
+                "op0_teb_int_st",
+                &format_args!("{}", self.op0_teb_int_st().bit()),
+            )
+            .field(
+                "op1_teb_int_st",
+                &format_args!("{}", self.op1_teb_int_st().bit()),
+            )
+            .field(
+                "op2_teb_int_st",
+                &format_args!("{}", self.op2_teb_int_st().bit()),
+            )
+            .field(
+                "fh0_cbc_int_st",
+                &format_args!("{}", self.fh0_cbc_int_st().bit()),
+            )
+            .field(
+                "fh1_cbc_int_st",
+                &format_args!("{}", self.fh1_cbc_int_st().bit()),
+            )
+            .field(
+                "fh2_cbc_int_st",
+                &format_args!("{}", self.fh2_cbc_int_st().bit()),
+            )
+            .field(
+                "fh0_ost_int_st",
+                &format_args!("{}", self.fh0_ost_int_st().bit()),
+            )
+            .field(
+                "fh1_ost_int_st",
+                &format_args!("{}", self.fh1_ost_int_st().bit()),
+            )
+            .field(
+                "fh2_ost_int_st",
+                &format_args!("{}", self.fh2_ost_int_st().bit()),
+            )
+            .field("cap0_int_st", &format_args!("{}", self.cap0_int_st().bit()))
+            .field("cap1_int_st", &format_args!("{}", self.cap1_int_st().bit()))
+            .field("cap2_int_st", &format_args!("{}", self.cap2_int_st().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

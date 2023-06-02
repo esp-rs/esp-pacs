@@ -35,15 +35,32 @@ impl From<crate::W<SLC_INTVEC_TOHOST_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TOHOST_INTVEC` reader - "]
-pub type SLC_TOHOST_INTVEC_R = crate::FieldReader<u8, u8>;
+pub type SLC_TOHOST_INTVEC_R = crate::FieldReader;
 #[doc = "Field `SLC_TOHOST_INTVEC` writer - "]
 pub type SLC_TOHOST_INTVEC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_INTVEC_TOHOST_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SLC_INTVEC_TOHOST_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn slc_tohost_intvec(&self) -> SLC_TOHOST_INTVEC_R {
         SLC_TOHOST_INTVEC_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_INTVEC_TOHOST")
+            .field(
+                "slc_tohost_intvec",
+                &format_args!("{}", self.slc_tohost_intvec().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_INTVEC_TOHOST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

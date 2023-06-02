@@ -35,69 +35,69 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI1_MST_ST` reader - The current status of SPI1 master FSM."]
-pub type SPI1_MST_ST_R = crate::FieldReader<u8, u8>;
+pub type SPI1_MST_ST_R = crate::FieldReader;
 #[doc = "Field `MSPI_ST` reader - The current status of SPI1 slave FSM: mspi_st. 0: idle state, 1: preparation state, 2: send command state, 3: send address state, 4: wait state, 5: read data state, 6:write data state, 7: done state, 8: read data end state."]
-pub type MSPI_ST_R = crate::FieldReader<u8, u8>;
+pub type MSPI_ST_R = crate::FieldReader;
 #[doc = "Field `FLASH_PE` reader - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_PE_R = crate::BitReader<bool>;
+pub type FLASH_PE_R = crate::BitReader;
 #[doc = "Field `FLASH_PE` writer - In user mode, it is set to indicate that program/erase operation will be triggered. The bit is combined with spi_mem_usr bit. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_PE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_PE_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type USR_R = crate::BitReader<bool>;
+pub type USR_R = crate::BitReader;
 #[doc = "Field `USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type USR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type USR_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_HPM` reader - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_HPM_R = crate::BitReader<bool>;
+pub type FLASH_HPM_R = crate::BitReader;
 #[doc = "Field `FLASH_HPM` writer - Drive Flash into high performance mode. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_HPM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_HPM_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_RES` reader - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_RES_R = crate::BitReader<bool>;
+pub type FLASH_RES_R = crate::BitReader;
 #[doc = "Field `FLASH_RES` writer - This bit combined with reg_resandres bit releases Flash from the power-down state or high performance mode and obtains the devices ID. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_RES_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_RES_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_DP` reader - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_DP_R = crate::BitReader<bool>;
+pub type FLASH_DP_R = crate::BitReader;
 #[doc = "Field `FLASH_DP` writer - Drive Flash into power down. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_DP_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_CE` reader - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_CE_R = crate::BitReader<bool>;
+pub type FLASH_CE_R = crate::BitReader;
 #[doc = "Field `FLASH_CE` writer - Chip erase enable. Chip erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_CE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_CE_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_BE` reader - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_BE_R = crate::BitReader<bool>;
+pub type FLASH_BE_R = crate::BitReader;
 #[doc = "Field `FLASH_BE` writer - Block erase enable(32KB) . Block erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_BE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_BE_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_SE` reader - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_SE_R = crate::BitReader<bool>;
+pub type FLASH_SE_R = crate::BitReader;
 #[doc = "Field `FLASH_SE` writer - Sector erase enable(4KB). Sector erase operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_SE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_SE_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_PP` reader - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub type FLASH_PP_R = crate::BitReader<bool>;
+pub type FLASH_PP_R = crate::BitReader;
 #[doc = "Field `FLASH_PP` writer - Page program enable(1 byte ~256 bytes data to be programmed). Page program operation will be triggered when the bit is set. The bit will be cleared once the operation done .1: enable 0: disable."]
-pub type FLASH_PP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_PP_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_WRSR` reader - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_WRSR_R = crate::BitReader<bool>;
+pub type FLASH_WRSR_R = crate::BitReader;
 #[doc = "Field `FLASH_WRSR` writer - Write status register enable. Write status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_WRSR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_WRSR_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_RDSR` reader - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_RDSR_R = crate::BitReader<bool>;
+pub type FLASH_RDSR_R = crate::BitReader;
 #[doc = "Field `FLASH_RDSR` writer - Read status register-1. Read status operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub type FLASH_RDSR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_RDSR_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_RDID` reader - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_RDID_R = crate::BitReader<bool>;
+pub type FLASH_RDID_R = crate::BitReader;
 #[doc = "Field `FLASH_RDID` writer - Read JEDEC ID . Read ID command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_RDID_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_RDID_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_WRDI` reader - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_WRDI_R = crate::BitReader<bool>;
+pub type FLASH_WRDI_R = crate::BitReader;
 #[doc = "Field `FLASH_WRDI` writer - Write flash disable. Write disable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_WRDI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_WRDI_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_WREN` reader - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_WREN_R = crate::BitReader<bool>;
+pub type FLASH_WREN_R = crate::BitReader;
 #[doc = "Field `FLASH_WREN` writer - Write flash enable. Write enable command will be sent when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_WREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_WREN_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `FLASH_READ` reader - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_READ_R = crate::BitReader<bool>;
+pub type FLASH_READ_R = crate::BitReader;
 #[doc = "Field `FLASH_READ` writer - Read flash enable. Read flash operation will be triggered when the bit is set. The bit will be cleared once the operation done. 1: enable 0: disable."]
-pub type FLASH_READ_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type FLASH_READ_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - The current status of SPI1 master FSM."]
     #[inline(always)]
@@ -183,6 +183,39 @@ impl R {
     #[inline(always)]
     pub fn flash_read(&self) -> FLASH_READ_R {
         FLASH_READ_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD")
+            .field(
+                "spi1_mst_st",
+                &format_args!("{}", self.spi1_mst_st().bits()),
+            )
+            .field("mspi_st", &format_args!("{}", self.mspi_st().bits()))
+            .field("flash_pe", &format_args!("{}", self.flash_pe().bit()))
+            .field("usr", &format_args!("{}", self.usr().bit()))
+            .field("flash_hpm", &format_args!("{}", self.flash_hpm().bit()))
+            .field("flash_res", &format_args!("{}", self.flash_res().bit()))
+            .field("flash_dp", &format_args!("{}", self.flash_dp().bit()))
+            .field("flash_ce", &format_args!("{}", self.flash_ce().bit()))
+            .field("flash_be", &format_args!("{}", self.flash_be().bit()))
+            .field("flash_se", &format_args!("{}", self.flash_se().bit()))
+            .field("flash_pp", &format_args!("{}", self.flash_pp().bit()))
+            .field("flash_wrsr", &format_args!("{}", self.flash_wrsr().bit()))
+            .field("flash_rdsr", &format_args!("{}", self.flash_rdsr().bit()))
+            .field("flash_rdid", &format_args!("{}", self.flash_rdid().bit()))
+            .field("flash_wrdi", &format_args!("{}", self.flash_wrdi().bit()))
+            .field("flash_wren", &format_args!("{}", self.flash_wren().bit()))
+            .field("flash_read", &format_args!("{}", self.flash_read().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

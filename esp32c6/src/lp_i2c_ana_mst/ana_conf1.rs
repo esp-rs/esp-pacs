@@ -38,12 +38,29 @@ impl From<crate::W<ANA_CONF1_SPEC>> for W {
 pub type LP_I2C_ANA_MAST_ANA_CONF1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_ANA_CONF1` writer - need_des"]
 pub type LP_I2C_ANA_MAST_ANA_CONF1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ANA_CONF1_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, ANA_CONF1_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - need_des"]
     #[inline(always)]
     pub fn lp_i2c_ana_mast_ana_conf1(&self) -> LP_I2C_ANA_MAST_ANA_CONF1_R {
         LP_I2C_ANA_MAST_ANA_CONF1_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ANA_CONF1")
+            .field(
+                "lp_i2c_ana_mast_ana_conf1",
+                &format_args!("{}", self.lp_i2c_ana_mast_ana_conf1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ANA_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

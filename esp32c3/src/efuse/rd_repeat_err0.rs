@@ -14,45 +14,45 @@ impl From<crate::R<RD_REPEAT_ERR0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_DIS_ERR` reader - If any bit in RD_DIS is 1, then it indicates a programming error."]
-pub type RD_DIS_ERR_R = crate::FieldReader<u8, u8>;
+pub type RD_DIS_ERR_R = crate::FieldReader;
 #[doc = "Field `DIS_RTC_RAM_BOOT_ERR` reader - If DIS_RTC_RAM_BOOT is 1, then it indicates a programming error."]
-pub type DIS_RTC_RAM_BOOT_ERR_R = crate::BitReader<bool>;
+pub type DIS_RTC_RAM_BOOT_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_ICACHE_ERR` reader - If DIS_ICACHE is 1, then it indicates a programming error."]
-pub type DIS_ICACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_ICACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_USB_JTAG_ERR` reader - If DIS_USB_JTAG is 1, then it indicates a programming error."]
-pub type DIS_USB_JTAG_ERR_R = crate::BitReader<bool>;
+pub type DIS_USB_JTAG_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_ICACHE_ERR` reader - If DIS_DOWNLOAD_ICACHE is 1, then it indicates a programming error."]
-pub type DIS_DOWNLOAD_ICACHE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_ICACHE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_USB_DEVICE_ERR` reader - If DIS_USB_DEVICE is 1, then it indicates a programming error."]
-pub type DIS_USB_DEVICE_ERR_R = crate::BitReader<bool>;
+pub type DIS_USB_DEVICE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_FORCE_DOWNLOAD_ERR` reader - If DIS_FORCE_DOWNLOAD is 1, then it indicates a programming error."]
-pub type DIS_FORCE_DOWNLOAD_ERR_R = crate::BitReader<bool>;
+pub type DIS_FORCE_DOWNLOAD_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED6_ERR` reader - Reserved."]
-pub type RPT4_RESERVED6_ERR_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED6_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_CAN_ERR` reader - If DIS_CAN is 1, then it indicates a programming error."]
-pub type DIS_CAN_ERR_R = crate::BitReader<bool>;
+pub type DIS_CAN_ERR_R = crate::BitReader;
 #[doc = "Field `JTAG_SEL_ENABLE_ERR` reader - If JTAG_SEL_ENABLE is 1, then it indicates a programming error."]
-pub type JTAG_SEL_ENABLE_ERR_R = crate::BitReader<bool>;
+pub type JTAG_SEL_ENABLE_ERR_R = crate::BitReader;
 #[doc = "Field `SOFT_DIS_JTAG_ERR` reader - If SOFT_DIS_JTAG is 1, then it indicates a programming error."]
-pub type SOFT_DIS_JTAG_ERR_R = crate::FieldReader<u8, u8>;
+pub type SOFT_DIS_JTAG_ERR_R = crate::FieldReader;
 #[doc = "Field `DIS_PAD_JTAG_ERR` reader - If DIS_PAD_JTAG is 1, then it indicates a programming error."]
-pub type DIS_PAD_JTAG_ERR_R = crate::BitReader<bool>;
+pub type DIS_PAD_JTAG_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR` reader - If DIS_DOWNLOAD_MANUAL_ENCRYPT is 1, then it indicates a programming error."]
-pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_ERR_R = crate::BitReader;
 #[doc = "Field `USB_DREFH_ERR` reader - If any bit in USB_DREFH is 1, then it indicates a programming error."]
-pub type USB_DREFH_ERR_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFH_ERR_R = crate::FieldReader;
 #[doc = "Field `USB_DREFL_ERR` reader - If any bit in USB_DREFL is 1, then it indicates a programming error."]
-pub type USB_DREFL_ERR_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFL_ERR_R = crate::FieldReader;
 #[doc = "Field `USB_EXCHG_PINS_ERR` reader - If USB_EXCHG_PINS is 1, then it indicates a programming error."]
-pub type USB_EXCHG_PINS_ERR_R = crate::BitReader<bool>;
+pub type USB_EXCHG_PINS_ERR_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_AS_GPIO_ERR` reader - If VDD_SPI_AS_GPIO is 1, then it indicates a programming error."]
-pub type VDD_SPI_AS_GPIO_ERR_R = crate::BitReader<bool>;
+pub type VDD_SPI_AS_GPIO_ERR_R = crate::BitReader;
 #[doc = "Field `BTLC_GPIO_ENABLE_ERR` reader - If any bit in BTLC_GPIO_ENABLE is 1, then it indicates a programming error."]
-pub type BTLC_GPIO_ENABLE_ERR_R = crate::FieldReader<u8, u8>;
+pub type BTLC_GPIO_ENABLE_ERR_R = crate::FieldReader;
 #[doc = "Field `POWERGLITCH_EN_ERR` reader - If POWERGLITCH_EN is 1, then it indicates a programming error."]
-pub type POWERGLITCH_EN_ERR_R = crate::BitReader<bool>;
+pub type POWERGLITCH_EN_ERR_R = crate::BitReader;
 #[doc = "Field `POWER_GLITCH_DSENSE_ERR` reader - If any bit in POWER_GLITCH_DSENSE is 1, then it indicates a programming error."]
-pub type POWER_GLITCH_DSENSE_ERR_R = crate::FieldReader<u8, u8>;
+pub type POWER_GLITCH_DSENSE_ERR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:6 - If any bit in RD_DIS is 1, then it indicates a programming error."]
     #[inline(always)]
@@ -153,6 +153,93 @@ impl R {
     #[inline(always)]
     pub fn power_glitch_dsense_err(&self) -> POWER_GLITCH_DSENSE_ERR_R {
         POWER_GLITCH_DSENSE_ERR_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR0")
+            .field("rd_dis_err", &format_args!("{}", self.rd_dis_err().bits()))
+            .field(
+                "dis_rtc_ram_boot_err",
+                &format_args!("{}", self.dis_rtc_ram_boot_err().bit()),
+            )
+            .field(
+                "dis_icache_err",
+                &format_args!("{}", self.dis_icache_err().bit()),
+            )
+            .field(
+                "dis_usb_jtag_err",
+                &format_args!("{}", self.dis_usb_jtag_err().bit()),
+            )
+            .field(
+                "dis_download_icache_err",
+                &format_args!("{}", self.dis_download_icache_err().bit()),
+            )
+            .field(
+                "dis_usb_device_err",
+                &format_args!("{}", self.dis_usb_device_err().bit()),
+            )
+            .field(
+                "dis_force_download_err",
+                &format_args!("{}", self.dis_force_download_err().bit()),
+            )
+            .field(
+                "rpt4_reserved6_err",
+                &format_args!("{}", self.rpt4_reserved6_err().bit()),
+            )
+            .field("dis_can_err", &format_args!("{}", self.dis_can_err().bit()))
+            .field(
+                "jtag_sel_enable_err",
+                &format_args!("{}", self.jtag_sel_enable_err().bit()),
+            )
+            .field(
+                "soft_dis_jtag_err",
+                &format_args!("{}", self.soft_dis_jtag_err().bits()),
+            )
+            .field(
+                "dis_pad_jtag_err",
+                &format_args!("{}", self.dis_pad_jtag_err().bit()),
+            )
+            .field(
+                "dis_download_manual_encrypt_err",
+                &format_args!("{}", self.dis_download_manual_encrypt_err().bit()),
+            )
+            .field(
+                "usb_drefh_err",
+                &format_args!("{}", self.usb_drefh_err().bits()),
+            )
+            .field(
+                "usb_drefl_err",
+                &format_args!("{}", self.usb_drefl_err().bits()),
+            )
+            .field(
+                "usb_exchg_pins_err",
+                &format_args!("{}", self.usb_exchg_pins_err().bit()),
+            )
+            .field(
+                "vdd_spi_as_gpio_err",
+                &format_args!("{}", self.vdd_spi_as_gpio_err().bit()),
+            )
+            .field(
+                "btlc_gpio_enable_err",
+                &format_args!("{}", self.btlc_gpio_enable_err().bits()),
+            )
+            .field(
+                "powerglitch_en_err",
+                &format_args!("{}", self.powerglitch_en_err().bit()),
+            )
+            .field(
+                "power_glitch_dsense_err",
+                &format_args!("{}", self.power_glitch_dsense_err().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err0](index.html) module"]

@@ -35,14 +35,31 @@ impl From<crate::W<TIMER5_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_SLP_VAL` reader - minimal sleep cycles in slow_clk_rtc"]
-pub type MIN_SLP_VAL_R = crate::FieldReader<u8, u8>;
+pub type MIN_SLP_VAL_R = crate::FieldReader;
 #[doc = "Field `MIN_SLP_VAL` writer - minimal sleep cycles in slow_clk_rtc"]
-pub type MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER5_SPEC, u8, u8, 8, O>;
+pub type MIN_SLP_VAL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER5_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
     pub fn min_slp_val(&self) -> MIN_SLP_VAL_R {
         MIN_SLP_VAL_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER5")
+            .field(
+                "min_slp_val",
+                &format_args!("{}", self.min_slp_val().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,33 +35,33 @@ impl From<crate::W<RESET_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `BUS_RESET_EN` writer - need_des"]
-pub type BUS_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type BUS_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `OTP_DBG_RESET_EN` reader - need_des"]
-pub type OTP_DBG_RESET_EN_R = crate::BitReader<bool>;
+pub type OTP_DBG_RESET_EN_R = crate::BitReader;
 #[doc = "Field `OTP_DBG_RESET_EN` writer - need_des"]
-pub type OTP_DBG_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type OTP_DBG_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `LP_UART_RESET_EN` reader - need_des"]
-pub type LP_UART_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_UART_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_UART_RESET_EN` writer - need_des"]
-pub type LP_UART_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type LP_UART_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `LP_IO_RESET_EN` reader - need_des"]
-pub type LP_IO_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_IO_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_IO_RESET_EN` writer - need_des"]
-pub type LP_IO_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type LP_IO_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `LP_EXT_I2C_RESET_EN` reader - need_des"]
-pub type LP_EXT_I2C_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_EXT_I2C_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_EXT_I2C_RESET_EN` writer - need_des"]
-pub type LP_EXT_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type LP_EXT_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `LP_ANA_I2C_RESET_EN` reader - need_des"]
-pub type LP_ANA_I2C_RESET_EN_R = crate::BitReader<bool>;
+pub type LP_ANA_I2C_RESET_EN_R = crate::BitReader;
 #[doc = "Field `LP_ANA_I2C_RESET_EN` writer - need_des"]
-pub type LP_ANA_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type LP_ANA_I2C_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `EFUSE_RESET_EN` reader - need_des"]
-pub type EFUSE_RESET_EN_R = crate::BitReader<bool>;
+pub type EFUSE_RESET_EN_R = crate::BitReader;
 #[doc = "Field `EFUSE_RESET_EN` writer - need_des"]
-pub type EFUSE_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type EFUSE_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 #[doc = "Field `LP_CPU_RESET_EN` writer - need_des"]
-pub type LP_CPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EN_SPEC, bool, O>;
+pub type LP_CPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
@@ -92,6 +92,43 @@ impl R {
     #[inline(always)]
     pub fn efuse_reset_en(&self) -> EFUSE_RESET_EN_R {
         EFUSE_RESET_EN_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_EN")
+            .field(
+                "otp_dbg_reset_en",
+                &format_args!("{}", self.otp_dbg_reset_en().bit()),
+            )
+            .field(
+                "lp_uart_reset_en",
+                &format_args!("{}", self.lp_uart_reset_en().bit()),
+            )
+            .field(
+                "lp_io_reset_en",
+                &format_args!("{}", self.lp_io_reset_en().bit()),
+            )
+            .field(
+                "lp_ext_i2c_reset_en",
+                &format_args!("{}", self.lp_ext_i2c_reset_en().bit()),
+            )
+            .field(
+                "lp_ana_i2c_reset_en",
+                &format_args!("{}", self.lp_ana_i2c_reset_en().bit()),
+            )
+            .field(
+                "efuse_reset_en",
+                &format_args!("{}", self.efuse_reset_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

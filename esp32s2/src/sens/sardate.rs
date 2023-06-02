@@ -37,12 +37,26 @@ impl From<crate::W<SARDATE_SPEC>> for W {
 #[doc = "Field `SAR_DATE` reader - Version Control Register"]
 pub type SAR_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR_DATE` writer - Version Control Register"]
-pub type SAR_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SARDATE_SPEC, u32, u32, 28, O>;
+pub type SAR_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SARDATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Version Control Register"]
     #[inline(always)]
     pub fn sar_date(&self) -> SAR_DATE_R {
         SAR_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SARDATE")
+            .field("sar_date", &format_args!("{}", self.sar_date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SARDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

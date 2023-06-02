@@ -35,19 +35,19 @@ impl From<crate::W<FIFO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_START_ADDR` reader - This is the offset address of the last received data, as described in I2C_NONFIFO_RX_THRES."]
-pub type RXFIFO_START_ADDR_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_START_ADDR_R = crate::FieldReader;
 #[doc = "Field `RXFIFO_END_ADDR` reader - This is the offset address of the last received data, as described in I2C_NONFIFO_RX_THRES. This value refreshes when an I2C_RXFIFO_UDF_INT or I2C_TRANS_COMPLETE_INT interrupt is generated."]
-pub type RXFIFO_END_ADDR_R = crate::FieldReader<u8, u8>;
+pub type RXFIFO_END_ADDR_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_START_ADDR` reader - This is the offset address of the first sent data, as described in I2C_NONFIFO_TX_THRES."]
-pub type TXFIFO_START_ADDR_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_START_ADDR_R = crate::FieldReader;
 #[doc = "Field `TXFIFO_END_ADDR` reader - This is the offset address of the last sent data, as described in I2C_NONFIFO_TX_THRES. The value refreshes when an I2C_TXFIFO_OVF_INT or I2C_TRANS_COMPLETE_INT interrupt is generated."]
-pub type TXFIFO_END_ADDR_R = crate::FieldReader<u8, u8>;
+pub type TXFIFO_END_ADDR_R = crate::FieldReader;
 #[doc = "Field `RX_UPDATE` writer - Write 0 or 1 to I2C_RX_UPDATE to update the value of I2C_RXFIFO_END_ADDR and I2C_RXFIFO_START_ADDR."]
-pub type RX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_ST_SPEC, bool, O>;
+pub type RX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_ST_SPEC, O>;
 #[doc = "Field `TX_UPDATE` writer - Write 0 or 1 to I2C_TX_UPDATE to update the value of I2C_TXFIFO_END_ADDR and I2C_TXFIFO_START_ADDR."]
-pub type TX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_ST_SPEC, bool, O>;
+pub type TX_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_ST_SPEC, O>;
 #[doc = "Field `SLAVE_RW_POINT` reader - The received data in I2C slave mode."]
-pub type SLAVE_RW_POINT_R = crate::FieldReader<u8, u8>;
+pub type SLAVE_RW_POINT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4 - This is the offset address of the last received data, as described in I2C_NONFIFO_RX_THRES."]
     #[inline(always)]
@@ -73,6 +73,39 @@ impl R {
     #[inline(always)]
     pub fn slave_rw_point(&self) -> SLAVE_RW_POINT_R {
         SLAVE_RW_POINT_R::new(((self.bits >> 22) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO_ST")
+            .field(
+                "rxfifo_start_addr",
+                &format_args!("{}", self.rxfifo_start_addr().bits()),
+            )
+            .field(
+                "rxfifo_end_addr",
+                &format_args!("{}", self.rxfifo_end_addr().bits()),
+            )
+            .field(
+                "txfifo_start_addr",
+                &format_args!("{}", self.txfifo_start_addr().bits()),
+            )
+            .field(
+                "txfifo_end_addr",
+                &format_args!("{}", self.txfifo_end_addr().bits()),
+            )
+            .field(
+                "slave_rw_point",
+                &format_args!("{}", self.slave_rw_point().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

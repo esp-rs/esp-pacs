@@ -35,14 +35,28 @@ impl From<crate::W<IN1_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_NEXT` reader - GPIO32~39 input value"]
-pub type DATA_NEXT_R = crate::FieldReader<u8, u8>;
+pub type DATA_NEXT_R = crate::FieldReader;
 #[doc = "Field `DATA_NEXT` writer - GPIO32~39 input value"]
-pub type DATA_NEXT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IN1_SPEC, u8, u8, 8, O>;
+pub type DATA_NEXT_W<'a, const O: u8> = crate::FieldWriter<'a, IN1_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 input value"]
     #[inline(always)]
     pub fn data_next(&self) -> DATA_NEXT_R {
         DATA_NEXT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN1")
+            .field("data_next", &format_args!("{}", self.data_next().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

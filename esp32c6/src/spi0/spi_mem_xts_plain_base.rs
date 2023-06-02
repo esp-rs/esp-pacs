@@ -38,12 +38,29 @@ impl From<crate::W<SPI_MEM_XTS_PLAIN_BASE_SPEC>> for W {
 pub type SPI_XTS_PLAIN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_XTS_PLAIN` writer - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
 pub type SPI_XTS_PLAIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_XTS_PLAIN_BASE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_PLAIN_BASE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
     #[inline(always)]
     pub fn spi_xts_plain(&self) -> SPI_XTS_PLAIN_R {
         SPI_XTS_PLAIN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_XTS_PLAIN_BASE")
+            .field(
+                "spi_xts_plain",
+                &format_args!("{}", self.spi_xts_plain().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_XTS_PLAIN_BASE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

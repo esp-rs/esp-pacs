@@ -37,11 +37,11 @@ impl From<crate::W<COMD_SPEC>> for W {
 #[doc = "Field `COMMAND` reader - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART; 1: WRITE; 2: READ; 3: STOP; 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
 pub type COMMAND_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COMMAND` writer - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART; 1: WRITE; 2: READ; 3: STOP; 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, COMD_SPEC, u16, u16, 14, O>;
+pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, COMD_SPEC, 14, O, u16, u16>;
 #[doc = "Field `COMMAND_DONE` reader - When command 0 is done in I2C Master mode, this bit changes to high level."]
-pub type COMMAND_DONE_R = crate::BitReader<bool>;
+pub type COMMAND_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND_DONE` writer - When command 0 is done in I2C Master mode, this bit changes to high level."]
-pub type COMMAND_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, COMD_SPEC, bool, O>;
+pub type COMMAND_DONE_W<'a, const O: u8> = crate::BitWriter<'a, COMD_SPEC, O>;
 impl R {
     #[doc = "Bits 0:13 - This is the content of command 0. It consists of three parts: op_code is the command, 0: RSTART; 1: WRITE; 2: READ; 3: STOP; 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn command_done(&self) -> COMMAND_DONE_R {
         COMMAND_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COMD")
+            .field("command", &format_args!("{}", self.command().bits()))
+            .field(
+                "command_done",
+                &format_args!("{}", self.command_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

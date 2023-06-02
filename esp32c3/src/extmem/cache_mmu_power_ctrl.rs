@@ -35,20 +35,20 @@ impl From<crate::W<CACHE_MMU_POWER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_MEM_FORCE_ON` reader - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
-pub type CACHE_MMU_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type CACHE_MMU_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_ON` writer - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
 pub type CACHE_MMU_MEM_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_MMU_POWER_CTRL_SPEC, O>;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PD` reader - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
-pub type CACHE_MMU_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type CACHE_MMU_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PD` writer - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
 pub type CACHE_MMU_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_MMU_POWER_CTRL_SPEC, O>;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PU` reader - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
-pub type CACHE_MMU_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type CACHE_MMU_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_MEM_FORCE_PU` writer - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
 pub type CACHE_MMU_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_MMU_POWER_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn cache_mmu_mem_force_pu(&self) -> CACHE_MMU_MEM_FORCE_PU_R {
         CACHE_MMU_MEM_FORCE_PU_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_MMU_POWER_CTRL")
+            .field(
+                "cache_mmu_mem_force_on",
+                &format_args!("{}", self.cache_mmu_mem_force_on().bit()),
+            )
+            .field(
+                "cache_mmu_mem_force_pd",
+                &format_args!("{}", self.cache_mmu_mem_force_pd().bit()),
+            )
+            .field(
+                "cache_mmu_mem_force_pu",
+                &format_args!("{}", self.cache_mmu_mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_POWER_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,11 +37,11 @@ impl From<crate::W<U_CONF2_SPEC>> for W {
 #[doc = "Field `CNT_H_LIM` reader - This register is used to configure the thr_h_lim value for unit %s."]
 pub type CNT_H_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CNT_H_LIM` writer - This register is used to configure the thr_h_lim value for unit %s."]
-pub type CNT_H_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF2_SPEC, u16, u16, 16, O>;
+pub type CNT_H_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16, u16>;
 #[doc = "Field `CNT_L_LIM` reader - This register is used to configure the thr_l_lim value for unit %s."]
 pub type CNT_L_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CNT_L_LIM` writer - This register is used to configure the thr_l_lim value for unit %s."]
-pub type CNT_L_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF2_SPEC, u16, u16, 16, O>;
+pub type CNT_L_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the thr_h_lim value for unit %s."]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn cnt_l_lim(&self) -> CNT_L_LIM_R {
         CNT_L_LIM_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("U_CONF2")
+            .field("cnt_h_lim", &format_args!("{}", self.cnt_h_lim().bits()))
+            .field("cnt_l_lim", &format_args!("{}", self.cnt_l_lim().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<U_CONF2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

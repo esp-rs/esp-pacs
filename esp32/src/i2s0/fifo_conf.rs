@@ -35,35 +35,33 @@ impl From<crate::W<FIFO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_DATA_NUM` reader - "]
-pub type RX_DATA_NUM_R = crate::FieldReader<u8, u8>;
+pub type RX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `RX_DATA_NUM` writer - "]
-pub type RX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, O>;
+pub type RX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 6, O>;
 #[doc = "Field `TX_DATA_NUM` reader - "]
-pub type TX_DATA_NUM_R = crate::FieldReader<u8, u8>;
+pub type TX_DATA_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_DATA_NUM` writer - "]
-pub type TX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, O>;
+pub type TX_DATA_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 6, O>;
 #[doc = "Field `DSCR_EN` reader - "]
-pub type DSCR_EN_R = crate::BitReader<bool>;
+pub type DSCR_EN_R = crate::BitReader;
 #[doc = "Field `DSCR_EN` writer - "]
-pub type DSCR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type DSCR_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `TX_FIFO_MOD` reader - "]
-pub type TX_FIFO_MOD_R = crate::FieldReader<u8, u8>;
+pub type TX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_FIFO_MOD` writer - "]
-pub type TX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 3, O>;
+pub type TX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 3, O>;
 #[doc = "Field `RX_FIFO_MOD` reader - "]
-pub type RX_FIFO_MOD_R = crate::FieldReader<u8, u8>;
+pub type RX_FIFO_MOD_R = crate::FieldReader;
 #[doc = "Field `RX_FIFO_MOD` writer - "]
-pub type RX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_FIFO_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, FIFO_CONF_SPEC, 3, O>;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` reader - "]
-pub type TX_FIFO_MOD_FORCE_EN_R = crate::BitReader<bool>;
+pub type TX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `TX_FIFO_MOD_FORCE_EN` writer - "]
-pub type TX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type TX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` reader - "]
-pub type RX_FIFO_MOD_FORCE_EN_R = crate::BitReader<bool>;
+pub type RX_FIFO_MOD_FORCE_EN_R = crate::BitReader;
 #[doc = "Field `RX_FIFO_MOD_FORCE_EN` writer - "]
-pub type RX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, O>;
+pub type RX_FIFO_MOD_FORCE_EN_W<'a, const O: u8> = crate::BitWriter<'a, FIFO_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -99,6 +97,44 @@ impl R {
     #[inline(always)]
     pub fn rx_fifo_mod_force_en(&self) -> RX_FIFO_MOD_FORCE_EN_R {
         RX_FIFO_MOD_FORCE_EN_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FIFO_CONF")
+            .field(
+                "rx_data_num",
+                &format_args!("{}", self.rx_data_num().bits()),
+            )
+            .field(
+                "tx_data_num",
+                &format_args!("{}", self.tx_data_num().bits()),
+            )
+            .field("dscr_en", &format_args!("{}", self.dscr_en().bit()))
+            .field(
+                "tx_fifo_mod",
+                &format_args!("{}", self.tx_fifo_mod().bits()),
+            )
+            .field(
+                "rx_fifo_mod",
+                &format_args!("{}", self.rx_fifo_mod().bits()),
+            )
+            .field(
+                "tx_fifo_mod_force_en",
+                &format_args!("{}", self.tx_fifo_mod_force_en().bit()),
+            )
+            .field(
+                "rx_fifo_mod_force_en",
+                &format_args!("{}", self.rx_fifo_mod_force_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

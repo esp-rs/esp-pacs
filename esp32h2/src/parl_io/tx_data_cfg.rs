@@ -37,18 +37,15 @@ impl From<crate::W<TX_DATA_CFG_SPEC>> for W {
 #[doc = "Field `TX_BITLEN` reader - Configures expected byte number of sent data."]
 pub type TX_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TX_BITLEN` writer - Configures expected byte number of sent data."]
-pub type TX_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_DATA_CFG_SPEC, u32, u32, 19, O>;
+pub type TX_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, TX_DATA_CFG_SPEC, 19, O, u32, u32>;
 #[doc = "Field `TX_DATA_ORDER_INV` reader - Set this bit to invert bit order of one byte sent from TX_FIFO to IO data."]
-pub type TX_DATA_ORDER_INV_R = crate::BitReader<bool>;
+pub type TX_DATA_ORDER_INV_R = crate::BitReader;
 #[doc = "Field `TX_DATA_ORDER_INV` writer - Set this bit to invert bit order of one byte sent from TX_FIFO to IO data."]
-pub type TX_DATA_ORDER_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TX_DATA_CFG_SPEC, bool, O>;
+pub type TX_DATA_ORDER_INV_W<'a, const O: u8> = crate::BitWriter<'a, TX_DATA_CFG_SPEC, O>;
 #[doc = "Field `TX_BUS_WID_SEL` reader - Configures the txd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
-pub type TX_BUS_WID_SEL_R = crate::FieldReader<u8, u8>;
+pub type TX_BUS_WID_SEL_R = crate::FieldReader;
 #[doc = "Field `TX_BUS_WID_SEL` writer - Configures the txd bus width. 3'd0: bus width is 1. 3'd1: bus width is 2. 3'd2: bus width is 4. 3'd3: bus width is 8."]
-pub type TX_BUS_WID_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_DATA_CFG_SPEC, u8, u8, 3, O>;
+pub type TX_BUS_WID_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TX_DATA_CFG_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 9:27 - Configures expected byte number of sent data."]
     #[inline(always)]
@@ -64,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn tx_bus_wid_sel(&self) -> TX_BUS_WID_SEL_R {
         TX_BUS_WID_SEL_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_DATA_CFG")
+            .field("tx_bitlen", &format_args!("{}", self.tx_bitlen().bits()))
+            .field(
+                "tx_data_order_inv",
+                &format_args!("{}", self.tx_data_order_inv().bit()),
+            )
+            .field(
+                "tx_bus_wid_sel",
+                &format_args!("{}", self.tx_bus_wid_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_DATA_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

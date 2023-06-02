@@ -35,15 +35,13 @@ impl From<crate::W<CACHE_MMU_ACCESS_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_MMU_RD_ACS` reader - pro_mmu_rd_acs"]
-pub type PRO_MMU_RD_ACS_R = crate::BitReader<bool>;
+pub type PRO_MMU_RD_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_MMU_RD_ACS` writer - pro_mmu_rd_acs"]
-pub type PRO_MMU_RD_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_ACCESS_1_SPEC, bool, O>;
+pub type PRO_MMU_RD_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_MMU_ACCESS_1_SPEC, O>;
 #[doc = "Field `PRO_MMU_WR_ACS` reader - pro_mmu_wr_acs"]
-pub type PRO_MMU_WR_ACS_R = crate::BitReader<bool>;
+pub type PRO_MMU_WR_ACS_R = crate::BitReader;
 #[doc = "Field `PRO_MMU_WR_ACS` writer - pro_mmu_wr_acs"]
-pub type PRO_MMU_WR_ACS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_ACCESS_1_SPEC, bool, O>;
+pub type PRO_MMU_WR_ACS_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_MMU_ACCESS_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - pro_mmu_rd_acs"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn pro_mmu_wr_acs(&self) -> PRO_MMU_WR_ACS_R {
         PRO_MMU_WR_ACS_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_MMU_ACCESS_1")
+            .field(
+                "pro_mmu_rd_acs",
+                &format_args!("{}", self.pro_mmu_rd_acs().bit()),
+            )
+            .field(
+                "pro_mmu_wr_acs",
+                &format_args!("{}", self.pro_mmu_wr_acs().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_ACCESS_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

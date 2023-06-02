@@ -35,17 +35,17 @@ impl From<crate::W<HSCH_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL` reader - There are four high speed timers the two bits are used to select one of them for high speed channel0. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
-pub type TIMER_SEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER_SEL` writer - There are four high speed timers the two bits are used to select one of them for high speed channel0. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
-pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSCH_CONF0_SPEC, u8, u8, 2, O>;
+pub type TIMER_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF0_SPEC, 2, O>;
 #[doc = "Field `SIG_OUT_EN` reader - This is the output enable control bit for high speed channel0"]
-pub type SIG_OUT_EN_R = crate::BitReader<bool>;
+pub type SIG_OUT_EN_R = crate::BitReader;
 #[doc = "Field `SIG_OUT_EN` writer - This is the output enable control bit for high speed channel0"]
-pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSCH_CONF0_SPEC, bool, O>;
+pub type SIG_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, HSCH_CONF0_SPEC, O>;
 #[doc = "Field `IDLE_LV` reader - This bit is used to control the output value when high speed channel0 is off."]
-pub type IDLE_LV_R = crate::BitReader<bool>;
+pub type IDLE_LV_R = crate::BitReader;
 #[doc = "Field `IDLE_LV` writer - This bit is used to control the output value when high speed channel0 is off."]
-pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSCH_CONF0_SPEC, bool, O>;
+pub type IDLE_LV_W<'a, const O: u8> = crate::BitWriter<'a, HSCH_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - There are four high speed timers the two bits are used to select one of them for high speed channel0. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn idle_lv(&self) -> IDLE_LV_R {
         IDLE_LV_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HSCH_CONF0")
+            .field("timer_sel", &format_args!("{}", self.timer_sel().bits()))
+            .field("sig_out_en", &format_args!("{}", self.sig_out_en().bit()))
+            .field("idle_lv", &format_args!("{}", self.idle_lv().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HSCH_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

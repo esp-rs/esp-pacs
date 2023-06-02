@@ -38,12 +38,29 @@ impl From<crate::W<NOUSE_SPEC>> for W {
 pub type LP_I2C_ANA_MAST_I2C_MST_NOUSE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MST_NOUSE` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MST_NOUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, NOUSE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, NOUSE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c_mst_nouse(&self) -> LP_I2C_ANA_MAST_I2C_MST_NOUSE_R {
         LP_I2C_ANA_MAST_I2C_MST_NOUSE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("NOUSE")
+            .field(
+                "lp_i2c_ana_mast_i2c_mst_nouse",
+                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mst_nouse().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<NOUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

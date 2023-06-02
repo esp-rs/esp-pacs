@@ -37,13 +37,26 @@ impl From<crate::W<FRC2_ALARM_SPEC>> for W {
 #[doc = "Field `frc2_alarm` reader - the alarm value for the counter"]
 pub type FRC2_ALARM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `frc2_alarm` writer - the alarm value for the counter"]
-pub type FRC2_ALARM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FRC2_ALARM_SPEC, u32, u32, 32, O>;
+pub type FRC2_ALARM_W<'a, const O: u8> = crate::FieldWriter<'a, FRC2_ALARM_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - the alarm value for the counter"]
     #[inline(always)]
     pub fn frc2_alarm(&self) -> FRC2_ALARM_R {
         FRC2_ALARM_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRC2_ALARM")
+            .field("frc2_alarm", &format_args!("{}", self.frc2_alarm().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRC2_ALARM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,46 +35,45 @@ impl From<crate::W<SPI_MEM_SRAM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_SCLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is always on."]
-pub type SPI_MEM_SCLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SCLK_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SWB_MODE` reader - Mode bits in the external RAM fast read mode it is combined with spi_mem_fastrd_mode bit."]
-pub type SPI_MEM_SWB_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_SWB_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_SDIN_DUAL` reader - For SPI0 external RAM , din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
-pub type SPI_MEM_SDIN_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDOUT_DUAL` reader - For SPI0 external RAM , dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
-pub type SPI_MEM_SDOUT_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SADDR_DUAL` reader - For SPI0 external RAM , address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
-pub type SPI_MEM_SADDR_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_SADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDIN_QUAD` reader - For SPI0 external RAM , din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
-pub type SPI_MEM_SDIN_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDOUT_QUAD` reader - For SPI0 external RAM , dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
-pub type SPI_MEM_SDOUT_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SADDR_QUAD` reader - For SPI0 external RAM , address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
-pub type SPI_MEM_SADDR_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_SADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SCMD_QUAD` reader - For SPI0 external RAM , cmd phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
-pub type SPI_MEM_SCMD_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_SCMD_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDIN_OCT` reader - For SPI0 external RAM , din phase apply 8 signals. 1: enable 0: disable."]
-pub type SPI_MEM_SDIN_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDIN_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDOUT_OCT` reader - For SPI0 external RAM , dout phase apply 8 signals. 1: enable 0: disable."]
-pub type SPI_MEM_SDOUT_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDOUT_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SADDR_OCT` reader - For SPI0 external RAM , address phase apply 4 signals. 1: enable 0: disable."]
-pub type SPI_MEM_SADDR_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SADDR_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SCMD_OCT` reader - For SPI0 external RAM , cmd phase apply 8 signals. 1: enable 0: disable."]
-pub type SPI_MEM_SCMD_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SCMD_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDUMMY_RIN` reader - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_SDUMMY_RIN_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDUMMY_RIN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_SDUMMY_RIN` writer - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_SDUMMY_RIN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_SRAM_CMD_SPEC, bool, O>;
+pub type SPI_MEM_SDUMMY_RIN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_SRAM_CMD_SPEC, O>;
 #[doc = "Field `SPI_MEM_SDUMMY_WOUT` reader - In the dummy phase of a MSPI write data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_SDUMMY_WOUT_R = crate::BitReader<bool>;
+pub type SPI_MEM_SDUMMY_WOUT_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
-pub type SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT_R = crate::BitReader<bool>;
+pub type SPI_SMEM_WDUMMY_DQS_ALWAYS_OUT_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_WDUMMY_ALWAYS_OUT` reader - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
-pub type SPI_SMEM_WDUMMY_ALWAYS_OUT_R = crate::BitReader<bool>;
+pub type SPI_SMEM_WDUMMY_ALWAYS_OUT_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DQS_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
-pub type SPI_SMEM_DQS_IE_ALWAYS_ON_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DQS_IE_ALWAYS_ON_R = crate::BitReader;
 #[doc = "Field `SPI_SMEM_DATA_IE_ALWAYS_ON` reader - When accesses to external RAM, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
-pub type SPI_SMEM_DATA_IE_ALWAYS_ON_R = crate::BitReader<bool>;
+pub type SPI_SMEM_DATA_IE_ALWAYS_ON_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is always on."]
     #[inline(always)]
@@ -170,6 +169,95 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_data_ie_always_on(&self) -> SPI_SMEM_DATA_IE_ALWAYS_ON_R {
         SPI_SMEM_DATA_IE_ALWAYS_ON_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_SRAM_CMD")
+            .field(
+                "spi_mem_sclk_mode",
+                &format_args!("{}", self.spi_mem_sclk_mode().bits()),
+            )
+            .field(
+                "spi_mem_swb_mode",
+                &format_args!("{}", self.spi_mem_swb_mode().bits()),
+            )
+            .field(
+                "spi_mem_sdin_dual",
+                &format_args!("{}", self.spi_mem_sdin_dual().bit()),
+            )
+            .field(
+                "spi_mem_sdout_dual",
+                &format_args!("{}", self.spi_mem_sdout_dual().bit()),
+            )
+            .field(
+                "spi_mem_saddr_dual",
+                &format_args!("{}", self.spi_mem_saddr_dual().bit()),
+            )
+            .field(
+                "spi_mem_sdin_quad",
+                &format_args!("{}", self.spi_mem_sdin_quad().bit()),
+            )
+            .field(
+                "spi_mem_sdout_quad",
+                &format_args!("{}", self.spi_mem_sdout_quad().bit()),
+            )
+            .field(
+                "spi_mem_saddr_quad",
+                &format_args!("{}", self.spi_mem_saddr_quad().bit()),
+            )
+            .field(
+                "spi_mem_scmd_quad",
+                &format_args!("{}", self.spi_mem_scmd_quad().bit()),
+            )
+            .field(
+                "spi_mem_sdin_oct",
+                &format_args!("{}", self.spi_mem_sdin_oct().bit()),
+            )
+            .field(
+                "spi_mem_sdout_oct",
+                &format_args!("{}", self.spi_mem_sdout_oct().bit()),
+            )
+            .field(
+                "spi_mem_saddr_oct",
+                &format_args!("{}", self.spi_mem_saddr_oct().bit()),
+            )
+            .field(
+                "spi_mem_scmd_oct",
+                &format_args!("{}", self.spi_mem_scmd_oct().bit()),
+            )
+            .field(
+                "spi_mem_sdummy_rin",
+                &format_args!("{}", self.spi_mem_sdummy_rin().bit()),
+            )
+            .field(
+                "spi_mem_sdummy_wout",
+                &format_args!("{}", self.spi_mem_sdummy_wout().bit()),
+            )
+            .field(
+                "spi_smem_wdummy_dqs_always_out",
+                &format_args!("{}", self.spi_smem_wdummy_dqs_always_out().bit()),
+            )
+            .field(
+                "spi_smem_wdummy_always_out",
+                &format_args!("{}", self.spi_smem_wdummy_always_out().bit()),
+            )
+            .field(
+                "spi_smem_dqs_ie_always_on",
+                &format_args!("{}", self.spi_smem_dqs_ie_always_on().bit()),
+            )
+            .field(
+                "spi_smem_data_ie_always_on",
+                &format_args!("{}", self.spi_smem_data_ie_always_on().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_SRAM_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

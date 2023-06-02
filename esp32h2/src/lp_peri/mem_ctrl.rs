@@ -35,24 +35,23 @@ impl From<crate::W<MEM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `UART_WAKEUP_FLAG_CLR` writer - need_des"]
-pub type UART_WAKEUP_FLAG_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
+pub type UART_WAKEUP_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CTRL_SPEC, O>;
 #[doc = "Field `UART_WAKEUP_FLAG` reader - need_des"]
-pub type UART_WAKEUP_FLAG_R = crate::BitReader<bool>;
+pub type UART_WAKEUP_FLAG_R = crate::BitReader;
 #[doc = "Field `UART_WAKEUP_FLAG` writer - need_des"]
-pub type UART_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
+pub type UART_WAKEUP_FLAG_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CTRL_SPEC, O>;
 #[doc = "Field `UART_WAKEUP_EN` reader - need_des"]
-pub type UART_WAKEUP_EN_R = crate::BitReader<bool>;
+pub type UART_WAKEUP_EN_R = crate::BitReader;
 #[doc = "Field `UART_WAKEUP_EN` writer - need_des"]
-pub type UART_WAKEUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
+pub type UART_WAKEUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CTRL_SPEC, O>;
 #[doc = "Field `UART_MEM_FORCE_PD` reader - need_des"]
-pub type UART_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type UART_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `UART_MEM_FORCE_PD` writer - need_des"]
-pub type UART_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
+pub type UART_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CTRL_SPEC, O>;
 #[doc = "Field `UART_MEM_FORCE_PU` reader - need_des"]
-pub type UART_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type UART_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `UART_MEM_FORCE_PU` writer - need_des"]
-pub type UART_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CTRL_SPEC, bool, O>;
+pub type UART_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
@@ -73,6 +72,35 @@ impl R {
     #[inline(always)]
     pub fn uart_mem_force_pu(&self) -> UART_MEM_FORCE_PU_R {
         UART_MEM_FORCE_PU_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CTRL")
+            .field(
+                "uart_wakeup_flag",
+                &format_args!("{}", self.uart_wakeup_flag().bit()),
+            )
+            .field(
+                "uart_wakeup_en",
+                &format_args!("{}", self.uart_wakeup_en().bit()),
+            )
+            .field(
+                "uart_mem_force_pd",
+                &format_args!("{}", self.uart_mem_force_pd().bit()),
+            )
+            .field(
+                "uart_mem_force_pu",
+                &format_args!("{}", self.uart_mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

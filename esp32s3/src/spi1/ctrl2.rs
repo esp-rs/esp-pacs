@@ -35,14 +35,28 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SYNC_RESET` reader - The FSM will be reset."]
-pub type SYNC_RESET_R = crate::BitReader<bool>;
+pub type SYNC_RESET_R = crate::BitReader;
 #[doc = "Field `SYNC_RESET` writer - The FSM will be reset."]
-pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
     pub fn sync_reset(&self) -> SYNC_RESET_R {
         SYNC_RESET_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("sync_reset", &format_args!("{}", self.sync_reset().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

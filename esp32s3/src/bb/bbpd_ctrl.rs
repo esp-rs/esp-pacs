@@ -35,21 +35,21 @@ impl From<crate::W<BBPD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DC_EST_FORCE_PD` reader - "]
-pub type DC_EST_FORCE_PD_R = crate::BitReader<bool>;
+pub type DC_EST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DC_EST_FORCE_PD` writer - "]
-pub type DC_EST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, O>;
+pub type DC_EST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, BBPD_CTRL_SPEC, O>;
 #[doc = "Field `DC_EST_FORCE_PU` reader - "]
-pub type DC_EST_FORCE_PU_R = crate::BitReader<bool>;
+pub type DC_EST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DC_EST_FORCE_PU` writer - "]
-pub type DC_EST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, O>;
+pub type DC_EST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, BBPD_CTRL_SPEC, O>;
 #[doc = "Field `FFT_FORCE_PD` reader - "]
-pub type FFT_FORCE_PD_R = crate::BitReader<bool>;
+pub type FFT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `FFT_FORCE_PD` writer - "]
-pub type FFT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, O>;
+pub type FFT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, BBPD_CTRL_SPEC, O>;
 #[doc = "Field `FFT_FORCE_PU` reader - "]
-pub type FFT_FORCE_PU_R = crate::BitReader<bool>;
+pub type FFT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `FFT_FORCE_PU` writer - "]
-pub type FFT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, O>;
+pub type FFT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, BBPD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn fft_force_pu(&self) -> FFT_FORCE_PU_R {
         FFT_FORCE_PU_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BBPD_CTRL")
+            .field(
+                "dc_est_force_pd",
+                &format_args!("{}", self.dc_est_force_pd().bit()),
+            )
+            .field(
+                "dc_est_force_pu",
+                &format_args!("{}", self.dc_est_force_pu().bit()),
+            )
+            .field(
+                "fft_force_pd",
+                &format_args!("{}", self.fft_force_pd().bit()),
+            )
+            .field(
+                "fft_force_pu",
+                &format_args!("{}", self.fft_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BBPD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

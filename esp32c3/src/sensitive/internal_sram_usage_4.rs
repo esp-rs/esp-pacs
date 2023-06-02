@@ -35,15 +35,32 @@ impl From<crate::W<INTERNAL_SRAM_USAGE_4_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOG_SRAM` reader - internal_sram_usage_log_sram"]
-pub type INTERNAL_SRAM_USAGE_LOG_SRAM_R = crate::BitReader<bool>;
+pub type INTERNAL_SRAM_USAGE_LOG_SRAM_R = crate::BitReader;
 #[doc = "Field `INTERNAL_SRAM_USAGE_LOG_SRAM` writer - internal_sram_usage_log_sram"]
 pub type INTERNAL_SRAM_USAGE_LOG_SRAM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INTERNAL_SRAM_USAGE_4_SPEC, bool, O>;
+    crate::BitWriter<'a, INTERNAL_SRAM_USAGE_4_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - internal_sram_usage_log_sram"]
     #[inline(always)]
     pub fn internal_sram_usage_log_sram(&self) -> INTERNAL_SRAM_USAGE_LOG_SRAM_R {
         INTERNAL_SRAM_USAGE_LOG_SRAM_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERNAL_SRAM_USAGE_4")
+            .field(
+                "internal_sram_usage_log_sram",
+                &format_args!("{}", self.internal_sram_usage_log_sram().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

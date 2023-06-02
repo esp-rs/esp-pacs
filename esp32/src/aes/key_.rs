@@ -35,14 +35,28 @@ impl From<crate::W<KEY__SPEC>> for W {
     }
 }
 #[doc = "Field `KEY` reader - AES key material register."]
-pub type KEY_R = crate::FieldReader<u8, u8>;
+pub type KEY_R = crate::FieldReader;
 #[doc = "Field `KEY` writer - AES key material register."]
-pub type KEY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, KEY__SPEC, u8, u8, 8, O>;
+pub type KEY_W<'a, const O: u8> = crate::FieldWriter<'a, KEY__SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - AES key material register."]
     #[inline(always)]
     pub fn key(&self) -> KEY_R {
         KEY_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("KEY_")
+            .field("key", &format_args!("{}", self.key().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<KEY__SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

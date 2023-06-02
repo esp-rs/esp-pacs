@@ -35,15 +35,32 @@ impl From<crate::W<I2C_SCL_MAIN_ST_TIME_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SCL_MAIN_ST_TO_I2C` reader - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
-pub type I2C_SCL_MAIN_ST_TO_I2C_R = crate::FieldReader<u8, u8>;
+pub type I2C_SCL_MAIN_ST_TO_I2C_R = crate::FieldReader;
 #[doc = "Field `I2C_SCL_MAIN_ST_TO_I2C` writer - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
 pub type I2C_SCL_MAIN_ST_TO_I2C_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_SCL_MAIN_ST_TIME_OUT_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, I2C_SCL_MAIN_ST_TIME_OUT_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
     #[inline(always)]
     pub fn i2c_scl_main_st_to_i2c(&self) -> I2C_SCL_MAIN_ST_TO_I2C_R {
         I2C_SCL_MAIN_ST_TO_I2C_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_SCL_MAIN_ST_TIME_OUT")
+            .field(
+                "i2c_scl_main_st_to_i2c",
+                &format_args!("{}", self.i2c_scl_main_st_to_i2c().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_SCL_MAIN_ST_TIME_OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,12 +37,26 @@ impl From<crate::W<LOG_MAX_SPEC>> for W {
 #[doc = "Field `LOG_MAX` reader - the max address of log range"]
 pub type LOG_MAX_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_MAX` writer - the max address of log range"]
-pub type LOG_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOG_MAX_SPEC, u32, u32, 32, O>;
+pub type LOG_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MAX_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - the max address of log range"]
     #[inline(always)]
     pub fn log_max(&self) -> LOG_MAX_R {
         LOG_MAX_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_MAX")
+            .field("log_max", &format_args!("{}", self.log_max().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_MAX_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

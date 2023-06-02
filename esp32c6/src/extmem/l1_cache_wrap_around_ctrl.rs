@@ -35,18 +35,17 @@ impl From<crate::W<L1_CACHE_WRAP_AROUND_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_WRAP` reader - Set this bit as 1 to enable L1-ICache0 wrap around mode."]
-pub type L1_ICACHE0_WRAP_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_WRAP_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_WRAP` reader - Set this bit as 1 to enable L1-ICache1 wrap around mode."]
-pub type L1_ICACHE1_WRAP_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_WRAP_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_WRAP` reader - Reserved"]
-pub type L1_ICACHE2_WRAP_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_WRAP_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_WRAP` reader - Reserved"]
-pub type L1_ICACHE3_WRAP_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_WRAP_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_WRAP` reader - Set this bit as 1 to enable L1-DCache wrap around mode."]
-pub type L1_CACHE_WRAP_R = crate::BitReader<bool>;
+pub type L1_CACHE_WRAP_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_WRAP` writer - Set this bit as 1 to enable L1-DCache wrap around mode."]
-pub type L1_CACHE_WRAP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_WRAP_AROUND_CTRL_SPEC, bool, O>;
+pub type L1_CACHE_WRAP_W<'a, const O: u8> = crate::BitWriter<'a, L1_CACHE_WRAP_AROUND_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit as 1 to enable L1-ICache0 wrap around mode."]
     #[inline(always)]
@@ -72,6 +71,39 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_wrap(&self) -> L1_CACHE_WRAP_R {
         L1_CACHE_WRAP_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_WRAP_AROUND_CTRL")
+            .field(
+                "l1_icache0_wrap",
+                &format_args!("{}", self.l1_icache0_wrap().bit()),
+            )
+            .field(
+                "l1_icache1_wrap",
+                &format_args!("{}", self.l1_icache1_wrap().bit()),
+            )
+            .field(
+                "l1_icache2_wrap",
+                &format_args!("{}", self.l1_icache2_wrap().bit()),
+            )
+            .field(
+                "l1_icache3_wrap",
+                &format_args!("{}", self.l1_icache3_wrap().bit()),
+            )
+            .field(
+                "l1_cache_wrap",
+                &format_args!("{}", self.l1_cache_wrap().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_WRAP_AROUND_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

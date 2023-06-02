@@ -35,15 +35,15 @@ impl From<crate::W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_DISABLE_DB_ENCRYPT` reader - Reserved"]
-pub type RECORD_DISABLE_DB_ENCRYPT_R = crate::BitReader<bool>;
+pub type RECORD_DISABLE_DB_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `RECORD_DISABLE_DB_ENCRYPT` writer - Reserved"]
 pub type RECORD_DISABLE_DB_ENCRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, O>;
 #[doc = "Field `RECORD_DISABLE_G0CB_DECRYPT` reader - Reserved"]
-pub type RECORD_DISABLE_G0CB_DECRYPT_R = crate::BitReader<bool>;
+pub type RECORD_DISABLE_G0CB_DECRYPT_R = crate::BitReader;
 #[doc = "Field `RECORD_DISABLE_G0CB_DECRYPT` writer - Reserved"]
 pub type RECORD_DISABLE_G0CB_DECRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn record_disable_g0cb_decrypt(&self) -> RECORD_DISABLE_G0CB_DECRYPT_R {
         RECORD_DISABLE_G0CB_DECRYPT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE")
+            .field(
+                "record_disable_db_encrypt",
+                &format_args!("{}", self.record_disable_db_encrypt().bit()),
+            )
+            .field(
+                "record_disable_g0cb_decrypt",
+                &format_args!("{}", self.record_disable_g0cb_decrypt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

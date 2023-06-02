@@ -38,12 +38,29 @@ impl From<crate::W<SAR2_PATT_TAB1_SPEC>> for W {
 pub type SAR2_PATT_TAB1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR2_PATT_TAB1` writer - item 0 ~ 3 for pattern table 2 (each item one byte)"]
 pub type SAR2_PATT_TAB1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR2_PATT_TAB1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SAR2_PATT_TAB1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - item 0 ~ 3 for pattern table 2 (each item one byte)"]
     #[inline(always)]
     pub fn sar2_patt_tab1(&self) -> SAR2_PATT_TAB1_R {
         SAR2_PATT_TAB1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR2_PATT_TAB1")
+            .field(
+                "sar2_patt_tab1",
+                &format_args!("{}", self.sar2_patt_tab1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR2_PATT_TAB1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

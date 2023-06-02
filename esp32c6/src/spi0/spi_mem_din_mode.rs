@@ -35,50 +35,41 @@ impl From<crate::W<SPI_MEM_DIN_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN0_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN0_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN0_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN1_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN1_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN1_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN1_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN1_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN2_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN2_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN2_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN2_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN2_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN2_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN3_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN3_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN3_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN3_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_MEM_DIN3_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN3_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN4_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN4_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN4_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN4_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN4_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN4_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN5_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN5_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN5_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN5_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN5_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN5_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN6_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN6_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN6_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN6_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN6_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN6_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DIN7_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN7_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DIN7_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DIN7_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DIN7_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DIN7_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_MEM_DINS_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DINS_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_DINS_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_DINS_MODE` writer - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk"]
-pub type SPI_MEM_DINS_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+pub type SPI_MEM_DINS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DIN_MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_dins_mode(&self) -> SPI_MEM_DINS_MODE_R {
         SPI_MEM_DINS_MODE_R::new(((self.bits >> 24) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_DIN_MODE")
+            .field(
+                "spi_mem_din0_mode",
+                &format_args!("{}", self.spi_mem_din0_mode().bits()),
+            )
+            .field(
+                "spi_mem_din1_mode",
+                &format_args!("{}", self.spi_mem_din1_mode().bits()),
+            )
+            .field(
+                "spi_mem_din2_mode",
+                &format_args!("{}", self.spi_mem_din2_mode().bits()),
+            )
+            .field(
+                "spi_mem_din3_mode",
+                &format_args!("{}", self.spi_mem_din3_mode().bits()),
+            )
+            .field(
+                "spi_mem_din4_mode",
+                &format_args!("{}", self.spi_mem_din4_mode().bits()),
+            )
+            .field(
+                "spi_mem_din5_mode",
+                &format_args!("{}", self.spi_mem_din5_mode().bits()),
+            )
+            .field(
+                "spi_mem_din6_mode",
+                &format_args!("{}", self.spi_mem_din6_mode().bits()),
+            )
+            .field(
+                "spi_mem_din7_mode",
+                &format_args!("{}", self.spi_mem_din7_mode().bits()),
+            )
+            .field(
+                "spi_mem_dins_mode",
+                &format_args!("{}", self.spi_mem_dins_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_DIN_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

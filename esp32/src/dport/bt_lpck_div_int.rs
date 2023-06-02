@@ -38,12 +38,11 @@ impl From<crate::W<BT_LPCK_DIV_INT_SPEC>> for W {
 pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_NUM` writer - "]
 pub type BT_LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BT_LPCK_DIV_INT_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
 #[doc = "Field `BTEXTWAKEUP_REQ` reader - "]
-pub type BTEXTWAKEUP_REQ_R = crate::BitReader<bool>;
+pub type BTEXTWAKEUP_REQ_R = crate::BitReader;
 #[doc = "Field `BTEXTWAKEUP_REQ` writer - "]
-pub type BTEXTWAKEUP_REQ_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BT_LPCK_DIV_INT_SPEC, bool, O>;
+pub type BTEXTWAKEUP_REQ_W<'a, const O: u8> = crate::BitWriter<'a, BT_LPCK_DIV_INT_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn btextwakeup_req(&self) -> BTEXTWAKEUP_REQ_R {
         BTEXTWAKEUP_REQ_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BT_LPCK_DIV_INT")
+            .field(
+                "bt_lpck_div_num",
+                &format_args!("{}", self.bt_lpck_div_num().bits()),
+            )
+            .field(
+                "btextwakeup_req",
+                &format_args!("{}", self.btextwakeup_req().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_INT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

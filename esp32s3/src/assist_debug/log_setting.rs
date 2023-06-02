@@ -35,18 +35,17 @@ impl From<crate::W<LOG_SETTING_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_ENA` reader - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
-pub type LOG_ENA_R = crate::FieldReader<u8, u8>;
+pub type LOG_ENA_R = crate::FieldReader;
 #[doc = "Field `LOG_ENA` writer - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
-pub type LOG_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOG_SETTING_SPEC, u8, u8, 3, O>;
+pub type LOG_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_SETTING_SPEC, 3, O>;
 #[doc = "Field `LOG_MODE` reader - check_mode:0:write,1:word,2:halword,3:byte,4:doubleword,5:4word"]
-pub type LOG_MODE_R = crate::FieldReader<u8, u8>;
+pub type LOG_MODE_R = crate::FieldReader;
 #[doc = "Field `LOG_MODE` writer - check_mode:0:write,1:word,2:halword,3:byte,4:doubleword,5:4word"]
-pub type LOG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOG_SETTING_SPEC, u8, u8, 3, O>;
+pub type LOG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_SETTING_SPEC, 3, O>;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` reader - mem_loop enable,1 means that loop write"]
-pub type LOG_MEM_LOOP_ENABLE_R = crate::BitReader<bool>;
+pub type LOG_MEM_LOOP_ENABLE_R = crate::BitReader;
 #[doc = "Field `LOG_MEM_LOOP_ENABLE` writer - mem_loop enable,1 means that loop write"]
-pub type LOG_MEM_LOOP_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LOG_SETTING_SPEC, bool, O>;
+pub type LOG_MEM_LOOP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, LOG_SETTING_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - bus moniter enable: \\[0\\]Core1,\\[1\\]core1,\\[2\\]dma"]
     #[inline(always)]
@@ -62,6 +61,25 @@ impl R {
     #[inline(always)]
     pub fn log_mem_loop_enable(&self) -> LOG_MEM_LOOP_ENABLE_R {
         LOG_MEM_LOOP_ENABLE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_SETTING")
+            .field("log_ena", &format_args!("{}", self.log_ena().bits()))
+            .field("log_mode", &format_args!("{}", self.log_mode().bits()))
+            .field(
+                "log_mem_loop_enable",
+                &format_args!("{}", self.log_mem_loop_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_SETTING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

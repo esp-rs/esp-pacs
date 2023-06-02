@@ -35,19 +35,17 @@ impl From<crate::W<ESC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SEPER_CHAR` reader - Configures the delimiter for encoding, default value is 0xC0."]
-pub type SEPER_CHAR_R = crate::FieldReader<u8, u8>;
+pub type SEPER_CHAR_R = crate::FieldReader;
 #[doc = "Field `SEPER_CHAR` writer - Configures the delimiter for encoding, default value is 0xC0."]
-pub type SEPER_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESC_CONF0_SPEC, u8, u8, 8, O>;
+pub type SEPER_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF0_SPEC, 8, O>;
 #[doc = "Field `SEPER_ESC_CHAR0` reader - Configures the first char of SLIP escape character, default value is 0xDB."]
-pub type SEPER_ESC_CHAR0_R = crate::FieldReader<u8, u8>;
+pub type SEPER_ESC_CHAR0_R = crate::FieldReader;
 #[doc = "Field `SEPER_ESC_CHAR0` writer - Configures the first char of SLIP escape character, default value is 0xDB."]
-pub type SEPER_ESC_CHAR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF0_SPEC, u8, u8, 8, O>;
+pub type SEPER_ESC_CHAR0_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF0_SPEC, 8, O>;
 #[doc = "Field `SEPER_ESC_CHAR1` reader - Configures the second char of SLIP escape character, default value is 0xDC."]
-pub type SEPER_ESC_CHAR1_R = crate::FieldReader<u8, u8>;
+pub type SEPER_ESC_CHAR1_R = crate::FieldReader;
 #[doc = "Field `SEPER_ESC_CHAR1` writer - Configures the second char of SLIP escape character, default value is 0xDC."]
-pub type SEPER_ESC_CHAR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESC_CONF0_SPEC, u8, u8, 8, O>;
+pub type SEPER_ESC_CHAR1_W<'a, const O: u8> = crate::FieldWriter<'a, ESC_CONF0_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Configures the delimiter for encoding, default value is 0xC0."]
     #[inline(always)]
@@ -63,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn seper_esc_char1(&self) -> SEPER_ESC_CHAR1_R {
         SEPER_ESC_CHAR1_R::new(((self.bits >> 16) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESC_CONF0")
+            .field("seper_char", &format_args!("{}", self.seper_char().bits()))
+            .field(
+                "seper_esc_char0",
+                &format_args!("{}", self.seper_esc_char0().bits()),
+            )
+            .field(
+                "seper_esc_char1",
+                &format_args!("{}", self.seper_esc_char1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ESC_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

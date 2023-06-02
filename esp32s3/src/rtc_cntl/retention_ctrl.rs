@@ -35,39 +35,34 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_TAG_MODE` reader - No public"]
-pub type RETENTION_TAG_MODE_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_TAG_MODE_R = crate::FieldReader;
 #[doc = "Field `RETENTION_TAG_MODE` writer - No public"]
-pub type RETENTION_TAG_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 4, O>;
+pub type RETENTION_TAG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 4, O>;
 #[doc = "Field `RETENTION_TARGET` reader - congfigure retention target cpu and/or tag"]
-pub type RETENTION_TARGET_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_TARGET_R = crate::FieldReader;
 #[doc = "Field `RETENTION_TARGET` writer - congfigure retention target cpu and/or tag"]
-pub type RETENTION_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 2, O>;
+pub type RETENTION_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 2, O>;
 #[doc = "Field `RETENTION_CLK_SEL` reader - No public"]
-pub type RETENTION_CLK_SEL_R = crate::BitReader<bool>;
+pub type RETENTION_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `RETENTION_CLK_SEL` writer - No public"]
-pub type RETENTION_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, O>;
+pub type RETENTION_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL_SPEC, O>;
 #[doc = "Field `RETENTION_DONE_WAIT` reader - wait retention done cycle"]
-pub type RETENTION_DONE_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_DONE_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_DONE_WAIT` writer - wait retention done cycle"]
-pub type RETENTION_DONE_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 3, O>;
+pub type RETENTION_DONE_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 3, O>;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` reader - wait clk off cycle"]
-pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` writer - wait clk off cycle"]
 pub type RETENTION_CLKOFF_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 4, O>;
 #[doc = "Field `RETENTION_EN` reader - enable retention"]
-pub type RETENTION_EN_R = crate::BitReader<bool>;
+pub type RETENTION_EN_R = crate::BitReader;
 #[doc = "Field `RETENTION_EN` writer - enable retention"]
-pub type RETENTION_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, O>;
+pub type RETENTION_EN_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_CTRL_SPEC, O>;
 #[doc = "Field `RETENTION_WAIT` reader - wait cycles for rention operation"]
-pub type RETENTION_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_WAIT` writer - wait cycles for rention operation"]
-pub type RETENTION_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 7, O>;
+pub type RETENTION_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 10:13 - No public"]
     #[inline(always)]
@@ -103,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn retention_wait(&self) -> RETENTION_WAIT_R {
         RETENTION_WAIT_R::new(((self.bits >> 25) & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_CTRL")
+            .field(
+                "retention_tag_mode",
+                &format_args!("{}", self.retention_tag_mode().bits()),
+            )
+            .field(
+                "retention_target",
+                &format_args!("{}", self.retention_target().bits()),
+            )
+            .field(
+                "retention_clk_sel",
+                &format_args!("{}", self.retention_clk_sel().bit()),
+            )
+            .field(
+                "retention_done_wait",
+                &format_args!("{}", self.retention_done_wait().bits()),
+            )
+            .field(
+                "retention_clkoff_wait",
+                &format_args!("{}", self.retention_clkoff_wait().bits()),
+            )
+            .field(
+                "retention_en",
+                &format_args!("{}", self.retention_en().bit()),
+            )
+            .field(
+                "retention_wait",
+                &format_args!("{}", self.retention_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

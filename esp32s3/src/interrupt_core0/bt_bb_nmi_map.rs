@@ -35,15 +35,31 @@ impl From<crate::W<BT_BB_NMI_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_BB_NMI_MAP` reader - this register used to map bb_bt_nmi interrupt to one of core0's external interrupt"]
-pub type BT_BB_NMI_MAP_R = crate::FieldReader<u8, u8>;
+pub type BT_BB_NMI_MAP_R = crate::FieldReader;
 #[doc = "Field `BT_BB_NMI_MAP` writer - this register used to map bb_bt_nmi interrupt to one of core0's external interrupt"]
-pub type BT_BB_NMI_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BT_BB_NMI_MAP_SPEC, u8, u8, 5, O>;
+pub type BT_BB_NMI_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, BT_BB_NMI_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map bb_bt_nmi interrupt to one of core0's external interrupt"]
     #[inline(always)]
     pub fn bt_bb_nmi_map(&self) -> BT_BB_NMI_MAP_R {
         BT_BB_NMI_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BT_BB_NMI_MAP")
+            .field(
+                "bt_bb_nmi_map",
+                &format_args!("{}", self.bt_bb_nmi_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BT_BB_NMI_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

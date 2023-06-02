@@ -35,15 +35,13 @@ impl From<crate::W<MEM_MONITOR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_MONITOR_CLK_EN` reader - Set 1 to enable mem_monitor clock"]
-pub type MEM_MONITOR_CLK_EN_R = crate::BitReader<bool>;
+pub type MEM_MONITOR_CLK_EN_R = crate::BitReader;
 #[doc = "Field `MEM_MONITOR_CLK_EN` writer - Set 1 to enable mem_monitor clock"]
-pub type MEM_MONITOR_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MEM_MONITOR_CONF_SPEC, bool, O>;
+pub type MEM_MONITOR_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, MEM_MONITOR_CONF_SPEC, O>;
 #[doc = "Field `MEM_MONITOR_RST_EN` reader - Set 0 to reset mem_monitor module"]
-pub type MEM_MONITOR_RST_EN_R = crate::BitReader<bool>;
+pub type MEM_MONITOR_RST_EN_R = crate::BitReader;
 #[doc = "Field `MEM_MONITOR_RST_EN` writer - Set 0 to reset mem_monitor module"]
-pub type MEM_MONITOR_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MEM_MONITOR_CONF_SPEC, bool, O>;
+pub type MEM_MONITOR_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, MEM_MONITOR_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable mem_monitor clock"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn mem_monitor_rst_en(&self) -> MEM_MONITOR_RST_EN_R {
         MEM_MONITOR_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_MONITOR_CONF")
+            .field(
+                "mem_monitor_clk_en",
+                &format_args!("{}", self.mem_monitor_clk_en().bit()),
+            )
+            .field(
+                "mem_monitor_rst_en",
+                &format_args!("{}", self.mem_monitor_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_MONITOR_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

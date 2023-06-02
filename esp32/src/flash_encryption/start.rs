@@ -20,7 +20,13 @@ impl From<crate::W<START_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_START` writer - Set this bit to start encryption operation on data buffer."]
-pub type FLASH_START_W<'a, const O: u8> = crate::FieldWriter<'a, u32, START_SPEC, u8, u8, 8, O>;
+pub type FLASH_START_W<'a, const O: u8> = crate::FieldWriter<'a, START_SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Set this bit to start encryption operation on data buffer."]
     #[inline(always)]

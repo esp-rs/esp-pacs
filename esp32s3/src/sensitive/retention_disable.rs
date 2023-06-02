@@ -35,15 +35,31 @@ impl From<crate::W<RETENTION_DISABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_DISABLE` reader - Set 1 to disable retention function and lock disable state."]
-pub type RETENTION_DISABLE_R = crate::BitReader<bool>;
+pub type RETENTION_DISABLE_R = crate::BitReader;
 #[doc = "Field `RETENTION_DISABLE` writer - Set 1 to disable retention function and lock disable state."]
-pub type RETENTION_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RETENTION_DISABLE_SPEC, bool, O>;
+pub type RETENTION_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, RETENTION_DISABLE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to disable retention function and lock disable state."]
     #[inline(always)]
     pub fn retention_disable(&self) -> RETENTION_DISABLE_R {
         RETENTION_DISABLE_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RETENTION_DISABLE")
+            .field(
+                "retention_disable",
+                &format_args!("{}", self.retention_disable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RETENTION_DISABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

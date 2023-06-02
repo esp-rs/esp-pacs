@@ -35,40 +35,34 @@ impl From<crate::W<SPI_MEM_CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` reader - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
-pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_R = crate::BitReader<bool>;
+pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_CACHE_USR_ADDR_4BYTE` writer - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
 pub type SPI_MEM_CACHE_USR_ADDR_4BYTE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` reader - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDIN_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDIN_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_DUAL` writer - For SPI1, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDIN_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDIN_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` reader - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDOUT_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDOUT_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_DUAL` writer - For SPI1, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FDOUT_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDOUT_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` reader - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FADDR_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FADDR_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_DUAL` writer - For SPI1, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
-pub type SPI_MEM_FADDR_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FADDR_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` reader - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDIN_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDIN_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_QUAD` writer - For SPI1, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDIN_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDIN_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` reader - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDOUT_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDOUT_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDOUT_QUAD` writer - For SPI1, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FDOUT_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDOUT_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` reader - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FADDR_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FADDR_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_QUAD` writer - For SPI1, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
-pub type SPI_MEM_FADDR_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CACHE_FCTRL_SPEC, bool, O>;
+pub type SPI_MEM_FADDR_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CACHE_FCTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - For SPI1, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
@@ -104,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_faddr_quad(&self) -> SPI_MEM_FADDR_QUAD_R {
         SPI_MEM_FADDR_QUAD_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CACHE_FCTRL")
+            .field(
+                "spi_mem_cache_usr_addr_4byte",
+                &format_args!("{}", self.spi_mem_cache_usr_addr_4byte().bit()),
+            )
+            .field(
+                "spi_mem_fdin_dual",
+                &format_args!("{}", self.spi_mem_fdin_dual().bit()),
+            )
+            .field(
+                "spi_mem_fdout_dual",
+                &format_args!("{}", self.spi_mem_fdout_dual().bit()),
+            )
+            .field(
+                "spi_mem_faddr_dual",
+                &format_args!("{}", self.spi_mem_faddr_dual().bit()),
+            )
+            .field(
+                "spi_mem_fdin_quad",
+                &format_args!("{}", self.spi_mem_fdin_quad().bit()),
+            )
+            .field(
+                "spi_mem_fdout_quad",
+                &format_args!("{}", self.spi_mem_fdout_quad().bit()),
+            )
+            .field(
+                "spi_mem_faddr_quad",
+                &format_args!("{}", self.spi_mem_faddr_quad().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CACHE_FCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

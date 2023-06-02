@@ -38,12 +38,29 @@ impl From<crate::W<L1_DCACHE_PRELOAD_SIZE_SPEC>> for W {
 pub type L1_CACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `L1_CACHE_PRELOAD_SIZE` writer - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
 pub type L1_CACHE_PRELOAD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, L1_DCACHE_PRELOAD_SIZE_SPEC, u16, u16, 14, O>;
+    crate::FieldWriter<'a, L1_DCACHE_PRELOAD_SIZE_SPEC, 14, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
     #[inline(always)]
     pub fn l1_cache_preload_size(&self) -> L1_CACHE_PRELOAD_SIZE_R {
         L1_CACHE_PRELOAD_SIZE_R::new((self.bits & 0x3fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_DCACHE_PRELOAD_SIZE")
+            .field(
+                "l1_cache_preload_size",
+                &format_args!("{}", self.l1_cache_preload_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_DCACHE_PRELOAD_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

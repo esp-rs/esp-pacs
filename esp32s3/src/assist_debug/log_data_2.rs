@@ -37,13 +37,26 @@ impl From<crate::W<LOG_DATA_2_SPEC>> for W {
 #[doc = "Field `LOG_DATA_2` reader - check data2"]
 pub type LOG_DATA_2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_DATA_2` writer - check data2"]
-pub type LOG_DATA_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LOG_DATA_2_SPEC, u32, u32, 32, O>;
+pub type LOG_DATA_2_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_DATA_2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - check data2"]
     #[inline(always)]
     pub fn log_data_2(&self) -> LOG_DATA_2_R {
         LOG_DATA_2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_DATA_2")
+            .field("log_data_2", &format_args!("{}", self.log_data_2().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_DATA_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

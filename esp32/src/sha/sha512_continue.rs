@@ -20,8 +20,13 @@ impl From<crate::W<SHA512_CONTINUE_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA512_CONTINUE` writer - Write 1 to continue the SHA-512 operation with subsequent blocks."]
-pub type SHA512_CONTINUE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SHA512_CONTINUE_SPEC, bool, O>;
+pub type SHA512_CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, SHA512_CONTINUE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SHA512_CONTINUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-512 operation with subsequent blocks."]
     #[inline(always)]

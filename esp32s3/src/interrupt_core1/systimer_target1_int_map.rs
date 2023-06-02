@@ -35,15 +35,32 @@ impl From<crate::W<SYSTIMER_TARGET1_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `SYSTIMER_TARGET1_INT_MAP` reader - this register used to map systimer_target1 interrupt to one of core1's external interrupt"]
-pub type SYSTIMER_TARGET1_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type SYSTIMER_TARGET1_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `SYSTIMER_TARGET1_INT_MAP` writer - this register used to map systimer_target1 interrupt to one of core1's external interrupt"]
 pub type SYSTIMER_TARGET1_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SYSTIMER_TARGET1_INT_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, SYSTIMER_TARGET1_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map systimer_target1 interrupt to one of core1's external interrupt"]
     #[inline(always)]
     pub fn systimer_target1_int_map(&self) -> SYSTIMER_TARGET1_INT_MAP_R {
         SYSTIMER_TARGET1_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYSTIMER_TARGET1_INT_MAP")
+            .field(
+                "systimer_target1_int_map",
+                &format_args!("{}", self.systimer_target1_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYSTIMER_TARGET1_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

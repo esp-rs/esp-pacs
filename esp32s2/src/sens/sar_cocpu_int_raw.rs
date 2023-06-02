@@ -14,23 +14,23 @@ impl From<crate::R<SAR_COCPU_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `COCPU_TOUCH_DONE_INT_RAW` reader - TOUCH_DONE_INT interrupt raw bit"]
-pub type COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_TOUCH_INACTIVE_INT_RAW` reader - TOUCH_INACTIVE_INT interrupt raw bit"]
-pub type COCPU_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_TOUCH_ACTIVE_INT_RAW` reader - TOUCH_ACTIVE_INT interrupt raw bit"]
-pub type COCPU_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_SARADC1_INT_RAW` reader - SARADC1_DONE_INT interrupt raw bit"]
-pub type COCPU_SARADC1_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_SARADC1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_SARADC2_INT_RAW` reader - SARADC2_DONE_INT interrupt raw bit"]
-pub type COCPU_SARADC2_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_SARADC2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_TSENS_INT_RAW` reader - TSENS_DONE_INT interrupt raw bit"]
-pub type COCPU_TSENS_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_TSENS_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_START_INT_RAW` reader - RISCV_START_INT interrupt raw bit"]
-pub type COCPU_START_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_SW_INT_RAW` reader - SW_INT interrupt raw bit"]
-pub type COCPU_SW_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_SW_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_SWD_INT_RAW` reader - SWD_INT interrupt raw bit"]
-pub type COCPU_SWD_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_SWD_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt raw bit"]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn cocpu_swd_int_raw(&self) -> COCPU_SWD_INT_RAW_R {
         COCPU_SWD_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_COCPU_INT_RAW")
+            .field(
+                "cocpu_touch_done_int_raw",
+                &format_args!("{}", self.cocpu_touch_done_int_raw().bit()),
+            )
+            .field(
+                "cocpu_touch_inactive_int_raw",
+                &format_args!("{}", self.cocpu_touch_inactive_int_raw().bit()),
+            )
+            .field(
+                "cocpu_touch_active_int_raw",
+                &format_args!("{}", self.cocpu_touch_active_int_raw().bit()),
+            )
+            .field(
+                "cocpu_saradc1_int_raw",
+                &format_args!("{}", self.cocpu_saradc1_int_raw().bit()),
+            )
+            .field(
+                "cocpu_saradc2_int_raw",
+                &format_args!("{}", self.cocpu_saradc2_int_raw().bit()),
+            )
+            .field(
+                "cocpu_tsens_int_raw",
+                &format_args!("{}", self.cocpu_tsens_int_raw().bit()),
+            )
+            .field(
+                "cocpu_start_int_raw",
+                &format_args!("{}", self.cocpu_start_int_raw().bit()),
+            )
+            .field(
+                "cocpu_sw_int_raw",
+                &format_args!("{}", self.cocpu_sw_int_raw().bit()),
+            )
+            .field(
+                "cocpu_swd_int_raw",
+                &format_args!("{}", self.cocpu_swd_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Interrupt raw bit of ULP-RISCV\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_cocpu_int_raw](index.html) module"]

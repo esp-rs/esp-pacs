@@ -20,11 +20,15 @@ impl From<crate::W<APP_INT_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CTRL0_INT_SET` writer - This bit is software interrupt trigger source of UHCI_APP_CTRL0_INT."]
-pub type APP_CTRL0_INT_SET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_INT_SET_SPEC, bool, O>;
+pub type APP_CTRL0_INT_SET_W<'a, const O: u8> = crate::BitWriter<'a, APP_INT_SET_SPEC, O>;
 #[doc = "Field `APP_CTRL1_INT_SET` writer - This bit is software interrupt trigger source of UHCI_APP_CTRL1_INT."]
-pub type APP_CTRL1_INT_SET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_INT_SET_SPEC, bool, O>;
+pub type APP_CTRL1_INT_SET_W<'a, const O: u8> = crate::BitWriter<'a, APP_INT_SET_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_INT_SET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - This bit is software interrupt trigger source of UHCI_APP_CTRL0_INT."]
     #[inline(always)]

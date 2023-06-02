@@ -35,15 +35,13 @@ impl From<crate::W<TIMEOUT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_TIMEOUT_RST_EN` reader - Set 0 to reset cpu_peri timeout module"]
-pub type CPU_TIMEOUT_RST_EN_R = crate::BitReader<bool>;
+pub type CPU_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `CPU_TIMEOUT_RST_EN` writer - Set 0 to reset cpu_peri timeout module"]
-pub type CPU_TIMEOUT_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMEOUT_CONF_SPEC, bool, O>;
+pub type CPU_TIMEOUT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMEOUT_CONF_SPEC, O>;
 #[doc = "Field `HP_TIMEOUT_RST_EN` reader - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
-pub type HP_TIMEOUT_RST_EN_R = crate::BitReader<bool>;
+pub type HP_TIMEOUT_RST_EN_R = crate::BitReader;
 #[doc = "Field `HP_TIMEOUT_RST_EN` writer - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
-pub type HP_TIMEOUT_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMEOUT_CONF_SPEC, bool, O>;
+pub type HP_TIMEOUT_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMEOUT_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn hp_timeout_rst_en(&self) -> HP_TIMEOUT_RST_EN_R {
         HP_TIMEOUT_RST_EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMEOUT_CONF")
+            .field(
+                "cpu_timeout_rst_en",
+                &format_args!("{}", self.cpu_timeout_rst_en().bit()),
+            )
+            .field(
+                "hp_timeout_rst_en",
+                &format_args!("{}", self.hp_timeout_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMEOUT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

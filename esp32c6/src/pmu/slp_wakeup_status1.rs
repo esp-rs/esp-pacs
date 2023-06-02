@@ -22,6 +22,23 @@ impl R {
         REJECT_CAUSE_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_WAKEUP_STATUS1")
+            .field(
+                "reject_cause",
+                &format_args!("{}", self.reject_cause().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_STATUS1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [slp_wakeup_status1](index.html) module"]
 pub struct SLP_WAKEUP_STATUS1_SPEC;
 impl crate::RegisterSpec for SLP_WAKEUP_STATUS1_SPEC {

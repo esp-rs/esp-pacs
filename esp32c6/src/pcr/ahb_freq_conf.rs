@@ -35,15 +35,13 @@ impl From<crate::W<AHB_FREQ_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `AHB_LS_DIV_NUM` reader - Set as one within (0,1,3,7) to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_LS_DIV_NUM."]
-pub type AHB_LS_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type AHB_LS_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `AHB_LS_DIV_NUM` writer - Set as one within (0,1,3,7) to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_LS_DIV_NUM."]
-pub type AHB_LS_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHB_FREQ_CONF_SPEC, u8, u8, 8, O>;
+pub type AHB_LS_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AHB_FREQ_CONF_SPEC, 8, O>;
 #[doc = "Field `AHB_HS_DIV_NUM` reader - Set as one within (3,7,15) to generate clk_ahb drived by clk_hproot. The clk_ahb is div4(default)/div8/div16 of clk_hproot. This field is only avaliable for high-speed clock-source such as SPLL, and should be used together with PCR_CPU_HS_DIV_NUM."]
-pub type AHB_HS_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type AHB_HS_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `AHB_HS_DIV_NUM` writer - Set as one within (3,7,15) to generate clk_ahb drived by clk_hproot. The clk_ahb is div4(default)/div8/div16 of clk_hproot. This field is only avaliable for high-speed clock-source such as SPLL, and should be used together with PCR_CPU_HS_DIV_NUM."]
-pub type AHB_HS_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHB_FREQ_CONF_SPEC, u8, u8, 8, O>;
+pub type AHB_HS_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AHB_FREQ_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Set as one within (0,1,3,7) to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_LS_DIV_NUM."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn ahb_hs_div_num(&self) -> AHB_HS_DIV_NUM_R {
         AHB_HS_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHB_FREQ_CONF")
+            .field(
+                "ahb_ls_div_num",
+                &format_args!("{}", self.ahb_ls_div_num().bits()),
+            )
+            .field(
+                "ahb_hs_div_num",
+                &format_args!("{}", self.ahb_hs_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHB_FREQ_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

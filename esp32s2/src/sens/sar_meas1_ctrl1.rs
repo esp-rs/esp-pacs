@@ -35,35 +35,31 @@ impl From<crate::W<SAR_MEAS1_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_SARADC_RESET` reader - SAR ADC software reset."]
-pub type RTC_SARADC_RESET_R = crate::BitReader<bool>;
+pub type RTC_SARADC_RESET_R = crate::BitReader;
 #[doc = "Field `RTC_SARADC_RESET` writer - SAR ADC software reset."]
-pub type RTC_SARADC_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, bool, O>;
+pub type RTC_SARADC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_CTRL1_SPEC, O>;
 #[doc = "Field `RTC_SARADC_CLKGATE_EN` reader - Enable bit of SAR ADC clock gate."]
-pub type RTC_SARADC_CLKGATE_EN_R = crate::BitReader<bool>;
+pub type RTC_SARADC_CLKGATE_EN_R = crate::BitReader;
 #[doc = "Field `RTC_SARADC_CLKGATE_EN` writer - Enable bit of SAR ADC clock gate."]
-pub type RTC_SARADC_CLKGATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, bool, O>;
+pub type RTC_SARADC_CLKGATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS1_CTRL1_SPEC, O>;
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
-pub type FORCE_XPD_AMP_R = crate::FieldReader<u8, u8>;
+pub type FORCE_XPD_AMP_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_AMP` writer - "]
-pub type FORCE_XPD_AMP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
+pub type FORCE_XPD_AMP_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS1_CTRL1_SPEC, 2, O>;
 #[doc = "Field `AMP_RST_FB_FORCE` reader - "]
-pub type AMP_RST_FB_FORCE_R = crate::FieldReader<u8, u8>;
+pub type AMP_RST_FB_FORCE_R = crate::FieldReader;
 #[doc = "Field `AMP_RST_FB_FORCE` writer - "]
-pub type AMP_RST_FB_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
+pub type AMP_RST_FB_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS1_CTRL1_SPEC, 2, O>;
 #[doc = "Field `AMP_SHORT_REF_FORCE` reader - "]
-pub type AMP_SHORT_REF_FORCE_R = crate::FieldReader<u8, u8>;
+pub type AMP_SHORT_REF_FORCE_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_FORCE` writer - "]
 pub type AMP_SHORT_REF_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SAR_MEAS1_CTRL1_SPEC, 2, O>;
 #[doc = "Field `AMP_SHORT_REF_GND_FORCE` reader - "]
-pub type AMP_SHORT_REF_GND_FORCE_R = crate::FieldReader<u8, u8>;
+pub type AMP_SHORT_REF_GND_FORCE_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_GND_FORCE` writer - "]
 pub type AMP_SHORT_REF_GND_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_MEAS1_CTRL1_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, SAR_MEAS1_CTRL1_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 22 - SAR ADC software reset."]
     #[inline(always)]
@@ -94,6 +90,43 @@ impl R {
     #[inline(always)]
     pub fn amp_short_ref_gnd_force(&self) -> AMP_SHORT_REF_GND_FORCE_R {
         AMP_SHORT_REF_GND_FORCE_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_MEAS1_CTRL1")
+            .field(
+                "rtc_saradc_reset",
+                &format_args!("{}", self.rtc_saradc_reset().bit()),
+            )
+            .field(
+                "rtc_saradc_clkgate_en",
+                &format_args!("{}", self.rtc_saradc_clkgate_en().bit()),
+            )
+            .field(
+                "force_xpd_amp",
+                &format_args!("{}", self.force_xpd_amp().bits()),
+            )
+            .field(
+                "amp_rst_fb_force",
+                &format_args!("{}", self.amp_rst_fb_force().bits()),
+            )
+            .field(
+                "amp_short_ref_force",
+                &format_args!("{}", self.amp_short_ref_force().bits()),
+            )
+            .field(
+                "amp_short_ref_gnd_force",
+                &format_args!("{}", self.amp_short_ref_gnd_force().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS1_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

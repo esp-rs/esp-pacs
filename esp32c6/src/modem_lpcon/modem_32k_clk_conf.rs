@@ -35,15 +35,32 @@ impl From<crate::W<MODEM_32K_CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODEM_32K_SEL` reader - "]
-pub type CLK_MODEM_32K_SEL_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODEM_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `CLK_MODEM_32K_SEL` writer - "]
 pub type CLK_MODEM_32K_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MODEM_32K_CLK_CONF_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, MODEM_32K_CLK_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn clk_modem_32k_sel(&self) -> CLK_MODEM_32K_SEL_R {
         CLK_MODEM_32K_SEL_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODEM_32K_CLK_CONF")
+            .field(
+                "clk_modem_32k_sel",
+                &format_args!("{}", self.clk_modem_32k_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODEM_32K_CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

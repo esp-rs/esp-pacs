@@ -35,84 +35,81 @@ impl From<crate::W<USB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_VREFH` reader - reg_usb_vrefh"]
-pub type USB_VREFH_R = crate::FieldReader<u8, u8>;
+pub type USB_VREFH_R = crate::FieldReader;
 #[doc = "Field `USB_VREFH` writer - reg_usb_vrefh"]
-pub type USB_VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USB_CONF_SPEC, u8, u8, 2, O>;
+pub type USB_VREFH_W<'a, const O: u8> = crate::FieldWriter<'a, USB_CONF_SPEC, 2, O>;
 #[doc = "Field `USB_VREFL` reader - reg_usb_vrefl"]
-pub type USB_VREFL_R = crate::FieldReader<u8, u8>;
+pub type USB_VREFL_R = crate::FieldReader;
 #[doc = "Field `USB_VREFL` writer - reg_usb_vrefl"]
-pub type USB_VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USB_CONF_SPEC, u8, u8, 2, O>;
+pub type USB_VREFL_W<'a, const O: u8> = crate::FieldWriter<'a, USB_CONF_SPEC, 2, O>;
 #[doc = "Field `USB_VREF_OVERRIDE` reader - reg_usb_vref_override"]
-pub type USB_VREF_OVERRIDE_R = crate::BitReader<bool>;
+pub type USB_VREF_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `USB_VREF_OVERRIDE` writer - reg_usb_vref_override"]
-pub type USB_VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_VREF_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_PAD_PULL_OVERRIDE` reader - reg_usb_pad_pull_override"]
-pub type USB_PAD_PULL_OVERRIDE_R = crate::BitReader<bool>;
+pub type USB_PAD_PULL_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_PULL_OVERRIDE` writer - reg_usb_pad_pull_override"]
-pub type USB_PAD_PULL_OVERRIDE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_PAD_PULL_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_DP_PULLUP` reader - reg_usb_dp_pullup"]
-pub type USB_DP_PULLUP_R = crate::BitReader<bool>;
+pub type USB_DP_PULLUP_R = crate::BitReader;
 #[doc = "Field `USB_DP_PULLUP` writer - reg_usb_dp_pullup"]
-pub type USB_DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_DP_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_DP_PULLDOWN` reader - reg_usb_dp_pulldown"]
-pub type USB_DP_PULLDOWN_R = crate::BitReader<bool>;
+pub type USB_DP_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `USB_DP_PULLDOWN` writer - reg_usb_dp_pulldown"]
-pub type USB_DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_DP_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_DM_PULLUP` reader - reg_usb_dm_pullup"]
-pub type USB_DM_PULLUP_R = crate::BitReader<bool>;
+pub type USB_DM_PULLUP_R = crate::BitReader;
 #[doc = "Field `USB_DM_PULLUP` writer - reg_usb_dm_pullup"]
-pub type USB_DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_DM_PULLUP_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_DM_PULLDOWN` reader - reg_usb_dm_pulldown"]
-pub type USB_DM_PULLDOWN_R = crate::BitReader<bool>;
+pub type USB_DM_PULLDOWN_R = crate::BitReader;
 #[doc = "Field `USB_DM_PULLDOWN` writer - reg_usb_dm_pulldown"]
-pub type USB_DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_DM_PULLDOWN_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_PULLUP_VALUE` reader - reg_usb_pullup_value"]
-pub type USB_PULLUP_VALUE_R = crate::BitReader<bool>;
+pub type USB_PULLUP_VALUE_R = crate::BitReader;
 #[doc = "Field `USB_PULLUP_VALUE` writer - reg_usb_pullup_value"]
-pub type USB_PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_PULLUP_VALUE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_PAD_ENABLE_OVERRIDE` reader - reg_usb_pad_enable_override"]
-pub type USB_PAD_ENABLE_OVERRIDE_R = crate::BitReader<bool>;
+pub type USB_PAD_ENABLE_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_ENABLE_OVERRIDE` writer - reg_usb_pad_enable_override"]
-pub type USB_PAD_ENABLE_OVERRIDE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_PAD_ENABLE_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_PAD_ENABLE` reader - reg_usb_pad_enable"]
-pub type USB_PAD_ENABLE_R = crate::BitReader<bool>;
+pub type USB_PAD_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_PAD_ENABLE` writer - reg_usb_pad_enable"]
-pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_PAD_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_TXM` reader - reg_usb_txm"]
-pub type USB_TXM_R = crate::BitReader<bool>;
+pub type USB_TXM_R = crate::BitReader;
 #[doc = "Field `USB_TXM` writer - reg_usb_txm"]
-pub type USB_TXM_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_TXM_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_TXP` reader - reg_usb_txp"]
-pub type USB_TXP_R = crate::BitReader<bool>;
+pub type USB_TXP_R = crate::BitReader;
 #[doc = "Field `USB_TXP` writer - reg_usb_txp"]
-pub type USB_TXP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_TXP_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_TX_EN` reader - reg_usb_tx_en"]
-pub type USB_TX_EN_R = crate::BitReader<bool>;
+pub type USB_TX_EN_R = crate::BitReader;
 #[doc = "Field `USB_TX_EN` writer - reg_usb_tx_en"]
-pub type USB_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_TX_EN_OVERRIDE` reader - reg_usb_tx_en_override"]
-pub type USB_TX_EN_OVERRIDE_R = crate::BitReader<bool>;
+pub type USB_TX_EN_OVERRIDE_R = crate::BitReader;
 #[doc = "Field `USB_TX_EN_OVERRIDE` writer - reg_usb_tx_en_override"]
-pub type USB_TX_EN_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_TX_EN_OVERRIDE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `USB_RESET_DISABLE` reader - reg_usb_reset_disable"]
-pub type USB_RESET_DISABLE_R = crate::BitReader<bool>;
+pub type USB_RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `USB_RESET_DISABLE` writer - reg_usb_reset_disable"]
-pub type USB_RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type USB_RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `IO_MUX_RESET_DISABLE` reader - reg_io_mux_reset_disable"]
-pub type IO_MUX_RESET_DISABLE_R = crate::BitReader<bool>;
+pub type IO_MUX_RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `IO_MUX_RESET_DISABLE` writer - reg_io_mux_reset_disable"]
-pub type IO_MUX_RESET_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type IO_MUX_RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `SW_USB_PHY_SEL` reader - reg_sw_usb_phy_sel"]
-pub type SW_USB_PHY_SEL_R = crate::BitReader<bool>;
+pub type SW_USB_PHY_SEL_R = crate::BitReader;
 #[doc = "Field `SW_USB_PHY_SEL` writer - reg_sw_usb_phy_sel"]
-pub type SW_USB_PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type SW_USB_PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 #[doc = "Field `SW_HW_USB_PHY_SEL` reader - reg_sw_hw_usb_phy_sel"]
-pub type SW_HW_USB_PHY_SEL_R = crate::BitReader<bool>;
+pub type SW_HW_USB_PHY_SEL_R = crate::BitReader;
 #[doc = "Field `SW_HW_USB_PHY_SEL` writer - reg_sw_hw_usb_phy_sel"]
-pub type SW_HW_USB_PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, O>;
+pub type SW_HW_USB_PHY_SEL_W<'a, const O: u8> = crate::BitWriter<'a, USB_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - reg_usb_vrefh"]
     #[inline(always)]
@@ -208,6 +205,80 @@ impl R {
     #[inline(always)]
     pub fn sw_hw_usb_phy_sel(&self) -> SW_HW_USB_PHY_SEL_R {
         SW_HW_USB_PHY_SEL_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB_CONF")
+            .field("usb_vrefh", &format_args!("{}", self.usb_vrefh().bits()))
+            .field("usb_vrefl", &format_args!("{}", self.usb_vrefl().bits()))
+            .field(
+                "usb_vref_override",
+                &format_args!("{}", self.usb_vref_override().bit()),
+            )
+            .field(
+                "usb_pad_pull_override",
+                &format_args!("{}", self.usb_pad_pull_override().bit()),
+            )
+            .field(
+                "usb_dp_pullup",
+                &format_args!("{}", self.usb_dp_pullup().bit()),
+            )
+            .field(
+                "usb_dp_pulldown",
+                &format_args!("{}", self.usb_dp_pulldown().bit()),
+            )
+            .field(
+                "usb_dm_pullup",
+                &format_args!("{}", self.usb_dm_pullup().bit()),
+            )
+            .field(
+                "usb_dm_pulldown",
+                &format_args!("{}", self.usb_dm_pulldown().bit()),
+            )
+            .field(
+                "usb_pullup_value",
+                &format_args!("{}", self.usb_pullup_value().bit()),
+            )
+            .field(
+                "usb_pad_enable_override",
+                &format_args!("{}", self.usb_pad_enable_override().bit()),
+            )
+            .field(
+                "usb_pad_enable",
+                &format_args!("{}", self.usb_pad_enable().bit()),
+            )
+            .field("usb_txm", &format_args!("{}", self.usb_txm().bit()))
+            .field("usb_txp", &format_args!("{}", self.usb_txp().bit()))
+            .field("usb_tx_en", &format_args!("{}", self.usb_tx_en().bit()))
+            .field(
+                "usb_tx_en_override",
+                &format_args!("{}", self.usb_tx_en_override().bit()),
+            )
+            .field(
+                "usb_reset_disable",
+                &format_args!("{}", self.usb_reset_disable().bit()),
+            )
+            .field(
+                "io_mux_reset_disable",
+                &format_args!("{}", self.io_mux_reset_disable().bit()),
+            )
+            .field(
+                "sw_usb_phy_sel",
+                &format_args!("{}", self.sw_usb_phy_sel().bit()),
+            )
+            .field(
+                "sw_hw_usb_phy_sel",
+                &format_args!("{}", self.sw_hw_usb_phy_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USB_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<TX_SIM_SPEC>> for W {
     }
 }
 #[doc = "Field `CH0` reader - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
-pub type CH0_R = crate::BitReader<bool>;
+pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH0` writer - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
-pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 #[doc = "Field `CH1` reader - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
-pub type CH1_R = crate::BitReader<bool>;
+pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH1` writer - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
-pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 #[doc = "Field `EN` reader - This register is used to enable multiple of channels to start sending data synchronously."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - This register is used to enable multiple of channels to start sending data synchronously."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, TX_SIM_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_SIM")
+            .field("ch0", &format_args!("{}", self.ch0().bit()))
+            .field("ch1", &format_args!("{}", self.ch1().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_SIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

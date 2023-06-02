@@ -35,20 +35,17 @@ impl From<crate::W<THRES1_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `THRES1_CHANNEL` reader - configure which channel thres0 monitor"]
-pub type THRES1_CHANNEL_R = crate::FieldReader<u8, u8>;
+pub type THRES1_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `THRES1_CHANNEL` writer - configure which channel thres0 monitor"]
-pub type THRES1_CHANNEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u8, u8, 5, O>;
+pub type THRES1_CHANNEL_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 5, O>;
 #[doc = "Field `THRES1_HIGH` reader - thres1 monitor high thres"]
 pub type THRES1_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `THRES1_HIGH` writer - thres1 monitor high thres"]
-pub type THRES1_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u16, u16, 13, O>;
+pub type THRES1_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
 #[doc = "Field `THRES1_LOW` reader - thres1 monitor low thres"]
 pub type THRES1_LOW_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `THRES1_LOW` writer - thres1 monitor low thres"]
-pub type THRES1_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u16, u16, 13, O>;
+pub type THRES1_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:4 - configure which channel thres0 monitor"]
     #[inline(always)]
@@ -64,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn thres1_low(&self) -> THRES1_LOW_R {
         THRES1_LOW_R::new(((self.bits >> 18) & 0x1fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("THRES1_CTRL")
+            .field(
+                "thres1_channel",
+                &format_args!("{}", self.thres1_channel().bits()),
+            )
+            .field(
+                "thres1_high",
+                &format_args!("{}", self.thres1_high().bits()),
+            )
+            .field("thres1_low", &format_args!("{}", self.thres1_low().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<THRES1_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

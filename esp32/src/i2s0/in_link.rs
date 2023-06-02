@@ -37,22 +37,21 @@ impl From<crate::W<IN_LINK_SPEC>> for W {
 #[doc = "Field `INLINK_ADDR` reader - "]
 pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INLINK_ADDR` writer - "]
-pub type INLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IN_LINK_SPEC, u32, u32, 20, O>;
+pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, IN_LINK_SPEC, 20, O, u32, u32>;
 #[doc = "Field `INLINK_STOP` reader - "]
-pub type INLINK_STOP_R = crate::BitReader<bool>;
+pub type INLINK_STOP_R = crate::BitReader;
 #[doc = "Field `INLINK_STOP` writer - "]
-pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_SPEC, bool, O>;
+pub type INLINK_STOP_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_START` reader - "]
-pub type INLINK_START_R = crate::BitReader<bool>;
+pub type INLINK_START_R = crate::BitReader;
 #[doc = "Field `INLINK_START` writer - "]
-pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_SPEC, bool, O>;
+pub type INLINK_START_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_RESTART` reader - "]
-pub type INLINK_RESTART_R = crate::BitReader<bool>;
+pub type INLINK_RESTART_R = crate::BitReader;
 #[doc = "Field `INLINK_RESTART` writer - "]
-pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_LINK_SPEC, bool, O>;
+pub type INLINK_RESTART_W<'a, const O: u8> = crate::BitWriter<'a, IN_LINK_SPEC, O>;
 #[doc = "Field `INLINK_PARK` reader - "]
-pub type INLINK_PARK_R = crate::BitReader<bool>;
+pub type INLINK_PARK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -78,6 +77,33 @@ impl R {
     #[inline(always)]
     pub fn inlink_park(&self) -> INLINK_PARK_R {
         INLINK_PARK_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_LINK")
+            .field(
+                "inlink_addr",
+                &format_args!("{}", self.inlink_addr().bits()),
+            )
+            .field("inlink_stop", &format_args!("{}", self.inlink_stop().bit()))
+            .field(
+                "inlink_start",
+                &format_args!("{}", self.inlink_start().bit()),
+            )
+            .field(
+                "inlink_restart",
+                &format_args!("{}", self.inlink_restart().bit()),
+            )
+            .field("inlink_park", &format_args!("{}", self.inlink_park().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_LINK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

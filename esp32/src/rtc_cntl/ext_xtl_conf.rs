@@ -35,13 +35,13 @@ impl From<crate::W<EXT_XTL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level 1: power down XTAL at low level"]
-pub type XTL_EXT_CTR_LV_R = crate::BitReader<bool>;
+pub type XTL_EXT_CTR_LV_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_LV` writer - 0: power down XTAL at high level 1: power down XTAL at low level"]
-pub type XTL_EXT_CTR_LV_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTL_EXT_CTR_LV_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 #[doc = "Field `XTL_EXT_CTR_EN` reader - enable control XTAL by external pads"]
-pub type XTL_EXT_CTR_EN_R = crate::BitReader<bool>;
+pub type XTL_EXT_CTR_EN_R = crate::BitReader;
 #[doc = "Field `XTL_EXT_CTR_EN` writer - enable control XTAL by external pads"]
-pub type XTL_EXT_CTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, O>;
+pub type XTL_EXT_CTR_EN_W<'a, const O: u8> = crate::BitWriter<'a, EXT_XTL_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - 0: power down XTAL at high level 1: power down XTAL at low level"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn xtl_ext_ctr_en(&self) -> XTL_EXT_CTR_EN_R {
         XTL_EXT_CTR_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_XTL_CONF")
+            .field(
+                "xtl_ext_ctr_lv",
+                &format_args!("{}", self.xtl_ext_ctr_lv().bit()),
+            )
+            .field(
+                "xtl_ext_ctr_en",
+                &format_args!("{}", self.xtl_ext_ctr_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_XTL_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

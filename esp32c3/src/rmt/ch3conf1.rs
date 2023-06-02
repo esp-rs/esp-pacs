@@ -35,34 +35,33 @@ impl From<crate::W<CH3CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EN` reader - reg_rx_en_ch3."]
-pub type RX_EN_R = crate::BitReader<bool>;
+pub type RX_EN_R = crate::BitReader;
 #[doc = "Field `RX_EN` writer - reg_rx_en_ch3."]
-pub type RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `MEM_WR_RST` writer - reg_mem_wr_rst_ch3."]
-pub type MEM_WR_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type MEM_WR_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `APB_MEM_RST` writer - reg_apb_mem_rst_ch3."]
-pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type APB_MEM_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `MEM_OWNER` reader - reg_mem_owner_ch3."]
-pub type MEM_OWNER_R = crate::BitReader<bool>;
+pub type MEM_OWNER_R = crate::BitReader;
 #[doc = "Field `MEM_OWNER` writer - reg_mem_owner_ch3."]
-pub type MEM_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type MEM_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_EN` reader - reg_rx_filter_en_ch3."]
-pub type RX_FILTER_EN_R = crate::BitReader<bool>;
+pub type RX_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `RX_FILTER_EN` writer - reg_rx_filter_en_ch3."]
-pub type RX_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type RX_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `RX_FILTER_THRES` reader - reg_rx_filter_thres_ch3."]
-pub type RX_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type RX_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `RX_FILTER_THRES` writer - reg_rx_filter_thres_ch3."]
-pub type RX_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH3CONF1_SPEC, u8, u8, 8, O>;
+pub type RX_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CH3CONF1_SPEC, 8, O>;
 #[doc = "Field `MEM_RX_WRAP_EN` reader - reg_mem_rx_wrap_en_ch3."]
-pub type MEM_RX_WRAP_EN_R = crate::BitReader<bool>;
+pub type MEM_RX_WRAP_EN_R = crate::BitReader;
 #[doc = "Field `MEM_RX_WRAP_EN` writer - reg_mem_rx_wrap_en_ch3."]
-pub type MEM_RX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type MEM_RX_WRAP_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `AFIFO_RST` writer - reg_afifo_rst_ch3."]
-pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type AFIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 #[doc = "Field `CONF_UPDATE` writer - reg_conf_update_ch3."]
-pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CONF1_SPEC, bool, O>;
+pub type CONF_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, CH3CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_rx_en_ch3."]
     #[inline(always)]
@@ -88,6 +87,33 @@ impl R {
     #[inline(always)]
     pub fn mem_rx_wrap_en(&self) -> MEM_RX_WRAP_EN_R {
         MEM_RX_WRAP_EN_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH3CONF1")
+            .field("rx_en", &format_args!("{}", self.rx_en().bit()))
+            .field("mem_owner", &format_args!("{}", self.mem_owner().bit()))
+            .field(
+                "rx_filter_en",
+                &format_args!("{}", self.rx_filter_en().bit()),
+            )
+            .field(
+                "rx_filter_thres",
+                &format_args!("{}", self.rx_filter_thres().bits()),
+            )
+            .field(
+                "mem_rx_wrap_en",
+                &format_args!("{}", self.mem_rx_wrap_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH3CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

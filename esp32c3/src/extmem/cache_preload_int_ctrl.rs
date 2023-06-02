@@ -35,15 +35,15 @@ impl From<crate::W<CACHE_PRELOAD_INT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by icache pre-load done."]
-pub type ICACHE_PRELOAD_INT_ST_R = crate::BitReader<bool>;
+pub type ICACHE_PRELOAD_INT_ST_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by icache pre-load done."]
-pub type ICACHE_PRELOAD_INT_ENA_R = crate::BitReader<bool>;
+pub type ICACHE_PRELOAD_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOAD_INT_ENA` writer - The bit is used to enable the interrupt by icache pre-load done."]
 pub type ICACHE_PRELOAD_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_PRELOAD_INT_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_PRELOAD_INT_CLR` writer - The bit is used to clear the interrupt by icache pre-load done."]
 pub type ICACHE_PRELOAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_PRELOAD_INT_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache pre-load done."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn icache_preload_int_ena(&self) -> ICACHE_PRELOAD_INT_ENA_R {
         ICACHE_PRELOAD_INT_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_PRELOAD_INT_CTRL")
+            .field(
+                "icache_preload_int_st",
+                &format_args!("{}", self.icache_preload_int_st().bit()),
+            )
+            .field(
+                "icache_preload_int_ena",
+                &format_args!("{}", self.icache_preload_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_PRELOAD_INT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

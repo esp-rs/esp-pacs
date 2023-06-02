@@ -35,14 +35,28 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MODE` reader - This bits decides which one operation mode will be used. 3'd0: AES-EN-128, 3'd1: AES-EN-192, 3'd2: AES-EN-256, 3'd4: AES-DE-128, 3'd5: AES-DE-192, 3'd6: AES-DE-256."]
-pub type MODE_R = crate::FieldReader<u8, u8>;
+pub type MODE_R = crate::FieldReader;
 #[doc = "Field `MODE` writer - This bits decides which one operation mode will be used. 3'd0: AES-EN-128, 3'd1: AES-EN-192, 3'd2: AES-EN-256, 3'd4: AES-DE-128, 3'd5: AES-DE-192, 3'd6: AES-DE-256."]
-pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MODE_SPEC, u8, u8, 3, O>;
+pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - This bits decides which one operation mode will be used. 3'd0: AES-EN-128, 3'd1: AES-EN-192, 3'd2: AES-EN-256, 3'd4: AES-DE-128, 3'd5: AES-DE-192, 3'd6: AES-DE-256."]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
         MODE_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MODE")
+            .field("mode", &format_args!("{}", self.mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

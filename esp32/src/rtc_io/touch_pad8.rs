@@ -35,25 +35,25 @@ impl From<crate::W<TOUCH_PAD8_SPEC>> for W {
     }
 }
 #[doc = "Field `TO_GPIO` reader - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
-pub type TO_GPIO_R = crate::BitReader<bool>;
+pub type TO_GPIO_R = crate::BitReader;
 #[doc = "Field `TO_GPIO` writer - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
-pub type TO_GPIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD8_SPEC, bool, O>;
+pub type TO_GPIO_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD8_SPEC, O>;
 #[doc = "Field `XPD` reader - touch sensor power on."]
-pub type XPD_R = crate::BitReader<bool>;
+pub type XPD_R = crate::BitReader;
 #[doc = "Field `XPD` writer - touch sensor power on."]
-pub type XPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD8_SPEC, bool, O>;
+pub type XPD_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD8_SPEC, O>;
 #[doc = "Field `TIE_OPT` reader - default touch sensor tie option. 0: tie low 1: tie high."]
-pub type TIE_OPT_R = crate::BitReader<bool>;
+pub type TIE_OPT_R = crate::BitReader;
 #[doc = "Field `TIE_OPT` writer - default touch sensor tie option. 0: tie low 1: tie high."]
-pub type TIE_OPT_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD8_SPEC, bool, O>;
+pub type TIE_OPT_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD8_SPEC, O>;
 #[doc = "Field `START` reader - start touch sensor."]
-pub type START_R = crate::BitReader<bool>;
+pub type START_R = crate::BitReader;
 #[doc = "Field `START` writer - start touch sensor."]
-pub type START_W<'a, const O: u8> = crate::BitWriter<'a, u32, TOUCH_PAD8_SPEC, bool, O>;
+pub type START_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_PAD8_SPEC, O>;
 #[doc = "Field `DAC` reader - touch sensor slope control. 3-bit for each touch panel default 100."]
-pub type DAC_R = crate::FieldReader<u8, u8>;
+pub type DAC_R = crate::FieldReader;
 #[doc = "Field `DAC` writer - touch sensor slope control. 3-bit for each touch panel default 100."]
-pub type DAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUCH_PAD8_SPEC, u8, u8, 3, O>;
+pub type DAC_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_PAD8_SPEC, 3, O>;
 impl R {
     #[doc = "Bit 19 - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
     #[inline(always)]
@@ -79,6 +79,24 @@ impl R {
     #[inline(always)]
     pub fn dac(&self) -> DAC_R {
         DAC_R::new(((self.bits >> 23) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_PAD8")
+            .field("to_gpio", &format_args!("{}", self.to_gpio().bit()))
+            .field("xpd", &format_args!("{}", self.xpd().bit()))
+            .field("tie_opt", &format_args!("{}", self.tie_opt().bit()))
+            .field("start", &format_args!("{}", self.start().bit()))
+            .field("dac", &format_args!("{}", self.dac().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_PAD8_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

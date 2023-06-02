@@ -14,33 +14,33 @@ impl From<crate::R<RD_REPEAT_ERR3_SPEC>> for R {
     }
 }
 #[doc = "Field `DIS_DOWNLOAD_MODE_ERR` reader - Indicates a programming error of DIS_DOWNLOAD_MODE."]
-pub type DIS_DOWNLOAD_MODE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_DIRECT_BOOT_ERR` reader - Indicates a programming error of DIS_DIRECT_BOOT."]
-pub type DIS_DIRECT_BOOT_ERR_R = crate::BitReader<bool>;
+pub type DIS_DIRECT_BOOT_ERR_R = crate::BitReader;
 #[doc = "Field `USB_PRINT_ERR` reader - Indicates a programming error of UART_PRINT_CHANNEL."]
-pub type USB_PRINT_ERR_R = crate::BitReader<bool>;
+pub type USB_PRINT_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED3_ERR_5` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_5_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED3_ERR_5_R = crate::BitReader;
 #[doc = "Field `DIS_USB_SERIAL_JTAG_DOWNLOAD_MODE_ERR` reader - Indicates a programming error of DIS_USB_SERIAL_JTAG_DOWNLOAD_MODE."]
-pub type DIS_USB_SERIAL_JTAG_DOWNLOAD_MODE_ERR_R = crate::BitReader<bool>;
+pub type DIS_USB_SERIAL_JTAG_DOWNLOAD_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD_ERR` reader - Indicates a programming error of ENABLE_SECURITY_DOWNLOAD."]
-pub type ENABLE_SECURITY_DOWNLOAD_ERR_R = crate::BitReader<bool>;
+pub type ENABLE_SECURITY_DOWNLOAD_ERR_R = crate::BitReader;
 #[doc = "Field `UART_PRINT_CONTROL_ERR` reader - Indicates a programming error of UART_PRINT_CONTROL."]
-pub type UART_PRINT_CONTROL_ERR_R = crate::FieldReader<u8, u8>;
+pub type UART_PRINT_CONTROL_ERR_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED3_ERR_4` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_4_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED3_ERR_4_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED3_ERR_3` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_3_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED3_ERR_3_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED3_ERR_2` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_2_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED3_ERR_2_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED3_ERR_1` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_1_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED3_ERR_1_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - Indicates a programming error of FORCE_SEND_RESUME."]
-pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader<bool>;
+pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION_ERR` reader - Indicates a programming error of SECURE_VERSION."]
 pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RPT4_RESERVED3_ERR_0` reader - Reserved."]
-pub type RPT4_RESERVED3_ERR_0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED3_ERR_0_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Indicates a programming error of DIS_DOWNLOAD_MODE."]
     #[inline(always)]
@@ -111,6 +111,75 @@ impl R {
     #[inline(always)]
     pub fn rpt4_reserved3_err_0(&self) -> RPT4_RESERVED3_ERR_0_R {
         RPT4_RESERVED3_ERR_0_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR3")
+            .field(
+                "dis_download_mode_err",
+                &format_args!("{}", self.dis_download_mode_err().bit()),
+            )
+            .field(
+                "dis_direct_boot_err",
+                &format_args!("{}", self.dis_direct_boot_err().bit()),
+            )
+            .field(
+                "usb_print_err",
+                &format_args!("{}", self.usb_print_err().bit()),
+            )
+            .field(
+                "rpt4_reserved3_err_5",
+                &format_args!("{}", self.rpt4_reserved3_err_5().bit()),
+            )
+            .field(
+                "dis_usb_serial_jtag_download_mode_err",
+                &format_args!("{}", self.dis_usb_serial_jtag_download_mode_err().bit()),
+            )
+            .field(
+                "enable_security_download_err",
+                &format_args!("{}", self.enable_security_download_err().bit()),
+            )
+            .field(
+                "uart_print_control_err",
+                &format_args!("{}", self.uart_print_control_err().bits()),
+            )
+            .field(
+                "rpt4_reserved3_err_4",
+                &format_args!("{}", self.rpt4_reserved3_err_4().bit()),
+            )
+            .field(
+                "rpt4_reserved3_err_3",
+                &format_args!("{}", self.rpt4_reserved3_err_3().bit()),
+            )
+            .field(
+                "rpt4_reserved3_err_2",
+                &format_args!("{}", self.rpt4_reserved3_err_2().bits()),
+            )
+            .field(
+                "rpt4_reserved3_err_1",
+                &format_args!("{}", self.rpt4_reserved3_err_1().bit()),
+            )
+            .field(
+                "force_send_resume_err",
+                &format_args!("{}", self.force_send_resume_err().bit()),
+            )
+            .field(
+                "secure_version_err",
+                &format_args!("{}", self.secure_version_err().bits()),
+            )
+            .field(
+                "rpt4_reserved3_err_0",
+                &format_args!("{}", self.rpt4_reserved3_err_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 3 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err3](index.html) module"]

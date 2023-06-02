@@ -35,28 +35,25 @@ impl From<crate::W<LCD_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_VSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type LCD_VSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_VSYNC_WIDTH` writer - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_VSYNC_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, O>;
+pub type LCD_VSYNC_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 7, O>;
 #[doc = "Field `VSYNC_IDLE_POL` reader - It is the idle value of spi_vsync. Can be configured in CONF state."]
-pub type VSYNC_IDLE_POL_R = crate::BitReader<bool>;
+pub type VSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `VSYNC_IDLE_POL` writer - It is the idle value of spi_vsync. Can be configured in CONF state."]
-pub type VSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type VSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type LCD_HSYNC_WIDTH_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_WIDTH` writer - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, O>;
+pub type LCD_HSYNC_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 7, O>;
 #[doc = "Field `HSYNC_IDLE_POL` reader - It is the idle value of spi_hsync. Can be configured in CONF state."]
-pub type HSYNC_IDLE_POL_R = crate::BitReader<bool>;
+pub type HSYNC_IDLE_POL_R = crate::BitReader;
 #[doc = "Field `HSYNC_IDLE_POL` writer - It is the idle value of spi_hsync. Can be configured in CONF state."]
-pub type HSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, O>;
+pub type HSYNC_IDLE_POL_W<'a, const O: u8> = crate::BitWriter<'a, LCD_CTRL2_SPEC, O>;
 #[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_POSITION_R = crate::FieldReader<u8, u8>;
+pub type LCD_HSYNC_POSITION_R = crate::FieldReader;
 #[doc = "Field `LCD_HSYNC_POSITION` writer - It is the position of spi_hsync active pulse in a line. Can be configured in CONF state."]
-pub type LCD_HSYNC_POSITION_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 8, O>;
+pub type LCD_HSYNC_POSITION_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:6 - It is the position of spi_vsync active pulse in a line. Can be configured in CONF state."]
     #[inline(always)]
@@ -82,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn lcd_hsync_position(&self) -> LCD_HSYNC_POSITION_R {
         LCD_HSYNC_POSITION_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_CTRL2")
+            .field(
+                "lcd_vsync_width",
+                &format_args!("{}", self.lcd_vsync_width().bits()),
+            )
+            .field(
+                "vsync_idle_pol",
+                &format_args!("{}", self.vsync_idle_pol().bit()),
+            )
+            .field(
+                "lcd_hsync_width",
+                &format_args!("{}", self.lcd_hsync_width().bits()),
+            )
+            .field(
+                "hsync_idle_pol",
+                &format_args!("{}", self.hsync_idle_pol().bit()),
+            )
+            .field(
+                "lcd_hsync_position",
+                &format_args!("{}", self.lcd_hsync_position().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

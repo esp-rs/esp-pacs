@@ -35,41 +35,41 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - 1=push pull,0=open drain"]
-pub type SDA_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SDA_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SDA_FORCE_OUT` writer - 1=push pull,0=open drain"]
-pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SDA_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SCL_FORCE_OUT` reader - 1=push pull,0=open drain"]
-pub type SCL_FORCE_OUT_R = crate::BitReader<bool>;
+pub type SCL_FORCE_OUT_R = crate::BitReader;
 #[doc = "Field `SCL_FORCE_OUT` writer - 1=push pull,0=open drain"]
-pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SCL_FORCE_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `MS_MODE` reader - 1=master,0=slave"]
-pub type MS_MODE_R = crate::BitReader<bool>;
+pub type MS_MODE_R = crate::BitReader;
 #[doc = "Field `MS_MODE` writer - 1=master,0=slave"]
-pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type MS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `TRANS_START` reader - force start"]
-pub type TRANS_START_R = crate::BitReader<bool>;
+pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - force start"]
-pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type TRANS_START_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `TX_LSB_FIRST` reader - transit lsb first"]
-pub type TX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type TX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `TX_LSB_FIRST` writer - transit lsb first"]
-pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type TX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `RX_LSB_FIRST` reader - receive lsb first"]
-pub type RX_LSB_FIRST_R = crate::BitReader<bool>;
+pub type RX_LSB_FIRST_R = crate::BitReader;
 #[doc = "Field `RX_LSB_FIRST` writer - receive lsb first"]
-pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type RX_LSB_FIRST_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `I2C_CTRL_CLK_GATE_EN` reader - configure i2c ctrl clk enable"]
-pub type I2C_CTRL_CLK_GATE_EN_R = crate::BitReader<bool>;
+pub type I2C_CTRL_CLK_GATE_EN_R = crate::BitReader;
 #[doc = "Field `I2C_CTRL_CLK_GATE_EN` writer - configure i2c ctrl clk enable"]
-pub type I2C_CTRL_CLK_GATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type I2C_CTRL_CLK_GATE_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `I2C_RESET` reader - rtc i2c sw reset"]
-pub type I2C_RESET_R = crate::BitReader<bool>;
+pub type I2C_RESET_R = crate::BitReader;
 #[doc = "Field `I2C_RESET` writer - rtc i2c sw reset"]
-pub type I2C_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type I2C_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `I2CCLK_EN` reader - rtc i2c reg clk gating"]
-pub type I2CCLK_EN_R = crate::BitReader<bool>;
+pub type I2CCLK_EN_R = crate::BitReader;
 #[doc = "Field `I2CCLK_EN` writer - rtc i2c reg clk gating"]
-pub type I2CCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type I2CCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1=push pull,0=open drain"]
     #[inline(always)]
@@ -115,6 +115,43 @@ impl R {
     #[inline(always)]
     pub fn i2cclk_en(&self) -> I2CCLK_EN_R {
         I2CCLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field(
+                "sda_force_out",
+                &format_args!("{}", self.sda_force_out().bit()),
+            )
+            .field(
+                "scl_force_out",
+                &format_args!("{}", self.scl_force_out().bit()),
+            )
+            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
+            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
+            .field(
+                "tx_lsb_first",
+                &format_args!("{}", self.tx_lsb_first().bit()),
+            )
+            .field(
+                "rx_lsb_first",
+                &format_args!("{}", self.rx_lsb_first().bit()),
+            )
+            .field(
+                "i2c_ctrl_clk_gate_en",
+                &format_args!("{}", self.i2c_ctrl_clk_gate_en().bit()),
+            )
+            .field("i2c_reset", &format_args!("{}", self.i2c_reset().bit()))
+            .field("i2cclk_en", &format_args!("{}", self.i2cclk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<DCACHE_OCCUPY_SIZE_SPEC>> for W {
 pub type DCACHE_OCCUPY_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DCACHE_OCCUPY_SIZE` writer - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
 pub type DCACHE_OCCUPY_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_OCCUPY_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, DCACHE_OCCUPY_SIZE_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
     #[inline(always)]
     pub fn dcache_occupy_size(&self) -> DCACHE_OCCUPY_SIZE_R {
         DCACHE_OCCUPY_SIZE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_OCCUPY_SIZE")
+            .field(
+                "dcache_occupy_size",
+                &format_args!("{}", self.dcache_occupy_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_OCCUPY_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

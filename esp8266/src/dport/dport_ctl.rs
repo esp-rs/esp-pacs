@@ -35,15 +35,31 @@ impl From<crate::W<DPORT_CTL_SPEC>> for W {
     }
 }
 #[doc = "Field `DPORT_CTL_DOUBLE_CLK` reader - "]
-pub type DPORT_CTL_DOUBLE_CLK_R = crate::BitReader<bool>;
+pub type DPORT_CTL_DOUBLE_CLK_R = crate::BitReader;
 #[doc = "Field `DPORT_CTL_DOUBLE_CLK` writer - "]
-pub type DPORT_CTL_DOUBLE_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DPORT_CTL_SPEC, bool, O>;
+pub type DPORT_CTL_DOUBLE_CLK_W<'a, const O: u8> = crate::BitWriter<'a, DPORT_CTL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn dport_ctl_double_clk(&self) -> DPORT_CTL_DOUBLE_CLK_R {
         DPORT_CTL_DOUBLE_CLK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DPORT_CTL")
+            .field(
+                "dport_ctl_double_clk",
+                &format_args!("{}", self.dport_ctl_double_clk().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DPORT_CTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

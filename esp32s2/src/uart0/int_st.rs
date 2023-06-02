@@ -14,45 +14,45 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ST` reader - This is the status bit for UART_RXFIFO_FULL_INT when UART_RXFIFO_FULL_INT_ENA is set to 1."]
-pub type RXFIFO_FULL_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_FULL_INT_ST_R = crate::BitReader;
 #[doc = "Field `TXFIFO_EMPTY_INT_ST` reader - This is the status bit for UART_TXFIFO_EMPTY_INT when UART_TXFIFO_EMPTY_INT_ENA is set to 1."]
-pub type TXFIFO_EMPTY_INT_ST_R = crate::BitReader<bool>;
+pub type TXFIFO_EMPTY_INT_ST_R = crate::BitReader;
 #[doc = "Field `PARITY_ERR_INT_ST` reader - This is the status bit for UART_PARITY_ERR_INT when UART_PARITY_ERR_INT_ENA is set to 1."]
-pub type PARITY_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type PARITY_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `FRM_ERR_INT_ST` reader - This is the status bit for UART_FRM_ERR_INT when UART_FRM_ERR_INT_ENA is set to 1."]
-pub type FRM_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type FRM_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - This is the status bit for UART_RXFIFO_OVF_INT when UART_RXFIFO_OVF_INT_ENA is set to 1."]
-pub type RXFIFO_OVF_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_ST_R = crate::BitReader;
 #[doc = "Field `DSR_CHG_INT_ST` reader - This is the status bit for UART_DSR_CHG_INT when UART_DSR_CHG_INT_ENA is set to 1."]
-pub type DSR_CHG_INT_ST_R = crate::BitReader<bool>;
+pub type DSR_CHG_INT_ST_R = crate::BitReader;
 #[doc = "Field `CTS_CHG_INT_ST` reader - This is the status bit for UART_CTS_CHG_INT when UART_CTS_CHG_INT_ENA is set to 1."]
-pub type CTS_CHG_INT_ST_R = crate::BitReader<bool>;
+pub type CTS_CHG_INT_ST_R = crate::BitReader;
 #[doc = "Field `BRK_DET_INT_ST` reader - This is the status bit for UART_BRK_DET_INT when UART_BRK_DET_INT_ENA is set to 1."]
-pub type BRK_DET_INT_ST_R = crate::BitReader<bool>;
+pub type BRK_DET_INT_ST_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TOUT_INT_ST` reader - This is the status bit for UART_RXFIFO_TOUT_INT when UART_RXFIFO_TOUT_INT_ENA is set to 1."]
-pub type RXFIFO_TOUT_INT_ST_R = crate::BitReader<bool>;
+pub type RXFIFO_TOUT_INT_ST_R = crate::BitReader;
 #[doc = "Field `SW_XON_INT_ST` reader - This is the status bit for UART_SW_XON_INT when UART_SW_XON_INT_ENA is set to 1."]
-pub type SW_XON_INT_ST_R = crate::BitReader<bool>;
+pub type SW_XON_INT_ST_R = crate::BitReader;
 #[doc = "Field `SW_XOFF_INT_ST` reader - This is the status bit for UART_SW_XOFF_INT when UART_SW_XOFF_INT_ENA is set to 1."]
-pub type SW_XOFF_INT_ST_R = crate::BitReader<bool>;
+pub type SW_XOFF_INT_ST_R = crate::BitReader;
 #[doc = "Field `GLITCH_DET_INT_ST` reader - This is the status bit for UART_GLITCH_DET_INT when UART_GLITCH_DET_INT_ENA is set to 1."]
-pub type GLITCH_DET_INT_ST_R = crate::BitReader<bool>;
+pub type GLITCH_DET_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_BRK_DONE_INT_ST` reader - This is the status bit for UART_TX_BRK_DONE_INT when UART_TX_BRK_DONE_INT_ENA is set to 1."]
-pub type TX_BRK_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TX_BRK_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ST` reader - This is the status bit for UART_TX_BRK_IDLE_DONE_INT when UART_TX_BRK_IDLE_DONE_INT_ENA is set to 1."]
-pub type TX_BRK_IDLE_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TX_BRK_IDLE_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `TX_DONE_INT_ST` reader - This is the status bit for UART_TX_DONE_INT when UART_TX_DONE_INT_ENA is set to 1."]
-pub type TX_DONE_INT_ST_R = crate::BitReader<bool>;
+pub type TX_DONE_INT_ST_R = crate::BitReader;
 #[doc = "Field `RS485_PARITY_ERR_INT_ST` reader - This is the status bit for UART_RS485_PARITY_ERR_INT when UART_RS485_PARITY_INT_ENA is set to 1."]
-pub type RS485_PARITY_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RS485_PARITY_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RS485_FRM_ERR_INT_ST` reader - This is the status bit for UART_RS485_FRM_ERR_INT when UART_RS485_FRM_ERR_INT_ENA is set to 1."]
-pub type RS485_FRM_ERR_INT_ST_R = crate::BitReader<bool>;
+pub type RS485_FRM_ERR_INT_ST_R = crate::BitReader;
 #[doc = "Field `RS485_CLASH_INT_ST` reader - This is the status bit for UART_RS485_CLASH_INT when UART_RS485_CLASH_INT_ENA is set to 1."]
-pub type RS485_CLASH_INT_ST_R = crate::BitReader<bool>;
+pub type RS485_CLASH_INT_ST_R = crate::BitReader;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ST` reader - This is the status bit for UART_AT_CMD_CHAR_DET_INT when UART_AT_CMD_CHAR_DET_INT_ENA is set to 1."]
-pub type AT_CMD_CHAR_DET_INT_ST_R = crate::BitReader<bool>;
+pub type AT_CMD_CHAR_DET_INT_ST_R = crate::BitReader;
 #[doc = "Field `WAKEUP_INT_ST` reader - This is the status bit for UART_WAKEUP_INT when UART_WAKEUP_INT_ENA is set to 1."]
-pub type WAKEUP_INT_ST_R = crate::BitReader<bool>;
+pub type WAKEUP_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This is the status bit for UART_RXFIFO_FULL_INT when UART_RXFIFO_FULL_INT_ENA is set to 1."]
     #[inline(always)]
@@ -153,6 +153,99 @@ impl R {
     #[inline(always)]
     pub fn wakeup_int_st(&self) -> WAKEUP_INT_ST_R {
         WAKEUP_INT_ST_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "rxfifo_full_int_st",
+                &format_args!("{}", self.rxfifo_full_int_st().bit()),
+            )
+            .field(
+                "txfifo_empty_int_st",
+                &format_args!("{}", self.txfifo_empty_int_st().bit()),
+            )
+            .field(
+                "parity_err_int_st",
+                &format_args!("{}", self.parity_err_int_st().bit()),
+            )
+            .field(
+                "frm_err_int_st",
+                &format_args!("{}", self.frm_err_int_st().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_st",
+                &format_args!("{}", self.rxfifo_ovf_int_st().bit()),
+            )
+            .field(
+                "dsr_chg_int_st",
+                &format_args!("{}", self.dsr_chg_int_st().bit()),
+            )
+            .field(
+                "cts_chg_int_st",
+                &format_args!("{}", self.cts_chg_int_st().bit()),
+            )
+            .field(
+                "brk_det_int_st",
+                &format_args!("{}", self.brk_det_int_st().bit()),
+            )
+            .field(
+                "rxfifo_tout_int_st",
+                &format_args!("{}", self.rxfifo_tout_int_st().bit()),
+            )
+            .field(
+                "sw_xon_int_st",
+                &format_args!("{}", self.sw_xon_int_st().bit()),
+            )
+            .field(
+                "sw_xoff_int_st",
+                &format_args!("{}", self.sw_xoff_int_st().bit()),
+            )
+            .field(
+                "glitch_det_int_st",
+                &format_args!("{}", self.glitch_det_int_st().bit()),
+            )
+            .field(
+                "tx_brk_done_int_st",
+                &format_args!("{}", self.tx_brk_done_int_st().bit()),
+            )
+            .field(
+                "tx_brk_idle_done_int_st",
+                &format_args!("{}", self.tx_brk_idle_done_int_st().bit()),
+            )
+            .field(
+                "tx_done_int_st",
+                &format_args!("{}", self.tx_done_int_st().bit()),
+            )
+            .field(
+                "rs485_parity_err_int_st",
+                &format_args!("{}", self.rs485_parity_err_int_st().bit()),
+            )
+            .field(
+                "rs485_frm_err_int_st",
+                &format_args!("{}", self.rs485_frm_err_int_st().bit()),
+            )
+            .field(
+                "rs485_clash_int_st",
+                &format_args!("{}", self.rs485_clash_int_st().bit()),
+            )
+            .field(
+                "at_cmd_char_det_int_st",
+                &format_args!("{}", self.at_cmd_char_det_int_st().bit()),
+            )
+            .field(
+                "wakeup_int_st",
+                &format_args!("{}", self.wakeup_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Masked interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

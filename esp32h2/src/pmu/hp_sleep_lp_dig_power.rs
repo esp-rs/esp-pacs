@@ -35,25 +35,25 @@ impl From<crate::W<HP_SLEEP_LP_DIG_POWER_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_SLEEP_BOD_SOURCE_SEL` reader - need_des"]
-pub type HP_SLEEP_BOD_SOURCE_SEL_R = crate::BitReader<bool>;
+pub type HP_SLEEP_BOD_SOURCE_SEL_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_BOD_SOURCE_SEL` writer - need_des"]
 pub type HP_SLEEP_BOD_SOURCE_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_SLEEP_VDDBAT_MODE` reader - need_des"]
-pub type HP_SLEEP_VDDBAT_MODE_R = crate::FieldReader<u8, u8>;
+pub type HP_SLEEP_VDDBAT_MODE_R = crate::FieldReader;
 #[doc = "Field `HP_SLEEP_VDDBAT_MODE` writer - need_des"]
 pub type HP_SLEEP_VDDBAT_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, 2, O>;
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` reader - need_des"]
-pub type HP_SLEEP_LP_MEM_DSLP_R = crate::BitReader<bool>;
+pub type HP_SLEEP_LP_MEM_DSLP_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_LP_MEM_DSLP` writer - need_des"]
 pub type HP_SLEEP_LP_MEM_DSLP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, O>;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` reader - need_des"]
-pub type HP_SLEEP_PD_LP_PERI_PD_EN_R = crate::BitReader<bool>;
+pub type HP_SLEEP_PD_LP_PERI_PD_EN_R = crate::BitReader;
 #[doc = "Field `HP_SLEEP_PD_LP_PERI_PD_EN` writer - need_des"]
 pub type HP_SLEEP_PD_LP_PERI_PD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_SLEEP_LP_DIG_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_SLEEP_LP_DIG_POWER_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn hp_sleep_pd_lp_peri_pd_en(&self) -> HP_SLEEP_PD_LP_PERI_PD_EN_R {
         HP_SLEEP_PD_LP_PERI_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_SLEEP_LP_DIG_POWER")
+            .field(
+                "hp_sleep_bod_source_sel",
+                &format_args!("{}", self.hp_sleep_bod_source_sel().bit()),
+            )
+            .field(
+                "hp_sleep_vddbat_mode",
+                &format_args!("{}", self.hp_sleep_vddbat_mode().bits()),
+            )
+            .field(
+                "hp_sleep_lp_mem_dslp",
+                &format_args!("{}", self.hp_sleep_lp_mem_dslp().bit()),
+            )
+            .field(
+                "hp_sleep_pd_lp_peri_pd_en",
+                &format_args!("{}", self.hp_sleep_pd_lp_peri_pd_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_DIG_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

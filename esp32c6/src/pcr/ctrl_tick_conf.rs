@@ -35,23 +35,21 @@ impl From<crate::W<CTRL_TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL_TICK_NUM` reader - ******* Description ***********"]
-pub type XTAL_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type XTAL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `XTAL_TICK_NUM` writer - ******* Description ***********"]
-pub type XTAL_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type XTAL_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_TICK_CONF_SPEC, 8, O>;
 #[doc = "Field `FOSC_TICK_NUM` reader - ******* Description ***********"]
-pub type FOSC_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type FOSC_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `FOSC_TICK_NUM` writer - ******* Description ***********"]
-pub type FOSC_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type FOSC_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_TICK_CONF_SPEC, 8, O>;
 #[doc = "Field `TICK_ENABLE` reader - ******* Description ***********"]
-pub type TICK_ENABLE_R = crate::BitReader<bool>;
+pub type TICK_ENABLE_R = crate::BitReader;
 #[doc = "Field `TICK_ENABLE` writer - ******* Description ***********"]
-pub type TICK_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_TICK_CONF_SPEC, bool, O>;
+pub type TICK_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_TICK_CONF_SPEC, O>;
 #[doc = "Field `RST_TICK_CNT` reader - ******* Description ***********"]
-pub type RST_TICK_CNT_R = crate::BitReader<bool>;
+pub type RST_TICK_CNT_R = crate::BitReader;
 #[doc = "Field `RST_TICK_CNT` writer - ******* Description ***********"]
-pub type RST_TICK_CNT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_TICK_CONF_SPEC, bool, O>;
+pub type RST_TICK_CNT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_TICK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
@@ -72,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn rst_tick_cnt(&self) -> RST_TICK_CNT_R {
         RST_TICK_CNT_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL_TICK_CONF")
+            .field(
+                "xtal_tick_num",
+                &format_args!("{}", self.xtal_tick_num().bits()),
+            )
+            .field(
+                "fosc_tick_num",
+                &format_args!("{}", self.fosc_tick_num().bits()),
+            )
+            .field("tick_enable", &format_args!("{}", self.tick_enable().bit()))
+            .field(
+                "rst_tick_cnt",
+                &format_args!("{}", self.rst_tick_cnt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_TICK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

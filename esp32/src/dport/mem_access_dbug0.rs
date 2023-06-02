@@ -14,23 +14,23 @@ impl From<crate::R<MEM_ACCESS_DBUG0_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_ROM_MPU_AD` reader - "]
-pub type PRO_ROM_MPU_AD_R = crate::BitReader<bool>;
+pub type PRO_ROM_MPU_AD_R = crate::BitReader;
 #[doc = "Field `PRO_ROM_IA` reader - "]
-pub type PRO_ROM_IA_R = crate::BitReader<bool>;
+pub type PRO_ROM_IA_R = crate::BitReader;
 #[doc = "Field `APP_ROM_MPU_AD` reader - "]
-pub type APP_ROM_MPU_AD_R = crate::BitReader<bool>;
+pub type APP_ROM_MPU_AD_R = crate::BitReader;
 #[doc = "Field `APP_ROM_IA` reader - "]
-pub type APP_ROM_IA_R = crate::BitReader<bool>;
+pub type APP_ROM_IA_R = crate::BitReader;
 #[doc = "Field `SHARE_ROM_MPU_AD` reader - "]
-pub type SHARE_ROM_MPU_AD_R = crate::FieldReader<u8, u8>;
+pub type SHARE_ROM_MPU_AD_R = crate::FieldReader;
 #[doc = "Field `SHARE_ROM_IA` reader - "]
-pub type SHARE_ROM_IA_R = crate::FieldReader<u8, u8>;
+pub type SHARE_ROM_IA_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_MMU_AD` reader - "]
-pub type INTERNAL_SRAM_MMU_AD_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_MMU_AD_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_IA` reader - "]
 pub type INTERNAL_SRAM_IA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INTERNAL_SRAM_MMU_MULTI_HIT` reader - "]
-pub type INTERNAL_SRAM_MMU_MULTI_HIT_R = crate::FieldReader<u8, u8>;
+pub type INTERNAL_SRAM_MMU_MULTI_HIT_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -76,6 +76,49 @@ impl R {
     #[inline(always)]
     pub fn internal_sram_mmu_multi_hit(&self) -> INTERNAL_SRAM_MMU_MULTI_HIT_R {
         INTERNAL_SRAM_MMU_MULTI_HIT_R::new(((self.bits >> 26) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_ACCESS_DBUG0")
+            .field(
+                "pro_rom_mpu_ad",
+                &format_args!("{}", self.pro_rom_mpu_ad().bit()),
+            )
+            .field("pro_rom_ia", &format_args!("{}", self.pro_rom_ia().bit()))
+            .field(
+                "app_rom_mpu_ad",
+                &format_args!("{}", self.app_rom_mpu_ad().bit()),
+            )
+            .field("app_rom_ia", &format_args!("{}", self.app_rom_ia().bit()))
+            .field(
+                "share_rom_mpu_ad",
+                &format_args!("{}", self.share_rom_mpu_ad().bits()),
+            )
+            .field(
+                "share_rom_ia",
+                &format_args!("{}", self.share_rom_ia().bits()),
+            )
+            .field(
+                "internal_sram_mmu_ad",
+                &format_args!("{}", self.internal_sram_mmu_ad().bits()),
+            )
+            .field(
+                "internal_sram_ia",
+                &format_args!("{}", self.internal_sram_ia().bits()),
+            )
+            .field(
+                "internal_sram_mmu_multi_hit",
+                &format_args!("{}", self.internal_sram_mmu_multi_hit().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_ACCESS_DBUG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_access_dbug0](index.html) module"]

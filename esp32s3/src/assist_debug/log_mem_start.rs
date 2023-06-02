@@ -38,12 +38,29 @@ impl From<crate::W<LOG_MEM_START_SPEC>> for W {
 pub type LOG_MEM_START_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_MEM_START` writer - mem start addr"]
 pub type LOG_MEM_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LOG_MEM_START_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, LOG_MEM_START_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - mem start addr"]
     #[inline(always)]
     pub fn log_mem_start(&self) -> LOG_MEM_START_R {
         LOG_MEM_START_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_MEM_START")
+            .field(
+                "log_mem_start",
+                &format_args!("{}", self.log_mem_start().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

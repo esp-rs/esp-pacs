@@ -35,33 +35,33 @@ impl From<crate::W<IN_INT_ENA_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_DONE` reader - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
-pub type IN_DONE_R = crate::BitReader<bool>;
+pub type IN_DONE_R = crate::BitReader;
 #[doc = "Field `IN_DONE` writer - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
-pub type IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `IN_SUC_EOF` reader - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
-pub type IN_SUC_EOF_R = crate::BitReader<bool>;
+pub type IN_SUC_EOF_R = crate::BitReader;
 #[doc = "Field `IN_SUC_EOF` writer - The interrupt enable bit for the IN_SUC_EOF_CH_INT interrupt."]
-pub type IN_SUC_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type IN_SUC_EOF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `IN_ERR_EOF` reader - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
-pub type IN_ERR_EOF_R = crate::BitReader<bool>;
+pub type IN_ERR_EOF_R = crate::BitReader;
 #[doc = "Field `IN_ERR_EOF` writer - The interrupt enable bit for the IN_ERR_EOF_CH_INT interrupt."]
-pub type IN_ERR_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type IN_ERR_EOF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `IN_DSCR_ERR` reader - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
-pub type IN_DSCR_ERR_R = crate::BitReader<bool>;
+pub type IN_DSCR_ERR_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_ERR` writer - The interrupt enable bit for the IN_DSCR_ERR_CH_INT interrupt."]
-pub type IN_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type IN_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `IN_DSCR_EMPTY` reader - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub type IN_DSCR_EMPTY_R = crate::BitReader<bool>;
+pub type IN_DSCR_EMPTY_R = crate::BitReader;
 #[doc = "Field `IN_DSCR_EMPTY` writer - The interrupt enable bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub type IN_DSCR_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type IN_DSCR_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `INFIFO_OVF` reader - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
-pub type INFIFO_OVF_R = crate::BitReader<bool>;
+pub type INFIFO_OVF_R = crate::BitReader;
 #[doc = "Field `INFIFO_OVF` writer - The interrupt enable bit for the INFIFO_OVF_L1_CH_INT interrupt."]
-pub type INFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type INFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 #[doc = "Field `INFIFO_UDF` reader - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
-pub type INFIFO_UDF_R = crate::BitReader<bool>;
+pub type INFIFO_UDF_R = crate::BitReader;
 #[doc = "Field `INFIFO_UDF` writer - The interrupt enable bit for the INFIFO_UDF_L1_CH_INT interrupt."]
-pub type INFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_ENA_CH_SPEC, bool, O>;
+pub type INFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_ENA_CH_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the IN_DONE_CH_INT interrupt."]
     #[inline(always)]
@@ -97,6 +97,29 @@ impl R {
     #[inline(always)]
     pub fn infifo_udf(&self) -> INFIFO_UDF_R {
         INFIFO_UDF_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_INT_ENA_CH")
+            .field("in_done", &format_args!("{}", self.in_done().bit()))
+            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
+            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
+            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
+            .field(
+                "in_dscr_empty",
+                &format_args!("{}", self.in_dscr_empty().bit()),
+            )
+            .field("infifo_ovf", &format_args!("{}", self.infifo_ovf().bit()))
+            .field("infifo_udf", &format_args!("{}", self.infifo_udf().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_INT_ENA_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

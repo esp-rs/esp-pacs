@@ -35,121 +35,121 @@ impl From<crate::W<DIG_PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `LSLP_MEM_FORCE_PD` reader - Set this bit to FPD the memories in the digital system in sleep."]
-pub type LSLP_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type LSLP_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_FORCE_PD` writer - Set this bit to FPD the memories in the digital system in sleep."]
-pub type LSLP_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type LSLP_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `LSLP_MEM_FORCE_PU` reader - Set this bit to FPU the memories in the digital system."]
-pub type LSLP_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type LSLP_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `LSLP_MEM_FORCE_PU` writer - Set this bit to FPU the memories in the digital system."]
-pub type LSLP_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type LSLP_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `ROM0_FORCE_PD` reader - ROM force power down"]
-pub type ROM0_FORCE_PD_R = crate::BitReader<bool>;
+pub type ROM0_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `ROM0_FORCE_PD` writer - ROM force power down"]
-pub type ROM0_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type ROM0_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `ROM0_FORCE_PU` reader - ROM force power up"]
-pub type ROM0_FORCE_PU_R = crate::BitReader<bool>;
+pub type ROM0_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `ROM0_FORCE_PU` writer - ROM force power up"]
-pub type ROM0_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type ROM0_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM0_FORCE_PD` reader - internal SRAM 0 force power down"]
-pub type INTER_RAM0_FORCE_PD_R = crate::BitReader<bool>;
+pub type INTER_RAM0_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `INTER_RAM0_FORCE_PD` writer - internal SRAM 0 force power down"]
-pub type INTER_RAM0_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM0_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM0_FORCE_PU` reader - internal SRAM 0 force power up"]
-pub type INTER_RAM0_FORCE_PU_R = crate::BitReader<bool>;
+pub type INTER_RAM0_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `INTER_RAM0_FORCE_PU` writer - internal SRAM 0 force power up"]
-pub type INTER_RAM0_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM0_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM1_FORCE_PD` reader - internal SRAM 1 force power down"]
-pub type INTER_RAM1_FORCE_PD_R = crate::BitReader<bool>;
+pub type INTER_RAM1_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `INTER_RAM1_FORCE_PD` writer - internal SRAM 1 force power down"]
-pub type INTER_RAM1_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM1_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM1_FORCE_PU` reader - internal SRAM 1 force power up"]
-pub type INTER_RAM1_FORCE_PU_R = crate::BitReader<bool>;
+pub type INTER_RAM1_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `INTER_RAM1_FORCE_PU` writer - internal SRAM 1 force power up"]
-pub type INTER_RAM1_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM1_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM2_FORCE_PD` reader - internal SRAM 2 force power down"]
-pub type INTER_RAM2_FORCE_PD_R = crate::BitReader<bool>;
+pub type INTER_RAM2_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `INTER_RAM2_FORCE_PD` writer - internal SRAM 2 force power down"]
-pub type INTER_RAM2_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM2_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM2_FORCE_PU` reader - internal SRAM 2 force power up"]
-pub type INTER_RAM2_FORCE_PU_R = crate::BitReader<bool>;
+pub type INTER_RAM2_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `INTER_RAM2_FORCE_PU` writer - internal SRAM 2 force power up"]
-pub type INTER_RAM2_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM2_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM3_FORCE_PD` reader - internal SRAM 3 force power down"]
-pub type INTER_RAM3_FORCE_PD_R = crate::BitReader<bool>;
+pub type INTER_RAM3_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `INTER_RAM3_FORCE_PD` writer - internal SRAM 3 force power down"]
-pub type INTER_RAM3_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM3_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM3_FORCE_PU` reader - internal SRAM 3 force power up"]
-pub type INTER_RAM3_FORCE_PU_R = crate::BitReader<bool>;
+pub type INTER_RAM3_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `INTER_RAM3_FORCE_PU` writer - internal SRAM 3 force power up"]
-pub type INTER_RAM3_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM3_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM4_FORCE_PD` reader - internal SRAM 4 force power down"]
-pub type INTER_RAM4_FORCE_PD_R = crate::BitReader<bool>;
+pub type INTER_RAM4_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `INTER_RAM4_FORCE_PD` writer - internal SRAM 4 force power down"]
-pub type INTER_RAM4_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM4_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM4_FORCE_PU` reader - internal SRAM 4 force power up"]
-pub type INTER_RAM4_FORCE_PU_R = crate::BitReader<bool>;
+pub type INTER_RAM4_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `INTER_RAM4_FORCE_PU` writer - internal SRAM 4 force power up"]
-pub type INTER_RAM4_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM4_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_PD` reader - Set this bit to FPD the Wi-Fi circuit."]
-pub type WIFI_FORCE_PD_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_PD` writer - Set this bit to FPD the Wi-Fi circuit."]
-pub type WIFI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_PU` reader - Set this bit to FPU the Wi-Fi circuit."]
-pub type WIFI_FORCE_PU_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_PU` writer - Set this bit to FPU the Wi-Fi circuit."]
-pub type WIFI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_PD` reader - Set this bit to FPD the digital system."]
-pub type DG_WRAP_FORCE_PD_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_PD` writer - Set this bit to FPD the digital system."]
-pub type DG_WRAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_PU` reader - Set this bit to FPD the DC-DC convertor in the digital system."]
-pub type DG_WRAP_FORCE_PU_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_PU` writer - Set this bit to FPD the DC-DC convertor in the digital system."]
-pub type DG_WRAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_DCDC_FORCE_PD` reader - Set this bit to FPD the DC-DC convertor in the digital system."]
-pub type DG_DCDC_FORCE_PD_R = crate::BitReader<bool>;
+pub type DG_DCDC_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DG_DCDC_FORCE_PD` writer - Set this bit to FPD the DC-DC convertor in the digital system."]
-pub type DG_DCDC_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_DCDC_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_DCDC_FORCE_PU` reader - Set this bit to FPU the DC-DC convertor in the digital system."]
-pub type DG_DCDC_FORCE_PU_R = crate::BitReader<bool>;
+pub type DG_DCDC_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DG_DCDC_FORCE_PU` writer - Set this bit to FPU the DC-DC convertor in the digital system."]
-pub type DG_DCDC_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_DCDC_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_DCDC_PD_EN` reader - Set this bit to enable PD for the DC-DC convertor in the digital system."]
-pub type DG_DCDC_PD_EN_R = crate::BitReader<bool>;
+pub type DG_DCDC_PD_EN_R = crate::BitReader;
 #[doc = "Field `DG_DCDC_PD_EN` writer - Set this bit to enable PD for the DC-DC convertor in the digital system."]
-pub type DG_DCDC_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_DCDC_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `ROM0_PD_EN` reader - enable power down ROM in sleep"]
-pub type ROM0_PD_EN_R = crate::BitReader<bool>;
+pub type ROM0_PD_EN_R = crate::BitReader;
 #[doc = "Field `ROM0_PD_EN` writer - enable power down ROM in sleep"]
-pub type ROM0_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type ROM0_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM0_PD_EN` reader - enable power down internal SRAM 0 in sleep"]
-pub type INTER_RAM0_PD_EN_R = crate::BitReader<bool>;
+pub type INTER_RAM0_PD_EN_R = crate::BitReader;
 #[doc = "Field `INTER_RAM0_PD_EN` writer - enable power down internal SRAM 0 in sleep"]
-pub type INTER_RAM0_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM0_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM1_PD_EN` reader - enable power down internal SRAM 1 in sleep"]
-pub type INTER_RAM1_PD_EN_R = crate::BitReader<bool>;
+pub type INTER_RAM1_PD_EN_R = crate::BitReader;
 #[doc = "Field `INTER_RAM1_PD_EN` writer - enable power down internal SRAM 1 in sleep"]
-pub type INTER_RAM1_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM1_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM2_PD_EN` reader - enable power down internal SRAM 2 in sleep"]
-pub type INTER_RAM2_PD_EN_R = crate::BitReader<bool>;
+pub type INTER_RAM2_PD_EN_R = crate::BitReader;
 #[doc = "Field `INTER_RAM2_PD_EN` writer - enable power down internal SRAM 2 in sleep"]
-pub type INTER_RAM2_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM2_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM3_PD_EN` reader - enable power down internal SRAM 3 in sleep"]
-pub type INTER_RAM3_PD_EN_R = crate::BitReader<bool>;
+pub type INTER_RAM3_PD_EN_R = crate::BitReader;
 #[doc = "Field `INTER_RAM3_PD_EN` writer - enable power down internal SRAM 3 in sleep"]
-pub type INTER_RAM3_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM3_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `INTER_RAM4_PD_EN` reader - enable power down internal SRAM 4 in sleep"]
-pub type INTER_RAM4_PD_EN_R = crate::BitReader<bool>;
+pub type INTER_RAM4_PD_EN_R = crate::BitReader;
 #[doc = "Field `INTER_RAM4_PD_EN` writer - enable power down internal SRAM 4 in sleep"]
-pub type INTER_RAM4_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type INTER_RAM4_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `WIFI_PD_EN` reader - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
-pub type WIFI_PD_EN_R = crate::BitReader<bool>;
+pub type WIFI_PD_EN_R = crate::BitReader;
 #[doc = "Field `WIFI_PD_EN` writer - Set this bit to enable PD for the Wi-Fi circuit in sleep."]
-pub type WIFI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type WIFI_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 #[doc = "Field `DG_WRAP_PD_EN` reader - Set this bit to enable PD for the digital system in sleep."]
-pub type DG_WRAP_PD_EN_R = crate::BitReader<bool>;
+pub type DG_WRAP_PD_EN_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_PD_EN` writer - Set this bit to enable PD for the digital system in sleep."]
-pub type DG_WRAP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_PWC_SPEC, bool, O>;
+pub type DG_WRAP_PD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_PWC_SPEC, O>;
 impl R {
     #[doc = "Bit 3 - Set this bit to FPD the memories in the digital system in sleep."]
     #[inline(always)]
@@ -295,6 +295,129 @@ impl R {
     #[inline(always)]
     pub fn dg_wrap_pd_en(&self) -> DG_WRAP_PD_EN_R {
         DG_WRAP_PD_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIG_PWC")
+            .field(
+                "lslp_mem_force_pd",
+                &format_args!("{}", self.lslp_mem_force_pd().bit()),
+            )
+            .field(
+                "lslp_mem_force_pu",
+                &format_args!("{}", self.lslp_mem_force_pu().bit()),
+            )
+            .field(
+                "rom0_force_pd",
+                &format_args!("{}", self.rom0_force_pd().bit()),
+            )
+            .field(
+                "rom0_force_pu",
+                &format_args!("{}", self.rom0_force_pu().bit()),
+            )
+            .field(
+                "inter_ram0_force_pd",
+                &format_args!("{}", self.inter_ram0_force_pd().bit()),
+            )
+            .field(
+                "inter_ram0_force_pu",
+                &format_args!("{}", self.inter_ram0_force_pu().bit()),
+            )
+            .field(
+                "inter_ram1_force_pd",
+                &format_args!("{}", self.inter_ram1_force_pd().bit()),
+            )
+            .field(
+                "inter_ram1_force_pu",
+                &format_args!("{}", self.inter_ram1_force_pu().bit()),
+            )
+            .field(
+                "inter_ram2_force_pd",
+                &format_args!("{}", self.inter_ram2_force_pd().bit()),
+            )
+            .field(
+                "inter_ram2_force_pu",
+                &format_args!("{}", self.inter_ram2_force_pu().bit()),
+            )
+            .field(
+                "inter_ram3_force_pd",
+                &format_args!("{}", self.inter_ram3_force_pd().bit()),
+            )
+            .field(
+                "inter_ram3_force_pu",
+                &format_args!("{}", self.inter_ram3_force_pu().bit()),
+            )
+            .field(
+                "inter_ram4_force_pd",
+                &format_args!("{}", self.inter_ram4_force_pd().bit()),
+            )
+            .field(
+                "inter_ram4_force_pu",
+                &format_args!("{}", self.inter_ram4_force_pu().bit()),
+            )
+            .field(
+                "wifi_force_pd",
+                &format_args!("{}", self.wifi_force_pd().bit()),
+            )
+            .field(
+                "wifi_force_pu",
+                &format_args!("{}", self.wifi_force_pu().bit()),
+            )
+            .field(
+                "dg_wrap_force_pd",
+                &format_args!("{}", self.dg_wrap_force_pd().bit()),
+            )
+            .field(
+                "dg_wrap_force_pu",
+                &format_args!("{}", self.dg_wrap_force_pu().bit()),
+            )
+            .field(
+                "dg_dcdc_force_pd",
+                &format_args!("{}", self.dg_dcdc_force_pd().bit()),
+            )
+            .field(
+                "dg_dcdc_force_pu",
+                &format_args!("{}", self.dg_dcdc_force_pu().bit()),
+            )
+            .field(
+                "dg_dcdc_pd_en",
+                &format_args!("{}", self.dg_dcdc_pd_en().bit()),
+            )
+            .field("rom0_pd_en", &format_args!("{}", self.rom0_pd_en().bit()))
+            .field(
+                "inter_ram0_pd_en",
+                &format_args!("{}", self.inter_ram0_pd_en().bit()),
+            )
+            .field(
+                "inter_ram1_pd_en",
+                &format_args!("{}", self.inter_ram1_pd_en().bit()),
+            )
+            .field(
+                "inter_ram2_pd_en",
+                &format_args!("{}", self.inter_ram2_pd_en().bit()),
+            )
+            .field(
+                "inter_ram3_pd_en",
+                &format_args!("{}", self.inter_ram3_pd_en().bit()),
+            )
+            .field(
+                "inter_ram4_pd_en",
+                &format_args!("{}", self.inter_ram4_pd_en().bit()),
+            )
+            .field("wifi_pd_en", &format_args!("{}", self.wifi_pd_en().bit()))
+            .field(
+                "dg_wrap_pd_en",
+                &format_args!("{}", self.dg_wrap_pd_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIG_PWC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

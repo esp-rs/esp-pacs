@@ -20,65 +20,71 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_STOP_INT_CLR` writer - "]
-pub type TIMER0_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_STOP_INT_CLR` writer - "]
-pub type TIMER1_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_STOP_INT_CLR` writer - "]
-pub type TIMER2_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_STOP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER0_TEZ_INT_CLR` writer - "]
-pub type TIMER0_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_TEZ_INT_CLR` writer - "]
-pub type TIMER1_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_TEZ_INT_CLR` writer - "]
-pub type TIMER2_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_TEZ_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER0_TEP_INT_CLR` writer - "]
-pub type TIMER0_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_TEP_INT_CLR` writer - "]
-pub type TIMER1_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_TEP_INT_CLR` writer - "]
-pub type TIMER2_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_TEP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT0_INT_CLR` writer - "]
-pub type FAULT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT1_INT_CLR` writer - "]
-pub type FAULT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT2_INT_CLR` writer - "]
-pub type FAULT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT0_CLR_INT_CLR` writer - "]
-pub type FAULT0_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT0_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT1_CLR_INT_CLR` writer - "]
-pub type FAULT1_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT1_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FAULT2_CLR_INT_CLR` writer - "]
-pub type FAULT2_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FAULT2_CLR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP0_TEA_INT_CLR` writer - "]
-pub type OP0_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP0_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP1_TEA_INT_CLR` writer - "]
-pub type OP1_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP1_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP2_TEA_INT_CLR` writer - "]
-pub type OP2_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP2_TEA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP0_TEB_INT_CLR` writer - "]
-pub type OP0_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP0_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP1_TEB_INT_CLR` writer - "]
-pub type OP1_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP1_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OP2_TEB_INT_CLR` writer - "]
-pub type OP2_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OP2_TEB_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH0_CBC_INT_CLR` writer - "]
-pub type FH0_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH0_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH1_CBC_INT_CLR` writer - "]
-pub type FH1_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH1_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH2_CBC_INT_CLR` writer - "]
-pub type FH2_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH2_CBC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH0_OST_INT_CLR` writer - "]
-pub type FH0_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH0_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH1_OST_INT_CLR` writer - "]
-pub type FH1_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH1_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FH2_OST_INT_CLR` writer - "]
-pub type FH2_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FH2_OST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP0_INT_CLR` writer - "]
-pub type CAP0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP1_INT_CLR` writer - "]
-pub type CAP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CAP2_INT_CLR` writer - "]
-pub type CAP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CAP2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]

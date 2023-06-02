@@ -37,13 +37,29 @@ impl From<crate::W<DEBNCE_SPEC>> for W {
 #[doc = "Field `DEBOUNCE_COUNT` reader - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
 pub type DEBOUNCE_COUNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DEBOUNCE_COUNT` writer - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
-pub type DEBOUNCE_COUNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DEBNCE_SPEC, u32, u32, 24, O>;
+pub type DEBOUNCE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, DEBNCE_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
     pub fn debounce_count(&self) -> DEBOUNCE_COUNT_R {
         DEBOUNCE_COUNT_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DEBNCE")
+            .field(
+                "debounce_count",
+                &format_args!("{}", self.debounce_count().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DEBNCE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

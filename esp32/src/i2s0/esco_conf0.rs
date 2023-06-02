@@ -35,43 +35,41 @@ impl From<crate::W<ESCO_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `ESCO_EN` reader - "]
-pub type ESCO_EN_R = crate::BitReader<bool>;
+pub type ESCO_EN_R = crate::BitReader;
 #[doc = "Field `ESCO_EN` writer - "]
-pub type ESCO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type ESCO_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `ESCO_CHAN_MOD` reader - "]
-pub type ESCO_CHAN_MOD_R = crate::BitReader<bool>;
+pub type ESCO_CHAN_MOD_R = crate::BitReader;
 #[doc = "Field `ESCO_CHAN_MOD` writer - "]
-pub type ESCO_CHAN_MOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type ESCO_CHAN_MOD_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `ESCO_CVSD_DEC_PACK_ERR` reader - "]
-pub type ESCO_CVSD_DEC_PACK_ERR_R = crate::BitReader<bool>;
+pub type ESCO_CVSD_DEC_PACK_ERR_R = crate::BitReader;
 #[doc = "Field `ESCO_CVSD_DEC_PACK_ERR` writer - "]
-pub type ESCO_CVSD_DEC_PACK_ERR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type ESCO_CVSD_DEC_PACK_ERR_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `ESCO_CVSD_PACK_LEN_8K` reader - "]
-pub type ESCO_CVSD_PACK_LEN_8K_R = crate::FieldReader<u8, u8>;
+pub type ESCO_CVSD_PACK_LEN_8K_R = crate::FieldReader;
 #[doc = "Field `ESCO_CVSD_PACK_LEN_8K` writer - "]
-pub type ESCO_CVSD_PACK_LEN_8K_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ESCO_CONF0_SPEC, u8, u8, 5, O>;
+pub type ESCO_CVSD_PACK_LEN_8K_W<'a, const O: u8> = crate::FieldWriter<'a, ESCO_CONF0_SPEC, 5, O>;
 #[doc = "Field `ESCO_CVSD_INF_EN` reader - "]
-pub type ESCO_CVSD_INF_EN_R = crate::BitReader<bool>;
+pub type ESCO_CVSD_INF_EN_R = crate::BitReader;
 #[doc = "Field `ESCO_CVSD_INF_EN` writer - "]
-pub type ESCO_CVSD_INF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type ESCO_CVSD_INF_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `CVSD_DEC_START` reader - "]
-pub type CVSD_DEC_START_R = crate::BitReader<bool>;
+pub type CVSD_DEC_START_R = crate::BitReader;
 #[doc = "Field `CVSD_DEC_START` writer - "]
-pub type CVSD_DEC_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type CVSD_DEC_START_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `CVSD_DEC_RESET` reader - "]
-pub type CVSD_DEC_RESET_R = crate::BitReader<bool>;
+pub type CVSD_DEC_RESET_R = crate::BitReader;
 #[doc = "Field `CVSD_DEC_RESET` writer - "]
-pub type CVSD_DEC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type CVSD_DEC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `PLC_EN` reader - "]
-pub type PLC_EN_R = crate::BitReader<bool>;
+pub type PLC_EN_R = crate::BitReader;
 #[doc = "Field `PLC_EN` writer - "]
-pub type PLC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type PLC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 #[doc = "Field `PLC2DMA_EN` reader - "]
-pub type PLC2DMA_EN_R = crate::BitReader<bool>;
+pub type PLC2DMA_EN_R = crate::BitReader;
 #[doc = "Field `PLC2DMA_EN` writer - "]
-pub type PLC2DMA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCO_CONF0_SPEC, bool, O>;
+pub type PLC2DMA_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCO_CONF0_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -117,6 +115,46 @@ impl R {
     #[inline(always)]
     pub fn plc2dma_en(&self) -> PLC2DMA_EN_R {
         PLC2DMA_EN_R::new(((self.bits >> 12) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESCO_CONF0")
+            .field("esco_en", &format_args!("{}", self.esco_en().bit()))
+            .field(
+                "esco_chan_mod",
+                &format_args!("{}", self.esco_chan_mod().bit()),
+            )
+            .field(
+                "esco_cvsd_dec_pack_err",
+                &format_args!("{}", self.esco_cvsd_dec_pack_err().bit()),
+            )
+            .field(
+                "esco_cvsd_pack_len_8k",
+                &format_args!("{}", self.esco_cvsd_pack_len_8k().bits()),
+            )
+            .field(
+                "esco_cvsd_inf_en",
+                &format_args!("{}", self.esco_cvsd_inf_en().bit()),
+            )
+            .field(
+                "cvsd_dec_start",
+                &format_args!("{}", self.cvsd_dec_start().bit()),
+            )
+            .field(
+                "cvsd_dec_reset",
+                &format_args!("{}", self.cvsd_dec_reset().bit()),
+            )
+            .field("plc_en", &format_args!("{}", self.plc_en().bit()))
+            .field("plc2dma_en", &format_args!("{}", self.plc2dma_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ESCO_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

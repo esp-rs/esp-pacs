@@ -35,34 +35,33 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
-pub type CS_SETUP_TIME_R = crate::FieldReader<u8, u8>;
+pub type CS_SETUP_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
-pub type CS_SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 5, O>;
+pub type CS_SETUP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 5, O>;
 #[doc = "Field `CS_HOLD_TIME` reader - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
-pub type CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_TIME` writer - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
-pub type CS_HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 5, O>;
+pub type CS_HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 5, O>;
 #[doc = "Field `ECC_CS_HOLD_TIME` reader - SPI_MEM_CS_HOLD_TIME + SPI_MEM_ECC_CS_HOLD_TIME is the SPI_CS hold cycle in ECC mode when accessed flash."]
-pub type ECC_CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
+pub type ECC_CS_HOLD_TIME_R = crate::FieldReader;
 #[doc = "Field `ECC_CS_HOLD_TIME` writer - SPI_MEM_CS_HOLD_TIME + SPI_MEM_ECC_CS_HOLD_TIME is the SPI_CS hold cycle in ECC mode when accessed flash."]
-pub type ECC_CS_HOLD_TIME_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 3, O>;
+pub type ECC_CS_HOLD_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 3, O>;
 #[doc = "Field `ECC_SKIP_PAGE_CORNER` reader - 1: MSPI skips page corner when accesses flash. 0: Not skip page corner when accesses flash."]
-pub type ECC_SKIP_PAGE_CORNER_R = crate::BitReader<bool>;
+pub type ECC_SKIP_PAGE_CORNER_R = crate::BitReader;
 #[doc = "Field `ECC_SKIP_PAGE_CORNER` writer - 1: MSPI skips page corner when accesses flash. 0: Not skip page corner when accesses flash."]
-pub type ECC_SKIP_PAGE_CORNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type ECC_SKIP_PAGE_CORNER_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `ECC_16TO18_BYTE_EN` reader - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses flash."]
-pub type ECC_16TO18_BYTE_EN_R = crate::BitReader<bool>;
+pub type ECC_16TO18_BYTE_EN_R = crate::BitReader;
 #[doc = "Field `ECC_16TO18_BYTE_EN` writer - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses flash."]
-pub type ECC_16TO18_BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type ECC_16TO18_BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to flash. tSHSL is (SPI_MEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 6, O>;
+pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 6, O>;
 #[doc = "Field `SYNC_RESET` reader - The FSM will be reset."]
-pub type SYNC_RESET_R = crate::BitReader<bool>;
+pub type SYNC_RESET_R = crate::BitReader;
 #[doc = "Field `SYNC_RESET` writer - The FSM will be reset."]
-pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, O>;
+pub type SYNC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
@@ -98,6 +97,44 @@ impl R {
     #[inline(always)]
     pub fn sync_reset(&self) -> SYNC_RESET_R {
         SYNC_RESET_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field(
+                "cs_setup_time",
+                &format_args!("{}", self.cs_setup_time().bits()),
+            )
+            .field(
+                "cs_hold_time",
+                &format_args!("{}", self.cs_hold_time().bits()),
+            )
+            .field(
+                "ecc_cs_hold_time",
+                &format_args!("{}", self.ecc_cs_hold_time().bits()),
+            )
+            .field(
+                "ecc_skip_page_corner",
+                &format_args!("{}", self.ecc_skip_page_corner().bit()),
+            )
+            .field(
+                "ecc_16to18_byte_en",
+                &format_args!("{}", self.ecc_16to18_byte_en().bit()),
+            )
+            .field(
+                "cs_hold_delay",
+                &format_args!("{}", self.cs_hold_delay().bits()),
+            )
+            .field("sync_reset", &format_args!("{}", self.sync_reset().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

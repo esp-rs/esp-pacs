@@ -35,20 +35,20 @@ impl From<crate::W<PRO_CPU_RECORD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CPU_RECORD_ENABLE` reader - "]
-pub type PRO_CPU_RECORD_ENABLE_R = crate::BitReader<bool>;
+pub type PRO_CPU_RECORD_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_RECORD_ENABLE` writer - "]
 pub type PRO_CPU_RECORD_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CPU_RECORD_DISABLE` reader - "]
-pub type PRO_CPU_RECORD_DISABLE_R = crate::BitReader<bool>;
+pub type PRO_CPU_RECORD_DISABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_RECORD_DISABLE` writer - "]
 pub type PRO_CPU_RECORD_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CPU_PDEBUG_ENABLE` reader - "]
-pub type PRO_CPU_PDEBUG_ENABLE_R = crate::BitReader<bool>;
+pub type PRO_CPU_PDEBUG_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CPU_PDEBUG_ENABLE` writer - "]
 pub type PRO_CPU_PDEBUG_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CPU_RECORD_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CPU_RECORD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn pro_cpu_pdebug_enable(&self) -> PRO_CPU_PDEBUG_ENABLE_R {
         PRO_CPU_PDEBUG_ENABLE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CPU_RECORD_CTRL")
+            .field(
+                "pro_cpu_record_enable",
+                &format_args!("{}", self.pro_cpu_record_enable().bit()),
+            )
+            .field(
+                "pro_cpu_record_disable",
+                &format_args!("{}", self.pro_cpu_record_disable().bit()),
+            )
+            .field(
+                "pro_cpu_pdebug_enable",
+                &format_args!("{}", self.pro_cpu_pdebug_enable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,29 @@ impl From<crate::W<WIN_CMD_SPEC>> for W {
 #[doc = "Field `SLCHOST_WIN_CMD` reader - *******Description***********"]
 pub type SLCHOST_WIN_CMD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLCHOST_WIN_CMD` writer - *******Description***********"]
-pub type SLCHOST_WIN_CMD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WIN_CMD_SPEC, u16, u16, 16, O>;
+pub type SLCHOST_WIN_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, WIN_CMD_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - *******Description***********"]
     #[inline(always)]
     pub fn slchost_win_cmd(&self) -> SLCHOST_WIN_CMD_R {
         SLCHOST_WIN_CMD_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIN_CMD")
+            .field(
+                "slchost_win_cmd",
+                &format_args!("{}", self.slchost_win_cmd().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WIN_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

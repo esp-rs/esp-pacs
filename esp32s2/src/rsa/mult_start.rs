@@ -20,7 +20,13 @@ impl From<crate::W<MULT_START_SPEC>> for W {
     }
 }
 #[doc = "Field `MULT_START` writer - Set this bit to 1 to start the multiplication."]
-pub type MULT_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, MULT_START_SPEC, bool, O>;
+pub type MULT_START_W<'a, const O: u8> = crate::BitWriter<'a, MULT_START_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MULT_START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to start the multiplication."]
     #[inline(always)]

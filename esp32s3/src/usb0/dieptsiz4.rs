@@ -35,13 +35,13 @@ impl From<crate::W<DIEPTSIZ4_SPEC>> for W {
     }
 }
 #[doc = "Field `D_XFERSIZE4` reader - "]
-pub type D_XFERSIZE4_R = crate::FieldReader<u8, u8>;
+pub type D_XFERSIZE4_R = crate::FieldReader;
 #[doc = "Field `D_XFERSIZE4` writer - "]
-pub type D_XFERSIZE4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPTSIZ4_SPEC, u8, u8, 7, O>;
+pub type D_XFERSIZE4_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTSIZ4_SPEC, 7, O>;
 #[doc = "Field `D_PKTCNT4` reader - "]
-pub type D_PKTCNT4_R = crate::FieldReader<u8, u8>;
+pub type D_PKTCNT4_R = crate::FieldReader;
 #[doc = "Field `D_PKTCNT4` writer - "]
-pub type D_PKTCNT4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIEPTSIZ4_SPEC, u8, u8, 2, O>;
+pub type D_PKTCNT4_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTSIZ4_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn d_pktcnt4(&self) -> D_PKTCNT4_R {
         D_PKTCNT4_R::new(((self.bits >> 19) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPTSIZ4")
+            .field(
+                "d_xfersize4",
+                &format_args!("{}", self.d_xfersize4().bits()),
+            )
+            .field("d_pktcnt4", &format_args!("{}", self.d_pktcnt4().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIEPTSIZ4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

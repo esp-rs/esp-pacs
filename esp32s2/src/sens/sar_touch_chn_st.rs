@@ -38,9 +38,9 @@ impl From<crate::W<SAR_TOUCH_CHN_ST_SPEC>> for W {
 pub type TOUCH_PAD_ACTIVE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_CHANNEL_CLR` writer - Clear touch channel"]
 pub type TOUCH_CHANNEL_CLR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_CHN_ST_SPEC, u16, u16, 15, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_CHN_ST_SPEC, 15, O, u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - Signal flag that indicates one touch pad is done."]
-pub type TOUCH_MEAS_DONE_R = crate::BitReader<bool>;
+pub type TOUCH_MEAS_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:14 - Touch active status"]
     #[inline(always)]
@@ -51,6 +51,27 @@ impl R {
     #[inline(always)]
     pub fn touch_meas_done(&self) -> TOUCH_MEAS_DONE_R {
         TOUCH_MEAS_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_CHN_ST")
+            .field(
+                "touch_pad_active",
+                &format_args!("{}", self.touch_pad_active().bits()),
+            )
+            .field(
+                "touch_meas_done",
+                &format_args!("{}", self.touch_meas_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CHN_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

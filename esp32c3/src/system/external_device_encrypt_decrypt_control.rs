@@ -35,25 +35,25 @@ impl From<crate::W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_SPI_MANUAL_ENCRYPT` reader - reg_enable_spi_manual_encrypt"]
-pub type ENABLE_SPI_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
+pub type ENABLE_SPI_MANUAL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `ENABLE_SPI_MANUAL_ENCRYPT` writer - reg_enable_spi_manual_encrypt"]
 pub type ENABLE_SPI_MANUAL_ENCRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, O>;
+    crate::BitWriter<'a, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, O>;
 #[doc = "Field `ENABLE_DOWNLOAD_DB_ENCRYPT` reader - reg_enable_download_db_encrypt"]
-pub type ENABLE_DOWNLOAD_DB_ENCRYPT_R = crate::BitReader<bool>;
+pub type ENABLE_DOWNLOAD_DB_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `ENABLE_DOWNLOAD_DB_ENCRYPT` writer - reg_enable_download_db_encrypt"]
 pub type ENABLE_DOWNLOAD_DB_ENCRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, O>;
+    crate::BitWriter<'a, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, O>;
 #[doc = "Field `ENABLE_DOWNLOAD_G0CB_DECRYPT` reader - reg_enable_download_g0cb_decrypt"]
-pub type ENABLE_DOWNLOAD_G0CB_DECRYPT_R = crate::BitReader<bool>;
+pub type ENABLE_DOWNLOAD_G0CB_DECRYPT_R = crate::BitReader;
 #[doc = "Field `ENABLE_DOWNLOAD_G0CB_DECRYPT` writer - reg_enable_download_g0cb_decrypt"]
 pub type ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, O>;
+    crate::BitWriter<'a, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, O>;
 #[doc = "Field `ENABLE_DOWNLOAD_MANUAL_ENCRYPT` reader - reg_enable_download_manual_encrypt"]
-pub type ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
+pub type ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `ENABLE_DOWNLOAD_MANUAL_ENCRYPT` writer - reg_enable_download_manual_encrypt"]
 pub type ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, O>;
+    crate::BitWriter<'a, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_enable_spi_manual_encrypt"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn enable_download_manual_encrypt(&self) -> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
         ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL")
+            .field(
+                "enable_spi_manual_encrypt",
+                &format_args!("{}", self.enable_spi_manual_encrypt().bit()),
+            )
+            .field(
+                "enable_download_db_encrypt",
+                &format_args!("{}", self.enable_download_db_encrypt().bit()),
+            )
+            .field(
+                "enable_download_g0cb_decrypt",
+                &format_args!("{}", self.enable_download_g0cb_decrypt().bit()),
+            )
+            .field(
+                "enable_download_manual_encrypt",
+                &format_args!("{}", self.enable_download_manual_encrypt().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

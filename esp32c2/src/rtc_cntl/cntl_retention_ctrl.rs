@@ -35,30 +35,27 @@ impl From<crate::W<CNTL_RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_CLK_SEL` reader - Need add desc"]
-pub type RETENTION_CLK_SEL_R = crate::BitReader<bool>;
+pub type RETENTION_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `RETENTION_CLK_SEL` writer - Need add desc"]
-pub type RETENTION_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_RETENTION_CTRL_SPEC, bool, O>;
+pub type RETENTION_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_RETENTION_CTRL_SPEC, O>;
 #[doc = "Field `RETENTION_DONE_WAIT` reader - Need add desc"]
-pub type RETENTION_DONE_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_DONE_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_DONE_WAIT` writer - Need add desc"]
 pub type RETENTION_DONE_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_RETENTION_CTRL_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, CNTL_RETENTION_CTRL_SPEC, 3, O>;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` reader - Need add desc"]
-pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` writer - Need add desc"]
 pub type RETENTION_CLKOFF_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_RETENTION_CTRL_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CNTL_RETENTION_CTRL_SPEC, 4, O>;
 #[doc = "Field `RETENTION_EN` reader - Need add desc"]
-pub type RETENTION_EN_R = crate::BitReader<bool>;
+pub type RETENTION_EN_R = crate::BitReader;
 #[doc = "Field `RETENTION_EN` writer - Need add desc"]
-pub type RETENTION_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CNTL_RETENTION_CTRL_SPEC, bool, O>;
+pub type RETENTION_EN_W<'a, const O: u8> = crate::BitWriter<'a, CNTL_RETENTION_CTRL_SPEC, O>;
 #[doc = "Field `RETENTION_WAIT` reader - wait cycles for rention operation"]
-pub type RETENTION_WAIT_R = crate::FieldReader<u8, u8>;
+pub type RETENTION_WAIT_R = crate::FieldReader;
 #[doc = "Field `RETENTION_WAIT` writer - wait cycles for rention operation"]
-pub type RETENTION_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CNTL_RETENTION_CTRL_SPEC, u8, u8, 5, O>;
+pub type RETENTION_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_RETENTION_CTRL_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 18 - Need add desc"]
     #[inline(always)]
@@ -84,6 +81,39 @@ impl R {
     #[inline(always)]
     pub fn retention_wait(&self) -> RETENTION_WAIT_R {
         RETENTION_WAIT_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CNTL_RETENTION_CTRL")
+            .field(
+                "retention_clk_sel",
+                &format_args!("{}", self.retention_clk_sel().bit()),
+            )
+            .field(
+                "retention_done_wait",
+                &format_args!("{}", self.retention_done_wait().bits()),
+            )
+            .field(
+                "retention_clkoff_wait",
+                &format_args!("{}", self.retention_clkoff_wait().bits()),
+            )
+            .field(
+                "retention_en",
+                &format_args!("{}", self.retention_en().bit()),
+            )
+            .field(
+                "retention_wait",
+                &format_args!("{}", self.retention_wait().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CNTL_RETENTION_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

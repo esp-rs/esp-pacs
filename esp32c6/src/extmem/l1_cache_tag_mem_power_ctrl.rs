@@ -35,44 +35,44 @@ impl From<crate::W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of L1-ICache0 tag memory. 1: close gating, 0: open clock gating."]
-pub type L1_ICACHE0_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_TAG_MEM_FORCE_PD` reader - The bit is used to power L1-ICache0 tag memory down. 0: follow rtc_lslp, 1: power down"]
-pub type L1_ICACHE0_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_TAG_MEM_FORCE_PU` reader - The bit is used to power L1-ICache0 tag memory up. 0: follow rtc_lslp, 1: power up"]
-pub type L1_ICACHE0_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of L1-ICache1 tag memory. 1: close gating, 0: open clock gating."]
-pub type L1_ICACHE1_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_TAG_MEM_FORCE_PD` reader - The bit is used to power L1-ICache1 tag memory down. 0: follow rtc_lslp, 1: power down"]
-pub type L1_ICACHE1_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_TAG_MEM_FORCE_PU` reader - The bit is used to power L1-ICache1 tag memory up. 0: follow rtc_lslp, 1: power up"]
-pub type L1_ICACHE1_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_TAG_MEM_FORCE_ON` reader - Reserved"]
-pub type L1_ICACHE2_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_TAG_MEM_FORCE_PD` reader - Reserved"]
-pub type L1_ICACHE2_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_TAG_MEM_FORCE_PU` reader - Reserved"]
-pub type L1_ICACHE2_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_TAG_MEM_FORCE_ON` reader - Reserved"]
-pub type L1_ICACHE3_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_TAG_MEM_FORCE_PD` reader - Reserved"]
-pub type L1_ICACHE3_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_TAG_MEM_FORCE_PU` reader - Reserved"]
-pub type L1_ICACHE3_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of L1-Cache tag memory. 1: close gating, 0: open clock gating."]
-pub type L1_CACHE_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
+pub type L1_CACHE_TAG_MEM_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of L1-Cache tag memory. 1: close gating, 0: open clock gating."]
 pub type L1_CACHE_TAG_MEM_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, O>;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
-pub type L1_CACHE_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type L1_CACHE_TAG_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
 pub type L1_CACHE_TAG_MEM_FORCE_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, O>;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
-pub type L1_CACHE_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type L1_CACHE_TAG_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
 pub type L1_CACHE_TAG_MEM_FORCE_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_TAG_MEM_POWER_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of L1-ICache0 tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -148,6 +148,79 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_tag_mem_force_pu(&self) -> L1_CACHE_TAG_MEM_FORCE_PU_R {
         L1_CACHE_TAG_MEM_FORCE_PU_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_TAG_MEM_POWER_CTRL")
+            .field(
+                "l1_icache0_tag_mem_force_on",
+                &format_args!("{}", self.l1_icache0_tag_mem_force_on().bit()),
+            )
+            .field(
+                "l1_icache0_tag_mem_force_pd",
+                &format_args!("{}", self.l1_icache0_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "l1_icache0_tag_mem_force_pu",
+                &format_args!("{}", self.l1_icache0_tag_mem_force_pu().bit()),
+            )
+            .field(
+                "l1_icache1_tag_mem_force_on",
+                &format_args!("{}", self.l1_icache1_tag_mem_force_on().bit()),
+            )
+            .field(
+                "l1_icache1_tag_mem_force_pd",
+                &format_args!("{}", self.l1_icache1_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "l1_icache1_tag_mem_force_pu",
+                &format_args!("{}", self.l1_icache1_tag_mem_force_pu().bit()),
+            )
+            .field(
+                "l1_icache2_tag_mem_force_on",
+                &format_args!("{}", self.l1_icache2_tag_mem_force_on().bit()),
+            )
+            .field(
+                "l1_icache2_tag_mem_force_pd",
+                &format_args!("{}", self.l1_icache2_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "l1_icache2_tag_mem_force_pu",
+                &format_args!("{}", self.l1_icache2_tag_mem_force_pu().bit()),
+            )
+            .field(
+                "l1_icache3_tag_mem_force_on",
+                &format_args!("{}", self.l1_icache3_tag_mem_force_on().bit()),
+            )
+            .field(
+                "l1_icache3_tag_mem_force_pd",
+                &format_args!("{}", self.l1_icache3_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "l1_icache3_tag_mem_force_pu",
+                &format_args!("{}", self.l1_icache3_tag_mem_force_pu().bit()),
+            )
+            .field(
+                "l1_cache_tag_mem_force_on",
+                &format_args!("{}", self.l1_cache_tag_mem_force_on().bit()),
+            )
+            .field(
+                "l1_cache_tag_mem_force_pd",
+                &format_args!("{}", self.l1_cache_tag_mem_force_pd().bit()),
+            )
+            .field(
+                "l1_cache_tag_mem_force_pu",
+                &format_args!("{}", self.l1_cache_tag_mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

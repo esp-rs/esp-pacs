@@ -35,15 +35,31 @@ impl From<crate::W<SW_CPU_STALL_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_STALL_PROCPU_C1` reader - Need add desc"]
-pub type SW_STALL_PROCPU_C1_R = crate::FieldReader<u8, u8>;
+pub type SW_STALL_PROCPU_C1_R = crate::FieldReader;
 #[doc = "Field `SW_STALL_PROCPU_C1` writer - Need add desc"]
-pub type SW_STALL_PROCPU_C1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SW_CPU_STALL_SPEC, u8, u8, 6, O>;
+pub type SW_STALL_PROCPU_C1_W<'a, const O: u8> = crate::FieldWriter<'a, SW_CPU_STALL_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 26:31 - Need add desc"]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&self) -> SW_STALL_PROCPU_C1_R {
         SW_STALL_PROCPU_C1_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SW_CPU_STALL")
+            .field(
+                "sw_stall_procpu_c1",
+                &format_args!("{}", self.sw_stall_procpu_c1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SW_CPU_STALL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,15 +14,15 @@ impl From<crate::R<L1_BYPASS_CACHE_CONF_SPEC>> for R {
     }
 }
 #[doc = "Field `BYPASS_L1_ICACHE0_EN` reader - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass."]
-pub type BYPASS_L1_ICACHE0_EN_R = crate::BitReader<bool>;
+pub type BYPASS_L1_ICACHE0_EN_R = crate::BitReader;
 #[doc = "Field `BYPASS_L1_ICACHE1_EN` reader - The bit is used to enable bypass L1-ICache1. 0: disable bypass, 1: enable bypass."]
-pub type BYPASS_L1_ICACHE1_EN_R = crate::BitReader<bool>;
+pub type BYPASS_L1_ICACHE1_EN_R = crate::BitReader;
 #[doc = "Field `BYPASS_L1_ICACHE2_EN` reader - Reserved"]
-pub type BYPASS_L1_ICACHE2_EN_R = crate::BitReader<bool>;
+pub type BYPASS_L1_ICACHE2_EN_R = crate::BitReader;
 #[doc = "Field `BYPASS_L1_ICACHE3_EN` reader - Reserved"]
-pub type BYPASS_L1_ICACHE3_EN_R = crate::BitReader<bool>;
+pub type BYPASS_L1_ICACHE3_EN_R = crate::BitReader;
 #[doc = "Field `BYPASS_L1_DCACHE_EN` reader - The bit is used to enable bypass L1-DCache. 0: disable bypass, 1: enable bypass."]
-pub type BYPASS_L1_DCACHE_EN_R = crate::BitReader<bool>;
+pub type BYPASS_L1_DCACHE_EN_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass."]
     #[inline(always)]
@@ -48,6 +48,39 @@ impl R {
     #[inline(always)]
     pub fn bypass_l1_dcache_en(&self) -> BYPASS_L1_DCACHE_EN_R {
         BYPASS_L1_DCACHE_EN_R::new(((self.bits >> 4) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_BYPASS_CACHE_CONF")
+            .field(
+                "bypass_l1_icache0_en",
+                &format_args!("{}", self.bypass_l1_icache0_en().bit()),
+            )
+            .field(
+                "bypass_l1_icache1_en",
+                &format_args!("{}", self.bypass_l1_icache1_en().bit()),
+            )
+            .field(
+                "bypass_l1_icache2_en",
+                &format_args!("{}", self.bypass_l1_icache2_en().bit()),
+            )
+            .field(
+                "bypass_l1_icache3_en",
+                &format_args!("{}", self.bypass_l1_icache3_en().bit()),
+            )
+            .field(
+                "bypass_l1_dcache_en",
+                &format_args!("{}", self.bypass_l1_dcache_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_BYPASS_CACHE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Bypass Cache configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l1_bypass_cache_conf](index.html) module"]

@@ -37,13 +37,12 @@ impl From<crate::W<BLK3_WDATA4_SPEC>> for W {
 #[doc = "Field `BLK3_DIN4` reader - program for BLOCK3"]
 pub type BLK3_DIN4_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BLK3_DIN4` writer - program for BLOCK3"]
-pub type BLK3_DIN4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA4_SPEC, u32, u32, 32, O>;
+pub type BLK3_DIN4_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA4_SPEC, 32, O, u32, u32>;
 #[doc = "Field `CAL_RESERVED` reader - Reserved for future calibration use. Indicated by EFUSE_BLK3_PART_RESERVE"]
 pub type CAL_RESERVED_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CAL_RESERVED` writer - Reserved for future calibration use. Indicated by EFUSE_BLK3_PART_RESERVE"]
 pub type CAL_RESERVED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA4_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, BLK3_WDATA4_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
@@ -54,6 +53,24 @@ impl R {
     #[inline(always)]
     pub fn cal_reserved(&self) -> CAL_RESERVED_R {
         CAL_RESERVED_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK3_WDATA4")
+            .field("blk3_din4", &format_args!("{}", self.blk3_din4().bits()))
+            .field(
+                "cal_reserved",
+                &format_args!("{}", self.cal_reserved().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

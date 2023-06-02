@@ -38,12 +38,29 @@ impl From<crate::W<TIME_LOW1_SPEC>> for W {
 pub type TIMER_VALUE1_LOW_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER_VALUE1_LOW` writer - RTC timer low 32 bits"]
 pub type TIMER_VALUE1_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIME_LOW1_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, TIME_LOW1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - RTC timer low 32 bits"]
     #[inline(always)]
     pub fn timer_value1_low(&self) -> TIMER_VALUE1_LOW_R {
         TIMER_VALUE1_LOW_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIME_LOW1")
+            .field(
+                "timer_value1_low",
+                &format_args!("{}", self.timer_value1_low().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIME_LOW1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

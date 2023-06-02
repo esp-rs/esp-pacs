@@ -14,13 +14,13 @@ impl From<crate::R<STATE_W0_SPEC>> for R {
     }
 }
 #[doc = "Field `SLCHOST_STATE0` reader - *******Description***********"]
-pub type SLCHOST_STATE0_R = crate::FieldReader<u8, u8>;
+pub type SLCHOST_STATE0_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_STATE1` reader - *******Description***********"]
-pub type SLCHOST_STATE1_R = crate::FieldReader<u8, u8>;
+pub type SLCHOST_STATE1_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_STATE2` reader - *******Description***********"]
-pub type SLCHOST_STATE2_R = crate::FieldReader<u8, u8>;
+pub type SLCHOST_STATE2_R = crate::FieldReader;
 #[doc = "Field `SLCHOST_STATE3` reader - *******Description***********"]
-pub type SLCHOST_STATE3_R = crate::FieldReader<u8, u8>;
+pub type SLCHOST_STATE3_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - *******Description***********"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn slchost_state3(&self) -> SLCHOST_STATE3_R {
         SLCHOST_STATE3_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE_W0")
+            .field(
+                "slchost_state0",
+                &format_args!("{}", self.slchost_state0().bits()),
+            )
+            .field(
+                "slchost_state1",
+                &format_args!("{}", self.slchost_state1().bits()),
+            )
+            .field(
+                "slchost_state2",
+                &format_args!("{}", self.slchost_state2().bits()),
+            )
+            .field(
+                "slchost_state3",
+                &format_args!("{}", self.slchost_state3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE_W0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "*******Description***********\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state_w0](index.html) module"]

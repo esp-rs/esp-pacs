@@ -35,13 +35,13 @@ impl From<crate::W<TWAI1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TWAI1_CLK_EN` reader - Set 1 to enable twai1 apb clock"]
-pub type TWAI1_CLK_EN_R = crate::BitReader<bool>;
+pub type TWAI1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `TWAI1_CLK_EN` writer - Set 1 to enable twai1 apb clock"]
-pub type TWAI1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TWAI1_CONF_SPEC, bool, O>;
+pub type TWAI1_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TWAI1_CONF_SPEC, O>;
 #[doc = "Field `TWAI1_RST_EN` reader - Set 0 to reset twai1 module"]
-pub type TWAI1_RST_EN_R = crate::BitReader<bool>;
+pub type TWAI1_RST_EN_R = crate::BitReader;
 #[doc = "Field `TWAI1_RST_EN` writer - Set 0 to reset twai1 module"]
-pub type TWAI1_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TWAI1_CONF_SPEC, bool, O>;
+pub type TWAI1_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, TWAI1_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable twai1 apb clock"]
     #[inline(always)]
@@ -52,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn twai1_rst_en(&self) -> TWAI1_RST_EN_R {
         TWAI1_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TWAI1_CONF")
+            .field(
+                "twai1_clk_en",
+                &format_args!("{}", self.twai1_clk_en().bit()),
+            )
+            .field(
+                "twai1_rst_en",
+                &format_args!("{}", self.twai1_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TWAI1_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

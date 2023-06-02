@@ -37,12 +37,26 @@ impl From<crate::W<BYTCNT_SPEC>> for W {
 #[doc = "Field `BYTE_COUNT` reader - Number of bytes to be transferred, should be an integral multiple of Block Size for block transfers. For data transfers of undefined byte lengths, byte count should be set to 0. When byte count is set to 0, it is the responsibility of host to explicitly send stop/abort command to terminate data transfer."]
 pub type BYTE_COUNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BYTE_COUNT` writer - Number of bytes to be transferred, should be an integral multiple of Block Size for block transfers. For data transfers of undefined byte lengths, byte count should be set to 0. When byte count is set to 0, it is the responsibility of host to explicitly send stop/abort command to terminate data transfer."]
-pub type BYTE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BYTCNT_SPEC, u32, u32, 32, O>;
+pub type BYTE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, BYTCNT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Number of bytes to be transferred, should be an integral multiple of Block Size for block transfers. For data transfers of undefined byte lengths, byte count should be set to 0. When byte count is set to 0, it is the responsibility of host to explicitly send stop/abort command to terminate data transfer."]
     #[inline(always)]
     pub fn byte_count(&self) -> BYTE_COUNT_R {
         BYTE_COUNT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BYTCNT")
+            .field("byte_count", &format_args!("{}", self.byte_count().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BYTCNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

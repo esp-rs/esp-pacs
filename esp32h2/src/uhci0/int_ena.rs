@@ -35,42 +35,41 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_START_INT_ENA` reader - a"]
-pub type RX_START_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_START_INT_ENA` writer - a"]
-pub type RX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_START_INT_ENA` reader - a"]
-pub type TX_START_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_START_INT_ENA` writer - a"]
-pub type TX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_START_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RX_HUNG_INT_ENA` reader - a"]
-pub type RX_HUNG_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ENA` writer - a"]
-pub type RX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_HUNG_INT_ENA` reader - a"]
-pub type TX_HUNG_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ENA` writer - a"]
-pub type TX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` reader - a"]
-pub type SEND_S_REG_Q_INT_ENA_R = crate::BitReader<bool>;
+pub type SEND_S_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_S_REG_Q_INT_ENA` writer - a"]
-pub type SEND_S_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SEND_S_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` reader - a"]
-pub type SEND_A_REG_Q_INT_ENA_R = crate::BitReader<bool>;
+pub type SEND_A_REG_Q_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SEND_A_REG_Q_INT_ENA` writer - a"]
-pub type SEND_A_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type SEND_A_REG_Q_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` reader - a"]
-pub type OUTLINK_EOF_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type OUTLINK_EOF_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ENA` writer - a"]
-pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OUTLINK_EOF_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `APP_CTRL0_INT_ENA` reader - a"]
-pub type APP_CTRL0_INT_ENA_R = crate::BitReader<bool>;
+pub type APP_CTRL0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CTRL0_INT_ENA` writer - a"]
-pub type APP_CTRL0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type APP_CTRL0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `APP_CTRL1_INT_ENA` reader - a"]
-pub type APP_CTRL1_INT_ENA_R = crate::BitReader<bool>;
+pub type APP_CTRL1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APP_CTRL1_INT_ENA` writer - a"]
-pub type APP_CTRL1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type APP_CTRL1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
@@ -116,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn app_ctrl1_int_ena(&self) -> APP_CTRL1_INT_ENA_R {
         APP_CTRL1_INT_ENA_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "rx_start_int_ena",
+                &format_args!("{}", self.rx_start_int_ena().bit()),
+            )
+            .field(
+                "tx_start_int_ena",
+                &format_args!("{}", self.tx_start_int_ena().bit()),
+            )
+            .field(
+                "rx_hung_int_ena",
+                &format_args!("{}", self.rx_hung_int_ena().bit()),
+            )
+            .field(
+                "tx_hung_int_ena",
+                &format_args!("{}", self.tx_hung_int_ena().bit()),
+            )
+            .field(
+                "send_s_reg_q_int_ena",
+                &format_args!("{}", self.send_s_reg_q_int_ena().bit()),
+            )
+            .field(
+                "send_a_reg_q_int_ena",
+                &format_args!("{}", self.send_a_reg_q_int_ena().bit()),
+            )
+            .field(
+                "outlink_eof_err_int_ena",
+                &format_args!("{}", self.outlink_eof_err_int_ena().bit()),
+            )
+            .field(
+                "app_ctrl0_int_ena",
+                &format_args!("{}", self.app_ctrl0_int_ena().bit()),
+            )
+            .field(
+                "app_ctrl1_int_ena",
+                &format_args!("{}", self.app_ctrl1_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

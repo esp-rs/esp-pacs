@@ -35,14 +35,13 @@ impl From<crate::W<USER1_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_DUMMY_CYCLELEN` reader - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `USR_DUMMY_CYCLELEN` writer - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub type USR_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 8, O>;
+pub type USR_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, USER1_SPEC, 8, O>;
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 5, O>;
+pub type USR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, USER1_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn usr_addr_bitlen(&self) -> USR_ADDR_BITLEN_R {
         USR_ADDR_BITLEN_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER1")
+            .field(
+                "usr_dummy_cyclelen",
+                &format_args!("{}", self.usr_dummy_cyclelen().bits()),
+            )
+            .field(
+                "usr_addr_bitlen",
+                &format_args!("{}", self.usr_addr_bitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

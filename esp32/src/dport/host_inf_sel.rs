@@ -35,15 +35,13 @@ impl From<crate::W<HOST_INF_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IO_SWAP` reader - "]
-pub type PERI_IO_SWAP_R = crate::FieldReader<u8, u8>;
+pub type PERI_IO_SWAP_R = crate::FieldReader;
 #[doc = "Field `PERI_IO_SWAP` writer - "]
-pub type PERI_IO_SWAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_INF_SEL_SPEC, u8, u8, 8, O>;
+pub type PERI_IO_SWAP_W<'a, const O: u8> = crate::FieldWriter<'a, HOST_INF_SEL_SPEC, 8, O>;
 #[doc = "Field `LINK_DEVICE_SEL` reader - "]
-pub type LINK_DEVICE_SEL_R = crate::FieldReader<u8, u8>;
+pub type LINK_DEVICE_SEL_R = crate::FieldReader;
 #[doc = "Field `LINK_DEVICE_SEL` writer - "]
-pub type LINK_DEVICE_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_INF_SEL_SPEC, u8, u8, 8, O>;
+pub type LINK_DEVICE_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, HOST_INF_SEL_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn link_device_sel(&self) -> LINK_DEVICE_SEL_R {
         LINK_DEVICE_SEL_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_INF_SEL")
+            .field(
+                "peri_io_swap",
+                &format_args!("{}", self.peri_io_swap().bits()),
+            )
+            .field(
+                "link_device_sel",
+                &format_args!("{}", self.link_device_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_INF_SEL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

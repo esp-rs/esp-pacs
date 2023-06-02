@@ -35,57 +35,57 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
+pub type CK_OUT_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_OUT_EDGE` writer - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
-pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type CK_OUT_EDGE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_DUAL` reader - In the write operations read-data phase apply 2 signals"]
-pub type FWRITE_DUAL_R = crate::BitReader<bool>;
+pub type FWRITE_DUAL_R = crate::BitReader;
 #[doc = "Field `FWRITE_DUAL` writer - In the write operations read-data phase apply 2 signals"]
-pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_QUAD` reader - In the write operations read-data phase apply 4 signals"]
-pub type FWRITE_QUAD_R = crate::BitReader<bool>;
+pub type FWRITE_QUAD_R = crate::BitReader;
 #[doc = "Field `FWRITE_QUAD` writer - In the write operations read-data phase apply 4 signals"]
-pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_DIO` reader - In the write operations address phase and read-data phase apply 2 signals."]
-pub type FWRITE_DIO_R = crate::BitReader<bool>;
+pub type FWRITE_DIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_DIO` writer - In the write operations address phase and read-data phase apply 2 signals."]
-pub type FWRITE_DIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_DIO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `FWRITE_QIO` reader - In the write operations address phase and read-data phase apply 4 signals."]
-pub type FWRITE_QIO_R = crate::BitReader<bool>;
+pub type FWRITE_QIO_R = crate::BitReader;
 #[doc = "Field `FWRITE_QIO` writer - In the write operations address phase and read-data phase apply 4 signals."]
-pub type FWRITE_QIO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type FWRITE_QIO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MISO_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MISO_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MISO_HIGHPART` writer - read-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MOSI_HIGHPART_R = crate::BitReader<bool>;
+pub type USR_MOSI_HIGHPART_R = crate::BitReader;
 #[doc = "Field `USR_MOSI_HIGHPART` writer - write-data phase only access to high-part of the buffer spi_mem_w8~spi_mem_w15. 1: enable 0: disable."]
-pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_HIGHPART_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - SPI clock is disable in dummy phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
+pub type USR_DUMMY_IDLE_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY_IDLE` writer - SPI clock is disable in dummy phase when the bit is enable."]
-pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MOSI` reader - This bit enable the write-data phase of an operation."]
-pub type USR_MOSI_R = crate::BitReader<bool>;
+pub type USR_MOSI_R = crate::BitReader;
 #[doc = "Field `USR_MOSI` writer - This bit enable the write-data phase of an operation."]
-pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MOSI_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_MISO` reader - This bit enable the read-data phase of an operation."]
-pub type USR_MISO_R = crate::BitReader<bool>;
+pub type USR_MISO_R = crate::BitReader;
 #[doc = "Field `USR_MISO` writer - This bit enable the read-data phase of an operation."]
-pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_MISO_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation."]
-pub type USR_DUMMY_R = crate::BitReader<bool>;
+pub type USR_DUMMY_R = crate::BitReader;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation."]
-pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_ADDR` reader - This bit enable the address phase of an operation."]
-pub type USR_ADDR_R = crate::BitReader<bool>;
+pub type USR_ADDR_R = crate::BitReader;
 #[doc = "Field `USR_ADDR` writer - This bit enable the address phase of an operation."]
-pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_ADDR_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 #[doc = "Field `USR_COMMAND` reader - This bit enable the command phase of an operation."]
-pub type USR_COMMAND_R = crate::BitReader<bool>;
+pub type USR_COMMAND_R = crate::BitReader;
 #[doc = "Field `USR_COMMAND` writer - This bit enable the command phase of an operation."]
-pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, u32, USER_SPEC, bool, O>;
+pub type USR_COMMAND_W<'a, const O: u8> = crate::BitWriter<'a, USER_SPEC, O>;
 impl R {
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
@@ -151,6 +151,41 @@ impl R {
     #[inline(always)]
     pub fn usr_command(&self) -> USR_COMMAND_R {
         USR_COMMAND_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USER")
+            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
+            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
+            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
+            .field("fwrite_dio", &format_args!("{}", self.fwrite_dio().bit()))
+            .field("fwrite_qio", &format_args!("{}", self.fwrite_qio().bit()))
+            .field(
+                "usr_miso_highpart",
+                &format_args!("{}", self.usr_miso_highpart().bit()),
+            )
+            .field(
+                "usr_mosi_highpart",
+                &format_args!("{}", self.usr_mosi_highpart().bit()),
+            )
+            .field(
+                "usr_dummy_idle",
+                &format_args!("{}", self.usr_dummy_idle().bit()),
+            )
+            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
+            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
+            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
+            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

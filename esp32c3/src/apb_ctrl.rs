@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - APB_CTRL_SYSCLK_CONF_REG"]
     pub sysclk_conf: SYSCLK_CONF,

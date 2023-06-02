@@ -37,12 +37,26 @@ impl From<crate::W<TEXT_SPEC>> for W {
 #[doc = "Field `TEXT` reader - SHA Message block and hash result register."]
 pub type TEXT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TEXT` writer - SHA Message block and hash result register."]
-pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TEXT_SPEC, u32, u32, 32, O>;
+pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - SHA Message block and hash result register."]
     #[inline(always)]
     pub fn text(&self) -> TEXT_R {
         TEXT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEXT")
+            .field("text", &format_args!("{}", self.text().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEXT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

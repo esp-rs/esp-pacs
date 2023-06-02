@@ -38,12 +38,29 @@ impl From<crate::W<SYSTEM_REG_DATE_SPEC>> for W {
 pub type SYSTEM_REG_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SYSTEM_REG_DATE` writer - reg_system_reg_date"]
 pub type SYSTEM_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SYSTEM_REG_DATE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, SYSTEM_REG_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - reg_system_reg_date"]
     #[inline(always)]
     pub fn system_reg_date(&self) -> SYSTEM_REG_DATE_R {
         SYSTEM_REG_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYSTEM_REG_DATE")
+            .field(
+                "system_reg_date",
+                &format_args!("{}", self.system_reg_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYSTEM_REG_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,33 +35,33 @@ impl From<crate::W<SPI_CACHE_SPEC>> for W {
     }
 }
 #[doc = "Field `cache_flush_start` reader - Flush cache"]
-pub type CACHE_FLUSH_START_R = crate::BitReader<bool>;
+pub type CACHE_FLUSH_START_R = crate::BitReader;
 #[doc = "Field `cache_flush_start` writer - Flush cache"]
-pub type CACHE_FLUSH_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_SPEC, bool, O>;
+pub type CACHE_FLUSH_START_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
 #[doc = "Field `cache_empty` reader - Cache is empty"]
-pub type CACHE_EMPTY_R = crate::BitReader<bool>;
+pub type CACHE_EMPTY_R = crate::BitReader;
 #[doc = "Field `cache_empty` writer - Cache is empty"]
-pub type CACHE_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_SPEC, bool, O>;
+pub type CACHE_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
 #[doc = "Field `cache_enable` reader - Cache enable"]
-pub type CACHE_ENABLE_R = crate::BitReader<bool>;
+pub type CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `cache_enable` writer - Cache enable"]
-pub type CACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_SPEC, bool, O>;
+pub type CACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
 #[doc = "Field `busy` reader - SPI busy"]
-pub type BUSY_R = crate::BitReader<bool>;
+pub type BUSY_R = crate::BitReader;
 #[doc = "Field `busy` writer - SPI busy"]
-pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_SPEC, bool, O>;
+pub type BUSY_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
 #[doc = "Field `block` reader - Flash memory block to map, in 2mb blocks"]
-pub type BLOCK_R = crate::FieldReader<u8, u8>;
+pub type BLOCK_R = crate::FieldReader;
 #[doc = "Field `block` writer - Flash memory block to map, in 2mb blocks"]
-pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CACHE_SPEC, u8, u8, 3, O>;
+pub type BLOCK_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CACHE_SPEC, 3, O>;
 #[doc = "Field `offset` reader - Offset within block to map, in megabytes"]
-pub type OFFSET_R = crate::FieldReader<u8, u8>;
+pub type OFFSET_R = crate::FieldReader;
 #[doc = "Field `offset` writer - Offset within block to map, in megabytes"]
-pub type OFFSET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CACHE_SPEC, u8, u8, 2, O>;
+pub type OFFSET_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CACHE_SPEC, 2, O>;
 #[doc = "Field `target` reader - Controls where the spi flash is mapped (unconfirmed)"]
-pub type TARGET_R = crate::BitReader<bool>;
+pub type TARGET_R = crate::BitReader;
 #[doc = "Field `target` writer - Controls where the spi flash is mapped (unconfirmed)"]
-pub type TARGET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CACHE_SPEC, bool, O>;
+pub type TARGET_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CACHE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Flush cache"]
     #[inline(always)]
@@ -97,6 +97,32 @@ impl R {
     #[inline(always)]
     pub fn target(&self) -> TARGET_R {
         TARGET_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CACHE")
+            .field(
+                "cache_flush_start",
+                &format_args!("{}", self.cache_flush_start().bit()),
+            )
+            .field("cache_empty", &format_args!("{}", self.cache_empty().bit()))
+            .field(
+                "cache_enable",
+                &format_args!("{}", self.cache_enable().bit()),
+            )
+            .field("busy", &format_args!("{}", self.busy().bit()))
+            .field("block", &format_args!("{}", self.block().bits()))
+            .field("offset", &format_args!("{}", self.offset().bits()))
+            .field("target", &format_args!("{}", self.target().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CACHE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

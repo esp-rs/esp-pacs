@@ -35,61 +35,61 @@ impl From<crate::W<HCINT2_SPEC>> for W {
     }
 }
 #[doc = "Field `H_XFERCOMPL2` reader - "]
-pub type H_XFERCOMPL2_R = crate::BitReader<bool>;
+pub type H_XFERCOMPL2_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPL2` writer - "]
-pub type H_XFERCOMPL2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_XFERCOMPL2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_CHHLTD2` reader - "]
-pub type H_CHHLTD2_R = crate::BitReader<bool>;
+pub type H_CHHLTD2_R = crate::BitReader;
 #[doc = "Field `H_CHHLTD2` writer - "]
-pub type H_CHHLTD2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_CHHLTD2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_AHBERR2` reader - "]
-pub type H_AHBERR2_R = crate::BitReader<bool>;
+pub type H_AHBERR2_R = crate::BitReader;
 #[doc = "Field `H_AHBERR2` writer - "]
-pub type H_AHBERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_AHBERR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_STALL2` reader - "]
-pub type H_STALL2_R = crate::BitReader<bool>;
+pub type H_STALL2_R = crate::BitReader;
 #[doc = "Field `H_STALL2` writer - "]
-pub type H_STALL2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_STALL2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_NACK2` reader - "]
-pub type H_NACK2_R = crate::BitReader<bool>;
+pub type H_NACK2_R = crate::BitReader;
 #[doc = "Field `H_NACK2` writer - "]
-pub type H_NACK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_NACK2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_ACK2` reader - "]
-pub type H_ACK2_R = crate::BitReader<bool>;
+pub type H_ACK2_R = crate::BitReader;
 #[doc = "Field `H_ACK2` writer - "]
-pub type H_ACK2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_ACK2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_NYET2` reader - "]
-pub type H_NYET2_R = crate::BitReader<bool>;
+pub type H_NYET2_R = crate::BitReader;
 #[doc = "Field `H_NYET2` writer - "]
-pub type H_NYET2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_NYET2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_XACTERR2` reader - "]
-pub type H_XACTERR2_R = crate::BitReader<bool>;
+pub type H_XACTERR2_R = crate::BitReader;
 #[doc = "Field `H_XACTERR2` writer - "]
-pub type H_XACTERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_XACTERR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_BBLERR2` reader - "]
-pub type H_BBLERR2_R = crate::BitReader<bool>;
+pub type H_BBLERR2_R = crate::BitReader;
 #[doc = "Field `H_BBLERR2` writer - "]
-pub type H_BBLERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_BBLERR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_FRMOVRUN2` reader - "]
-pub type H_FRMOVRUN2_R = crate::BitReader<bool>;
+pub type H_FRMOVRUN2_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUN2` writer - "]
-pub type H_FRMOVRUN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_FRMOVRUN2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_DATATGLERR2` reader - "]
-pub type H_DATATGLERR2_R = crate::BitReader<bool>;
+pub type H_DATATGLERR2_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERR2` writer - "]
-pub type H_DATATGLERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_DATATGLERR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_BNAINTR2` reader - "]
-pub type H_BNAINTR2_R = crate::BitReader<bool>;
+pub type H_BNAINTR2_R = crate::BitReader;
 #[doc = "Field `H_BNAINTR2` writer - "]
-pub type H_BNAINTR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_BNAINTR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_XCS_XACT_ERR2` reader - "]
-pub type H_XCS_XACT_ERR2_R = crate::BitReader<bool>;
+pub type H_XCS_XACT_ERR2_R = crate::BitReader;
 #[doc = "Field `H_XCS_XACT_ERR2` writer - "]
-pub type H_XCS_XACT_ERR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_XCS_XACT_ERR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 #[doc = "Field `H_DESC_LST_ROLLINTR2` reader - "]
-pub type H_DESC_LST_ROLLINTR2_R = crate::BitReader<bool>;
+pub type H_DESC_LST_ROLLINTR2_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTR2` writer - "]
-pub type H_DESC_LST_ROLLINTR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT2_SPEC, bool, O>;
+pub type H_DESC_LST_ROLLINTR2_W<'a, const O: u8> = crate::BitWriter<'a, HCINT2_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,6 +160,45 @@ impl R {
     #[inline(always)]
     pub fn h_desc_lst_rollintr2(&self) -> H_DESC_LST_ROLLINTR2_R {
         H_DESC_LST_ROLLINTR2_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINT2")
+            .field(
+                "h_xfercompl2",
+                &format_args!("{}", self.h_xfercompl2().bit()),
+            )
+            .field("h_chhltd2", &format_args!("{}", self.h_chhltd2().bit()))
+            .field("h_ahberr2", &format_args!("{}", self.h_ahberr2().bit()))
+            .field("h_stall2", &format_args!("{}", self.h_stall2().bit()))
+            .field("h_nack2", &format_args!("{}", self.h_nack2().bit()))
+            .field("h_ack2", &format_args!("{}", self.h_ack2().bit()))
+            .field("h_nyet2", &format_args!("{}", self.h_nyet2().bit()))
+            .field("h_xacterr2", &format_args!("{}", self.h_xacterr2().bit()))
+            .field("h_bblerr2", &format_args!("{}", self.h_bblerr2().bit()))
+            .field("h_frmovrun2", &format_args!("{}", self.h_frmovrun2().bit()))
+            .field(
+                "h_datatglerr2",
+                &format_args!("{}", self.h_datatglerr2().bit()),
+            )
+            .field("h_bnaintr2", &format_args!("{}", self.h_bnaintr2().bit()))
+            .field(
+                "h_xcs_xact_err2",
+                &format_args!("{}", self.h_xcs_xact_err2().bit()),
+            )
+            .field(
+                "h_desc_lst_rollintr2",
+                &format_args!("{}", self.h_desc_lst_rollintr2().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCINT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

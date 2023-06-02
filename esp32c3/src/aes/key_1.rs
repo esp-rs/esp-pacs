@@ -37,12 +37,26 @@ impl From<crate::W<KEY_1_SPEC>> for W {
 #[doc = "Field `KEY_1` reader - This bits stores key_1 that is a part of key material."]
 pub type KEY_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `KEY_1` writer - This bits stores key_1 that is a part of key material."]
-pub type KEY_1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, KEY_1_SPEC, u32, u32, 32, O>;
+pub type KEY_1_W<'a, const O: u8> = crate::FieldWriter<'a, KEY_1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores key_1 that is a part of key material."]
     #[inline(always)]
     pub fn key_1(&self) -> KEY_1_R {
         KEY_1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("KEY_1")
+            .field("key_1", &format_args!("{}", self.key_1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<KEY_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

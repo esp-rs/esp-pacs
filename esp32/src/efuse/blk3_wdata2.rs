@@ -37,13 +37,26 @@ impl From<crate::W<BLK3_WDATA2_SPEC>> for W {
 #[doc = "Field `BLK3_DIN2` reader - program for BLOCK3"]
 pub type BLK3_DIN2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BLK3_DIN2` writer - program for BLOCK3"]
-pub type BLK3_DIN2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA2_SPEC, u32, u32, 32, O>;
+pub type BLK3_DIN2_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA2_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
     pub fn blk3_din2(&self) -> BLK3_DIN2_R {
         BLK3_DIN2_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK3_WDATA2")
+            .field("blk3_din2", &format_args!("{}", self.blk3_din2().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

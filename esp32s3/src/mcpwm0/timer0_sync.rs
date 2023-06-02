@@ -35,28 +35,26 @@ impl From<crate::W<TIMER0_SYNC_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_SYNCI_EN` reader - When set, timer reloading with phase on sync input event is enabled."]
-pub type TIMER0_SYNCI_EN_R = crate::BitReader<bool>;
+pub type TIMER0_SYNCI_EN_R = crate::BitReader;
 #[doc = "Field `TIMER0_SYNCI_EN` writer - When set, timer reloading with phase on sync input event is enabled."]
-pub type TIMER0_SYNCI_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER0_SYNC_SPEC, bool, O>;
+pub type TIMER0_SYNCI_EN_W<'a, const O: u8> = crate::BitWriter<'a, TIMER0_SYNC_SPEC, O>;
 #[doc = "Field `SW` reader - Toggling this bit will trigger a software sync."]
-pub type SW_R = crate::BitReader<bool>;
+pub type SW_R = crate::BitReader;
 #[doc = "Field `SW` writer - Toggling this bit will trigger a software sync."]
-pub type SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, TIMER0_SYNC_SPEC, bool, O>;
+pub type SW_W<'a, const O: u8> = crate::BitWriter<'a, TIMER0_SYNC_SPEC, O>;
 #[doc = "Field `TIMER0_SYNCO_SEL` reader - PWM timer0 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
-pub type TIMER0_SYNCO_SEL_R = crate::FieldReader<u8, u8>;
+pub type TIMER0_SYNCO_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER0_SYNCO_SEL` writer - PWM timer0 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
-pub type TIMER0_SYNCO_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER0_SYNC_SPEC, u8, u8, 2, O>;
+pub type TIMER0_SYNCO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER0_SYNC_SPEC, 2, O>;
 #[doc = "Field `TIMER0_PHASE` reader - phase for timer reload on sync event"]
 pub type TIMER0_PHASE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER0_PHASE` writer - phase for timer reload on sync event"]
 pub type TIMER0_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER0_SYNC_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, TIMER0_SYNC_SPEC, 16, O, u16, u16>;
 #[doc = "Field `TIMER0_PHASE_DIRECTION` reader - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
-pub type TIMER0_PHASE_DIRECTION_R = crate::BitReader<bool>;
+pub type TIMER0_PHASE_DIRECTION_R = crate::BitReader;
 #[doc = "Field `TIMER0_PHASE_DIRECTION` writer - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
-pub type TIMER0_PHASE_DIRECTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TIMER0_SYNC_SPEC, bool, O>;
+pub type TIMER0_PHASE_DIRECTION_W<'a, const O: u8> = crate::BitWriter<'a, TIMER0_SYNC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
@@ -82,6 +80,36 @@ impl R {
     #[inline(always)]
     pub fn timer0_phase_direction(&self) -> TIMER0_PHASE_DIRECTION_R {
         TIMER0_PHASE_DIRECTION_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER0_SYNC")
+            .field(
+                "timer0_synci_en",
+                &format_args!("{}", self.timer0_synci_en().bit()),
+            )
+            .field("sw", &format_args!("{}", self.sw().bit()))
+            .field(
+                "timer0_synco_sel",
+                &format_args!("{}", self.timer0_synco_sel().bits()),
+            )
+            .field(
+                "timer0_phase",
+                &format_args!("{}", self.timer0_phase().bits()),
+            )
+            .field(
+                "timer0_phase_direction",
+                &format_args!("{}", self.timer0_phase_direction().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER0_SYNC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

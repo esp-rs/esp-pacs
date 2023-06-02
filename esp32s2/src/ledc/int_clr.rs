@@ -20,53 +20,51 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER0_OVF_INT interrupt."]
-pub type TIMER0_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER0_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER1_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER1_OVF_INT interrupt."]
-pub type TIMER1_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER1_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER2_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER2_OVF_INT interrupt."]
-pub type TIMER2_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER2_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIMER3_OVF_INT_CLR` writer - Set this bit to clear the LEDC_TIMER3_OVF_INT interrupt."]
-pub type TIMER3_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIMER3_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH0_INT interrupt."]
-pub type DUTY_CHNG_END_CH0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH1_INT interrupt."]
-pub type DUTY_CHNG_END_CH1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH2_INT interrupt."]
-pub type DUTY_CHNG_END_CH2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH3_INT interrupt."]
-pub type DUTY_CHNG_END_CH3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH4_INT interrupt."]
-pub type DUTY_CHNG_END_CH4_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH5_INT interrupt."]
-pub type DUTY_CHNG_END_CH5_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH6_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH6_INT interrupt."]
-pub type DUTY_CHNG_END_CH6_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH6_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_CH7_INT_CLR` writer - Set this bit to clear the LEDC_DUTY_CHNG_END_CH7_INT interrupt."]
-pub type DUTY_CHNG_END_CH7_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_CH7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH0_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH0_INT interrupt."]
-pub type OVF_CNT_CH0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH1_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH1_INT interrupt."]
-pub type OVF_CNT_CH1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH2_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH2_INT interrupt."]
-pub type OVF_CNT_CH2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH3_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH3_INT interrupt."]
-pub type OVF_CNT_CH3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH4_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH4_INT interrupt."]
-pub type OVF_CNT_CH4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH5_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH5_INT interrupt."]
-pub type OVF_CNT_CH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH6_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH6_INT interrupt."]
-pub type OVF_CNT_CH6_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH6_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_CH7_INT_CLR` writer - Set this bit to clear the LEDC_OVF_CNT_CH7_INT interrupt."]
-pub type OVF_CNT_CH7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_CH7_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the LEDC_TIMER0_OVF_INT interrupt."]
     #[inline(always)]

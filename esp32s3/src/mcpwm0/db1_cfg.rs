@@ -35,55 +35,53 @@ impl From<crate::W<DB1_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DB1_FED_UPMETHOD` reader - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub type DB1_FED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DB1_FED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DB1_FED_UPMETHOD` writer - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub type DB1_FED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DB1_CFG_SPEC, u8, u8, 4, O>;
+pub type DB1_FED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DB1_CFG_SPEC, 4, O>;
 #[doc = "Field `DB1_RED_UPMETHOD` reader - Update method for RED (rising edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub type DB1_RED_UPMETHOD_R = crate::FieldReader<u8, u8>;
+pub type DB1_RED_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `DB1_RED_UPMETHOD` writer - Update method for RED (rising edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
-pub type DB1_RED_UPMETHOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DB1_CFG_SPEC, u8, u8, 4, O>;
+pub type DB1_RED_UPMETHOD_W<'a, const O: u8> = crate::FieldWriter<'a, DB1_CFG_SPEC, 4, O>;
 #[doc = "Field `DB1_DEB_MODE` reader - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
-pub type DB1_DEB_MODE_R = crate::BitReader<bool>;
+pub type DB1_DEB_MODE_R = crate::BitReader;
 #[doc = "Field `DB1_DEB_MODE` writer - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
-pub type DB1_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_DEB_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_A_OUTSWAP` reader - S6 in documentation"]
-pub type DB1_A_OUTSWAP_R = crate::BitReader<bool>;
+pub type DB1_A_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DB1_A_OUTSWAP` writer - S6 in documentation"]
-pub type DB1_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_A_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_B_OUTSWAP` reader - S7 in documentation"]
-pub type DB1_B_OUTSWAP_R = crate::BitReader<bool>;
+pub type DB1_B_OUTSWAP_R = crate::BitReader;
 #[doc = "Field `DB1_B_OUTSWAP` writer - S7 in documentation"]
-pub type DB1_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_B_OUTSWAP_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_RED_INSEL` reader - S4 in documentation"]
-pub type DB1_RED_INSEL_R = crate::BitReader<bool>;
+pub type DB1_RED_INSEL_R = crate::BitReader;
 #[doc = "Field `DB1_RED_INSEL` writer - S4 in documentation"]
-pub type DB1_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_RED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_FED_INSEL` reader - S5 in documentation"]
-pub type DB1_FED_INSEL_R = crate::BitReader<bool>;
+pub type DB1_FED_INSEL_R = crate::BitReader;
 #[doc = "Field `DB1_FED_INSEL` writer - S5 in documentation"]
-pub type DB1_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_FED_INSEL_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_RED_OUTINVERT` reader - S2 in documentation"]
-pub type DB1_RED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DB1_RED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DB1_RED_OUTINVERT` writer - S2 in documentation"]
-pub type DB1_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_RED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_FED_OUTINVERT` reader - S3 in documentation"]
-pub type DB1_FED_OUTINVERT_R = crate::BitReader<bool>;
+pub type DB1_FED_OUTINVERT_R = crate::BitReader;
 #[doc = "Field `DB1_FED_OUTINVERT` writer - S3 in documentation"]
-pub type DB1_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_FED_OUTINVERT_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_A_OUTBYPASS` reader - S1 in documentation"]
-pub type DB1_A_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DB1_A_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DB1_A_OUTBYPASS` writer - S1 in documentation"]
-pub type DB1_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_A_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_B_OUTBYPASS` reader - S0 in documentation"]
-pub type DB1_B_OUTBYPASS_R = crate::BitReader<bool>;
+pub type DB1_B_OUTBYPASS_R = crate::BitReader;
 #[doc = "Field `DB1_B_OUTBYPASS` writer - S0 in documentation"]
-pub type DB1_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_B_OUTBYPASS_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 #[doc = "Field `DB1_CLK_SEL` reader - Dead time generator 1 clock selection. 0: PWM_clk, 1: PT_clk"]
-pub type DB1_CLK_SEL_R = crate::BitReader<bool>;
+pub type DB1_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `DB1_CLK_SEL` writer - Dead time generator 1 clock selection. 0: PWM_clk, 1: PT_clk"]
-pub type DB1_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DB1_CFG_SPEC, bool, O>;
+pub type DB1_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DB1_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
     #[inline(always)]
@@ -144,6 +142,64 @@ impl R {
     #[inline(always)]
     pub fn db1_clk_sel(&self) -> DB1_CLK_SEL_R {
         DB1_CLK_SEL_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DB1_CFG")
+            .field(
+                "db1_fed_upmethod",
+                &format_args!("{}", self.db1_fed_upmethod().bits()),
+            )
+            .field(
+                "db1_red_upmethod",
+                &format_args!("{}", self.db1_red_upmethod().bits()),
+            )
+            .field(
+                "db1_deb_mode",
+                &format_args!("{}", self.db1_deb_mode().bit()),
+            )
+            .field(
+                "db1_a_outswap",
+                &format_args!("{}", self.db1_a_outswap().bit()),
+            )
+            .field(
+                "db1_b_outswap",
+                &format_args!("{}", self.db1_b_outswap().bit()),
+            )
+            .field(
+                "db1_red_insel",
+                &format_args!("{}", self.db1_red_insel().bit()),
+            )
+            .field(
+                "db1_fed_insel",
+                &format_args!("{}", self.db1_fed_insel().bit()),
+            )
+            .field(
+                "db1_red_outinvert",
+                &format_args!("{}", self.db1_red_outinvert().bit()),
+            )
+            .field(
+                "db1_fed_outinvert",
+                &format_args!("{}", self.db1_fed_outinvert().bit()),
+            )
+            .field(
+                "db1_a_outbypass",
+                &format_args!("{}", self.db1_a_outbypass().bit()),
+            )
+            .field(
+                "db1_b_outbypass",
+                &format_args!("{}", self.db1_b_outbypass().bit()),
+            )
+            .field("db1_clk_sel", &format_args!("{}", self.db1_clk_sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DB1_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,35 +35,29 @@ impl From<crate::W<PERIP_CLK_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_AES_CLK_EN` reader - Set this bit to enable clock of cryptography AES."]
-pub type CRYPTO_AES_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_AES_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_CLK_EN` writer - Set this bit to enable clock of cryptography AES."]
-pub type CRYPTO_AES_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_AES_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Set this bit to enable clock of cryptography SHA."]
-pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Set this bit to enable clock of cryptography SHA."]
-pub type CRYPTO_SHA_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_SHA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` reader - Set this bit to enable clock of cryptography RSA."]
-pub type CRYPTO_RSA_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_RSA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` writer - Set this bit to enable clock of cryptography RSA."]
-pub type CRYPTO_RSA_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_RSA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_DS_CLK_EN` reader - Set this bit to enable clock of cryptography Digital Signature."]
-pub type CRYPTO_DS_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_DS_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DS_CLK_EN` writer - Set this bit to enable clock of cryptography Digital Signature."]
-pub type CRYPTO_DS_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_DS_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` reader - Set this bit to enable clock of cryptography HMAC."]
-pub type CRYPTO_HMAC_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_HMAC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` writer - Set this bit to enable clock of cryptography HMAC."]
-pub type CRYPTO_HMAC_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_HMAC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 #[doc = "Field `CRYPTO_DMA_CLK_EN` reader - Set this bit to enable clock of cryptography DMA."]
-pub type CRYPTO_DMA_CLK_EN_R = crate::BitReader<bool>;
+pub type CRYPTO_DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `CRYPTO_DMA_CLK_EN` writer - Set this bit to enable clock of cryptography DMA."]
-pub type CRYPTO_DMA_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, O>;
+pub type CRYPTO_DMA_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, PERIP_CLK_EN1_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Set this bit to enable clock of cryptography AES."]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn crypto_dma_clk_en(&self) -> CRYPTO_DMA_CLK_EN_R {
         CRYPTO_DMA_CLK_EN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERIP_CLK_EN1")
+            .field(
+                "crypto_aes_clk_en",
+                &format_args!("{}", self.crypto_aes_clk_en().bit()),
+            )
+            .field(
+                "crypto_sha_clk_en",
+                &format_args!("{}", self.crypto_sha_clk_en().bit()),
+            )
+            .field(
+                "crypto_rsa_clk_en",
+                &format_args!("{}", self.crypto_rsa_clk_en().bit()),
+            )
+            .field(
+                "crypto_ds_clk_en",
+                &format_args!("{}", self.crypto_ds_clk_en().bit()),
+            )
+            .field(
+                "crypto_hmac_clk_en",
+                &format_args!("{}", self.crypto_hmac_clk_en().bit()),
+            )
+            .field(
+                "crypto_dma_clk_en",
+                &format_args!("{}", self.crypto_dma_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

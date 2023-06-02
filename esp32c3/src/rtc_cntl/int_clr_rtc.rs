@@ -20,30 +20,29 @@ impl From<crate::W<INT_CLR_RTC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_CLR` writer - Clear sleep wakeup interrupt state"]
-pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_WAKEUP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_CLR` writer - Clear sleep reject interrupt state"]
-pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SLP_REJECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `WDT_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type WDT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_CLR` writer - Clear brown out interrupt state"]
-pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type BROWN_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_CLR` writer - Clear RTC main timer interrupt state"]
-pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type MAIN_TIMER_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `SWD_INT_CLR` writer - Clear super watch dog interrupt state"]
-pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type SWD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `XTAL32K_DEAD_INT_CLR` writer - Clear RTC WDT interrupt state"]
-pub type XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type XTAL32K_DEAD_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_CLR` writer - Clear glitch det interrupt state"]
-pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
 #[doc = "Field `BBPLL_CAL_INT_CLR` writer - clear bbpll cal end interrupt state"]
-pub type BBPLL_CAL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_RTC_SPEC, bool, O>;
+pub type BBPLL_CAL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_RTC_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_RTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]

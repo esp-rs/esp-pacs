@@ -35,20 +35,18 @@ impl From<crate::W<SRAM_POWER_CONF_1_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_FORCE_PU` reader - Set this bit to force power up SRAM"]
-pub type SRAM_FORCE_PU_R = crate::FieldReader<u8, u8>;
+pub type SRAM_FORCE_PU_R = crate::FieldReader;
 #[doc = "Field `SRAM_FORCE_PU` writer - Set this bit to force power up SRAM"]
-pub type SRAM_FORCE_PU_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_POWER_CONF_1_SPEC, u8, u8, 5, O>;
+pub type SRAM_FORCE_PU_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_POWER_CONF_1_SPEC, 5, O>;
 #[doc = "Field `SRAM_FORCE_PD` reader - Set this bit to force power down SRAM."]
-pub type SRAM_FORCE_PD_R = crate::FieldReader<u8, u8>;
+pub type SRAM_FORCE_PD_R = crate::FieldReader;
 #[doc = "Field `SRAM_FORCE_PD` writer - Set this bit to force power down SRAM."]
-pub type SRAM_FORCE_PD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_POWER_CONF_1_SPEC, u8, u8, 5, O>;
+pub type SRAM_FORCE_PD_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_POWER_CONF_1_SPEC, 5, O>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
-pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader<u8, u8>;
+pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` writer - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
 pub type SRAM_CLKGATE_FORCE_ON_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_POWER_CONF_1_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, SRAM_POWER_CONF_1_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Set this bit to force power up SRAM"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn sram_clkgate_force_on(&self) -> SRAM_CLKGATE_FORCE_ON_R {
         SRAM_CLKGATE_FORCE_ON_R::new(((self.bits >> 25) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_POWER_CONF_1")
+            .field(
+                "sram_force_pu",
+                &format_args!("{}", self.sram_force_pu().bits()),
+            )
+            .field(
+                "sram_force_pd",
+                &format_args!("{}", self.sram_force_pd().bits()),
+            )
+            .field(
+                "sram_clkgate_force_on",
+                &format_args!("{}", self.sram_clkgate_force_on().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_POWER_CONF_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

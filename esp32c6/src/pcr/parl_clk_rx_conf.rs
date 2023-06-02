@@ -38,22 +38,19 @@ impl From<crate::W<PARL_CLK_RX_CONF_SPEC>> for W {
 pub type PARL_CLK_RX_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PARL_CLK_RX_DIV_NUM` writer - The integral part of the frequency divider factor of the parl rx clock."]
 pub type PARL_CLK_RX_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PARL_CLK_RX_CONF_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, PARL_CLK_RX_CONF_SPEC, 16, O, u16, u16>;
 #[doc = "Field `PARL_CLK_RX_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
-pub type PARL_CLK_RX_SEL_R = crate::FieldReader<u8, u8>;
+pub type PARL_CLK_RX_SEL_R = crate::FieldReader;
 #[doc = "Field `PARL_CLK_RX_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
-pub type PARL_CLK_RX_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PARL_CLK_RX_CONF_SPEC, u8, u8, 2, O>;
+pub type PARL_CLK_RX_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, PARL_CLK_RX_CONF_SPEC, 2, O>;
 #[doc = "Field `PARL_CLK_RX_EN` reader - Set 1 to enable parl rx clock"]
-pub type PARL_CLK_RX_EN_R = crate::BitReader<bool>;
+pub type PARL_CLK_RX_EN_R = crate::BitReader;
 #[doc = "Field `PARL_CLK_RX_EN` writer - Set 1 to enable parl rx clock"]
-pub type PARL_CLK_RX_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PARL_CLK_RX_CONF_SPEC, bool, O>;
+pub type PARL_CLK_RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, PARL_CLK_RX_CONF_SPEC, O>;
 #[doc = "Field `PARL_RX_RST_EN` reader - Set 0 to reset parl rx module"]
-pub type PARL_RX_RST_EN_R = crate::BitReader<bool>;
+pub type PARL_RX_RST_EN_R = crate::BitReader;
 #[doc = "Field `PARL_RX_RST_EN` writer - Set 0 to reset parl rx module"]
-pub type PARL_RX_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PARL_CLK_RX_CONF_SPEC, bool, O>;
+pub type PARL_RX_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, PARL_CLK_RX_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - The integral part of the frequency divider factor of the parl rx clock."]
     #[inline(always)]
@@ -74,6 +71,35 @@ impl R {
     #[inline(always)]
     pub fn parl_rx_rst_en(&self) -> PARL_RX_RST_EN_R {
         PARL_RX_RST_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PARL_CLK_RX_CONF")
+            .field(
+                "parl_clk_rx_div_num",
+                &format_args!("{}", self.parl_clk_rx_div_num().bits()),
+            )
+            .field(
+                "parl_clk_rx_sel",
+                &format_args!("{}", self.parl_clk_rx_sel().bits()),
+            )
+            .field(
+                "parl_clk_rx_en",
+                &format_args!("{}", self.parl_clk_rx_en().bit()),
+            )
+            .field(
+                "parl_rx_rst_en",
+                &format_args!("{}", self.parl_rx_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PARL_CLK_RX_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

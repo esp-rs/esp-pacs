@@ -35,33 +35,33 @@ impl From<crate::W<CLK_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_FE_16M_EN` reader - ."]
-pub type CLK_FE_16M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_16M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_16M_EN` writer - ."]
-pub type CLK_FE_16M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_16M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_32M_EN` reader - ."]
-pub type CLK_FE_32M_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_32M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_32M_EN` writer - ."]
-pub type CLK_FE_32M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_32M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_SDM_EN` reader - ."]
-pub type CLK_FE_SDM_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_SDM_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_SDM_EN` writer - ."]
-pub type CLK_FE_SDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_SDM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_ADC_EN` reader - ."]
-pub type CLK_FE_ADC_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_ADC_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_ADC_EN` writer - ."]
-pub type CLK_FE_ADC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_ADC_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_FE_APB_EN` reader - ."]
-pub type CLK_FE_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_FE_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_FE_APB_EN` writer - ."]
-pub type CLK_FE_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_FE_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_BT_APB_EN` reader - ."]
-pub type CLK_BT_APB_EN_R = crate::BitReader<bool>;
+pub type CLK_BT_APB_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_APB_EN` writer - ."]
-pub type CLK_BT_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_BT_APB_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 #[doc = "Field `CLK_BT_EN` reader - ."]
-pub type CLK_BT_EN_R = crate::BitReader<bool>;
+pub type CLK_BT_EN_R = crate::BitReader;
 #[doc = "Field `CLK_BT_EN` writer - ."]
-pub type CLK_BT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF1_SPEC, bool, O>;
+pub type CLK_BT_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 12 - ."]
     #[inline(always)]
@@ -97,6 +97,44 @@ impl R {
     #[inline(always)]
     pub fn clk_bt_en(&self) -> CLK_BT_EN_R {
         CLK_BT_EN_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF1")
+            .field(
+                "clk_fe_16m_en",
+                &format_args!("{}", self.clk_fe_16m_en().bit()),
+            )
+            .field(
+                "clk_fe_32m_en",
+                &format_args!("{}", self.clk_fe_32m_en().bit()),
+            )
+            .field(
+                "clk_fe_sdm_en",
+                &format_args!("{}", self.clk_fe_sdm_en().bit()),
+            )
+            .field(
+                "clk_fe_adc_en",
+                &format_args!("{}", self.clk_fe_adc_en().bit()),
+            )
+            .field(
+                "clk_fe_apb_en",
+                &format_args!("{}", self.clk_fe_apb_en().bit()),
+            )
+            .field(
+                "clk_bt_apb_en",
+                &format_args!("{}", self.clk_bt_apb_en().bit()),
+            )
+            .field("clk_bt_en", &format_args!("{}", self.clk_bt_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

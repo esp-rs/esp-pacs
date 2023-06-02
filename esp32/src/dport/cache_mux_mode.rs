@@ -35,15 +35,31 @@ impl From<crate::W<CACHE_MUX_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MUX_MODE` reader - "]
-pub type CACHE_MUX_MODE_R = crate::FieldReader<u8, u8>;
+pub type CACHE_MUX_MODE_R = crate::FieldReader;
 #[doc = "Field `CACHE_MUX_MODE` writer - "]
-pub type CACHE_MUX_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_MUX_MODE_SPEC, u8, u8, 2, O>;
+pub type CACHE_MUX_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CACHE_MUX_MODE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn cache_mux_mode(&self) -> CACHE_MUX_MODE_R {
         CACHE_MUX_MODE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_MUX_MODE")
+            .field(
+                "cache_mux_mode",
+                &format_args!("{}", self.cache_mux_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_MUX_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

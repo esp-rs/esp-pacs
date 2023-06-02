@@ -37,28 +37,23 @@ impl From<crate::W<BLK3_WDATA3_SPEC>> for W {
 #[doc = "Field `BLK3_DIN3` reader - program for BLOCK3"]
 pub type BLK3_DIN3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BLK3_DIN3` writer - program for BLOCK3"]
-pub type BLK3_DIN3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA3_SPEC, u32, u32, 32, O>;
+pub type BLK3_DIN3_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 32, O, u32, u32>;
 #[doc = "Field `ADC1_TP_LOW` reader - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC1_TP_LOW_R = crate::FieldReader<u8, u8>;
+pub type ADC1_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `ADC1_TP_LOW` writer - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC1_TP_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA3_SPEC, u8, u8, 7, O>;
+pub type ADC1_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 7, O>;
 #[doc = "Field `ADC1_TP_HIGH` reader - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
 pub type ADC1_TP_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC1_TP_HIGH` writer - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC1_TP_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA3_SPEC, u16, u16, 9, O>;
+pub type ADC1_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 9, O, u16, u16>;
 #[doc = "Field `ADC2_TP_LOW` reader - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC2_TP_LOW_R = crate::FieldReader<u8, u8>;
+pub type ADC2_TP_LOW_R = crate::FieldReader;
 #[doc = "Field `ADC2_TP_LOW` writer - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC2_TP_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA3_SPEC, u8, u8, 7, O>;
+pub type ADC2_TP_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 7, O>;
 #[doc = "Field `ADC2_TP_HIGH` reader - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
 pub type ADC2_TP_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC2_TP_HIGH` writer - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub type ADC2_TP_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK3_WDATA3_SPEC, u16, u16, 9, O>;
+pub type ADC2_TP_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_WDATA3_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
@@ -84,6 +79,36 @@ impl R {
     #[inline(always)]
     pub fn adc2_tp_high(&self) -> ADC2_TP_HIGH_R {
         ADC2_TP_HIGH_R::new(((self.bits >> 23) & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK3_WDATA3")
+            .field("blk3_din3", &format_args!("{}", self.blk3_din3().bits()))
+            .field(
+                "adc1_tp_low",
+                &format_args!("{}", self.adc1_tp_low().bits()),
+            )
+            .field(
+                "adc1_tp_high",
+                &format_args!("{}", self.adc1_tp_high().bits()),
+            )
+            .field(
+                "adc2_tp_low",
+                &format_args!("{}", self.adc2_tp_low().bits()),
+            )
+            .field(
+                "adc2_tp_high",
+                &format_args!("{}", self.adc2_tp_high().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

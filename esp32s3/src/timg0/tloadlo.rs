@@ -37,12 +37,26 @@ impl From<crate::W<TLOADLO_SPEC>> for W {
 #[doc = "Field `LOAD_LO` reader - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
 pub type LOAD_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOAD_LO` writer - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
-pub type LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TLOADLO_SPEC, u32, u32, 32, O>;
+pub type LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, TLOADLO_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer %s time-base Counter."]
     #[inline(always)]
     pub fn load_lo(&self) -> LOAD_LO_R {
         LOAD_LO_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TLOADLO")
+            .field("load_lo", &format_args!("{}", self.load_lo().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TLOADLO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

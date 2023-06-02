@@ -35,13 +35,13 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_MEM_PD` reader - 1: power down usb memory."]
-pub type USB_MEM_PD_R = crate::BitReader<bool>;
+pub type USB_MEM_PD_R = crate::BitReader;
 #[doc = "Field `USB_MEM_PD` writer - 1: power down usb memory."]
-pub type USB_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type USB_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 #[doc = "Field `USB_MEM_CLK_EN` reader - 1: Force clock on for usb memory."]
-pub type USB_MEM_CLK_EN_R = crate::BitReader<bool>;
+pub type USB_MEM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `USB_MEM_CLK_EN` writer - 1: Force clock on for usb memory."]
-pub type USB_MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type USB_MEM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn usb_mem_clk_en(&self) -> USB_MEM_CLK_EN_R {
         USB_MEM_CLK_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CONF")
+            .field("usb_mem_pd", &format_args!("{}", self.usb_mem_pd().bit()))
+            .field(
+                "usb_mem_clk_en",
+                &format_args!("{}", self.usb_mem_clk_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

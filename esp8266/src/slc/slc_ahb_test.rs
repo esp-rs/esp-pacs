@@ -35,15 +35,13 @@ impl From<crate::W<SLC_AHB_TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_AHB_TESTMODE` reader - "]
-pub type SLC_AHB_TESTMODE_R = crate::FieldReader<u8, u8>;
+pub type SLC_AHB_TESTMODE_R = crate::FieldReader;
 #[doc = "Field `SLC_AHB_TESTMODE` writer - "]
-pub type SLC_AHB_TESTMODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_AHB_TEST_SPEC, u8, u8, 3, O>;
+pub type SLC_AHB_TESTMODE_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_AHB_TEST_SPEC, 3, O>;
 #[doc = "Field `SLC_AHB_TESTADDR` reader - "]
-pub type SLC_AHB_TESTADDR_R = crate::FieldReader<u8, u8>;
+pub type SLC_AHB_TESTADDR_R = crate::FieldReader;
 #[doc = "Field `SLC_AHB_TESTADDR` writer - "]
-pub type SLC_AHB_TESTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLC_AHB_TEST_SPEC, u8, u8, 2, O>;
+pub type SLC_AHB_TESTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_AHB_TEST_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn slc_ahb_testaddr(&self) -> SLC_AHB_TESTADDR_R {
         SLC_AHB_TESTADDR_R::new(((self.bits >> 4) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC_AHB_TEST")
+            .field(
+                "slc_ahb_testaddr",
+                &format_args!("{}", self.slc_ahb_testaddr().bits()),
+            )
+            .field(
+                "slc_ahb_testmode",
+                &format_args!("{}", self.slc_ahb_testmode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC_AHB_TEST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

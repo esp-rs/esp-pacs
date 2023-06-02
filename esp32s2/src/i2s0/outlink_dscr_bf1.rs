@@ -22,6 +22,23 @@ impl R {
         OUTLINK_DSCR_BF1_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUTLINK_DSCR_BF1")
+            .field(
+                "outlink_dscr_bf1",
+                &format_args!("{}", self.outlink_dscr_bf1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUTLINK_DSCR_BF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Address of next outlink data buffer\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [outlink_dscr_bf1](index.html) module"]
 pub struct OUTLINK_DSCR_BF1_SPEC;
 impl crate::RegisterSpec for OUTLINK_DSCR_BF1_SPEC {

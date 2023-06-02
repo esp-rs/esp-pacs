@@ -20,43 +20,47 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `TAKE_DATA_INT_CLR` writer - Set this bit to clear I2S_RX_TAKE_DATA_INT interrupt."]
-pub type TAKE_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TAKE_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `PUT_DATA_INT_CLR` writer - Set this bit to clear I2S_TX_PUT_DATA_INT interrupt."]
-pub type PUT_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type PUT_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RX_WFULL_INT_CLR` writer - Set this bit to clear I2S_RX_WFULL_INT interrupt."]
-pub type RX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RX_REMPTY_INT_CLR` writer - Set this bit to clear I2S_RX_REMPTY_INT interrupt."]
-pub type RX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_WFULL_INT_CLR` writer - Set this bit to clear I2S_TX_WFULL_INT interrupt."]
-pub type TX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_REMPTY_INT_CLR` writer - Set this bit to clear I2S_TX_REMPTY_INT interrupt."]
-pub type TX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RX_HUNG_INT_CLR` writer - Set this bit to clear I2S_RX_HUNG_INT interrupt."]
-pub type RX_HUNG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RX_HUNG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_HUNG_INT_CLR` writer - Set this bit to clear I2S_TX_HUNG_INT interrupt."]
-pub type TX_HUNG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_HUNG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_DONE_INT_CLR` writer - Set this bit to clear I2S_IN_DONE_INT interrupt."]
-pub type IN_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_SUC_EOF_INT_CLR` writer - Set this bit to clear I2S_IN_SUC_EOF_INT interrupt."]
-pub type IN_SUC_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_SUC_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_ERR_EOF_INT_CLR` writer - Reserved."]
-pub type IN_ERR_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_ERR_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_DONE_INT_CLR` writer - Set this bit to clear I2S_OUT_DONE_INT interrupt."]
-pub type OUT_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_EOF_INT_CLR` writer - Set this bit to clear I2S_OUT_EOF_INT interrupt."]
-pub type OUT_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_DSCR_ERR_INT_CLR` writer - Set this bit to clear I2S_IN_DSCR_ERR_INT interrupt."]
-pub type IN_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_DSCR_ERR_INT_CLR` writer - Set this bit to clear I2S_OUT_DSCR_ERR_INT interrupt."]
-pub type OUT_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_DSCR_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `IN_DSCR_EMPTY_INT_CLR` writer - Set this bit to clear I2S_IN_DSCR_EMPTY_INT interrupt."]
-pub type IN_DSCR_EMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type IN_DSCR_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_CLR` writer - Set this bit to clear I2S_OUT_TOTAL_EOF_INT interrupt."]
-pub type OUT_TOTAL_EOF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OUT_TOTAL_EOF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `V_SYNC_INT_CLR` writer - Set this bit to clear I2S_V_SYNC_INT interrupt."]
-pub type V_SYNC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type V_SYNC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear I2S_RX_TAKE_DATA_INT interrupt."]
     #[inline(always)]

@@ -37,12 +37,26 @@ impl From<crate::W<SPI_W14_SPEC>> for W {
 #[doc = "Field `spi_w14` reader - the data inside the buffer of the SPI module, word 14"]
 pub type SPI_W14_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `spi_w14` writer - the data inside the buffer of the SPI module, word 14"]
-pub type SPI_W14_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_W14_SPEC, u32, u32, 32, O>;
+pub type SPI_W14_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_W14_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - the data inside the buffer of the SPI module, word 14"]
     #[inline(always)]
     pub fn spi_w14(&self) -> SPI_W14_R {
         SPI_W14_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_W14")
+            .field("spi_w14", &format_args!("{}", self.spi_w14().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_W14_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

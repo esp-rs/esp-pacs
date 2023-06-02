@@ -35,20 +35,19 @@ impl From<crate::W<CACHE_CONF_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by preload operation."]
-pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R = crate::BitReader<bool>;
+pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by preload operation."]
 pub type CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_CONF_MISC_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_CONF_MISC_SPEC, O>;
 #[doc = "Field `CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` reader - The bit is used to disable checking mmu entry fault by sync operation."]
-pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R = crate::BitReader<bool>;
+pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_R = crate::BitReader;
 #[doc = "Field `CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT` writer - The bit is used to disable checking mmu entry fault by sync operation."]
 pub type CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_CONF_MISC_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_CONF_MISC_SPEC, O>;
 #[doc = "Field `CACHE_TRACE_ENA` reader - The bit is used to enable cache trace function."]
-pub type CACHE_TRACE_ENA_R = crate::BitReader<bool>;
+pub type CACHE_TRACE_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_TRACE_ENA` writer - The bit is used to enable cache trace function."]
-pub type CACHE_TRACE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_CONF_MISC_SPEC, bool, O>;
+pub type CACHE_TRACE_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_CONF_MISC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable checking mmu entry fault by preload operation."]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn cache_trace_ena(&self) -> CACHE_TRACE_ENA_R {
         CACHE_TRACE_ENA_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_CONF_MISC")
+            .field(
+                "cache_ignore_preload_mmu_entry_fault",
+                &format_args!("{}", self.cache_ignore_preload_mmu_entry_fault().bit()),
+            )
+            .field(
+                "cache_ignore_sync_mmu_entry_fault",
+                &format_args!("{}", self.cache_ignore_sync_mmu_entry_fault().bit()),
+            )
+            .field(
+                "cache_trace_ena",
+                &format_args!("{}", self.cache_trace_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_MISC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

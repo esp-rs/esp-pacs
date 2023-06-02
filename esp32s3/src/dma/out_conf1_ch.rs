@@ -35,14 +35,13 @@ impl From<crate::W<OUT_CONF1_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_R = crate::BitReader<bool>;
+pub type OUT_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `OUT_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type OUT_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CONF1_CH_SPEC, bool, O>;
+pub type OUT_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CONF1_CH_SPEC, O>;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type OUT_EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+pub type OUT_EXT_MEM_BK_SIZE_R = crate::FieldReader;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE` writer - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type OUT_EXT_MEM_BK_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, OUT_CONF1_CH_SPEC, u8, u8, 2, O>;
+pub type OUT_EXT_MEM_BK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_CONF1_CH_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn out_ext_mem_bk_size(&self) -> OUT_EXT_MEM_BK_SIZE_R {
         OUT_EXT_MEM_BK_SIZE_R::new(((self.bits >> 13) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_CONF1_CH")
+            .field(
+                "out_check_owner",
+                &format_args!("{}", self.out_check_owner().bit()),
+            )
+            .field(
+                "out_ext_mem_bk_size",
+                &format_args!("{}", self.out_ext_mem_bk_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_CONF1_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

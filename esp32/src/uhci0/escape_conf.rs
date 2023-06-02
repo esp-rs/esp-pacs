@@ -35,37 +35,37 @@ impl From<crate::W<ESCAPE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_C0_ESC_EN` reader - Set this bit to enable 0xc0 char decode when DMA receives data."]
-pub type TX_C0_ESC_EN_R = crate::BitReader<bool>;
+pub type TX_C0_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_C0_ESC_EN` writer - Set this bit to enable 0xc0 char decode when DMA receives data."]
-pub type TX_C0_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type TX_C0_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `TX_DB_ESC_EN` reader - Set this bit to enable 0xdb char decode when DMA receives data."]
-pub type TX_DB_ESC_EN_R = crate::BitReader<bool>;
+pub type TX_DB_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_DB_ESC_EN` writer - Set this bit to enable 0xdb char decode when DMA receives data."]
-pub type TX_DB_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type TX_DB_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `TX_11_ESC_EN` reader - Set this bit to enable flow control char 0x11 decode when DMA receives data."]
-pub type TX_11_ESC_EN_R = crate::BitReader<bool>;
+pub type TX_11_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_11_ESC_EN` writer - Set this bit to enable flow control char 0x11 decode when DMA receives data."]
-pub type TX_11_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type TX_11_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `TX_13_ESC_EN` reader - Set this bit to enable flow control char 0x13 decode when DMA receives data."]
-pub type TX_13_ESC_EN_R = crate::BitReader<bool>;
+pub type TX_13_ESC_EN_R = crate::BitReader;
 #[doc = "Field `TX_13_ESC_EN` writer - Set this bit to enable flow control char 0x13 decode when DMA receives data."]
-pub type TX_13_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type TX_13_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `RX_C0_ESC_EN` reader - Set this bit to enable 0xc0 char replace when DMA sends data."]
-pub type RX_C0_ESC_EN_R = crate::BitReader<bool>;
+pub type RX_C0_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_C0_ESC_EN` writer - Set this bit to enable 0xc0 char replace when DMA sends data."]
-pub type RX_C0_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type RX_C0_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `RX_DB_ESC_EN` reader - Set this bit to enable 0xdb char replace when DMA sends data."]
-pub type RX_DB_ESC_EN_R = crate::BitReader<bool>;
+pub type RX_DB_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_DB_ESC_EN` writer - Set this bit to enable 0xdb char replace when DMA sends data."]
-pub type RX_DB_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type RX_DB_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `RX_11_ESC_EN` reader - Set this bit to enable flow control char 0x11 replace when DMA sends data."]
-pub type RX_11_ESC_EN_R = crate::BitReader<bool>;
+pub type RX_11_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_11_ESC_EN` writer - Set this bit to enable flow control char 0x11 replace when DMA sends data."]
-pub type RX_11_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type RX_11_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 #[doc = "Field `RX_13_ESC_EN` reader - Set this bit to enable flow control char 0x13 replace when DMA sends data."]
-pub type RX_13_ESC_EN_R = crate::BitReader<bool>;
+pub type RX_13_ESC_EN_R = crate::BitReader;
 #[doc = "Field `RX_13_ESC_EN` writer - Set this bit to enable flow control char 0x13 replace when DMA sends data."]
-pub type RX_13_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ESCAPE_CONF_SPEC, bool, O>;
+pub type RX_13_ESC_EN_W<'a, const O: u8> = crate::BitWriter<'a, ESCAPE_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable 0xc0 char decode when DMA receives data."]
     #[inline(always)]
@@ -106,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn rx_13_esc_en(&self) -> RX_13_ESC_EN_R {
         RX_13_ESC_EN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESCAPE_CONF")
+            .field(
+                "tx_c0_esc_en",
+                &format_args!("{}", self.tx_c0_esc_en().bit()),
+            )
+            .field(
+                "tx_db_esc_en",
+                &format_args!("{}", self.tx_db_esc_en().bit()),
+            )
+            .field(
+                "tx_11_esc_en",
+                &format_args!("{}", self.tx_11_esc_en().bit()),
+            )
+            .field(
+                "tx_13_esc_en",
+                &format_args!("{}", self.tx_13_esc_en().bit()),
+            )
+            .field(
+                "rx_c0_esc_en",
+                &format_args!("{}", self.rx_c0_esc_en().bit()),
+            )
+            .field(
+                "rx_db_esc_en",
+                &format_args!("{}", self.rx_db_esc_en().bit()),
+            )
+            .field(
+                "rx_11_esc_en",
+                &format_args!("{}", self.rx_11_esc_en().bit()),
+            )
+            .field(
+                "rx_13_esc_en",
+                &format_args!("{}", self.rx_13_esc_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ESCAPE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_CMD` reader - Set this bit to send read command."]
-pub type READ_CMD_R = crate::BitReader<bool>;
+pub type READ_CMD_R = crate::BitReader;
 #[doc = "Field `READ_CMD` writer - Set this bit to send read command."]
-pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type READ_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `PGM_CMD` reader - Set this bit to send programming command."]
-pub type PGM_CMD_R = crate::BitReader<bool>;
+pub type PGM_CMD_R = crate::BitReader;
 #[doc = "Field `PGM_CMD` writer - Set this bit to send programming command."]
-pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CMD_SPEC, bool, O>;
+pub type PGM_CMD_W<'a, const O: u8> = crate::BitWriter<'a, CMD_SPEC, O>;
 #[doc = "Field `BLK_NUM` reader - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
-pub type BLK_NUM_R = crate::FieldReader<u8, u8>;
+pub type BLK_NUM_R = crate::FieldReader;
 #[doc = "Field `BLK_NUM` writer - The serial number of the block to be programmed. Value 0-3 corresponds to block number 0-3, respectively."]
-pub type BLK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMD_SPEC, u8, u8, 2, O>;
+pub type BLK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn blk_num(&self) -> BLK_NUM_R {
         BLK_NUM_R::new(((self.bits >> 2) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD")
+            .field("read_cmd", &format_args!("{}", self.read_cmd().bit()))
+            .field("pgm_cmd", &format_args!("{}", self.pgm_cmd().bit()))
+            .field("blk_num", &format_args!("{}", self.blk_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

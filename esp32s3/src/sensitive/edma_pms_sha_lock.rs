@@ -35,15 +35,31 @@ impl From<crate::W<EDMA_PMS_SHA_LOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `EDMA_PMS_SHA_LOCK` reader - Set 1 to lock EDMA-SHA permission control registers."]
-pub type EDMA_PMS_SHA_LOCK_R = crate::BitReader<bool>;
+pub type EDMA_PMS_SHA_LOCK_R = crate::BitReader;
 #[doc = "Field `EDMA_PMS_SHA_LOCK` writer - Set 1 to lock EDMA-SHA permission control registers."]
-pub type EDMA_PMS_SHA_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EDMA_PMS_SHA_LOCK_SPEC, bool, O>;
+pub type EDMA_PMS_SHA_LOCK_W<'a, const O: u8> = crate::BitWriter<'a, EDMA_PMS_SHA_LOCK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock EDMA-SHA permission control registers."]
     #[inline(always)]
     pub fn edma_pms_sha_lock(&self) -> EDMA_PMS_SHA_LOCK_R {
         EDMA_PMS_SHA_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EDMA_PMS_SHA_LOCK")
+            .field(
+                "edma_pms_sha_lock",
+                &format_args!("{}", self.edma_pms_sha_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_SHA_LOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

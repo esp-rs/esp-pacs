@@ -35,15 +35,32 @@ impl From<crate::W<HP_APM_M2_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_APM_M2_INTR_MAP` reader - Need add description"]
-pub type HP_APM_M2_INTR_MAP_R = crate::FieldReader<u8, u8>;
+pub type HP_APM_M2_INTR_MAP_R = crate::FieldReader;
 #[doc = "Field `HP_APM_M2_INTR_MAP` writer - Need add description"]
 pub type HP_APM_M2_INTR_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_APM_M2_INTR_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, HP_APM_M2_INTR_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
     pub fn hp_apm_m2_intr_map(&self) -> HP_APM_M2_INTR_MAP_R {
         HP_APM_M2_INTR_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_APM_M2_INTR_MAP")
+            .field(
+                "hp_apm_m2_intr_map",
+                &format_args!("{}", self.hp_apm_m2_intr_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_APM_M2_INTR_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

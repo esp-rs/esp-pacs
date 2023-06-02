@@ -35,40 +35,34 @@ impl From<crate::W<SAR_AMP_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_DAC_XPD_FSM` reader - no public"]
-pub type SAR1_DAC_XPD_FSM_R = crate::FieldReader<u8, u8>;
+pub type SAR1_DAC_XPD_FSM_R = crate::FieldReader;
 #[doc = "Field `SAR1_DAC_XPD_FSM` writer - no public"]
-pub type SAR1_DAC_XPD_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type SAR1_DAC_XPD_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `XPD_SAR_AMP_FSM` reader - no public"]
-pub type XPD_SAR_AMP_FSM_R = crate::FieldReader<u8, u8>;
+pub type XPD_SAR_AMP_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_AMP_FSM` writer - no public"]
-pub type XPD_SAR_AMP_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type XPD_SAR_AMP_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `AMP_RST_FB_FSM` reader - no public"]
-pub type AMP_RST_FB_FSM_R = crate::FieldReader<u8, u8>;
+pub type AMP_RST_FB_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_RST_FB_FSM` writer - no public"]
-pub type AMP_RST_FB_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type AMP_RST_FB_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `AMP_SHORT_REF_FSM` reader - no public"]
-pub type AMP_SHORT_REF_FSM_R = crate::FieldReader<u8, u8>;
+pub type AMP_SHORT_REF_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_FSM` writer - no public"]
-pub type AMP_SHORT_REF_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type AMP_SHORT_REF_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` reader - no public"]
-pub type AMP_SHORT_REF_GND_FSM_R = crate::FieldReader<u8, u8>;
+pub type AMP_SHORT_REF_GND_FSM_R = crate::FieldReader;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM` writer - no public"]
 pub type AMP_SHORT_REF_GND_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `XPD_SAR_FSM` reader - no public"]
-pub type XPD_SAR_FSM_R = crate::FieldReader<u8, u8>;
+pub type XPD_SAR_FSM_R = crate::FieldReader;
 #[doc = "Field `XPD_SAR_FSM` writer - no public"]
-pub type XPD_SAR_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type XPD_SAR_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 #[doc = "Field `RSTB_FSM` reader - no public"]
-pub type RSTB_FSM_R = crate::FieldReader<u8, u8>;
+pub type RSTB_FSM_R = crate::FieldReader;
 #[doc = "Field `RSTB_FSM` writer - no public"]
-pub type RSTB_FSM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL3_SPEC, u8, u8, 4, O>;
+pub type RSTB_FSM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL3_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - no public"]
     #[inline(always)]
@@ -104,6 +98,44 @@ impl R {
     #[inline(always)]
     pub fn rstb_fsm(&self) -> RSTB_FSM_R {
         RSTB_FSM_R::new(((self.bits >> 24) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_AMP_CTRL3")
+            .field(
+                "sar1_dac_xpd_fsm",
+                &format_args!("{}", self.sar1_dac_xpd_fsm().bits()),
+            )
+            .field(
+                "xpd_sar_amp_fsm",
+                &format_args!("{}", self.xpd_sar_amp_fsm().bits()),
+            )
+            .field(
+                "amp_rst_fb_fsm",
+                &format_args!("{}", self.amp_rst_fb_fsm().bits()),
+            )
+            .field(
+                "amp_short_ref_fsm",
+                &format_args!("{}", self.amp_short_ref_fsm().bits()),
+            )
+            .field(
+                "amp_short_ref_gnd_fsm",
+                &format_args!("{}", self.amp_short_ref_gnd_fsm().bits()),
+            )
+            .field(
+                "xpd_sar_fsm",
+                &format_args!("{}", self.xpd_sar_fsm().bits()),
+            )
+            .field("rstb_fsm", &format_args!("{}", self.rstb_fsm().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_AMP_CTRL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

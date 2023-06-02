@@ -35,17 +35,17 @@ impl From<crate::W<ECC_PD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_MEM_PD` reader - Set this bit to power down ecc internal memory."]
-pub type ECC_MEM_PD_R = crate::BitReader<bool>;
+pub type ECC_MEM_PD_R = crate::BitReader;
 #[doc = "Field `ECC_MEM_PD` writer - Set this bit to power down ecc internal memory."]
-pub type ECC_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECC_PD_CTRL_SPEC, bool, O>;
+pub type ECC_MEM_PD_W<'a, const O: u8> = crate::BitWriter<'a, ECC_PD_CTRL_SPEC, O>;
 #[doc = "Field `ECC_MEM_FORCE_PU` reader - Set this bit to force power up ecc internal memory"]
-pub type ECC_MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type ECC_MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `ECC_MEM_FORCE_PU` writer - Set this bit to force power up ecc internal memory"]
-pub type ECC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECC_PD_CTRL_SPEC, bool, O>;
+pub type ECC_MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, ECC_PD_CTRL_SPEC, O>;
 #[doc = "Field `ECC_MEM_FORCE_PD` reader - Set this bit to force power down ecc internal memory."]
-pub type ECC_MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type ECC_MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `ECC_MEM_FORCE_PD` writer - Set this bit to force power down ecc internal memory."]
-pub type ECC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECC_PD_CTRL_SPEC, bool, O>;
+pub type ECC_MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, ECC_PD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to power down ecc internal memory."]
     #[inline(always)]
@@ -61,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn ecc_mem_force_pd(&self) -> ECC_MEM_FORCE_PD_R {
         ECC_MEM_FORCE_PD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECC_PD_CTRL")
+            .field("ecc_mem_pd", &format_args!("{}", self.ecc_mem_pd().bit()))
+            .field(
+                "ecc_mem_force_pu",
+                &format_args!("{}", self.ecc_mem_force_pu().bit()),
+            )
+            .field(
+                "ecc_mem_force_pd",
+                &format_args!("{}", self.ecc_mem_force_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECC_PD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

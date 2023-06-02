@@ -39,13 +39,11 @@ pub type WAKEUP_CAUSE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAKEUP_ENA` reader - wakeup enable bitmap"]
 pub type WAKEUP_ENA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAKEUP_ENA` writer - wakeup enable bitmap"]
-pub type WAKEUP_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WAKEUP_STATE_SPEC, u16, u16, 11, O>;
+pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 11, O, u16, u16>;
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - enable filter for gpio wakeup event"]
-pub type GPIO_WAKEUP_FILTER_R = crate::BitReader<bool>;
+pub type GPIO_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `GPIO_WAKEUP_FILTER` writer - enable filter for gpio wakeup event"]
-pub type GPIO_WAKEUP_FILTER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WAKEUP_STATE_SPEC, bool, O>;
+pub type GPIO_WAKEUP_FILTER_W<'a, const O: u8> = crate::BitWriter<'a, WAKEUP_STATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10 - wakeup cause"]
     #[inline(always)]
@@ -61,6 +59,28 @@ impl R {
     #[inline(always)]
     pub fn gpio_wakeup_filter(&self) -> GPIO_WAKEUP_FILTER_R {
         GPIO_WAKEUP_FILTER_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WAKEUP_STATE")
+            .field(
+                "wakeup_cause",
+                &format_args!("{}", self.wakeup_cause().bits()),
+            )
+            .field("wakeup_ena", &format_args!("{}", self.wakeup_ena().bits()))
+            .field(
+                "gpio_wakeup_filter",
+                &format_args!("{}", self.gpio_wakeup_filter().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WAKEUP_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

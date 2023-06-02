@@ -20,36 +20,37 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_CLR` writer - Set this bit to clear the rxfifo_full_int interrupt."]
-pub type RXFIFO_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TXFIFO_EMPTY_INT_CLR` writer - Set this bit to clear the txfifo_empty_int interrupt."]
-pub type TXFIFO_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TXFIFO_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RXFIFO_OVF_INT_CLR` writer - Set this bit to clear the rxfifo_ovf_int interrupt."]
-pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `END_DETECT_INT_CLR` writer - Set this bit to clear the end_detect_int interrupt."]
-pub type END_DETECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type END_DETECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_CLR` writer - Set this bit to clear the slave_tran_comp_int interrupt."]
-pub type SLAVE_TRAN_COMP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SLAVE_TRAN_COMP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` writer - Set this bit to clear the arbitration_lost_int interrupt."]
-pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_CLR` writer - Set this bit to clear the master_tran_comp interrupt."]
-pub type MASTER_TRAN_COMP_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type MASTER_TRAN_COMP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` writer - Set this bit to clear the trans_complete_int interrupt."]
-pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TIME_OUT_INT_CLR` writer - Set this bit to clear the time_out_int interrupt."]
-pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TRANS_START_INT_CLR` writer - Set this bit to clear the trans_start_int interrupt."]
-pub type TRANS_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TRANS_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `ACK_ERR_INT_CLR` writer - Set this bit to clear the ack_err_int interrupt."]
-pub type ACK_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type ACK_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RX_REC_FULL_INT_CLR` writer - Set this bit to clear the rx_rec_full_int interrupt."]
-pub type RX_REC_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RX_REC_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_SEND_EMPTY_INT_CLR` writer - Set this bit to clear the tx_send_empty_int interrupt."]
-pub type TX_SEND_EMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_SEND_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the rxfifo_full_int interrupt."]
     #[inline(always)]

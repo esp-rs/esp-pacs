@@ -35,50 +35,41 @@ impl From<crate::W<REGION14_PMS_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION14_R0_PMS_X` reader - Region execute authority in REE_MODE0"]
-pub type REGION14_R0_PMS_X_R = crate::BitReader<bool>;
+pub type REGION14_R0_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION14_R0_PMS_X` writer - Region execute authority in REE_MODE0"]
-pub type REGION14_R0_PMS_X_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R0_PMS_X_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R0_PMS_W` reader - Region write authority in REE_MODE0"]
-pub type REGION14_R0_PMS_W_R = crate::BitReader<bool>;
+pub type REGION14_R0_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION14_R0_PMS_W` writer - Region write authority in REE_MODE0"]
-pub type REGION14_R0_PMS_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R0_PMS_W_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R0_PMS_R` reader - Region read authority in REE_MODE0"]
-pub type REGION14_R0_PMS_R_R = crate::BitReader<bool>;
+pub type REGION14_R0_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION14_R0_PMS_R` writer - Region read authority in REE_MODE0"]
-pub type REGION14_R0_PMS_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R0_PMS_R_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R1_PMS_X` reader - Region execute authority in REE_MODE1"]
-pub type REGION14_R1_PMS_X_R = crate::BitReader<bool>;
+pub type REGION14_R1_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION14_R1_PMS_X` writer - Region execute authority in REE_MODE1"]
-pub type REGION14_R1_PMS_X_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R1_PMS_X_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R1_PMS_W` reader - Region write authority in REE_MODE1"]
-pub type REGION14_R1_PMS_W_R = crate::BitReader<bool>;
+pub type REGION14_R1_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION14_R1_PMS_W` writer - Region write authority in REE_MODE1"]
-pub type REGION14_R1_PMS_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R1_PMS_W_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R1_PMS_R` reader - Region read authority in REE_MODE1"]
-pub type REGION14_R1_PMS_R_R = crate::BitReader<bool>;
+pub type REGION14_R1_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION14_R1_PMS_R` writer - Region read authority in REE_MODE1"]
-pub type REGION14_R1_PMS_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R1_PMS_R_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R2_PMS_X` reader - Region execute authority in REE_MODE2"]
-pub type REGION14_R2_PMS_X_R = crate::BitReader<bool>;
+pub type REGION14_R2_PMS_X_R = crate::BitReader;
 #[doc = "Field `REGION14_R2_PMS_X` writer - Region execute authority in REE_MODE2"]
-pub type REGION14_R2_PMS_X_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R2_PMS_X_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R2_PMS_W` reader - Region write authority in REE_MODE2"]
-pub type REGION14_R2_PMS_W_R = crate::BitReader<bool>;
+pub type REGION14_R2_PMS_W_R = crate::BitReader;
 #[doc = "Field `REGION14_R2_PMS_W` writer - Region write authority in REE_MODE2"]
-pub type REGION14_R2_PMS_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R2_PMS_W_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 #[doc = "Field `REGION14_R2_PMS_R` reader - Region read authority in REE_MODE2"]
-pub type REGION14_R2_PMS_R_R = crate::BitReader<bool>;
+pub type REGION14_R2_PMS_R_R = crate::BitReader;
 #[doc = "Field `REGION14_R2_PMS_R` writer - Region read authority in REE_MODE2"]
-pub type REGION14_R2_PMS_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, REGION14_PMS_ATTR_SPEC, bool, O>;
+pub type REGION14_R2_PMS_R_W<'a, const O: u8> = crate::BitWriter<'a, REGION14_PMS_ATTR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Region execute authority in REE_MODE0"]
     #[inline(always)]
@@ -124,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn region14_r2_pms_r(&self) -> REGION14_R2_PMS_R_R {
         REGION14_R2_PMS_R_R::new(((self.bits >> 10) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REGION14_PMS_ATTR")
+            .field(
+                "region14_r0_pms_x",
+                &format_args!("{}", self.region14_r0_pms_x().bit()),
+            )
+            .field(
+                "region14_r0_pms_w",
+                &format_args!("{}", self.region14_r0_pms_w().bit()),
+            )
+            .field(
+                "region14_r0_pms_r",
+                &format_args!("{}", self.region14_r0_pms_r().bit()),
+            )
+            .field(
+                "region14_r1_pms_x",
+                &format_args!("{}", self.region14_r1_pms_x().bit()),
+            )
+            .field(
+                "region14_r1_pms_w",
+                &format_args!("{}", self.region14_r1_pms_w().bit()),
+            )
+            .field(
+                "region14_r1_pms_r",
+                &format_args!("{}", self.region14_r1_pms_r().bit()),
+            )
+            .field(
+                "region14_r2_pms_x",
+                &format_args!("{}", self.region14_r2_pms_x().bit()),
+            )
+            .field(
+                "region14_r2_pms_w",
+                &format_args!("{}", self.region14_r2_pms_w().bit()),
+            )
+            .field(
+                "region14_r2_pms_r",
+                &format_args!("{}", self.region14_r2_pms_r().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REGION14_PMS_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

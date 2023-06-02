@@ -35,41 +35,40 @@ impl From<crate::W<L1_CACHE_FREEZE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_FREEZE_EN` reader - The bit is used to enable freeze operation on L1-ICache0. It can be cleared by software."]
-pub type L1_ICACHE0_FREEZE_EN_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_FREEZE_MODE` reader - The bit is used to configure mode of freeze operation L1-ICache0. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
-pub type L1_ICACHE0_FREEZE_MODE_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE0_FREEZE_DONE` reader - The bit is used to indicate whether freeze operation on L1-ICache0 is finished or not. 0: not finished. 1: finished."]
-pub type L1_ICACHE0_FREEZE_DONE_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_FREEZE_DONE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_FREEZE_EN` reader - The bit is used to enable freeze operation on L1-ICache1. It can be cleared by software."]
-pub type L1_ICACHE1_FREEZE_EN_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_FREEZE_MODE` reader - The bit is used to configure mode of freeze operation L1-ICache1. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
-pub type L1_ICACHE1_FREEZE_MODE_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_FREEZE_DONE` reader - The bit is used to indicate whether freeze operation on L1-ICache1 is finished or not. 0: not finished. 1: finished."]
-pub type L1_ICACHE1_FREEZE_DONE_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_FREEZE_DONE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_FREEZE_EN` reader - Reserved"]
-pub type L1_ICACHE2_FREEZE_EN_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_FREEZE_MODE` reader - Reserved"]
-pub type L1_ICACHE2_FREEZE_MODE_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_FREEZE_DONE` reader - Reserved"]
-pub type L1_ICACHE2_FREEZE_DONE_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_FREEZE_DONE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FREEZE_EN` reader - Reserved"]
-pub type L1_ICACHE3_FREEZE_EN_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FREEZE_MODE` reader - Reserved"]
-pub type L1_ICACHE3_FREEZE_MODE_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_FREEZE_DONE` reader - Reserved"]
-pub type L1_ICACHE3_FREEZE_DONE_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_FREEZE_DONE_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_EN` reader - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
-pub type L1_CACHE_FREEZE_EN_R = crate::BitReader<bool>;
+pub type L1_CACHE_FREEZE_EN_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_EN` writer - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
-pub type L1_CACHE_FREEZE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_FREEZE_CTRL_SPEC, bool, O>;
+pub type L1_CACHE_FREEZE_EN_W<'a, const O: u8> = crate::BitWriter<'a, L1_CACHE_FREEZE_CTRL_SPEC, O>;
 #[doc = "Field `L1_CACHE_FREEZE_MODE` reader - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
-pub type L1_CACHE_FREEZE_MODE_R = crate::BitReader<bool>;
+pub type L1_CACHE_FREEZE_MODE_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_FREEZE_MODE` writer - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
 pub type L1_CACHE_FREEZE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_FREEZE_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_FREEZE_CTRL_SPEC, O>;
 #[doc = "Field `L1_CACHE_FREEZE_DONE` reader - The bit is used to indicate whether freeze operation on L1-Cache is finished or not. 0: not finished. 1: finished."]
-pub type L1_CACHE_FREEZE_DONE_R = crate::BitReader<bool>;
+pub type L1_CACHE_FREEZE_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable freeze operation on L1-ICache0. It can be cleared by software."]
     #[inline(always)]
@@ -145,6 +144,79 @@ impl R {
     #[inline(always)]
     pub fn l1_cache_freeze_done(&self) -> L1_CACHE_FREEZE_DONE_R {
         L1_CACHE_FREEZE_DONE_R::new(((self.bits >> 18) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_FREEZE_CTRL")
+            .field(
+                "l1_icache0_freeze_en",
+                &format_args!("{}", self.l1_icache0_freeze_en().bit()),
+            )
+            .field(
+                "l1_icache0_freeze_mode",
+                &format_args!("{}", self.l1_icache0_freeze_mode().bit()),
+            )
+            .field(
+                "l1_icache0_freeze_done",
+                &format_args!("{}", self.l1_icache0_freeze_done().bit()),
+            )
+            .field(
+                "l1_icache1_freeze_en",
+                &format_args!("{}", self.l1_icache1_freeze_en().bit()),
+            )
+            .field(
+                "l1_icache1_freeze_mode",
+                &format_args!("{}", self.l1_icache1_freeze_mode().bit()),
+            )
+            .field(
+                "l1_icache1_freeze_done",
+                &format_args!("{}", self.l1_icache1_freeze_done().bit()),
+            )
+            .field(
+                "l1_icache2_freeze_en",
+                &format_args!("{}", self.l1_icache2_freeze_en().bit()),
+            )
+            .field(
+                "l1_icache2_freeze_mode",
+                &format_args!("{}", self.l1_icache2_freeze_mode().bit()),
+            )
+            .field(
+                "l1_icache2_freeze_done",
+                &format_args!("{}", self.l1_icache2_freeze_done().bit()),
+            )
+            .field(
+                "l1_icache3_freeze_en",
+                &format_args!("{}", self.l1_icache3_freeze_en().bit()),
+            )
+            .field(
+                "l1_icache3_freeze_mode",
+                &format_args!("{}", self.l1_icache3_freeze_mode().bit()),
+            )
+            .field(
+                "l1_icache3_freeze_done",
+                &format_args!("{}", self.l1_icache3_freeze_done().bit()),
+            )
+            .field(
+                "l1_cache_freeze_en",
+                &format_args!("{}", self.l1_cache_freeze_en().bit()),
+            )
+            .field(
+                "l1_cache_freeze_mode",
+                &format_args!("{}", self.l1_cache_freeze_mode().bit()),
+            )
+            .field(
+                "l1_cache_freeze_done",
+                &format_args!("{}", self.l1_cache_freeze_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_FREEZE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

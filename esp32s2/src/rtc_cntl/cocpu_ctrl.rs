@@ -35,48 +35,43 @@ impl From<crate::W<COCPU_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `COCPU_CLK_FO` reader - ULP-RISCV clock force on"]
-pub type COCPU_CLK_FO_R = crate::BitReader<bool>;
+pub type COCPU_CLK_FO_R = crate::BitReader;
 #[doc = "Field `COCPU_CLK_FO` writer - ULP-RISCV clock force on"]
-pub type COCPU_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_START_2_RESET_DIS` reader - Time from ULP-RISCV startup to pull down reset"]
-pub type COCPU_START_2_RESET_DIS_R = crate::FieldReader<u8, u8>;
+pub type COCPU_START_2_RESET_DIS_R = crate::FieldReader;
 #[doc = "Field `COCPU_START_2_RESET_DIS` writer - Time from ULP-RISCV startup to pull down reset"]
-pub type COCPU_START_2_RESET_DIS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COCPU_CTRL_SPEC, u8, u8, 6, O>;
+pub type COCPU_START_2_RESET_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, COCPU_CTRL_SPEC, 6, O>;
 #[doc = "Field `COCPU_START_2_INTR_EN` reader - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
-pub type COCPU_START_2_INTR_EN_R = crate::FieldReader<u8, u8>;
+pub type COCPU_START_2_INTR_EN_R = crate::FieldReader;
 #[doc = "Field `COCPU_START_2_INTR_EN` writer - Time from ULP-RISCV startup to send out RISCV_START_INT interrupt"]
-pub type COCPU_START_2_INTR_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COCPU_CTRL_SPEC, u8, u8, 6, O>;
+pub type COCPU_START_2_INTR_EN_W<'a, const O: u8> = crate::FieldWriter<'a, COCPU_CTRL_SPEC, 6, O>;
 #[doc = "Field `COCPU_SHUT` reader - Shut down ULP-RISCV"]
-pub type COCPU_SHUT_R = crate::BitReader<bool>;
+pub type COCPU_SHUT_R = crate::BitReader;
 #[doc = "Field `COCPU_SHUT` writer - Shut down ULP-RISCV"]
-pub type COCPU_SHUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_SHUT_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_SHUT_2_CLK_DIS` reader - Time from shut down ULP-RISCV to disable clock"]
-pub type COCPU_SHUT_2_CLK_DIS_R = crate::FieldReader<u8, u8>;
+pub type COCPU_SHUT_2_CLK_DIS_R = crate::FieldReader;
 #[doc = "Field `COCPU_SHUT_2_CLK_DIS` writer - Time from shut down ULP-RISCV to disable clock"]
-pub type COCPU_SHUT_2_CLK_DIS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, COCPU_CTRL_SPEC, u8, u8, 8, O>;
+pub type COCPU_SHUT_2_CLK_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, COCPU_CTRL_SPEC, 8, O>;
 #[doc = "Field `COCPU_SHUT_RESET_EN` reader - This bit is used to reset ULP-RISCV"]
-pub type COCPU_SHUT_RESET_EN_R = crate::BitReader<bool>;
+pub type COCPU_SHUT_RESET_EN_R = crate::BitReader;
 #[doc = "Field `COCPU_SHUT_RESET_EN` writer - This bit is used to reset ULP-RISCV"]
-pub type COCPU_SHUT_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_SHUT_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_SEL` reader - 0: select ULP-RISCV. 1: select ULP-FSM"]
-pub type COCPU_SEL_R = crate::BitReader<bool>;
+pub type COCPU_SEL_R = crate::BitReader;
 #[doc = "Field `COCPU_SEL` writer - 0: select ULP-RISCV. 1: select ULP-FSM"]
-pub type COCPU_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_SEL_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_DONE_FORCE` reader - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
-pub type COCPU_DONE_FORCE_R = crate::BitReader<bool>;
+pub type COCPU_DONE_FORCE_R = crate::BitReader;
 #[doc = "Field `COCPU_DONE_FORCE` writer - 0: select ULP-FSM DONE signal. 1: select ULP-RISCV DONE signal"]
-pub type COCPU_DONE_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_DONE_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_DONE` reader - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
-pub type COCPU_DONE_R = crate::BitReader<bool>;
+pub type COCPU_DONE_R = crate::BitReader;
 #[doc = "Field `COCPU_DONE` writer - DONE signal. Write 1 to this bit, ULP-RISCV will go to HALT and the timer starts counting"]
-pub type COCPU_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_DONE_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 #[doc = "Field `COCPU_SW_INT_TRIGGER` writer - Trigger ULP-RISCV register interrupt"]
-pub type COCPU_SW_INT_TRIGGER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, COCPU_CTRL_SPEC, bool, O>;
+pub type COCPU_SW_INT_TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, COCPU_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - ULP-RISCV clock force on"]
     #[inline(always)]
@@ -122,6 +117,46 @@ impl R {
     #[inline(always)]
     pub fn cocpu_done(&self) -> COCPU_DONE_R {
         COCPU_DONE_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("COCPU_CTRL")
+            .field(
+                "cocpu_clk_fo",
+                &format_args!("{}", self.cocpu_clk_fo().bit()),
+            )
+            .field(
+                "cocpu_start_2_reset_dis",
+                &format_args!("{}", self.cocpu_start_2_reset_dis().bits()),
+            )
+            .field(
+                "cocpu_start_2_intr_en",
+                &format_args!("{}", self.cocpu_start_2_intr_en().bits()),
+            )
+            .field("cocpu_shut", &format_args!("{}", self.cocpu_shut().bit()))
+            .field(
+                "cocpu_shut_2_clk_dis",
+                &format_args!("{}", self.cocpu_shut_2_clk_dis().bits()),
+            )
+            .field(
+                "cocpu_shut_reset_en",
+                &format_args!("{}", self.cocpu_shut_reset_en().bit()),
+            )
+            .field("cocpu_sel", &format_args!("{}", self.cocpu_sel().bit()))
+            .field(
+                "cocpu_done_force",
+                &format_args!("{}", self.cocpu_done_force().bit()),
+            )
+            .field("cocpu_done", &format_args!("{}", self.cocpu_done().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<COCPU_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

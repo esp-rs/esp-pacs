@@ -37,13 +37,11 @@ impl From<crate::W<GPIO_OUT_SPEC>> for W {
 #[doc = "Field `GPIO_OUT_DATA` reader - The output value when the GPIO pin is set as output."]
 pub type GPIO_OUT_DATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_OUT_DATA` writer - The output value when the GPIO pin is set as output."]
-pub type GPIO_OUT_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_OUT_SPEC, u16, u16, 16, O>;
+pub type GPIO_OUT_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16, u16>;
 #[doc = "Field `GPIO_BT_SEL` reader - BT-Coexist Selection register"]
 pub type GPIO_BT_SEL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_BT_SEL` writer - BT-Coexist Selection register"]
-pub type GPIO_BT_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_OUT_SPEC, u16, u16, 16, O>;
+pub type GPIO_BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn gpio_bt_sel(&self) -> GPIO_BT_SEL_R {
         GPIO_BT_SEL_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_OUT")
+            .field(
+                "gpio_bt_sel",
+                &format_args!("{}", self.gpio_bt_sel().bits()),
+            )
+            .field(
+                "gpio_out_data",
+                &format_args!("{}", self.gpio_out_data().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_OUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

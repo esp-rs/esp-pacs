@@ -14,35 +14,35 @@ impl From<crate::R<RD_REPEAT_ERR3_SPEC>> for R {
     }
 }
 #[doc = "Field `DIS_DOWNLOAD_MODE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type DIS_DOWNLOAD_MODE_ERR_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_LEGACY_SPI_BOOT_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type DIS_LEGACY_SPI_BOOT_ERR_R = crate::BitReader<bool>;
+pub type DIS_LEGACY_SPI_BOOT_ERR_R = crate::BitReader;
 #[doc = "Field `UART_PRINT_CHANNEL_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type UART_PRINT_CHANNEL_ERR_R = crate::BitReader<bool>;
+pub type UART_PRINT_CHANNEL_ERR_R = crate::BitReader;
 #[doc = "Field `FLASH_ECC_MODE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type FLASH_ECC_MODE_ERR_R = crate::BitReader<bool>;
+pub type FLASH_ECC_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `DIS_USB_DOWNLOAD_MODE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type DIS_USB_DOWNLOAD_MODE_ERR_R = crate::BitReader<bool>;
+pub type DIS_USB_DOWNLOAD_MODE_ERR_R = crate::BitReader;
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type ENABLE_SECURITY_DOWNLOAD_ERR_R = crate::BitReader<bool>;
+pub type ENABLE_SECURITY_DOWNLOAD_ERR_R = crate::BitReader;
 #[doc = "Field `UART_PRINT_CONTROL_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type UART_PRINT_CONTROL_ERR_R = crate::FieldReader<u8, u8>;
+pub type UART_PRINT_CONTROL_ERR_R = crate::FieldReader;
 #[doc = "Field `PIN_POWER_SELECTION_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type PIN_POWER_SELECTION_ERR_R = crate::BitReader<bool>;
+pub type PIN_POWER_SELECTION_ERR_R = crate::BitReader;
 #[doc = "Field `FLASH_TYPE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type FLASH_TYPE_ERR_R = crate::BitReader<bool>;
+pub type FLASH_TYPE_ERR_R = crate::BitReader;
 #[doc = "Field `FLASH_PAGE_SIZE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type FLASH_PAGE_SIZE_ERR_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PAGE_SIZE_ERR_R = crate::FieldReader;
 #[doc = "Field `FLASH_ECC_EN_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type FLASH_ECC_EN_ERR_R = crate::BitReader<bool>;
+pub type FLASH_ECC_EN_ERR_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader<bool>;
+pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
 pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `POWERGLITCH_EN_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type POWERGLITCH_EN_ERR_R = crate::BitReader<bool>;
+pub type POWERGLITCH_EN_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED1_ERR` reader - Reserved."]
-pub type RPT4_RESERVED1_ERR_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED1_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]
@@ -118,6 +118,79 @@ impl R {
     #[inline(always)]
     pub fn rpt4_reserved1_err(&self) -> RPT4_RESERVED1_ERR_R {
         RPT4_RESERVED1_ERR_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_ERR3")
+            .field(
+                "dis_download_mode_err",
+                &format_args!("{}", self.dis_download_mode_err().bit()),
+            )
+            .field(
+                "dis_legacy_spi_boot_err",
+                &format_args!("{}", self.dis_legacy_spi_boot_err().bit()),
+            )
+            .field(
+                "uart_print_channel_err",
+                &format_args!("{}", self.uart_print_channel_err().bit()),
+            )
+            .field(
+                "flash_ecc_mode_err",
+                &format_args!("{}", self.flash_ecc_mode_err().bit()),
+            )
+            .field(
+                "dis_usb_download_mode_err",
+                &format_args!("{}", self.dis_usb_download_mode_err().bit()),
+            )
+            .field(
+                "enable_security_download_err",
+                &format_args!("{}", self.enable_security_download_err().bit()),
+            )
+            .field(
+                "uart_print_control_err",
+                &format_args!("{}", self.uart_print_control_err().bits()),
+            )
+            .field(
+                "pin_power_selection_err",
+                &format_args!("{}", self.pin_power_selection_err().bit()),
+            )
+            .field(
+                "flash_type_err",
+                &format_args!("{}", self.flash_type_err().bit()),
+            )
+            .field(
+                "flash_page_size_err",
+                &format_args!("{}", self.flash_page_size_err().bits()),
+            )
+            .field(
+                "flash_ecc_en_err",
+                &format_args!("{}", self.flash_ecc_en_err().bit()),
+            )
+            .field(
+                "force_send_resume_err",
+                &format_args!("{}", self.force_send_resume_err().bit()),
+            )
+            .field(
+                "secure_version_err",
+                &format_args!("{}", self.secure_version_err().bits()),
+            )
+            .field(
+                "powerglitch_en_err",
+                &format_args!("{}", self.powerglitch_en_err().bit()),
+            )
+            .field(
+                "rpt4_reserved1_err",
+                &format_args!("{}", self.rpt4_reserved1_err().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Programming error record register 3 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_err3](index.html) module"]

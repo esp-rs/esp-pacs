@@ -35,15 +35,31 @@ impl From<crate::W<CH29_EVT_ID_SPEC>> for W {
     }
 }
 #[doc = "Field `CH29_EVT_ID` reader - ch29_evt_id"]
-pub type CH29_EVT_ID_R = crate::FieldReader<u8, u8>;
+pub type CH29_EVT_ID_R = crate::FieldReader;
 #[doc = "Field `CH29_EVT_ID` writer - ch29_evt_id"]
-pub type CH29_EVT_ID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH29_EVT_ID_SPEC, u8, u8, 8, O>;
+pub type CH29_EVT_ID_W<'a, const O: u8> = crate::FieldWriter<'a, CH29_EVT_ID_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - ch29_evt_id"]
     #[inline(always)]
     pub fn ch29_evt_id(&self) -> CH29_EVT_ID_R {
         CH29_EVT_ID_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH29_EVT_ID")
+            .field(
+                "ch29_evt_id",
+                &format_args!("{}", self.ch29_evt_id().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH29_EVT_ID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

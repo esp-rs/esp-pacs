@@ -35,15 +35,31 @@ impl From<crate::W<APLL_TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APLL_TICK_NUM` reader - "]
-pub type APLL_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type APLL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `APLL_TICK_NUM` writer - "]
-pub type APLL_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, APLL_TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type APLL_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, APLL_TICK_CONF_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn apll_tick_num(&self) -> APLL_TICK_NUM_R {
         APLL_TICK_NUM_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APLL_TICK_CONF")
+            .field(
+                "apll_tick_num",
+                &format_args!("{}", self.apll_tick_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APLL_TICK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

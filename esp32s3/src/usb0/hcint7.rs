@@ -35,61 +35,61 @@ impl From<crate::W<HCINT7_SPEC>> for W {
     }
 }
 #[doc = "Field `H_XFERCOMPL7` reader - "]
-pub type H_XFERCOMPL7_R = crate::BitReader<bool>;
+pub type H_XFERCOMPL7_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPL7` writer - "]
-pub type H_XFERCOMPL7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_XFERCOMPL7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_CHHLTD7` reader - "]
-pub type H_CHHLTD7_R = crate::BitReader<bool>;
+pub type H_CHHLTD7_R = crate::BitReader;
 #[doc = "Field `H_CHHLTD7` writer - "]
-pub type H_CHHLTD7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_CHHLTD7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_AHBERR7` reader - "]
-pub type H_AHBERR7_R = crate::BitReader<bool>;
+pub type H_AHBERR7_R = crate::BitReader;
 #[doc = "Field `H_AHBERR7` writer - "]
-pub type H_AHBERR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_AHBERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_STALL7` reader - "]
-pub type H_STALL7_R = crate::BitReader<bool>;
+pub type H_STALL7_R = crate::BitReader;
 #[doc = "Field `H_STALL7` writer - "]
-pub type H_STALL7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_STALL7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_NACK7` reader - "]
-pub type H_NACK7_R = crate::BitReader<bool>;
+pub type H_NACK7_R = crate::BitReader;
 #[doc = "Field `H_NACK7` writer - "]
-pub type H_NACK7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_NACK7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_ACK7` reader - "]
-pub type H_ACK7_R = crate::BitReader<bool>;
+pub type H_ACK7_R = crate::BitReader;
 #[doc = "Field `H_ACK7` writer - "]
-pub type H_ACK7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_ACK7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_NYET7` reader - "]
-pub type H_NYET7_R = crate::BitReader<bool>;
+pub type H_NYET7_R = crate::BitReader;
 #[doc = "Field `H_NYET7` writer - "]
-pub type H_NYET7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_NYET7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_XACTERR7` reader - "]
-pub type H_XACTERR7_R = crate::BitReader<bool>;
+pub type H_XACTERR7_R = crate::BitReader;
 #[doc = "Field `H_XACTERR7` writer - "]
-pub type H_XACTERR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_XACTERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_BBLERR7` reader - "]
-pub type H_BBLERR7_R = crate::BitReader<bool>;
+pub type H_BBLERR7_R = crate::BitReader;
 #[doc = "Field `H_BBLERR7` writer - "]
-pub type H_BBLERR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_BBLERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_FRMOVRUN7` reader - "]
-pub type H_FRMOVRUN7_R = crate::BitReader<bool>;
+pub type H_FRMOVRUN7_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUN7` writer - "]
-pub type H_FRMOVRUN7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_FRMOVRUN7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_DATATGLERR7` reader - "]
-pub type H_DATATGLERR7_R = crate::BitReader<bool>;
+pub type H_DATATGLERR7_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERR7` writer - "]
-pub type H_DATATGLERR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_DATATGLERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_BNAINTR7` reader - "]
-pub type H_BNAINTR7_R = crate::BitReader<bool>;
+pub type H_BNAINTR7_R = crate::BitReader;
 #[doc = "Field `H_BNAINTR7` writer - "]
-pub type H_BNAINTR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_BNAINTR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_XCS_XACT_ERR7` reader - "]
-pub type H_XCS_XACT_ERR7_R = crate::BitReader<bool>;
+pub type H_XCS_XACT_ERR7_R = crate::BitReader;
 #[doc = "Field `H_XCS_XACT_ERR7` writer - "]
-pub type H_XCS_XACT_ERR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_XCS_XACT_ERR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 #[doc = "Field `H_DESC_LST_ROLLINTR7` reader - "]
-pub type H_DESC_LST_ROLLINTR7_R = crate::BitReader<bool>;
+pub type H_DESC_LST_ROLLINTR7_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTR7` writer - "]
-pub type H_DESC_LST_ROLLINTR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINT7_SPEC, bool, O>;
+pub type H_DESC_LST_ROLLINTR7_W<'a, const O: u8> = crate::BitWriter<'a, HCINT7_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -160,6 +160,45 @@ impl R {
     #[inline(always)]
     pub fn h_desc_lst_rollintr7(&self) -> H_DESC_LST_ROLLINTR7_R {
         H_DESC_LST_ROLLINTR7_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINT7")
+            .field(
+                "h_xfercompl7",
+                &format_args!("{}", self.h_xfercompl7().bit()),
+            )
+            .field("h_chhltd7", &format_args!("{}", self.h_chhltd7().bit()))
+            .field("h_ahberr7", &format_args!("{}", self.h_ahberr7().bit()))
+            .field("h_stall7", &format_args!("{}", self.h_stall7().bit()))
+            .field("h_nack7", &format_args!("{}", self.h_nack7().bit()))
+            .field("h_ack7", &format_args!("{}", self.h_ack7().bit()))
+            .field("h_nyet7", &format_args!("{}", self.h_nyet7().bit()))
+            .field("h_xacterr7", &format_args!("{}", self.h_xacterr7().bit()))
+            .field("h_bblerr7", &format_args!("{}", self.h_bblerr7().bit()))
+            .field("h_frmovrun7", &format_args!("{}", self.h_frmovrun7().bit()))
+            .field(
+                "h_datatglerr7",
+                &format_args!("{}", self.h_datatglerr7().bit()),
+            )
+            .field("h_bnaintr7", &format_args!("{}", self.h_bnaintr7().bit()))
+            .field(
+                "h_xcs_xact_err7",
+                &format_args!("{}", self.h_xcs_xact_err7().bit()),
+            )
+            .field(
+                "h_desc_lst_rollintr7",
+                &format_args!("{}", self.h_desc_lst_rollintr7().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCINT7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

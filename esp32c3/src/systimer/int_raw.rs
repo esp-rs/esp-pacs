@@ -35,17 +35,17 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET0_INT_RAW` reader - interupt0 raw"]
-pub type TARGET0_INT_RAW_R = crate::BitReader<bool>;
+pub type TARGET0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET0_INT_RAW` writer - interupt0 raw"]
-pub type TARGET0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TARGET0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TARGET1_INT_RAW` reader - interupt1 raw"]
-pub type TARGET1_INT_RAW_R = crate::BitReader<bool>;
+pub type TARGET1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET1_INT_RAW` writer - interupt1 raw"]
-pub type TARGET1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TARGET1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TARGET2_INT_RAW` reader - interupt2 raw"]
-pub type TARGET2_INT_RAW_R = crate::BitReader<bool>;
+pub type TARGET2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TARGET2_INT_RAW` writer - interupt2 raw"]
-pub type TARGET2_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TARGET2_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]
@@ -61,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn target2_int_raw(&self) -> TARGET2_INT_RAW_R {
         TARGET2_INT_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "target0_int_raw",
+                &format_args!("{}", self.target0_int_raw().bit()),
+            )
+            .field(
+                "target1_int_raw",
+                &format_args!("{}", self.target1_int_raw().bit()),
+            )
+            .field(
+                "target2_int_raw",
+                &format_args!("{}", self.target2_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

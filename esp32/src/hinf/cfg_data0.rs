@@ -37,13 +37,11 @@ impl From<crate::W<CFG_DATA0_SPEC>> for W {
 #[doc = "Field `USER_ID_FN1` reader - "]
 pub type USER_ID_FN1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `USER_ID_FN1` writer - "]
-pub type USER_ID_FN1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_DATA0_SPEC, u16, u16, 16, O>;
+pub type USER_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16, u16>;
 #[doc = "Field `DEVICE_ID_FN1` reader - "]
 pub type DEVICE_ID_FN1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DEVICE_ID_FN1` writer - "]
-pub type DEVICE_ID_FN1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_DATA0_SPEC, u16, u16, 16, O>;
+pub type DEVICE_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn device_id_fn1(&self) -> DEVICE_ID_FN1_R {
         DEVICE_ID_FN1_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_DATA0")
+            .field(
+                "user_id_fn1",
+                &format_args!("{}", self.user_id_fn1().bits()),
+            )
+            .field(
+                "device_id_fn1",
+                &format_args!("{}", self.device_id_fn1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_DATA0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

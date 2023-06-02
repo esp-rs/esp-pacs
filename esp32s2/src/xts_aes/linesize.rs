@@ -35,14 +35,28 @@ impl From<crate::W<LINESIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `LINESIZE` reader - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
-pub type LINESIZE_R = crate::FieldReader<u8, u8>;
+pub type LINESIZE_R = crate::FieldReader;
 #[doc = "Field `LINESIZE` writer - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
-pub type LINESIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LINESIZE_SPEC, u8, u8, 2, O>;
+pub type LINESIZE_W<'a, const O: u8> = crate::FieldWriter<'a, LINESIZE_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
     #[inline(always)]
     pub fn linesize(&self) -> LINESIZE_R {
         LINESIZE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LINESIZE")
+            .field("linesize", &format_args!("{}", self.linesize().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LINESIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

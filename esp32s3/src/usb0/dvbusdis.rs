@@ -37,12 +37,26 @@ impl From<crate::W<DVBUSDIS_SPEC>> for W {
 #[doc = "Field `DVBUSDIS` reader - "]
 pub type DVBUSDIS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DVBUSDIS` writer - "]
-pub type DVBUSDIS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DVBUSDIS_SPEC, u16, u16, 16, O>;
+pub type DVBUSDIS_W<'a, const O: u8> = crate::FieldWriter<'a, DVBUSDIS_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn dvbusdis(&self) -> DVBUSDIS_R {
         DVBUSDIS_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DVBUSDIS")
+            .field("dvbusdis", &format_args!("{}", self.dvbusdis().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DVBUSDIS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

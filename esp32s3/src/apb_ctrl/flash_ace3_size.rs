@@ -38,12 +38,29 @@ impl From<crate::W<FLASH_ACE3_SIZE_SPEC>> for W {
 pub type FLASH_ACE3_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FLASH_ACE3_SIZE` writer - ******* Description ***********"]
 pub type FLASH_ACE3_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_ACE3_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, FLASH_ACE3_SIZE_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
     pub fn flash_ace3_size(&self) -> FLASH_ACE3_SIZE_R {
         FLASH_ACE3_SIZE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_ACE3_SIZE")
+            .field(
+                "flash_ace3_size",
+                &format_args!("{}", self.flash_ace3_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_ACE3_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

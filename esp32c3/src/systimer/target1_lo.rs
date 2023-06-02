@@ -38,12 +38,29 @@ impl From<crate::W<TARGET1_LO_SPEC>> for W {
 pub type TIMER_TARGET1_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER_TARGET1_LO` writer - timer taget1 low 32 bit"]
 pub type TIMER_TARGET1_LO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TARGET1_LO_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, TARGET1_LO_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - timer taget1 low 32 bit"]
     #[inline(always)]
     pub fn timer_target1_lo(&self) -> TIMER_TARGET1_LO_R {
         TIMER_TARGET1_LO_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TARGET1_LO")
+            .field(
+                "timer_target1_lo",
+                &format_args!("{}", self.timer_target1_lo().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TARGET1_LO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

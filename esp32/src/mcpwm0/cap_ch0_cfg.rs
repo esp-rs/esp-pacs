@@ -35,24 +35,23 @@ impl From<crate::W<CAP_CH0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP0_EN` reader - "]
-pub type CAP0_EN_R = crate::BitReader<bool>;
+pub type CAP0_EN_R = crate::BitReader;
 #[doc = "Field `CAP0_EN` writer - "]
-pub type CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, O>;
+pub type CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH0_CFG_SPEC, O>;
 #[doc = "Field `CAP0_MODE` reader - "]
-pub type CAP0_MODE_R = crate::FieldReader<u8, u8>;
+pub type CAP0_MODE_R = crate::FieldReader;
 #[doc = "Field `CAP0_MODE` writer - "]
-pub type CAP0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CAP_CH0_CFG_SPEC, u8, u8, 2, O>;
+pub type CAP0_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH0_CFG_SPEC, 2, O>;
 #[doc = "Field `CAP0_PRESCALE` reader - "]
-pub type CAP0_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type CAP0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `CAP0_PRESCALE` writer - "]
-pub type CAP0_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAP_CH0_CFG_SPEC, u8, u8, 8, O>;
+pub type CAP0_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_CH0_CFG_SPEC, 8, O>;
 #[doc = "Field `CAP0_IN_INVERT` reader - "]
-pub type CAP0_IN_INVERT_R = crate::BitReader<bool>;
+pub type CAP0_IN_INVERT_R = crate::BitReader;
 #[doc = "Field `CAP0_IN_INVERT` writer - "]
-pub type CAP0_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, O>;
+pub type CAP0_IN_INVERT_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH0_CFG_SPEC, O>;
 #[doc = "Field `CAP0_SW` writer - "]
-pub type CAP0_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, O>;
+pub type CAP0_SW_W<'a, const O: u8> = crate::BitWriter<'a, CAP_CH0_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -73,6 +72,29 @@ impl R {
     #[inline(always)]
     pub fn cap0_in_invert(&self) -> CAP0_IN_INVERT_R {
         CAP0_IN_INVERT_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CAP_CH0_CFG")
+            .field("cap0_en", &format_args!("{}", self.cap0_en().bit()))
+            .field("cap0_mode", &format_args!("{}", self.cap0_mode().bits()))
+            .field(
+                "cap0_prescale",
+                &format_args!("{}", self.cap0_prescale().bits()),
+            )
+            .field(
+                "cap0_in_invert",
+                &format_args!("{}", self.cap0_in_invert().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CAP_CH0_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

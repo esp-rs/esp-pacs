@@ -16,7 +16,7 @@ impl From<crate::R<RD_BLK2_DATA2_SPEC>> for R {
 #[doc = "Field `LDO_VOL_BIAS_CONFIG_HIGH` reader - Store the bit \\[3:29\\] of ido configuration parameters."]
 pub type LDO_VOL_BIAS_CONFIG_HIGH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PVT_LOW` reader - Store the bit \\[0:4\\] of pvt."]
-pub type PVT_LOW_R = crate::FieldReader<u8, u8>;
+pub type PVT_LOW_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:26 - Store the bit \\[3:29\\] of ido configuration parameters."]
     #[inline(always)]
@@ -27,6 +27,24 @@ impl R {
     #[inline(always)]
     pub fn pvt_low(&self) -> PVT_LOW_R {
         PVT_LOW_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_BLK2_DATA2")
+            .field(
+                "ldo_vol_bias_config_high",
+                &format_args!("{}", self.ldo_vol_bias_config_high().bits()),
+            )
+            .field("pvt_low", &format_args!("{}", self.pvt_low().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_BLK2_DATA2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Register 2 of BLOCK2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk2_data2](index.html) module"]

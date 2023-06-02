@@ -35,45 +35,40 @@ impl From<crate::W<SAR_AMP_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_SAR1_DAC_XPD_FSM_IDLE` reader - no public"]
-pub type SAR_SAR1_DAC_XPD_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_SAR1_DAC_XPD_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_SAR1_DAC_XPD_FSM_IDLE` writer - no public"]
-pub type SAR_SAR1_DAC_XPD_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+pub type SAR_SAR1_DAC_XPD_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_XPD_SAR_AMP_FSM_IDLE` reader - no public"]
-pub type SAR_XPD_SAR_AMP_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_XPD_SAR_AMP_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_XPD_SAR_AMP_FSM_IDLE` writer - no public"]
-pub type SAR_XPD_SAR_AMP_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+pub type SAR_XPD_SAR_AMP_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_AMP_RST_FB_FSM_IDLE` reader - no public"]
-pub type SAR_AMP_RST_FB_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_AMP_RST_FB_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_RST_FB_FSM_IDLE` writer - no public"]
-pub type SAR_AMP_RST_FB_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+pub type SAR_AMP_RST_FB_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_AMP_SHORT_REF_FSM_IDLE` reader - no public"]
-pub type SAR_AMP_SHORT_REF_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_AMP_SHORT_REF_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_SHORT_REF_FSM_IDLE` writer - no public"]
 pub type SAR_AMP_SHORT_REF_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_AMP_SHORT_REF_GND_FSM_IDLE` reader - no public"]
-pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_AMP_SHORT_REF_GND_FSM_IDLE` writer - no public"]
 pub type SAR_AMP_SHORT_REF_GND_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+    crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_XPD_SAR_FSM_IDLE` reader - no public"]
-pub type SAR_XPD_SAR_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_XPD_SAR_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_XPD_SAR_FSM_IDLE` writer - no public"]
-pub type SAR_XPD_SAR_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+pub type SAR_XPD_SAR_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` reader - no public"]
-pub type SAR_RSTB_FSM_IDLE_R = crate::BitReader<bool>;
+pub type SAR_RSTB_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` writer - no public"]
-pub type SAR_RSTB_FSM_IDLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, O>;
+pub type SAR_RSTB_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - no public"]
 pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - no public"]
 pub type SAR_AMP_WAIT3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_AMP_CTRL2_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SAR_AMP_CTRL2_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - no public"]
     #[inline(always)]
@@ -114,6 +109,51 @@ impl R {
     #[inline(always)]
     pub fn sar_amp_wait3(&self) -> SAR_AMP_WAIT3_R {
         SAR_AMP_WAIT3_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_AMP_CTRL2")
+            .field(
+                "sar_sar1_dac_xpd_fsm_idle",
+                &format_args!("{}", self.sar_sar1_dac_xpd_fsm_idle().bit()),
+            )
+            .field(
+                "sar_xpd_sar_amp_fsm_idle",
+                &format_args!("{}", self.sar_xpd_sar_amp_fsm_idle().bit()),
+            )
+            .field(
+                "sar_amp_rst_fb_fsm_idle",
+                &format_args!("{}", self.sar_amp_rst_fb_fsm_idle().bit()),
+            )
+            .field(
+                "sar_amp_short_ref_fsm_idle",
+                &format_args!("{}", self.sar_amp_short_ref_fsm_idle().bit()),
+            )
+            .field(
+                "sar_amp_short_ref_gnd_fsm_idle",
+                &format_args!("{}", self.sar_amp_short_ref_gnd_fsm_idle().bit()),
+            )
+            .field(
+                "sar_xpd_sar_fsm_idle",
+                &format_args!("{}", self.sar_xpd_sar_fsm_idle().bit()),
+            )
+            .field(
+                "sar_rstb_fsm_idle",
+                &format_args!("{}", self.sar_rstb_fsm_idle().bit()),
+            )
+            .field(
+                "sar_amp_wait3",
+                &format_args!("{}", self.sar_amp_wait3().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_AMP_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

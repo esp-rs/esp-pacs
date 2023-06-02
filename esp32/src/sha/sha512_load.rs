@@ -20,7 +20,13 @@ impl From<crate::W<SHA512_LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA512_LOAD` writer - Write 1 to finish the SHA-512 operation to calculate the final message hash."]
-pub type SHA512_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA512_LOAD_SPEC, bool, O>;
+pub type SHA512_LOAD_W<'a, const O: u8> = crate::BitWriter<'a, SHA512_LOAD_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SHA512_LOAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-512 operation to calculate the final message hash."]
     #[inline(always)]

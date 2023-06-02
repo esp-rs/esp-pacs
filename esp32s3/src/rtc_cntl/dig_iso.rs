@@ -35,77 +35,77 @@ impl From<crate::W<DIG_ISO_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_OFF` reader - No public"]
-pub type FORCE_OFF_R = crate::BitReader<bool>;
+pub type FORCE_OFF_R = crate::BitReader;
 #[doc = "Field `FORCE_OFF` writer - No public"]
-pub type FORCE_OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type FORCE_OFF_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `FORCE_ON` reader - No public"]
-pub type FORCE_ON_R = crate::BitReader<bool>;
+pub type FORCE_ON_R = crate::BitReader;
 #[doc = "Field `FORCE_ON` writer - No public"]
-pub type FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_AUTOHOLD` reader - read only register to indicate digital pad auto-hold status"]
-pub type DG_PAD_AUTOHOLD_R = crate::BitReader<bool>;
+pub type DG_PAD_AUTOHOLD_R = crate::BitReader;
 #[doc = "Field `CLR_DG_PAD_AUTOHOLD` writer - wtite only register to clear digital pad auto-hold"]
-pub type CLR_DG_PAD_AUTOHOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type CLR_DG_PAD_AUTOHOLD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_AUTOHOLD_EN` reader - digital pad enable auto-hold"]
-pub type DG_PAD_AUTOHOLD_EN_R = crate::BitReader<bool>;
+pub type DG_PAD_AUTOHOLD_EN_R = crate::BitReader;
 #[doc = "Field `DG_PAD_AUTOHOLD_EN` writer - digital pad enable auto-hold"]
-pub type DG_PAD_AUTOHOLD_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PAD_AUTOHOLD_EN_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_FORCE_NOISO` reader - digital pad force no ISO"]
-pub type DG_PAD_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type DG_PAD_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `DG_PAD_FORCE_NOISO` writer - digital pad force no ISO"]
-pub type DG_PAD_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PAD_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_FORCE_ISO` reader - digital pad force ISO"]
-pub type DG_PAD_FORCE_ISO_R = crate::BitReader<bool>;
+pub type DG_PAD_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `DG_PAD_FORCE_ISO` writer - digital pad force ISO"]
-pub type DG_PAD_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PAD_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_FORCE_UNHOLD` reader - digital pad force un-hold"]
-pub type DG_PAD_FORCE_UNHOLD_R = crate::BitReader<bool>;
+pub type DG_PAD_FORCE_UNHOLD_R = crate::BitReader;
 #[doc = "Field `DG_PAD_FORCE_UNHOLD` writer - digital pad force un-hold"]
-pub type DG_PAD_FORCE_UNHOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PAD_FORCE_UNHOLD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PAD_FORCE_HOLD` reader - digital pad force hold"]
-pub type DG_PAD_FORCE_HOLD_R = crate::BitReader<bool>;
+pub type DG_PAD_FORCE_HOLD_R = crate::BitReader;
 #[doc = "Field `DG_PAD_FORCE_HOLD` writer - digital pad force hold"]
-pub type DG_PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PAD_FORCE_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `BT_FORCE_ISO` reader - internal SRAM 2 force ISO"]
-pub type BT_FORCE_ISO_R = crate::BitReader<bool>;
+pub type BT_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `BT_FORCE_ISO` writer - internal SRAM 2 force ISO"]
-pub type BT_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type BT_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `BT_FORCE_NOISO` reader - internal SRAM 2 force no ISO"]
-pub type BT_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type BT_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `BT_FORCE_NOISO` writer - internal SRAM 2 force no ISO"]
-pub type BT_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type BT_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PERI_FORCE_ISO` reader - internal SRAM 3 force ISO"]
-pub type DG_PERI_FORCE_ISO_R = crate::BitReader<bool>;
+pub type DG_PERI_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `DG_PERI_FORCE_ISO` writer - internal SRAM 3 force ISO"]
-pub type DG_PERI_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PERI_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_PERI_FORCE_NOISO` reader - internal SRAM 3 force no ISO"]
-pub type DG_PERI_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type DG_PERI_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `DG_PERI_FORCE_NOISO` writer - internal SRAM 3 force no ISO"]
-pub type DG_PERI_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_PERI_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `CPU_TOP_FORCE_ISO` reader - internal SRAM 4 force ISO"]
-pub type CPU_TOP_FORCE_ISO_R = crate::BitReader<bool>;
+pub type CPU_TOP_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `CPU_TOP_FORCE_ISO` writer - internal SRAM 4 force ISO"]
-pub type CPU_TOP_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type CPU_TOP_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `CPU_TOP_FORCE_NOISO` reader - internal SRAM 4 force no ISO"]
-pub type CPU_TOP_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type CPU_TOP_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `CPU_TOP_FORCE_NOISO` writer - internal SRAM 4 force no ISO"]
-pub type CPU_TOP_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type CPU_TOP_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_ISO` reader - wifi force ISO"]
-pub type WIFI_FORCE_ISO_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_ISO` writer - wifi force ISO"]
-pub type WIFI_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type WIFI_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `WIFI_FORCE_NOISO` reader - wifi force no ISO"]
-pub type WIFI_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type WIFI_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `WIFI_FORCE_NOISO` writer - wifi force no ISO"]
-pub type WIFI_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type WIFI_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_ISO` reader - digital core force ISO"]
-pub type DG_WRAP_FORCE_ISO_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_ISO_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_ISO` writer - digital core force ISO"]
-pub type DG_WRAP_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_ISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 #[doc = "Field `DG_WRAP_FORCE_NOISO` reader - digita core force no ISO"]
-pub type DG_WRAP_FORCE_NOISO_R = crate::BitReader<bool>;
+pub type DG_WRAP_FORCE_NOISO_R = crate::BitReader;
 #[doc = "Field `DG_WRAP_FORCE_NOISO` writer - digita core force no ISO"]
-pub type DG_WRAP_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, O>;
+pub type DG_WRAP_FORCE_NOISO_W<'a, const O: u8> = crate::BitWriter<'a, DIG_ISO_SPEC, O>;
 impl R {
     #[doc = "Bit 7 - No public"]
     #[inline(always)]
@@ -196,6 +196,85 @@ impl R {
     #[inline(always)]
     pub fn dg_wrap_force_noiso(&self) -> DG_WRAP_FORCE_NOISO_R {
         DG_WRAP_FORCE_NOISO_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIG_ISO")
+            .field("force_off", &format_args!("{}", self.force_off().bit()))
+            .field("force_on", &format_args!("{}", self.force_on().bit()))
+            .field(
+                "dg_pad_autohold",
+                &format_args!("{}", self.dg_pad_autohold().bit()),
+            )
+            .field(
+                "dg_pad_autohold_en",
+                &format_args!("{}", self.dg_pad_autohold_en().bit()),
+            )
+            .field(
+                "dg_pad_force_noiso",
+                &format_args!("{}", self.dg_pad_force_noiso().bit()),
+            )
+            .field(
+                "dg_pad_force_iso",
+                &format_args!("{}", self.dg_pad_force_iso().bit()),
+            )
+            .field(
+                "dg_pad_force_unhold",
+                &format_args!("{}", self.dg_pad_force_unhold().bit()),
+            )
+            .field(
+                "dg_pad_force_hold",
+                &format_args!("{}", self.dg_pad_force_hold().bit()),
+            )
+            .field(
+                "bt_force_iso",
+                &format_args!("{}", self.bt_force_iso().bit()),
+            )
+            .field(
+                "bt_force_noiso",
+                &format_args!("{}", self.bt_force_noiso().bit()),
+            )
+            .field(
+                "dg_peri_force_iso",
+                &format_args!("{}", self.dg_peri_force_iso().bit()),
+            )
+            .field(
+                "dg_peri_force_noiso",
+                &format_args!("{}", self.dg_peri_force_noiso().bit()),
+            )
+            .field(
+                "cpu_top_force_iso",
+                &format_args!("{}", self.cpu_top_force_iso().bit()),
+            )
+            .field(
+                "cpu_top_force_noiso",
+                &format_args!("{}", self.cpu_top_force_noiso().bit()),
+            )
+            .field(
+                "wifi_force_iso",
+                &format_args!("{}", self.wifi_force_iso().bit()),
+            )
+            .field(
+                "wifi_force_noiso",
+                &format_args!("{}", self.wifi_force_noiso().bit()),
+            )
+            .field(
+                "dg_wrap_force_iso",
+                &format_args!("{}", self.dg_wrap_force_iso().bit()),
+            )
+            .field(
+                "dg_wrap_force_noiso",
+                &format_args!("{}", self.dg_wrap_force_noiso().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIG_ISO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

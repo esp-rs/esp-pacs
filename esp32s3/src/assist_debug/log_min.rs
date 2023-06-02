@@ -37,12 +37,26 @@ impl From<crate::W<LOG_MIN_SPEC>> for W {
 #[doc = "Field `LOG_MIN` reader - check region min addr"]
 pub type LOG_MIN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_MIN` writer - check region min addr"]
-pub type LOG_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOG_MIN_SPEC, u32, u32, 32, O>;
+pub type LOG_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MIN_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - check region min addr"]
     #[inline(always)]
     pub fn log_min(&self) -> LOG_MIN_R {
         LOG_MIN_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_MIN")
+            .field("log_min", &format_args!("{}", self.log_min().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_MIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

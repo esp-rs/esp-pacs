@@ -38,12 +38,29 @@ impl From<crate::W<PRO_DPORT_APB_MASK0_SPEC>> for W {
 pub type PRODPORT_APB_MASK0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRODPORT_APB_MASK0` writer - "]
 pub type PRODPORT_APB_MASK0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_DPORT_APB_MASK0_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, PRO_DPORT_APB_MASK0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn prodport_apb_mask0(&self) -> PRODPORT_APB_MASK0_R {
         PRODPORT_APB_MASK0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_DPORT_APB_MASK0")
+            .field(
+                "prodport_apb_mask0",
+                &format_args!("{}", self.prodport_apb_mask0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_DPORT_APB_MASK0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

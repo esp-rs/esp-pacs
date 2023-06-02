@@ -14,13 +14,13 @@ impl From<crate::R<CORE_1_MESSAGE_PHASE_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_MESSAGE_MATCH` reader - This bit indicates whether the check is successful"]
-pub type CORE_1_MESSAGE_MATCH_R = crate::BitReader<bool>;
+pub type CORE_1_MESSAGE_MATCH_R = crate::BitReader;
 #[doc = "Field `CORE_1_MESSAGE_EXPECT` reader - This field indicates the data to be written next time"]
-pub type CORE_1_MESSAGE_EXPECT_R = crate::FieldReader<u8, u8>;
+pub type CORE_1_MESSAGE_EXPECT_R = crate::FieldReader;
 #[doc = "Field `CORE_1_MESSAGE_DATAPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation, and is checking data"]
-pub type CORE_1_MESSAGE_DATAPHASE_R = crate::BitReader<bool>;
+pub type CORE_1_MESSAGE_DATAPHASE_R = crate::BitReader;
 #[doc = "Field `CORE_1_MESSAGE_ADDRESSPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation, and is checking address."]
-pub type CORE_1_MESSAGE_ADDRESSPHASE_R = crate::BitReader<bool>;
+pub type CORE_1_MESSAGE_ADDRESSPHASE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This bit indicates whether the check is successful"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn core_1_message_addressphase(&self) -> CORE_1_MESSAGE_ADDRESSPHASE_R {
         CORE_1_MESSAGE_ADDRESSPHASE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_1_MESSAGE_PHASE")
+            .field(
+                "core_1_message_match",
+                &format_args!("{}", self.core_1_message_match().bit()),
+            )
+            .field(
+                "core_1_message_expect",
+                &format_args!("{}", self.core_1_message_expect().bits()),
+            )
+            .field(
+                "core_1_message_dataphase",
+                &format_args!("{}", self.core_1_message_dataphase().bit()),
+            )
+            .field(
+                "core_1_message_addressphase",
+                &format_args!("{}", self.core_1_message_addressphase().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_MESSAGE_PHASE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Clear writer_buffer status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_1_message_phase](index.html) module"]

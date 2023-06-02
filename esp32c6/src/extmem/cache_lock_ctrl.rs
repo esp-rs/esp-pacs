@@ -35,19 +35,17 @@ impl From<crate::W<CACHE_LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
-pub type CACHE_LOCK_ENA_R = crate::BitReader<bool>;
+pub type CACHE_LOCK_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
-pub type CACHE_LOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_LOCK_CTRL_SPEC, bool, O>;
+pub type CACHE_LOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_LOCK_CTRL_SPEC, O>;
 #[doc = "Field `CACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done"]
-pub type CACHE_UNLOCK_ENA_R = crate::BitReader<bool>;
+pub type CACHE_UNLOCK_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done"]
-pub type CACHE_UNLOCK_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_LOCK_CTRL_SPEC, bool, O>;
+pub type CACHE_UNLOCK_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CACHE_LOCK_CTRL_SPEC, O>;
 #[doc = "Field `CACHE_LOCK_DONE` reader - The bit is used to indicate whether unlock/lock operation is finished or not. 0: not finished. 1: finished."]
-pub type CACHE_LOCK_DONE_R = crate::BitReader<bool>;
+pub type CACHE_LOCK_DONE_R = crate::BitReader;
 #[doc = "Field `CACHE_LOCK_RGID` reader - The bit is used to set the gid of cache lock/unlock."]
-pub type CACHE_LOCK_RGID_R = crate::FieldReader<u8, u8>;
+pub type CACHE_LOCK_RGID_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done"]
     #[inline(always)]
@@ -68,6 +66,35 @@ impl R {
     #[inline(always)]
     pub fn cache_lock_rgid(&self) -> CACHE_LOCK_RGID_R {
         CACHE_LOCK_RGID_R::new(((self.bits >> 3) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_LOCK_CTRL")
+            .field(
+                "cache_lock_ena",
+                &format_args!("{}", self.cache_lock_ena().bit()),
+            )
+            .field(
+                "cache_unlock_ena",
+                &format_args!("{}", self.cache_unlock_ena().bit()),
+            )
+            .field(
+                "cache_lock_done",
+                &format_args!("{}", self.cache_lock_done().bit()),
+            )
+            .field(
+                "cache_lock_rgid",
+                &format_args!("{}", self.cache_lock_rgid().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_LOCK_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

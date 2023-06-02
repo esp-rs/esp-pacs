@@ -20,8 +20,13 @@ impl From<crate::W<MEM_ADDR_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_CURRENT_ADDR_UPDATE` writer - when set this reg, the current_mem_addr will update to start_addr"]
-pub type MEM_CURRENT_ADDR_UPDATE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, MEM_ADDR_UPDATE_SPEC, bool, O>;
+pub type MEM_CURRENT_ADDR_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, MEM_ADDR_UPDATE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_ADDR_UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - when set this reg, the current_mem_addr will update to start_addr"]
     #[inline(always)]

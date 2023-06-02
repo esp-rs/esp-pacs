@@ -35,20 +35,17 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_THRES_ALL_EN` reader - enable thres to all channel"]
-pub type APB_SARADC_THRES_ALL_EN_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES_ALL_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES_ALL_EN` writer - enable thres to all channel"]
-pub type APB_SARADC_THRES_ALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type APB_SARADC_THRES_ALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES1_EN` reader - enable thres1"]
-pub type APB_SARADC_THRES1_EN_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES1_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES1_EN` writer - enable thres1"]
-pub type APB_SARADC_THRES1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type APB_SARADC_THRES1_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `APB_SARADC_THRES0_EN` reader - enable thres0"]
-pub type APB_SARADC_THRES0_EN_R = crate::BitReader<bool>;
+pub type APB_SARADC_THRES0_EN_R = crate::BitReader;
 #[doc = "Field `APB_SARADC_THRES0_EN` writer - enable thres0"]
-pub type APB_SARADC_THRES0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, O>;
+pub type APB_SARADC_THRES0_EN_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 27 - enable thres to all channel"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn apb_saradc_thres0_en(&self) -> APB_SARADC_THRES0_EN_R {
         APB_SARADC_THRES0_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("THRES_CTRL")
+            .field(
+                "apb_saradc_thres_all_en",
+                &format_args!("{}", self.apb_saradc_thres_all_en().bit()),
+            )
+            .field(
+                "apb_saradc_thres1_en",
+                &format_args!("{}", self.apb_saradc_thres1_en().bit()),
+            )
+            .field(
+                "apb_saradc_thres0_en",
+                &format_args!("{}", self.apb_saradc_thres0_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<TRIGGER_SPEC>> for W {
     }
 }
 #[doc = "Field `ON` writer - 0\\] set 1 start trace."]
-pub type ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, O>;
+pub type ON_W<'a, const O: u8> = crate::BitWriter<'a, TRIGGER_SPEC, O>;
 #[doc = "Field `OFF` writer - set 1 stop trace."]
-pub type OFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, O>;
+pub type OFF_W<'a, const O: u8> = crate::BitWriter<'a, TRIGGER_SPEC, O>;
 #[doc = "Field `MEM_LOOP` reader - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
-pub type MEM_LOOP_R = crate::BitReader<bool>;
+pub type MEM_LOOP_R = crate::BitReader;
 #[doc = "Field `MEM_LOOP` writer - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
-pub type MEM_LOOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, O>;
+pub type MEM_LOOP_W<'a, const O: u8> = crate::BitWriter<'a, TRIGGER_SPEC, O>;
 #[doc = "Field `RESTART_ENA` reader - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
-pub type RESTART_ENA_R = crate::BitReader<bool>;
+pub type RESTART_ENA_R = crate::BitReader;
 #[doc = "Field `RESTART_ENA` writer - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
-pub type RESTART_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, O>;
+pub type RESTART_ENA_W<'a, const O: u8> = crate::BitWriter<'a, TRIGGER_SPEC, O>;
 impl R {
     #[doc = "Bit 2 - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
     #[inline(always)]
@@ -56,6 +56,21 @@ impl R {
     #[inline(always)]
     pub fn restart_ena(&self) -> RESTART_ENA_R {
         RESTART_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TRIGGER")
+            .field("mem_loop", &format_args!("{}", self.mem_loop().bit()))
+            .field("restart_ena", &format_args!("{}", self.restart_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TRIGGER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,23 +14,23 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_RAW` reader - sleep wakeup interrupt raw"]
-pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_RAW` reader - sleep reject interrupt raw"]
-pub type SLP_REJECT_INT_RAW_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - SDIO idle interrupt raw"]
-pub type SDIO_IDLE_INT_RAW_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` reader - RTC WDT interrupt raw"]
-pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+pub type WDT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TIME_VALID_INT_RAW` reader - RTC time valid interrupt raw"]
-pub type TIME_VALID_INT_RAW_R = crate::BitReader<bool>;
+pub type TIME_VALID_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ULP_CP_INT_RAW` reader - ULP-coprocessor interrupt raw"]
-pub type ULP_CP_INT_RAW_R = crate::BitReader<bool>;
+pub type ULP_CP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_INT_RAW` reader - touch interrupt raw"]
-pub type TOUCH_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_INT_RAW_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_RAW` reader - brown out interrupt raw"]
-pub type BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_RAW` reader - RTC main timer interrupt raw"]
-pub type MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
     #[inline(always)]
@@ -76,6 +76,52 @@ impl R {
     #[inline(always)]
     pub fn main_timer_int_raw(&self) -> MAIN_TIMER_INT_RAW_R {
         MAIN_TIMER_INT_RAW_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "slp_wakeup_int_raw",
+                &format_args!("{}", self.slp_wakeup_int_raw().bit()),
+            )
+            .field(
+                "slp_reject_int_raw",
+                &format_args!("{}", self.slp_reject_int_raw().bit()),
+            )
+            .field(
+                "sdio_idle_int_raw",
+                &format_args!("{}", self.sdio_idle_int_raw().bit()),
+            )
+            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
+            .field(
+                "time_valid_int_raw",
+                &format_args!("{}", self.time_valid_int_raw().bit()),
+            )
+            .field(
+                "ulp_cp_int_raw",
+                &format_args!("{}", self.ulp_cp_int_raw().bit()),
+            )
+            .field(
+                "touch_int_raw",
+                &format_args!("{}", self.touch_int_raw().bit()),
+            )
+            .field(
+                "brown_out_int_raw",
+                &format_args!("{}", self.brown_out_int_raw().bit()),
+            )
+            .field(
+                "main_timer_int_raw",
+                &format_args!("{}", self.main_timer_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

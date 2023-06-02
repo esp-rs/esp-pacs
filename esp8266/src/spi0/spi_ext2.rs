@@ -35,14 +35,28 @@ impl From<crate::W<SPI_EXT2_SPEC>> for W {
     }
 }
 #[doc = "Field `st` reader - "]
-pub type ST_R = crate::FieldReader<u8, u8>;
+pub type ST_R = crate::FieldReader;
 #[doc = "Field `st` writer - "]
-pub type ST_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_EXT2_SPEC, u8, u8, 3, O>;
+pub type ST_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT2_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn st(&self) -> ST_R {
         ST_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_EXT2")
+            .field("st", &format_args!("{}", self.st().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_EXT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

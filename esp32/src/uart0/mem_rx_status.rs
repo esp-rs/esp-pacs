@@ -36,6 +36,31 @@ impl R {
         MEM_RX_WR_ADDR_R::new(((self.bits >> 13) & 0x07ff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_RX_STATUS")
+            .field(
+                "mem_rx_status",
+                &format_args!("{}", self.mem_rx_status().bits()),
+            )
+            .field(
+                "mem_rx_rd_addr",
+                &format_args!("{}", self.mem_rx_rd_addr().bits()),
+            )
+            .field(
+                "mem_rx_wr_addr",
+                &format_args!("{}", self.mem_rx_wr_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_RX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mem_rx_status](index.html) module"]
 pub struct MEM_RX_STATUS_SPEC;
 impl crate::RegisterSpec for MEM_RX_STATUS_SPEC {

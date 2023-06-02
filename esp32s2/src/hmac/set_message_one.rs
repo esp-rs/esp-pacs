@@ -20,7 +20,13 @@ impl From<crate::W<SET_MESSAGE_ONE_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_TEXT_ONE` writer - Call SHA to calculate one message block."]
-pub type SET_TEXT_ONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_MESSAGE_ONE_SPEC, bool, O>;
+pub type SET_TEXT_ONE_W<'a, const O: u8> = crate::BitWriter<'a, SET_MESSAGE_ONE_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ONE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Call SHA to calculate one message block."]
     #[inline(always)]

@@ -35,135 +35,129 @@ impl From<crate::W<SLC1HOST_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC1_TOHOST_BIT0_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT0_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT0_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT0_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT1_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT1_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT1_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT1_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT2_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT2_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT2_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT2_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT3_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT3_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT3_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT3_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT4_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT4_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT4_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT4_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT4_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT5_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT5_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT5_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT5_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT5_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT6_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT6_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT6_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT6_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT6_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOHOST_BIT7_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOHOST_BIT7_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOHOST_BIT7_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOHOST_BIT7_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOHOST_BIT7_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN0_1TO0_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOKEN0_1TO0_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN0_1TO0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN0_1TO0_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOKEN0_1TO0_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_1TO0_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOKEN1_1TO0_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN1_1TO0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN1_1TO0_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOKEN1_1TO0_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN0_0TO1_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOKEN0_0TO1_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN0_0TO1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN0_0TO1_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOKEN0_0TO1_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_0TO1_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TOKEN1_0TO1_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TOKEN1_0TO1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN1_0TO1_INT_RAW` writer - *******Description***********"]
 pub type SLC1_TOKEN1_0TO1_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_SOF_INT_RAW` reader - *******Description***********"]
-pub type SLC1HOST_RX_SOF_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1HOST_RX_SOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1HOST_RX_SOF_INT_RAW` writer - *******Description***********"]
 pub type SLC1HOST_RX_SOF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_EOF_INT_RAW` reader - *******Description***********"]
-pub type SLC1HOST_RX_EOF_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1HOST_RX_EOF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1HOST_RX_EOF_INT_RAW` writer - *******Description***********"]
 pub type SLC1HOST_RX_EOF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1HOST_RX_START_INT_RAW` reader - *******Description***********"]
-pub type SLC1HOST_RX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1HOST_RX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1HOST_RX_START_INT_RAW` writer - *******Description***********"]
 pub type SLC1HOST_RX_START_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1HOST_TX_START_INT_RAW` reader - *******Description***********"]
-pub type SLC1HOST_TX_START_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1HOST_TX_START_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1HOST_TX_START_INT_RAW` writer - *******Description***********"]
 pub type SLC1HOST_TX_START_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_RX_UDF_INT_RAW` reader - *******Description***********"]
-pub type SLC1_RX_UDF_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_RX_UDF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_UDF_INT_RAW` writer - *******Description***********"]
-pub type SLC1_RX_UDF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_RX_UDF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_TX_OVF_INT_RAW` reader - *******Description***********"]
-pub type SLC1_TX_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_TX_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_OVF_INT_RAW` writer - *******Description***********"]
-pub type SLC1_TX_OVF_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_TX_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_RX_PF_VALID_INT_RAW` reader - *******Description***********"]
-pub type SLC1_RX_PF_VALID_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_RX_PF_VALID_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_PF_VALID_INT_RAW` writer - *******Description***********"]
 pub type SLC1_RX_PF_VALID_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT0_INT_RAW` reader - *******Description***********"]
-pub type SLC1_EXT_BIT0_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_EXT_BIT0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_EXT_BIT0_INT_RAW` writer - *******Description***********"]
-pub type SLC1_EXT_BIT0_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_EXT_BIT0_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT1_INT_RAW` reader - *******Description***********"]
-pub type SLC1_EXT_BIT1_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_EXT_BIT1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_EXT_BIT1_INT_RAW` writer - *******Description***********"]
-pub type SLC1_EXT_BIT1_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_EXT_BIT1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT2_INT_RAW` reader - *******Description***********"]
-pub type SLC1_EXT_BIT2_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_EXT_BIT2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_EXT_BIT2_INT_RAW` writer - *******Description***********"]
-pub type SLC1_EXT_BIT2_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_EXT_BIT2_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_EXT_BIT3_INT_RAW` reader - *******Description***********"]
-pub type SLC1_EXT_BIT3_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_EXT_BIT3_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_EXT_BIT3_INT_RAW` writer - *******Description***********"]
-pub type SLC1_EXT_BIT3_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+pub type SLC1_EXT_BIT3_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_WIFI_RX_NEW_PACKET_INT_RAW` reader - *******Description***********"]
-pub type SLC1_WIFI_RX_NEW_PACKET_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_WIFI_RX_NEW_PACKET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_WIFI_RX_NEW_PACKET_INT_RAW` writer - *******Description***********"]
 pub type SLC1_WIFI_RX_NEW_PACKET_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_HOST_RD_RETRY_INT_RAW` reader - *******Description***********"]
-pub type SLC1_HOST_RD_RETRY_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_HOST_RD_RETRY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_HOST_RD_RETRY_INT_RAW` writer - *******Description***********"]
 pub type SLC1_HOST_RD_RETRY_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 #[doc = "Field `SLC1_BT_RX_NEW_PACKET_INT_RAW` reader - *******Description***********"]
-pub type SLC1_BT_RX_NEW_PACKET_INT_RAW_R = crate::BitReader<bool>;
+pub type SLC1_BT_RX_NEW_PACKET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLC1_BT_RX_NEW_PACKET_INT_RAW` writer - *******Description***********"]
 pub type SLC1_BT_RX_NEW_PACKET_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLC1HOST_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, SLC1HOST_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]
@@ -294,6 +288,123 @@ impl R {
     #[inline(always)]
     pub fn slc1_bt_rx_new_packet_int_raw(&self) -> SLC1_BT_RX_NEW_PACKET_INT_RAW_R {
         SLC1_BT_RX_NEW_PACKET_INT_RAW_R::new(((self.bits >> 25) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC1HOST_INT_RAW")
+            .field(
+                "slc1_tohost_bit0_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit0_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit1_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit1_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit2_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit2_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit3_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit3_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit4_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit4_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit5_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit5_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit6_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit6_int_raw().bit()),
+            )
+            .field(
+                "slc1_tohost_bit7_int_raw",
+                &format_args!("{}", self.slc1_tohost_bit7_int_raw().bit()),
+            )
+            .field(
+                "slc1_token0_1to0_int_raw",
+                &format_args!("{}", self.slc1_token0_1to0_int_raw().bit()),
+            )
+            .field(
+                "slc1_token1_1to0_int_raw",
+                &format_args!("{}", self.slc1_token1_1to0_int_raw().bit()),
+            )
+            .field(
+                "slc1_token0_0to1_int_raw",
+                &format_args!("{}", self.slc1_token0_0to1_int_raw().bit()),
+            )
+            .field(
+                "slc1_token1_0to1_int_raw",
+                &format_args!("{}", self.slc1_token1_0to1_int_raw().bit()),
+            )
+            .field(
+                "slc1host_rx_sof_int_raw",
+                &format_args!("{}", self.slc1host_rx_sof_int_raw().bit()),
+            )
+            .field(
+                "slc1host_rx_eof_int_raw",
+                &format_args!("{}", self.slc1host_rx_eof_int_raw().bit()),
+            )
+            .field(
+                "slc1host_rx_start_int_raw",
+                &format_args!("{}", self.slc1host_rx_start_int_raw().bit()),
+            )
+            .field(
+                "slc1host_tx_start_int_raw",
+                &format_args!("{}", self.slc1host_tx_start_int_raw().bit()),
+            )
+            .field(
+                "slc1_rx_udf_int_raw",
+                &format_args!("{}", self.slc1_rx_udf_int_raw().bit()),
+            )
+            .field(
+                "slc1_tx_ovf_int_raw",
+                &format_args!("{}", self.slc1_tx_ovf_int_raw().bit()),
+            )
+            .field(
+                "slc1_rx_pf_valid_int_raw",
+                &format_args!("{}", self.slc1_rx_pf_valid_int_raw().bit()),
+            )
+            .field(
+                "slc1_ext_bit0_int_raw",
+                &format_args!("{}", self.slc1_ext_bit0_int_raw().bit()),
+            )
+            .field(
+                "slc1_ext_bit1_int_raw",
+                &format_args!("{}", self.slc1_ext_bit1_int_raw().bit()),
+            )
+            .field(
+                "slc1_ext_bit2_int_raw",
+                &format_args!("{}", self.slc1_ext_bit2_int_raw().bit()),
+            )
+            .field(
+                "slc1_ext_bit3_int_raw",
+                &format_args!("{}", self.slc1_ext_bit3_int_raw().bit()),
+            )
+            .field(
+                "slc1_wifi_rx_new_packet_int_raw",
+                &format_args!("{}", self.slc1_wifi_rx_new_packet_int_raw().bit()),
+            )
+            .field(
+                "slc1_host_rd_retry_int_raw",
+                &format_args!("{}", self.slc1_host_rd_retry_int_raw().bit()),
+            )
+            .field(
+                "slc1_bt_rx_new_packet_int_raw",
+                &format_args!("{}", self.slc1_bt_rx_new_packet_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLC1HOST_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,21 +35,21 @@ impl From<crate::W<CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force eFuse SRAM into power-saving mode."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force eFuse SRAM into power-saving mode."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SPEC, bool, O>;
+pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit and force to activate clock signal of eFuse SRAM."]
-pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit and force to activate clock signal of eFuse SRAM."]
-pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SPEC, bool, O>;
+pub type MEM_CLK_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force eFuse SRAM into working mode."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force eFuse SRAM into working mode."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SPEC, bool, O>;
+pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
 #[doc = "Field `EN` reader - Set this bit to force enable eFuse register configuration clock signal."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Set this bit to force enable eFuse register configuration clock signal."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
@@ -70,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK")
+            .field(
+                "mem_force_pd",
+                &format_args!("{}", self.mem_force_pd().bit()),
+            )
+            .field(
+                "mem_clk_force_on",
+                &format_args!("{}", self.mem_clk_force_on().bit()),
+            )
+            .field(
+                "mem_force_pu",
+                &format_args!("{}", self.mem_force_pu().bit()),
+            )
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

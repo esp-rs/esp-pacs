@@ -37,12 +37,26 @@ impl From<crate::W<STORE1_SPEC>> for W {
 #[doc = "Field `SCRATCH1` reader - Reservation register 1"]
 pub type SCRATCH1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SCRATCH1` writer - Reservation register 1"]
-pub type SCRATCH1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STORE1_SPEC, u32, u32, 32, O>;
+pub type SCRATCH1_W<'a, const O: u8> = crate::FieldWriter<'a, STORE1_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reservation register 1"]
     #[inline(always)]
     pub fn scratch1(&self) -> SCRATCH1_R {
         SCRATCH1_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STORE1")
+            .field("scratch1", &format_args!("{}", self.scratch1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STORE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

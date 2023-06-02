@@ -20,21 +20,27 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_THR_EVENT_U0` writer - Set this bit to clear channel0 event interrupt."]
-pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U0_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U1` writer - Set this bit to clear channel1 event interrupt."]
-pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U1_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U2` writer - Set this bit to clear channel2 event interrupt."]
-pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U2_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U3` writer - Set this bit to clear channel3 event interrupt."]
-pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U3_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U4` writer - Set this bit to clear channel4 event interrupt."]
-pub type CNT_THR_EVENT_U4_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U4_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U5` writer - Set this bit to clear channel5 event interrupt."]
-pub type CNT_THR_EVENT_U5_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U5_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U6` writer - Set this bit to clear channel6 event interrupt."]
-pub type CNT_THR_EVENT_U6_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U6_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CNT_THR_EVENT_U7` writer - Set this bit to clear channel7 event interrupt."]
-pub type CNT_THR_EVENT_U7_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CNT_THR_EVENT_U7_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear channel0 event interrupt."]
     #[inline(always)]

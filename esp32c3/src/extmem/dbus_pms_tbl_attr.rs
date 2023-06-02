@@ -35,15 +35,15 @@ impl From<crate::W<DBUS_PMS_TBL_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `DBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
-pub type DBUS_PMS_SCT1_ATTR_R = crate::FieldReader<u8, u8>;
+pub type DBUS_PMS_SCT1_ATTR_R = crate::FieldReader;
 #[doc = "Field `DBUS_PMS_SCT1_ATTR` writer - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
 pub type DBUS_PMS_SCT1_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBUS_PMS_TBL_ATTR_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DBUS_PMS_TBL_ATTR_SPEC, 2, O>;
 #[doc = "Field `DBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
-pub type DBUS_PMS_SCT2_ATTR_R = crate::FieldReader<u8, u8>;
+pub type DBUS_PMS_SCT2_ATTR_R = crate::FieldReader;
 #[doc = "Field `DBUS_PMS_SCT2_ATTR` writer - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
 pub type DBUS_PMS_SCT2_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBUS_PMS_TBL_ATTR_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, DBUS_PMS_TBL_ATTR_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn dbus_pms_sct2_attr(&self) -> DBUS_PMS_SCT2_ATTR_R {
         DBUS_PMS_SCT2_ATTR_R::new(((self.bits >> 2) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBUS_PMS_TBL_ATTR")
+            .field(
+                "dbus_pms_sct1_attr",
+                &format_args!("{}", self.dbus_pms_sct1_attr().bits()),
+            )
+            .field(
+                "dbus_pms_sct2_attr",
+                &format_args!("{}", self.dbus_pms_sct2_attr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBUS_PMS_TBL_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

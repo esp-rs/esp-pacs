@@ -35,14 +35,31 @@ impl From<crate::W<UNIT1_OP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_UNIT1_VALUE_VALID` reader - timer value is sync and valid"]
-pub type TIMER_UNIT1_VALUE_VALID_R = crate::BitReader<bool>;
+pub type TIMER_UNIT1_VALUE_VALID_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT1_UPDATE` writer - update timer unit1"]
-pub type TIMER_UNIT1_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UNIT1_OP_SPEC, bool, O>;
+pub type TIMER_UNIT1_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, UNIT1_OP_SPEC, O>;
 impl R {
     #[doc = "Bit 29 - timer value is sync and valid"]
     #[inline(always)]
     pub fn timer_unit1_value_valid(&self) -> TIMER_UNIT1_VALUE_VALID_R {
         TIMER_UNIT1_VALUE_VALID_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UNIT1_OP")
+            .field(
+                "timer_unit1_value_valid",
+                &format_args!("{}", self.timer_unit1_value_valid().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UNIT1_OP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

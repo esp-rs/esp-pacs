@@ -35,25 +35,25 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
-pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
-pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 2, O>;
+pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 2, O>;
 #[doc = "Field `CLK_MODE_13` reader - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
-pub type CLK_MODE_13_R = crate::BitReader<bool>;
+pub type CLK_MODE_13_R = crate::BitReader;
 #[doc = "Field `CLK_MODE_13` writer - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
-pub type CLK_MODE_13_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL1_SPEC, bool, O>;
+pub type CLK_MODE_13_W<'a, const O: u8> = crate::BitWriter<'a, CTRL1_SPEC, O>;
 #[doc = "Field `RSCK_DATA_OUT` reader - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
-pub type RSCK_DATA_OUT_R = crate::BitReader<bool>;
+pub type RSCK_DATA_OUT_R = crate::BitReader;
 #[doc = "Field `RSCK_DATA_OUT` writer - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
-pub type RSCK_DATA_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL1_SPEC, bool, O>;
+pub type RSCK_DATA_OUT_W<'a, const O: u8> = crate::BitWriter<'a, CTRL1_SPEC, O>;
 #[doc = "Field `W16_17_WR_ENA` reader - 1:SPI_BUF16~SPI_BUF17 can be written 0:SPI_BUF16~SPI_BUF17 can not be written. Can be configured in CONF state."]
-pub type W16_17_WR_ENA_R = crate::BitReader<bool>;
+pub type W16_17_WR_ENA_R = crate::BitReader;
 #[doc = "Field `W16_17_WR_ENA` writer - 1:SPI_BUF16~SPI_BUF17 can be written 0:SPI_BUF16~SPI_BUF17 can not be written. Can be configured in CONF state."]
-pub type W16_17_WR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL1_SPEC, bool, O>;
+pub type W16_17_WR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, CTRL1_SPEC, O>;
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles. Can be configured in CONF state."]
-pub type CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
+pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - SPI cs signal is delayed by spi clock cycles. Can be configured in CONF state."]
-pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 6, O>;
+pub type CS_HOLD_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
     #[inline(always)]
@@ -79,6 +79,33 @@ impl R {
     #[inline(always)]
     pub fn cs_hold_delay(&self) -> CS_HOLD_DELAY_R {
         CS_HOLD_DELAY_R::new(((self.bits >> 14) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .field("clk_mode_13", &format_args!("{}", self.clk_mode_13().bit()))
+            .field(
+                "rsck_data_out",
+                &format_args!("{}", self.rsck_data_out().bit()),
+            )
+            .field(
+                "w16_17_wr_ena",
+                &format_args!("{}", self.w16_17_wr_ena().bit()),
+            )
+            .field(
+                "cs_hold_delay",
+                &format_args!("{}", self.cs_hold_delay().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,41 +35,41 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT0_MODE_R = crate::BitReader<bool>;
+pub type DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT0_MODE` writer - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT1_MODE` reader - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT1_MODE_R = crate::BitReader<bool>;
+pub type DOUT1_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT1_MODE` writer - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT2_MODE` reader - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT2_MODE_R = crate::BitReader<bool>;
+pub type DOUT2_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT2_MODE` writer - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT3_MODE` reader - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT3_MODE_R = crate::BitReader<bool>;
+pub type DOUT3_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT3_MODE` writer - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT4_MODE` reader - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT4_MODE_R = crate::BitReader<bool>;
+pub type DOUT4_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT4_MODE` writer - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT4_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT4_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT5_MODE` reader - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT5_MODE_R = crate::BitReader<bool>;
+pub type DOUT5_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT5_MODE` writer - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT5_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT5_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT6_MODE` reader - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT6_MODE_R = crate::BitReader<bool>;
+pub type DOUT6_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT6_MODE` writer - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT6_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT6_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT7_MODE` reader - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT7_MODE_R = crate::BitReader<bool>;
+pub type DOUT7_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT7_MODE` writer - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUT7_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT7_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUTS_MODE` reader - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUTS_MODE_R = crate::BitReader<bool>;
+pub type DOUTS_MODE_R = crate::BitReader;
 #[doc = "Field `DOUTS_MODE` writer - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
-pub type DOUTS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUTS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
@@ -115,6 +115,28 @@ impl R {
     #[inline(always)]
     pub fn douts_mode(&self) -> DOUTS_MODE_R {
         DOUTS_MODE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOUT_MODE")
+            .field("dout0_mode", &format_args!("{}", self.dout0_mode().bit()))
+            .field("dout1_mode", &format_args!("{}", self.dout1_mode().bit()))
+            .field("dout2_mode", &format_args!("{}", self.dout2_mode().bit()))
+            .field("dout3_mode", &format_args!("{}", self.dout3_mode().bit()))
+            .field("dout4_mode", &format_args!("{}", self.dout4_mode().bit()))
+            .field("dout5_mode", &format_args!("{}", self.dout5_mode().bit()))
+            .field("dout6_mode", &format_args!("{}", self.dout6_mode().bit()))
+            .field("dout7_mode", &format_args!("{}", self.dout7_mode().bit()))
+            .field("douts_mode", &format_args!("{}", self.douts_mode().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOUT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,45 +14,45 @@ impl From<crate::R<INT_RAW_RTC_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_RAW` reader - Stores the raw interrupt triggered when the chip wakes up from sleep."]
-pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_INT_RAW` reader - Stores the raw interrupt triggered when the chip rejects to go to sleep."]
-pub type SLP_REJECT_INT_RAW_R = crate::BitReader<bool>;
+pub type SLP_REJECT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SDIO_IDLE_INT_RAW` reader - Stores the raw interrupt triggered when the SDIO idles."]
-pub type SDIO_IDLE_INT_RAW_R = crate::BitReader<bool>;
+pub type SDIO_IDLE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` reader - Stores the raw RTC watchdog interrupt."]
-pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+pub type WDT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_SCAN_DONE_INT_RAW` reader - Stores the raw interrupt triggered upon the completion of a touch scanning."]
-pub type TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_SCAN_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `ULP_CP_INT_RAW` reader - Stores the raw ULP co-processor interrupt."]
-pub type ULP_CP_INT_RAW_R = crate::BitReader<bool>;
+pub type ULP_CP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_DONE_INT_RAW` reader - Stores the raw interrupt triggered upon the completion of a single touch."]
-pub type TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_ACTIVE_INT_RAW` reader - Stores the raw interrupt triggered when a touch is detected."]
-pub type TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_ACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_INACTIVE_INT_RAW` reader - Stores the raw interrupt triggered when a touch is released."]
-pub type TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_INACTIVE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_RAW` reader - Stores the raw brown out interrupt."]
-pub type BROWN_OUT_INT_RAW_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_INT_RAW` reader - Stores the raw RTC main timer interrupt."]
-pub type MAIN_TIMER_INT_RAW_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SARADC1_INT_RAW` reader - Stores the raw SAR ADC 1 interrupt."]
-pub type SARADC1_INT_RAW_R = crate::BitReader<bool>;
+pub type SARADC1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TSENS_INT_RAW` reader - Stores the raw touch sensor interrupt."]
-pub type TSENS_INT_RAW_R = crate::BitReader<bool>;
+pub type TSENS_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_INT_RAW` reader - Stores the raw ULP-RISCV interrupt."]
-pub type COCPU_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SARADC2_INT_RAW` reader - Stores the raw SAR ADC 2 interrupt."]
-pub type SARADC2_INT_RAW_R = crate::BitReader<bool>;
+pub type SARADC2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SWD_INT_RAW` reader - Stores the raw super watchdog interrupt."]
-pub type SWD_INT_RAW_R = crate::BitReader<bool>;
+pub type SWD_INT_RAW_R = crate::BitReader;
 #[doc = "Field `XTAL32K_DEAD_INT_RAW` reader - Stores the raw interrupt triggered when the 32 kHz crystal is dead."]
-pub type XTAL32K_DEAD_INT_RAW_R = crate::BitReader<bool>;
+pub type XTAL32K_DEAD_INT_RAW_R = crate::BitReader;
 #[doc = "Field `COCPU_TRAP_INT_RAW` reader - Stores the raw interrupt triggered when the ULP-RISCV is trapped."]
-pub type COCPU_TRAP_INT_RAW_R = crate::BitReader<bool>;
+pub type COCPU_TRAP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TOUCH_TIMEOUT_INT_RAW` reader - Stores the raw interrupt triggered when touch sensor times out."]
-pub type TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader<bool>;
+pub type TOUCH_TIMEOUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `GLITCH_DET_INT_RAW` reader - Stores the raw interrupt triggered when a glitch is detected."]
-pub type GLITCH_DET_INT_RAW_R = crate::BitReader<bool>;
+pub type GLITCH_DET_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Stores the raw interrupt triggered when the chip wakes up from sleep."]
     #[inline(always)]
@@ -153,6 +153,93 @@ impl R {
     #[inline(always)]
     pub fn glitch_det_int_raw(&self) -> GLITCH_DET_INT_RAW_R {
         GLITCH_DET_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW_RTC")
+            .field(
+                "slp_wakeup_int_raw",
+                &format_args!("{}", self.slp_wakeup_int_raw().bit()),
+            )
+            .field(
+                "slp_reject_int_raw",
+                &format_args!("{}", self.slp_reject_int_raw().bit()),
+            )
+            .field(
+                "sdio_idle_int_raw",
+                &format_args!("{}", self.sdio_idle_int_raw().bit()),
+            )
+            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
+            .field(
+                "touch_scan_done_int_raw",
+                &format_args!("{}", self.touch_scan_done_int_raw().bit()),
+            )
+            .field(
+                "ulp_cp_int_raw",
+                &format_args!("{}", self.ulp_cp_int_raw().bit()),
+            )
+            .field(
+                "touch_done_int_raw",
+                &format_args!("{}", self.touch_done_int_raw().bit()),
+            )
+            .field(
+                "touch_active_int_raw",
+                &format_args!("{}", self.touch_active_int_raw().bit()),
+            )
+            .field(
+                "touch_inactive_int_raw",
+                &format_args!("{}", self.touch_inactive_int_raw().bit()),
+            )
+            .field(
+                "brown_out_int_raw",
+                &format_args!("{}", self.brown_out_int_raw().bit()),
+            )
+            .field(
+                "main_timer_int_raw",
+                &format_args!("{}", self.main_timer_int_raw().bit()),
+            )
+            .field(
+                "saradc1_int_raw",
+                &format_args!("{}", self.saradc1_int_raw().bit()),
+            )
+            .field(
+                "tsens_int_raw",
+                &format_args!("{}", self.tsens_int_raw().bit()),
+            )
+            .field(
+                "cocpu_int_raw",
+                &format_args!("{}", self.cocpu_int_raw().bit()),
+            )
+            .field(
+                "saradc2_int_raw",
+                &format_args!("{}", self.saradc2_int_raw().bit()),
+            )
+            .field("swd_int_raw", &format_args!("{}", self.swd_int_raw().bit()))
+            .field(
+                "xtal32k_dead_int_raw",
+                &format_args!("{}", self.xtal32k_dead_int_raw().bit()),
+            )
+            .field(
+                "cocpu_trap_int_raw",
+                &format_args!("{}", self.cocpu_trap_int_raw().bit()),
+            )
+            .field(
+                "touch_timeout_int_raw",
+                &format_args!("{}", self.touch_timeout_int_raw().bit()),
+            )
+            .field(
+                "glitch_det_int_raw",
+                &format_args!("{}", self.glitch_det_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_RTC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "RTC interrupt raw register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_rtc](index.html) module"]

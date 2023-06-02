@@ -37,15 +37,15 @@ impl From<crate::W<EXT1_SPEC>> for W {
 #[doc = "Field `T_ERASE_TIME` reader - erase flash delay time by system clock."]
 pub type T_ERASE_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `T_ERASE_TIME` writer - erase flash delay time by system clock."]
-pub type T_ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT1_SPEC, u16, u16, 12, O>;
+pub type T_ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `T_ERASE_SHIFT` reader - erase flash delay time shift."]
-pub type T_ERASE_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type T_ERASE_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_ERASE_SHIFT` writer - erase flash delay time shift."]
-pub type T_ERASE_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT1_SPEC, u8, u8, 4, O>;
+pub type T_ERASE_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, EXT1_SPEC, 4, O>;
 #[doc = "Field `T_ERASE_ENA` reader - erase flash delay enable."]
-pub type T_ERASE_ENA_R = crate::BitReader<bool>;
+pub type T_ERASE_ENA_R = crate::BitReader;
 #[doc = "Field `T_ERASE_ENA` writer - erase flash delay enable."]
-pub type T_ERASE_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, EXT1_SPEC, bool, O>;
+pub type T_ERASE_ENA_W<'a, const O: u8> = crate::BitWriter<'a, EXT1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - erase flash delay time by system clock."]
     #[inline(always)]
@@ -61,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn t_erase_ena(&self) -> T_ERASE_ENA_R {
         T_ERASE_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT1")
+            .field(
+                "t_erase_time",
+                &format_args!("{}", self.t_erase_time().bits()),
+            )
+            .field(
+                "t_erase_shift",
+                &format_args!("{}", self.t_erase_shift().bits()),
+            )
+            .field("t_erase_ena", &format_args!("{}", self.t_erase_ena().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

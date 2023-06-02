@@ -35,39 +35,35 @@ impl From<crate::W<BLK0_RDATA3_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_CHIP_VER_DIS_APP_CPU` reader - "]
-pub type RD_CHIP_VER_DIS_APP_CPU_R = crate::BitReader<bool>;
+pub type RD_CHIP_VER_DIS_APP_CPU_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_VER_DIS_BT` reader - "]
-pub type RD_CHIP_VER_DIS_BT_R = crate::BitReader<bool>;
+pub type RD_CHIP_VER_DIS_BT_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_VER_PKG_4BIT` reader - most significant bit of chip package"]
-pub type RD_CHIP_VER_PKG_4BIT_R = crate::BitReader<bool>;
+pub type RD_CHIP_VER_PKG_4BIT_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_VER_DIS_CACHE` reader - "]
-pub type RD_CHIP_VER_DIS_CACHE_R = crate::BitReader<bool>;
+pub type RD_CHIP_VER_DIS_CACHE_R = crate::BitReader;
 #[doc = "Field `RD_SPI_PAD_CONFIG_HD` reader - read for SPI_pad_config_hd"]
-pub type RD_SPI_PAD_CONFIG_HD_R = crate::FieldReader<u8, u8>;
+pub type RD_SPI_PAD_CONFIG_HD_R = crate::FieldReader;
 #[doc = "Field `RD_CHIP_VER_PKG` reader - least significant bits of chip package"]
-pub type RD_CHIP_VER_PKG_R = crate::FieldReader<u8, u8>;
+pub type RD_CHIP_VER_PKG_R = crate::FieldReader;
 #[doc = "Field `RD_CHIP_VER_PKG` writer - least significant bits of chip package"]
-pub type RD_CHIP_VER_PKG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_RDATA3_SPEC, u8, u8, 3, O>;
+pub type RD_CHIP_VER_PKG_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA3_SPEC, 3, O>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_LOW` reader - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
-pub type RD_CHIP_CPU_FREQ_LOW_R = crate::BitReader<bool>;
+pub type RD_CHIP_CPU_FREQ_LOW_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_CPU_FREQ_LOW` writer - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
-pub type RD_CHIP_CPU_FREQ_LOW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
+pub type RD_CHIP_CPU_FREQ_LOW_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA3_SPEC, O>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` reader - If set, the ESP32's maximum CPU frequency has been rated"]
-pub type RD_CHIP_CPU_FREQ_RATED_R = crate::BitReader<bool>;
+pub type RD_CHIP_CPU_FREQ_RATED_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` writer - If set, the ESP32's maximum CPU frequency has been rated"]
-pub type RD_CHIP_CPU_FREQ_RATED_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
+pub type RD_CHIP_CPU_FREQ_RATED_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA3_SPEC, O>;
 #[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
-pub type RD_BLK3_PART_RESERVE_R = crate::BitReader<bool>;
+pub type RD_BLK3_PART_RESERVE_R = crate::BitReader;
 #[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
-pub type RD_BLK3_PART_RESERVE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
+pub type RD_BLK3_PART_RESERVE_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA3_SPEC, O>;
 #[doc = "Field `RD_CHIP_VER_REV1` reader - bit is set to 1 for rev1 silicon"]
-pub type RD_CHIP_VER_REV1_R = crate::BitReader<bool>;
+pub type RD_CHIP_VER_REV1_R = crate::BitReader;
 #[doc = "Field `RD_CHIP_VER_REV1` writer - bit is set to 1 for rev1 silicon"]
-pub type RD_CHIP_VER_REV1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, O>;
+pub type RD_CHIP_VER_REV1_W<'a, const O: u8> = crate::BitWriter<'a, BLK0_RDATA3_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -118,6 +114,59 @@ impl R {
     #[inline(always)]
     pub fn rd_chip_ver_rev1(&self) -> RD_CHIP_VER_REV1_R {
         RD_CHIP_VER_REV1_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_RDATA3")
+            .field(
+                "rd_chip_ver_dis_app_cpu",
+                &format_args!("{}", self.rd_chip_ver_dis_app_cpu().bit()),
+            )
+            .field(
+                "rd_chip_ver_dis_bt",
+                &format_args!("{}", self.rd_chip_ver_dis_bt().bit()),
+            )
+            .field(
+                "rd_chip_ver_pkg_4bit",
+                &format_args!("{}", self.rd_chip_ver_pkg_4bit().bit()),
+            )
+            .field(
+                "rd_chip_ver_dis_cache",
+                &format_args!("{}", self.rd_chip_ver_dis_cache().bit()),
+            )
+            .field(
+                "rd_spi_pad_config_hd",
+                &format_args!("{}", self.rd_spi_pad_config_hd().bits()),
+            )
+            .field(
+                "rd_chip_ver_pkg",
+                &format_args!("{}", self.rd_chip_ver_pkg().bits()),
+            )
+            .field(
+                "rd_chip_cpu_freq_low",
+                &format_args!("{}", self.rd_chip_cpu_freq_low().bit()),
+            )
+            .field(
+                "rd_chip_cpu_freq_rated",
+                &format_args!("{}", self.rd_chip_cpu_freq_rated().bit()),
+            )
+            .field(
+                "rd_blk3_part_reserve",
+                &format_args!("{}", self.rd_blk3_part_reserve().bit()),
+            )
+            .field(
+                "rd_chip_ver_rev1",
+                &format_args!("{}", self.rd_chip_ver_rev1().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

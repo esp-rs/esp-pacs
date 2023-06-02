@@ -20,9 +20,15 @@ impl From<crate::W<OUT_MSK_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_VALUE` writer - This register is used to configure updated output value of 8-channel dedicated GPIO."]
-pub type OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_MSK_SPEC, u8, u8, 8, O>;
+pub type OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_MSK_SPEC, 8, O>;
 #[doc = "Field `OUT_MSK` writer - This register is used to configure channels which would be updated. 1: corresponding channel's output would be updated."]
-pub type OUT_MSK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT_MSK_SPEC, u8, u8, 8, O>;
+pub type OUT_MSK_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_MSK_SPEC, 8, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_MSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure updated output value of 8-channel dedicated GPIO."]
     #[inline(always)]

@@ -35,33 +35,33 @@ impl From<crate::W<PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `SYNC2_BYPASS` reader - For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub type SYNC2_BYPASS_R = crate::FieldReader<u8, u8>;
+pub type SYNC2_BYPASS_R = crate::FieldReader;
 #[doc = "Field `SYNC2_BYPASS` writer - For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub type SYNC2_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 2, O>;
+pub type SYNC2_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 2, O>;
 #[doc = "Field `PAD_DRIVER` reader - Pad driver selection. 0: normal output; 1: open drain output.."]
-pub type PAD_DRIVER_R = crate::BitReader<bool>;
+pub type PAD_DRIVER_R = crate::BitReader;
 #[doc = "Field `PAD_DRIVER` writer - Pad driver selection. 0: normal output; 1: open drain output.."]
-pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+pub type PAD_DRIVER_W<'a, const O: u8> = crate::BitWriter<'a, PIN_SPEC, O>;
 #[doc = "Field `SYNC1_BYPASS` reader - For the first stage synchronization, GPIO input data can be synchro- nized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub type SYNC1_BYPASS_R = crate::FieldReader<u8, u8>;
+pub type SYNC1_BYPASS_R = crate::FieldReader;
 #[doc = "Field `SYNC1_BYPASS` writer - For the first stage synchronization, GPIO input data can be synchro- nized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
-pub type SYNC1_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 2, O>;
+pub type SYNC1_BYPASS_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 2, O>;
 #[doc = "Field `INT_TYPE` reader - Interrupt type selection. 0: GPIO interrupt disabled; 1: rising edge trigger; 2: falling edge trigger; 3: any edge trigger; 4: low level trigger; 5: high level trigger. (R/W)"]
-pub type INT_TYPE_R = crate::FieldReader<u8, u8>;
+pub type INT_TYPE_R = crate::FieldReader;
 #[doc = "Field `INT_TYPE` writer - Interrupt type selection. 0: GPIO interrupt disabled; 1: rising edge trigger; 2: falling edge trigger; 3: any edge trigger; 4: low level trigger; 5: high level trigger. (R/W)"]
-pub type INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 3, O>;
+pub type INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 3, O>;
 #[doc = "Field `WAKEUP_ENABLE` reader - GPIO wake-up enable bit, only wakes up the CPU from Light-sleep."]
-pub type WAKEUP_ENABLE_R = crate::BitReader<bool>;
+pub type WAKEUP_ENABLE_R = crate::BitReader;
 #[doc = "Field `WAKEUP_ENABLE` writer - GPIO wake-up enable bit, only wakes up the CPU from Light-sleep."]
-pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PIN_SPEC, bool, O>;
+pub type WAKEUP_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PIN_SPEC, O>;
 #[doc = "Field `CONFIG` reader - Reserved"]
-pub type CONFIG_R = crate::FieldReader<u8, u8>;
+pub type CONFIG_R = crate::FieldReader;
 #[doc = "Field `CONFIG` writer - Reserved"]
-pub type CONFIG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 2, O>;
+pub type CONFIG_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 2, O>;
 #[doc = "Field `INT_ENA` reader - Interrupt enable bits. bit13: CPU interrupt enabled; bit14: CPU non-maskable interrupt enabled."]
-pub type INT_ENA_R = crate::FieldReader<u8, u8>;
+pub type INT_ENA_R = crate::FieldReader;
 #[doc = "Field `INT_ENA` writer - Interrupt enable bits. bit13: CPU interrupt enabled; bit14: CPU non-maskable interrupt enabled."]
-pub type INT_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PIN_SPEC, u8, u8, 5, O>;
+pub type INT_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, PIN_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:1 - For the second stage synchronization, GPIO input data can be syn- chronized on either edge of the APB clock. 0: no synchronization; 1: synchronized on falling edge; 2 and 3: synchronized on rising edge."]
     #[inline(always)]
@@ -97,6 +97,35 @@ impl R {
     #[inline(always)]
     pub fn int_ena(&self) -> INT_ENA_R {
         INT_ENA_R::new(((self.bits >> 13) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PIN")
+            .field(
+                "sync2_bypass",
+                &format_args!("{}", self.sync2_bypass().bits()),
+            )
+            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
+            .field(
+                "sync1_bypass",
+                &format_args!("{}", self.sync1_bypass().bits()),
+            )
+            .field("int_type", &format_args!("{}", self.int_type().bits()))
+            .field(
+                "wakeup_enable",
+                &format_args!("{}", self.wakeup_enable().bit()),
+            )
+            .field("config", &format_args!("{}", self.config().bits()))
+            .field("int_ena", &format_args!("{}", self.int_ena().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

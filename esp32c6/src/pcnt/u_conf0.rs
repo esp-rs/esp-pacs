@@ -37,68 +37,63 @@ impl From<crate::W<U_CONF0_SPEC>> for W {
 #[doc = "Field `FILTER_THRES` reader - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
 pub type FILTER_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FILTER_THRES` writer - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
-pub type FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U_CONF0_SPEC, u16, u16, 10, O>;
+pub type FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 10, O, u16, u16>;
 #[doc = "Field `FILTER_EN` reader - This is the enable bit for unit %s's input filter."]
-pub type FILTER_EN_R = crate::BitReader<bool>;
+pub type FILTER_EN_R = crate::BitReader;
 #[doc = "Field `FILTER_EN` writer - This is the enable bit for unit %s's input filter."]
-pub type FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `THR_ZERO_EN` reader - This is the enable bit for unit %s's zero comparator."]
-pub type THR_ZERO_EN_R = crate::BitReader<bool>;
+pub type THR_ZERO_EN_R = crate::BitReader;
 #[doc = "Field `THR_ZERO_EN` writer - This is the enable bit for unit %s's zero comparator."]
-pub type THR_ZERO_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type THR_ZERO_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `THR_H_LIM_EN` reader - This is the enable bit for unit %s's thr_h_lim comparator."]
-pub type THR_H_LIM_EN_R = crate::BitReader<bool>;
+pub type THR_H_LIM_EN_R = crate::BitReader;
 #[doc = "Field `THR_H_LIM_EN` writer - This is the enable bit for unit %s's thr_h_lim comparator."]
-pub type THR_H_LIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type THR_H_LIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `THR_L_LIM_EN` reader - This is the enable bit for unit %s's thr_l_lim comparator."]
-pub type THR_L_LIM_EN_R = crate::BitReader<bool>;
+pub type THR_L_LIM_EN_R = crate::BitReader;
 #[doc = "Field `THR_L_LIM_EN` writer - This is the enable bit for unit %s's thr_l_lim comparator."]
-pub type THR_L_LIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type THR_L_LIM_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `THR_THRES0_EN` reader - This is the enable bit for unit %s's thres0 comparator."]
-pub type THR_THRES0_EN_R = crate::BitReader<bool>;
+pub type THR_THRES0_EN_R = crate::BitReader;
 #[doc = "Field `THR_THRES0_EN` writer - This is the enable bit for unit %s's thres0 comparator."]
-pub type THR_THRES0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type THR_THRES0_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `THR_THRES1_EN` reader - This is the enable bit for unit %s's thres1 comparator."]
-pub type THR_THRES1_EN_R = crate::BitReader<bool>;
+pub type THR_THRES1_EN_R = crate::BitReader;
 #[doc = "Field `THR_THRES1_EN` writer - This is the enable bit for unit %s's thres1 comparator."]
-pub type THR_THRES1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, U_CONF0_SPEC, bool, O>;
+pub type THR_THRES1_EN_W<'a, const O: u8> = crate::BitWriter<'a, U_CONF0_SPEC, O>;
 #[doc = "Field `CH0_NEG_MODE` reader - This register sets the behavior when the signal input of channel 0 detects a negative edge. 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter"]
-pub type CH0_NEG_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH0_NEG_MODE_R = crate::FieldReader;
 #[doc = "Field `CH0_NEG_MODE` writer - This register sets the behavior when the signal input of channel 0 detects a negative edge. 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter"]
-pub type CH0_NEG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH0_NEG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH0_POS_MODE` reader - This register sets the behavior when the signal input of channel 0 detects a positive edge. 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter"]
-pub type CH0_POS_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH0_POS_MODE_R = crate::FieldReader;
 #[doc = "Field `CH0_POS_MODE` writer - This register sets the behavior when the signal input of channel 0 detects a positive edge. 1: Increase the counter.2: Decrease the counter.0, 3: No effect on counter"]
-pub type CH0_POS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH0_POS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH0_HCTRL_MODE` reader - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH0_HCTRL_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH0_HCTRL_MODE_R = crate::FieldReader;
 #[doc = "Field `CH0_HCTRL_MODE` writer - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH0_HCTRL_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH0_HCTRL_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH0_LCTRL_MODE` reader - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH0_LCTRL_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH0_LCTRL_MODE_R = crate::FieldReader;
 #[doc = "Field `CH0_LCTRL_MODE` writer - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH0_LCTRL_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH0_LCTRL_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH1_NEG_MODE` reader - This register sets the behavior when the signal input of channel 1 detects a negative edge. 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter"]
-pub type CH1_NEG_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH1_NEG_MODE_R = crate::FieldReader;
 #[doc = "Field `CH1_NEG_MODE` writer - This register sets the behavior when the signal input of channel 1 detects a negative edge. 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter"]
-pub type CH1_NEG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH1_NEG_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH1_POS_MODE` reader - This register sets the behavior when the signal input of channel 1 detects a positive edge. 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter"]
-pub type CH1_POS_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH1_POS_MODE_R = crate::FieldReader;
 #[doc = "Field `CH1_POS_MODE` writer - This register sets the behavior when the signal input of channel 1 detects a positive edge. 1: Increment the counter.2: Decrement the counter.0, 3: No effect on counter"]
-pub type CH1_POS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH1_POS_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH1_HCTRL_MODE` reader - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH1_HCTRL_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH1_HCTRL_MODE_R = crate::FieldReader;
 #[doc = "Field `CH1_HCTRL_MODE` writer - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is high. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH1_HCTRL_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH1_HCTRL_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 #[doc = "Field `CH1_LCTRL_MODE` reader - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH1_LCTRL_MODE_R = crate::FieldReader<u8, u8>;
+pub type CH1_LCTRL_MODE_R = crate::FieldReader;
 #[doc = "Field `CH1_LCTRL_MODE` writer - This register configures how the CH%s_POS_MODE/CH%s_NEG_MODE settings will be modified when the control signal is low. 0: No modification.1: Invert behavior (increase -> decrease, decrease -> increase).2, 3: Inhibit counter modification"]
-pub type CH1_LCTRL_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, U_CONF0_SPEC, u8, u8, 2, O>;
+pub type CH1_LCTRL_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:9 - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
     #[inline(always)]
@@ -174,6 +169,73 @@ impl R {
     #[inline(always)]
     pub fn ch1_lctrl_mode(&self) -> CH1_LCTRL_MODE_R {
         CH1_LCTRL_MODE_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("U_CONF0")
+            .field(
+                "filter_thres",
+                &format_args!("{}", self.filter_thres().bits()),
+            )
+            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
+            .field("thr_zero_en", &format_args!("{}", self.thr_zero_en().bit()))
+            .field(
+                "thr_h_lim_en",
+                &format_args!("{}", self.thr_h_lim_en().bit()),
+            )
+            .field(
+                "thr_l_lim_en",
+                &format_args!("{}", self.thr_l_lim_en().bit()),
+            )
+            .field(
+                "thr_thres0_en",
+                &format_args!("{}", self.thr_thres0_en().bit()),
+            )
+            .field(
+                "thr_thres1_en",
+                &format_args!("{}", self.thr_thres1_en().bit()),
+            )
+            .field(
+                "ch0_neg_mode",
+                &format_args!("{}", self.ch0_neg_mode().bits()),
+            )
+            .field(
+                "ch0_pos_mode",
+                &format_args!("{}", self.ch0_pos_mode().bits()),
+            )
+            .field(
+                "ch0_hctrl_mode",
+                &format_args!("{}", self.ch0_hctrl_mode().bits()),
+            )
+            .field(
+                "ch0_lctrl_mode",
+                &format_args!("{}", self.ch0_lctrl_mode().bits()),
+            )
+            .field(
+                "ch1_neg_mode",
+                &format_args!("{}", self.ch1_neg_mode().bits()),
+            )
+            .field(
+                "ch1_pos_mode",
+                &format_args!("{}", self.ch1_pos_mode().bits()),
+            )
+            .field(
+                "ch1_hctrl_mode",
+                &format_args!("{}", self.ch1_hctrl_mode().bits()),
+            )
+            .field(
+                "ch1_lctrl_mode",
+                &format_args!("{}", self.ch1_lctrl_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<U_CONF0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

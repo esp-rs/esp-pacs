@@ -35,15 +35,31 @@ impl From<crate::W<DMMU_TABLE1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMMU_TABLE1` reader - "]
-pub type DMMU_TABLE1_R = crate::FieldReader<u8, u8>;
+pub type DMMU_TABLE1_R = crate::FieldReader;
 #[doc = "Field `DMMU_TABLE1` writer - "]
-pub type DMMU_TABLE1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMMU_TABLE1_SPEC, u8, u8, 7, O>;
+pub type DMMU_TABLE1_W<'a, const O: u8> = crate::FieldWriter<'a, DMMU_TABLE1_SPEC, 7, O>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     pub fn dmmu_table1(&self) -> DMMU_TABLE1_R {
         DMMU_TABLE1_R::new((self.bits & 0x7f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMMU_TABLE1")
+            .field(
+                "dmmu_table1",
+                &format_args!("{}", self.dmmu_table1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMMU_TABLE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

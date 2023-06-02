@@ -35,21 +35,21 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_DONE_INT_ENA` reader - The interrupt enable bit for the i2s_rx_done_int interrupt"]
-pub type RX_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_DONE_INT_ENA` writer - The interrupt enable bit for the i2s_rx_done_int interrupt"]
-pub type RX_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_DONE_INT_ENA` reader - The interrupt enable bit for the i2s_tx_done_int interrupt"]
-pub type TX_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_DONE_INT_ENA` writer - The interrupt enable bit for the i2s_tx_done_int interrupt"]
-pub type TX_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `RX_HUNG_INT_ENA` reader - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
-pub type RX_HUNG_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_ENA` writer - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
-pub type RX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_HUNG_INT_ENA` reader - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
-pub type TX_HUNG_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_ENA` writer - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
-pub type TX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_HUNG_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
@@ -70,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn tx_hung_int_ena(&self) -> TX_HUNG_INT_ENA_R {
         TX_HUNG_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "rx_done_int_ena",
+                &format_args!("{}", self.rx_done_int_ena().bit()),
+            )
+            .field(
+                "tx_done_int_ena",
+                &format_args!("{}", self.tx_done_int_ena().bit()),
+            )
+            .field(
+                "rx_hung_int_ena",
+                &format_args!("{}", self.rx_hung_int_ena().bit()),
+            )
+            .field(
+                "tx_hung_int_ena",
+                &format_args!("{}", self.tx_hung_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

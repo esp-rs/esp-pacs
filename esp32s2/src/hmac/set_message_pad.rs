@@ -20,7 +20,13 @@ impl From<crate::W<SET_MESSAGE_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_TEXT_PAD` writer - Set this bit to let software do padding job."]
-pub type SET_TEXT_PAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SET_MESSAGE_PAD_SPEC, bool, O>;
+pub type SET_TEXT_PAD_W<'a, const O: u8> = crate::BitWriter<'a, SET_MESSAGE_PAD_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_PAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to let software do padding job."]
     #[inline(always)]

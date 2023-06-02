@@ -37,12 +37,26 @@ impl From<crate::W<CH_TX_LIM_SPEC>> for W {
 #[doc = "Field `TX_LIM` reader - When channel0 sends more than reg_rmt_tx_lim_ch0 datas then channel0 produce the relative interrupt."]
 pub type TX_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_LIM` writer - When channel0 sends more than reg_rmt_tx_lim_ch0 datas then channel0 produce the relative interrupt."]
-pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH_TX_LIM_SPEC, u16, u16, 9, O>;
+pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:8 - When channel0 sends more than reg_rmt_tx_lim_ch0 datas then channel0 produce the relative interrupt."]
     #[inline(always)]
     pub fn tx_lim(&self) -> TX_LIM_R {
         TX_LIM_R::new((self.bits & 0x01ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_TX_LIM")
+            .field("tx_lim", &format_args!("{}", self.tx_lim().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_TX_LIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,107 +35,101 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub type IN_RST_R = crate::BitReader<bool>;
+pub type IN_RST_R = crate::BitReader;
 #[doc = "Field `IN_RST` writer - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type IN_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUT_RST` reader - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub type OUT_RST_R = crate::BitReader<bool>;
+pub type OUT_RST_R = crate::BitReader;
 #[doc = "Field `OUT_RST` writer - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUT_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `AHBM_FIFO_RST` reader - Reset spi dma ahb master fifo pointer."]
-pub type AHBM_FIFO_RST_R = crate::BitReader<bool>;
+pub type AHBM_FIFO_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_FIFO_RST` writer - Reset spi dma ahb master fifo pointer."]
-pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type AHBM_FIFO_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `AHBM_RST` reader - Reset spi dma ahb master."]
-pub type AHBM_RST_R = crate::BitReader<bool>;
+pub type AHBM_RST_R = crate::BitReader;
 #[doc = "Field `AHBM_RST` writer - Reset spi dma ahb master."]
-pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type AHBM_RST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set bit to test in link."]
-pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
+pub type IN_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `IN_LOOP_TEST` writer - Set bit to test in link."]
-pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type IN_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set bit to test out link."]
-pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
+pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set bit to test out link."]
-pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUT_LOOP_TEST_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when the bit is set, DMA continue to use the next inlink node when the length of inlink is 0."]
-pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
+pub type OUT_AUTO_WRBACK_R = crate::BitReader;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - when the bit is set, DMA continue to use the next inlink node when the length of inlink is 0."]
-pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUT_AUTO_WRBACK_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUT_EOF_MODE` reader - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
+pub type OUT_EOF_MODE_R = crate::BitReader;
 #[doc = "Field `OUT_EOF_MODE` writer - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUT_EOF_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - read descriptor use burst mode when read data for memory."]
-pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type OUTDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - read descriptor use burst mode when read data for memory."]
-pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUTDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `INDSCR_BURST_EN` reader - read descriptor use burst mode when write data to memory."]
-pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
+pub type INDSCR_BURST_EN_R = crate::BitReader;
 #[doc = "Field `INDSCR_BURST_EN` writer - read descriptor use burst mode when write data to memory."]
-pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type INDSCR_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - spi dma read data from memory in burst mode."]
-pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
+pub type OUT_DATA_BURST_EN_R = crate::BitReader;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - spi dma read data from memory in burst mode."]
-pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type OUT_DATA_BURST_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `MEM_TRANS_EN` reader - 1: Internal memory data transfer enable bit. Send SPI DMA RX buffer data to SPI DMA TX buffer. 0: Disable this function."]
-pub type MEM_TRANS_EN_R = crate::BitReader<bool>;
+pub type MEM_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `MEM_TRANS_EN` writer - 1: Internal memory data transfer enable bit. Send SPI DMA RX buffer data to SPI DMA TX buffer. 0: Disable this function."]
-pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type MEM_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_RX_STOP` reader - spi dma read data stop when in continue tx/rx mode."]
-pub type DMA_RX_STOP_R = crate::BitReader<bool>;
+pub type DMA_RX_STOP_R = crate::BitReader;
 #[doc = "Field `DMA_RX_STOP` writer - spi dma read data stop when in continue tx/rx mode."]
-pub type DMA_RX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_RX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_TX_STOP` reader - spi dma write data stop when in continue tx/rx mode."]
-pub type DMA_TX_STOP_R = crate::BitReader<bool>;
+pub type DMA_TX_STOP_R = crate::BitReader;
 #[doc = "Field `DMA_TX_STOP` writer - spi dma write data stop when in continue tx/rx mode."]
-pub type DMA_TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_TX_STOP_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_CONTINUE` reader - spi dma continue tx/rx data."]
-pub type DMA_CONTINUE_R = crate::BitReader<bool>;
+pub type DMA_CONTINUE_R = crate::BitReader;
 #[doc = "Field `DMA_CONTINUE` writer - spi dma continue tx/rx data."]
-pub type DMA_CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_CONTINUE_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `SLV_LAST_SEG_POP_CLR` reader - 1: Clear spi_slv_seg_frt_pop_mask. 0 : others"]
-pub type SLV_LAST_SEG_POP_CLR_R = crate::BitReader<bool>;
+pub type SLV_LAST_SEG_POP_CLR_R = crate::BitReader;
 #[doc = "Field `SLV_LAST_SEG_POP_CLR` writer - 1: Clear spi_slv_seg_frt_pop_mask. 0 : others"]
-pub type SLV_LAST_SEG_POP_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type SLV_LAST_SEG_POP_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` reader - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub type DMA_SLV_SEG_TRANS_EN_R = crate::BitReader<bool>;
+pub type DMA_SLV_SEG_TRANS_EN_R = crate::BitReader;
 #[doc = "Field `DMA_SLV_SEG_TRANS_EN` writer - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
-pub type DMA_SLV_SEG_TRANS_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_SLV_SEG_TRANS_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_infifo_full_vld is cleared by spi slave CMD5. 0: spi_dma_infifo_full_vld is cleared by SPI_TRANS_DONE."]
-pub type SLV_RX_SEG_TRANS_CLR_EN_R = crate::BitReader<bool>;
+pub type SLV_RX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_infifo_full_vld is cleared by spi slave CMD5. 0: spi_dma_infifo_full_vld is cleared by SPI_TRANS_DONE."]
-pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type SLV_RX_SEG_TRANS_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` reader - 1: spi_dma_outfifo_empty_vld is cleared by spi slave CMD6. 0: spi_dma_outfifo_empty_vld is cleared by SPI_TRANS_DONE."]
-pub type SLV_TX_SEG_TRANS_CLR_EN_R = crate::BitReader<bool>;
+pub type SLV_TX_SEG_TRANS_CLR_EN_R = crate::BitReader;
 #[doc = "Field `SLV_TX_SEG_TRANS_CLR_EN` writer - 1: spi_dma_outfifo_empty_vld is cleared by spi slave CMD6. 0: spi_dma_outfifo_empty_vld is cleared by SPI_TRANS_DONE."]
-pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type SLV_TX_SEG_TRANS_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `RX_EOF_EN` reader - 1: SPI_IN_SUC_EOF_INT_RAW is set when the number of dma pushed data bytes is equal to the value of SPI_SLV_DMA_RD_BYTELEN\\[19:0\\]/ SPI_MST_DMA_RD_BYTELEN\\[19:0\\] in spi dma transition. 0: SPI_IN_SUC_EOF_INT_RAW is set by SPI_TRANS_DONE in non-seg-trans or SPI_DMA_SEG_TRANS_DONE in seg-trans."]
-pub type RX_EOF_EN_R = crate::BitReader<bool>;
+pub type RX_EOF_EN_R = crate::BitReader;
 #[doc = "Field `RX_EOF_EN` writer - 1: SPI_IN_SUC_EOF_INT_RAW is set when the number of dma pushed data bytes is equal to the value of SPI_SLV_DMA_RD_BYTELEN\\[19:0\\]/ SPI_MST_DMA_RD_BYTELEN\\[19:0\\] in spi dma transition. 0: SPI_IN_SUC_EOF_INT_RAW is set by SPI_TRANS_DONE in non-seg-trans or SPI_DMA_SEG_TRANS_DONE in seg-trans."]
-pub type RX_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type RX_EOF_EN_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_INFIFO_FULL_CLR` reader - 1:Clear spi_dma_infifo_full_vld. 0: Do not control it."]
-pub type DMA_INFIFO_FULL_CLR_R = crate::BitReader<bool>;
+pub type DMA_INFIFO_FULL_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_INFIFO_FULL_CLR` writer - 1:Clear spi_dma_infifo_full_vld. 0: Do not control it."]
-pub type DMA_INFIFO_FULL_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_INFIFO_FULL_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `DMA_OUTFIFO_EMPTY_CLR` reader - 1:Clear spi_dma_outfifo_empty_vld. 0: Do not control it."]
-pub type DMA_OUTFIFO_EMPTY_CLR_R = crate::BitReader<bool>;
+pub type DMA_OUTFIFO_EMPTY_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_OUTFIFO_EMPTY_CLR` writer - 1:Clear spi_dma_outfifo_empty_vld. 0: Do not control it."]
-pub type DMA_OUTFIFO_EMPTY_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_OUTFIFO_EMPTY_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `EXT_MEM_BK_SIZE` reader - Select the external memory block size."]
-pub type EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+pub type EXT_MEM_BK_SIZE_R = crate::FieldReader;
 #[doc = "Field `EXT_MEM_BK_SIZE` writer - Select the external memory block size."]
-pub type EXT_MEM_BK_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_CONF_SPEC, u8, u8, 2, O>;
+pub type EXT_MEM_BK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_CONF_SPEC, 2, O>;
 #[doc = "Field `DMA_SEG_TRANS_CLR` reader - 1: End slave seg-trans, which acts as 0x05 command. 2 or more end seg-trans signals will induce error in DMA RX. 0: others. Will be cleared in 1 APB CLK cycles by hardware.."]
-pub type DMA_SEG_TRANS_CLR_R = crate::BitReader<bool>;
+pub type DMA_SEG_TRANS_CLR_R = crate::BitReader;
 #[doc = "Field `DMA_SEG_TRANS_CLR` writer - 1: End slave seg-trans, which acts as 0x05 command. 2 or more end seg-trans signals will induce error in DMA RX. 0: others. Will be cleared in 1 APB CLK cycles by hardware.."]
-pub type DMA_SEG_TRANS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type DMA_SEG_TRANS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
@@ -256,6 +250,97 @@ impl R {
     #[inline(always)]
     pub fn dma_seg_trans_clr(&self) -> DMA_SEG_TRANS_CLR_R {
         DMA_SEG_TRANS_CLR_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_CONF")
+            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
+            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
+            .field(
+                "ahbm_fifo_rst",
+                &format_args!("{}", self.ahbm_fifo_rst().bit()),
+            )
+            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
+            .field(
+                "in_loop_test",
+                &format_args!("{}", self.in_loop_test().bit()),
+            )
+            .field(
+                "out_loop_test",
+                &format_args!("{}", self.out_loop_test().bit()),
+            )
+            .field(
+                "out_auto_wrback",
+                &format_args!("{}", self.out_auto_wrback().bit()),
+            )
+            .field(
+                "out_eof_mode",
+                &format_args!("{}", self.out_eof_mode().bit()),
+            )
+            .field(
+                "outdscr_burst_en",
+                &format_args!("{}", self.outdscr_burst_en().bit()),
+            )
+            .field(
+                "indscr_burst_en",
+                &format_args!("{}", self.indscr_burst_en().bit()),
+            )
+            .field(
+                "out_data_burst_en",
+                &format_args!("{}", self.out_data_burst_en().bit()),
+            )
+            .field(
+                "mem_trans_en",
+                &format_args!("{}", self.mem_trans_en().bit()),
+            )
+            .field("dma_rx_stop", &format_args!("{}", self.dma_rx_stop().bit()))
+            .field("dma_tx_stop", &format_args!("{}", self.dma_tx_stop().bit()))
+            .field(
+                "dma_continue",
+                &format_args!("{}", self.dma_continue().bit()),
+            )
+            .field(
+                "slv_last_seg_pop_clr",
+                &format_args!("{}", self.slv_last_seg_pop_clr().bit()),
+            )
+            .field(
+                "dma_slv_seg_trans_en",
+                &format_args!("{}", self.dma_slv_seg_trans_en().bit()),
+            )
+            .field(
+                "slv_rx_seg_trans_clr_en",
+                &format_args!("{}", self.slv_rx_seg_trans_clr_en().bit()),
+            )
+            .field(
+                "slv_tx_seg_trans_clr_en",
+                &format_args!("{}", self.slv_tx_seg_trans_clr_en().bit()),
+            )
+            .field("rx_eof_en", &format_args!("{}", self.rx_eof_en().bit()))
+            .field(
+                "dma_infifo_full_clr",
+                &format_args!("{}", self.dma_infifo_full_clr().bit()),
+            )
+            .field(
+                "dma_outfifo_empty_clr",
+                &format_args!("{}", self.dma_outfifo_empty_clr().bit()),
+            )
+            .field(
+                "ext_mem_bk_size",
+                &format_args!("{}", self.ext_mem_bk_size().bits()),
+            )
+            .field(
+                "dma_seg_trans_clr",
+                &format_args!("{}", self.dma_seg_trans_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<CORE_0_VECBASE_OVERRIDE_2_SPEC>> for W {
 pub type CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE` writer - world1 vecbase_override register, when core0 in world1 use this register to override vecbase register."]
 pub type CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_VECBASE_OVERRIDE_2_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, CORE_0_VECBASE_OVERRIDE_2_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - world1 vecbase_override register, when core0 in world1 use this register to override vecbase register."]
     #[inline(always)]
     pub fn core_0_vecbase_override_world1_value(&self) -> CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_R {
         CORE_0_VECBASE_OVERRIDE_WORLD1_VALUE_R::new(self.bits & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_VECBASE_OVERRIDE_2")
+            .field(
+                "core_0_vecbase_override_world1_value",
+                &format_args!("{}", self.core_0_vecbase_override_world1_value().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_VECBASE_OVERRIDE_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

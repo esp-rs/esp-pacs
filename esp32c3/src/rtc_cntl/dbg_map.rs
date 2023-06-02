@@ -35,59 +35,53 @@ impl From<crate::W<DBG_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_PIN5_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN5_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN5_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN5_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN5_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN5_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN4_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN4_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN4_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN4_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN4_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN3_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN3_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN3_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN3_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN3_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN2_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN2_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN1_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN1_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` reader - use for debug"]
-pub type GPIO_PIN0_MUX_SEL_R = crate::BitReader<bool>;
+pub type GPIO_PIN0_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `GPIO_PIN0_MUX_SEL` writer - use for debug"]
-pub type GPIO_PIN0_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, O>;
+pub type GPIO_PIN0_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, DBG_MAP_SPEC, O>;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN5_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN5_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN5_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN5_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN5_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN4_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN4_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN4_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN4_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN4_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN3_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN3_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN3_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN3_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN3_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN2_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN2_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN2_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN2_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN1_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN1_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN1_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` reader - use for debug"]
-pub type GPIO_PIN0_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_PIN0_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_PIN0_FUN_SEL` writer - use for debug"]
-pub type GPIO_PIN0_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, O>;
+pub type GPIO_PIN0_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, DBG_MAP_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
@@ -148,6 +142,67 @@ impl R {
     #[inline(always)]
     pub fn gpio_pin0_fun_sel(&self) -> GPIO_PIN0_FUN_SEL_R {
         GPIO_PIN0_FUN_SEL_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBG_MAP")
+            .field(
+                "gpio_pin5_mux_sel",
+                &format_args!("{}", self.gpio_pin5_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin4_mux_sel",
+                &format_args!("{}", self.gpio_pin4_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin3_mux_sel",
+                &format_args!("{}", self.gpio_pin3_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin2_mux_sel",
+                &format_args!("{}", self.gpio_pin2_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin1_mux_sel",
+                &format_args!("{}", self.gpio_pin1_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin0_mux_sel",
+                &format_args!("{}", self.gpio_pin0_mux_sel().bit()),
+            )
+            .field(
+                "gpio_pin5_fun_sel",
+                &format_args!("{}", self.gpio_pin5_fun_sel().bits()),
+            )
+            .field(
+                "gpio_pin4_fun_sel",
+                &format_args!("{}", self.gpio_pin4_fun_sel().bits()),
+            )
+            .field(
+                "gpio_pin3_fun_sel",
+                &format_args!("{}", self.gpio_pin3_fun_sel().bits()),
+            )
+            .field(
+                "gpio_pin2_fun_sel",
+                &format_args!("{}", self.gpio_pin2_fun_sel().bits()),
+            )
+            .field(
+                "gpio_pin1_fun_sel",
+                &format_args!("{}", self.gpio_pin1_fun_sel().bits()),
+            )
+            .field(
+                "gpio_pin0_fun_sel",
+                &format_args!("{}", self.gpio_pin0_fun_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBG_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

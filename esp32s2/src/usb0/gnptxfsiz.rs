@@ -37,12 +37,11 @@ impl From<crate::W<GNPTXFSIZ_SPEC>> for W {
 #[doc = "Field `NPTXFSTADDR` reader - "]
 pub type NPTXFSTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `NPTXFSTADDR` writer - "]
-pub type NPTXFSTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GNPTXFSIZ_SPEC, u16, u16, 16, O>;
+pub type NPTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16, u16>;
 #[doc = "Field `NPTXFDEP` reader - "]
 pub type NPTXFDEP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `NPTXFDEP` writer - "]
-pub type NPTXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GNPTXFSIZ_SPEC, u16, u16, 16, O>;
+pub type NPTXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn nptxfdep(&self) -> NPTXFDEP_R {
         NPTXFDEP_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GNPTXFSIZ")
+            .field(
+                "nptxfstaddr",
+                &format_args!("{}", self.nptxfstaddr().bits()),
+            )
+            .field("nptxfdep", &format_args!("{}", self.nptxfdep().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GNPTXFSIZ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,27 +35,27 @@ impl From<crate::W<INF_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO20_MODE` reader - *******Description***********"]
-pub type SDIO20_MODE_R = crate::FieldReader<u8, u8>;
+pub type SDIO20_MODE_R = crate::FieldReader;
 #[doc = "Field `SDIO_NEG_SAMP` reader - *******Description***********"]
-pub type SDIO_NEG_SAMP_R = crate::FieldReader<u8, u8>;
+pub type SDIO_NEG_SAMP_R = crate::FieldReader;
 #[doc = "Field `SDIO_QUICK_IN` reader - *******Description***********"]
-pub type SDIO_QUICK_IN_R = crate::FieldReader<u8, u8>;
+pub type SDIO_QUICK_IN_R = crate::FieldReader;
 #[doc = "Field `DLL_ON_SW` reader - dll is controlled by software"]
-pub type DLL_ON_SW_R = crate::BitReader<bool>;
+pub type DLL_ON_SW_R = crate::BitReader;
 #[doc = "Field `DLL_ON_SW` writer - dll is controlled by software"]
-pub type DLL_ON_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INF_ST_SPEC, bool, O>;
+pub type DLL_ON_SW_W<'a, const O: u8> = crate::BitWriter<'a, INF_ST_SPEC, O>;
 #[doc = "Field `DLL_ON` reader - Software dll on"]
-pub type DLL_ON_R = crate::BitReader<bool>;
+pub type DLL_ON_R = crate::BitReader;
 #[doc = "Field `DLL_ON` writer - Software dll on"]
-pub type DLL_ON_W<'a, const O: u8> = crate::BitWriter<'a, u32, INF_ST_SPEC, bool, O>;
+pub type DLL_ON_W<'a, const O: u8> = crate::BitWriter<'a, INF_ST_SPEC, O>;
 #[doc = "Field `CLK_MODE_SW` reader - dll clock mode is controlled by software"]
-pub type CLK_MODE_SW_R = crate::BitReader<bool>;
+pub type CLK_MODE_SW_R = crate::BitReader;
 #[doc = "Field `CLK_MODE_SW` writer - dll clock mode is controlled by software"]
-pub type CLK_MODE_SW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INF_ST_SPEC, bool, O>;
+pub type CLK_MODE_SW_W<'a, const O: u8> = crate::BitWriter<'a, INF_ST_SPEC, O>;
 #[doc = "Field `CLK_MODE` reader - Software set clock mode"]
-pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - Software set clock mode"]
-pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INF_ST_SPEC, u8, u8, 2, O>;
+pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, INF_ST_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
@@ -91,6 +91,35 @@ impl R {
     #[inline(always)]
     pub fn clk_mode(&self) -> CLK_MODE_R {
         CLK_MODE_R::new(((self.bits >> 18) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INF_ST")
+            .field(
+                "sdio20_mode",
+                &format_args!("{}", self.sdio20_mode().bits()),
+            )
+            .field(
+                "sdio_neg_samp",
+                &format_args!("{}", self.sdio_neg_samp().bits()),
+            )
+            .field(
+                "sdio_quick_in",
+                &format_args!("{}", self.sdio_quick_in().bits()),
+            )
+            .field("dll_on_sw", &format_args!("{}", self.dll_on_sw().bit()))
+            .field("dll_on", &format_args!("{}", self.dll_on().bit()))
+            .field("clk_mode_sw", &format_args!("{}", self.clk_mode_sw().bit()))
+            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INF_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

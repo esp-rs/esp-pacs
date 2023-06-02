@@ -35,28 +35,25 @@ impl From<crate::W<RX_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SD_IN_DM` reader - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_SD_IN_DM_R = crate::FieldReader<u8, u8>;
+pub type RX_SD_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_SD_IN_DM` writer - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_SD_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_SD_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_WS_OUT_DM` reader - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type RX_WS_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `RX_WS_OUT_DM` writer - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_WS_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_BCK_OUT_DM` reader - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_OUT_DM_R = crate::FieldReader<u8, u8>;
+pub type RX_BCK_OUT_DM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_OUT_DM` writer - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_OUT_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_BCK_OUT_DM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_WS_IN_DM` reader - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_IN_DM_R = crate::FieldReader<u8, u8>;
+pub type RX_WS_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_WS_IN_DM` writer - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_WS_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_WS_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TIMING_SPEC, 2, O>;
 #[doc = "Field `RX_BCK_IN_DM` reader - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_IN_DM_R = crate::FieldReader<u8, u8>;
+pub type RX_BCK_IN_DM_R = crate::FieldReader;
 #[doc = "Field `RX_BCK_IN_DM` writer - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub type RX_BCK_IN_DM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, O>;
+pub type RX_BCK_IN_DM_W<'a, const O: u8> = crate::FieldWriter<'a, RX_TIMING_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
@@ -82,6 +79,39 @@ impl R {
     #[inline(always)]
     pub fn rx_bck_in_dm(&self) -> RX_BCK_IN_DM_R {
         RX_BCK_IN_DM_R::new(((self.bits >> 28) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RX_TIMING")
+            .field(
+                "rx_sd_in_dm",
+                &format_args!("{}", self.rx_sd_in_dm().bits()),
+            )
+            .field(
+                "rx_ws_out_dm",
+                &format_args!("{}", self.rx_ws_out_dm().bits()),
+            )
+            .field(
+                "rx_bck_out_dm",
+                &format_args!("{}", self.rx_bck_out_dm().bits()),
+            )
+            .field(
+                "rx_ws_in_dm",
+                &format_args!("{}", self.rx_ws_in_dm().bits()),
+            )
+            .field(
+                "rx_bck_in_dm",
+                &format_args!("{}", self.rx_bck_in_dm().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RX_TIMING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

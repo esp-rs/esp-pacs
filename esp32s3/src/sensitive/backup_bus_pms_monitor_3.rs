@@ -22,6 +22,23 @@ impl R {
         BACKUP_BUS_PMS_MONITOR_VIOLATE_HADDR_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_MONITOR_3")
+            .field(
+                "backup_bus_pms_monitor_violate_haddr",
+                &format_args!("{}", self.backup_bus_pms_monitor_violate_haddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_MONITOR_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "BackUp permission report register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [backup_bus_pms_monitor_3](index.html) module"]
 pub struct BACKUP_BUS_PMS_MONITOR_3_SPEC;
 impl crate::RegisterSpec for BACKUP_BUS_PMS_MONITOR_3_SPEC {

@@ -35,20 +35,17 @@ impl From<crate::W<CPU_PER_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPUPERIOD_SEL` reader - "]
-pub type CPUPERIOD_SEL_R = crate::FieldReader<u8, u8>;
+pub type CPUPERIOD_SEL_R = crate::FieldReader;
 #[doc = "Field `CPUPERIOD_SEL` writer - "]
-pub type CPUPERIOD_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_PER_CONF_SPEC, u8, u8, 2, O>;
+pub type CPUPERIOD_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_PER_CONF_SPEC, 2, O>;
 #[doc = "Field `LOWSPEED_CLK_SEL` reader - "]
-pub type LOWSPEED_CLK_SEL_R = crate::BitReader<bool>;
+pub type LOWSPEED_CLK_SEL_R = crate::BitReader;
 #[doc = "Field `LOWSPEED_CLK_SEL` writer - "]
-pub type LOWSPEED_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PER_CONF_SPEC, bool, O>;
+pub type LOWSPEED_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CPU_PER_CONF_SPEC, O>;
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - "]
-pub type FAST_CLK_RTC_SEL_R = crate::BitReader<bool>;
+pub type FAST_CLK_RTC_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_RTC_SEL` writer - "]
-pub type FAST_CLK_RTC_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PER_CONF_SPEC, bool, O>;
+pub type FAST_CLK_RTC_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CPU_PER_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn fast_clk_rtc_sel(&self) -> FAST_CLK_RTC_SEL_R {
         FAST_CLK_RTC_SEL_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_PER_CONF")
+            .field(
+                "cpuperiod_sel",
+                &format_args!("{}", self.cpuperiod_sel().bits()),
+            )
+            .field(
+                "lowspeed_clk_sel",
+                &format_args!("{}", self.lowspeed_clk_sel().bit()),
+            )
+            .field(
+                "fast_clk_rtc_sel",
+                &format_args!("{}", self.fast_clk_rtc_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_PER_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

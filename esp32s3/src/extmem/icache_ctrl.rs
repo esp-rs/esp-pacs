@@ -35,22 +35,21 @@ impl From<crate::W<ICACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type ICACHE_ENABLE_R = crate::BitReader<bool>;
+pub type ICACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `ICACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub type ICACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICACHE_CTRL_SPEC, bool, O>;
+pub type ICACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_WAY_MODE` reader - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
-pub type ICACHE_WAY_MODE_R = crate::BitReader<bool>;
+pub type ICACHE_WAY_MODE_R = crate::BitReader;
 #[doc = "Field `ICACHE_WAY_MODE` writer - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
-pub type ICACHE_WAY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICACHE_CTRL_SPEC, bool, O>;
+pub type ICACHE_WAY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_SIZE_MODE` reader - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
-pub type ICACHE_SIZE_MODE_R = crate::BitReader<bool>;
+pub type ICACHE_SIZE_MODE_R = crate::BitReader;
 #[doc = "Field `ICACHE_SIZE_MODE` writer - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
-pub type ICACHE_SIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICACHE_CTRL_SPEC, bool, O>;
+pub type ICACHE_SIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub type ICACHE_BLOCKSIZE_MODE_R = crate::BitReader<bool>;
+pub type ICACHE_BLOCKSIZE_MODE_R = crate::BitReader;
 #[doc = "Field `ICACHE_BLOCKSIZE_MODE` writer - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub type ICACHE_BLOCKSIZE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_CTRL_SPEC, bool, O>;
+pub type ICACHE_BLOCKSIZE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, ICACHE_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -71,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn icache_blocksize_mode(&self) -> ICACHE_BLOCKSIZE_MODE_R {
         ICACHE_BLOCKSIZE_MODE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_CTRL")
+            .field(
+                "icache_enable",
+                &format_args!("{}", self.icache_enable().bit()),
+            )
+            .field(
+                "icache_way_mode",
+                &format_args!("{}", self.icache_way_mode().bit()),
+            )
+            .field(
+                "icache_size_mode",
+                &format_args!("{}", self.icache_size_mode().bit()),
+            )
+            .field(
+                "icache_blocksize_mode",
+                &format_args!("{}", self.icache_blocksize_mode().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

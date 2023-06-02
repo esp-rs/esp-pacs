@@ -38,12 +38,29 @@ impl From<crate::W<SRAM_ACE0_SIZE_SPEC>> for W {
 pub type SRAM_ACE0_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SRAM_ACE0_SIZE` writer - ******* Description ***********"]
 pub type SRAM_ACE0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SRAM_ACE0_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, SRAM_ACE0_SIZE_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
     pub fn sram_ace0_size(&self) -> SRAM_ACE0_SIZE_R {
         SRAM_ACE0_SIZE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SRAM_ACE0_SIZE")
+            .field(
+                "sram_ace0_size",
+                &format_args!("{}", self.sram_ace0_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SRAM_ACE0_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

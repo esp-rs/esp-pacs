@@ -35,45 +35,42 @@ impl From<crate::W<POWER_PD_HPWIFI_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_HP_WIFI_RESET` reader - need_des"]
-pub type FORCE_HP_WIFI_RESET_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_RESET` writer - need_des"]
 pub type FORCE_HP_WIFI_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_HP_WIFI_ISO` reader - need_des"]
-pub type FORCE_HP_WIFI_ISO_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_ISO` writer - need_des"]
-pub type FORCE_HP_WIFI_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+pub type FORCE_HP_WIFI_ISO_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_HP_WIFI_PU` reader - need_des"]
-pub type FORCE_HP_WIFI_PU_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_PU_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_PU` writer - need_des"]
-pub type FORCE_HP_WIFI_PU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+pub type FORCE_HP_WIFI_PU_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_HP_WIFI_NO_RESET` reader - need_des"]
-pub type FORCE_HP_WIFI_NO_RESET_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_NO_RESET_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_NO_RESET` writer - need_des"]
 pub type FORCE_HP_WIFI_NO_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_HP_WIFI_NO_ISO` reader - need_des"]
-pub type FORCE_HP_WIFI_NO_ISO_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_NO_ISO_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_NO_ISO` writer - need_des"]
 pub type FORCE_HP_WIFI_NO_ISO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+    crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `FORCE_HP_WIFI_PD` reader - need_des"]
-pub type FORCE_HP_WIFI_PD_R = crate::BitReader<bool>;
+pub type FORCE_HP_WIFI_PD_R = crate::BitReader;
 #[doc = "Field `FORCE_HP_WIFI_PD` writer - need_des"]
-pub type FORCE_HP_WIFI_PD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, bool, O>;
+pub type FORCE_HP_WIFI_PD_W<'a, const O: u8> = crate::BitWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, O>;
 #[doc = "Field `PD_HP_WIFI_MASK` reader - need_des"]
-pub type PD_HP_WIFI_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_WIFI_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_WIFI_MASK` writer - need_des"]
 pub type PD_HP_WIFI_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, 5, O>;
 #[doc = "Field `PD_HP_WIFI_PD_MASK` reader - need_des"]
-pub type PD_HP_WIFI_PD_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_WIFI_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_WIFI_PD_MASK` writer - need_des"]
 pub type PD_HP_WIFI_PD_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_HPWIFI_CNTL_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, POWER_PD_HPWIFI_CNTL_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
@@ -114,6 +111,51 @@ impl R {
     #[inline(always)]
     pub fn pd_hp_wifi_pd_mask(&self) -> PD_HP_WIFI_PD_MASK_R {
         PD_HP_WIFI_PD_MASK_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_PD_HPWIFI_CNTL")
+            .field(
+                "force_hp_wifi_reset",
+                &format_args!("{}", self.force_hp_wifi_reset().bit()),
+            )
+            .field(
+                "force_hp_wifi_iso",
+                &format_args!("{}", self.force_hp_wifi_iso().bit()),
+            )
+            .field(
+                "force_hp_wifi_pu",
+                &format_args!("{}", self.force_hp_wifi_pu().bit()),
+            )
+            .field(
+                "force_hp_wifi_no_reset",
+                &format_args!("{}", self.force_hp_wifi_no_reset().bit()),
+            )
+            .field(
+                "force_hp_wifi_no_iso",
+                &format_args!("{}", self.force_hp_wifi_no_iso().bit()),
+            )
+            .field(
+                "force_hp_wifi_pd",
+                &format_args!("{}", self.force_hp_wifi_pd().bit()),
+            )
+            .field(
+                "pd_hp_wifi_mask",
+                &format_args!("{}", self.pd_hp_wifi_mask().bits()),
+            )
+            .field(
+                "pd_hp_wifi_pd_mask",
+                &format_args!("{}", self.pd_hp_wifi_pd_mask().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPWIFI_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

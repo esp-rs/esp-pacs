@@ -14,12 +14,26 @@ impl From<crate::R<HAINT_SPEC>> for R {
     }
 }
 #[doc = "Field `HAINT` reader - "]
-pub type HAINT_R = crate::FieldReader<u8, u8>;
+pub type HAINT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn haint(&self) -> HAINT_R {
         HAINT_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HAINT")
+            .field("haint", &format_args!("{}", self.haint().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HAINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [haint](index.html) module"]

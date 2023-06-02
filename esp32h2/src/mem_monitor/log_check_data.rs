@@ -38,12 +38,29 @@ impl From<crate::W<LOG_CHECK_DATA_SPEC>> for W {
 pub type LOG_CHECK_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_CHECK_DATA` writer - The special check data, when write this special data, it will trigger logging."]
 pub type LOG_CHECK_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LOG_CHECK_DATA_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, LOG_CHECK_DATA_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The special check data, when write this special data, it will trigger logging."]
     #[inline(always)]
     pub fn log_check_data(&self) -> LOG_CHECK_DATA_R {
         LOG_CHECK_DATA_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LOG_CHECK_DATA")
+            .field(
+                "log_check_data",
+                &format_args!("{}", self.log_check_data().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LOG_CHECK_DATA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,14 +35,31 @@ impl From<crate::W<VDDBAT_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `VDDBAT_MODE` reader - need_des"]
-pub type VDDBAT_MODE_R = crate::FieldReader<u8, u8>;
+pub type VDDBAT_MODE_R = crate::FieldReader;
 #[doc = "Field `VDDBAT_SW_UPDATE` writer - need_des"]
-pub type VDDBAT_SW_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, VDDBAT_CFG_SPEC, bool, O>;
+pub type VDDBAT_SW_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, VDDBAT_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
     pub fn vddbat_mode(&self) -> VDDBAT_MODE_R {
         VDDBAT_MODE_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("VDDBAT_CFG")
+            .field(
+                "vddbat_mode",
+                &format_args!("{}", self.vddbat_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<VDDBAT_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

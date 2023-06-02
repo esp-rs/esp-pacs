@@ -36,34 +36,29 @@ impl From<crate::W<_0_LEN_CONF_SPEC>> for W {
 }
 #[doc = "Field `SLC0_LEN_WDATA` writer - "]
 pub type SLC0_LEN_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _0_LEN_CONF_SPEC, u32, u32, 20, O>;
+    crate::FieldWriter<'a, _0_LEN_CONF_SPEC, 20, O, u32, u32>;
 #[doc = "Field `SLC0_LEN_WR` writer - "]
-pub type SLC0_LEN_WR_W<'a, const O: u8> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_LEN_WR_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_LEN_INC` writer - "]
-pub type SLC0_LEN_INC_W<'a, const O: u8> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_LEN_INC_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_LEN_INC_MORE` writer - "]
-pub type SLC0_LEN_INC_MORE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_LEN_INC_MORE_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` reader - "]
-pub type SLC0_RX_PACKET_LOAD_EN_R = crate::BitReader<bool>;
+pub type SLC0_RX_PACKET_LOAD_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` writer - "]
-pub type SLC0_RX_PACKET_LOAD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_RX_PACKET_LOAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` reader - "]
-pub type SLC0_TX_PACKET_LOAD_EN_R = crate::BitReader<bool>;
+pub type SLC0_TX_PACKET_LOAD_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` writer - "]
-pub type SLC0_TX_PACKET_LOAD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_TX_PACKET_LOAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_GET_USED_DSCR` writer - "]
-pub type SLC0_RX_GET_USED_DSCR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_RX_GET_USED_DSCR_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_TX_GET_USED_DSCR` writer - "]
-pub type SLC0_TX_GET_USED_DSCR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, O>;
+pub type SLC0_TX_GET_USED_DSCR_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RX_NEW_PKT_IND` reader - "]
-pub type SLC0_RX_NEW_PKT_IND_R = crate::BitReader<bool>;
+pub type SLC0_RX_NEW_PKT_IND_R = crate::BitReader;
 #[doc = "Field `SLC0_TX_NEW_PKT_IND` reader - "]
-pub type SLC0_TX_NEW_PKT_IND_R = crate::BitReader<bool>;
+pub type SLC0_TX_NEW_PKT_IND_R = crate::BitReader;
 impl R {
     #[doc = "Bit 23"]
     #[inline(always)]
@@ -84,6 +79,35 @@ impl R {
     #[inline(always)]
     pub fn slc0_tx_new_pkt_ind(&self) -> SLC0_TX_NEW_PKT_IND_R {
         SLC0_TX_NEW_PKT_IND_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_0_LEN_CONF")
+            .field(
+                "slc0_rx_packet_load_en",
+                &format_args!("{}", self.slc0_rx_packet_load_en().bit()),
+            )
+            .field(
+                "slc0_tx_packet_load_en",
+                &format_args!("{}", self.slc0_tx_packet_load_en().bit()),
+            )
+            .field(
+                "slc0_rx_new_pkt_ind",
+                &format_args!("{}", self.slc0_rx_new_pkt_ind().bit()),
+            )
+            .field(
+                "slc0_tx_new_pkt_ind",
+                &format_args!("{}", self.slc0_tx_new_pkt_ind().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_0_LEN_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

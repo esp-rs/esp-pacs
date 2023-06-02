@@ -35,14 +35,13 @@ impl From<crate::W<SIGMADELTA_SPEC>> for W {
     }
 }
 #[doc = "Field `SD0_IN` reader - This field is used to configure the duty cycle of sigma delta modulation output."]
-pub type SD0_IN_R = crate::FieldReader<u8, u8>;
+pub type SD0_IN_R = crate::FieldReader;
 #[doc = "Field `SD0_IN` writer - This field is used to configure the duty cycle of sigma delta modulation output."]
-pub type SD0_IN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SIGMADELTA_SPEC, u8, u8, 8, O>;
+pub type SD0_IN_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
 #[doc = "Field `SD0_PRESCALE` reader - This field is used to set a divider value to divide APB clock."]
-pub type SD0_PRESCALE_R = crate::FieldReader<u8, u8>;
+pub type SD0_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `SD0_PRESCALE` writer - This field is used to set a divider value to divide APB clock."]
-pub type SD0_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SIGMADELTA_SPEC, u8, u8, 8, O>;
+pub type SD0_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, SIGMADELTA_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - This field is used to configure the duty cycle of sigma delta modulation output."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn sd0_prescale(&self) -> SD0_PRESCALE_R {
         SD0_PRESCALE_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SIGMADELTA")
+            .field("sd0_in", &format_args!("{}", self.sd0_in().bits()))
+            .field(
+                "sd0_prescale",
+                &format_args!("{}", self.sd0_prescale().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SIGMADELTA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

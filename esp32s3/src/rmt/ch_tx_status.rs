@@ -18,11 +18,11 @@ pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_MEM_WADDR` reader - This register records the memory address offset when writes RAM over APB bus."]
 pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE` reader - This register records the FSM status of CHANNEL%s."]
-pub type STATE_R = crate::FieldReader<u8, u8>;
+pub type STATE_R = crate::FieldReader;
 #[doc = "Field `MEM_EMPTY` reader - This status bit will be set when the data to be set is more than memory size and the wraparound mode is disabled."]
-pub type MEM_EMPTY_R = crate::BitReader<bool>;
+pub type MEM_EMPTY_R = crate::BitReader;
 #[doc = "Field `APB_MEM_WR_ERR` reader - This status bit will be set if the offset address out of memory size when writes via APB bus."]
-pub type APB_MEM_WR_ERR_R = crate::BitReader<bool>;
+pub type APB_MEM_WR_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:9 - This register records the memory address offset when transmitter of CHANNEL%s is using the RAM."]
     #[inline(always)]
@@ -48,6 +48,33 @@ impl R {
     #[inline(always)]
     pub fn apb_mem_wr_err(&self) -> APB_MEM_WR_ERR_R {
         APB_MEM_WR_ERR_R::new(((self.bits >> 26) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_TX_STATUS")
+            .field(
+                "mem_raddr_ex",
+                &format_args!("{}", self.mem_raddr_ex().bits()),
+            )
+            .field(
+                "apb_mem_waddr",
+                &format_args!("{}", self.apb_mem_waddr().bits()),
+            )
+            .field("state", &format_args!("{}", self.state().bits()))
+            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
+            .field(
+                "apb_mem_wr_err",
+                &format_args!("{}", self.apb_mem_wr_err().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_TX_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Channel %s status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch_tx_status](index.html) module"]

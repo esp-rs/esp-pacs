@@ -35,23 +35,21 @@ impl From<crate::W<SARADC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_CLK_EN` reader - no use"]
-pub type SARADC_CLK_EN_R = crate::BitReader<bool>;
+pub type SARADC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_CLK_EN` writer - no use"]
-pub type SARADC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SARADC_CONF_SPEC, bool, O>;
+pub type SARADC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SARADC_CONF_SPEC, O>;
 #[doc = "Field `SARADC_RST_EN` reader - Set 0 to reset function_register of saradc module"]
-pub type SARADC_RST_EN_R = crate::BitReader<bool>;
+pub type SARADC_RST_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_RST_EN` writer - Set 0 to reset function_register of saradc module"]
-pub type SARADC_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SARADC_CONF_SPEC, bool, O>;
+pub type SARADC_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SARADC_CONF_SPEC, O>;
 #[doc = "Field `SARADC_REG_CLK_EN` reader - Set 1 to enable saradc apb clock"]
-pub type SARADC_REG_CLK_EN_R = crate::BitReader<bool>;
+pub type SARADC_REG_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_REG_CLK_EN` writer - Set 1 to enable saradc apb clock"]
-pub type SARADC_REG_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SARADC_CONF_SPEC, bool, O>;
+pub type SARADC_REG_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SARADC_CONF_SPEC, O>;
 #[doc = "Field `SARADC_REG_RST_EN` reader - Set 0 to reset apb_register of saradc module"]
-pub type SARADC_REG_RST_EN_R = crate::BitReader<bool>;
+pub type SARADC_REG_RST_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_REG_RST_EN` writer - Set 0 to reset apb_register of saradc module"]
-pub type SARADC_REG_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SARADC_CONF_SPEC, bool, O>;
+pub type SARADC_REG_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SARADC_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - no use"]
     #[inline(always)]
@@ -72,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn saradc_reg_rst_en(&self) -> SARADC_REG_RST_EN_R {
         SARADC_REG_RST_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SARADC_CONF")
+            .field(
+                "saradc_clk_en",
+                &format_args!("{}", self.saradc_clk_en().bit()),
+            )
+            .field(
+                "saradc_rst_en",
+                &format_args!("{}", self.saradc_rst_en().bit()),
+            )
+            .field(
+                "saradc_reg_clk_en",
+                &format_args!("{}", self.saradc_reg_clk_en().bit()),
+            )
+            .field(
+                "saradc_reg_rst_en",
+                &format_args!("{}", self.saradc_reg_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SARADC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

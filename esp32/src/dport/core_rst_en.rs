@@ -35,14 +35,28 @@ impl From<crate::W<CORE_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_RST` reader - "]
-pub type CORE_RST_R = crate::FieldReader<u8, u8>;
+pub type CORE_RST_R = crate::FieldReader;
 #[doc = "Field `CORE_RST` writer - "]
-pub type CORE_RST_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CORE_RST_EN_SPEC, u8, u8, 8, O>;
+pub type CORE_RST_W<'a, const O: u8> = crate::FieldWriter<'a, CORE_RST_EN_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn core_rst(&self) -> CORE_RST_R {
         CORE_RST_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_RST_EN")
+            .field("core_rst", &format_args!("{}", self.core_rst().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_RST_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

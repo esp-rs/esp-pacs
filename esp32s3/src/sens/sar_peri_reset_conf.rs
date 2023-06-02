@@ -35,25 +35,21 @@ impl From<crate::W<SAR_PERI_RESET_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_COCPU_RESET` reader - enable ulp-riscv reset"]
-pub type SAR_COCPU_RESET_R = crate::BitReader<bool>;
+pub type SAR_COCPU_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_RESET` writer - enable ulp-riscv reset"]
-pub type SAR_COCPU_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_PERI_RESET_CONF_SPEC, bool, O>;
+pub type SAR_COCPU_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
 #[doc = "Field `SAR_RTC_I2C_RESET` reader - Reserved."]
-pub type SAR_RTC_I2C_RESET_R = crate::BitReader<bool>;
+pub type SAR_RTC_I2C_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_RTC_I2C_RESET` writer - Reserved."]
-pub type SAR_RTC_I2C_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_PERI_RESET_CONF_SPEC, bool, O>;
+pub type SAR_RTC_I2C_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
 #[doc = "Field `SAR_TSENS_RESET` reader - enbale saradc reset"]
-pub type SAR_TSENS_RESET_R = crate::BitReader<bool>;
+pub type SAR_TSENS_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_RESET` writer - enbale saradc reset"]
-pub type SAR_TSENS_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_PERI_RESET_CONF_SPEC, bool, O>;
+pub type SAR_TSENS_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
 #[doc = "Field `SAR_SARADC_RESET` reader - enable io_mux reset"]
-pub type SAR_SARADC_RESET_R = crate::BitReader<bool>;
+pub type SAR_SARADC_RESET_R = crate::BitReader;
 #[doc = "Field `SAR_SARADC_RESET` writer - enable io_mux reset"]
-pub type SAR_SARADC_RESET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SAR_PERI_RESET_CONF_SPEC, bool, O>;
+pub type SAR_SARADC_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SAR_PERI_RESET_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn sar_saradc_reset(&self) -> SAR_SARADC_RESET_R {
         SAR_SARADC_RESET_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_PERI_RESET_CONF")
+            .field(
+                "sar_cocpu_reset",
+                &format_args!("{}", self.sar_cocpu_reset().bit()),
+            )
+            .field(
+                "sar_rtc_i2c_reset",
+                &format_args!("{}", self.sar_rtc_i2c_reset().bit()),
+            )
+            .field(
+                "sar_tsens_reset",
+                &format_args!("{}", self.sar_tsens_reset().bit()),
+            )
+            .field(
+                "sar_saradc_reset",
+                &format_args!("{}", self.sar_saradc_reset().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_PERI_RESET_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

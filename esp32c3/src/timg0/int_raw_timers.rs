@@ -14,9 +14,9 @@ impl From<crate::R<INT_RAW_TIMERS_SPEC>> for R {
     }
 }
 #[doc = "Field `T0_INT_RAW` reader - t0_int_raw"]
-pub type T0_INT_RAW_R = crate::BitReader<bool>;
+pub type T0_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WDT_INT_RAW` reader - wdt_int_raw"]
-pub type WDT_INT_RAW_R = crate::BitReader<bool>;
+pub type WDT_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - t0_int_raw"]
     #[inline(always)]
@@ -27,6 +27,21 @@ impl R {
     #[inline(always)]
     pub fn wdt_int_raw(&self) -> WDT_INT_RAW_R {
         WDT_INT_RAW_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW_TIMERS")
+            .field("t0_int_raw", &format_args!("{}", self.t0_int_raw().bit()))
+            .field("wdt_int_raw", &format_args!("{}", self.wdt_int_raw().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_TIMERS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "INT_RAW_TIMG_REG\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw_timers](index.html) module"]

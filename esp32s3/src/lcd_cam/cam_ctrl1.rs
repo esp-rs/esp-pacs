@@ -38,49 +38,47 @@ impl From<crate::W<CAM_CTRL1_SPEC>> for W {
 pub type CAM_REC_DATA_BYTELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CAM_REC_DATA_BYTELEN` writer - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
 pub type CAM_REC_DATA_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAM_CTRL1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, CAM_CTRL1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `CAM_LINE_INT_NUM` reader - The line number minus 1 to generate cam_hs_int."]
-pub type CAM_LINE_INT_NUM_R = crate::FieldReader<u8, u8>;
+pub type CAM_LINE_INT_NUM_R = crate::FieldReader;
 #[doc = "Field `CAM_LINE_INT_NUM` writer - The line number minus 1 to generate cam_hs_int."]
-pub type CAM_LINE_INT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CAM_CTRL1_SPEC, u8, u8, 6, O>;
+pub type CAM_LINE_INT_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CAM_CTRL1_SPEC, 6, O>;
 #[doc = "Field `CAM_CLK_INV` reader - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
-pub type CAM_CLK_INV_R = crate::BitReader<bool>;
+pub type CAM_CLK_INV_R = crate::BitReader;
 #[doc = "Field `CAM_CLK_INV` writer - 1: Invert the input signal CAM_PCLK. 0: Not invert."]
-pub type CAM_CLK_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_CLK_INV_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_VSYNC_FILTER_EN` reader - 1: Enable CAM_VSYNC filter function. 0: bypass."]
-pub type CAM_VSYNC_FILTER_EN_R = crate::BitReader<bool>;
+pub type CAM_VSYNC_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_FILTER_EN` writer - 1: Enable CAM_VSYNC filter function. 0: bypass."]
-pub type CAM_VSYNC_FILTER_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_VSYNC_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_2BYTE_EN` reader - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
-pub type CAM_2BYTE_EN_R = crate::BitReader<bool>;
+pub type CAM_2BYTE_EN_R = crate::BitReader;
 #[doc = "Field `CAM_2BYTE_EN` writer - 1: The bit number of input data is 9~16. 0: The bit number of input data is 0~8."]
-pub type CAM_2BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_2BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_DE_INV` reader - CAM_DE invert enable signal, valid in high level."]
-pub type CAM_DE_INV_R = crate::BitReader<bool>;
+pub type CAM_DE_INV_R = crate::BitReader;
 #[doc = "Field `CAM_DE_INV` writer - CAM_DE invert enable signal, valid in high level."]
-pub type CAM_DE_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_DE_INV_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_HSYNC_INV` reader - CAM_HSYNC invert enable signal, valid in high level."]
-pub type CAM_HSYNC_INV_R = crate::BitReader<bool>;
+pub type CAM_HSYNC_INV_R = crate::BitReader;
 #[doc = "Field `CAM_HSYNC_INV` writer - CAM_HSYNC invert enable signal, valid in high level."]
-pub type CAM_HSYNC_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_HSYNC_INV_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_VSYNC_INV` reader - CAM_VSYNC invert enable signal, valid in high level."]
-pub type CAM_VSYNC_INV_R = crate::BitReader<bool>;
+pub type CAM_VSYNC_INV_R = crate::BitReader;
 #[doc = "Field `CAM_VSYNC_INV` writer - CAM_VSYNC invert enable signal, valid in high level."]
-pub type CAM_VSYNC_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_VSYNC_INV_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_VH_DE_MODE_EN` reader - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
-pub type CAM_VH_DE_MODE_EN_R = crate::BitReader<bool>;
+pub type CAM_VH_DE_MODE_EN_R = crate::BitReader;
 #[doc = "Field `CAM_VH_DE_MODE_EN` writer - 1: Input control signals are CAM_DE CAM_HSYNC and CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 the the same time."]
-pub type CAM_VH_DE_MODE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_VH_DE_MODE_EN_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_START` reader - Camera module start signal."]
-pub type CAM_START_R = crate::BitReader<bool>;
+pub type CAM_START_R = crate::BitReader;
 #[doc = "Field `CAM_START` writer - Camera module start signal."]
-pub type CAM_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_START_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_RESET` writer - Camera module reset signal."]
-pub type CAM_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 #[doc = "Field `CAM_AFIFO_RESET` writer - Camera AFIFO reset signal."]
-pub type CAM_AFIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CAM_CTRL1_SPEC, bool, O>;
+pub type CAM_AFIFO_RESET_W<'a, const O: u8> = crate::BitWriter<'a, CAM_CTRL1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
     #[inline(always)]
@@ -131,6 +129,50 @@ impl R {
     #[inline(always)]
     pub fn cam_start(&self) -> CAM_START_R {
         CAM_START_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CAM_CTRL1")
+            .field(
+                "cam_rec_data_bytelen",
+                &format_args!("{}", self.cam_rec_data_bytelen().bits()),
+            )
+            .field(
+                "cam_line_int_num",
+                &format_args!("{}", self.cam_line_int_num().bits()),
+            )
+            .field("cam_clk_inv", &format_args!("{}", self.cam_clk_inv().bit()))
+            .field(
+                "cam_vsync_filter_en",
+                &format_args!("{}", self.cam_vsync_filter_en().bit()),
+            )
+            .field(
+                "cam_2byte_en",
+                &format_args!("{}", self.cam_2byte_en().bit()),
+            )
+            .field("cam_de_inv", &format_args!("{}", self.cam_de_inv().bit()))
+            .field(
+                "cam_hsync_inv",
+                &format_args!("{}", self.cam_hsync_inv().bit()),
+            )
+            .field(
+                "cam_vsync_inv",
+                &format_args!("{}", self.cam_vsync_inv().bit()),
+            )
+            .field(
+                "cam_vh_de_mode_en",
+                &format_args!("{}", self.cam_vh_de_mode_en().bit()),
+            )
+            .field("cam_start", &format_args!("{}", self.cam_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CAM_CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

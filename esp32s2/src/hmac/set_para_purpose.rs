@@ -20,8 +20,13 @@ impl From<crate::W<SET_PARA_PURPOSE_SPEC>> for W {
     }
 }
 #[doc = "Field `PURPOSE_SET` writer - Set hmac purpose."]
-pub type PURPOSE_SET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SET_PARA_PURPOSE_SPEC, u8, u8, 4, O>;
+pub type PURPOSE_SET_W<'a, const O: u8> = crate::FieldWriter<'a, SET_PARA_PURPOSE_SPEC, 4, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SET_PARA_PURPOSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Set hmac purpose."]
     #[inline(always)]

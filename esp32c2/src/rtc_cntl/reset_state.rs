@@ -35,25 +35,21 @@ impl From<crate::W<RESET_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
-pub type RESET_CAUSE_PROCPU_R = crate::FieldReader<u8, u8>;
+pub type RESET_CAUSE_PROCPU_R = crate::FieldReader;
 #[doc = "Field `RESET_CAUSE_PROCPU` writer - reset cause of PRO CPU"]
-pub type RESET_CAUSE_PROCPU_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RESET_STATE_SPEC, u8, u8, 6, O>;
+pub type RESET_CAUSE_PROCPU_W<'a, const O: u8> = crate::FieldWriter<'a, RESET_STATE_SPEC, 6, O>;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` reader - PRO CPU state vector sel"]
-pub type STAT_VECTOR_SEL_PROCPU_R = crate::BitReader<bool>;
+pub type STAT_VECTOR_SEL_PROCPU_R = crate::BitReader;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` writer - PRO CPU state vector sel"]
-pub type STAT_VECTOR_SEL_PROCPU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type STAT_VECTOR_SEL_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` reader - PROCPU OcdHaltOnReset"]
-pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader<bool>;
+pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` writer - PROCPU OcdHaltOnReset"]
-pub type OCD_HALT_ON_RESET_PROCPU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type OCD_HALT_ON_RESET_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 #[doc = "Field `DRESET_MASK_PROCPU` reader - Need add desc"]
-pub type DRESET_MASK_PROCPU_R = crate::BitReader<bool>;
+pub type DRESET_MASK_PROCPU_R = crate::BitReader;
 #[doc = "Field `DRESET_MASK_PROCPU` writer - Need add desc"]
-pub type DRESET_MASK_PROCPU_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, O>;
+pub type DRESET_MASK_PROCPU_W<'a, const O: u8> = crate::BitWriter<'a, RESET_STATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -74,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn dreset_mask_procpu(&self) -> DRESET_MASK_PROCPU_R {
         DRESET_MASK_PROCPU_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_STATE")
+            .field(
+                "reset_cause_procpu",
+                &format_args!("{}", self.reset_cause_procpu().bits()),
+            )
+            .field(
+                "stat_vector_sel_procpu",
+                &format_args!("{}", self.stat_vector_sel_procpu().bit()),
+            )
+            .field(
+                "ocd_halt_on_reset_procpu",
+                &format_args!("{}", self.ocd_halt_on_reset_procpu().bit()),
+            )
+            .field(
+                "dreset_mask_procpu",
+                &format_args!("{}", self.dreset_mask_procpu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

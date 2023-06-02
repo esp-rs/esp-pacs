@@ -20,52 +20,44 @@ impl From<crate::W<I2C_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_RXFIFO_WM_INT_CLR` writer - Set this bit to clear I2C_RXFIFO_WM_INT interrupt."]
-pub type I2C_RXFIFO_WM_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_RXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_TXFIFO_WM_INT_CLR` writer - Set this bit to clear I2C_TXFIFO_WM_INT interrupt."]
-pub type I2C_TXFIFO_WM_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_TXFIFO_WM_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_RXFIFO_OVF_INT_CLR` writer - Set this bit to clear I2C_RXFIFO_OVF_INT interrupt."]
-pub type I2C_RXFIFO_OVF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_END_DETECT_INT_CLR` writer - Set this bit to clear the I2C_END_DETECT_INT interrupt."]
-pub type I2C_END_DETECT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_END_DETECT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_BYTE_TRANS_DONE_INT_CLR` writer - Set this bit to clear the I2C_END_DETECT_INT interrupt."]
-pub type I2C_BYTE_TRANS_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_BYTE_TRANS_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_ARBITRATION_LOST_INT_CLR` writer - Set this bit to clear the I2C_ARBITRATION_LOST_INT interrupt."]
 pub type I2C_ARBITRATION_LOST_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_MST_TXFIFO_UDF_INT_CLR` writer - Set this bit to clear I2C_TRANS_COMPLETE_INT interrupt."]
-pub type I2C_MST_TXFIFO_UDF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_MST_TXFIFO_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_TRANS_COMPLETE_INT_CLR` writer - Set this bit to clear the I2C_TRANS_COMPLETE_INT interrupt."]
-pub type I2C_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_TRANS_COMPLETE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_TIME_OUT_INT_CLR` writer - Set this bit to clear the I2C_TIME_OUT_INT interrupt."]
-pub type I2C_TIME_OUT_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_TIME_OUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_TRANS_START_INT_CLR` writer - Set this bit to clear the I2C_TRANS_START_INT interrupt."]
-pub type I2C_TRANS_START_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_TRANS_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_NACK_INT_CLR` writer - Set this bit to clear I2C_SLAVE_STRETCH_INT interrupt."]
-pub type I2C_NACK_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_NACK_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_TXFIFO_OVF_INT_CLR` writer - Set this bit to clear I2C_TXFIFO_OVF_INT interrupt."]
-pub type I2C_TXFIFO_OVF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_TXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_RXFIFO_UDF_INT_CLR` writer - Set this bit to clear I2C_RXFIFO_UDF_INT interrupt."]
-pub type I2C_RXFIFO_UDF_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_RXFIFO_UDF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_SCL_ST_TO_INT_CLR` writer - Set this bit to clear I2C_SCL_ST_TO_INT interrupt."]
-pub type I2C_SCL_ST_TO_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_SCL_ST_TO_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_SCL_MAIN_ST_TO_INT_CLR` writer - Set this bit to clear I2C_SCL_MAIN_ST_TO_INT interrupt."]
-pub type I2C_SCL_MAIN_ST_TO_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_SCL_MAIN_ST_TO_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
 #[doc = "Field `I2C_DET_START_INT_CLR` writer - Set this bit to clear I2C_DET_START_INT interrupt."]
-pub type I2C_DET_START_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2C_INT_CLR_SPEC, bool, O>;
+pub type I2C_DET_START_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2C_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]

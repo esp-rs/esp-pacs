@@ -38,12 +38,29 @@ impl From<crate::W<GPIO_STATUS_SPEC>> for W {
 pub type GPIO_STATUS_INTERRUPT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_STATUS_INTERRUPT` writer - Interrupt enable register."]
 pub type GPIO_STATUS_INTERRUPT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_STATUS_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, GPIO_STATUS_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Interrupt enable register."]
     #[inline(always)]
     pub fn gpio_status_interrupt(&self) -> GPIO_STATUS_INTERRUPT_R {
         GPIO_STATUS_INTERRUPT_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_STATUS")
+            .field(
+                "gpio_status_interrupt",
+                &format_args!("{}", self.gpio_status_interrupt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,13 @@ impl From<crate::W<SDIO_SLAVE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_SLAVE_CLK_EN` reader - Set 1 to enable sdio_slave clock"]
-pub type SDIO_SLAVE_CLK_EN_R = crate::BitReader<bool>;
+pub type SDIO_SLAVE_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_CLK_EN` writer - Set 1 to enable sdio_slave clock"]
-pub type SDIO_SLAVE_CLK_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SDIO_SLAVE_CONF_SPEC, bool, O>;
+pub type SDIO_SLAVE_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_SLAVE_CONF_SPEC, O>;
 #[doc = "Field `SDIO_SLAVE_RST_EN` reader - Set 0 to reset sdio_slave module"]
-pub type SDIO_SLAVE_RST_EN_R = crate::BitReader<bool>;
+pub type SDIO_SLAVE_RST_EN_R = crate::BitReader;
 #[doc = "Field `SDIO_SLAVE_RST_EN` writer - Set 0 to reset sdio_slave module"]
-pub type SDIO_SLAVE_RST_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SDIO_SLAVE_CONF_SPEC, bool, O>;
+pub type SDIO_SLAVE_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_SLAVE_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable sdio_slave clock"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sdio_slave_rst_en(&self) -> SDIO_SLAVE_RST_EN_R {
         SDIO_SLAVE_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_SLAVE_CONF")
+            .field(
+                "sdio_slave_clk_en",
+                &format_args!("{}", self.sdio_slave_clk_en().bit()),
+            )
+            .field(
+                "sdio_slave_rst_en",
+                &format_args!("{}", self.sdio_slave_rst_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

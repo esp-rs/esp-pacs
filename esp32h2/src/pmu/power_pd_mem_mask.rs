@@ -35,35 +35,32 @@ impl From<crate::W<POWER_PD_MEM_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `PD_HP_MEM2_PD_MASK` reader - need_des"]
-pub type PD_HP_MEM2_PD_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM2_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM2_PD_MASK` writer - need_des"]
 pub type PD_HP_MEM2_PD_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 #[doc = "Field `PD_HP_MEM1_PD_MASK` reader - need_des"]
-pub type PD_HP_MEM1_PD_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM1_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM1_PD_MASK` writer - need_des"]
 pub type PD_HP_MEM1_PD_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 #[doc = "Field `PD_HP_MEM0_PD_MASK` reader - need_des"]
-pub type PD_HP_MEM0_PD_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM0_PD_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM0_PD_MASK` writer - need_des"]
 pub type PD_HP_MEM0_PD_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 #[doc = "Field `PD_HP_MEM2_MASK` reader - need_des"]
-pub type PD_HP_MEM2_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM2_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM2_MASK` writer - need_des"]
-pub type PD_HP_MEM2_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+pub type PD_HP_MEM2_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 #[doc = "Field `PD_HP_MEM1_MASK` reader - need_des"]
-pub type PD_HP_MEM1_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM1_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM1_MASK` writer - need_des"]
-pub type PD_HP_MEM1_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+pub type PD_HP_MEM1_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 #[doc = "Field `PD_HP_MEM0_MASK` reader - need_des"]
-pub type PD_HP_MEM0_MASK_R = crate::FieldReader<u8, u8>;
+pub type PD_HP_MEM0_MASK_R = crate::FieldReader;
 #[doc = "Field `PD_HP_MEM0_MASK` writer - need_des"]
-pub type PD_HP_MEM0_MASK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, POWER_PD_MEM_MASK_SPEC, u8, u8, 5, O>;
+pub type PD_HP_MEM0_MASK_W<'a, const O: u8> = crate::FieldWriter<'a, POWER_PD_MEM_MASK_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
@@ -94,6 +91,43 @@ impl R {
     #[inline(always)]
     pub fn pd_hp_mem0_mask(&self) -> PD_HP_MEM0_MASK_R {
         PD_HP_MEM0_MASK_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POWER_PD_MEM_MASK")
+            .field(
+                "pd_hp_mem2_pd_mask",
+                &format_args!("{}", self.pd_hp_mem2_pd_mask().bits()),
+            )
+            .field(
+                "pd_hp_mem1_pd_mask",
+                &format_args!("{}", self.pd_hp_mem1_pd_mask().bits()),
+            )
+            .field(
+                "pd_hp_mem0_pd_mask",
+                &format_args!("{}", self.pd_hp_mem0_pd_mask().bits()),
+            )
+            .field(
+                "pd_hp_mem2_mask",
+                &format_args!("{}", self.pd_hp_mem2_mask().bits()),
+            )
+            .field(
+                "pd_hp_mem1_mask",
+                &format_args!("{}", self.pd_hp_mem1_mask().bits()),
+            )
+            .field(
+                "pd_hp_mem0_mask",
+                &format_args!("{}", self.pd_hp_mem0_mask().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<POWER_PD_MEM_MASK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

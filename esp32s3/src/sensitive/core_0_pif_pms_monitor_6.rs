@@ -24,6 +24,27 @@ impl R {
         CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_PIF_PMS_MONITOR_6")
+            .field(
+                "core_0_pif_pms_monitor_nonword_violate_status_haddr",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_monitor_nonword_violate_status_haddr()
+                        .bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_MONITOR_6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Core0 permission report register 6.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_pif_pms_monitor_6](index.html) module"]
 pub struct CORE_0_PIF_PMS_MONITOR_6_SPEC;
 impl crate::RegisterSpec for CORE_0_PIF_PMS_MONITOR_6_SPEC {

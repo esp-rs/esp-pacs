@@ -35,37 +35,37 @@ impl From<crate::W<OUT_CPU_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL0` reader - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL0_R = crate::BitReader<bool>;
+pub type SEL0_R = crate::BitReader;
 #[doc = "Field `SEL0` writer - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL0_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL0_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL1` reader - Select GPIO out value configured by registers or CPU instructions for channel 1. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL1_R = crate::BitReader<bool>;
+pub type SEL1_R = crate::BitReader;
 #[doc = "Field `SEL1` writer - Select GPIO out value configured by registers or CPU instructions for channel 1. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL1_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL1_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL2` reader - Select GPIO out value configured by registers or CPU instructions for channel 2. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL2_R = crate::BitReader<bool>;
+pub type SEL2_R = crate::BitReader;
 #[doc = "Field `SEL2` writer - Select GPIO out value configured by registers or CPU instructions for channel 2. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL2_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL2_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL3` reader - Select GPIO out value configured by registers or CPU instructions for channel 3. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL3_R = crate::BitReader<bool>;
+pub type SEL3_R = crate::BitReader;
 #[doc = "Field `SEL3` writer - Select GPIO out value configured by registers or CPU instructions for channel 3. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL3_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL3_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL4` reader - Select GPIO out value configured by registers or CPU instructions for channel 4. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL4_R = crate::BitReader<bool>;
+pub type SEL4_R = crate::BitReader;
 #[doc = "Field `SEL4` writer - Select GPIO out value configured by registers or CPU instructions for channel 4. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL4_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL4_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL5` reader - Select GPIO out value configured by registers or CPU instructions for channel 5. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL5_R = crate::BitReader<bool>;
+pub type SEL5_R = crate::BitReader;
 #[doc = "Field `SEL5` writer - Select GPIO out value configured by registers or CPU instructions for channel 5. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL5_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL5_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL6` reader - Select GPIO out value configured by registers or CPU instructions for channel 6. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL6_R = crate::BitReader<bool>;
+pub type SEL6_R = crate::BitReader;
 #[doc = "Field `SEL6` writer - Select GPIO out value configured by registers or CPU instructions for channel 6. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL6_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL6_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 #[doc = "Field `SEL7` reader - Select GPIO out value configured by registers or CPU instructions for channel 7. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL7_R = crate::BitReader<bool>;
+pub type SEL7_R = crate::BitReader;
 #[doc = "Field `SEL7` writer - Select GPIO out value configured by registers or CPU instructions for channel 7. 0: Configured by registers. 1: configured by CPU instructions."]
-pub type SEL7_W<'a, const O: u8> = crate::BitWriter<'a, u32, OUT_CPU_SPEC, bool, O>;
+pub type SEL7_W<'a, const O: u8> = crate::BitWriter<'a, OUT_CPU_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
@@ -106,6 +106,27 @@ impl R {
     #[inline(always)]
     pub fn sel7(&self) -> SEL7_R {
         SEL7_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT_CPU")
+            .field("sel0", &format_args!("{}", self.sel0().bit()))
+            .field("sel1", &format_args!("{}", self.sel1().bit()))
+            .field("sel2", &format_args!("{}", self.sel2().bit()))
+            .field("sel3", &format_args!("{}", self.sel3().bit()))
+            .field("sel4", &format_args!("{}", self.sel4().bit()))
+            .field("sel5", &format_args!("{}", self.sel5().bit()))
+            .field("sel6", &format_args!("{}", self.sel6().bit()))
+            .field("sel7", &format_args!("{}", self.sel7().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT_CPU_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

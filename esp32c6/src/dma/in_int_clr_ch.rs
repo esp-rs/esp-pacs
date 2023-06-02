@@ -20,19 +20,25 @@ impl From<crate::W<IN_INT_CLR_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_DONE` writer - Set this bit to clear the IN_DONE_CH_INT interrupt."]
-pub type IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type IN_DONE_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `IN_SUC_EOF` writer - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
-pub type IN_SUC_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type IN_SUC_EOF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `IN_ERR_EOF` writer - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
-pub type IN_ERR_EOF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type IN_ERR_EOF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `IN_DSCR_ERR` writer - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
-pub type IN_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type IN_DSCR_ERR_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `IN_DSCR_EMPTY` writer - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub type IN_DSCR_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type IN_DSCR_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `INFIFO_OVF` writer - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
-pub type INFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type INFIFO_OVF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
 #[doc = "Field `INFIFO_UDF` writer - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
-pub type INFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_INT_CLR_CH_SPEC, bool, O>;
+pub type INFIFO_UDF_W<'a, const O: u8> = crate::BitWriter<'a, IN_INT_CLR_CH_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_INT_CLR_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the IN_DONE_CH_INT interrupt."]
     #[inline(always)]

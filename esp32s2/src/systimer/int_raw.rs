@@ -14,11 +14,11 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `INT0_RAW` reader - Interrupt raw bit of system timer target 0."]
-pub type INT0_RAW_R = crate::BitReader<bool>;
+pub type INT0_RAW_R = crate::BitReader;
 #[doc = "Field `INT1_RAW` reader - Interrupt raw bit of system timer target 1."]
-pub type INT1_RAW_R = crate::BitReader<bool>;
+pub type INT1_RAW_R = crate::BitReader;
 #[doc = "Field `INT2_RAW` reader - Interrupt raw bit of system timer target 2."]
-pub type INT2_RAW_R = crate::BitReader<bool>;
+pub type INT2_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Interrupt raw bit of system timer target 0."]
     #[inline(always)]
@@ -34,6 +34,22 @@ impl R {
     #[inline(always)]
     pub fn int2_raw(&self) -> INT2_RAW_R {
         INT2_RAW_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field("int0_raw", &format_args!("{}", self.int0_raw().bit()))
+            .field("int1_raw", &format_args!("{}", self.int1_raw().bit()))
+            .field("int2_raw", &format_args!("{}", self.int2_raw().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "System timer interrupt raw\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

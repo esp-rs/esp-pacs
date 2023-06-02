@@ -35,40 +35,35 @@ impl From<crate::W<TOUCH_SCAN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_RES` reader - De-noise resolution: 12/10/8/4 bit"]
-pub type TOUCH_DENOISE_RES_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_DENOISE_RES_R = crate::FieldReader;
 #[doc = "Field `TOUCH_DENOISE_RES` writer - De-noise resolution: 12/10/8/4 bit"]
-pub type TOUCH_DENOISE_RES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 2, O>;
+pub type TOUCH_DENOISE_RES_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 2, O>;
 #[doc = "Field `TOUCH_DENOISE_EN` reader - touch pad0 will be used to de-noise"]
-pub type TOUCH_DENOISE_EN_R = crate::BitReader<bool>;
+pub type TOUCH_DENOISE_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_DENOISE_EN` writer - touch pad0 will be used to de-noise"]
-pub type TOUCH_DENOISE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, O>;
+pub type TOUCH_DENOISE_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_SCAN_CTRL_SPEC, O>;
 #[doc = "Field `TOUCH_INACTIVE_CONNECTION` reader - inactive touch pads connect to 1: gnd 0: HighZ"]
-pub type TOUCH_INACTIVE_CONNECTION_R = crate::BitReader<bool>;
+pub type TOUCH_INACTIVE_CONNECTION_R = crate::BitReader;
 #[doc = "Field `TOUCH_INACTIVE_CONNECTION` writer - inactive touch pads connect to 1: gnd 0: HighZ"]
 pub type TOUCH_INACTIVE_CONNECTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, TOUCH_SCAN_CTRL_SPEC, O>;
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` reader - touch pad14 will be used as shield"]
-pub type TOUCH_SHIELD_PAD_EN_R = crate::BitReader<bool>;
+pub type TOUCH_SHIELD_PAD_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` writer - touch pad14 will be used as shield"]
-pub type TOUCH_SHIELD_PAD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, O>;
+pub type TOUCH_SHIELD_PAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_SCAN_CTRL_SPEC, O>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` reader - touch scan mode pad enable map"]
 pub type TOUCH_SCAN_PAD_MAP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` writer - touch scan mode pad enable map"]
 pub type TOUCH_SCAN_PAD_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u16, u16, 15, O>;
+    crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 15, O, u16, u16>;
 #[doc = "Field `TOUCH_BUFDRV` reader - touch7 buffer driver strength"]
-pub type TOUCH_BUFDRV_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_BUFDRV_R = crate::FieldReader;
 #[doc = "Field `TOUCH_BUFDRV` writer - touch7 buffer driver strength"]
-pub type TOUCH_BUFDRV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 3, O>;
+pub type TOUCH_BUFDRV_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 3, O>;
 #[doc = "Field `TOUCH_OUT_RING` reader - select out ring pad"]
-pub type TOUCH_OUT_RING_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_OUT_RING_R = crate::FieldReader;
 #[doc = "Field `TOUCH_OUT_RING` writer - select out ring pad"]
-pub type TOUCH_OUT_RING_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 4, O>;
+pub type TOUCH_OUT_RING_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:1 - De-noise resolution: 12/10/8/4 bit"]
     #[inline(always)]
@@ -104,6 +99,47 @@ impl R {
     #[inline(always)]
     pub fn touch_out_ring(&self) -> TOUCH_OUT_RING_R {
         TOUCH_OUT_RING_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_SCAN_CTRL")
+            .field(
+                "touch_denoise_res",
+                &format_args!("{}", self.touch_denoise_res().bits()),
+            )
+            .field(
+                "touch_denoise_en",
+                &format_args!("{}", self.touch_denoise_en().bit()),
+            )
+            .field(
+                "touch_inactive_connection",
+                &format_args!("{}", self.touch_inactive_connection().bit()),
+            )
+            .field(
+                "touch_shield_pad_en",
+                &format_args!("{}", self.touch_shield_pad_en().bit()),
+            )
+            .field(
+                "touch_scan_pad_map",
+                &format_args!("{}", self.touch_scan_pad_map().bits()),
+            )
+            .field(
+                "touch_bufdrv",
+                &format_args!("{}", self.touch_bufdrv().bits()),
+            )
+            .field(
+                "touch_out_ring",
+                &format_args!("{}", self.touch_out_ring().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_SCAN_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

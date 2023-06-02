@@ -37,13 +37,29 @@ impl From<crate::W<RC32K_CNTL_SPEC>> for W {
 #[doc = "Field `RC32K_DFREQ` reader - need_des"]
 pub type RC32K_DFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RC32K_DFREQ` writer - need_des"]
-pub type RC32K_DFREQ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RC32K_CNTL_SPEC, u16, u16, 10, O>;
+pub type RC32K_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, RC32K_CNTL_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     pub fn rc32k_dfreq(&self) -> RC32K_DFREQ_R {
         RC32K_DFREQ_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RC32K_CNTL")
+            .field(
+                "rc32k_dfreq",
+                &format_args!("{}", self.rc32k_dfreq().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RC32K_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

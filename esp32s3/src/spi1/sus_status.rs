@@ -35,29 +35,29 @@ impl From<crate::W<SUS_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_SUS` reader - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
-pub type FLASH_SUS_R = crate::BitReader<bool>;
+pub type FLASH_SUS_R = crate::BitReader;
 #[doc = "Field `FLASH_SUS` writer - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
-pub type FLASH_SUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_SUS_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 #[doc = "Field `FLASH_HPM_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
-pub type FLASH_HPM_DLY_256_R = crate::BitReader<bool>;
+pub type FLASH_HPM_DLY_256_R = crate::BitReader;
 #[doc = "Field `FLASH_HPM_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
-pub type FLASH_HPM_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_HPM_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 #[doc = "Field `FLASH_RES_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
-pub type FLASH_RES_DLY_256_R = crate::BitReader<bool>;
+pub type FLASH_RES_DLY_256_R = crate::BitReader;
 #[doc = "Field `FLASH_RES_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
-pub type FLASH_RES_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_RES_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 #[doc = "Field `FLASH_DP_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
-pub type FLASH_DP_DLY_256_R = crate::BitReader<bool>;
+pub type FLASH_DP_DLY_256_R = crate::BitReader;
 #[doc = "Field `FLASH_DP_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
-pub type FLASH_DP_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_DP_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 #[doc = "Field `FLASH_PER_DLY_256` reader - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
-pub type FLASH_PER_DLY_256_R = crate::BitReader<bool>;
+pub type FLASH_PER_DLY_256_R = crate::BitReader;
 #[doc = "Field `FLASH_PER_DLY_256` writer - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
-pub type FLASH_PER_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_PER_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 #[doc = "Field `FLASH_PES_DLY_256` reader - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
-pub type FLASH_PES_DLY_256_R = crate::BitReader<bool>;
+pub type FLASH_PES_DLY_256_R = crate::BitReader;
 #[doc = "Field `FLASH_PES_DLY_256` writer - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
-pub type FLASH_PES_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, O>;
+pub type FLASH_PES_DLY_256_W<'a, const O: u8> = crate::BitWriter<'a, SUS_STATUS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
     #[inline(always)]
@@ -88,6 +88,40 @@ impl R {
     #[inline(always)]
     pub fn flash_pes_dly_256(&self) -> FLASH_PES_DLY_256_R {
         FLASH_PES_DLY_256_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SUS_STATUS")
+            .field("flash_sus", &format_args!("{}", self.flash_sus().bit()))
+            .field(
+                "flash_hpm_dly_256",
+                &format_args!("{}", self.flash_hpm_dly_256().bit()),
+            )
+            .field(
+                "flash_res_dly_256",
+                &format_args!("{}", self.flash_res_dly_256().bit()),
+            )
+            .field(
+                "flash_dp_dly_256",
+                &format_args!("{}", self.flash_dp_dly_256().bit()),
+            )
+            .field(
+                "flash_per_dly_256",
+                &format_args!("{}", self.flash_per_dly_256().bit()),
+            )
+            .field(
+                "flash_pes_dly_256",
+                &format_args!("{}", self.flash_pes_dly_256().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SUS_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

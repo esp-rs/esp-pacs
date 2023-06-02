@@ -14,15 +14,15 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `VDDBAT_CHARGE_UPVOLTAGE_INT_ST` reader - need_des"]
-pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ST_R = crate::BitReader<bool>;
+pub type VDDBAT_CHARGE_UPVOLTAGE_INT_ST_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CHARGE_UNDERVOLTAGE_INT_ST` reader - need_des"]
-pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ST_R = crate::BitReader<bool>;
+pub type VDDBAT_CHARGE_UNDERVOLTAGE_INT_ST_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UPVOLTAGE_INT_ST` reader - need_des"]
-pub type VDDBAT_UPVOLTAGE_INT_ST_R = crate::BitReader<bool>;
+pub type VDDBAT_UPVOLTAGE_INT_ST_R = crate::BitReader;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_INT_ST` reader - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_INT_ST_R = crate::BitReader<bool>;
+pub type VDDBAT_UNDERVOLTAGE_INT_ST_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_INT_ST` reader - need_des"]
-pub type BOD_MODE0_INT_ST_R = crate::BitReader<bool>;
+pub type BOD_MODE0_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
@@ -48,6 +48,39 @@ impl R {
     #[inline(always)]
     pub fn bod_mode0_int_st(&self) -> BOD_MODE0_INT_ST_R {
         BOD_MODE0_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "vddbat_charge_upvoltage_int_st",
+                &format_args!("{}", self.vddbat_charge_upvoltage_int_st().bit()),
+            )
+            .field(
+                "vddbat_charge_undervoltage_int_st",
+                &format_args!("{}", self.vddbat_charge_undervoltage_int_st().bit()),
+            )
+            .field(
+                "vddbat_upvoltage_int_st",
+                &format_args!("{}", self.vddbat_upvoltage_int_st().bit()),
+            )
+            .field(
+                "vddbat_undervoltage_int_st",
+                &format_args!("{}", self.vddbat_undervoltage_int_st().bit()),
+            )
+            .field(
+                "bod_mode0_int_st",
+                &format_args!("{}", self.bod_mode0_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "need_des\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

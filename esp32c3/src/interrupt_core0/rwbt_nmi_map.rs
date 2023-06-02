@@ -35,15 +35,31 @@ impl From<crate::W<RWBT_NMI_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `RWBT_NMI_MAP` reader - reg_core0_rwbt_nmi_map"]
-pub type RWBT_NMI_MAP_R = crate::FieldReader<u8, u8>;
+pub type RWBT_NMI_MAP_R = crate::FieldReader;
 #[doc = "Field `RWBT_NMI_MAP` writer - reg_core0_rwbt_nmi_map"]
-pub type RWBT_NMI_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RWBT_NMI_MAP_SPEC, u8, u8, 5, O>;
+pub type RWBT_NMI_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, RWBT_NMI_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_rwbt_nmi_map"]
     #[inline(always)]
     pub fn rwbt_nmi_map(&self) -> RWBT_NMI_MAP_R {
         RWBT_NMI_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RWBT_NMI_MAP")
+            .field(
+                "rwbt_nmi_map",
+                &format_args!("{}", self.rwbt_nmi_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RWBT_NMI_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

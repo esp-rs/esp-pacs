@@ -14,9 +14,9 @@ impl From<crate::R<FSM_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ST_URX_OUT` reader - This is the status register of the receiver."]
-pub type ST_URX_OUT_R = crate::FieldReader<u8, u8>;
+pub type ST_URX_OUT_R = crate::FieldReader;
 #[doc = "Field `ST_UTX_OUT` reader - This is the status register of the transmitter."]
-pub type ST_UTX_OUT_R = crate::FieldReader<u8, u8>;
+pub type ST_UTX_OUT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - This is the status register of the receiver."]
     #[inline(always)]
@@ -27,6 +27,21 @@ impl R {
     #[inline(always)]
     pub fn st_utx_out(&self) -> ST_UTX_OUT_R {
         ST_UTX_OUT_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FSM_STATUS")
+            .field("st_urx_out", &format_args!("{}", self.st_urx_out().bits()))
+            .field("st_utx_out", &format_args!("{}", self.st_utx_out().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FSM_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UART transmitter and receiver status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fsm_status](index.html) module"]

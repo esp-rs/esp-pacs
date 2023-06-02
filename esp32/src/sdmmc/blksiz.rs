@@ -37,12 +37,26 @@ impl From<crate::W<BLKSIZ_SPEC>> for W {
 #[doc = "Field `BLOCK_SIZE` reader - Block size."]
 pub type BLOCK_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BLOCK_SIZE` writer - Block size."]
-pub type BLOCK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BLKSIZ_SPEC, u16, u16, 16, O>;
+pub type BLOCK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, BLKSIZ_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Block size."]
     #[inline(always)]
     pub fn block_size(&self) -> BLOCK_SIZE_R {
         BLOCK_SIZE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLKSIZ")
+            .field("block_size", &format_args!("{}", self.block_size().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLKSIZ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

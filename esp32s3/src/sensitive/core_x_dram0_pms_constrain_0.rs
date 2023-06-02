@@ -35,15 +35,32 @@ impl From<crate::W<CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_LOCK` reader - Set 1 to lock corex dram0 permission configuration register"]
-pub type CORE_X_DRAM0_PMS_CONSTRAIN_LOCK_R = crate::BitReader<bool>;
+pub type CORE_X_DRAM0_PMS_CONSTRAIN_LOCK_R = crate::BitReader;
 #[doc = "Field `CORE_X_DRAM0_PMS_CONSTRAIN_LOCK` writer - Set 1 to lock corex dram0 permission configuration register"]
 pub type CORE_X_DRAM0_PMS_CONSTRAIN_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock corex dram0 permission configuration register"]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_lock(&self) -> CORE_X_DRAM0_PMS_CONSTRAIN_LOCK_R {
         CORE_X_DRAM0_PMS_CONSTRAIN_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_DRAM0_PMS_CONSTRAIN_0")
+            .field(
+                "core_x_dram0_pms_constrain_lock",
+                &format_args!("{}", self.core_x_dram0_pms_constrain_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_DRAM0_PMS_CONSTRAIN_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

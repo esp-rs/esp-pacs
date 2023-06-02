@@ -38,12 +38,29 @@ impl From<crate::W<SLCHOSTDATE_SPEC>> for W {
 pub type SLCHOST_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLCHOST_DATE` writer - *******Description***********"]
 pub type SLCHOST_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLCHOSTDATE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, SLCHOSTDATE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
     pub fn slchost_date(&self) -> SLCHOST_DATE_R {
         SLCHOST_DATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLCHOSTDATE")
+            .field(
+                "slchost_date",
+                &format_args!("{}", self.slchost_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLCHOSTDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

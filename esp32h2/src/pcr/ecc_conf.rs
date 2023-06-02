@@ -35,15 +35,15 @@ impl From<crate::W<ECC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_CLK_EN` reader - Set 1 to enable ecc clock"]
-pub type ECC_CLK_EN_R = crate::BitReader<bool>;
+pub type ECC_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ECC_CLK_EN` writer - Set 1 to enable ecc clock"]
-pub type ECC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECC_CONF_SPEC, bool, O>;
+pub type ECC_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, ECC_CONF_SPEC, O>;
 #[doc = "Field `ECC_RST_EN` reader - Set 0 to reset ecc module"]
-pub type ECC_RST_EN_R = crate::BitReader<bool>;
+pub type ECC_RST_EN_R = crate::BitReader;
 #[doc = "Field `ECC_RST_EN` writer - Set 0 to reset ecc module"]
-pub type ECC_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ECC_CONF_SPEC, bool, O>;
+pub type ECC_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, ECC_CONF_SPEC, O>;
 #[doc = "Field `ECC_READY` reader - Query this field after reset ecc module"]
-pub type ECC_READY_R = crate::BitReader<bool>;
+pub type ECC_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable ecc clock"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn ecc_ready(&self) -> ECC_READY_R {
         ECC_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ECC_CONF")
+            .field("ecc_clk_en", &format_args!("{}", self.ecc_clk_en().bit()))
+            .field("ecc_rst_en", &format_args!("{}", self.ecc_rst_en().bit()))
+            .field("ecc_ready", &format_args!("{}", self.ecc_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ECC_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,17 +35,17 @@ impl From<crate::W<DOEPTSIZ6_SPEC>> for W {
     }
 }
 #[doc = "Field `XFERSIZE6` reader - "]
-pub type XFERSIZE6_R = crate::FieldReader<u8, u8>;
+pub type XFERSIZE6_R = crate::FieldReader;
 #[doc = "Field `XFERSIZE6` writer - "]
-pub type XFERSIZE6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEPTSIZ6_SPEC, u8, u8, 7, O>;
+pub type XFERSIZE6_W<'a, const O: u8> = crate::FieldWriter<'a, DOEPTSIZ6_SPEC, 7, O>;
 #[doc = "Field `PKTCNT6` reader - "]
-pub type PKTCNT6_R = crate::BitReader<bool>;
+pub type PKTCNT6_R = crate::BitReader;
 #[doc = "Field `PKTCNT6` writer - "]
-pub type PKTCNT6_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPTSIZ6_SPEC, bool, O>;
+pub type PKTCNT6_W<'a, const O: u8> = crate::BitWriter<'a, DOEPTSIZ6_SPEC, O>;
 #[doc = "Field `SUPCNT6` reader - "]
-pub type SUPCNT6_R = crate::FieldReader<u8, u8>;
+pub type SUPCNT6_R = crate::FieldReader;
 #[doc = "Field `SUPCNT6` writer - "]
-pub type SUPCNT6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DOEPTSIZ6_SPEC, u8, u8, 2, O>;
+pub type SUPCNT6_W<'a, const O: u8> = crate::FieldWriter<'a, DOEPTSIZ6_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -61,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn supcnt6(&self) -> SUPCNT6_R {
         SUPCNT6_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPTSIZ6")
+            .field("xfersize6", &format_args!("{}", self.xfersize6().bits()))
+            .field("pktcnt6", &format_args!("{}", self.pktcnt6().bit()))
+            .field("supcnt6", &format_args!("{}", self.supcnt6().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

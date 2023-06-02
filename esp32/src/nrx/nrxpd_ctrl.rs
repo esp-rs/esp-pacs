@@ -35,37 +35,37 @@ impl From<crate::W<NRXPD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DEMAP_FORCE_PD` reader - "]
-pub type DEMAP_FORCE_PD_R = crate::BitReader<bool>;
+pub type DEMAP_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `DEMAP_FORCE_PD` writer - "]
-pub type DEMAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type DEMAP_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `DEMAP_FORCE_PU` reader - "]
-pub type DEMAP_FORCE_PU_R = crate::BitReader<bool>;
+pub type DEMAP_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `DEMAP_FORCE_PU` writer - "]
-pub type DEMAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type DEMAP_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `VIT_FORCE_PD` reader - "]
-pub type VIT_FORCE_PD_R = crate::BitReader<bool>;
+pub type VIT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `VIT_FORCE_PD` writer - "]
-pub type VIT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type VIT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `VIT_FORCE_PU` reader - "]
-pub type VIT_FORCE_PU_R = crate::BitReader<bool>;
+pub type VIT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `VIT_FORCE_PU` writer - "]
-pub type VIT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type VIT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `RX_ROT_FORCE_PD` reader - "]
-pub type RX_ROT_FORCE_PD_R = crate::BitReader<bool>;
+pub type RX_ROT_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `RX_ROT_FORCE_PD` writer - "]
-pub type RX_ROT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type RX_ROT_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `RX_ROT_FORCE_PU` reader - "]
-pub type RX_ROT_FORCE_PU_R = crate::BitReader<bool>;
+pub type RX_ROT_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `RX_ROT_FORCE_PU` writer - "]
-pub type RX_ROT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type RX_ROT_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `CHAN_EST_FORCE_PD` reader - "]
-pub type CHAN_EST_FORCE_PD_R = crate::BitReader<bool>;
+pub type CHAN_EST_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CHAN_EST_FORCE_PD` writer - "]
-pub type CHAN_EST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type CHAN_EST_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 #[doc = "Field `CHAN_EST_FORCE_PU` reader - "]
-pub type CHAN_EST_FORCE_PU_R = crate::BitReader<bool>;
+pub type CHAN_EST_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CHAN_EST_FORCE_PU` writer - "]
-pub type CHAN_EST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, NRXPD_CTRL_SPEC, bool, O>;
+pub type CHAN_EST_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, NRXPD_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -106,6 +106,51 @@ impl R {
     #[inline(always)]
     pub fn chan_est_force_pu(&self) -> CHAN_EST_FORCE_PU_R {
         CHAN_EST_FORCE_PU_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("NRXPD_CTRL")
+            .field(
+                "demap_force_pd",
+                &format_args!("{}", self.demap_force_pd().bit()),
+            )
+            .field(
+                "demap_force_pu",
+                &format_args!("{}", self.demap_force_pu().bit()),
+            )
+            .field(
+                "vit_force_pd",
+                &format_args!("{}", self.vit_force_pd().bit()),
+            )
+            .field(
+                "vit_force_pu",
+                &format_args!("{}", self.vit_force_pu().bit()),
+            )
+            .field(
+                "rx_rot_force_pd",
+                &format_args!("{}", self.rx_rot_force_pd().bit()),
+            )
+            .field(
+                "rx_rot_force_pu",
+                &format_args!("{}", self.rx_rot_force_pu().bit()),
+            )
+            .field(
+                "chan_est_force_pd",
+                &format_args!("{}", self.chan_est_force_pd().bit()),
+            )
+            .field(
+                "chan_est_force_pu",
+                &format_args!("{}", self.chan_est_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<NRXPD_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

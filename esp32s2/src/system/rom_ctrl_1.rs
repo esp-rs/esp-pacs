@@ -35,15 +35,13 @@ impl From<crate::W<ROM_CTRL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_FORCE_PD` reader - This field is used to power down internal ROM."]
-pub type ROM_FORCE_PD_R = crate::FieldReader<u8, u8>;
+pub type ROM_FORCE_PD_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PD` writer - This field is used to power down internal ROM."]
-pub type ROM_FORCE_PD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROM_CTRL_1_SPEC, u8, u8, 2, O>;
+pub type ROM_FORCE_PD_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_CTRL_1_SPEC, 2, O>;
 #[doc = "Field `ROM_FORCE_PU` reader - This field is used to power up internal ROM."]
-pub type ROM_FORCE_PU_R = crate::FieldReader<u8, u8>;
+pub type ROM_FORCE_PU_R = crate::FieldReader;
 #[doc = "Field `ROM_FORCE_PU` writer - This field is used to power up internal ROM."]
-pub type ROM_FORCE_PU_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ROM_CTRL_1_SPEC, u8, u8, 2, O>;
+pub type ROM_FORCE_PU_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_CTRL_1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to power down internal ROM."]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn rom_force_pu(&self) -> ROM_FORCE_PU_R {
         ROM_FORCE_PU_R::new(((self.bits >> 2) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ROM_CTRL_1")
+            .field(
+                "rom_force_pd",
+                &format_args!("{}", self.rom_force_pd().bits()),
+            )
+            .field(
+                "rom_force_pu",
+                &format_args!("{}", self.rom_force_pu().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ROM_CTRL_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

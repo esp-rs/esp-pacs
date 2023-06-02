@@ -37,12 +37,26 @@ impl From<crate::W<DATE_SPEC>> for W {
 #[doc = "Field `DATE` reader - Need add description"]
 pub type DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATE` writer - Need add description"]
-pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, O>;
+pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
         DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATE")
+            .field("date", &format_args!("{}", self.date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

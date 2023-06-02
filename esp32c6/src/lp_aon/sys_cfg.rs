@@ -35,16 +35,33 @@ impl From<crate::W<SYS_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` reader - need_des"]
-pub type FORCE_DOWNLOAD_BOOT_R = crate::BitReader<bool>;
+pub type FORCE_DOWNLOAD_BOOT_R = crate::BitReader;
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` writer - need_des"]
-pub type FORCE_DOWNLOAD_BOOT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CFG_SPEC, bool, O>;
+pub type FORCE_DOWNLOAD_BOOT_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CFG_SPEC, O>;
 #[doc = "Field `HPSYS_SW_RESET` writer - need_des"]
-pub type HPSYS_SW_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYS_CFG_SPEC, bool, O>;
+pub type HPSYS_SW_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SYS_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     pub fn force_download_boot(&self) -> FORCE_DOWNLOAD_BOOT_R {
         FORCE_DOWNLOAD_BOOT_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYS_CFG")
+            .field(
+                "force_download_boot",
+                &format_args!("{}", self.force_download_boot().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYS_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

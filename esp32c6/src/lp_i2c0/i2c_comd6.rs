@@ -37,12 +37,11 @@ impl From<crate::W<I2C_COMD6_SPEC>> for W {
 #[doc = "Field `I2C_COMMAND6` reader - This is the content of command 6. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
 pub type I2C_COMMAND6_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_COMMAND6` writer - This is the content of command 6. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type I2C_COMMAND6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, I2C_COMD6_SPEC, u16, u16, 14, O>;
+pub type I2C_COMMAND6_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_COMD6_SPEC, 14, O, u16, u16>;
 #[doc = "Field `I2C_COMMAND6_DONE` reader - When command 6 is done in I2C Master mode, this bit changes to high level."]
-pub type I2C_COMMAND6_DONE_R = crate::BitReader<bool>;
+pub type I2C_COMMAND6_DONE_R = crate::BitReader;
 #[doc = "Field `I2C_COMMAND6_DONE` writer - When command 6 is done in I2C Master mode, this bit changes to high level."]
-pub type I2C_COMMAND6_DONE_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_COMD6_SPEC, bool, O>;
+pub type I2C_COMMAND6_DONE_W<'a, const O: u8> = crate::BitWriter<'a, I2C_COMD6_SPEC, O>;
 impl R {
     #[doc = "Bits 0:13 - This is the content of command 6. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn i2c_command6_done(&self) -> I2C_COMMAND6_DONE_R {
         I2C_COMMAND6_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_COMD6")
+            .field(
+                "i2c_command6",
+                &format_args!("{}", self.i2c_command6().bits()),
+            )
+            .field(
+                "i2c_command6_done",
+                &format_args!("{}", self.i2c_command6_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2C_COMD6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

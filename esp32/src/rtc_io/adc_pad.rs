@@ -35,53 +35,53 @@ impl From<crate::W<ADC_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_FUN_IE` reader - the input enable of the pad"]
-pub type ADC2_FUN_IE_R = crate::BitReader<bool>;
+pub type ADC2_FUN_IE_R = crate::BitReader;
 #[doc = "Field `ADC2_FUN_IE` writer - the input enable of the pad"]
-pub type ADC2_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC2_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type ADC2_SLP_IE_R = crate::BitReader<bool>;
+pub type ADC2_SLP_IE_R = crate::BitReader;
 #[doc = "Field `ADC2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type ADC2_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC2_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type ADC2_SLP_SEL_R = crate::BitReader<bool>;
+pub type ADC2_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `ADC2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type ADC2_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC2_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type ADC2_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type ADC2_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `ADC2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type ADC2_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADC_PAD_SPEC, u8, u8, 2, O>;
+pub type ADC2_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, ADC_PAD_SPEC, 2, O>;
 #[doc = "Field `ADC1_FUN_IE` reader - the input enable of the pad"]
-pub type ADC1_FUN_IE_R = crate::BitReader<bool>;
+pub type ADC1_FUN_IE_R = crate::BitReader;
 #[doc = "Field `ADC1_FUN_IE` writer - the input enable of the pad"]
-pub type ADC1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub type ADC1_SLP_IE_R = crate::BitReader<bool>;
+pub type ADC1_SLP_IE_R = crate::BitReader;
 #[doc = "Field `ADC1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub type ADC1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub type ADC1_SLP_SEL_R = crate::BitReader<bool>;
+pub type ADC1_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `ADC1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub type ADC1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub type ADC1_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type ADC1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `ADC1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub type ADC1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADC_PAD_SPEC, u8, u8, 2, O>;
+pub type ADC1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, ADC_PAD_SPEC, 2, O>;
 #[doc = "Field `ADC2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC2_MUX_SEL_R = crate::BitReader<bool>;
+pub type ADC2_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `ADC2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC2_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC1_MUX_SEL_R = crate::BitReader<bool>;
+pub type ADC1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `ADC1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub type ADC1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC2_HOLD_R = crate::BitReader<bool>;
+pub type ADC2_HOLD_R = crate::BitReader;
 #[doc = "Field `ADC2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC2_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 #[doc = "Field `ADC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC1_HOLD_R = crate::BitReader<bool>;
+pub type ADC1_HOLD_R = crate::BitReader;
 #[doc = "Field `ADC1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub type ADC1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, O>;
+pub type ADC1_HOLD_W<'a, const O: u8> = crate::BitWriter<'a, ADC_PAD_SPEC, O>;
 impl R {
     #[doc = "Bit 18 - the input enable of the pad"]
     #[inline(always)]
@@ -142,6 +142,49 @@ impl R {
     #[inline(always)]
     pub fn adc1_hold(&self) -> ADC1_HOLD_R {
         ADC1_HOLD_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ADC_PAD")
+            .field("adc2_fun_ie", &format_args!("{}", self.adc2_fun_ie().bit()))
+            .field("adc2_slp_ie", &format_args!("{}", self.adc2_slp_ie().bit()))
+            .field(
+                "adc2_slp_sel",
+                &format_args!("{}", self.adc2_slp_sel().bit()),
+            )
+            .field(
+                "adc2_fun_sel",
+                &format_args!("{}", self.adc2_fun_sel().bits()),
+            )
+            .field("adc1_fun_ie", &format_args!("{}", self.adc1_fun_ie().bit()))
+            .field("adc1_slp_ie", &format_args!("{}", self.adc1_slp_ie().bit()))
+            .field(
+                "adc1_slp_sel",
+                &format_args!("{}", self.adc1_slp_sel().bit()),
+            )
+            .field(
+                "adc1_fun_sel",
+                &format_args!("{}", self.adc1_fun_sel().bits()),
+            )
+            .field(
+                "adc2_mux_sel",
+                &format_args!("{}", self.adc2_mux_sel().bit()),
+            )
+            .field(
+                "adc1_mux_sel",
+                &format_args!("{}", self.adc1_mux_sel().bit()),
+            )
+            .field("adc2_hold", &format_args!("{}", self.adc2_hold().bit()))
+            .field("adc1_hold", &format_args!("{}", self.adc1_hold().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ADC_PAD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

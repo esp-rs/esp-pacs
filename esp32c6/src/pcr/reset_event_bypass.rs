@@ -35,14 +35,13 @@ impl From<crate::W<RESET_EVENT_BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `APM` reader - This field is used to control reset event relationship for tee_reg/apm_reg/hp_system_reg. 1: tee_reg/apm_reg/hp_system_reg will only be reset by power-reset. some reset event will be bypass. 0: tee_reg/apm_reg/hp_system_reg will not only be reset by power-reset, but also some reset event."]
-pub type APM_R = crate::BitReader<bool>;
+pub type APM_R = crate::BitReader;
 #[doc = "Field `APM` writer - This field is used to control reset event relationship for tee_reg/apm_reg/hp_system_reg. 1: tee_reg/apm_reg/hp_system_reg will only be reset by power-reset. some reset event will be bypass. 0: tee_reg/apm_reg/hp_system_reg will not only be reset by power-reset, but also some reset event."]
-pub type APM_W<'a, const O: u8> = crate::BitWriter<'a, u32, RESET_EVENT_BYPASS_SPEC, bool, O>;
+pub type APM_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EVENT_BYPASS_SPEC, O>;
 #[doc = "Field `RESET_EVENT_BYPASS` reader - This field is used to control reset event relationship for system-bus. 1: system bus (including arbiter/router) will only be reset by power-reset. some reset event will be bypass. 0: system bus (including arbiter/router) will not only be reset by power-reset, but also some reset event."]
-pub type RESET_EVENT_BYPASS_R = crate::BitReader<bool>;
+pub type RESET_EVENT_BYPASS_R = crate::BitReader;
 #[doc = "Field `RESET_EVENT_BYPASS` writer - This field is used to control reset event relationship for system-bus. 1: system bus (including arbiter/router) will only be reset by power-reset. some reset event will be bypass. 0: system bus (including arbiter/router) will not only be reset by power-reset, but also some reset event."]
-pub type RESET_EVENT_BYPASS_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, RESET_EVENT_BYPASS_SPEC, bool, O>;
+pub type RESET_EVENT_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, RESET_EVENT_BYPASS_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This field is used to control reset event relationship for tee_reg/apm_reg/hp_system_reg. 1: tee_reg/apm_reg/hp_system_reg will only be reset by power-reset. some reset event will be bypass. 0: tee_reg/apm_reg/hp_system_reg will not only be reset by power-reset, but also some reset event."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn reset_event_bypass(&self) -> RESET_EVENT_BYPASS_R {
         RESET_EVENT_BYPASS_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RESET_EVENT_BYPASS")
+            .field("apm", &format_args!("{}", self.apm().bit()))
+            .field(
+                "reset_event_bypass",
+                &format_args!("{}", self.reset_event_bypass().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RESET_EVENT_BYPASS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,11 @@ impl From<crate::W<GPIO_ENABLE_SPEC>> for W {
 pub type GPIO_ENABLE_DATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `GPIO_ENABLE_DATA` writer - The output enable register."]
 pub type GPIO_ENABLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_ENABLE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, GPIO_ENABLE_SPEC, 16, O, u16, u16>;
 #[doc = "Field `GPIO_SDIO_SEL` reader - SDIO-dis selection register"]
-pub type GPIO_SDIO_SEL_R = crate::FieldReader<u8, u8>;
+pub type GPIO_SDIO_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_SDIO_SEL` writer - SDIO-dis selection register"]
-pub type GPIO_SDIO_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_ENABLE_SPEC, u8, u8, 6, O>;
+pub type GPIO_SDIO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_ENABLE_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:15 - The output enable register."]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn gpio_sdio_sel(&self) -> GPIO_SDIO_SEL_R {
         GPIO_SDIO_SEL_R::new(((self.bits >> 16) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_ENABLE")
+            .field(
+                "gpio_sdio_sel",
+                &format_args!("{}", self.gpio_sdio_sel().bits()),
+            )
+            .field(
+                "gpio_enable_data",
+                &format_args!("{}", self.gpio_enable_data().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_ENABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

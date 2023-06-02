@@ -35,31 +35,29 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SIZE` reader - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
-pub type RX_SIZE_R = crate::FieldReader<u8, u8>;
+pub type RX_SIZE_R = crate::FieldReader;
 #[doc = "Field `RX_SIZE` writer - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
-pub type RX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type RX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `TX_SIZE` reader - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
-pub type TX_SIZE_R = crate::FieldReader<u8, u8>;
+pub type TX_SIZE_R = crate::FieldReader;
 #[doc = "Field `TX_SIZE` writer - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
-pub type TX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u8, u8, 3, O>;
+pub type TX_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 3, O>;
 #[doc = "Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
 pub type RX_FLOW_THRHD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_FLOW_THRHD` writer - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
-pub type RX_FLOW_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u16, u16, 10, O>;
+pub type RX_FLOW_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
 pub type RX_TOUT_THRHD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
-pub type RX_TOUT_THRHD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MEM_CONF_SPEC, u16, u16, 10, O>;
+pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory."]
-pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory."]
-pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 #[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory."]
-pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
+pub type MEM_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory."]
-pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, O>;
+pub type MEM_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, MEM_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
     #[inline(always)]
@@ -90,6 +88,37 @@ impl R {
     #[inline(always)]
     pub fn mem_force_pu(&self) -> MEM_FORCE_PU_R {
         MEM_FORCE_PU_R::new(((self.bits >> 28) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MEM_CONF")
+            .field("rx_size", &format_args!("{}", self.rx_size().bits()))
+            .field("tx_size", &format_args!("{}", self.tx_size().bits()))
+            .field(
+                "rx_flow_thrhd",
+                &format_args!("{}", self.rx_flow_thrhd().bits()),
+            )
+            .field(
+                "rx_tout_thrhd",
+                &format_args!("{}", self.rx_tout_thrhd().bits()),
+            )
+            .field(
+                "mem_force_pd",
+                &format_args!("{}", self.mem_force_pd().bit()),
+            )
+            .field(
+                "mem_force_pu",
+                &format_args!("{}", self.mem_force_pu().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

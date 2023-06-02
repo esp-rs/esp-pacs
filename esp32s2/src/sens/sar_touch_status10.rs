@@ -16,7 +16,7 @@ impl From<crate::R<SAR_TOUCH_STATUS10_SPEC>> for R {
 #[doc = "Field `TOUCH_PAD10_DATA` reader - The data of touch pad 10, depending on the setting of SENS_TOUCH_DATA_SEL."]
 pub type TOUCH_PAD10_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_PAD10_DEBOUNCE` reader - Touch pad 10 debounce value."]
-pub type TOUCH_PAD10_DEBOUNCE_R = crate::FieldReader<u8, u8>;
+pub type TOUCH_PAD10_DEBOUNCE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:21 - The data of touch pad 10, depending on the setting of SENS_TOUCH_DATA_SEL."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn touch_pad10_debounce(&self) -> TOUCH_PAD10_DEBOUNCE_R {
         TOUCH_PAD10_DEBOUNCE_R::new(((self.bits >> 29) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_STATUS10")
+            .field(
+                "touch_pad10_data",
+                &format_args!("{}", self.touch_pad10_data().bits()),
+            )
+            .field(
+                "touch_pad10_debounce",
+                &format_args!("{}", self.touch_pad10_debounce().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS10_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Touch pad 10 status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sar_touch_status10](index.html) module"]

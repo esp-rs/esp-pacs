@@ -35,34 +35,33 @@ impl From<crate::W<RS485_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RS485_EN` reader - Set this bit to choose rs485 mode."]
-pub type RS485_EN_R = crate::BitReader<bool>;
+pub type RS485_EN_R = crate::BitReader;
 #[doc = "Field `RS485_EN` writer - Set this bit to choose rs485 mode."]
-pub type RS485_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type RS485_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub type DL0_EN_R = crate::BitReader<bool>;
+pub type DL0_EN_R = crate::BitReader;
 #[doc = "Field `DL0_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type DL0_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub type DL1_EN_R = crate::BitReader<bool>;
+pub type DL1_EN_R = crate::BitReader;
 #[doc = "Field `DL1_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub type DL1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type DL1_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `RS485TX_RX_EN` reader - Set this bit to enable loopback transmitter's output data signal to receiver's input data signal."]
-pub type RS485TX_RX_EN_R = crate::BitReader<bool>;
+pub type RS485TX_RX_EN_R = crate::BitReader;
 #[doc = "Field `RS485TX_RX_EN` writer - Set this bit to enable loopback transmitter's output data signal to receiver's input data signal."]
-pub type RS485TX_RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type RS485TX_RX_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `RS485RXBY_TX_EN` reader - 1: enable rs485's transmitter to send data when rs485's receiver is busy. 0:rs485's transmitter should not send data when its receiver is busy."]
-pub type RS485RXBY_TX_EN_R = crate::BitReader<bool>;
+pub type RS485RXBY_TX_EN_R = crate::BitReader;
 #[doc = "Field `RS485RXBY_TX_EN` writer - 1: enable rs485's transmitter to send data when rs485's receiver is busy. 0:rs485's transmitter should not send data when its receiver is busy."]
-pub type RS485RXBY_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type RS485RXBY_TX_EN_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `RS485_RX_DLY_NUM` reader - This register is used to delay the receiver's internal data signal."]
-pub type RS485_RX_DLY_NUM_R = crate::BitReader<bool>;
+pub type RS485_RX_DLY_NUM_R = crate::BitReader;
 #[doc = "Field `RS485_RX_DLY_NUM` writer - This register is used to delay the receiver's internal data signal."]
-pub type RS485_RX_DLY_NUM_W<'a, const O: u8> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, O>;
+pub type RS485_RX_DLY_NUM_W<'a, const O: u8> = crate::BitWriter<'a, RS485_CONF_SPEC, O>;
 #[doc = "Field `RS485_TX_DLY_NUM` reader - This register is used to delay the transmitter's internal data signal."]
-pub type RS485_TX_DLY_NUM_R = crate::FieldReader<u8, u8>;
+pub type RS485_TX_DLY_NUM_R = crate::FieldReader;
 #[doc = "Field `RS485_TX_DLY_NUM` writer - This register is used to delay the transmitter's internal data signal."]
-pub type RS485_TX_DLY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RS485_CONF_SPEC, u8, u8, 4, O>;
+pub type RS485_TX_DLY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RS485_CONF_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to choose rs485 mode."]
     #[inline(always)]
@@ -98,6 +97,38 @@ impl R {
     #[inline(always)]
     pub fn rs485_tx_dly_num(&self) -> RS485_TX_DLY_NUM_R {
         RS485_TX_DLY_NUM_R::new(((self.bits >> 6) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RS485_CONF")
+            .field("rs485_en", &format_args!("{}", self.rs485_en().bit()))
+            .field("dl0_en", &format_args!("{}", self.dl0_en().bit()))
+            .field("dl1_en", &format_args!("{}", self.dl1_en().bit()))
+            .field(
+                "rs485tx_rx_en",
+                &format_args!("{}", self.rs485tx_rx_en().bit()),
+            )
+            .field(
+                "rs485rxby_tx_en",
+                &format_args!("{}", self.rs485rxby_tx_en().bit()),
+            )
+            .field(
+                "rs485_rx_dly_num",
+                &format_args!("{}", self.rs485_rx_dly_num().bit()),
+            )
+            .field(
+                "rs485_tx_dly_num",
+                &format_args!("{}", self.rs485_tx_dly_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RS485_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,31 @@ impl From<crate::W<FORCE_ACC_HP_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_AON_FORCE_ACC_HPMEM_EN` reader - need_des"]
-pub type LP_AON_FORCE_ACC_HPMEM_EN_R = crate::BitReader<bool>;
+pub type LP_AON_FORCE_ACC_HPMEM_EN_R = crate::BitReader;
 #[doc = "Field `LP_AON_FORCE_ACC_HPMEM_EN` writer - need_des"]
-pub type LP_AON_FORCE_ACC_HPMEM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, FORCE_ACC_HP_SPEC, bool, O>;
+pub type LP_AON_FORCE_ACC_HPMEM_EN_W<'a, const O: u8> = crate::BitWriter<'a, FORCE_ACC_HP_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
     pub fn lp_aon_force_acc_hpmem_en(&self) -> LP_AON_FORCE_ACC_HPMEM_EN_R {
         LP_AON_FORCE_ACC_HPMEM_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FORCE_ACC_HP")
+            .field(
+                "lp_aon_force_acc_hpmem_en",
+                &format_args!("{}", self.lp_aon_force_acc_hpmem_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FORCE_ACC_HP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,41 +35,41 @@ impl From<crate::W<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_ICACHE0_PLD_DONE_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache0 preload-operation. If preload operation is done, interrupt occurs."]
-pub type L1_ICACHE0_PLD_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_DONE_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache1 preload-operation. If preload operation is done, interrupt occurs."]
-pub type L1_ICACHE1_PLD_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_DONE_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE2_PLD_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_DONE_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE3_PLD_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_ENA` reader - The bit is used to enable interrupt of L1-Cache preload-operation. If preload operation is done, interrupt occurs."]
-pub type L1_CACHE_PLD_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_CACHE_PLD_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_DONE_INT_ENA` writer - The bit is used to enable interrupt of L1-Cache preload-operation. If preload operation is done, interrupt occurs."]
 pub type L1_CACHE_PLD_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, O>;
 #[doc = "Field `CACHE_SYNC_DONE_INT_ENA` reader - The bit is used to enable interrupt of Cache sync-operation done."]
-pub type CACHE_SYNC_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type CACHE_SYNC_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_DONE_INT_ENA` writer - The bit is used to enable interrupt of Cache sync-operation done."]
 pub type CACHE_SYNC_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, O>;
 #[doc = "Field `L1_ICACHE0_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache0 preload-operation error."]
-pub type L1_ICACHE0_PLD_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE0_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE1_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-ICache1 preload-operation error."]
-pub type L1_ICACHE1_PLD_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE1_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE2_PLD_ERR_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE2_PLD_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE2_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_ICACHE3_PLD_ERR_INT_ENA` reader - Reserved"]
-pub type L1_ICACHE3_PLD_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_ICACHE3_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_ENA` reader - The bit is used to enable interrupt of L1-Cache preload-operation error."]
-pub type L1_CACHE_PLD_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type L1_CACHE_PLD_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `L1_CACHE_PLD_ERR_INT_ENA` writer - The bit is used to enable interrupt of L1-Cache preload-operation error."]
 pub type L1_CACHE_PLD_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, O>;
 #[doc = "Field `CACHE_SYNC_ERR_INT_ENA` reader - The bit is used to enable interrupt of Cache sync-operation error."]
-pub type CACHE_SYNC_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type CACHE_SYNC_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `CACHE_SYNC_ERR_INT_ENA` writer - The bit is used to enable interrupt of Cache sync-operation error."]
 pub type CACHE_SYNC_ERR_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable interrupt of L1-ICache0 preload-operation. If preload operation is done, interrupt occurs."]
     #[inline(always)]
@@ -130,6 +130,67 @@ impl R {
     #[inline(always)]
     pub fn cache_sync_err_int_ena(&self) -> CACHE_SYNC_ERR_INT_ENA_R {
         CACHE_SYNC_ERR_INT_ENA_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L1_CACHE_SYNC_PRELOAD_INT_ENA")
+            .field(
+                "l1_icache0_pld_done_int_ena",
+                &format_args!("{}", self.l1_icache0_pld_done_int_ena().bit()),
+            )
+            .field(
+                "l1_icache1_pld_done_int_ena",
+                &format_args!("{}", self.l1_icache1_pld_done_int_ena().bit()),
+            )
+            .field(
+                "l1_icache2_pld_done_int_ena",
+                &format_args!("{}", self.l1_icache2_pld_done_int_ena().bit()),
+            )
+            .field(
+                "l1_icache3_pld_done_int_ena",
+                &format_args!("{}", self.l1_icache3_pld_done_int_ena().bit()),
+            )
+            .field(
+                "l1_cache_pld_done_int_ena",
+                &format_args!("{}", self.l1_cache_pld_done_int_ena().bit()),
+            )
+            .field(
+                "cache_sync_done_int_ena",
+                &format_args!("{}", self.cache_sync_done_int_ena().bit()),
+            )
+            .field(
+                "l1_icache0_pld_err_int_ena",
+                &format_args!("{}", self.l1_icache0_pld_err_int_ena().bit()),
+            )
+            .field(
+                "l1_icache1_pld_err_int_ena",
+                &format_args!("{}", self.l1_icache1_pld_err_int_ena().bit()),
+            )
+            .field(
+                "l1_icache2_pld_err_int_ena",
+                &format_args!("{}", self.l1_icache2_pld_err_int_ena().bit()),
+            )
+            .field(
+                "l1_icache3_pld_err_int_ena",
+                &format_args!("{}", self.l1_icache3_pld_err_int_ena().bit()),
+            )
+            .field(
+                "l1_cache_pld_err_int_ena",
+                &format_args!("{}", self.l1_cache_pld_err_int_ena().bit()),
+            )
+            .field(
+                "cache_sync_err_int_ena",
+                &format_args!("{}", self.cache_sync_err_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

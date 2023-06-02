@@ -35,14 +35,28 @@ impl From<crate::W<T0UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `UPDATE` reader - t0_update"]
-pub type UPDATE_R = crate::BitReader<bool>;
+pub type UPDATE_R = crate::BitReader;
 #[doc = "Field `UPDATE` writer - t0_update"]
-pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0UPDATE_SPEC, bool, O>;
+pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, T0UPDATE_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - t0_update"]
     #[inline(always)]
     pub fn update(&self) -> UPDATE_R {
         UPDATE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T0UPDATE")
+            .field("update", &format_args!("{}", self.update().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T0UPDATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

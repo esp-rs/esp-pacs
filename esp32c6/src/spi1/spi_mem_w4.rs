@@ -37,13 +37,29 @@ impl From<crate::W<SPI_MEM_W4_SPEC>> for W {
 #[doc = "Field `SPI_MEM_BUF4` reader - data buffer"]
 pub type SPI_MEM_BUF4_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MEM_BUF4` writer - data buffer"]
-pub type SPI_MEM_BUF4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_MEM_W4_SPEC, u32, u32, 32, O>;
+pub type SPI_MEM_BUF4_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_W4_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     pub fn spi_mem_buf4(&self) -> SPI_MEM_BUF4_R {
         SPI_MEM_BUF4_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_W4")
+            .field(
+                "spi_mem_buf4",
+                &format_args!("{}", self.spi_mem_buf4().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_W4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,53 +35,53 @@ impl From<crate::W<GEN0_B_SPEC>> for W {
     }
 }
 #[doc = "Field `UTEZ` reader - Action on PWM0B triggered by event TEZ when timer increasing"]
-pub type UTEZ_R = crate::FieldReader<u8, u8>;
+pub type UTEZ_R = crate::FieldReader;
 #[doc = "Field `UTEZ` writer - Action on PWM0B triggered by event TEZ when timer increasing"]
-pub type UTEZ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UTEZ_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `UTEP` reader - Action on PWM0B triggered by event TEP when timer increasing"]
-pub type UTEP_R = crate::FieldReader<u8, u8>;
+pub type UTEP_R = crate::FieldReader;
 #[doc = "Field `UTEP` writer - Action on PWM0B triggered by event TEP when timer increasing"]
-pub type UTEP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UTEP_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `UTEA` reader - Action on PWM0B triggered by event TEA when timer increasing"]
-pub type UTEA_R = crate::FieldReader<u8, u8>;
+pub type UTEA_R = crate::FieldReader;
 #[doc = "Field `UTEA` writer - Action on PWM0B triggered by event TEA when timer increasing"]
-pub type UTEA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UTEA_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `UTEB` reader - Action on PWM0B triggered by event TEB when timer increasing"]
-pub type UTEB_R = crate::FieldReader<u8, u8>;
+pub type UTEB_R = crate::FieldReader;
 #[doc = "Field `UTEB` writer - Action on PWM0B triggered by event TEB when timer increasing"]
-pub type UTEB_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UTEB_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `UT0` reader - Action on PWM0B triggered by event_t0 when timer increasing"]
-pub type UT0_R = crate::FieldReader<u8, u8>;
+pub type UT0_R = crate::FieldReader;
 #[doc = "Field `UT0` writer - Action on PWM0B triggered by event_t0 when timer increasing"]
-pub type UT0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UT0_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `UT1` reader - Action on PWM0B triggered by event_t1 when timer increasing"]
-pub type UT1_R = crate::FieldReader<u8, u8>;
+pub type UT1_R = crate::FieldReader;
 #[doc = "Field `UT1` writer - Action on PWM0B triggered by event_t1 when timer increasing"]
-pub type UT1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type UT1_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DTEZ` reader - Action on PWM0B triggered by event TEZ when timer decreasing"]
-pub type DTEZ_R = crate::FieldReader<u8, u8>;
+pub type DTEZ_R = crate::FieldReader;
 #[doc = "Field `DTEZ` writer - Action on PWM0B triggered by event TEZ when timer decreasing"]
-pub type DTEZ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DTEZ_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DTEP` reader - Action on PWM0B triggered by event TEP when timer decreasing"]
-pub type DTEP_R = crate::FieldReader<u8, u8>;
+pub type DTEP_R = crate::FieldReader;
 #[doc = "Field `DTEP` writer - Action on PWM0B triggered by event TEP when timer decreasing"]
-pub type DTEP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DTEP_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DTEA` reader - Action on PWM0B triggered by event TEA when timer decreasing"]
-pub type DTEA_R = crate::FieldReader<u8, u8>;
+pub type DTEA_R = crate::FieldReader;
 #[doc = "Field `DTEA` writer - Action on PWM0B triggered by event TEA when timer decreasing"]
-pub type DTEA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DTEA_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DTEB` reader - Action on PWM0B triggered by event TEB when timer decreasing"]
-pub type DTEB_R = crate::FieldReader<u8, u8>;
+pub type DTEB_R = crate::FieldReader;
 #[doc = "Field `DTEB` writer - Action on PWM0B triggered by event TEB when timer decreasing"]
-pub type DTEB_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DTEB_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DT0` reader - Action on PWM0B triggered by event_t0 when timer decreasing"]
-pub type DT0_R = crate::FieldReader<u8, u8>;
+pub type DT0_R = crate::FieldReader;
 #[doc = "Field `DT0` writer - Action on PWM0B triggered by event_t0 when timer decreasing"]
-pub type DT0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DT0_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 #[doc = "Field `DT1` reader - Action on PWM0B triggered by event_t1 when timer decreasing. 0: no change, 1: low, 2: high, 3: toggle"]
-pub type DT1_R = crate::FieldReader<u8, u8>;
+pub type DT1_R = crate::FieldReader;
 #[doc = "Field `DT1` writer - Action on PWM0B triggered by event_t1 when timer decreasing. 0: no change, 1: low, 2: high, 3: toggle"]
-pub type DT1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GEN0_B_SPEC, u8, u8, 2, O>;
+pub type DT1_W<'a, const O: u8> = crate::FieldWriter<'a, GEN0_B_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - Action on PWM0B triggered by event TEZ when timer increasing"]
     #[inline(always)]
@@ -142,6 +142,31 @@ impl R {
     #[inline(always)]
     pub fn dt1(&self) -> DT1_R {
         DT1_R::new(((self.bits >> 22) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GEN0_B")
+            .field("utez", &format_args!("{}", self.utez().bits()))
+            .field("utep", &format_args!("{}", self.utep().bits()))
+            .field("utea", &format_args!("{}", self.utea().bits()))
+            .field("uteb", &format_args!("{}", self.uteb().bits()))
+            .field("ut0", &format_args!("{}", self.ut0().bits()))
+            .field("ut1", &format_args!("{}", self.ut1().bits()))
+            .field("dtez", &format_args!("{}", self.dtez().bits()))
+            .field("dtep", &format_args!("{}", self.dtep().bits()))
+            .field("dtea", &format_args!("{}", self.dtea().bits()))
+            .field("dteb", &format_args!("{}", self.dteb().bits()))
+            .field("dt0", &format_args!("{}", self.dt0().bits()))
+            .field("dt1", &format_args!("{}", self.dt1().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GEN0_B_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

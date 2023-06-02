@@ -38,12 +38,29 @@ impl From<crate::W<SENSITIVE_REG_DATE_SPEC>> for W {
 pub type SENSITIVE_REG_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SENSITIVE_REG_DATE` writer - Need add description"]
 pub type SENSITIVE_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SENSITIVE_REG_DATE_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, SENSITIVE_REG_DATE_SPEC, 28, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]
     pub fn sensitive_reg_date(&self) -> SENSITIVE_REG_DATE_R {
         SENSITIVE_REG_DATE_R::new(self.bits & 0x0fff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SENSITIVE_REG_DATE")
+            .field(
+                "sensitive_reg_date",
+                &format_args!("{}", self.sensitive_reg_date().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SENSITIVE_REG_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

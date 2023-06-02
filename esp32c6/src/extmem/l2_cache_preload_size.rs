@@ -22,6 +22,23 @@ impl R {
         L2_CACHE_PRELOAD_SIZE_R::new((self.bits & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_PRELOAD_SIZE")
+            .field(
+                "l2_cache_preload_size",
+                &format_args!("{}", self.l2_cache_preload_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOAD_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "L2 Cache preload size configure register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_preload_size](index.html) module"]
 pub struct L2_CACHE_PRELOAD_SIZE_SPEC;
 impl crate::RegisterSpec for L2_CACHE_PRELOAD_SIZE_SPEC {

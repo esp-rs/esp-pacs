@@ -35,40 +35,40 @@ impl From<crate::W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2` reader - core_0_pif_pms_constrain_world_1_spi_2"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2` writer - core_0_pif_pms_constrain_world_1_spi_2"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL` reader - core_0_pif_pms_constrain_world_1_apb_ctrl"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL` writer - core_0_pif_pms_constrain_world_1_apb_ctrl"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN` reader - core_0_pif_pms_constrain_world_1_can"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN` writer - core_0_pif_pms_constrain_world_1_can"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1` reader - core_0_pif_pms_constrain_world_1_i2s1"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1` writer - core_0_pif_pms_constrain_world_1_i2s1"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT` reader - core_0_pif_pms_constrain_world_1_rwbt"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT` writer - core_0_pif_pms_constrain_world_1_rwbt"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC` reader - core_0_pif_pms_constrain_world_1_wifimac"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC` writer - core_0_pif_pms_constrain_world_1_wifimac"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR` reader - core_0_pif_pms_constrain_world_1_pwr"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_R = crate::FieldReader;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR` writer - core_0_pif_pms_constrain_world_1_pwr"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_1_spi_2"]
     #[inline(always)]
@@ -110,6 +110,50 @@ impl R {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_pwr(&self) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_R {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_R::new(((self.bits >> 28) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_7")
+            .field(
+                "core_0_pif_pms_constrain_world_1_spi_2",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_spi_2().bits()),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_apb_ctrl",
+                &format_args!(
+                    "{}",
+                    self.core_0_pif_pms_constrain_world_1_apb_ctrl().bits()
+                ),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_can",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_can().bits()),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_i2s1",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_i2s1().bits()),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_rwbt",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_rwbt().bits()),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_wifimac",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_wifimac().bits()),
+            )
+            .field(
+                "core_0_pif_pms_constrain_world_1_pwr",
+                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_pwr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

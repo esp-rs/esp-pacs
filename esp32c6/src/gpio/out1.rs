@@ -35,14 +35,28 @@ impl From<crate::W<OUT1_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_ORIG` reader - GPIO output register for GPIO32-34"]
-pub type DATA_ORIG_R = crate::FieldReader<u8, u8>;
+pub type DATA_ORIG_R = crate::FieldReader;
 #[doc = "Field `DATA_ORIG` writer - GPIO output register for GPIO32-34"]
-pub type DATA_ORIG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, OUT1_SPEC, u8, u8, 3, O>;
+pub type DATA_ORIG_W<'a, const O: u8> = crate::FieldWriter<'a, OUT1_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - GPIO output register for GPIO32-34"]
     #[inline(always)]
     pub fn data_orig(&self) -> DATA_ORIG_R {
         DATA_ORIG_R::new((self.bits & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OUT1")
+            .field("data_orig", &format_args!("{}", self.data_orig().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<OUT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

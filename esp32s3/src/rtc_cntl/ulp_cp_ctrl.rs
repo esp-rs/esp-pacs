@@ -38,32 +38,30 @@ impl From<crate::W<ULP_CP_CTRL_SPEC>> for W {
 pub type ULP_CP_MEM_ADDR_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` writer - No public"]
 pub type ULP_CP_MEM_ADDR_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ULP_CP_CTRL_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` reader - No public"]
 pub type ULP_CP_MEM_ADDR_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` writer - No public"]
 pub type ULP_CP_MEM_ADDR_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, ULP_CP_CTRL_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16, u16>;
 #[doc = "Field `ULP_CP_MEM_OFFST_CLR` writer - No public"]
-pub type ULP_CP_MEM_OFFST_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ULP_CP_CTRL_SPEC, bool, O>;
+pub type ULP_CP_MEM_OFFST_CLR_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 #[doc = "Field `ULP_CP_CLK_FO` reader - ulp coprocessor clk force on"]
-pub type ULP_CP_CLK_FO_R = crate::BitReader<bool>;
+pub type ULP_CP_CLK_FO_R = crate::BitReader;
 #[doc = "Field `ULP_CP_CLK_FO` writer - ulp coprocessor clk force on"]
-pub type ULP_CP_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, ULP_CP_CTRL_SPEC, bool, O>;
+pub type ULP_CP_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 #[doc = "Field `ULP_CP_RESET` reader - ulp coprocessor clk software reset"]
-pub type ULP_CP_RESET_R = crate::BitReader<bool>;
+pub type ULP_CP_RESET_R = crate::BitReader;
 #[doc = "Field `ULP_CP_RESET` writer - ulp coprocessor clk software reset"]
-pub type ULP_CP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ULP_CP_CTRL_SPEC, bool, O>;
+pub type ULP_CP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW"]
-pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader<bool>;
+pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - 1: ULP-coprocessor is started by SW"]
-pub type ULP_CP_FORCE_START_TOP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ULP_CP_CTRL_SPEC, bool, O>;
+pub type ULP_CP_FORCE_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor"]
-pub type ULP_CP_START_TOP_R = crate::BitReader<bool>;
+pub type ULP_CP_START_TOP_R = crate::BitReader;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-coprocessor"]
-pub type ULP_CP_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, ULP_CP_CTRL_SPEC, bool, O>;
+pub type ULP_CP_START_TOP_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:10 - No public"]
     #[inline(always)]
@@ -94,6 +92,43 @@ impl R {
     #[inline(always)]
     pub fn ulp_cp_start_top(&self) -> ULP_CP_START_TOP_R {
         ULP_CP_START_TOP_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ULP_CP_CTRL")
+            .field(
+                "ulp_cp_mem_addr_init",
+                &format_args!("{}", self.ulp_cp_mem_addr_init().bits()),
+            )
+            .field(
+                "ulp_cp_mem_addr_size",
+                &format_args!("{}", self.ulp_cp_mem_addr_size().bits()),
+            )
+            .field(
+                "ulp_cp_clk_fo",
+                &format_args!("{}", self.ulp_cp_clk_fo().bit()),
+            )
+            .field(
+                "ulp_cp_reset",
+                &format_args!("{}", self.ulp_cp_reset().bit()),
+            )
+            .field(
+                "ulp_cp_force_start_top",
+                &format_args!("{}", self.ulp_cp_force_start_top().bit()),
+            )
+            .field(
+                "ulp_cp_start_top",
+                &format_args!("{}", self.ulp_cp_start_top().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ULP_CP_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

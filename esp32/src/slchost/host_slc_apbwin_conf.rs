@@ -38,17 +38,16 @@ impl From<crate::W<HOST_SLC_APBWIN_CONF_SPEC>> for W {
 pub type HOST_SLC_APBWIN_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HOST_SLC_APBWIN_ADDR` writer - "]
 pub type HOST_SLC_APBWIN_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, u32, u32, 28, O>;
+    crate::FieldWriter<'a, HOST_SLC_APBWIN_CONF_SPEC, 28, O, u32, u32>;
 #[doc = "Field `HOST_SLC_APBWIN_WR` reader - "]
-pub type HOST_SLC_APBWIN_WR_R = crate::BitReader<bool>;
+pub type HOST_SLC_APBWIN_WR_R = crate::BitReader;
 #[doc = "Field `HOST_SLC_APBWIN_WR` writer - "]
-pub type HOST_SLC_APBWIN_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, bool, O>;
+pub type HOST_SLC_APBWIN_WR_W<'a, const O: u8> = crate::BitWriter<'a, HOST_SLC_APBWIN_CONF_SPEC, O>;
 #[doc = "Field `HOST_SLC_APBWIN_START` reader - "]
-pub type HOST_SLC_APBWIN_START_R = crate::BitReader<bool>;
+pub type HOST_SLC_APBWIN_START_R = crate::BitReader;
 #[doc = "Field `HOST_SLC_APBWIN_START` writer - "]
 pub type HOST_SLC_APBWIN_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLC_APBWIN_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:27"]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn host_slc_apbwin_start(&self) -> HOST_SLC_APBWIN_START_R {
         HOST_SLC_APBWIN_START_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLC_APBWIN_CONF")
+            .field(
+                "host_slc_apbwin_addr",
+                &format_args!("{}", self.host_slc_apbwin_addr().bits()),
+            )
+            .field(
+                "host_slc_apbwin_wr",
+                &format_args!("{}", self.host_slc_apbwin_wr().bit()),
+            )
+            .field(
+                "host_slc_apbwin_start",
+                &format_args!("{}", self.host_slc_apbwin_start().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLC_APBWIN_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

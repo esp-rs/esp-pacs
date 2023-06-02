@@ -35,20 +35,18 @@ impl From<crate::W<FLASH_SUS_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PER_COMMAND` reader - Program/Erase resume command."]
-pub type FLASH_PER_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PER_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PER_COMMAND` writer - Program/Erase resume command."]
-pub type FLASH_PER_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_SUS_CMD_SPEC, u8, u8, 8, O>;
+pub type FLASH_PER_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 8, O>;
 #[doc = "Field `FLASH_PES_COMMAND` reader - Program/Erase suspend command."]
-pub type FLASH_PES_COMMAND_R = crate::FieldReader<u8, u8>;
+pub type FLASH_PES_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PES_COMMAND` writer - Program/Erase suspend command."]
-pub type FLASH_PES_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_SUS_CMD_SPEC, u8, u8, 8, O>;
+pub type FLASH_PES_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 8, O>;
 #[doc = "Field `WAIT_PESR_COMMAND` reader - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
 pub type WAIT_PESR_COMMAND_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WAIT_PESR_COMMAND` writer - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
 pub type WAIT_PESR_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FLASH_SUS_CMD_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:7 - Program/Erase resume command."]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn wait_pesr_command(&self) -> WAIT_PESR_COMMAND_R {
         WAIT_PESR_COMMAND_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FLASH_SUS_CMD")
+            .field(
+                "flash_per_command",
+                &format_args!("{}", self.flash_per_command().bits()),
+            )
+            .field(
+                "flash_pes_command",
+                &format_args!("{}", self.flash_pes_command().bits()),
+            )
+            .field(
+                "wait_pesr_command",
+                &format_args!("{}", self.wait_pesr_command().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FLASH_SUS_CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

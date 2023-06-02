@@ -37,11 +37,11 @@ impl From<crate::W<HFIR_SPEC>> for W {
 #[doc = "Field `FRINT` reader - "]
 pub type FRINT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FRINT` writer - "]
-pub type FRINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HFIR_SPEC, u16, u16, 16, O>;
+pub type FRINT_W<'a, const O: u8> = crate::FieldWriter<'a, HFIR_SPEC, 16, O, u16, u16>;
 #[doc = "Field `HFIRRLDCTRL` reader - "]
-pub type HFIRRLDCTRL_R = crate::BitReader<bool>;
+pub type HFIRRLDCTRL_R = crate::BitReader;
 #[doc = "Field `HFIRRLDCTRL` writer - "]
-pub type HFIRRLDCTRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HFIR_SPEC, bool, O>;
+pub type HFIRRLDCTRL_W<'a, const O: u8> = crate::BitWriter<'a, HFIR_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn hfirrldctrl(&self) -> HFIRRLDCTRL_R {
         HFIRRLDCTRL_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HFIR")
+            .field("frint", &format_args!("{}", self.frint().bits()))
+            .field("hfirrldctrl", &format_args!("{}", self.hfirrldctrl().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HFIR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

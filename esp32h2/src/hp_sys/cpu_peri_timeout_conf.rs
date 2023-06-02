@@ -38,15 +38,15 @@ impl From<crate::W<CPU_PERI_TIMEOUT_CONF_SPEC>> for W {
 pub type CPU_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CPU_PERI_TIMEOUT_THRES` writer - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
 pub type CPU_PERI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_PERI_TIMEOUT_CONF_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, 16, O, u16, u16>;
 #[doc = "Field `CPU_PERI_TIMEOUT_INT_CLEAR` writer - Set this bit as 1 to clear timeout interrupt"]
 pub type CPU_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PERI_TIMEOUT_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, O>;
 #[doc = "Field `CPU_PERI_TIMEOUT_PROTECT_EN` reader - Set this bit as 1 to enable timeout protection for accessing cpu peripheral registers"]
-pub type CPU_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader<bool>;
+pub type CPU_PERI_TIMEOUT_PROTECT_EN_R = crate::BitReader;
 #[doc = "Field `CPU_PERI_TIMEOUT_PROTECT_EN` writer - Set this bit as 1 to enable timeout protection for accessing cpu peripheral registers"]
 pub type CPU_PERI_TIMEOUT_PROTECT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CPU_PERI_TIMEOUT_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
     #[inline(always)]
@@ -57,6 +57,27 @@ impl R {
     #[inline(always)]
     pub fn cpu_peri_timeout_protect_en(&self) -> CPU_PERI_TIMEOUT_PROTECT_EN_R {
         CPU_PERI_TIMEOUT_PROTECT_EN_R::new(((self.bits >> 17) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_PERI_TIMEOUT_CONF")
+            .field(
+                "cpu_peri_timeout_thres",
+                &format_args!("{}", self.cpu_peri_timeout_thres().bits()),
+            )
+            .field(
+                "cpu_peri_timeout_protect_en",
+                &format_args!("{}", self.cpu_peri_timeout_protect_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_PERI_TIMEOUT_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

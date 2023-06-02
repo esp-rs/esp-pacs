@@ -35,35 +35,35 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CHECK_SUM_EN` reader - Set this bit to enable head checksum check when receiving."]
-pub type CHECK_SUM_EN_R = crate::BitReader<bool>;
+pub type CHECK_SUM_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SUM_EN` writer - Set this bit to enable head checksum check when receiving."]
-pub type CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CHECK_SUM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CHECK_SEQ_EN` reader - Set this bit to enable sequence number check when receiving."]
-pub type CHECK_SEQ_EN_R = crate::BitReader<bool>;
+pub type CHECK_SEQ_EN_R = crate::BitReader;
 #[doc = "Field `CHECK_SEQ_EN` writer - Set this bit to enable sequence number check when receiving."]
-pub type CHECK_SEQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CHECK_SEQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `CRC_DISABLE` reader - Set this bit to support CRC calculation, and data integrity check bit should 1."]
-pub type CRC_DISABLE_R = crate::BitReader<bool>;
+pub type CRC_DISABLE_R = crate::BitReader;
 #[doc = "Field `CRC_DISABLE` writer - Set this bit to support CRC calculation, and data integrity check bit should 1."]
-pub type CRC_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type CRC_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SAVE_HEAD` reader - Set this bit to save data packet head when UHCI receive data."]
-pub type SAVE_HEAD_R = crate::BitReader<bool>;
+pub type SAVE_HEAD_R = crate::BitReader;
 #[doc = "Field `SAVE_HEAD` writer - Set this bit to save data packet head when UHCI receive data."]
-pub type SAVE_HEAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SAVE_HEAD_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to encode data packet with checksum."]
-pub type TX_CHECK_SUM_RE_R = crate::BitReader<bool>;
+pub type TX_CHECK_SUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_CHECK_SUM_RE` writer - Set this bit to encode data packet with checksum."]
-pub type TX_CHECK_SUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_CHECK_SUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to encode data packet with ACK when reliable data packet is ready."]
-pub type TX_ACK_NUM_RE_R = crate::BitReader<bool>;
+pub type TX_ACK_NUM_RE_R = crate::BitReader;
 #[doc = "Field `TX_ACK_NUM_RE` writer - Set this bit to encode data packet with ACK when reliable data packet is ready."]
-pub type TX_ACK_NUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type TX_ACK_NUM_RE_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `WAIT_SW_START` reader - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
-pub type WAIT_SW_START_R = crate::BitReader<bool>;
+pub type WAIT_SW_START_R = crate::BitReader;
 #[doc = "Field `WAIT_SW_START` writer - Set this bit to enable UHCI encoder transfer to ST_SW_WAIT status."]
-pub type WAIT_SW_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type WAIT_SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `SW_START` writer - Set this bit to transmit data packet if UCHI_ENCODE_STATE is ST_SW_WAIT."]
-pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, O>;
+pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable head checksum check when receiving."]
     #[inline(always)]
@@ -99,6 +99,41 @@ impl R {
     #[inline(always)]
     pub fn wait_sw_start(&self) -> WAIT_SW_START_R {
         WAIT_SW_START_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF1")
+            .field(
+                "check_sum_en",
+                &format_args!("{}", self.check_sum_en().bit()),
+            )
+            .field(
+                "check_seq_en",
+                &format_args!("{}", self.check_seq_en().bit()),
+            )
+            .field("crc_disable", &format_args!("{}", self.crc_disable().bit()))
+            .field("save_head", &format_args!("{}", self.save_head().bit()))
+            .field(
+                "tx_check_sum_re",
+                &format_args!("{}", self.tx_check_sum_re().bit()),
+            )
+            .field(
+                "tx_ack_num_re",
+                &format_args!("{}", self.tx_ack_num_re().bit()),
+            )
+            .field(
+                "wait_sw_start",
+                &format_args!("{}", self.wait_sw_start().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

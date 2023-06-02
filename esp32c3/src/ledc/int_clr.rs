@@ -20,49 +20,43 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `LSTIMER0_OVF_INT_CLR` writer - reg_lstimer0_ovf_int_clr."]
-pub type LSTIMER0_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type LSTIMER0_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `LSTIMER1_OVF_INT_CLR` writer - reg_lstimer1_ovf_int_clr."]
-pub type LSTIMER1_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type LSTIMER1_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `LSTIMER2_OVF_INT_CLR` writer - reg_lstimer2_ovf_int_clr."]
-pub type LSTIMER2_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type LSTIMER2_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `LSTIMER3_OVF_INT_CLR` writer - reg_lstimer3_ovf_int_clr."]
-pub type LSTIMER3_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type LSTIMER3_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_CLR` writer - reg_duty_chng_end_lsch0_int_clr."]
-pub type DUTY_CHNG_END_LSCH0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_CLR` writer - reg_duty_chng_end_lsch1_int_clr."]
-pub type DUTY_CHNG_END_LSCH1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_CLR` writer - reg_duty_chng_end_lsch2_int_clr."]
-pub type DUTY_CHNG_END_LSCH2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_CLR` writer - reg_duty_chng_end_lsch3_int_clr."]
-pub type DUTY_CHNG_END_LSCH3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_CLR` writer - reg_duty_chng_end_lsch4_int_clr."]
-pub type DUTY_CHNG_END_LSCH4_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_CLR` writer - reg_duty_chng_end_lsch5_int_clr."]
-pub type DUTY_CHNG_END_LSCH5_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH0_INT_CLR` writer - reg_ovf_cnt_lsch0_int_clr."]
-pub type OVF_CNT_LSCH0_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH0_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH1_INT_CLR` writer - reg_ovf_cnt_lsch1_int_clr."]
-pub type OVF_CNT_LSCH1_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH1_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH2_INT_CLR` writer - reg_ovf_cnt_lsch2_int_clr."]
-pub type OVF_CNT_LSCH2_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH2_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH3_INT_CLR` writer - reg_ovf_cnt_lsch3_int_clr."]
-pub type OVF_CNT_LSCH3_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH3_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH4_INT_CLR` writer - reg_ovf_cnt_lsch4_int_clr."]
-pub type OVF_CNT_LSCH4_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH4_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH5_INT_CLR` writer - reg_ovf_cnt_lsch5_int_clr."]
-pub type OVF_CNT_LSCH5_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type OVF_CNT_LSCH5_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_clr."]
     #[inline(always)]

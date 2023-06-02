@@ -35,15 +35,31 @@ impl From<crate::W<APP_BOOT_REMAP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_BOOT_REMAP` reader - "]
-pub type APP_BOOT_REMAP_R = crate::BitReader<bool>;
+pub type APP_BOOT_REMAP_R = crate::BitReader;
 #[doc = "Field `APP_BOOT_REMAP` writer - "]
-pub type APP_BOOT_REMAP_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_BOOT_REMAP_CTRL_SPEC, bool, O>;
+pub type APP_BOOT_REMAP_W<'a, const O: u8> = crate::BitWriter<'a, APP_BOOT_REMAP_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_boot_remap(&self) -> APP_BOOT_REMAP_R {
         APP_BOOT_REMAP_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_BOOT_REMAP_CTRL")
+            .field(
+                "app_boot_remap",
+                &format_args!("{}", self.app_boot_remap().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_BOOT_REMAP_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -29,6 +29,24 @@ impl R {
         SPI_PAD_CONF_0_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_MAC_SPI_SYS_1")
+            .field("mac_1", &format_args!("{}", self.mac_1().bits()))
+            .field(
+                "spi_pad_conf_0",
+                &format_args!("{}", self.spi_pad_conf_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_MAC_SPI_SYS_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "BLOCK1 data register 1.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_mac_spi_sys_1](index.html) module"]
 pub struct RD_MAC_SPI_SYS_1_SPEC;
 impl crate::RegisterSpec for RD_MAC_SPI_SYS_1_SPEC {

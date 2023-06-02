@@ -14,37 +14,37 @@ impl From<crate::R<L2_CACHE_ACS_CNT_CTRL_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_IBUS0_CNT_ENA` reader - The bit is used to enable ibus0 counter in L2-Cache."]
-pub type L2_IBUS0_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_IBUS0_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_IBUS1_CNT_ENA` reader - The bit is used to enable ibus1 counter in L2-Cache."]
-pub type L2_IBUS1_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_IBUS1_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_IBUS2_CNT_ENA` reader - Reserved"]
-pub type L2_IBUS2_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_IBUS2_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_IBUS3_CNT_ENA` reader - Reserved"]
-pub type L2_IBUS3_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_IBUS3_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_DBUS0_CNT_ENA` reader - The bit is used to enable dbus0 counter in L2-Cache."]
-pub type L2_DBUS0_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_DBUS0_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_DBUS1_CNT_ENA` reader - The bit is used to enable dbus1 counter in L2-Cache."]
-pub type L2_DBUS1_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_DBUS1_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_DBUS2_CNT_ENA` reader - Reserved"]
-pub type L2_DBUS2_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_DBUS2_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_DBUS3_CNT_ENA` reader - Reserved"]
-pub type L2_DBUS3_CNT_ENA_R = crate::BitReader<bool>;
+pub type L2_DBUS3_CNT_ENA_R = crate::BitReader;
 #[doc = "Field `L2_IBUS0_CNT_CLR` reader - The bit is used to clear ibus0 counter in L2-Cache."]
-pub type L2_IBUS0_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS0_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS1_CNT_CLR` reader - The bit is used to clear ibus1 counter in L2-Cache."]
-pub type L2_IBUS1_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS1_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS2_CNT_CLR` reader - Reserved"]
-pub type L2_IBUS2_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS2_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_IBUS3_CNT_CLR` reader - Reserved"]
-pub type L2_IBUS3_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_IBUS3_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS0_CNT_CLR` reader - The bit is used to clear dbus0 counter in L2-Cache."]
-pub type L2_DBUS0_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS0_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS1_CNT_CLR` reader - The bit is used to clear dbus1 counter in L2-Cache."]
-pub type L2_DBUS1_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS1_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS2_CNT_CLR` reader - Reserved"]
-pub type L2_DBUS2_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS2_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `L2_DBUS3_CNT_CLR` reader - Reserved"]
-pub type L2_DBUS3_CNT_CLR_R = crate::BitReader<bool>;
+pub type L2_DBUS3_CNT_CLR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 8 - The bit is used to enable ibus0 counter in L2-Cache."]
     #[inline(always)]
@@ -125,6 +125,83 @@ impl R {
     #[inline(always)]
     pub fn l2_dbus3_cnt_clr(&self) -> L2_DBUS3_CNT_CLR_R {
         L2_DBUS3_CNT_CLR_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_CACHE_ACS_CNT_CTRL")
+            .field(
+                "l2_ibus0_cnt_ena",
+                &format_args!("{}", self.l2_ibus0_cnt_ena().bit()),
+            )
+            .field(
+                "l2_ibus1_cnt_ena",
+                &format_args!("{}", self.l2_ibus1_cnt_ena().bit()),
+            )
+            .field(
+                "l2_ibus2_cnt_ena",
+                &format_args!("{}", self.l2_ibus2_cnt_ena().bit()),
+            )
+            .field(
+                "l2_ibus3_cnt_ena",
+                &format_args!("{}", self.l2_ibus3_cnt_ena().bit()),
+            )
+            .field(
+                "l2_dbus0_cnt_ena",
+                &format_args!("{}", self.l2_dbus0_cnt_ena().bit()),
+            )
+            .field(
+                "l2_dbus1_cnt_ena",
+                &format_args!("{}", self.l2_dbus1_cnt_ena().bit()),
+            )
+            .field(
+                "l2_dbus2_cnt_ena",
+                &format_args!("{}", self.l2_dbus2_cnt_ena().bit()),
+            )
+            .field(
+                "l2_dbus3_cnt_ena",
+                &format_args!("{}", self.l2_dbus3_cnt_ena().bit()),
+            )
+            .field(
+                "l2_ibus0_cnt_clr",
+                &format_args!("{}", self.l2_ibus0_cnt_clr().bit()),
+            )
+            .field(
+                "l2_ibus1_cnt_clr",
+                &format_args!("{}", self.l2_ibus1_cnt_clr().bit()),
+            )
+            .field(
+                "l2_ibus2_cnt_clr",
+                &format_args!("{}", self.l2_ibus2_cnt_clr().bit()),
+            )
+            .field(
+                "l2_ibus3_cnt_clr",
+                &format_args!("{}", self.l2_ibus3_cnt_clr().bit()),
+            )
+            .field(
+                "l2_dbus0_cnt_clr",
+                &format_args!("{}", self.l2_dbus0_cnt_clr().bit()),
+            )
+            .field(
+                "l2_dbus1_cnt_clr",
+                &format_args!("{}", self.l2_dbus1_cnt_clr().bit()),
+            )
+            .field(
+                "l2_dbus2_cnt_clr",
+                &format_args!("{}", self.l2_dbus2_cnt_clr().bit()),
+            )
+            .field(
+                "l2_dbus3_cnt_clr",
+                &format_args!("{}", self.l2_dbus3_cnt_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Cache Access Counter enable and clear register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_cache_acs_cnt_ctrl](index.html) module"]

@@ -38,12 +38,29 @@ impl From<crate::W<AT_CMD_GAPTOUT_SPEC>> for W {
 pub type RX_GAP_TOUT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_GAP_TOUT` writer - This register is used to configure the duration time between the AT_CMD characters. It will not take the data as continuous AT_CMD characters when the duration time is less than this register's value."]
 pub type RX_GAP_TOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AT_CMD_GAPTOUT_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, AT_CMD_GAPTOUT_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the AT_CMD characters. It will not take the data as continuous AT_CMD characters when the duration time is less than this register's value."]
     #[inline(always)]
     pub fn rx_gap_tout(&self) -> RX_GAP_TOUT_R {
         RX_GAP_TOUT_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AT_CMD_GAPTOUT")
+            .field(
+                "rx_gap_tout",
+                &format_args!("{}", self.rx_gap_tout().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AT_CMD_GAPTOUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

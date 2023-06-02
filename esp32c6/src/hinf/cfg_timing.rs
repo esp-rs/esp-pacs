@@ -35,29 +35,26 @@ impl From<crate::W<CFG_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `NCRC` reader - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
-pub type NCRC_R = crate::FieldReader<u8, u8>;
+pub type NCRC_R = crate::FieldReader;
 #[doc = "Field `NCRC` writer - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
-pub type NCRC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_TIMING_SPEC, u8, u8, 3, O>;
+pub type NCRC_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 3, O>;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` reader - configure cycles to lower cmd after voltage is changed to 1.8V."]
-pub type PST_END_CMD_LOW_VALUE_R = crate::FieldReader<u8, u8>;
+pub type PST_END_CMD_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_CMD_LOW_VALUE` writer - configure cycles to lower cmd after voltage is changed to 1.8V."]
-pub type PST_END_CMD_LOW_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_TIMING_SPEC, u8, u8, 7, O>;
+pub type PST_END_CMD_LOW_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 7, O>;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` reader - configure cycles to lower data after voltage is changed to 1.8V."]
-pub type PST_END_DATA_LOW_VALUE_R = crate::FieldReader<u8, u8>;
+pub type PST_END_DATA_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` writer - configure cycles to lower data after voltage is changed to 1.8V."]
-pub type PST_END_DATA_LOW_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_TIMING_SPEC, u8, u8, 6, O>;
+pub type PST_END_DATA_LOW_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 6, O>;
 #[doc = "Field `SDCLK_STOP_THRES` reader - Configure the number of cycles of module clk to judge sdclk has stopped"]
 pub type SDCLK_STOP_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDCLK_STOP_THRES` writer - Configure the number of cycles of module clk to judge sdclk has stopped"]
 pub type SDCLK_STOP_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_TIMING_SPEC, u16, u16, 11, O>;
+    crate::FieldWriter<'a, CFG_TIMING_SPEC, 11, O, u16, u16>;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` reader - module clk divider to sample sdclk"]
-pub type SAMPLE_CLK_DIVIDER_R = crate::FieldReader<u8, u8>;
+pub type SAMPLE_CLK_DIVIDER_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` writer - module clk divider to sample sdclk"]
-pub type SAMPLE_CLK_DIVIDER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CFG_TIMING_SPEC, u8, u8, 4, O>;
+pub type SAMPLE_CLK_DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:2 - configure Ncrc parameter in sdr50/104 mode, no more than 6."]
     #[inline(always)]
@@ -83,6 +80,36 @@ impl R {
     #[inline(always)]
     pub fn sample_clk_divider(&self) -> SAMPLE_CLK_DIVIDER_R {
         SAMPLE_CLK_DIVIDER_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG_TIMING")
+            .field("ncrc", &format_args!("{}", self.ncrc().bits()))
+            .field(
+                "pst_end_cmd_low_value",
+                &format_args!("{}", self.pst_end_cmd_low_value().bits()),
+            )
+            .field(
+                "pst_end_data_low_value",
+                &format_args!("{}", self.pst_end_data_low_value().bits()),
+            )
+            .field(
+                "sdclk_stop_thres",
+                &format_args!("{}", self.sdclk_stop_thres().bits()),
+            )
+            .field(
+                "sample_clk_divider",
+                &format_args!("{}", self.sample_clk_divider().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CFG_TIMING_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,10 +37,9 @@ impl From<crate::W<REDCY_SIG1_SPEC>> for W {
 #[doc = "Field `REDCY_SIG1` reader - "]
 pub type REDCY_SIG1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REDCY_SIG1` writer - "]
-pub type REDCY_SIG1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, REDCY_SIG1_SPEC, u32, u32, 31, O>;
+pub type REDCY_SIG1_W<'a, const O: u8> = crate::FieldWriter<'a, REDCY_SIG1_SPEC, 31, O, u32, u32>;
 #[doc = "Field `REDCY_NANDOR` reader - "]
-pub type REDCY_NANDOR_R = crate::BitReader<bool>;
+pub type REDCY_NANDOR_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:30"]
     #[inline(always)]
@@ -51,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn redcy_nandor(&self) -> REDCY_NANDOR_R {
         REDCY_NANDOR_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REDCY_SIG1")
+            .field("redcy_sig1", &format_args!("{}", self.redcy_sig1().bits()))
+            .field(
+                "redcy_nandor",
+                &format_args!("{}", self.redcy_nandor().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<REDCY_SIG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

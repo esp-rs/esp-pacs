@@ -20,7 +20,13 @@ impl From<crate::W<SHA1_START_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA1_START` writer - Write 1 to start an SHA-1 operation on the first message block."]
-pub type SHA1_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHA1_START_SPEC, bool, O>;
+pub type SHA1_START_W<'a, const O: u8> = crate::BitWriter<'a, SHA1_START_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SHA1_START_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Write 1 to start an SHA-1 operation on the first message block."]
     #[inline(always)]

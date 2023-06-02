@@ -36,14 +36,13 @@ impl From<crate::W<_1TOKEN1_SPEC>> for W {
 }
 #[doc = "Field `SLC1_TOKEN1_WDATA` writer - "]
 pub type SLC1_TOKEN1_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, _1TOKEN1_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, _1TOKEN1_SPEC, 12, O, u16, u16>;
 #[doc = "Field `SLC1_TOKEN1_WR` writer - "]
-pub type SLC1_TOKEN1_WR_W<'a, const O: u8> = crate::BitWriter<'a, u32, _1TOKEN1_SPEC, bool, O>;
+pub type SLC1_TOKEN1_WR_W<'a, const O: u8> = crate::BitWriter<'a, _1TOKEN1_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_INC` writer - "]
-pub type SLC1_TOKEN1_INC_W<'a, const O: u8> = crate::BitWriter<'a, u32, _1TOKEN1_SPEC, bool, O>;
+pub type SLC1_TOKEN1_INC_W<'a, const O: u8> = crate::BitWriter<'a, _1TOKEN1_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1_INC_MORE` writer - "]
-pub type SLC1_TOKEN1_INC_MORE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, _1TOKEN1_SPEC, bool, O>;
+pub type SLC1_TOKEN1_INC_MORE_W<'a, const O: u8> = crate::BitWriter<'a, _1TOKEN1_SPEC, O>;
 #[doc = "Field `SLC1_TOKEN1` reader - "]
 pub type SLC1_TOKEN1_R = crate::FieldReader<u16, u16>;
 impl R {
@@ -51,6 +50,23 @@ impl R {
     #[inline(always)]
     pub fn slc1_token1(&self) -> SLC1_TOKEN1_R {
         SLC1_TOKEN1_R::new(((self.bits >> 16) & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("_1TOKEN1")
+            .field(
+                "slc1_token1",
+                &format_args!("{}", self.slc1_token1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<_1TOKEN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

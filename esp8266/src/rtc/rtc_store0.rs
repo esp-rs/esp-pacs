@@ -37,13 +37,26 @@ impl From<crate::W<RTC_STORE0_SPEC>> for W {
 #[doc = "Field `Register` reader - "]
 pub type REGISTER_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_STORE0_SPEC, u32, u32, 32, O>;
+pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_STORE0_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn register(&self) -> REGISTER_R {
         REGISTER_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_STORE0")
+            .field("register", &format_args!("{}", self.register().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_STORE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

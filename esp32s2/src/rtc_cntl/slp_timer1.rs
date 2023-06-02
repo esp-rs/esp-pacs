@@ -37,16 +37,28 @@ impl From<crate::W<SLP_TIMER1_SPEC>> for W {
 #[doc = "Field `SLP_VAL_HI` reader - Sets the higher 16 bits of the trigger threshold for the RTC timer."]
 pub type SLP_VAL_HI_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLP_VAL_HI` writer - Sets the higher 16 bits of the trigger threshold for the RTC timer."]
-pub type SLP_VAL_HI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLP_TIMER1_SPEC, u16, u16, 16, O>;
+pub type SLP_VAL_HI_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` writer - Sets this bit to enable the timer alarm."]
-pub type MAIN_TIMER_ALARM_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SLP_TIMER1_SPEC, bool, O>;
+pub type MAIN_TIMER_ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_TIMER1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - Sets the higher 16 bits of the trigger threshold for the RTC timer."]
     #[inline(always)]
     pub fn slp_val_hi(&self) -> SLP_VAL_HI_R {
         SLP_VAL_HI_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLP_TIMER1")
+            .field("slp_val_hi", &format_args!("{}", self.slp_val_hi().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLP_TIMER1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,95 +35,77 @@ impl From<crate::W<EVT_TASK_EN2_SPEC>> for W {
     }
 }
 #[doc = "Field `TASK_GAMMA_RESTART_CH0_EN` reader - Ledc ch0 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH0_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH0_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH0_EN` writer - Ledc ch0 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESTART_CH1_EN` reader - Ledc ch1 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH1_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH1_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH1_EN` writer - Ledc ch1 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESTART_CH2_EN` reader - Ledc ch2 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH2_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH2_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH2_EN` writer - Ledc ch2 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESTART_CH3_EN` reader - Ledc ch3 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH3_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH3_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH3_EN` writer - Ledc ch3 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESTART_CH4_EN` reader - Ledc ch4 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH4_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH4_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH4_EN` writer - Ledc ch4 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH4_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESTART_CH5_EN` reader - Ledc ch5 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH5_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESTART_CH5_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESTART_CH5_EN` writer - Ledc ch5 gamma restart task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESTART_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESTART_CH5_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH0_EN` reader - Ledc ch0 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH0_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH0_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH0_EN` writer - Ledc ch0 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH1_EN` reader - Ledc ch1 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH1_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH1_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH1_EN` writer - Ledc ch1 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH2_EN` reader - Ledc ch2 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH2_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH2_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH2_EN` writer - Ledc ch2 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH3_EN` reader - Ledc ch3 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH3_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH3_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH3_EN` writer - Ledc ch3 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH4_EN` reader - Ledc ch4 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH4_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH4_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH4_EN` writer - Ledc ch4 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH4_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH5_EN` reader - Ledc ch5 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH5_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_PAUSE_CH5_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_PAUSE_CH5_EN` writer - Ledc ch5 gamma pause task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_PAUSE_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_PAUSE_CH5_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH0_EN` reader - Ledc ch0 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH0_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH0_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH0_EN` writer - Ledc ch0 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH1_EN` reader - Ledc ch1 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH1_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH1_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH1_EN` writer - Ledc ch1 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH2_EN` reader - Ledc ch2 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH2_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH2_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH2_EN` writer - Ledc ch2 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH3_EN` reader - Ledc ch3 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH3_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH3_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH3_EN` writer - Ledc ch3 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH3_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH4_EN` reader - Ledc ch4 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH4_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH4_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH4_EN` writer - Ledc ch4 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH4_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH4_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 #[doc = "Field `TASK_GAMMA_RESUME_CH5_EN` reader - Ledc ch5 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH5_EN_R = crate::BitReader<bool>;
+pub type TASK_GAMMA_RESUME_CH5_EN_R = crate::BitReader;
 #[doc = "Field `TASK_GAMMA_RESUME_CH5_EN` writer - Ledc ch5 gamma resume task enable register, write 1 to enable this task."]
-pub type TASK_GAMMA_RESUME_CH5_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EVT_TASK_EN2_SPEC, bool, O>;
+pub type TASK_GAMMA_RESUME_CH5_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_TASK_EN2_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Ledc ch0 gamma restart task enable register, write 1 to enable this task."]
     #[inline(always)]
@@ -214,6 +196,91 @@ impl R {
     #[inline(always)]
     pub fn task_gamma_resume_ch5_en(&self) -> TASK_GAMMA_RESUME_CH5_EN_R {
         TASK_GAMMA_RESUME_CH5_EN_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EVT_TASK_EN2")
+            .field(
+                "task_gamma_restart_ch0_en",
+                &format_args!("{}", self.task_gamma_restart_ch0_en().bit()),
+            )
+            .field(
+                "task_gamma_restart_ch1_en",
+                &format_args!("{}", self.task_gamma_restart_ch1_en().bit()),
+            )
+            .field(
+                "task_gamma_restart_ch2_en",
+                &format_args!("{}", self.task_gamma_restart_ch2_en().bit()),
+            )
+            .field(
+                "task_gamma_restart_ch3_en",
+                &format_args!("{}", self.task_gamma_restart_ch3_en().bit()),
+            )
+            .field(
+                "task_gamma_restart_ch4_en",
+                &format_args!("{}", self.task_gamma_restart_ch4_en().bit()),
+            )
+            .field(
+                "task_gamma_restart_ch5_en",
+                &format_args!("{}", self.task_gamma_restart_ch5_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch0_en",
+                &format_args!("{}", self.task_gamma_pause_ch0_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch1_en",
+                &format_args!("{}", self.task_gamma_pause_ch1_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch2_en",
+                &format_args!("{}", self.task_gamma_pause_ch2_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch3_en",
+                &format_args!("{}", self.task_gamma_pause_ch3_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch4_en",
+                &format_args!("{}", self.task_gamma_pause_ch4_en().bit()),
+            )
+            .field(
+                "task_gamma_pause_ch5_en",
+                &format_args!("{}", self.task_gamma_pause_ch5_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch0_en",
+                &format_args!("{}", self.task_gamma_resume_ch0_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch1_en",
+                &format_args!("{}", self.task_gamma_resume_ch1_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch2_en",
+                &format_args!("{}", self.task_gamma_resume_ch2_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch3_en",
+                &format_args!("{}", self.task_gamma_resume_ch3_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch4_en",
+                &format_args!("{}", self.task_gamma_resume_ch4_en().bit()),
+            )
+            .field(
+                "task_gamma_resume_ch5_en",
+                &format_args!("{}", self.task_gamma_resume_ch5_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EVT_TASK_EN2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

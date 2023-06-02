@@ -37,12 +37,26 @@ impl From<crate::W<CMDARG_SPEC>> for W {
 #[doc = "Field `CMDARG` reader - Value indicates command argument to be passed to the card."]
 pub type CMDARG_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CMDARG` writer - Value indicates command argument to be passed to the card."]
-pub type CMDARG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMDARG_SPEC, u32, u32, 32, O>;
+pub type CMDARG_W<'a, const O: u8> = crate::FieldWriter<'a, CMDARG_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
     #[inline(always)]
     pub fn cmdarg(&self) -> CMDARG_R {
         CMDARG_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMDARG")
+            .field("cmdarg", &format_args!("{}", self.cmdarg().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMDARG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

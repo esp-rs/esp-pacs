@@ -35,15 +35,32 @@ impl From<crate::W<BACKUP_BUS_PMS_MONITOR_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_LOCK` reader - backup_bus_pms_monitor_lock"]
-pub type BACKUP_BUS_PMS_MONITOR_LOCK_R = crate::BitReader<bool>;
+pub type BACKUP_BUS_PMS_MONITOR_LOCK_R = crate::BitReader;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_LOCK` writer - backup_bus_pms_monitor_lock"]
 pub type BACKUP_BUS_PMS_MONITOR_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, BACKUP_BUS_PMS_MONITOR_0_SPEC, bool, O>;
+    crate::BitWriter<'a, BACKUP_BUS_PMS_MONITOR_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - backup_bus_pms_monitor_lock"]
     #[inline(always)]
     pub fn backup_bus_pms_monitor_lock(&self) -> BACKUP_BUS_PMS_MONITOR_LOCK_R {
         BACKUP_BUS_PMS_MONITOR_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_MONITOR_0")
+            .field(
+                "backup_bus_pms_monitor_lock",
+                &format_args!("{}", self.backup_bus_pms_monitor_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_MONITOR_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

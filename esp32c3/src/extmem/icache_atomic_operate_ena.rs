@@ -35,15 +35,32 @@ impl From<crate::W<ICACHE_ATOMIC_OPERATE_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_ATOMIC_OPERATE_ENA` reader - The bit is used to activate icache atomic operation protection. In this case, sync/lock operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
-pub type ICACHE_ATOMIC_OPERATE_ENA_R = crate::BitReader<bool>;
+pub type ICACHE_ATOMIC_OPERATE_ENA_R = crate::BitReader;
 #[doc = "Field `ICACHE_ATOMIC_OPERATE_ENA` writer - The bit is used to activate icache atomic operation protection. In this case, sync/lock operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
 pub type ICACHE_ATOMIC_OPERATE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_ATOMIC_OPERATE_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_ATOMIC_OPERATE_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate icache atomic operation protection. In this case, sync/lock operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
     #[inline(always)]
     pub fn icache_atomic_operate_ena(&self) -> ICACHE_ATOMIC_OPERATE_ENA_R {
         ICACHE_ATOMIC_OPERATE_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_ATOMIC_OPERATE_ENA")
+            .field(
+                "icache_atomic_operate_ena",
+                &format_args!("{}", self.icache_atomic_operate_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_ATOMIC_OPERATE_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

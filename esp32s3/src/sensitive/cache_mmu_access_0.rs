@@ -35,15 +35,32 @@ impl From<crate::W<CACHE_MMU_ACCESS_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_ACCESS_LOCK` reader - Set 1 to lock cache MMU registers."]
-pub type CACHE_MMU_ACCESS_LOCK_R = crate::BitReader<bool>;
+pub type CACHE_MMU_ACCESS_LOCK_R = crate::BitReader;
 #[doc = "Field `CACHE_MMU_ACCESS_LOCK` writer - Set 1 to lock cache MMU registers."]
 pub type CACHE_MMU_ACCESS_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CACHE_MMU_ACCESS_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CACHE_MMU_ACCESS_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to lock cache MMU registers."]
     #[inline(always)]
     pub fn cache_mmu_access_lock(&self) -> CACHE_MMU_ACCESS_LOCK_R {
         CACHE_MMU_ACCESS_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_MMU_ACCESS_0")
+            .field(
+                "cache_mmu_access_lock",
+                &format_args!("{}", self.cache_mmu_access_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_ACCESS_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

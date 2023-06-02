@@ -35,35 +35,32 @@ impl From<crate::W<PERI_BACKUP_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_BACKUP_FLOW_ERR` reader - reg_peri_backup_flow_err"]
-pub type PERI_BACKUP_FLOW_ERR_R = crate::FieldReader<u8, u8>;
+pub type PERI_BACKUP_FLOW_ERR_R = crate::FieldReader;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` reader - reg_peri_backup_burst_limit"]
-pub type PERI_BACKUP_BURST_LIMIT_R = crate::FieldReader<u8, u8>;
+pub type PERI_BACKUP_BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` writer - reg_peri_backup_burst_limit"]
 pub type PERI_BACKUP_BURST_LIMIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 5, O>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` reader - reg_peri_backup_tout_thres"]
 pub type PERI_BACKUP_TOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` writer - reg_peri_backup_tout_thres"]
 pub type PERI_BACKUP_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16, u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` reader - reg_peri_backup_size"]
 pub type PERI_BACKUP_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` writer - reg_peri_backup_size"]
 pub type PERI_BACKUP_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16, u16>;
 #[doc = "Field `PERI_BACKUP_START` writer - reg_peri_backup_start"]
-pub type PERI_BACKUP_START_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, O>;
+pub type PERI_BACKUP_START_W<'a, const O: u8> = crate::BitWriter<'a, PERI_BACKUP_CONFIG_SPEC, O>;
 #[doc = "Field `PERI_BACKUP_TO_MEM` reader - reg_peri_backup_to_mem"]
-pub type PERI_BACKUP_TO_MEM_R = crate::BitReader<bool>;
+pub type PERI_BACKUP_TO_MEM_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_TO_MEM` writer - reg_peri_backup_to_mem"]
-pub type PERI_BACKUP_TO_MEM_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, O>;
+pub type PERI_BACKUP_TO_MEM_W<'a, const O: u8> = crate::BitWriter<'a, PERI_BACKUP_CONFIG_SPEC, O>;
 #[doc = "Field `PERI_BACKUP_ENA` reader - reg_peri_backup_ena"]
-pub type PERI_BACKUP_ENA_R = crate::BitReader<bool>;
+pub type PERI_BACKUP_ENA_R = crate::BitReader;
 #[doc = "Field `PERI_BACKUP_ENA` writer - reg_peri_backup_ena"]
-pub type PERI_BACKUP_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, O>;
+pub type PERI_BACKUP_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PERI_BACKUP_CONFIG_SPEC, O>;
 impl R {
     #[doc = "Bits 1:2 - reg_peri_backup_flow_err"]
     #[inline(always)]
@@ -94,6 +91,43 @@ impl R {
     #[inline(always)]
     pub fn peri_backup_ena(&self) -> PERI_BACKUP_ENA_R {
         PERI_BACKUP_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PERI_BACKUP_CONFIG")
+            .field(
+                "peri_backup_flow_err",
+                &format_args!("{}", self.peri_backup_flow_err().bits()),
+            )
+            .field(
+                "peri_backup_burst_limit",
+                &format_args!("{}", self.peri_backup_burst_limit().bits()),
+            )
+            .field(
+                "peri_backup_tout_thres",
+                &format_args!("{}", self.peri_backup_tout_thres().bits()),
+            )
+            .field(
+                "peri_backup_size",
+                &format_args!("{}", self.peri_backup_size().bits()),
+            )
+            .field(
+                "peri_backup_to_mem",
+                &format_args!("{}", self.peri_backup_to_mem().bit()),
+            )
+            .field(
+                "peri_backup_ena",
+                &format_args!("{}", self.peri_backup_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

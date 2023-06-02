@@ -38,12 +38,29 @@ impl From<crate::W<SLV_WRBUF_DLEN_SPEC>> for W {
 pub type SLV_WRBUF_DBITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_WRBUF_DBITLEN` writer - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
 pub type SLV_WRBUF_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLV_WRBUF_DLEN_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, SLV_WRBUF_DLEN_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn slv_wrbuf_dbitlen(&self) -> SLV_WRBUF_DBITLEN_R {
         SLV_WRBUF_DBITLEN_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLV_WRBUF_DLEN")
+            .field(
+                "slv_wrbuf_dbitlen",
+                &format_args!("{}", self.slv_wrbuf_dbitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLV_WRBUF_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

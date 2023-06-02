@@ -38,16 +38,15 @@ impl From<crate::W<IN_CONF1_CH_SPEC>> for W {
 pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
 pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IN_CONF1_CH_SPEC, u16, u16, 12, O>;
+    crate::FieldWriter<'a, IN_CONF1_CH_SPEC, 12, O, u16, u16>;
 #[doc = "Field `IN_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type IN_CHECK_OWNER_R = crate::BitReader<bool>;
+pub type IN_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `IN_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub type IN_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, u32, IN_CONF1_CH_SPEC, bool, O>;
+pub type IN_CHECK_OWNER_W<'a, const O: u8> = crate::BitWriter<'a, IN_CONF1_CH_SPEC, O>;
 #[doc = "Field `IN_EXT_MEM_BK_SIZE` reader - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type IN_EXT_MEM_BK_SIZE_R = crate::FieldReader<u8, u8>;
+pub type IN_EXT_MEM_BK_SIZE_R = crate::FieldReader;
 #[doc = "Field `IN_EXT_MEM_BK_SIZE` writer - Block size of Rx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub type IN_EXT_MEM_BK_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IN_CONF1_CH_SPEC, u8, u8, 2, O>;
+pub type IN_EXT_MEM_BK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, IN_CONF1_CH_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:11 - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
     #[inline(always)]
@@ -63,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn in_ext_mem_bk_size(&self) -> IN_EXT_MEM_BK_SIZE_R {
         IN_EXT_MEM_BK_SIZE_R::new(((self.bits >> 13) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IN_CONF1_CH")
+            .field(
+                "dma_infifo_full_thrs",
+                &format_args!("{}", self.dma_infifo_full_thrs().bits()),
+            )
+            .field(
+                "in_check_owner",
+                &format_args!("{}", self.in_check_owner().bit()),
+            )
+            .field(
+                "in_ext_mem_bk_size",
+                &format_args!("{}", self.in_ext_mem_bk_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IN_CONF1_CH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

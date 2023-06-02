@@ -38,12 +38,29 @@ impl From<crate::W<PGM_CHECK_VALUE_SPEC>> for W {
 pub type PGM_RS_DATA_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PGM_RS_DATA_0` writer - The content of the %sth 32-bit RS code to be programmed."]
 pub type PGM_RS_DATA_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PGM_CHECK_VALUE_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, PGM_CHECK_VALUE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of the %sth 32-bit RS code to be programmed."]
     #[inline(always)]
     pub fn pgm_rs_data_0(&self) -> PGM_RS_DATA_0_R {
         PGM_RS_DATA_0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PGM_CHECK_VALUE")
+            .field(
+                "pgm_rs_data_0",
+                &format_args!("{}", self.pgm_rs_data_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PGM_CHECK_VALUE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

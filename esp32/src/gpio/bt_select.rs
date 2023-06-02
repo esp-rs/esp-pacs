@@ -37,12 +37,26 @@ impl From<crate::W<BT_SELECT_SPEC>> for W {
 #[doc = "Field `BT_SEL` reader - NA"]
 pub type BT_SEL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BT_SEL` writer - NA"]
-pub type BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BT_SELECT_SPEC, u32, u32, 32, O>;
+pub type BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, BT_SELECT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
     pub fn bt_sel(&self) -> BT_SEL_R {
         BT_SEL_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BT_SELECT")
+            .field("bt_sel", &format_args!("{}", self.bt_sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BT_SELECT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

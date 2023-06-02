@@ -38,15 +38,15 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
 pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_ADC_EOF_NUM` writer - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
 pub type APB_ADC_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DMA_CONF_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, DMA_CONF_SPEC, 16, O, u16, u16>;
 #[doc = "Field `APB_ADC_RESET_FSM` reader - Reset DIG ADC CTRL status."]
-pub type APB_ADC_RESET_FSM_R = crate::BitReader<bool>;
+pub type APB_ADC_RESET_FSM_R = crate::BitReader;
 #[doc = "Field `APB_ADC_RESET_FSM` writer - Reset DIG ADC CTRL status."]
-pub type APB_ADC_RESET_FSM_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type APB_ADC_RESET_FSM_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 #[doc = "Field `APB_ADC_TRANS` reader - Set this bit, DIG ADC CTRL uses SPI DMA."]
-pub type APB_ADC_TRANS_R = crate::BitReader<bool>;
+pub type APB_ADC_TRANS_R = crate::BitReader;
 #[doc = "Field `APB_ADC_TRANS` writer - Set this bit, DIG ADC CTRL uses SPI DMA."]
-pub type APB_ADC_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, O>;
+pub type APB_ADC_TRANS_W<'a, const O: u8> = crate::BitWriter<'a, DMA_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
@@ -62,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn apb_adc_trans(&self) -> APB_ADC_TRANS_R {
         APB_ADC_TRANS_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_CONF")
+            .field(
+                "apb_adc_eof_num",
+                &format_args!("{}", self.apb_adc_eof_num().bits()),
+            )
+            .field(
+                "apb_adc_reset_fsm",
+                &format_args!("{}", self.apb_adc_reset_fsm().bit()),
+            )
+            .field(
+                "apb_adc_trans",
+                &format_args!("{}", self.apb_adc_trans().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

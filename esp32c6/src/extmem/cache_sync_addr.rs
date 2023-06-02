@@ -38,12 +38,29 @@ impl From<crate::W<CACHE_SYNC_ADDR_SPEC>> for W {
 pub type CACHE_SYNC_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CACHE_SYNC_ADDR` writer - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
 pub type CACHE_SYNC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CACHE_SYNC_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CACHE_SYNC_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
     #[inline(always)]
     pub fn cache_sync_addr(&self) -> CACHE_SYNC_ADDR_R {
         CACHE_SYNC_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CACHE_SYNC_ADDR")
+            .field(
+                "cache_sync_addr",
+                &format_args!("{}", self.cache_sync_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

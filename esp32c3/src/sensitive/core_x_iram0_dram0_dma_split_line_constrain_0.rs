@@ -35,10 +35,10 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK` reader - core_x_iram0_dram0_dma_split_line_constrain_lock"]
-pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_R = crate::BitReader<bool>;
+pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_R = crate::BitReader;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK` writer - core_x_iram0_dram0_dma_split_line_constrain_lock"]
 pub type CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - core_x_iram0_dram0_dma_split_line_constrain_lock"]
     #[inline(always)]
@@ -46,6 +46,27 @@ impl R {
         &self,
     ) -> CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_R {
         CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0")
+            .field(
+                "core_x_iram0_dram0_dma_split_line_constrain_lock",
+                &format_args!(
+                    "{}",
+                    self.core_x_iram0_dram0_dma_split_line_constrain_lock()
+                        .bit()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

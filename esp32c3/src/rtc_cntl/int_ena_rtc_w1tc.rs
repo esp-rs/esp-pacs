@@ -21,31 +21,33 @@ impl From<crate::W<INT_ENA_RTC_W1TC_SPEC>> for W {
 }
 #[doc = "Field `SLP_WAKEUP_INT_ENA_W1TC` writer - clear sleep wakeup interrupt enable"]
 pub type SLP_WAKEUP_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `SLP_REJECT_INT_ENA_W1TC` writer - clear sleep reject interrupt enable"]
 pub type SLP_REJECT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `WDT_INT_ENA_W1TC` writer - clear RTC WDT interrupt enable"]
-pub type WDT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type WDT_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `BROWN_OUT_INT_ENA_W1TC` writer - clear brown out interrupt enable"]
-pub type BROWN_OUT_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type BROWN_OUT_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_INT_ENA_W1TC` writer - Clear RTC main timer interrupt enable"]
 pub type MAIN_TIMER_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `SWD_INT_ENA_W1TC` writer - clear super watch dog interrupt enable"]
-pub type SWD_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type SWD_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `XTAL32K_DEAD_INT_ENA_W1TC` writer - clear xtal32k_dead interrupt enable"]
 pub type XTAL32K_DEAD_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_ENA_W1TC` writer - clear gitch det interrupt enable"]
 pub type GLITCH_DET_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+    crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
 #[doc = "Field `BBPLL_CAL_INT_ENA_W1TC` writer - clear bbpll cal interrupt enable"]
-pub type BBPLL_CAL_INT_ENA_W1TC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_RTC_W1TC_SPEC, bool, O>;
+pub type BBPLL_CAL_INT_ENA_W1TC_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_RTC_W1TC_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_RTC_W1TC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - clear sleep wakeup interrupt enable"]
     #[inline(always)]

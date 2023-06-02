@@ -35,18 +35,17 @@ impl From<crate::W<FUNC_IN_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_SEL` reader - set this value: s=0-53: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
-pub type IN_SEL_R = crate::FieldReader<u8, u8>;
+pub type IN_SEL_R = crate::FieldReader;
 #[doc = "Field `IN_SEL` writer - set this value: s=0-53: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
-pub type IN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, u8, u8, 5, O>;
+pub type IN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_IN_SEL_CFG_SPEC, 5, O>;
 #[doc = "Field `IN_INV_SEL` reader - set this bit to invert input signal. 1:invert. 0:not invert."]
-pub type IN_INV_SEL_R = crate::BitReader<bool>;
+pub type IN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `IN_INV_SEL` writer - set this bit to invert input signal. 1:invert. 0:not invert."]
-pub type IN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, O>;
+pub type IN_INV_SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_IN_SEL_CFG_SPEC, O>;
 #[doc = "Field `SEL` reader - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
-pub type SEL_R = crate::BitReader<bool>;
+pub type SEL_R = crate::BitReader;
 #[doc = "Field `SEL` writer - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
-pub type SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, O>;
+pub type SEL_W<'a, const O: u8> = crate::BitWriter<'a, FUNC_IN_SEL_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:4 - set this value: s=0-53: connect GPIO\\[s\\] to this port. s=0x38: set this port always high level. s=0x3C: set this port always low level."]
     #[inline(always)]
@@ -62,6 +61,22 @@ impl R {
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FUNC_IN_SEL_CFG")
+            .field("in_sel", &format_args!("{}", self.in_sel().bits()))
+            .field("in_inv_sel", &format_args!("{}", self.in_inv_sel().bit()))
+            .field("sel", &format_args!("{}", self.sel().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FUNC_IN_SEL_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

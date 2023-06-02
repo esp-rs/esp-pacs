@@ -35,35 +35,29 @@ impl From<crate::W<SPI_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_miso_delay_mode` reader - MISO signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_MISO_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MISO_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `spi_miso_delay_mode` writer - MISO signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_MISO_DELAY_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 2, O>;
+pub type SPI_MISO_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 2, O>;
 #[doc = "Field `spi_miso_delay_num` reader - MISO signals are delayed by 80MHz clock cycles"]
-pub type SPI_MISO_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MISO_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `spi_miso_delay_num` writer - MISO signals are delayed by 80MHz clock cycles"]
-pub type SPI_MISO_DELAY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 3, O>;
+pub type SPI_MISO_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 3, O>;
 #[doc = "Field `spi_mosi_delay_mode` reader - MOSI signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_MOSI_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_MOSI_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `spi_mosi_delay_mode` writer - MOSI signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_MOSI_DELAY_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 2, O>;
+pub type SPI_MOSI_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 2, O>;
 #[doc = "Field `spi_mosi_delay_num` reader - MOSI signals are delayed by 80MHz clock cycles"]
-pub type SPI_MOSI_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_MOSI_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `spi_mosi_delay_num` writer - MOSI signals are delayed by 80MHz clock cycles"]
-pub type SPI_MOSI_DELAY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 3, O>;
+pub type SPI_MOSI_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 3, O>;
 #[doc = "Field `spi_cs_delay_mode` reader - spi_cs signal is delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_CS_DELAY_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_CS_DELAY_MODE_R = crate::FieldReader;
 #[doc = "Field `spi_cs_delay_mode` writer - spi_cs signal is delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
-pub type SPI_CS_DELAY_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 2, O>;
+pub type SPI_CS_DELAY_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 2, O>;
 #[doc = "Field `spi_cs_delay_num` reader - spi_cs signal is delayed by 80MHz clock cycles"]
-pub type SPI_CS_DELAY_NUM_R = crate::FieldReader<u8, u8>;
+pub type SPI_CS_DELAY_NUM_R = crate::FieldReader;
 #[doc = "Field `spi_cs_delay_num` writer - spi_cs signal is delayed by 80MHz clock cycles"]
-pub type SPI_CS_DELAY_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRL2_SPEC, u8, u8, 4, O>;
+pub type SPI_CS_DELAY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRL2_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 16:17 - MISO signals are delayed by spi_clk. 0: zero; 1: half cycle; 2: one cycle"]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn spi_cs_delay_num(&self) -> SPI_CS_DELAY_NUM_R {
         SPI_CS_DELAY_NUM_R::new(((self.bits >> 28) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_CTRL2")
+            .field(
+                "spi_cs_delay_num",
+                &format_args!("{}", self.spi_cs_delay_num().bits()),
+            )
+            .field(
+                "spi_cs_delay_mode",
+                &format_args!("{}", self.spi_cs_delay_mode().bits()),
+            )
+            .field(
+                "spi_mosi_delay_num",
+                &format_args!("{}", self.spi_mosi_delay_num().bits()),
+            )
+            .field(
+                "spi_mosi_delay_mode",
+                &format_args!("{}", self.spi_mosi_delay_mode().bits()),
+            )
+            .field(
+                "spi_miso_delay_num",
+                &format_args!("{}", self.spi_miso_delay_num().bits()),
+            )
+            .field(
+                "spi_miso_delay_mode",
+                &format_args!("{}", self.spi_miso_delay_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

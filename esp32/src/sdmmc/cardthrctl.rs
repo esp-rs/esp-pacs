@@ -35,22 +35,22 @@ impl From<crate::W<CARDTHRCTL_SPEC>> for W {
     }
 }
 #[doc = "Field `CARDRDTHREN` reader - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
-pub type CARDRDTHREN_R = crate::BitReader<bool>;
+pub type CARDRDTHREN_R = crate::BitReader;
 #[doc = "Field `CARDRDTHREN` writer - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
-pub type CARDRDTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CARDTHRCTL_SPEC, bool, O>;
+pub type CARDRDTHREN_W<'a, const O: u8> = crate::BitWriter<'a, CARDTHRCTL_SPEC, O>;
 #[doc = "Field `CARDCLRINTEN` reader - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
-pub type CARDCLRINTEN_R = crate::BitReader<bool>;
+pub type CARDCLRINTEN_R = crate::BitReader;
 #[doc = "Field `CARDCLRINTEN` writer - Busy clear interrupt generation: 1'b0-Busy clear interrypt disabled. 1'b1-Busy clear interrypt enabled."]
-pub type CARDCLRINTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CARDTHRCTL_SPEC, bool, O>;
+pub type CARDCLRINTEN_W<'a, const O: u8> = crate::BitWriter<'a, CARDTHRCTL_SPEC, O>;
 #[doc = "Field `CARDWRTHREN` reader - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
-pub type CARDWRTHREN_R = crate::BitReader<bool>;
+pub type CARDWRTHREN_R = crate::BitReader;
 #[doc = "Field `CARDWRTHREN` writer - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
-pub type CARDWRTHREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CARDTHRCTL_SPEC, bool, O>;
+pub type CARDWRTHREN_W<'a, const O: u8> = crate::BitWriter<'a, CARDTHRCTL_SPEC, O>;
 #[doc = "Field `CARDTHRESHOLD` reader - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
 pub type CARDTHRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CARDTHRESHOLD` writer - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
 pub type CARDTHRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CARDTHRCTL_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, CARDTHRCTL_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]
@@ -71,6 +71,29 @@ impl R {
     #[inline(always)]
     pub fn cardthreshold(&self) -> CARDTHRESHOLD_R {
         CARDTHRESHOLD_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CARDTHRCTL")
+            .field("cardrdthren", &format_args!("{}", self.cardrdthren().bit()))
+            .field(
+                "cardclrinten",
+                &format_args!("{}", self.cardclrinten().bit()),
+            )
+            .field("cardwrthren", &format_args!("{}", self.cardwrthren().bit()))
+            .field(
+                "cardthreshold",
+                &format_args!("{}", self.cardthreshold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CARDTHRCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

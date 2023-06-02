@@ -35,15 +35,32 @@ impl From<crate::W<DCACHE_PRELOAD_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_PRELOAD_INT_MAP` reader - this register used to map dcache_prelaod interrupt to one of core0's external interrupt"]
-pub type DCACHE_PRELOAD_INT_MAP_R = crate::FieldReader<u8, u8>;
+pub type DCACHE_PRELOAD_INT_MAP_R = crate::FieldReader;
 #[doc = "Field `DCACHE_PRELOAD_INT_MAP` writer - this register used to map dcache_prelaod interrupt to one of core0's external interrupt"]
 pub type DCACHE_PRELOAD_INT_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DCACHE_PRELOAD_INT_MAP_SPEC, u8, u8, 5, O>;
+    crate::FieldWriter<'a, DCACHE_PRELOAD_INT_MAP_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map dcache_prelaod interrupt to one of core0's external interrupt"]
     #[inline(always)]
     pub fn dcache_preload_int_map(&self) -> DCACHE_PRELOAD_INT_MAP_R {
         DCACHE_PRELOAD_INT_MAP_R::new((self.bits & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCACHE_PRELOAD_INT_MAP")
+            .field(
+                "dcache_preload_int_map",
+                &format_args!("{}", self.dcache_preload_int_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOAD_INT_MAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

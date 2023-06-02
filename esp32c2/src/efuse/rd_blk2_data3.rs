@@ -29,6 +29,24 @@ impl R {
         ADC_CALIBRATION_0_R::new((self.bits >> 10) & 0x003f_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_BLK2_DATA3")
+            .field("pvt_high", &format_args!("{}", self.pvt_high().bits()))
+            .field(
+                "adc_calibration_0",
+                &format_args!("{}", self.adc_calibration_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_BLK2_DATA3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Register 3 of BLOCK2.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_blk2_data3](index.html) module"]
 pub struct RD_BLK2_DATA3_SPEC;
 impl crate::RegisterSpec for RD_BLK2_DATA3_SPEC {

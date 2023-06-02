@@ -35,15 +35,15 @@ impl From<crate::W<UART0_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `UART0_CLK_EN` reader - Set 1 to enable uart0 apb clock"]
-pub type UART0_CLK_EN_R = crate::BitReader<bool>;
+pub type UART0_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART0_CLK_EN` writer - Set 1 to enable uart0 apb clock"]
-pub type UART0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART0_CONF_SPEC, bool, O>;
+pub type UART0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART0_CONF_SPEC, O>;
 #[doc = "Field `UART0_RST_EN` reader - Set 0 to reset uart0 module"]
-pub type UART0_RST_EN_R = crate::BitReader<bool>;
+pub type UART0_RST_EN_R = crate::BitReader;
 #[doc = "Field `UART0_RST_EN` writer - Set 0 to reset uart0 module"]
-pub type UART0_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART0_CONF_SPEC, bool, O>;
+pub type UART0_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, UART0_CONF_SPEC, O>;
 #[doc = "Field `UART0_READY` reader - Query this field after reset uart0 module"]
-pub type UART0_READY_R = crate::BitReader<bool>;
+pub type UART0_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable uart0 apb clock"]
     #[inline(always)]
@@ -59,6 +59,28 @@ impl R {
     #[inline(always)]
     pub fn uart0_ready(&self) -> UART0_READY_R {
         UART0_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART0_CONF")
+            .field(
+                "uart0_clk_en",
+                &format_args!("{}", self.uart0_clk_en().bit()),
+            )
+            .field(
+                "uart0_rst_en",
+                &format_args!("{}", self.uart0_rst_en().bit()),
+            )
+            .field("uart0_ready", &format_args!("{}", self.uart0_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART0_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

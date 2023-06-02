@@ -38,14 +38,31 @@ impl From<crate::W<LP_CPU_PWR1_SPEC>> for W {
 pub type LP_CPU_WAKEUP_EN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LP_CPU_WAKEUP_EN` writer - need_des"]
 pub type LP_CPU_WAKEUP_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LP_CPU_PWR1_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, LP_CPU_PWR1_SPEC, 16, O, u16, u16>;
 #[doc = "Field `LP_CPU_SLEEP_REQ` writer - need_des"]
-pub type LP_CPU_SLEEP_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, LP_CPU_PWR1_SPEC, bool, O>;
+pub type LP_CPU_SLEEP_REQ_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
     pub fn lp_cpu_wakeup_en(&self) -> LP_CPU_WAKEUP_EN_R {
         LP_CPU_WAKEUP_EN_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_CPU_PWR1")
+            .field(
+                "lp_cpu_wakeup_en",
+                &format_args!("{}", self.lp_cpu_wakeup_en().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_CPU_PWR1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

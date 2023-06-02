@@ -35,81 +35,69 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LSTIMER0_OVF_INT_ENA` reader - reg_lstimer0_ovf_int_ena."]
-pub type LSTIMER0_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER0_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER0_OVF_INT_ENA` writer - reg_lstimer0_ovf_int_ena."]
-pub type LSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER1_OVF_INT_ENA` reader - reg_lstimer1_ovf_int_ena."]
-pub type LSTIMER1_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER1_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER1_OVF_INT_ENA` writer - reg_lstimer1_ovf_int_ena."]
-pub type LSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER2_OVF_INT_ENA` reader - reg_lstimer2_ovf_int_ena."]
-pub type LSTIMER2_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER2_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER2_OVF_INT_ENA` writer - reg_lstimer2_ovf_int_ena."]
-pub type LSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER3_OVF_INT_ENA` reader - reg_lstimer3_ovf_int_ena."]
-pub type LSTIMER3_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER3_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER3_OVF_INT_ENA` writer - reg_lstimer3_ovf_int_ena."]
-pub type LSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ENA` reader - reg_duty_chng_end_lsch0_int_ena."]
-pub type DUTY_CHNG_END_LSCH0_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ENA` writer - reg_duty_chng_end_lsch0_int_ena."]
-pub type DUTY_CHNG_END_LSCH0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ENA` reader - reg_duty_chng_end_lsch1_int_ena."]
-pub type DUTY_CHNG_END_LSCH1_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ENA` writer - reg_duty_chng_end_lsch1_int_ena."]
-pub type DUTY_CHNG_END_LSCH1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ENA` reader - reg_duty_chng_end_lsch2_int_ena."]
-pub type DUTY_CHNG_END_LSCH2_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ENA` writer - reg_duty_chng_end_lsch2_int_ena."]
-pub type DUTY_CHNG_END_LSCH2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ENA` reader - reg_duty_chng_end_lsch3_int_ena."]
-pub type DUTY_CHNG_END_LSCH3_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ENA` writer - reg_duty_chng_end_lsch3_int_ena."]
-pub type DUTY_CHNG_END_LSCH3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ENA` reader - reg_duty_chng_end_lsch4_int_ena."]
-pub type DUTY_CHNG_END_LSCH4_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ENA` writer - reg_duty_chng_end_lsch4_int_ena."]
-pub type DUTY_CHNG_END_LSCH4_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ENA` reader - reg_duty_chng_end_lsch5_int_ena."]
-pub type DUTY_CHNG_END_LSCH5_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ENA` writer - reg_duty_chng_end_lsch5_int_ena."]
-pub type DUTY_CHNG_END_LSCH5_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH0_INT_ENA` reader - reg_ovf_cnt_lsch0_int_ena."]
-pub type OVF_CNT_LSCH0_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH0_INT_ENA` writer - reg_ovf_cnt_lsch0_int_ena."]
-pub type OVF_CNT_LSCH0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH1_INT_ENA` reader - reg_ovf_cnt_lsch1_int_ena."]
-pub type OVF_CNT_LSCH1_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH1_INT_ENA` writer - reg_ovf_cnt_lsch1_int_ena."]
-pub type OVF_CNT_LSCH1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH2_INT_ENA` reader - reg_ovf_cnt_lsch2_int_ena."]
-pub type OVF_CNT_LSCH2_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH2_INT_ENA` writer - reg_ovf_cnt_lsch2_int_ena."]
-pub type OVF_CNT_LSCH2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH3_INT_ENA` reader - reg_ovf_cnt_lsch3_int_ena."]
-pub type OVF_CNT_LSCH3_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH3_INT_ENA` writer - reg_ovf_cnt_lsch3_int_ena."]
-pub type OVF_CNT_LSCH3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH4_INT_ENA` reader - reg_ovf_cnt_lsch4_int_ena."]
-pub type OVF_CNT_LSCH4_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH4_INT_ENA` writer - reg_ovf_cnt_lsch4_int_ena."]
-pub type OVF_CNT_LSCH4_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVF_CNT_LSCH5_INT_ENA` reader - reg_ovf_cnt_lsch5_int_ena."]
-pub type OVF_CNT_LSCH5_INT_ENA_R = crate::BitReader<bool>;
+pub type OVF_CNT_LSCH5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVF_CNT_LSCH5_INT_ENA` writer - reg_ovf_cnt_lsch5_int_ena."]
-pub type OVF_CNT_LSCH5_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVF_CNT_LSCH5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_ena."]
     #[inline(always)]
@@ -190,6 +178,83 @@ impl R {
     #[inline(always)]
     pub fn ovf_cnt_lsch5_int_ena(&self) -> OVF_CNT_LSCH5_INT_ENA_R {
         OVF_CNT_LSCH5_INT_ENA_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "lstimer0_ovf_int_ena",
+                &format_args!("{}", self.lstimer0_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer1_ovf_int_ena",
+                &format_args!("{}", self.lstimer1_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer2_ovf_int_ena",
+                &format_args!("{}", self.lstimer2_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer3_ovf_int_ena",
+                &format_args!("{}", self.lstimer3_ovf_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch0_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch0_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch1_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch1_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch2_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch2_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch3_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch3_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch4_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch4_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch5_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch5_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch0_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch0_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch1_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch1_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch2_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch2_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch3_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch3_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch4_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch4_int_ena().bit()),
+            )
+            .field(
+                "ovf_cnt_lsch5_int_ena",
+                &format_args!("{}", self.ovf_cnt_lsch5_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

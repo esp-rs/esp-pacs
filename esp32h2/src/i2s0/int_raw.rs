@@ -14,13 +14,13 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_DONE_INT_RAW` reader - The raw interrupt status bit for the i2s_rx_done_int interrupt"]
-pub type RX_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_DONE_INT_RAW` reader - The raw interrupt status bit for the i2s_tx_done_int interrupt"]
-pub type TX_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RX_HUNG_INT_RAW` reader - The raw interrupt status bit for the i2s_rx_hung_int interrupt"]
-pub type RX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type RX_HUNG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_HUNG_INT_RAW` reader - The raw interrupt status bit for the i2s_tx_hung_int interrupt"]
-pub type TX_HUNG_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_HUNG_INT_RAW_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn tx_hung_int_raw(&self) -> TX_HUNG_INT_RAW_R {
         TX_HUNG_INT_RAW_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "rx_done_int_raw",
+                &format_args!("{}", self.rx_done_int_raw().bit()),
+            )
+            .field(
+                "tx_done_int_raw",
+                &format_args!("{}", self.tx_done_int_raw().bit()),
+            )
+            .field(
+                "rx_hung_int_raw",
+                &format_args!("{}", self.rx_hung_int_raw().bit()),
+            )
+            .field(
+                "tx_hung_int_raw",
+                &format_args!("{}", self.tx_hung_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "I2S interrupt raw register, valid in level.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_raw](index.html) module"]

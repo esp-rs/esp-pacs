@@ -38,17 +38,15 @@ impl From<crate::W<TARGET2_CONF_SPEC>> for W {
 pub type TARGET2_PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TARGET2_PERIOD` writer - target2 period"]
 pub type TARGET2_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TARGET2_CONF_SPEC, u32, u32, 26, O>;
+    crate::FieldWriter<'a, TARGET2_CONF_SPEC, 26, O, u32, u32>;
 #[doc = "Field `TARGET2_PERIOD_MODE` reader - Set target2 to period mode"]
-pub type TARGET2_PERIOD_MODE_R = crate::BitReader<bool>;
+pub type TARGET2_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET2_PERIOD_MODE` writer - Set target2 to period mode"]
-pub type TARGET2_PERIOD_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TARGET2_CONF_SPEC, bool, O>;
+pub type TARGET2_PERIOD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, TARGET2_CONF_SPEC, O>;
 #[doc = "Field `TARGET2_TIMER_UNIT_SEL` reader - select which unit to compare"]
-pub type TARGET2_TIMER_UNIT_SEL_R = crate::BitReader<bool>;
+pub type TARGET2_TIMER_UNIT_SEL_R = crate::BitReader;
 #[doc = "Field `TARGET2_TIMER_UNIT_SEL` writer - select which unit to compare"]
-pub type TARGET2_TIMER_UNIT_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TARGET2_CONF_SPEC, bool, O>;
+pub type TARGET2_TIMER_UNIT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, TARGET2_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:25 - target2 period"]
     #[inline(always)]
@@ -64,6 +62,31 @@ impl R {
     #[inline(always)]
     pub fn target2_timer_unit_sel(&self) -> TARGET2_TIMER_UNIT_SEL_R {
         TARGET2_TIMER_UNIT_SEL_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TARGET2_CONF")
+            .field(
+                "target2_period",
+                &format_args!("{}", self.target2_period().bits()),
+            )
+            .field(
+                "target2_period_mode",
+                &format_args!("{}", self.target2_period_mode().bit()),
+            )
+            .field(
+                "target2_timer_unit_sel",
+                &format_args!("{}", self.target2_timer_unit_sel().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TARGET2_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

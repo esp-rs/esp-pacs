@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - DMA_INT_RAW_CH0_REG."]
     pub int_raw_ch0: INT_RAW_CH0,

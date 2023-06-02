@@ -38,22 +38,22 @@ impl From<crate::W<TX_PCM2PDM_CONF1_SPEC>> for W {
 pub type TX_PDM_FP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_PDM_FP` writer - I2S TX PDM Fp"]
 pub type TX_PDM_FP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF1_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TX_PDM_FS` reader - I2S TX PDM Fs"]
 pub type TX_PDM_FS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TX_PDM_FS` writer - I2S TX PDM Fs"]
 pub type TX_PDM_FS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF1_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TX_IIR_HP_MULT12_5` reader - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_5_R = crate::FieldReader<u8, u8>;
+pub type TX_IIR_HP_MULT12_5_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_5` writer - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF1_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 3, O>;
 #[doc = "Field `TX_IIR_HP_MULT12_0` reader - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
-pub type TX_IIR_HP_MULT12_0_R = crate::FieldReader<u8, u8>;
+pub type TX_IIR_HP_MULT12_0_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_0` writer - The fourth parameter of PDM TX IIR_HP filter stage 1 is (504 + I2S_TX_IIR_HP_MULT12_0\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF1_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:9 - I2S TX PDM Fp"]
     #[inline(always)]
@@ -74,6 +74,29 @@ impl R {
     #[inline(always)]
     pub fn tx_iir_hp_mult12_0(&self) -> TX_IIR_HP_MULT12_0_R {
         TX_IIR_HP_MULT12_0_R::new(((self.bits >> 23) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TX_PCM2PDM_CONF1")
+            .field("tx_pdm_fp", &format_args!("{}", self.tx_pdm_fp().bits()))
+            .field("tx_pdm_fs", &format_args!("{}", self.tx_pdm_fs().bits()))
+            .field(
+                "tx_iir_hp_mult12_5",
+                &format_args!("{}", self.tx_iir_hp_mult12_5().bits()),
+            )
+            .field(
+                "tx_iir_hp_mult12_0",
+                &format_args!("{}", self.tx_iir_hp_mult12_0().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TX_PCM2PDM_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

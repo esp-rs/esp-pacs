@@ -35,15 +35,31 @@ impl From<crate::W<HP_CK_POWERON_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_POR_WAIT_TARGET` reader - need_des"]
-pub type I2C_POR_WAIT_TARGET_R = crate::FieldReader<u8, u8>;
+pub type I2C_POR_WAIT_TARGET_R = crate::FieldReader;
 #[doc = "Field `I2C_POR_WAIT_TARGET` writer - need_des"]
-pub type I2C_POR_WAIT_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HP_CK_POWERON_SPEC, u8, u8, 8, O>;
+pub type I2C_POR_WAIT_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, HP_CK_POWERON_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
     pub fn i2c_por_wait_target(&self) -> I2C_POR_WAIT_TARGET_R {
         I2C_POR_WAIT_TARGET_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_CK_POWERON")
+            .field(
+                "i2c_por_wait_target",
+                &format_args!("{}", self.i2c_por_wait_target().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_CK_POWERON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

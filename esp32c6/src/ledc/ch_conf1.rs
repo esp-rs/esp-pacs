@@ -35,14 +35,28 @@ impl From<crate::W<CH_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_START` reader - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_R = crate::BitReader<bool>;
+pub type DUTY_START_R = crate::BitReader;
 #[doc = "Field `DUTY_START` writer - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
-pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_CONF1_SPEC, bool, O>;
+pub type DUTY_START_W<'a, const O: u8> = crate::BitWriter<'a, CH_CONF1_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
     pub fn duty_start(&self) -> DUTY_START_R {
         DUTY_START_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_CONF1")
+            .field("duty_start", &format_args!("{}", self.duty_start().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_CONF1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

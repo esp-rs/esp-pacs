@@ -35,45 +35,45 @@ impl From<crate::W<DCFG_SPEC>> for W {
     }
 }
 #[doc = "Field `NZSTSOUTHSHK` reader - "]
-pub type NZSTSOUTHSHK_R = crate::BitReader<bool>;
+pub type NZSTSOUTHSHK_R = crate::BitReader;
 #[doc = "Field `NZSTSOUTHSHK` writer - "]
-pub type NZSTSOUTHSHK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type NZSTSOUTHSHK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `DEVADDR` reader - "]
-pub type DEVADDR_R = crate::FieldReader<u8, u8>;
+pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - "]
-pub type DEVADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 7, O>;
+pub type DEVADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 7, O>;
 #[doc = "Field `PERFRLINT` reader - "]
-pub type PERFRLINT_R = crate::FieldReader<u8, u8>;
+pub type PERFRLINT_R = crate::FieldReader;
 #[doc = "Field `PERFRLINT` writer - "]
-pub type PERFRLINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 2, O>;
+pub type PERFRLINT_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 2, O>;
 #[doc = "Field `ENDEVOUTNAK` reader - "]
-pub type ENDEVOUTNAK_R = crate::BitReader<bool>;
+pub type ENDEVOUTNAK_R = crate::BitReader;
 #[doc = "Field `ENDEVOUTNAK` writer - "]
-pub type ENDEVOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type ENDEVOUTNAK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `XCVRDLY` reader - "]
-pub type XCVRDLY_R = crate::BitReader<bool>;
+pub type XCVRDLY_R = crate::BitReader;
 #[doc = "Field `XCVRDLY` writer - "]
-pub type XCVRDLY_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type XCVRDLY_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `ERRATICINTMSK` reader - "]
-pub type ERRATICINTMSK_R = crate::BitReader<bool>;
+pub type ERRATICINTMSK_R = crate::BitReader;
 #[doc = "Field `ERRATICINTMSK` writer - "]
-pub type ERRATICINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type ERRATICINTMSK_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `EPMISCNT` reader - "]
-pub type EPMISCNT_R = crate::FieldReader<u8, u8>;
+pub type EPMISCNT_R = crate::FieldReader;
 #[doc = "Field `EPMISCNT` writer - "]
-pub type EPMISCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 5, O>;
+pub type EPMISCNT_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 5, O>;
 #[doc = "Field `DESCDMA` reader - "]
-pub type DESCDMA_R = crate::BitReader<bool>;
+pub type DESCDMA_R = crate::BitReader;
 #[doc = "Field `DESCDMA` writer - "]
-pub type DESCDMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, DCFG_SPEC, bool, O>;
+pub type DESCDMA_W<'a, const O: u8> = crate::BitWriter<'a, DCFG_SPEC, O>;
 #[doc = "Field `PERSCHINTVL` reader - "]
-pub type PERSCHINTVL_R = crate::FieldReader<u8, u8>;
+pub type PERSCHINTVL_R = crate::FieldReader;
 #[doc = "Field `PERSCHINTVL` writer - "]
-pub type PERSCHINTVL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 2, O>;
+pub type PERSCHINTVL_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 2, O>;
 #[doc = "Field `RESVALID` reader - "]
-pub type RESVALID_R = crate::FieldReader<u8, u8>;
+pub type RESVALID_R = crate::FieldReader;
 #[doc = "Field `RESVALID` writer - "]
-pub type RESVALID_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DCFG_SPEC, u8, u8, 6, O>;
+pub type RESVALID_W<'a, const O: u8> = crate::FieldWriter<'a, DCFG_SPEC, 6, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -124,6 +124,38 @@ impl R {
     #[inline(always)]
     pub fn resvalid(&self) -> RESVALID_R {
         RESVALID_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCFG")
+            .field(
+                "nzstsouthshk",
+                &format_args!("{}", self.nzstsouthshk().bit()),
+            )
+            .field("devaddr", &format_args!("{}", self.devaddr().bits()))
+            .field("perfrlint", &format_args!("{}", self.perfrlint().bits()))
+            .field("endevoutnak", &format_args!("{}", self.endevoutnak().bit()))
+            .field("xcvrdly", &format_args!("{}", self.xcvrdly().bit()))
+            .field(
+                "erraticintmsk",
+                &format_args!("{}", self.erraticintmsk().bit()),
+            )
+            .field("epmiscnt", &format_args!("{}", self.epmiscnt().bits()))
+            .field("descdma", &format_args!("{}", self.descdma().bit()))
+            .field(
+                "perschintvl",
+                &format_args!("{}", self.perschintvl().bits()),
+            )
+            .field("resvalid", &format_args!("{}", self.resvalid().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

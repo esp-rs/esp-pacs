@@ -37,17 +37,15 @@ impl From<crate::W<SYSCLK_CONF_SPEC>> for W {
 #[doc = "Field `PRE_DIV_CNT` reader - This field is used to set the count of prescaler of XTAL_CLK."]
 pub type PRE_DIV_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRE_DIV_CNT` writer - This field is used to set the count of prescaler of XTAL_CLK."]
-pub type PRE_DIV_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SYSCLK_CONF_SPEC, u16, u16, 10, O>;
+pub type PRE_DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, SYSCLK_CONF_SPEC, 10, O, u16, u16>;
 #[doc = "Field `SOC_CLK_SEL` reader - This field is used to select soc clock."]
-pub type SOC_CLK_SEL_R = crate::FieldReader<u8, u8>;
+pub type SOC_CLK_SEL_R = crate::FieldReader;
 #[doc = "Field `SOC_CLK_SEL` writer - This field is used to select soc clock."]
-pub type SOC_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SYSCLK_CONF_SPEC, u8, u8, 2, O>;
+pub type SOC_CLK_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SYSCLK_CONF_SPEC, 2, O>;
 #[doc = "Field `CLK_XTAL_FREQ` reader - This field is used to read xtal frequency in MHz."]
-pub type CLK_XTAL_FREQ_R = crate::FieldReader<u8, u8>;
+pub type CLK_XTAL_FREQ_R = crate::FieldReader;
 #[doc = "Field `CLK_DIV_EN` reader - Reserved."]
-pub type CLK_DIV_EN_R = crate::BitReader<bool>;
+pub type CLK_DIV_EN_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:9 - This field is used to set the count of prescaler of XTAL_CLK."]
     #[inline(always)]
@@ -68,6 +66,32 @@ impl R {
     #[inline(always)]
     pub fn clk_div_en(&self) -> CLK_DIV_EN_R {
         CLK_DIV_EN_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYSCLK_CONF")
+            .field(
+                "pre_div_cnt",
+                &format_args!("{}", self.pre_div_cnt().bits()),
+            )
+            .field(
+                "soc_clk_sel",
+                &format_args!("{}", self.soc_clk_sel().bits()),
+            )
+            .field(
+                "clk_xtal_freq",
+                &format_args!("{}", self.clk_xtal_freq().bits()),
+            )
+            .field("clk_div_en", &format_args!("{}", self.clk_div_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SYSCLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,9 +37,9 @@ impl From<crate::W<INFIFO_POP_SPEC>> for W {
 #[doc = "Field `INFIFO_RDATA` reader - APB in FIFO read data."]
 pub type INFIFO_RDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INFIFO_POP` reader - APB in FIFO pop."]
-pub type INFIFO_POP_R = crate::BitReader<bool>;
+pub type INFIFO_POP_R = crate::BitReader;
 #[doc = "Field `INFIFO_POP` writer - APB in FIFO pop."]
-pub type INFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, u32, INFIFO_POP_SPEC, bool, O>;
+pub type INFIFO_POP_W<'a, const O: u8> = crate::BitWriter<'a, INFIFO_POP_SPEC, O>;
 impl R {
     #[doc = "Bits 0:11 - APB in FIFO read data."]
     #[inline(always)]
@@ -50,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn infifo_pop(&self) -> INFIFO_POP_R {
         INFIFO_POP_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INFIFO_POP")
+            .field(
+                "infifo_rdata",
+                &format_args!("{}", self.infifo_rdata().bits()),
+            )
+            .field("infifo_pop", &format_args!("{}", self.infifo_pop().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INFIFO_POP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

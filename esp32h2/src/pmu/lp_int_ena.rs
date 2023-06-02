@@ -35,65 +35,63 @@ impl From<crate::W<LP_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_CPU_WAKEUP_INT_ENA` reader - need_des"]
-pub type LP_CPU_WAKEUP_INT_ENA_R = crate::BitReader<bool>;
+pub type LP_CPU_WAKEUP_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LP_CPU_WAKEUP_INT_ENA` writer - need_des"]
-pub type LP_CPU_WAKEUP_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+pub type LP_CPU_WAKEUP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_END_INT_ENA` reader - need_des"]
-pub type MODEM_SWITCH_ACTIVE_END_INT_ENA_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_ACTIVE_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_END_INT_ENA` writer - need_des"]
 pub type MODEM_SWITCH_ACTIVE_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_END_INT_ENA` reader - need_des"]
-pub type SLEEP_SWITCH_ACTIVE_END_INT_ENA_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_ACTIVE_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_END_INT_ENA` writer - need_des"]
 pub type SLEEP_SWITCH_ACTIVE_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `SLEEP_SWITCH_MODEM_END_INT_ENA` reader - need_des"]
-pub type SLEEP_SWITCH_MODEM_END_INT_ENA_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_MODEM_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_MODEM_END_INT_ENA` writer - need_des"]
 pub type SLEEP_SWITCH_MODEM_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `MODEM_SWITCH_SLEEP_END_INT_ENA` reader - need_des"]
-pub type MODEM_SWITCH_SLEEP_END_INT_ENA_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_SLEEP_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_SLEEP_END_INT_ENA` writer - need_des"]
 pub type MODEM_SWITCH_SLEEP_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_END_INT_ENA` reader - need_des"]
-pub type ACTIVE_SWITCH_SLEEP_END_INT_ENA_R = crate::BitReader<bool>;
+pub type ACTIVE_SWITCH_SLEEP_END_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_END_INT_ENA` writer - need_des"]
 pub type ACTIVE_SWITCH_SLEEP_END_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_START_INT_ENA` reader - need_des"]
-pub type MODEM_SWITCH_ACTIVE_START_INT_ENA_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_ACTIVE_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_ACTIVE_START_INT_ENA` writer - need_des"]
 pub type MODEM_SWITCH_ACTIVE_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_START_INT_ENA` reader - need_des"]
-pub type SLEEP_SWITCH_ACTIVE_START_INT_ENA_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_ACTIVE_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_ACTIVE_START_INT_ENA` writer - need_des"]
 pub type SLEEP_SWITCH_ACTIVE_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `SLEEP_SWITCH_MODEM_START_INT_ENA` reader - need_des"]
-pub type SLEEP_SWITCH_MODEM_START_INT_ENA_R = crate::BitReader<bool>;
+pub type SLEEP_SWITCH_MODEM_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `SLEEP_SWITCH_MODEM_START_INT_ENA` writer - need_des"]
 pub type SLEEP_SWITCH_MODEM_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `MODEM_SWITCH_SLEEP_START_INT_ENA` reader - need_des"]
-pub type MODEM_SWITCH_SLEEP_START_INT_ENA_R = crate::BitReader<bool>;
+pub type MODEM_SWITCH_SLEEP_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `MODEM_SWITCH_SLEEP_START_INT_ENA` writer - need_des"]
 pub type MODEM_SWITCH_SLEEP_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_START_INT_ENA` reader - need_des"]
-pub type ACTIVE_SWITCH_SLEEP_START_INT_ENA_R = crate::BitReader<bool>;
+pub type ACTIVE_SWITCH_SLEEP_START_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ACTIVE_SWITCH_SLEEP_START_INT_ENA` writer - need_des"]
 pub type ACTIVE_SWITCH_SLEEP_START_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 #[doc = "Field `HP_SW_TRIGGER_INT_ENA` reader - need_des"]
-pub type HP_SW_TRIGGER_INT_ENA_R = crate::BitReader<bool>;
+pub type HP_SW_TRIGGER_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HP_SW_TRIGGER_INT_ENA` writer - need_des"]
-pub type HP_SW_TRIGGER_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_ENA_SPEC, bool, O>;
+pub type HP_SW_TRIGGER_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LP_INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
@@ -154,6 +152,67 @@ impl R {
     #[inline(always)]
     pub fn hp_sw_trigger_int_ena(&self) -> HP_SW_TRIGGER_INT_ENA_R {
         HP_SW_TRIGGER_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_INT_ENA")
+            .field(
+                "lp_cpu_wakeup_int_ena",
+                &format_args!("{}", self.lp_cpu_wakeup_int_ena().bit()),
+            )
+            .field(
+                "modem_switch_active_end_int_ena",
+                &format_args!("{}", self.modem_switch_active_end_int_ena().bit()),
+            )
+            .field(
+                "sleep_switch_active_end_int_ena",
+                &format_args!("{}", self.sleep_switch_active_end_int_ena().bit()),
+            )
+            .field(
+                "sleep_switch_modem_end_int_ena",
+                &format_args!("{}", self.sleep_switch_modem_end_int_ena().bit()),
+            )
+            .field(
+                "modem_switch_sleep_end_int_ena",
+                &format_args!("{}", self.modem_switch_sleep_end_int_ena().bit()),
+            )
+            .field(
+                "active_switch_sleep_end_int_ena",
+                &format_args!("{}", self.active_switch_sleep_end_int_ena().bit()),
+            )
+            .field(
+                "modem_switch_active_start_int_ena",
+                &format_args!("{}", self.modem_switch_active_start_int_ena().bit()),
+            )
+            .field(
+                "sleep_switch_active_start_int_ena",
+                &format_args!("{}", self.sleep_switch_active_start_int_ena().bit()),
+            )
+            .field(
+                "sleep_switch_modem_start_int_ena",
+                &format_args!("{}", self.sleep_switch_modem_start_int_ena().bit()),
+            )
+            .field(
+                "modem_switch_sleep_start_int_ena",
+                &format_args!("{}", self.modem_switch_sleep_start_int_ena().bit()),
+            )
+            .field(
+                "active_switch_sleep_start_int_ena",
+                &format_args!("{}", self.active_switch_sleep_start_int_ena().bit()),
+            )
+            .field(
+                "hp_sw_trigger_int_ena",
+                &format_args!("{}", self.hp_sw_trigger_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

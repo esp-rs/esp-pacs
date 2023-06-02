@@ -35,15 +35,32 @@ impl From<crate::W<CORE_0_WORLD_DRAM0_PIF_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_WORLD_DRAM0_PIF` reader - this field is used to read current world of Dram0 bus and PIF bus"]
-pub type CORE_0_WORLD_DRAM0_PIF_R = crate::FieldReader<u8, u8>;
+pub type CORE_0_WORLD_DRAM0_PIF_R = crate::FieldReader;
 #[doc = "Field `CORE_0_WORLD_DRAM0_PIF` writer - this field is used to read current world of Dram0 bus and PIF bus"]
 pub type CORE_0_WORLD_DRAM0_PIF_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_0_WORLD_DRAM0_PIF_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_0_WORLD_DRAM0_PIF_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - this field is used to read current world of Dram0 bus and PIF bus"]
     #[inline(always)]
     pub fn core_0_world_dram0_pif(&self) -> CORE_0_WORLD_DRAM0_PIF_R {
         CORE_0_WORLD_DRAM0_PIF_R::new((self.bits & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_0_World_DRam0_PIF")
+            .field(
+                "core_0_world_dram0_pif",
+                &format_args!("{}", self.core_0_world_dram0_pif().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_WORLD_DRAM0_PIF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

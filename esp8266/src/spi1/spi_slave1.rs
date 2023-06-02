@@ -35,54 +35,46 @@ impl From<crate::W<SPI_SLAVE1_SPEC>> for W {
     }
 }
 #[doc = "Field `slv_rdbuf_dummy_en` reader - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-buffer\" operations."]
-pub type SLV_RDBUF_DUMMY_EN_R = crate::BitReader<bool>;
+pub type SLV_RDBUF_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `slv_rdbuf_dummy_en` writer - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-buffer\" operations."]
-pub type SLV_RDBUF_DUMMY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SLV_RDBUF_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `slv_wrbuf_dummy_en` reader - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-buffer\" operations."]
-pub type SLV_WRBUF_DUMMY_EN_R = crate::BitReader<bool>;
+pub type SLV_WRBUF_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `slv_wrbuf_dummy_en` writer - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-buffer\" operations."]
-pub type SLV_WRBUF_DUMMY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SLV_WRBUF_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `slv_rdsta_dummy_en` reader - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-status\" operations."]
-pub type SLV_RDSTA_DUMMY_EN_R = crate::BitReader<bool>;
+pub type SLV_RDSTA_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `slv_rdsta_dummy_en` writer - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-status\" operations."]
-pub type SLV_RDSTA_DUMMY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SLV_RDSTA_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `slv_wrsta_dummy_en` reader - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-status\" operations."]
-pub type SLV_WRSTA_DUMMY_EN_R = crate::BitReader<bool>;
+pub type SLV_WRSTA_DUMMY_EN_R = crate::BitReader;
 #[doc = "Field `slv_wrsta_dummy_en` writer - In the slave mode, it is the enable bit of \"dummy\" phase for \"write-status\" operations."]
-pub type SLV_WRSTA_DUMMY_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SLV_WRSTA_DUMMY_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `slv_wr_addr_bitlen` reader - In the slave mode, it is the address length in bits for \"write-buffer\" operation. The register value shall be(bit_num-1)"]
-pub type SLV_WR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_WR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `slv_wr_addr_bitlen` writer - In the slave mode, it is the address length in bits for \"write-buffer\" operation. The register value shall be(bit_num-1)"]
-pub type SLV_WR_ADDR_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE1_SPEC, u8, u8, 6, O>;
+pub type SLV_WR_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 6, O>;
 #[doc = "Field `slv_rd_addr_bitlen` reader - In the slave mode, it is the address length in bits for \"read-buffer\" operation. The register value shall be(bit_num-1)"]
-pub type SLV_RD_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_RD_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `slv_rd_addr_bitlen` writer - In the slave mode, it is the address length in bits for \"read-buffer\" operation. The register value shall be(bit_num-1)"]
-pub type SLV_RD_ADDR_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE1_SPEC, u8, u8, 6, O>;
+pub type SLV_RD_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 6, O>;
 #[doc = "Field `slv_buf_bitlen` reader - In the slave mode, it is the length in bits for \"write-buffer\" and \"read-buffer\" operations. The register value shallbe (bit_num-1)"]
 pub type SLV_BUF_BITLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `slv_buf_bitlen` writer - In the slave mode, it is the length in bits for \"write-buffer\" and \"read-buffer\" operations. The register value shallbe (bit_num-1)"]
 pub type SLV_BUF_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE1_SPEC, u16, u16, 9, O>;
+    crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 9, O, u16, u16>;
 #[doc = "Field `spi_status_read` reader - Enable spi slave status"]
-pub type SPI_STATUS_READ_R = crate::BitReader<bool>;
+pub type SPI_STATUS_READ_R = crate::BitReader;
 #[doc = "Field `spi_status_read` writer - Enable spi slave status"]
-pub type SPI_STATUS_READ_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SPI_STATUS_READ_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `spi_status_fast_enable` reader - Enable fast spi slave status"]
-pub type SPI_STATUS_FAST_ENABLE_R = crate::BitReader<bool>;
+pub type SPI_STATUS_FAST_ENABLE_R = crate::BitReader;
 #[doc = "Field `spi_status_fast_enable` writer - Enable fast spi slave status"]
-pub type SPI_STATUS_FAST_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_SLAVE1_SPEC, bool, O>;
+pub type SPI_STATUS_FAST_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_SLAVE1_SPEC, O>;
 #[doc = "Field `slv_status_bitlen` reader - In the slave mode, it is the length in bits for \"write-status\" and \"read-status\" operations. The register valueshall be (bit_num-1)"]
-pub type SLV_STATUS_BITLEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_STATUS_BITLEN_R = crate::FieldReader;
 #[doc = "Field `slv_status_bitlen` writer - In the slave mode, it is the length in bits for \"write-status\" and \"read-status\" operations. The register valueshall be (bit_num-1)"]
-pub type SLV_STATUS_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE1_SPEC, u8, u8, 5, O>;
+pub type SLV_STATUS_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 0 - In the slave mode, it is the enable bit of \"dummy\" phase for \"read-buffer\" operations."]
     #[inline(always)]
@@ -133,6 +125,59 @@ impl R {
     #[inline(always)]
     pub fn slv_status_bitlen(&self) -> SLV_STATUS_BITLEN_R {
         SLV_STATUS_BITLEN_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SLAVE1")
+            .field(
+                "slv_status_bitlen",
+                &format_args!("{}", self.slv_status_bitlen().bits()),
+            )
+            .field(
+                "slv_buf_bitlen",
+                &format_args!("{}", self.slv_buf_bitlen().bits()),
+            )
+            .field(
+                "slv_rd_addr_bitlen",
+                &format_args!("{}", self.slv_rd_addr_bitlen().bits()),
+            )
+            .field(
+                "slv_wr_addr_bitlen",
+                &format_args!("{}", self.slv_wr_addr_bitlen().bits()),
+            )
+            .field(
+                "slv_wrsta_dummy_en",
+                &format_args!("{}", self.slv_wrsta_dummy_en().bit()),
+            )
+            .field(
+                "slv_rdsta_dummy_en",
+                &format_args!("{}", self.slv_rdsta_dummy_en().bit()),
+            )
+            .field(
+                "slv_wrbuf_dummy_en",
+                &format_args!("{}", self.slv_wrbuf_dummy_en().bit()),
+            )
+            .field(
+                "slv_rdbuf_dummy_en",
+                &format_args!("{}", self.slv_rdbuf_dummy_en().bit()),
+            )
+            .field(
+                "spi_status_fast_enable",
+                &format_args!("{}", self.spi_status_fast_enable().bit()),
+            )
+            .field(
+                "spi_status_read",
+                &format_args!("{}", self.spi_status_read().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SLAVE1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

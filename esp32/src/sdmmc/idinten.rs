@@ -35,33 +35,33 @@ impl From<crate::W<IDINTEN_SPEC>> for W {
     }
 }
 #[doc = "Field `TI` reader - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
-pub type TI_R = crate::BitReader<bool>;
+pub type TI_R = crate::BitReader;
 #[doc = "Field `TI` writer - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
-pub type TI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type TI_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `RI` reader - Receive Interrupt Enable. When set with Normal Interrupt Summary Enable, Receive Interrupt is enabled. When reset, Receive Interrupt is disabled."]
-pub type RI_R = crate::BitReader<bool>;
+pub type RI_R = crate::BitReader;
 #[doc = "Field `RI` writer - Receive Interrupt Enable. When set with Normal Interrupt Summary Enable, Receive Interrupt is enabled. When reset, Receive Interrupt is disabled."]
-pub type RI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type RI_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `FBE` reader - Fatal Bus Error Enable. When set with Abnormal Interrupt Summary Enable, the Fatal Bus Error Interrupt is enabled. When reset, Fatal Bus Error Enable Interrupt is disabled."]
-pub type FBE_R = crate::BitReader<bool>;
+pub type FBE_R = crate::BitReader;
 #[doc = "Field `FBE` writer - Fatal Bus Error Enable. When set with Abnormal Interrupt Summary Enable, the Fatal Bus Error Interrupt is enabled. When reset, Fatal Bus Error Enable Interrupt is disabled."]
-pub type FBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type FBE_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `DU` reader - Descriptor Unavailable Interrupt. When set along with Abnormal Interrupt Summary Enable, the DU interrupt is enabled."]
-pub type DU_R = crate::BitReader<bool>;
+pub type DU_R = crate::BitReader;
 #[doc = "Field `DU` writer - Descriptor Unavailable Interrupt. When set along with Abnormal Interrupt Summary Enable, the DU interrupt is enabled."]
-pub type DU_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type DU_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `CES` reader - Card Error summary Interrupt Enable. When set, it enables the Card Interrupt summary."]
-pub type CES_R = crate::BitReader<bool>;
+pub type CES_R = crate::BitReader;
 #[doc = "Field `CES` writer - Card Error summary Interrupt Enable. When set, it enables the Card Interrupt summary."]
-pub type CES_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type CES_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `NI` reader - Normal Interrupt Summary Enable. When set, a normal interrupt is enabled. When reset, a normal interrupt is disabled. This bit enables the following bits: IDINTEN\\[0\\]: Transmit Interrupt; IDINTEN\\[1\\]: Receive Interrupt."]
-pub type NI_R = crate::BitReader<bool>;
+pub type NI_R = crate::BitReader;
 #[doc = "Field `NI` writer - Normal Interrupt Summary Enable. When set, a normal interrupt is enabled. When reset, a normal interrupt is disabled. This bit enables the following bits: IDINTEN\\[0\\]: Transmit Interrupt; IDINTEN\\[1\\]: Receive Interrupt."]
-pub type NI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type NI_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 #[doc = "Field `AI` reader - Abnormal Interrupt Summary Enable. When set, an abnormal interrupt is enabled. This bit enables the following bits: IDINTEN\\[2\\]: Fatal Bus Error Interrupt; IDINTEN\\[4\\]: DU Interrupt."]
-pub type AI_R = crate::BitReader<bool>;
+pub type AI_R = crate::BitReader;
 #[doc = "Field `AI` writer - Abnormal Interrupt Summary Enable. When set, an abnormal interrupt is enabled. This bit enables the following bits: IDINTEN\\[2\\]: Fatal Bus Error Interrupt; IDINTEN\\[4\\]: DU Interrupt."]
-pub type AI_W<'a, const O: u8> = crate::BitWriter<'a, u32, IDINTEN_SPEC, bool, O>;
+pub type AI_W<'a, const O: u8> = crate::BitWriter<'a, IDINTEN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
     #[inline(always)]
@@ -97,6 +97,26 @@ impl R {
     #[inline(always)]
     pub fn ai(&self) -> AI_R {
         AI_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDINTEN")
+            .field("ti", &format_args!("{}", self.ti().bit()))
+            .field("ri", &format_args!("{}", self.ri().bit()))
+            .field("fbe", &format_args!("{}", self.fbe().bit()))
+            .field("du", &format_args!("{}", self.du().bit()))
+            .field("ces", &format_args!("{}", self.ces().bit()))
+            .field("ni", &format_args!("{}", self.ni().bit()))
+            .field("ai", &format_args!("{}", self.ai().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IDINTEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

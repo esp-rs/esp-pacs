@@ -22,6 +22,23 @@ impl R {
         APP_CACHE_VADDR_R::new(self.bits & 0x07ff_ffff)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_DCACHE_DBUG2")
+            .field(
+                "app_cache_vaddr",
+                &format_args!("{}", self.app_cache_vaddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_DCACHE_DBUG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [app_dcache_dbug2](index.html) module"]
 pub struct APP_DCACHE_DBUG2_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG2_SPEC {

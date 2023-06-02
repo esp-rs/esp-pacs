@@ -20,49 +20,51 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_CLR` writer - Set this bit to clear UART_THE RXFIFO_FULL_INT interrupt."]
-pub type RXFIFO_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_FULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TXFIFO_EMPTY_INT_CLR` writer - Set this bit to clear UART_TXFIFO_EMPTY_INT interrupt."]
-pub type TXFIFO_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TXFIFO_EMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `PARITY_ERR_INT_CLR` writer - Set this bit to clear UART_PARITY_ERR_INT interrupt."]
-pub type PARITY_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type PARITY_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `FRM_ERR_INT_CLR` writer - Set this bit to clear UART_FRM_ERR_INT interrupt."]
-pub type FRM_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type FRM_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RXFIFO_OVF_INT_CLR` writer - Set this bit to clear UART_UART_RXFIFO_OVF_INT interrupt."]
-pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `DSR_CHG_INT_CLR` writer - Set this bit to clear UART_DSR_CHG_INT interrupt."]
-pub type DSR_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type DSR_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `CTS_CHG_INT_CLR` writer - Set this bit to clear UART_CTS_CHG_INT interrupt."]
-pub type CTS_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type CTS_CHG_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `BRK_DET_INT_CLR` writer - Set this bit to clear UART_BRK_DET_INT interrupt."]
-pub type BRK_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type BRK_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RXFIFO_TOUT_INT_CLR` writer - Set this bit to clear UART_RXFIFO_TOUT_INT interrupt."]
-pub type RXFIFO_TOUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RXFIFO_TOUT_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SW_XON_INT_CLR` writer - Set this bit to clear UART_SW_XON_INT interrupt."]
-pub type SW_XON_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SW_XON_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `SW_XOFF_INT_CLR` writer - Set this bit to clear UART_SW_XOFF_INT interrupt."]
-pub type SW_XOFF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type SW_XOFF_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_CLR` writer - Set this bit to clear UART_GLITCH_DET_INT interrupt."]
-pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type GLITCH_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_BRK_DONE_INT_CLR` writer - Set this bit to clear UART_TX_BRK_DONE_INT interrupt."]
-pub type TX_BRK_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_BRK_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_CLR` writer - Set this bit to clear UART_TX_BRK_IDLE_DONE_INT interrupt."]
-pub type TX_BRK_IDLE_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_BRK_IDLE_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `TX_DONE_INT_CLR` writer - Set this bit to clear UART_TX_DONE_INT interrupt."]
-pub type TX_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type TX_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RS485_PARITY_ERR_INT_CLR` writer - Set this bit to clear UART_RS485_PARITY_ERR_INT interrupt."]
-pub type RS485_PARITY_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RS485_PARITY_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RS485_FRM_ERR_INT_CLR` writer - Set this bit to clear UART_RS485_FRM_ERR_INT interrupt."]
-pub type RS485_FRM_ERR_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RS485_FRM_ERR_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `RS485_CLASH_INT_CLR` writer - Set this bit to clear UART_RS485_CLASH_INT interrupt."]
-pub type RS485_CLASH_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type RS485_CLASH_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_CLR` writer - Set this bit to clear UART_AT_CMD_CHAR_DET_INT interrupt."]
-pub type AT_CMD_CHAR_DET_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type AT_CMD_CHAR_DET_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
 #[doc = "Field `WAKEUP_INT_CLR` writer - Set this bit to clear UART_WAKEUP_INT interrupt."]
-pub type WAKEUP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, O>;
+pub type WAKEUP_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set this bit to clear UART_THE RXFIFO_FULL_INT interrupt."]
     #[inline(always)]

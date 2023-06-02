@@ -35,15 +35,15 @@ impl From<crate::W<ETM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_CLK_EN` reader - Set 1 to enable etm clock"]
-pub type ETM_CLK_EN_R = crate::BitReader<bool>;
+pub type ETM_CLK_EN_R = crate::BitReader;
 #[doc = "Field `ETM_CLK_EN` writer - Set 1 to enable etm clock"]
-pub type ETM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ETM_CONF_SPEC, bool, O>;
+pub type ETM_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CONF_SPEC, O>;
 #[doc = "Field `ETM_RST_EN` reader - Set 0 to reset etm module"]
-pub type ETM_RST_EN_R = crate::BitReader<bool>;
+pub type ETM_RST_EN_R = crate::BitReader;
 #[doc = "Field `ETM_RST_EN` writer - Set 0 to reset etm module"]
-pub type ETM_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, ETM_CONF_SPEC, bool, O>;
+pub type ETM_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, ETM_CONF_SPEC, O>;
 #[doc = "Field `ETM_READY` reader - Query this field after reset etm module"]
-pub type ETM_READY_R = crate::BitReader<bool>;
+pub type ETM_READY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable etm clock"]
     #[inline(always)]
@@ -59,6 +59,22 @@ impl R {
     #[inline(always)]
     pub fn etm_ready(&self) -> ETM_READY_R {
         ETM_READY_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ETM_CONF")
+            .field("etm_clk_en", &format_args!("{}", self.etm_clk_en().bit()))
+            .field("etm_rst_en", &format_args!("{}", self.etm_rst_en().bit()))
+            .field("etm_ready", &format_args!("{}", self.etm_ready().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ETM_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

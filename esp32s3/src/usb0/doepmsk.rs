@@ -35,53 +35,53 @@ impl From<crate::W<DOEPMSK_SPEC>> for W {
     }
 }
 #[doc = "Field `XFERCOMPLMSK` reader - "]
-pub type XFERCOMPLMSK_R = crate::BitReader<bool>;
+pub type XFERCOMPLMSK_R = crate::BitReader;
 #[doc = "Field `XFERCOMPLMSK` writer - "]
-pub type XFERCOMPLMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type XFERCOMPLMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `EPDISBLDMSK` reader - "]
-pub type EPDISBLDMSK_R = crate::BitReader<bool>;
+pub type EPDISBLDMSK_R = crate::BitReader;
 #[doc = "Field `EPDISBLDMSK` writer - "]
-pub type EPDISBLDMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type EPDISBLDMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `AHBERMSK` reader - "]
-pub type AHBERMSK_R = crate::BitReader<bool>;
+pub type AHBERMSK_R = crate::BitReader;
 #[doc = "Field `AHBERMSK` writer - "]
-pub type AHBERMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type AHBERMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `SETUPMSK` reader - "]
-pub type SETUPMSK_R = crate::BitReader<bool>;
+pub type SETUPMSK_R = crate::BitReader;
 #[doc = "Field `SETUPMSK` writer - "]
-pub type SETUPMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type SETUPMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `OUTTKNEPDISMSK` reader - "]
-pub type OUTTKNEPDISMSK_R = crate::BitReader<bool>;
+pub type OUTTKNEPDISMSK_R = crate::BitReader;
 #[doc = "Field `OUTTKNEPDISMSK` writer - "]
-pub type OUTTKNEPDISMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type OUTTKNEPDISMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `STSPHSERCVDMSK` reader - "]
-pub type STSPHSERCVDMSK_R = crate::BitReader<bool>;
+pub type STSPHSERCVDMSK_R = crate::BitReader;
 #[doc = "Field `STSPHSERCVDMSK` writer - "]
-pub type STSPHSERCVDMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type STSPHSERCVDMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `BACK2BACKSETUP` reader - "]
-pub type BACK2BACKSETUP_R = crate::BitReader<bool>;
+pub type BACK2BACKSETUP_R = crate::BitReader;
 #[doc = "Field `BACK2BACKSETUP` writer - "]
-pub type BACK2BACKSETUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type BACK2BACKSETUP_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `OUTPKTERRMSK` reader - "]
-pub type OUTPKTERRMSK_R = crate::BitReader<bool>;
+pub type OUTPKTERRMSK_R = crate::BitReader;
 #[doc = "Field `OUTPKTERRMSK` writer - "]
-pub type OUTPKTERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type OUTPKTERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `BNAOUTINTRMSK` reader - "]
-pub type BNAOUTINTRMSK_R = crate::BitReader<bool>;
+pub type BNAOUTINTRMSK_R = crate::BitReader;
 #[doc = "Field `BNAOUTINTRMSK` writer - "]
-pub type BNAOUTINTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type BNAOUTINTRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `BBLEERRMSK` reader - "]
-pub type BBLEERRMSK_R = crate::BitReader<bool>;
+pub type BBLEERRMSK_R = crate::BitReader;
 #[doc = "Field `BBLEERRMSK` writer - "]
-pub type BBLEERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type BBLEERRMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `NAKMSK` reader - "]
-pub type NAKMSK_R = crate::BitReader<bool>;
+pub type NAKMSK_R = crate::BitReader;
 #[doc = "Field `NAKMSK` writer - "]
-pub type NAKMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type NAKMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 #[doc = "Field `NYETMSK` reader - "]
-pub type NYETMSK_R = crate::BitReader<bool>;
+pub type NYETMSK_R = crate::BitReader;
 #[doc = "Field `NYETMSK` writer - "]
-pub type NYETMSK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOEPMSK_SPEC, bool, O>;
+pub type NYETMSK_W<'a, const O: u8> = crate::BitWriter<'a, DOEPMSK_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -142,6 +142,49 @@ impl R {
     #[inline(always)]
     pub fn nyetmsk(&self) -> NYETMSK_R {
         NYETMSK_R::new(((self.bits >> 14) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPMSK")
+            .field(
+                "xfercomplmsk",
+                &format_args!("{}", self.xfercomplmsk().bit()),
+            )
+            .field("epdisbldmsk", &format_args!("{}", self.epdisbldmsk().bit()))
+            .field("ahbermsk", &format_args!("{}", self.ahbermsk().bit()))
+            .field("setupmsk", &format_args!("{}", self.setupmsk().bit()))
+            .field(
+                "outtknepdismsk",
+                &format_args!("{}", self.outtknepdismsk().bit()),
+            )
+            .field(
+                "stsphsercvdmsk",
+                &format_args!("{}", self.stsphsercvdmsk().bit()),
+            )
+            .field(
+                "back2backsetup",
+                &format_args!("{}", self.back2backsetup().bit()),
+            )
+            .field(
+                "outpkterrmsk",
+                &format_args!("{}", self.outpkterrmsk().bit()),
+            )
+            .field(
+                "bnaoutintrmsk",
+                &format_args!("{}", self.bnaoutintrmsk().bit()),
+            )
+            .field("bbleerrmsk", &format_args!("{}", self.bbleerrmsk().bit()))
+            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
+            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOEPMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,26 @@ impl From<crate::W<SLCHOSTID_SPEC>> for W {
 #[doc = "Field `SLCHOST_ID` reader - *******Description***********"]
 pub type SLCHOST_ID_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLCHOST_ID` writer - *******Description***********"]
-pub type SLCHOST_ID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SLCHOSTID_SPEC, u32, u32, 32, O>;
+pub type SLCHOST_ID_W<'a, const O: u8> = crate::FieldWriter<'a, SLCHOSTID_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]
     pub fn slchost_id(&self) -> SLCHOST_ID_R {
         SLCHOST_ID_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLCHOSTID")
+            .field("slchost_id", &format_args!("{}", self.slchost_id().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SLCHOSTID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

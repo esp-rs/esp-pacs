@@ -38,12 +38,11 @@ impl From<crate::W<TOUCH_TIMEOUT_CTRL_SPEC>> for W {
 pub type TOUCH_TIMEOUT_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_TIMEOUT_NUM` writer - Set touch timeout threshold."]
 pub type TOUCH_TIMEOUT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TOUCH_TIMEOUT_CTRL_SPEC, u32, u32, 22, O>;
+    crate::FieldWriter<'a, TOUCH_TIMEOUT_CTRL_SPEC, 22, O, u32, u32>;
 #[doc = "Field `TOUCH_TIMEOUT_EN` reader - Enable touch timeout."]
-pub type TOUCH_TIMEOUT_EN_R = crate::BitReader<bool>;
+pub type TOUCH_TIMEOUT_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_TIMEOUT_EN` writer - Enable touch timeout."]
-pub type TOUCH_TIMEOUT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TOUCH_TIMEOUT_CTRL_SPEC, bool, O>;
+pub type TOUCH_TIMEOUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_TIMEOUT_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:21 - Set touch timeout threshold."]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn touch_timeout_en(&self) -> TOUCH_TIMEOUT_EN_R {
         TOUCH_TIMEOUT_EN_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TOUCH_TIMEOUT_CTRL")
+            .field(
+                "touch_timeout_num",
+                &format_args!("{}", self.touch_timeout_num().bits()),
+            )
+            .field(
+                "touch_timeout_en",
+                &format_args!("{}", self.touch_timeout_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TOUCH_TIMEOUT_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

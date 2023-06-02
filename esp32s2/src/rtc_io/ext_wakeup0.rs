@@ -35,14 +35,28 @@ impl From<crate::W<EXT_WAKEUP0_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
-pub type SEL_R = crate::FieldReader<u8, u8>;
+pub type SEL_R = crate::FieldReader;
 #[doc = "Field `SEL` writer - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EXT_WAKEUP0_SPEC, u8, u8, 5, O>;
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP0_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 27:31 - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT_WAKEUP0")
+            .field("sel", &format_args!("{}", self.sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

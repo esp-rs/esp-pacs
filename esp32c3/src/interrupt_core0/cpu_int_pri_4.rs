@@ -35,15 +35,31 @@ impl From<crate::W<CPU_INT_PRI_4_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_PRI_4_MAP` reader - reg_core0_cpu_pri_4_map"]
-pub type CPU_PRI_4_MAP_R = crate::FieldReader<u8, u8>;
+pub type CPU_PRI_4_MAP_R = crate::FieldReader;
 #[doc = "Field `CPU_PRI_4_MAP` writer - reg_core0_cpu_pri_4_map"]
-pub type CPU_PRI_4_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_INT_PRI_4_SPEC, u8, u8, 4, O>;
+pub type CPU_PRI_4_MAP_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_INT_PRI_4_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - reg_core0_cpu_pri_4_map"]
     #[inline(always)]
     pub fn cpu_pri_4_map(&self) -> CPU_PRI_4_MAP_R {
         CPU_PRI_4_MAP_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INT_PRI_4")
+            .field(
+                "cpu_pri_4_map",
+                &format_args!("{}", self.cpu_pri_4_map().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INT_PRI_4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

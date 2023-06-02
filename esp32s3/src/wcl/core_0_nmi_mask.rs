@@ -35,15 +35,31 @@ impl From<crate::W<CORE_0_NMI_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_NMI_MASK` reader - this bit is used to mask NMI interrupt,it can directly mask NMI interrupt"]
-pub type CORE_0_NMI_MASK_R = crate::BitReader<bool>;
+pub type CORE_0_NMI_MASK_R = crate::BitReader;
 #[doc = "Field `CORE_0_NMI_MASK` writer - this bit is used to mask NMI interrupt,it can directly mask NMI interrupt"]
-pub type CORE_0_NMI_MASK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_0_NMI_MASK_SPEC, bool, O>;
+pub type CORE_0_NMI_MASK_W<'a, const O: u8> = crate::BitWriter<'a, CORE_0_NMI_MASK_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - this bit is used to mask NMI interrupt,it can directly mask NMI interrupt"]
     #[inline(always)]
     pub fn core_0_nmi_mask(&self) -> CORE_0_NMI_MASK_R {
         CORE_0_NMI_MASK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_0_NMI_MASK")
+            .field(
+                "core_0_nmi_mask",
+                &format_args!("{}", self.core_0_nmi_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_NMI_MASK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

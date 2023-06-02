@@ -35,33 +35,33 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_INT_ENA` reader - Set this bit to 1 to enable receive interrupt."]
-pub type RX_INT_ENA_R = crate::BitReader<bool>;
+pub type RX_INT_ENA_R = crate::BitReader;
 #[doc = "Field `RX_INT_ENA` writer - Set this bit to 1 to enable receive interrupt."]
-pub type RX_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type RX_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `TX_INT_ENA` reader - Set this bit to 1 to enable transmit interrupt."]
-pub type TX_INT_ENA_R = crate::BitReader<bool>;
+pub type TX_INT_ENA_R = crate::BitReader;
 #[doc = "Field `TX_INT_ENA` writer - Set this bit to 1 to enable transmit interrupt."]
-pub type TX_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type TX_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ERR_WARN_INT_ENA` reader - Set this bit to 1 to enable error warning interrupt."]
-pub type ERR_WARN_INT_ENA_R = crate::BitReader<bool>;
+pub type ERR_WARN_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_WARN_INT_ENA` writer - Set this bit to 1 to enable error warning interrupt."]
-pub type ERR_WARN_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ERR_WARN_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `OVERRUN_INT_ENA` reader - Set this bit to 1 to enable data overrun interrupt."]
-pub type OVERRUN_INT_ENA_R = crate::BitReader<bool>;
+pub type OVERRUN_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVERRUN_INT_ENA` writer - Set this bit to 1 to enable data overrun interrupt."]
-pub type OVERRUN_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type OVERRUN_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` reader - Set this bit to 1 to enable error passive interrupt."]
-pub type ERR_PASSIVE_INT_ENA_R = crate::BitReader<bool>;
+pub type ERR_PASSIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` writer - Set this bit to 1 to enable error passive interrupt."]
-pub type ERR_PASSIVE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ERR_PASSIVE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `ARB_LOST_INT_ENA` reader - Set this bit to 1 to enable arbitration lost interrupt."]
-pub type ARB_LOST_INT_ENA_R = crate::BitReader<bool>;
+pub type ARB_LOST_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ARB_LOST_INT_ENA` writer - Set this bit to 1 to enable arbitration lost interrupt."]
-pub type ARB_LOST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type ARB_LOST_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `BUS_ERR_INT_ENA` reader - Set this bit to 1 to enable error interrupt."]
-pub type BUS_ERR_INT_ENA_R = crate::BitReader<bool>;
+pub type BUS_ERR_INT_ENA_R = crate::BitReader;
 #[doc = "Field `BUS_ERR_INT_ENA` writer - Set this bit to 1 to enable error interrupt."]
-pub type BUS_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type BUS_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 1 to enable receive interrupt."]
     #[inline(always)]
@@ -97,6 +97,41 @@ impl R {
     #[inline(always)]
     pub fn bus_err_int_ena(&self) -> BUS_ERR_INT_ENA_R {
         BUS_ERR_INT_ENA_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field("rx_int_ena", &format_args!("{}", self.rx_int_ena().bit()))
+            .field("tx_int_ena", &format_args!("{}", self.tx_int_ena().bit()))
+            .field(
+                "err_warn_int_ena",
+                &format_args!("{}", self.err_warn_int_ena().bit()),
+            )
+            .field(
+                "overrun_int_ena",
+                &format_args!("{}", self.overrun_int_ena().bit()),
+            )
+            .field(
+                "err_passive_int_ena",
+                &format_args!("{}", self.err_passive_int_ena().bit()),
+            )
+            .field(
+                "arb_lost_int_ena",
+                &format_args!("{}", self.arb_lost_int_ena().bit()),
+            )
+            .field(
+                "bus_err_int_ena",
+                &format_args!("{}", self.bus_err_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

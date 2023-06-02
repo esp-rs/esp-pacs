@@ -35,14 +35,13 @@ impl From<crate::W<SDA_FILTER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FILTER_THRES` reader - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
-pub type SDA_FILTER_THRES_R = crate::FieldReader<u8, u8>;
+pub type SDA_FILTER_THRES_R = crate::FieldReader;
 #[doc = "Field `SDA_FILTER_THRES` writer - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
-pub type SDA_FILTER_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SDA_FILTER_CFG_SPEC, u8, u8, 3, O>;
+pub type SDA_FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_FILTER_CFG_SPEC, 3, O>;
 #[doc = "Field `SDA_FILTER_EN` reader - This is the filter enable bit for SDA."]
-pub type SDA_FILTER_EN_R = crate::BitReader<bool>;
+pub type SDA_FILTER_EN_R = crate::BitReader;
 #[doc = "Field `SDA_FILTER_EN` writer - This is the filter enable bit for SDA."]
-pub type SDA_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDA_FILTER_CFG_SPEC, bool, O>;
+pub type SDA_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, SDA_FILTER_CFG_SPEC, O>;
 impl R {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sda_filter_en(&self) -> SDA_FILTER_EN_R {
         SDA_FILTER_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDA_FILTER_CFG")
+            .field(
+                "sda_filter_thres",
+                &format_args!("{}", self.sda_filter_thres().bits()),
+            )
+            .field(
+                "sda_filter_en",
+                &format_args!("{}", self.sda_filter_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDA_FILTER_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

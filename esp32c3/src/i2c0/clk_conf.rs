@@ -35,25 +35,25 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_sclk_div_num"]
-pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_sclk_div_num"]
-pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_sclk_div_a"]
-pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_A_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_A` writer - reg_sclk_div_a"]
-pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_sclk_div_b"]
-pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
+pub type SCLK_DIV_B_R = crate::FieldReader;
 #[doc = "Field `SCLK_DIV_B` writer - reg_sclk_div_b"]
-pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, O>;
+pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 6, O>;
 #[doc = "Field `SCLK_SEL` reader - reg_sclk_sel"]
-pub type SCLK_SEL_R = crate::BitReader<bool>;
+pub type SCLK_SEL_R = crate::BitReader;
 #[doc = "Field `SCLK_SEL` writer - reg_sclk_sel"]
-pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_sclk_active"]
-pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
+pub type SCLK_ACTIVE_R = crate::BitReader;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_sclk_active"]
-pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type SCLK_ACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
@@ -79,6 +79,27 @@ impl R {
     #[inline(always)]
     pub fn sclk_active(&self) -> SCLK_ACTIVE_R {
         SCLK_ACTIVE_R::new(((self.bits >> 21) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field(
+                "sclk_div_num",
+                &format_args!("{}", self.sclk_div_num().bits()),
+            )
+            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
+            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
+            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bit()))
+            .field("sclk_active", &format_args!("{}", self.sclk_active().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

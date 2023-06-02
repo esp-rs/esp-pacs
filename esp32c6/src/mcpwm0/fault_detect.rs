@@ -35,35 +35,35 @@ impl From<crate::W<FAULT_DETECT_SPEC>> for W {
     }
 }
 #[doc = "Field `F0_EN` reader - When set, event_f0 generation is enabled"]
-pub type F0_EN_R = crate::BitReader<bool>;
+pub type F0_EN_R = crate::BitReader;
 #[doc = "Field `F0_EN` writer - When set, event_f0 generation is enabled"]
-pub type F0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F0_EN_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `F1_EN` reader - When set, event_f1 generation is enabled"]
-pub type F1_EN_R = crate::BitReader<bool>;
+pub type F1_EN_R = crate::BitReader;
 #[doc = "Field `F1_EN` writer - When set, event_f1 generation is enabled"]
-pub type F1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F1_EN_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `F2_EN` reader - When set, event_f2 generation is enabled"]
-pub type F2_EN_R = crate::BitReader<bool>;
+pub type F2_EN_R = crate::BitReader;
 #[doc = "Field `F2_EN` writer - When set, event_f2 generation is enabled"]
-pub type F2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F2_EN_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `F0_POLE` reader - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F0_POLE_R = crate::BitReader<bool>;
+pub type F0_POLE_R = crate::BitReader;
 #[doc = "Field `F0_POLE` writer - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F0_POLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F0_POLE_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `F1_POLE` reader - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F1_POLE_R = crate::BitReader<bool>;
+pub type F1_POLE_R = crate::BitReader;
 #[doc = "Field `F1_POLE` writer - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F1_POLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F1_POLE_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `F2_POLE` reader - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F2_POLE_R = crate::BitReader<bool>;
+pub type F2_POLE_R = crate::BitReader;
 #[doc = "Field `F2_POLE` writer - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub type F2_POLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, O>;
+pub type F2_POLE_W<'a, const O: u8> = crate::BitWriter<'a, FAULT_DETECT_SPEC, O>;
 #[doc = "Field `EVENT_F0` reader - Set and reset by hardware. If set, event_f0 is on going"]
-pub type EVENT_F0_R = crate::BitReader<bool>;
+pub type EVENT_F0_R = crate::BitReader;
 #[doc = "Field `EVENT_F1` reader - Set and reset by hardware. If set, event_f1 is on going"]
-pub type EVENT_F1_R = crate::BitReader<bool>;
+pub type EVENT_F1_R = crate::BitReader;
 #[doc = "Field `EVENT_F2` reader - Set and reset by hardware. If set, event_f2 is on going"]
-pub type EVENT_F2_R = crate::BitReader<bool>;
+pub type EVENT_F2_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - When set, event_f0 generation is enabled"]
     #[inline(always)]
@@ -109,6 +109,28 @@ impl R {
     #[inline(always)]
     pub fn event_f2(&self) -> EVENT_F2_R {
         EVENT_F2_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FAULT_DETECT")
+            .field("f0_en", &format_args!("{}", self.f0_en().bit()))
+            .field("f1_en", &format_args!("{}", self.f1_en().bit()))
+            .field("f2_en", &format_args!("{}", self.f2_en().bit()))
+            .field("f0_pole", &format_args!("{}", self.f0_pole().bit()))
+            .field("f1_pole", &format_args!("{}", self.f1_pole().bit()))
+            .field("f2_pole", &format_args!("{}", self.f2_pole().bit()))
+            .field("event_f0", &format_args!("{}", self.event_f0().bit()))
+            .field("event_f1", &format_args!("{}", self.event_f1().bit()))
+            .field("event_f2", &format_args!("{}", self.event_f2().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FAULT_DETECT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

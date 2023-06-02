@@ -38,58 +38,57 @@ impl From<crate::W<LCD_USER_SPEC>> for W {
 pub type LCD_DOUT_CYCLELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_DOUT_CYCLELEN` writer - The output data cycles minus 1 of LCD module."]
 pub type LCD_DOUT_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_USER_SPEC, u16, u16, 13, O>;
+    crate::FieldWriter<'a, LCD_USER_SPEC, 13, O, u16, u16>;
 #[doc = "Field `LCD_ALWAYS_OUT_EN` reader - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
-pub type LCD_ALWAYS_OUT_EN_R = crate::BitReader<bool>;
+pub type LCD_ALWAYS_OUT_EN_R = crate::BitReader;
 #[doc = "Field `LCD_ALWAYS_OUT_EN` writer - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
-pub type LCD_ALWAYS_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_ALWAYS_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_8BITS_ORDER` reader - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
-pub type LCD_8BITS_ORDER_R = crate::BitReader<bool>;
+pub type LCD_8BITS_ORDER_R = crate::BitReader;
 #[doc = "Field `LCD_8BITS_ORDER` writer - 1: invert every two data byte, valid in 1 byte mode. 0: Not change."]
-pub type LCD_8BITS_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_8BITS_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_UPDATE` reader - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
-pub type LCD_UPDATE_R = crate::BitReader<bool>;
+pub type LCD_UPDATE_R = crate::BitReader;
 #[doc = "Field `LCD_UPDATE` writer - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
-pub type LCD_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_BIT_ORDER` reader - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
-pub type LCD_BIT_ORDER_R = crate::BitReader<bool>;
+pub type LCD_BIT_ORDER_R = crate::BitReader;
 #[doc = "Field `LCD_BIT_ORDER` writer - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
-pub type LCD_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_BIT_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_BYTE_ORDER` reader - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
-pub type LCD_BYTE_ORDER_R = crate::BitReader<bool>;
+pub type LCD_BYTE_ORDER_R = crate::BitReader;
 #[doc = "Field `LCD_BYTE_ORDER` writer - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
-pub type LCD_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_BYTE_ORDER_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_2BYTE_EN` reader - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
-pub type LCD_2BYTE_EN_R = crate::BitReader<bool>;
+pub type LCD_2BYTE_EN_R = crate::BitReader;
 #[doc = "Field `LCD_2BYTE_EN` writer - 1: The bit number of output LCD data is 9~16. 0: The bit number of output LCD data is 0~8."]
-pub type LCD_2BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_2BYTE_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_DOUT` reader - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_DOUT_R = crate::BitReader<bool>;
+pub type LCD_DOUT_R = crate::BitReader;
 #[doc = "Field `LCD_DOUT` writer - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_DOUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_DOUT_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_DUMMY` reader - 1: Enable DUMMY phase in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_DUMMY_R = crate::BitReader<bool>;
+pub type LCD_DUMMY_R = crate::BitReader;
 #[doc = "Field `LCD_DUMMY` writer - 1: Enable DUMMY phase in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_DUMMY_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_CMD` reader - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_CMD_R = crate::BitReader<bool>;
+pub type LCD_CMD_R = crate::BitReader;
 #[doc = "Field `LCD_CMD` writer - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
-pub type LCD_CMD_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_CMD_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_START` reader - LCD start sending data enable signal, valid in high level."]
-pub type LCD_START_R = crate::BitReader<bool>;
+pub type LCD_START_R = crate::BitReader;
 #[doc = "Field `LCD_START` writer - LCD start sending data enable signal, valid in high level."]
-pub type LCD_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_START_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_RESET` writer - The value of command."]
-pub type LCD_RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_RESET_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 #[doc = "Field `LCD_DUMMY_CYCLELEN` reader - The dummy cycle length minus 1."]
-pub type LCD_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type LCD_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `LCD_DUMMY_CYCLELEN` writer - The dummy cycle length minus 1."]
-pub type LCD_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_USER_SPEC, u8, u8, 2, O>;
+pub type LCD_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_USER_SPEC, 2, O>;
 #[doc = "Field `LCD_CMD_2_CYCLE_EN` reader - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
-pub type LCD_CMD_2_CYCLE_EN_R = crate::BitReader<bool>;
+pub type LCD_CMD_2_CYCLE_EN_R = crate::BitReader;
 #[doc = "Field `LCD_CMD_2_CYCLE_EN` writer - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
-pub type LCD_CMD_2_CYCLE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_USER_SPEC, bool, O>;
+pub type LCD_CMD_2_CYCLE_EN_W<'a, const O: u8> = crate::BitWriter<'a, LCD_USER_SPEC, O>;
 impl R {
     #[doc = "Bits 0:12 - The output data cycles minus 1 of LCD module."]
     #[inline(always)]
@@ -155,6 +154,56 @@ impl R {
     #[inline(always)]
     pub fn lcd_cmd_2_cycle_en(&self) -> LCD_CMD_2_CYCLE_EN_R {
         LCD_CMD_2_CYCLE_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_USER")
+            .field(
+                "lcd_dout_cyclelen",
+                &format_args!("{}", self.lcd_dout_cyclelen().bits()),
+            )
+            .field(
+                "lcd_always_out_en",
+                &format_args!("{}", self.lcd_always_out_en().bit()),
+            )
+            .field(
+                "lcd_8bits_order",
+                &format_args!("{}", self.lcd_8bits_order().bit()),
+            )
+            .field("lcd_update", &format_args!("{}", self.lcd_update().bit()))
+            .field(
+                "lcd_bit_order",
+                &format_args!("{}", self.lcd_bit_order().bit()),
+            )
+            .field(
+                "lcd_byte_order",
+                &format_args!("{}", self.lcd_byte_order().bit()),
+            )
+            .field(
+                "lcd_2byte_en",
+                &format_args!("{}", self.lcd_2byte_en().bit()),
+            )
+            .field("lcd_dout", &format_args!("{}", self.lcd_dout().bit()))
+            .field("lcd_dummy", &format_args!("{}", self.lcd_dummy().bit()))
+            .field("lcd_cmd", &format_args!("{}", self.lcd_cmd().bit()))
+            .field("lcd_start", &format_args!("{}", self.lcd_start().bit()))
+            .field(
+                "lcd_dummy_cyclelen",
+                &format_args!("{}", self.lcd_dummy_cyclelen().bits()),
+            )
+            .field(
+                "lcd_cmd_2_cycle_en",
+                &format_args!("{}", self.lcd_cmd_2_cycle_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_USER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

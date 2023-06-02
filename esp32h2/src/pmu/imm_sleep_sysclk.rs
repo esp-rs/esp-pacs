@@ -20,17 +20,19 @@ impl From<crate::W<IMM_SLEEP_SYSCLK_SPEC>> for W {
     }
 }
 #[doc = "Field `UPDATE_DIG_ICG_SWITCH` writer - need_des"]
-pub type UPDATE_DIG_ICG_SWITCH_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_SLEEP_SYSCLK_SPEC, bool, O>;
+pub type UPDATE_DIG_ICG_SWITCH_W<'a, const O: u8> = crate::BitWriter<'a, IMM_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `TIE_LOW_ICG_SLP_SEL` writer - need_des"]
-pub type TIE_LOW_ICG_SLP_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_SLEEP_SYSCLK_SPEC, bool, O>;
+pub type TIE_LOW_ICG_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `TIE_HIGH_ICG_SLP_SEL` writer - need_des"]
-pub type TIE_HIGH_ICG_SLP_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_SLEEP_SYSCLK_SPEC, bool, O>;
+pub type TIE_HIGH_ICG_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_SLEEP_SYSCLK_SPEC, O>;
 #[doc = "Field `UPDATE_DIG_SYS_CLK_SEL` writer - need_des"]
-pub type UPDATE_DIG_SYS_CLK_SEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IMM_SLEEP_SYSCLK_SPEC, bool, O>;
+pub type UPDATE_DIG_SYS_CLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, IMM_SLEEP_SYSCLK_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IMM_SLEEP_SYSCLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]

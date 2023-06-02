@@ -38,12 +38,29 @@ impl From<crate::W<HW_STANDBY_CNT_SPEC>> for W {
 pub type STANDBY_WAIT_CNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `STANDBY_WAIT_CNT` writer - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
 pub type STANDBY_WAIT_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, HW_STANDBY_CNT_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, HW_STANDBY_CNT_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
     #[inline(always)]
     pub fn standby_wait_cnt(&self) -> STANDBY_WAIT_CNT_R {
         STANDBY_WAIT_CNT_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HW_STANDBY_CNT")
+            .field(
+                "standby_wait_cnt",
+                &format_args!("{}", self.standby_wait_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HW_STANDBY_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

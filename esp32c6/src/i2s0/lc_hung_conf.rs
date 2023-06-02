@@ -35,20 +35,17 @@ impl From<crate::W<LC_HUNG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LC_FIFO_TIMEOUT` reader - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
-pub type LC_FIFO_TIMEOUT_R = crate::FieldReader<u8, u8>;
+pub type LC_FIFO_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `LC_FIFO_TIMEOUT` writer - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
-pub type LC_FIFO_TIMEOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LC_HUNG_CONF_SPEC, u8, u8, 8, O>;
+pub type LC_FIFO_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, LC_HUNG_CONF_SPEC, 8, O>;
 #[doc = "Field `LC_FIFO_TIMEOUT_SHIFT` reader - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
-pub type LC_FIFO_TIMEOUT_SHIFT_R = crate::FieldReader<u8, u8>;
+pub type LC_FIFO_TIMEOUT_SHIFT_R = crate::FieldReader;
 #[doc = "Field `LC_FIFO_TIMEOUT_SHIFT` writer - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
-pub type LC_FIFO_TIMEOUT_SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LC_HUNG_CONF_SPEC, u8, u8, 3, O>;
+pub type LC_FIFO_TIMEOUT_SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, LC_HUNG_CONF_SPEC, 3, O>;
 #[doc = "Field `LC_FIFO_TIMEOUT_ENA` reader - The enable bit for FIFO timeout"]
-pub type LC_FIFO_TIMEOUT_ENA_R = crate::BitReader<bool>;
+pub type LC_FIFO_TIMEOUT_ENA_R = crate::BitReader;
 #[doc = "Field `LC_FIFO_TIMEOUT_ENA` writer - The enable bit for FIFO timeout"]
-pub type LC_FIFO_TIMEOUT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_HUNG_CONF_SPEC, bool, O>;
+pub type LC_FIFO_TIMEOUT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, LC_HUNG_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn lc_fifo_timeout_ena(&self) -> LC_FIFO_TIMEOUT_ENA_R {
         LC_FIFO_TIMEOUT_ENA_R::new(((self.bits >> 11) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LC_HUNG_CONF")
+            .field(
+                "lc_fifo_timeout",
+                &format_args!("{}", self.lc_fifo_timeout().bits()),
+            )
+            .field(
+                "lc_fifo_timeout_shift",
+                &format_args!("{}", self.lc_fifo_timeout_shift().bits()),
+            )
+            .field(
+                "lc_fifo_timeout_ena",
+                &format_args!("{}", self.lc_fifo_timeout_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_HUNG_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

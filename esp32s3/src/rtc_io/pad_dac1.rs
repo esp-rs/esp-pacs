@@ -35,54 +35,53 @@ impl From<crate::W<PAD_DAC1_SPEC>> for W {
     }
 }
 #[doc = "Field `PDAC1_DAC` reader - PDAC1_DAC"]
-pub type PDAC1_DAC_R = crate::FieldReader<u8, u8>;
+pub type PDAC1_DAC_R = crate::FieldReader;
 #[doc = "Field `PDAC1_DAC` writer - PDAC1_DAC"]
-pub type PDAC1_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 8, O>;
+pub type PDAC1_DAC_W<'a, const O: u8> = crate::FieldWriter<'a, PAD_DAC1_SPEC, 8, O>;
 #[doc = "Field `PDAC1_XPD_DAC` reader - PDAC1_XPD_DAC"]
-pub type PDAC1_XPD_DAC_R = crate::BitReader<bool>;
+pub type PDAC1_XPD_DAC_R = crate::BitReader;
 #[doc = "Field `PDAC1_XPD_DAC` writer - PDAC1_XPD_DAC"]
-pub type PDAC1_XPD_DAC_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_XPD_DAC_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_DAC_XPD_FORCE` reader - 1: use reg_pdac1_xpd_dac to control PDAC1_XPD_DAC,0: use SAR ADC FSM to control PDAC1_XPD_DAC"]
-pub type PDAC1_DAC_XPD_FORCE_R = crate::BitReader<bool>;
+pub type PDAC1_DAC_XPD_FORCE_R = crate::BitReader;
 #[doc = "Field `PDAC1_DAC_XPD_FORCE` writer - 1: use reg_pdac1_xpd_dac to control PDAC1_XPD_DAC,0: use SAR ADC FSM to control PDAC1_XPD_DAC"]
-pub type PDAC1_DAC_XPD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_DAC_XPD_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_FUN_IE` reader - input enable in work mode"]
-pub type PDAC1_FUN_IE_R = crate::BitReader<bool>;
+pub type PDAC1_FUN_IE_R = crate::BitReader;
 #[doc = "Field `PDAC1_FUN_IE` writer - input enable in work mode"]
-pub type PDAC1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_FUN_IE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_SLP_OE` reader - output enable in sleep mode"]
-pub type PDAC1_SLP_OE_R = crate::BitReader<bool>;
+pub type PDAC1_SLP_OE_R = crate::BitReader;
 #[doc = "Field `PDAC1_SLP_OE` writer - output enable in sleep mode"]
-pub type PDAC1_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_SLP_OE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_SLP_IE` reader - input enable in sleep mode"]
-pub type PDAC1_SLP_IE_R = crate::BitReader<bool>;
+pub type PDAC1_SLP_IE_R = crate::BitReader;
 #[doc = "Field `PDAC1_SLP_IE` writer - input enable in sleep mode"]
-pub type PDAC1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_SLP_IE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_SLP_SEL` reader - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub type PDAC1_SLP_SEL_R = crate::BitReader<bool>;
+pub type PDAC1_SLP_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC1_SLP_SEL` writer - 1: enable sleep mode during sleep,0: no sleep mode"]
-pub type PDAC1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_SLP_SEL_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_FUN_SEL` reader - PDAC1 function sel"]
-pub type PDAC1_FUN_SEL_R = crate::FieldReader<u8, u8>;
+pub type PDAC1_FUN_SEL_R = crate::FieldReader;
 #[doc = "Field `PDAC1_FUN_SEL` writer - PDAC1 function sel"]
-pub type PDAC1_FUN_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 2, O>;
+pub type PDAC1_FUN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, PAD_DAC1_SPEC, 2, O>;
 #[doc = "Field `PDAC1_MUX_SEL` reader - 1: use RTC GPIO,0: use digital GPIO"]
-pub type PDAC1_MUX_SEL_R = crate::BitReader<bool>;
+pub type PDAC1_MUX_SEL_R = crate::BitReader;
 #[doc = "Field `PDAC1_MUX_SEL` writer - 1: use RTC GPIO,0: use digital GPIO"]
-pub type PDAC1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_MUX_SEL_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_RUE` reader - PDAC1_RUE"]
-pub type PDAC1_RUE_R = crate::BitReader<bool>;
+pub type PDAC1_RUE_R = crate::BitReader;
 #[doc = "Field `PDAC1_RUE` writer - PDAC1_RUE"]
-pub type PDAC1_RUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_RUE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_RDE` reader - PDAC1_RDE"]
-pub type PDAC1_RDE_R = crate::BitReader<bool>;
+pub type PDAC1_RDE_R = crate::BitReader;
 #[doc = "Field `PDAC1_RDE` writer - PDAC1_RDE"]
-pub type PDAC1_RDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, O>;
+pub type PDAC1_RDE_W<'a, const O: u8> = crate::BitWriter<'a, PAD_DAC1_SPEC, O>;
 #[doc = "Field `PDAC1_DRV` reader - PDAC1_DRV"]
-pub type PDAC1_DRV_R = crate::FieldReader<u8, u8>;
+pub type PDAC1_DRV_R = crate::FieldReader;
 #[doc = "Field `PDAC1_DRV` writer - PDAC1_DRV"]
-pub type PDAC1_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 2, O>;
+pub type PDAC1_DRV_W<'a, const O: u8> = crate::FieldWriter<'a, PAD_DAC1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 3:10 - PDAC1_DAC"]
     #[inline(always)]
@@ -143,6 +142,55 @@ impl R {
     #[inline(always)]
     pub fn pdac1_drv(&self) -> PDAC1_DRV_R {
         PDAC1_DRV_R::new(((self.bits >> 29) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PAD_DAC1")
+            .field("pdac1_dac", &format_args!("{}", self.pdac1_dac().bits()))
+            .field(
+                "pdac1_xpd_dac",
+                &format_args!("{}", self.pdac1_xpd_dac().bit()),
+            )
+            .field(
+                "pdac1_dac_xpd_force",
+                &format_args!("{}", self.pdac1_dac_xpd_force().bit()),
+            )
+            .field(
+                "pdac1_fun_ie",
+                &format_args!("{}", self.pdac1_fun_ie().bit()),
+            )
+            .field(
+                "pdac1_slp_oe",
+                &format_args!("{}", self.pdac1_slp_oe().bit()),
+            )
+            .field(
+                "pdac1_slp_ie",
+                &format_args!("{}", self.pdac1_slp_ie().bit()),
+            )
+            .field(
+                "pdac1_slp_sel",
+                &format_args!("{}", self.pdac1_slp_sel().bit()),
+            )
+            .field(
+                "pdac1_fun_sel",
+                &format_args!("{}", self.pdac1_fun_sel().bits()),
+            )
+            .field(
+                "pdac1_mux_sel",
+                &format_args!("{}", self.pdac1_mux_sel().bit()),
+            )
+            .field("pdac1_rue", &format_args!("{}", self.pdac1_rue().bit()))
+            .field("pdac1_rde", &format_args!("{}", self.pdac1_rde().bit()))
+            .field("pdac1_drv", &format_args!("{}", self.pdac1_drv().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PAD_DAC1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

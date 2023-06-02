@@ -20,17 +20,17 @@ pub type MEM_WADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_RADDR_EX` reader - The current memory write address of channel4."]
 pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE` reader - The channel4 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait."]
-pub type STATE_R = crate::FieldReader<u8, u8>;
+pub type STATE_R = crate::FieldReader;
 #[doc = "Field `MEM_OWNER_ERR` reader - When channel4 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1."]
-pub type MEM_OWNER_ERR_R = crate::BitReader<bool>;
+pub type MEM_OWNER_ERR_R = crate::BitReader;
 #[doc = "Field `MEM_FULL` reader - The memory full status bit for channel4 turns to high level when mem_waddr_ex is greater than or equal to the configuration range."]
-pub type MEM_FULL_R = crate::BitReader<bool>;
+pub type MEM_FULL_R = crate::BitReader;
 #[doc = "Field `MEM_EMPTY` reader - The memory empty status bit for channel4. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range."]
-pub type MEM_EMPTY_R = crate::BitReader<bool>;
+pub type MEM_EMPTY_R = crate::BitReader;
 #[doc = "Field `APB_MEM_WR_ERR` reader - The apb write memory status bit for channel4 turns to high level when the apb write address exceeds the configuration range."]
-pub type APB_MEM_WR_ERR_R = crate::BitReader<bool>;
+pub type APB_MEM_WR_ERR_R = crate::BitReader;
 #[doc = "Field `APB_MEM_RD_ERR` reader - The apb read memory status bit for channel4 turns to high level when the apb read address exceeds the configuration range."]
-pub type APB_MEM_RD_ERR_R = crate::BitReader<bool>;
+pub type APB_MEM_RD_ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:31 - The status for channel4"]
     #[inline(always)]
@@ -76,6 +76,43 @@ impl R {
     #[inline(always)]
     pub fn apb_mem_rd_err(&self) -> APB_MEM_RD_ERR_R {
         APB_MEM_RD_ERR_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH4STATUS")
+            .field("status", &format_args!("{}", self.status().bits()))
+            .field(
+                "mem_waddr_ex",
+                &format_args!("{}", self.mem_waddr_ex().bits()),
+            )
+            .field(
+                "mem_raddr_ex",
+                &format_args!("{}", self.mem_raddr_ex().bits()),
+            )
+            .field("state", &format_args!("{}", self.state().bits()))
+            .field(
+                "mem_owner_err",
+                &format_args!("{}", self.mem_owner_err().bit()),
+            )
+            .field("mem_full", &format_args!("{}", self.mem_full().bit()))
+            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
+            .field(
+                "apb_mem_wr_err",
+                &format_args!("{}", self.apb_mem_wr_err().bit()),
+            )
+            .field(
+                "apb_mem_rd_err",
+                &format_args!("{}", self.apb_mem_rd_err().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH4STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch4status](index.html) module"]

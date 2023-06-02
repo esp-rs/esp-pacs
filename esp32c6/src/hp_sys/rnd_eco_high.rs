@@ -37,13 +37,26 @@ impl From<crate::W<RND_ECO_HIGH_SPEC>> for W {
 #[doc = "Field `REDCY_HIGH` reader - Only reserved for ECO."]
 pub type REDCY_HIGH_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REDCY_HIGH` writer - Only reserved for ECO."]
-pub type REDCY_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RND_ECO_HIGH_SPEC, u32, u32, 32, O>;
+pub type REDCY_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, RND_ECO_HIGH_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Only reserved for ECO."]
     #[inline(always)]
     pub fn redcy_high(&self) -> REDCY_HIGH_R {
         REDCY_HIGH_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RND_ECO_HIGH")
+            .field("redcy_high", &format_args!("{}", self.redcy_high().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RND_ECO_HIGH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -38,12 +38,29 @@ impl From<crate::W<DBUS_TO_FLASH_START_VADDR_SPEC>> for W {
 pub type DBUS_TO_FLASH_START_VADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DBUS_TO_FLASH_START_VADDR` writer - The bits are used to configure the start virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
 pub type DBUS_TO_FLASH_START_VADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DBUS_TO_FLASH_START_VADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, DBUS_TO_FLASH_START_VADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
     #[inline(always)]
     pub fn dbus_to_flash_start_vaddr(&self) -> DBUS_TO_FLASH_START_VADDR_R {
         DBUS_TO_FLASH_START_VADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DBUS_TO_FLASH_START_VADDR")
+            .field(
+                "dbus_to_flash_start_vaddr",
+                &format_args!("{}", self.dbus_to_flash_start_vaddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DBUS_TO_FLASH_START_VADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

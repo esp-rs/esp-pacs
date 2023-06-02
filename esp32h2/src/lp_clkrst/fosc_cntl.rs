@@ -37,13 +37,26 @@ impl From<crate::W<FOSC_CNTL_SPEC>> for W {
 #[doc = "Field `FOSC_DFREQ` reader - need_des"]
 pub type FOSC_DFREQ_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FOSC_DFREQ` writer - need_des"]
-pub type FOSC_DFREQ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FOSC_CNTL_SPEC, u16, u16, 10, O>;
+pub type FOSC_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, FOSC_CNTL_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     pub fn fosc_dfreq(&self) -> FOSC_DFREQ_R {
         FOSC_DFREQ_R::new(((self.bits >> 22) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FOSC_CNTL")
+            .field("fosc_dfreq", &format_args!("{}", self.fosc_dfreq().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FOSC_CNTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

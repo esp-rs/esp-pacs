@@ -14,27 +14,27 @@ impl From<crate::R<GHWCFG3_SPEC>> for R {
     }
 }
 #[doc = "Field `XFERSIZEWIDTH` reader - "]
-pub type XFERSIZEWIDTH_R = crate::FieldReader<u8, u8>;
+pub type XFERSIZEWIDTH_R = crate::FieldReader;
 #[doc = "Field `PKTSIZEWIDTH` reader - "]
-pub type PKTSIZEWIDTH_R = crate::FieldReader<u8, u8>;
+pub type PKTSIZEWIDTH_R = crate::FieldReader;
 #[doc = "Field `OTGEN` reader - "]
-pub type OTGEN_R = crate::BitReader<bool>;
+pub type OTGEN_R = crate::BitReader;
 #[doc = "Field `I2CINTSEL` reader - "]
-pub type I2CINTSEL_R = crate::BitReader<bool>;
+pub type I2CINTSEL_R = crate::BitReader;
 #[doc = "Field `VNDCTLSUPT` reader - "]
-pub type VNDCTLSUPT_R = crate::BitReader<bool>;
+pub type VNDCTLSUPT_R = crate::BitReader;
 #[doc = "Field `OPTFEATURE` reader - "]
-pub type OPTFEATURE_R = crate::BitReader<bool>;
+pub type OPTFEATURE_R = crate::BitReader;
 #[doc = "Field `RSTTYPE` reader - "]
-pub type RSTTYPE_R = crate::BitReader<bool>;
+pub type RSTTYPE_R = crate::BitReader;
 #[doc = "Field `ADPSUPPORT` reader - "]
-pub type ADPSUPPORT_R = crate::BitReader<bool>;
+pub type ADPSUPPORT_R = crate::BitReader;
 #[doc = "Field `HSICMODE` reader - "]
-pub type HSICMODE_R = crate::BitReader<bool>;
+pub type HSICMODE_R = crate::BitReader;
 #[doc = "Field `BCSUPPORT` reader - "]
-pub type BCSUPPORT_R = crate::BitReader<bool>;
+pub type BCSUPPORT_R = crate::BitReader;
 #[doc = "Field `LPMMODE` reader - "]
-pub type LPMMODE_R = crate::BitReader<bool>;
+pub type LPMMODE_R = crate::BitReader;
 #[doc = "Field `DFIFODEPTH` reader - "]
 pub type DFIFODEPTH_R = crate::FieldReader<u16, u16>;
 impl R {
@@ -97,6 +97,37 @@ impl R {
     #[inline(always)]
     pub fn dfifodepth(&self) -> DFIFODEPTH_R {
         DFIFODEPTH_R::new(((self.bits >> 16) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GHWCFG3")
+            .field(
+                "xfersizewidth",
+                &format_args!("{}", self.xfersizewidth().bits()),
+            )
+            .field(
+                "pktsizewidth",
+                &format_args!("{}", self.pktsizewidth().bits()),
+            )
+            .field("otgen", &format_args!("{}", self.otgen().bit()))
+            .field("i2cintsel", &format_args!("{}", self.i2cintsel().bit()))
+            .field("vndctlsupt", &format_args!("{}", self.vndctlsupt().bit()))
+            .field("optfeature", &format_args!("{}", self.optfeature().bit()))
+            .field("rsttype", &format_args!("{}", self.rsttype().bit()))
+            .field("adpsupport", &format_args!("{}", self.adpsupport().bit()))
+            .field("hsicmode", &format_args!("{}", self.hsicmode().bit()))
+            .field("bcsupport", &format_args!("{}", self.bcsupport().bit()))
+            .field("lpmmode", &format_args!("{}", self.lpmmode().bit()))
+            .field("dfifodepth", &format_args!("{}", self.dfifodepth().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GHWCFG3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ghwcfg3](index.html) module"]

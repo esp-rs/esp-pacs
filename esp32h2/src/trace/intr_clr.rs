@@ -20,10 +20,15 @@ impl From<crate::W<INTR_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `FIFO_OVERFLOW_INTR_CLR` writer - Set 1 clr fifo overflow interrupt"]
-pub type FIFO_OVERFLOW_INTR_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INTR_CLR_SPEC, bool, O>;
+pub type FIFO_OVERFLOW_INTR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INTR_CLR_SPEC, O>;
 #[doc = "Field `MEM_FULL_INTR_CLR` writer - Set 1 clr mem full interrupt"]
-pub type MEM_FULL_INTR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_CLR_SPEC, bool, O>;
+pub type MEM_FULL_INTR_CLR_W<'a, const O: u8> = crate::BitWriter<'a, INTR_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - Set 1 clr fifo overflow interrupt"]
     #[inline(always)]

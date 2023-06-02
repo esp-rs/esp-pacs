@@ -35,14 +35,31 @@ impl From<crate::W<USB_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_DISABLE` reader - need_des"]
-pub type RESET_DISABLE_R = crate::BitReader<bool>;
+pub type RESET_DISABLE_R = crate::BitReader;
 #[doc = "Field `RESET_DISABLE` writer - need_des"]
-pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_SPEC, bool, O>;
+pub type RESET_DISABLE_W<'a, const O: u8> = crate::BitWriter<'a, USB_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn reset_disable(&self) -> RESET_DISABLE_R {
         RESET_DISABLE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("USB")
+            .field(
+                "reset_disable",
+                &format_args!("{}", self.reset_disable().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<USB_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

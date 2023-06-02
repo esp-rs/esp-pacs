@@ -35,23 +35,21 @@ impl From<crate::W<TAG_FO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_TAG_FORCE_ON` reader - "]
-pub type PRO_CACHE_TAG_FORCE_ON_R = crate::BitReader<bool>;
+pub type PRO_CACHE_TAG_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_TAG_FORCE_ON` writer - "]
-pub type PRO_CACHE_TAG_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TAG_FO_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_TAG_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, TAG_FO_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_TAG_PD` reader - "]
-pub type PRO_CACHE_TAG_PD_R = crate::BitReader<bool>;
+pub type PRO_CACHE_TAG_PD_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_TAG_PD` writer - "]
-pub type PRO_CACHE_TAG_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TAG_FO_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_TAG_PD_W<'a, const O: u8> = crate::BitWriter<'a, TAG_FO_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_TAG_FORCE_ON` reader - "]
-pub type APP_CACHE_TAG_FORCE_ON_R = crate::BitReader<bool>;
+pub type APP_CACHE_TAG_FORCE_ON_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_TAG_FORCE_ON` writer - "]
-pub type APP_CACHE_TAG_FORCE_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, TAG_FO_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_TAG_FORCE_ON_W<'a, const O: u8> = crate::BitWriter<'a, TAG_FO_CTRL_SPEC, O>;
 #[doc = "Field `APP_CACHE_TAG_PD` reader - "]
-pub type APP_CACHE_TAG_PD_R = crate::BitReader<bool>;
+pub type APP_CACHE_TAG_PD_R = crate::BitReader;
 #[doc = "Field `APP_CACHE_TAG_PD` writer - "]
-pub type APP_CACHE_TAG_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, TAG_FO_CTRL_SPEC, bool, O>;
+pub type APP_CACHE_TAG_PD_W<'a, const O: u8> = crate::BitWriter<'a, TAG_FO_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -72,6 +70,35 @@ impl R {
     #[inline(always)]
     pub fn app_cache_tag_pd(&self) -> APP_CACHE_TAG_PD_R {
         APP_CACHE_TAG_PD_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TAG_FO_CTRL")
+            .field(
+                "pro_cache_tag_force_on",
+                &format_args!("{}", self.pro_cache_tag_force_on().bit()),
+            )
+            .field(
+                "pro_cache_tag_pd",
+                &format_args!("{}", self.pro_cache_tag_pd().bit()),
+            )
+            .field(
+                "app_cache_tag_force_on",
+                &format_args!("{}", self.app_cache_tag_force_on().bit()),
+            )
+            .field(
+                "app_cache_tag_pd",
+                &format_args!("{}", self.app_cache_tag_pd().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TAG_FO_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,31 @@ impl From<crate::W<APPCPU_CTRL_A_SPEC>> for W {
     }
 }
 #[doc = "Field `APPCPU_RESETTING` reader - "]
-pub type APPCPU_RESETTING_R = crate::BitReader<bool>;
+pub type APPCPU_RESETTING_R = crate::BitReader;
 #[doc = "Field `APPCPU_RESETTING` writer - "]
-pub type APPCPU_RESETTING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APPCPU_CTRL_A_SPEC, bool, O>;
+pub type APPCPU_RESETTING_W<'a, const O: u8> = crate::BitWriter<'a, APPCPU_CTRL_A_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn appcpu_resetting(&self) -> APPCPU_RESETTING_R {
         APPCPU_RESETTING_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APPCPU_CTRL_A")
+            .field(
+                "appcpu_resetting",
+                &format_args!("{}", self.appcpu_resetting().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_A_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

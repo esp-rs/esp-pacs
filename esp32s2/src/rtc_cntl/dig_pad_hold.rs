@@ -38,12 +38,29 @@ impl From<crate::W<DIG_PAD_HOLD_SPEC>> for W {
 pub type DIG_PAD_HOLD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DIG_PAD_HOLD` writer - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
 pub type DIG_PAD_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DIG_PAD_HOLD_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, DIG_PAD_HOLD_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
     #[inline(always)]
     pub fn dig_pad_hold(&self) -> DIG_PAD_HOLD_R {
         DIG_PAD_HOLD_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIG_PAD_HOLD")
+            .field(
+                "dig_pad_hold",
+                &format_args!("{}", self.dig_pad_hold().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DIG_PAD_HOLD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

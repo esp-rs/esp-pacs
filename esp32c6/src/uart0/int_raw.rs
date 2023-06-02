@@ -35,89 +35,85 @@ impl From<crate::W<INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies."]
-pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_FULL_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RXFIFO_FULL_INT_RAW` writer - This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies."]
-pub type RXFIFO_FULL_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RXFIFO_FULL_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TXFIFO_EMPTY_INT_RAW` reader - This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies ."]
-pub type TXFIFO_EMPTY_INT_RAW_R = crate::BitReader<bool>;
+pub type TXFIFO_EMPTY_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TXFIFO_EMPTY_INT_RAW` writer - This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies ."]
-pub type TXFIFO_EMPTY_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TXFIFO_EMPTY_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a parity error in the data."]
-pub type PARITY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type PARITY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `PARITY_ERR_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a parity error in the data."]
-pub type PARITY_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type PARITY_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a data frame error ."]
-pub type FRM_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type FRM_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `FRM_ERR_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a data frame error ."]
-pub type FRM_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type FRM_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RXFIFO_OVF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store."]
-pub type RXFIFO_OVF_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_OVF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RXFIFO_OVF_INT_RAW` writer - This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store."]
-pub type RXFIFO_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RXFIFO_OVF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `DSR_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal."]
-pub type DSR_CHG_INT_RAW_R = crate::BitReader<bool>;
+pub type DSR_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DSR_CHG_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal."]
-pub type DSR_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type DSR_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `CTS_CHG_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal."]
-pub type CTS_CHG_INT_RAW_R = crate::BitReader<bool>;
+pub type CTS_CHG_INT_RAW_R = crate::BitReader;
 #[doc = "Field `CTS_CHG_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal."]
-pub type CTS_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type CTS_CHG_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `BRK_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit."]
-pub type BRK_DET_INT_RAW_R = crate::BitReader<bool>;
+pub type BRK_DET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `BRK_DET_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit."]
-pub type BRK_DET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type BRK_DET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RXFIFO_TOUT_INT_RAW` reader - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
-pub type RXFIFO_TOUT_INT_RAW_R = crate::BitReader<bool>;
+pub type RXFIFO_TOUT_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RXFIFO_TOUT_INT_RAW` writer - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
-pub type RXFIFO_TOUT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RXFIFO_TOUT_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SW_XON_INT_RAW` reader - This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1."]
-pub type SW_XON_INT_RAW_R = crate::BitReader<bool>;
+pub type SW_XON_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SW_XON_INT_RAW` writer - This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1."]
-pub type SW_XON_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SW_XON_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `SW_XOFF_INT_RAW` reader - This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1."]
-pub type SW_XOFF_INT_RAW_R = crate::BitReader<bool>;
+pub type SW_XOFF_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SW_XOFF_INT_RAW` writer - This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1."]
-pub type SW_XOFF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type SW_XOFF_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `GLITCH_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit."]
-pub type GLITCH_DET_INT_RAW_R = crate::BitReader<bool>;
+pub type GLITCH_DET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `GLITCH_DET_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit."]
-pub type GLITCH_DET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type GLITCH_DET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_BRK_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter completes sending NULL characters after all data in Tx-FIFO are sent."]
-pub type TX_BRK_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_BRK_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_BRK_DONE_INT_RAW` writer - This interrupt raw bit turns to high level when transmitter completes sending NULL characters after all data in Tx-FIFO are sent."]
-pub type TX_BRK_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_BRK_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the last data."]
-pub type TX_BRK_IDLE_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_BRK_IDLE_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_RAW` writer - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the last data."]
-pub type TX_BRK_IDLE_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_BRK_IDLE_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `TX_DONE_INT_RAW` reader - This interrupt raw bit turns to high level when transmitter has send out all data in FIFO."]
-pub type TX_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TX_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TX_DONE_INT_RAW` writer - This interrupt raw bit turns to high level when transmitter has send out all data in FIFO."]
-pub type TX_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type TX_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RS485_PARITY_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a parity error from the echo of transmitter in rs485 mode."]
-pub type RS485_PARITY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type RS485_PARITY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RS485_PARITY_ERR_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a parity error from the echo of transmitter in rs485 mode."]
-pub type RS485_PARITY_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RS485_PARITY_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RS485_FRM_ERR_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects a data frame error from the echo of transmitter in rs485 mode."]
-pub type RS485_FRM_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type RS485_FRM_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RS485_FRM_ERR_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects a data frame error from the echo of transmitter in rs485 mode."]
-pub type RS485_FRM_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RS485_FRM_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `RS485_CLASH_INT_RAW` reader - This interrupt raw bit turns to high level when detects a clash between transmitter and receiver in rs485 mode."]
-pub type RS485_CLASH_INT_RAW_R = crate::BitReader<bool>;
+pub type RS485_CLASH_INT_RAW_R = crate::BitReader;
 #[doc = "Field `RS485_CLASH_INT_RAW` writer - This interrupt raw bit turns to high level when detects a clash between transmitter and receiver in rs485 mode."]
-pub type RS485_CLASH_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type RS485_CLASH_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_RAW` reader - This interrupt raw bit turns to high level when receiver detects the configured at_cmd char."]
-pub type AT_CMD_CHAR_DET_INT_RAW_R = crate::BitReader<bool>;
+pub type AT_CMD_CHAR_DET_INT_RAW_R = crate::BitReader;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_RAW` writer - This interrupt raw bit turns to high level when receiver detects the configured at_cmd char."]
-pub type AT_CMD_CHAR_DET_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type AT_CMD_CHAR_DET_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 #[doc = "Field `WAKEUP_INT_RAW` reader - This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode."]
-pub type WAKEUP_INT_RAW_R = crate::BitReader<bool>;
+pub type WAKEUP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `WAKEUP_INT_RAW` writer - This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode."]
-pub type WAKEUP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_RAW_SPEC, bool, O>;
+pub type WAKEUP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies."]
     #[inline(always)]
@@ -218,6 +214,99 @@ impl R {
     #[inline(always)]
     pub fn wakeup_int_raw(&self) -> WAKEUP_INT_RAW_R {
         WAKEUP_INT_RAW_R::new(((self.bits >> 19) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_RAW")
+            .field(
+                "rxfifo_full_int_raw",
+                &format_args!("{}", self.rxfifo_full_int_raw().bit()),
+            )
+            .field(
+                "txfifo_empty_int_raw",
+                &format_args!("{}", self.txfifo_empty_int_raw().bit()),
+            )
+            .field(
+                "parity_err_int_raw",
+                &format_args!("{}", self.parity_err_int_raw().bit()),
+            )
+            .field(
+                "frm_err_int_raw",
+                &format_args!("{}", self.frm_err_int_raw().bit()),
+            )
+            .field(
+                "rxfifo_ovf_int_raw",
+                &format_args!("{}", self.rxfifo_ovf_int_raw().bit()),
+            )
+            .field(
+                "dsr_chg_int_raw",
+                &format_args!("{}", self.dsr_chg_int_raw().bit()),
+            )
+            .field(
+                "cts_chg_int_raw",
+                &format_args!("{}", self.cts_chg_int_raw().bit()),
+            )
+            .field(
+                "brk_det_int_raw",
+                &format_args!("{}", self.brk_det_int_raw().bit()),
+            )
+            .field(
+                "rxfifo_tout_int_raw",
+                &format_args!("{}", self.rxfifo_tout_int_raw().bit()),
+            )
+            .field(
+                "sw_xon_int_raw",
+                &format_args!("{}", self.sw_xon_int_raw().bit()),
+            )
+            .field(
+                "sw_xoff_int_raw",
+                &format_args!("{}", self.sw_xoff_int_raw().bit()),
+            )
+            .field(
+                "glitch_det_int_raw",
+                &format_args!("{}", self.glitch_det_int_raw().bit()),
+            )
+            .field(
+                "tx_brk_done_int_raw",
+                &format_args!("{}", self.tx_brk_done_int_raw().bit()),
+            )
+            .field(
+                "tx_brk_idle_done_int_raw",
+                &format_args!("{}", self.tx_brk_idle_done_int_raw().bit()),
+            )
+            .field(
+                "tx_done_int_raw",
+                &format_args!("{}", self.tx_done_int_raw().bit()),
+            )
+            .field(
+                "rs485_parity_err_int_raw",
+                &format_args!("{}", self.rs485_parity_err_int_raw().bit()),
+            )
+            .field(
+                "rs485_frm_err_int_raw",
+                &format_args!("{}", self.rs485_frm_err_int_raw().bit()),
+            )
+            .field(
+                "rs485_clash_int_raw",
+                &format_args!("{}", self.rs485_clash_int_raw().bit()),
+            )
+            .field(
+                "at_cmd_char_det_int_raw",
+                &format_args!("{}", self.at_cmd_char_det_int_raw().bit()),
+            )
+            .field(
+                "wakeup_int_raw",
+                &format_args!("{}", self.wakeup_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

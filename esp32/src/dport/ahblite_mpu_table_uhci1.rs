@@ -35,15 +35,32 @@ impl From<crate::W<AHBLITE_MPU_TABLE_UHCI1_SPEC>> for W {
     }
 }
 #[doc = "Field `UHCI1_ACCESS_GRANT_CONFIG` reader - "]
-pub type UHCI1_ACCESS_GRANT_CONFIG_R = crate::FieldReader<u8, u8>;
+pub type UHCI1_ACCESS_GRANT_CONFIG_R = crate::FieldReader;
 #[doc = "Field `UHCI1_ACCESS_GRANT_CONFIG` writer - "]
 pub type UHCI1_ACCESS_GRANT_CONFIG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AHBLITE_MPU_TABLE_UHCI1_SPEC, u8, u8, 6, O>;
+    crate::FieldWriter<'a, AHBLITE_MPU_TABLE_UHCI1_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn uhci1_access_grant_config(&self) -> UHCI1_ACCESS_GRANT_CONFIG_R {
         UHCI1_ACCESS_GRANT_CONFIG_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLITE_MPU_TABLE_UHCI1")
+            .field(
+                "uhci1_access_grant_config",
+                &format_args!("{}", self.uhci1_access_grant_config().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_UHCI1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

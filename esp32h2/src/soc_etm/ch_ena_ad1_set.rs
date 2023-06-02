@@ -20,41 +20,47 @@ impl From<crate::W<CH_ENA_AD1_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_SET32` writer - ch32 set"]
-pub type CH_SET32_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET32_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET33` writer - ch33 set"]
-pub type CH_SET33_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET33_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET34` writer - ch34 set"]
-pub type CH_SET34_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET34_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET35` writer - ch35 set"]
-pub type CH_SET35_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET35_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET36` writer - ch36 set"]
-pub type CH_SET36_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET36_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET37` writer - ch37 set"]
-pub type CH_SET37_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET37_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET38` writer - ch38 set"]
-pub type CH_SET38_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET38_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET39` writer - ch39 set"]
-pub type CH_SET39_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET39_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET40` writer - ch40 set"]
-pub type CH_SET40_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET40_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET41` writer - ch41 set"]
-pub type CH_SET41_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET41_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET42` writer - ch42 set"]
-pub type CH_SET42_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET42_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET43` writer - ch43 set"]
-pub type CH_SET43_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET43_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET44` writer - ch44 set"]
-pub type CH_SET44_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET44_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET45` writer - ch45 set"]
-pub type CH_SET45_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET45_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET46` writer - ch46 set"]
-pub type CH_SET46_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET46_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET47` writer - ch47 set"]
-pub type CH_SET47_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET47_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET48` writer - ch48 set"]
-pub type CH_SET48_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET48_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
 #[doc = "Field `CH_SET49` writer - ch49 set"]
-pub type CH_SET49_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH_ENA_AD1_SET_SPEC, bool, O>;
+pub type CH_SET49_W<'a, const O: u8> = crate::BitWriter<'a, CH_ENA_AD1_SET_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD1_SET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - ch32 set"]
     #[inline(always)]

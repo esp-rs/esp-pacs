@@ -38,12 +38,29 @@ impl From<crate::W<PRO_ICACHE_LOCK1_SIZE_SPEC>> for W {
 pub type PRO_ICACHE_LOCK1_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_ICACHE_LOCK1_SIZE` writer - The bits are used to configure the second length of data locking, which is combined with PRO_ICACHE_LOCK1_ADDR_REG"]
 pub type PRO_ICACHE_LOCK1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_ICACHE_LOCK1_SIZE_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, PRO_ICACHE_LOCK1_SIZE_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with PRO_ICACHE_LOCK1_ADDR_REG"]
     #[inline(always)]
     pub fn pro_icache_lock1_size(&self) -> PRO_ICACHE_LOCK1_SIZE_R {
         PRO_ICACHE_LOCK1_SIZE_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_ICACHE_LOCK1_SIZE")
+            .field(
+                "pro_icache_lock1_size",
+                &format_args!("{}", self.pro_icache_lock1_size().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_LOCK1_SIZE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,15 @@ impl From<crate::W<CLKGATE_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` reader - reg_rom_clkgate_force_on"]
-pub type ROM_CLKGATE_FORCE_ON_R = crate::FieldReader<u8, u8>;
+pub type ROM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `ROM_CLKGATE_FORCE_ON` writer - reg_rom_clkgate_force_on"]
 pub type ROM_CLKGATE_FORCE_ON_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLKGATE_FORCE_ON_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CLKGATE_FORCE_ON_SPEC, 2, O>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - reg_sram_clkgate_force_on"]
-pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader<u8, u8>;
+pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` writer - reg_sram_clkgate_force_on"]
 pub type SRAM_CLKGATE_FORCE_ON_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLKGATE_FORCE_ON_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, CLKGATE_FORCE_ON_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:1 - reg_rom_clkgate_force_on"]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn sram_clkgate_force_on(&self) -> SRAM_CLKGATE_FORCE_ON_R {
         SRAM_CLKGATE_FORCE_ON_R::new(((self.bits >> 2) & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKGATE_FORCE_ON")
+            .field(
+                "rom_clkgate_force_on",
+                &format_args!("{}", self.rom_clkgate_force_on().bits()),
+            )
+            .field(
+                "sram_clkgate_force_on",
+                &format_args!("{}", self.sram_clkgate_force_on().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLKGATE_FORCE_ON_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

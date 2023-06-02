@@ -35,14 +35,28 @@ impl From<crate::W<XTL_EXT_CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - select RTC GPIO 0 ~ 17 to control XTAL"]
-pub type SEL_R = crate::FieldReader<u8, u8>;
+pub type SEL_R = crate::FieldReader;
 #[doc = "Field `SEL` writer - select RTC GPIO 0 ~ 17 to control XTAL"]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, XTL_EXT_CTR_SPEC, u8, u8, 5, O>;
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, XTL_EXT_CTR_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 27:31 - select RTC GPIO 0 ~ 17 to control XTAL"]
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 27) & 0x1f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XTL_EXT_CTR")
+            .field("sel", &format_args!("{}", self.sel().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<XTL_EXT_CTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

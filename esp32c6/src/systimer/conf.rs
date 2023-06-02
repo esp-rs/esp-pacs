@@ -35,57 +35,53 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SYSTIMER_CLK_FO` reader - systimer clock force on"]
-pub type SYSTIMER_CLK_FO_R = crate::BitReader<bool>;
+pub type SYSTIMER_CLK_FO_R = crate::BitReader;
 #[doc = "Field `SYSTIMER_CLK_FO` writer - systimer clock force on"]
-pub type SYSTIMER_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type SYSTIMER_CLK_FO_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `ETM_EN` reader - enable systimer's etm task and event"]
-pub type ETM_EN_R = crate::BitReader<bool>;
+pub type ETM_EN_R = crate::BitReader;
 #[doc = "Field `ETM_EN` writer - enable systimer's etm task and event"]
-pub type ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type ETM_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TARGET2_WORK_EN` reader - target2 work enable"]
-pub type TARGET2_WORK_EN_R = crate::BitReader<bool>;
+pub type TARGET2_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TARGET2_WORK_EN` writer - target2 work enable"]
-pub type TARGET2_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TARGET2_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TARGET1_WORK_EN` reader - target1 work enable"]
-pub type TARGET1_WORK_EN_R = crate::BitReader<bool>;
+pub type TARGET1_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TARGET1_WORK_EN` writer - target1 work enable"]
-pub type TARGET1_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TARGET1_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TARGET0_WORK_EN` reader - target0 work enable"]
-pub type TARGET0_WORK_EN_R = crate::BitReader<bool>;
+pub type TARGET0_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TARGET0_WORK_EN` writer - target0 work enable"]
-pub type TARGET0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TARGET0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT1_CORE1_STALL_EN` reader - If timer unit1 is stalled when core1 stalled"]
-pub type TIMER_UNIT1_CORE1_STALL_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT1_CORE1_STALL_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT1_CORE1_STALL_EN` writer - If timer unit1 is stalled when core1 stalled"]
-pub type TIMER_UNIT1_CORE1_STALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT1_CORE1_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT1_CORE0_STALL_EN` reader - If timer unit1 is stalled when core0 stalled"]
-pub type TIMER_UNIT1_CORE0_STALL_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT1_CORE0_STALL_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT1_CORE0_STALL_EN` writer - If timer unit1 is stalled when core0 stalled"]
-pub type TIMER_UNIT1_CORE0_STALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT1_CORE0_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT0_CORE1_STALL_EN` reader - If timer unit0 is stalled when core1 stalled"]
-pub type TIMER_UNIT0_CORE1_STALL_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT0_CORE1_STALL_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT0_CORE1_STALL_EN` writer - If timer unit0 is stalled when core1 stalled"]
-pub type TIMER_UNIT0_CORE1_STALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT0_CORE1_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT0_CORE0_STALL_EN` reader - If timer unit0 is stalled when core0 stalled"]
-pub type TIMER_UNIT0_CORE0_STALL_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT0_CORE0_STALL_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT0_CORE0_STALL_EN` writer - If timer unit0 is stalled when core0 stalled"]
-pub type TIMER_UNIT0_CORE0_STALL_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT0_CORE0_STALL_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT1_WORK_EN` reader - timer unit1 work enable"]
-pub type TIMER_UNIT1_WORK_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT1_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT1_WORK_EN` writer - timer unit1 work enable"]
-pub type TIMER_UNIT1_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT1_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `TIMER_UNIT0_WORK_EN` reader - timer unit0 work enable"]
-pub type TIMER_UNIT0_WORK_EN_R = crate::BitReader<bool>;
+pub type TIMER_UNIT0_WORK_EN_R = crate::BitReader;
 #[doc = "Field `TIMER_UNIT0_WORK_EN` writer - timer unit0 work enable"]
-pub type TIMER_UNIT0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type TIMER_UNIT0_WORK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 #[doc = "Field `CLK_EN` reader - register file clk gating"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - register file clk gating"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - systimer clock force on"]
     #[inline(always)]
@@ -146,6 +142,61 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONF")
+            .field(
+                "systimer_clk_fo",
+                &format_args!("{}", self.systimer_clk_fo().bit()),
+            )
+            .field("etm_en", &format_args!("{}", self.etm_en().bit()))
+            .field(
+                "target2_work_en",
+                &format_args!("{}", self.target2_work_en().bit()),
+            )
+            .field(
+                "target1_work_en",
+                &format_args!("{}", self.target1_work_en().bit()),
+            )
+            .field(
+                "target0_work_en",
+                &format_args!("{}", self.target0_work_en().bit()),
+            )
+            .field(
+                "timer_unit1_core1_stall_en",
+                &format_args!("{}", self.timer_unit1_core1_stall_en().bit()),
+            )
+            .field(
+                "timer_unit1_core0_stall_en",
+                &format_args!("{}", self.timer_unit1_core0_stall_en().bit()),
+            )
+            .field(
+                "timer_unit0_core1_stall_en",
+                &format_args!("{}", self.timer_unit0_core1_stall_en().bit()),
+            )
+            .field(
+                "timer_unit0_core0_stall_en",
+                &format_args!("{}", self.timer_unit0_core0_stall_en().bit()),
+            )
+            .field(
+                "timer_unit1_work_en",
+                &format_args!("{}", self.timer_unit1_work_en().bit()),
+            )
+            .field(
+                "timer_unit0_work_en",
+                &format_args!("{}", self.timer_unit0_work_en().bit()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

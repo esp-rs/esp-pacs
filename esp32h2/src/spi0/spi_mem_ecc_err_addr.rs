@@ -16,7 +16,7 @@ impl From<crate::R<SPI_MEM_ECC_ERR_ADDR_SPEC>> for R {
 #[doc = "Field `SPI_MEM_ECC_ERR_ADDR` reader - This bits show the first MSPI ECC error address. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
 pub type SPI_MEM_ECC_ERR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SPI_MEM_ECC_ERR_CNT` reader - This bits show the error times of MSPI ECC read. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
-pub type SPI_MEM_ECC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type SPI_MEM_ECC_ERR_CNT_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:25 - This bits show the first MSPI ECC error address. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
     #[inline(always)]
@@ -27,6 +27,27 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_ecc_err_cnt(&self) -> SPI_MEM_ECC_ERR_CNT_R {
         SPI_MEM_ECC_ERR_CNT_R::new(((self.bits >> 26) & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_ECC_ERR_ADDR")
+            .field(
+                "spi_mem_ecc_err_addr",
+                &format_args!("{}", self.spi_mem_ecc_err_addr().bits()),
+            )
+            .field(
+                "spi_mem_ecc_err_cnt",
+                &format_args!("{}", self.spi_mem_ecc_err_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ECC_ERR_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "MSPI ECC error address register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_mem_ecc_err_addr](index.html) module"]

@@ -35,31 +35,29 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `THRES1_LOW_INT_ENA` reader - Need add description"]
-pub type THRES1_LOW_INT_ENA_R = crate::BitReader<bool>;
+pub type THRES1_LOW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `THRES1_LOW_INT_ENA` writer - Need add description"]
-pub type THRES1_LOW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type THRES1_LOW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `THRES0_LOW_INT_ENA` reader - Need add description"]
-pub type THRES0_LOW_INT_ENA_R = crate::BitReader<bool>;
+pub type THRES0_LOW_INT_ENA_R = crate::BitReader;
 #[doc = "Field `THRES0_LOW_INT_ENA` writer - Need add description"]
-pub type THRES0_LOW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type THRES0_LOW_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `THRES1_HIGH_INT_ENA` reader - Need add description"]
-pub type THRES1_HIGH_INT_ENA_R = crate::BitReader<bool>;
+pub type THRES1_HIGH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `THRES1_HIGH_INT_ENA` writer - Need add description"]
-pub type THRES1_HIGH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type THRES1_HIGH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `THRES0_HIGH_INT_ENA` reader - Need add description"]
-pub type THRES0_HIGH_INT_ENA_R = crate::BitReader<bool>;
+pub type THRES0_HIGH_INT_ENA_R = crate::BitReader;
 #[doc = "Field `THRES0_HIGH_INT_ENA` writer - Need add description"]
-pub type THRES0_HIGH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type THRES0_HIGH_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` reader - Need add description"]
-pub type APB_SARADC2_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type APB_SARADC2_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` writer - Need add description"]
-pub type APB_SARADC2_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type APB_SARADC2_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` reader - Need add description"]
-pub type APB_SARADC1_DONE_INT_ENA_R = crate::BitReader<bool>;
+pub type APB_SARADC1_DONE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` writer - Need add description"]
-pub type APB_SARADC1_DONE_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type APB_SARADC1_DONE_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 26 - Need add description"]
     #[inline(always)]
@@ -90,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn apb_saradc1_done_int_ena(&self) -> APB_SARADC1_DONE_INT_ENA_R {
         APB_SARADC1_DONE_INT_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "thres1_low_int_ena",
+                &format_args!("{}", self.thres1_low_int_ena().bit()),
+            )
+            .field(
+                "thres0_low_int_ena",
+                &format_args!("{}", self.thres0_low_int_ena().bit()),
+            )
+            .field(
+                "thres1_high_int_ena",
+                &format_args!("{}", self.thres1_high_int_ena().bit()),
+            )
+            .field(
+                "thres0_high_int_ena",
+                &format_args!("{}", self.thres0_high_int_ena().bit()),
+            )
+            .field(
+                "apb_saradc2_done_int_ena",
+                &format_args!("{}", self.apb_saradc2_done_int_ena().bit()),
+            )
+            .field(
+                "apb_saradc1_done_int_ena",
+                &format_args!("{}", self.apb_saradc1_done_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

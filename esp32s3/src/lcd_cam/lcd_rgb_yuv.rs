@@ -35,53 +35,45 @@ impl From<crate::W<LCD_RGB_YUV_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_CONV_8BITS_DATA_INV` reader - 1:invert every two 8bits input data. 2. disabled."]
-pub type LCD_CONV_8BITS_DATA_INV_R = crate::BitReader<bool>;
+pub type LCD_CONV_8BITS_DATA_INV_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_8BITS_DATA_INV` writer - 1:invert every two 8bits input data. 2. disabled."]
-pub type LCD_CONV_8BITS_DATA_INV_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_8BITS_DATA_INV_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_TXTORX` reader - 0: txtorx mode off. 1: txtorx mode on."]
-pub type LCD_CONV_TXTORX_R = crate::BitReader<bool>;
+pub type LCD_CONV_TXTORX_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_TXTORX` writer - 0: txtorx mode off. 1: txtorx mode on."]
-pub type LCD_CONV_TXTORX_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_TXTORX_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_YUV2YUV_MODE` reader - 0: to yuv422. 1: to yuv420. 2: to yuv411. 3: disabled. To enable yuv2yuv mode, trans_mode must be set to 1."]
-pub type LCD_CONV_YUV2YUV_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_CONV_YUV2YUV_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_CONV_YUV2YUV_MODE` writer - 0: to yuv422. 1: to yuv420. 2: to yuv411. 3: disabled. To enable yuv2yuv mode, trans_mode must be set to 1."]
-pub type LCD_CONV_YUV2YUV_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_RGB_YUV_SPEC, u8, u8, 2, O>;
+pub type LCD_CONV_YUV2YUV_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_RGB_YUV_SPEC, 2, O>;
 #[doc = "Field `LCD_CONV_YUV_MODE` reader - 0: yuv422. 1: yuv420. 2: yuv411. When in yuv2yuv mode, yuv_mode decides the yuv mode of Data_in"]
-pub type LCD_CONV_YUV_MODE_R = crate::FieldReader<u8, u8>;
+pub type LCD_CONV_YUV_MODE_R = crate::FieldReader;
 #[doc = "Field `LCD_CONV_YUV_MODE` writer - 0: yuv422. 1: yuv420. 2: yuv411. When in yuv2yuv mode, yuv_mode decides the yuv mode of Data_in"]
-pub type LCD_CONV_YUV_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, LCD_RGB_YUV_SPEC, u8, u8, 2, O>;
+pub type LCD_CONV_YUV_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_RGB_YUV_SPEC, 2, O>;
 #[doc = "Field `LCD_CONV_PROTOCOL_MODE` reader - 0:BT601. 1:BT709."]
-pub type LCD_CONV_PROTOCOL_MODE_R = crate::BitReader<bool>;
+pub type LCD_CONV_PROTOCOL_MODE_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_PROTOCOL_MODE` writer - 0:BT601. 1:BT709."]
-pub type LCD_CONV_PROTOCOL_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_PROTOCOL_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_DATA_OUT_MODE` reader - LIMIT or FULL mode of Data out. 0: limit. 1: full"]
-pub type LCD_CONV_DATA_OUT_MODE_R = crate::BitReader<bool>;
+pub type LCD_CONV_DATA_OUT_MODE_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_DATA_OUT_MODE` writer - LIMIT or FULL mode of Data out. 0: limit. 1: full"]
-pub type LCD_CONV_DATA_OUT_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_DATA_OUT_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_DATA_IN_MODE` reader - LIMIT or FULL mode of Data in. 0: limit. 1: full"]
-pub type LCD_CONV_DATA_IN_MODE_R = crate::BitReader<bool>;
+pub type LCD_CONV_DATA_IN_MODE_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_DATA_IN_MODE` writer - LIMIT or FULL mode of Data in. 0: limit. 1: full"]
-pub type LCD_CONV_DATA_IN_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_DATA_IN_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_MODE_8BITS_ON` reader - 0: 16bits mode. 1: 8bits mode."]
-pub type LCD_CONV_MODE_8BITS_ON_R = crate::BitReader<bool>;
+pub type LCD_CONV_MODE_8BITS_ON_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_MODE_8BITS_ON` writer - 0: 16bits mode. 1: 8bits mode."]
-pub type LCD_CONV_MODE_8BITS_ON_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_MODE_8BITS_ON_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_TRANS_MODE` reader - 0: YUV to RGB. 1: RGB to YUV."]
-pub type LCD_CONV_TRANS_MODE_R = crate::BitReader<bool>;
+pub type LCD_CONV_TRANS_MODE_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_TRANS_MODE` writer - 0: YUV to RGB. 1: RGB to YUV."]
-pub type LCD_CONV_TRANS_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_TRANS_MODE_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 #[doc = "Field `LCD_CONV_BYPASS` reader - 0: Bypass converter. 1: Enable converter."]
-pub type LCD_CONV_BYPASS_R = crate::BitReader<bool>;
+pub type LCD_CONV_BYPASS_R = crate::BitReader;
 #[doc = "Field `LCD_CONV_BYPASS` writer - 0: Bypass converter. 1: Enable converter."]
-pub type LCD_CONV_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, LCD_RGB_YUV_SPEC, bool, O>;
+pub type LCD_CONV_BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, LCD_RGB_YUV_SPEC, O>;
 impl R {
     #[doc = "Bit 20 - 1:invert every two 8bits input data. 2. disabled."]
     #[inline(always)]
@@ -132,6 +124,59 @@ impl R {
     #[inline(always)]
     pub fn lcd_conv_bypass(&self) -> LCD_CONV_BYPASS_R {
         LCD_CONV_BYPASS_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LCD_RGB_YUV")
+            .field(
+                "lcd_conv_8bits_data_inv",
+                &format_args!("{}", self.lcd_conv_8bits_data_inv().bit()),
+            )
+            .field(
+                "lcd_conv_txtorx",
+                &format_args!("{}", self.lcd_conv_txtorx().bit()),
+            )
+            .field(
+                "lcd_conv_yuv2yuv_mode",
+                &format_args!("{}", self.lcd_conv_yuv2yuv_mode().bits()),
+            )
+            .field(
+                "lcd_conv_yuv_mode",
+                &format_args!("{}", self.lcd_conv_yuv_mode().bits()),
+            )
+            .field(
+                "lcd_conv_protocol_mode",
+                &format_args!("{}", self.lcd_conv_protocol_mode().bit()),
+            )
+            .field(
+                "lcd_conv_data_out_mode",
+                &format_args!("{}", self.lcd_conv_data_out_mode().bit()),
+            )
+            .field(
+                "lcd_conv_data_in_mode",
+                &format_args!("{}", self.lcd_conv_data_in_mode().bit()),
+            )
+            .field(
+                "lcd_conv_mode_8bits_on",
+                &format_args!("{}", self.lcd_conv_mode_8bits_on().bit()),
+            )
+            .field(
+                "lcd_conv_trans_mode",
+                &format_args!("{}", self.lcd_conv_trans_mode().bit()),
+            )
+            .field(
+                "lcd_conv_bypass",
+                &format_args!("{}", self.lcd_conv_bypass().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LCD_RGB_YUV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

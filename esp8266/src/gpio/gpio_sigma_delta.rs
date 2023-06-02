@@ -35,20 +35,19 @@ impl From<crate::W<GPIO_SIGMA_DELTA_SPEC>> for W {
     }
 }
 #[doc = "Field `SIGMA_DELTA_TARGET` reader - target level of the sigma-delta. It is a signed byte."]
-pub type SIGMA_DELTA_TARGET_R = crate::FieldReader<u8, u8>;
+pub type SIGMA_DELTA_TARGET_R = crate::FieldReader;
 #[doc = "Field `SIGMA_DELTA_TARGET` writer - target level of the sigma-delta. It is a signed byte."]
 pub type SIGMA_DELTA_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_SIGMA_DELTA_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, GPIO_SIGMA_DELTA_SPEC, 8, O>;
 #[doc = "Field `SIGMA_DELTA_PRESCALAR` reader - Clock pre-divider for sigma-delta."]
-pub type SIGMA_DELTA_PRESCALAR_R = crate::FieldReader<u8, u8>;
+pub type SIGMA_DELTA_PRESCALAR_R = crate::FieldReader;
 #[doc = "Field `SIGMA_DELTA_PRESCALAR` writer - Clock pre-divider for sigma-delta."]
 pub type SIGMA_DELTA_PRESCALAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_SIGMA_DELTA_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, GPIO_SIGMA_DELTA_SPEC, 8, O>;
 #[doc = "Field `SIGMA_DELTA_ENABLE` reader - 1: enable sigma-delta; 0: disable"]
-pub type SIGMA_DELTA_ENABLE_R = crate::BitReader<bool>;
+pub type SIGMA_DELTA_ENABLE_R = crate::BitReader;
 #[doc = "Field `SIGMA_DELTA_ENABLE` writer - 1: enable sigma-delta; 0: disable"]
-pub type SIGMA_DELTA_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, GPIO_SIGMA_DELTA_SPEC, bool, O>;
+pub type SIGMA_DELTA_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, GPIO_SIGMA_DELTA_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - target level of the sigma-delta. It is a signed byte."]
     #[inline(always)]
@@ -64,6 +63,31 @@ impl R {
     #[inline(always)]
     pub fn sigma_delta_enable(&self) -> SIGMA_DELTA_ENABLE_R {
         SIGMA_DELTA_ENABLE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GPIO_SIGMA_DELTA")
+            .field(
+                "sigma_delta_enable",
+                &format_args!("{}", self.sigma_delta_enable().bit()),
+            )
+            .field(
+                "sigma_delta_prescalar",
+                &format_args!("{}", self.sigma_delta_prescalar().bits()),
+            )
+            .field(
+                "sigma_delta_target",
+                &format_args!("{}", self.sigma_delta_target().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<GPIO_SIGMA_DELTA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

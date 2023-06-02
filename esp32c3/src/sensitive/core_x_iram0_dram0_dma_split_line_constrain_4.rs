@@ -35,25 +35,25 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0` reader - core_x_dram0_dma_sram_line_0_category_0"]
-pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0` writer - core_x_dram0_dma_sram_line_0_category_0"]
 pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1` reader - core_x_dram0_dma_sram_line_0_category_1"]
-pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1` writer - core_x_dram0_dma_sram_line_0_category_1"]
 pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2` reader - core_x_dram0_dma_sram_line_0_category_2"]
-pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2` writer - core_x_dram0_dma_sram_line_0_category_2"]
 pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_CATEGORY_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, 2, O>;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR` reader - core_x_dram0_dma_sram_line_0_splitaddr"]
-pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_R = crate::FieldReader<u8, u8>;
+pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_R = crate::FieldReader;
 #[doc = "Field `CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR` writer - core_x_dram0_dma_sram_line_0_splitaddr"]
 pub type CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - core_x_dram0_dma_sram_line_0_category_0"]
     #[inline(always)]
@@ -82,6 +82,35 @@ impl R {
         &self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_R {
         CORE_X_DRAM0_DMA_SRAM_LINE_0_SPLITADDR_R::new(((self.bits >> 14) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4")
+            .field(
+                "core_x_dram0_dma_sram_line_0_category_0",
+                &format_args!("{}", self.core_x_dram0_dma_sram_line_0_category_0().bits()),
+            )
+            .field(
+                "core_x_dram0_dma_sram_line_0_category_1",
+                &format_args!("{}", self.core_x_dram0_dma_sram_line_0_category_1().bits()),
+            )
+            .field(
+                "core_x_dram0_dma_sram_line_0_category_2",
+                &format_args!("{}", self.core_x_dram0_dma_sram_line_0_category_2().bits()),
+            )
+            .field(
+                "core_x_dram0_dma_sram_line_0_splitaddr",
+                &format_args!("{}", self.core_x_dram0_dma_sram_line_0_splitaddr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,13 +37,26 @@ impl From<crate::W<RTC_GPIO_STATUS_SPEC>> for W {
 #[doc = "Field `INT` reader - RTC GPIO 0 ~ 21 interrupt status"]
 pub type INT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INT` writer - RTC GPIO 0 ~ 21 interrupt status"]
-pub type INT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, RTC_GPIO_STATUS_SPEC, u32, u32, 22, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_STATUS_SPEC, 22, O, u32, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new((self.bits >> 10) & 0x003f_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTC_GPIO_STATUS")
+            .field("int", &format_args!("{}", self.int().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_STATUS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

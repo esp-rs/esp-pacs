@@ -38,12 +38,29 @@ impl From<crate::W<CORE_1_ENTRY_1_ADDR_SPEC>> for W {
 pub type CORE_1_ENTRY_1_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_ENTRY_1_ADDR` writer - Core_1 Entry 1 address from WORLD1 to WORLD0"]
 pub type CORE_1_ENTRY_1_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CORE_1_ENTRY_1_ADDR_SPEC, u32, u32, 32, O>;
+    crate::FieldWriter<'a, CORE_1_ENTRY_1_ADDR_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core_1 Entry 1 address from WORLD1 to WORLD0"]
     #[inline(always)]
     pub fn core_1_entry_1_addr(&self) -> CORE_1_ENTRY_1_ADDR_R {
         CORE_1_ENTRY_1_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Core_1_ENTRY_1_ADDR")
+            .field(
+                "core_1_entry_1_addr",
+                &format_args!("{}", self.core_1_entry_1_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_ENTRY_1_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

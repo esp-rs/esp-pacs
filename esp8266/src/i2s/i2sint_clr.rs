@@ -35,35 +35,29 @@ impl From<crate::W<I2SINT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_I2S_TAKE_DATA_INT_CLR` reader - "]
-pub type I2S_I2S_TAKE_DATA_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_TAKE_DATA_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TAKE_DATA_INT_CLR` writer - "]
-pub type I2S_I2S_TAKE_DATA_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_TAKE_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 #[doc = "Field `I2S_I2S_PUT_DATA_INT_CLR` reader - "]
-pub type I2S_I2S_PUT_DATA_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_PUT_DATA_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_PUT_DATA_INT_CLR` writer - "]
-pub type I2S_I2S_PUT_DATA_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_PUT_DATA_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_WFULL_INT_CLR` reader - "]
-pub type I2S_I2S_RX_WFULL_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_WFULL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_WFULL_INT_CLR` writer - "]
-pub type I2S_I2S_RX_WFULL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_RX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 #[doc = "Field `I2S_I2S_RX_REMPTY_INT_CLR` reader - "]
-pub type I2S_I2S_RX_REMPTY_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_RX_REMPTY_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_RX_REMPTY_INT_CLR` writer - "]
-pub type I2S_I2S_RX_REMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_RX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_WFULL_INT_CLR` reader - "]
-pub type I2S_I2S_TX_WFULL_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_WFULL_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_WFULL_INT_CLR` writer - "]
-pub type I2S_I2S_TX_WFULL_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_TX_WFULL_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 #[doc = "Field `I2S_I2S_TX_REMPTY_INT_CLR` reader - "]
-pub type I2S_I2S_TX_REMPTY_INT_CLR_R = crate::BitReader<bool>;
+pub type I2S_I2S_TX_REMPTY_INT_CLR_R = crate::BitReader;
 #[doc = "Field `I2S_I2S_TX_REMPTY_INT_CLR` writer - "]
-pub type I2S_I2S_TX_REMPTY_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, I2SINT_CLR_SPEC, bool, O>;
+pub type I2S_I2S_TX_REMPTY_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, I2SINT_CLR_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -94,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn i2s_i2s_tx_rempty_int_clr(&self) -> I2S_I2S_TX_REMPTY_INT_CLR_R {
         I2S_I2S_TX_REMPTY_INT_CLR_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SINT_CLR")
+            .field(
+                "i2s_i2s_tx_rempty_int_clr",
+                &format_args!("{}", self.i2s_i2s_tx_rempty_int_clr().bit()),
+            )
+            .field(
+                "i2s_i2s_tx_wfull_int_clr",
+                &format_args!("{}", self.i2s_i2s_tx_wfull_int_clr().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_rempty_int_clr",
+                &format_args!("{}", self.i2s_i2s_rx_rempty_int_clr().bit()),
+            )
+            .field(
+                "i2s_i2s_rx_wfull_int_clr",
+                &format_args!("{}", self.i2s_i2s_rx_wfull_int_clr().bit()),
+            )
+            .field(
+                "i2s_i2s_put_data_int_clr",
+                &format_args!("{}", self.i2s_i2s_put_data_int_clr().bit()),
+            )
+            .field(
+                "i2s_i2s_take_data_int_clr",
+                &format_args!("{}", self.i2s_i2s_take_data_int_clr().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<I2SINT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

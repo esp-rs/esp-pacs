@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
     #[doc = "0x00 - Configures the low level width of the SCL Clock"]
     pub i2c_scl_low_period: I2C_SCL_LOW_PERIOD,

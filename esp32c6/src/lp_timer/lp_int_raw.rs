@@ -35,15 +35,14 @@ impl From<crate::W<LP_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` reader - need_des"]
-pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_OVERFLOW_LP_INT_RAW` writer - need_des"]
 pub type MAIN_TIMER_OVERFLOW_LP_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, LP_INT_RAW_SPEC, O>;
 #[doc = "Field `MAIN_TIMER_LP_INT_RAW` reader - need_des"]
-pub type MAIN_TIMER_LP_INT_RAW_R = crate::BitReader<bool>;
+pub type MAIN_TIMER_LP_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_LP_INT_RAW` writer - need_des"]
-pub type MAIN_TIMER_LP_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LP_INT_RAW_SPEC, bool, O>;
+pub type MAIN_TIMER_LP_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, LP_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
@@ -54,6 +53,27 @@ impl R {
     #[inline(always)]
     pub fn main_timer_lp_int_raw(&self) -> MAIN_TIMER_LP_INT_RAW_R {
         MAIN_TIMER_LP_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_INT_RAW")
+            .field(
+                "main_timer_overflow_lp_int_raw",
+                &format_args!("{}", self.main_timer_overflow_lp_int_raw().bit()),
+            )
+            .field(
+                "main_timer_lp_int_raw",
+                &format_args!("{}", self.main_timer_lp_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LP_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

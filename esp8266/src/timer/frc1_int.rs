@@ -35,14 +35,31 @@ impl From<crate::W<FRC1_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `frc1_int_clr_mask` reader - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
-pub type FRC1_INT_CLR_MASK_R = crate::BitReader<bool>;
+pub type FRC1_INT_CLR_MASK_R = crate::BitReader;
 #[doc = "Field `frc1_int_clr_mask` writer - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
-pub type FRC1_INT_CLR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, u32, FRC1_INT_SPEC, bool, O>;
+pub type FRC1_INT_CLR_MASK_W<'a, const O: u8> = crate::BitWriter<'a, FRC1_INT_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - write to clear the status of the interrupt, if theinterrupt type is \"level\""]
     #[inline(always)]
     pub fn frc1_int_clr_mask(&self) -> FRC1_INT_CLR_MASK_R {
         FRC1_INT_CLR_MASK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRC1_INT")
+            .field(
+                "frc1_int_clr_mask",
+                &format_args!("{}", self.frc1_int_clr_mask().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<FRC1_INT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

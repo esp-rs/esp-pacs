@@ -35,19 +35,17 @@ impl From<crate::W<TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL_TICK_NUM` reader - reg_xtal_tick_num"]
-pub type XTAL_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type XTAL_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `XTAL_TICK_NUM` writer - reg_xtal_tick_num"]
-pub type XTAL_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type XTAL_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TICK_CONF_SPEC, 8, O>;
 #[doc = "Field `CK8M_TICK_NUM` reader - reg_ck8m_tick_num"]
-pub type CK8M_TICK_NUM_R = crate::FieldReader<u8, u8>;
+pub type CK8M_TICK_NUM_R = crate::FieldReader;
 #[doc = "Field `CK8M_TICK_NUM` writer - reg_ck8m_tick_num"]
-pub type CK8M_TICK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TICK_CONF_SPEC, u8, u8, 8, O>;
+pub type CK8M_TICK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TICK_CONF_SPEC, 8, O>;
 #[doc = "Field `TICK_ENABLE` reader - reg_tick_enable"]
-pub type TICK_ENABLE_R = crate::BitReader<bool>;
+pub type TICK_ENABLE_R = crate::BitReader;
 #[doc = "Field `TICK_ENABLE` writer - reg_tick_enable"]
-pub type TICK_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TICK_CONF_SPEC, bool, O>;
+pub type TICK_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, TICK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - reg_xtal_tick_num"]
     #[inline(always)]
@@ -63,6 +61,28 @@ impl R {
     #[inline(always)]
     pub fn tick_enable(&self) -> TICK_ENABLE_R {
         TICK_ENABLE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TICK_CONF")
+            .field(
+                "xtal_tick_num",
+                &format_args!("{}", self.xtal_tick_num().bits()),
+            )
+            .field(
+                "ck8m_tick_num",
+                &format_args!("{}", self.ck8m_tick_num().bits()),
+            )
+            .field("tick_enable", &format_args!("{}", self.tick_enable().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TICK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

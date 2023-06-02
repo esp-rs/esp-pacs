@@ -37,13 +37,26 @@ impl From<crate::W<SAR_NOUSE_SPEC>> for W {
 #[doc = "Field `SAR_NOUSE` reader - no public"]
 pub type SAR_NOUSE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR_NOUSE` writer - no public"]
-pub type SAR_NOUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_NOUSE_SPEC, u32, u32, 32, O>;
+pub type SAR_NOUSE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_NOUSE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - no public"]
     #[inline(always)]
     pub fn sar_nouse(&self) -> SAR_NOUSE_R {
         SAR_NOUSE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_NOUSE")
+            .field("sar_nouse", &format_args!("{}", self.sar_nouse().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_NOUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

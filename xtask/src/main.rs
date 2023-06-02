@@ -147,6 +147,8 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         target,
         output_dir: path.clone(),
         const_generic: true,
+        impl_debug: true,
+        impl_debug_feature: Some("impl-register-debug".to_owned()),
 
         ..match target {
             Target::RISCV => Config {

@@ -35,45 +35,41 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_START_FORCE` reader - select software enable saradc sample"]
-pub type SARADC_START_FORCE_R = crate::BitReader<bool>;
+pub type SARADC_START_FORCE_R = crate::BitReader;
 #[doc = "Field `SARADC_START_FORCE` writer - select software enable saradc sample"]
-pub type SARADC_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SARADC_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SARADC_START` reader - software enable saradc sample"]
-pub type SARADC_START_R = crate::BitReader<bool>;
+pub type SARADC_START_R = crate::BitReader;
 #[doc = "Field `SARADC_START` writer - software enable saradc sample"]
-pub type SARADC_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SARADC_START_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SARADC_SAR_CLK_GATED` reader - SAR clock gated"]
-pub type SARADC_SAR_CLK_GATED_R = crate::BitReader<bool>;
+pub type SARADC_SAR_CLK_GATED_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR_CLK_GATED` writer - SAR clock gated"]
-pub type SARADC_SAR_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SARADC_SAR_CLK_GATED_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SARADC_SAR_CLK_DIV` reader - SAR clock divider"]
-pub type SARADC_SAR_CLK_DIV_R = crate::FieldReader<u8, u8>;
+pub type SARADC_SAR_CLK_DIV_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAR_CLK_DIV` writer - SAR clock divider"]
-pub type SARADC_SAR_CLK_DIV_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 8, O>;
+pub type SARADC_SAR_CLK_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 8, O>;
 #[doc = "Field `SARADC_SAR_PATT_LEN` reader - 0 ~ 15 means length 1 ~ 16"]
-pub type SARADC_SAR_PATT_LEN_R = crate::FieldReader<u8, u8>;
+pub type SARADC_SAR_PATT_LEN_R = crate::FieldReader;
 #[doc = "Field `SARADC_SAR_PATT_LEN` writer - 0 ~ 15 means length 1 ~ 16"]
-pub type SARADC_SAR_PATT_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 3, O>;
+pub type SARADC_SAR_PATT_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 3, O>;
 #[doc = "Field `SARADC_SAR_PATT_P_CLEAR` reader - clear the pointer of pattern table for DIG ADC1 CTRL"]
-pub type SARADC_SAR_PATT_P_CLEAR_R = crate::BitReader<bool>;
+pub type SARADC_SAR_PATT_P_CLEAR_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR_PATT_P_CLEAR` writer - clear the pointer of pattern table for DIG ADC1 CTRL"]
-pub type SARADC_SAR_PATT_P_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SARADC_SAR_PATT_P_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SARADC_XPD_SAR_FORCE` reader - force option to xpd sar blocks"]
-pub type SARADC_XPD_SAR_FORCE_R = crate::FieldReader<u8, u8>;
+pub type SARADC_XPD_SAR_FORCE_R = crate::FieldReader;
 #[doc = "Field `SARADC_XPD_SAR_FORCE` writer - force option to xpd sar blocks"]
-pub type SARADC_XPD_SAR_FORCE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, O>;
+pub type SARADC_XPD_SAR_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 2, O>;
 #[doc = "Field `SARADC2_PWDET_DRV` reader - enable saradc2 power detect driven func."]
-pub type SARADC2_PWDET_DRV_R = crate::BitReader<bool>;
+pub type SARADC2_PWDET_DRV_R = crate::BitReader;
 #[doc = "Field `SARADC2_PWDET_DRV` writer - enable saradc2 power detect driven func."]
-pub type SARADC2_PWDET_DRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type SARADC2_PWDET_DRV_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `SARADC_WAIT_ARB_CYCLE` reader - wait arbit signal stable after sar_done"]
-pub type SARADC_WAIT_ARB_CYCLE_R = crate::FieldReader<u8, u8>;
+pub type SARADC_WAIT_ARB_CYCLE_R = crate::FieldReader;
 #[doc = "Field `SARADC_WAIT_ARB_CYCLE` writer - wait arbit signal stable after sar_done"]
-pub type SARADC_WAIT_ARB_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_SPEC, u8, u8, 2, O>;
+pub type SARADC_WAIT_ARB_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
@@ -119,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn saradc_wait_arb_cycle(&self) -> SARADC_WAIT_ARB_CYCLE_R {
         SARADC_WAIT_ARB_CYCLE_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field(
+                "saradc_start_force",
+                &format_args!("{}", self.saradc_start_force().bit()),
+            )
+            .field(
+                "saradc_start",
+                &format_args!("{}", self.saradc_start().bit()),
+            )
+            .field(
+                "saradc_sar_clk_gated",
+                &format_args!("{}", self.saradc_sar_clk_gated().bit()),
+            )
+            .field(
+                "saradc_sar_clk_div",
+                &format_args!("{}", self.saradc_sar_clk_div().bits()),
+            )
+            .field(
+                "saradc_sar_patt_len",
+                &format_args!("{}", self.saradc_sar_patt_len().bits()),
+            )
+            .field(
+                "saradc_sar_patt_p_clear",
+                &format_args!("{}", self.saradc_sar_patt_p_clear().bit()),
+            )
+            .field(
+                "saradc_xpd_sar_force",
+                &format_args!("{}", self.saradc_xpd_sar_force().bits()),
+            )
+            .field(
+                "saradc2_pwdet_drv",
+                &format_args!("{}", self.saradc2_pwdet_drv().bit()),
+            )
+            .field(
+                "saradc_wait_arb_cycle",
+                &format_args!("{}", self.saradc_wait_arb_cycle().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

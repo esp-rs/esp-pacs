@@ -35,15 +35,13 @@ impl From<crate::W<IO_MUX_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI0_CLK_EQU_SYS_CLK` reader - "]
-pub type SPI0_CLK_EQU_SYS_CLK_R = crate::BitReader<bool>;
+pub type SPI0_CLK_EQU_SYS_CLK_R = crate::BitReader;
 #[doc = "Field `SPI0_CLK_EQU_SYS_CLK` writer - "]
-pub type SPI0_CLK_EQU_SYS_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IO_MUX_CONF_SPEC, bool, O>;
+pub type SPI0_CLK_EQU_SYS_CLK_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_CONF_SPEC, O>;
 #[doc = "Field `SPI1_CLK_EQU_SYS_CLK` reader - "]
-pub type SPI1_CLK_EQU_SYS_CLK_R = crate::BitReader<bool>;
+pub type SPI1_CLK_EQU_SYS_CLK_R = crate::BitReader;
 #[doc = "Field `SPI1_CLK_EQU_SYS_CLK` writer - "]
-pub type SPI1_CLK_EQU_SYS_CLK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IO_MUX_CONF_SPEC, bool, O>;
+pub type SPI1_CLK_EQU_SYS_CLK_W<'a, const O: u8> = crate::BitWriter<'a, IO_MUX_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 8"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn spi1_clk_equ_sys_clk(&self) -> SPI1_CLK_EQU_SYS_CLK_R {
         SPI1_CLK_EQU_SYS_CLK_R::new(((self.bits >> 9) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IO_MUX_CONF")
+            .field(
+                "spi0_clk_equ_sys_clk",
+                &format_args!("{}", self.spi0_clk_equ_sys_clk().bit()),
+            )
+            .field(
+                "spi1_clk_equ_sys_clk",
+                &format_args!("{}", self.spi1_clk_equ_sys_clk().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<IO_MUX_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

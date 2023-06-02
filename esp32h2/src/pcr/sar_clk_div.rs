@@ -35,15 +35,13 @@ impl From<crate::W<SAR_CLK_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_CLK_DIV_NUM` reader - xxxx"]
-pub type SAR2_CLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SAR2_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR2_CLK_DIV_NUM` writer - xxxx"]
-pub type SAR2_CLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_CLK_DIV_SPEC, u8, u8, 8, O>;
+pub type SAR2_CLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_CLK_DIV_SPEC, 8, O>;
 #[doc = "Field `SAR1_CLK_DIV_NUM` reader - xxxx"]
-pub type SAR1_CLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
+pub type SAR1_CLK_DIV_NUM_R = crate::FieldReader;
 #[doc = "Field `SAR1_CLK_DIV_NUM` writer - xxxx"]
-pub type SAR1_CLK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_CLK_DIV_SPEC, u8, u8, 8, O>;
+pub type SAR1_CLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_CLK_DIV_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
@@ -54,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn sar1_clk_div_num(&self) -> SAR1_CLK_DIV_NUM_R {
         SAR1_CLK_DIV_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_CLK_DIV")
+            .field(
+                "sar2_clk_div_num",
+                &format_args!("{}", self.sar2_clk_div_num().bits()),
+            )
+            .field(
+                "sar1_clk_div_num",
+                &format_args!("{}", self.sar1_clk_div_num().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_CLK_DIV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

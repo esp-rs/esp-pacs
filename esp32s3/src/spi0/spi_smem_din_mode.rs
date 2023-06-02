@@ -35,50 +35,50 @@ impl From<crate::W<SPI_SMEM_DIN_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_DIN0_MODE` reader - SPI_D input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN0_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN0_MODE` writer - SPI_D input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN0_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN1_MODE` reader - SPI_Q input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN1_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN1_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN1_MODE` writer - SPI_Q input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN3_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN1_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN2_MODE` reader - SPI_WP input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN2_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN2_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN2_MODE` writer - SPI_WP input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN6_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN2_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN3_MODE` reader - SPI_HD input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN3_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN3_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN3_MODE` writer - SPI_HD input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN9_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN3_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN4_MODE` reader - SPI_IO4 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN4_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN4_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN4_MODE` writer - SPI_IO4 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN12_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN4_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN5_MODE` reader - SPI_IO5 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN5_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN5_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN5_MODE` writer - SPI_IO5 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN15_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN5_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN6_MODE` reader - SPI_IO6 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN6_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN6_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN6_MODE` writer - SPI_IO6 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN18_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN6_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DIN7_MODE` reader - SPI_IO7 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DIN7_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN7_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN7_MODE` writer - SPI_IO7 input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN21_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DIN7_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 #[doc = "Field `SPI_SMEM_DINS_MODE` reader - SPI_DQS input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DINS_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
-pub type SPI_SMEM_DINS_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DINS_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DINS_MODE` writer - SPI_DQS input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DINS_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DINS_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
 pub type SPI_SMEM_DINS_MODE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_MODE_SPEC, u8, u8, 3, O>;
+    crate::FieldWriter<'a, SPI_SMEM_DIN_MODE_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - SPI_D input delay mode. 0: No delay. 1: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at MSPI_CORE_CLK negative edge. 2: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK positive edge. 3: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK positive edge and one cycle at MSPI_CORE_CLK negative edge. 4: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK positive edge. 5: Delay for (SPI_SMEM_DIN0_NUM+1) cycles at HCLK negative edge and one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
@@ -124,6 +124,55 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_dins_mode(&self) -> SPI_SMEM_DINS_MODE_R {
         SPI_SMEM_DINS_MODE_R::new(((self.bits >> 24) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_DIN_MODE")
+            .field(
+                "spi_smem_din0_mode",
+                &format_args!("{}", self.spi_smem_din0_mode().bits()),
+            )
+            .field(
+                "spi_smem_din1_mode",
+                &format_args!("{}", self.spi_smem_din1_mode().bits()),
+            )
+            .field(
+                "spi_smem_din2_mode",
+                &format_args!("{}", self.spi_smem_din2_mode().bits()),
+            )
+            .field(
+                "spi_smem_din3_mode",
+                &format_args!("{}", self.spi_smem_din3_mode().bits()),
+            )
+            .field(
+                "spi_smem_din4_mode",
+                &format_args!("{}", self.spi_smem_din4_mode().bits()),
+            )
+            .field(
+                "spi_smem_din5_mode",
+                &format_args!("{}", self.spi_smem_din5_mode().bits()),
+            )
+            .field(
+                "spi_smem_din6_mode",
+                &format_args!("{}", self.spi_smem_din6_mode().bits()),
+            )
+            .field(
+                "spi_smem_din7_mode",
+                &format_args!("{}", self.spi_smem_din7_mode().bits()),
+            )
+            .field(
+                "spi_smem_dins_mode",
+                &format_args!("{}", self.spi_smem_dins_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

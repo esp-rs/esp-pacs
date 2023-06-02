@@ -35,24 +35,23 @@ impl From<crate::W<BLK0_RDATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_CK8M_FREQ` reader - "]
-pub type RD_CK8M_FREQ_R = crate::FieldReader<u8, u8>;
+pub type RD_CK8M_FREQ_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` reader - True ADC reference voltage"]
-pub type RD_ADC_VREF_R = crate::FieldReader<u8, u8>;
+pub type RD_ADC_VREF_R = crate::FieldReader;
 #[doc = "Field `RD_ADC_VREF` writer - True ADC reference voltage"]
-pub type RD_ADC_VREF_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BLK0_RDATA4_SPEC, u8, u8, 5, O>;
+pub type RD_ADC_VREF_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_RDATA4_SPEC, 5, O>;
 #[doc = "Field `RD_SDIO_DREFH` reader - "]
-pub type RD_SDIO_DREFH_R = crate::FieldReader<u8, u8>;
+pub type RD_SDIO_DREFH_R = crate::FieldReader;
 #[doc = "Field `RD_SDIO_DREFM` reader - "]
-pub type RD_SDIO_DREFM_R = crate::FieldReader<u8, u8>;
+pub type RD_SDIO_DREFM_R = crate::FieldReader;
 #[doc = "Field `RD_SDIO_DREFL` reader - "]
-pub type RD_SDIO_DREFL_R = crate::FieldReader<u8, u8>;
+pub type RD_SDIO_DREFL_R = crate::FieldReader;
 #[doc = "Field `RD_XPD_SDIO` reader - read for XPD_SDIO_REG"]
-pub type RD_XPD_SDIO_R = crate::BitReader<bool>;
+pub type RD_XPD_SDIO_R = crate::BitReader;
 #[doc = "Field `RD_SDIO_TIEH` reader - read for SDIO_TIEH"]
-pub type RD_SDIO_TIEH_R = crate::BitReader<bool>;
+pub type RD_SDIO_TIEH_R = crate::BitReader;
 #[doc = "Field `RD_SDIO_FORCE` reader - read for sdio_force"]
-pub type RD_SDIO_FORCE_R = crate::BitReader<bool>;
+pub type RD_SDIO_FORCE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -93,6 +92,48 @@ impl R {
     #[inline(always)]
     pub fn rd_sdio_force(&self) -> RD_SDIO_FORCE_R {
         RD_SDIO_FORCE_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BLK0_RDATA4")
+            .field(
+                "rd_ck8m_freq",
+                &format_args!("{}", self.rd_ck8m_freq().bits()),
+            )
+            .field(
+                "rd_adc_vref",
+                &format_args!("{}", self.rd_adc_vref().bits()),
+            )
+            .field(
+                "rd_sdio_drefh",
+                &format_args!("{}", self.rd_sdio_drefh().bits()),
+            )
+            .field(
+                "rd_sdio_drefm",
+                &format_args!("{}", self.rd_sdio_drefm().bits()),
+            )
+            .field(
+                "rd_sdio_drefl",
+                &format_args!("{}", self.rd_sdio_drefl().bits()),
+            )
+            .field("rd_xpd_sdio", &format_args!("{}", self.rd_xpd_sdio().bit()))
+            .field(
+                "rd_sdio_tieh",
+                &format_args!("{}", self.rd_sdio_tieh().bit()),
+            )
+            .field(
+                "rd_sdio_force",
+                &format_args!("{}", self.rd_sdio_force().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

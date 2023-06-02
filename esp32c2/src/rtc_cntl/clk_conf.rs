@@ -35,86 +35,81 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `EFUSE_CLK_FORCE_GATING` reader - Need add desc"]
-pub type EFUSE_CLK_FORCE_GATING_R = crate::BitReader<bool>;
+pub type EFUSE_CLK_FORCE_GATING_R = crate::BitReader;
 #[doc = "Field `EFUSE_CLK_FORCE_GATING` writer - Need add desc"]
-pub type EFUSE_CLK_FORCE_GATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type EFUSE_CLK_FORCE_GATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `EFUSE_CLK_FORCE_NOGATING` reader - Need add desc"]
-pub type EFUSE_CLK_FORCE_NOGATING_R = crate::BitReader<bool>;
+pub type EFUSE_CLK_FORCE_NOGATING_R = crate::BitReader;
 #[doc = "Field `EFUSE_CLK_FORCE_NOGATING` writer - Need add desc"]
-pub type EFUSE_CLK_FORCE_NOGATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type EFUSE_CLK_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_DIV_SEL_VLD` reader - used to sync reg_ck8m_div_sel bus. Clear vld before set reg_ck8m_div_sel"]
-pub type CK8M_DIV_SEL_VLD_R = crate::BitReader<bool>;
+pub type CK8M_DIV_SEL_VLD_R = crate::BitReader;
 #[doc = "Field `CK8M_DIV_SEL_VLD` writer - used to sync reg_ck8m_div_sel bus. Clear vld before set reg_ck8m_div_sel"]
-pub type CK8M_DIV_SEL_VLD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CK8M_DIV_SEL_VLD_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128"]
-pub type CK8M_DIV_R = crate::FieldReader<u8, u8>;
+pub type CK8M_DIV_R = crate::FieldReader;
 #[doc = "Field `CK8M_DIV` writer - CK8M_D256_OUT divider. 00: div128"]
-pub type CK8M_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 2, O>;
+pub type CK8M_DIV_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 2, O>;
 #[doc = "Field `ENB_CK8M` reader - disable CK8M and CK8M_D256_OUT"]
-pub type ENB_CK8M_R = crate::BitReader<bool>;
+pub type ENB_CK8M_R = crate::BitReader;
 #[doc = "Field `ENB_CK8M` writer - disable CK8M and CK8M_D256_OUT"]
-pub type ENB_CK8M_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type ENB_CK8M_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `ENB_CK8M_DIV` reader - 1: CK8M_D256_OUT is actually CK8M"]
-pub type ENB_CK8M_DIV_R = crate::BitReader<bool>;
+pub type ENB_CK8M_DIV_R = crate::BitReader;
 #[doc = "Field `ENB_CK8M_DIV` writer - 1: CK8M_D256_OUT is actually CK8M"]
-pub type ENB_CK8M_DIV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type ENB_CK8M_DIV_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `DIG_XTAL32K_EN` reader - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
-pub type DIG_XTAL32K_EN_R = crate::BitReader<bool>;
+pub type DIG_XTAL32K_EN_R = crate::BitReader;
 #[doc = "Field `DIG_XTAL32K_EN` writer - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
-pub type DIG_XTAL32K_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type DIG_XTAL32K_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `DIG_CLK8M_D256_EN` reader - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
-pub type DIG_CLK8M_D256_EN_R = crate::BitReader<bool>;
+pub type DIG_CLK8M_D256_EN_R = crate::BitReader;
 #[doc = "Field `DIG_CLK8M_D256_EN` writer - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
-pub type DIG_CLK8M_D256_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type DIG_CLK8M_D256_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `DIG_CLK8M_EN` reader - enable CK8M for digital core (no relationship with RTC core)"]
-pub type DIG_CLK8M_EN_R = crate::BitReader<bool>;
+pub type DIG_CLK8M_EN_R = crate::BitReader;
 #[doc = "Field `DIG_CLK8M_EN` writer - enable CK8M for digital core (no relationship with RTC core)"]
-pub type DIG_CLK8M_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type DIG_CLK8M_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_DIV_SEL` reader - divider = reg_ck8m_div_sel + 1"]
-pub type CK8M_DIV_SEL_R = crate::FieldReader<u8, u8>;
+pub type CK8M_DIV_SEL_R = crate::FieldReader;
 #[doc = "Field `CK8M_DIV_SEL` writer - divider = reg_ck8m_div_sel + 1"]
-pub type CK8M_DIV_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 3, O>;
+pub type CK8M_DIV_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 3, O>;
 #[doc = "Field `XTAL_FORCE_NOGATING` reader - XTAL force no gating during sleep"]
-pub type XTAL_FORCE_NOGATING_R = crate::BitReader<bool>;
+pub type XTAL_FORCE_NOGATING_R = crate::BitReader;
 #[doc = "Field `XTAL_FORCE_NOGATING` writer - XTAL force no gating during sleep"]
-pub type XTAL_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type XTAL_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_FORCE_NOGATING` reader - CK8M force no gating during sleep"]
-pub type CK8M_FORCE_NOGATING_R = crate::BitReader<bool>;
+pub type CK8M_FORCE_NOGATING_R = crate::BitReader;
 #[doc = "Field `CK8M_FORCE_NOGATING` writer - CK8M force no gating during sleep"]
-pub type CK8M_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CK8M_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_DFREQ` reader - CK8M_DFREQ"]
-pub type CK8M_DFREQ_R = crate::FieldReader<u8, u8>;
+pub type CK8M_DFREQ_R = crate::FieldReader;
 #[doc = "Field `CK8M_DFREQ` writer - CK8M_DFREQ"]
-pub type CK8M_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, O>;
+pub type CK8M_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 8, O>;
 #[doc = "Field `CK8M_FORCE_PD` reader - CK8M force power down"]
-pub type CK8M_FORCE_PD_R = crate::BitReader<bool>;
+pub type CK8M_FORCE_PD_R = crate::BitReader;
 #[doc = "Field `CK8M_FORCE_PD` writer - CK8M force power down"]
-pub type CK8M_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CK8M_FORCE_PD_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CK8M_FORCE_PU` reader - CK8M force power up"]
-pub type CK8M_FORCE_PU_R = crate::BitReader<bool>;
+pub type CK8M_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CK8M_FORCE_PU` writer - CK8M force power up"]
-pub type CK8M_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CK8M_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `XTAL_GLOBAL_FORCE_GATING` reader - Need add desc"]
-pub type XTAL_GLOBAL_FORCE_GATING_R = crate::BitReader<bool>;
+pub type XTAL_GLOBAL_FORCE_GATING_R = crate::BitReader;
 #[doc = "Field `XTAL_GLOBAL_FORCE_GATING` writer - Need add desc"]
-pub type XTAL_GLOBAL_FORCE_GATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type XTAL_GLOBAL_FORCE_GATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `XTAL_GLOBAL_FORCE_NOGATING` reader - Need add desc"]
-pub type XTAL_GLOBAL_FORCE_NOGATING_R = crate::BitReader<bool>;
+pub type XTAL_GLOBAL_FORCE_NOGATING_R = crate::BitReader;
 #[doc = "Field `XTAL_GLOBAL_FORCE_NOGATING` writer - Need add desc"]
-pub type XTAL_GLOBAL_FORCE_NOGATING_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type XTAL_GLOBAL_FORCE_NOGATING_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - fast_clk_rtc sel. 0: XTAL div 4"]
-pub type FAST_CLK_RTC_SEL_R = crate::BitReader<bool>;
+pub type FAST_CLK_RTC_SEL_R = crate::BitReader;
 #[doc = "Field `FAST_CLK_RTC_SEL` writer - fast_clk_rtc sel. 0: XTAL div 4"]
-pub type FAST_CLK_RTC_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type FAST_CLK_RTC_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - Need add desc"]
-pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<u8, u8>;
+pub type ANA_CLK_RTC_SEL_R = crate::FieldReader;
 #[doc = "Field `ANA_CLK_RTC_SEL` writer - Need add desc"]
-pub type ANA_CLK_RTC_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 2, O>;
+pub type ANA_CLK_RTC_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_CONF_SPEC, 2, O>;
 impl R {
     #[doc = "Bit 1 - Need add desc"]
     #[inline(always)]
@@ -210,6 +205,86 @@ impl R {
     #[inline(always)]
     pub fn ana_clk_rtc_sel(&self) -> ANA_CLK_RTC_SEL_R {
         ANA_CLK_RTC_SEL_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field(
+                "efuse_clk_force_gating",
+                &format_args!("{}", self.efuse_clk_force_gating().bit()),
+            )
+            .field(
+                "efuse_clk_force_nogating",
+                &format_args!("{}", self.efuse_clk_force_nogating().bit()),
+            )
+            .field(
+                "ck8m_div_sel_vld",
+                &format_args!("{}", self.ck8m_div_sel_vld().bit()),
+            )
+            .field("ck8m_div", &format_args!("{}", self.ck8m_div().bits()))
+            .field("enb_ck8m", &format_args!("{}", self.enb_ck8m().bit()))
+            .field(
+                "enb_ck8m_div",
+                &format_args!("{}", self.enb_ck8m_div().bit()),
+            )
+            .field(
+                "dig_xtal32k_en",
+                &format_args!("{}", self.dig_xtal32k_en().bit()),
+            )
+            .field(
+                "dig_clk8m_d256_en",
+                &format_args!("{}", self.dig_clk8m_d256_en().bit()),
+            )
+            .field(
+                "dig_clk8m_en",
+                &format_args!("{}", self.dig_clk8m_en().bit()),
+            )
+            .field(
+                "ck8m_div_sel",
+                &format_args!("{}", self.ck8m_div_sel().bits()),
+            )
+            .field(
+                "xtal_force_nogating",
+                &format_args!("{}", self.xtal_force_nogating().bit()),
+            )
+            .field(
+                "ck8m_force_nogating",
+                &format_args!("{}", self.ck8m_force_nogating().bit()),
+            )
+            .field("ck8m_dfreq", &format_args!("{}", self.ck8m_dfreq().bits()))
+            .field(
+                "ck8m_force_pd",
+                &format_args!("{}", self.ck8m_force_pd().bit()),
+            )
+            .field(
+                "ck8m_force_pu",
+                &format_args!("{}", self.ck8m_force_pu().bit()),
+            )
+            .field(
+                "xtal_global_force_gating",
+                &format_args!("{}", self.xtal_global_force_gating().bit()),
+            )
+            .field(
+                "xtal_global_force_nogating",
+                &format_args!("{}", self.xtal_global_force_nogating().bit()),
+            )
+            .field(
+                "fast_clk_rtc_sel",
+                &format_args!("{}", self.fast_clk_rtc_sel().bit()),
+            )
+            .field(
+                "ana_clk_rtc_sel",
+                &format_args!("{}", self.ana_clk_rtc_sel().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

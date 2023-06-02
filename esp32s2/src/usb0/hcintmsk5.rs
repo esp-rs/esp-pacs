@@ -35,58 +35,57 @@ impl From<crate::W<HCINTMSK5_SPEC>> for W {
     }
 }
 #[doc = "Field `H_XFERCOMPLMSK5` reader - "]
-pub type H_XFERCOMPLMSK5_R = crate::BitReader<bool>;
+pub type H_XFERCOMPLMSK5_R = crate::BitReader;
 #[doc = "Field `H_XFERCOMPLMSK5` writer - "]
-pub type H_XFERCOMPLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_XFERCOMPLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_CHHLTDMSK5` reader - "]
-pub type H_CHHLTDMSK5_R = crate::BitReader<bool>;
+pub type H_CHHLTDMSK5_R = crate::BitReader;
 #[doc = "Field `H_CHHLTDMSK5` writer - "]
-pub type H_CHHLTDMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_CHHLTDMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_AHBERRMSK5` reader - "]
-pub type H_AHBERRMSK5_R = crate::BitReader<bool>;
+pub type H_AHBERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_AHBERRMSK5` writer - "]
-pub type H_AHBERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_AHBERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_STALLMSK5` reader - "]
-pub type H_STALLMSK5_R = crate::BitReader<bool>;
+pub type H_STALLMSK5_R = crate::BitReader;
 #[doc = "Field `H_STALLMSK5` writer - "]
-pub type H_STALLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_STALLMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_NAKMSK5` reader - "]
-pub type H_NAKMSK5_R = crate::BitReader<bool>;
+pub type H_NAKMSK5_R = crate::BitReader;
 #[doc = "Field `H_NAKMSK5` writer - "]
-pub type H_NAKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_NAKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_ACKMSK5` reader - "]
-pub type H_ACKMSK5_R = crate::BitReader<bool>;
+pub type H_ACKMSK5_R = crate::BitReader;
 #[doc = "Field `H_ACKMSK5` writer - "]
-pub type H_ACKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_ACKMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_NYETMSK5` reader - "]
-pub type H_NYETMSK5_R = crate::BitReader<bool>;
+pub type H_NYETMSK5_R = crate::BitReader;
 #[doc = "Field `H_NYETMSK5` writer - "]
-pub type H_NYETMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_NYETMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_XACTERRMSK5` reader - "]
-pub type H_XACTERRMSK5_R = crate::BitReader<bool>;
+pub type H_XACTERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_XACTERRMSK5` writer - "]
-pub type H_XACTERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_XACTERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_BBLERRMSK5` reader - "]
-pub type H_BBLERRMSK5_R = crate::BitReader<bool>;
+pub type H_BBLERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_BBLERRMSK5` writer - "]
-pub type H_BBLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_BBLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_FRMOVRUNMSK5` reader - "]
-pub type H_FRMOVRUNMSK5_R = crate::BitReader<bool>;
+pub type H_FRMOVRUNMSK5_R = crate::BitReader;
 #[doc = "Field `H_FRMOVRUNMSK5` writer - "]
-pub type H_FRMOVRUNMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_FRMOVRUNMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_DATATGLERRMSK5` reader - "]
-pub type H_DATATGLERRMSK5_R = crate::BitReader<bool>;
+pub type H_DATATGLERRMSK5_R = crate::BitReader;
 #[doc = "Field `H_DATATGLERRMSK5` writer - "]
-pub type H_DATATGLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_DATATGLERRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_BNAINTRMSK5` reader - "]
-pub type H_BNAINTRMSK5_R = crate::BitReader<bool>;
+pub type H_BNAINTRMSK5_R = crate::BitReader;
 #[doc = "Field `H_BNAINTRMSK5` writer - "]
-pub type H_BNAINTRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_BNAINTRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK5` reader - "]
-pub type H_DESC_LST_ROLLINTRMSK5_R = crate::BitReader<bool>;
+pub type H_DESC_LST_ROLLINTRMSK5_R = crate::BitReader;
 #[doc = "Field `H_DESC_LST_ROLLINTRMSK5` writer - "]
-pub type H_DESC_LST_ROLLINTRMSK5_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HCINTMSK5_SPEC, bool, O>;
+pub type H_DESC_LST_ROLLINTRMSK5_W<'a, const O: u8> = crate::BitWriter<'a, HCINTMSK5_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -152,6 +151,59 @@ impl R {
     #[inline(always)]
     pub fn h_desc_lst_rollintrmsk5(&self) -> H_DESC_LST_ROLLINTRMSK5_R {
         H_DESC_LST_ROLLINTRMSK5_R::new(((self.bits >> 13) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINTMSK5")
+            .field(
+                "h_xfercomplmsk5",
+                &format_args!("{}", self.h_xfercomplmsk5().bit()),
+            )
+            .field(
+                "h_chhltdmsk5",
+                &format_args!("{}", self.h_chhltdmsk5().bit()),
+            )
+            .field(
+                "h_ahberrmsk5",
+                &format_args!("{}", self.h_ahberrmsk5().bit()),
+            )
+            .field("h_stallmsk5", &format_args!("{}", self.h_stallmsk5().bit()))
+            .field("h_nakmsk5", &format_args!("{}", self.h_nakmsk5().bit()))
+            .field("h_ackmsk5", &format_args!("{}", self.h_ackmsk5().bit()))
+            .field("h_nyetmsk5", &format_args!("{}", self.h_nyetmsk5().bit()))
+            .field(
+                "h_xacterrmsk5",
+                &format_args!("{}", self.h_xacterrmsk5().bit()),
+            )
+            .field(
+                "h_bblerrmsk5",
+                &format_args!("{}", self.h_bblerrmsk5().bit()),
+            )
+            .field(
+                "h_frmovrunmsk5",
+                &format_args!("{}", self.h_frmovrunmsk5().bit()),
+            )
+            .field(
+                "h_datatglerrmsk5",
+                &format_args!("{}", self.h_datatglerrmsk5().bit()),
+            )
+            .field(
+                "h_bnaintrmsk5",
+                &format_args!("{}", self.h_bnaintrmsk5().bit()),
+            )
+            .field(
+                "h_desc_lst_rollintrmsk5",
+                &format_args!("{}", self.h_desc_lst_rollintrmsk5().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HCINTMSK5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

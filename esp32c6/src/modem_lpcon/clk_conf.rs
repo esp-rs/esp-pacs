@@ -35,21 +35,21 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_WIFIPWR_EN` reader - "]
-pub type CLK_WIFIPWR_EN_R = crate::BitReader<bool>;
+pub type CLK_WIFIPWR_EN_R = crate::BitReader;
 #[doc = "Field `CLK_WIFIPWR_EN` writer - "]
-pub type CLK_WIFIPWR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_WIFIPWR_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_COEX_EN` reader - "]
-pub type CLK_COEX_EN_R = crate::BitReader<bool>;
+pub type CLK_COEX_EN_R = crate::BitReader;
 #[doc = "Field `CLK_COEX_EN` writer - "]
-pub type CLK_COEX_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_COEX_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_I2C_MST_EN` reader - "]
-pub type CLK_I2C_MST_EN_R = crate::BitReader<bool>;
+pub type CLK_I2C_MST_EN_R = crate::BitReader;
 #[doc = "Field `CLK_I2C_MST_EN` writer - "]
-pub type CLK_I2C_MST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_I2C_MST_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_LP_TIMER_EN` reader - "]
-pub type CLK_LP_TIMER_EN_R = crate::BitReader<bool>;
+pub type CLK_LP_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `CLK_LP_TIMER_EN` writer - "]
-pub type CLK_LP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, O>;
+pub type CLK_LP_TIMER_EN_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -70,6 +70,32 @@ impl R {
     #[inline(always)]
     pub fn clk_lp_timer_en(&self) -> CLK_LP_TIMER_EN_R {
         CLK_LP_TIMER_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLK_CONF")
+            .field(
+                "clk_wifipwr_en",
+                &format_args!("{}", self.clk_wifipwr_en().bit()),
+            )
+            .field("clk_coex_en", &format_args!("{}", self.clk_coex_en().bit()))
+            .field(
+                "clk_i2c_mst_en",
+                &format_args!("{}", self.clk_i2c_mst_en().bit()),
+            )
+            .field(
+                "clk_lp_timer_en",
+                &format_args!("{}", self.clk_lp_timer_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

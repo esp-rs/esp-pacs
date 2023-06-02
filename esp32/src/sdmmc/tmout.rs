@@ -35,14 +35,13 @@ impl From<crate::W<TMOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RESPONSE_TIMEOUT` reader - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
-pub type RESPONSE_TIMEOUT_R = crate::FieldReader<u8, u8>;
+pub type RESPONSE_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RESPONSE_TIMEOUT` writer - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
-pub type RESPONSE_TIMEOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TMOUT_SPEC, u8, u8, 8, O>;
+pub type RESPONSE_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TMOUT_SPEC, 8, O>;
 #[doc = "Field `DATA_TIMEOUT` reader - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
 pub type DATA_TIMEOUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATA_TIMEOUT` writer - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
-pub type DATA_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TMOUT_SPEC, u32, u32, 24, O>;
+pub type DATA_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TMOUT_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:7 - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
     #[inline(always)]
@@ -53,6 +52,27 @@ impl R {
     #[inline(always)]
     pub fn data_timeout(&self) -> DATA_TIMEOUT_R {
         DATA_TIMEOUT_R::new((self.bits >> 8) & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMOUT")
+            .field(
+                "response_timeout",
+                &format_args!("{}", self.response_timeout().bits()),
+            )
+            .field(
+                "data_timeout",
+                &format_args!("{}", self.data_timeout().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TMOUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -20,17 +20,19 @@ impl From<crate::W<LC_DMA_INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_CLR` writer - The clear bit for LCD frame end interrupt."]
-pub type LCD_VSYNC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_CLR_SPEC, bool, O>;
+pub type LCD_VSYNC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `LCD_TRANS_DONE_INT_CLR` writer - The clear bit for lcd transfer end interrupt."]
-pub type LCD_TRANS_DONE_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_CLR_SPEC, bool, O>;
+pub type LCD_TRANS_DONE_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `CAM_VSYNC_INT_CLR` writer - The clear bit for Camera frame end interrupt."]
-pub type CAM_VSYNC_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_CLR_SPEC, bool, O>;
+pub type CAM_VSYNC_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_CLR_SPEC, O>;
 #[doc = "Field `CAM_HS_INT_CLR` writer - The clear bit for Camera line interrupt."]
-pub type CAM_HS_INT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, LC_DMA_INT_CLR_SPEC, bool, O>;
+pub type CAM_HS_INT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, LC_DMA_INT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<LC_DMA_INT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The clear bit for LCD frame end interrupt."]
     #[inline(always)]

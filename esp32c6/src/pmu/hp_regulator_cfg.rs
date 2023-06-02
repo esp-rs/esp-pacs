@@ -35,15 +35,31 @@ impl From<crate::W<HP_REGULATOR_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_REGULATOR_EN_CAL` reader - need_des"]
-pub type DIG_REGULATOR_EN_CAL_R = crate::BitReader<bool>;
+pub type DIG_REGULATOR_EN_CAL_R = crate::BitReader;
 #[doc = "Field `DIG_REGULATOR_EN_CAL` writer - need_des"]
-pub type DIG_REGULATOR_EN_CAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_REGULATOR_CFG_SPEC, bool, O>;
+pub type DIG_REGULATOR_EN_CAL_W<'a, const O: u8> = crate::BitWriter<'a, HP_REGULATOR_CFG_SPEC, O>;
 impl R {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn dig_regulator_en_cal(&self) -> DIG_REGULATOR_EN_CAL_R {
         DIG_REGULATOR_EN_CAL_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_REGULATOR_CFG")
+            .field(
+                "dig_regulator_en_cal",
+                &format_args!("{}", self.dig_regulator_en_cal().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_REGULATOR_CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

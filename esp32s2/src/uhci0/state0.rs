@@ -16,13 +16,13 @@ impl From<crate::R<STATE0_SPEC>> for R {
 #[doc = "Field `INLINK_DSCR_ADDR` reader - This register stores the current receive descriptor's address."]
 pub type INLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `IN_DSCR_STATE` reader - Reserved."]
-pub type IN_DSCR_STATE_R = crate::FieldReader<u8, u8>;
+pub type IN_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `IN_STATE` reader - Reserved."]
-pub type IN_STATE_R = crate::FieldReader<u8, u8>;
+pub type IN_STATE_R = crate::FieldReader;
 #[doc = "Field `INFIFO_CNT_DEBUG` reader - This register stores the number of data bytes in RX FIFO."]
-pub type INFIFO_CNT_DEBUG_R = crate::FieldReader<u8, u8>;
+pub type INFIFO_CNT_DEBUG_R = crate::FieldReader;
 #[doc = "Field `DECODE_STATE` reader - UHCI decoder status."]
-pub type DECODE_STATE_R = crate::FieldReader<u8, u8>;
+pub type DECODE_STATE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:17 - This register stores the current receive descriptor's address."]
     #[inline(always)]
@@ -48,6 +48,36 @@ impl R {
     #[inline(always)]
     pub fn decode_state(&self) -> DECODE_STATE_R {
         DECODE_STATE_R::new(((self.bits >> 28) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE0")
+            .field(
+                "inlink_dscr_addr",
+                &format_args!("{}", self.inlink_dscr_addr().bits()),
+            )
+            .field(
+                "in_dscr_state",
+                &format_args!("{}", self.in_dscr_state().bits()),
+            )
+            .field("in_state", &format_args!("{}", self.in_state().bits()))
+            .field(
+                "infifo_cnt_debug",
+                &format_args!("{}", self.infifo_cnt_debug().bits()),
+            )
+            .field(
+                "decode_state",
+                &format_args!("{}", self.decode_state().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "UHCI decoder status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [state0](index.html) module"]

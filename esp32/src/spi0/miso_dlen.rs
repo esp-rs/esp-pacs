@@ -38,12 +38,29 @@ impl From<crate::W<MISO_DLEN_SPEC>> for W {
 pub type USR_MISO_DBITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USR_MISO_DBITLEN` writer - The length in bits of read-data. The register value shall be (bit_num-1)."]
 pub type USR_MISO_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MISO_DLEN_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, MISO_DLEN_SPEC, 24, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - The length in bits of read-data. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn usr_miso_dbitlen(&self) -> USR_MISO_DBITLEN_R {
         USR_MISO_DBITLEN_R::new(self.bits & 0x00ff_ffff)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISO_DLEN")
+            .field(
+                "usr_miso_dbitlen",
+                &format_args!("{}", self.usr_miso_dbitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MISO_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

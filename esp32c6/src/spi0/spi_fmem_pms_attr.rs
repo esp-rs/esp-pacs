@@ -35,20 +35,17 @@ impl From<crate::W<SPI_FMEM_PMS_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_FMEM_PMS_RD_ATTR` reader - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_RD_ATTR_R = crate::BitReader<bool>;
+pub type SPI_FMEM_PMS_RD_ATTR_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_RD_ATTR` writer - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_RD_ATTR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_FMEM_PMS_ATTR_SPEC, bool, O>;
+pub type SPI_FMEM_PMS_RD_ATTR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_FMEM_PMS_ATTR_SPEC, O>;
 #[doc = "Field `SPI_FMEM_PMS_WR_ATTR` reader - 1: SPI1 flash ACE section %s write accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_WR_ATTR_R = crate::BitReader<bool>;
+pub type SPI_FMEM_PMS_WR_ATTR_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_WR_ATTR` writer - 1: SPI1 flash ACE section %s write accessible. 0: Not allowed."]
-pub type SPI_FMEM_PMS_WR_ATTR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_FMEM_PMS_ATTR_SPEC, bool, O>;
+pub type SPI_FMEM_PMS_WR_ATTR_W<'a, const O: u8> = crate::BitWriter<'a, SPI_FMEM_PMS_ATTR_SPEC, O>;
 #[doc = "Field `SPI_FMEM_PMS_ECC` reader - SPI1 flash ACE section %s ECC mode, 1: enable ECC mode. 0: Disable it. The flash ACE section %s is configured by registers SPI_FMEM_PMS%s_ADDR_REG and SPI_FMEM_PMS%s_SIZE_REG."]
-pub type SPI_FMEM_PMS_ECC_R = crate::BitReader<bool>;
+pub type SPI_FMEM_PMS_ECC_R = crate::BitReader;
 #[doc = "Field `SPI_FMEM_PMS_ECC` writer - SPI1 flash ACE section %s ECC mode, 1: enable ECC mode. 0: Disable it. The flash ACE section %s is configured by registers SPI_FMEM_PMS%s_ADDR_REG and SPI_FMEM_PMS%s_SIZE_REG."]
-pub type SPI_FMEM_PMS_ECC_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_FMEM_PMS_ATTR_SPEC, bool, O>;
+pub type SPI_FMEM_PMS_ECC_W<'a, const O: u8> = crate::BitWriter<'a, SPI_FMEM_PMS_ATTR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: SPI1 flash ACE section %s read accessible. 0: Not allowed."]
     #[inline(always)]
@@ -64,6 +61,31 @@ impl R {
     #[inline(always)]
     pub fn spi_fmem_pms_ecc(&self) -> SPI_FMEM_PMS_ECC_R {
         SPI_FMEM_PMS_ECC_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_FMEM_PMS_ATTR")
+            .field(
+                "spi_fmem_pms_rd_attr",
+                &format_args!("{}", self.spi_fmem_pms_rd_attr().bit()),
+            )
+            .field(
+                "spi_fmem_pms_wr_attr",
+                &format_args!("{}", self.spi_fmem_pms_wr_attr().bit()),
+            )
+            .field(
+                "spi_fmem_pms_ecc",
+                &format_args!("{}", self.spi_fmem_pms_ecc().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_FMEM_PMS_ATTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

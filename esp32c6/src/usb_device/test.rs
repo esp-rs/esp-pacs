@@ -35,27 +35,27 @@ impl From<crate::W<TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `TEST_ENABLE` reader - Enable test of the USB pad"]
-pub type TEST_ENABLE_R = crate::BitReader<bool>;
+pub type TEST_ENABLE_R = crate::BitReader;
 #[doc = "Field `TEST_ENABLE` writer - Enable test of the USB pad"]
-pub type TEST_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TEST_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TEST_USB_OE` reader - USB pad oen in test"]
-pub type TEST_USB_OE_R = crate::BitReader<bool>;
+pub type TEST_USB_OE_R = crate::BitReader;
 #[doc = "Field `TEST_USB_OE` writer - USB pad oen in test"]
-pub type TEST_USB_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TEST_USB_OE_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TEST_TX_DP` reader - USB D+ tx value in test"]
-pub type TEST_TX_DP_R = crate::BitReader<bool>;
+pub type TEST_TX_DP_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DP` writer - USB D+ tx value in test"]
-pub type TEST_TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TEST_TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TEST_TX_DM` reader - USB D- tx value in test"]
-pub type TEST_TX_DM_R = crate::BitReader<bool>;
+pub type TEST_TX_DM_R = crate::BitReader;
 #[doc = "Field `TEST_TX_DM` writer - USB D- tx value in test"]
-pub type TEST_TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_SPEC, bool, O>;
+pub type TEST_TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, TEST_SPEC, O>;
 #[doc = "Field `TEST_RX_RCV` reader - USB RCV value in test"]
-pub type TEST_RX_RCV_R = crate::BitReader<bool>;
+pub type TEST_RX_RCV_R = crate::BitReader;
 #[doc = "Field `TEST_RX_DP` reader - USB D+ rx value in test"]
-pub type TEST_RX_DP_R = crate::BitReader<bool>;
+pub type TEST_RX_DP_R = crate::BitReader;
 #[doc = "Field `TEST_RX_DM` reader - USB D- rx value in test"]
-pub type TEST_RX_DM_R = crate::BitReader<bool>;
+pub type TEST_RX_DM_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
@@ -91,6 +91,26 @@ impl R {
     #[inline(always)]
     pub fn test_rx_dm(&self) -> TEST_RX_DM_R {
         TEST_RX_DM_R::new(((self.bits >> 6) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEST")
+            .field("test_enable", &format_args!("{}", self.test_enable().bit()))
+            .field("test_usb_oe", &format_args!("{}", self.test_usb_oe().bit()))
+            .field("test_tx_dp", &format_args!("{}", self.test_tx_dp().bit()))
+            .field("test_tx_dm", &format_args!("{}", self.test_tx_dm().bit()))
+            .field("test_rx_rcv", &format_args!("{}", self.test_rx_rcv().bit()))
+            .field("test_rx_dp", &format_args!("{}", self.test_rx_dp().bit()))
+            .field("test_rx_dm", &format_args!("{}", self.test_rx_dm().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

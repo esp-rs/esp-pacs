@@ -35,20 +35,20 @@ impl From<crate::W<THRES1_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_THRES1_CHANNEL` reader - configure thres1 to adc channel"]
-pub type APB_SARADC_THRES1_CHANNEL_R = crate::FieldReader<u8, u8>;
+pub type APB_SARADC_THRES1_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `APB_SARADC_THRES1_CHANNEL` writer - configure thres1 to adc channel"]
 pub type APB_SARADC_THRES1_CHANNEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u8, u8, 4, O>;
+    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 4, O>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH` reader - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH` writer - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u16, u16, 13, O>;
+    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
 #[doc = "Field `APB_SARADC_THRES1_LOW` reader - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_LOW_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_SARADC_THRES1_LOW` writer - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, THRES1_CTRL_SPEC, u16, u16, 13, O>;
+    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:3 - configure thres1 to adc channel"]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn apb_saradc_thres1_low(&self) -> APB_SARADC_THRES1_LOW_R {
         APB_SARADC_THRES1_LOW_R::new(((self.bits >> 18) & 0x1fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("THRES1_CTRL")
+            .field(
+                "apb_saradc_thres1_channel",
+                &format_args!("{}", self.apb_saradc_thres1_channel().bits()),
+            )
+            .field(
+                "apb_saradc_thres1_high",
+                &format_args!("{}", self.apb_saradc_thres1_high().bits()),
+            )
+            .field(
+                "apb_saradc_thres1_low",
+                &format_args!("{}", self.apb_saradc_thres1_low().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<THRES1_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

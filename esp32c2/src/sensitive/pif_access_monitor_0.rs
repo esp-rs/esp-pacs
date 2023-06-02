@@ -35,15 +35,32 @@ impl From<crate::W<PIF_ACCESS_MONITOR_0_SPEC>> for W {
     }
 }
 #[doc = "Field `PIF_ACCESS_MONITOR_LOCK` reader - Need add description"]
-pub type PIF_ACCESS_MONITOR_LOCK_R = crate::BitReader<bool>;
+pub type PIF_ACCESS_MONITOR_LOCK_R = crate::BitReader;
 #[doc = "Field `PIF_ACCESS_MONITOR_LOCK` writer - Need add description"]
 pub type PIF_ACCESS_MONITOR_LOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PIF_ACCESS_MONITOR_0_SPEC, bool, O>;
+    crate::BitWriter<'a, PIF_ACCESS_MONITOR_0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
     pub fn pif_access_monitor_lock(&self) -> PIF_ACCESS_MONITOR_LOCK_R {
         PIF_ACCESS_MONITOR_LOCK_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PIF_ACCESS_MONITOR_0")
+            .field(
+                "pif_access_monitor_lock",
+                &format_args!("{}", self.pif_access_monitor_lock().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PIF_ACCESS_MONITOR_0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

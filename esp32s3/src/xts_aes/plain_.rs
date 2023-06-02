@@ -37,12 +37,26 @@ impl From<crate::W<PLAIN__SPEC>> for W {
 #[doc = "Field `PLAIN_0` reader - Stores the nth 32-bit piece of plaintext."]
 pub type PLAIN_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PLAIN_0` writer - Stores the nth 32-bit piece of plaintext."]
-pub type PLAIN_0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PLAIN__SPEC, u32, u32, 32, O>;
+pub type PLAIN_0_W<'a, const O: u8> = crate::FieldWriter<'a, PLAIN__SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the nth 32-bit piece of plaintext."]
     #[inline(always)]
     pub fn plain_0(&self) -> PLAIN_0_R {
         PLAIN_0_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLAIN_")
+            .field("plain_0", &format_args!("{}", self.plain_0().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PLAIN__SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

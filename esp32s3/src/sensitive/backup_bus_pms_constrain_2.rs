@@ -35,75 +35,75 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT` reader - BackUp access bt permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BT_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BT` writer - BackUp access bt permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0` reader - BackUp access i2c_ext0 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0` writer - BackUp access i2c_ext0 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UHCI0` reader - BackUp access uhci0 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_UHCI0` writer - BackUp access uhci0 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SLCHOST` reader - BackUp access slchost permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SLCHOST` writer - BackUp access slchost permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RMT` reader - BackUp access rmt permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RMT` writer - BackUp access rmt permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RMT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PCNT` reader - BackUp access pcnt permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_PCNT_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_PCNT_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PCNT` writer - BackUp access pcnt permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_PCNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SLC` reader - BackUp access slc permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SLC_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SLC_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SLC` writer - BackUp access slc permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SLC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_LEDC` reader - BackUp access ledc permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_LEDC` writer - BackUp access ledc permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BACKUP` reader - BackUp access backup permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BACKUP_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BACKUP_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BACKUP` writer - BackUp access backup permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BACKUP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BB` reader - BackUp access bb permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_BB_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_BB_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_BB` writer - BackUp access bb permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_BB_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWM0` reader - BackUp access pwm0 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_PWM0_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_PWM0_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWM0` writer - BackUp access pwm0 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_PWM0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP` reader - BackUp access timergroup permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP` writer - BackUp access timergroup permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1` reader - BackUp access timergroup1 permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1` writer - BackUp access timergroup1 permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER` reader - BackUp access systimer permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_R = crate::FieldReader<u8, u8>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_R = crate::FieldReader;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER` writer - BackUp access systimer permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, O>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - BackUp access bt permission."]
     #[inline(always)]
@@ -174,6 +174,75 @@ impl R {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_systimer(&self) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_R {
         BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_2")
+            .field(
+                "backup_bus_pms_constrain_bt",
+                &format_args!("{}", self.backup_bus_pms_constrain_bt().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_i2c_ext0",
+                &format_args!("{}", self.backup_bus_pms_constrain_i2c_ext0().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_uhci0",
+                &format_args!("{}", self.backup_bus_pms_constrain_uhci0().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_slchost",
+                &format_args!("{}", self.backup_bus_pms_constrain_slchost().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_rmt",
+                &format_args!("{}", self.backup_bus_pms_constrain_rmt().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_pcnt",
+                &format_args!("{}", self.backup_bus_pms_constrain_pcnt().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_slc",
+                &format_args!("{}", self.backup_bus_pms_constrain_slc().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_ledc",
+                &format_args!("{}", self.backup_bus_pms_constrain_ledc().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_backup",
+                &format_args!("{}", self.backup_bus_pms_constrain_backup().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_bb",
+                &format_args!("{}", self.backup_bus_pms_constrain_bb().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_pwm0",
+                &format_args!("{}", self.backup_bus_pms_constrain_pwm0().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_timergroup",
+                &format_args!("{}", self.backup_bus_pms_constrain_timergroup().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_timergroup1",
+                &format_args!("{}", self.backup_bus_pms_constrain_timergroup1().bits()),
+            )
+            .field(
+                "backup_bus_pms_constrain_systimer",
+                &format_args!("{}", self.backup_bus_pms_constrain_systimer().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

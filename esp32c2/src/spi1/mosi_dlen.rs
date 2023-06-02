@@ -38,12 +38,29 @@ impl From<crate::W<MOSI_DLEN_SPEC>> for W {
 pub type USR_MOSI_DBITLEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `USR_MOSI_DBITLEN` writer - The length in bits of write-data. The register value shall be (bit_num-1)."]
 pub type USR_MOSI_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MOSI_DLEN_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, MOSI_DLEN_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - The length in bits of write-data. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn usr_mosi_dbitlen(&self) -> USR_MOSI_DBITLEN_R {
         USR_MOSI_DBITLEN_R::new((self.bits & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MOSI_DLEN")
+            .field(
+                "usr_mosi_dbitlen",
+                &format_args!("{}", self.usr_mosi_dbitlen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<MOSI_DLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

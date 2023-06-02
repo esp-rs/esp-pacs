@@ -35,33 +35,33 @@ impl From<crate::W<STATE0_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_CPU_INT` reader - rtc software interrupt to main cpu"]
-pub type SW_CPU_INT_R = crate::BitReader<bool>;
+pub type SW_CPU_INT_R = crate::BitReader;
 #[doc = "Field `SW_CPU_INT` writer - rtc software interrupt to main cpu"]
-pub type SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SW_CPU_INT_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` reader - clear rtc sleep reject cause"]
-pub type SLP_REJECT_CAUSE_CLR_R = crate::BitReader<bool>;
+pub type SLP_REJECT_CAUSE_CLR_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT_CAUSE_CLR` writer - clear rtc sleep reject cause"]
-pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_REJECT_CAUSE_CLR_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` reader - 1: APB to RTC using bridge"]
-pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader<bool>;
+pub type APB2RTC_BRIDGE_SEL_R = crate::BitReader;
 #[doc = "Field `APB2RTC_BRIDGE_SEL` writer - 1: APB to RTC using bridge"]
-pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type APB2RTC_BRIDGE_SEL_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SDIO_ACTIVE_IND` reader - SDIO active indication"]
-pub type SDIO_ACTIVE_IND_R = crate::BitReader<bool>;
+pub type SDIO_ACTIVE_IND_R = crate::BitReader;
 #[doc = "Field `SDIO_ACTIVE_IND` writer - SDIO active indication"]
-pub type SDIO_ACTIVE_IND_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SDIO_ACTIVE_IND_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_WAKEUP` reader - leep wakeup bit"]
-pub type SLP_WAKEUP_R = crate::BitReader<bool>;
+pub type SLP_WAKEUP_R = crate::BitReader;
 #[doc = "Field `SLP_WAKEUP` writer - leep wakeup bit"]
-pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_WAKEUP_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLP_REJECT` reader - leep reject bit"]
-pub type SLP_REJECT_R = crate::BitReader<bool>;
+pub type SLP_REJECT_R = crate::BitReader;
 #[doc = "Field `SLP_REJECT` writer - leep reject bit"]
-pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLP_REJECT_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 #[doc = "Field `SLEEP_EN` reader - sleep enable bit"]
-pub type SLEEP_EN_R = crate::BitReader<bool>;
+pub type SLEEP_EN_R = crate::BitReader;
 #[doc = "Field `SLEEP_EN` writer - sleep enable bit"]
-pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, STATE0_SPEC, bool, O>;
+pub type SLEEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, STATE0_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - rtc software interrupt to main cpu"]
     #[inline(always)]
@@ -97,6 +97,35 @@ impl R {
     #[inline(always)]
     pub fn sleep_en(&self) -> SLEEP_EN_R {
         SLEEP_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STATE0")
+            .field("sw_cpu_int", &format_args!("{}", self.sw_cpu_int().bit()))
+            .field(
+                "slp_reject_cause_clr",
+                &format_args!("{}", self.slp_reject_cause_clr().bit()),
+            )
+            .field(
+                "apb2rtc_bridge_sel",
+                &format_args!("{}", self.apb2rtc_bridge_sel().bit()),
+            )
+            .field(
+                "sdio_active_ind",
+                &format_args!("{}", self.sdio_active_ind().bit()),
+            )
+            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
+            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
+            .field("sleep_en", &format_args!("{}", self.sleep_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,31 @@ impl From<crate::W<CPU_INT_THRESH_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INT_THRESH` reader - Need add description"]
-pub type CPU_INT_THRESH_R = crate::FieldReader<u8, u8>;
+pub type CPU_INT_THRESH_R = crate::FieldReader;
 #[doc = "Field `CPU_INT_THRESH` writer - Need add description"]
-pub type CPU_INT_THRESH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CPU_INT_THRESH_SPEC, u8, u8, 8, O>;
+pub type CPU_INT_THRESH_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_INT_THRESH_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Need add description"]
     #[inline(always)]
     pub fn cpu_int_thresh(&self) -> CPU_INT_THRESH_R {
         CPU_INT_THRESH_R::new((self.bits & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CPU_INT_THRESH")
+            .field(
+                "cpu_int_thresh",
+                &format_args!("{}", self.cpu_int_thresh().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CPU_INT_THRESH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

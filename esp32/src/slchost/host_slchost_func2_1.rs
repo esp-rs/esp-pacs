@@ -35,15 +35,32 @@ impl From<crate::W<HOST_SLCHOST_FUNC2_1_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC_FUNC2_INT_EN` reader - "]
-pub type HOST_SLC_FUNC2_INT_EN_R = crate::BitReader<bool>;
+pub type HOST_SLC_FUNC2_INT_EN_R = crate::BitReader;
 #[doc = "Field `HOST_SLC_FUNC2_INT_EN` writer - "]
 pub type HOST_SLC_FUNC2_INT_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HOST_SLCHOST_FUNC2_1_SPEC, bool, O>;
+    crate::BitWriter<'a, HOST_SLCHOST_FUNC2_1_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn host_slc_func2_int_en(&self) -> HOST_SLC_FUNC2_INT_EN_R {
         HOST_SLC_FUNC2_INT_EN_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HOST_SLCHOST_FUNC2_1")
+            .field(
+                "host_slc_func2_int_en",
+                &format_args!("{}", self.host_slc_func2_int_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_FUNC2_1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

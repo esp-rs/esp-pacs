@@ -35,31 +35,31 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - The output signal 0 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT0_MODE_R = crate::BitReader<bool>;
+pub type DOUT0_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT0_MODE` writer - The output signal 0 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT0_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT1_MODE` reader - The output signal 1 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT1_MODE_R = crate::BitReader<bool>;
+pub type DOUT1_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT1_MODE` writer - The output signal 1 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT1_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT2_MODE` reader - The output signal 2 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT2_MODE_R = crate::BitReader<bool>;
+pub type DOUT2_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT2_MODE` writer - The output signal 2 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT2_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT3_MODE` reader - The output signal 3 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT3_MODE_R = crate::BitReader<bool>;
+pub type DOUT3_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT3_MODE` writer - The output signal 3 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DOUT_MODE_SPEC, bool, O>;
+pub type DOUT3_MODE_W<'a, const O: u8> = crate::BitWriter<'a, DOUT_MODE_SPEC, O>;
 #[doc = "Field `DOUT4_MODE` reader - The output signal 4 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT4_MODE_R = crate::BitReader<bool>;
+pub type DOUT4_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT5_MODE` reader - The output signal 5 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT5_MODE_R = crate::BitReader<bool>;
+pub type DOUT5_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT6_MODE` reader - The output signal 6 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT6_MODE_R = crate::BitReader<bool>;
+pub type DOUT6_MODE_R = crate::BitReader;
 #[doc = "Field `DOUT7_MODE` reader - The output signal 7 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type DOUT7_MODE_R = crate::BitReader<bool>;
+pub type DOUT7_MODE_R = crate::BitReader;
 #[doc = "Field `D_DQS_MODE` reader - The output signal SPI_DQS is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
-pub type D_DQS_MODE_R = crate::BitReader<bool>;
+pub type D_DQS_MODE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The output signal 0 is delayed by the SPI module clock, 0: output without delayed, 1: output delay for a SPI module clock cycle at its negative edge. Can be configured in CONF state."]
     #[inline(always)]
@@ -105,6 +105,28 @@ impl R {
     #[inline(always)]
     pub fn d_dqs_mode(&self) -> D_DQS_MODE_R {
         D_DQS_MODE_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOUT_MODE")
+            .field("dout0_mode", &format_args!("{}", self.dout0_mode().bit()))
+            .field("dout1_mode", &format_args!("{}", self.dout1_mode().bit()))
+            .field("dout2_mode", &format_args!("{}", self.dout2_mode().bit()))
+            .field("dout3_mode", &format_args!("{}", self.dout3_mode().bit()))
+            .field("dout4_mode", &format_args!("{}", self.dout4_mode().bit()))
+            .field("dout5_mode", &format_args!("{}", self.dout5_mode().bit()))
+            .field("dout6_mode", &format_args!("{}", self.dout6_mode().bit()))
+            .field("dout7_mode", &format_args!("{}", self.dout7_mode().bit()))
+            .field("d_dqs_mode", &format_args!("{}", self.d_dqs_mode().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DOUT_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

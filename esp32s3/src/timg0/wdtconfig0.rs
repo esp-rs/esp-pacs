@@ -35,50 +35,45 @@ impl From<crate::W<WDTCONFIG0_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_APPCPU_RESET_EN` reader - Reserved"]
-pub type WDT_APPCPU_RESET_EN_R = crate::BitReader<bool>;
+pub type WDT_APPCPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_APPCPU_RESET_EN` writer - Reserved"]
-pub type WDT_APPCPU_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_APPCPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_PROCPU_RESET_EN` reader - WDT reset CPU enable."]
-pub type WDT_PROCPU_RESET_EN_R = crate::BitReader<bool>;
+pub type WDT_PROCPU_RESET_EN_R = crate::BitReader;
 #[doc = "Field `WDT_PROCPU_RESET_EN` writer - WDT reset CPU enable."]
-pub type WDT_PROCPU_RESET_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_PROCPU_RESET_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` reader - When set, Flash boot protection is enabled."]
-pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader<bool>;
+pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set, Flash boot protection is enabled."]
-pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - System reset signal length selection. 0: 100 ns, 1: 200 ns, 2: 300 ns, 3: 400 ns, 4: 500 ns, 5: 800 ns, 6: 1.6 us, 7: 3.2 us."]
-pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<u8, u8>;
+pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - System reset signal length selection. 0: 100 ns, 1: 200 ns, 2: 300 ns, 3: 400 ns, 4: 500 ns, 5: 800 ns, 6: 1.6 us, 7: 3.2 us."]
-pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 3, O>;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - CPU reset signal length selection. 0: 100 ns, 1: 200 ns, 2: 300 ns, 3: 400 ns, 4: 500 ns, 5: 800 ns, 6: 1.6 us, 7: 3.2 us."]
-pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<u8, u8>;
+pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader;
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - CPU reset signal length selection. 0: 100 ns, 1: 200 ns, 2: 300 ns, 3: 400 ns, 4: 500 ns, 5: 800 ns, 6: 1.6 us, 7: 3.2 us."]
-pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 3, O>;
+pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 3, O>;
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG3_R = crate::FieldReader<u8, u8>;
+pub type WDT_STG3_R = crate::FieldReader;
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 2, O>;
+pub type WDT_STG3_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 2, O>;
 #[doc = "Field `WDT_STG2` reader - Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG2_R = crate::FieldReader<u8, u8>;
+pub type WDT_STG2_R = crate::FieldReader;
 #[doc = "Field `WDT_STG2` writer - Stage 2 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 2, O>;
+pub type WDT_STG2_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 2, O>;
 #[doc = "Field `WDT_STG1` reader - Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG1_R = crate::FieldReader<u8, u8>;
+pub type WDT_STG1_R = crate::FieldReader;
 #[doc = "Field `WDT_STG1` writer - Stage 1 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 2, O>;
+pub type WDT_STG1_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 2, O>;
 #[doc = "Field `WDT_STG0` reader - Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG0_R = crate::FieldReader<u8, u8>;
+pub type WDT_STG0_R = crate::FieldReader;
 #[doc = "Field `WDT_STG0` writer - Stage 0 configuration. 0: off, 1: interrupt, 2: reset CPU, 3: reset system."]
-pub type WDT_STG0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WDTCONFIG0_SPEC, u8, u8, 2, O>;
+pub type WDT_STG0_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG0_SPEC, 2, O>;
 #[doc = "Field `WDT_EN` reader - When set, MWDT is enabled."]
-pub type WDT_EN_R = crate::BitReader<bool>;
+pub type WDT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EN` writer - When set, MWDT is enabled."]
-pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, WDTCONFIG0_SPEC, bool, O>;
+pub type WDT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 impl R {
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
@@ -129,6 +124,44 @@ impl R {
     #[inline(always)]
     pub fn wdt_en(&self) -> WDT_EN_R {
         WDT_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WDTCONFIG0")
+            .field(
+                "wdt_appcpu_reset_en",
+                &format_args!("{}", self.wdt_appcpu_reset_en().bit()),
+            )
+            .field(
+                "wdt_procpu_reset_en",
+                &format_args!("{}", self.wdt_procpu_reset_en().bit()),
+            )
+            .field(
+                "wdt_flashboot_mod_en",
+                &format_args!("{}", self.wdt_flashboot_mod_en().bit()),
+            )
+            .field(
+                "wdt_sys_reset_length",
+                &format_args!("{}", self.wdt_sys_reset_length().bits()),
+            )
+            .field(
+                "wdt_cpu_reset_length",
+                &format_args!("{}", self.wdt_cpu_reset_length().bits()),
+            )
+            .field("wdt_stg3", &format_args!("{}", self.wdt_stg3().bits()))
+            .field("wdt_stg2", &format_args!("{}", self.wdt_stg2().bits()))
+            .field("wdt_stg1", &format_args!("{}", self.wdt_stg1().bits()))
+            .field("wdt_stg0", &format_args!("{}", self.wdt_stg0().bits()))
+            .field("wdt_en", &format_args!("{}", self.wdt_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

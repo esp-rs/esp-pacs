@@ -35,13 +35,13 @@ impl From<crate::W<TEST_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - "]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - "]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_CONF_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
 #[doc = "Field `CLK_DEBUG_ENA` reader - "]
-pub type CLK_DEBUG_ENA_R = crate::BitReader<bool>;
+pub type CLK_DEBUG_ENA_R = crate::BitReader;
 #[doc = "Field `CLK_DEBUG_ENA` writer - "]
-pub type CLK_DEBUG_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, TEST_CONF_SPEC, bool, O>;
+pub type CLK_DEBUG_ENA_W<'a, const O: u8> = crate::BitWriter<'a, TEST_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn clk_debug_ena(&self) -> CLK_DEBUG_ENA_R {
         CLK_DEBUG_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TEST_CONF")
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field(
+                "clk_debug_ena",
+                &format_args!("{}", self.clk_debug_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TEST_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

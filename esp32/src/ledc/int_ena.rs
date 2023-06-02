@@ -35,117 +35,101 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `HSTIMER0_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
-pub type HSTIMER0_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type HSTIMER0_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HSTIMER0_OVF_INT_ENA` writer - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
-pub type HSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type HSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `HSTIMER1_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel1 counter overflow interrupt."]
-pub type HSTIMER1_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type HSTIMER1_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HSTIMER1_OVF_INT_ENA` writer - The interrupt enable bit for high speed channel1 counter overflow interrupt."]
-pub type HSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type HSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `HSTIMER2_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel2 counter overflow interrupt."]
-pub type HSTIMER2_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type HSTIMER2_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HSTIMER2_OVF_INT_ENA` writer - The interrupt enable bit for high speed channel2 counter overflow interrupt."]
-pub type HSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type HSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `HSTIMER3_OVF_INT_ENA` reader - The interrupt enable bit for high speed channel3 counter overflow interrupt."]
-pub type HSTIMER3_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type HSTIMER3_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `HSTIMER3_OVF_INT_ENA` writer - The interrupt enable bit for high speed channel3 counter overflow interrupt."]
-pub type HSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type HSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER0_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel0 counter overflow interrupt."]
-pub type LSTIMER0_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER0_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER0_OVF_INT_ENA` writer - The interrupt enable bit for low speed channel0 counter overflow interrupt."]
-pub type LSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER0_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER1_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel1 counter overflow interrupt."]
-pub type LSTIMER1_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER1_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER1_OVF_INT_ENA` writer - The interrupt enable bit for low speed channel1 counter overflow interrupt."]
-pub type LSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER1_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER2_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel2 counter overflow interrupt."]
-pub type LSTIMER2_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER2_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER2_OVF_INT_ENA` writer - The interrupt enable bit for low speed channel2 counter overflow interrupt."]
-pub type LSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER2_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `LSTIMER3_OVF_INT_ENA` reader - The interrupt enable bit for low speed channel3 counter overflow interrupt."]
-pub type LSTIMER3_OVF_INT_ENA_R = crate::BitReader<bool>;
+pub type LSTIMER3_OVF_INT_ENA_R = crate::BitReader;
 #[doc = "Field `LSTIMER3_OVF_INT_ENA` writer - The interrupt enable bit for low speed channel3 counter overflow interrupt."]
-pub type LSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type LSTIMER3_OVF_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH0_INT_ENA` reader - The interrupt enable bit for high speed channel 0 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH0_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH0_INT_ENA` writer - The interrupt enable bit for high speed channel 0 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH1_INT_ENA` reader - The interrupt enable bit for high speed channel 1 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH1_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH1_INT_ENA` writer - The interrupt enable bit for high speed channel 1 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH2_INT_ENA` reader - The interrupt enable bit for high speed channel 2 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH2_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH2_INT_ENA` writer - The interrupt enable bit for high speed channel 2 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH3_INT_ENA` reader - The interrupt enable bit for high speed channel 3 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH3_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH3_INT_ENA` writer - The interrupt enable bit for high speed channel 3 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH4_INT_ENA` reader - The interrupt enable bit for high speed channel 4 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH4_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH4_INT_ENA` writer - The interrupt enable bit for high speed channel 4 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH4_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH5_INT_ENA` reader - The interrupt enable bit for high speed channel 5 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH5_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH5_INT_ENA` writer - The interrupt enable bit for high speed channel 5 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH5_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH6_INT_ENA` reader - The interrupt enable bit for high speed channel 6 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH6_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH6_INT_ENA` writer - The interrupt enable bit for high speed channel 6 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH6_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH6_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_HSCH7_INT_ENA` reader - The interrupt enable bit for high speed channel 7 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH7_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_HSCH7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_HSCH7_INT_ENA` writer - The interrupt enable bit for high speed channel 7 duty change done interrupt."]
-pub type DUTY_CHNG_END_HSCH7_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_HSCH7_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ENA` reader - The interrupt enable bit for low speed channel 0 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH0_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH0_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ENA` writer - The interrupt enable bit for low speed channel 0 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH0_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH0_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ENA` reader - The interrupt enable bit for low speed channel 1 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH1_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH1_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ENA` writer - The interrupt enable bit for low speed channel 1 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH1_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH1_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ENA` reader - The interrupt enable bit for low speed channel 2 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH2_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH2_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ENA` writer - The interrupt enable bit for low speed channel 2 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH2_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH2_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ENA` reader - The interrupt enable bit for low speed channel 3 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH3_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH3_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ENA` writer - The interrupt enable bit for low speed channel 3 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH3_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH3_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ENA` reader - The interrupt enable bit for low speed channel 4 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH4_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH4_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ENA` writer - The interrupt enable bit for low speed channel 4 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH4_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH4_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ENA` reader - The interrupt enable bit for low speed channel 5 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH5_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH5_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ENA` writer - The interrupt enable bit for low speed channel 5 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH5_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH5_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH6_INT_ENA` reader - The interrupt enable bit for low speed channel 6 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH6_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH6_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH6_INT_ENA` writer - The interrupt enable bit for low speed channel 6 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH6_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH6_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 #[doc = "Field `DUTY_CHNG_END_LSCH7_INT_ENA` reader - The interrupt enable bit for low speed channel 7 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH7_INT_ENA_R = crate::BitReader<bool>;
+pub type DUTY_CHNG_END_LSCH7_INT_ENA_R = crate::BitReader;
 #[doc = "Field `DUTY_CHNG_END_LSCH7_INT_ENA` writer - The interrupt enable bit for low speed channel 7 duty change done interrupt."]
-pub type DUTY_CHNG_END_LSCH7_INT_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
+pub type DUTY_CHNG_END_LSCH7_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, INT_ENA_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
     #[inline(always)]
@@ -266,6 +250,115 @@ impl R {
     #[inline(always)]
     pub fn duty_chng_end_lsch7_int_ena(&self) -> DUTY_CHNG_END_LSCH7_INT_ENA_R {
         DUTY_CHNG_END_LSCH7_INT_ENA_R::new(((self.bits >> 23) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ENA")
+            .field(
+                "hstimer0_ovf_int_ena",
+                &format_args!("{}", self.hstimer0_ovf_int_ena().bit()),
+            )
+            .field(
+                "hstimer1_ovf_int_ena",
+                &format_args!("{}", self.hstimer1_ovf_int_ena().bit()),
+            )
+            .field(
+                "hstimer2_ovf_int_ena",
+                &format_args!("{}", self.hstimer2_ovf_int_ena().bit()),
+            )
+            .field(
+                "hstimer3_ovf_int_ena",
+                &format_args!("{}", self.hstimer3_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer0_ovf_int_ena",
+                &format_args!("{}", self.lstimer0_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer1_ovf_int_ena",
+                &format_args!("{}", self.lstimer1_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer2_ovf_int_ena",
+                &format_args!("{}", self.lstimer2_ovf_int_ena().bit()),
+            )
+            .field(
+                "lstimer3_ovf_int_ena",
+                &format_args!("{}", self.lstimer3_ovf_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch0_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch0_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch1_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch1_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch2_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch2_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch3_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch3_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch4_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch4_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch5_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch5_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch6_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch6_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_hsch7_int_ena",
+                &format_args!("{}", self.duty_chng_end_hsch7_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch0_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch0_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch1_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch1_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch2_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch2_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch3_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch3_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch4_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch4_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch5_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch5_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch6_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch6_int_ena().bit()),
+            )
+            .field(
+                "duty_chng_end_lsch7_int_ena",
+                &format_args!("{}", self.duty_chng_end_lsch7_int_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

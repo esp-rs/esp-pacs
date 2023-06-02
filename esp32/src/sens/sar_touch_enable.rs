@@ -38,17 +38,17 @@ impl From<crate::W<SAR_TOUCH_ENABLE_SPEC>> for W {
 pub type TOUCH_PAD_WORKEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_PAD_WORKEN` writer - Bitmap defining the working set during the measurement."]
 pub type TOUCH_PAD_WORKEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_ENABLE_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` reader - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` writer - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_ENABLE_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` reader - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` writer - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SAR_TOUCH_ENABLE_SPEC, u16, u16, 10, O>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]
@@ -64,6 +64,31 @@ impl R {
     #[inline(always)]
     pub fn touch_pad_outen1(&self) -> TOUCH_PAD_OUTEN1_R {
         TOUCH_PAD_OUTEN1_R::new(((self.bits >> 20) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SAR_TOUCH_ENABLE")
+            .field(
+                "touch_pad_worken",
+                &format_args!("{}", self.touch_pad_worken().bits()),
+            )
+            .field(
+                "touch_pad_outen2",
+                &format_args!("{}", self.touch_pad_outen2().bits()),
+            )
+            .field(
+                "touch_pad_outen1",
+                &format_args!("{}", self.touch_pad_outen1().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_ENABLE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

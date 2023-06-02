@@ -35,3 +35,4 @@ xtensa-lx = "0.8.0"
 [features]
 default = ["xtensa-lx/esp8266"]
 rt = []
+impl-register-debug = []

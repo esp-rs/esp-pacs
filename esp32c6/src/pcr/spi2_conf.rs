@@ -35,13 +35,13 @@ impl From<crate::W<SPI2_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI2_CLK_EN` reader - Set 1 to enable spi2 apb clock"]
-pub type SPI2_CLK_EN_R = crate::BitReader<bool>;
+pub type SPI2_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_CLK_EN` writer - Set 1 to enable spi2 apb clock"]
-pub type SPI2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI2_CONF_SPEC, bool, O>;
+pub type SPI2_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI2_CONF_SPEC, O>;
 #[doc = "Field `SPI2_RST_EN` reader - Set 0 to reset spi2 module"]
-pub type SPI2_RST_EN_R = crate::BitReader<bool>;
+pub type SPI2_RST_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_RST_EN` writer - Set 0 to reset spi2 module"]
-pub type SPI2_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI2_CONF_SPEC, bool, O>;
+pub type SPI2_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI2_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable spi2 apb clock"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn spi2_rst_en(&self) -> SPI2_RST_EN_R {
         SPI2_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI2_CONF")
+            .field("spi2_clk_en", &format_args!("{}", self.spi2_clk_en().bit()))
+            .field("spi2_rst_en", &format_args!("{}", self.spi2_rst_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI2_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

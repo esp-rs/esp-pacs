@@ -35,15 +35,31 @@ impl From<crate::W<TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PWR_TICK_TARGET` reader - "]
-pub type PWR_TICK_TARGET_R = crate::FieldReader<u8, u8>;
+pub type PWR_TICK_TARGET_R = crate::FieldReader;
 #[doc = "Field `PWR_TICK_TARGET` writer - "]
-pub type PWR_TICK_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TICK_CONF_SPEC, u8, u8, 6, O>;
+pub type PWR_TICK_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, TICK_CONF_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn pwr_tick_target(&self) -> PWR_TICK_TARGET_R {
         PWR_TICK_TARGET_R::new((self.bits & 0x3f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TICK_CONF")
+            .field(
+                "pwr_tick_target",
+                &format_args!("{}", self.pwr_tick_target().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TICK_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -14,23 +14,23 @@ impl From<crate::R<SPI_SMEM_DIN_MODE_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_SMEM_DIN0_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN0_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN0_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN1_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN1_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN1_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN2_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN2_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN2_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN3_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN3_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN3_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN4_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN4_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN4_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN5_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN5_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN5_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN6_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN6_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN6_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DIN7_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DIN7_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DIN7_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_SMEM_DINS_MODE` reader - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
-pub type SPI_SMEM_DINS_MODE_R = crate::FieldReader<u8, u8>;
+pub type SPI_SMEM_DINS_MODE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
@@ -76,6 +76,55 @@ impl R {
     #[inline(always)]
     pub fn spi_smem_dins_mode(&self) -> SPI_SMEM_DINS_MODE_R {
         SPI_SMEM_DINS_MODE_R::new(((self.bits >> 24) & 7) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SMEM_DIN_MODE")
+            .field(
+                "spi_smem_din0_mode",
+                &format_args!("{}", self.spi_smem_din0_mode().bits()),
+            )
+            .field(
+                "spi_smem_din1_mode",
+                &format_args!("{}", self.spi_smem_din1_mode().bits()),
+            )
+            .field(
+                "spi_smem_din2_mode",
+                &format_args!("{}", self.spi_smem_din2_mode().bits()),
+            )
+            .field(
+                "spi_smem_din3_mode",
+                &format_args!("{}", self.spi_smem_din3_mode().bits()),
+            )
+            .field(
+                "spi_smem_din4_mode",
+                &format_args!("{}", self.spi_smem_din4_mode().bits()),
+            )
+            .field(
+                "spi_smem_din5_mode",
+                &format_args!("{}", self.spi_smem_din5_mode().bits()),
+            )
+            .field(
+                "spi_smem_din6_mode",
+                &format_args!("{}", self.spi_smem_din6_mode().bits()),
+            )
+            .field(
+                "spi_smem_din7_mode",
+                &format_args!("{}", self.spi_smem_din7_mode().bits()),
+            )
+            .field(
+                "spi_smem_dins_mode",
+                &format_args!("{}", self.spi_smem_dins_mode().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_MODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "MSPI external RAM input timing delay mode control register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [spi_smem_din_mode](index.html) module"]

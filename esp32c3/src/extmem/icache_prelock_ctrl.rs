@@ -35,15 +35,15 @@ impl From<crate::W<ICACHE_PRELOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_PRELOCK_SCT0_EN` reader - The bit is used to enable the first section of prelock function."]
-pub type ICACHE_PRELOCK_SCT0_EN_R = crate::BitReader<bool>;
+pub type ICACHE_PRELOCK_SCT0_EN_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOCK_SCT0_EN` writer - The bit is used to enable the first section of prelock function."]
 pub type ICACHE_PRELOCK_SCT0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_PRELOCK_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_PRELOCK_CTRL_SPEC, O>;
 #[doc = "Field `ICACHE_PRELOCK_SCT1_EN` reader - The bit is used to enable the second section of prelock function."]
-pub type ICACHE_PRELOCK_SCT1_EN_R = crate::BitReader<bool>;
+pub type ICACHE_PRELOCK_SCT1_EN_R = crate::BitReader;
 #[doc = "Field `ICACHE_PRELOCK_SCT1_EN` writer - The bit is used to enable the second section of prelock function."]
 pub type ICACHE_PRELOCK_SCT1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ICACHE_PRELOCK_CTRL_SPEC, bool, O>;
+    crate::BitWriter<'a, ICACHE_PRELOCK_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
@@ -54,6 +54,27 @@ impl R {
     #[inline(always)]
     pub fn icache_prelock_sct1_en(&self) -> ICACHE_PRELOCK_SCT1_EN_R {
         ICACHE_PRELOCK_SCT1_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ICACHE_PRELOCK_CTRL")
+            .field(
+                "icache_prelock_sct0_en",
+                &format_args!("{}", self.icache_prelock_sct0_en().bit()),
+            )
+            .field(
+                "icache_prelock_sct1_en",
+                &format_args!("{}", self.icache_prelock_sct1_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOCK_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

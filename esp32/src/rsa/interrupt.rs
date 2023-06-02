@@ -35,14 +35,28 @@ impl From<crate::W<INTERRUPT_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT` reader - RSA interrupt status register. Will read 1 once an operation has completed."]
-pub type INTERRUPT_R = crate::BitReader<bool>;
+pub type INTERRUPT_R = crate::BitReader;
 #[doc = "Field `INTERRUPT` writer - RSA interrupt status register. Will read 1 once an operation has completed."]
-pub type INTERRUPT_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTERRUPT_SPEC, bool, O>;
+pub type INTERRUPT_W<'a, const O: u8> = crate::BitWriter<'a, INTERRUPT_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - RSA interrupt status register. Will read 1 once an operation has completed."]
     #[inline(always)]
     pub fn interrupt(&self) -> INTERRUPT_R {
         INTERRUPT_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT")
+            .field("interrupt", &format_args!("{}", self.interrupt().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

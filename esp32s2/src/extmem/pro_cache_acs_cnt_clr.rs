@@ -21,10 +21,16 @@ impl From<crate::W<PRO_CACHE_ACS_CNT_CLR_SPEC>> for W {
 }
 #[doc = "Field `PRO_DCACHE_ACS_CNT_CLR` writer - The bit is used to clear dcache counter which include DC_PRELOAD_CNT_REG, DC_PRELOAD_EVICT_CNT_REG, DC_PRELOAD_MISS_CNT_REG, DBUS0-2_ABANDON_CNT_REG, DBUS0-2_ACS_WB_CNT_REG, DBUS0-2_ACS_MISS_CNT_REG and DBUS0-2_ACS_CNT_REG."]
 pub type PRO_DCACHE_ACS_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_ACS_CNT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CACHE_ACS_CNT_CLR_SPEC, O>;
 #[doc = "Field `PRO_ICACHE_ACS_CNT_CLR` writer - The bit is used to clear icache counter which include IC_PRELOAD_CNT_REG, IC_PRELOAD_MISS_CNT_REG, IBUS0-2_ABANDON_CNT_REG, IBUS0-2_ACS_MISS_CNT_REG and IBUS0-2_ACS_CNT_REG."]
 pub type PRO_ICACHE_ACS_CNT_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_ACS_CNT_CLR_SPEC, bool, O>;
+    crate::BitWriter<'a, PRO_CACHE_ACS_CNT_CLR_SPEC, O>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_ACS_CNT_CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 0 - The bit is used to clear dcache counter which include DC_PRELOAD_CNT_REG, DC_PRELOAD_EVICT_CNT_REG, DC_PRELOAD_MISS_CNT_REG, DBUS0-2_ABANDON_CNT_REG, DBUS0-2_ACS_WB_CNT_REG, DBUS0-2_ACS_MISS_CNT_REG and DBUS0-2_ACS_CNT_REG."]
     #[inline(always)]

@@ -38,37 +38,31 @@ impl From<crate::W<PRO_IRAM0_2_SPEC>> for W {
 pub type PRO_IRAM0_SRAM_4_SPLTADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_SPLTADDR` writer - Configure the split address of SRAM Block 4-21 for IBUS access."]
 pub type PRO_IRAM0_SRAM_4_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PRO_IRAM0_2_SPEC, u32, u32, 17, O>;
+    crate::FieldWriter<'a, PRO_IRAM0_2_SPEC, 17, O, u32, u32>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_L_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_L_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_L_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_L_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 4-21 low address region."]
-pub type PRO_IRAM0_SRAM_4_L_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_L_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_F_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_H_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_F_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_H_F_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_R` reader - Setting to 1 grants IBUS permission to read SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_R_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_H_R_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_R` writer - Setting to 1 grants IBUS permission to read SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_R_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_H_R_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_W` reader - Setting to 1 grants IBUS permission to write SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_W_R = crate::BitReader<bool>;
+pub type PRO_IRAM0_SRAM_4_H_W_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_H_W` writer - Setting to 1 grants IBUS permission to write SRAM Block 4-21 high address region."]
-pub type PRO_IRAM0_SRAM_4_H_W_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_IRAM0_2_SPEC, bool, O>;
+pub type PRO_IRAM0_SRAM_4_H_W_W<'a, const O: u8> = crate::BitWriter<'a, PRO_IRAM0_2_SPEC, O>;
 impl R {
     #[doc = "Bits 0:16 - Configure the split address of SRAM Block 4-21 for IBUS access."]
     #[inline(always)]
@@ -104,6 +98,47 @@ impl R {
     #[inline(always)]
     pub fn pro_iram0_sram_4_h_w(&self) -> PRO_IRAM0_SRAM_4_H_W_R {
         PRO_IRAM0_SRAM_4_H_W_R::new(((self.bits >> 22) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_IRAM0_2")
+            .field(
+                "pro_iram0_sram_4_spltaddr",
+                &format_args!("{}", self.pro_iram0_sram_4_spltaddr().bits()),
+            )
+            .field(
+                "pro_iram0_sram_4_l_f",
+                &format_args!("{}", self.pro_iram0_sram_4_l_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_4_l_r",
+                &format_args!("{}", self.pro_iram0_sram_4_l_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_4_l_w",
+                &format_args!("{}", self.pro_iram0_sram_4_l_w().bit()),
+            )
+            .field(
+                "pro_iram0_sram_4_h_f",
+                &format_args!("{}", self.pro_iram0_sram_4_h_f().bit()),
+            )
+            .field(
+                "pro_iram0_sram_4_h_r",
+                &format_args!("{}", self.pro_iram0_sram_4_h_r().bit()),
+            )
+            .field(
+                "pro_iram0_sram_4_h_w",
+                &format_args!("{}", self.pro_iram0_sram_4_h_w().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_IRAM0_2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

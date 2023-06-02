@@ -35,14 +35,13 @@ impl From<crate::W<AT_CMD_CHAR_SPEC>> for W {
     }
 }
 #[doc = "Field `AT_CMD_CHAR` reader - This register is used to configure the content of at_cmd char."]
-pub type AT_CMD_CHAR_R = crate::FieldReader<u8, u8>;
+pub type AT_CMD_CHAR_R = crate::FieldReader;
 #[doc = "Field `AT_CMD_CHAR` writer - This register is used to configure the content of at_cmd char."]
-pub type AT_CMD_CHAR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, AT_CMD_CHAR_SPEC, u8, u8, 8, O>;
+pub type AT_CMD_CHAR_W<'a, const O: u8> = crate::FieldWriter<'a, AT_CMD_CHAR_SPEC, 8, O>;
 #[doc = "Field `CHAR_NUM` reader - This register is used to configure the num of continous at_cmd chars received by receiver."]
-pub type CHAR_NUM_R = crate::FieldReader<u8, u8>;
+pub type CHAR_NUM_R = crate::FieldReader;
 #[doc = "Field `CHAR_NUM` writer - This register is used to configure the num of continous at_cmd chars received by receiver."]
-pub type CHAR_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AT_CMD_CHAR_SPEC, u8, u8, 8, O>;
+pub type CHAR_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AT_CMD_CHAR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn char_num(&self) -> CHAR_NUM_R {
         CHAR_NUM_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AT_CMD_CHAR")
+            .field(
+                "at_cmd_char",
+                &format_args!("{}", self.at_cmd_char().bits()),
+            )
+            .field("char_num", &format_args!("{}", self.char_num().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<AT_CMD_CHAR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,64 +35,55 @@ impl From<crate::W<PRO_CACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_MODE` reader - "]
-pub type PRO_CACHE_MODE_R = crate::BitReader<bool>;
+pub type PRO_CACHE_MODE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_MODE` writer - "]
-pub type PRO_CACHE_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_MODE_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_ENABLE` reader - "]
-pub type PRO_CACHE_ENABLE_R = crate::BitReader<bool>;
+pub type PRO_CACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_ENABLE` writer - "]
-pub type PRO_CACHE_ENABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` reader - "]
-pub type PRO_CACHE_FLUSH_ENA_R = crate::BitReader<bool>;
+pub type PRO_CACHE_FLUSH_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` writer - "]
-pub type PRO_CACHE_FLUSH_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_FLUSH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_FLUSH_DONE` reader - "]
-pub type PRO_CACHE_FLUSH_DONE_R = crate::BitReader<bool>;
+pub type PRO_CACHE_FLUSH_DONE_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` reader - "]
-pub type PRO_CACHE_LOCK_0_EN_R = crate::BitReader<bool>;
+pub type PRO_CACHE_LOCK_0_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` writer - "]
-pub type PRO_CACHE_LOCK_0_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_LOCK_0_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` reader - "]
-pub type PRO_CACHE_LOCK_1_EN_R = crate::BitReader<bool>;
+pub type PRO_CACHE_LOCK_1_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` writer - "]
-pub type PRO_CACHE_LOCK_1_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_LOCK_1_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` reader - "]
-pub type PRO_CACHE_LOCK_2_EN_R = crate::BitReader<bool>;
+pub type PRO_CACHE_LOCK_2_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` writer - "]
-pub type PRO_CACHE_LOCK_2_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_LOCK_2_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` reader - "]
-pub type PRO_CACHE_LOCK_3_EN_R = crate::BitReader<bool>;
+pub type PRO_CACHE_LOCK_3_EN_R = crate::BitReader;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` writer - "]
-pub type PRO_CACHE_LOCK_3_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_CACHE_LOCK_3_EN_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` reader - "]
-pub type PRO_SINGLE_IRAM_ENA_R = crate::BitReader<bool>;
+pub type PRO_SINGLE_IRAM_ENA_R = crate::BitReader;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` writer - "]
-pub type PRO_SINGLE_IRAM_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_SINGLE_IRAM_ENA_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_DRAM_SPLIT` reader - "]
-pub type PRO_DRAM_SPLIT_R = crate::BitReader<bool>;
+pub type PRO_DRAM_SPLIT_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_SPLIT` writer - "]
-pub type PRO_DRAM_SPLIT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DRAM_SPLIT_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 #[doc = "Field `PRO_AHB_SPI_REQ` reader - "]
-pub type PRO_AHB_SPI_REQ_R = crate::BitReader<bool>;
+pub type PRO_AHB_SPI_REQ_R = crate::BitReader;
 #[doc = "Field `PRO_SLAVE_REQ` reader - "]
-pub type PRO_SLAVE_REQ_R = crate::BitReader<bool>;
+pub type PRO_SLAVE_REQ_R = crate::BitReader;
 #[doc = "Field `AHB_SPI_REQ` reader - "]
-pub type AHB_SPI_REQ_R = crate::BitReader<bool>;
+pub type AHB_SPI_REQ_R = crate::BitReader;
 #[doc = "Field `SLAVE_REQ` reader - "]
-pub type SLAVE_REQ_R = crate::BitReader<bool>;
+pub type SLAVE_REQ_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_HL` reader - "]
-pub type PRO_DRAM_HL_R = crate::BitReader<bool>;
+pub type PRO_DRAM_HL_R = crate::BitReader;
 #[doc = "Field `PRO_DRAM_HL` writer - "]
-pub type PRO_DRAM_HL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, O>;
+pub type PRO_DRAM_HL_W<'a, const O: u8> = crate::BitWriter<'a, PRO_CACHE_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -168,6 +159,70 @@ impl R {
     #[inline(always)]
     pub fn pro_dram_hl(&self) -> PRO_DRAM_HL_R {
         PRO_DRAM_HL_R::new(((self.bits >> 16) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PRO_CACHE_CTRL")
+            .field(
+                "pro_cache_mode",
+                &format_args!("{}", self.pro_cache_mode().bit()),
+            )
+            .field(
+                "pro_cache_enable",
+                &format_args!("{}", self.pro_cache_enable().bit()),
+            )
+            .field(
+                "pro_cache_flush_ena",
+                &format_args!("{}", self.pro_cache_flush_ena().bit()),
+            )
+            .field(
+                "pro_cache_flush_done",
+                &format_args!("{}", self.pro_cache_flush_done().bit()),
+            )
+            .field(
+                "pro_cache_lock_0_en",
+                &format_args!("{}", self.pro_cache_lock_0_en().bit()),
+            )
+            .field(
+                "pro_cache_lock_1_en",
+                &format_args!("{}", self.pro_cache_lock_1_en().bit()),
+            )
+            .field(
+                "pro_cache_lock_2_en",
+                &format_args!("{}", self.pro_cache_lock_2_en().bit()),
+            )
+            .field(
+                "pro_cache_lock_3_en",
+                &format_args!("{}", self.pro_cache_lock_3_en().bit()),
+            )
+            .field(
+                "pro_single_iram_ena",
+                &format_args!("{}", self.pro_single_iram_ena().bit()),
+            )
+            .field(
+                "pro_dram_split",
+                &format_args!("{}", self.pro_dram_split().bit()),
+            )
+            .field(
+                "pro_ahb_spi_req",
+                &format_args!("{}", self.pro_ahb_spi_req().bit()),
+            )
+            .field(
+                "pro_slave_req",
+                &format_args!("{}", self.pro_slave_req().bit()),
+            )
+            .field("ahb_spi_req", &format_args!("{}", self.ahb_spi_req().bit()))
+            .field("slave_req", &format_args!("{}", self.slave_req().bit()))
+            .field("pro_dram_hl", &format_args!("{}", self.pro_dram_hl().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

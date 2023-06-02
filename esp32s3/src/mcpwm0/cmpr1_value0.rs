@@ -37,13 +37,26 @@ impl From<crate::W<CMPR1_VALUE0_SPEC>> for W {
 #[doc = "Field `CMPR1_A` reader - PWM generator 1 time stamp A's shadow register"]
 pub type CMPR1_A_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CMPR1_A` writer - PWM generator 1 time stamp A's shadow register"]
-pub type CMPR1_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CMPR1_VALUE0_SPEC, u16, u16, 16, O>;
+pub type CMPR1_A_W<'a, const O: u8> = crate::FieldWriter<'a, CMPR1_VALUE0_SPEC, 16, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - PWM generator 1 time stamp A's shadow register"]
     #[inline(always)]
     pub fn cmpr1_a(&self) -> CMPR1_A_R {
         CMPR1_A_R::new((self.bits & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMPR1_VALUE0")
+            .field("cmpr1_a", &format_args!("{}", self.cmpr1_a().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMPR1_VALUE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

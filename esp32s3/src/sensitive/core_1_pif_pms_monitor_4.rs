@@ -35,15 +35,15 @@ impl From<crate::W<CORE_1_PIF_PMS_MONITOR_4_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR` reader - Set 1 to clear interrupt that core1 initiate unsupported access type."]
-pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_R = crate::BitReader<bool>;
+pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_R = crate::BitReader;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR` writer - Set 1 to clear interrupt that core1 initiate unsupported access type."]
 pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_PIF_PMS_MONITOR_4_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_PIF_PMS_MONITOR_4_SPEC, O>;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN` reader - Set 1 to enable interrupt that core1 initiate unsupported access type."]
-pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_R = crate::BitReader<bool>;
+pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_R = crate::BitReader;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN` writer - Set 1 to enable interrupt that core1 initiate unsupported access type."]
 pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, CORE_1_PIF_PMS_MONITOR_4_SPEC, bool, O>;
+    crate::BitWriter<'a, CORE_1_PIF_PMS_MONITOR_4_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to clear interrupt that core1 initiate unsupported access type."]
     #[inline(always)]
@@ -58,6 +58,30 @@ impl R {
         &self,
     ) -> CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_R {
         CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_R::new(((self.bits >> 1) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_1_PIF_PMS_MONITOR_4")
+            .field(
+                "core_1_pif_pms_monitor_nonword_violate_clr",
+                &format_args!(
+                    "{}",
+                    self.core_1_pif_pms_monitor_nonword_violate_clr().bit()
+                ),
+            )
+            .field(
+                "core_1_pif_pms_monitor_nonword_violate_en",
+                &format_args!("{}", self.core_1_pif_pms_monitor_nonword_violate_en().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_1_PIF_PMS_MONITOR_4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -37,9 +37,9 @@ impl From<crate::W<CMD_SPEC>> for W {
 #[doc = "Field `COMMAND` reader - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
 pub type COMMAND_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COMMAND` writer - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
-pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CMD_SPEC, u16, u16, 14, O>;
+pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 14, O, u16, u16>;
 #[doc = "Field `COMMAND_DONE` reader - When command 0 is done, this bit changes to 1."]
-pub type COMMAND_DONE_R = crate::BitReader<bool>;
+pub type COMMAND_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:13 - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
     #[inline(always)]
@@ -50,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn command_done(&self) -> COMMAND_DONE_R {
         COMMAND_DONE_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD")
+            .field("command", &format_args!("{}", self.command().bits()))
+            .field(
+                "command_done",
+                &format_args!("{}", self.command_done().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

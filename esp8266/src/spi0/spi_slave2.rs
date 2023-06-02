@@ -35,25 +35,25 @@ impl From<crate::W<SPI_SLAVE2_SPEC>> for W {
     }
 }
 #[doc = "Field `slv_rdsta_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
-pub type SLV_RDSTA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_RDSTA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_rdsta_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
 pub type SLV_RDSTA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
 #[doc = "Field `slv_wrsta_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"write-status\" operations. Theregister value shall be (cycle_num-1)"]
-pub type SLV_WRSTA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_WRSTA_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_wrsta_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"write-status\" operations. Theregister value shall be (cycle_num-1)"]
 pub type SLV_WRSTA_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
 #[doc = "Field `slv_rdbuf_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-buffer\" operations. The registervalue shall be (cycle_num-1)"]
-pub type SLV_RDBUF_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_RDBUF_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_rdbuf_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-buffer\" operations. The registervalue shall be (cycle_num-1)"]
 pub type SLV_RDBUF_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
 #[doc = "Field `slv_wrbuf_dummy_cyclelen` reader - In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)"]
-pub type SLV_WRBUF_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
+pub type SLV_WRBUF_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `slv_wrbuf_dummy_cyclelen` writer - In the slave mode, it is the length in spi_clk cycles \"dummy\" phase for \"write-buffer\" operations. The registervalue shall be (cycle_num-1)"]
 pub type SLV_WRBUF_DUMMY_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_SLAVE2_SPEC, u8, u8, 8, O>;
+    crate::FieldWriter<'a, SPI_SLAVE2_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - In the slave mode, it is the length in spi_clk cycles of \"dummy\" phase for \"read-status\" operations. Theregister value shall be (cycle_num-1)"]
     #[inline(always)]
@@ -74,6 +74,35 @@ impl R {
     #[inline(always)]
     pub fn slv_wrbuf_dummy_cyclelen(&self) -> SLV_WRBUF_DUMMY_CYCLELEN_R {
         SLV_WRBUF_DUMMY_CYCLELEN_R::new(((self.bits >> 24) & 0xff) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_SLAVE2")
+            .field(
+                "slv_wrbuf_dummy_cyclelen",
+                &format_args!("{}", self.slv_wrbuf_dummy_cyclelen().bits()),
+            )
+            .field(
+                "slv_rdbuf_dummy_cyclelen",
+                &format_args!("{}", self.slv_rdbuf_dummy_cyclelen().bits()),
+            )
+            .field(
+                "slv_wrsta_dummy_cyclelen",
+                &format_args!("{}", self.slv_wrsta_dummy_cyclelen().bits()),
+            )
+            .field(
+                "slv_rdsta_dummy_cyclelen",
+                &format_args!("{}", self.slv_rdsta_dummy_cyclelen().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_SLAVE2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

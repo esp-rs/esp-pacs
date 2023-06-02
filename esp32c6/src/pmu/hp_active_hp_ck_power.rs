@@ -35,30 +35,30 @@ impl From<crate::W<HP_ACTIVE_HP_CK_POWER_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_ACTIVE_I2C_ISO_EN` reader - need_des"]
-pub type HP_ACTIVE_I2C_ISO_EN_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_I2C_ISO_EN_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_I2C_ISO_EN` writer - need_des"]
 pub type HP_ACTIVE_I2C_ISO_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_I2C_RETENTION` reader - need_des"]
-pub type HP_ACTIVE_I2C_RETENTION_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_I2C_RETENTION_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_I2C_RETENTION` writer - need_des"]
 pub type HP_ACTIVE_I2C_RETENTION_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BB_I2C` reader - need_des"]
-pub type HP_ACTIVE_XPD_BB_I2C_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_XPD_BB_I2C_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BB_I2C` writer - need_des"]
 pub type HP_ACTIVE_XPD_BB_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL_I2C` reader - need_des"]
-pub type HP_ACTIVE_XPD_BBPLL_I2C_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_XPD_BBPLL_I2C_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL_I2C` writer - need_des"]
 pub type HP_ACTIVE_XPD_BBPLL_I2C_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL` reader - need_des"]
-pub type HP_ACTIVE_XPD_BBPLL_R = crate::BitReader<bool>;
+pub type HP_ACTIVE_XPD_BBPLL_R = crate::BitReader;
 #[doc = "Field `HP_ACTIVE_XPD_BBPLL` writer - need_des"]
 pub type HP_ACTIVE_XPD_BBPLL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, HP_ACTIVE_HP_CK_POWER_SPEC, bool, O>;
+    crate::BitWriter<'a, HP_ACTIVE_HP_CK_POWER_SPEC, O>;
 impl R {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
@@ -84,6 +84,39 @@ impl R {
     #[inline(always)]
     pub fn hp_active_xpd_bbpll(&self) -> HP_ACTIVE_XPD_BBPLL_R {
         HP_ACTIVE_XPD_BBPLL_R::new(((self.bits >> 30) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HP_ACTIVE_HP_CK_POWER")
+            .field(
+                "hp_active_i2c_iso_en",
+                &format_args!("{}", self.hp_active_i2c_iso_en().bit()),
+            )
+            .field(
+                "hp_active_i2c_retention",
+                &format_args!("{}", self.hp_active_i2c_retention().bit()),
+            )
+            .field(
+                "hp_active_xpd_bb_i2c",
+                &format_args!("{}", self.hp_active_xpd_bb_i2c().bit()),
+            )
+            .field(
+                "hp_active_xpd_bbpll_i2c",
+                &format_args!("{}", self.hp_active_xpd_bbpll_i2c().bit()),
+            )
+            .field(
+                "hp_active_xpd_bbpll",
+                &format_args!("{}", self.hp_active_xpd_bbpll().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_CK_POWER_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

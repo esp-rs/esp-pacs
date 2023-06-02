@@ -35,104 +35,92 @@ impl From<crate::W<DMA_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL_ERR_INT_RAW` reader - 1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data. 0: Others."]
-pub type DMA_INFIFO_FULL_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type DMA_INFIFO_FULL_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DMA_INFIFO_FULL_ERR_INT_RAW` writer - 1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data. 0: Others."]
-pub type DMA_INFIFO_FULL_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type DMA_INFIFO_FULL_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `DMA_OUTFIFO_EMPTY_ERR_INT_RAW` reader - 1: The current data rate of DMA TX is smaller than that of SPI. SPI will stop in master mode and send out all 0 in slave mode. 0: Others."]
-pub type DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type DMA_OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DMA_OUTFIFO_EMPTY_ERR_INT_RAW` writer - 1: The current data rate of DMA TX is smaller than that of SPI. SPI will stop in master mode and send out all 0 in slave mode. 0: Others."]
 pub type DMA_OUTFIFO_EMPTY_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_EX_QPI_INT_RAW` reader - The raw bit for SPI slave Ex_QPI interrupt. 1: SPI slave mode Ex_QPI transmission is ended. 0: Others."]
-pub type SLV_EX_QPI_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_EX_QPI_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_EX_QPI_INT_RAW` writer - The raw bit for SPI slave Ex_QPI interrupt. 1: SPI slave mode Ex_QPI transmission is ended. 0: Others."]
-pub type SLV_EX_QPI_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_EX_QPI_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_EN_QPI_INT_RAW` reader - The raw bit for SPI slave En_QPI interrupt. 1: SPI slave mode En_QPI transmission is ended. 0: Others."]
-pub type SLV_EN_QPI_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_EN_QPI_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_EN_QPI_INT_RAW` writer - The raw bit for SPI slave En_QPI interrupt. 1: SPI slave mode En_QPI transmission is ended. 0: Others."]
-pub type SLV_EN_QPI_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_EN_QPI_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD7_INT_RAW` reader - The raw bit for SPI slave CMD7 interrupt. 1: SPI slave mode CMD7 transmission is ended. 0: Others."]
-pub type SLV_CMD7_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD7_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD7_INT_RAW` writer - The raw bit for SPI slave CMD7 interrupt. 1: SPI slave mode CMD7 transmission is ended. 0: Others."]
-pub type SLV_CMD7_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD7_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD8_INT_RAW` reader - The raw bit for SPI slave CMD8 interrupt. 1: SPI slave mode CMD8 transmission is ended. 0: Others."]
-pub type SLV_CMD8_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD8_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD8_INT_RAW` writer - The raw bit for SPI slave CMD8 interrupt. 1: SPI slave mode CMD8 transmission is ended. 0: Others."]
-pub type SLV_CMD8_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD8_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD9_INT_RAW` reader - The raw bit for SPI slave CMD9 interrupt. 1: SPI slave mode CMD9 transmission is ended. 0: Others."]
-pub type SLV_CMD9_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD9_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD9_INT_RAW` writer - The raw bit for SPI slave CMD9 interrupt. 1: SPI slave mode CMD9 transmission is ended. 0: Others."]
-pub type SLV_CMD9_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD9_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMDA_INT_RAW` reader - The raw bit for SPI slave CMDA interrupt. 1: SPI slave mode CMDA transmission is ended. 0: Others."]
-pub type SLV_CMDA_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMDA_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMDA_INT_RAW` writer - The raw bit for SPI slave CMDA interrupt. 1: SPI slave mode CMDA transmission is ended. 0: Others."]
-pub type SLV_CMDA_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMDA_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_RD_DMA_DONE_INT_RAW` reader - The raw bit for SPI_SLV_RD_DMA_DONE_INT interrupt. 1: SPI slave mode Rd_DMA transmission is ended. 0: Others."]
-pub type SLV_RD_DMA_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_RD_DMA_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_RD_DMA_DONE_INT_RAW` writer - The raw bit for SPI_SLV_RD_DMA_DONE_INT interrupt. 1: SPI slave mode Rd_DMA transmission is ended. 0: Others."]
-pub type SLV_RD_DMA_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_RD_DMA_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_WR_DMA_DONE_INT_RAW` reader - The raw bit for SPI_SLV_WR_DMA_DONE_INT interrupt. 1: SPI slave mode Wr_DMA transmission is ended. 0: Others."]
-pub type SLV_WR_DMA_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_WR_DMA_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_WR_DMA_DONE_INT_RAW` writer - The raw bit for SPI_SLV_WR_DMA_DONE_INT interrupt. 1: SPI slave mode Wr_DMA transmission is ended. 0: Others."]
-pub type SLV_WR_DMA_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_WR_DMA_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_RD_BUF_DONE_INT_RAW` reader - The raw bit for SPI_SLV_RD_BUF_DONE_INT interrupt. 1: SPI slave mode Rd_BUF transmission is ended. 0: Others."]
-pub type SLV_RD_BUF_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_RD_BUF_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_RD_BUF_DONE_INT_RAW` writer - The raw bit for SPI_SLV_RD_BUF_DONE_INT interrupt. 1: SPI slave mode Rd_BUF transmission is ended. 0: Others."]
-pub type SLV_RD_BUF_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_RD_BUF_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_WR_BUF_DONE_INT_RAW` reader - The raw bit for SPI_SLV_WR_BUF_DONE_INT interrupt. 1: SPI slave mode Wr_BUF transmission is ended. 0: Others."]
-pub type SLV_WR_BUF_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_WR_BUF_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_WR_BUF_DONE_INT_RAW` writer - The raw bit for SPI_SLV_WR_BUF_DONE_INT interrupt. 1: SPI slave mode Wr_BUF transmission is ended. 0: Others."]
-pub type SLV_WR_BUF_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_WR_BUF_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `TRANS_DONE_INT_RAW` reader - The raw bit for SPI_TRANS_DONE_INT interrupt. 1: SPI master mode transmission is ended. 0: others."]
-pub type TRANS_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type TRANS_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE_INT_RAW` writer - The raw bit for SPI_TRANS_DONE_INT interrupt. 1: SPI master mode transmission is ended. 0: others."]
-pub type TRANS_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type TRANS_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `DMA_SEG_TRANS_DONE_INT_RAW` reader - The raw bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt. 1: spi master DMA full-duplex/half-duplex seg-conf-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-conf-trans or seg-trans is not ended or not occurred."]
-pub type DMA_SEG_TRANS_DONE_INT_RAW_R = crate::BitReader<bool>;
+pub type DMA_SEG_TRANS_DONE_INT_RAW_R = crate::BitReader;
 #[doc = "Field `DMA_SEG_TRANS_DONE_INT_RAW` writer - The raw bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt. 1: spi master DMA full-duplex/half-duplex seg-conf-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-conf-trans or seg-trans is not ended or not occurred."]
-pub type DMA_SEG_TRANS_DONE_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type DMA_SEG_TRANS_DONE_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SEG_MAGIC_ERR_INT_RAW` reader - The raw bit for SPI_SEG_MAGIC_ERR_INT interrupt. 1: The magic value in CONF buffer is error in the DMA seg-conf-trans. 0: others."]
-pub type SEG_MAGIC_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SEG_MAGIC_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SEG_MAGIC_ERR_INT_RAW` writer - The raw bit for SPI_SEG_MAGIC_ERR_INT interrupt. 1: The magic value in CONF buffer is error in the DMA seg-conf-trans. 0: others."]
-pub type SEG_MAGIC_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SEG_MAGIC_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_BUF_ADDR_ERR_INT_RAW` reader - The raw bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt. 1: The accessing data address of the current SPI slave mode CPU controlled FD, Wr_BUF or Rd_BUF transmission is bigger than 63. 0: Others."]
-pub type SLV_BUF_ADDR_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_BUF_ADDR_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_BUF_ADDR_ERR_INT_RAW` writer - The raw bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt. 1: The accessing data address of the current SPI slave mode CPU controlled FD, Wr_BUF or Rd_BUF transmission is bigger than 63. 0: Others."]
-pub type SLV_BUF_ADDR_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_BUF_ADDR_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `SLV_CMD_ERR_INT_RAW` reader - The raw bit for SPI_SLV_CMD_ERR_INT interrupt. 1: The slave command value in the current SPI slave HD mode transmission is not supported. 0: Others."]
-pub type SLV_CMD_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type SLV_CMD_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `SLV_CMD_ERR_INT_RAW` writer - The raw bit for SPI_SLV_CMD_ERR_INT interrupt. 1: The slave command value in the current SPI slave HD mode transmission is not supported. 0: Others."]
-pub type SLV_CMD_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type SLV_CMD_ERR_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `MST_RX_AFIFO_WFULL_ERR_INT_RAW` reader - The raw bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt. 1: There is a RX AFIFO write-full error when SPI inputs data in master mode. 0: Others."]
-pub type MST_RX_AFIFO_WFULL_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type MST_RX_AFIFO_WFULL_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MST_RX_AFIFO_WFULL_ERR_INT_RAW` writer - The raw bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt. 1: There is a RX AFIFO write-full error when SPI inputs data in master mode. 0: Others."]
 pub type MST_RX_AFIFO_WFULL_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `MST_TX_AFIFO_REMPTY_ERR_INT_RAW` reader - The raw bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt. 1: There is a TX BUF AFIFO read-empty error when SPI outputs data in master mode. 0: Others."]
-pub type MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R = crate::BitReader<bool>;
+pub type MST_TX_AFIFO_REMPTY_ERR_INT_RAW_R = crate::BitReader;
 #[doc = "Field `MST_TX_AFIFO_REMPTY_ERR_INT_RAW` writer - The raw bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt. 1: There is a TX BUF AFIFO read-empty error when SPI outputs data in master mode. 0: Others."]
 pub type MST_TX_AFIFO_REMPTY_ERR_INT_RAW_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+    crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `APP2_INT_RAW` reader - The raw bit for SPI_APP2_INT interrupt. The value is only controlled by software."]
-pub type APP2_INT_RAW_R = crate::BitReader<bool>;
+pub type APP2_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP2_INT_RAW` writer - The raw bit for SPI_APP2_INT interrupt. The value is only controlled by software."]
-pub type APP2_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type APP2_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 #[doc = "Field `APP1_INT_RAW` reader - The raw bit for SPI_APP1_INT interrupt. The value is only controlled by software."]
-pub type APP1_INT_RAW_R = crate::BitReader<bool>;
+pub type APP1_INT_RAW_R = crate::BitReader;
 #[doc = "Field `APP1_INT_RAW` writer - The raw bit for SPI_APP1_INT interrupt. The value is only controlled by software."]
-pub type APP1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, O>;
+pub type APP1_INT_RAW_W<'a, const O: u8> = crate::BitWriter<'a, DMA_INT_RAW_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data. 0: Others."]
     #[inline(always)]
@@ -238,6 +226,103 @@ impl R {
     #[inline(always)]
     pub fn app1_int_raw(&self) -> APP1_INT_RAW_R {
         APP1_INT_RAW_R::new(((self.bits >> 20) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_INT_RAW")
+            .field(
+                "dma_infifo_full_err_int_raw",
+                &format_args!("{}", self.dma_infifo_full_err_int_raw().bit()),
+            )
+            .field(
+                "dma_outfifo_empty_err_int_raw",
+                &format_args!("{}", self.dma_outfifo_empty_err_int_raw().bit()),
+            )
+            .field(
+                "slv_ex_qpi_int_raw",
+                &format_args!("{}", self.slv_ex_qpi_int_raw().bit()),
+            )
+            .field(
+                "slv_en_qpi_int_raw",
+                &format_args!("{}", self.slv_en_qpi_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd7_int_raw",
+                &format_args!("{}", self.slv_cmd7_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd8_int_raw",
+                &format_args!("{}", self.slv_cmd8_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd9_int_raw",
+                &format_args!("{}", self.slv_cmd9_int_raw().bit()),
+            )
+            .field(
+                "slv_cmda_int_raw",
+                &format_args!("{}", self.slv_cmda_int_raw().bit()),
+            )
+            .field(
+                "slv_rd_dma_done_int_raw",
+                &format_args!("{}", self.slv_rd_dma_done_int_raw().bit()),
+            )
+            .field(
+                "slv_wr_dma_done_int_raw",
+                &format_args!("{}", self.slv_wr_dma_done_int_raw().bit()),
+            )
+            .field(
+                "slv_rd_buf_done_int_raw",
+                &format_args!("{}", self.slv_rd_buf_done_int_raw().bit()),
+            )
+            .field(
+                "slv_wr_buf_done_int_raw",
+                &format_args!("{}", self.slv_wr_buf_done_int_raw().bit()),
+            )
+            .field(
+                "trans_done_int_raw",
+                &format_args!("{}", self.trans_done_int_raw().bit()),
+            )
+            .field(
+                "dma_seg_trans_done_int_raw",
+                &format_args!("{}", self.dma_seg_trans_done_int_raw().bit()),
+            )
+            .field(
+                "seg_magic_err_int_raw",
+                &format_args!("{}", self.seg_magic_err_int_raw().bit()),
+            )
+            .field(
+                "slv_buf_addr_err_int_raw",
+                &format_args!("{}", self.slv_buf_addr_err_int_raw().bit()),
+            )
+            .field(
+                "slv_cmd_err_int_raw",
+                &format_args!("{}", self.slv_cmd_err_int_raw().bit()),
+            )
+            .field(
+                "mst_rx_afifo_wfull_err_int_raw",
+                &format_args!("{}", self.mst_rx_afifo_wfull_err_int_raw().bit()),
+            )
+            .field(
+                "mst_tx_afifo_rempty_err_int_raw",
+                &format_args!("{}", self.mst_tx_afifo_rempty_err_int_raw().bit()),
+            )
+            .field(
+                "app2_int_raw",
+                &format_args!("{}", self.app2_int_raw().bit()),
+            )
+            .field(
+                "app1_int_raw",
+                &format_args!("{}", self.app1_int_raw().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DMA_INT_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

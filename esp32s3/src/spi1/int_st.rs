@@ -14,13 +14,13 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `PER_END_INT_ST` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
-pub type PER_END_INT_ST_R = crate::BitReader<bool>;
+pub type PER_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `PES_END_INT_ST` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
-pub type PES_END_INT_ST_R = crate::BitReader<bool>;
+pub type PES_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `TOTAL_TRANS_END_INT_ST` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub type TOTAL_TRANS_END_INT_ST_R = crate::BitReader<bool>;
+pub type TOTAL_TRANS_END_INT_ST_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_INT_ST` reader - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub type BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
+pub type BROWN_OUT_INT_ST_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
@@ -41,6 +41,35 @@ impl R {
     #[inline(always)]
     pub fn brown_out_int_st(&self) -> BROWN_OUT_INT_ST_R {
         BROWN_OUT_INT_ST_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INT_ST")
+            .field(
+                "per_end_int_st",
+                &format_args!("{}", self.per_end_int_st().bit()),
+            )
+            .field(
+                "pes_end_int_st",
+                &format_args!("{}", self.pes_end_int_st().bit()),
+            )
+            .field(
+                "total_trans_end_int_st",
+                &format_args!("{}", self.total_trans_end_int_st().bit()),
+            )
+            .field(
+                "brown_out_int_st",
+                &format_args!("{}", self.brown_out_int_st().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "SPI1 interrupt status register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_st](index.html) module"]

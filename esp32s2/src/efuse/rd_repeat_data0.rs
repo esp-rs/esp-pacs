@@ -14,49 +14,49 @@ impl From<crate::R<RD_REPEAT_DATA0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_DIS` reader - Disables software reading from individual eFuse blocks (BLOCK4-10)."]
-pub type RD_DIS_R = crate::FieldReader<u8, u8>;
+pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `DIS_RTC_RAM_BOOT` reader - Reserved."]
-pub type DIS_RTC_RAM_BOOT_R = crate::BitReader<bool>;
+pub type DIS_RTC_RAM_BOOT_R = crate::BitReader;
 #[doc = "Field `DIS_ICACHE` reader - Set this bit to disable Icache."]
-pub type DIS_ICACHE_R = crate::BitReader<bool>;
+pub type DIS_ICACHE_R = crate::BitReader;
 #[doc = "Field `DIS_DCACHE` reader - Set this bit to disable Dcache."]
-pub type DIS_DCACHE_R = crate::BitReader<bool>;
+pub type DIS_DCACHE_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_ICACHE` reader - Disables Icache when SoC is in Download mode."]
-pub type DIS_DOWNLOAD_ICACHE_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_ICACHE_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_DCACHE` reader - Disables Dcache when SoC is in Download mode."]
-pub type DIS_DOWNLOAD_DCACHE_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_DCACHE_R = crate::BitReader;
 #[doc = "Field `DIS_FORCE_DOWNLOAD` reader - Set this bit to disable the function that forces chip into download mode."]
-pub type DIS_FORCE_DOWNLOAD_R = crate::BitReader<bool>;
+pub type DIS_FORCE_DOWNLOAD_R = crate::BitReader;
 #[doc = "Field `DIS_USB` reader - Set this bit to disable USB OTG function."]
-pub type DIS_USB_R = crate::BitReader<bool>;
+pub type DIS_USB_R = crate::BitReader;
 #[doc = "Field `DIS_CAN` reader - Set this bit to disable the TWAI Controller function."]
-pub type DIS_CAN_R = crate::BitReader<bool>;
+pub type DIS_CAN_R = crate::BitReader;
 #[doc = "Field `DIS_BOOT_REMAP` reader - Disables capability to Remap RAM to ROM address space."]
-pub type DIS_BOOT_REMAP_R = crate::BitReader<bool>;
+pub type DIS_BOOT_REMAP_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED5` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED5_R = crate::BitReader<bool>;
+pub type RPT4_RESERVED5_R = crate::BitReader;
 #[doc = "Field `SOFT_DIS_JTAG` reader - Software disables JTAG. When software disabled, JTAG can be activated temporarily by HMAC peripheral."]
-pub type SOFT_DIS_JTAG_R = crate::BitReader<bool>;
+pub type SOFT_DIS_JTAG_R = crate::BitReader;
 #[doc = "Field `HARD_DIS_JTAG` reader - Hardware disables JTAG permanently."]
-pub type HARD_DIS_JTAG_R = crate::BitReader<bool>;
+pub type HARD_DIS_JTAG_R = crate::BitReader;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT` reader - Disables flash encryption when in download boot modes."]
-pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
+pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader;
 #[doc = "Field `USB_DREFH` reader - Controls single-end input threshold vrefh, 1.76 V to 2 V with step of 80 mV, stored in eFuse."]
-pub type USB_DREFH_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFH_R = crate::FieldReader;
 #[doc = "Field `USB_DREFL` reader - Controls single-end input threshold vrefl, 0.8 V to 1.04 V with step of 80 mV, stored in eFuse."]
-pub type USB_DREFL_R = crate::FieldReader<u8, u8>;
+pub type USB_DREFL_R = crate::FieldReader;
 #[doc = "Field `USB_EXCHG_PINS` reader - Set this bit to exchange USB D+ and D- pins."]
-pub type USB_EXCHG_PINS_R = crate::BitReader<bool>;
+pub type USB_EXCHG_PINS_R = crate::BitReader;
 #[doc = "Field `EXT_PHY_ENABLE` reader - Set this bit to enable external USB PHY."]
-pub type EXT_PHY_ENABLE_R = crate::BitReader<bool>;
+pub type EXT_PHY_ENABLE_R = crate::BitReader;
 #[doc = "Field `USB_FORCE_NOPERSIST` reader - If set, forces USB BVALID to 1."]
-pub type USB_FORCE_NOPERSIST_R = crate::BitReader<bool>;
+pub type USB_FORCE_NOPERSIST_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED0` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED0_R = crate::FieldReader<u8, u8>;
+pub type RPT4_RESERVED0_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_MODECURLIM` reader - SPI regulator switches current limit mode."]
-pub type VDD_SPI_MODECURLIM_R = crate::BitReader<bool>;
+pub type VDD_SPI_MODECURLIM_R = crate::BitReader;
 #[doc = "Field `VDD_SPI_DREFH` reader - SPI regulator high voltage reference."]
-pub type VDD_SPI_DREFH_R = crate::FieldReader<u8, u8>;
+pub type VDD_SPI_DREFH_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:6 - Disables software reading from individual eFuse blocks (BLOCK4-10)."]
     #[inline(always)]
@@ -167,6 +167,86 @@ impl R {
     #[inline(always)]
     pub fn vdd_spi_drefh(&self) -> VDD_SPI_DREFH_R {
         VDD_SPI_DREFH_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RD_REPEAT_DATA0")
+            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
+            .field(
+                "dis_rtc_ram_boot",
+                &format_args!("{}", self.dis_rtc_ram_boot().bit()),
+            )
+            .field("dis_icache", &format_args!("{}", self.dis_icache().bit()))
+            .field("dis_dcache", &format_args!("{}", self.dis_dcache().bit()))
+            .field(
+                "dis_download_icache",
+                &format_args!("{}", self.dis_download_icache().bit()),
+            )
+            .field(
+                "dis_download_dcache",
+                &format_args!("{}", self.dis_download_dcache().bit()),
+            )
+            .field(
+                "dis_force_download",
+                &format_args!("{}", self.dis_force_download().bit()),
+            )
+            .field("dis_usb", &format_args!("{}", self.dis_usb().bit()))
+            .field("dis_can", &format_args!("{}", self.dis_can().bit()))
+            .field(
+                "dis_boot_remap",
+                &format_args!("{}", self.dis_boot_remap().bit()),
+            )
+            .field(
+                "rpt4_reserved5",
+                &format_args!("{}", self.rpt4_reserved5().bit()),
+            )
+            .field(
+                "soft_dis_jtag",
+                &format_args!("{}", self.soft_dis_jtag().bit()),
+            )
+            .field(
+                "hard_dis_jtag",
+                &format_args!("{}", self.hard_dis_jtag().bit()),
+            )
+            .field(
+                "dis_download_manual_encrypt",
+                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+            )
+            .field("usb_drefh", &format_args!("{}", self.usb_drefh().bits()))
+            .field("usb_drefl", &format_args!("{}", self.usb_drefl().bits()))
+            .field(
+                "usb_exchg_pins",
+                &format_args!("{}", self.usb_exchg_pins().bit()),
+            )
+            .field(
+                "ext_phy_enable",
+                &format_args!("{}", self.ext_phy_enable().bit()),
+            )
+            .field(
+                "usb_force_nopersist",
+                &format_args!("{}", self.usb_force_nopersist().bit()),
+            )
+            .field(
+                "rpt4_reserved0",
+                &format_args!("{}", self.rpt4_reserved0().bits()),
+            )
+            .field(
+                "vdd_spi_modecurlim",
+                &format_args!("{}", self.vdd_spi_modecurlim().bit()),
+            )
+            .field(
+                "vdd_spi_drefh",
+                &format_args!("{}", self.vdd_spi_drefh().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Register 1 of BLOCK0.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rd_repeat_data0](index.html) module"]

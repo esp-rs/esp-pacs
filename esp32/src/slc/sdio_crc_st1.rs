@@ -35,11 +35,11 @@ impl From<crate::W<SDIO_CRC_ST1_SPEC>> for W {
     }
 }
 #[doc = "Field `CMD_CRC_ERR_CNT` reader - "]
-pub type CMD_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
+pub type CMD_CRC_ERR_CNT_R = crate::FieldReader;
 #[doc = "Field `ERR_CNT_CLR` reader - "]
-pub type ERR_CNT_CLR_R = crate::BitReader<bool>;
+pub type ERR_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `ERR_CNT_CLR` writer - "]
-pub type ERR_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SDIO_CRC_ST1_SPEC, bool, O>;
+pub type ERR_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SDIO_CRC_ST1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -50,6 +50,24 @@ impl R {
     #[inline(always)]
     pub fn err_cnt_clr(&self) -> ERR_CNT_CLR_R {
         ERR_CNT_CLR_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SDIO_CRC_ST1")
+            .field(
+                "cmd_crc_err_cnt",
+                &format_args!("{}", self.cmd_crc_err_cnt().bits()),
+            )
+            .field("err_cnt_clr", &format_args!("{}", self.err_cnt_clr().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SDIO_CRC_ST1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

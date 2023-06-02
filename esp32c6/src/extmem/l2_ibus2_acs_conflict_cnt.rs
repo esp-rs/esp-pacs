@@ -22,6 +22,23 @@ impl R {
         L2_IBUS2_CONFLICT_CNT_R::new(self.bits)
     }
 }
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("L2_IBUS2_ACS_CONFLICT_CNT")
+            .field(
+                "l2_ibus2_conflict_cnt",
+                &format_args!("{}", self.l2_ibus2_conflict_cnt().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<L2_IBUS2_ACS_CONFLICT_CNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "L2-Cache bus2 Conflict-Access Counter register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [l2_ibus2_acs_conflict_cnt](index.html) module"]
 pub struct L2_IBUS2_ACS_CONFLICT_CNT_SPEC;
 impl crate::RegisterSpec for L2_IBUS2_ACS_CONFLICT_CNT_SPEC {

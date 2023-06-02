@@ -37,13 +37,26 @@ impl From<crate::W<DVBUSPULSE_SPEC>> for W {
 #[doc = "Field `DVBUSPULSE` reader - "]
 pub type DVBUSPULSE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DVBUSPULSE` writer - "]
-pub type DVBUSPULSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, DVBUSPULSE_SPEC, u16, u16, 12, O>;
+pub type DVBUSPULSE_W<'a, const O: u8> = crate::FieldWriter<'a, DVBUSPULSE_SPEC, 12, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     pub fn dvbuspulse(&self) -> DVBUSPULSE_R {
         DVBUSPULSE_R::new((self.bits & 0x0fff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DVBUSPULSE")
+            .field("dvbuspulse", &format_args!("{}", self.dvbuspulse().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DVBUSPULSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

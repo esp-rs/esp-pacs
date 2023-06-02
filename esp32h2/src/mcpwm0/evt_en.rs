@@ -35,125 +35,125 @@ impl From<crate::W<EVT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `EVT_TIMER0_STOP_EN` reader - set this bit high to enable timer0 stop event generate"]
-pub type EVT_TIMER0_STOP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER0_STOP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER0_STOP_EN` writer - set this bit high to enable timer0 stop event generate"]
-pub type EVT_TIMER0_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER0_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER1_STOP_EN` reader - set this bit high to enable timer1 stop event generate"]
-pub type EVT_TIMER1_STOP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER1_STOP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER1_STOP_EN` writer - set this bit high to enable timer1 stop event generate"]
-pub type EVT_TIMER1_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER1_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER2_STOP_EN` reader - set this bit high to enable timer2 stop event generate"]
-pub type EVT_TIMER2_STOP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER2_STOP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER2_STOP_EN` writer - set this bit high to enable timer2 stop event generate"]
-pub type EVT_TIMER2_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER2_STOP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER0_TEZ_EN` reader - set this bit high to enable timer0 equal zero event generate"]
-pub type EVT_TIMER0_TEZ_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER0_TEZ_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER0_TEZ_EN` writer - set this bit high to enable timer0 equal zero event generate"]
-pub type EVT_TIMER0_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER0_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER1_TEZ_EN` reader - set this bit high to enable timer1 equal zero event generate"]
-pub type EVT_TIMER1_TEZ_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER1_TEZ_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER1_TEZ_EN` writer - set this bit high to enable timer1 equal zero event generate"]
-pub type EVT_TIMER1_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER1_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER2_TEZ_EN` reader - set this bit high to enable timer2 equal zero event generate"]
-pub type EVT_TIMER2_TEZ_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER2_TEZ_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER2_TEZ_EN` writer - set this bit high to enable timer2 equal zero event generate"]
-pub type EVT_TIMER2_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER2_TEZ_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER0_TEP_EN` reader - set this bit high to enable timer0 equal period event generate"]
-pub type EVT_TIMER0_TEP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER0_TEP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER0_TEP_EN` writer - set this bit high to enable timer0 equal period event generate"]
-pub type EVT_TIMER0_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER0_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER1_TEP_EN` reader - set this bit high to enable timer1 equal period event generate"]
-pub type EVT_TIMER1_TEP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER1_TEP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER1_TEP_EN` writer - set this bit high to enable timer1 equal period event generate"]
-pub type EVT_TIMER1_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER1_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TIMER2_TEP_EN` reader - set this bit high to enable timer2 equal period event generate"]
-pub type EVT_TIMER2_TEP_EN_R = crate::BitReader<bool>;
+pub type EVT_TIMER2_TEP_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TIMER2_TEP_EN` writer - set this bit high to enable timer2 equal period event generate"]
-pub type EVT_TIMER2_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TIMER2_TEP_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP0_TEA_EN` reader - set this bit high to enable PWM generator0 timer equal a event generate"]
-pub type EVT_OP0_TEA_EN_R = crate::BitReader<bool>;
+pub type EVT_OP0_TEA_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP0_TEA_EN` writer - set this bit high to enable PWM generator0 timer equal a event generate"]
-pub type EVT_OP0_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP0_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP1_TEA_EN` reader - set this bit high to enable PWM generator1 timer equal a event generate"]
-pub type EVT_OP1_TEA_EN_R = crate::BitReader<bool>;
+pub type EVT_OP1_TEA_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP1_TEA_EN` writer - set this bit high to enable PWM generator1 timer equal a event generate"]
-pub type EVT_OP1_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP1_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP2_TEA_EN` reader - set this bit high to enable PWM generator2 timer equal a event generate"]
-pub type EVT_OP2_TEA_EN_R = crate::BitReader<bool>;
+pub type EVT_OP2_TEA_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP2_TEA_EN` writer - set this bit high to enable PWM generator2 timer equal a event generate"]
-pub type EVT_OP2_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP2_TEA_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP0_TEB_EN` reader - set this bit high to enable PWM generator0 timer equal b event generate"]
-pub type EVT_OP0_TEB_EN_R = crate::BitReader<bool>;
+pub type EVT_OP0_TEB_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP0_TEB_EN` writer - set this bit high to enable PWM generator0 timer equal b event generate"]
-pub type EVT_OP0_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP0_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP1_TEB_EN` reader - set this bit high to enable PWM generator1 timer equal b event generate"]
-pub type EVT_OP1_TEB_EN_R = crate::BitReader<bool>;
+pub type EVT_OP1_TEB_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP1_TEB_EN` writer - set this bit high to enable PWM generator1 timer equal b event generate"]
-pub type EVT_OP1_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP1_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_OP2_TEB_EN` reader - set this bit high to enable PWM generator2 timer equal b event generate"]
-pub type EVT_OP2_TEB_EN_R = crate::BitReader<bool>;
+pub type EVT_OP2_TEB_EN_R = crate::BitReader;
 #[doc = "Field `EVT_OP2_TEB_EN` writer - set this bit high to enable PWM generator2 timer equal b event generate"]
-pub type EVT_OP2_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_OP2_TEB_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F0_EN` reader - set this bit high to enable fault0 event generate"]
-pub type EVT_F0_EN_R = crate::BitReader<bool>;
+pub type EVT_F0_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F0_EN` writer - set this bit high to enable fault0 event generate"]
-pub type EVT_F0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F1_EN` reader - set this bit high to enable fault1 event generate"]
-pub type EVT_F1_EN_R = crate::BitReader<bool>;
+pub type EVT_F1_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F1_EN` writer - set this bit high to enable fault1 event generate"]
-pub type EVT_F1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F2_EN` reader - set this bit high to enable fault2 event generate"]
-pub type EVT_F2_EN_R = crate::BitReader<bool>;
+pub type EVT_F2_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F2_EN` writer - set this bit high to enable fault2 event generate"]
-pub type EVT_F2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F0_CLR_EN` reader - set this bit high to enable fault0 clear event generate"]
-pub type EVT_F0_CLR_EN_R = crate::BitReader<bool>;
+pub type EVT_F0_CLR_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F0_CLR_EN` writer - set this bit high to enable fault0 clear event generate"]
-pub type EVT_F0_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F0_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F1_CLR_EN` reader - set this bit high to enable fault1 clear event generate"]
-pub type EVT_F1_CLR_EN_R = crate::BitReader<bool>;
+pub type EVT_F1_CLR_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F1_CLR_EN` writer - set this bit high to enable fault1 clear event generate"]
-pub type EVT_F1_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F1_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_F2_CLR_EN` reader - set this bit high to enable fault2 clear event generate"]
-pub type EVT_F2_CLR_EN_R = crate::BitReader<bool>;
+pub type EVT_F2_CLR_EN_R = crate::BitReader;
 #[doc = "Field `EVT_F2_CLR_EN` writer - set this bit high to enable fault2 clear event generate"]
-pub type EVT_F2_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_F2_CLR_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ0_CBC_EN` reader - set this bit high to enable cycle by cycle trip0 event generate"]
-pub type EVT_TZ0_CBC_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ0_CBC_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ0_CBC_EN` writer - set this bit high to enable cycle by cycle trip0 event generate"]
-pub type EVT_TZ0_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ0_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ1_CBC_EN` reader - set this bit high to enable cycle by cycle trip1 event generate"]
-pub type EVT_TZ1_CBC_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ1_CBC_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ1_CBC_EN` writer - set this bit high to enable cycle by cycle trip1 event generate"]
-pub type EVT_TZ1_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ1_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ2_CBC_EN` reader - set this bit high to enable cycle by cycle trip2 event generate"]
-pub type EVT_TZ2_CBC_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ2_CBC_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ2_CBC_EN` writer - set this bit high to enable cycle by cycle trip2 event generate"]
-pub type EVT_TZ2_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ2_CBC_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ0_OST_EN` reader - set this bit high to enable one shot trip0 event generate"]
-pub type EVT_TZ0_OST_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ0_OST_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ0_OST_EN` writer - set this bit high to enable one shot trip0 event generate"]
-pub type EVT_TZ0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ0_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ1_OST_EN` reader - set this bit high to enable one shot trip1 event generate"]
-pub type EVT_TZ1_OST_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ1_OST_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ1_OST_EN` writer - set this bit high to enable one shot trip1 event generate"]
-pub type EVT_TZ1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ1_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_TZ2_OST_EN` reader - set this bit high to enable one shot trip2 event generate"]
-pub type EVT_TZ2_OST_EN_R = crate::BitReader<bool>;
+pub type EVT_TZ2_OST_EN_R = crate::BitReader;
 #[doc = "Field `EVT_TZ2_OST_EN` writer - set this bit high to enable one shot trip2 event generate"]
-pub type EVT_TZ2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_TZ2_OST_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_CAP0_EN` reader - set this bit high to enable capture0 event generate"]
-pub type EVT_CAP0_EN_R = crate::BitReader<bool>;
+pub type EVT_CAP0_EN_R = crate::BitReader;
 #[doc = "Field `EVT_CAP0_EN` writer - set this bit high to enable capture0 event generate"]
-pub type EVT_CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_CAP0_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_CAP1_EN` reader - set this bit high to enable capture1 event generate"]
-pub type EVT_CAP1_EN_R = crate::BitReader<bool>;
+pub type EVT_CAP1_EN_R = crate::BitReader;
 #[doc = "Field `EVT_CAP1_EN` writer - set this bit high to enable capture1 event generate"]
-pub type EVT_CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_CAP1_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 #[doc = "Field `EVT_CAP2_EN` reader - set this bit high to enable capture2 event generate"]
-pub type EVT_CAP2_EN_R = crate::BitReader<bool>;
+pub type EVT_CAP2_EN_R = crate::BitReader;
 #[doc = "Field `EVT_CAP2_EN` writer - set this bit high to enable capture2 event generate"]
-pub type EVT_CAP2_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EVT_EN_SPEC, bool, O>;
+pub type EVT_CAP2_EN_W<'a, const O: u8> = crate::BitWriter<'a, EVT_EN_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - set this bit high to enable timer0 stop event generate"]
     #[inline(always)]
@@ -304,6 +304,121 @@ impl R {
     #[inline(always)]
     pub fn evt_cap2_en(&self) -> EVT_CAP2_EN_R {
         EVT_CAP2_EN_R::new(((self.bits >> 29) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EVT_EN")
+            .field(
+                "evt_timer0_stop_en",
+                &format_args!("{}", self.evt_timer0_stop_en().bit()),
+            )
+            .field(
+                "evt_timer1_stop_en",
+                &format_args!("{}", self.evt_timer1_stop_en().bit()),
+            )
+            .field(
+                "evt_timer2_stop_en",
+                &format_args!("{}", self.evt_timer2_stop_en().bit()),
+            )
+            .field(
+                "evt_timer0_tez_en",
+                &format_args!("{}", self.evt_timer0_tez_en().bit()),
+            )
+            .field(
+                "evt_timer1_tez_en",
+                &format_args!("{}", self.evt_timer1_tez_en().bit()),
+            )
+            .field(
+                "evt_timer2_tez_en",
+                &format_args!("{}", self.evt_timer2_tez_en().bit()),
+            )
+            .field(
+                "evt_timer0_tep_en",
+                &format_args!("{}", self.evt_timer0_tep_en().bit()),
+            )
+            .field(
+                "evt_timer1_tep_en",
+                &format_args!("{}", self.evt_timer1_tep_en().bit()),
+            )
+            .field(
+                "evt_timer2_tep_en",
+                &format_args!("{}", self.evt_timer2_tep_en().bit()),
+            )
+            .field(
+                "evt_op0_tea_en",
+                &format_args!("{}", self.evt_op0_tea_en().bit()),
+            )
+            .field(
+                "evt_op1_tea_en",
+                &format_args!("{}", self.evt_op1_tea_en().bit()),
+            )
+            .field(
+                "evt_op2_tea_en",
+                &format_args!("{}", self.evt_op2_tea_en().bit()),
+            )
+            .field(
+                "evt_op0_teb_en",
+                &format_args!("{}", self.evt_op0_teb_en().bit()),
+            )
+            .field(
+                "evt_op1_teb_en",
+                &format_args!("{}", self.evt_op1_teb_en().bit()),
+            )
+            .field(
+                "evt_op2_teb_en",
+                &format_args!("{}", self.evt_op2_teb_en().bit()),
+            )
+            .field("evt_f0_en", &format_args!("{}", self.evt_f0_en().bit()))
+            .field("evt_f1_en", &format_args!("{}", self.evt_f1_en().bit()))
+            .field("evt_f2_en", &format_args!("{}", self.evt_f2_en().bit()))
+            .field(
+                "evt_f0_clr_en",
+                &format_args!("{}", self.evt_f0_clr_en().bit()),
+            )
+            .field(
+                "evt_f1_clr_en",
+                &format_args!("{}", self.evt_f1_clr_en().bit()),
+            )
+            .field(
+                "evt_f2_clr_en",
+                &format_args!("{}", self.evt_f2_clr_en().bit()),
+            )
+            .field(
+                "evt_tz0_cbc_en",
+                &format_args!("{}", self.evt_tz0_cbc_en().bit()),
+            )
+            .field(
+                "evt_tz1_cbc_en",
+                &format_args!("{}", self.evt_tz1_cbc_en().bit()),
+            )
+            .field(
+                "evt_tz2_cbc_en",
+                &format_args!("{}", self.evt_tz2_cbc_en().bit()),
+            )
+            .field(
+                "evt_tz0_ost_en",
+                &format_args!("{}", self.evt_tz0_ost_en().bit()),
+            )
+            .field(
+                "evt_tz1_ost_en",
+                &format_args!("{}", self.evt_tz1_ost_en().bit()),
+            )
+            .field(
+                "evt_tz2_ost_en",
+                &format_args!("{}", self.evt_tz2_ost_en().bit()),
+            )
+            .field("evt_cap0_en", &format_args!("{}", self.evt_cap0_en().bit()))
+            .field("evt_cap1_en", &format_args!("{}", self.evt_cap1_en().bit()))
+            .field("evt_cap2_en", &format_args!("{}", self.evt_cap2_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<EVT_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

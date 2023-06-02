@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_DRAM0_PMS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - recorded core0 dram0 wr status, 1 means store, 0 means load."]
-pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader<bool>;
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN` reader - recorded core0 dram0 byteen status."]
 pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R = crate::FieldReader<u16, u16>;
 impl R {
@@ -31,6 +31,33 @@ impl R {
         &self,
     ) -> CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
         CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R::new(((self.bits >> 1) & 0xffff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CORE_0_DRAM0_PMS_MONITOR_3")
+            .field(
+                "core_0_dram0_pms_monitor_violate_status_wr",
+                &format_args!(
+                    "{}",
+                    self.core_0_dram0_pms_monitor_violate_status_wr().bit()
+                ),
+            )
+            .field(
+                "core_0_dram0_pms_monitor_violate_status_byteen",
+                &format_args!(
+                    "{}",
+                    self.core_0_dram0_pms_monitor_violate_status_byteen().bits()
+                ),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CORE_0_DRAM0_PMS_MONITOR_3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "core0 dram0 permission monitor configuration register 3.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [core_0_dram0_pms_monitor_3](index.html) module"]

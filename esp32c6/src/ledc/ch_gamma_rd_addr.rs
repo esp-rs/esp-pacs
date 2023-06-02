@@ -35,15 +35,31 @@ impl From<crate::W<CH_GAMMA_RD_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_GAMMA_RD_ADDR` reader - Ledc ch%s gamma ram read address."]
-pub type CH_GAMMA_RD_ADDR_R = crate::FieldReader<u8, u8>;
+pub type CH_GAMMA_RD_ADDR_R = crate::FieldReader;
 #[doc = "Field `CH_GAMMA_RD_ADDR` writer - Ledc ch%s gamma ram read address."]
-pub type CH_GAMMA_RD_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH_GAMMA_RD_ADDR_SPEC, u8, u8, 4, O>;
+pub type CH_GAMMA_RD_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, CH_GAMMA_RD_ADDR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Ledc ch%s gamma ram read address."]
     #[inline(always)]
     pub fn ch_gamma_rd_addr(&self) -> CH_GAMMA_RD_ADDR_R {
         CH_GAMMA_RD_ADDR_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CH_GAMMA_RD_ADDR")
+            .field(
+                "ch_gamma_rd_addr",
+                &format_args!("{}", self.ch_gamma_rd_addr().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CH_GAMMA_RD_ADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

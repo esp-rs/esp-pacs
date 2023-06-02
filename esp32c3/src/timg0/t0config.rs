@@ -35,31 +35,31 @@ impl From<crate::W<T0CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `USE_XTAL` reader - reg_t0_use_xtal."]
-pub type USE_XTAL_R = crate::BitReader<bool>;
+pub type USE_XTAL_R = crate::BitReader;
 #[doc = "Field `USE_XTAL` writer - reg_t0_use_xtal."]
-pub type USE_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type USE_XTAL_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `ALARM_EN` reader - reg_t0_alarm_en."]
-pub type ALARM_EN_R = crate::BitReader<bool>;
+pub type ALARM_EN_R = crate::BitReader;
 #[doc = "Field `ALARM_EN` writer - reg_t0_alarm_en."]
-pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `DIVCNT_RST` writer - reg_t0_divcnt_rst."]
-pub type DIVCNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type DIVCNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `DIVIDER` reader - reg_t0_divider."]
 pub type DIVIDER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DIVIDER` writer - reg_t0_divider."]
-pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, T0CONFIG_SPEC, u16, u16, 16, O>;
+pub type DIVIDER_W<'a, const O: u8> = crate::FieldWriter<'a, T0CONFIG_SPEC, 16, O, u16, u16>;
 #[doc = "Field `AUTORELOAD` reader - reg_t0_autoreload."]
-pub type AUTORELOAD_R = crate::BitReader<bool>;
+pub type AUTORELOAD_R = crate::BitReader;
 #[doc = "Field `AUTORELOAD` writer - reg_t0_autoreload."]
-pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type AUTORELOAD_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `INCREASE` reader - reg_t0_increase."]
-pub type INCREASE_R = crate::BitReader<bool>;
+pub type INCREASE_R = crate::BitReader;
 #[doc = "Field `INCREASE` writer - reg_t0_increase."]
-pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type INCREASE_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 #[doc = "Field `EN` reader - reg_t0_en."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - reg_t0_en."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, T0CONFIG_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, T0CONFIG_SPEC, O>;
 impl R {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
@@ -90,6 +90,25 @@ impl R {
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("T0CONFIG")
+            .field("use_xtal", &format_args!("{}", self.use_xtal().bit()))
+            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
+            .field("divider", &format_args!("{}", self.divider().bits()))
+            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
+            .field("increase", &format_args!("{}", self.increase().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<T0CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

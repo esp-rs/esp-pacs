@@ -35,29 +35,29 @@ impl From<crate::W<SER_AFIFO_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
-pub type SERIAL_IN_AFIFO_RESET_WR_R = crate::BitReader<bool>;
+pub type SERIAL_IN_AFIFO_RESET_WR_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
 pub type SERIAL_IN_AFIFO_RESET_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
+    crate::BitWriter<'a, SER_AFIFO_CONFIG_SPEC, O>;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
-pub type SERIAL_IN_AFIFO_RESET_RD_R = crate::BitReader<bool>;
+pub type SERIAL_IN_AFIFO_RESET_RD_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
 pub type SERIAL_IN_AFIFO_RESET_RD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
+    crate::BitWriter<'a, SER_AFIFO_CONFIG_SPEC, O>;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` reader - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
-pub type SERIAL_OUT_AFIFO_RESET_WR_R = crate::BitReader<bool>;
+pub type SERIAL_OUT_AFIFO_RESET_WR_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_WR` writer - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
 pub type SERIAL_OUT_AFIFO_RESET_WR_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
+    crate::BitWriter<'a, SER_AFIFO_CONFIG_SPEC, O>;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` reader - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
-pub type SERIAL_OUT_AFIFO_RESET_RD_R = crate::BitReader<bool>;
+pub type SERIAL_OUT_AFIFO_RESET_RD_R = crate::BitReader;
 #[doc = "Field `SERIAL_OUT_AFIFO_RESET_RD` writer - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
 pub type SERIAL_OUT_AFIFO_RESET_RD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SER_AFIFO_CONFIG_SPEC, bool, O>;
+    crate::BitWriter<'a, SER_AFIFO_CONFIG_SPEC, O>;
 #[doc = "Field `SERIAL_OUT_AFIFO_REMPTY` reader - CDC_ACM OUTOUT async FIFO empty signal in read clock domain."]
-pub type SERIAL_OUT_AFIFO_REMPTY_R = crate::BitReader<bool>;
+pub type SERIAL_OUT_AFIFO_REMPTY_R = crate::BitReader;
 #[doc = "Field `SERIAL_IN_AFIFO_WFULL` reader - CDC_ACM OUT IN async FIFO empty signal in write clock domain."]
-pub type SERIAL_IN_AFIFO_WFULL_R = crate::BitReader<bool>;
+pub type SERIAL_IN_AFIFO_WFULL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
     #[inline(always)]
@@ -88,6 +88,43 @@ impl R {
     #[inline(always)]
     pub fn serial_in_afifo_wfull(&self) -> SERIAL_IN_AFIFO_WFULL_R {
         SERIAL_IN_AFIFO_WFULL_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SER_AFIFO_CONFIG")
+            .field(
+                "serial_in_afifo_reset_wr",
+                &format_args!("{}", self.serial_in_afifo_reset_wr().bit()),
+            )
+            .field(
+                "serial_in_afifo_reset_rd",
+                &format_args!("{}", self.serial_in_afifo_reset_rd().bit()),
+            )
+            .field(
+                "serial_out_afifo_reset_wr",
+                &format_args!("{}", self.serial_out_afifo_reset_wr().bit()),
+            )
+            .field(
+                "serial_out_afifo_reset_rd",
+                &format_args!("{}", self.serial_out_afifo_reset_rd().bit()),
+            )
+            .field(
+                "serial_out_afifo_rempty",
+                &format_args!("{}", self.serial_out_afifo_rempty().bit()),
+            )
+            .field(
+                "serial_in_afifo_wfull",
+                &format_args!("{}", self.serial_in_afifo_wfull().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SER_AFIFO_CONFIG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

@@ -35,15 +35,32 @@ impl From<crate::W<ADC_INV_PHASE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_ADC_INV_PHASE_ENA` reader - xxxx"]
-pub type CLK_ADC_INV_PHASE_ENA_R = crate::BitReader<bool>;
+pub type CLK_ADC_INV_PHASE_ENA_R = crate::BitReader;
 #[doc = "Field `CLK_ADC_INV_PHASE_ENA` writer - xxxx"]
 pub type CLK_ADC_INV_PHASE_ENA_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, ADC_INV_PHASE_CONF_SPEC, bool, O>;
+    crate::BitWriter<'a, ADC_INV_PHASE_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
     pub fn clk_adc_inv_phase_ena(&self) -> CLK_ADC_INV_PHASE_ENA_R {
         CLK_ADC_INV_PHASE_ENA_R::new((self.bits & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ADC_INV_PHASE_CONF")
+            .field(
+                "clk_adc_inv_phase_ena",
+                &format_args!("{}", self.clk_adc_inv_phase_ena().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ADC_INV_PHASE_CONF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

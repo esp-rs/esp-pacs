@@ -14,11 +14,11 @@ impl From<crate::R<ERR_CODE_CAP_SPEC>> for R {
     }
 }
 #[doc = "Field `ECC_SEGMENT` reader - This register contains information about the location of errors, see Table 181 for details."]
-pub type ECC_SEGMENT_R = crate::FieldReader<u8, u8>;
+pub type ECC_SEGMENT_R = crate::FieldReader;
 #[doc = "Field `ECC_DIRECTION` reader - This register contains information about transmission direction of the node when error occurs. 1: Error occurs when receiving a message; 0: Error occurs when transmitting a message"]
-pub type ECC_DIRECTION_R = crate::BitReader<bool>;
+pub type ECC_DIRECTION_R = crate::BitReader;
 #[doc = "Field `ECC_TYPE` reader - This register contains information about error types: 00: bit error; 01: form error; 10: stuff error; 11: other type of error"]
-pub type ECC_TYPE_R = crate::FieldReader<u8, u8>;
+pub type ECC_TYPE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4 - This register contains information about the location of errors, see Table 181 for details."]
     #[inline(always)]
@@ -34,6 +34,28 @@ impl R {
     #[inline(always)]
     pub fn ecc_type(&self) -> ECC_TYPE_R {
         ECC_TYPE_R::new(((self.bits >> 6) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ERR_CODE_CAP")
+            .field(
+                "ecc_segment",
+                &format_args!("{}", self.ecc_segment().bits()),
+            )
+            .field(
+                "ecc_direction",
+                &format_args!("{}", self.ecc_direction().bit()),
+            )
+            .field("ecc_type", &format_args!("{}", self.ecc_type().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<ERR_CODE_CAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Error Code Capture Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [err_code_cap](index.html) module"]

@@ -35,14 +35,28 @@ impl From<crate::W<CG_SPEC>> for W {
     }
 }
 #[doc = "Field `SD_CLK_EN` reader - "]
-pub type SD_CLK_EN_R = crate::BitReader<bool>;
+pub type SD_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SD_CLK_EN` writer - "]
-pub type SD_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CG_SPEC, bool, O>;
+pub type SD_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, CG_SPEC, O>;
 impl R {
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn sd_clk_en(&self) -> SD_CLK_EN_R {
         SD_CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CG")
+            .field("sd_clk_en", &format_args!("{}", self.sd_clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

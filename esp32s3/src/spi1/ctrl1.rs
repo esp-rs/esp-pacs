@@ -35,14 +35,13 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
+pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 2, O>;
+pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 2, O>;
 #[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
 pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
-pub type CS_HOLD_DLY_RES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL1_SPEC, u16, u16, 10, O>;
+pub type CS_HOLD_DLY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 10, O, u16, u16>;
 impl R {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
@@ -53,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn cs_hold_dly_res(&self) -> CS_HOLD_DLY_RES_R {
         CS_HOLD_DLY_RES_R::new(((self.bits >> 2) & 0x03ff) as u16)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .field(
+                "cs_hold_dly_res",
+                &format_args!("{}", self.cs_hold_dly_res().bits()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

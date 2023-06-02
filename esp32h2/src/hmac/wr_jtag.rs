@@ -20,7 +20,13 @@ impl From<crate::W<WR_JTAG_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_JTAG` writer - 32-bit of key to be compared."]
-pub type WR_JTAG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WR_JTAG_SPEC, u32, u32, 32, O>;
+pub type WR_JTAG_W<'a, const O: u8> = crate::FieldWriter<'a, WR_JTAG_SPEC, 32, O, u32, u32>;
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<WR_JTAG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - 32-bit of key to be compared."]
     #[inline(always)]

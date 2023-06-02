@@ -37,39 +37,39 @@ impl From<crate::W<APP_DCACHE_DBUG3_SPEC>> for W {
 #[doc = "Field `APP_MMU_RDATA` reader - "]
 pub type APP_MMU_RDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_R = crate::FieldReader<u8, u8>;
+pub type APP_CPU_DISABLED_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_OPPOSITE` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DRAM1` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DRAM1` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_DRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IROM0` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IROM0` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM1` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM1` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IRAM1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM0` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_IRAM0` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_IRAM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DROM0` reader - "]
-pub type APP_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader<bool>;
+pub type APP_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader;
 #[doc = "Field `APP_CPU_DISABLED_CACHE_IA_DROM0` writer - "]
 pub type APP_CPU_DISABLED_CACHE_IA_DROM0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, APP_DCACHE_DBUG3_SPEC, bool, O>;
+    crate::BitWriter<'a, APP_DCACHE_DBUG3_SPEC, O>;
 #[doc = "Field `APP_CACHE_IRAM0_PID_ERROR` reader - "]
-pub type APP_CACHE_IRAM0_PID_ERROR_R = crate::BitReader<bool>;
+pub type APP_CACHE_IRAM0_PID_ERROR_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -115,6 +115,55 @@ impl R {
     #[inline(always)]
     pub fn app_cache_iram0_pid_error(&self) -> APP_CACHE_IRAM0_PID_ERROR_R {
         APP_CACHE_IRAM0_PID_ERROR_R::new(((self.bits >> 15) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APP_DCACHE_DBUG3")
+            .field(
+                "app_mmu_rdata",
+                &format_args!("{}", self.app_mmu_rdata().bits()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia().bits()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_opposite",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_opposite().bit()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_dram1",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_dram1().bit()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_irom0",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_irom0().bit()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_iram1",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_iram1().bit()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_iram0",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_iram0().bit()),
+            )
+            .field(
+                "app_cpu_disabled_cache_ia_drom0",
+                &format_args!("{}", self.app_cpu_disabled_cache_ia_drom0().bit()),
+            )
+            .field(
+                "app_cache_iram0_pid_error",
+                &format_args!("{}", self.app_cache_iram0_pid_error().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<APP_DCACHE_DBUG3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

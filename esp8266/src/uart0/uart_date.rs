@@ -37,13 +37,26 @@ impl From<crate::W<UART_DATE_SPEC>> for W {
 #[doc = "Field `uart_date` reader - UART HW INFO"]
 pub type UART_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `uart_date` writer - UART HW INFO"]
-pub type UART_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UART_DATE_SPEC, u32, u32, 32, O>;
+pub type UART_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, UART_DATE_SPEC, 32, O, u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - UART HW INFO"]
     #[inline(always)]
     pub fn uart_date(&self) -> UART_DATE_R {
         UART_DATE_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UART_DATE")
+            .field("uart_date", &format_args!("{}", self.uart_date().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<UART_DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

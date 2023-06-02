@@ -14,21 +14,21 @@ impl From<crate::R<INTR_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO0` reader - This interrupt raw bit turns to high level when dedicated GPIO0 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO0_R = crate::BitReader<bool>;
+pub type GPIO0_R = crate::BitReader;
 #[doc = "Field `GPIO1` reader - This interrupt raw bit turns to high level when dedicated GPIO1 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO1_R = crate::BitReader<bool>;
+pub type GPIO1_R = crate::BitReader;
 #[doc = "Field `GPIO2` reader - This interrupt raw bit turns to high level when dedicated GPIO2 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO2_R = crate::BitReader<bool>;
+pub type GPIO2_R = crate::BitReader;
 #[doc = "Field `GPIO3` reader - This interrupt raw bit turns to high level when dedicated GPIO3 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO3_R = crate::BitReader<bool>;
+pub type GPIO3_R = crate::BitReader;
 #[doc = "Field `GPIO4` reader - This interrupt raw bit turns to high level when dedicated GPIO4 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO4_R = crate::BitReader<bool>;
+pub type GPIO4_R = crate::BitReader;
 #[doc = "Field `GPIO5` reader - This interrupt raw bit turns to high level when dedicated GPIO5 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO5_R = crate::BitReader<bool>;
+pub type GPIO5_R = crate::BitReader;
 #[doc = "Field `GPIO6` reader - This interrupt raw bit turns to high level when dedicated GPIO6 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO6_R = crate::BitReader<bool>;
+pub type GPIO6_R = crate::BitReader;
 #[doc = "Field `GPIO7` reader - This interrupt raw bit turns to high level when dedicated GPIO7 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub type GPIO7_R = crate::BitReader<bool>;
+pub type GPIO7_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when dedicated GPIO0 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]
@@ -69,6 +69,27 @@ impl R {
     #[inline(always)]
     pub fn gpio7(&self) -> GPIO7_R {
         GPIO7_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTR_RAW")
+            .field("gpio0", &format_args!("{}", self.gpio0().bit()))
+            .field("gpio1", &format_args!("{}", self.gpio1().bit()))
+            .field("gpio2", &format_args!("{}", self.gpio2().bit()))
+            .field("gpio3", &format_args!("{}", self.gpio3().bit()))
+            .field("gpio4", &format_args!("{}", self.gpio4().bit()))
+            .field("gpio5", &format_args!("{}", self.gpio5().bit()))
+            .field("gpio6", &format_args!("{}", self.gpio6().bit()))
+            .field("gpio7", &format_args!("{}", self.gpio7().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<INTR_RAW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "Raw interrupt status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr_raw](index.html) module"]

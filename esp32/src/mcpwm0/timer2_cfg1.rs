@@ -35,15 +35,13 @@ impl From<crate::W<TIMER2_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER2_START` reader - "]
-pub type TIMER2_START_R = crate::FieldReader<u8, u8>;
+pub type TIMER2_START_R = crate::FieldReader;
 #[doc = "Field `TIMER2_START` writer - "]
-pub type TIMER2_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER2_CFG1_SPEC, u8, u8, 3, O>;
+pub type TIMER2_START_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG1_SPEC, 3, O>;
 #[doc = "Field `TIMER2_MOD` reader - "]
-pub type TIMER2_MOD_R = crate::FieldReader<u8, u8>;
+pub type TIMER2_MOD_R = crate::FieldReader;
 #[doc = "Field `TIMER2_MOD` writer - "]
-pub type TIMER2_MOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, TIMER2_CFG1_SPEC, u8, u8, 2, O>;
+pub type TIMER2_MOD_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -54,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn timer2_mod(&self) -> TIMER2_MOD_R {
         TIMER2_MOD_R::new(((self.bits >> 3) & 3) as u8)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIMER2_CFG1")
+            .field(
+                "timer2_start",
+                &format_args!("{}", self.timer2_start().bits()),
+            )
+            .field("timer2_mod", &format_args!("{}", self.timer2_mod().bits()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<TIMER2_CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

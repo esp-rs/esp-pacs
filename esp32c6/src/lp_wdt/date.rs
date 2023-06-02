@@ -37,11 +37,11 @@ impl From<crate::W<DATE_SPEC>> for W {
 #[doc = "Field `LP_WDT_DATE` reader - need_des"]
 pub type LP_WDT_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LP_WDT_DATE` writer - need_des"]
-pub type LP_WDT_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 31, O>;
+pub type LP_WDT_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 31, O, u32, u32>;
 #[doc = "Field `CLK_EN` reader - need_des"]
-pub type CLK_EN_R = crate::BitReader<bool>;
+pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - need_des"]
-pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, DATE_SPEC, bool, O>;
+pub type CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, DATE_SPEC, O>;
 impl R {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
@@ -52,6 +52,24 @@ impl R {
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATE")
+            .field(
+                "lp_wdt_date",
+                &format_args!("{}", self.lp_wdt_date().bits()),
+            )
+            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

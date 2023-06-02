@@ -35,78 +35,69 @@ impl From<crate::W<SPI_MEM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_FDUMMY_RIN` reader - In the dummy phase of a MSPI read data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_FDUMMY_RIN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDUMMY_RIN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDUMMY_RIN` writer - In the dummy phase of a MSPI read data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_FDUMMY_RIN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDUMMY_RIN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDUMMY_WOUT` reader - In the dummy phase of a MSPI write data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_FDUMMY_WOUT_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDUMMY_WOUT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDUMMY_WOUT` writer - In the dummy phase of a MSPI write data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
-pub type SPI_MEM_FDUMMY_WOUT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FDUMMY_WOUT_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FDOUT_OCT` reader - Apply 8 signals during write-data phase 1:enable 0: disable"]
-pub type SPI_MEM_FDOUT_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDOUT_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FDIN_OCT` reader - Apply 8 signals during read-data phase 1:enable 0: disable"]
-pub type SPI_MEM_FDIN_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_FDIN_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FADDR_OCT` reader - Apply 8 signals during address phase 1:enable 0: disable"]
-pub type SPI_MEM_FADDR_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_FADDR_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FCMD_QUAD` reader - Apply 4 signals during command phase 1:enable 0: disable"]
-pub type SPI_MEM_FCMD_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FCMD_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FCMD_QUAD` writer - Apply 4 signals during command phase 1:enable 0: disable"]
-pub type SPI_MEM_FCMD_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FCMD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FCMD_OCT` reader - Apply 8 signals during command phase 1:enable 0: disable"]
-pub type SPI_MEM_FCMD_OCT_R = crate::BitReader<bool>;
+pub type SPI_MEM_FCMD_OCT_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FCS_CRC_EN` reader - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
-pub type SPI_MEM_FCS_CRC_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_FCS_CRC_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_TX_CRC_EN` reader - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
-pub type SPI_MEM_TX_CRC_EN_R = crate::BitReader<bool>;
+pub type SPI_MEM_TX_CRC_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FASTRD_MODE` reader - This bit enable the bits: spi_mem_fread_qio, spi_mem_fread_dio, spi_mem_fread_qout and spi_mem_fread_dout. 1: enable 0: disable."]
-pub type SPI_MEM_FASTRD_MODE_R = crate::BitReader<bool>;
+pub type SPI_MEM_FASTRD_MODE_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FASTRD_MODE` writer - This bit enable the bits: spi_mem_fread_qio, spi_mem_fread_dio, spi_mem_fread_qout and spi_mem_fread_dout. 1: enable 0: disable."]
-pub type SPI_MEM_FASTRD_MODE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FASTRD_MODE_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FREAD_DUAL` reader - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_DUAL_R = crate::BitReader<bool>;
+pub type SPI_MEM_FREAD_DUAL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FREAD_DUAL` writer - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_DUAL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FREAD_DUAL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_RESANDRES` reader - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
-pub type SPI_MEM_RESANDRES_R = crate::BitReader<bool>;
+pub type SPI_MEM_RESANDRES_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RESANDRES` writer - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
-pub type SPI_MEM_RESANDRES_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_RESANDRES_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_Q_POL` reader - The bit is used to set MISO line polarity, 1: high 0, low"]
-pub type SPI_MEM_Q_POL_R = crate::BitReader<bool>;
+pub type SPI_MEM_Q_POL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_Q_POL` writer - The bit is used to set MISO line polarity, 1: high 0, low"]
-pub type SPI_MEM_Q_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_Q_POL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_D_POL` reader - The bit is used to set MOSI line polarity, 1: high 0, low"]
-pub type SPI_MEM_D_POL_R = crate::BitReader<bool>;
+pub type SPI_MEM_D_POL_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_D_POL` writer - The bit is used to set MOSI line polarity, 1: high 0, low"]
-pub type SPI_MEM_D_POL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_D_POL_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FREAD_QUAD` reader - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_QUAD_R = crate::BitReader<bool>;
+pub type SPI_MEM_FREAD_QUAD_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FREAD_QUAD` writer - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_QUAD_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FREAD_QUAD_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WP` reader - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
-pub type SPI_MEM_WP_R = crate::BitReader<bool>;
+pub type SPI_MEM_WP_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WP` writer - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
-pub type SPI_MEM_WP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_WP_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_WRSR_2B` reader - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
-pub type SPI_MEM_WRSR_2B_R = crate::BitReader<bool>;
+pub type SPI_MEM_WRSR_2B_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_WRSR_2B` writer - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
-pub type SPI_MEM_WRSR_2B_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_WRSR_2B_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FREAD_DIO` reader - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_DIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_FREAD_DIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FREAD_DIO` writer - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_DIO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FREAD_DIO_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 #[doc = "Field `SPI_MEM_FREAD_QIO` reader - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_QIO_R = crate::BitReader<bool>;
+pub type SPI_MEM_FREAD_QIO_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_FREAD_QIO` writer - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
-pub type SPI_MEM_FREAD_QIO_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, SPI_MEM_CTRL_SPEC, bool, O>;
+pub type SPI_MEM_FREAD_QIO_W<'a, const O: u8> = crate::BitWriter<'a, SPI_MEM_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 2 - In the dummy phase of a MSPI read data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
@@ -202,6 +193,92 @@ impl R {
     #[inline(always)]
     pub fn spi_mem_fread_qio(&self) -> SPI_MEM_FREAD_QIO_R {
         SPI_MEM_FREAD_QIO_R::new(((self.bits >> 24) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPI_MEM_CTRL")
+            .field(
+                "spi_mem_fdummy_rin",
+                &format_args!("{}", self.spi_mem_fdummy_rin().bit()),
+            )
+            .field(
+                "spi_mem_fdummy_wout",
+                &format_args!("{}", self.spi_mem_fdummy_wout().bit()),
+            )
+            .field(
+                "spi_mem_fdout_oct",
+                &format_args!("{}", self.spi_mem_fdout_oct().bit()),
+            )
+            .field(
+                "spi_mem_fdin_oct",
+                &format_args!("{}", self.spi_mem_fdin_oct().bit()),
+            )
+            .field(
+                "spi_mem_faddr_oct",
+                &format_args!("{}", self.spi_mem_faddr_oct().bit()),
+            )
+            .field(
+                "spi_mem_fcmd_quad",
+                &format_args!("{}", self.spi_mem_fcmd_quad().bit()),
+            )
+            .field(
+                "spi_mem_fcmd_oct",
+                &format_args!("{}", self.spi_mem_fcmd_oct().bit()),
+            )
+            .field(
+                "spi_mem_fcs_crc_en",
+                &format_args!("{}", self.spi_mem_fcs_crc_en().bit()),
+            )
+            .field(
+                "spi_mem_tx_crc_en",
+                &format_args!("{}", self.spi_mem_tx_crc_en().bit()),
+            )
+            .field(
+                "spi_mem_fastrd_mode",
+                &format_args!("{}", self.spi_mem_fastrd_mode().bit()),
+            )
+            .field(
+                "spi_mem_fread_dual",
+                &format_args!("{}", self.spi_mem_fread_dual().bit()),
+            )
+            .field(
+                "spi_mem_resandres",
+                &format_args!("{}", self.spi_mem_resandres().bit()),
+            )
+            .field(
+                "spi_mem_q_pol",
+                &format_args!("{}", self.spi_mem_q_pol().bit()),
+            )
+            .field(
+                "spi_mem_d_pol",
+                &format_args!("{}", self.spi_mem_d_pol().bit()),
+            )
+            .field(
+                "spi_mem_fread_quad",
+                &format_args!("{}", self.spi_mem_fread_quad().bit()),
+            )
+            .field("spi_mem_wp", &format_args!("{}", self.spi_mem_wp().bit()))
+            .field(
+                "spi_mem_wrsr_2b",
+                &format_args!("{}", self.spi_mem_wrsr_2b().bit()),
+            )
+            .field(
+                "spi_mem_fread_dio",
+                &format_args!("{}", self.spi_mem_fread_dio().bit()),
+            )
+            .field(
+                "spi_mem_fread_qio",
+                &format_args!("{}", self.spi_mem_fread_qio().bit()),
+            )
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {

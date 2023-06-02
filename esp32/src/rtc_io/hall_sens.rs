@@ -35,13 +35,13 @@ impl From<crate::W<HALL_SENS_SPEC>> for W {
     }
 }
 #[doc = "Field `HALL_PHASE` reader - Reverse phase of hall sensor"]
-pub type HALL_PHASE_R = crate::BitReader<bool>;
+pub type HALL_PHASE_R = crate::BitReader;
 #[doc = "Field `HALL_PHASE` writer - Reverse phase of hall sensor"]
-pub type HALL_PHASE_W<'a, const O: u8> = crate::BitWriter<'a, u32, HALL_SENS_SPEC, bool, O>;
+pub type HALL_PHASE_W<'a, const O: u8> = crate::BitWriter<'a, HALL_SENS_SPEC, O>;
 #[doc = "Field `XPD_HALL` reader - Power on hall sensor and connect to VP and VN"]
-pub type XPD_HALL_R = crate::BitReader<bool>;
+pub type XPD_HALL_R = crate::BitReader;
 #[doc = "Field `XPD_HALL` writer - Power on hall sensor and connect to VP and VN"]
-pub type XPD_HALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HALL_SENS_SPEC, bool, O>;
+pub type XPD_HALL_W<'a, const O: u8> = crate::BitWriter<'a, HALL_SENS_SPEC, O>;
 impl R {
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
@@ -52,6 +52,21 @@ impl R {
     #[inline(always)]
     pub fn xpd_hall(&self) -> XPD_HALL_R {
         XPD_HALL_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HALL_SENS")
+            .field("hall_phase", &format_args!("{}", self.hall_phase().bit()))
+            .field("xpd_hall", &format_args!("{}", self.xpd_hall().bit()))
+            .finish()
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for crate::generic::Reg<HALL_SENS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
