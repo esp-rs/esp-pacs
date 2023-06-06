@@ -42,15 +42,15 @@ pub type PERI_BACKUP_BURST_LIMIT_R = crate::FieldReader;
 pub type PERI_BACKUP_BURST_LIMIT_W<'a, const O: u8> =
     crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 5, O>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` reader - reg_peri_backup_tout_thres"]
-pub type PERI_BACKUP_TOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type PERI_BACKUP_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` writer - reg_peri_backup_tout_thres"]
 pub type PERI_BACKUP_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` reader - reg_peri_backup_size"]
-pub type PERI_BACKUP_SIZE_R = crate::FieldReader<u16, u16>;
+pub type PERI_BACKUP_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` writer - reg_peri_backup_size"]
 pub type PERI_BACKUP_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, PERI_BACKUP_CONFIG_SPEC, 10, O, u16>;
 #[doc = "Field `PERI_BACKUP_START` writer - reg_peri_backup_start"]
 pub type PERI_BACKUP_START_W<'a, const O: u8> = crate::BitWriter<'a, PERI_BACKUP_CONFIG_SPEC, O>;
 #[doc = "Field `PERI_BACKUP_TO_MEM` reader - reg_peri_backup_to_mem"]

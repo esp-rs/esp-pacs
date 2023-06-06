@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_MESSAGE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_MESSAGE_ADDR` reader - This field is used to set address that need to write when enter WORLD0"]
-pub type CORE_1_MESSAGE_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_MESSAGE_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_MESSAGE_ADDR` writer - This field is used to set address that need to write when enter WORLD0"]
 pub type CORE_1_MESSAGE_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_MESSAGE_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_1_MESSAGE_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
     #[inline(always)]

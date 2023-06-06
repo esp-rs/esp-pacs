@@ -35,10 +35,10 @@ impl From<crate::W<INTERRUPT_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT_REG_DATE` reader - reg_core0_interrupt_reg_date"]
-pub type INTERRUPT_REG_DATE_R = crate::FieldReader<u32, u32>;
+pub type INTERRUPT_REG_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `INTERRUPT_REG_DATE` writer - reg_core0_interrupt_reg_date"]
 pub type INTERRUPT_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, INTERRUPT_REG_DATE_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, INTERRUPT_REG_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - reg_core0_interrupt_reg_date"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<HOST_SLCHOSTDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLCHOST_DATE` reader - "]
-pub type HOST_SLCHOST_DATE_R = crate::FieldReader<u32, u32>;
+pub type HOST_SLCHOST_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `HOST_SLCHOST_DATE` writer - "]
 pub type HOST_SLCHOST_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HOST_SLCHOSTDATE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, HOST_SLCHOSTDATE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

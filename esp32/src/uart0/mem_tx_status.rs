@@ -14,7 +14,7 @@ impl From<crate::R<MEM_TX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_TX_STATUS` reader - "]
-pub type MEM_TX_STATUS_R = crate::FieldReader<u32, u32>;
+pub type MEM_TX_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<SLV_RD_BYTE_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_DATA_BYTELEN` reader - The full-duplex or half-duplex data byte length of the last SPI transfer in slave mode. In half-duplex mode, this value is controlled by bits \\[23:20\\]."]
-pub type SLV_DATA_BYTELEN_R = crate::FieldReader<u32, u32>;
+pub type SLV_DATA_BYTELEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_DATA_BYTELEN` writer - The full-duplex or half-duplex data byte length of the last SPI transfer in slave mode. In half-duplex mode, this value is controlled by bits \\[23:20\\]."]
-pub type SLV_DATA_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLV_RD_BYTE_SPEC, 20, O, u32, u32>;
+pub type SLV_DATA_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_RD_BYTE_SPEC, 20, O, u32>;
 #[doc = "Field `SLV_RDDMA_BYTELEN_EN` reader - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
 pub type SLV_RDDMA_BYTELEN_EN_R = crate::BitReader;
 #[doc = "Field `SLV_RDDMA_BYTELEN_EN` writer - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]

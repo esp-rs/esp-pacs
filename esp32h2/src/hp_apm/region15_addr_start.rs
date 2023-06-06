@@ -35,10 +35,10 @@ impl From<crate::W<REGION15_ADDR_START_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION15_ADDR_START` reader - Start address of region15"]
-pub type REGION15_ADDR_START_R = crate::FieldReader<u32, u32>;
+pub type REGION15_ADDR_START_R = crate::FieldReader<u32>;
 #[doc = "Field `REGION15_ADDR_START` writer - Start address of region15"]
 pub type REGION15_ADDR_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGION15_ADDR_START_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, REGION15_ADDR_START_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start address of region15"]
     #[inline(always)]

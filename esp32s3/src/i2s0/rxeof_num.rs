@@ -35,9 +35,9 @@ impl From<crate::W<RXEOF_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EOF_NUM` reader - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
-pub type RX_EOF_NUM_R = crate::FieldReader<u16, u16>;
+pub type RX_EOF_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_EOF_NUM` writer - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
-pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 12, O, u16, u16>;
+pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - The receive data bit length is (I2S_RX_BITS_MOD\\[4:0\\] + 1) * (REG_RX_EOF_NUM\\[11:0\\] + 1) . It will trigger in_suc_eof interrupt in the configured DMA RX channel."]
     #[inline(always)]

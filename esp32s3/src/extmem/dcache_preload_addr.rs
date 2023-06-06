@@ -35,10 +35,10 @@ impl From<crate::W<DCACHE_PRELOAD_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_PRELOAD_ADDR` reader - The bits are used to configure the start virtual address for preload operation. It should be combined with DCACHE_PRELOAD_SIZE_REG."]
-pub type DCACHE_PRELOAD_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DCACHE_PRELOAD_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DCACHE_PRELOAD_ADDR` writer - The bits are used to configure the start virtual address for preload operation. It should be combined with DCACHE_PRELOAD_SIZE_REG."]
 pub type DCACHE_PRELOAD_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DCACHE_PRELOAD_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, DCACHE_PRELOAD_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for preload operation. It should be combined with DCACHE_PRELOAD_SIZE_REG."]
     #[inline(always)]

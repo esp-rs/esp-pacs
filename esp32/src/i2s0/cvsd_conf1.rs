@@ -35,15 +35,13 @@ impl From<crate::W<CVSD_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_SIGMA_MAX` reader - "]
-pub type CVSD_SIGMA_MAX_R = crate::FieldReader<u16, u16>;
+pub type CVSD_SIGMA_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSD_SIGMA_MAX` writer - "]
-pub type CVSD_SIGMA_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16, u16>;
+pub type CVSD_SIGMA_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16>;
 #[doc = "Field `CVSD_SIGMA_MIN` reader - "]
-pub type CVSD_SIGMA_MIN_R = crate::FieldReader<u16, u16>;
+pub type CVSD_SIGMA_MIN_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSD_SIGMA_MIN` writer - "]
-pub type CVSD_SIGMA_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16, u16>;
+pub type CVSD_SIGMA_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

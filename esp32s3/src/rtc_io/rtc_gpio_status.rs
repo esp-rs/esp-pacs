@@ -35,9 +35,9 @@ impl From<crate::W<RTC_GPIO_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `INT` reader - RTC GPIO 0 ~ 21 interrupt status"]
-pub type INT_R = crate::FieldReader<u32, u32>;
+pub type INT_R = crate::FieldReader<u32>;
 #[doc = "Field `INT` writer - RTC GPIO 0 ~ 21 interrupt status"]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_STATUS_SPEC, 22, O, u32, u32>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_STATUS_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<MAC_DUMP_1_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_DUMP_CONNECT` reader - Configure MAC dump connection."]
-pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16, u16>;
+pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16>;
 #[doc = "Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection."]
-pub type MAC_DUMP_CONNECT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MAC_DUMP_1_SPEC, 12, O, u16, u16>;
+pub type MAC_DUMP_CONNECT_W<'a, const O: u8> = crate::FieldWriter<'a, MAC_DUMP_1_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]

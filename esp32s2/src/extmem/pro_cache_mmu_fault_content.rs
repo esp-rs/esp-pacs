@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CACHE_MMU_FAULT_CONTENT_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CACHE_MMU_FAULT_CONTENT` reader - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
-pub type PRO_CACHE_MMU_FAULT_CONTENT_R = crate::FieldReader<u32, u32>;
+pub type PRO_CACHE_MMU_FAULT_CONTENT_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_CACHE_MMU_FAULT_CODE` reader - The bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: flush, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx"]
 pub type PRO_CACHE_MMU_FAULT_CODE_R = crate::FieldReader;
 impl R {

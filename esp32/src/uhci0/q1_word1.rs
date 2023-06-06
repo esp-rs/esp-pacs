@@ -35,9 +35,9 @@ impl From<crate::W<Q1_WORD1_SPEC>> for W {
     }
 }
 #[doc = "Field `SEND_Q1_WORD1` reader - This register stores the content of short packet's second dword"]
-pub type SEND_Q1_WORD1_R = crate::FieldReader<u32, u32>;
+pub type SEND_Q1_WORD1_R = crate::FieldReader<u32>;
 #[doc = "Field `SEND_Q1_WORD1` writer - This register stores the content of short packet's second dword"]
-pub type SEND_Q1_WORD1_W<'a, const O: u8> = crate::FieldWriter<'a, Q1_WORD1_SPEC, 32, O, u32, u32>;
+pub type SEND_Q1_WORD1_W<'a, const O: u8> = crate::FieldWriter<'a, Q1_WORD1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the content of short packet's second dword"]
     #[inline(always)]

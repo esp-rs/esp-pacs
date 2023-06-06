@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK2_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_ID_HIGH` reader - Store the bit \\[31:47\\] of MAC."]
-pub type MAC_ID_HIGH_R = crate::FieldReader<u16, u16>;
+pub type MAC_ID_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `WAFER_VERSION` reader - Store wafer version."]
 pub type WAFER_VERSION_R = crate::FieldReader;
 #[doc = "Field `PKG_VERSION` reader - Store package version."]

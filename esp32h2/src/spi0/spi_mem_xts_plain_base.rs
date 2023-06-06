@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_XTS_PLAIN_BASE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_XTS_PLAIN` reader - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
-pub type SPI_XTS_PLAIN_R = crate::FieldReader<u32, u32>;
+pub type SPI_XTS_PLAIN_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_XTS_PLAIN` writer - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
 pub type SPI_XTS_PLAIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_XTS_PLAIN_BASE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_PLAIN_BASE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
     #[inline(always)]

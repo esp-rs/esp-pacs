@@ -14,7 +14,7 @@ impl From<crate::R<CALI_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CALI_VALUE_SYNC2` reader - "]
-pub type CALI_VALUE_SYNC2_R = crate::FieldReader<u32, u32>;
+pub type CALI_VALUE_SYNC2_R = crate::FieldReader<u32>;
 #[doc = "Field `CALI_RDY_REAL` reader - "]
 pub type CALI_RDY_REAL_R = crate::BitReader;
 #[doc = "Field `CALI_RDY_SYNC2` reader - "]

@@ -35,7 +35,7 @@ impl From<crate::W<SAR_TOUCH_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_MEAS_EN` reader - 10-bit register to indicate which pads are \"touched\""]
-pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - fsm set 1 to indicate touch touch meas is done"]
 pub type TOUCH_MEAS_DONE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START &amp; TOUCH_XPD is controlled by touch fsm 0: TOUCH_START &amp; TOUCH_XPD is controlled by registers"]
@@ -51,10 +51,10 @@ pub type TOUCH_START_FORCE_R = crate::BitReader;
 #[doc = "Field `TOUCH_START_FORCE` writer - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
 pub type TOUCH_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - sleep cycles for timer"]
-pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CTRL2_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_CTRL2_SPEC, 16, O, u16>;
 #[doc = "Field `TOUCH_MEAS_EN_CLR` writer - to clear reg_touch_meas_en"]
 pub type TOUCH_MEAS_EN_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CTRL2_SPEC, O>;
 impl R {

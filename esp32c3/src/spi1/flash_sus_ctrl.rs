@@ -59,10 +59,9 @@ pub type FLASH_PES_EN_R = crate::BitReader;
 #[doc = "Field `FLASH_PES_EN` writer - Set this bit to enable Auto-suspending function."]
 pub type FLASH_PES_EN_W<'a, const O: u8> = crate::BitWriter<'a, FLASH_SUS_CTRL_SPEC, O>;
 #[doc = "Field `PESR_END_MSK` reader - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
-pub type PESR_END_MSK_R = crate::FieldReader<u16, u16>;
+pub type PESR_END_MSK_R = crate::FieldReader<u16>;
 #[doc = "Field `PESR_END_MSK` writer - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
-pub type PESR_END_MSK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FLASH_SUS_CTRL_SPEC, 16, O, u16, u16>;
+pub type PESR_END_MSK_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CTRL_SPEC, 16, O, u16>;
 #[doc = "Field `RD_SUS_2B` reader - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
 pub type RD_SUS_2B_R = crate::BitReader;
 #[doc = "Field `RD_SUS_2B` writer - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]

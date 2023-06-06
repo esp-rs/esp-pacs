@@ -35,10 +35,10 @@ impl From<crate::W<ULP_CP_SLEEP_CYC3_SPEC>> for W {
     }
 }
 #[doc = "Field `SLEEP_CYCLES_S3` reader - "]
-pub type SLEEP_CYCLES_S3_R = crate::FieldReader<u32, u32>;
+pub type SLEEP_CYCLES_S3_R = crate::FieldReader<u32>;
 #[doc = "Field `SLEEP_CYCLES_S3` writer - "]
 pub type SLEEP_CYCLES_S3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_SLEEP_CYC3_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, ULP_CP_SLEEP_CYC3_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

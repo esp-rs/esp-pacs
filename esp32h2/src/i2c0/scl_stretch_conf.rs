@@ -35,10 +35,10 @@ impl From<crate::W<SCL_STRETCH_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `STRETCH_PROTECT_NUM` reader - Configure the period of I2C slave stretching SCL line."]
-pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16, u16>;
+pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `STRETCH_PROTECT_NUM` writer - Configure the period of I2C slave stretching SCL line."]
 pub type STRETCH_PROTECT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
 pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]

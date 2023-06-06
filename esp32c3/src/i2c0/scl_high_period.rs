@@ -35,10 +35,10 @@ impl From<crate::W<SCL_HIGH_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_HIGH_PERIOD` reader - reg_scl_high_period"]
-pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `SCL_HIGH_PERIOD` writer - reg_scl_high_period"]
 pub type SCL_HIGH_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_HIGH_PERIOD_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, SCL_HIGH_PERIOD_SPEC, 9, O, u16>;
 #[doc = "Field `SCL_WAIT_HIGH_PERIOD` reader - reg_scl_wait_high_period"]
 pub type SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader;
 #[doc = "Field `SCL_WAIT_HIGH_PERIOD` writer - reg_scl_wait_high_period"]

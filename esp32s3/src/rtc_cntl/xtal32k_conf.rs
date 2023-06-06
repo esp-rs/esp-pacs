@@ -39,10 +39,10 @@ pub type XTAL32K_RETURN_WAIT_R = crate::FieldReader;
 #[doc = "Field `XTAL32K_RETURN_WAIT` writer - cycles to wait to return noral xtal 32k"]
 pub type XTAL32K_RETURN_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 4, O>;
 #[doc = "Field `XTAL32K_RESTART_WAIT` reader - cycles to wait to repower on xtal 32k"]
-pub type XTAL32K_RESTART_WAIT_R = crate::FieldReader<u16, u16>;
+pub type XTAL32K_RESTART_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `XTAL32K_RESTART_WAIT` writer - cycles to wait to repower on xtal 32k"]
 pub type XTAL32K_RESTART_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 16, O, u16>;
 #[doc = "Field `XTAL32K_WDT_TIMEOUT` reader - If no clock detected for this amount of time 32k is regarded as dead"]
 pub type XTAL32K_WDT_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `XTAL32K_WDT_TIMEOUT` writer - If no clock detected for this amount of time 32k is regarded as dead"]

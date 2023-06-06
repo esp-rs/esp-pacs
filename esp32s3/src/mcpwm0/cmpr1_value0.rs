@@ -35,9 +35,9 @@ impl From<crate::W<CMPR1_VALUE0_SPEC>> for W {
     }
 }
 #[doc = "Field `CMPR1_A` reader - PWM generator 1 time stamp A's shadow register"]
-pub type CMPR1_A_R = crate::FieldReader<u16, u16>;
+pub type CMPR1_A_R = crate::FieldReader<u16>;
 #[doc = "Field `CMPR1_A` writer - PWM generator 1 time stamp A's shadow register"]
-pub type CMPR1_A_W<'a, const O: u8> = crate::FieldWriter<'a, CMPR1_VALUE0_SPEC, 16, O, u16, u16>;
+pub type CMPR1_A_W<'a, const O: u8> = crate::FieldWriter<'a, CMPR1_VALUE0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - PWM generator 1 time stamp A's shadow register"]
     #[inline(always)]

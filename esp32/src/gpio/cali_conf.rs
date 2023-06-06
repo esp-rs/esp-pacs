@@ -35,9 +35,9 @@ impl From<crate::W<CALI_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CALI_RTC_MAX` reader - "]
-pub type CALI_RTC_MAX_R = crate::FieldReader<u16, u16>;
+pub type CALI_RTC_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `CALI_RTC_MAX` writer - "]
-pub type CALI_RTC_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_CONF_SPEC, 10, O, u16, u16>;
+pub type CALI_RTC_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `CALI_START` reader - "]
 pub type CALI_START_R = crate::BitReader;
 #[doc = "Field `CALI_START` writer - "]

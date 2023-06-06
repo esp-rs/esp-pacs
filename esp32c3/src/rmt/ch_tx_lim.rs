@@ -35,13 +35,13 @@ impl From<crate::W<CH_TX_LIM_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_LIM` reader - reg_rmt_tx_lim_ch0."]
-pub type TX_LIM_R = crate::FieldReader<u16, u16>;
+pub type TX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LIM` writer - reg_rmt_tx_lim_ch0."]
-pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16, u16>;
+pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16>;
 #[doc = "Field `TX_LOOP_NUM` reader - reg_rmt_tx_loop_num_ch0."]
-pub type TX_LOOP_NUM_R = crate::FieldReader<u16, u16>;
+pub type TX_LOOP_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LOOP_NUM` writer - reg_rmt_tx_loop_num_ch0."]
-pub type TX_LOOP_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 10, O, u16, u16>;
+pub type TX_LOOP_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 10, O, u16>;
 #[doc = "Field `TX_LOOP_CNT_EN` reader - reg_rmt_tx_loop_cnt_en_ch0."]
 pub type TX_LOOP_CNT_EN_R = crate::BitReader;
 #[doc = "Field `TX_LOOP_CNT_EN` writer - reg_rmt_tx_loop_cnt_en_ch0."]

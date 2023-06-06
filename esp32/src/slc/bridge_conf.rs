@@ -55,10 +55,9 @@ pub type SLC1_TX_DUMMY_MODE_R = crate::BitReader;
 #[doc = "Field `SLC1_TX_DUMMY_MODE` writer - "]
 pub type SLC1_TX_DUMMY_MODE_W<'a, const O: u8> = crate::BitWriter<'a, BRIDGE_CONF_SPEC, O>;
 #[doc = "Field `TX_PUSH_IDLE_NUM` reader - "]
-pub type TX_PUSH_IDLE_NUM_R = crate::FieldReader<u16, u16>;
+pub type TX_PUSH_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PUSH_IDLE_NUM` writer - "]
-pub type TX_PUSH_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BRIDGE_CONF_SPEC, 16, O, u16, u16>;
+pub type TX_PUSH_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, BRIDGE_CONF_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]

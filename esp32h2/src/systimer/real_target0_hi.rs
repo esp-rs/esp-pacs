@@ -14,7 +14,7 @@ impl From<crate::R<REAL_TARGET0_HI_SPEC>> for R {
     }
 }
 #[doc = "Field `TARGET0_HI_RO` reader - actual target value value high 20bits"]
-pub type TARGET0_HI_RO_R = crate::FieldReader<u32, u32>;
+pub type TARGET0_HI_RO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - actual target value value high 20bits"]
     #[inline(always)]

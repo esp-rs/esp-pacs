@@ -35,9 +35,9 @@ impl From<crate::W<CH_RX_LIM_SPEC>> for W {
     }
 }
 #[doc = "Field `RMT_RX_LIM_CH2` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RMT_RX_LIM_CH2_R = crate::FieldReader<u16, u16>;
+pub type RMT_RX_LIM_CH2_R = crate::FieldReader<u16>;
 #[doc = "Field `RMT_RX_LIM_CH2` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub type RMT_RX_LIM_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16, u16>;
+pub type RMT_RX_LIM_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]

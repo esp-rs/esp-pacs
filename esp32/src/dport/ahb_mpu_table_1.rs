@@ -35,10 +35,10 @@ impl From<crate::W<AHB_MPU_TABLE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `AHB_ACCESS_GRANT_1` reader - "]
-pub type AHB_ACCESS_GRANT_1_R = crate::FieldReader<u16, u16>;
+pub type AHB_ACCESS_GRANT_1_R = crate::FieldReader<u16>;
 #[doc = "Field `AHB_ACCESS_GRANT_1` writer - "]
 pub type AHB_ACCESS_GRANT_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, AHB_MPU_TABLE_1_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, AHB_MPU_TABLE_1_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]

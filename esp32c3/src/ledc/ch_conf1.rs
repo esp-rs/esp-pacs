@@ -35,17 +35,17 @@ impl From<crate::W<CH_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_SCALE` reader - reg_duty_scale_lsch0."]
-pub type DUTY_SCALE_R = crate::FieldReader<u16, u16>;
+pub type DUTY_SCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_SCALE` writer - reg_duty_scale_lsch0."]
-pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_CYCLE` reader - reg_duty_cycle_lsch0."]
-pub type DUTY_CYCLE_R = crate::FieldReader<u16, u16>;
+pub type DUTY_CYCLE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_CYCLE` writer - reg_duty_cycle_lsch0."]
-pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_NUM` reader - reg_duty_num_lsch0."]
-pub type DUTY_NUM_R = crate::FieldReader<u16, u16>;
+pub type DUTY_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_NUM` writer - reg_duty_num_lsch0."]
-pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_INC` reader - reg_duty_inc_lsch0."]
 pub type DUTY_INC_R = crate::BitReader;
 #[doc = "Field `DUTY_INC` writer - reg_duty_inc_lsch0."]

@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_DRAM0_EXCEPTION_MONITOR_4_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_DRAM0_RECORDING_BYTEEN_1` reader - The second dram0's byteen status when trigger DRAM busy interrupt"]
-pub type CORE_1_DRAM0_RECORDING_BYTEEN_1_R = crate::FieldReader<u16, u16>;
+pub type CORE_1_DRAM0_RECORDING_BYTEEN_1_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The second dram0's byteen status when trigger DRAM busy interrupt"]
     #[inline(always)]

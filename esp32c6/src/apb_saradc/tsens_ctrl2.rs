@@ -35,10 +35,9 @@ impl From<crate::W<TSENS_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TSENS_XPD_WAIT` reader - the time that power up tsens need wait"]
-pub type TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
+pub type TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `TSENS_XPD_WAIT` writer - the time that power up tsens need wait"]
-pub type TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TSENS_CTRL2_SPEC, 12, O, u16, u16>;
+pub type TSENS_XPD_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TSENS_CTRL2_SPEC, 12, O, u16>;
 #[doc = "Field `TSENS_XPD_FORCE` reader - force power up tsens"]
 pub type TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `TSENS_XPD_FORCE` writer - force power up tsens"]

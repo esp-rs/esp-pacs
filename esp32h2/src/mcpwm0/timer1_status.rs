@@ -14,7 +14,7 @@ impl From<crate::R<TIMER1_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER1_VALUE` reader - current PWM timer1 counter value"]
-pub type TIMER1_VALUE_R = crate::FieldReader<u16, u16>;
+pub type TIMER1_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER1_DIRECTION` reader - current PWM timer1 counter direction, 0: increment 1: decrement"]
 pub type TIMER1_DIRECTION_R = crate::BitReader;
 impl R {

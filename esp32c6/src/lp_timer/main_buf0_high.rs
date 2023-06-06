@@ -14,7 +14,7 @@ impl From<crate::R<MAIN_BUF0_HIGH_SPEC>> for R {
     }
 }
 #[doc = "Field `MAIN_TIMER_BUF0_HIGH` reader - need_des"]
-pub type MAIN_TIMER_BUF0_HIGH_R = crate::FieldReader<u16, u16>;
+pub type MAIN_TIMER_BUF0_HIGH_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]

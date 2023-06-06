@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_REGISTERRND_ECO_HIGH_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_REGISTERRND_ECO_HIGH` reader - ECO high register"]
-pub type SPI_MEM_REGISTERRND_ECO_HIGH_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_REGISTERRND_ECO_HIGH_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - ECO high register"]
     #[inline(always)]

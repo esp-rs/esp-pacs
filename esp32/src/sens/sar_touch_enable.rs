@@ -35,20 +35,20 @@ impl From<crate::W<SAR_TOUCH_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD_WORKEN` reader - Bitmap defining the working set during the measurement."]
-pub type TOUCH_PAD_WORKEN_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_PAD_WORKEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_WORKEN` writer - Bitmap defining the working set during the measurement."]
 pub type TOUCH_PAD_WORKEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` reader - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
-pub type TOUCH_PAD_OUTEN2_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_PAD_OUTEN2_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN2` writer - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` reader - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
-pub type TOUCH_PAD_OUTEN1_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_PAD_OUTEN1_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_PAD_OUTEN1` writer - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
 pub type TOUCH_PAD_OUTEN1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_ENABLE_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]

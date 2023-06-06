@@ -14,7 +14,7 @@ impl From<crate::R<REGDMA_CURRENT_LINK_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `CURRENT_LINK_ADDR` reader - current link addr reg"]
-pub type CURRENT_LINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CURRENT_LINK_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - current link addr reg"]
     #[inline(always)]

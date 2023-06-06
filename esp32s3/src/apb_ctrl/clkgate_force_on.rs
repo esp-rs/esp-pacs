@@ -40,10 +40,10 @@ pub type ROM_CLKGATE_FORCE_ON_R = crate::FieldReader;
 pub type ROM_CLKGATE_FORCE_ON_W<'a, const O: u8> =
     crate::FieldWriter<'a, CLKGATE_FORCE_ON_SPEC, 3, O>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` reader - ******* Description ***********"]
-pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader<u16, u16>;
+pub type SRAM_CLKGATE_FORCE_ON_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_CLKGATE_FORCE_ON` writer - ******* Description ***********"]
 pub type SRAM_CLKGATE_FORCE_ON_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CLKGATE_FORCE_ON_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, CLKGATE_FORCE_ON_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]

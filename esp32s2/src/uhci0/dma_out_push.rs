@@ -35,10 +35,9 @@ impl From<crate::W<DMA_OUT_PUSH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTFIFO_WDATA` reader - This is the data that need to be pushed into TX FIFO."]
-pub type OUTFIFO_WDATA_R = crate::FieldReader<u16, u16>;
+pub type OUTFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `OUTFIFO_WDATA` writer - This is the data that need to be pushed into TX FIFO."]
-pub type OUTFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_OUT_PUSH_SPEC, 9, O, u16, u16>;
+pub type OUTFIFO_WDATA_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_OUT_PUSH_SPEC, 9, O, u16>;
 #[doc = "Field `OUTFIFO_PUSH` reader - Set this bit to push data into TX FIFO."]
 pub type OUTFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_PUSH` writer - Set this bit to push data into TX FIFO."]

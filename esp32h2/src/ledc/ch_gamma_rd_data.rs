@@ -14,7 +14,7 @@ impl From<crate::R<CH_GAMMA_RD_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CH_GAMMA_RD_DATA` reader - Ledc ch%s gamma ram read data."]
-pub type CH_GAMMA_RD_DATA_R = crate::FieldReader<u32, u32>;
+pub type CH_GAMMA_RD_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:30 - Ledc ch%s gamma ram read data."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<POWER_VDD_SPI_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `VDD_SPI_PWR_WAIT` reader - need_des"]
-pub type VDD_SPI_PWR_WAIT_R = crate::FieldReader<u16, u16>;
+pub type VDD_SPI_PWR_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `VDD_SPI_PWR_WAIT` writer - need_des"]
 pub type VDD_SPI_PWR_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_VDD_SPI_CNTL_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_VDD_SPI_CNTL_SPEC, 11, O, u16>;
 #[doc = "Field `VDD_SPI_PWR_SW` reader - need_des"]
 pub type VDD_SPI_PWR_SW_R = crate::FieldReader;
 #[doc = "Field `VDD_SPI_PWR_SW` writer - need_des"]

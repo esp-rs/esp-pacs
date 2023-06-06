@@ -71,9 +71,9 @@ pub type EMP_R = crate::BitReader;
 #[doc = "Field `IOENABLE1` reader - ioe1 status in cccr"]
 pub type IOENABLE1_R = crate::BitReader;
 #[doc = "Field `SDIO_VER` reader - sdio version in cccr"]
-pub type SDIO_VER_R = crate::FieldReader<u16, u16>;
+pub type SDIO_VER_R = crate::FieldReader<u16>;
 #[doc = "Field `SDIO_VER` writer - sdio version in cccr"]
-pub type SDIO_VER_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA1_SPEC, 12, O, u16, u16>;
+pub type SDIO_VER_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA1_SPEC, 12, O, u16>;
 #[doc = "Field `FUNC2_EPS` reader - function2 eps status in fbr"]
 pub type FUNC2_EPS_R = crate::BitReader;
 #[doc = "Field `SDIO20_CONF` reader - 29\\],sdio negedge sample enablel.\\[30\\],sdio posedge sample enable.\\[31\\],sdio cmd/dat in delayed cycles control,0:no delay, 1:delay 1 cycle. \\[25\\]: sdio1.1 dat/cmd sending out edge control,1:negedge,0:posedge when highseed mode. \\[26\\]: sdio2.0 dat/cmd sending out edge control,1:negedge when \\[12\\]=0,0:negedge when \\[12\\]=0,posedge when highspeed mode enable. \\[27\\]: sdio interrupt sending out delay control,1:delay one cycle, 0: no delay. \\[28\\]: sdio data pad pull up enable"]

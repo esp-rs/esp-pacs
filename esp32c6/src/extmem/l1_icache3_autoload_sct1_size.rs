@@ -14,7 +14,7 @@ impl From<crate::R<L1_ICACHE3_AUTOLOAD_SCT1_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_ICACHE3_AUTOLOAD_SCT1_SIZE` reader - Reserved"]
-pub type L1_ICACHE3_AUTOLOAD_SCT1_SIZE_R = crate::FieldReader<u32, u32>;
+pub type L1_ICACHE3_AUTOLOAD_SCT1_SIZE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:27 - Reserved"]
     #[inline(always)]

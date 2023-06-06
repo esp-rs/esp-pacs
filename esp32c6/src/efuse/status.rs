@@ -28,7 +28,7 @@ pub type OTP_PGENB_SW_R = crate::BitReader;
 #[doc = "Field `OTP_VDDQ_IS_SW` reader - The value of OTP_VDDQ_IS_SW."]
 pub type OTP_VDDQ_IS_SW_R = crate::BitReader;
 #[doc = "Field `BLK0_VALID_BIT_CNT` reader - Indicates the number of block valid bit."]
-pub type BLK0_VALID_BIT_CNT_R = crate::FieldReader<u16, u16>;
+pub type BLK0_VALID_BIT_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:3 - Indicates the state of the eFuse state machine."]
     #[inline(always)]

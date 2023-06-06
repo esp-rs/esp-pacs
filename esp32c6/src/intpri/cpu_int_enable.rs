@@ -35,10 +35,10 @@ impl From<crate::W<CPU_INT_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INT_ENABLE` reader - Need add description"]
-pub type CPU_INT_ENABLE_R = crate::FieldReader<u32, u32>;
+pub type CPU_INT_ENABLE_R = crate::FieldReader<u32>;
 #[doc = "Field `CPU_INT_ENABLE` writer - Need add description"]
 pub type CPU_INT_ENABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CPU_INT_ENABLE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CPU_INT_ENABLE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

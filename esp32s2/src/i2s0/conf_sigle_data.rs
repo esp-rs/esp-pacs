@@ -35,10 +35,9 @@ impl From<crate::W<CONF_SIGLE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `SIGLE_DATA` reader - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
-pub type SIGLE_DATA_R = crate::FieldReader<u32, u32>;
+pub type SIGLE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SIGLE_DATA` writer - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
-pub type SIGLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CONF_SIGLE_DATA_SPEC, 32, O, u32, u32>;
+pub type SIGLE_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SIGLE_DATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
     #[inline(always)]

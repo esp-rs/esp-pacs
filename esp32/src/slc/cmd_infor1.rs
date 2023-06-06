@@ -14,7 +14,7 @@ impl From<crate::R<CMD_INFOR1_SPEC>> for R {
     }
 }
 #[doc = "Field `CMD_CONTENT1` reader - "]
-pub type CMD_CONTENT1_R = crate::FieldReader<u32, u32>;
+pub type CMD_CONTENT1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

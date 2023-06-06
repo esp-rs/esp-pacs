@@ -35,9 +35,9 @@ impl From<crate::W<SDA_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `NUM` reader - The number of clock cycles between the SDA switch and the falling edge of SCL."]
-pub type NUM_R = crate::FieldReader<u32, u32>;
+pub type NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `NUM` writer - The number of clock cycles between the SDA switch and the falling edge of SCL."]
-pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_DUTY_SPEC, 20, O, u32, u32>;
+pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_DUTY_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - The number of clock cycles between the SDA switch and the falling edge of SCL."]
     #[inline(always)]

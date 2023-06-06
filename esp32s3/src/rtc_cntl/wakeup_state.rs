@@ -35,9 +35,9 @@ impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `WAKEUP_ENA` reader - wakeup enable bitmap"]
-pub type WAKEUP_ENA_R = crate::FieldReader<u32, u32>;
+pub type WAKEUP_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `WAKEUP_ENA` writer - wakeup enable bitmap"]
-pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 17, O, u32, u32>;
+pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 17, O, u32>;
 impl R {
     #[doc = "Bits 15:31 - wakeup enable bitmap"]
     #[inline(always)]

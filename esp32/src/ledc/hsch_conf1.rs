@@ -35,17 +35,17 @@ impl From<crate::W<HSCH_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_SCALE` reader - This register controls the increase or decrease step scale for high speed channel0."]
-pub type DUTY_SCALE_R = crate::FieldReader<u16, u16>;
+pub type DUTY_SCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_SCALE` writer - This register controls the increase or decrease step scale for high speed channel0."]
-pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_SCALE_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_CYCLE` reader - This register is used to increase or decrease the duty every reg_duty_cycle_hsch0 cycles for high speed channel0."]
-pub type DUTY_CYCLE_R = crate::FieldReader<u16, u16>;
+pub type DUTY_CYCLE_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_CYCLE` writer - This register is used to increase or decrease the duty every reg_duty_cycle_hsch0 cycles for high speed channel0."]
-pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_CYCLE_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_NUM` reader - This register is used to control the num of increased or decreased times for high speed channel0."]
-pub type DUTY_NUM_R = crate::FieldReader<u16, u16>;
+pub type DUTY_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `DUTY_NUM` writer - This register is used to control the num of increased or decreased times for high speed channel0."]
-pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16, u16>;
+pub type DUTY_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `DUTY_INC` reader - This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel0."]
 pub type DUTY_INC_R = crate::BitReader;
 #[doc = "Field `DUTY_INC` writer - This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel0."]

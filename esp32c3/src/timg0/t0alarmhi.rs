@@ -35,9 +35,9 @@ impl From<crate::W<T0ALARMHI_SPEC>> for W {
     }
 }
 #[doc = "Field `ALARM_HI` reader - reg_t0_alarm_hi."]
-pub type ALARM_HI_R = crate::FieldReader<u32, u32>;
+pub type ALARM_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_HI` writer - reg_t0_alarm_hi."]
-pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0ALARMHI_SPEC, 22, O, u32, u32>;
+pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0ALARMHI_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - reg_t0_alarm_hi."]
     #[inline(always)]

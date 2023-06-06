@@ -14,7 +14,7 @@ impl From<crate::R<IBUS_ACS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IBUS_ACS_CNT` reader - The bits are used to count the number of ibus access flash/spiram through icache."]
-pub type IBUS_ACS_CNT_R = crate::FieldReader<u32, u32>;
+pub type IBUS_ACS_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to count the number of ibus access flash/spiram through icache."]
     #[inline(always)]

@@ -35,15 +35,13 @@ impl From<crate::W<CH1CARRIER_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER_LOW` reader - reg_carrier_low_ch1."]
-pub type CARRIER_LOW_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_LOW` writer - reg_carrier_low_ch1."]
-pub type CARRIER_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH1CARRIER_DUTY_SPEC, 16, O, u16, u16>;
+pub type CARRIER_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, CH1CARRIER_DUTY_SPEC, 16, O, u16>;
 #[doc = "Field `CARRIER_HIGH` reader - reg_carrier_high_ch1."]
-pub type CARRIER_HIGH_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_HIGH` writer - reg_carrier_high_ch1."]
-pub type CARRIER_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH1CARRIER_DUTY_SPEC, 16, O, u16, u16>;
+pub type CARRIER_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, CH1CARRIER_DUTY_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - reg_carrier_low_ch1."]
     #[inline(always)]

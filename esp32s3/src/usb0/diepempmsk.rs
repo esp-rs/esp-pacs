@@ -35,10 +35,9 @@ impl From<crate::W<DIEPEMPMSK_SPEC>> for W {
     }
 }
 #[doc = "Field `D_INEPTXFEMPMSK` reader - "]
-pub type D_INEPTXFEMPMSK_R = crate::FieldReader<u16, u16>;
+pub type D_INEPTXFEMPMSK_R = crate::FieldReader<u16>;
 #[doc = "Field `D_INEPTXFEMPMSK` writer - "]
-pub type D_INEPTXFEMPMSK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DIEPEMPMSK_SPEC, 16, O, u16, u16>;
+pub type D_INEPTXFEMPMSK_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPEMPMSK_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

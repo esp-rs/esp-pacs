@@ -14,7 +14,7 @@ impl From<crate::R<T0LO_SPEC>> for R {
     }
 }
 #[doc = "Field `LO` reader - t0_lo"]
-pub type LO_R = crate::FieldReader<u32, u32>;
+pub type LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - t0_lo"]
     #[inline(always)]

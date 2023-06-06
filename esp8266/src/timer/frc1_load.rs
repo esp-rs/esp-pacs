@@ -35,10 +35,9 @@ impl From<crate::W<FRC1_LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `frc1_load_value` reader - the load value into the counter"]
-pub type FRC1_LOAD_VALUE_R = crate::FieldReader<u32, u32>;
+pub type FRC1_LOAD_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `frc1_load_value` writer - the load value into the counter"]
-pub type FRC1_LOAD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FRC1_LOAD_SPEC, 23, O, u32, u32>;
+pub type FRC1_LOAD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, FRC1_LOAD_SPEC, 23, O, u32>;
 impl R {
     #[doc = "Bits 0:22 - the load value into the counter"]
     #[inline(always)]

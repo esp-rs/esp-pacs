@@ -14,7 +14,7 @@ impl From<crate::R<STRAP_SPEC>> for R {
     }
 }
 #[doc = "Field `STRAPPING` reader - pad strapping register"]
-pub type STRAPPING_R = crate::FieldReader<u16, u16>;
+pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - pad strapping register"]
     #[inline(always)]

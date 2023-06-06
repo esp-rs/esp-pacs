@@ -35,10 +35,9 @@ impl From<crate::W<AT_CMD_GAPTOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_GAP_TOUT` reader - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
-pub type RX_GAP_TOUT_R = crate::FieldReader<u32, u32>;
+pub type RX_GAP_TOUT_R = crate::FieldReader<u32>;
 #[doc = "Field `RX_GAP_TOUT` writer - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
-pub type RX_GAP_TOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, AT_CMD_GAPTOUT_SPEC, 24, O, u32, u32>;
+pub type RX_GAP_TOUT_W<'a, const O: u8> = crate::FieldWriter<'a, AT_CMD_GAPTOUT_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
     #[inline(always)]

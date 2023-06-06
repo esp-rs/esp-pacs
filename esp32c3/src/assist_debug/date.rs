@@ -35,9 +35,9 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `ASSIST_DEBUG_DATE` reader - reg_assist_debug_date"]
-pub type ASSIST_DEBUG_DATE_R = crate::FieldReader<u32, u32>;
+pub type ASSIST_DEBUG_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `ASSIST_DEBUG_DATE` writer - reg_assist_debug_date"]
-pub type ASSIST_DEBUG_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 28, O, u32, u32>;
+pub type ASSIST_DEBUG_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - reg_assist_debug_date"]
     #[inline(always)]

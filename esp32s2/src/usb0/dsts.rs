@@ -20,7 +20,7 @@ pub type ENUMSPD_R = crate::FieldReader;
 #[doc = "Field `ERRTICERR` reader - "]
 pub type ERRTICERR_R = crate::BitReader;
 #[doc = "Field `SOFFN` reader - "]
-pub type SOFFN_R = crate::FieldReader<u16, u16>;
+pub type SOFFN_R = crate::FieldReader<u16>;
 #[doc = "Field `DEVLNSTS` reader - "]
 pub type DEVLNSTS_R = crate::FieldReader;
 impl R {

@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DEBUG` reader - "]
-pub type DEBUG_R = crate::FieldReader<u32, u32>;
+pub type DEBUG_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

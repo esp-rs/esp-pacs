@@ -35,9 +35,9 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_PRESC` reader - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub type BAUD_PRESC_R = crate::FieldReader<u16, u16>;
+pub type BAUD_PRESC_R = crate::FieldReader<u16>;
 #[doc = "Field `BAUD_PRESC` writer - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub type BAUD_PRESC_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 14, O, u16, u16>;
+pub type BAUD_PRESC_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 14, O, u16>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
 pub type SYNC_JUMP_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]

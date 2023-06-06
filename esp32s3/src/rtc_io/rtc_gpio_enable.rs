@@ -35,10 +35,10 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_ENABLE` reader - RTC GPIO 0 ~ 21 enable"]
-pub type RTC_GPIO_ENABLE_R = crate::FieldReader<u32, u32>;
+pub type RTC_GPIO_ENABLE_R = crate::FieldReader<u32>;
 #[doc = "Field `RTC_GPIO_ENABLE` writer - RTC GPIO 0 ~ 21 enable"]
 pub type RTC_GPIO_ENABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_GPIO_ENABLE_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, RTC_GPIO_ENABLE_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]

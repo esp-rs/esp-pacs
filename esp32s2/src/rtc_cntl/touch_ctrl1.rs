@@ -35,15 +35,14 @@ impl From<crate::W<TOUCH_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - Set sleep cycles for touch timer."]
-pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - Set sleep cycles for touch timer."]
 pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` reader - Configure measurement length (in 8 MHz), i.e., charge/discharge times."]
-pub type TOUCH_MEAS_NUM_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` writer - Configure measurement length (in 8 MHz), i.e., charge/discharge times."]
-pub type TOUCH_MEAS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
+pub type TOUCH_MEAS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Set sleep cycles for touch timer."]
     #[inline(always)]

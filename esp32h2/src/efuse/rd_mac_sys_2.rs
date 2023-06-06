@@ -14,9 +14,9 @@ impl From<crate::R<RD_MAC_SYS_2_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_RESERVED_1` reader - Reserved."]
-pub type MAC_RESERVED_1_R = crate::FieldReader<u16, u16>;
+pub type MAC_RESERVED_1_R = crate::FieldReader<u16>;
 #[doc = "Field `MAC_RESERVED_0` reader - Reserved."]
-pub type MAC_RESERVED_0_R = crate::FieldReader<u32, u32>;
+pub type MAC_RESERVED_0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:13 - Reserved."]
     #[inline(always)]

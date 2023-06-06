@@ -39,10 +39,10 @@ pub type XTAL32K_RETURN_WAIT_R = crate::FieldReader;
 #[doc = "Field `XTAL32K_RETURN_WAIT` writer - Defines the waiting cycles before returning to the normal 32 kHz crystal oscillator."]
 pub type XTAL32K_RETURN_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 4, O>;
 #[doc = "Field `XTAL32K_RESTART_WAIT` reader - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
-pub type XTAL32K_RESTART_WAIT_R = crate::FieldReader<u16, u16>;
+pub type XTAL32K_RESTART_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `XTAL32K_RESTART_WAIT` writer - Defines the maximum waiting cycle before restarting the 32 kHz crystal oscillator."]
 pub type XTAL32K_RESTART_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, XTAL32K_CONF_SPEC, 16, O, u16>;
 #[doc = "Field `XTAL32K_WDT_TIMEOUT` reader - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]
 pub type XTAL32K_WDT_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `XTAL32K_WDT_TIMEOUT` writer - Defines the maximum waiting period for clock detection. If no clock is detected after this period, the 32 kHz crystal oscillator can be regarded as dead."]

@@ -35,9 +35,9 @@ impl From<crate::W<STORE0_SPEC>> for W {
     }
 }
 #[doc = "Field `SCRATCH0` reader - Reservation register 0"]
-pub type SCRATCH0_R = crate::FieldReader<u32, u32>;
+pub type SCRATCH0_R = crate::FieldReader<u32>;
 #[doc = "Field `SCRATCH0` writer - Reservation register 0"]
-pub type SCRATCH0_W<'a, const O: u8> = crate::FieldWriter<'a, STORE0_SPEC, 32, O, u32, u32>;
+pub type SCRATCH0_W<'a, const O: u8> = crate::FieldWriter<'a, STORE0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reservation register 0"]
     #[inline(always)]

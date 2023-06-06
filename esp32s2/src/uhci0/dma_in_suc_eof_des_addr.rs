@@ -14,7 +14,7 @@ impl From<crate::R<DMA_IN_SUC_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_SUC_EOF_DES_ADDR` reader - This register stores the address of the receive descriptor when received successful EOF."]
-pub type IN_SUC_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type IN_SUC_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the receive descriptor when received successful EOF."]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<MEM_END_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_END_ADDR` reader - The end address of trace memory"]
-pub type MEM_END_ADDR_R = crate::FieldReader<u32, u32>;
+pub type MEM_END_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `MEM_END_ADDR` writer - The end address of trace memory"]
-pub type MEM_END_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MEM_END_ADDR_SPEC, 32, O, u32, u32>;
+pub type MEM_END_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_END_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The end address of trace memory"]
     #[inline(always)]

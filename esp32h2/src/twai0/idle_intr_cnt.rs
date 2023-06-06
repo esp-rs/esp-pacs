@@ -35,10 +35,9 @@ impl From<crate::W<IDLE_INTR_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `IDLE_INTR_CNT` reader - Configure the number of cycles before triggering idle interrupt."]
-pub type IDLE_INTR_CNT_R = crate::FieldReader<u32, u32>;
+pub type IDLE_INTR_CNT_R = crate::FieldReader<u32>;
 #[doc = "Field `IDLE_INTR_CNT` writer - Configure the number of cycles before triggering idle interrupt."]
-pub type IDLE_INTR_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IDLE_INTR_CNT_SPEC, 32, O, u32, u32>;
+pub type IDLE_INTR_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_INTR_CNT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure the number of cycles before triggering idle interrupt."]
     #[inline(always)]

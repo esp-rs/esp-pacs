@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CACHE_MMU_FAULT_VADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CACHE_MMU_FAULT_VADDR` reader - The bits are used to indicate the virtual address which cause mmu fault.."]
-pub type PRO_CACHE_MMU_FAULT_VADDR_R = crate::FieldReader<u32, u32>;
+pub type PRO_CACHE_MMU_FAULT_VADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to indicate the virtual address which cause mmu fault.."]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<WDTCONFIG1_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_CLK_PRESCALE` reader - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
-pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16, u16>;
+pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_CLK_PRESCALE` writer - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
-pub type WDT_CLK_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WDTCONFIG1_SPEC, 16, O, u16, u16>;
+pub type WDT_CLK_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 16:31 - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
     #[inline(always)]

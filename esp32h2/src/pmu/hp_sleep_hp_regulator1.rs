@@ -35,10 +35,10 @@ impl From<crate::W<HP_SLEEP_HP_REGULATOR1_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_SLEEP_HP_REGULATOR_DRV_B` reader - need_des"]
-pub type HP_SLEEP_HP_REGULATOR_DRV_B_R = crate::FieldReader<u32, u32>;
+pub type HP_SLEEP_HP_REGULATOR_DRV_B_R = crate::FieldReader<u32>;
 #[doc = "Field `HP_SLEEP_HP_REGULATOR_DRV_B` writer - need_des"]
 pub type HP_SLEEP_HP_REGULATOR_DRV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HP_SLEEP_HP_REGULATOR1_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, HP_SLEEP_HP_REGULATOR1_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 8:31 - need_des"]
     #[inline(always)]

@@ -35,15 +35,15 @@ impl From<crate::W<CH3_RX_CARRIER_RM_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER_LOW_THRES` reader - reg_carrier_low_thres_ch3."]
-pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_LOW_THRES` writer - reg_carrier_low_thres_ch3."]
 pub type CARRIER_LOW_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH3_RX_CARRIER_RM_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CH3_RX_CARRIER_RM_SPEC, 16, O, u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` reader - reg_carrier_high_thres_ch3."]
-pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` writer - reg_carrier_high_thres_ch3."]
 pub type CARRIER_HIGH_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH3_RX_CARRIER_RM_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CH3_RX_CARRIER_RM_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - reg_carrier_low_thres_ch3."]
     #[inline(always)]

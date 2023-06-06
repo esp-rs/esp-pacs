@@ -35,10 +35,9 @@ impl From<crate::W<BROWN_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `BROWN_OUT_INT_WAIT` reader - brown out interrupt wait cycles"]
-pub type BROWN_OUT_INT_WAIT_R = crate::FieldReader<u16, u16>;
+pub type BROWN_OUT_INT_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BROWN_OUT_INT_WAIT` writer - brown out interrupt wait cycles"]
-pub type BROWN_OUT_INT_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16, u16>;
+pub type BROWN_OUT_INT_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16>;
 #[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` reader - enable close flash when brown out happens"]
 pub type BROWN_OUT_CLOSE_FLASH_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_CLOSE_FLASH_ENA` writer - enable close flash when brown out happens"]
@@ -48,10 +47,9 @@ pub type BROWN_OUT_PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_PD_RF_ENA` writer - enable power down RF when brown out happens"]
 pub type BROWN_OUT_PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BROWN_OUT_SPEC, O>;
 #[doc = "Field `BROWN_OUT_RST_WAIT` reader - brown out reset wait cycles"]
-pub type BROWN_OUT_RST_WAIT_R = crate::FieldReader<u16, u16>;
+pub type BROWN_OUT_RST_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BROWN_OUT_RST_WAIT` writer - brown out reset wait cycles"]
-pub type BROWN_OUT_RST_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16, u16>;
+pub type BROWN_OUT_RST_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, BROWN_OUT_SPEC, 10, O, u16>;
 #[doc = "Field `BROWN_OUT_RST_ENA` reader - enable brown out reset"]
 pub type BROWN_OUT_RST_ENA_R = crate::BitReader;
 #[doc = "Field `BROWN_OUT_RST_ENA` writer - enable brown out reset"]

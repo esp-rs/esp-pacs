@@ -35,10 +35,10 @@ impl From<crate::W<SENSITIVE_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SENSITIVE_REG_DATE` reader - Need add description"]
-pub type SENSITIVE_REG_DATE_R = crate::FieldReader<u32, u32>;
+pub type SENSITIVE_REG_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SENSITIVE_REG_DATE` writer - Need add description"]
 pub type SENSITIVE_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SENSITIVE_REG_DATE_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, SENSITIVE_REG_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]

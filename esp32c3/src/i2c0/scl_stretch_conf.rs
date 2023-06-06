@@ -35,10 +35,10 @@ impl From<crate::W<SCL_STRETCH_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `STRETCH_PROTECT_NUM` reader - reg_stretch_protect_num"]
-pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16, u16>;
+pub type STRETCH_PROTECT_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `STRETCH_PROTECT_NUM` writer - reg_stretch_protect_num"]
 pub type STRETCH_PROTECT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SCL_STRETCH_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` reader - reg_slave_scl_stretch_en"]
 pub type SLAVE_SCL_STRETCH_EN_R = crate::BitReader;
 #[doc = "Field `SLAVE_SCL_STRETCH_EN` writer - reg_slave_scl_stretch_en"]

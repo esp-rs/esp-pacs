@@ -35,9 +35,9 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `PMU_DATE` reader - need_des"]
-pub type PMU_DATE_R = crate::FieldReader<u32, u32>;
+pub type PMU_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `PMU_DATE` writer - need_des"]
-pub type PMU_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 31, O, u32, u32>;
+pub type PMU_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 31, O, u32>;
 #[doc = "Field `CLK_EN` reader - need_des"]
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - need_des"]

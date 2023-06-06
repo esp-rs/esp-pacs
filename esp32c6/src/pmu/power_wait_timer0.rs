@@ -35,20 +35,20 @@ impl From<crate::W<POWER_WAIT_TIMER0_SPEC>> for W {
     }
 }
 #[doc = "Field `DG_HP_POWERDOWN_TIMER` reader - need_des"]
-pub type DG_HP_POWERDOWN_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_HP_POWERDOWN_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_POWERDOWN_TIMER` writer - need_des"]
 pub type DG_HP_POWERDOWN_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` reader - need_des"]
-pub type DG_HP_POWERUP_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_HP_POWERUP_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_POWERUP_TIMER` writer - need_des"]
 pub type DG_HP_POWERUP_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` reader - need_des"]
-pub type DG_HP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_HP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_HP_WAIT_TIMER` writer - need_des"]
 pub type DG_HP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER0_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]

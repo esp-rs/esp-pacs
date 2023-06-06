@@ -35,10 +35,10 @@ impl From<crate::W<FLASH_ACE3_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_ACE3_ATTR` reader - ******* Description ***********"]
-pub type FLASH_ACE3_ATTR_R = crate::FieldReader<u16, u16>;
+pub type FLASH_ACE3_ATTR_R = crate::FieldReader<u16>;
 #[doc = "Field `FLASH_ACE3_ATTR` writer - ******* Description ***********"]
 pub type FLASH_ACE3_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FLASH_ACE3_ATTR_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, FLASH_ACE3_ATTR_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - ******* Description ***********"]
     #[inline(always)]

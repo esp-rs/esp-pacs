@@ -35,19 +35,17 @@ impl From<crate::W<TIMER6_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_TOP_WAIT_TIMER` reader - No public"]
-pub type CPU_TOP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type CPU_TOP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `CPU_TOP_WAIT_TIMER` writer - No public"]
-pub type CPU_TOP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16, u16>;
+pub type CPU_TOP_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16>;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` reader - No public"]
 pub type CPU_TOP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` writer - No public"]
 pub type CPU_TOP_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 7, O>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` reader - No public"]
-pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` writer - No public"]
-pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16, u16>;
+pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16>;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` reader - No public"]
 pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` writer - No public"]

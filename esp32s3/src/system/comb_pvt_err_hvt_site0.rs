@@ -14,7 +14,7 @@ impl From<crate::R<COMB_PVT_ERR_HVT_SITE0_SPEC>> for R {
     }
 }
 #[doc = "Field `COMB_TIMING_ERR_CNT_HVT_SITE0` reader - ******* Description ***********"]
-pub type COMB_TIMING_ERR_CNT_HVT_SITE0_R = crate::FieldReader<u16, u16>;
+pub type COMB_TIMING_ERR_CNT_HVT_SITE0_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]

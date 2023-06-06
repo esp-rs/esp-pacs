@@ -14,7 +14,7 @@ impl From<crate::R<DMA_RSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_OUT_STATUS` reader - spi dma read data from memory status."]
-pub type DMA_OUT_STATUS_R = crate::FieldReader<u32, u32>;
+pub type DMA_OUT_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - spi dma read data from memory status."]
     #[inline(always)]

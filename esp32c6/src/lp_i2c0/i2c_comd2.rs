@@ -35,9 +35,9 @@ impl From<crate::W<I2C_COMD2_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_COMMAND2` reader - This is the content of command 2. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type I2C_COMMAND2_R = crate::FieldReader<u16, u16>;
+pub type I2C_COMMAND2_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_COMMAND2` writer - This is the content of command 2. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more Information."]
-pub type I2C_COMMAND2_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_COMD2_SPEC, 14, O, u16, u16>;
+pub type I2C_COMMAND2_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_COMD2_SPEC, 14, O, u16>;
 #[doc = "Field `I2C_COMMAND2_DONE` reader - When command 2 is done in I2C Master mode, this bit changes to high Level."]
 pub type I2C_COMMAND2_DONE_R = crate::BitReader;
 #[doc = "Field `I2C_COMMAND2_DONE` writer - When command 2 is done in I2C Master mode, this bit changes to high Level."]

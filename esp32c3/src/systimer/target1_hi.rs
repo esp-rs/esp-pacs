@@ -35,10 +35,9 @@ impl From<crate::W<TARGET1_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_TARGET1_HI` reader - timer taget1 high 32 bit"]
-pub type TIMER_TARGET1_HI_R = crate::FieldReader<u32, u32>;
+pub type TIMER_TARGET1_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_TARGET1_HI` writer - timer taget1 high 32 bit"]
-pub type TIMER_TARGET1_HI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TARGET1_HI_SPEC, 20, O, u32, u32>;
+pub type TIMER_TARGET1_HI_W<'a, const O: u8> = crate::FieldWriter<'a, TARGET1_HI_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - timer taget1 high 32 bit"]
     #[inline(always)]

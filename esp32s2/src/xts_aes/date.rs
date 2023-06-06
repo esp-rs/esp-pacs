@@ -14,7 +14,7 @@ impl From<crate::R<DATE_SPEC>> for R {
     }
 }
 #[doc = "Field `DATE` reader - Version control register."]
-pub type DATE_R = crate::FieldReader<u32, u32>;
+pub type DATE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:29 - Version control register."]
     #[inline(always)]

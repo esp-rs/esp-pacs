@@ -35,9 +35,9 @@ impl From<crate::W<TIMERS_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMERS_DATE` reader - Version control register."]
-pub type TIMERS_DATE_R = crate::FieldReader<u32, u32>;
+pub type TIMERS_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMERS_DATE` writer - Version control register."]
-pub type TIMERS_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMERS_DATE_SPEC, 28, O, u32, u32>;
+pub type TIMERS_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMERS_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]

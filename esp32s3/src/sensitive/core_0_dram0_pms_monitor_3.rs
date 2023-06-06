@@ -16,7 +16,7 @@ impl From<crate::R<CORE_0_DRAM0_PMS_MONITOR_3_SPEC>> for R {
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - recorded core0 dram0 wr status, 1 means store, 0 means load."]
 pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN` reader - recorded core0 dram0 byteen status."]
-pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R = crate::FieldReader<u16, u16>;
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - recorded core0 dram0 wr status, 1 means store, 0 means load."]
     #[inline(always)]

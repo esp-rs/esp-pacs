@@ -14,7 +14,7 @@ impl From<crate::R<CH6ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_MEM_ADDR` reader - The ram relative address in channel6 by apb fifo access"]
-pub type APB_MEM_ADDR_R = crate::FieldReader<u32, u32>;
+pub type APB_MEM_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The ram relative address in channel6 by apb fifo access"]
     #[inline(always)]

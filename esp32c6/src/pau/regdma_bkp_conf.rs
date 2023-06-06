@@ -39,19 +39,19 @@ pub type READ_INTERVAL_R = crate::FieldReader;
 #[doc = "Field `READ_INTERVAL` writer - Link read_interval"]
 pub type READ_INTERVAL_W<'a, const O: u8> = crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 7, O>;
 #[doc = "Field `LINK_TOUT_THRES` reader - link wait timeout threshold"]
-pub type LINK_TOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type LINK_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `LINK_TOUT_THRES` writer - link wait timeout threshold"]
 pub type LINK_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `BURST_LIMIT` reader - burst limit"]
 pub type BURST_LIMIT_R = crate::FieldReader;
 #[doc = "Field `BURST_LIMIT` writer - burst limit"]
 pub type BURST_LIMIT_W<'a, const O: u8> = crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 5, O>;
 #[doc = "Field `BACKUP_TOUT_THRES` reader - Backup timeout threshold"]
-pub type BACKUP_TOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type BACKUP_TOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `BACKUP_TOUT_THRES` writer - Backup timeout threshold"]
 pub type BACKUP_TOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, REGDMA_BKP_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:6 - Link read_interval"]
     #[inline(always)]

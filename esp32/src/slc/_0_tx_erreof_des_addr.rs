@@ -14,7 +14,7 @@ impl From<crate::R<_0_TX_ERREOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_TX_ERR_EOF_DES_ADDR` reader - "]
-pub type SLC0_TX_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SLC0_TX_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS2_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `MEAS2_DATA_SAR` reader - SAR ADC2 data"]
-pub type MEAS2_DATA_SAR_R = crate::FieldReader<u16, u16>;
+pub type MEAS2_DATA_SAR_R = crate::FieldReader<u16>;
 #[doc = "Field `MEAS2_DONE_SAR` reader - SAR ADC2 conversion done indication"]
 pub type MEAS2_DONE_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS2_START_SAR` reader - SAR ADC2 controller (in RTC) starts conversion"]
@@ -47,10 +47,9 @@ pub type MEAS2_START_FORCE_R = crate::BitReader;
 #[doc = "Field `MEAS2_START_FORCE` writer - 1: SAR ADC2 controller (in RTC) is started by SW"]
 pub type MEAS2_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS2_CTRL2_SPEC, O>;
 #[doc = "Field `SAR2_EN_PAD` reader - SAR ADC2 pad enable bitmap"]
-pub type SAR2_EN_PAD_R = crate::FieldReader<u16, u16>;
+pub type SAR2_EN_PAD_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR2_EN_PAD` writer - SAR ADC2 pad enable bitmap"]
-pub type SAR2_EN_PAD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEAS2_CTRL2_SPEC, 12, O, u16, u16>;
+pub type SAR2_EN_PAD_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS2_CTRL2_SPEC, 12, O, u16>;
 #[doc = "Field `SAR2_EN_PAD_FORCE` reader - 1: SAR ADC2 pad enable bitmap is controlled by SW"]
 pub type SAR2_EN_PAD_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR2_EN_PAD_FORCE` writer - 1: SAR ADC2 pad enable bitmap is controlled by SW"]

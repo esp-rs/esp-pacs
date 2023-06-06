@@ -35,10 +35,10 @@ impl From<crate::W<SAR_TOUCH_CHN_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD_ACTIVE` reader - Touch active status"]
-pub type TOUCH_PAD_ACTIVE_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_PAD_ACTIVE_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_CHANNEL_CLR` writer - Clear touch channel"]
 pub type TOUCH_CHANNEL_CLR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CHN_ST_SPEC, 15, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_CHN_ST_SPEC, 15, O, u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - Signal flag that indicates one touch pad is done."]
 pub type TOUCH_MEAS_DONE_R = crate::BitReader;
 impl R {

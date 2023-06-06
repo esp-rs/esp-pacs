@@ -14,7 +14,7 @@ impl From<crate::R<EXT_WAKEUP1_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `EXT_WAKEUP1_STATUS` reader - ext wakeup1 status"]
-pub type EXT_WAKEUP1_STATUS_R = crate::FieldReader<u32, u32>;
+pub type EXT_WAKEUP1_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - ext wakeup1 status"]
     #[inline(always)]

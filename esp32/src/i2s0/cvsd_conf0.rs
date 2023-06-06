@@ -35,13 +35,13 @@ impl From<crate::W<CVSD_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_Y_MAX` reader - "]
-pub type CVSD_Y_MAX_R = crate::FieldReader<u16, u16>;
+pub type CVSD_Y_MAX_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSD_Y_MAX` writer - "]
-pub type CVSD_Y_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF0_SPEC, 16, O, u16, u16>;
+pub type CVSD_Y_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF0_SPEC, 16, O, u16>;
 #[doc = "Field `CVSD_Y_MIN` reader - "]
-pub type CVSD_Y_MIN_R = crate::FieldReader<u16, u16>;
+pub type CVSD_Y_MIN_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSD_Y_MIN` writer - "]
-pub type CVSD_Y_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF0_SPEC, 16, O, u16, u16>;
+pub type CVSD_Y_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, CVSD_CONF0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<CPU_INT_EIP_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_INT_EIP_STATUS` reader - Need add description"]
-pub type CPU_INT_EIP_STATUS_R = crate::FieldReader<u32, u32>;
+pub type CPU_INT_EIP_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

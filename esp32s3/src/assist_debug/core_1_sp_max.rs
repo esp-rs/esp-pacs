@@ -35,10 +35,9 @@ impl From<crate::W<CORE_1_SP_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_SP_MAX` reader - stack max value"]
-pub type CORE_1_SP_MAX_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_SP_MAX_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_SP_MAX` writer - stack max value"]
-pub type CORE_1_SP_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_SP_MAX_SPEC, 32, O, u32, u32>;
+pub type CORE_1_SP_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, CORE_1_SP_MAX_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - stack max value"]
     #[inline(always)]

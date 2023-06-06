@@ -35,9 +35,9 @@ impl From<crate::W<T1ALARMHI_SPEC>> for W {
     }
 }
 #[doc = "Field `ALARM_HI` reader - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
-pub type ALARM_HI_R = crate::FieldReader<u32, u32>;
+pub type ALARM_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_HI` writer - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
-pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T1ALARMHI_SPEC, 32, O, u32, u32>;
+pub type ALARM_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T1ALARMHI_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timer 1 time-base counter value higher 32 bits that will trigger the alarm"]
     #[inline(always)]

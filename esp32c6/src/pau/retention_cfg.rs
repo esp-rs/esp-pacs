@@ -35,10 +35,9 @@ impl From<crate::W<RETENTION_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_INV_CFG` reader - retention inv scan out"]
-pub type RET_INV_CFG_R = crate::FieldReader<u32, u32>;
+pub type RET_INV_CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `RET_INV_CFG` writer - retention inv scan out"]
-pub type RET_INV_CFG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CFG_SPEC, 32, O, u32, u32>;
+pub type RET_INV_CFG_W<'a, const O: u8> = crate::FieldWriter<'a, RETENTION_CFG_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - retention inv scan out"]
     #[inline(always)]

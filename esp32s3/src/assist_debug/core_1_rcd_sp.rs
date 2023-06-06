@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_RCD_SP_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_RCD_SP` reader - Core1_stack pointer"]
-pub type CORE_1_RCD_SP_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_RCD_SP_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Core1_stack pointer"]
     #[inline(always)]

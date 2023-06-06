@@ -35,9 +35,9 @@ impl From<crate::W<SPI_SMEM_PMS_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `S` reader - SPI1 external RAM ACE section %s start address value"]
-pub type S_R = crate::FieldReader<u32, u32>;
+pub type S_R = crate::FieldReader<u32>;
 #[doc = "Field `S` writer - SPI1 external RAM ACE section %s start address value"]
-pub type S_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_PMS_ADDR_SPEC, 26, O, u32, u32>;
+pub type S_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SMEM_PMS_ADDR_SPEC, 26, O, u32>;
 impl R {
     #[doc = "Bits 0:25 - SPI1 external RAM ACE section %s start address value"]
     #[inline(always)]

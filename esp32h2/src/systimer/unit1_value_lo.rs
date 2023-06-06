@@ -14,7 +14,7 @@ impl From<crate::R<UNIT1_VALUE_LO_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_UNIT1_VALUE_LO` reader - timer read value low 32bits"]
-pub type TIMER_UNIT1_VALUE_LO_R = crate::FieldReader<u32, u32>;
+pub type TIMER_UNIT1_VALUE_LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - timer read value low 32bits"]
     #[inline(always)]

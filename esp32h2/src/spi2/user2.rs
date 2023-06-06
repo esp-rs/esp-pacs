@@ -35,9 +35,9 @@ impl From<crate::W<USER2_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_COMMAND_VALUE` reader - The value of command. Can be configured in CONF state."]
-pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
+pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `USR_COMMAND_VALUE` writer - The value of command. Can be configured in CONF state."]
-pub type USR_COMMAND_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 16, O, u16, u16>;
+pub type USR_COMMAND_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 16, O, u16>;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` reader - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
 pub type MST_REMPTY_ERR_END_EN_R = crate::BitReader;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` writer - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]

@@ -35,10 +35,10 @@ impl From<crate::W<PARL_CLK_TX_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PARL_CLK_TX_DIV_NUM` reader - The integral part of the frequency divider factor of the parl tx clock."]
-pub type PARL_CLK_TX_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type PARL_CLK_TX_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PARL_CLK_TX_DIV_NUM` writer - The integral part of the frequency divider factor of the parl tx clock."]
 pub type PARL_CLK_TX_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PARL_CLK_TX_CONF_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, PARL_CLK_TX_CONF_SPEC, 16, O, u16>;
 #[doc = "Field `PARL_CLK_TX_SEL` reader - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]
 pub type PARL_CLK_TX_SEL_R = crate::FieldReader;
 #[doc = "Field `PARL_CLK_TX_SEL` writer - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: user clock from pad."]

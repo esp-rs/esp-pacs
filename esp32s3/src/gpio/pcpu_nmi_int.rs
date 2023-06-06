@@ -14,7 +14,7 @@ impl From<crate::R<PCPU_NMI_INT_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_NMI_INT` reader - GPIO PRO_CPU(not shielded) interrupt status register for GPIO0-31"]
-pub type PROCPU_NMI_INT_R = crate::FieldReader<u32, u32>;
+pub type PROCPU_NMI_INT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO PRO_CPU(not shielded) interrupt status register for GPIO0-31"]
     #[inline(always)]

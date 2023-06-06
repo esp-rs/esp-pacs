@@ -35,9 +35,9 @@ impl From<crate::W<CNTL_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CNTL_DATE` reader - Need add desc"]
-pub type CNTL_DATE_R = crate::FieldReader<u32, u32>;
+pub type CNTL_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `CNTL_DATE` writer - Need add desc"]
-pub type CNTL_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DATE_SPEC, 28, O, u32, u32>;
+pub type CNTL_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, CNTL_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Need add desc"]
     #[inline(always)]

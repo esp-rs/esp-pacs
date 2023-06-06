@@ -35,9 +35,9 @@ impl From<crate::W<CMD2_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND2` reader - command2"]
-pub type COMMAND2_R = crate::FieldReader<u16, u16>;
+pub type COMMAND2_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND2` writer - command2"]
-pub type COMMAND2_W<'a, const O: u8> = crate::FieldWriter<'a, CMD2_SPEC, 14, O, u16, u16>;
+pub type COMMAND2_W<'a, const O: u8> = crate::FieldWriter<'a, CMD2_SPEC, 14, O, u16>;
 #[doc = "Field `COMMAND2_DONE` reader - command2_done"]
 pub type COMMAND2_DONE_R = crate::BitReader;
 impl R {

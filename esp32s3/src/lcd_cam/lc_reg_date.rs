@@ -35,9 +35,9 @@ impl From<crate::W<LC_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `LC_DATE` reader - LCD_CAM version control register"]
-pub type LC_DATE_R = crate::FieldReader<u32, u32>;
+pub type LC_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `LC_DATE` writer - LCD_CAM version control register"]
-pub type LC_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, LC_REG_DATE_SPEC, 28, O, u32, u32>;
+pub type LC_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, LC_REG_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - LCD_CAM version control register"]
     #[inline(always)]

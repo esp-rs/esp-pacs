@@ -35,15 +35,15 @@ impl From<crate::W<SAR_SLAVE_ADDR1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_I2C_SLAVE_ADDR1` reader - configure i2c slave address1"]
-pub type SAR_I2C_SLAVE_ADDR1_R = crate::FieldReader<u16, u16>;
+pub type SAR_I2C_SLAVE_ADDR1_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR1` writer - configure i2c slave address1"]
 pub type SAR_I2C_SLAVE_ADDR1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` reader - configure i2c slave address0"]
-pub type SAR_I2C_SLAVE_ADDR0_R = crate::FieldReader<u16, u16>;
+pub type SAR_I2C_SLAVE_ADDR0_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR0` writer - configure i2c slave address0"]
 pub type SAR_I2C_SLAVE_ADDR0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR1_SPEC, 11, O, u16>;
 #[doc = "Field `SAR_SARADC_MEAS_STATUS` reader - no public"]
 pub type SAR_SARADC_MEAS_STATUS_R = crate::FieldReader;
 impl R {

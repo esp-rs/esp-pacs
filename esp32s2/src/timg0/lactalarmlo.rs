@@ -35,10 +35,9 @@ impl From<crate::W<LACTALARMLO_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_ALARM_LO` reader - Reserved."]
-pub type LACT_ALARM_LO_R = crate::FieldReader<u32, u32>;
+pub type LACT_ALARM_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `LACT_ALARM_LO` writer - Reserved."]
-pub type LACT_ALARM_LO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LACTALARMLO_SPEC, 32, O, u32, u32>;
+pub type LACT_ALARM_LO_W<'a, const O: u8> = crate::FieldWriter<'a, LACTALARMLO_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]

@@ -39,10 +39,9 @@ pub type TIMER2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TIMER2_PRESCALE` writer - "]
 pub type TIMER2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 8, O>;
 #[doc = "Field `TIMER2_PERIOD` reader - "]
-pub type TIMER2_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type TIMER2_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER2_PERIOD` writer - "]
-pub type TIMER2_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 16, O, u16, u16>;
+pub type TIMER2_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 16, O, u16>;
 #[doc = "Field `TIMER2_PERIOD_UPMETHOD` reader - "]
 pub type TIMER2_PERIOD_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `TIMER2_PERIOD_UPMETHOD` writer - "]

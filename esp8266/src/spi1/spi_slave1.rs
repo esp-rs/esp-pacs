@@ -59,10 +59,9 @@ pub type SLV_RD_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `slv_rd_addr_bitlen` writer - In the slave mode, it is the address length in bits for \"read-buffer\" operation. The register value shall be(bit_num-1)"]
 pub type SLV_RD_ADDR_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 6, O>;
 #[doc = "Field `slv_buf_bitlen` reader - In the slave mode, it is the length in bits for \"write-buffer\" and \"read-buffer\" operations. The register value shallbe (bit_num-1)"]
-pub type SLV_BUF_BITLEN_R = crate::FieldReader<u16, u16>;
+pub type SLV_BUF_BITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `slv_buf_bitlen` writer - In the slave mode, it is the length in bits for \"write-buffer\" and \"read-buffer\" operations. The register value shallbe (bit_num-1)"]
-pub type SLV_BUF_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 9, O, u16, u16>;
+pub type SLV_BUF_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_SLAVE1_SPEC, 9, O, u16>;
 #[doc = "Field `spi_status_read` reader - Enable spi slave status"]
 pub type SPI_STATUS_READ_R = crate::BitReader;
 #[doc = "Field `spi_status_read` writer - Enable spi slave status"]

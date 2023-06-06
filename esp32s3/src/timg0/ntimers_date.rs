@@ -35,10 +35,9 @@ impl From<crate::W<NTIMERS_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `NTIMERS_DATE` reader - Timer version control register"]
-pub type NTIMERS_DATE_R = crate::FieldReader<u32, u32>;
+pub type NTIMERS_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `NTIMERS_DATE` writer - Timer version control register"]
-pub type NTIMERS_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, NTIMERS_DATE_SPEC, 28, O, u32, u32>;
+pub type NTIMERS_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, NTIMERS_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Timer version control register"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_MISO_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_USR_MISO_DBITLEN` reader - The length in bits of read-data. The register value shall be (bit_num-1)."]
-pub type SPI_MEM_USR_MISO_DBITLEN_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_USR_MISO_DBITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_USR_MISO_DBITLEN` writer - The length in bits of read-data. The register value shall be (bit_num-1)."]
 pub type SPI_MEM_USR_MISO_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_MISO_DLEN_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_MISO_DLEN_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - The length in bits of read-data. The register value shall be (bit_num-1)."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<L2_IBUS0_ACS_CONFLICT_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_IBUS0_CONFLICT_CNT` reader - The register records the number of access-conflicts when L1-ICache0 accesses L2-Cache due to bus0 accessing L1-ICache0."]
-pub type L2_IBUS0_CONFLICT_CNT_R = crate::FieldReader<u32, u32>;
+pub type L2_IBUS0_CONFLICT_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The register records the number of access-conflicts when L1-ICache0 accesses L2-Cache due to bus0 accessing L1-ICache0."]
     #[inline(always)]

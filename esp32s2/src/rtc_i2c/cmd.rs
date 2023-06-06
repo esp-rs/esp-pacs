@@ -35,9 +35,9 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND` reader - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
-pub type COMMAND_R = crate::FieldReader<u16, u16>;
+pub type COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `COMMAND` writer - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
-pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 14, O, u16, u16>;
+pub type COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 14, O, u16>;
 #[doc = "Field `COMMAND_DONE` reader - When command 0 is done, this bit changes to 1."]
 pub type COMMAND_DONE_R = crate::BitReader;
 impl R {

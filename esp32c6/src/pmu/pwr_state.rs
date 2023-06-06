@@ -18,7 +18,7 @@ pub type BACKUP_ST_STATE_R = crate::FieldReader;
 #[doc = "Field `LP_PWR_ST_STATE` reader - need_des"]
 pub type LP_PWR_ST_STATE_R = crate::FieldReader;
 #[doc = "Field `HP_PWR_ST_STATE` reader - need_des"]
-pub type HP_PWR_ST_STATE_R = crate::FieldReader<u16, u16>;
+pub type HP_PWR_ST_STATE_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 13:17 - need_des"]
     #[inline(always)]

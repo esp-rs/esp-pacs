@@ -35,9 +35,9 @@ impl From<crate::W<OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - GPIO0~31 output value"]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - GPIO0~31 output value"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_SPEC, 32, O, u32, u32>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, OUT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO0~31 output value"]
     #[inline(always)]

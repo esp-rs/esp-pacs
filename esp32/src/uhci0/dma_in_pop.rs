@@ -35,7 +35,7 @@ impl From<crate::W<DMA_IN_POP_SPEC>> for W {
     }
 }
 #[doc = "Field `INFIFO_RDATA` reader - This register stores the data pop from in link descriptor's fifo."]
-pub type INFIFO_RDATA_R = crate::FieldReader<u16, u16>;
+pub type INFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `INFIFO_POP` reader - Set this bit to pop data in in link descriptor's fifo."]
 pub type INFIFO_POP_R = crate::BitReader;
 #[doc = "Field `INFIFO_POP` writer - Set this bit to pop data in in link descriptor's fifo."]

@@ -35,15 +35,15 @@ impl From<crate::W<SLC0HOST_TOKEN_WDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0HOST_TOKEN0_WD` reader - *******Description***********"]
-pub type SLC0HOST_TOKEN0_WD_R = crate::FieldReader<u16, u16>;
+pub type SLC0HOST_TOKEN0_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0HOST_TOKEN0_WD` writer - *******Description***********"]
 pub type SLC0HOST_TOKEN0_WD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16>;
 #[doc = "Field `SLC0HOST_TOKEN1_WD` reader - *******Description***********"]
-pub type SLC0HOST_TOKEN1_WD_R = crate::FieldReader<u16, u16>;
+pub type SLC0HOST_TOKEN1_WD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0HOST_TOKEN1_WD` writer - *******Description***********"]
 pub type SLC0HOST_TOKEN1_WD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, SLC0HOST_TOKEN_WDATA_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - *******Description***********"]
     #[inline(always)]

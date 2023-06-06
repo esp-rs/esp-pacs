@@ -39,10 +39,9 @@ pub type TIMER2_PRESCALE_R = crate::FieldReader;
 #[doc = "Field `TIMER2_PRESCALE` writer - period of PT0_clk = Period of PWM_clk * (PWM_timer2_PRESCALE + 1)"]
 pub type TIMER2_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 8, O>;
 #[doc = "Field `TIMER2_PERIOD` reader - period shadow register of PWM timer2"]
-pub type TIMER2_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type TIMER2_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER2_PERIOD` writer - period shadow register of PWM timer2"]
-pub type TIMER2_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 16, O, u16, u16>;
+pub type TIMER2_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_CFG0_SPEC, 16, O, u16>;
 #[doc = "Field `TIMER2_PERIOD_UPMETHOD` reader - Update method for active register of PWM timer2 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]
 pub type TIMER2_PERIOD_UPMETHOD_R = crate::FieldReader;
 #[doc = "Field `TIMER2_PERIOD_UPMETHOD` writer - Update method for active register of PWM timer2 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]

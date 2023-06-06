@@ -14,11 +14,11 @@ impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_RX_STATUS` reader - This register stores the current uart rx mem read address and rx mem write address"]
-pub type MEM_RX_STATUS_R = crate::FieldReader<u32, u32>;
+pub type MEM_RX_STATUS_R = crate::FieldReader<u32>;
 #[doc = "Field `MEM_RX_RD_ADDR` reader - This register stores the rx mem read address"]
-pub type MEM_RX_RD_ADDR_R = crate::FieldReader<u16, u16>;
+pub type MEM_RX_RD_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_RX_WR_ADDR` reader - This register stores the rx mem write address"]
-pub type MEM_RX_WR_ADDR_R = crate::FieldReader<u16, u16>;
+pub type MEM_RX_WR_ADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:23 - This register stores the current uart rx mem read address and rx mem write address"]
     #[inline(always)]

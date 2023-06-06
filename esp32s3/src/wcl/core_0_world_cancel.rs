@@ -21,7 +21,7 @@ impl From<crate::W<CORE_0_WORLD_CANCEL_SPEC>> for W {
 }
 #[doc = "Field `CORE_0_WORLD_CANCEL` writer - This field is used to cancel switch world configuration,if the trigger address and update configuration complete,use this register to cancel world switch, jujst need write any value,the hardware only checks the write operation of this register and does not case about its value"]
 pub type CORE_0_WORLD_CANCEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_WORLD_CANCEL_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_0_WORLD_CANCEL_SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_0_WORLD_CANCEL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

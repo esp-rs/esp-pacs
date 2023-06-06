@@ -16,7 +16,7 @@ impl From<crate::R<RTCCALICFG1_SPEC>> for R {
 #[doc = "Field `RTC_CALI_CYCLING_DATA_VLD` reader - Periodic calibration valid signal."]
 pub type RTC_CALI_CYCLING_DATA_VLD_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_VALUE` reader - Calibration value when cycles of clock to be calibrated reach TIMG_RTC_CALI_MAX, in unit of XTAL_CLK clock cycles."]
-pub type RTC_CALI_VALUE_R = crate::FieldReader<u32, u32>;
+pub type RTC_CALI_VALUE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bit 0 - Periodic calibration valid signal."]
     #[inline(always)]

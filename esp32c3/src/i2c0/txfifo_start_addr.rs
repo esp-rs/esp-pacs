@@ -14,7 +14,7 @@ impl From<crate::R<TXFIFO_START_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `TXFIFO_START_ADDR` reader - reg_txfifo_start_addr."]
-pub type TXFIFO_START_ADDR_R = crate::FieldReader<u32, u32>;
+pub type TXFIFO_START_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_txfifo_start_addr."]
     #[inline(always)]

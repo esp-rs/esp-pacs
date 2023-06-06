@@ -14,7 +14,7 @@ impl From<crate::R<SAR_COCPU_DEBUG_SPEC>> for R {
     }
 }
 #[doc = "Field `SAR_COCPU_PC` reader - cocpu Program counter"]
-pub type SAR_COCPU_PC_R = crate::FieldReader<u16, u16>;
+pub type SAR_COCPU_PC_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_COCPU_MEM_VLD` reader - cocpu mem valid output"]
 pub type SAR_COCPU_MEM_VLD_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_MEM_RDY` reader - cocpu mem ready input"]
@@ -22,7 +22,7 @@ pub type SAR_COCPU_MEM_RDY_R = crate::BitReader;
 #[doc = "Field `SAR_COCPU_MEM_WEN` reader - cocpu mem write enable output"]
 pub type SAR_COCPU_MEM_WEN_R = crate::FieldReader;
 #[doc = "Field `SAR_COCPU_MEM_ADDR` reader - cocpu mem address output"]
-pub type SAR_COCPU_MEM_ADDR_R = crate::FieldReader<u16, u16>;
+pub type SAR_COCPU_MEM_ADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:12 - cocpu Program counter"]
     #[inline(always)]

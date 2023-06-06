@@ -20,8 +20,7 @@ impl From<crate::W<STATUS_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS_INT_W1TS` writer - GPIO0~17 interrupt status write 1 to set"]
-pub type STATUS_INT_W1TS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, STATUS_W1TS_SPEC, 18, O, u32, u32>;
+pub type STATUS_INT_W1TS_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS_W1TS_SPEC, 18, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

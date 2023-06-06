@@ -40,15 +40,15 @@ pub type APB_SARADC_THRES1_CHANNEL_R = crate::FieldReader;
 pub type APB_SARADC_THRES1_CHANNEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, THRES1_CTRL_SPEC, 4, O>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH` reader - saradc thres1 monitor thres"]
-pub type APB_SARADC_THRES1_HIGH_R = crate::FieldReader<u16, u16>;
+pub type APB_SARADC_THRES1_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH` writer - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_HIGH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
+    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16>;
 #[doc = "Field `APB_SARADC_THRES1_LOW` reader - saradc thres1 monitor thres"]
-pub type APB_SARADC_THRES1_LOW_R = crate::FieldReader<u16, u16>;
+pub type APB_SARADC_THRES1_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_SARADC_THRES1_LOW` writer - saradc thres1 monitor thres"]
 pub type APB_SARADC_THRES1_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
+    crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:3 - configure thres1 to adc channel"]
     #[inline(always)]

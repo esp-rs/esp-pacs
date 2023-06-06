@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_CONTROL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` reader - it's only a R/W register, no function, software can write any value"]
-pub type CONTROL_CORE_1_MESSAGE_R = crate::FieldReader<u32, u32>;
+pub type CONTROL_CORE_1_MESSAGE_R = crate::FieldReader<u32>;
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` writer - it's only a R/W register, no function, software can write any value"]
 pub type CONTROL_CORE_1_MESSAGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_CONTROL_1_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_1_CONTROL_1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]

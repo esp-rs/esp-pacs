@@ -35,13 +35,13 @@ impl From<crate::W<GPIO_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_OUT_DATA` reader - The output value when the GPIO pin is set as output."]
-pub type GPIO_OUT_DATA_R = crate::FieldReader<u16, u16>;
+pub type GPIO_OUT_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_OUT_DATA` writer - The output value when the GPIO pin is set as output."]
-pub type GPIO_OUT_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16, u16>;
+pub type GPIO_OUT_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16>;
 #[doc = "Field `GPIO_BT_SEL` reader - BT-Coexist Selection register"]
-pub type GPIO_BT_SEL_R = crate::FieldReader<u16, u16>;
+pub type GPIO_BT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_BT_SEL` writer - BT-Coexist Selection register"]
-pub type GPIO_BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16, u16>;
+pub type GPIO_BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The output value when the GPIO pin is set as output."]
     #[inline(always)]

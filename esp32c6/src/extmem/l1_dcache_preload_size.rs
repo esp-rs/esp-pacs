@@ -35,10 +35,10 @@ impl From<crate::W<L1_DCACHE_PRELOAD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_CACHE_PRELOAD_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
-pub type L1_CACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
+pub type L1_CACHE_PRELOAD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L1_CACHE_PRELOAD_SIZE` writer - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
 pub type L1_CACHE_PRELOAD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_DCACHE_PRELOAD_SIZE_SPEC, 14, O, u16, u16>;
+    crate::FieldWriter<'a, L1_DCACHE_PRELOAD_SIZE_SPEC, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOAD_ADDR_REG"]
     #[inline(always)]

@@ -47,13 +47,13 @@ pub type ADC1_THRES_MODE_R = crate::BitReader;
 #[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
 pub type ADC1_THRES_MODE_W<'a, const O: u8> = crate::BitWriter<'a, THRES_CTRL_SPEC, O>;
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
-pub type ADC2_THRES_R = crate::FieldReader<u16, u16>;
+pub type ADC2_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC2_THRES` writer - ADC2 threshold."]
-pub type ADC2_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16, u16>;
+pub type ADC2_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16>;
 #[doc = "Field `ADC1_THRES` reader - ADC1 threshold."]
-pub type ADC1_THRES_R = crate::FieldReader<u16, u16>;
+pub type ADC1_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC1_THRES` writer - ADC1 threshold."]
-pub type ADC1_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16, u16>;
+pub type ADC1_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, THRES_CTRL_SPEC, 13, O, u16>;
 #[doc = "Field `ADC2_THRES_EN` reader - Enable ADC2 threshold monitor."]
 pub type ADC2_THRES_EN_R = crate::BitReader;
 #[doc = "Field `ADC2_THRES_EN` writer - Enable ADC2 threshold monitor."]

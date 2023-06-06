@@ -14,7 +14,7 @@ impl From<crate::R<RTC_GPIO_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `NEXT` reader - RTC GPIO input data"]
-pub type NEXT_R = crate::FieldReader<u32, u32>;
+pub type NEXT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO input data"]
     #[inline(always)]

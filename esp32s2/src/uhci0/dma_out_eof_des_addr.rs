@@ -14,7 +14,7 @@ impl From<crate::R<DMA_OUT_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_EOF_DES_ADDR` reader - This register stores the address of the transmit descriptor when the EOF bit in this descriptor is 1."]
-pub type OUT_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUT_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the transmit descriptor when the EOF bit in this descriptor is 1."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CONF_BITLEN` reader - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
-pub type CONF_BITLEN_R = crate::FieldReader<u32, u32>;
+pub type CONF_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `CONF_BITLEN` writer - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
-pub type CONF_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 18, O, u32, u32>;
+pub type CONF_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 18, O, u32>;
 #[doc = "Field `UPDATE` reader - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
 pub type UPDATE_R = crate::BitReader;
 #[doc = "Field `UPDATE` writer - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]

@@ -35,10 +35,10 @@ impl From<crate::W<GPIO_RTC_CALIB_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_CALIB_VALUE` reader - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
-pub type RTC_CALIB_VALUE_R = crate::FieldReader<u32, u32>;
+pub type RTC_CALIB_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `RTC_CALIB_VALUE` writer - The cycle number of clk_xtal (crystal clock) for the RTC_PERIOD_NUM cycles of RTC-clock"]
 pub type RTC_CALIB_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GPIO_RTC_CALIB_VALUE_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, GPIO_RTC_CALIB_VALUE_SPEC, 20, O, u32>;
 #[doc = "Field `RTC_CALIB_RDY_REAL` reader - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]
 pub type RTC_CALIB_RDY_REAL_R = crate::BitReader;
 #[doc = "Field `RTC_CALIB_RDY_REAL` writer - 0: during RTC-clock-calibration; 1: RTC-clock-calibration is done"]

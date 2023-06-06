@@ -35,15 +35,15 @@ impl From<crate::W<SAR_SLAVE_ADDR3_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR5` reader - "]
-pub type I2C_SLAVE_ADDR5_R = crate::FieldReader<u16, u16>;
+pub type I2C_SLAVE_ADDR5_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SLAVE_ADDR5` writer - "]
 pub type I2C_SLAVE_ADDR5_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR4` reader - "]
-pub type I2C_SLAVE_ADDR4_R = crate::FieldReader<u16, u16>;
+pub type I2C_SLAVE_ADDR4_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SLAVE_ADDR4` writer - "]
 pub type I2C_SLAVE_ADDR4_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR3_SPEC, 11, O, u16>;
 #[doc = "Field `TSENS_OUT` reader - temperature sensor data out"]
 pub type TSENS_OUT_R = crate::FieldReader;
 #[doc = "Field `TSENS_RDY_OUT` reader - indicate temperature sensor out ready"]

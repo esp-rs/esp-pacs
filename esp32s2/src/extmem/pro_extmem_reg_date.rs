@@ -35,10 +35,10 @@ impl From<crate::W<PRO_EXTMEM_REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_EXTMEM_REG_DATE` reader - Reserved."]
-pub type PRO_EXTMEM_REG_DATE_R = crate::FieldReader<u32, u32>;
+pub type PRO_EXTMEM_REG_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_EXTMEM_REG_DATE` writer - Reserved."]
 pub type PRO_EXTMEM_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_EXTMEM_REG_DATE_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_EXTMEM_REG_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Reserved."]
     #[inline(always)]

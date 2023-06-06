@@ -35,20 +35,20 @@ impl From<crate::W<I2S_TX_CLKM_DIV_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_TX_CLKM_DIV_Z` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b)."]
-pub type I2S_TX_CLKM_DIV_Z_R = crate::FieldReader<u16, u16>;
+pub type I2S_TX_CLKM_DIV_Z_R = crate::FieldReader<u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_Z` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Z is b. For b > a/2, the value of I2S_TX_CLKM_DIV_Z is (a-b)."]
 pub type I2S_TX_CLKM_DIV_Z_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_Y` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b))."]
-pub type I2S_TX_CLKM_DIV_Y_R = crate::FieldReader<u16, u16>;
+pub type I2S_TX_CLKM_DIV_Y_R = crate::FieldReader<u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_Y` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_Y is (a%b) . For b > a/2, the value of I2S_TX_CLKM_DIV_Y is (a%(a-b))."]
 pub type I2S_TX_CLKM_DIV_Y_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_X` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1."]
-pub type I2S_TX_CLKM_DIV_X_R = crate::FieldReader<u16, u16>;
+pub type I2S_TX_CLKM_DIV_X_R = crate::FieldReader<u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_X` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_X is (a/b) - 1. For b > a/2, the value of I2S_TX_CLKM_DIV_X is (a/(a-b)) - 1."]
 pub type I2S_TX_CLKM_DIV_X_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, I2S_TX_CLKM_DIV_CONF_SPEC, 9, O, u16>;
 #[doc = "Field `I2S_TX_CLKM_DIV_YN1` reader - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1."]
 pub type I2S_TX_CLKM_DIV_YN1_R = crate::BitReader;
 #[doc = "Field `I2S_TX_CLKM_DIV_YN1` writer - For b &lt;= a/2, the value of I2S_TX_CLKM_DIV_YN1 is 0 . For b > a/2, the value of I2S_TX_CLKM_DIV_YN1 is 1."]

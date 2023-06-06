@@ -14,7 +14,7 @@ impl From<crate::R<RND_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `RND_DATA` reader - reg_rnd_data"]
-pub type RND_DATA_R = crate::FieldReader<u32, u32>;
+pub type RND_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_rnd_data"]
     #[inline(always)]

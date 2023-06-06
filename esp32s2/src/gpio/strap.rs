@@ -14,7 +14,7 @@ impl From<crate::R<STRAP_SPEC>> for R {
     }
 }
 #[doc = "Field `STRAPPING` reader - GPIO strapping values: bit4 ~ bit2 correspond to stripping pins GPIO45, GPIO0, and GPIO46 respectively."]
-pub type STRAPPING_R = crate::FieldReader<u16, u16>;
+pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - GPIO strapping values: bit4 ~ bit2 correspond to stripping pins GPIO45, GPIO0, and GPIO46 respectively."]
     #[inline(always)]

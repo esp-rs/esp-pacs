@@ -35,10 +35,10 @@ impl From<crate::W<IN_CONF1_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_INFIFO_FULL_THRS` reader - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
-pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
+pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - This register is used to generate the INFIFO_FULL_WM_INT interrupt when Rx channel 0 received byte number in Rx FIFO is up to the value of the register."]
 pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IN_CONF1_CH_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, IN_CONF1_CH_SPEC, 12, O, u16>;
 #[doc = "Field `IN_CHECK_OWNER` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
 pub type IN_CHECK_OWNER_R = crate::BitReader;
 #[doc = "Field `IN_CHECK_OWNER` writer - Set this bit to enable checking the owner attribute of the link descriptor."]

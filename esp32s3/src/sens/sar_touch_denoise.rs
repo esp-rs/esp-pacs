@@ -14,7 +14,7 @@ impl From<crate::R<SAR_TOUCH_DENOISE_SPEC>> for R {
     }
 }
 #[doc = "Field `DATA` reader - configure touch controller"]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - configure touch controller"]
     #[inline(always)]

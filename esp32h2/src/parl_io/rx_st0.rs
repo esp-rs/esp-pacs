@@ -16,7 +16,7 @@ impl From<crate::R<RX_ST0_SPEC>> for R {
 #[doc = "Field `RX_CNT` reader - Indicates the cycle number of reading Rx FIFO."]
 pub type RX_CNT_R = crate::FieldReader;
 #[doc = "Field `RX_FIFO_WR_BIT_CNT` reader - Indicates the current written bit number into Rx FIFO."]
-pub type RX_FIFO_WR_BIT_CNT_R = crate::FieldReader<u32, u32>;
+pub type RX_FIFO_WR_BIT_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 9:12 - Indicates the cycle number of reading Rx FIFO."]
     #[inline(always)]

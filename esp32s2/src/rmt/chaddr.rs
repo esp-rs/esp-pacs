@@ -14,9 +14,9 @@ impl From<crate::R<CHADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_MEM_WADDR` reader - This register records the memory address offset when writes RAM over APB bus."]
-pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_WADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_MEM_RADDR` reader - This register records the memory address offset when reads RAM over APB bus."]
-pub type APB_MEM_RADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_RADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:8 - This register records the memory address offset when writes RAM over APB bus."]
     #[inline(always)]

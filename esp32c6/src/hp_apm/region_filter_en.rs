@@ -35,10 +35,10 @@ impl From<crate::W<REGION_FILTER_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_FILTER_EN` reader - Region filter enable"]
-pub type REGION_FILTER_EN_R = crate::FieldReader<u16, u16>;
+pub type REGION_FILTER_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `REGION_FILTER_EN` writer - Region filter enable"]
 pub type REGION_FILTER_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGION_FILTER_EN_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, REGION_FILTER_EN_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Region filter enable"]
     #[inline(always)]

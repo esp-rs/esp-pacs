@@ -14,7 +14,7 @@ impl From<crate::R<CH_DUTY_R_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_CH_R` reader - This register stores the current duty of output signal on channel %s."]
-pub type DUTY_CH_R_R = crate::FieldReader<u32, u32>;
+pub type DUTY_CH_R_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:24 - This register stores the current duty of output signal on channel %s."]
     #[inline(always)]

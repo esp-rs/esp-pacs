@@ -14,7 +14,7 @@ impl From<crate::R<_0_TXPKTU_H_DSCR_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_TX_PKT_START_DSCR_ADDR` reader - "]
-pub type SLC0_TX_PKT_START_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SLC0_TX_PKT_START_DSCR_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

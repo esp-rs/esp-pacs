@@ -47,10 +47,9 @@ pub type TIMER2_SYNCO_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER2_SYNCO_SEL` writer - "]
 pub type TIMER2_SYNCO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SYNC_SPEC, 2, O>;
 #[doc = "Field `TIMER2_PHASE` reader - "]
-pub type TIMER2_PHASE_R = crate::FieldReader<u16, u16>;
+pub type TIMER2_PHASE_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER2_PHASE` writer - "]
-pub type TIMER2_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER2_SYNC_SPEC, 16, O, u16, u16>;
+pub type TIMER2_PHASE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SYNC_SPEC, 16, O, u16>;
 #[doc = "Field `TIMER2_PHASE_DIRECTION` reader - "]
 pub type TIMER2_PHASE_DIRECTION_R = crate::BitReader;
 #[doc = "Field `TIMER2_PHASE_DIRECTION` writer - "]

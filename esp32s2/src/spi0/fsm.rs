@@ -37,9 +37,9 @@ impl From<crate::W<FSM_SPEC>> for W {
 #[doc = "Field `ST` reader - The status of spi state machine. 0: idle state, 1: preparation state, 2: send command state, 3: send data state, 4: red data state, 5:write data state, 6: wait state, 7: done state."]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `MST_DMA_RD_BYTELEN` reader - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
-pub type MST_DMA_RD_BYTELEN_R = crate::FieldReader<u32, u32>;
+pub type MST_DMA_RD_BYTELEN_R = crate::FieldReader<u32>;
 #[doc = "Field `MST_DMA_RD_BYTELEN` writer - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
-pub type MST_DMA_RD_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_SPEC, 20, O, u32, u32>;
+pub type MST_DMA_RD_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, FSM_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:3 - The status of spi state machine. 0: idle state, 1: preparation state, 2: send command state, 3: send data state, 4: red data state, 5:write data state, 6: wait state, 7: done state."]
     #[inline(always)]

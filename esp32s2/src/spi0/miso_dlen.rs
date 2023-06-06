@@ -35,10 +35,9 @@ impl From<crate::W<MISO_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_MISO_DBITLEN` reader - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_MISO_DBITLEN_R = crate::FieldReader<u32, u32>;
+pub type USR_MISO_DBITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `USR_MISO_DBITLEN` writer - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type USR_MISO_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MISO_DLEN_SPEC, 23, O, u32, u32>;
+pub type USR_MISO_DBITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MISO_DLEN_SPEC, 23, O, u32>;
 impl R {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]

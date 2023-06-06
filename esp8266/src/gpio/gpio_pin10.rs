@@ -137,7 +137,7 @@ impl<'a, const O: u8> GPIO_PIN10_DRIVER_W<'a, O> {
     }
 }
 #[doc = "Field `GPIO_PIN10_INT_TYPE` reader - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
-pub type GPIO_PIN10_INT_TYPE_R = crate::FieldReader<u8, GPIO_PIN10_INT_TYPE_A>;
+pub type GPIO_PIN10_INT_TYPE_R = crate::FieldReader<GPIO_PIN10_INT_TYPE_A>;
 #[doc = "0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -160,6 +160,9 @@ impl From<GPIO_PIN10_INT_TYPE_A> for u8 {
     fn from(variant: GPIO_PIN10_INT_TYPE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for GPIO_PIN10_INT_TYPE_A {
+    type Ux = u8;
 }
 impl GPIO_PIN10_INT_TYPE_R {
     #[doc = "Get enumerated values variant"]
@@ -208,7 +211,7 @@ impl GPIO_PIN10_INT_TYPE_R {
 }
 #[doc = "Field `GPIO_PIN10_INT_TYPE` writer - 0: disable; 1: positive edge; 2: negative edge; 3: both types of edge; 4: low-level; 5: high-level"]
 pub type GPIO_PIN10_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GPIO_PIN10_SPEC, 3, O, u8, GPIO_PIN10_INT_TYPE_A>;
+    crate::FieldWriter<'a, GPIO_PIN10_SPEC, 3, O, GPIO_PIN10_INT_TYPE_A>;
 impl<'a, const O: u8> GPIO_PIN10_INT_TYPE_W<'a, O> {
     #[doc = "interrupt is disabled"]
     #[inline(always)]

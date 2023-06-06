@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_DATA4_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED2_R = crate::FieldReader<u32, u32>;
+pub type RPT4_RESERVED2_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:23 - Reserved (used for four backups method)."]
     #[inline(always)]

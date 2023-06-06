@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_NEXT_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS_INTERRUPT_NEXT` reader - Interrupt source signal of GPIO0 ~ 31, could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt."]
-pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32, u32>;
+pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt source signal of GPIO0 ~ 31, could be rising edge interrupt, falling edge interrupt, level sensitive interrupt and any edge interrupt."]
     #[inline(always)]

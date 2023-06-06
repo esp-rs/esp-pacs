@@ -35,10 +35,9 @@ impl From<crate::W<SLEEP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ACTIVE_THRESHOLD` reader - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
-pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
-pub type ACTIVE_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLEEP_CONF_SPEC, 10, O, u16, u16>;
+pub type ACTIVE_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SLEEP_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
     #[inline(always)]

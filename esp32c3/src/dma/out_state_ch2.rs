@@ -14,7 +14,7 @@ impl From<crate::R<OUT_STATE_CH2_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_ADDR` reader - This register stores the current outlink descriptor's address."]
-pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUT_DSCR_STATE` reader - reserved"]
 pub type OUT_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `OUT_STATE` reader - reserved"]

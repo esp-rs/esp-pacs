@@ -35,9 +35,9 @@ impl From<crate::W<SPI_W14_SPEC>> for W {
     }
 }
 #[doc = "Field `spi_w14` reader - the data inside the buffer of the SPI module, word 14"]
-pub type SPI_W14_R = crate::FieldReader<u32, u32>;
+pub type SPI_W14_R = crate::FieldReader<u32>;
 #[doc = "Field `spi_w14` writer - the data inside the buffer of the SPI module, word 14"]
-pub type SPI_W14_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_W14_SPEC, 32, O, u32, u32>;
+pub type SPI_W14_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_W14_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the data inside the buffer of the SPI module, word 14"]
     #[inline(always)]

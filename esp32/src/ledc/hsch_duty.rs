@@ -35,9 +35,9 @@ impl From<crate::W<HSCH_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY` reader - This register represents the current duty of the output signal for high speed channel0."]
-pub type DUTY_R = crate::FieldReader<u32, u32>;
+pub type DUTY_R = crate::FieldReader<u32>;
 #[doc = "Field `DUTY` writer - This register represents the current duty of the output signal for high speed channel0."]
-pub type DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_DUTY_SPEC, 25, O, u32, u32>;
+pub type DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_DUTY_SPEC, 25, O, u32>;
 impl R {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for high speed channel0."]
     #[inline(always)]

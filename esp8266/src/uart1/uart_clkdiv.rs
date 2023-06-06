@@ -35,9 +35,9 @@ impl From<crate::W<UART_CLKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `uart_clkdiv` reader - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
-pub type UART_CLKDIV_R = crate::FieldReader<u32, u32>;
+pub type UART_CLKDIV_R = crate::FieldReader<u32>;
 #[doc = "Field `uart_clkdiv` writer - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
-pub type UART_CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CLKDIV_SPEC, 20, O, u32, u32>;
+pub type UART_CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, UART_CLKDIV_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - BAUDRATE = UART_CLK_FREQ / UART_CLKDIV"]
     #[inline(always)]

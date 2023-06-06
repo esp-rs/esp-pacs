@@ -35,10 +35,10 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLEEP_REJECT_ENA` reader - Set this bit to enable reject-to-sleep."]
-pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32, u32>;
+pub type SLEEP_REJECT_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `SLEEP_REJECT_ENA` writer - Set this bit to enable reject-to-sleep."]
 pub type SLEEP_REJECT_ENA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLP_REJECT_CONF_SPEC, 17, O, u32, u32>;
+    crate::FieldWriter<'a, SLP_REJECT_CONF_SPEC, 17, O, u32>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - Set this bit to enable reject-to-light-sleep."]
 pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - Set this bit to enable reject-to-light-sleep."]

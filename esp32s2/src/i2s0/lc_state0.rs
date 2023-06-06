@@ -14,7 +14,7 @@ impl From<crate::R<LC_STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_ADDR` reader - I2S DMA out descriptor address."]
-pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUT_DSCR_STATE` reader - I2S DMA out descriptor state."]
 pub type OUT_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `OUT_STATE` reader - I2S DMA out data state."]

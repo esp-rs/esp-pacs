@@ -14,7 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_ADDR` reader - This register store the first address rejected by permission control when accessing external RAM."]
-pub type EXTMEM_REJECT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type EXTMEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register store the first address rejected by permission control when accessing external RAM."]
     #[inline(always)]

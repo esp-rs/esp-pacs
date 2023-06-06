@@ -14,7 +14,7 @@ impl From<crate::R<HCDMAB1_SPEC>> for R {
     }
 }
 #[doc = "Field `H_HCDMAB1` reader - "]
-pub type H_HCDMAB1_R = crate::FieldReader<u32, u32>;
+pub type H_HCDMAB1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

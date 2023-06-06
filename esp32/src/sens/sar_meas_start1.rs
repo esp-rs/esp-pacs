@@ -35,7 +35,7 @@ impl From<crate::W<SAR_MEAS_START1_SPEC>> for W {
     }
 }
 #[doc = "Field `MEAS1_DATA_SAR` reader - SAR ADC1 data"]
-pub type MEAS1_DATA_SAR_R = crate::FieldReader<u16, u16>;
+pub type MEAS1_DATA_SAR_R = crate::FieldReader<u16>;
 #[doc = "Field `MEAS1_DONE_SAR` reader - SAR ADC1 conversion done indication"]
 pub type MEAS1_DONE_SAR_R = crate::BitReader;
 #[doc = "Field `MEAS1_START_SAR` reader - SAR ADC1 controller (in RTC) starts conversion only active when reg_meas1_start_force = 1"]
@@ -47,10 +47,9 @@ pub type MEAS1_START_FORCE_R = crate::BitReader;
 #[doc = "Field `MEAS1_START_FORCE` writer - 1: SAR ADC1 controller (in RTC) is started by SW 0: SAR ADC1 controller is started by ULP-coprocessor"]
 pub type MEAS1_START_FORCE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS_START1_SPEC, O>;
 #[doc = "Field `SAR1_EN_PAD` reader - SAR ADC1 pad enable bitmap only active when reg_sar1_en_pad_force = 1"]
-pub type SAR1_EN_PAD_R = crate::FieldReader<u16, u16>;
+pub type SAR1_EN_PAD_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR1_EN_PAD` writer - SAR ADC1 pad enable bitmap only active when reg_sar1_en_pad_force = 1"]
-pub type SAR1_EN_PAD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEAS_START1_SPEC, 12, O, u16, u16>;
+pub type SAR1_EN_PAD_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_START1_SPEC, 12, O, u16>;
 #[doc = "Field `SAR1_EN_PAD_FORCE` reader - 1: SAR ADC1 pad enable bitmap is controlled by SW 0: SAR ADC1 pad enable bitmap is controlled by ULP-coprocessor"]
 pub type SAR1_EN_PAD_FORCE_R = crate::BitReader;
 #[doc = "Field `SAR1_EN_PAD_FORCE` writer - 1: SAR ADC1 pad enable bitmap is controlled by SW 0: SAR ADC1 pad enable bitmap is controlled by ULP-coprocessor"]

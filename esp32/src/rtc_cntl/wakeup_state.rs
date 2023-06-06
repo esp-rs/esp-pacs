@@ -35,11 +35,11 @@ impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `WAKEUP_CAUSE` reader - wakeup cause"]
-pub type WAKEUP_CAUSE_R = crate::FieldReader<u16, u16>;
+pub type WAKEUP_CAUSE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAKEUP_ENA` reader - wakeup enable bitmap"]
-pub type WAKEUP_ENA_R = crate::FieldReader<u16, u16>;
+pub type WAKEUP_ENA_R = crate::FieldReader<u16>;
 #[doc = "Field `WAKEUP_ENA` writer - wakeup enable bitmap"]
-pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 11, O, u16, u16>;
+pub type WAKEUP_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, WAKEUP_STATE_SPEC, 11, O, u16>;
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - enable filter for gpio wakeup event"]
 pub type GPIO_WAKEUP_FILTER_R = crate::BitReader;
 #[doc = "Field `GPIO_WAKEUP_FILTER` writer - enable filter for gpio wakeup event"]

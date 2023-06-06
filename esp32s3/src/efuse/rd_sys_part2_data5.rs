@@ -14,7 +14,7 @@ impl From<crate::R<RD_SYS_PART2_DATA5_SPEC>> for R {
     }
 }
 #[doc = "Field `SYS_DATA_PART2_5` reader - Stores the 5th 32 bits of the 2nd part of system data."]
-pub type SYS_DATA_PART2_5_R = crate::FieldReader<u32, u32>;
+pub type SYS_DATA_PART2_5_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the 5th 32 bits of the 2nd part of system data."]
     #[inline(always)]

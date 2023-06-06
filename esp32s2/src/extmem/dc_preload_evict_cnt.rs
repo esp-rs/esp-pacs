@@ -14,7 +14,7 @@ impl From<crate::R<DC_PRELOAD_EVICT_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DC_PRELOAD_EVICT_CNT` reader - The bits are used to count the number of cache evictions by pre-load which include manual pre-load and conditional pre-load."]
-pub type DC_PRELOAD_EVICT_CNT_R = crate::FieldReader<u16, u16>;
+pub type DC_PRELOAD_EVICT_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to count the number of cache evictions by pre-load which include manual pre-load and conditional pre-load."]
     #[inline(always)]

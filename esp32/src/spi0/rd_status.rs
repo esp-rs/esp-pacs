@@ -35,9 +35,9 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS` reader - In the slave mode, it is the status for master to read out."]
-pub type STATUS_R = crate::FieldReader<u16, u16>;
+pub type STATUS_R = crate::FieldReader<u16>;
 #[doc = "Field `STATUS` writer - In the slave mode, it is the status for master to read out."]
-pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 16, O, u16, u16>;
+pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 16, O, u16>;
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
 pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]

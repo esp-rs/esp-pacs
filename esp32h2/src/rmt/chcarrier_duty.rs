@@ -35,15 +35,15 @@ impl From<crate::W<CHCARRIER_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER_LOW_CH0` reader - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
-pub type CARRIER_LOW_CH0_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_LOW_CH0_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_LOW_CH0` writer - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
 pub type CARRIER_LOW_CH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
 #[doc = "Field `CARRIER_HIGH_CH0` reader - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
-pub type CARRIER_HIGH_CH0_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_HIGH_CH0_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_HIGH_CH0` writer - This register is used to configure carrier wave 's high level clock period for CHANNEL%s."]
 pub type CARRIER_HIGH_CH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CHCARRIER_DUTY_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave 's low level clock period for CHANNEL%s."]
     #[inline(always)]

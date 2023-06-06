@@ -35,10 +35,10 @@ impl From<crate::W<SLV_WRBUF_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_WRBUF_DBITLEN` reader - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
-pub type SLV_WRBUF_DBITLEN_R = crate::FieldReader<u32, u32>;
+pub type SLV_WRBUF_DBITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_WRBUF_DBITLEN` writer - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
 pub type SLV_WRBUF_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLV_WRBUF_DLEN_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, SLV_WRBUF_DLEN_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - In the slave mode it is the length in bits for write-buffer operations. The register value shall be (bit_num-1)."]
     #[inline(always)]

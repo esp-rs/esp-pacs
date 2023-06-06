@@ -14,7 +14,7 @@ impl From<crate::R<BLK0_RDATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_WIFI_MAC_CRC_HIGH` reader - read for high 24bit WIFI_MAC_Address"]
-pub type RD_WIFI_MAC_CRC_HIGH_R = crate::FieldReader<u32, u32>;
+pub type RD_WIFI_MAC_CRC_HIGH_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:23 - read for high 24bit WIFI_MAC_Address"]
     #[inline(always)]

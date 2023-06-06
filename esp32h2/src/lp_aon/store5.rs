@@ -35,9 +35,9 @@ impl From<crate::W<STORE5_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_AON_STORE5` reader - need_des"]
-pub type LP_AON_STORE5_R = crate::FieldReader<u32, u32>;
+pub type LP_AON_STORE5_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_AON_STORE5` writer - need_des"]
-pub type LP_AON_STORE5_W<'a, const O: u8> = crate::FieldWriter<'a, STORE5_SPEC, 32, O, u32, u32>;
+pub type LP_AON_STORE5_W<'a, const O: u8> = crate::FieldWriter<'a, STORE5_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

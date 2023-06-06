@@ -39,10 +39,9 @@ pub type FORCE_XPD_SAR_SW_R = crate::BitReader;
 #[doc = "Field `FORCE_XPD_SAR_SW` writer - "]
 pub type FORCE_XPD_SAR_SW_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEAS_WAIT2_SPEC, O>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
-pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - "]
-pub type SAR_AMP_WAIT3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT3_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT2_SPEC, 16, O, u16>;
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
 pub type FORCE_XPD_AMP_R = crate::FieldReader;
 #[doc = "Field `FORCE_XPD_AMP` writer - "]

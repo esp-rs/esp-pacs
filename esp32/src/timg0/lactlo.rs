@@ -14,7 +14,7 @@ impl From<crate::R<LACTLO_SPEC>> for R {
     }
 }
 #[doc = "Field `LACT_LO` reader - "]
-pub type LACT_LO_R = crate::FieldReader<u32, u32>;
+pub type LACT_LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

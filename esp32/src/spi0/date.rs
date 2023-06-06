@@ -14,7 +14,7 @@ impl From<crate::R<DATE_SPEC>> for R {
     }
 }
 #[doc = "Field `DATE` reader - SPI register version."]
-pub type DATE_R = crate::FieldReader<u32, u32>;
+pub type DATE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:27 - SPI register version."]
     #[inline(always)]

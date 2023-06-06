@@ -35,9 +35,9 @@ impl From<crate::W<GPIO_HOLD1_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_HOLD1` reader - need_des"]
-pub type GPIO_HOLD1_R = crate::FieldReader<u32, u32>;
+pub type GPIO_HOLD1_R = crate::FieldReader<u32>;
 #[doc = "Field `GPIO_HOLD1` writer - need_des"]
-pub type GPIO_HOLD1_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_HOLD1_SPEC, 32, O, u32, u32>;
+pub type GPIO_HOLD1_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_HOLD1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

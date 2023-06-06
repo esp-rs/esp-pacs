@@ -35,10 +35,9 @@ impl From<crate::W<REG_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT_REG_DATE` reader - This is the version register."]
-pub type INTERRUPT_REG_DATE_R = crate::FieldReader<u32, u32>;
+pub type INTERRUPT_REG_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `INTERRUPT_REG_DATE` writer - This is the version register."]
-pub type INTERRUPT_REG_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REG_DATE_SPEC, 28, O, u32, u32>;
+pub type INTERRUPT_REG_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, REG_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - This is the version register."]
     #[inline(always)]

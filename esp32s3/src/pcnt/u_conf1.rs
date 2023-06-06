@@ -35,13 +35,13 @@ impl From<crate::W<U_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_THRES0` reader - This register is used to configure the thres0 value for unit %s."]
-pub type CNT_THRES0_R = crate::FieldReader<u16, u16>;
+pub type CNT_THRES0_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_THRES0` writer - This register is used to configure the thres0 value for unit %s."]
-pub type CNT_THRES0_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF1_SPEC, 16, O, u16, u16>;
+pub type CNT_THRES0_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF1_SPEC, 16, O, u16>;
 #[doc = "Field `CNT_THRES1` reader - This register is used to configure the thres1 value for unit %s."]
-pub type CNT_THRES1_R = crate::FieldReader<u16, u16>;
+pub type CNT_THRES1_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_THRES1` writer - This register is used to configure the thres1 value for unit %s."]
-pub type CNT_THRES1_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF1_SPEC, 16, O, u16, u16>;
+pub type CNT_THRES1_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]

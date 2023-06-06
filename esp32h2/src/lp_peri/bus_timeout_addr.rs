@@ -14,7 +14,7 @@ impl From<crate::R<BUS_TIMEOUT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `LP_PERI_TIMEOUT_ADDR` reader - need_des"]
-pub type LP_PERI_TIMEOUT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type LP_PERI_TIMEOUT_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<IBUS_PMS_TBL_BOUNDARY0_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_PMS_BOUNDARY0` reader - The bit is used to configure the ibus permission control section boundary0"]
-pub type IBUS_PMS_BOUNDARY0_R = crate::FieldReader<u16, u16>;
+pub type IBUS_PMS_BOUNDARY0_R = crate::FieldReader<u16>;
 #[doc = "Field `IBUS_PMS_BOUNDARY0` writer - The bit is used to configure the ibus permission control section boundary0"]
 pub type IBUS_PMS_BOUNDARY0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IBUS_PMS_TBL_BOUNDARY0_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, IBUS_PMS_TBL_BOUNDARY0_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to configure the ibus permission control section boundary0"]
     #[inline(always)]

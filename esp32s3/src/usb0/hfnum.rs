@@ -14,9 +14,9 @@ impl From<crate::R<HFNUM_SPEC>> for R {
     }
 }
 #[doc = "Field `FRNUM` reader - "]
-pub type FRNUM_R = crate::FieldReader<u16, u16>;
+pub type FRNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `FRREM` reader - "]
-pub type FRREM_R = crate::FieldReader<u16, u16>;
+pub type FRREM_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:13"]
     #[inline(always)]

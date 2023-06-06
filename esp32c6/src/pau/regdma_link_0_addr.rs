@@ -35,10 +35,10 @@ impl From<crate::W<REGDMA_LINK_0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `LINK_ADDR_0` reader - link_0_addr reg"]
-pub type LINK_ADDR_0_R = crate::FieldReader<u32, u32>;
+pub type LINK_ADDR_0_R = crate::FieldReader<u32>;
 #[doc = "Field `LINK_ADDR_0` writer - link_0_addr reg"]
 pub type LINK_ADDR_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGDMA_LINK_0_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, REGDMA_LINK_0_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - link_0_addr reg"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<CAP_TIMER_PHASE_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP_PHASE` reader - Phase value for capture timer sync operation."]
-pub type CAP_PHASE_R = crate::FieldReader<u32, u32>;
+pub type CAP_PHASE_R = crate::FieldReader<u32>;
 #[doc = "Field `CAP_PHASE` writer - Phase value for capture timer sync operation."]
-pub type CAP_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CAP_TIMER_PHASE_SPEC, 32, O, u32, u32>;
+pub type CAP_PHASE_W<'a, const O: u8> = crate::FieldWriter<'a, CAP_TIMER_PHASE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Phase value for capture timer sync operation."]
     #[inline(always)]

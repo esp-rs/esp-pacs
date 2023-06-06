@@ -14,7 +14,7 @@ impl From<crate::R<DEC_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DEC_WARNINGS` reader - the decode result of 3/4 coding scheme has warning"]
-pub type DEC_WARNINGS_R = crate::FieldReader<u16, u16>;
+pub type DEC_WARNINGS_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:11 - the decode result of 3/4 coding scheme has warning"]
     #[inline(always)]

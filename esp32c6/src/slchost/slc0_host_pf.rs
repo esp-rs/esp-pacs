@@ -14,7 +14,7 @@ impl From<crate::R<SLC0_HOST_PF_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_PF_DATA` reader - *******Description***********"]
-pub type SLC0_PF_DATA_R = crate::FieldReader<u32, u32>;
+pub type SLC0_PF_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]

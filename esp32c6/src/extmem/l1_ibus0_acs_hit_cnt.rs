@@ -14,7 +14,7 @@ impl From<crate::R<L1_IBUS0_ACS_HIT_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_IBUS0_HIT_CNT` reader - The register records the number of hits when bus0 accesses L1-ICache0."]
-pub type L1_IBUS0_HIT_CNT_R = crate::FieldReader<u32, u32>;
+pub type L1_IBUS0_HIT_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The register records the number of hits when bus0 accesses L1-ICache0."]
     #[inline(always)]

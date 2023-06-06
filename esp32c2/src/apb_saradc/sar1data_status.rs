@@ -14,7 +14,7 @@ impl From<crate::R<SAR1DATA_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_SARADC1_DATA` reader - Need add description"]
-pub type APB_SARADC1_DATA_R = crate::FieldReader<u32, u32>;
+pub type APB_SARADC1_DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]

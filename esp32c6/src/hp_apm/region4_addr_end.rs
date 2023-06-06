@@ -35,10 +35,10 @@ impl From<crate::W<REGION4_ADDR_END_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION4_ADDR_END` reader - End address of region4"]
-pub type REGION4_ADDR_END_R = crate::FieldReader<u32, u32>;
+pub type REGION4_ADDR_END_R = crate::FieldReader<u32>;
 #[doc = "Field `REGION4_ADDR_END` writer - End address of region4"]
 pub type REGION4_ADDR_END_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REGION4_ADDR_END_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, REGION4_ADDR_END_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - End address of region4"]
     #[inline(always)]

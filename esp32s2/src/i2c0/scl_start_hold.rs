@@ -35,9 +35,9 @@ impl From<crate::W<SCL_START_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure interval between pulling SDA low and pulling SCL low when the master generates a START condition, in I2C module clock cycles."]
-pub type TIME_R = crate::FieldReader<u16, u16>;
+pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - This register is used to configure interval between pulling SDA low and pulling SCL low when the master generates a START condition, in I2C module clock cycles."]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_START_HOLD_SPEC, 10, O, u16, u16>;
+pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_START_HOLD_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure interval between pulling SDA low and pulling SCL low when the master generates a START condition, in I2C module clock cycles."]
     #[inline(always)]

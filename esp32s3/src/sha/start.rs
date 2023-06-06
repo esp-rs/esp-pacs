@@ -14,7 +14,7 @@ impl From<crate::R<START_SPEC>> for R {
     }
 }
 #[doc = "Field `START` reader - reserved."]
-pub type START_R = crate::FieldReader<u32, u32>;
+pub type START_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 1:31 - reserved."]
     #[inline(always)]

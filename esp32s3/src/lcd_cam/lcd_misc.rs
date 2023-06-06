@@ -43,10 +43,9 @@ pub type LCD_VFK_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `LCD_VFK_CYCLELEN` writer - The setup cycle length minus 1 in LCD non-RGB mode."]
 pub type LCD_VFK_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_MISC_SPEC, 6, O>;
 #[doc = "Field `LCD_VBK_CYCLELEN` reader - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
-pub type LCD_VBK_CYCLELEN_R = crate::FieldReader<u16, u16>;
+pub type LCD_VBK_CYCLELEN_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_VBK_CYCLELEN` writer - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
-pub type LCD_VBK_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LCD_MISC_SPEC, 13, O, u16, u16>;
+pub type LCD_VBK_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_MISC_SPEC, 13, O, u16>;
 #[doc = "Field `LCD_NEXT_FRAME_EN` reader - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
 pub type LCD_NEXT_FRAME_EN_R = crate::BitReader;
 #[doc = "Field `LCD_NEXT_FRAME_EN` writer - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]

@@ -14,7 +14,7 @@ impl From<crate::R<L2_CACHE_PRELOAD_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_PRELOAD_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOAD_ADDR_REG"]
-pub type L2_CACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
+pub type L2_CACHE_PRELOAD_SIZE_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - Those bits are used to configure the size of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOAD_ADDR_REG"]
     #[inline(always)]

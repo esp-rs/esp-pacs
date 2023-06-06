@@ -35,10 +35,10 @@ impl From<crate::W<L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ADDR` reader - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
-pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32, u32>;
+pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `L1_CACHE_AUTOLOAD_SCT0_ADDR` writer - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
 pub type L1_CACHE_AUTOLOAD_SCT0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, L1_CACHE_AUTOLOAD_SCT0_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section for autoload operation on L1-Cache. Note that it should be used together with L1_CACHE_AUTOLOAD_SCT0_SIZE and L1_CACHE_AUTOLOAD_SCT0_ENA."]
     #[inline(always)]

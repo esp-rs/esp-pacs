@@ -35,9 +35,9 @@ impl From<crate::W<SDIO_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_DATE` reader - sdio version date."]
-pub type SDIO_DATE_R = crate::FieldReader<u32, u32>;
+pub type SDIO_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SDIO_DATE` writer - sdio version date."]
-pub type SDIO_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_DATE_SPEC, 32, O, u32, u32>;
+pub type SDIO_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_DATE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - sdio version date."]
     #[inline(always)]

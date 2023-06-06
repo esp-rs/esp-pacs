@@ -35,10 +35,10 @@ impl From<crate::W<SLC_TOKEN0_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` reader - "]
-pub type SLC_TOKEN0_LOCAL_WDATA_R = crate::FieldReader<u16, u16>;
+pub type SLC_TOKEN0_LOCAL_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WDATA` writer - "]
 pub type SLC_TOKEN0_LOCAL_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16>;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` reader - "]
 pub type SLC_TOKEN0_LOCAL_WR_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_WR` writer - "]
@@ -52,9 +52,9 @@ pub type SLC_TOKEN0_LOCAL_INC_MORE_R = crate::BitReader;
 #[doc = "Field `SLC_TOKEN0_LOCAL_INC_MORE` writer - "]
 pub type SLC_TOKEN0_LOCAL_INC_MORE_W<'a, const O: u8> = crate::BitWriter<'a, SLC_TOKEN0_SPEC, O>;
 #[doc = "Field `SLC_TOKEN0` reader - "]
-pub type SLC_TOKEN0_R = crate::FieldReader<u16, u16>;
+pub type SLC_TOKEN0_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TOKEN0` writer - "]
-pub type SLC_TOKEN0_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16, u16>;
+pub type SLC_TOKEN0_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_TOKEN0_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]

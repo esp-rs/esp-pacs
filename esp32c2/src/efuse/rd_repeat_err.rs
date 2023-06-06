@@ -42,7 +42,7 @@ pub type FLASH_TPUW_ERR_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_EN_ERR` reader - If any bit in this filed is 1, then it indicates a programming error."]
 pub type SECURE_BOOT_EN_ERR_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED_ERR` reader - Reserved."]
-pub type RPT4_RESERVED_ERR_R = crate::FieldReader<u16, u16>;
+pub type RPT4_RESERVED_ERR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:1 - If any bit in RD_DIS is 1, then it indicates a programming error."]
     #[inline(always)]

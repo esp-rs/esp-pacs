@@ -14,7 +14,7 @@ impl From<crate::R<INT_STATUS_REG_2_SPEC>> for R {
     }
 }
 #[doc = "Field `INT_STATUS_2` reader - Need add description"]
-pub type INT_STATUS_2_R = crate::FieldReader<u32, u32>;
+pub type INT_STATUS_2_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

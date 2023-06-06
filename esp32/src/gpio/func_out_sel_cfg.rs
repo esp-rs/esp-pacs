@@ -35,9 +35,9 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_SEL` reader - select one of the 256 output to 40 GPIO"]
-pub type OUT_SEL_R = crate::FieldReader<u16, u16>;
+pub type OUT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `OUT_SEL` writer - select one of the 256 output to 40 GPIO"]
-pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16, u16>;
+pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16>;
 #[doc = "Field `INV_SEL` reader - invert the output value if you want to revert the output value setting the value to 1"]
 pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - invert the output value if you want to revert the output value setting the value to 1"]

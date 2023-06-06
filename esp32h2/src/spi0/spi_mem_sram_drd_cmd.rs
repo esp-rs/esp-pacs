@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_SRAM_DRD_CMD_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE` reader - For SPI0,When cache mode is enable it is the read command value of command phase for sram."]
-pub type SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_CACHE_SRAM_USR_RD_CMD_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_CACHE_SRAM_USR_RD_CMD_BITLEN` reader - For SPI0,When cache mode is enable it is the length in bits of command phase for sram. The register value shall be (bit_num-1)."]
 pub type SPI_MEM_CACHE_SRAM_USR_RD_CMD_BITLEN_R = crate::FieldReader;
 impl R {

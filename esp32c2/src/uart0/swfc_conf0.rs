@@ -35,10 +35,9 @@ impl From<crate::W<SWFC_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `XOFF_THRESHOLD` reader - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
-pub type XOFF_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type XOFF_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `XOFF_THRESHOLD` writer - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
-pub type XOFF_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SWFC_CONF0_SPEC, 9, O, u16, u16>;
+pub type XOFF_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, SWFC_CONF0_SPEC, 9, O, u16>;
 #[doc = "Field `XOFF_CHAR` reader - This register stores the Xoff flow control char."]
 pub type XOFF_CHAR_R = crate::FieldReader;
 #[doc = "Field `XOFF_CHAR` writer - This register stores the Xoff flow control char."]

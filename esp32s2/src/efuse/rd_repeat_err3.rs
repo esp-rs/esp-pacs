@@ -34,7 +34,7 @@ pub type FLASH_TYPE_ERR_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_FORCE_SEND_RESUME."]
 pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_SECURE_VERSION."]
-pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16, u16>;
+pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16>;
 #[doc = "Field `RPT4_RESERVED2_ERR` reader - Any bit equal to 1 denotes a programming error in EFUSE_RPT4_RESERVED2."]
 pub type RPT4_RESERVED2_ERR_R = crate::FieldReader;
 impl R {

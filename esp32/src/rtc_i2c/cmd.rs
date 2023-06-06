@@ -35,9 +35,9 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `VAL` reader - Command content"]
-pub type VAL_R = crate::FieldReader<u16, u16>;
+pub type VAL_R = crate::FieldReader<u16>;
 #[doc = "Field `VAL` writer - Command content"]
-pub type VAL_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 14, O, u16, u16>;
+pub type VAL_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 14, O, u16>;
 #[doc = "Field `DONE` reader - Bit is set by HW when command is done"]
 pub type DONE_R = crate::BitReader;
 #[doc = "Field `DONE` writer - Bit is set by HW when command is done"]

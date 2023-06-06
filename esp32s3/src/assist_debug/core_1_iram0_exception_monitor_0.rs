@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_IRAM0_EXCEPTION_MONITOR_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_IRAM0_RECORDING_ADDR_0` reader - The first iram0's addr\\[25:2\\] status when trigger IRAM busy interrupt"]
-pub type CORE_1_IRAM0_RECORDING_ADDR_0_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_IRAM0_RECORDING_ADDR_0_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_IRAM0_RECORDING_WR_0` reader - The first iram0's wr status when trigger IRAM busy interrupt"]
 pub type CORE_1_IRAM0_RECORDING_WR_0_R = crate::BitReader;
 #[doc = "Field `CORE_1_IRAM0_RECORDING_LOADSTORE_0` reader - The first iram0's loadstore status when trigger IRAM busy interrupt"]

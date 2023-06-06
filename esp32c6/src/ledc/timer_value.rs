@@ -14,7 +14,7 @@ impl From<crate::R<TIMER_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_CNT` reader - This register stores the current counter value of timer %s."]
-pub type TIMER_CNT_R = crate::FieldReader<u32, u32>;
+pub type TIMER_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the current counter value of timer %s."]
     #[inline(always)]

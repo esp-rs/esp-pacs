@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED1_1` reader - Reserved."]
-pub type RPT4_RESERVED1_1_R = crate::FieldReader<u16, u16>;
+pub type RPT4_RESERVED1_1_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_DELAY_SEL` reader - Represents whether RTC watchdog timeout threshold is selected at startup. 1: selected. 0: not selected."]
 pub type WDT_DELAY_SEL_R = crate::FieldReader;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT` reader - Represents whether SPI boot encrypt/decrypt is disabled or enabled. Odd number of 1: enabled. Even number of 1: disabled."]

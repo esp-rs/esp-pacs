@@ -35,10 +35,9 @@ impl From<crate::W<TARGET1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET1_PERIOD` reader - target1 period"]
-pub type TARGET1_PERIOD_R = crate::FieldReader<u32, u32>;
+pub type TARGET1_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `TARGET1_PERIOD` writer - target1 period"]
-pub type TARGET1_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TARGET1_CONF_SPEC, 26, O, u32, u32>;
+pub type TARGET1_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, TARGET1_CONF_SPEC, 26, O, u32>;
 #[doc = "Field `TARGET1_PERIOD_MODE` reader - Set target1 to period mode"]
 pub type TARGET1_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET1_PERIOD_MODE` writer - Set target1 to period mode"]

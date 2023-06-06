@@ -39,9 +39,9 @@ pub type CLK_MODE_R = crate::FieldReader;
 #[doc = "Field `CLK_MODE` writer - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
 pub type CLK_MODE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 2, O>;
 #[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
-pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16, u16>;
+pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16>;
 #[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
-pub type CS_HOLD_DLY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 10, O, u16, u16>;
+pub type CS_HOLD_DLY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]

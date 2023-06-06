@@ -35,10 +35,9 @@ impl From<crate::W<SAR_I2C_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_I2C_CTRL` reader - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
-pub type SAR_I2C_CTRL_R = crate::FieldReader<u32, u32>;
+pub type SAR_I2C_CTRL_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_I2C_CTRL` writer - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
-pub type SAR_I2C_CTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_I2C_CTRL_SPEC, 28, O, u32, u32>;
+pub type SAR_I2C_CTRL_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_I2C_CTRL_SPEC, 28, O, u32>;
 #[doc = "Field `SAR_I2C_START` reader - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
 pub type SAR_I2C_START_R = crate::BitReader;
 #[doc = "Field `SAR_I2C_START` writer - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]

@@ -35,9 +35,9 @@ impl From<crate::W<W11_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF11` reader - data buffer"]
-pub type BUF11_R = crate::FieldReader<u32, u32>;
+pub type BUF11_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF11` writer - data buffer"]
-pub type BUF11_W<'a, const O: u8> = crate::FieldWriter<'a, W11_SPEC, 32, O, u32, u32>;
+pub type BUF11_W<'a, const O: u8> = crate::FieldWriter<'a, W11_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]

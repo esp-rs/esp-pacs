@@ -35,10 +35,10 @@ impl From<crate::W<PRO_AHB_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_AHB_RTCSLOW_1_SPLTADDR` reader - Configure the split address of RTCSlow_1 for PeriBus2 access."]
-pub type PRO_AHB_RTCSLOW_1_SPLTADDR_R = crate::FieldReader<u16, u16>;
+pub type PRO_AHB_RTCSLOW_1_SPLTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_AHB_RTCSLOW_1_SPLTADDR` writer - Configure the split address of RTCSlow_1 for PeriBus2 access."]
 pub type PRO_AHB_RTCSLOW_1_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_AHB_2_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_AHB_2_SPEC, 11, O, u16>;
 #[doc = "Field `PRO_AHB_RTCSLOW_1_L_F` reader - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_1 low address region."]
 pub type PRO_AHB_RTCSLOW_1_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_AHB_RTCSLOW_1_L_F` writer - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_1 low address region."]

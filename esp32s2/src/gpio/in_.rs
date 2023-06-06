@@ -35,9 +35,9 @@ impl From<crate::W<IN_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_NEXT` reader - GPIO0 ~ 31 input value. Each bit represents a pad input value, 1 for high level and 0 for low level."]
-pub type DATA_NEXT_R = crate::FieldReader<u32, u32>;
+pub type DATA_NEXT_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA_NEXT` writer - GPIO0 ~ 31 input value. Each bit represents a pad input value, 1 for high level and 0 for low level."]
-pub type DATA_NEXT_W<'a, const O: u8> = crate::FieldWriter<'a, IN_SPEC, 32, O, u32, u32>;
+pub type DATA_NEXT_W<'a, const O: u8> = crate::FieldWriter<'a, IN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 input value. Each bit represents a pad input value, 1 for high level and 0 for low level."]
     #[inline(always)]

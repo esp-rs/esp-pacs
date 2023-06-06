@@ -37,10 +37,9 @@ impl From<crate::W<WDTCONFIG1_SPEC>> for W {
 #[doc = "Field `WDT_DIVCNT_RST` writer - reg_wdt_divcnt_rst."]
 pub type WDT_DIVCNT_RST_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG1_SPEC, O>;
 #[doc = "Field `WDT_CLK_PRESCALE` reader - reg_wdt_clk_prescale."]
-pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16, u16>;
+pub type WDT_CLK_PRESCALE_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_CLK_PRESCALE` writer - reg_wdt_clk_prescale."]
-pub type WDT_CLK_PRESCALE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WDTCONFIG1_SPEC, 16, O, u16, u16>;
+pub type WDT_CLK_PRESCALE_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<ID_SPEC>> for W {
     }
 }
 #[doc = "Field `ID` reader - This register is used to configure the uart_id."]
-pub type ID_R = crate::FieldReader<u32, u32>;
+pub type ID_R = crate::FieldReader<u32>;
 #[doc = "Field `ID` writer - This register is used to configure the uart_id."]
-pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 32, O, u32, u32>;
+pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register is used to configure the uart_id."]
     #[inline(always)]

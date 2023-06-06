@@ -35,9 +35,9 @@ impl From<crate::W<TALARMLO_SPEC>> for W {
     }
 }
 #[doc = "Field `ALARM_LO` reader - Timer %s alarm trigger time-base counter value, low 32 bits."]
-pub type ALARM_LO_R = crate::FieldReader<u32, u32>;
+pub type ALARM_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `ALARM_LO` writer - Timer %s alarm trigger time-base counter value, low 32 bits."]
-pub type ALARM_LO_W<'a, const O: u8> = crate::FieldWriter<'a, TALARMLO_SPEC, 32, O, u32, u32>;
+pub type ALARM_LO_W<'a, const O: u8> = crate::FieldWriter<'a, TALARMLO_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timer %s alarm trigger time-base counter value, low 32 bits."]
     #[inline(always)]

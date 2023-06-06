@@ -35,15 +35,15 @@ impl From<crate::W<SAR_MEM_WR_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_WR_ADDR_INIT` reader - "]
-pub type MEM_WR_ADDR_INIT_R = crate::FieldReader<u16, u16>;
+pub type MEM_WR_ADDR_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_WR_ADDR_INIT` writer - "]
 pub type MEM_WR_ADDR_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` reader - "]
-pub type MEM_WR_ADDR_SIZE_R = crate::FieldReader<u16, u16>;
+pub type MEM_WR_ADDR_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_WR_ADDR_SIZE` writer - "]
 pub type MEM_WR_ADDR_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_MEM_WR_CTRL_SPEC, 11, O, u16>;
 #[doc = "Field `RTC_MEM_WR_OFFST_CLR` writer - "]
 pub type RTC_MEM_WR_OFFST_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_MEM_WR_CTRL_SPEC, O>;
 impl R {

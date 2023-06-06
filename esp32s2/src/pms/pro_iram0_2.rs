@@ -35,10 +35,10 @@ impl From<crate::W<PRO_IRAM0_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_IRAM0_SRAM_4_SPLTADDR` reader - Configure the split address of SRAM Block 4-21 for IBUS access."]
-pub type PRO_IRAM0_SRAM_4_SPLTADDR_R = crate::FieldReader<u32, u32>;
+pub type PRO_IRAM0_SRAM_4_SPLTADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_SPLTADDR` writer - Configure the split address of SRAM Block 4-21 for IBUS access."]
 pub type PRO_IRAM0_SRAM_4_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_IRAM0_2_SPEC, 17, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_IRAM0_2_SPEC, 17, O, u32>;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_F` reader - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
 pub type PRO_IRAM0_SRAM_4_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_SRAM_4_L_F` writer - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]

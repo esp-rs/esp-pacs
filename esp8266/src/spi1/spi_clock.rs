@@ -47,10 +47,9 @@ pub type SPI_CLKCNT_N_R = crate::FieldReader;
 #[doc = "Field `spi_clkcnt_N` writer - In the master mode, it is the divider of spi_clk. So spi_clk frequency is 80MHz/(spi_clkdiv_pre+1)/(spi_clkcnt_N+1)"]
 pub type SPI_CLKCNT_N_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CLOCK_SPEC, 6, O>;
 #[doc = "Field `spi_clkdiv_pre` reader - In the master mode, it is pre-divider of spi_clk."]
-pub type SPI_CLKDIV_PRE_R = crate::FieldReader<u16, u16>;
+pub type SPI_CLKDIV_PRE_R = crate::FieldReader<u16>;
 #[doc = "Field `spi_clkdiv_pre` writer - In the master mode, it is pre-divider of spi_clk."]
-pub type SPI_CLKDIV_PRE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_CLOCK_SPEC, 13, O, u16, u16>;
+pub type SPI_CLKDIV_PRE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CLOCK_SPEC, 13, O, u16>;
 #[doc = "Field `spi_clk_equ_sysclk` reader - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]
 pub type SPI_CLK_EQU_SYSCLK_R = crate::BitReader;
 #[doc = "Field `spi_clk_equ_sysclk` writer - In the master mode, 1: spi_clk is eqaul to 80MHz, 0: spi_clk is divided from 80 MHz clock."]

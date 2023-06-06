@@ -35,13 +35,13 @@ impl From<crate::W<GNPTXFSIZ_SPEC>> for W {
     }
 }
 #[doc = "Field `NPTXFSTADDR` reader - "]
-pub type NPTXFSTADDR_R = crate::FieldReader<u16, u16>;
+pub type NPTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `NPTXFSTADDR` writer - "]
-pub type NPTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16, u16>;
+pub type NPTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16>;
 #[doc = "Field `NPTXFDEP` reader - "]
-pub type NPTXFDEP_R = crate::FieldReader<u16, u16>;
+pub type NPTXFDEP_R = crate::FieldReader<u16>;
 #[doc = "Field `NPTXFDEP` writer - "]
-pub type NPTXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16, u16>;
+pub type NPTXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, GNPTXFSIZ_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

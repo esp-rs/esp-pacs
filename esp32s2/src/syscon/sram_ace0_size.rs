@@ -35,10 +35,10 @@ impl From<crate::W<SRAM_ACE0_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_ACE0_SIZE` reader - "]
-pub type SRAM_ACE0_SIZE_R = crate::FieldReader<u16, u16>;
+pub type SRAM_ACE0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_ACE0_SIZE` writer - "]
 pub type SRAM_ACE0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SRAM_ACE0_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SRAM_ACE0_SIZE_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

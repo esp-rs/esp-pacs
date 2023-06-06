@@ -35,10 +35,10 @@ impl From<crate::W<GET_LINE_CODE_W0_SPEC>> for W {
     }
 }
 #[doc = "Field `GET_DW_DTE_RATE` reader - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
-pub type GET_DW_DTE_RATE_R = crate::FieldReader<u32, u32>;
+pub type GET_DW_DTE_RATE_R = crate::FieldReader<u32>;
 #[doc = "Field `GET_DW_DTE_RATE` writer - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
 pub type GET_DW_DTE_RATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GET_LINE_CODE_W0_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, GET_LINE_CODE_W0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]

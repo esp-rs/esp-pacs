@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_ENTRY_11_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_ENTRY_11_ADDR` reader - Core_1 Entry 11 address from WORLD1 to WORLD0"]
-pub type CORE_1_ENTRY_11_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_ENTRY_11_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_ENTRY_11_ADDR` writer - Core_1 Entry 11 address from WORLD1 to WORLD0"]
 pub type CORE_1_ENTRY_11_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_ENTRY_11_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_1_ENTRY_11_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core_1 Entry 11 address from WORLD1 to WORLD0"]
     #[inline(always)]

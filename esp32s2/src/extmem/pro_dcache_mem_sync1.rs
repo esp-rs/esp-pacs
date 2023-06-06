@@ -35,10 +35,10 @@ impl From<crate::W<PRO_DCACHE_MEM_SYNC1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_MEMSYNC_SIZE` reader - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_DCACHE_MEM_SYNC0."]
-pub type PRO_DCACHE_MEMSYNC_SIZE_R = crate::FieldReader<u32, u32>;
+pub type PRO_DCACHE_MEMSYNC_SIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_DCACHE_MEMSYNC_SIZE` writer - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_DCACHE_MEM_SYNC0."]
 pub type PRO_DCACHE_MEMSYNC_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_DCACHE_MEM_SYNC1_SPEC, 19, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_DCACHE_MEM_SYNC1_SPEC, 19, O, u32>;
 impl R {
     #[doc = "Bits 0:18 - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_DCACHE_MEM_SYNC0."]
     #[inline(always)]

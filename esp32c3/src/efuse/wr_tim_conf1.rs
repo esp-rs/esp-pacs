@@ -35,9 +35,9 @@ impl From<crate::W<WR_TIM_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `PWR_ON_NUM` reader - Configures the power up time for VDDQ."]
-pub type PWR_ON_NUM_R = crate::FieldReader<u16, u16>;
+pub type PWR_ON_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PWR_ON_NUM` writer - Configures the power up time for VDDQ."]
-pub type PWR_ON_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF1_SPEC, 16, O, u16, u16>;
+pub type PWR_ON_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]

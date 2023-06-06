@@ -35,10 +35,10 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1` reader - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
-pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_R = crate::FieldReader<u32, u32>;
+pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1` writer - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
 pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<CLKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKDIV` reader - The register value is the integer part of the frequency divider's factor."]
-pub type CLKDIV_R = crate::FieldReader<u32, u32>;
+pub type CLKDIV_R = crate::FieldReader<u32>;
 #[doc = "Field `CLKDIV` writer - The register value is the integer part of the frequency divider's factor."]
-pub type CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 20, O, u32, u32>;
+pub type CLKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, CLKDIV_SPEC, 20, O, u32>;
 #[doc = "Field `FRAG` reader - The register value is the decimal part of the frequency divider's factor."]
 pub type FRAG_R = crate::FieldReader;
 #[doc = "Field `FRAG` writer - The register value is the decimal part of the frequency divider's factor."]

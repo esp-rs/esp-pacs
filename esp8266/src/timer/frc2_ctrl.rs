@@ -90,7 +90,7 @@ impl<'a, const O: u8> INTERRUPT_TYPE_W<'a, O> {
     }
 }
 #[doc = "Field `prescale_divider` reader - Pre-scale divider for the timer"]
-pub type PRESCALE_DIVIDER_R = crate::FieldReader<u8, PRESCALE_DIVIDER_A>;
+pub type PRESCALE_DIVIDER_R = crate::FieldReader<PRESCALE_DIVIDER_A>;
 #[doc = "Pre-scale divider for the timer\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -107,6 +107,9 @@ impl From<PRESCALE_DIVIDER_A> for u8 {
     fn from(variant: PRESCALE_DIVIDER_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for PRESCALE_DIVIDER_A {
+    type Ux = u8;
 }
 impl PRESCALE_DIVIDER_R {
     #[doc = "Get enumerated values variant"]
@@ -137,7 +140,7 @@ impl PRESCALE_DIVIDER_R {
 }
 #[doc = "Field `prescale_divider` writer - Pre-scale divider for the timer"]
 pub type PRESCALE_DIVIDER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FRC2_CTRL_SPEC, 2, O, u8, PRESCALE_DIVIDER_A>;
+    crate::FieldWriter<'a, FRC2_CTRL_SPEC, 2, O, PRESCALE_DIVIDER_A>;
 impl<'a, const O: u8> PRESCALE_DIVIDER_W<'a, O> {
     #[doc = "divided by 1"]
     #[inline(always)]

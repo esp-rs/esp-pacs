@@ -39,15 +39,13 @@ pub type REG_USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_dummy_cyclelen` writer - The length in spi_clk cycles of \"dummy\" phase. The register value shall be (cycle_num-1)"]
 pub type REG_USR_DUMMY_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_USER1_SPEC, 8, O>;
 #[doc = "Field `reg_usr_miso_bitlen` reader - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MISO_BITLEN_R = crate::FieldReader<u16, u16>;
+pub type REG_USR_MISO_BITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `reg_usr_miso_bitlen` writer - The length in bits of \"read-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MISO_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16, u16>;
+pub type REG_USR_MISO_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` reader - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MOSI_BITLEN_R = crate::FieldReader<u16, u16>;
+pub type REG_USR_MOSI_BITLEN_R = crate::FieldReader<u16>;
 #[doc = "Field `reg_usr_mosi_bitlen` writer - The length in bits of \"write-data\" phase. The register value shall be (bit_num-1)"]
-pub type REG_USR_MOSI_BITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16, u16>;
+pub type REG_USR_MOSI_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_USER1_SPEC, 9, O, u16>;
 #[doc = "Field `reg_usr_addr_bitlen` reader - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]
 pub type REG_USR_ADDR_BITLEN_R = crate::FieldReader;
 #[doc = "Field `reg_usr_addr_bitlen` writer - The length in bits of \"address\" phase. The register value shall be (bit_num-1)"]

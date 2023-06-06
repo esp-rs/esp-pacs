@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_AXI_ERR_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_AXI_ERR_ADDR` reader - This bits show the first AXI write/read invalid error or AXI write flash error address. It is cleared by when SPI_MEM_AXI_WADDR_ERR_INT_CLR, SPI_MEM_AXI_WR_FLASH_ERR_IN_CLR or SPI_MEM_AXI_RADDR_ERR_IN_CLR bit is set."]
-pub type SPI_MEM_AXI_ERR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_AXI_ERR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_ALL_FIFO_EMPTY` reader - The empty status of all AFIFO and SYNC_FIFO in MSPI module. 1: All AXI transfers and SPI0 transfers are done. 0: Others."]
 pub type SPI_MEM_ALL_FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `SPI_RDATA_AFIFO_REMPTY` reader - 1: RDATA_AFIFO is empty. 0: At least one AXI read transfer is pending."]

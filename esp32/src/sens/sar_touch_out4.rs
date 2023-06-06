@@ -14,9 +14,9 @@ impl From<crate::R<SAR_TOUCH_OUT4_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_MEAS_OUT7` reader - the counter for touch pad 7"]
-pub type TOUCH_MEAS_OUT7_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_OUT7_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_OUT6` reader - the counter for touch pad 6"]
-pub type TOUCH_MEAS_OUT6_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_OUT6_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - the counter for touch pad 7"]
     #[inline(always)]

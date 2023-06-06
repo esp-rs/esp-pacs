@@ -35,9 +35,9 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD_DELAY_RES` reader - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub type CS_HOLD_DELAY_RES_R = crate::FieldReader<u16, u16>;
+pub type CS_HOLD_DELAY_RES_R = crate::FieldReader<u16>;
 #[doc = "Field `CS_HOLD_DELAY_RES` writer - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub type CS_HOLD_DELAY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 12, O, u16, u16>;
+pub type CS_HOLD_DELAY_RES_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL1_SPEC, 12, O, u16>;
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles"]
 pub type CS_HOLD_DELAY_R = crate::FieldReader;
 #[doc = "Field `CS_HOLD_DELAY` writer - SPI cs signal is delayed by spi clock cycles"]

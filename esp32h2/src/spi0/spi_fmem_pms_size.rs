@@ -35,10 +35,10 @@ impl From<crate::W<SPI_FMEM_PMS_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_FMEM_PMS_SIZE` reader - SPI1 flash ACE section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
-pub type SPI_FMEM_PMS_SIZE_R = crate::FieldReader<u16, u16>;
+pub type SPI_FMEM_PMS_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_FMEM_PMS_SIZE` writer - SPI1 flash ACE section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
 pub type SPI_FMEM_PMS_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_FMEM_PMS_SIZE_SPEC, 14, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_FMEM_PMS_SIZE_SPEC, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - SPI1 flash ACE section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
     #[inline(always)]

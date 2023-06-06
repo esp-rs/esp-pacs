@@ -35,7 +35,7 @@ impl From<crate::W<U_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_STATUS_U0` reader - "]
-pub type CORE_STATUS_U0_R = crate::FieldReader<u32, u32>;
+pub type CORE_STATUS_U0_R = crate::FieldReader<u32>;
 #[doc = "Field `ZERO_MODE` reader - "]
 pub type ZERO_MODE_R = crate::FieldReader;
 #[doc = "Field `ZERO_MODE` writer - "]

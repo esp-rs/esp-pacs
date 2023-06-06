@@ -14,7 +14,7 @@ impl From<crate::R<SAR_TOUCH_STATUS0_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_DATA` reader - Denoise measure value from touch sensor 0."]
-pub type TOUCH_DENOISE_DATA_R = crate::FieldReader<u32, u32>;
+pub type TOUCH_DENOISE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_SCAN_CURR` reader - Current pad in scan status"]
 pub type TOUCH_SCAN_CURR_R = crate::FieldReader;
 impl R {

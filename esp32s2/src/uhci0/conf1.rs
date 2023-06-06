@@ -71,10 +71,9 @@ pub type SW_START_R = crate::BitReader;
 #[doc = "Field `SW_START` writer - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
 pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` reader - This field is used to generate the UHCI_DMA_INFIFO_FULL_WM_INT interrupt when the counter value of DMA RX FIFO exceeds the value of the register."]
-pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
+pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - This field is used to generate the UHCI_DMA_INFIFO_FULL_WM_INT interrupt when the counter value of DMA RX FIFO exceeds the value of the register."]
-pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CONF1_SPEC, 12, O, u16, u16>;
+pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit to check header checksum when UHCI receives a data packet."]
     #[inline(always)]

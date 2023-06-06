@@ -14,7 +14,7 @@ impl From<crate::R<DMA_OUT_DSCR_BF0_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_BF0` reader - The content of current out link descriptor's first dword"]
-pub type OUTLINK_DSCR_BF0_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_DSCR_BF0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of current out link descriptor's first dword"]
     #[inline(always)]

@@ -14,9 +14,9 @@ impl From<crate::R<RD_MAC_SYS_3_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_RESERVED_2` reader - Reserved."]
-pub type MAC_RESERVED_2_R = crate::FieldReader<u32, u32>;
+pub type MAC_RESERVED_2_R = crate::FieldReader<u32>;
 #[doc = "Field `SYS_DATA_PART0_0` reader - Stores the first 14 bits of the zeroth part of system data."]
-pub type SYS_DATA_PART0_0_R = crate::FieldReader<u16, u16>;
+pub type SYS_DATA_PART0_0_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:17 - Reserved."]
     #[inline(always)]

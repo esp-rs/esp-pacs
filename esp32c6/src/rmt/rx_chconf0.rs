@@ -39,10 +39,9 @@ pub type DIV_CNT_CH2_R = crate::FieldReader;
 #[doc = "Field `DIV_CNT_CH2` writer - This register is used to configure the divider for clock of CHANNEL%s."]
 pub type DIV_CNT_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF0_SPEC, 8, O>;
 #[doc = "Field `IDLE_THRES_CH2` reader - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
-pub type IDLE_THRES_CH2_R = crate::FieldReader<u16, u16>;
+pub type IDLE_THRES_CH2_R = crate::FieldReader<u16>;
 #[doc = "Field `IDLE_THRES_CH2` writer - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
-pub type IDLE_THRES_CH2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RX_CHCONF0_SPEC, 15, O, u16, u16>;
+pub type IDLE_THRES_CH2_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CHCONF0_SPEC, 15, O, u16>;
 #[doc = "Field `MEM_SIZE_CH2` reader - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
 pub type MEM_SIZE_CH2_R = crate::FieldReader;
 #[doc = "Field `MEM_SIZE_CH2` writer - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]

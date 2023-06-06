@@ -35,9 +35,9 @@ impl From<crate::W<IO_MUX_MTDI_SPEC>> for W {
     }
 }
 #[doc = "Field `Register` reader - "]
-pub type REGISTER_R = crate::FieldReader<u32, u32>;
+pub type REGISTER_R = crate::FieldReader<u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, IO_MUX_MTDI_SPEC, 32, O, u32, u32>;
+pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, IO_MUX_MTDI_SPEC, 32, O, u32>;
 #[doc = "Field `SLEEP_ENABLE` reader - configures output enable during sleep mode"]
 pub type SLEEP_ENABLE_R = crate::BitReader;
 #[doc = "Field `SLEEP_ENABLE` writer - configures output enable during sleep mode"]

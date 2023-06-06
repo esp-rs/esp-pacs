@@ -35,10 +35,10 @@ impl From<crate::W<CAP_TIMER_PHASE_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP_TIMER_PHASE` reader - "]
-pub type CAP_TIMER_PHASE_R = crate::FieldReader<u32, u32>;
+pub type CAP_TIMER_PHASE_R = crate::FieldReader<u32>;
 #[doc = "Field `CAP_TIMER_PHASE` writer - "]
 pub type CAP_TIMER_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CAP_TIMER_PHASE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CAP_TIMER_PHASE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

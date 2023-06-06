@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_USR_ADDR_VALUE` reader - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub type SPI_MEM_USR_ADDR_VALUE_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_USR_ADDR_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
 pub type SPI_MEM_USR_ADDR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, SPI_MEM_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]

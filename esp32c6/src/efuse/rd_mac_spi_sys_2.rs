@@ -14,9 +14,9 @@ impl From<crate::R<RD_MAC_SPI_SYS_2_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_SPI_RESERVED` reader - Reserved."]
-pub type MAC_SPI_RESERVED_R = crate::FieldReader<u16, u16>;
+pub type MAC_SPI_RESERVED_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_PAD_CONF_1` reader - Stores the first part of SPI_PAD_CONF."]
-pub type SPI_PAD_CONF_1_R = crate::FieldReader<u32, u32>;
+pub type SPI_PAD_CONF_1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:13 - Reserved."]
     #[inline(always)]

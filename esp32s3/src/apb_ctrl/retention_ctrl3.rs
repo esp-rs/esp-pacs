@@ -35,20 +35,20 @@ impl From<crate::W<RETENTION_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_DCACHE_SIZE` reader - ******* Description ***********"]
-pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16, u16>;
+pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_SIZE` writer - ******* Description ***********"]
 pub type RET_DCACHE_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` reader - ******* Description ***********"]
-pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16, u16>;
+pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` writer - ******* Description ***********"]
 pub type RET_DCACHE_VLD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` reader - ******* Description ***********"]
-pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16, u16>;
+pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` writer - ******* Description ***********"]
 pub type RET_DCACHE_START_POINT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, RETENTION_CTRL3_SPEC, 9, O, u16>;
 #[doc = "Field `RET_DCACHE_ENABLE` reader - ******* Description ***********"]
 pub type RET_DCACHE_ENABLE_R = crate::BitReader;
 #[doc = "Field `RET_DCACHE_ENABLE` writer - ******* Description ***********"]

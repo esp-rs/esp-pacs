@@ -35,9 +35,9 @@ impl From<crate::W<I2C_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_DATE` reader - This is the the version register."]
-pub type I2C_DATE_R = crate::FieldReader<u32, u32>;
+pub type I2C_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `I2C_DATE` writer - This is the the version register."]
-pub type I2C_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_DATE_SPEC, 32, O, u32, u32>;
+pub type I2C_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, I2C_DATE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is the the version register."]
     #[inline(always)]

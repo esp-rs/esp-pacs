@@ -14,7 +14,7 @@ impl From<crate::R<THI_SPEC>> for R {
     }
 }
 #[doc = "Field `HI` reader - After writing to TIMG_T%sUPDATE_REG, the high 32 bits of the time-base counter of timer %s can be read here."]
-pub type HI_R = crate::FieldReader<u32, u32>;
+pub type HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - After writing to TIMG_T%sUPDATE_REG, the high 32 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]

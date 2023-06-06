@@ -35,9 +35,9 @@ impl From<crate::W<DMA_IN_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_ADDR` reader - This register stores the least 20 bits of the first in link descriptor's address."]
-pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type INLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `INLINK_ADDR` writer - This register stores the least 20 bits of the first in link descriptor's address."]
-pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_IN_LINK_SPEC, 20, O, u32, u32>;
+pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_IN_LINK_SPEC, 20, O, u32>;
 #[doc = "Field `INLINK_AUTO_RET` reader - 1:when a packet is wrong in link descriptor returns to the descriptor which is lately used."]
 pub type INLINK_AUTO_RET_R = crate::BitReader;
 #[doc = "Field `INLINK_AUTO_RET` writer - 1:when a packet is wrong in link descriptor returns to the descriptor which is lately used."]

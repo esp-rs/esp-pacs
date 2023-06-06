@@ -35,9 +35,9 @@ impl From<crate::W<UART_ID_SPEC>> for W {
     }
 }
 #[doc = "Field `uart_id` reader - "]
-pub type UART_ID_R = crate::FieldReader<u32, u32>;
+pub type UART_ID_R = crate::FieldReader<u32>;
 #[doc = "Field `uart_id` writer - "]
-pub type UART_ID_W<'a, const O: u8> = crate::FieldWriter<'a, UART_ID_SPEC, 32, O, u32, u32>;
+pub type UART_ID_W<'a, const O: u8> = crate::FieldWriter<'a, UART_ID_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

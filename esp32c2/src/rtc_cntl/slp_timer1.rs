@@ -35,9 +35,9 @@ impl From<crate::W<SLP_TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_VAL_HI` reader - RTC sleep timer high 16 bits"]
-pub type SLP_VAL_HI_R = crate::FieldReader<u16, u16>;
+pub type SLP_VAL_HI_R = crate::FieldReader<u16>;
 #[doc = "Field `SLP_VAL_HI` writer - RTC sleep timer high 16 bits"]
-pub type SLP_VAL_HI_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER1_SPEC, 16, O, u16, u16>;
+pub type SLP_VAL_HI_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER1_SPEC, 16, O, u16>;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` reader - timer alarm enable bit"]
 pub type MAIN_TIMER_ALARM_EN_R = crate::BitReader;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` writer - timer alarm enable bit"]

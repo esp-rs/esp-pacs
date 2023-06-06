@@ -35,9 +35,9 @@ impl From<crate::W<CIS_CONF_W3_SPEC>> for W {
     }
 }
 #[doc = "Field `CIS_CONF_W3` reader - Configure cis addr 51~48"]
-pub type CIS_CONF_W3_R = crate::FieldReader<u32, u32>;
+pub type CIS_CONF_W3_R = crate::FieldReader<u32>;
 #[doc = "Field `CIS_CONF_W3` writer - Configure cis addr 51~48"]
-pub type CIS_CONF_W3_W<'a, const O: u8> = crate::FieldWriter<'a, CIS_CONF_W3_SPEC, 32, O, u32, u32>;
+pub type CIS_CONF_W3_W<'a, const O: u8> = crate::FieldWriter<'a, CIS_CONF_W3_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure cis addr 51~48"]
     #[inline(always)]

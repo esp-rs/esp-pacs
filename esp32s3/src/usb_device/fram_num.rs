@@ -14,7 +14,7 @@ impl From<crate::R<FRAM_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `SOF_FRAME_INDEX` reader - Frame index of received SOF frame."]
-pub type SOF_FRAME_INDEX_R = crate::FieldReader<u16, u16>;
+pub type SOF_FRAME_INDEX_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:10 - Frame index of received SOF frame."]
     #[inline(always)]

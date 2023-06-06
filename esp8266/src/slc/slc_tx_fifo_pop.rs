@@ -35,10 +35,10 @@ impl From<crate::W<SLC_TX_FIFO_POP_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_TXFIFO_RDATA` reader - "]
-pub type SLC_TXFIFO_RDATA_R = crate::FieldReader<u16, u16>;
+pub type SLC_TXFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_TXFIFO_RDATA` writer - "]
 pub type SLC_TXFIFO_RDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC_TX_FIFO_POP_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SLC_TX_FIFO_POP_SPEC, 11, O, u16>;
 #[doc = "Field `SLC_TXFIFO_POP` reader - "]
 pub type SLC_TXFIFO_POP_R = crate::BitReader;
 #[doc = "Field `SLC_TXFIFO_POP` writer - "]

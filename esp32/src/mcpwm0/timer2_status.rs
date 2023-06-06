@@ -14,7 +14,7 @@ impl From<crate::R<TIMER2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER2_VALUE` reader - "]
-pub type TIMER2_VALUE_R = crate::FieldReader<u16, u16>;
+pub type TIMER2_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER2_DIRECTION` reader - "]
 pub type TIMER2_DIRECTION_R = crate::BitReader;
 impl R {

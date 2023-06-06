@@ -14,7 +14,7 @@ impl From<crate::R<PCPU_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_INT1` reader - GPIO PRO_CPU interrupt status register for GPIO32-53"]
-pub type PROCPU_INT1_R = crate::FieldReader<u32, u32>;
+pub type PROCPU_INT1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO PRO_CPU interrupt status register for GPIO32-53"]
     #[inline(always)]

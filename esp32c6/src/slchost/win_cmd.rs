@@ -35,9 +35,9 @@ impl From<crate::W<WIN_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SLCHOST_WIN_CMD` reader - *******Description***********"]
-pub type SLCHOST_WIN_CMD_R = crate::FieldReader<u16, u16>;
+pub type SLCHOST_WIN_CMD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLCHOST_WIN_CMD` writer - *******Description***********"]
-pub type SLCHOST_WIN_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, WIN_CMD_SPEC, 16, O, u16, u16>;
+pub type SLCHOST_WIN_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, WIN_CMD_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - *******Description***********"]
     #[inline(always)]

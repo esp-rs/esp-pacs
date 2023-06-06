@@ -35,10 +35,10 @@ impl From<crate::W<PRO_ICACHE_MEM_SYNC0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_MEMSYNC_ADDR` reader - The bits are used to configure the start virtual address for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if the address is validate. The auto operations will be issued if the address is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC1."]
-pub type PRO_ICACHE_MEMSYNC_ADDR_R = crate::FieldReader<u32, u32>;
+pub type PRO_ICACHE_MEMSYNC_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_MEMSYNC_ADDR` writer - The bits are used to configure the start virtual address for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if the address is validate. The auto operations will be issued if the address is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC1."]
 pub type PRO_ICACHE_MEMSYNC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_MEM_SYNC0_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_ICACHE_MEM_SYNC0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if the address is validate. The auto operations will be issued if the address is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC1."]
     #[inline(always)]

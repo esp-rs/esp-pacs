@@ -35,9 +35,9 @@ impl From<crate::W<DIAG0_SPEC>> for W {
     }
 }
 #[doc = "Field `LOW_POWER_DIAG1` reader - Need add desc"]
-pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
+pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32>;
 #[doc = "Field `LOW_POWER_DIAG1` writer - Need add desc"]
-pub type LOW_POWER_DIAG1_W<'a, const O: u8> = crate::FieldWriter<'a, DIAG0_SPEC, 32, O, u32, u32>;
+pub type LOW_POWER_DIAG1_W<'a, const O: u8> = crate::FieldWriter<'a, DIAG0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]

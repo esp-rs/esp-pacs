@@ -35,9 +35,9 @@ impl From<crate::W<SPI_MEM_W5_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_BUF5` reader - data buffer"]
-pub type SPI_MEM_BUF5_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_BUF5_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_BUF5` writer - data buffer"]
-pub type SPI_MEM_BUF5_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_W5_SPEC, 32, O, u32, u32>;
+pub type SPI_MEM_BUF5_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_W5_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]

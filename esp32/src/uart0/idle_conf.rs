@@ -35,13 +35,13 @@ impl From<crate::W<IDLE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_IDLE_THRHD` reader - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
-pub type RX_IDLE_THRHD_R = crate::FieldReader<u16, u16>;
+pub type RX_IDLE_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_IDLE_THRHD` writer - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
-pub type RX_IDLE_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
+pub type RX_IDLE_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `TX_IDLE_NUM` reader - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_R = crate::FieldReader<u16, u16>;
+pub type TX_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_NUM` writer - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
+pub type TX_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `TX_BRK_NUM` reader - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]
 pub type TX_BRK_NUM_R = crate::FieldReader;
 #[doc = "Field `TX_BRK_NUM` writer - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]

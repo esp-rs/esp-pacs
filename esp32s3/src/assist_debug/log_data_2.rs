@@ -35,9 +35,9 @@ impl From<crate::W<LOG_DATA_2_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_DATA_2` reader - check data2"]
-pub type LOG_DATA_2_R = crate::FieldReader<u32, u32>;
+pub type LOG_DATA_2_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_DATA_2` writer - check data2"]
-pub type LOG_DATA_2_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_DATA_2_SPEC, 32, O, u32, u32>;
+pub type LOG_DATA_2_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_DATA_2_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - check data2"]
     #[inline(always)]

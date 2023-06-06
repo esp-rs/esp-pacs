@@ -35,10 +35,10 @@ impl From<crate::W<BT_LPCK_DIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_NUM` reader - "]
-pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_NUM` writer - "]
 pub type BT_LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16>;
 #[doc = "Field `BTEXTWAKEUP_REQ` reader - "]
 pub type BTEXTWAKEUP_REQ_R = crate::BitReader;
 #[doc = "Field `BTEXTWAKEUP_REQ` writer - "]

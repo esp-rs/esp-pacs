@@ -35,10 +35,10 @@ impl From<crate::W<SLP_WAKEUP_CNTL7_SPEC>> for W {
     }
 }
 #[doc = "Field `ANA_WAIT_TARGET` reader - need_des"]
-pub type ANA_WAIT_TARGET_R = crate::FieldReader<u16, u16>;
+pub type ANA_WAIT_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `ANA_WAIT_TARGET` writer - need_des"]
 pub type ANA_WAIT_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLP_WAKEUP_CNTL7_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL7_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]

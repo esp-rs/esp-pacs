@@ -14,7 +14,7 @@ impl From<crate::R<I2C_TXFIFO_START_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `I2C_TXFIFO_START_ADDR` reader - This is the I2C txfifo first address."]
-pub type I2C_TXFIFO_START_ADDR_R = crate::FieldReader<u32, u32>;
+pub type I2C_TXFIFO_START_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This is the I2C txfifo first address."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_DATA4_SPEC>> for R {
     }
 }
 #[doc = "Field `HYS_EN_PAD1` reader - Represents whether the hysteresis function of corresponding PAD is enabled. 1: enabled. 0:disabled."]
-pub type HYS_EN_PAD1_R = crate::FieldReader<u32, u32>;
+pub type HYS_EN_PAD1_R = crate::FieldReader<u32>;
 #[doc = "Field `RPT4_RESERVED4_1` reader - Reserved."]
 pub type RPT4_RESERVED4_1_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED4_0` reader - Reserved."]

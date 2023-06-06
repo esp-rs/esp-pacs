@@ -35,8 +35,7 @@ impl From<crate::W<_0_LEN_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_LEN_WDATA` writer - "]
-pub type SLC0_LEN_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, _0_LEN_CONF_SPEC, 20, O, u32, u32>;
+pub type SLC0_LEN_WDATA_W<'a, const O: u8> = crate::FieldWriter<'a, _0_LEN_CONF_SPEC, 20, O, u32>;
 #[doc = "Field `SLC0_LEN_WR` writer - "]
 pub type SLC0_LEN_WR_W<'a, const O: u8> = crate::BitWriter<'a, _0_LEN_CONF_SPEC, O>;
 #[doc = "Field `SLC0_LEN_INC` writer - "]

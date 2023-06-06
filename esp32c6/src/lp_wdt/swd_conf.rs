@@ -43,10 +43,9 @@ pub type SWD_AUTO_FEED_EN_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPE
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - need_des"]
 pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - need_des"]
-pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - need_des"]
-pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16, u16>;
+pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `SWD_DISABLE` reader - need_des"]
 pub type SWD_DISABLE_R = crate::BitReader;
 #[doc = "Field `SWD_DISABLE` writer - need_des"]

@@ -14,7 +14,7 @@ impl From<crate::R<T0HI_SPEC>> for R {
     }
 }
 #[doc = "Field `HI` reader - Register to store timer 0 time-base counter current value higher 32 bits."]
-pub type HI_R = crate::FieldReader<u32, u32>;
+pub type HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 0 time-base counter current value higher 32 bits."]
     #[inline(always)]

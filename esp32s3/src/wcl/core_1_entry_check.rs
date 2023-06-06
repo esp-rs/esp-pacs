@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_ENTRY_CHECK_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_ENTRY_CHECK` reader - This filed is used to enable entry address check"]
-pub type CORE_1_ENTRY_CHECK_R = crate::FieldReader<u16, u16>;
+pub type CORE_1_ENTRY_CHECK_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_1_ENTRY_CHECK` writer - This filed is used to enable entry address check"]
 pub type CORE_1_ENTRY_CHECK_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_ENTRY_CHECK_SPEC, 13, O, u16, u16>;
+    crate::FieldWriter<'a, CORE_1_ENTRY_CHECK_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 1:13 - This filed is used to enable entry address check"]
     #[inline(always)]

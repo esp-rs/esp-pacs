@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_RECORDING_PC_1` reader - reg_core_0_dram0_recording_pc_1"]
-pub type CORE_0_DRAM0_RECORDING_PC_1_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_DRAM0_RECORDING_PC_1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_dram0_recording_pc_1"]
     #[inline(always)]

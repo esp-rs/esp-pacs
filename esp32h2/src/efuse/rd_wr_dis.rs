@@ -14,7 +14,7 @@ impl From<crate::R<RD_WR_DIS_SPEC>> for R {
     }
 }
 #[doc = "Field `WR_DIS` reader - Represents whether programming of individual eFuse memory bit is disabled or enabled. 1: Disabled. 0 Enabled."]
-pub type WR_DIS_R = crate::FieldReader<u32, u32>;
+pub type WR_DIS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Represents whether programming of individual eFuse memory bit is disabled or enabled. 1: Disabled. 0 Enabled."]
     #[inline(always)]

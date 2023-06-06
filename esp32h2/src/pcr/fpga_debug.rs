@@ -35,9 +35,9 @@ impl From<crate::W<FPGA_DEBUG_SPEC>> for W {
     }
 }
 #[doc = "Field `FPGA_DEBUG` reader - Only used in fpga debug."]
-pub type FPGA_DEBUG_R = crate::FieldReader<u32, u32>;
+pub type FPGA_DEBUG_R = crate::FieldReader<u32>;
 #[doc = "Field `FPGA_DEBUG` writer - Only used in fpga debug."]
-pub type FPGA_DEBUG_W<'a, const O: u8> = crate::FieldWriter<'a, FPGA_DEBUG_SPEC, 32, O, u32, u32>;
+pub type FPGA_DEBUG_W<'a, const O: u8> = crate::FieldWriter<'a, FPGA_DEBUG_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Only used in fpga debug."]
     #[inline(always)]

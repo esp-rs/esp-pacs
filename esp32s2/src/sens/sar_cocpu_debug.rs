@@ -14,7 +14,7 @@ impl From<crate::R<SAR_COCPU_DEBUG_SPEC>> for R {
     }
 }
 #[doc = "Field `COCPU_PC` reader - ULP-RISCV Program counter"]
-pub type COCPU_PC_R = crate::FieldReader<u16, u16>;
+pub type COCPU_PC_R = crate::FieldReader<u16>;
 #[doc = "Field `COCPU_MEM_VLD` reader - ULP-RISCV memory valid output"]
 pub type COCPU_MEM_VLD_R = crate::BitReader;
 #[doc = "Field `COCPU_MEM_RDY` reader - ULP-RISCV memory ready input"]
@@ -22,7 +22,7 @@ pub type COCPU_MEM_RDY_R = crate::BitReader;
 #[doc = "Field `COCPU_MEM_WEN` reader - ULP-RISCV memory write enable output"]
 pub type COCPU_MEM_WEN_R = crate::FieldReader;
 #[doc = "Field `COCPU_MEM_ADDR` reader - ULP-RISCV memory address output"]
-pub type COCPU_MEM_ADDR_R = crate::FieldReader<u16, u16>;
+pub type COCPU_MEM_ADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:12 - ULP-RISCV Program counter"]
     #[inline(always)]

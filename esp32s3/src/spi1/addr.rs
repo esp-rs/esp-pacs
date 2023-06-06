@@ -35,9 +35,9 @@ impl From<crate::W<ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_ADDR_VALUE` reader - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub type USR_ADDR_VALUE_R = crate::FieldReader<u32, u32>;
+pub type USR_ADDR_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub type USR_ADDR_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_SPEC, 32, O, u32, u32>;
+pub type USR_ADDR_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<TEXT_OUT__SPEC>> for W {
     }
 }
 #[doc = "Field `TEXT_OUT_0` reader - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
-pub type TEXT_OUT_0_R = crate::FieldReader<u32, u32>;
+pub type TEXT_OUT_0_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT_OUT_0` writer - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
-pub type TEXT_OUT_0_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_OUT__SPEC, 32, O, u32, u32>;
+pub type TEXT_OUT_0_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_OUT__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the result data when the AES Accelerator operates in the Typical AES working mode."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<TO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_OUT_VALUE` reader - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub type TIME_OUT_VALUE_R = crate::FieldReader<u32, u32>;
+pub type TIME_OUT_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `TIME_OUT_VALUE` writer - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub type TIME_OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TO_SPEC, 24, O, u32, u32>;
+pub type TIME_OUT_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TO_SPEC, 24, O, u32>;
 #[doc = "Field `TIME_OUT_EN` reader - This is the enable bit for time out control."]
 pub type TIME_OUT_EN_R = crate::BitReader;
 #[doc = "Field `TIME_OUT_EN` writer - This is the enable bit for time out control."]

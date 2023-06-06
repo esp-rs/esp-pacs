@@ -14,7 +14,7 @@ impl From<crate::R<SLP_WAKEUP_STATUS0_SPEC>> for R {
     }
 }
 #[doc = "Field `WAKEUP_CAUSE` reader - need_des"]
-pub type WAKEUP_CAUSE_R = crate::FieldReader<u32, u32>;
+pub type WAKEUP_CAUSE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

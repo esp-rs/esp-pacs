@@ -35,15 +35,15 @@ impl From<crate::W<SAR_SLAVE_ADDR4_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR7` reader - "]
-pub type I2C_SLAVE_ADDR7_R = crate::FieldReader<u16, u16>;
+pub type I2C_SLAVE_ADDR7_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SLAVE_ADDR7` writer - "]
 pub type I2C_SLAVE_ADDR7_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR4_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR4_SPEC, 11, O, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR6` reader - "]
-pub type I2C_SLAVE_ADDR6_R = crate::FieldReader<u16, u16>;
+pub type I2C_SLAVE_ADDR6_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SLAVE_ADDR6` writer - "]
 pub type I2C_SLAVE_ADDR6_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR4_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR4_SPEC, 11, O, u16>;
 #[doc = "Field `I2C_RDATA` reader - I2C read data"]
 pub type I2C_RDATA_R = crate::FieldReader;
 #[doc = "Field `I2C_DONE` reader - indicate I2C done"]

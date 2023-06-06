@@ -35,15 +35,14 @@ impl From<crate::W<TOUCH_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - sleep cycles for timer"]
-pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
 pub type TOUCH_SLEEP_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` reader - the meas length (in 8MHz)"]
-pub type TOUCH_MEAS_NUM_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_NUM` writer - the meas length (in 8MHz)"]
-pub type TOUCH_MEAS_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
+pub type TOUCH_MEAS_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_CTRL1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - sleep cycles for timer"]
     #[inline(always)]

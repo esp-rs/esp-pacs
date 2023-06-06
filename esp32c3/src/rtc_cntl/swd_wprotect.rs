@@ -35,9 +35,9 @@ impl From<crate::W<SWD_WPROTECT_SPEC>> for W {
     }
 }
 #[doc = "Field `SWD_WKEY` reader - the key of super wdt"]
-pub type SWD_WKEY_R = crate::FieldReader<u32, u32>;
+pub type SWD_WKEY_R = crate::FieldReader<u32>;
 #[doc = "Field `SWD_WKEY` writer - the key of super wdt"]
-pub type SWD_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_WPROTECT_SPEC, 32, O, u32, u32>;
+pub type SWD_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_WPROTECT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the key of super wdt"]
     #[inline(always)]

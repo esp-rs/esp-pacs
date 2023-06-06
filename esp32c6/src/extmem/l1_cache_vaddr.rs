@@ -35,10 +35,10 @@ impl From<crate::W<L1_CACHE_VADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `L1_CACHE_VADDR` reader - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
-pub type L1_CACHE_VADDR_R = crate::FieldReader<u32, u32>;
+pub type L1_CACHE_VADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `L1_CACHE_VADDR` writer - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
 pub type L1_CACHE_VADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, L1_CACHE_VADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, L1_CACHE_VADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]

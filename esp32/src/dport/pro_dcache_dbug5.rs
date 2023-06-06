@@ -14,7 +14,7 @@ impl From<crate::R<PRO_DCACHE_DBUG5_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_DROM0ADDR0_IA` reader - "]
-pub type PRO_DROM0ADDR0_IA_R = crate::FieldReader<u32, u32>;
+pub type PRO_DROM0ADDR0_IA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

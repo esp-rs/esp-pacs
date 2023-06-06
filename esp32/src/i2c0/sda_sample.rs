@@ -35,9 +35,9 @@ impl From<crate::W<SDA_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
-pub type TIME_R = crate::FieldReader<u16, u16>;
+pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_SAMPLE_SPEC, 10, O, u16, u16>;
+pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_SAMPLE_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
     #[inline(always)]

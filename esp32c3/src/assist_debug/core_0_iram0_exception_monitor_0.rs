@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_IRAM0_EXCEPTION_MONITOR_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_ADDR_0` reader - reg_core_0_iram0_recording_addr_0"]
-pub type CORE_0_IRAM0_RECORDING_ADDR_0_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_IRAM0_RECORDING_ADDR_0_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_WR_0` reader - reg_core_0_iram0_recording_wr_0"]
 pub type CORE_0_IRAM0_RECORDING_WR_0_R = crate::BitReader;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_LOADSTORE_0` reader - reg_core_0_iram0_recording_loadstore_0"]

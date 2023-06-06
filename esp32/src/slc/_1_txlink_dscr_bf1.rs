@@ -14,7 +14,7 @@ impl From<crate::R<_1_TXLINK_DSCR_BF1_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC1_TXLINK_DSCR_BF1` reader - "]
-pub type SLC1_TXLINK_DSCR_BF1_R = crate::FieldReader<u32, u32>;
+pub type SLC1_TXLINK_DSCR_BF1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

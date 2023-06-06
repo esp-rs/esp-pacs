@@ -35,15 +35,15 @@ impl From<crate::W<SAR_TOUCH_THRES1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_OUT_TH1` reader - the threshold for touch pad 1"]
-pub type TOUCH_OUT_TH1_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_OUT_TH1_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_OUT_TH1` writer - the threshold for touch pad 1"]
 pub type TOUCH_OUT_TH1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_THRES1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_THRES1_SPEC, 16, O, u16>;
 #[doc = "Field `TOUCH_OUT_TH0` reader - the threshold for touch pad 0"]
-pub type TOUCH_OUT_TH0_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_OUT_TH0_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_OUT_TH0` writer - the threshold for touch pad 0"]
 pub type TOUCH_OUT_TH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_THRES1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_THRES1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - the threshold for touch pad 1"]
     #[inline(always)]

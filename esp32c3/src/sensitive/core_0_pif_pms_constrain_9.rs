@@ -35,15 +35,15 @@ impl From<crate::W<CORE_0_PIF_PMS_CONSTRAIN_9_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0` reader - core_0_pif_pms_constrain_rtcfast_spltaddr_world_0"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_R = crate::FieldReader<u16, u16>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0` writer - core_0_pif_pms_constrain_rtcfast_spltaddr_world_0"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_9_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_9_SPEC, 11, O, u16>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1` reader - core_0_pif_pms_constrain_rtcfast_spltaddr_world_1"]
-pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_R = crate::FieldReader<u16, u16>;
+pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1` writer - core_0_pif_pms_constrain_rtcfast_spltaddr_world_1"]
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_SPLTADDR_WORLD_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_9_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, CORE_0_PIF_PMS_CONSTRAIN_9_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:10 - core_0_pif_pms_constrain_rtcfast_spltaddr_world_0"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<SLC_RXLINK_DSCR_BF1_SPEC>> for W {
     }
 }
 #[doc = "Field `Register` reader - "]
-pub type REGISTER_R = crate::FieldReader<u32, u32>;
+pub type REGISTER_R = crate::FieldReader<u32>;
 #[doc = "Field `Register` writer - "]
-pub type REGISTER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC_RXLINK_DSCR_BF1_SPEC, 32, O, u32, u32>;
+pub type REGISTER_W<'a, const O: u8> = crate::FieldWriter<'a, SLC_RXLINK_DSCR_BF1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

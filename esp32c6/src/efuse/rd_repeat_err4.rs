@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_ERR4_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED4_ERR_1` reader - Reserved."]
-pub type RPT4_RESERVED4_ERR_1_R = crate::FieldReader<u32, u32>;
+pub type RPT4_RESERVED4_ERR_1_R = crate::FieldReader<u32>;
 #[doc = "Field `RPT4_RESERVED4_ERR_0` reader - Reserved."]
 pub type RPT4_RESERVED4_ERR_0_R = crate::FieldReader;
 impl R {

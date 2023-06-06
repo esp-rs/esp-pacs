@@ -14,7 +14,7 @@ impl From<crate::R<RXFIFO_START_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_START_ADDR` reader - This is the I2C rxfifo first address."]
-pub type RXFIFO_START_ADDR_R = crate::FieldReader<u32, u32>;
+pub type RXFIFO_START_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This is the I2C rxfifo first address."]
     #[inline(always)]

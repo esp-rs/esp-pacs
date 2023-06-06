@@ -35,10 +35,10 @@ impl From<crate::W<UNIT0_LOAD_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_UNIT0_LOAD_HI` reader - timer unit0 load high 32 bit"]
-pub type TIMER_UNIT0_LOAD_HI_R = crate::FieldReader<u32, u32>;
+pub type TIMER_UNIT0_LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_UNIT0_LOAD_HI` writer - timer unit0 load high 32 bit"]
 pub type TIMER_UNIT0_LOAD_HI_W<'a, const O: u8> =
-    crate::FieldWriter<'a, UNIT0_LOAD_HI_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, UNIT0_LOAD_HI_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - timer unit0 load high 32 bit"]
     #[inline(always)]

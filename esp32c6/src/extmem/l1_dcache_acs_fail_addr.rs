@@ -14,7 +14,7 @@ impl From<crate::R<L1_DCACHE_ACS_FAIL_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_CACHE_FAIL_ADDR` reader - The register records the address of fail-access when cache accesses L1-Cache."]
-pub type L1_CACHE_FAIL_ADDR_R = crate::FieldReader<u32, u32>;
+pub type L1_CACHE_FAIL_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The register records the address of fail-access when cache accesses L1-Cache."]
     #[inline(always)]

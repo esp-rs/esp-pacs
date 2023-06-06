@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_STATUS` reader - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
-pub type SPI_MEM_STATUS_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_STATUS_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_STATUS` writer - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
 pub type SPI_MEM_STATUS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_RD_STATUS_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_RD_STATUS_SPEC, 16, O, u16>;
 #[doc = "Field `SPI_MEM_WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
 pub type SPI_MEM_WB_MODE_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]

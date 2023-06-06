@@ -35,9 +35,9 @@ impl From<crate::W<HCDMA1_SPEC>> for W {
     }
 }
 #[doc = "Field `H_DMAADDR1` reader - "]
-pub type H_DMAADDR1_R = crate::FieldReader<u32, u32>;
+pub type H_DMAADDR1_R = crate::FieldReader<u32>;
 #[doc = "Field `H_DMAADDR1` writer - "]
-pub type H_DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, HCDMA1_SPEC, 32, O, u32, u32>;
+pub type H_DMAADDR1_W<'a, const O: u8> = crate::FieldWriter<'a, HCDMA1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

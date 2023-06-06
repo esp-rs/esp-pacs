@@ -45,10 +45,9 @@ pub type RX_EXT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `RX_EXT_EN_SEL` writer - Configures rx external enable signal selection from 16 data lines."]
 pub type RX_EXT_EN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG1_SPEC, 4, O>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` reader - Configures rx threshold of timeout counter."]
-pub type RX_TIMEOUT_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type RX_TIMEOUT_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_TIMEOUT_THRESHOLD` writer - Configures rx threshold of timeout counter."]
-pub type RX_TIMEOUT_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RX_CFG1_SPEC, 16, O, u16, u16>;
+pub type RX_TIMEOUT_THRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, RX_CFG1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 3 - Write 1 to enable timeout count to generate error eof."]
     #[inline(always)]

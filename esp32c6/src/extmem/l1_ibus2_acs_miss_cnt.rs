@@ -14,7 +14,7 @@ impl From<crate::R<L1_IBUS2_ACS_MISS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_IBUS2_MISS_CNT` reader - The register records the number of missing when bus2 accesses L1-ICache2."]
-pub type L1_IBUS2_MISS_CNT_R = crate::FieldReader<u32, u32>;
+pub type L1_IBUS2_MISS_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The register records the number of missing when bus2 accesses L1-ICache2."]
     #[inline(always)]

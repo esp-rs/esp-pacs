@@ -35,9 +35,9 @@ impl From<crate::W<BLK0_WDATA0_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_DIS` reader - program for efuse_wr_disable"]
-pub type WR_DIS_R = crate::FieldReader<u16, u16>;
+pub type WR_DIS_R = crate::FieldReader<u16>;
 #[doc = "Field `WR_DIS` writer - program for efuse_wr_disable"]
-pub type WR_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA0_SPEC, 16, O, u16, u16>;
+pub type WR_DIS_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA0_SPEC, 16, O, u16>;
 #[doc = "Field `RD_DIS` reader - program for efuse_rd_disable"]
 pub type RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RD_DIS` writer - program for efuse_rd_disable"]

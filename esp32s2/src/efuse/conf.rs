@@ -35,9 +35,9 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `OP_CODE` reader - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
-pub type OP_CODE_R = crate::FieldReader<u16, u16>;
+pub type OP_CODE_R = crate::FieldReader<u16>;
 #[doc = "Field `OP_CODE` writer - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
-pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16, u16>;
+pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
     #[inline(always)]

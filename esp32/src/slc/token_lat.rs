@@ -14,9 +14,9 @@ impl From<crate::R<TOKEN_LAT_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_TOKEN` reader - "]
-pub type SLC0_TOKEN_R = crate::FieldReader<u16, u16>;
+pub type SLC0_TOKEN_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1_TOKEN` reader - "]
-pub type SLC1_TOKEN_R = crate::FieldReader<u16, u16>;
+pub type SLC1_TOKEN_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<SAR_TOUCH_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_MEAS_DELAY` reader - the meas length (in 8MHz)"]
-pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_MEAS_DELAY` writer - the meas length (in 8MHz)"]
 pub type TOUCH_MEAS_DELAY_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TOUCH_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
 pub type TOUCH_XPD_WAIT_R = crate::FieldReader;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]

@@ -40,10 +40,10 @@ pub type PRO_DPORT_APB_PERIPHERAL_FORBID_R = crate::BitReader;
 pub type PRO_DPORT_APB_PERIPHERAL_FORBID_W<'a, const O: u8> =
     crate::BitWriter<'a, PRO_DPORT_1_SPEC, O>;
 #[doc = "Field `PRO_DPORT_RTCSLOW_SPLTADDR` reader - Configure the split address of RTC FAST for PeriBus1 access."]
-pub type PRO_DPORT_RTCSLOW_SPLTADDR_R = crate::FieldReader<u16, u16>;
+pub type PRO_DPORT_RTCSLOW_SPLTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_DPORT_RTCSLOW_SPLTADDR` writer - Configure the split address of RTC FAST for PeriBus1 access."]
 pub type PRO_DPORT_RTCSLOW_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_DPORT_1_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_DPORT_1_SPEC, 11, O, u16>;
 #[doc = "Field `PRO_DPORT_RTCSLOW_L_R` reader - Setting to 1 grants PeriBus1 permission to read RTC FAST low address region."]
 pub type PRO_DPORT_RTCSLOW_L_R_R = crate::BitReader;
 #[doc = "Field `PRO_DPORT_RTCSLOW_L_R` writer - Setting to 1 grants PeriBus1 permission to read RTC FAST low address region."]

@@ -35,9 +35,9 @@ impl From<crate::W<PKT_THRES_SPEC>> for W {
     }
 }
 #[doc = "Field `PKT_THRS` reader - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
-pub type PKT_THRS_R = crate::FieldReader<u16, u16>;
+pub type PKT_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `PKT_THRS` writer - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
-pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, PKT_THRES_SPEC, 13, O, u16, u16>;
+pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, PKT_THRES_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:12 - Configures the data packet's maximum length when UHCI_HEAD_EN is 0."]
     #[inline(always)]

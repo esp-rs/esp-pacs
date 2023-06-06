@@ -14,7 +14,7 @@ impl From<crate::R<T1LO_SPEC>> for R {
     }
 }
 #[doc = "Field `LO` reader - Register to store timer 1 time-base counter current value lower 32 bits."]
-pub type LO_R = crate::FieldReader<u32, u32>;
+pub type LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 1 time-base counter current value lower 32 bits."]
     #[inline(always)]

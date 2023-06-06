@@ -35,10 +35,9 @@ impl From<crate::W<OUTFIFO_PUSH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTFIFO_WDATA` reader - APB out FIFO write data."]
-pub type OUTFIFO_WDATA_R = crate::FieldReader<u16, u16>;
+pub type OUTFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `OUTFIFO_WDATA` writer - APB out FIFO write data."]
-pub type OUTFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, OUTFIFO_PUSH_SPEC, 9, O, u16, u16>;
+pub type OUTFIFO_WDATA_W<'a, const O: u8> = crate::FieldWriter<'a, OUTFIFO_PUSH_SPEC, 9, O, u16>;
 #[doc = "Field `OUTFIFO_PUSH` reader - APB out FIFO push."]
 pub type OUTFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `OUTFIFO_PUSH` writer - APB out FIFO push."]

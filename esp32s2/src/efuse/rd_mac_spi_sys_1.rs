@@ -14,9 +14,9 @@ impl From<crate::R<RD_MAC_SPI_SYS_1_SPEC>> for R {
     }
 }
 #[doc = "Field `MAC_1` reader - Stores the high 16 bits of MAC address."]
-pub type MAC_1_R = crate::FieldReader<u16, u16>;
+pub type MAC_1_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_PAD_CONF_0` reader - Stores the zeroth part of SPI_PAD_CONF."]
-pub type SPI_PAD_CONF_0_R = crate::FieldReader<u16, u16>;
+pub type SPI_PAD_CONF_0_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - Stores the high 16 bits of MAC address."]
     #[inline(always)]

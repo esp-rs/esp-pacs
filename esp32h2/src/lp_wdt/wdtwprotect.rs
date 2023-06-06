@@ -35,9 +35,9 @@ impl From<crate::W<WDTWPROTECT_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_WKEY` reader - need_des"]
-pub type WDT_WKEY_R = crate::FieldReader<u32, u32>;
+pub type WDT_WKEY_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_WKEY` writer - need_des"]
-pub type WDT_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, WDTWPROTECT_SPEC, 32, O, u32, u32>;
+pub type WDT_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, WDTWPROTECT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

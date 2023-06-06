@@ -14,7 +14,7 @@ impl From<crate::R<IN_ERR_EOF_DES_ADDR_CH2_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_ERR_EOF_DES_ADDR` reader - This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0."]
-pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the inlink descriptor when there are some errors in current receiving data. Only used when peripheral is UHCI0."]
     #[inline(always)]

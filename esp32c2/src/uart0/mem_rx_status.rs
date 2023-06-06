@@ -14,9 +14,9 @@ impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_RX_RADDR` reader - This register stores the offset address in RX-FIFO when software reads data from Rx-FIFO via APB. UART0 is 10'h100. UART1 is 10'h180."]
-pub type APB_RX_RADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_RX_RADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_WADDR` reader - This register stores the offset address in Rx-FIFO when Rx-FIFO_Ctrl writes Rx-FIFO. UART0 is 10'h100. UART1 is 10'h180."]
-pub type RX_WADDR_R = crate::FieldReader<u16, u16>;
+pub type RX_WADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the offset address in RX-FIFO when software reads data from Rx-FIFO via APB. UART0 is 10'h100. UART1 is 10'h180."]
     #[inline(always)]

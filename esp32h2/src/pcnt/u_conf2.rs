@@ -35,13 +35,13 @@ impl From<crate::W<U_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_H_LIM` reader - This register is used to configure the thr_h_lim value for unit %s. When pluse_cnt reaches this value, the counter will be cleared to 0."]
-pub type CNT_H_LIM_R = crate::FieldReader<u16, u16>;
+pub type CNT_H_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_H_LIM` writer - This register is used to configure the thr_h_lim value for unit %s. When pluse_cnt reaches this value, the counter will be cleared to 0."]
-pub type CNT_H_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16, u16>;
+pub type CNT_H_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16>;
 #[doc = "Field `CNT_L_LIM` reader - This register is used to configure the thr_l_lim value for unit %s. When pluse_cnt reaches this value, the counter will be cleared to 0."]
-pub type CNT_L_LIM_R = crate::FieldReader<u16, u16>;
+pub type CNT_L_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT_L_LIM` writer - This register is used to configure the thr_l_lim value for unit %s. When pluse_cnt reaches this value, the counter will be cleared to 0."]
-pub type CNT_L_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16, u16>;
+pub type CNT_L_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF2_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the thr_h_lim value for unit %s. When pluse_cnt reaches this value, the counter will be cleared to 0."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<PGM_CHECK_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `PGM_RS_DATA_0` reader - The content of the %sth 32-bit RS code to be programmed."]
-pub type PGM_RS_DATA_0_R = crate::FieldReader<u32, u32>;
+pub type PGM_RS_DATA_0_R = crate::FieldReader<u32>;
 #[doc = "Field `PGM_RS_DATA_0` writer - The content of the %sth 32-bit RS code to be programmed."]
 pub type PGM_RS_DATA_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PGM_CHECK_VALUE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, PGM_CHECK_VALUE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of the %sth 32-bit RS code to be programmed."]
     #[inline(always)]

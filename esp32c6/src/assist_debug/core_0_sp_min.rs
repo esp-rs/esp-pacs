@@ -35,10 +35,9 @@ impl From<crate::W<CORE_0_SP_MIN_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_SP_MIN` reader - core0 sp region configuration regsiter"]
-pub type CORE_0_SP_MIN_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_SP_MIN_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_SP_MIN` writer - core0 sp region configuration regsiter"]
-pub type CORE_0_SP_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_SP_MIN_SPEC, 32, O, u32, u32>;
+pub type CORE_0_SP_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, CORE_0_SP_MIN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - core0 sp region configuration regsiter"]
     #[inline(always)]

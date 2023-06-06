@@ -35,9 +35,9 @@ impl From<crate::W<CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `CFG` reader - Need add description"]
-pub type CFG_R = crate::FieldReader<u32, u32>;
+pub type CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `CFG` writer - Need add description"]
-pub type CFG_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_SPEC, 17, O, u32, u32>;
+pub type CFG_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_SPEC, 17, O, u32>;
 impl R {
     #[doc = "Bits 0:16 - Need add description"]
     #[inline(always)]

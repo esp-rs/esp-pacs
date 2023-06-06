@@ -35,9 +35,9 @@ impl From<crate::W<FRC2_ALARM_SPEC>> for W {
     }
 }
 #[doc = "Field `frc2_alarm` reader - the alarm value for the counter"]
-pub type FRC2_ALARM_R = crate::FieldReader<u32, u32>;
+pub type FRC2_ALARM_R = crate::FieldReader<u32>;
 #[doc = "Field `frc2_alarm` writer - the alarm value for the counter"]
-pub type FRC2_ALARM_W<'a, const O: u8> = crate::FieldWriter<'a, FRC2_ALARM_SPEC, 32, O, u32, u32>;
+pub type FRC2_ALARM_W<'a, const O: u8> = crate::FieldWriter<'a, FRC2_ALARM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the alarm value for the counter"]
     #[inline(always)]

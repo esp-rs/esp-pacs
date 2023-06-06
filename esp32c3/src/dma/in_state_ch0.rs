@@ -14,7 +14,7 @@ impl From<crate::R<IN_STATE_CH0_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_ADDR` reader - This register stores the current inlink descriptor's address."]
-pub type INLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type INLINK_DSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `IN_DSCR_STATE` reader - reserved"]
 pub type IN_DSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `IN_STATE` reader - reserved"]

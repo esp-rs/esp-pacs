@@ -35,9 +35,9 @@ impl From<crate::W<M_PRIME_SPEC>> for W {
     }
 }
 #[doc = "Field `M_PRIME` reader - Represents M’"]
-pub type M_PRIME_R = crate::FieldReader<u32, u32>;
+pub type M_PRIME_R = crate::FieldReader<u32>;
 #[doc = "Field `M_PRIME` writer - Represents M’"]
-pub type M_PRIME_W<'a, const O: u8> = crate::FieldWriter<'a, M_PRIME_SPEC, 32, O, u32, u32>;
+pub type M_PRIME_W<'a, const O: u8> = crate::FieldWriter<'a, M_PRIME_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Represents M’"]
     #[inline(always)]

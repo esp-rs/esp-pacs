@@ -35,9 +35,9 @@ impl From<crate::W<WIFI_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_RST` reader - reg_wifi_rst"]
-pub type WIFI_RST_R = crate::FieldReader<u32, u32>;
+pub type WIFI_RST_R = crate::FieldReader<u32>;
 #[doc = "Field `WIFI_RST` writer - reg_wifi_rst"]
-pub type WIFI_RST_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_RST_EN_SPEC, 32, O, u32, u32>;
+pub type WIFI_RST_W<'a, const O: u8> = crate::FieldWriter<'a, WIFI_RST_EN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_wifi_rst"]
     #[inline(always)]

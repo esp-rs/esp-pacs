@@ -14,7 +14,7 @@ impl From<crate::R<IN_ERR_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_IN_ERR_EOF_DES_ADDR` reader - The inlink descriptor address when spi dma produce receiving error."]
-pub type DMA_IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The inlink descriptor address when spi dma produce receiving error."]
     #[inline(always)]

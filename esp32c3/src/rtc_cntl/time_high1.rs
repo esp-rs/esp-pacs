@@ -14,7 +14,7 @@ impl From<crate::R<TIME_HIGH1_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_VALUE1_HIGH` reader - RTC timer high 16 bits"]
-pub type TIMER_VALUE1_HIGH_R = crate::FieldReader<u16, u16>;
+pub type TIMER_VALUE1_HIGH_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]

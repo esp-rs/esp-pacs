@@ -35,10 +35,10 @@ impl From<crate::W<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ADDR` reader - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
-pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_R = crate::FieldReader<u32, u32>;
+pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT1_ADDR` writer - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT1_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the second section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct1_ena."]
     #[inline(always)]

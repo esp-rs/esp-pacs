@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_REJECT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_REJECT_ADDR` reader - reg_spi_mem_reject_addr"]
-pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_spi_mem_reject_addr"]
     #[inline(always)]

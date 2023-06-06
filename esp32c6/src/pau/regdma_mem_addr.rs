@@ -14,7 +14,7 @@ impl From<crate::R<REGDMA_MEM_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_ADDR` reader - mem addr reg"]
-pub type MEM_ADDR_R = crate::FieldReader<u32, u32>;
+pub type MEM_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - mem addr reg"]
     #[inline(always)]

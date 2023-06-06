@@ -14,7 +14,7 @@ impl From<crate::R<DMA_IN_ERR_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_ERR_EOF_DES_ADDR` reader - This register stores the address of the receive descriptor when there are some errors in this descriptor."]
-pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the receive descriptor when there are some errors in this descriptor."]
     #[inline(always)]

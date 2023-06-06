@@ -35,9 +35,9 @@ impl From<crate::W<BT_SELECT_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_SEL` reader - GPIO bit select register"]
-pub type BT_SEL_R = crate::FieldReader<u32, u32>;
+pub type BT_SEL_R = crate::FieldReader<u32>;
 #[doc = "Field `BT_SEL` writer - GPIO bit select register"]
-pub type BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, BT_SELECT_SPEC, 32, O, u32, u32>;
+pub type BT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, BT_SELECT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO bit select register"]
     #[inline(always)]

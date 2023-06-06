@@ -14,7 +14,7 @@ impl From<crate::R<OUT_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_OUT_EOF_DES_ADDR` reader - The last outlink descriptor address when spi dma produce to_eof."]
-pub type DMA_OUT_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_OUT_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The last outlink descriptor address when spi dma produce to_eof."]
     #[inline(always)]

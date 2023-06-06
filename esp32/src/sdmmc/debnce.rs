@@ -35,9 +35,9 @@ impl From<crate::W<DEBNCE_SPEC>> for W {
     }
 }
 #[doc = "Field `DEBOUNCE_COUNT` reader - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
-pub type DEBOUNCE_COUNT_R = crate::FieldReader<u32, u32>;
+pub type DEBOUNCE_COUNT_R = crate::FieldReader<u32>;
 #[doc = "Field `DEBOUNCE_COUNT` writer - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
-pub type DEBOUNCE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, DEBNCE_SPEC, 24, O, u32, u32>;
+pub type DEBOUNCE_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, DEBNCE_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]

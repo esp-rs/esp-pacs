@@ -14,7 +14,7 @@ impl From<crate::R<LACTHI_SPEC>> for R {
     }
 }
 #[doc = "Field `LACT_HI` reader - Reserved."]
-pub type LACT_HI_R = crate::FieldReader<u32, u32>;
+pub type LACT_HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<ICACHE_LOCK_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_LOCK_SIZE` reader - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
-pub type ICACHE_LOCK_SIZE_R = crate::FieldReader<u16, u16>;
+pub type ICACHE_LOCK_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ICACHE_LOCK_SIZE` writer - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
 pub type ICACHE_LOCK_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ICACHE_LOCK_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, ICACHE_LOCK_SIZE_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
     #[inline(always)]

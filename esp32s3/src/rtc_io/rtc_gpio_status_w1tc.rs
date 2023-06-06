@@ -21,7 +21,7 @@ impl From<crate::W<RTC_GPIO_STATUS_W1TC_SPEC>> for W {
 }
 #[doc = "Field `RTC_GPIO_STATUS_INT_W1TC` writer - RTC GPIO 0 ~ 21 interrupt status write 1 to clear"]
 pub type RTC_GPIO_STATUS_INT_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_GPIO_STATUS_W1TC_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, RTC_GPIO_STATUS_W1TC_SPEC, 22, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_STATUS_W1TC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

@@ -35,9 +35,9 @@ impl From<crate::W<U_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `FILTER_THRES` reader - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
-pub type FILTER_THRES_R = crate::FieldReader<u16, u16>;
+pub type FILTER_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `FILTER_THRES` writer - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
-pub type FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 10, O, u16, u16>;
+pub type FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 10, O, u16>;
 #[doc = "Field `FILTER_EN` reader - This is the enable bit for unit %s's input filter."]
 pub type FILTER_EN_R = crate::BitReader;
 #[doc = "Field `FILTER_EN` writer - This is the enable bit for unit %s's input filter."]

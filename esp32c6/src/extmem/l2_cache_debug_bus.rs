@@ -14,7 +14,7 @@ impl From<crate::R<L2_CACHE_DEBUG_BUS_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_DEBUG_BUS` reader - This is a constant place where we can write data to or read data from the tag/data memory on the specified cache."]
-pub type L2_CACHE_DEBUG_BUS_R = crate::FieldReader<u32, u32>;
+pub type L2_CACHE_DEBUG_BUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag/data memory on the specified cache."]
     #[inline(always)]

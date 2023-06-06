@@ -35,10 +35,9 @@ impl From<crate::W<APB_CTRL_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_CTRL_DATE` reader - Version control register"]
-pub type APB_CTRL_DATE_R = crate::FieldReader<u32, u32>;
+pub type APB_CTRL_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `APB_CTRL_DATE` writer - Version control register"]
-pub type APB_CTRL_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APB_CTRL_DATE_SPEC, 32, O, u32, u32>;
+pub type APB_CTRL_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, APB_CTRL_DATE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Version control register"]
     #[inline(always)]

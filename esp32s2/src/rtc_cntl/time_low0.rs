@@ -14,7 +14,7 @@ impl From<crate::R<TIME_LOW0_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_VALUE0_LOW` reader - Stores the lower 32 bits of RTC timer 0."]
-pub type TIMER_VALUE0_LOW_R = crate::FieldReader<u32, u32>;
+pub type TIMER_VALUE0_LOW_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the lower 32 bits of RTC timer 0."]
     #[inline(always)]

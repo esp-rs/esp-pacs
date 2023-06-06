@@ -35,9 +35,9 @@ impl From<crate::W<SLAVE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_ADDR` reader - when configured as i2c slave this register is used to configure slave's address."]
-pub type SLAVE_ADDR_R = crate::FieldReader<u16, u16>;
+pub type SLAVE_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLAVE_ADDR` writer - when configured as i2c slave this register is used to configure slave's address."]
-pub type SLAVE_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_ADDR_SPEC, 15, O, u16, u16>;
+pub type SLAVE_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_ADDR_SPEC, 15, O, u16>;
 #[doc = "Field `ADDR_10BIT_EN` reader - This register is used to enable slave 10bit address mode."]
 pub type ADDR_10BIT_EN_R = crate::BitReader;
 #[doc = "Field `ADDR_10BIT_EN` writer - This register is used to enable slave 10bit address mode."]

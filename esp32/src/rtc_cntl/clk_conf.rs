@@ -35,7 +35,7 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub type CK8M_DIV_R = crate::FieldReader<u8, CK8M_DIV_A>;
+pub type CK8M_DIV_R = crate::FieldReader<CK8M_DIV_A>;
 #[doc = "CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024.\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -54,6 +54,9 @@ impl From<CK8M_DIV_A> for u8 {
     fn from(variant: CK8M_DIV_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for CK8M_DIV_A {
+    type Ux = u8;
 }
 impl CK8M_DIV_R {
     #[doc = "Get enumerated values variant"]
@@ -89,8 +92,7 @@ impl CK8M_DIV_R {
     }
 }
 #[doc = "Field `CK8M_DIV` writer - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub type CK8M_DIV_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, CLK_CONF_SPEC, 2, O, u8, CK8M_DIV_A>;
+pub type CK8M_DIV_W<'a, const O: u8> = crate::FieldWriterSafe<'a, CLK_CONF_SPEC, 2, O, CK8M_DIV_A>;
 impl<'a, const O: u8> CK8M_DIV_W<'a, O> {
     #[doc = "DIV128"]
     #[inline(always)]
@@ -208,7 +210,7 @@ pub type CK8M_FORCE_PU_R = crate::BitReader;
 #[doc = "Field `CK8M_FORCE_PU` writer - CK8M force power up"]
 pub type CK8M_FORCE_PU_W<'a, const O: u8> = crate::BitWriter<'a, CLK_CONF_SPEC, O>;
 #[doc = "Field `SOC_CLK_SEL` reader - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub type SOC_CLK_SEL_R = crate::FieldReader<u8, SOC_CLK_SEL_A>;
+pub type SOC_CLK_SEL_R = crate::FieldReader<SOC_CLK_SEL_A>;
 #[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -227,6 +229,9 @@ impl From<SOC_CLK_SEL_A> for u8 {
     fn from(variant: SOC_CLK_SEL_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for SOC_CLK_SEL_A {
+    type Ux = u8;
 }
 impl SOC_CLK_SEL_R {
     #[doc = "Get enumerated values variant"]
@@ -263,7 +268,7 @@ impl SOC_CLK_SEL_R {
 }
 #[doc = "Field `SOC_CLK_SEL` writer - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
 pub type SOC_CLK_SEL_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, CLK_CONF_SPEC, 2, O, u8, SOC_CLK_SEL_A>;
+    crate::FieldWriterSafe<'a, CLK_CONF_SPEC, 2, O, SOC_CLK_SEL_A>;
 impl<'a, const O: u8> SOC_CLK_SEL_W<'a, O> {
     #[doc = "XTAL"]
     #[inline(always)]
@@ -338,7 +343,7 @@ impl<'a, const O: u8> FAST_CLK_RTC_SEL_W<'a, O> {
     }
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<u8, ANA_CLK_RTC_SEL_A>;
+pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<ANA_CLK_RTC_SEL_A>;
 #[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -355,6 +360,9 @@ impl From<ANA_CLK_RTC_SEL_A> for u8 {
     fn from(variant: ANA_CLK_RTC_SEL_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for ANA_CLK_RTC_SEL_A {
+    type Ux = u8;
 }
 impl ANA_CLK_RTC_SEL_R {
     #[doc = "Get enumerated values variant"]
@@ -385,7 +393,7 @@ impl ANA_CLK_RTC_SEL_R {
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` writer - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
 pub type ANA_CLK_RTC_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CLK_CONF_SPEC, 2, O, u8, ANA_CLK_RTC_SEL_A>;
+    crate::FieldWriter<'a, CLK_CONF_SPEC, 2, O, ANA_CLK_RTC_SEL_A>;
 impl<'a, const O: u8> ANA_CLK_RTC_SEL_W<'a, O> {
     #[doc = "SLOW_CK"]
     #[inline(always)]

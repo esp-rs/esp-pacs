@@ -43,9 +43,9 @@ pub type RX_TOUT_FLOW_DIS_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
 pub type RX_TOUT_FLOW_DIS_W<'a, const O: u8> = crate::BitWriter<'a, TOUT_CONF_SPEC, O>;
 #[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
-pub type RX_TOUT_THRHD_R = crate::FieldReader<u16, u16>;
+pub type RX_TOUT_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
-pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, TOUT_CONF_SPEC, 10, O, u16, u16>;
+pub type RX_TOUT_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, TOUT_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bit 0 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]

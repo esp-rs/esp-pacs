@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` reader - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
-pub type SPI_XTS_PHYSICAL_ADDRESS_R = crate::FieldReader<u32, u32>;
+pub type SPI_XTS_PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_XTS_PHYSICAL_ADDRESS` writer - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
 pub type SPI_XTS_PHYSICAL_ADDRESS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC, 26, O, u32, u32>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_PHYSICAL_ADDRESS_SPEC, 26, O, u32>;
 impl R {
     #[doc = "Bits 0:25 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
     #[inline(always)]

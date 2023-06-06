@@ -14,9 +14,9 @@ impl From<crate::R<CH_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_WADDR_EX` reader - This register records the memory address offset when receiver of CHANNEL%s is using the RAM."]
-pub type MEM_WADDR_EX_R = crate::FieldReader<u16, u16>;
+pub type MEM_WADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_MEM_RADDR` reader - This register records the memory address offset when reads RAM over APB bus."]
-pub type APB_MEM_RADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_RADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE` reader - This register records the FSM status of CHANNEL%s."]
 pub type STATE_R = crate::FieldReader;
 #[doc = "Field `MEM_OWNER_ERR` reader - This status bit will be set when the ownership of memory block is wrong."]

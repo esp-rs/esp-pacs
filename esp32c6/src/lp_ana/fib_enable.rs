@@ -35,9 +35,9 @@ impl From<crate::W<FIB_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `ANA_FIB_ENA` reader - need_des"]
-pub type ANA_FIB_ENA_R = crate::FieldReader<u32, u32>;
+pub type ANA_FIB_ENA_R = crate::FieldReader<u32>;
 #[doc = "Field `ANA_FIB_ENA` writer - need_des"]
-pub type ANA_FIB_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, FIB_ENABLE_SPEC, 32, O, u32, u32>;
+pub type ANA_FIB_ENA_W<'a, const O: u8> = crate::FieldWriter<'a, FIB_ENABLE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

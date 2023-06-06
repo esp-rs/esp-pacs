@@ -35,10 +35,9 @@ impl From<crate::W<TOUCH_SLP_THRES_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_SLP_TH` reader - the threshold for sleep touch pad"]
-pub type TOUCH_SLP_TH_R = crate::FieldReader<u32, u32>;
+pub type TOUCH_SLP_TH_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_SLP_TH` writer - the threshold for sleep touch pad"]
-pub type TOUCH_SLP_TH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 22, O, u32, u32>;
+pub type TOUCH_SLP_TH_W<'a, const O: u8> = crate::FieldWriter<'a, TOUCH_SLP_THRES_SPEC, 22, O, u32>;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` reader - sleep pad approach function enable"]
 pub type TOUCH_SLP_APPROACH_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SLP_APPROACH_EN` writer - sleep pad approach function enable"]

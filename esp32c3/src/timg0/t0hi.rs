@@ -14,7 +14,7 @@ impl From<crate::R<T0HI_SPEC>> for R {
     }
 }
 #[doc = "Field `HI` reader - t0_hi"]
-pub type HI_R = crate::FieldReader<u32, u32>;
+pub type HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - t0_hi"]
     #[inline(always)]

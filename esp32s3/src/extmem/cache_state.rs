@@ -14,9 +14,9 @@ impl From<crate::R<CACHE_STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `ICACHE_STATE` reader - The bit is used to indicate whether icache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub type ICACHE_STATE_R = crate::FieldReader<u16, u16>;
+pub type ICACHE_STATE_R = crate::FieldReader<u16>;
 #[doc = "Field `DCACHE_STATE` reader - The bit is used to indicate whether dcache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub type DCACHE_STATE_R = crate::FieldReader<u16, u16>;
+pub type DCACHE_STATE_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to indicate whether icache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
     #[inline(always)]

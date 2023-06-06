@@ -35,15 +35,15 @@ impl From<crate::W<POWER_CK_WAIT_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `WAIT_XTL_STABLE` reader - need_des"]
-pub type WAIT_XTL_STABLE_R = crate::FieldReader<u16, u16>;
+pub type WAIT_XTL_STABLE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_XTL_STABLE` writer - need_des"]
 pub type WAIT_XTL_STABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_CK_WAIT_CNTL_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_CK_WAIT_CNTL_SPEC, 16, O, u16>;
 #[doc = "Field `WAIT_PLL_STABLE` reader - need_des"]
-pub type WAIT_PLL_STABLE_R = crate::FieldReader<u16, u16>;
+pub type WAIT_PLL_STABLE_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_PLL_STABLE` writer - need_des"]
 pub type WAIT_PLL_STABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_CK_WAIT_CNTL_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_CK_WAIT_CNTL_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]

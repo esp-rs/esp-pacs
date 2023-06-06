@@ -14,7 +14,7 @@ impl From<crate::R<RTC_FASTMEM_CRC_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_RES` reader - This field stores the CRC result of RTC memory."]
-pub type RTC_MEM_CRC_RES_R = crate::FieldReader<u32, u32>;
+pub type RTC_MEM_CRC_RES_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This field stores the CRC result of RTC memory."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<CACHE_TAG_CONTENT_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_TAG_CONTENT` reader - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
-pub type CACHE_TAG_CONTENT_R = crate::FieldReader<u32, u32>;
+pub type CACHE_TAG_CONTENT_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_TAG_CONTENT` writer - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
 pub type CACHE_TAG_CONTENT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CACHE_TAG_CONTENT_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CACHE_TAG_CONTENT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<OUT_DSCR_BF1_CH0_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_BF1` reader - The address of the second-to-last inlink descriptor x-2."]
-pub type OUTLINK_DSCR_BF1_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_DSCR_BF1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the second-to-last inlink descriptor x-2."]
     #[inline(always)]

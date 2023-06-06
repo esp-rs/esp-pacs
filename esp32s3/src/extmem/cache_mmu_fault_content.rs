@@ -14,7 +14,7 @@ impl From<crate::R<CACHE_MMU_FAULT_CONTENT_SPEC>> for R {
     }
 }
 #[doc = "Field `CACHE_MMU_FAULT_CONTENT` reader - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
-pub type CACHE_MMU_FAULT_CONTENT_R = crate::FieldReader<u16, u16>;
+pub type CACHE_MMU_FAULT_CONTENT_R = crate::FieldReader<u16>;
 #[doc = "Field `CACHE_MMU_FAULT_CODE` reader - The right-most 3 bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: writeback, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx. The most significant bit is used to indicate this operation occurs in which one icache."]
 pub type CACHE_MMU_FAULT_CODE_R = crate::FieldReader;
 impl R {

@@ -35,18 +35,17 @@ impl From<crate::W<TIMER3_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_WAIT_TIMER` reader - "]
-pub type WIFI_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type WIFI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `WIFI_WAIT_TIMER` writer - "]
-pub type WIFI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16, u16>;
+pub type WIFI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16>;
 #[doc = "Field `WIFI_POWERUP_TIMER` reader - "]
 pub type WIFI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `WIFI_POWERUP_TIMER` writer - "]
 pub type WIFI_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 7, O>;
 #[doc = "Field `ROM_RAM_WAIT_TIMER` reader - "]
-pub type ROM_RAM_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type ROM_RAM_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `ROM_RAM_WAIT_TIMER` writer - "]
-pub type ROM_RAM_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16, u16>;
+pub type ROM_RAM_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER3_SPEC, 9, O, u16>;
 #[doc = "Field `ROM_RAM_POWERUP_TIMER` reader - "]
 pub type ROM_RAM_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `ROM_RAM_POWERUP_TIMER` writer - "]

@@ -35,10 +35,9 @@ impl From<crate::W<DMA_OUT_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR` reader - This register is used to specify the least significant 20 bits of the first transmit descriptor's address."]
-pub type OUTLINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - This register is used to specify the least significant 20 bits of the first transmit descriptor's address."]
-pub type OUTLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_OUT_LINK_SPEC, 20, O, u32, u32>;
+pub type OUTLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_OUT_LINK_SPEC, 20, O, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - Set this bit to stop dealing with the transmit descriptor."]
 pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - Set this bit to stop dealing with the transmit descriptor."]

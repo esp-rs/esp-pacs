@@ -35,9 +35,9 @@ impl From<crate::W<HCCHAR3_SPEC>> for W {
     }
 }
 #[doc = "Field `H_MPS3` reader - "]
-pub type H_MPS3_R = crate::FieldReader<u16, u16>;
+pub type H_MPS3_R = crate::FieldReader<u16>;
 #[doc = "Field `H_MPS3` writer - "]
-pub type H_MPS3_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR3_SPEC, 11, O, u16, u16>;
+pub type H_MPS3_W<'a, const O: u8> = crate::FieldWriter<'a, HCCHAR3_SPEC, 11, O, u16>;
 #[doc = "Field `H_EPNUM3` reader - "]
 pub type H_EPNUM3_R = crate::FieldReader;
 #[doc = "Field `H_EPNUM3` writer - "]

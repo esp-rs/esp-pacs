@@ -35,9 +35,9 @@ impl From<crate::W<SLCHOSTID_SPEC>> for W {
     }
 }
 #[doc = "Field `SLCHOST_ID` reader - *******Description***********"]
-pub type SLCHOST_ID_R = crate::FieldReader<u32, u32>;
+pub type SLCHOST_ID_R = crate::FieldReader<u32>;
 #[doc = "Field `SLCHOST_ID` writer - *******Description***********"]
-pub type SLCHOST_ID_W<'a, const O: u8> = crate::FieldWriter<'a, SLCHOSTID_SPEC, 32, O, u32, u32>;
+pub type SLCHOST_ID_W<'a, const O: u8> = crate::FieldWriter<'a, SLCHOSTID_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]

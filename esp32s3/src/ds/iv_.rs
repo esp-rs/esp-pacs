@@ -35,9 +35,9 @@ impl From<crate::W<IV__SPEC>> for W {
     }
 }
 #[doc = "Field `IV_0` reader - Stores IV block data"]
-pub type IV_0_R = crate::FieldReader<u32, u32>;
+pub type IV_0_R = crate::FieldReader<u32>;
 #[doc = "Field `IV_0` writer - Stores IV block data"]
-pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32, u32>;
+pub type IV_0_W<'a, const O: u8> = crate::FieldWriter<'a, IV__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores IV block data"]
     #[inline(always)]

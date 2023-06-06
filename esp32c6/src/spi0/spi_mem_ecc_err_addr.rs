@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_ECC_ERR_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_MEM_ECC_ERR_ADDR` reader - This bits show the first MSPI ECC error address. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
-pub type SPI_MEM_ECC_ERR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_ECC_ERR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_ECC_ERR_CNT` reader - This bits show the error times of MSPI ECC read. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
 pub type SPI_MEM_ECC_ERR_CNT_R = crate::FieldReader;
 impl R {

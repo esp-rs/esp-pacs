@@ -35,9 +35,9 @@ impl From<crate::W<MULT_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `DATE` reader - ECC mult version control register"]
-pub type DATE_R = crate::FieldReader<u32, u32>;
+pub type DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `DATE` writer - ECC mult version control register"]
-pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, MULT_DATE_SPEC, 28, O, u32, u32>;
+pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, MULT_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - ECC mult version control register"]
     #[inline(always)]

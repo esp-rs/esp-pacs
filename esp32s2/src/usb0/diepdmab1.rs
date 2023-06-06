@@ -14,7 +14,7 @@ impl From<crate::R<DIEPDMAB1_SPEC>> for R {
     }
 }
 #[doc = "Field `D_DMABUFFERADDR1` reader - "]
-pub type D_DMABUFFERADDR1_R = crate::FieldReader<u32, u32>;
+pub type D_DMABUFFERADDR1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

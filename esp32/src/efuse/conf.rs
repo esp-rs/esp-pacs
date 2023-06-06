@@ -35,9 +35,9 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `OP_CODE` reader - efuse operation code"]
-pub type OP_CODE_R = crate::FieldReader<u16, u16>;
+pub type OP_CODE_R = crate::FieldReader<u16>;
 #[doc = "Field `OP_CODE` writer - efuse operation code"]
-pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16, u16>;
+pub type OP_CODE_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SPEC, 16, O, u16>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
 pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` writer - "]

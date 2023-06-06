@@ -14,7 +14,7 @@ impl From<crate::R<LOWPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `MIN_CNT` reader - This register stores the value of the minimum duration time for the low level pulse. it is used in baudrate-detect process."]
-pub type MIN_CNT_R = crate::FieldReader<u32, u32>;
+pub type MIN_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the value of the minimum duration time for the low level pulse. it is used in baudrate-detect process."]
     #[inline(always)]

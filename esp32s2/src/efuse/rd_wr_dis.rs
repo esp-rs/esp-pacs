@@ -14,7 +14,7 @@ impl From<crate::R<RD_WR_DIS_SPEC>> for R {
     }
 }
 #[doc = "Field `WR_DIS` reader - Disables programming of individual eFuses."]
-pub type WR_DIS_R = crate::FieldReader<u32, u32>;
+pub type WR_DIS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Disables programming of individual eFuses."]
     #[inline(always)]

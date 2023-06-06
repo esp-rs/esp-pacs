@@ -35,10 +35,10 @@ impl From<crate::W<HW_STANDBY_CNT_SPEC>> for W {
     }
 }
 #[doc = "Field `STANDBY_WAIT_CNT` reader - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
-pub type STANDBY_WAIT_CNT_R = crate::FieldReader<u32, u32>;
+pub type STANDBY_WAIT_CNT_R = crate::FieldReader<u32>;
 #[doc = "Field `STANDBY_WAIT_CNT` writer - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
 pub type STANDBY_WAIT_CNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HW_STANDBY_CNT_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, HW_STANDBY_CNT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
     #[inline(always)]

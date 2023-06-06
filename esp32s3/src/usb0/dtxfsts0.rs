@@ -14,7 +14,7 @@ impl From<crate::R<DTXFSTS0_SPEC>> for R {
     }
 }
 #[doc = "Field `D_INEPTXFSPCAVAIL0` reader - "]
-pub type D_INEPTXFSPCAVAIL0_R = crate::FieldReader<u16, u16>;
+pub type D_INEPTXFSPCAVAIL0_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

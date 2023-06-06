@@ -14,7 +14,7 @@ impl From<crate::R<HOST_SLCHOST_PKT_LEN0_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_HOSTSLC0_LEN0` reader - "]
-pub type HOST_HOSTSLC0_LEN0_R = crate::FieldReader<u32, u32>;
+pub type HOST_HOSTSLC0_LEN0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

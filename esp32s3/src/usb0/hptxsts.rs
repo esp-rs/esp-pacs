@@ -14,7 +14,7 @@ impl From<crate::R<HPTXSTS_SPEC>> for R {
     }
 }
 #[doc = "Field `PTXFSPCAVAIL` reader - "]
-pub type PTXFSPCAVAIL_R = crate::FieldReader<u16, u16>;
+pub type PTXFSPCAVAIL_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXQSPCAVAIL` reader - "]
 pub type PTXQSPCAVAIL_R = crate::FieldReader;
 #[doc = "Field `PTXQTOP` reader - "]

@@ -35,14 +35,13 @@ impl From<crate::W<SPI_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `iodata_start_addr` reader - In the master mode, it is the value of address in \"address\" phase."]
-pub type IODATA_START_ADDR_R = crate::FieldReader<u32, u32>;
+pub type IODATA_START_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `iodata_start_addr` writer - In the master mode, it is the value of address in \"address\" phase."]
-pub type IODATA_START_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_ADDR_SPEC, 32, O, u32, u32>;
+pub type IODATA_START_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_ADDR_SPEC, 32, O, u32>;
 #[doc = "Field `address` reader - "]
-pub type ADDRESS_R = crate::FieldReader<u32, u32>;
+pub type ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `address` writer - "]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_ADDR_SPEC, 24, O, u32, u32>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_ADDR_SPEC, 24, O, u32>;
 #[doc = "Field `size` reader - "]
 pub type SIZE_R = crate::FieldReader;
 #[doc = "Field `size` writer - "]

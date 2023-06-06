@@ -35,10 +35,10 @@ impl From<crate::W<I2C_SCL_HIGH_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SCL_HIGH_PERIOD` reader - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
-pub type I2C_SCL_HIGH_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type I2C_SCL_HIGH_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `I2C_SCL_HIGH_PERIOD` writer - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_HIGH_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2C_SCL_HIGH_PERIOD_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, I2C_SCL_HIGH_PERIOD_SPEC, 9, O, u16>;
 #[doc = "Field `I2C_SCL_WAIT_HIGH_PERIOD` reader - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
 pub type I2C_SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader;
 #[doc = "Field `I2C_SCL_WAIT_HIGH_PERIOD` writer - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]

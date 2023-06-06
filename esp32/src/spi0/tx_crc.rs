@@ -35,9 +35,9 @@ impl From<crate::W<TX_CRC_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - For SPI1 the value of crc32 for 256 bits data."]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - For SPI1 the value of crc32 for 256 bits data."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CRC_SPEC, 32, O, u32, u32>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CRC_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - For SPI1 the value of crc32 for 256 bits data."]
     #[inline(always)]

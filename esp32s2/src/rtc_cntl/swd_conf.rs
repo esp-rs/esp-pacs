@@ -39,10 +39,9 @@ pub type SWD_RESET_FLAG_R = crate::BitReader;
 #[doc = "Field `SWD_FEED_INT` reader - Receiving this interrupt leads to feeding the super watchdog via SW."]
 pub type SWD_FEED_INT_R = crate::BitReader;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - Adjusts the signal width sent to the super watchdog."]
-pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - Adjusts the signal width sent to the super watchdog."]
-pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16, u16>;
+pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - Set to reset the super watchdog reset flag."]
 pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_FEED` writer - Set to feed the super watchdog via SW."]

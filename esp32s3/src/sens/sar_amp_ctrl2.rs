@@ -65,10 +65,9 @@ pub type SAR_RSTB_FSM_IDLE_R = crate::BitReader;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` writer - no public"]
 pub type SAR_RSTB_FSM_IDLE_W<'a, const O: u8> = crate::BitWriter<'a, SAR_AMP_CTRL2_SPEC, O>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - no public"]
-pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - no public"]
-pub type SAR_AMP_WAIT3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_AMP_CTRL2_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT3_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL2_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 0 - no public"]
     #[inline(always)]

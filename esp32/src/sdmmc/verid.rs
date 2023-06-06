@@ -14,7 +14,7 @@ impl From<crate::R<VERID_SPEC>> for R {
     }
 }
 #[doc = "Field `VERSIONID` reader - Hardware version register. Can also be read by fireware."]
-pub type VERSIONID_R = crate::FieldReader<u32, u32>;
+pub type VERSIONID_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Hardware version register. Can also be read by fireware."]
     #[inline(always)]

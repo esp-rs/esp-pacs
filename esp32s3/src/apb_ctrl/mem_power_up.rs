@@ -39,10 +39,9 @@ pub type ROM_POWER_UP_R = crate::FieldReader;
 #[doc = "Field `ROM_POWER_UP` writer - ******* Description ***********"]
 pub type ROM_POWER_UP_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_POWER_UP_SPEC, 3, O>;
 #[doc = "Field `SRAM_POWER_UP` reader - ******* Description ***********"]
-pub type SRAM_POWER_UP_R = crate::FieldReader<u16, u16>;
+pub type SRAM_POWER_UP_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_POWER_UP` writer - ******* Description ***********"]
-pub type SRAM_POWER_UP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MEM_POWER_UP_SPEC, 11, O, u16, u16>;
+pub type SRAM_POWER_UP_W<'a, const O: u8> = crate::FieldWriter<'a, MEM_POWER_UP_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]

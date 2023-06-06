@@ -14,7 +14,7 @@ impl From<crate::R<UNIT0_VALUE_HI_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_UNIT0_VALUE_HI` reader - timer read value high 32bit"]
-pub type TIMER_UNIT0_VALUE_HI_R = crate::FieldReader<u32, u32>;
+pub type TIMER_UNIT0_VALUE_HI_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - timer read value high 32bit"]
     #[inline(always)]

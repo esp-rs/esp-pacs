@@ -35,10 +35,10 @@ impl From<crate::W<RETENTION_LINK_BASE_SPEC>> for W {
     }
 }
 #[doc = "Field `LINK_BASE_ADDR` reader - retention dma link base"]
-pub type LINK_BASE_ADDR_R = crate::FieldReader<u32, u32>;
+pub type LINK_BASE_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `LINK_BASE_ADDR` writer - retention dma link base"]
 pub type LINK_BASE_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_LINK_BASE_SPEC, 27, O, u32, u32>;
+    crate::FieldWriter<'a, RETENTION_LINK_BASE_SPEC, 27, O, u32>;
 impl R {
     #[doc = "Bits 0:26 - retention dma link base"]
     #[inline(always)]

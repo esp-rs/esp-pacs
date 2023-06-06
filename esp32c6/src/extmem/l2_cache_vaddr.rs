@@ -14,7 +14,7 @@ impl From<crate::R<L2_CACHE_VADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_VADDR` reader - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
-pub type L2_CACHE_VADDR_R = crate::FieldReader<u32, u32>;
+pub type L2_CACHE_VADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]

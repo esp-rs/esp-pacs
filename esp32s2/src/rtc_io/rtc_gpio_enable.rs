@@ -35,10 +35,10 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE` reader - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
-pub type REG_RTCIO_REG_GPIO_ENABLE_R = crate::FieldReader<u32, u32>;
+pub type REG_RTCIO_REG_GPIO_ENABLE_R = crate::FieldReader<u32>;
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE` writer - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
 pub type REG_RTCIO_REG_GPIO_ENABLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_GPIO_ENABLE_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, RTC_GPIO_ENABLE_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
     #[inline(always)]

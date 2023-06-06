@@ -35,9 +35,9 @@ impl From<crate::W<BLKSIZ_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_SIZE` reader - Block size."]
-pub type BLOCK_SIZE_R = crate::FieldReader<u16, u16>;
+pub type BLOCK_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `BLOCK_SIZE` writer - Block size."]
-pub type BLOCK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, BLKSIZ_SPEC, 16, O, u16, u16>;
+pub type BLOCK_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, BLKSIZ_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Block size."]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<LPPERI_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_BLETIMER_DIV_NUM` reader - need_des"]
-pub type LP_BLETIMER_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type LP_BLETIMER_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_BLETIMER_DIV_NUM` writer - need_des"]
-pub type LP_BLETIMER_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LPPERI_SPEC, 12, O, u16, u16>;
+pub type LP_BLETIMER_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LPPERI_SPEC, 12, O, u16>;
 #[doc = "Field `LP_BLETIMER_32K_SEL` reader - need_des"]
 pub type LP_BLETIMER_32K_SEL_R = crate::FieldReader;
 #[doc = "Field `LP_BLETIMER_32K_SEL` writer - need_des"]

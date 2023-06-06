@@ -35,9 +35,9 @@ impl From<crate::W<SEARCH_POS_SPEC>> for W {
     }
 }
 #[doc = "Field `SEARCH_POS` reader - Configure this field to set search position. This field should be used together with RSA_SEARCH_ENABLE. The field is only meaningful when RSA_SEARCH_ENABLE is high."]
-pub type SEARCH_POS_R = crate::FieldReader<u16, u16>;
+pub type SEARCH_POS_R = crate::FieldReader<u16>;
 #[doc = "Field `SEARCH_POS` writer - Configure this field to set search position. This field should be used together with RSA_SEARCH_ENABLE. The field is only meaningful when RSA_SEARCH_ENABLE is high."]
-pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16, u16>;
+pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - Configure this field to set search position. This field should be used together with RSA_SEARCH_ENABLE. The field is only meaningful when RSA_SEARCH_ENABLE is high."]
     #[inline(always)]

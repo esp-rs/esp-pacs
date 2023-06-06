@@ -35,10 +35,10 @@ impl From<crate::W<SCL_LOW_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_LOW_PERIOD` reader - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
-pub type SCL_LOW_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type SCL_LOW_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `SCL_LOW_PERIOD` writer - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
 pub type SCL_LOW_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 14, O, u16, u16>;
+    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - This register is used to configure for how long SCL remains low in master mode, in I2C module clock cycles."]
     #[inline(always)]

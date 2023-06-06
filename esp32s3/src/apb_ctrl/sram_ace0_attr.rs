@@ -35,10 +35,9 @@ impl From<crate::W<SRAM_ACE0_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_ACE0_ATTR` reader - ******* Description ***********"]
-pub type SRAM_ACE0_ATTR_R = crate::FieldReader<u16, u16>;
+pub type SRAM_ACE0_ATTR_R = crate::FieldReader<u16>;
 #[doc = "Field `SRAM_ACE0_ATTR` writer - ******* Description ***********"]
-pub type SRAM_ACE0_ATTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SRAM_ACE0_ATTR_SPEC, 9, O, u16, u16>;
+pub type SRAM_ACE0_ATTR_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_ACE0_ATTR_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - ******* Description ***********"]
     #[inline(always)]

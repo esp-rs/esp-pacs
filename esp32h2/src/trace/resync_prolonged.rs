@@ -35,10 +35,10 @@ impl From<crate::W<RESYNC_PROLONGED_SPEC>> for W {
     }
 }
 #[doc = "Field `RESYNC_PROLONGED` reader - count number, when count to this value, send a sync package"]
-pub type RESYNC_PROLONGED_R = crate::FieldReader<u32, u32>;
+pub type RESYNC_PROLONGED_R = crate::FieldReader<u32>;
 #[doc = "Field `RESYNC_PROLONGED` writer - count number, when count to this value, send a sync package"]
 pub type RESYNC_PROLONGED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RESYNC_PROLONGED_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, RESYNC_PROLONGED_SPEC, 24, O, u32>;
 #[doc = "Field `RESYNC_MODE` reader - resyc mode sel: 0: default, cycle count 1: package num count"]
 pub type RESYNC_MODE_R = crate::BitReader;
 #[doc = "Field `RESYNC_MODE` writer - resyc mode sel: 0: default, cycle count 1: package num count"]

@@ -35,13 +35,13 @@ impl From<crate::W<IDLE_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_IDLE_THRHD` reader - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
-pub type RX_IDLE_THRHD_R = crate::FieldReader<u16, u16>;
+pub type RX_IDLE_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_IDLE_THRHD` writer - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
-pub type RX_IDLE_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
+pub type RX_IDLE_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `TX_IDLE_NUM` reader - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_R = crate::FieldReader<u16, u16>;
+pub type TX_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_NUM` writer - This register is used to configure the duration time between transfers."]
-pub type TX_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16, u16>;
+pub type TX_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, IDLE_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
     #[inline(always)]

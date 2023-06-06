@@ -14,7 +14,7 @@ impl From<crate::R<INLINK_DSCR_BF0_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_BF0` reader - "]
-pub type INLINK_DSCR_BF0_R = crate::FieldReader<u32, u32>;
+pub type INLINK_DSCR_BF0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<CONF_SIGLE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `SINGLE_DATA` reader - The configured constant channel data to be sent out."]
-pub type SINGLE_DATA_R = crate::FieldReader<u32, u32>;
+pub type SINGLE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SINGLE_DATA` writer - The configured constant channel data to be sent out."]
-pub type SINGLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CONF_SIGLE_DATA_SPEC, 32, O, u32, u32>;
+pub type SINGLE_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CONF_SIGLE_DATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]

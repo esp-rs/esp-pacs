@@ -35,9 +35,9 @@ impl From<crate::W<TIMER_CMP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_CMP` reader - This register stores ledc timer%s compare value."]
-pub type TIMER_CMP_R = crate::FieldReader<u32, u32>;
+pub type TIMER_CMP_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_CMP` writer - This register stores ledc timer%s compare value."]
-pub type TIMER_CMP_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_CMP_SPEC, 20, O, u32, u32>;
+pub type TIMER_CMP_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER_CMP_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores ledc timer%s compare value."]
     #[inline(always)]

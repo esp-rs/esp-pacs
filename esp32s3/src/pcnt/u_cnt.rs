@@ -14,7 +14,7 @@ impl From<crate::R<U_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `CNT` reader - This register stores the current pulse count value for unit %s."]
-pub type CNT_R = crate::FieldReader<u16, u16>;
+pub type CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - This register stores the current pulse count value for unit %s."]
     #[inline(always)]

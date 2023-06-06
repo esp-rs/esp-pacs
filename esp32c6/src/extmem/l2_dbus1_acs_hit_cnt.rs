@@ -14,7 +14,7 @@ impl From<crate::R<L2_DBUS1_ACS_HIT_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_DBUS1_HIT_CNT` reader - The register records the number of hits when L1-DCache accesses L2-Cache due to bus1 accessing L1-DCache."]
-pub type L2_DBUS1_HIT_CNT_R = crate::FieldReader<u32, u32>;
+pub type L2_DBUS1_HIT_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The register records the number of hits when L1-DCache accesses L2-Cache due to bus1 accessing L1-DCache."]
     #[inline(always)]

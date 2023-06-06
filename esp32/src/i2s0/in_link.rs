@@ -35,9 +35,9 @@ impl From<crate::W<IN_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_ADDR` reader - "]
-pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type INLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `INLINK_ADDR` writer - "]
-pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, IN_LINK_SPEC, 20, O, u32, u32>;
+pub type INLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, IN_LINK_SPEC, 20, O, u32>;
 #[doc = "Field `INLINK_STOP` reader - "]
 pub type INLINK_STOP_R = crate::BitReader;
 #[doc = "Field `INLINK_STOP` writer - "]

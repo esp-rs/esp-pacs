@@ -20,7 +20,7 @@ impl From<crate::W<TLOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `LOAD` writer - Write any value to trigger a timer %s time-base counter reload."]
-pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, TLOAD_SPEC, 32, O, u32, u32>;
+pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, TLOAD_SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<TLOAD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

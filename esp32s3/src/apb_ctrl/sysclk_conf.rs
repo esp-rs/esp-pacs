@@ -35,9 +35,9 @@ impl From<crate::W<SYSCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_DIV_CNT` reader - ******* Description ***********"]
-pub type PRE_DIV_CNT_R = crate::FieldReader<u16, u16>;
+pub type PRE_DIV_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PRE_DIV_CNT` writer - ******* Description ***********"]
-pub type PRE_DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, SYSCLK_CONF_SPEC, 10, O, u16, u16>;
+pub type PRE_DIV_CNT_W<'a, const O: u8> = crate::FieldWriter<'a, SYSCLK_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `CLK_320M_EN` reader - ******* Description ***********"]
 pub type CLK_320M_EN_R = crate::BitReader;
 #[doc = "Field `CLK_320M_EN` writer - ******* Description ***********"]

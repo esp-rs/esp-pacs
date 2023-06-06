@@ -35,10 +35,9 @@ impl From<crate::W<RTC_GPIO_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_OUT_DATA` reader - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
-pub type GPIO_OUT_DATA_R = crate::FieldReader<u32, u32>;
+pub type GPIO_OUT_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `GPIO_OUT_DATA` writer - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
-pub type GPIO_OUT_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_GPIO_OUT_SPEC, 22, O, u32, u32>;
+pub type GPIO_OUT_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_OUT_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
     #[inline(always)]

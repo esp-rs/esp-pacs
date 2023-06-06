@@ -35,9 +35,9 @@ impl From<crate::W<Q3_WORD0_SPEC>> for W {
     }
 }
 #[doc = "Field `SEND_Q3_WORD0` reader - This register is used as a quick_sent register when mode is specified by UHCI_ALWAYS_SEND_NUM or UHCI_SINGLE_SEND_NUM."]
-pub type SEND_Q3_WORD0_R = crate::FieldReader<u32, u32>;
+pub type SEND_Q3_WORD0_R = crate::FieldReader<u32>;
 #[doc = "Field `SEND_Q3_WORD0` writer - This register is used as a quick_sent register when mode is specified by UHCI_ALWAYS_SEND_NUM or UHCI_SINGLE_SEND_NUM."]
-pub type SEND_Q3_WORD0_W<'a, const O: u8> = crate::FieldWriter<'a, Q3_WORD0_SPEC, 32, O, u32, u32>;
+pub type SEND_Q3_WORD0_W<'a, const O: u8> = crate::FieldWriter<'a, Q3_WORD0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register is used as a quick_sent register when mode is specified by UHCI_ALWAYS_SEND_NUM or UHCI_SINGLE_SEND_NUM."]
     #[inline(always)]

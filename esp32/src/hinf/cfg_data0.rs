@@ -35,13 +35,13 @@ impl From<crate::W<CFG_DATA0_SPEC>> for W {
     }
 }
 #[doc = "Field `USER_ID_FN1` reader - "]
-pub type USER_ID_FN1_R = crate::FieldReader<u16, u16>;
+pub type USER_ID_FN1_R = crate::FieldReader<u16>;
 #[doc = "Field `USER_ID_FN1` writer - "]
-pub type USER_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16, u16>;
+pub type USER_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16>;
 #[doc = "Field `DEVICE_ID_FN1` reader - "]
-pub type DEVICE_ID_FN1_R = crate::FieldReader<u16, u16>;
+pub type DEVICE_ID_FN1_R = crate::FieldReader<u16>;
 #[doc = "Field `DEVICE_ID_FN1` writer - "]
-pub type DEVICE_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16, u16>;
+pub type DEVICE_ID_FN1_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

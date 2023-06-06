@@ -35,15 +35,15 @@ impl From<crate::W<SPI_MEM_FLASH_SUS_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_FLASH_PES_COMMAND` reader - Program/Erase suspend command."]
-pub type SPI_MEM_FLASH_PES_COMMAND_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_FLASH_PES_COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_FLASH_PES_COMMAND` writer - Program/Erase suspend command."]
 pub type SPI_MEM_FLASH_PES_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CMD_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CMD_SPEC, 16, O, u16>;
 #[doc = "Field `SPI_MEM_WAIT_PESR_COMMAND` reader - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
-pub type SPI_MEM_WAIT_PESR_COMMAND_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_WAIT_PESR_COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_WAIT_PESR_COMMAND` writer - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
 pub type SPI_MEM_WAIT_PESR_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CMD_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_SUS_CMD_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Program/Erase suspend command."]
     #[inline(always)]

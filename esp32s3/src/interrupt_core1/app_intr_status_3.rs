@@ -14,7 +14,7 @@ impl From<crate::R<APP_INTR_STATUS_3_SPEC>> for R {
     }
 }
 #[doc = "Field `INTR_STATUS_3` reader - this register store the status of the first 32 interrupt source"]
-pub type INTR_STATUS_3_R = crate::FieldReader<u32, u32>;
+pub type INTR_STATUS_3_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - this register store the status of the first 32 interrupt source"]
     #[inline(always)]
