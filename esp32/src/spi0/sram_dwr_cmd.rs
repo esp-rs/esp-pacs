@@ -35,10 +35,10 @@ impl From<crate::W<SRAM_DWR_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_SRAM_USR_WR_CMD_VALUE` reader - For SPI0 When cache mode is enable it is the write command value of command phase for SRAM."]
-pub type CACHE_SRAM_USR_WR_CMD_VALUE_R = crate::FieldReader<u16, u16>;
+pub type CACHE_SRAM_USR_WR_CMD_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `CACHE_SRAM_USR_WR_CMD_VALUE` writer - For SPI0 When cache mode is enable it is the write command value of command phase for SRAM."]
 pub type CACHE_SRAM_USR_WR_CMD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SRAM_DWR_CMD_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SRAM_DWR_CMD_SPEC, 16, O, u16>;
 #[doc = "Field `CACHE_SRAM_USR_WR_CMD_BITLEN` reader - For SPI0 When cache mode is enable it is the in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
 pub type CACHE_SRAM_USR_WR_CMD_BITLEN_R = crate::FieldReader;
 #[doc = "Field `CACHE_SRAM_USR_WR_CMD_BITLEN` writer - For SPI0 When cache mode is enable it is the in bits of command phase for SRAM. The register value shall be (bit_num-1)."]

@@ -14,7 +14,7 @@ impl From<crate::R<BLK0_RDATA0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_EFUSE_WR_DIS` reader - read for efuse_wr_disable"]
-pub type RD_EFUSE_WR_DIS_R = crate::FieldReader<u16, u16>;
+pub type RD_EFUSE_WR_DIS_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_EFUSE_RD_DIS` reader - read for efuse_rd_disable"]
 pub type RD_EFUSE_RD_DIS_R = crate::FieldReader;
 #[doc = "Field `RD_FLASH_CRYPT_CNT` reader - read for flash_crypt_cnt"]

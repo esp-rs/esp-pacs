@@ -35,9 +35,9 @@ impl From<crate::W<RC32K_CNTL_SPEC>> for W {
     }
 }
 #[doc = "Field `RC32K_DFREQ` reader - need_des"]
-pub type RC32K_DFREQ_R = crate::FieldReader<u16, u16>;
+pub type RC32K_DFREQ_R = crate::FieldReader<u16>;
 #[doc = "Field `RC32K_DFREQ` writer - need_des"]
-pub type RC32K_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, RC32K_CNTL_SPEC, 10, O, u16, u16>;
+pub type RC32K_DFREQ_W<'a, const O: u8> = crate::FieldWriter<'a, RC32K_CNTL_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]

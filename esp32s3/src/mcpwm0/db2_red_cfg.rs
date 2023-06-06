@@ -35,9 +35,9 @@ impl From<crate::W<DB2_RED_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DB2_RED` reader - Shadow register for RED"]
-pub type DB2_RED_R = crate::FieldReader<u16, u16>;
+pub type DB2_RED_R = crate::FieldReader<u16>;
 #[doc = "Field `DB2_RED` writer - Shadow register for RED"]
-pub type DB2_RED_W<'a, const O: u8> = crate::FieldWriter<'a, DB2_RED_CFG_SPEC, 16, O, u16, u16>;
+pub type DB2_RED_W<'a, const O: u8> = crate::FieldWriter<'a, DB2_RED_CFG_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]

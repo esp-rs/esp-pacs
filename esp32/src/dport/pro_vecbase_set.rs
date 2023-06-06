@@ -35,10 +35,10 @@ impl From<crate::W<PRO_VECBASE_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_OUT_VECBASE` reader - "]
-pub type PRO_OUT_VECBASE_R = crate::FieldReader<u32, u32>;
+pub type PRO_OUT_VECBASE_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_OUT_VECBASE` writer - "]
 pub type PRO_OUT_VECBASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_VECBASE_SET_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_VECBASE_SET_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]

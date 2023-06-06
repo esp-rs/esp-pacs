@@ -35,9 +35,9 @@ impl From<crate::W<RXEOF_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EOF_NUM` reader - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
-pub type RX_EOF_NUM_R = crate::FieldReader<u32, u32>;
+pub type RX_EOF_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `RX_EOF_NUM` writer - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
-pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 32, O, u32, u32>;
+pub type RX_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RXEOF_NUM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
     #[inline(always)]

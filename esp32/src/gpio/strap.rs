@@ -14,7 +14,7 @@ impl From<crate::R<STRAP_SPEC>> for R {
     }
 }
 #[doc = "Field `STRAPPING` reader - {10'b0, MTDI, GPIO0, GPIO2, GPIO4, MTDO, GPIO5}"]
-pub type STRAPPING_R = crate::FieldReader<u16, u16>;
+pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - {10'b0, MTDI, GPIO0, GPIO2, GPIO4, MTDO, GPIO5}"]
     #[inline(always)]

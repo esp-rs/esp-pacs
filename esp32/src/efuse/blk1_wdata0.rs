@@ -35,9 +35,9 @@ impl From<crate::W<BLK1_WDATA0_SPEC>> for W {
     }
 }
 #[doc = "Field `BLK1_DIN0` reader - program for BLOCK1"]
-pub type BLK1_DIN0_R = crate::FieldReader<u32, u32>;
+pub type BLK1_DIN0_R = crate::FieldReader<u32>;
 #[doc = "Field `BLK1_DIN0` writer - program for BLOCK1"]
-pub type BLK1_DIN0_W<'a, const O: u8> = crate::FieldWriter<'a, BLK1_WDATA0_SPEC, 32, O, u32, u32>;
+pub type BLK1_DIN0_W<'a, const O: u8> = crate::FieldWriter<'a, BLK1_WDATA0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - program for BLOCK1"]
     #[inline(always)]

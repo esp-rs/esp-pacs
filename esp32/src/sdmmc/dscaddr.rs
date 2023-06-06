@@ -14,7 +14,7 @@ impl From<crate::R<DSCADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `DSCADDR` reader - Host Descriptor Address Pointer, updated by IDMAC during operation and cleared on reset. This register points to the start address of the current descriptor read by the IDMAC."]
-pub type DSCADDR_R = crate::FieldReader<u32, u32>;
+pub type DSCADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Host Descriptor Address Pointer, updated by IDMAC during operation and cleared on reset. This register points to the start address of the current descriptor read by the IDMAC."]
     #[inline(always)]

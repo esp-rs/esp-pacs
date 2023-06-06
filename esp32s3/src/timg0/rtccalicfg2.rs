@@ -42,10 +42,10 @@ pub type RTC_CALI_TIMEOUT_RST_CNT_R = crate::FieldReader;
 pub type RTC_CALI_TIMEOUT_RST_CNT_W<'a, const O: u8> =
     crate::FieldWriter<'a, RTCCALICFG2_SPEC, 4, O>;
 #[doc = "Field `RTC_CALI_TIMEOUT_THRES` reader - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
-pub type RTC_CALI_TIMEOUT_THRES_R = crate::FieldReader<u32, u32>;
+pub type RTC_CALI_TIMEOUT_THRES_R = crate::FieldReader<u32>;
 #[doc = "Field `RTC_CALI_TIMEOUT_THRES` writer - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
 pub type RTC_CALI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTCCALICFG2_SPEC, 25, O, u32, u32>;
+    crate::FieldWriter<'a, RTCCALICFG2_SPEC, 25, O, u32>;
 impl R {
     #[doc = "Bit 0 - RTC calibration timeout indicator"]
     #[inline(always)]

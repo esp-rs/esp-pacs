@@ -35,10 +35,9 @@ impl From<crate::W<LR_VALUE_SPEC>> for W {
     }
 }
 #[doc = "Field `GLOABLE_LR_VALUE` reader - backup gloable value"]
-pub type GLOABLE_LR_VALUE_R = crate::FieldReader<u32, u32>;
+pub type GLOABLE_LR_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `GLOABLE_LR_VALUE` writer - backup gloable value"]
-pub type GLOABLE_LR_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LR_VALUE_SPEC, 32, O, u32, u32>;
+pub type GLOABLE_LR_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, LR_VALUE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - backup gloable value"]
     #[inline(always)]

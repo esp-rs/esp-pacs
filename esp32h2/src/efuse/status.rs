@@ -28,7 +28,7 @@ pub type OTP_PGENB_SW_R = crate::BitReader;
 #[doc = "Field `OTP_VDDQ_IS_SW` reader - The value of OTP_VDDQ_IS_SW."]
 pub type OTP_VDDQ_IS_SW_R = crate::BitReader;
 #[doc = "Field `BLK0_VALID_BIT_CNT` reader - Indicates the number of block valid bit."]
-pub type BLK0_VALID_BIT_CNT_R = crate::FieldReader<u16, u16>;
+pub type BLK0_VALID_BIT_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `CUR_ECDSA_BLK` reader - Indicates which block is used for ECDSA key output."]
 pub type CUR_ECDSA_BLK_R = crate::FieldReader;
 impl R {

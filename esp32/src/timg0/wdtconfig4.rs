@@ -35,10 +35,9 @@ impl From<crate::W<WDTCONFIG4_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_STG2_HOLD` reader - Stage 2 timeout value in SWDT clock cycles"]
-pub type WDT_STG2_HOLD_R = crate::FieldReader<u32, u32>;
+pub type WDT_STG2_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_STG2_HOLD` writer - Stage 2 timeout value in SWDT clock cycles"]
-pub type WDT_STG2_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WDTCONFIG4_SPEC, 32, O, u32, u32>;
+pub type WDT_STG2_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG4_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stage 2 timeout value in SWDT clock cycles"]
     #[inline(always)]

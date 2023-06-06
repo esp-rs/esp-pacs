@@ -35,9 +35,9 @@ impl From<crate::W<SEARCH_POS_SPEC>> for W {
     }
 }
 #[doc = "Field `SEARCH_POS` reader - This field is used to configure the starting search position when the acceleration option of SEARCH is used."]
-pub type SEARCH_POS_R = crate::FieldReader<u16, u16>;
+pub type SEARCH_POS_R = crate::FieldReader<u16>;
 #[doc = "Field `SEARCH_POS` writer - This field is used to configure the starting search position when the acceleration option of SEARCH is used."]
-pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16, u16>;
+pub type SEARCH_POS_W<'a, const O: u8> = crate::FieldWriter<'a, SEARCH_POS_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - This field is used to configure the starting search position when the acceleration option of SEARCH is used."]
     #[inline(always)]

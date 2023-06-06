@@ -14,7 +14,7 @@ impl From<crate::R<SPI_MEM_TX_CRC_SPEC>> for R {
     }
 }
 #[doc = "Field `DATA` reader - For SPI1, the value of crc32."]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - For SPI1, the value of crc32."]
     #[inline(always)]

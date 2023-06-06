@@ -65,10 +65,10 @@ pub type SPI_MEM_WAITI_DUMMY_CYCLELEN_R = crate::FieldReader;
 pub type SPI_MEM_WAITI_DUMMY_CYCLELEN_W<'a, const O: u8> =
     crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 6, O>;
 #[doc = "Field `SPI_MEM_WAITI_CMD` reader - The command value to wait flash idle(RDSR)."]
-pub type SPI_MEM_WAITI_CMD_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_WAITI_CMD_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_WAITI_CMD` writer - The command value to wait flash idle(RDSR)."]
 pub type SPI_MEM_WAITI_CMD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_FLASH_WAITI_CTRL_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 0 - 1: The hardware will wait idle after SE/PP/WRSR automatically, and hardware auto Suspend/Resume can be enabled. 0: The functions of hardware wait idle and auto Suspend/Resume are not supported."]
     #[inline(always)]

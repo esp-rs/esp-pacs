@@ -14,7 +14,7 @@ impl From<crate::R<RX_HEAD_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_HEAD` reader - Stores the head of received packet."]
-pub type RX_HEAD_R = crate::FieldReader<u32, u32>;
+pub type RX_HEAD_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the head of received packet."]
     #[inline(always)]

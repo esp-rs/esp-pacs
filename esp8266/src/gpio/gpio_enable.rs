@@ -35,10 +35,9 @@ impl From<crate::W<GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_ENABLE_DATA` reader - The output enable register."]
-pub type GPIO_ENABLE_DATA_R = crate::FieldReader<u16, u16>;
+pub type GPIO_ENABLE_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_ENABLE_DATA` writer - The output enable register."]
-pub type GPIO_ENABLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GPIO_ENABLE_SPEC, 16, O, u16, u16>;
+pub type GPIO_ENABLE_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_ENABLE_SPEC, 16, O, u16>;
 #[doc = "Field `GPIO_SDIO_SEL` reader - SDIO-dis selection register"]
 pub type GPIO_SDIO_SEL_R = crate::FieldReader;
 #[doc = "Field `GPIO_SDIO_SEL` writer - SDIO-dis selection register"]

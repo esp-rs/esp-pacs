@@ -14,7 +14,7 @@ impl From<crate::R<PRO_DPORT_7_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_DPORT_ILG_ST` reader - Record the illegitimate information of PeriBus1. \\[25:6\\]: store the bits \\[21:2\\] of PeriBus1 address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: if bits \\[31:22\\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \\[3:0\\]: PeriBus1 byte enables."]
-pub type PRO_DPORT_ILG_ST_R = crate::FieldReader<u32, u32>;
+pub type PRO_DPORT_ILG_ST_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:25 - Record the illegitimate information of PeriBus1. \\[25:6\\]: store the bits \\[21:2\\] of PeriBus1 address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: if bits \\[31:22\\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \\[3:0\\]: PeriBus1 byte enables."]
     #[inline(always)]

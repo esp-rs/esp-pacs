@@ -35,10 +35,10 @@ impl From<crate::W<_0_DSCR_REC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_RX_DSCR_REC_LIM` reader - "]
-pub type SLC0_RX_DSCR_REC_LIM_R = crate::FieldReader<u16, u16>;
+pub type SLC0_RX_DSCR_REC_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RX_DSCR_REC_LIM` writer - "]
 pub type SLC0_RX_DSCR_REC_LIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, _0_DSCR_REC_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, _0_DSCR_REC_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]

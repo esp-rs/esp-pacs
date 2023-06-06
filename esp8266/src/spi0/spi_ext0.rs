@@ -35,9 +35,9 @@ impl From<crate::W<SPI_EXT0_SPEC>> for W {
     }
 }
 #[doc = "Field `pp_time` reader - "]
-pub type PP_TIME_R = crate::FieldReader<u16, u16>;
+pub type PP_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `pp_time` writer - "]
-pub type PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT0_SPEC, 12, O, u16, u16>;
+pub type PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT0_SPEC, 12, O, u16>;
 #[doc = "Field `pp_shift` reader - "]
 pub type PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `pp_shift` writer - "]

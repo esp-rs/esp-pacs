@@ -35,9 +35,9 @@ impl From<crate::W<SDA_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - reg_sda_hold_time"]
-pub type TIME_R = crate::FieldReader<u16, u16>;
+pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - reg_sda_hold_time"]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_HOLD_SPEC, 9, O, u16, u16>;
+pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_HOLD_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_sda_hold_time"]
     #[inline(always)]

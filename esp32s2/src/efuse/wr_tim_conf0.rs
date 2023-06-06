@@ -43,9 +43,9 @@ pub type TPGM_INACTIVE_R = crate::FieldReader;
 #[doc = "Field `TPGM_INACTIVE` writer - Configures the length of pulse during programming 0 to eFuse."]
 pub type TPGM_INACTIVE_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 8, O>;
 #[doc = "Field `TPGM` reader - Configures the length of pulse during programming 1 to eFuse."]
-pub type TPGM_R = crate::FieldReader<u16, u16>;
+pub type TPGM_R = crate::FieldReader<u16>;
 #[doc = "Field `TPGM` writer - Configures the length of pulse during programming 1 to eFuse."]
-pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 16, O, u16, u16>;
+pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:7 - Configures the hold time of programming operation."]
     #[inline(always)]

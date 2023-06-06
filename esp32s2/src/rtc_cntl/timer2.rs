@@ -35,10 +35,9 @@ impl From<crate::W<TIMER2_SPEC>> for W {
     }
 }
 #[doc = "Field `ULPCP_TOUCH_START_WAIT` reader - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
-pub type ULPCP_TOUCH_START_WAIT_R = crate::FieldReader<u16, u16>;
+pub type ULPCP_TOUCH_START_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULPCP_TOUCH_START_WAIT` writer - Sets the waiting cycle (using the RTC slow clock) before the ULP co-processor / touch controller start to work."]
-pub type ULPCP_TOUCH_START_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER2_SPEC, 9, O, u16, u16>;
+pub type ULPCP_TOUCH_START_WAIT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SPEC, 9, O, u16>;
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]
 pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader;
 #[doc = "Field `MIN_TIME_CK8M_OFF` writer - Sets the minimal cycle for 8 MHz clock (using the RTC slow clock) when powered down."]

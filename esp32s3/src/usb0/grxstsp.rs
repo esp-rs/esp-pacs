@@ -16,7 +16,7 @@ impl From<crate::R<GRXSTSP_SPEC>> for R {
 #[doc = "Field `CHNUM` reader - "]
 pub type CHNUM_R = crate::FieldReader;
 #[doc = "Field `BCNT` reader - "]
-pub type BCNT_R = crate::FieldReader<u16, u16>;
+pub type BCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `DPID` reader - "]
 pub type DPID_R = crate::FieldReader;
 #[doc = "Field `PKTSTS` reader - "]

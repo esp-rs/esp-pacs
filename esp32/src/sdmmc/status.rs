@@ -32,7 +32,7 @@ pub type DATA_STATE_MC_BUSY_R = crate::BitReader;
 #[doc = "Field `RESPONSE_INDEX` reader - Index of previous response, including any auto-stop sent by core."]
 pub type RESPONSE_INDEX_R = crate::FieldReader;
 #[doc = "Field `FIFO_COUNT` reader - FIFO count, number of filled locations in FIFO."]
-pub type FIFO_COUNT_R = crate::FieldReader<u16, u16>;
+pub type FIFO_COUNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - FIFO reached Receive watermark level, not qualified with data transfer."]
     #[inline(always)]

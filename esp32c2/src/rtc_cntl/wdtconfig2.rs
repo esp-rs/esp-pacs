@@ -35,10 +35,9 @@ impl From<crate::W<WDTCONFIG2_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_STG1_HOLD` reader - Need add desc"]
-pub type WDT_STG1_HOLD_R = crate::FieldReader<u32, u32>;
+pub type WDT_STG1_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_STG1_HOLD` writer - Need add desc"]
-pub type WDT_STG1_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WDTCONFIG2_SPEC, 32, O, u32, u32>;
+pub type WDT_STG1_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG2_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]

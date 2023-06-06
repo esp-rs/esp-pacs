@@ -14,7 +14,7 @@ impl From<crate::R<TBBCNT_SPEC>> for R {
     }
 }
 #[doc = "Field `TBBCNT` reader - Number of bytes transferred between Host/DMA memory and BIU FIFO."]
-pub type TBBCNT_R = crate::FieldReader<u32, u32>;
+pub type TBBCNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Number of bytes transferred between Host/DMA memory and BIU FIFO."]
     #[inline(always)]

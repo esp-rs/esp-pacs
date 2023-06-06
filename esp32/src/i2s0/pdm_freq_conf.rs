@@ -35,13 +35,13 @@ impl From<crate::W<PDM_FREQ_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_FS` reader - "]
-pub type TX_PDM_FS_R = crate::FieldReader<u16, u16>;
+pub type TX_PDM_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FS` writer - "]
-pub type TX_PDM_FS_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_FREQ_CONF_SPEC, 10, O, u16, u16>;
+pub type TX_PDM_FS_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_FREQ_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `TX_PDM_FP` reader - "]
-pub type TX_PDM_FP_R = crate::FieldReader<u16, u16>;
+pub type TX_PDM_FP_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FP` writer - "]
-pub type TX_PDM_FP_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_FREQ_CONF_SPEC, 10, O, u16, u16>;
+pub type TX_PDM_FP_W<'a, const O: u8> = crate::FieldWriter<'a, PDM_FREQ_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]

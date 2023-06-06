@@ -35,10 +35,9 @@ impl From<crate::W<AAD_BLOCK_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `AAD_BLOCK_NUM` reader - Stores the ADD Block Number for the GCM operation."]
-pub type AAD_BLOCK_NUM_R = crate::FieldReader<u32, u32>;
+pub type AAD_BLOCK_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `AAD_BLOCK_NUM` writer - Stores the ADD Block Number for the GCM operation."]
-pub type AAD_BLOCK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, AAD_BLOCK_NUM_SPEC, 32, O, u32, u32>;
+pub type AAD_BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AAD_BLOCK_NUM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]

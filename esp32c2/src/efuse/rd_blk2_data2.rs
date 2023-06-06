@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK2_DATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `LDO_VOL_BIAS_CONFIG_HIGH` reader - Store the bit \\[3:29\\] of ido configuration parameters."]
-pub type LDO_VOL_BIAS_CONFIG_HIGH_R = crate::FieldReader<u32, u32>;
+pub type LDO_VOL_BIAS_CONFIG_HIGH_R = crate::FieldReader<u32>;
 #[doc = "Field `PVT_LOW` reader - Store the bit \\[0:4\\] of pvt."]
 pub type PVT_LOW_R = crate::FieldReader;
 impl R {

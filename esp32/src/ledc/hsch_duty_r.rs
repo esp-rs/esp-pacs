@@ -14,7 +14,7 @@ impl From<crate::R<HSCH_DUTY_R_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_R` reader - This register represents the current duty cycle of the output signal for high-speed channel %s"]
-pub type DUTY_R_R = crate::FieldReader<u32, u32>;
+pub type DUTY_R_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:24 - This register represents the current duty cycle of the output signal for high-speed channel %s"]
     #[inline(always)]

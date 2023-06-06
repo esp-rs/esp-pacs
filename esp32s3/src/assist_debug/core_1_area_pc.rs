@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_AREA_PC_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_AREA_PC` reader - the stackpointer when first touch region monitor interrupt"]
-pub type CORE_1_AREA_PC_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_AREA_PC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - the stackpointer when first touch region monitor interrupt"]
     #[inline(always)]

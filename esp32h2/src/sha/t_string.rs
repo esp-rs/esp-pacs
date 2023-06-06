@@ -35,9 +35,9 @@ impl From<crate::W<T_STRING_SPEC>> for W {
     }
 }
 #[doc = "Field `T_STRING` reader - Sha t_string (used if and only if mode == SHA_512/t)."]
-pub type T_STRING_R = crate::FieldReader<u32, u32>;
+pub type T_STRING_R = crate::FieldReader<u32>;
 #[doc = "Field `T_STRING` writer - Sha t_string (used if and only if mode == SHA_512/t)."]
-pub type T_STRING_W<'a, const O: u8> = crate::FieldWriter<'a, T_STRING_SPEC, 32, O, u32, u32>;
+pub type T_STRING_W<'a, const O: u8> = crate::FieldWriter<'a, T_STRING_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Sha t_string (used if and only if mode == SHA_512/t)."]
     #[inline(always)]

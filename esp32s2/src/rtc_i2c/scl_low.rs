@@ -35,9 +35,9 @@ impl From<crate::W<SCL_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `PERIOD` reader - This register is used to configure how many clock cycles SCL remains low."]
-pub type PERIOD_R = crate::FieldReader<u32, u32>;
+pub type PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `PERIOD` writer - This register is used to configure how many clock cycles SCL remains low."]
-pub type PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_LOW_SPEC, 20, O, u32, u32>;
+pub type PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_LOW_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register is used to configure how many clock cycles SCL remains low."]
     #[inline(always)]

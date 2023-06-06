@@ -35,10 +35,10 @@ impl From<crate::W<SCL_HIGH_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_HIGH_PERIOD` reader - Number of FAST_CLK cycles for SCL to be high"]
-pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u32, u32>;
+pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `SCL_HIGH_PERIOD` writer - Number of FAST_CLK cycles for SCL to be high"]
 pub type SCL_HIGH_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_HIGH_PERIOD_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, SCL_HIGH_PERIOD_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles for SCL to be high"]
     #[inline(always)]

@@ -71,10 +71,9 @@ pub type SW_START_R = crate::BitReader;
 #[doc = "Field `SW_START` writer - Set this bit to start inserting the packet header."]
 pub type SW_START_W<'a, const O: u8> = crate::BitWriter<'a, CONF1_SPEC, O>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` reader - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
-pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
+pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
-pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CONF1_SPEC, 12, O, u16, u16>;
+pub type DMA_INFIFO_FULL_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable decoder to check check_sum in packet header."]
     #[inline(always)]

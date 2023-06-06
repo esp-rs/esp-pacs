@@ -35,15 +35,13 @@ impl From<crate::W<TX_PCM2PDM_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_FP` reader - I2S TX PDM Fp"]
-pub type TX_PDM_FP_R = crate::FieldReader<u16, u16>;
+pub type TX_PDM_FP_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FP` writer - I2S TX PDM Fp"]
-pub type TX_PDM_FP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16, u16>;
+pub type TX_PDM_FP_W<'a, const O: u8> = crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `TX_PDM_FS` reader - I2S TX PDM Fs"]
-pub type TX_PDM_FS_R = crate::FieldReader<u16, u16>;
+pub type TX_PDM_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_PDM_FS` writer - I2S TX PDM Fs"]
-pub type TX_PDM_FS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16, u16>;
+pub type TX_PDM_FS_W<'a, const O: u8> = crate::FieldWriter<'a, TX_PCM2PDM_CONF1_SPEC, 10, O, u16>;
 #[doc = "Field `TX_IIR_HP_MULT12_5` reader - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]
 pub type TX_IIR_HP_MULT12_5_R = crate::FieldReader;
 #[doc = "Field `TX_IIR_HP_MULT12_5` writer - The fourth parameter of PDM TX IIR_HP filter stage 2 is (504 + I2S_TX_IIR_HP_MULT12_5\\[2:0\\])"]

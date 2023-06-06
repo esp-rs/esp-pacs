@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CACHE_3_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CACHE_ILG_ST_I` reader - Record the illegitimate information of ICache to access memory. \\[16\\]: access enable, active low. \\[15:4\\]: store the bits \\[11:0\\] of address. \\[3:0\\]: Icache bus write byte enables, active low."]
-pub type PRO_CACHE_ILG_ST_I_R = crate::FieldReader<u32, u32>;
+pub type PRO_CACHE_ILG_ST_I_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:16 - Record the illegitimate information of ICache to access memory. \\[16\\]: access enable, active low. \\[15:4\\]: store the bits \\[11:0\\] of address. \\[3:0\\]: Icache bus write byte enables, active low."]
     #[inline(always)]

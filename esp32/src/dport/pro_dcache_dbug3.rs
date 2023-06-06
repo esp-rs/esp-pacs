@@ -35,7 +35,7 @@ impl From<crate::W<PRO_DCACHE_DBUG3_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_MMU_RDATA` reader - "]
-pub type PRO_MMU_RDATA_R = crate::FieldReader<u16, u16>;
+pub type PRO_MMU_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA` reader - "]
 pub type PRO_CPU_DISABLED_CACHE_IA_R = crate::FieldReader;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]

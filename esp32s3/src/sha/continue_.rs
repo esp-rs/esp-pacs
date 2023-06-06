@@ -14,7 +14,7 @@ impl From<crate::R<CONTINUE_SPEC>> for R {
     }
 }
 #[doc = "Field `CONTINUE` reader - reserved."]
-pub type CONTINUE_R = crate::FieldReader<u32, u32>;
+pub type CONTINUE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 1:31 - reserved."]
     #[inline(always)]

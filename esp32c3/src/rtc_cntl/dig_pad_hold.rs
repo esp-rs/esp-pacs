@@ -35,10 +35,9 @@ impl From<crate::W<DIG_PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_PAD_HOLD` reader - the configure of digital pad"]
-pub type DIG_PAD_HOLD_R = crate::FieldReader<u32, u32>;
+pub type DIG_PAD_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `DIG_PAD_HOLD` writer - the configure of digital pad"]
-pub type DIG_PAD_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DIG_PAD_HOLD_SPEC, 32, O, u32, u32>;
+pub type DIG_PAD_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, DIG_PAD_HOLD_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the configure of digital pad"]
     #[inline(always)]

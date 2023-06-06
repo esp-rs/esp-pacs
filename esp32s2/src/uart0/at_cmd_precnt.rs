@@ -35,10 +35,9 @@ impl From<crate::W<AT_CMD_PRECNT_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_IDLE_NUM` reader - This register is used to configure the idle duration time before the first AT_CMD is received by the receiver. It will not take the next data received as AT_CMD character when the duration is less than this register's value."]
-pub type PRE_IDLE_NUM_R = crate::FieldReader<u16, u16>;
+pub type PRE_IDLE_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PRE_IDLE_NUM` writer - This register is used to configure the idle duration time before the first AT_CMD is received by the receiver. It will not take the next data received as AT_CMD character when the duration is less than this register's value."]
-pub type PRE_IDLE_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, AT_CMD_PRECNT_SPEC, 16, O, u16, u16>;
+pub type PRE_IDLE_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, AT_CMD_PRECNT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the idle duration time before the first AT_CMD is received by the receiver. It will not take the next data received as AT_CMD character when the duration is less than this register's value."]
     #[inline(always)]

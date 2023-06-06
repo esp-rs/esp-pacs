@@ -35,9 +35,9 @@ impl From<crate::W<W17_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF17` reader - 32 bits data buffer 17, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub type BUF17_R = crate::FieldReader<u32, u32>;
+pub type BUF17_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF17` writer - 32 bits data buffer 17, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub type BUF17_W<'a, const O: u8> = crate::FieldWriter<'a, W17_SPEC, 32, O, u32, u32>;
+pub type BUF17_W<'a, const O: u8> = crate::FieldWriter<'a, W17_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - 32 bits data buffer 17, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]

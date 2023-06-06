@@ -35,9 +35,9 @@ impl From<crate::W<U_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `FILTER_THRES` reader - This register is used to filter pluse whose width is smaller than this value for unit0."]
-pub type FILTER_THRES_R = crate::FieldReader<u16, u16>;
+pub type FILTER_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `FILTER_THRES` writer - This register is used to filter pluse whose width is smaller than this value for unit0."]
-pub type FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 10, O, u16, u16>;
+pub type FILTER_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, U_CONF0_SPEC, 10, O, u16>;
 #[doc = "Field `FILTER_EN` reader - This is the enable bit for filtering input signals for unit0."]
 pub type FILTER_EN_R = crate::BitReader;
 #[doc = "Field `FILTER_EN` writer - This is the enable bit for filtering input signals for unit0."]

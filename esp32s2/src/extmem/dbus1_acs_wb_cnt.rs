@@ -14,7 +14,7 @@ impl From<crate::R<DBUS1_ACS_WB_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS1_ACS_WB_CNT` reader - The bits are used to count the number of cache evictions by dbus1 access cache."]
-pub type DBUS1_ACS_WB_CNT_R = crate::FieldReader<u32, u32>;
+pub type DBUS1_ACS_WB_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - The bits are used to count the number of cache evictions by dbus1 access cache."]
     #[inline(always)]

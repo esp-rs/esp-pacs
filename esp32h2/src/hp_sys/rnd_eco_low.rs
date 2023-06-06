@@ -35,9 +35,9 @@ impl From<crate::W<RND_ECO_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `REDCY_LOW` reader - Only reserved for ECO."]
-pub type REDCY_LOW_R = crate::FieldReader<u32, u32>;
+pub type REDCY_LOW_R = crate::FieldReader<u32>;
 #[doc = "Field `REDCY_LOW` writer - Only reserved for ECO."]
-pub type REDCY_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, RND_ECO_LOW_SPEC, 32, O, u32, u32>;
+pub type REDCY_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, RND_ECO_LOW_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Only reserved for ECO."]
     #[inline(always)]

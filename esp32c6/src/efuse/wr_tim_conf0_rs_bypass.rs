@@ -40,10 +40,10 @@ pub type BYPASS_RS_CORRECTION_R = crate::BitReader;
 pub type BYPASS_RS_CORRECTION_W<'a, const O: u8> =
     crate::BitWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, O>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` reader - Configures block number of programming twice operation."]
-pub type BYPASS_RS_BLK_NUM_R = crate::FieldReader<u16, u16>;
+pub type BYPASS_RS_BLK_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `BYPASS_RS_BLK_NUM` writer - Configures block number of programming twice operation."]
 pub type BYPASS_RS_BLK_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, 11, O, u16>;
 #[doc = "Field `UPDATE` writer - Set this bit to update multi-bit register signals."]
 pub type UPDATE_W<'a, const O: u8> = crate::BitWriter<'a, WR_TIM_CONF0_RS_BYPASS_SPEC, O>;
 #[doc = "Field `TPGM_INACTIVE` reader - Configures the inactive programming time."]

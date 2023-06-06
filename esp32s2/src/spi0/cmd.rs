@@ -35,9 +35,9 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CONF_BITLEN` reader - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
-pub type CONF_BITLEN_R = crate::FieldReader<u32, u32>;
+pub type CONF_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `CONF_BITLEN` writer - Define the spi_clk cycles of SPI_CONF state. Can be configured in CONF state."]
-pub type CONF_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 23, O, u32, u32>;
+pub type CONF_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, CMD_SPEC, 23, O, u32>;
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
 pub type USR_R = crate::BitReader;
 #[doc = "Field `USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]

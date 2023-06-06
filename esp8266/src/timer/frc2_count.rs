@@ -14,7 +14,7 @@ impl From<crate::R<FRC2_COUNT_SPEC>> for R {
     }
 }
 #[doc = "Field `frc2_count` reader - the current value of the counter. It is a increasingcounter."]
-pub type FRC2_COUNT_R = crate::FieldReader<u32, u32>;
+pub type FRC2_COUNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - the current value of the counter. It is a increasingcounter."]
     #[inline(always)]

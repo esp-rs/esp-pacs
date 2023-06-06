@@ -35,14 +35,13 @@ impl From<crate::W<CFG_DATA16_SPEC>> for W {
     }
 }
 #[doc = "Field `DEVICE_ID_FN2` reader - configure device id of function2 in cis"]
-pub type DEVICE_ID_FN2_R = crate::FieldReader<u16, u16>;
+pub type DEVICE_ID_FN2_R = crate::FieldReader<u16>;
 #[doc = "Field `DEVICE_ID_FN2` writer - configure device id of function2 in cis"]
-pub type DEVICE_ID_FN2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CFG_DATA16_SPEC, 16, O, u16, u16>;
+pub type DEVICE_ID_FN2_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA16_SPEC, 16, O, u16>;
 #[doc = "Field `USER_ID_FN2` reader - configure user id of function2 in cis"]
-pub type USER_ID_FN2_R = crate::FieldReader<u16, u16>;
+pub type USER_ID_FN2_R = crate::FieldReader<u16>;
 #[doc = "Field `USER_ID_FN2` writer - configure user id of function2 in cis"]
-pub type USER_ID_FN2_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA16_SPEC, 16, O, u16, u16>;
+pub type USER_ID_FN2_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_DATA16_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - configure device id of function2 in cis"]
     #[inline(always)]

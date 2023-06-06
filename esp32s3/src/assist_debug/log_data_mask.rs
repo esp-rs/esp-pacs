@@ -35,10 +35,9 @@ impl From<crate::W<LOG_DATA_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_DATA_SIZE` reader - data mask"]
-pub type LOG_DATA_SIZE_R = crate::FieldReader<u16, u16>;
+pub type LOG_DATA_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `LOG_DATA_SIZE` writer - data mask"]
-pub type LOG_DATA_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LOG_DATA_MASK_SPEC, 16, O, u16, u16>;
+pub type LOG_DATA_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_DATA_MASK_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - data mask"]
     #[inline(always)]

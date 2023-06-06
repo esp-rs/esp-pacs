@@ -35,10 +35,10 @@ impl From<crate::W<CPU_PERI_TIMEOUT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_PERI_TIMEOUT_THRES` reader - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
-pub type CPU_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type CPU_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CPU_PERI_TIMEOUT_THRES` writer - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
 pub type CPU_PERI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, 16, O, u16>;
 #[doc = "Field `CPU_PERI_TIMEOUT_INT_CLEAR` writer - Set this bit as 1 to clear timeout interrupt"]
 pub type CPU_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> =
     crate::BitWriter<'a, CPU_PERI_TIMEOUT_CONF_SPEC, O>;

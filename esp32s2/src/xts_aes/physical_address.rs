@@ -35,10 +35,10 @@ impl From<crate::W<PHYSICAL_ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `PHYSICAL_ADDRESS` reader - Physical address."]
-pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32, u32>;
+pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `PHYSICAL_ADDRESS` writer - Physical address."]
 pub type PHYSICAL_ADDRESS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PHYSICAL_ADDRESS_SPEC, 30, O, u32, u32>;
+    crate::FieldWriter<'a, PHYSICAL_ADDRESS_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29 - Physical address."]
     #[inline(always)]

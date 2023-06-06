@@ -35,10 +35,9 @@ impl From<crate::W<ULP_CP_TIMER_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_PC_INIT` reader - ULP-coprocessor PC initial address"]
-pub type ULP_CP_PC_INIT_R = crate::FieldReader<u16, u16>;
+pub type ULP_CP_PC_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_PC_INIT` writer - ULP-coprocessor PC initial address"]
-pub type ULP_CP_PC_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_TIMER_SPEC, 11, O, u16, u16>;
+pub type ULP_CP_PC_INIT_W<'a, const O: u8> = crate::FieldWriter<'a, ULP_CP_TIMER_SPEC, 11, O, u16>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` reader - ULP-coprocessor wakeup by GPIO enable"]
 pub type ULP_CP_GPIO_WAKEUP_ENA_R = crate::BitReader;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` writer - ULP-coprocessor wakeup by GPIO enable"]

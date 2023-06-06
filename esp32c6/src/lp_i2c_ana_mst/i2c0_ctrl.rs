@@ -35,10 +35,10 @@ impl From<crate::W<I2C0_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CTRL` reader - need_des"]
-pub type LP_I2C_ANA_MAST_I2C0_CTRL_R = crate::FieldReader<u32, u32>;
+pub type LP_I2C_ANA_MAST_I2C0_CTRL_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_CTRL` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_CTRL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2C0_CTRL_SPEC, 25, O, u32, u32>;
+    crate::FieldWriter<'a, I2C0_CTRL_SPEC, 25, O, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C0_BUSY` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C0_BUSY_R = crate::BitReader;
 impl R {

@@ -35,10 +35,10 @@ impl From<crate::W<LOG_CHECK_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_CHECK_DATA` reader - The special check data, when write this special data, it will trigger logging."]
-pub type LOG_CHECK_DATA_R = crate::FieldReader<u32, u32>;
+pub type LOG_CHECK_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_CHECK_DATA` writer - The special check data, when write this special data, it will trigger logging."]
 pub type LOG_CHECK_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LOG_CHECK_DATA_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, LOG_CHECK_DATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The special check data, when write this special data, it will trigger logging."]
     #[inline(always)]

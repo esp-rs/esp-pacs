@@ -35,10 +35,10 @@ impl From<crate::W<APB_DAC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DAC_TIMER_TARGET` reader - Set DAC timer target."]
-pub type DAC_TIMER_TARGET_R = crate::FieldReader<u16, u16>;
+pub type DAC_TIMER_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `DAC_TIMER_TARGET` writer - Set DAC timer target."]
 pub type DAC_TIMER_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APB_DAC_CTRL_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, APB_DAC_CTRL_SPEC, 12, O, u16>;
 #[doc = "Field `DAC_TIMER_EN` reader - Enable read dac data."]
 pub type DAC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `DAC_TIMER_EN` writer - Enable read dac data."]

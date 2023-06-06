@@ -35,10 +35,10 @@ impl From<crate::W<MEM_START_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `MEM_STAET_ADDR` reader - The start address of trace memory"]
-pub type MEM_STAET_ADDR_R = crate::FieldReader<u32, u32>;
+pub type MEM_STAET_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `MEM_STAET_ADDR` writer - The start address of trace memory"]
 pub type MEM_STAET_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MEM_START_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, MEM_START_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The start address of trace memory"]
     #[inline(always)]

@@ -39,13 +39,13 @@ pub type THRES0_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `THRES0_CHANNEL` writer - Need add description"]
 pub type THRES0_CHANNEL_W<'a, const O: u8> = crate::FieldWriter<'a, THRES0_CTRL_SPEC, 4, O>;
 #[doc = "Field `THRES0_HIGH` reader - saradc1's thres0 monitor thres"]
-pub type THRES0_HIGH_R = crate::FieldReader<u16, u16>;
+pub type THRES0_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES0_HIGH` writer - saradc1's thres0 monitor thres"]
-pub type THRES0_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, THRES0_CTRL_SPEC, 13, O, u16, u16>;
+pub type THRES0_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, THRES0_CTRL_SPEC, 13, O, u16>;
 #[doc = "Field `THRES0_LOW` reader - saradc1's thres0 monitor thres"]
-pub type THRES0_LOW_R = crate::FieldReader<u16, u16>;
+pub type THRES0_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES0_LOW` writer - saradc1's thres0 monitor thres"]
-pub type THRES0_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, THRES0_CTRL_SPEC, 13, O, u16, u16>;
+pub type THRES0_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, THRES0_CTRL_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]

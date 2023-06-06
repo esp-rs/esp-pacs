@@ -39,13 +39,13 @@ pub type LCD_VB_FRONT_R = crate::FieldReader;
 #[doc = "Field `LCD_VB_FRONT` writer - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
 pub type LCD_VB_FRONT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 8, O>;
 #[doc = "Field `LCD_HA_WIDTH` reader - It is the horizontal active width of a frame. Can be configured in CONF state."]
-pub type LCD_HA_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type LCD_HA_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HA_WIDTH` writer - It is the horizontal active width of a frame. Can be configured in CONF state."]
-pub type LCD_HA_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16, u16>;
+pub type LCD_HA_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16>;
 #[doc = "Field `LCD_HT_WIDTH` reader - It is the horizontal total width of a frame. Can be configured in CONF state."]
-pub type LCD_HT_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type LCD_HT_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HT_WIDTH` writer - It is the horizontal total width of a frame. Can be configured in CONF state."]
-pub type LCD_HT_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16, u16>;
+pub type LCD_HT_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL1_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]

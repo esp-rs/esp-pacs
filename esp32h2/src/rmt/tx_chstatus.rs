@@ -14,11 +14,11 @@ impl From<crate::R<TX_CHSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_RADDR_EX_CH0` reader - This register records the memory address offset when transmitter of CHANNEL%s is using the RAM."]
-pub type MEM_RADDR_EX_CH0_R = crate::FieldReader<u16, u16>;
+pub type MEM_RADDR_EX_CH0_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE_CH0` reader - This register records the FSM status of CHANNEL%s."]
 pub type STATE_CH0_R = crate::FieldReader;
 #[doc = "Field `APB_MEM_WADDR_CH0` reader - This register records the memory address offset when writes RAM over APB bus."]
-pub type APB_MEM_WADDR_CH0_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_WADDR_CH0_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_MEM_RD_ERR_CH0` reader - This status bit will be set if the offset address out of memory size when reading via APB bus."]
 pub type APB_MEM_RD_ERR_CH0_R = crate::BitReader;
 #[doc = "Field `MEM_EMPTY_CH0` reader - This status bit will be set when the data to be set is more than memory size and the wraparound mode is disabled."]

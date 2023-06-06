@@ -14,7 +14,7 @@ impl From<crate::R<RD_RESULT__SPEC>> for R {
     }
 }
 #[doc = "Field `RDATA` reader - Read the %sth 32-bit of hash result."]
-pub type RDATA_R = crate::FieldReader<u32, u32>;
+pub type RDATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Read the %sth 32-bit of hash result."]
     #[inline(always)]

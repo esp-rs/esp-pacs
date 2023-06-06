@@ -14,7 +14,7 @@ impl From<crate::R<LOG_MEM_WRITING_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `LOG_MEM_WRITING_ADDR` reader - mem current addr, it means next writing addr"]
-pub type LOG_MEM_WRITING_ADDR_R = crate::FieldReader<u32, u32>;
+pub type LOG_MEM_WRITING_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - mem current addr, it means next writing addr"]
     #[inline(always)]

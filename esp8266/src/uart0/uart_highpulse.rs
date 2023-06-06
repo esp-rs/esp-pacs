@@ -14,7 +14,7 @@ impl From<crate::R<UART_HIGHPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `highpulse_min_cnt` reader - used in baudrate detect"]
-pub type HIGHPULSE_MIN_CNT_R = crate::FieldReader<u32, u32>;
+pub type HIGHPULSE_MIN_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - used in baudrate detect"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK1_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `SYSTEM_DATA1` reader - Stores the bits \\[32:63\\] of system data."]
-pub type SYSTEM_DATA1_R = crate::FieldReader<u32, u32>;
+pub type SYSTEM_DATA1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the bits \\[32:63\\] of system data."]
     #[inline(always)]

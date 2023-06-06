@@ -35,9 +35,9 @@ impl From<crate::W<RTC_GPIO_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - RTC GPIO 0 ~ 21 output data"]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - RTC GPIO 0 ~ 21 output data"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_OUT_SPEC, 22, O, u32, u32>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, RTC_GPIO_OUT_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 output data"]
     #[inline(always)]

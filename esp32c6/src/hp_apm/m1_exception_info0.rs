@@ -14,7 +14,7 @@ impl From<crate::R<M1_EXCEPTION_INFO0_SPEC>> for R {
     }
 }
 #[doc = "Field `M1_EXCEPTION_REGION` reader - Exception region"]
-pub type M1_EXCEPTION_REGION_R = crate::FieldReader<u16, u16>;
+pub type M1_EXCEPTION_REGION_R = crate::FieldReader<u16>;
 #[doc = "Field `M1_EXCEPTION_MODE` reader - Exception mode"]
 pub type M1_EXCEPTION_MODE_R = crate::FieldReader;
 #[doc = "Field `M1_EXCEPTION_ID` reader - Exception id information"]

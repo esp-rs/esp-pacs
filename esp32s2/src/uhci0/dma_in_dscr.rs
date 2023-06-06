@@ -14,7 +14,7 @@ impl From<crate::R<DMA_IN_DSCR_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR` reader - This register stores the third word of the next receive descriptor."]
-pub type INLINK_DSCR_R = crate::FieldReader<u32, u32>;
+pub type INLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the third word of the next receive descriptor."]
     #[inline(always)]

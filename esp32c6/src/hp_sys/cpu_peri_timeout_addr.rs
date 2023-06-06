@@ -14,7 +14,7 @@ impl From<crate::R<CPU_PERI_TIMEOUT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_PERI_TIMEOUT_ADDR` reader - Record the address information of abnormal access"]
-pub type CPU_PERI_TIMEOUT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CPU_PERI_TIMEOUT_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Record the address information of abnormal access"]
     #[inline(always)]

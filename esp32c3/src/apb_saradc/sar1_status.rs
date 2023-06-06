@@ -14,7 +14,7 @@ impl From<crate::R<SAR1_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `SARADC_SAR1_STATUS` reader - saradc1 status about data and channel"]
-pub type SARADC_SAR1_STATUS_R = crate::FieldReader<u32, u32>;
+pub type SARADC_SAR1_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - saradc1 status about data and channel"]
     #[inline(always)]

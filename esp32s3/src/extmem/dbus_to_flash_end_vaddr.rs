@@ -35,10 +35,10 @@ impl From<crate::W<DBUS_TO_FLASH_END_VADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DBUS_TO_FLASH_END_VADDR` reader - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
-pub type DBUS_TO_FLASH_END_VADDR_R = crate::FieldReader<u32, u32>;
+pub type DBUS_TO_FLASH_END_VADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DBUS_TO_FLASH_END_VADDR` writer - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
 pub type DBUS_TO_FLASH_END_VADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DBUS_TO_FLASH_END_VADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, DBUS_TO_FLASH_END_VADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
     #[inline(always)]

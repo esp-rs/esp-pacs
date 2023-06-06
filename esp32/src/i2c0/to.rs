@@ -35,9 +35,9 @@ impl From<crate::W<TO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_OUT` reader - This register is used to configure the max clock number of receiving a data."]
-pub type TIME_OUT_R = crate::FieldReader<u32, u32>;
+pub type TIME_OUT_R = crate::FieldReader<u32>;
 #[doc = "Field `TIME_OUT` writer - This register is used to configure the max clock number of receiving a data."]
-pub type TIME_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, TO_SPEC, 20, O, u32, u32>;
+pub type TIME_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, TO_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register is used to configure the max clock number of receiving a data."]
     #[inline(always)]

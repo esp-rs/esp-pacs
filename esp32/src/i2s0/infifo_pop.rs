@@ -35,7 +35,7 @@ impl From<crate::W<INFIFO_POP_SPEC>> for W {
     }
 }
 #[doc = "Field `INFIFO_RDATA` reader - "]
-pub type INFIFO_RDATA_R = crate::FieldReader<u16, u16>;
+pub type INFIFO_RDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `INFIFO_POP` reader - "]
 pub type INFIFO_POP_R = crate::BitReader;
 #[doc = "Field `INFIFO_POP` writer - "]

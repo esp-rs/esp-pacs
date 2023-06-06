@@ -38,7 +38,7 @@ pub type RPT4_RESERVED3_ERR_1_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - Indicates a programming error of FORCE_SEND_RESUME."]
 pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION_ERR` reader - Indicates a programming error of SECURE_VERSION."]
-pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16, u16>;
+pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16>;
 #[doc = "Field `RPT4_RESERVED3_ERR_0` reader - Reserved."]
 pub type RPT4_RESERVED3_ERR_0_R = crate::FieldReader;
 impl R {

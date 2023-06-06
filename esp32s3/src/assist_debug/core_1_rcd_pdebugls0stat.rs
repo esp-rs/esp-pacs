@@ -14,7 +14,7 @@ impl From<crate::R<CORE_1_RCD_PDEBUGLS0STAT_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_RCD_PDEBUGLS0STAT` reader - Core1_pdebug_s0stat"]
-pub type CORE_1_RCD_PDEBUGLS0STAT_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_RCD_PDEBUGLS0STAT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Core1_pdebug_s0stat"]
     #[inline(always)]

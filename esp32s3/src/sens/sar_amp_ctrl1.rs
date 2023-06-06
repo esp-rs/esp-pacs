@@ -35,15 +35,13 @@ impl From<crate::W<SAR_AMP_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_AMP_WAIT1` reader - no public"]
-pub type SAR_AMP_WAIT1_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT1_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT1` writer - no public"]
-pub type SAR_AMP_WAIT1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_AMP_CTRL1_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT1_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `SAR_AMP_WAIT2` reader - no public"]
-pub type SAR_AMP_WAIT2_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT2_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT2` writer - no public"]
-pub type SAR_AMP_WAIT2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_AMP_CTRL1_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT2_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_AMP_CTRL1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - no public"]
     #[inline(always)]

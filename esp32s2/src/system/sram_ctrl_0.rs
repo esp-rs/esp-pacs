@@ -35,9 +35,9 @@ impl From<crate::W<SRAM_CTRL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_FO` reader - This field is used to force on clock gate of internal SRAM."]
-pub type SRAM_FO_R = crate::FieldReader<u32, u32>;
+pub type SRAM_FO_R = crate::FieldReader<u32>;
 #[doc = "Field `SRAM_FO` writer - This field is used to force on clock gate of internal SRAM."]
-pub type SRAM_FO_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CTRL_0_SPEC, 22, O, u32, u32>;
+pub type SRAM_FO_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_CTRL_0_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - This field is used to force on clock gate of internal SRAM."]
     #[inline(always)]

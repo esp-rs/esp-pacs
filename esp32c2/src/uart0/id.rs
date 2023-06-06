@@ -35,9 +35,9 @@ impl From<crate::W<ID_SPEC>> for W {
     }
 }
 #[doc = "Field `ID` reader - This register is used to configure the uart_id."]
-pub type ID_R = crate::FieldReader<u32, u32>;
+pub type ID_R = crate::FieldReader<u32>;
 #[doc = "Field `ID` writer - This register is used to configure the uart_id."]
-pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 30, O, u32, u32>;
+pub type ID_W<'a, const O: u8> = crate::FieldWriter<'a, ID_SPEC, 30, O, u32>;
 #[doc = "Field `HIGH_SPEED` reader - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
 pub type HIGH_SPEED_R = crate::BitReader;
 #[doc = "Field `HIGH_SPEED` writer - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]

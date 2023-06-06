@@ -35,10 +35,10 @@ impl From<crate::W<SLV_RDBUF_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_DMA_RD_BYTELEN` reader - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
-pub type SLV_DMA_RD_BYTELEN_R = crate::FieldReader<u32, u32>;
+pub type SLV_DMA_RD_BYTELEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_DMA_RD_BYTELEN` writer - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
 pub type SLV_DMA_RD_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLV_RDBUF_DLEN_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, SLV_RDBUF_DLEN_SPEC, 20, O, u32>;
 #[doc = "Field `SLV_RD_BUF_DONE` reader - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
 pub type SLV_RD_BUF_DONE_R = crate::BitReader;
 #[doc = "Field `SLV_RD_BUF_DONE` writer - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]

@@ -16,7 +16,7 @@ impl From<crate::R<RTCCALICFG1_SPEC>> for R {
 #[doc = "Field `RTC_CALI_CYCLING_DATA_VLD` reader - indicate periodic frequency calculation is done."]
 pub type RTC_CALI_CYCLING_DATA_VLD_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_VALUE` reader - When one-shot or periodic frequency calculation is done, read this value to calculate RTC slow clock's frequency."]
-pub type RTC_CALI_VALUE_R = crate::FieldReader<u32, u32>;
+pub type RTC_CALI_VALUE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bit 0 - indicate periodic frequency calculation is done."]
     #[inline(always)]

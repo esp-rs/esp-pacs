@@ -35,15 +35,15 @@ impl From<crate::W<ICACHE_PRELOCK_SCT_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_PRELOCK_SCT1_SIZE` reader - The bits are used to configure the second length of data locking, which is combined with ICACHE_PRELOCK_SCT1_ADDR_REG"]
-pub type ICACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16, u16>;
+pub type ICACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT1_SIZE` writer - The bits are used to configure the second length of data locking, which is combined with ICACHE_PRELOCK_SCT1_ADDR_REG"]
 pub type ICACHE_PRELOCK_SCT1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT0_SIZE` reader - The bits are used to configure the first length of data locking, which is combined with ICACHE_PRELOCK_SCT0_ADDR_REG"]
-pub type ICACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16, u16>;
+pub type ICACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ICACHE_PRELOCK_SCT0_SIZE` writer - The bits are used to configure the first length of data locking, which is combined with ICACHE_PRELOCK_SCT0_ADDR_REG"]
 pub type ICACHE_PRELOCK_SCT0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, ICACHE_PRELOCK_SCT_SIZE_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with ICACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]

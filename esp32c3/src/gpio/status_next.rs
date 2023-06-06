@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_NEXT_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS_INTERRUPT_NEXT` reader - GPIO interrupt source register for GPIO0-25"]
-pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32, u32>;
+pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:25 - GPIO interrupt source register for GPIO0-25"]
     #[inline(always)]

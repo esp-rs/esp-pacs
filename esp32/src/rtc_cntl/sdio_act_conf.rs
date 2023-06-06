@@ -35,10 +35,9 @@ impl From<crate::W<SDIO_ACT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_ACT_DNUM` reader - "]
-pub type SDIO_ACT_DNUM_R = crate::FieldReader<u16, u16>;
+pub type SDIO_ACT_DNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `SDIO_ACT_DNUM` writer - "]
-pub type SDIO_ACT_DNUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SDIO_ACT_CONF_SPEC, 10, O, u16, u16>;
+pub type SDIO_ACT_DNUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDIO_ACT_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 22:31"]
     #[inline(always)]

@@ -39,10 +39,10 @@ pub type RX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `RX_GATING_EN` writer - Set this bit to enable the clock gating of output rx clock."]
 pub type RX_GATING_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_GENRL_CFG_SPEC, O>;
 #[doc = "Field `RX_TIMEOUT_THRES` reader - Configures threshold of timeout counter."]
-pub type RX_TIMEOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type RX_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_TIMEOUT_THRES` writer - Configures threshold of timeout counter."]
 pub type RX_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RX_GENRL_CFG_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, RX_GENRL_CFG_SPEC, 16, O, u16>;
 #[doc = "Field `RX_TIMEOUT_EN` reader - Set this bit to enable timeout function to generate error eof."]
 pub type RX_TIMEOUT_EN_R = crate::BitReader;
 #[doc = "Field `RX_TIMEOUT_EN` writer - Set this bit to enable timeout function to generate error eof."]

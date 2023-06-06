@@ -14,7 +14,7 @@ impl From<crate::R<IN_SPEC>> for R {
     }
 }
 #[doc = "Field `NEXT` reader - GPIO0~17 input value"]
-pub type NEXT_R = crate::FieldReader<u32, u32>;
+pub type NEXT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 14:31 - GPIO0~17 input value"]
     #[inline(always)]

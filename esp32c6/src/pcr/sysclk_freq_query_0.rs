@@ -16,7 +16,7 @@ impl From<crate::R<SYSCLK_FREQ_QUERY_0_SPEC>> for R {
 #[doc = "Field `FOSC_FREQ` reader - This field indicates the frequency(MHz) of FOSC."]
 pub type FOSC_FREQ_R = crate::FieldReader;
 #[doc = "Field `PLL_FREQ` reader - This field indicates the frequency(MHz) of SPLL."]
-pub type PLL_FREQ_R = crate::FieldReader<u16, u16>;
+pub type PLL_FREQ_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:7 - This field indicates the frequency(MHz) of FOSC."]
     #[inline(always)]

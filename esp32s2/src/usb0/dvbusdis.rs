@@ -35,9 +35,9 @@ impl From<crate::W<DVBUSDIS_SPEC>> for W {
     }
 }
 #[doc = "Field `DVBUSDIS` reader - "]
-pub type DVBUSDIS_R = crate::FieldReader<u16, u16>;
+pub type DVBUSDIS_R = crate::FieldReader<u16>;
 #[doc = "Field `DVBUSDIS` writer - "]
-pub type DVBUSDIS_W<'a, const O: u8> = crate::FieldWriter<'a, DVBUSDIS_SPEC, 16, O, u16, u16>;
+pub type DVBUSDIS_W<'a, const O: u8> = crate::FieldWriter<'a, DVBUSDIS_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

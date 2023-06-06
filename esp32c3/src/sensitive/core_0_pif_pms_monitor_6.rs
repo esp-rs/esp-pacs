@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_PIF_PMS_MONITOR_6_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR` reader - core_0_pif_pms_monitor_nonword_violate_status_haddr"]
-pub type CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - core_0_pif_pms_monitor_nonword_violate_status_haddr"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<TOUCH_TIMEOUT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_TIMEOUT_NUM` reader - configure touch timerout time"]
-pub type TOUCH_TIMEOUT_NUM_R = crate::FieldReader<u32, u32>;
+pub type TOUCH_TIMEOUT_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `TOUCH_TIMEOUT_NUM` writer - configure touch timerout time"]
 pub type TOUCH_TIMEOUT_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_TIMEOUT_CTRL_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, TOUCH_TIMEOUT_CTRL_SPEC, 22, O, u32>;
 #[doc = "Field `TOUCH_TIMEOUT_EN` reader - enable touch timerout"]
 pub type TOUCH_TIMEOUT_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_TIMEOUT_EN` writer - enable touch timerout"]

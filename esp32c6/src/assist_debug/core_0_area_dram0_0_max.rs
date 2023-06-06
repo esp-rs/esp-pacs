@@ -35,10 +35,10 @@ impl From<crate::W<CORE_0_AREA_DRAM0_0_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_0_MAX` reader - Core0 dram0 region0 end addr"]
-pub type CORE_0_AREA_DRAM0_0_MAX_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_AREA_DRAM0_0_MAX_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_AREA_DRAM0_0_MAX` writer - Core0 dram0 region0 end addr"]
 pub type CORE_0_AREA_DRAM0_0_MAX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_AREA_DRAM0_0_MAX_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_0_AREA_DRAM0_0_MAX_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core0 dram0 region0 end addr"]
     #[inline(always)]

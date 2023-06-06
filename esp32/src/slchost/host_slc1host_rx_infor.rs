@@ -35,10 +35,10 @@ impl From<crate::W<HOST_SLC1HOST_RX_INFOR_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC1HOST_RX_INFOR` reader - "]
-pub type HOST_SLC1HOST_RX_INFOR_R = crate::FieldReader<u32, u32>;
+pub type HOST_SLC1HOST_RX_INFOR_R = crate::FieldReader<u32>;
 #[doc = "Field `HOST_SLC1HOST_RX_INFOR` writer - "]
 pub type HOST_SLC1HOST_RX_INFOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HOST_SLC1HOST_RX_INFOR_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, HOST_SLC1HOST_RX_INFOR_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

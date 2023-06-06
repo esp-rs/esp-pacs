@@ -14,7 +14,7 @@ impl From<crate::R<INLINK_DSCR_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INLINK_DSCR` reader - The content of current in descriptor pointer."]
-pub type DMA_INLINK_DSCR_R = crate::FieldReader<u32, u32>;
+pub type DMA_INLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of current in descriptor pointer."]
     #[inline(always)]

@@ -16,7 +16,7 @@ impl From<crate::R<RTCCALICFG1_SPEC>> for R {
 #[doc = "Field `RTC_CALI_CYCLING_DATA_VLD` reader - Reserved"]
 pub type RTC_CALI_CYCLING_DATA_VLD_R = crate::BitReader;
 #[doc = "Field `RTC_CALI_VALUE` reader - Reserved"]
-pub type RTC_CALI_VALUE_R = crate::FieldReader<u32, u32>;
+pub type RTC_CALI_VALUE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<EXT0_SPEC>> for W {
     }
 }
 #[doc = "Field `T_PP_TIME` reader - page program delay time by system clock."]
-pub type T_PP_TIME_R = crate::FieldReader<u16, u16>;
+pub type T_PP_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `T_PP_TIME` writer - page program delay time by system clock."]
-pub type T_PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT0_SPEC, 12, O, u16, u16>;
+pub type T_PP_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT0_SPEC, 12, O, u16>;
 #[doc = "Field `T_PP_SHIFT` reader - page program delay time shift ."]
 pub type T_PP_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_PP_SHIFT` writer - page program delay time shift ."]

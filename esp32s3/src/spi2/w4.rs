@@ -35,9 +35,9 @@ impl From<crate::W<W4_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF4` reader - data buffer"]
-pub type BUF4_R = crate::FieldReader<u32, u32>;
+pub type BUF4_R = crate::FieldReader<u32>;
 #[doc = "Field `BUF4` writer - data buffer"]
-pub type BUF4_W<'a, const O: u8> = crate::FieldWriter<'a, W4_SPEC, 32, O, u32, u32>;
+pub type BUF4_W<'a, const O: u8> = crate::FieldWriter<'a, W4_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]

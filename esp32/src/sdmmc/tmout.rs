@@ -39,9 +39,9 @@ pub type RESPONSE_TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `RESPONSE_TIMEOUT` writer - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
 pub type RESPONSE_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TMOUT_SPEC, 8, O>;
 #[doc = "Field `DATA_TIMEOUT` reader - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
-pub type DATA_TIMEOUT_R = crate::FieldReader<u32, u32>;
+pub type DATA_TIMEOUT_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA_TIMEOUT` writer - Value for card data read timeout. This value is also used for data starvation by host timeout. The timeout counter is started only after the card clock is stopped. This value is specified in number of card output clocks, i.e. sdhost_cclk_out of the selected card. NOTE: The software timer should be used if the timeout value is in the order of 100 ms. In this case, read data timeout interrupt needs to be disabled."]
-pub type DATA_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TMOUT_SPEC, 24, O, u32, u32>;
+pub type DATA_TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TMOUT_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:7 - Response timeout value. Value is specified in terms of number of card output clocks, i.e., sdhost_cclk_out."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<SAR_TSENS_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_TSENS_XPD_WAIT` reader - no public"]
-pub type SAR_TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
+pub type SAR_TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_TSENS_XPD_WAIT` writer - no public"]
 pub type SAR_TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_TSENS_CTRL2_SPEC, 12, O, u16>;
 #[doc = "Field `SAR_TSENS_XPD_FORCE` reader - no public"]
 pub type SAR_TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `SAR_TSENS_XPD_FORCE` writer - no public"]

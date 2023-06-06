@@ -35,9 +35,9 @@ impl From<crate::W<TX_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_IDLE_VALUE` reader - Configures data value on tx bus when IDLE state."]
-pub type TX_IDLE_VALUE_R = crate::FieldReader<u16, u16>;
+pub type TX_IDLE_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_VALUE` writer - Configures data value on tx bus when IDLE state."]
-pub type TX_IDLE_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG1_SPEC, 16, O, u16, u16>;
+pub type TX_IDLE_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 16:31 - Configures data value on tx bus when IDLE state."]
     #[inline(always)]

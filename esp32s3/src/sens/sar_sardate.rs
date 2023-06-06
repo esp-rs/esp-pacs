@@ -35,9 +35,9 @@ impl From<crate::W<SAR_SARDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DATE` reader - version"]
-pub type SAR_DATE_R = crate::FieldReader<u32, u32>;
+pub type SAR_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_DATE` writer - version"]
-pub type SAR_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_SARDATE_SPEC, 28, O, u32, u32>;
+pub type SAR_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_SARDATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<HSTIMER_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `CNT` reader - software can read this register to get the current counter value in high speed timer0"]
-pub type CNT_R = crate::FieldReader<u32, u32>;
+pub type CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - software can read this register to get the current counter value in high speed timer0"]
     #[inline(always)]

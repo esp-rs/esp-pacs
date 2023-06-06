@@ -35,15 +35,13 @@ impl From<crate::W<SAR_MEAS_WAIT1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_AMP_WAIT1` reader - "]
-pub type SAR_AMP_WAIT1_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT1_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT1` writer - "]
-pub type SAR_AMP_WAIT1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEAS_WAIT1_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT1_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT1_SPEC, 16, O, u16>;
 #[doc = "Field `SAR_AMP_WAIT2` reader - "]
-pub type SAR_AMP_WAIT2_R = crate::FieldReader<u16, u16>;
+pub type SAR_AMP_WAIT2_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_AMP_WAIT2` writer - "]
-pub type SAR_AMP_WAIT2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_MEAS_WAIT1_SPEC, 16, O, u16, u16>;
+pub type SAR_AMP_WAIT2_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_MEAS_WAIT1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

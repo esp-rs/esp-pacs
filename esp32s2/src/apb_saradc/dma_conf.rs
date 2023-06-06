@@ -35,10 +35,9 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_ADC_EOF_NUM` reader - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
-pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16, u16>;
+pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_ADC_EOF_NUM` writer - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
-pub type APB_ADC_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_CONF_SPEC, 16, O, u16, u16>;
+pub type APB_ADC_EOF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_CONF_SPEC, 16, O, u16>;
 #[doc = "Field `APB_ADC_RESET_FSM` reader - Reset DIG ADC CTRL status."]
 pub type APB_ADC_RESET_FSM_R = crate::BitReader;
 #[doc = "Field `APB_ADC_RESET_FSM` writer - Reset DIG ADC CTRL status."]

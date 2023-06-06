@@ -35,9 +35,9 @@ impl From<crate::W<TX_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_TDM_WS_WIDTH` reader - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
-pub type TX_TDM_WS_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type TX_TDM_WS_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_TDM_WS_WIDTH` writer - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
-pub type TX_TDM_WS_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 9, O, u16, u16>;
+pub type TX_TDM_WS_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CONF1_SPEC, 9, O, u16>;
 #[doc = "Field `TX_BITS_MOD` reader - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
 pub type TX_BITS_MOD_R = crate::FieldReader;
 #[doc = "Field `TX_BITS_MOD` writer - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]

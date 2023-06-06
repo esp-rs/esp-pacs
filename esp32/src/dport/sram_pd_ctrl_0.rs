@@ -35,10 +35,9 @@ impl From<crate::W<SRAM_PD_CTRL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_PD_0` reader - "]
-pub type SRAM_PD_0_R = crate::FieldReader<u32, u32>;
+pub type SRAM_PD_0_R = crate::FieldReader<u32>;
 #[doc = "Field `SRAM_PD_0` writer - "]
-pub type SRAM_PD_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SRAM_PD_CTRL_0_SPEC, 32, O, u32, u32>;
+pub type SRAM_PD_0_W<'a, const O: u8> = crate::FieldWriter<'a, SRAM_PD_CTRL_0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

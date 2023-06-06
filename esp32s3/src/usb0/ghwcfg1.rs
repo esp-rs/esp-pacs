@@ -14,7 +14,7 @@ impl From<crate::R<GHWCFG1_SPEC>> for R {
     }
 }
 #[doc = "Field `EPDIR` reader - "]
-pub type EPDIR_R = crate::FieldReader<u32, u32>;
+pub type EPDIR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

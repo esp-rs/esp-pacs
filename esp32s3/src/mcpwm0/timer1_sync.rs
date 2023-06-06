@@ -47,10 +47,9 @@ pub type TIMER1_SYNCO_SEL_R = crate::FieldReader;
 #[doc = "Field `TIMER1_SYNCO_SEL` writer - PWM timer1 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
 pub type TIMER1_SYNCO_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SYNC_SPEC, 2, O>;
 #[doc = "Field `TIMER1_PHASE` reader - phase for timer reload on sync event"]
-pub type TIMER1_PHASE_R = crate::FieldReader<u16, u16>;
+pub type TIMER1_PHASE_R = crate::FieldReader<u16>;
 #[doc = "Field `TIMER1_PHASE` writer - phase for timer reload on sync event"]
-pub type TIMER1_PHASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER1_SYNC_SPEC, 16, O, u16, u16>;
+pub type TIMER1_PHASE_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER1_SYNC_SPEC, 16, O, u16>;
 #[doc = "Field `TIMER1_PHASE_DIRECTION` reader - Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease."]
 pub type TIMER1_PHASE_DIRECTION_R = crate::BitReader;
 #[doc = "Field `TIMER1_PHASE_DIRECTION` writer - Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease."]

@@ -14,7 +14,7 @@ impl From<crate::R<PRO_AHB_4_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_AHB_ILG_ST` reader - Record the illegitimate information of PeriBus2. \\[31:2\\]: store the bits \\[31:2\\] of PeriBus2 address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
-pub type PRO_AHB_ILG_ST_R = crate::FieldReader<u32, u32>;
+pub type PRO_AHB_ILG_ST_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Record the illegitimate information of PeriBus2. \\[31:2\\]: store the bits \\[31:2\\] of PeriBus2 address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
     #[inline(always)]

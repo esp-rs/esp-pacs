@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK2_DATA5_SPEC>> for R {
     }
 }
 #[doc = "Field `ADC_CALIBRATION_2` reader - Store the bit \\[54:85\\] of ADC calibration data."]
-pub type ADC_CALIBRATION_2_R = crate::FieldReader<u32, u32>;
+pub type ADC_CALIBRATION_2_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Store the bit \\[54:85\\] of ADC calibration data."]
     #[inline(always)]

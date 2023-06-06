@@ -45,10 +45,10 @@ pub type DG_LP_POWERUP_TIMER_R = crate::FieldReader;
 pub type DG_LP_POWERUP_TIMER_W<'a, const O: u8> =
     crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 7, O>;
 #[doc = "Field `DG_LP_WAIT_TIMER` reader - need_des"]
-pub type DG_LP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_LP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_LP_WAIT_TIMER` writer - need_des"]
 pub type DG_LP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, POWER_WAIT_TIMER1_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 9:15 - need_des"]
     #[inline(always)]

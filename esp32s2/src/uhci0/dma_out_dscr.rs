@@ -14,7 +14,7 @@ impl From<crate::R<DMA_OUT_DSCR_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR` reader - This register stores the third word of the next transmit descriptor."]
-pub type OUTLINK_DSCR_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_DSCR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the third word of the next transmit descriptor."]
     #[inline(always)]

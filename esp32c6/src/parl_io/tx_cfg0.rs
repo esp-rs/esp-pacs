@@ -35,9 +35,9 @@ impl From<crate::W<TX_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BYTELEN` reader - Configures tx sending data byte length."]
-pub type TX_BYTELEN_R = crate::FieldReader<u16, u16>;
+pub type TX_BYTELEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_BYTELEN` writer - Configures tx sending data byte length."]
-pub type TX_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG0_SPEC, 16, O, u16, u16>;
+pub type TX_BYTELEN_W<'a, const O: u8> = crate::FieldWriter<'a, TX_CFG0_SPEC, 16, O, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Write 1 to enable output tx clock gating."]
 pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Write 1 to enable output tx clock gating."]

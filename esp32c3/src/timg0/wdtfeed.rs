@@ -20,7 +20,7 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_FEED` writer - wdt_feed"]
-pub type WDT_FEED_W<'a, const O: u8> = crate::FieldWriter<'a, WDTFEED_SPEC, 32, O, u32, u32>;
+pub type WDT_FEED_W<'a, const O: u8> = crate::FieldWriter<'a, WDTFEED_SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

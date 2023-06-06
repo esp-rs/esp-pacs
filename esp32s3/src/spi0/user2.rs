@@ -35,9 +35,9 @@ impl From<crate::W<USER2_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_COMMAND_VALUE` reader - The value of user defined(USR) command."]
-pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
+pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `USR_COMMAND_VALUE` writer - The value of user defined(USR) command."]
-pub type USR_COMMAND_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 16, O, u16, u16>;
+pub type USR_COMMAND_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, USER2_SPEC, 16, O, u16>;
 #[doc = "Field `USR_COMMAND_BITLEN` reader - The length in bits of CMD phase. The register value shall be (bit_num-1)"]
 pub type USR_COMMAND_BITLEN_R = crate::FieldReader;
 #[doc = "Field `USR_COMMAND_BITLEN` writer - The length in bits of CMD phase. The register value shall be (bit_num-1)"]

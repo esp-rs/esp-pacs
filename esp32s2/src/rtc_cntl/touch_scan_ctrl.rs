@@ -52,10 +52,10 @@ pub type TOUCH_SHIELD_PAD_EN_R = crate::BitReader;
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` writer - Touch pad 14 will be used as shield_pad."]
 pub type TOUCH_SHIELD_PAD_EN_W<'a, const O: u8> = crate::BitWriter<'a, TOUCH_SCAN_CTRL_SPEC, O>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` reader - Pad enable map for touch scan mode."]
-pub type TOUCH_SCAN_PAD_MAP_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_SCAN_PAD_MAP_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` writer - Pad enable map for touch scan mode."]
 pub type TOUCH_SCAN_PAD_MAP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 15, O, u16, u16>;
+    crate::FieldWriter<'a, TOUCH_SCAN_CTRL_SPEC, 15, O, u16>;
 #[doc = "Field `TOUCH_BUFDRV` reader - Touch 14 buffer driver strength."]
 pub type TOUCH_BUFDRV_R = crate::FieldReader;
 #[doc = "Field `TOUCH_BUFDRV` writer - Touch 14 buffer driver strength."]

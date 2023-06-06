@@ -35,9 +35,9 @@ impl From<crate::W<CMDARG_SPEC>> for W {
     }
 }
 #[doc = "Field `CMDARG` reader - Value indicates command argument to be passed to the card."]
-pub type CMDARG_R = crate::FieldReader<u32, u32>;
+pub type CMDARG_R = crate::FieldReader<u32>;
 #[doc = "Field `CMDARG` writer - Value indicates command argument to be passed to the card."]
-pub type CMDARG_W<'a, const O: u8> = crate::FieldWriter<'a, CMDARG_SPEC, 32, O, u32, u32>;
+pub type CMDARG_W<'a, const O: u8> = crate::FieldWriter<'a, CMDARG_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
     #[inline(always)]

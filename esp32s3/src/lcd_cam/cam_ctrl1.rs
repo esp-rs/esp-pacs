@@ -35,10 +35,10 @@ impl From<crate::W<CAM_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CAM_REC_DATA_BYTELEN` reader - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
-pub type CAM_REC_DATA_BYTELEN_R = crate::FieldReader<u16, u16>;
+pub type CAM_REC_DATA_BYTELEN_R = crate::FieldReader<u16>;
 #[doc = "Field `CAM_REC_DATA_BYTELEN` writer - Camera receive data byte length minus 1 to set DMA in_suc_eof_int."]
 pub type CAM_REC_DATA_BYTELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CAM_CTRL1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CAM_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `CAM_LINE_INT_NUM` reader - The line number minus 1 to generate cam_hs_int."]
 pub type CAM_LINE_INT_NUM_R = crate::FieldReader;
 #[doc = "Field `CAM_LINE_INT_NUM` writer - The line number minus 1 to generate cam_hs_int."]

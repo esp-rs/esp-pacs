@@ -14,7 +14,7 @@ impl From<crate::R<APP_DCACHE_DBUG2_SPEC>> for R {
     }
 }
 #[doc = "Field `APP_CACHE_VADDR` reader - "]
-pub type APP_CACHE_VADDR_R = crate::FieldReader<u32, u32>;
+pub type APP_CACHE_VADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:26"]
     #[inline(always)]

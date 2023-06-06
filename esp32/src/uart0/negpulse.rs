@@ -14,7 +14,7 @@ impl From<crate::R<NEGPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `NEGEDGE_MIN_CNT` reader - This register stores the count of rxd negedge edge. it is used in boudrate-detect process."]
-pub type NEGEDGE_MIN_CNT_R = crate::FieldReader<u32, u32>;
+pub type NEGEDGE_MIN_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the count of rxd negedge edge. it is used in boudrate-detect process."]
     #[inline(always)]

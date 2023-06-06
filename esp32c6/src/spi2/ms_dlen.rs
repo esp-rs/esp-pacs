@@ -35,9 +35,9 @@ impl From<crate::W<MS_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `MS_DATA_BITLEN` reader - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type MS_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
+pub type MS_DATA_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `MS_DATA_BITLEN` writer - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub type MS_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MS_DLEN_SPEC, 18, O, u32, u32>;
+pub type MS_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MS_DLEN_SPEC, 18, O, u32>;
 impl R {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]

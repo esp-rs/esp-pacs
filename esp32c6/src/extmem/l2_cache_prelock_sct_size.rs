@@ -14,9 +14,9 @@ impl From<crate::R<L2_CACHE_PRELOCK_SCT_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_PRELOCK_SCT0_SIZE` reader - Those bits are used to configure the size of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOCK_SCT0_ADDR_REG"]
-pub type L2_CACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16, u16>;
+pub type L2_CACHE_PRELOCK_SCT0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `L2_CACHE_PRELOCK_SCT1_SIZE` reader - Those bits are used to configure the size of the second section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOCK_SCT1_ADDR_REG"]
-pub type L2_CACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16, u16>;
+pub type L2_CACHE_PRELOCK_SCT1_SIZE_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - Those bits are used to configure the size of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]

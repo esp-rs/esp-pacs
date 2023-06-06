@@ -35,10 +35,9 @@ impl From<crate::W<WDTCONFIG1_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_STG0_HOLD` reader - the hold time of stage0"]
-pub type WDT_STG0_HOLD_R = crate::FieldReader<u32, u32>;
+pub type WDT_STG0_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_STG0_HOLD` writer - the hold time of stage0"]
-pub type WDT_STG0_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WDTCONFIG1_SPEC, 32, O, u32, u32>;
+pub type WDT_STG0_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, WDTCONFIG1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the hold time of stage0"]
     #[inline(always)]

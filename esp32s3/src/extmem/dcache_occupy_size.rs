@@ -35,10 +35,10 @@ impl From<crate::W<DCACHE_OCCUPY_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_OCCUPY_SIZE` reader - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
-pub type DCACHE_OCCUPY_SIZE_R = crate::FieldReader<u16, u16>;
+pub type DCACHE_OCCUPY_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `DCACHE_OCCUPY_SIZE` writer - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
 pub type DCACHE_OCCUPY_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DCACHE_OCCUPY_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, DCACHE_OCCUPY_SIZE_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
     #[inline(always)]

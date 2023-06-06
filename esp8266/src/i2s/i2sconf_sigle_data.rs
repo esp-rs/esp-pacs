@@ -35,10 +35,10 @@ impl From<crate::W<I2SCONF_SIGLE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_I2S_SIGLE_DATA` reader - "]
-pub type I2S_I2S_SIGLE_DATA_R = crate::FieldReader<u32, u32>;
+pub type I2S_I2S_SIGLE_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `I2S_I2S_SIGLE_DATA` writer - "]
 pub type I2S_I2S_SIGLE_DATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2SCONF_SIGLE_DATA_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, I2SCONF_SIGLE_DATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

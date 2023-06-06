@@ -35,9 +35,9 @@ impl From<crate::W<LOG_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MAX` reader - the max address of log range"]
-pub type LOG_MAX_R = crate::FieldReader<u32, u32>;
+pub type LOG_MAX_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MAX` writer - the max address of log range"]
-pub type LOG_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MAX_SPEC, 32, O, u32, u32>;
+pub type LOG_MAX_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MAX_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the max address of log range"]
     #[inline(always)]

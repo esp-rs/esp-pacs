@@ -35,9 +35,9 @@ impl From<crate::W<HSCH_HPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `HPOINT` reader - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
-pub type HPOINT_R = crate::FieldReader<u32, u32>;
+pub type HPOINT_R = crate::FieldReader<u32>;
 #[doc = "Field `HPOINT` writer - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
-pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_HPOINT_SPEC, 20, O, u32, u32>;
+pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, HSCH_HPOINT_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - The output value changes to high when htimerx(x=\\[0 3\\]) selected by high speed channel0 has reached reg_hpoint_hsch0\\[19:0\\]"]
     #[inline(always)]

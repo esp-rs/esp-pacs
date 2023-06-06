@@ -35,14 +35,13 @@ impl From<crate::W<WR_TIM_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `PWR_OFF_NUM` reader - Configures the power outage time for VDDQ."]
-pub type PWR_OFF_NUM_R = crate::FieldReader<u16, u16>;
+pub type PWR_OFF_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `PWR_OFF_NUM` writer - Configures the power outage time for VDDQ."]
-pub type PWR_OFF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, WR_TIM_CONF2_SPEC, 16, O, u16, u16>;
+pub type PWR_OFF_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF2_SPEC, 16, O, u16>;
 #[doc = "Field `TPGM` reader - Configures the active programming time."]
-pub type TPGM_R = crate::FieldReader<u16, u16>;
+pub type TPGM_R = crate::FieldReader<u16>;
 #[doc = "Field `TPGM` writer - Configures the active programming time."]
-pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF2_SPEC, 16, O, u16, u16>;
+pub type TPGM_W<'a, const O: u8> = crate::FieldWriter<'a, WR_TIM_CONF2_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Configures the power outage time for VDDQ."]
     #[inline(always)]

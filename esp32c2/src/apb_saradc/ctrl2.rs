@@ -51,10 +51,9 @@ pub type SARADC_SAR2_INV_R = crate::BitReader;
 #[doc = "Field `SARADC_SAR2_INV` writer - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
 pub type SARADC_SAR2_INV_W<'a, const O: u8> = crate::BitWriter<'a, CTRL2_SPEC, O>;
 #[doc = "Field `SARADC_TIMER_TARGET` reader - to set saradc timer target"]
-pub type SARADC_TIMER_TARGET_R = crate::FieldReader<u16, u16>;
+pub type SARADC_TIMER_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `SARADC_TIMER_TARGET` writer - to set saradc timer target"]
-pub type SARADC_TIMER_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CTRL2_SPEC, 12, O, u16, u16>;
+pub type SARADC_TIMER_TARGET_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL2_SPEC, 12, O, u16>;
 #[doc = "Field `SARADC_TIMER_EN` reader - to enable saradc timer trigger"]
 pub type SARADC_TIMER_EN_R = crate::BitReader;
 #[doc = "Field `SARADC_TIMER_EN` writer - to enable saradc timer trigger"]

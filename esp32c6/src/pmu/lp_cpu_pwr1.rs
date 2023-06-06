@@ -35,10 +35,9 @@ impl From<crate::W<LP_CPU_PWR1_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_CPU_WAKEUP_EN` reader - need_des"]
-pub type LP_CPU_WAKEUP_EN_R = crate::FieldReader<u16, u16>;
+pub type LP_CPU_WAKEUP_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_CPU_WAKEUP_EN` writer - need_des"]
-pub type LP_CPU_WAKEUP_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LP_CPU_PWR1_SPEC, 16, O, u16, u16>;
+pub type LP_CPU_WAKEUP_EN_W<'a, const O: u8> = crate::FieldWriter<'a, LP_CPU_PWR1_SPEC, 16, O, u16>;
 #[doc = "Field `LP_CPU_SLEEP_REQ` writer - need_des"]
 pub type LP_CPU_SLEEP_REQ_W<'a, const O: u8> = crate::BitWriter<'a, LP_CPU_PWR1_SPEC, O>;
 impl R {

@@ -35,9 +35,9 @@ impl From<crate::W<OUT1_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA_ORIG` reader - GPIO32 ~ 53 output value in simple GPIO output mode. The values of bit0 ~ bit13 correspond to GPIO32 ~ GPIO45. Bit14 ~ bit21 are invalid."]
-pub type DATA_ORIG_R = crate::FieldReader<u32, u32>;
+pub type DATA_ORIG_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA_ORIG` writer - GPIO32 ~ 53 output value in simple GPIO output mode. The values of bit0 ~ bit13 correspond to GPIO32 ~ GPIO45. Bit14 ~ bit21 are invalid."]
-pub type DATA_ORIG_W<'a, const O: u8> = crate::FieldWriter<'a, OUT1_SPEC, 22, O, u32, u32>;
+pub type DATA_ORIG_W<'a, const O: u8> = crate::FieldWriter<'a, OUT1_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 output value in simple GPIO output mode. The values of bit0 ~ bit13 correspond to GPIO32 ~ GPIO45. Bit14 ~ bit21 are invalid."]
     #[inline(always)]

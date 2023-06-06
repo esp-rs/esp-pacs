@@ -14,7 +14,7 @@ impl From<crate::R<CLK_STATE2_SPEC>> for R {
     }
 }
 #[doc = "Field `ICG_APB_EN_STATE` reader - need_des"]
-pub type ICG_APB_EN_STATE_R = crate::FieldReader<u32, u32>;
+pub type ICG_APB_EN_STATE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

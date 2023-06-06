@@ -14,7 +14,7 @@ impl From<crate::R<REGDMA_BACKUP_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `BACKUP_ADDR` reader - backup addr reg"]
-pub type BACKUP_ADDR_R = crate::FieldReader<u32, u32>;
+pub type BACKUP_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - backup addr reg"]
     #[inline(always)]

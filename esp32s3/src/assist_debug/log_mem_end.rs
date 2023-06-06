@@ -35,9 +35,9 @@ impl From<crate::W<LOG_MEM_END_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_END` reader - mem end addr"]
-pub type LOG_MEM_END_R = crate::FieldReader<u32, u32>;
+pub type LOG_MEM_END_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MEM_END` writer - mem end addr"]
-pub type LOG_MEM_END_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MEM_END_SPEC, 32, O, u32, u32>;
+pub type LOG_MEM_END_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MEM_END_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - mem end addr"]
     #[inline(always)]

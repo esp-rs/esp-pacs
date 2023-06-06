@@ -43,10 +43,10 @@ pub type FLASH_PES_COMMAND_R = crate::FieldReader;
 #[doc = "Field `FLASH_PES_COMMAND` writer - Program/Erase suspend command."]
 pub type FLASH_PES_COMMAND_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 8, O>;
 #[doc = "Field `WAIT_PESR_COMMAND` reader - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
-pub type WAIT_PESR_COMMAND_R = crate::FieldReader<u16, u16>;
+pub type WAIT_PESR_COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_PESR_COMMAND` writer - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
 pub type WAIT_PESR_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, FLASH_SUS_CMD_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:7 - Program/Erase resume command."]
     #[inline(always)]

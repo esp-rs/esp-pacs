@@ -14,7 +14,7 @@ impl From<crate::R<LOW_POWER_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LOW_POWER_DIAG0` reader - "]
-pub type LOW_POWER_DIAG0_R = crate::FieldReader<u32, u32>;
+pub type LOW_POWER_DIAG0_R = crate::FieldReader<u32>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - 1 if RTC controller is ready to execute WAKE instruction, 0 otherwise"]
 pub type RDY_FOR_WAKEUP_R = crate::BitReader;
 impl R {

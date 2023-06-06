@@ -35,10 +35,9 @@ impl From<crate::W<SAR_TOUCH_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_OUTEN` reader - Enable touch controller output."]
-pub type TOUCH_OUTEN_R = crate::FieldReader<u16, u16>;
+pub type TOUCH_OUTEN_R = crate::FieldReader<u16>;
 #[doc = "Field `TOUCH_OUTEN` writer - Enable touch controller output."]
-pub type TOUCH_OUTEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 15, O, u16, u16>;
+pub type TOUCH_OUTEN_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_TOUCH_CONF_SPEC, 15, O, u16>;
 #[doc = "Field `TOUCH_STATUS_CLR` writer - Clear all touch active status."]
 pub type TOUCH_STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SAR_TOUCH_CONF_SPEC, O>;
 #[doc = "Field `TOUCH_DATA_SEL` reader - 0 and 1: touch_raw_data; 2: base_line; 3: touch_smooth_data."]

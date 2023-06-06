@@ -35,9 +35,9 @@ impl From<crate::W<VERSION_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_SD_DATE` reader - Version control register."]
-pub type GPIO_SD_DATE_R = crate::FieldReader<u32, u32>;
+pub type GPIO_SD_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `GPIO_SD_DATE` writer - Version control register."]
-pub type GPIO_SD_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, VERSION_SPEC, 28, O, u32, u32>;
+pub type GPIO_SD_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, VERSION_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]

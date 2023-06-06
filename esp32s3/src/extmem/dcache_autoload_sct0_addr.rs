@@ -35,10 +35,10 @@ impl From<crate::W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` reader - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
-pub type DCACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DCACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` writer - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
 pub type DCACHE_AUTOLOAD_SCT0_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DCACHE_AUTOLOAD_SCT0_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, DCACHE_AUTOLOAD_SCT0_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]

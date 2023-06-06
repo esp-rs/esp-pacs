@@ -35,15 +35,15 @@ impl From<crate::W<RDCLR0_SPEC>> for W {
     }
 }
 #[doc = "Field `SLCHOST_SLC0_BIT7_CLRADDR` reader - *******Description***********"]
-pub type SLCHOST_SLC0_BIT7_CLRADDR_R = crate::FieldReader<u16, u16>;
+pub type SLCHOST_SLC0_BIT7_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLCHOST_SLC0_BIT7_CLRADDR` writer - *******Description***********"]
 pub type SLCHOST_SLC0_BIT7_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RDCLR0_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, RDCLR0_SPEC, 9, O, u16>;
 #[doc = "Field `SLCHOST_SLC0_BIT6_CLRADDR` reader - *******Description***********"]
-pub type SLCHOST_SLC0_BIT6_CLRADDR_R = crate::FieldReader<u16, u16>;
+pub type SLCHOST_SLC0_BIT6_CLRADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLCHOST_SLC0_BIT6_CLRADDR` writer - *******Description***********"]
 pub type SLCHOST_SLC0_BIT6_CLRADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RDCLR0_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, RDCLR0_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - *******Description***********"]
     #[inline(always)]

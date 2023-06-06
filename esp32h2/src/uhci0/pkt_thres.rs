@@ -35,9 +35,9 @@ impl From<crate::W<PKT_THRES_SPEC>> for W {
     }
 }
 #[doc = "Field `PKT_THRS` reader - a"]
-pub type PKT_THRS_R = crate::FieldReader<u16, u16>;
+pub type PKT_THRS_R = crate::FieldReader<u16>;
 #[doc = "Field `PKT_THRS` writer - a"]
-pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, PKT_THRES_SPEC, 13, O, u16, u16>;
+pub type PKT_THRS_W<'a, const O: u8> = crate::FieldWriter<'a, PKT_THRES_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:12 - a"]
     #[inline(always)]

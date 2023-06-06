@@ -35,13 +35,13 @@ impl From<crate::W<DIEPTXF1_SPEC>> for W {
     }
 }
 #[doc = "Field `INEP1TXFSTADDR` reader - "]
-pub type INEP1TXFSTADDR_R = crate::FieldReader<u16, u16>;
+pub type INEP1TXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `INEP1TXFSTADDR` writer - "]
-pub type INEP1TXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF1_SPEC, 16, O, u16, u16>;
+pub type INEP1TXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF1_SPEC, 16, O, u16>;
 #[doc = "Field `INEP1TXFDEP` reader - "]
-pub type INEP1TXFDEP_R = crate::FieldReader<u16, u16>;
+pub type INEP1TXFDEP_R = crate::FieldReader<u16>;
 #[doc = "Field `INEP1TXFDEP` writer - "]
-pub type INEP1TXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF1_SPEC, 16, O, u16, u16>;
+pub type INEP1TXFDEP_W<'a, const O: u8> = crate::FieldWriter<'a, DIEPTXF1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

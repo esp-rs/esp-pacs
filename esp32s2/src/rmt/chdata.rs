@@ -35,9 +35,9 @@ impl From<crate::W<CHDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `CH_DATA` reader - The read and write data register for CHANNEL%s by apb fifo access."]
-pub type CH_DATA_R = crate::FieldReader<u32, u32>;
+pub type CH_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `CH_DATA` writer - The read and write data register for CHANNEL%s by apb fifo access."]
-pub type CH_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32, u32>;
+pub type CH_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, CHDATA_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]

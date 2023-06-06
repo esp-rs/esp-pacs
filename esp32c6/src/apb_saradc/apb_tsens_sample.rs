@@ -35,10 +35,10 @@ impl From<crate::W<APB_TSENS_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `TSENS_SAMPLE_RATE` reader - HW sample rate"]
-pub type TSENS_SAMPLE_RATE_R = crate::FieldReader<u16, u16>;
+pub type TSENS_SAMPLE_RATE_R = crate::FieldReader<u16>;
 #[doc = "Field `TSENS_SAMPLE_RATE` writer - HW sample rate"]
 pub type TSENS_SAMPLE_RATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APB_TSENS_SAMPLE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, APB_TSENS_SAMPLE_SPEC, 16, O, u16>;
 #[doc = "Field `TSENS_SAMPLE_EN` reader - HW sample en"]
 pub type TSENS_SAMPLE_EN_R = crate::BitReader;
 #[doc = "Field `TSENS_SAMPLE_EN` writer - HW sample en"]

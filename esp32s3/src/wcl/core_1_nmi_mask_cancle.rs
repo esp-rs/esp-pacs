@@ -21,7 +21,7 @@ impl From<crate::W<CORE_1_NMI_MASK_CANCLE_SPEC>> for W {
 }
 #[doc = "Field `CORE_1_NMI_MASK_CANCEL` writer - this field is used to cancel NMI mask disable function."]
 pub type CORE_1_NMI_MASK_CANCEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_NMI_MASK_CANCLE_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_1_NMI_MASK_CANCLE_SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<CORE_1_NMI_MASK_CANCLE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

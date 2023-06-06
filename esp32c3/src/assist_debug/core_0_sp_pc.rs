@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_SP_PC_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_SP_PC` reader - reg_core_0_sp_pc"]
-pub type CORE_0_SP_PC_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_SP_PC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_sp_pc"]
     #[inline(always)]

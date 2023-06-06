@@ -14,7 +14,7 @@ impl From<crate::R<BACKUP_BUS_PMS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_HADDR` reader - Record address information when BackUp initiate illegal access."]
-pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_HADDR_R = crate::FieldReader<u32, u32>;
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_HADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Record address information when BackUp initiate illegal access."]
     #[inline(always)]

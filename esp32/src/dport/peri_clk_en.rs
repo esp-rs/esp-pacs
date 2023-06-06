@@ -35,9 +35,9 @@ impl From<crate::W<PERI_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_CLK_EN` reader - "]
-pub type PERI_CLK_EN_R = crate::FieldReader<u32, u32>;
+pub type PERI_CLK_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `PERI_CLK_EN` writer - "]
-pub type PERI_CLK_EN_W<'a, const O: u8> = crate::FieldWriter<'a, PERI_CLK_EN_SPEC, 32, O, u32, u32>;
+pub type PERI_CLK_EN_W<'a, const O: u8> = crate::FieldWriter<'a, PERI_CLK_EN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

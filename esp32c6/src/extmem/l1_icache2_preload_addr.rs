@@ -14,7 +14,7 @@ impl From<crate::R<L1_ICACHE2_PRELOAD_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `L1_ICACHE2_PRELOAD_ADDR` reader - Those bits are used to configure the start virtual address of preload on L1-ICache2, which should be used together with L1_ICACHE2_PRELOAD_SIZE_REG"]
-pub type L1_ICACHE2_PRELOAD_ADDR_R = crate::FieldReader<u32, u32>;
+pub type L1_ICACHE2_PRELOAD_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of preload on L1-ICache2, which should be used together with L1_ICACHE2_PRELOAD_SIZE_REG"]
     #[inline(always)]

@@ -78,10 +78,10 @@ pub type SPI_MEM_FLASH_PESR_CMD_2B_R = crate::BitReader;
 pub type SPI_MEM_FLASH_PESR_CMD_2B_W<'a, const O: u8> =
     crate::BitWriter<'a, SPI_MEM_SUS_STATUS_SPEC, O>;
 #[doc = "Field `SPI_MEM_FLASH_PER_COMMAND` reader - Program/Erase resume command."]
-pub type SPI_MEM_FLASH_PER_COMMAND_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_FLASH_PER_COMMAND_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_FLASH_PER_COMMAND` writer - Program/Erase resume command."]
 pub type SPI_MEM_FLASH_PER_COMMAND_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_SUS_STATUS_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_SUS_STATUS_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 0 - The status of flash suspend, only used in SPI1."]
     #[inline(always)]

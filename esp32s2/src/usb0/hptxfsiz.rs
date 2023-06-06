@@ -35,13 +35,13 @@ impl From<crate::W<HPTXFSIZ_SPEC>> for W {
     }
 }
 #[doc = "Field `PTXFSTADDR` reader - "]
-pub type PTXFSTADDR_R = crate::FieldReader<u16, u16>;
+pub type PTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSTADDR` writer - "]
-pub type PTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16, u16>;
+pub type PTXFSTADDR_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16>;
 #[doc = "Field `PTXFSIZE` reader - "]
-pub type PTXFSIZE_R = crate::FieldReader<u16, u16>;
+pub type PTXFSIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSIZE` writer - "]
-pub type PTXFSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16, u16>;
+pub type PTXFSIZE_W<'a, const O: u8> = crate::FieldWriter<'a, HPTXFSIZ_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<SPI_RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `slv_rd_status` reader - In the slave mode, this register are the status register for the master to read out."]
-pub type SLV_RD_STATUS_R = crate::FieldReader<u32, u32>;
+pub type SLV_RD_STATUS_R = crate::FieldReader<u32>;
 #[doc = "Field `slv_rd_status` writer - In the slave mode, this register are the status register for the master to read out."]
-pub type SLV_RD_STATUS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_RD_STATUS_SPEC, 32, O, u32, u32>;
+pub type SLV_RD_STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_RD_STATUS_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode, this register are the status register for the master to read out."]
     #[inline(always)]

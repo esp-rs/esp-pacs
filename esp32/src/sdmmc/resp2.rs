@@ -14,7 +14,7 @@ impl From<crate::R<RESP2_SPEC>> for R {
     }
 }
 #[doc = "Field `RESPONSE2` reader - Bit\\[95:64\\] of long response."]
-pub type RESPONSE2_R = crate::FieldReader<u32, u32>;
+pub type RESPONSE2_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Bit\\[95:64\\] of long response."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<RD_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS` reader - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
-pub type STATUS_R = crate::FieldReader<u16, u16>;
+pub type STATUS_R = crate::FieldReader<u16>;
 #[doc = "Field `STATUS` writer - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
-pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 16, O, u16, u16>;
+pub type STATUS_W<'a, const O: u8> = crate::FieldWriter<'a, RD_STATUS_SPEC, 16, O, u16>;
 #[doc = "Field `WB_MODE` reader - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
 pub type WB_MODE_R = crate::FieldReader;
 #[doc = "Field `WB_MODE` writer - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]

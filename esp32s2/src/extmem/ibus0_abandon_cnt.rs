@@ -14,7 +14,7 @@ impl From<crate::R<IBUS0_ABANDON_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IBUS0_ABANDON_CNT` reader - The bits are used to count the number of the abandoned ibus0 access."]
-pub type IBUS0_ABANDON_CNT_R = crate::FieldReader<u16, u16>;
+pub type IBUS0_ABANDON_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to count the number of the abandoned ibus0 access."]
     #[inline(always)]

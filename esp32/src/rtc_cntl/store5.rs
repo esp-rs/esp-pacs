@@ -35,9 +35,9 @@ impl From<crate::W<STORE5_SPEC>> for W {
     }
 }
 #[doc = "Field `SCRATCH5` reader - 32-bit general purpose retention register"]
-pub type SCRATCH5_R = crate::FieldReader<u32, u32>;
+pub type SCRATCH5_R = crate::FieldReader<u32>;
 #[doc = "Field `SCRATCH5` writer - 32-bit general purpose retention register"]
-pub type SCRATCH5_W<'a, const O: u8> = crate::FieldWriter<'a, STORE5_SPEC, 32, O, u32, u32>;
+pub type SCRATCH5_W<'a, const O: u8> = crate::FieldWriter<'a, STORE5_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - 32-bit general purpose retention register"]
     #[inline(always)]

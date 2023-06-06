@@ -47,10 +47,9 @@ pub type CARDWRTHREN_R = crate::BitReader;
 #[doc = "Field `CARDWRTHREN` writer - Applicable when HS400 mode is enabled. 1'b0-Card write Threshold disabled. 1'b1-Card write Threshold enabled."]
 pub type CARDWRTHREN_W<'a, const O: u8> = crate::BitWriter<'a, CARDTHRCTL_SPEC, O>;
 #[doc = "Field `CARDTHRESHOLD` reader - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
-pub type CARDTHRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type CARDTHRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `CARDTHRESHOLD` writer - The inside FIFO size is 512,This register is applicable when SDHOST_CARDERTHREN_REG is set to 1 or SDHOST_CARDRDTHREN_REG set to 1."]
-pub type CARDTHRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CARDTHRCTL_SPEC, 16, O, u16, u16>;
+pub type CARDTHRESHOLD_W<'a, const O: u8> = crate::FieldWriter<'a, CARDTHRCTL_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 0 - Card read threshold enable. 1'b0-Card read threshold disabled. 1'b1-Card read threshold enabled."]
     #[inline(always)]

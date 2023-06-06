@@ -35,9 +35,9 @@ impl From<crate::W<T0LOADLO_SPEC>> for W {
     }
 }
 #[doc = "Field `LOAD_LO` reader - Lower 32 bits of the value that will load into timer 0 time-base counter"]
-pub type LOAD_LO_R = crate::FieldReader<u32, u32>;
+pub type LOAD_LO_R = crate::FieldReader<u32>;
 #[doc = "Field `LOAD_LO` writer - Lower 32 bits of the value that will load into timer 0 time-base counter"]
-pub type LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADLO_SPEC, 32, O, u32, u32>;
+pub type LOAD_LO_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADLO_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Lower 32 bits of the value that will load into timer 0 time-base counter"]
     #[inline(always)]

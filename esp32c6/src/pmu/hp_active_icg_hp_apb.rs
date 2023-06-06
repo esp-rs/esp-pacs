@@ -35,10 +35,10 @@ impl From<crate::W<HP_ACTIVE_ICG_HP_APB_SPEC>> for W {
     }
 }
 #[doc = "Field `HP_ACTIVE_DIG_ICG_APB_EN` reader - need_des"]
-pub type HP_ACTIVE_DIG_ICG_APB_EN_R = crate::FieldReader<u32, u32>;
+pub type HP_ACTIVE_DIG_ICG_APB_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `HP_ACTIVE_DIG_ICG_APB_EN` writer - need_des"]
 pub type HP_ACTIVE_DIG_ICG_APB_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HP_ACTIVE_ICG_HP_APB_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, HP_ACTIVE_ICG_HP_APB_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]

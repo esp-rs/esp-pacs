@@ -35,9 +35,9 @@ impl From<crate::W<CH_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY` reader - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
-pub type DUTY_R = crate::FieldReader<u32, u32>;
+pub type DUTY_R = crate::FieldReader<u32>;
 #[doc = "Field `DUTY` writer - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
-pub type DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, CH_DUTY_SPEC, 19, O, u32, u32>;
+pub type DUTY_W<'a, const O: u8> = crate::FieldWriter<'a, CH_DUTY_SPEC, 19, O, u32>;
 impl R {
     #[doc = "Bits 0:18 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]

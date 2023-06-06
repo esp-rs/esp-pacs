@@ -35,10 +35,10 @@ impl From<crate::W<PRO_DPORT_4_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DPORT_RESERVE_FIFO_2` reader - Configure read-protection address 2."]
-pub type PRO_DPORT_RESERVE_FIFO_2_R = crate::FieldReader<u32, u32>;
+pub type PRO_DPORT_RESERVE_FIFO_2_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_DPORT_RESERVE_FIFO_2` writer - Configure read-protection address 2."]
 pub type PRO_DPORT_RESERVE_FIFO_2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_DPORT_4_SPEC, 18, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_DPORT_4_SPEC, 18, O, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]

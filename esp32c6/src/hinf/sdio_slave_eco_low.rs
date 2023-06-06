@@ -35,10 +35,10 @@ impl From<crate::W<SDIO_SLAVE_ECO_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `RDN_ECO_LOW` reader - redundant registers for sdio_slave"]
-pub type RDN_ECO_LOW_R = crate::FieldReader<u32, u32>;
+pub type RDN_ECO_LOW_R = crate::FieldReader<u32>;
 #[doc = "Field `RDN_ECO_LOW` writer - redundant registers for sdio_slave"]
 pub type RDN_ECO_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SDIO_SLAVE_ECO_LOW_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, SDIO_SLAVE_ECO_LOW_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - redundant registers for sdio_slave"]
     #[inline(always)]

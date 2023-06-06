@@ -35,10 +35,10 @@ impl From<crate::W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0` reader - busy monitor window cycle"]
-pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R = crate::FieldReader<u32, u32>;
+pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0` writer - busy monitor window cycle"]
 pub type CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - busy monitor window cycle"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<TIMER_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `CNT` reader - reg_lstimer0_cnt."]
-pub type CNT_R = crate::FieldReader<u16, u16>;
+pub type CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:13 - reg_lstimer0_cnt."]
     #[inline(always)]

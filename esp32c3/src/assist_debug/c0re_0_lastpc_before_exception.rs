@@ -14,7 +14,7 @@ impl From<crate::R<C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_LASTPC_BEFORE_EXC` reader - reg_core_0_lastpc_before_exc"]
-pub type CORE_0_LASTPC_BEFORE_EXC_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_LASTPC_BEFORE_EXC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_lastpc_before_exc"]
     #[inline(always)]

@@ -39,13 +39,13 @@ pub type THRES1_CHANNEL_R = crate::FieldReader;
 #[doc = "Field `THRES1_CHANNEL` writer - configure which channel thres0 monitor"]
 pub type THRES1_CHANNEL_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 5, O>;
 #[doc = "Field `THRES1_HIGH` reader - thres1 monitor high thres"]
-pub type THRES1_HIGH_R = crate::FieldReader<u16, u16>;
+pub type THRES1_HIGH_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES1_HIGH` writer - thres1 monitor high thres"]
-pub type THRES1_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
+pub type THRES1_HIGH_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16>;
 #[doc = "Field `THRES1_LOW` reader - thres1 monitor low thres"]
-pub type THRES1_LOW_R = crate::FieldReader<u16, u16>;
+pub type THRES1_LOW_R = crate::FieldReader<u16>;
 #[doc = "Field `THRES1_LOW` writer - thres1 monitor low thres"]
-pub type THRES1_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16, u16>;
+pub type THRES1_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, THRES1_CTRL_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:4 - configure which channel thres0 monitor"]
     #[inline(always)]

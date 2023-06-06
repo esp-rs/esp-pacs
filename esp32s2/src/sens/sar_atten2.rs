@@ -35,9 +35,9 @@ impl From<crate::W<SAR_ATTEN2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_ATTEN` reader - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
-pub type SAR2_ATTEN_R = crate::FieldReader<u32, u32>;
+pub type SAR2_ATTEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR2_ATTEN` writer - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
-pub type SAR2_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_ATTEN2_SPEC, 32, O, u32, u32>;
+pub type SAR2_ATTEN_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_ATTEN2_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
     #[inline(always)]

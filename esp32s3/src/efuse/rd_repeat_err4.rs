@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_ERR4_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED2_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub type RPT4_RESERVED2_ERR_R = crate::FieldReader<u32, u32>;
+pub type RPT4_RESERVED2_ERR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:23 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]

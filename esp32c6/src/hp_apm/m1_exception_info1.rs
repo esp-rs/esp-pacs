@@ -14,7 +14,7 @@ impl From<crate::R<M1_EXCEPTION_INFO1_SPEC>> for R {
     }
 }
 #[doc = "Field `M1_EXCEPTION_ADDR` reader - Exception addr"]
-pub type M1_EXCEPTION_ADDR_R = crate::FieldReader<u32, u32>;
+pub type M1_EXCEPTION_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Exception addr"]
     #[inline(always)]

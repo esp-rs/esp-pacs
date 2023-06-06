@@ -14,7 +14,7 @@ impl From<crate::R<UART_RXD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `rxd_edge_cnt` reader - used in baudrate detect"]
-pub type RXD_EDGE_CNT_R = crate::FieldReader<u16, u16>;
+pub type RXD_EDGE_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:9 - used in baudrate detect"]
     #[inline(always)]

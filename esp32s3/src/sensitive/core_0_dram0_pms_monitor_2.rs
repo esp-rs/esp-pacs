@@ -20,7 +20,7 @@ pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R = crate::BitReader;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - recorded core0 dram0 world status, 0x1 means world0, 0x2 means world1."]
 pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - recorded core0 dram0 address\\[25:4\\] status when core0 dram0 violated permission,the real address is 0x3c000000+addr*16"]
-pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bit 0 - recorded core0 dram0 permission monitor interrupt status."]
     #[inline(always)]

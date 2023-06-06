@@ -14,7 +14,7 @@ impl From<crate::R<RXD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `RXD_EDGE_CNT` reader - This register stores the count of RXD edge change. It is used in baud rate detection. As baud rate registers UART_REG_LOWPULSE_MIN_CNT, UART_REG_HIGHPULSE_MIN_CNT, UART_REG_POSEDGE_MIN_CNT, and UART_REG_NEGEDGE_MIN_CNT always record the minimal value, UART_REG_RXD_EDGE_CNT indicates the statistic number of RXD edge to find out the minimal value for these baud rate registers."]
-pub type RXD_EDGE_CNT_R = crate::FieldReader<u16, u16>;
+pub type RXD_EDGE_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the count of RXD edge change. It is used in baud rate detection. As baud rate registers UART_REG_LOWPULSE_MIN_CNT, UART_REG_HIGHPULSE_MIN_CNT, UART_REG_POSEDGE_MIN_CNT, and UART_REG_NEGEDGE_MIN_CNT always record the minimal value, UART_REG_RXD_EDGE_CNT indicates the statistic number of RXD edge to find out the minimal value for these baud rate registers."]
     #[inline(always)]

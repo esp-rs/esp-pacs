@@ -35,9 +35,9 @@ impl From<crate::W<SAR_DAC_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_FSTEP` reader - frequency step for CW generator can be used to adjust the frequency"]
-pub type SW_FSTEP_R = crate::FieldReader<u16, u16>;
+pub type SW_FSTEP_R = crate::FieldReader<u16>;
 #[doc = "Field `SW_FSTEP` writer - frequency step for CW generator can be used to adjust the frequency"]
-pub type SW_FSTEP_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_DAC_CTRL1_SPEC, 16, O, u16, u16>;
+pub type SW_FSTEP_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_DAC_CTRL1_SPEC, 16, O, u16>;
 #[doc = "Field `SW_TONE_EN` reader - 1: enable CW generator 0: disable CW generator"]
 pub type SW_TONE_EN_R = crate::BitReader;
 #[doc = "Field `SW_TONE_EN` writer - 1: enable CW generator 0: disable CW generator"]

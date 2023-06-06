@@ -35,10 +35,9 @@ impl From<crate::W<TX_GENRL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_IDLE_VALUE` reader - Configures bus value of transmitter in IDLE state."]
-pub type TX_IDLE_VALUE_R = crate::FieldReader<u16, u16>;
+pub type TX_IDLE_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_IDLE_VALUE` writer - Configures bus value of transmitter in IDLE state."]
-pub type TX_IDLE_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_GENRL_CFG_SPEC, 16, O, u16, u16>;
+pub type TX_IDLE_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, TX_GENRL_CFG_SPEC, 16, O, u16>;
 #[doc = "Field `TX_GATING_EN` reader - Set this bit to enable the clock gating of output tx clock."]
 pub type TX_GATING_EN_R = crate::BitReader;
 #[doc = "Field `TX_GATING_EN` writer - Set this bit to enable the clock gating of output tx clock."]

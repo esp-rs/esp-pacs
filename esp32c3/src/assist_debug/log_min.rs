@@ -35,9 +35,9 @@ impl From<crate::W<LOG_MIN_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MIN` reader - reg_log_min"]
-pub type LOG_MIN_R = crate::FieldReader<u32, u32>;
+pub type LOG_MIN_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MIN` writer - reg_log_min"]
-pub type LOG_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MIN_SPEC, 32, O, u32, u32>;
+pub type LOG_MIN_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MIN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_log_min"]
     #[inline(always)]

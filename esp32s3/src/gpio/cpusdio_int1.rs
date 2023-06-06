@@ -14,7 +14,7 @@ impl From<crate::R<CPUSDIO_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `SDIO_INT1` reader - GPIO CPUSDIO interrupt status register for GPIO32-53"]
-pub type SDIO_INT1_R = crate::FieldReader<u32, u32>;
+pub type SDIO_INT1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO CPUSDIO interrupt status register for GPIO32-53"]
     #[inline(always)]

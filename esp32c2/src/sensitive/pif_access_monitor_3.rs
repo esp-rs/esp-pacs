@@ -14,7 +14,7 @@ impl From<crate::R<PIF_ACCESS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `PIF_ACCESS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR` reader - Need add description"]
-pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR_R = crate::FieldReader<u32, u32>;
+pub type PIF_ACCESS_MONITOR_NONWORD_VIOLATE_STATUS_HADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

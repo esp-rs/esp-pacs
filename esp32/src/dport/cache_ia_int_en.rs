@@ -35,10 +35,10 @@ impl From<crate::W<CACHE_IA_INT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_IA_INT_EN` reader - Interrupt enable bits for various invalid cache access reasons"]
-pub type CACHE_IA_INT_EN_R = crate::FieldReader<u32, u32>;
+pub type CACHE_IA_INT_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_IA_INT_EN` writer - Interrupt enable bits for various invalid cache access reasons"]
 pub type CACHE_IA_INT_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CACHE_IA_INT_EN_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, CACHE_IA_INT_EN_SPEC, 28, O, u32>;
 #[doc = "Field `CACHE_IA_INT_APP_DROM0` reader - APP CPU invalid access to DROM0 when cache is disabled"]
 pub type CACHE_IA_INT_APP_DROM0_R = crate::BitReader;
 #[doc = "Field `CACHE_IA_INT_APP_DROM0` writer - APP CPU invalid access to DROM0 when cache is disabled"]

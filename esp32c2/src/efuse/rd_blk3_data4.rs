@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK3_DATA4_SPEC>> for R {
     }
 }
 #[doc = "Field `BLK3_DATA4` reader - Store the fifth 32-bit of Block3."]
-pub type BLK3_DATA4_R = crate::FieldReader<u32, u32>;
+pub type BLK3_DATA4_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Store the fifth 32-bit of Block3."]
     #[inline(always)]

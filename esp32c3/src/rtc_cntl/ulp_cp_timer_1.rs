@@ -35,10 +35,10 @@ impl From<crate::W<ULP_CP_TIMER_1_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_TIMER_SLP_CYCLE` reader - sleep cycles for ULP-coprocessor timer"]
-pub type ULP_CP_TIMER_SLP_CYCLE_R = crate::FieldReader<u32, u32>;
+pub type ULP_CP_TIMER_SLP_CYCLE_R = crate::FieldReader<u32>;
 #[doc = "Field `ULP_CP_TIMER_SLP_CYCLE` writer - sleep cycles for ULP-coprocessor timer"]
 pub type ULP_CP_TIMER_SLP_CYCLE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_TIMER_1_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, ULP_CP_TIMER_1_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 8:31 - sleep cycles for ULP-coprocessor timer"]
     #[inline(always)]

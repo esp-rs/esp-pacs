@@ -35,9 +35,9 @@ impl From<crate::W<ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - GPIO output enable register for GPIO0-24"]
-pub type DATA_R = crate::FieldReader<u32, u32>;
+pub type DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `DATA` writer - GPIO output enable register for GPIO0-24"]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, ENABLE_SPEC, 25, O, u32, u32>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, ENABLE_SPEC, 25, O, u32>;
 impl R {
     #[doc = "Bits 0:24 - GPIO output enable register for GPIO0-24"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<OCCUPY_3_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_PRO_TRACE` reader - Configure one block of SRAM Block 4-21 is used as trace memory."]
-pub type OCCUPY_PRO_TRACE_R = crate::FieldReader<u32, u32>;
+pub type OCCUPY_PRO_TRACE_R = crate::FieldReader<u32>;
 #[doc = "Field `OCCUPY_PRO_TRACE` writer - Configure one block of SRAM Block 4-21 is used as trace memory."]
-pub type OCCUPY_PRO_TRACE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, OCCUPY_3_SPEC, 18, O, u32, u32>;
+pub type OCCUPY_PRO_TRACE_W<'a, const O: u8> = crate::FieldWriter<'a, OCCUPY_3_SPEC, 18, O, u32>;
 impl R {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]

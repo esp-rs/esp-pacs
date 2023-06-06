@@ -35,10 +35,9 @@ impl From<crate::W<DIG_PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_PAD_HOLD` reader - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
-pub type DIG_PAD_HOLD_R = crate::FieldReader<u32, u32>;
+pub type DIG_PAD_HOLD_R = crate::FieldReader<u32>;
 #[doc = "Field `DIG_PAD_HOLD` writer - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
-pub type DIG_PAD_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DIG_PAD_HOLD_SPEC, 32, O, u32, u32>;
+pub type DIG_PAD_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, DIG_PAD_HOLD_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
     #[inline(always)]

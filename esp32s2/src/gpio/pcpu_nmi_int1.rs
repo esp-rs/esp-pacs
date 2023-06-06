@@ -14,7 +14,7 @@ impl From<crate::R<PCPU_NMI_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_NMI1_INT` reader - GPIO32 ~ 53 PRO_CPU non-maskable interrupt status. This interrupt status is corresponding to bit in GPIO_STATUS1_REG when assert (high) enable signal (bit 14 of GPIO_PINn_REG)."]
-pub type PROCPU_NMI1_INT_R = crate::FieldReader<u32, u32>;
+pub type PROCPU_NMI1_INT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 PRO_CPU non-maskable interrupt status. This interrupt status is corresponding to bit in GPIO_STATUS1_REG when assert (high) enable signal (bit 14 of GPIO_PINn_REG)."]
     #[inline(always)]

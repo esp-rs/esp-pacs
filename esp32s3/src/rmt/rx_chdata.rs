@@ -14,7 +14,7 @@ impl From<crate::R<RX_CHDATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CHDATA` reader - Read and write data for channel 0 via APB FIFO."]
-pub type CHDATA_R = crate::FieldReader<u32, u32>;
+pub type CHDATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Read and write data for channel 0 via APB FIFO."]
     #[inline(always)]

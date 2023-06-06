@@ -14,9 +14,9 @@ impl From<crate::R<FILTER_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ADC2_FILTER_DATA` reader - ADC2 filter data."]
-pub type ADC2_FILTER_DATA_R = crate::FieldReader<u16, u16>;
+pub type ADC2_FILTER_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `ADC1_FILTER_DATA` reader - ADC1 filter data."]
-pub type ADC1_FILTER_DATA_R = crate::FieldReader<u16, u16>;
+pub type ADC1_FILTER_DATA_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - ADC2 filter data."]
     #[inline(always)]

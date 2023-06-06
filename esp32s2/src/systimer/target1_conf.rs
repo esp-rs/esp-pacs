@@ -35,10 +35,9 @@ impl From<crate::W<TARGET1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET1_PERIOD` reader - Set alarm period for system timer target 1, only valid in periodic alarms mode."]
-pub type TARGET1_PERIOD_R = crate::FieldReader<u32, u32>;
+pub type TARGET1_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `TARGET1_PERIOD` writer - Set alarm period for system timer target 1, only valid in periodic alarms mode."]
-pub type TARGET1_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TARGET1_CONF_SPEC, 30, O, u32, u32>;
+pub type TARGET1_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, TARGET1_CONF_SPEC, 30, O, u32>;
 #[doc = "Field `TARGET1_PERIOD_MODE` reader - Set work mode for system timer target 1. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
 pub type TARGET1_PERIOD_MODE_R = crate::BitReader;
 #[doc = "Field `TARGET1_PERIOD_MODE` writer - Set work mode for system timer target 1. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]

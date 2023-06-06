@@ -35,10 +35,10 @@ impl From<crate::W<SLP_REJECT_CAUSE_SPEC>> for W {
     }
 }
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub type REJECT_CAUSE_R = crate::FieldReader<u32, u32>;
+pub type REJECT_CAUSE_R = crate::FieldReader<u32>;
 #[doc = "Field `REJECT_CAUSE` writer - sleep reject cause"]
 pub type REJECT_CAUSE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLP_REJECT_CAUSE_SPEC, 18, O, u32, u32>;
+    crate::FieldWriter<'a, SLP_REJECT_CAUSE_SPEC, 18, O, u32>;
 impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]

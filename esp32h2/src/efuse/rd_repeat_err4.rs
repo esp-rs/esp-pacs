@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_ERR4_SPEC>> for R {
     }
 }
 #[doc = "Field `HYS_EN_PAD1_ERR` reader - Indicates a programming error of HYS_EN_PAD1."]
-pub type HYS_EN_PAD1_ERR_R = crate::FieldReader<u32, u32>;
+pub type HYS_EN_PAD1_ERR_R = crate::FieldReader<u32>;
 #[doc = "Field `RPT4_RESERVED4_ERR_1` reader - Reserved."]
 pub type RPT4_RESERVED4_ERR_1_R = crate::FieldReader;
 #[doc = "Field `RPT4_RESERVED4_ERR_0` reader - Reserved."]

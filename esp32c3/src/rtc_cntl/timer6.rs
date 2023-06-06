@@ -35,10 +35,9 @@ impl From<crate::W<TIMER6_SPEC>> for W {
     }
 }
 #[doc = "Field `DG_PERI_WAIT_TIMER` reader - digital peri power domain wakeup time"]
-pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_PERI_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_PERI_WAIT_TIMER` writer - digital peri power domain wakeup time"]
-pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16, u16>;
+pub type DG_PERI_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER6_SPEC, 9, O, u16>;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` reader - digital peri power domain power on time"]
 pub type DG_PERI_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_PERI_POWERUP_TIMER` writer - digital peri power domain power on time"]

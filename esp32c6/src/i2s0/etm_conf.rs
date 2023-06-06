@@ -35,15 +35,15 @@ impl From<crate::W<ETM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ETM_TX_SEND_WORD_NUM` reader - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
-pub type ETM_TX_SEND_WORD_NUM_R = crate::FieldReader<u16, u16>;
+pub type ETM_TX_SEND_WORD_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `ETM_TX_SEND_WORD_NUM` writer - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
 pub type ETM_TX_SEND_WORD_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ETM_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, ETM_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `ETM_RX_RECEIVE_WORD_NUM` reader - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
-pub type ETM_RX_RECEIVE_WORD_NUM_R = crate::FieldReader<u16, u16>;
+pub type ETM_RX_RECEIVE_WORD_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `ETM_RX_RECEIVE_WORD_NUM` writer - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
 pub type ETM_RX_RECEIVE_WORD_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ETM_CONF_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, ETM_CONF_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]

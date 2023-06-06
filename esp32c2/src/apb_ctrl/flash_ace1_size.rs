@@ -35,10 +35,10 @@ impl From<crate::W<FLASH_ACE1_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_ACE1_SIZE` reader - reg_flash_ace1_size"]
-pub type FLASH_ACE1_SIZE_R = crate::FieldReader<u16, u16>;
+pub type FLASH_ACE1_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `FLASH_ACE1_SIZE` writer - reg_flash_ace1_size"]
 pub type FLASH_ACE1_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, FLASH_ACE1_SIZE_SPEC, 13, O, u16, u16>;
+    crate::FieldWriter<'a, FLASH_ACE1_SIZE_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 0:12 - reg_flash_ace1_size"]
     #[inline(always)]

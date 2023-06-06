@@ -14,7 +14,7 @@ impl From<crate::R<DMA_INSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INDSCR_ADDR` reader - SPI dma in descriptor address."]
-pub type DMA_INDSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_INDSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_INDSCR_STATE` reader - SPI dma in descriptor state."]
 pub type DMA_INDSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `DMA_IN_STATE` reader - SPI dma in data state."]

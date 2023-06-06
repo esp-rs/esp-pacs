@@ -14,7 +14,7 @@ impl From<crate::R<_0_DSCR_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_RX_DSCR_CNT_LAT` reader - "]
-pub type SLC0_RX_DSCR_CNT_LAT_R = crate::FieldReader<u16, u16>;
+pub type SLC0_RX_DSCR_CNT_LAT_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RX_GET_EOF_OCC` reader - "]
 pub type SLC0_RX_GET_EOF_OCC_R = crate::BitReader;
 impl R {

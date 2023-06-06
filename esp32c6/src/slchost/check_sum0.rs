@@ -14,7 +14,7 @@ impl From<crate::R<CHECK_SUM0_SPEC>> for R {
     }
 }
 #[doc = "Field `SLCHOST_CHECK_SUM0` reader - *******Description***********"]
-pub type SLCHOST_CHECK_SUM0_R = crate::FieldReader<u32, u32>;
+pub type SLCHOST_CHECK_SUM0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - *******Description***********"]
     #[inline(always)]

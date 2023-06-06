@@ -35,10 +35,10 @@ impl From<crate::W<REDUNDANCY_SIG2_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_REDCY_SIG2` reader - Those bits are prepared for ECO."]
-pub type CACHE_REDCY_SIG2_R = crate::FieldReader<u32, u32>;
+pub type CACHE_REDCY_SIG2_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_REDCY_SIG2` writer - Those bits are prepared for ECO."]
 pub type CACHE_REDCY_SIG2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, REDUNDANCY_SIG2_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, REDUNDANCY_SIG2_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are prepared for ECO."]
     #[inline(always)]

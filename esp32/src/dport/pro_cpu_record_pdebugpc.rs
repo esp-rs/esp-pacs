@@ -14,7 +14,7 @@ impl From<crate::R<PRO_CPU_RECORD_PDEBUGPC_SPEC>> for R {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGPC` reader - "]
-pub type RECORD_PRO_PDEBUGPC_R = crate::FieldReader<u32, u32>;
+pub type RECORD_PRO_PDEBUGPC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

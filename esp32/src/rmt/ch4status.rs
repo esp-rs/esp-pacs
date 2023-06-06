@@ -14,11 +14,11 @@ impl From<crate::R<CH4STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS` reader - The status for channel4"]
-pub type STATUS_R = crate::FieldReader<u32, u32>;
+pub type STATUS_R = crate::FieldReader<u32>;
 #[doc = "Field `MEM_WADDR_EX` reader - The current memory read address of channel4."]
-pub type MEM_WADDR_EX_R = crate::FieldReader<u16, u16>;
+pub type MEM_WADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `MEM_RADDR_EX` reader - The current memory write address of channel4."]
-pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
+pub type MEM_RADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE` reader - The channel4 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait."]
 pub type STATE_R = crate::FieldReader;
 #[doc = "Field `MEM_OWNER_ERR` reader - When channel4 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1."]

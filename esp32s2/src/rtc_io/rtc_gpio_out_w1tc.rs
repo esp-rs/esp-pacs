@@ -21,7 +21,7 @@ impl From<crate::W<RTC_GPIO_OUT_W1TC_SPEC>> for W {
 }
 #[doc = "Field `GPIO_OUT_DATA_W1TC` writer - GPIO0 ~ 21 output clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_OUT_REG will be cleared. Recommended operation: use this register to clear RTCIO_RTC_GPIO_OUT_REG."]
 pub type GPIO_OUT_DATA_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_GPIO_OUT_W1TC_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, RTC_GPIO_OUT_W1TC_SPEC, 22, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_OUT_W1TC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

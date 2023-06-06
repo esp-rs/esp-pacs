@@ -35,10 +35,10 @@ impl From<crate::W<APP_DPORT_APB_MASK0_SPEC>> for W {
     }
 }
 #[doc = "Field `APPDPORT_APB_MASK0` reader - "]
-pub type APPDPORT_APB_MASK0_R = crate::FieldReader<u32, u32>;
+pub type APPDPORT_APB_MASK0_R = crate::FieldReader<u32>;
 #[doc = "Field `APPDPORT_APB_MASK0` writer - "]
 pub type APPDPORT_APB_MASK0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APP_DPORT_APB_MASK0_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, APP_DPORT_APB_MASK0_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

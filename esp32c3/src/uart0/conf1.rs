@@ -35,13 +35,13 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
-pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u16, u16>;
+pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
-pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16, u16>;
+pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
-pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u16, u16>;
+pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
-pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16, u16>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16>;
 #[doc = "Field `DIS_RX_DAT_OVF` reader - Disable UART Rx data overflow detect."]
 pub type DIS_RX_DAT_OVF_R = crate::BitReader;
 #[doc = "Field `DIS_RX_DAT_OVF` writer - Disable UART Rx data overflow detect."]

@@ -35,7 +35,7 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGDATA` reader - "]
-pub type RECORD_PRO_PDEBUGDATA_R = crate::FieldReader<u32, u32>;
+pub type RECORD_PRO_PDEBUGDATA_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` reader - "]
 pub type RECORD_PDEBUGDATA_DEP_OTHER_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_DEP_OTHER` writer - "]
@@ -72,10 +72,10 @@ pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_R = crate::BitReader;
 pub type RECORD_PDEBUGDATA_STALL_BUFFCONFL_W<'a, const O: u8> =
     crate::BitWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, O>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` reader - "]
-pub type RECORD_PDEBUGDATA_INSNTYPE_ER_R = crate::FieldReader<u16, u16>;
+pub type RECORD_PDEBUGDATA_INSNTYPE_ER_R = crate::FieldReader<u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_INSNTYPE_ER` writer - "]
 pub type RECORD_PDEBUGDATA_INSNTYPE_ER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_CPU_RECORD_PDEBUGDATA_SPEC, 12, O, u16>;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` reader - "]
 pub type RECORD_PDEBUGDATA_STALL_DCM_R = crate::BitReader;
 #[doc = "Field `RECORD_PDEBUGDATA_STALL_DCM` writer - "]

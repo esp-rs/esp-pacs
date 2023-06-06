@@ -14,7 +14,7 @@ impl From<crate::R<DBUS2_ABANDON_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS2_ABANDON_CNT` reader - The bits are used to count the number of the abandoned dbus2 access."]
-pub type DBUS2_ABANDON_CNT_R = crate::FieldReader<u16, u16>;
+pub type DBUS2_ABANDON_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to count the number of the abandoned dbus2 access."]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<CPU_INT_TYPE_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INT_TYPE` reader - reg_core0_cpu_int_type"]
-pub type CPU_INT_TYPE_R = crate::FieldReader<u32, u32>;
+pub type CPU_INT_TYPE_R = crate::FieldReader<u32>;
 #[doc = "Field `CPU_INT_TYPE` writer - reg_core0_cpu_int_type"]
-pub type CPU_INT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CPU_INT_TYPE_SPEC, 32, O, u32, u32>;
+pub type CPU_INT_TYPE_W<'a, const O: u8> = crate::FieldWriter<'a, CPU_INT_TYPE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core0_cpu_int_type"]
     #[inline(always)]

@@ -47,10 +47,9 @@ pub type PST_END_DATA_LOW_VALUE_R = crate::FieldReader;
 #[doc = "Field `PST_END_DATA_LOW_VALUE` writer - configure cycles to lower data after voltage is changed to 1.8V."]
 pub type PST_END_DATA_LOW_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 6, O>;
 #[doc = "Field `SDCLK_STOP_THRES` reader - Configure the number of cycles of module clk to judge sdclk has stopped"]
-pub type SDCLK_STOP_THRES_R = crate::FieldReader<u16, u16>;
+pub type SDCLK_STOP_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `SDCLK_STOP_THRES` writer - Configure the number of cycles of module clk to judge sdclk has stopped"]
-pub type SDCLK_STOP_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CFG_TIMING_SPEC, 11, O, u16, u16>;
+pub type SDCLK_STOP_THRES_W<'a, const O: u8> = crate::FieldWriter<'a, CFG_TIMING_SPEC, 11, O, u16>;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` reader - module clk divider to sample sdclk"]
 pub type SAMPLE_CLK_DIVIDER_R = crate::FieldReader;
 #[doc = "Field `SAMPLE_CLK_DIVIDER` writer - module clk divider to sample sdclk"]

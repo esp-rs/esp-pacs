@@ -35,15 +35,15 @@ impl From<crate::W<ULP_CP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` reader - "]
-pub type ULP_CP_MEM_ADDR_INIT_R = crate::FieldReader<u16, u16>;
+pub type ULP_CP_MEM_ADDR_INIT_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_INIT` writer - "]
 pub type ULP_CP_MEM_ADDR_INIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` reader - "]
-pub type ULP_CP_MEM_ADDR_SIZE_R = crate::FieldReader<u16, u16>;
+pub type ULP_CP_MEM_ADDR_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `ULP_CP_MEM_ADDR_SIZE` writer - "]
 pub type ULP_CP_MEM_ADDR_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, ULP_CP_CTRL_SPEC, 11, O, u16>;
 #[doc = "Field `ULP_CP_MEM_OFFSET_CLR` writer - "]
 pub type ULP_CP_MEM_OFFSET_CLR_W<'a, const O: u8> = crate::BitWriter<'a, ULP_CP_CTRL_SPEC, O>;
 #[doc = "Field `ULP_CP_CLK_FO` reader - ULP-FSM clock force on"]

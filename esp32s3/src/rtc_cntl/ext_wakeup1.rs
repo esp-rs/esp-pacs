@@ -35,10 +35,9 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
     }
 }
 #[doc = "Field `EXT_WAKEUP1_SEL` reader - Bitmap to select RTC pads for ext wakeup1"]
-pub type EXT_WAKEUP1_SEL_R = crate::FieldReader<u32, u32>;
+pub type EXT_WAKEUP1_SEL_R = crate::FieldReader<u32>;
 #[doc = "Field `EXT_WAKEUP1_SEL` writer - Bitmap to select RTC pads for ext wakeup1"]
-pub type EXT_WAKEUP1_SEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, EXT_WAKEUP1_SPEC, 22, O, u32, u32>;
+pub type EXT_WAKEUP1_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP1_SPEC, 22, O, u32>;
 #[doc = "Field `EXT_WAKEUP1_STATUS_CLR` writer - clear ext wakeup1 status"]
 pub type EXT_WAKEUP1_STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP1_SPEC, O>;
 impl R {

@@ -14,7 +14,7 @@ impl From<crate::R<RD_BLK2_DATA7_SPEC>> for R {
     }
 }
 #[doc = "Field `BLK2_RESERVED_DATA_1` reader - Store the bit \\[21:52\\] of block2 reserved data."]
-pub type BLK2_RESERVED_DATA_1_R = crate::FieldReader<u32, u32>;
+pub type BLK2_RESERVED_DATA_1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Store the bit \\[21:52\\] of block2 reserved data."]
     #[inline(always)]

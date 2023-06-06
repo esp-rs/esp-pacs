@@ -55,10 +55,10 @@ pub type SLC0_RX_FILL_EN_R = crate::BitReader;
 #[doc = "Field `SLC0_RX_FILL_EN` writer - "]
 pub type SLC0_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` reader - "]
-pub type SLC0_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type SLC0_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` writer - "]
 pub type SLC0_RD_RETRY_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16>;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` reader - "]
 pub type SLC1_TOKEN_NO_REPLACE_R = crate::BitReader;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` writer - "]
@@ -80,10 +80,10 @@ pub type SLC1_RX_FILL_EN_R = crate::BitReader;
 #[doc = "Field `SLC1_RX_FILL_EN` writer - "]
 pub type SLC1_RX_FILL_EN_W<'a, const O: u8> = crate::BitWriter<'a, RX_DSCR_CONF_SPEC, O>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` reader - "]
-pub type SLC1_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type SLC1_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` writer - "]
 pub type SLC1_RD_RETRY_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, RX_DSCR_CONF_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

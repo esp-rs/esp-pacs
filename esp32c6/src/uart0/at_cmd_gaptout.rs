@@ -35,10 +35,9 @@ impl From<crate::W<AT_CMD_GAPTOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_GAP_TOUT` reader - This register is used to configure the duration time between the at_cmd chars."]
-pub type RX_GAP_TOUT_R = crate::FieldReader<u16, u16>;
+pub type RX_GAP_TOUT_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_GAP_TOUT` writer - This register is used to configure the duration time between the at_cmd chars."]
-pub type RX_GAP_TOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, AT_CMD_GAPTOUT_SPEC, 16, O, u16, u16>;
+pub type RX_GAP_TOUT_W<'a, const O: u8> = crate::FieldWriter<'a, AT_CMD_GAPTOUT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the at_cmd chars."]
     #[inline(always)]

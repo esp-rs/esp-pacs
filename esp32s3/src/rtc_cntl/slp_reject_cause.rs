@@ -14,7 +14,7 @@ impl From<crate::R<SLP_REJECT_CAUSE_SPEC>> for R {
     }
 }
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub type REJECT_CAUSE_R = crate::FieldReader<u32, u32>;
+pub type REJECT_CAUSE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]

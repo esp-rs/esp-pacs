@@ -14,7 +14,7 @@ impl From<crate::R<CPUSDIO_INT_SPEC>> for R {
     }
 }
 #[doc = "Field `SDIO_INT` reader - SDIO's extent GPIO0~31 interrupt"]
-pub type SDIO_INT_R = crate::FieldReader<u32, u32>;
+pub type SDIO_INT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - SDIO's extent GPIO0~31 interrupt"]
     #[inline(always)]

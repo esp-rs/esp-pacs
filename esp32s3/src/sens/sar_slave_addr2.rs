@@ -35,15 +35,15 @@ impl From<crate::W<SAR_SLAVE_ADDR2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_I2C_SLAVE_ADDR3` reader - configure i2c slave address3"]
-pub type SAR_I2C_SLAVE_ADDR3_R = crate::FieldReader<u16, u16>;
+pub type SAR_I2C_SLAVE_ADDR3_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR3` writer - configure i2c slave address3"]
 pub type SAR_I2C_SLAVE_ADDR3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR2` reader - configure i2c slave address2"]
-pub type SAR_I2C_SLAVE_ADDR2_R = crate::FieldReader<u16, u16>;
+pub type SAR_I2C_SLAVE_ADDR2_R = crate::FieldReader<u16>;
 #[doc = "Field `SAR_I2C_SLAVE_ADDR2` writer - configure i2c slave address2"]
 pub type SAR_I2C_SLAVE_ADDR2_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, SAR_SLAVE_ADDR2_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:10 - configure i2c slave address3"]
     #[inline(always)]

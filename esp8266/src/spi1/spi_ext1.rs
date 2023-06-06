@@ -35,9 +35,9 @@ impl From<crate::W<SPI_EXT1_SPEC>> for W {
     }
 }
 #[doc = "Field `erase_time` reader - "]
-pub type ERASE_TIME_R = crate::FieldReader<u16, u16>;
+pub type ERASE_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `erase_time` writer - "]
-pub type ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT1_SPEC, 12, O, u16, u16>;
+pub type ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_EXT1_SPEC, 12, O, u16>;
 #[doc = "Field `erase_shift` reader - "]
 pub type ERASE_SHIFT_R = crate::FieldReader;
 #[doc = "Field `erase_shift` writer - "]

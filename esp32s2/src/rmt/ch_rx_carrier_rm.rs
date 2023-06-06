@@ -35,15 +35,15 @@ impl From<crate::W<CH_RX_CARRIER_RM_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER_LOW_THRES` reader - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_LOW_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_LOW_THRES` writer - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
 pub type CARRIER_LOW_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` reader - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
-pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16, u16>;
+pub type CARRIER_HIGH_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `CARRIER_HIGH_THRES` writer - The high level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_HIGH_THRES_CH%s + 1) for channel %s."]
 pub type CARRIER_HIGH_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, CH_RX_CARRIER_RM_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The low level period in a carrier modulation mode is (REG_RMT_REG_CARRIER_LOW_THRES_CH%s + 1) for channel %s."]
     #[inline(always)]

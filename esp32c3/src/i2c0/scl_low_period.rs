@@ -35,10 +35,9 @@ impl From<crate::W<SCL_LOW_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_LOW_PERIOD` reader - reg_scl_low_period"]
-pub type SCL_LOW_PERIOD_R = crate::FieldReader<u16, u16>;
+pub type SCL_LOW_PERIOD_R = crate::FieldReader<u16>;
 #[doc = "Field `SCL_LOW_PERIOD` writer - reg_scl_low_period"]
-pub type SCL_LOW_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 9, O, u16, u16>;
+pub type SCL_LOW_PERIOD_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_scl_low_period"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_SIZE` reader - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
-pub type PRO_ICACHE_AUTOLOAD_SCT0_SIZE_R = crate::FieldReader<u32, u32>;
+pub type PRO_ICACHE_AUTOLOAD_SCT0_SIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `PRO_ICACHE_AUTOLOAD_SCT0_SIZE` writer - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
 pub type PRO_ICACHE_AUTOLOAD_SCT0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, PRO_ICACHE_AUTOLOAD_SECTION0_SIZE_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_icache_autoload_sct0_ena."]
     #[inline(always)]

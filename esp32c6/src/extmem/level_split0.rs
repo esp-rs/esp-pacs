@@ -14,7 +14,7 @@ impl From<crate::R<LEVEL_SPLIT0_SPEC>> for R {
     }
 }
 #[doc = "Field `LEVEL_SPLIT0` reader - Reserved"]
-pub type LEVEL_SPLIT0_R = crate::FieldReader<u32, u32>;
+pub type LEVEL_SPLIT0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Reserved"]
     #[inline(always)]

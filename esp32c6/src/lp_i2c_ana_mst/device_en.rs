@@ -35,10 +35,10 @@ impl From<crate::W<DEVICE_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_DEVICE_EN` reader - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_DEVICE_EN_R = crate::FieldReader<u16, u16>;
+pub type LP_I2C_ANA_MAST_I2C_DEVICE_EN_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_DEVICE_EN` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_DEVICE_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DEVICE_EN_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, DEVICE_EN_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - need_des"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<CH_DUTY_R_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_R` reader - reg_duty_lsch0_r."]
-pub type DUTY_R_R = crate::FieldReader<u32, u32>;
+pub type DUTY_R_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:18 - reg_duty_lsch0_r."]
     #[inline(always)]

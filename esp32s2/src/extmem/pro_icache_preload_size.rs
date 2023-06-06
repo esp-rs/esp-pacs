@@ -35,10 +35,10 @@ impl From<crate::W<PRO_ICACHE_PRELOAD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
-pub type PRO_ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
+pub type PRO_ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` writer - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
 pub type PRO_ICACHE_PRELOAD_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_PRELOAD_SIZE_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_ICACHE_PRELOAD_SIZE_SPEC, 10, O, u16>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` reader - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
 pub type PRO_ICACHE_PRELOAD_ORDER_R = crate::BitReader;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` writer - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]

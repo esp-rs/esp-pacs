@@ -54,10 +54,10 @@ pub type CLK_COEX_LP_SEL_XTAL32K_R = crate::BitReader;
 pub type CLK_COEX_LP_SEL_XTAL32K_W<'a, const O: u8> =
     crate::BitWriter<'a, COEX_LP_CLK_CONF_SPEC, O>;
 #[doc = "Field `CLK_COEX_LP_DIV_NUM` reader - "]
-pub type CLK_COEX_LP_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type CLK_COEX_LP_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `CLK_COEX_LP_DIV_NUM` writer - "]
 pub type CLK_COEX_LP_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, COEX_LP_CLK_CONF_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, COEX_LP_CLK_CONF_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

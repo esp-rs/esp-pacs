@@ -35,9 +35,9 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - Selects a RTC GPIO to be the EXT1 wakeup source."]
-pub type SEL_R = crate::FieldReader<u32, u32>;
+pub type SEL_R = crate::FieldReader<u32>;
 #[doc = "Field `SEL` writer - Selects a RTC GPIO to be the EXT1 wakeup source."]
-pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP1_SPEC, 22, O, u32, u32>;
+pub type SEL_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_WAKEUP1_SPEC, 22, O, u32>;
 #[doc = "Field `STATUS_CLR` writer - Clears the EXT1 wakeup status."]
 pub type STATUS_CLR_W<'a, const O: u8> = crate::BitWriter<'a, EXT_WAKEUP1_SPEC, O>;
 impl R {

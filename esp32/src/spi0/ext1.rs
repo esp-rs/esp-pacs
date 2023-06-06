@@ -35,9 +35,9 @@ impl From<crate::W<EXT1_SPEC>> for W {
     }
 }
 #[doc = "Field `T_ERASE_TIME` reader - erase flash delay time by system clock."]
-pub type T_ERASE_TIME_R = crate::FieldReader<u16, u16>;
+pub type T_ERASE_TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `T_ERASE_TIME` writer - erase flash delay time by system clock."]
-pub type T_ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT1_SPEC, 12, O, u16, u16>;
+pub type T_ERASE_TIME_W<'a, const O: u8> = crate::FieldWriter<'a, EXT1_SPEC, 12, O, u16>;
 #[doc = "Field `T_ERASE_SHIFT` reader - erase flash delay time shift."]
 pub type T_ERASE_SHIFT_R = crate::FieldReader;
 #[doc = "Field `T_ERASE_SHIFT` writer - erase flash delay time shift."]

@@ -35,10 +35,9 @@ impl From<crate::W<LCD_CMD_VAL_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_CMD_VALUE` reader - The LCD write command value."]
-pub type LCD_CMD_VALUE_R = crate::FieldReader<u32, u32>;
+pub type LCD_CMD_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `LCD_CMD_VALUE` writer - The LCD write command value."]
-pub type LCD_CMD_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LCD_CMD_VAL_SPEC, 32, O, u32, u32>;
+pub type LCD_CMD_VALUE_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CMD_VAL_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The LCD write command value."]
     #[inline(always)]

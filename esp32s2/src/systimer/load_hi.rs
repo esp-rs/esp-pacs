@@ -35,9 +35,9 @@ impl From<crate::W<LOAD_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_LOAD_HI` reader - The value to be loaded into system timer, high 32 bits."]
-pub type TIMER_LOAD_HI_R = crate::FieldReader<u32, u32>;
+pub type TIMER_LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMER_LOAD_HI` writer - The value to be loaded into system timer, high 32 bits."]
-pub type TIMER_LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, LOAD_HI_SPEC, 32, O, u32, u32>;
+pub type TIMER_LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, LOAD_HI_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The value to be loaded into system timer, high 32 bits."]
     #[inline(always)]

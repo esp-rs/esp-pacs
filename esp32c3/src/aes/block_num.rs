@@ -35,9 +35,9 @@ impl From<crate::W<BLOCK_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_NUM` reader - Those bits stores the number of Plaintext/ciphertext block."]
-pub type BLOCK_NUM_R = crate::FieldReader<u32, u32>;
+pub type BLOCK_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `BLOCK_NUM` writer - Those bits stores the number of Plaintext/ciphertext block."]
-pub type BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, BLOCK_NUM_SPEC, 32, O, u32, u32>;
+pub type BLOCK_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, BLOCK_NUM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits stores the number of Plaintext/ciphertext block."]
     #[inline(always)]

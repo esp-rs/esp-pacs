@@ -39,7 +39,7 @@ pub type WDT_FLASHBOOT_MOD_EN_R = crate::BitReader;
 #[doc = "Field `WDT_FLASHBOOT_MOD_EN` writer - When set flash boot protection is enabled"]
 pub type WDT_FLASHBOOT_MOD_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_SYS_RESET_LENGTH` reader - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<u8, WDT_SYS_RESET_LENGTH_A>;
+pub type WDT_SYS_RESET_LENGTH_R = crate::FieldReader<WDT_SYS_RESET_LENGTH_A>;
 #[doc = "length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -66,6 +66,9 @@ impl From<WDT_SYS_RESET_LENGTH_A> for u8 {
     fn from(variant: WDT_SYS_RESET_LENGTH_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for WDT_SYS_RESET_LENGTH_A {
+    type Ux = u8;
 }
 impl WDT_SYS_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
@@ -126,7 +129,7 @@ impl WDT_SYS_RESET_LENGTH_R {
 }
 #[doc = "Field `WDT_SYS_RESET_LENGTH` writer - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_SYS_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, u8, WDT_SYS_RESET_LENGTH_A>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, WDT_SYS_RESET_LENGTH_A>;
 impl<'a, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, O> {
     #[doc = "100ns"]
     #[inline(always)]
@@ -170,7 +173,7 @@ impl<'a, const O: u8> WDT_SYS_RESET_LENGTH_W<'a, O> {
     }
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` reader - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
-pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<u8, WDT_CPU_RESET_LENGTH_A>;
+pub type WDT_CPU_RESET_LENGTH_R = crate::FieldReader<WDT_CPU_RESET_LENGTH_A>;
 #[doc = "length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -197,6 +200,9 @@ impl From<WDT_CPU_RESET_LENGTH_A> for u8 {
     fn from(variant: WDT_CPU_RESET_LENGTH_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for WDT_CPU_RESET_LENGTH_A {
+    type Ux = u8;
 }
 impl WDT_CPU_RESET_LENGTH_R {
     #[doc = "Get enumerated values variant"]
@@ -257,7 +263,7 @@ impl WDT_CPU_RESET_LENGTH_R {
 }
 #[doc = "Field `WDT_CPU_RESET_LENGTH` writer - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
 pub type WDT_CPU_RESET_LENGTH_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, u8, WDT_CPU_RESET_LENGTH_A>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 3, O, WDT_CPU_RESET_LENGTH_A>;
 impl<'a, const O: u8> WDT_CPU_RESET_LENGTH_W<'a, O> {
     #[doc = "100ns"]
     #[inline(always)]
@@ -309,7 +315,7 @@ pub type WDT_EDGE_INT_EN_R = crate::BitReader;
 #[doc = "Field `WDT_EDGE_INT_EN` writer - When set edge type interrupt generation is enabled"]
 pub type WDT_EDGE_INT_EN_W<'a, const O: u8> = crate::BitWriter<'a, WDTCONFIG0_SPEC, O>;
 #[doc = "Field `WDT_STG3` reader - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
-pub type WDT_STG3_R = crate::FieldReader<u8, WDT_STG3_A>;
+pub type WDT_STG3_R = crate::FieldReader<WDT_STG3_A>;
 #[doc = "Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -328,6 +334,9 @@ impl From<WDT_STG3_A> for u8 {
     fn from(variant: WDT_STG3_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for WDT_STG3_A {
+    type Ux = u8;
 }
 impl WDT_STG3_R {
     #[doc = "Get enumerated values variant"]
@@ -364,7 +373,7 @@ impl WDT_STG3_R {
 }
 #[doc = "Field `WDT_STG3` writer - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
 pub type WDT_STG3_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 2, O, u8, WDT_STG3_A>;
+    crate::FieldWriterSafe<'a, WDTCONFIG0_SPEC, 2, O, WDT_STG3_A>;
 impl<'a, const O: u8> WDT_STG3_W<'a, O> {
     #[doc = "Off"]
     #[inline(always)]

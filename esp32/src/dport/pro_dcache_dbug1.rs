@@ -14,7 +14,7 @@ impl From<crate::R<PRO_DCACHE_DBUG1_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CTAG_RAM_RDATA` reader - "]
-pub type PRO_CTAG_RAM_RDATA_R = crate::FieldReader<u32, u32>;
+pub type PRO_CTAG_RAM_RDATA_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -14,9 +14,9 @@ impl From<crate::R<CH3STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_WADDR_EX` reader - reg_mem_waddr_ex_ch3."]
-pub type MEM_WADDR_EX_R = crate::FieldReader<u16, u16>;
+pub type MEM_WADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_MEM_RADDR` reader - reg_apb_mem_raddr_ch3."]
-pub type APB_MEM_RADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_RADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE` reader - reg_state_ch3."]
 pub type STATE_R = crate::FieldReader;
 #[doc = "Field `MEM_OWNER_ERR` reader - reg_mem_owner_err_ch3."]

@@ -14,7 +14,7 @@ impl From<crate::R<RD_REPEAT_ERR1_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED2_ERR` reader - Reserved."]
-pub type RPT4_RESERVED2_ERR_R = crate::FieldReader<u16, u16>;
+pub type RPT4_RESERVED2_ERR_R = crate::FieldReader<u16>;
 #[doc = "Field `WDT_DELAY_SEL_ERR` reader - If any bit in WDT_DELAY_SEL is 1, then it indicates a programming error."]
 pub type WDT_DELAY_SEL_ERR_R = crate::FieldReader;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT_ERR` reader - If any bit in SPI_BOOT_CRYPT_CNT is 1, then it indicates a programming error."]

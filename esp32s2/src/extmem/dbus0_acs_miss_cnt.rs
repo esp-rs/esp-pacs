@@ -14,7 +14,7 @@ impl From<crate::R<DBUS0_ACS_MISS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS0_ACS_MISS_CNT` reader - The bits are used to count the number of the cache miss caused by dbus0 access."]
-pub type DBUS0_ACS_MISS_CNT_R = crate::FieldReader<u32, u32>;
+pub type DBUS0_ACS_MISS_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to count the number of the cache miss caused by dbus0 access."]
     #[inline(always)]

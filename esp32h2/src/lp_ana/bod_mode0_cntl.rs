@@ -44,15 +44,15 @@ pub type BOD_MODE0_PD_RF_ENA_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_PD_RF_ENA` writer - need_des"]
 pub type BOD_MODE0_PD_RF_ENA_W<'a, const O: u8> = crate::BitWriter<'a, BOD_MODE0_CNTL_SPEC, O>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` reader - need_des"]
-pub type BOD_MODE0_INTR_WAIT_R = crate::FieldReader<u16, u16>;
+pub type BOD_MODE0_INTR_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BOD_MODE0_INTR_WAIT` writer - need_des"]
 pub type BOD_MODE0_INTR_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` reader - need_des"]
-pub type BOD_MODE0_RESET_WAIT_R = crate::FieldReader<u16, u16>;
+pub type BOD_MODE0_RESET_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `BOD_MODE0_RESET_WAIT` writer - need_des"]
 pub type BOD_MODE0_RESET_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, BOD_MODE0_CNTL_SPEC, 10, O, u16>;
 #[doc = "Field `BOD_MODE0_CNT_CLR` reader - need_des"]
 pub type BOD_MODE0_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `BOD_MODE0_CNT_CLR` writer - need_des"]

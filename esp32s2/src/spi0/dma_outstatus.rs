@@ -14,7 +14,7 @@ impl From<crate::R<DMA_OUTSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_OUTDSCR_ADDR` reader - SPI dma out descriptor address."]
-pub type DMA_OUTDSCR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_OUTDSCR_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_OUTDSCR_STATE` reader - SPI dma out descriptor state."]
 pub type DMA_OUTDSCR_STATE_R = crate::FieldReader;
 #[doc = "Field `DMA_OUT_STATE` reader - SPI dma out data state."]

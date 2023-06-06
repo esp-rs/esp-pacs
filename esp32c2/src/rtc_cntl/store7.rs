@@ -35,9 +35,9 @@ impl From<crate::W<STORE7_SPEC>> for W {
     }
 }
 #[doc = "Field `SCRATCH7` reader - Need add desc"]
-pub type SCRATCH7_R = crate::FieldReader<u32, u32>;
+pub type SCRATCH7_R = crate::FieldReader<u32>;
 #[doc = "Field `SCRATCH7` writer - Need add desc"]
-pub type SCRATCH7_W<'a, const O: u8> = crate::FieldWriter<'a, STORE7_SPEC, 32, O, u32, u32>;
+pub type SCRATCH7_W<'a, const O: u8> = crate::FieldWriter<'a, STORE7_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]

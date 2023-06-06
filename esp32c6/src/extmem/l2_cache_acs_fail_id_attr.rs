@@ -14,9 +14,9 @@ impl From<crate::R<L2_CACHE_ACS_FAIL_ID_ATTR_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_FAIL_ID` reader - The register records the ID of fail-access when L1-Cache accesses L2-Cache."]
-pub type L2_CACHE_FAIL_ID_R = crate::FieldReader<u16, u16>;
+pub type L2_CACHE_FAIL_ID_R = crate::FieldReader<u16>;
 #[doc = "Field `L2_CACHE_FAIL_ATTR` reader - The register records the attribution of fail-access when L1-Cache accesses L2-Cache due to cache accessing L1-Cache."]
-pub type L2_CACHE_FAIL_ATTR_R = crate::FieldReader<u16, u16>;
+pub type L2_CACHE_FAIL_ATTR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The register records the ID of fail-access when L1-Cache accesses L2-Cache."]
     #[inline(always)]

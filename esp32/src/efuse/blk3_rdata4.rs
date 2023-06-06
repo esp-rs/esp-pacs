@@ -35,12 +35,11 @@ impl From<crate::W<BLK3_RDATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `BLK3_DOUT4` reader - read for BLOCK3"]
-pub type BLK3_DOUT4_R = crate::FieldReader<u32, u32>;
+pub type BLK3_DOUT4_R = crate::FieldReader<u32>;
 #[doc = "Field `RD_CAL_RESERVED` reader - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-pub type RD_CAL_RESERVED_R = crate::FieldReader<u16, u16>;
+pub type RD_CAL_RESERVED_R = crate::FieldReader<u16>;
 #[doc = "Field `RD_CAL_RESERVED` writer - Reserved for future calibration use. Indicated by EFUSE_RD_BLK3_PART_RESERVE"]
-pub type RD_CAL_RESERVED_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BLK3_RDATA4_SPEC, 16, O, u16, u16>;
+pub type RD_CAL_RESERVED_W<'a, const O: u8> = crate::FieldWriter<'a, BLK3_RDATA4_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:31 - read for BLOCK3"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<SET_LINE_CODE_W0_SPEC>> for R {
     }
 }
 #[doc = "Field `DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
-pub type DW_DTE_RATE_R = crate::FieldReader<u32, u32>;
+pub type DW_DTE_RATE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The value of dwDTERate set by host through SET_LINE_CODING command."]
     #[inline(always)]

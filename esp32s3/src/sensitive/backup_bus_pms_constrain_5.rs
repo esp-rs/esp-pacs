@@ -35,10 +35,10 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` reader - BackUp access rtcfast_spltaddr permission."]
-pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` writer - BackUp access rtcfast_spltaddr permission."]
 pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:10 - BackUp access rtcfast_spltaddr permission."]
     #[inline(always)]

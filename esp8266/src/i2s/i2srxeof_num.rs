@@ -35,10 +35,10 @@ impl From<crate::W<I2SRXEOF_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_I2S_RX_EOF_NUM` reader - "]
-pub type I2S_I2S_RX_EOF_NUM_R = crate::FieldReader<u32, u32>;
+pub type I2S_I2S_RX_EOF_NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `I2S_I2S_RX_EOF_NUM` writer - "]
 pub type I2S_I2S_RX_EOF_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, I2SRXEOF_NUM_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, I2SRXEOF_NUM_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

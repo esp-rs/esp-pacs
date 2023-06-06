@@ -35,9 +35,9 @@ impl From<crate::W<CH_RX_LIM_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_LIM` reader - reg_rmt_rx_lim_ch2."]
-pub type RX_LIM_R = crate::FieldReader<u16, u16>;
+pub type RX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `RX_LIM` writer - reg_rmt_rx_lim_ch2."]
-pub type RX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16, u16>;
+pub type RX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_RX_LIM_SPEC, 9, O, u16>;
 impl R {
     #[doc = "Bits 0:8 - reg_rmt_rx_lim_ch2."]
     #[inline(always)]

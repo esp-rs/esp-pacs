@@ -35,9 +35,9 @@ impl From<crate::W<EXT_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `EXT_ADDR` reader - The register are the higher 32bits in the 64 bits address mode."]
-pub type EXT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type EXT_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `EXT_ADDR` writer - The register are the higher 32bits in the 64 bits address mode."]
-pub type EXT_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_ADDR_SPEC, 32, O, u32, u32>;
+pub type EXT_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, EXT_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - The register are the higher 32bits in the 64 bits address mode."]
     #[inline(always)]

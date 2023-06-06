@@ -35,9 +35,9 @@ impl From<crate::W<SLV_WR_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_WR_ST` reader - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
-pub type SLV_WR_ST_R = crate::FieldReader<u32, u32>;
+pub type SLV_WR_ST_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_WR_ST` writer - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
-pub type SLV_WR_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_WR_STATUS_SPEC, 32, O, u32, u32>;
+pub type SLV_WR_ST_W<'a, const O: u8> = crate::FieldWriter<'a, SLV_WR_STATUS_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]

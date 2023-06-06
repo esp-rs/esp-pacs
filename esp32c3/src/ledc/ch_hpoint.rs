@@ -35,9 +35,9 @@ impl From<crate::W<CH_HPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `HPOINT` reader - reg_hpoint_lsch0."]
-pub type HPOINT_R = crate::FieldReader<u16, u16>;
+pub type HPOINT_R = crate::FieldReader<u16>;
 #[doc = "Field `HPOINT` writer - reg_hpoint_lsch0."]
-pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_HPOINT_SPEC, 14, O, u16, u16>;
+pub type HPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, CH_HPOINT_SPEC, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - reg_hpoint_lsch0."]
     #[inline(always)]

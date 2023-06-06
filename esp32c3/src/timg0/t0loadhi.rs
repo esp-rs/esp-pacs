@@ -35,9 +35,9 @@ impl From<crate::W<T0LOADHI_SPEC>> for W {
     }
 }
 #[doc = "Field `LOAD_HI` reader - reg_t0_load_hi."]
-pub type LOAD_HI_R = crate::FieldReader<u32, u32>;
+pub type LOAD_HI_R = crate::FieldReader<u32>;
 #[doc = "Field `LOAD_HI` writer - reg_t0_load_hi."]
-pub type LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADHI_SPEC, 22, O, u32, u32>;
+pub type LOAD_HI_W<'a, const O: u8> = crate::FieldWriter<'a, T0LOADHI_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - reg_t0_load_hi."]
     #[inline(always)]

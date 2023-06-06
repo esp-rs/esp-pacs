@@ -14,7 +14,7 @@ impl From<crate::R<ACPU_INT_SPEC>> for R {
     }
 }
 #[doc = "Field `APPCPU_INT` reader - GPIO0~31 APP CPU interrupt status"]
-pub type APPCPU_INT_R = crate::FieldReader<u32, u32>;
+pub type APPCPU_INT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO0~31 APP CPU interrupt status"]
     #[inline(always)]

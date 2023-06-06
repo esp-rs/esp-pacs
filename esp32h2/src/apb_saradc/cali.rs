@@ -35,10 +35,9 @@ impl From<crate::W<CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_CALI_CFG` reader - saradc cali factor"]
-pub type APB_SARADC_CALI_CFG_R = crate::FieldReader<u32, u32>;
+pub type APB_SARADC_CALI_CFG_R = crate::FieldReader<u32>;
 #[doc = "Field `APB_SARADC_CALI_CFG` writer - saradc cali factor"]
-pub type APB_SARADC_CALI_CFG_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CALI_SPEC, 17, O, u32, u32>;
+pub type APB_SARADC_CALI_CFG_W<'a, const O: u8> = crate::FieldWriter<'a, CALI_SPEC, 17, O, u32>;
 impl R {
     #[doc = "Bits 0:16 - saradc cali factor"]
     #[inline(always)]

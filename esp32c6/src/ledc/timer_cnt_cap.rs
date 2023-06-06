@@ -14,7 +14,7 @@ impl From<crate::R<TIMER_CNT_CAP_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_CNT_CAP` reader - This register stores ledc timer%s count value."]
-pub type TIMER_CNT_CAP_R = crate::FieldReader<u32, u32>;
+pub type TIMER_CNT_CAP_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores ledc timer%s count value."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<SAR_TOUCH_STATUS10_SPEC>> for R {
     }
 }
 #[doc = "Field `SAR_TOUCH_PAD10_DATA` reader - touch data debounce of touch pad 10"]
-pub type SAR_TOUCH_PAD10_DATA_R = crate::FieldReader<u32, u32>;
+pub type SAR_TOUCH_PAD10_DATA_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_TOUCH_PAD10_DEBOUNCE` reader - touch current debounce of touch pad 10"]
 pub type SAR_TOUCH_PAD10_DEBOUNCE_R = crate::FieldReader;
 impl R {

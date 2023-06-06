@@ -35,9 +35,9 @@ impl From<crate::W<J0__SPEC>> for W {
     }
 }
 #[doc = "Field `J0_0` reader - This register stores the %sth 32-bit piece of 128-bit J0"]
-pub type J0_0_R = crate::FieldReader<u32, u32>;
+pub type J0_0_R = crate::FieldReader<u32>;
 #[doc = "Field `J0_0` writer - This register stores the %sth 32-bit piece of 128-bit J0"]
-pub type J0_0_W<'a, const O: u8> = crate::FieldWriter<'a, J0__SPEC, 32, O, u32, u32>;
+pub type J0_0_W<'a, const O: u8> = crate::FieldWriter<'a, J0__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit J0"]
     #[inline(always)]

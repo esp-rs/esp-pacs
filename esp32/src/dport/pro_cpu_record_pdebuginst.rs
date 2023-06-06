@@ -35,7 +35,7 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGINST_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGINST` reader - "]
-pub type RECORD_PRO_PDEBUGINST_R = crate::FieldReader<u32, u32>;
+pub type RECORD_PRO_PDEBUGINST_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` reader - "]
 pub type RECORD_PDEBUGINST_SZ_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGINST_SZ` writer - "]

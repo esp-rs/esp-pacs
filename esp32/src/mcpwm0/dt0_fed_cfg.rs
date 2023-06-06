@@ -35,9 +35,9 @@ impl From<crate::W<DT0_FED_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DT0_FED` reader - "]
-pub type DT0_FED_R = crate::FieldReader<u16, u16>;
+pub type DT0_FED_R = crate::FieldReader<u16>;
 #[doc = "Field `DT0_FED` writer - "]
-pub type DT0_FED_W<'a, const O: u8> = crate::FieldWriter<'a, DT0_FED_CFG_SPEC, 16, O, u16, u16>;
+pub type DT0_FED_W<'a, const O: u8> = crate::FieldWriter<'a, DT0_FED_CFG_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

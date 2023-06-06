@@ -35,10 +35,10 @@ impl From<crate::W<CORE_0_NMI_MASK_TRIGGER_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_NMI_MASK_TRIGGER_ADDR` reader - this field to used to set trigger address, when CPU executes to this address,NMI mask automatically fails"]
-pub type CORE_0_NMI_MASK_TRIGGER_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_NMI_MASK_TRIGGER_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_NMI_MASK_TRIGGER_ADDR` writer - this field to used to set trigger address, when CPU executes to this address,NMI mask automatically fails"]
 pub type CORE_0_NMI_MASK_TRIGGER_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_NMI_MASK_TRIGGER_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_0_NMI_MASK_TRIGGER_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - this field to used to set trigger address, when CPU executes to this address,NMI mask automatically fails"]
     #[inline(always)]

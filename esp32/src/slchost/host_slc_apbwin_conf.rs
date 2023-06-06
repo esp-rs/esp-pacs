@@ -35,10 +35,10 @@ impl From<crate::W<HOST_SLC_APBWIN_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC_APBWIN_ADDR` reader - "]
-pub type HOST_SLC_APBWIN_ADDR_R = crate::FieldReader<u32, u32>;
+pub type HOST_SLC_APBWIN_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `HOST_SLC_APBWIN_ADDR` writer - "]
 pub type HOST_SLC_APBWIN_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, HOST_SLC_APBWIN_CONF_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, HOST_SLC_APBWIN_CONF_SPEC, 28, O, u32>;
 #[doc = "Field `HOST_SLC_APBWIN_WR` reader - "]
 pub type HOST_SLC_APBWIN_WR_R = crate::BitReader;
 #[doc = "Field `HOST_SLC_APBWIN_WR` writer - "]

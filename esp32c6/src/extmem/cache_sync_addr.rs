@@ -35,10 +35,10 @@ impl From<crate::W<CACHE_SYNC_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_SYNC_ADDR` reader - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
-pub type CACHE_SYNC_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CACHE_SYNC_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_SYNC_ADDR` writer - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
 pub type CACHE_SYNC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CACHE_SYNC_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CACHE_SYNC_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
     #[inline(always)]

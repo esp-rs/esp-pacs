@@ -35,10 +35,10 @@ impl From<crate::W<CORE_0_AREA_PIF_1_MIN_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_AREA_PIF_1_MIN` reader - Core0 PIF region1 start addr"]
-pub type CORE_0_AREA_PIF_1_MIN_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_AREA_PIF_1_MIN_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_AREA_PIF_1_MIN` writer - Core0 PIF region1 start addr"]
 pub type CORE_0_AREA_PIF_1_MIN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_AREA_PIF_1_MIN_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_0_AREA_PIF_1_MIN_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core0 PIF region1 start addr"]
     #[inline(always)]

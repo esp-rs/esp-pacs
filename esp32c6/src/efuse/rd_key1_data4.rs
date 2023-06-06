@@ -14,7 +14,7 @@ impl From<crate::R<RD_KEY1_DATA4_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY1_DATA4` reader - Stores the fourth 32 bits of KEY1."]
-pub type KEY1_DATA4_R = crate::FieldReader<u32, u32>;
+pub type KEY1_DATA4_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the fourth 32 bits of KEY1."]
     #[inline(always)]

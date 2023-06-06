@@ -38,7 +38,7 @@ pub type FLASH_ECC_EN_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME` reader - Set this bit to force ROM code to send a resume command during SPI boot."]
 pub type FORCE_SEND_RESUME_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION` reader - Secure version (used by ESP-IDF anti-rollback feature)."]
-pub type SECURE_VERSION_R = crate::FieldReader<u16, u16>;
+pub type SECURE_VERSION_R = crate::FieldReader<u16>;
 #[doc = "Field `RPT4_RESERVED1` reader - Reserved (used for four backups method)."]
 pub type RPT4_RESERVED1_R = crate::FieldReader;
 impl R {

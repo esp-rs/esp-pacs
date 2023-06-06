@@ -14,7 +14,7 @@ impl From<crate::R<CAP_CH0_SPEC>> for R {
     }
 }
 #[doc = "Field `CAP0_VALUE` reader - Value of last capture on channel 0"]
-pub type CAP0_VALUE_R = crate::FieldReader<u32, u32>;
+pub type CAP0_VALUE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Value of last capture on channel 0"]
     #[inline(always)]

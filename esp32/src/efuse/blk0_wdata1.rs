@@ -35,10 +35,9 @@ impl From<crate::W<BLK0_WDATA1_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_MAC_CRC_LOW` reader - program for low 32bit WIFI_MAC_Address"]
-pub type WIFI_MAC_CRC_LOW_R = crate::FieldReader<u32, u32>;
+pub type WIFI_MAC_CRC_LOW_R = crate::FieldReader<u32>;
 #[doc = "Field `WIFI_MAC_CRC_LOW` writer - program for low 32bit WIFI_MAC_Address"]
-pub type WIFI_MAC_CRC_LOW_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BLK0_WDATA1_SPEC, 32, O, u32, u32>;
+pub type WIFI_MAC_CRC_LOW_W<'a, const O: u8> = crate::FieldWriter<'a, BLK0_WDATA1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - program for low 32bit WIFI_MAC_Address"]
     #[inline(always)]

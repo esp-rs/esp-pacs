@@ -35,9 +35,9 @@ impl From<crate::W<SLAVE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_ADDR` reader - local slave address"]
-pub type SLAVE_ADDR_R = crate::FieldReader<u16, u16>;
+pub type SLAVE_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SLAVE_ADDR` writer - local slave address"]
-pub type SLAVE_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_ADDR_SPEC, 15, O, u16, u16>;
+pub type SLAVE_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE_ADDR_SPEC, 15, O, u16>;
 #[doc = "Field `_10BIT` reader - Set if local slave address is 10-bit"]
 pub type _10BIT_R = crate::BitReader;
 #[doc = "Field `_10BIT` writer - Set if local slave address is 10-bit"]

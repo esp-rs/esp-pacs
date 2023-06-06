@@ -35,9 +35,9 @@ impl From<crate::W<WDTWPROTECT_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_WKEY` reader - If change its value from default then write protection is on."]
-pub type WDT_WKEY_R = crate::FieldReader<u32, u32>;
+pub type WDT_WKEY_R = crate::FieldReader<u32>;
 #[doc = "Field `WDT_WKEY` writer - If change its value from default then write protection is on."]
-pub type WDT_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, WDTWPROTECT_SPEC, 32, O, u32, u32>;
+pub type WDT_WKEY_W<'a, const O: u8> = crate::FieldWriter<'a, WDTWPROTECT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - If change its value from default then write protection is on."]
     #[inline(always)]

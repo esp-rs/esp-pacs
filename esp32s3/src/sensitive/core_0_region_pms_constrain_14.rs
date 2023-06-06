@@ -35,10 +35,10 @@ impl From<crate::W<CORE_0_REGION_PMS_CONSTRAIN_14_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_ADDR_11` reader - Region 10 end address for core0."]
-pub type CORE_0_REGION_PMS_CONSTRAIN_ADDR_11_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_REGION_PMS_CONSTRAIN_ADDR_11_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_0_REGION_PMS_CONSTRAIN_ADDR_11` writer - Region 10 end address for core0."]
 pub type CORE_0_REGION_PMS_CONSTRAIN_ADDR_11_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_0_REGION_PMS_CONSTRAIN_14_SPEC, 30, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_0_REGION_PMS_CONSTRAIN_14_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29 - Region 10 end address for core0."]
     #[inline(always)]

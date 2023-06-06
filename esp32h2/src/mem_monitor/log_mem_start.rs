@@ -35,10 +35,9 @@ impl From<crate::W<LOG_MEM_START_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_START` reader - the start address of writing logging message"]
-pub type LOG_MEM_START_R = crate::FieldReader<u32, u32>;
+pub type LOG_MEM_START_R = crate::FieldReader<u32>;
 #[doc = "Field `LOG_MEM_START` writer - the start address of writing logging message"]
-pub type LOG_MEM_START_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LOG_MEM_START_SPEC, 32, O, u32, u32>;
+pub type LOG_MEM_START_W<'a, const O: u8> = crate::FieldWriter<'a, LOG_MEM_START_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - the start address of writing logging message"]
     #[inline(always)]

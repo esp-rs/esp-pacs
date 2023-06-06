@@ -35,13 +35,13 @@ impl From<crate::W<HCTSIZ3_SPEC>> for W {
     }
 }
 #[doc = "Field `H_XFERSIZE3` reader - "]
-pub type H_XFERSIZE3_R = crate::FieldReader<u32, u32>;
+pub type H_XFERSIZE3_R = crate::FieldReader<u32>;
 #[doc = "Field `H_XFERSIZE3` writer - "]
-pub type H_XFERSIZE3_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ3_SPEC, 19, O, u32, u32>;
+pub type H_XFERSIZE3_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ3_SPEC, 19, O, u32>;
 #[doc = "Field `H_PKTCNT3` reader - "]
-pub type H_PKTCNT3_R = crate::FieldReader<u16, u16>;
+pub type H_PKTCNT3_R = crate::FieldReader<u16>;
 #[doc = "Field `H_PKTCNT3` writer - "]
-pub type H_PKTCNT3_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ3_SPEC, 10, O, u16, u16>;
+pub type H_PKTCNT3_W<'a, const O: u8> = crate::FieldWriter<'a, HCTSIZ3_SPEC, 10, O, u16>;
 #[doc = "Field `H_PID3` reader - "]
 pub type H_PID3_R = crate::FieldReader;
 #[doc = "Field `H_PID3` writer - "]

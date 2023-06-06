@@ -35,9 +35,9 @@ impl From<crate::W<APB_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_START_ADDR` reader - x"]
-pub type APB_START_ADDR_R = crate::FieldReader<u32, u32>;
+pub type APB_START_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `APB_START_ADDR` writer - x"]
-pub type APB_START_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADDR_SPEC, 32, O, u32, u32>;
+pub type APB_START_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, APB_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]

@@ -35,10 +35,9 @@ impl From<crate::W<MMU_IA_INT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `MMU_IA_INT_EN` reader - "]
-pub type MMU_IA_INT_EN_R = crate::FieldReader<u32, u32>;
+pub type MMU_IA_INT_EN_R = crate::FieldReader<u32>;
 #[doc = "Field `MMU_IA_INT_EN` writer - "]
-pub type MMU_IA_INT_EN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MMU_IA_INT_EN_SPEC, 24, O, u32, u32>;
+pub type MMU_IA_INT_EN_W<'a, const O: u8> = crate::FieldWriter<'a, MMU_IA_INT_EN_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]

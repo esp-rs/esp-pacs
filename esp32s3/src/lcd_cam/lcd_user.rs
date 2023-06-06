@@ -35,10 +35,9 @@ impl From<crate::W<LCD_USER_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_DOUT_CYCLELEN` reader - The output data cycles minus 1 of LCD module."]
-pub type LCD_DOUT_CYCLELEN_R = crate::FieldReader<u16, u16>;
+pub type LCD_DOUT_CYCLELEN_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_DOUT_CYCLELEN` writer - The output data cycles minus 1 of LCD module."]
-pub type LCD_DOUT_CYCLELEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LCD_USER_SPEC, 13, O, u16, u16>;
+pub type LCD_DOUT_CYCLELEN_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_USER_SPEC, 13, O, u16>;
 #[doc = "Field `LCD_ALWAYS_OUT_EN` reader - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
 pub type LCD_ALWAYS_OUT_EN_R = crate::BitReader;
 #[doc = "Field `LCD_ALWAYS_OUT_EN` writer - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]

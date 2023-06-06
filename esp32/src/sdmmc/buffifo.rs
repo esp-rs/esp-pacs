@@ -35,9 +35,9 @@ impl From<crate::W<BUFFIFO_SPEC>> for W {
     }
 }
 #[doc = "Field `BUFFIFO` reader - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
-pub type BUFFIFO_R = crate::FieldReader<u32, u32>;
+pub type BUFFIFO_R = crate::FieldReader<u32>;
 #[doc = "Field `BUFFIFO` writer - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
-pub type BUFFIFO_W<'a, const O: u8> = crate::FieldWriter<'a, BUFFIFO_SPEC, 32, O, u32, u32>;
+pub type BUFFIFO_W<'a, const O: u8> = crate::FieldWriter<'a, BUFFIFO_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
     #[inline(always)]

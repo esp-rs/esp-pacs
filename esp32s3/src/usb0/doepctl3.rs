@@ -35,7 +35,7 @@ impl From<crate::W<DOEPCTL3_SPEC>> for W {
     }
 }
 #[doc = "Field `MPS3` reader - "]
-pub type MPS3_R = crate::FieldReader<u16, u16>;
+pub type MPS3_R = crate::FieldReader<u16>;
 #[doc = "Field `USBACTEP3` reader - "]
 pub type USBACTEP3_R = crate::BitReader;
 #[doc = "Field `NAKSTS3` reader - "]

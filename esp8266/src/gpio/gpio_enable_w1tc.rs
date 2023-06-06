@@ -21,7 +21,7 @@ impl From<crate::W<GPIO_ENABLE_W1TC_SPEC>> for W {
 }
 #[doc = "Field `GPIO_ENABLE_DATA_W1TC` writer - Writing 1 into a bit in this register will clear the related bit in GPIO_ENABLE_DATA"]
 pub type GPIO_ENABLE_DATA_W1TC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, GPIO_ENABLE_W1TC_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, GPIO_ENABLE_W1TC_SPEC, 16, O, u16>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<GPIO_ENABLE_W1TC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

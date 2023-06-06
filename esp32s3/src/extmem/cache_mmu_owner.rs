@@ -35,10 +35,10 @@ impl From<crate::W<CACHE_MMU_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
-pub type CACHE_MMU_OWNER_R = crate::FieldReader<u32, u32>;
+pub type CACHE_MMU_OWNER_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_MMU_OWNER` writer - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
 pub type CACHE_MMU_OWNER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CACHE_MMU_OWNER_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, CACHE_MMU_OWNER_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<OUTLINK_DSCR_BF0_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_OUTLINK_DSCR_BF0` reader - The content of next out descriptor pointer."]
-pub type DMA_OUTLINK_DSCR_BF0_R = crate::FieldReader<u32, u32>;
+pub type DMA_OUTLINK_DSCR_BF0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of next out descriptor pointer."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` reader - need_des"]
-pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_R = crate::FieldReader<u32, u32>;
+pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` writer - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DATE_SPEC, 28, O, u32, u32>;
+    crate::FieldWriter<'a, DATE_SPEC, 28, O, u32>;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` reader - need_des"]
 pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R = crate::BitReader;
 #[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` writer - need_des"]

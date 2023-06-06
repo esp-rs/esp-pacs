@@ -35,9 +35,9 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_SEL` reader - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
-pub type OUT_SEL_R = crate::FieldReader<u16, u16>;
+pub type OUT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `OUT_SEL` writer - The value of the bits: 0&lt;=s&lt;=256. Set the value to select output signal. s=0-255: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=256: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
-pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16, u16>;
+pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16>;
 #[doc = "Field `INV_SEL` reader - set this bit to invert output signal.1:invert.0:not invert."]
 pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - set this bit to invert output signal.1:invert.0:not invert."]

@@ -14,7 +14,7 @@ impl From<crate::R<H__SPEC>> for R {
     }
 }
 #[doc = "Field `H_0` reader - GCM hash subkey"]
-pub type H_0_R = crate::FieldReader<u32, u32>;
+pub type H_0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - GCM hash subkey"]
     #[inline(always)]

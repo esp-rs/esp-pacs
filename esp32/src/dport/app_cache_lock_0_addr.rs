@@ -35,10 +35,9 @@ impl From<crate::W<APP_CACHE_LOCK_0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE` reader - "]
-pub type PRE_R = crate::FieldReader<u16, u16>;
+pub type PRE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRE` writer - "]
-pub type PRE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APP_CACHE_LOCK_0_ADDR_SPEC, 14, O, u16, u16>;
+pub type PRE_W<'a, const O: u8> = crate::FieldWriter<'a, APP_CACHE_LOCK_0_ADDR_SPEC, 14, O, u16>;
 #[doc = "Field `MIN` reader - "]
 pub type MIN_R = crate::FieldReader;
 #[doc = "Field `MIN` writer - "]

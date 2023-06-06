@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_XTS_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_XTS_DATE` reader - This bits stores the last modified-time of manual encryption feature."]
-pub type SPI_XTS_DATE_R = crate::FieldReader<u32, u32>;
+pub type SPI_XTS_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_XTS_DATE` writer - This bits stores the last modified-time of manual encryption feature."]
 pub type SPI_XTS_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_XTS_DATE_SPEC, 30, O, u32, u32>;
+    crate::FieldWriter<'a, SPI_MEM_XTS_DATE_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
     #[inline(always)]

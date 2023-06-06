@@ -35,10 +35,9 @@ impl From<crate::W<LPCK_DIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `LPCK_DIV_NUM` reader - This field is used to set the integer number of the divider value."]
-pub type LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type LPCK_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `LPCK_DIV_NUM` writer - This field is used to set the integer number of the divider value."]
-pub type LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
+pub type LPCK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, LPCK_DIV_INT_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]

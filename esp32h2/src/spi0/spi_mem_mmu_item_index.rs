@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_MMU_ITEM_INDEX_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MMU_ITEM_INDEX` reader - MSPI-MMU item index"]
-pub type SPI_MMU_ITEM_INDEX_R = crate::FieldReader<u32, u32>;
+pub type SPI_MMU_ITEM_INDEX_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MMU_ITEM_INDEX` writer - MSPI-MMU item index"]
 pub type SPI_MMU_ITEM_INDEX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_MMU_ITEM_INDEX_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, SPI_MEM_MMU_ITEM_INDEX_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - MSPI-MMU item index"]
     #[inline(always)]

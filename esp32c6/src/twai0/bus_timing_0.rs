@@ -35,9 +35,9 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_PRESC` reader - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
-pub type BAUD_PRESC_R = crate::FieldReader<u16, u16>;
+pub type BAUD_PRESC_R = crate::FieldReader<u16>;
 #[doc = "Field `BAUD_PRESC` writer - The period of the TWAI system clock is programmable and determines the individual bit timing. Software has R/W permission in reset mode and RO permission in operation mode."]
-pub type BAUD_PRESC_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 14, O, u16, u16>;
+pub type BAUD_PRESC_W<'a, const O: u8> = crate::FieldWriter<'a, BUS_TIMING_0_SPEC, 14, O, u16>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - The synchronization jump width defines the maximum number of clock cycles a bit period may be shortened or lengthened. Software has R/W permission in reset mode and RO in operation mode."]
 pub type SYNC_JUMP_WIDTH_R = crate::FieldReader;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - The synchronization jump width defines the maximum number of clock cycles a bit period may be shortened or lengthened. Software has R/W permission in reset mode and RO in operation mode."]

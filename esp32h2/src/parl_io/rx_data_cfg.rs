@@ -35,9 +35,9 @@ impl From<crate::W<RX_DATA_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_BITLEN` reader - Configures expected byte number of received data."]
-pub type RX_BITLEN_R = crate::FieldReader<u32, u32>;
+pub type RX_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `RX_BITLEN` writer - Configures expected byte number of received data."]
-pub type RX_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, RX_DATA_CFG_SPEC, 19, O, u32, u32>;
+pub type RX_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, RX_DATA_CFG_SPEC, 19, O, u32>;
 #[doc = "Field `RX_DATA_ORDER_INV` reader - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]
 pub type RX_DATA_ORDER_INV_R = crate::BitReader;
 #[doc = "Field `RX_DATA_ORDER_INV` writer - Set this bit to invert bit order of one byte sent from RX_FIFO to DMA."]

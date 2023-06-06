@@ -47,9 +47,9 @@ pub type SPI_SPICLK_PAD_DRV_CTL_EN_R = crate::BitReader;
 #[doc = "Field `SPI_SPICLK_PAD_DRV_CTL_EN` writer - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
 pub type SPI_SPICLK_PAD_DRV_CTL_EN_W<'a, const O: u8> = crate::BitWriter<'a, DATE_SPEC, O>;
 #[doc = "Field `DATE` reader - SPI register version."]
-pub type DATE_R = crate::FieldReader<u32, u32>;
+pub type DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `DATE` writer - SPI register version."]
-pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 23, O, u32, u32>;
+pub type DATE_W<'a, const O: u8> = crate::FieldWriter<'a, DATE_SPEC, 23, O, u32>;
 impl R {
     #[doc = "Bits 0:1 - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]

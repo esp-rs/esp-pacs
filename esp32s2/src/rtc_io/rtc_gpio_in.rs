@@ -14,7 +14,7 @@ impl From<crate::R<RTC_GPIO_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_IN_NEXT` reader - GPIO0 ~ 21 input value. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. Each bit represents a pad input value, 1 for high level, and 0 for low level."]
-pub type GPIO_IN_NEXT_R = crate::FieldReader<u32, u32>;
+pub type GPIO_IN_NEXT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 input value. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. Each bit represents a pad input value, 1 for high level, and 0 for low level."]
     #[inline(always)]

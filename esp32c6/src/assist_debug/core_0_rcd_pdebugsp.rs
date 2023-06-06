@@ -14,7 +14,7 @@ impl From<crate::R<CORE_0_RCD_PDEBUGSP_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_RCD_PDEBUGSP` reader - recorded sp"]
-pub type CORE_0_RCD_PDEBUGSP_R = crate::FieldReader<u32, u32>;
+pub type CORE_0_RCD_PDEBUGSP_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - recorded sp"]
     #[inline(always)]

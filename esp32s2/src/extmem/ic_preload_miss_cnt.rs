@@ -14,7 +14,7 @@ impl From<crate::R<IC_PRELOAD_MISS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IC_PRELOAD_MISS_CNT` reader - The bits are used to count the number of missed pre-load which include manual pre-load and conditional pre-load."]
-pub type IC_PRELOAD_MISS_CNT_R = crate::FieldReader<u16, u16>;
+pub type IC_PRELOAD_MISS_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to count the number of missed pre-load which include manual pre-load and conditional pre-load."]
     #[inline(always)]

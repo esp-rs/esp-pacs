@@ -45,15 +45,15 @@ pub type VDDBAT_CNT_CLR_R = crate::BitReader;
 #[doc = "Field `VDDBAT_CNT_CLR` writer - need_des"]
 pub type VDDBAT_CNT_CLR_W<'a, const O: u8> = crate::BitWriter<'a, VDDBAT_BOD_CNTL_SPEC, O>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` reader - need_des"]
-pub type VDDBAT_UPVOLTAGE_TARGET_R = crate::FieldReader<u16, u16>;
+pub type VDDBAT_UPVOLTAGE_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `VDDBAT_UPVOLTAGE_TARGET` writer - need_des"]
 pub type VDDBAT_UPVOLTAGE_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` reader - need_des"]
-pub type VDDBAT_UNDERVOLTAGE_TARGET_R = crate::FieldReader<u16, u16>;
+pub type VDDBAT_UNDERVOLTAGE_TARGET_R = crate::FieldReader<u16>;
 #[doc = "Field `VDDBAT_UNDERVOLTAGE_TARGET` writer - need_des"]
 pub type VDDBAT_UNDERVOLTAGE_TARGET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16, u16>;
+    crate::FieldWriter<'a, VDDBAT_BOD_CNTL_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]

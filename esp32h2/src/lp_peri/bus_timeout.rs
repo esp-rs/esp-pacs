@@ -35,10 +35,10 @@ impl From<crate::W<BUS_TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` reader - need_des"]
-pub type LP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16, u16>;
+pub type LP_PERI_TIMEOUT_THRES_R = crate::FieldReader<u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_THRES` writer - need_des"]
 pub type LP_PERI_TIMEOUT_THRES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BUS_TIMEOUT_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, BUS_TIMEOUT_SPEC, 16, O, u16>;
 #[doc = "Field `LP_PERI_TIMEOUT_INT_CLEAR` writer - need_des"]
 pub type LP_PERI_TIMEOUT_INT_CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, BUS_TIMEOUT_SPEC, O>;
 #[doc = "Field `LP_PERI_TIMEOUT_PROTECT_EN` reader - need_des"]

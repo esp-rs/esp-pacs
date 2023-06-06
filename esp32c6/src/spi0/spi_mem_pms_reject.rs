@@ -35,7 +35,7 @@ impl From<crate::W<SPI_MEM_PMS_REJECT_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_REJECT_ADDR` reader - This bits show the first SPI1 access error address. It is cleared by when SPI_MEM_PMS_REJECT_INT_CLR bit is set."]
-pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_PM_EN` reader - Set this bit to enable SPI0/1 transfer permission control function."]
 pub type SPI_MEM_PM_EN_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_PM_EN` writer - Set this bit to enable SPI0/1 transfer permission control function."]

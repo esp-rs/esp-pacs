@@ -14,7 +14,7 @@ impl From<crate::R<L2_CACHE_PRELOCK_SCT0_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_PRELOCK_SCT0_ADDR` reader - Those bits are used to configure the start virtual address of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOCK_SCT0_SIZE_REG"]
-pub type L2_CACHE_PRELOCK_SCT0_ADDR_R = crate::FieldReader<u32, u32>;
+pub type L2_CACHE_PRELOCK_SCT0_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section of prelock on L2-Cache, which should be used together with L2_CACHE_PRELOCK_SCT0_SIZE_REG"]
     #[inline(always)]

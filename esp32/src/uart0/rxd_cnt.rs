@@ -14,7 +14,7 @@ impl From<crate::R<RXD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `RXD_EDGE_CNT` reader - This register stores the count of rxd edge change. it is used in baudrate-detect process."]
-pub type RXD_EDGE_CNT_R = crate::FieldReader<u16, u16>;
+pub type RXD_EDGE_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the count of rxd edge change. it is used in baudrate-detect process."]
     #[inline(always)]

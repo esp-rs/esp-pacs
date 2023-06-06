@@ -35,10 +35,10 @@ impl From<crate::W<PRO_IRAM0_3_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_IRAM0_RTCFAST_SPLTADDR` reader - Configure the split address of RTC FAST for IBUS access."]
-pub type PRO_IRAM0_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
+pub type PRO_IRAM0_RTCFAST_SPLTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_SPLTADDR` writer - Configure the split address of RTC FAST for IBUS access."]
 pub type PRO_IRAM0_RTCFAST_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_IRAM0_3_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_IRAM0_3_SPEC, 11, O, u16>;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_F` reader - Setting to 1 grants IBUS permission to fetch RTC FAST low address region."]
 pub type PRO_IRAM0_RTCFAST_L_F_R = crate::BitReader;
 #[doc = "Field `PRO_IRAM0_RTCFAST_L_F` writer - Setting to 1 grants IBUS permission to fetch RTC FAST low address region."]

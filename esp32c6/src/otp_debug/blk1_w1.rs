@@ -14,7 +14,7 @@ impl From<crate::R<BLK1_W1_SPEC>> for R {
     }
 }
 #[doc = "Field `BLOCK1_W1` reader - Otp block1 word1 data."]
-pub type BLOCK1_W1_R = crate::FieldReader<u32, u32>;
+pub type BLOCK1_W1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Otp block1 word1 data."]
     #[inline(always)]

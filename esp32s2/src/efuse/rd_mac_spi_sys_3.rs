@@ -14,9 +14,9 @@ impl From<crate::R<RD_MAC_SPI_SYS_3_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_PAD_CONF_2` reader - Stores the second part of SPI_PAD_CONF."]
-pub type SPI_PAD_CONF_2_R = crate::FieldReader<u32, u32>;
+pub type SPI_PAD_CONF_2_R = crate::FieldReader<u32>;
 #[doc = "Field `SYS_DATA_PART0_0` reader - Stores the zeroth part of the zeroth part of system data."]
-pub type SYS_DATA_PART0_0_R = crate::FieldReader<u16, u16>;
+pub type SYS_DATA_PART0_0_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:17 - Stores the second part of SPI_PAD_CONF."]
     #[inline(always)]

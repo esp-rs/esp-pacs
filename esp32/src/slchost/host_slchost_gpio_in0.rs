@@ -14,7 +14,7 @@ impl From<crate::R<HOST_SLCHOST_GPIO_IN0_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_GPIO_SDIO_IN0` reader - "]
-pub type HOST_GPIO_SDIO_IN0_R = crate::FieldReader<u32, u32>;
+pub type HOST_GPIO_SDIO_IN0_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

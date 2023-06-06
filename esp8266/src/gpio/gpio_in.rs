@@ -35,13 +35,13 @@ impl From<crate::W<GPIO_IN_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_IN_DATA` reader - The values of the GPIO pins when the GPIO pin is set as input."]
-pub type GPIO_IN_DATA_R = crate::FieldReader<u16, u16>;
+pub type GPIO_IN_DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_IN_DATA` writer - The values of the GPIO pins when the GPIO pin is set as input."]
-pub type GPIO_IN_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16, u16>;
+pub type GPIO_IN_DATA_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16>;
 #[doc = "Field `GPIO_STRAPPING` reader - The values of the strapping pins."]
-pub type GPIO_STRAPPING_R = crate::FieldReader<u16, u16>;
+pub type GPIO_STRAPPING_R = crate::FieldReader<u16>;
 #[doc = "Field `GPIO_STRAPPING` writer - The values of the strapping pins."]
-pub type GPIO_STRAPPING_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16, u16>;
+pub type GPIO_STRAPPING_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_IN_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The values of the GPIO pins when the GPIO pin is set as input."]
     #[inline(always)]

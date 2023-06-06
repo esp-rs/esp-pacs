@@ -35,10 +35,9 @@ impl From<crate::W<SPI_MEM_DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_DATE` reader - SPI0 register version."]
-pub type SPI_MEM_DATE_R = crate::FieldReader<u32, u32>;
+pub type SPI_MEM_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SPI_MEM_DATE` writer - SPI0 register version."]
-pub type SPI_MEM_DATE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_DATE_SPEC, 28, O, u32, u32>;
+pub type SPI_MEM_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_MEM_DATE_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27 - SPI0 register version."]
     #[inline(always)]

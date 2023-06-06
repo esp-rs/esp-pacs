@@ -35,9 +35,9 @@ impl From<crate::W<HFIR_SPEC>> for W {
     }
 }
 #[doc = "Field `FRINT` reader - "]
-pub type FRINT_R = crate::FieldReader<u16, u16>;
+pub type FRINT_R = crate::FieldReader<u16>;
 #[doc = "Field `FRINT` writer - "]
-pub type FRINT_W<'a, const O: u8> = crate::FieldWriter<'a, HFIR_SPEC, 16, O, u16, u16>;
+pub type FRINT_W<'a, const O: u8> = crate::FieldWriter<'a, HFIR_SPEC, 16, O, u16>;
 #[doc = "Field `HFIRRLDCTRL` reader - "]
 pub type HFIRRLDCTRL_R = crate::BitReader;
 #[doc = "Field `HFIRRLDCTRL` writer - "]

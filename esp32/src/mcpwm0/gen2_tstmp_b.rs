@@ -35,9 +35,9 @@ impl From<crate::W<GEN2_TSTMP_B_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN2_B` reader - "]
-pub type GEN2_B_R = crate::FieldReader<u16, u16>;
+pub type GEN2_B_R = crate::FieldReader<u16>;
 #[doc = "Field `GEN2_B` writer - "]
-pub type GEN2_B_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_TSTMP_B_SPEC, 16, O, u16, u16>;
+pub type GEN2_B_W<'a, const O: u8> = crate::FieldWriter<'a, GEN2_TSTMP_B_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

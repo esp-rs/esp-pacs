@@ -35,13 +35,13 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - An UART_RXFIFO_FULL_INT interrupt is generated when the receiver receives more data than this register’s value."]
-pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u16, u16>;
+pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - An UART_RXFIFO_FULL_INT interrupt is generated when the receiver receives more data than this register’s value."]
-pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16, u16>;
+pub type RXFIFO_FULL_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - An UART_TXFIFO_EMPTY_INT interrupt is generated when the number of data bytes in TX FIFO is less than this register's value."]
-pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u16, u16>;
+pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u16>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - An UART_TXFIFO_EMPTY_INT interrupt is generated when the number of data bytes in TX FIFO is less than this register's value."]
-pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16, u16>;
+pub type TXFIFO_EMPTY_THRHD_W<'a, const O: u8> = crate::FieldWriter<'a, CONF1_SPEC, 9, O, u16>;
 #[doc = "Field `RX_TOUT_FLOW_DIS` reader - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
 pub type RX_TOUT_FLOW_DIS_R = crate::BitReader;
 #[doc = "Field `RX_TOUT_FLOW_DIS` writer - Set this bit to stop accumulating idle_cnt when hardware flow control works."]

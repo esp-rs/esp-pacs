@@ -14,9 +14,9 @@ impl From<crate::R<MEM_TX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_TX_WADDR` reader - This register stores the offset address in TX FIFO when software writes TX FIFO via APB."]
-pub type APB_TX_WADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_TX_WADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_RADDR` reader - This register stores the offset address in TX FIFO when TX FSM reads data via Tx_FIFO_Ctrl."]
-pub type TX_RADDR_R = crate::FieldReader<u16, u16>;
+pub type TX_RADDR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the offset address in TX FIFO when software writes TX FIFO via APB."]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<GSNPSID_SPEC>> for R {
     }
 }
 #[doc = "Field `SYNOPSYSID` reader - "]
-pub type SYNOPSYSID_R = crate::FieldReader<u32, u32>;
+pub type SYNOPSYSID_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

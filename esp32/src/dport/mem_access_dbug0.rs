@@ -28,7 +28,7 @@ pub type SHARE_ROM_IA_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_MMU_AD` reader - "]
 pub type INTERNAL_SRAM_MMU_AD_R = crate::FieldReader;
 #[doc = "Field `INTERNAL_SRAM_IA` reader - "]
-pub type INTERNAL_SRAM_IA_R = crate::FieldReader<u16, u16>;
+pub type INTERNAL_SRAM_IA_R = crate::FieldReader<u16>;
 #[doc = "Field `INTERNAL_SRAM_MMU_MULTI_HIT` reader - "]
 pub type INTERNAL_SRAM_MMU_MULTI_HIT_R = crate::FieldReader;
 impl R {

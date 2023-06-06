@@ -35,19 +35,17 @@ impl From<crate::W<TIMER4_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_TOP_WAIT_TIMER` reader - cpu top power domain wakeup time"]
-pub type CPU_TOP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type CPU_TOP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `CPU_TOP_WAIT_TIMER` writer - cpu top power domain wakeup time"]
-pub type CPU_TOP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16, u16>;
+pub type CPU_TOP_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16>;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` reader - cpu top power domain power on time"]
 pub type CPU_TOP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `CPU_TOP_POWERUP_TIMER` writer - cpu top power domain power on time"]
 pub type CPU_TOP_POWERUP_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 7, O>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` reader - digital wrap power domain wakeup time"]
-pub type DG_WRAP_WAIT_TIMER_R = crate::FieldReader<u16, u16>;
+pub type DG_WRAP_WAIT_TIMER_R = crate::FieldReader<u16>;
 #[doc = "Field `DG_WRAP_WAIT_TIMER` writer - digital wrap power domain wakeup time"]
-pub type DG_WRAP_WAIT_TIMER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16, u16>;
+pub type DG_WRAP_WAIT_TIMER_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER4_SPEC, 9, O, u16>;
 #[doc = "Field `DG_WRAP_POWERUP_TIMER` reader - digital wrap power domain power on time"]
 pub type DG_WRAP_POWERUP_TIMER_R = crate::FieldReader;
 #[doc = "Field `DG_WRAP_POWERUP_TIMER` writer - digital wrap power domain power on time"]

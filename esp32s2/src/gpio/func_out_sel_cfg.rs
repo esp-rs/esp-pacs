@@ -35,9 +35,9 @@ impl From<crate::W<FUNC_OUT_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_SEL` reader - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
-pub type OUT_SEL_R = crate::FieldReader<u16, u16>;
+pub type OUT_SEL_R = crate::FieldReader<u16>;
 #[doc = "Field `OUT_SEL` writer - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
-pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16, u16>;
+pub type OUT_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, FUNC_OUT_SEL_CFG_SPEC, 9, O, u16>;
 #[doc = "Field `INV_SEL` reader - 0: Do not invert the output value; 1: Invert the output value."]
 pub type INV_SEL_R = crate::BitReader;
 #[doc = "Field `INV_SEL` writer - 0: Do not invert the output value; 1: Invert the output value."]

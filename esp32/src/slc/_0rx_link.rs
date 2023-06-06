@@ -35,10 +35,9 @@ impl From<crate::W<_0RX_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_RXLINK_ADDR` reader - "]
-pub type SLC0_RXLINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type SLC0_RXLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `SLC0_RXLINK_ADDR` writer - "]
-pub type SLC0_RXLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, _0RX_LINK_SPEC, 20, O, u32, u32>;
+pub type SLC0_RXLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, _0RX_LINK_SPEC, 20, O, u32>;
 #[doc = "Field `SLC0_RXLINK_STOP` reader - "]
 pub type SLC0_RXLINK_STOP_R = crate::BitReader;
 #[doc = "Field `SLC0_RXLINK_STOP` writer - "]

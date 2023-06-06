@@ -35,10 +35,9 @@ impl From<crate::W<DMA_OUT_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR` reader - The address of the first outlink descriptor."]
-pub type OUTLINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUTLINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - The address of the first outlink descriptor."]
-pub type OUTLINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_OUT_LINK_SPEC, 20, O, u32, u32>;
+pub type OUTLINK_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, DMA_OUT_LINK_SPEC, 20, O, u32>;
 #[doc = "Field `OUTLINK_STOP` reader - Set the bit to stop to use outlink descriptor."]
 pub type OUTLINK_STOP_R = crate::BitReader;
 #[doc = "Field `OUTLINK_STOP` writer - Set the bit to stop to use outlink descriptor."]

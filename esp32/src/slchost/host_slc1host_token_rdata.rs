@@ -14,11 +14,11 @@ impl From<crate::R<HOST_SLC1HOST_TOKEN_RDATA_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLC1_TOKEN0` reader - "]
-pub type HOST_SLC1_TOKEN0_R = crate::FieldReader<u16, u16>;
+pub type HOST_SLC1_TOKEN0_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLC1_RX_PF_VALID` reader - "]
 pub type HOST_SLC1_RX_PF_VALID_R = crate::BitReader;
 #[doc = "Field `HOST_HOSTSLC1_TOKEN1` reader - "]
-pub type HOST_HOSTSLC1_TOKEN1_R = crate::FieldReader<u16, u16>;
+pub type HOST_HOSTSLC1_TOKEN1_R = crate::FieldReader<u16>;
 #[doc = "Field `HOST_SLC1_RX_PF_EOF` reader - "]
 pub type HOST_SLC1_RX_PF_EOF_R = crate::FieldReader;
 impl R {

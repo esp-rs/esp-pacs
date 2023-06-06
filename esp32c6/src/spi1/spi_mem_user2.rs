@@ -35,10 +35,10 @@ impl From<crate::W<SPI_MEM_USER2_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_USR_COMMAND_VALUE` reader - The value of command."]
-pub type SPI_MEM_USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_USR_COMMAND_VALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_USR_COMMAND_VALUE` writer - The value of command."]
 pub type SPI_MEM_USR_COMMAND_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SPI_MEM_USER2_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, SPI_MEM_USER2_SPEC, 16, O, u16>;
 #[doc = "Field `SPI_MEM_USR_COMMAND_BITLEN` reader - The length in bits of command phase. The register value shall be (bit_num-1)"]
 pub type SPI_MEM_USR_COMMAND_BITLEN_R = crate::FieldReader;
 #[doc = "Field `SPI_MEM_USR_COMMAND_BITLEN` writer - The length in bits of command phase. The register value shall be (bit_num-1)"]

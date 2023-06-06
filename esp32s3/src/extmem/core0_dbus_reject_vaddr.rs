@@ -14,7 +14,7 @@ impl From<crate::R<CORE0_DBUS_REJECT_VADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE0_DBUS_VADDR` reader - The bits are used to indicate the virtual address of CPU access dbus when authentication fail."]
-pub type CORE0_DBUS_VADDR_R = crate::FieldReader<u32, u32>;
+pub type CORE0_DBUS_VADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to indicate the virtual address of CPU access dbus when authentication fail."]
     #[inline(always)]

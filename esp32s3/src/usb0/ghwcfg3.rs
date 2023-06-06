@@ -36,7 +36,7 @@ pub type BCSUPPORT_R = crate::BitReader;
 #[doc = "Field `LPMMODE` reader - "]
 pub type LPMMODE_R = crate::BitReader;
 #[doc = "Field `DFIFODEPTH` reader - "]
-pub type DFIFODEPTH_R = crate::FieldReader<u16, u16>;
+pub type DFIFODEPTH_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

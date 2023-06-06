@@ -35,10 +35,9 @@ impl From<crate::W<MOSI_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_MOSI_DBITLEN` reader - The length in bits of write-data. The register value shall be (bit_num-1)."]
-pub type USR_MOSI_DBITLEN_R = crate::FieldReader<u32, u32>;
+pub type USR_MOSI_DBITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `USR_MOSI_DBITLEN` writer - The length in bits of write-data. The register value shall be (bit_num-1)."]
-pub type USR_MOSI_DBITLEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, MOSI_DLEN_SPEC, 24, O, u32, u32>;
+pub type USR_MOSI_DBITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, MOSI_DLEN_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - The length in bits of write-data. The register value shall be (bit_num-1)."]
     #[inline(always)]

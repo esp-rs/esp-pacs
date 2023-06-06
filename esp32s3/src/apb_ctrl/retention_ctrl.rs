@@ -35,10 +35,10 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` reader - ******* Description ***********"]
-pub type RETENTION_CPU_LINK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type RETENTION_CPU_LINK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` writer - ******* Description ***********"]
 pub type RETENTION_CPU_LINK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 27, O, u32, u32>;
+    crate::FieldWriter<'a, RETENTION_CTRL_SPEC, 27, O, u32>;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` reader - ******* Description ***********"]
 pub type NOBYPASS_CPU_ISO_RST_R = crate::BitReader;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` writer - ******* Description ***********"]

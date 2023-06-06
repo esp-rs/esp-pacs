@@ -38,7 +38,7 @@ pub type FLASH_ECC_EN_ERR_R = crate::BitReader;
 #[doc = "Field `FORCE_SEND_RESUME_ERR` reader - If FORCE_SEND_RESUME is 1, then it indicates a programming error."]
 pub type FORCE_SEND_RESUME_ERR_R = crate::BitReader;
 #[doc = "Field `SECURE_VERSION_ERR` reader - If any bit in SECURE_VERSION is 1, then it indicates a programming error."]
-pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16, u16>;
+pub type SECURE_VERSION_ERR_R = crate::FieldReader<u16>;
 #[doc = "Field `RPT4_RESERVED1_ERR` reader - Reserved."]
 pub type RPT4_RESERVED1_ERR_R = crate::FieldReader;
 impl R {

@@ -14,7 +14,7 @@ impl From<crate::R<L2_CACHE_AUTOLOAD_SCT2_SIZE_SPEC>> for R {
     }
 }
 #[doc = "Field `L2_CACHE_AUTOLOAD_SCT2_SIZE` reader - Those bits are used to configure the size of the third section for autoload operation on L2-Cache. Note that it should be used together with L2_CACHE_AUTOLOAD_SCT2_ADDR and L2_CACHE_AUTOLOAD_SCT2_ENA."]
-pub type L2_CACHE_AUTOLOAD_SCT2_SIZE_R = crate::FieldReader<u32, u32>;
+pub type L2_CACHE_AUTOLOAD_SCT2_SIZE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the third section for autoload operation on L2-Cache. Note that it should be used together with L2_CACHE_AUTOLOAD_SCT2_ADDR and L2_CACHE_AUTOLOAD_SCT2_ENA."]
     #[inline(always)]

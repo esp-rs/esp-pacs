@@ -35,10 +35,10 @@ impl From<crate::W<EDMA_BOUNDARY_0_SPEC>> for W {
     }
 }
 #[doc = "Field `EDMA_BOUNDARY_0` reader - This field is used to configure the boundary 0 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
-pub type EDMA_BOUNDARY_0_R = crate::FieldReader<u16, u16>;
+pub type EDMA_BOUNDARY_0_R = crate::FieldReader<u16>;
 #[doc = "Field `EDMA_BOUNDARY_0` writer - This field is used to configure the boundary 0 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
 pub type EDMA_BOUNDARY_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, EDMA_BOUNDARY_0_SPEC, 14, O, u16, u16>;
+    crate::FieldWriter<'a, EDMA_BOUNDARY_0_SPEC, 14, O, u16>;
 impl R {
     #[doc = "Bits 0:13 - This field is used to configure the boundary 0 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
     #[inline(always)]

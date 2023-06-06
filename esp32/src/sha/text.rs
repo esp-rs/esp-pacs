@@ -35,9 +35,9 @@ impl From<crate::W<TEXT_SPEC>> for W {
     }
 }
 #[doc = "Field `TEXT` reader - SHA Message block and hash result register."]
-pub type TEXT_R = crate::FieldReader<u32, u32>;
+pub type TEXT_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT` writer - SHA Message block and hash result register."]
-pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_SPEC, 32, O, u32, u32>;
+pub type TEXT_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - SHA Message block and hash result register."]
     #[inline(always)]

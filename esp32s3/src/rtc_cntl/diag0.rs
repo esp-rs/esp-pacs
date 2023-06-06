@@ -14,7 +14,7 @@ impl From<crate::R<DIAG0_SPEC>> for R {
     }
 }
 #[doc = "Field `LOW_POWER_DIAG1` reader - No public"]
-pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
+pub type LOW_POWER_DIAG1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - No public"]
     #[inline(always)]

@@ -14,7 +14,7 @@ impl From<crate::R<IN_SUC_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_IN_SUC_EOF_DES_ADDR` reader - The last inlink descriptor address when spi dma produce from_suc_eof."]
-pub type DMA_IN_SUC_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_IN_SUC_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The last inlink descriptor address when spi dma produce from_suc_eof."]
     #[inline(always)]

@@ -14,11 +14,11 @@ impl From<crate::R<CH0STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_RADDR_EX` reader - reg_mem_raddr_ex_ch0."]
-pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
+pub type MEM_RADDR_EX_R = crate::FieldReader<u16>;
 #[doc = "Field `STATE` reader - reg_state_ch0."]
 pub type STATE_R = crate::FieldReader;
 #[doc = "Field `APB_MEM_WADDR` reader - reg_apb_mem_waddr_ch0."]
-pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
+pub type APB_MEM_WADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `APB_MEM_RD_ERR` reader - reg_apb_mem_rd_err_ch0."]
 pub type APB_MEM_RD_ERR_R = crate::BitReader;
 #[doc = "Field `MEM_EMPTY` reader - reg_mem_empty_ch0."]

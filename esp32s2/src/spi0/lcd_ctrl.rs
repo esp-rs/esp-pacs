@@ -35,17 +35,17 @@ impl From<crate::W<LCD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_HB_FRONT` reader - It is the horizontal blank front porch of a frame. Can be configured in CONF state."]
-pub type LCD_HB_FRONT_R = crate::FieldReader<u16, u16>;
+pub type LCD_HB_FRONT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_HB_FRONT` writer - It is the horizontal blank front porch of a frame. Can be configured in CONF state."]
-pub type LCD_HB_FRONT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 11, O, u16, u16>;
+pub type LCD_HB_FRONT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 11, O, u16>;
 #[doc = "Field `LCD_VA_HEIGHT` reader - It is the vertical active height of a frame. Can be configured in CONF state."]
-pub type LCD_VA_HEIGHT_R = crate::FieldReader<u16, u16>;
+pub type LCD_VA_HEIGHT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_VA_HEIGHT` writer - It is the vertical active height of a frame. Can be configured in CONF state."]
-pub type LCD_VA_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 10, O, u16, u16>;
+pub type LCD_VA_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 10, O, u16>;
 #[doc = "Field `LCD_VT_HEIGHT` reader - It is the vertical total height of a frame. Can be configured in CONF state."]
-pub type LCD_VT_HEIGHT_R = crate::FieldReader<u16, u16>;
+pub type LCD_VT_HEIGHT_R = crate::FieldReader<u16>;
 #[doc = "Field `LCD_VT_HEIGHT` writer - It is the vertical total height of a frame. Can be configured in CONF state."]
-pub type LCD_VT_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 10, O, u16, u16>;
+pub type LCD_VT_HEIGHT_W<'a, const O: u8> = crate::FieldWriter<'a, LCD_CTRL_SPEC, 10, O, u16>;
 #[doc = "Field `LCD_MODE_EN` reader - 1: Enable LCD mode output vsync, hsync, de. 0: Disable. Can be configured in CONF state."]
 pub type LCD_MODE_EN_R = crate::BitReader;
 #[doc = "Field `LCD_MODE_EN` writer - 1: Enable LCD mode output vsync, hsync, de. 0: Disable. Can be configured in CONF state."]

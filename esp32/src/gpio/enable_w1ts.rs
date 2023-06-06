@@ -35,10 +35,9 @@ impl From<crate::W<ENABLE_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_DATA_W1TS` reader - GPIO0~31 output enable write 1 to set"]
-pub type ENABLE_DATA_W1TS_R = crate::FieldReader<u32, u32>;
+pub type ENABLE_DATA_W1TS_R = crate::FieldReader<u32>;
 #[doc = "Field `ENABLE_DATA_W1TS` writer - GPIO0~31 output enable write 1 to set"]
-pub type ENABLE_DATA_W1TS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, ENABLE_W1TS_SPEC, 32, O, u32, u32>;
+pub type ENABLE_DATA_W1TS_W<'a, const O: u8> = crate::FieldWriter<'a, ENABLE_W1TS_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - GPIO0~31 output enable write 1 to set"]
     #[inline(always)]

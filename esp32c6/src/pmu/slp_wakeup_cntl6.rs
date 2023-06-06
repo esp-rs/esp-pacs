@@ -35,10 +35,10 @@ impl From<crate::W<SLP_WAKEUP_CNTL6_SPEC>> for W {
     }
 }
 #[doc = "Field `SOC_WAKEUP_WAIT` reader - need_des"]
-pub type SOC_WAKEUP_WAIT_R = crate::FieldReader<u32, u32>;
+pub type SOC_WAKEUP_WAIT_R = crate::FieldReader<u32>;
 #[doc = "Field `SOC_WAKEUP_WAIT` writer - need_des"]
 pub type SOC_WAKEUP_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLP_WAKEUP_CNTL6_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, SLP_WAKEUP_CNTL6_SPEC, 20, O, u32>;
 #[doc = "Field `SOC_WAKEUP_WAIT_CFG` reader - need_des"]
 pub type SOC_WAKEUP_WAIT_CFG_R = crate::FieldReader;
 #[doc = "Field `SOC_WAKEUP_WAIT_CFG` writer - need_des"]

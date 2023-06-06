@@ -35,9 +35,9 @@ impl From<crate::W<SAR_NOUSE_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_NOUSE` reader - "]
-pub type SAR_NOUSE_R = crate::FieldReader<u32, u32>;
+pub type SAR_NOUSE_R = crate::FieldReader<u32>;
 #[doc = "Field `SAR_NOUSE` writer - "]
-pub type SAR_NOUSE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_NOUSE_SPEC, 32, O, u32, u32>;
+pub type SAR_NOUSE_W<'a, const O: u8> = crate::FieldWriter<'a, SAR_NOUSE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

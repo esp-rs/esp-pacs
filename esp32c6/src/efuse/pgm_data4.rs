@@ -35,9 +35,9 @@ impl From<crate::W<PGM_DATA4_SPEC>> for W {
     }
 }
 #[doc = "Field `PGM_DATA_4` reader - Configures the 4th 32-bit data to be programmed."]
-pub type PGM_DATA_4_R = crate::FieldReader<u32, u32>;
+pub type PGM_DATA_4_R = crate::FieldReader<u32>;
 #[doc = "Field `PGM_DATA_4` writer - Configures the 4th 32-bit data to be programmed."]
-pub type PGM_DATA_4_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA4_SPEC, 32, O, u32, u32>;
+pub type PGM_DATA_4_W<'a, const O: u8> = crate::FieldWriter<'a, PGM_DATA4_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Configures the 4th 32-bit data to be programmed."]
     #[inline(always)]

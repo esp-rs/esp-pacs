@@ -35,9 +35,9 @@ impl From<crate::W<FLASH_ACE3_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `S` reader - reg_flash_ace3_addr_s"]
-pub type S_R = crate::FieldReader<u32, u32>;
+pub type S_R = crate::FieldReader<u32>;
 #[doc = "Field `S` writer - reg_flash_ace3_addr_s"]
-pub type S_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_ACE3_ADDR_SPEC, 32, O, u32, u32>;
+pub type S_W<'a, const O: u8> = crate::FieldWriter<'a, FLASH_ACE3_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_flash_ace3_addr_s"]
     #[inline(always)]

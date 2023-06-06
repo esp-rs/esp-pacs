@@ -35,10 +35,10 @@ impl From<crate::W<XTAL32K_CLK_FACTOR_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_CLK_FACTOR` reader - xtal 32k watch dog backup clock factor"]
-pub type XTAL32K_CLK_FACTOR_R = crate::FieldReader<u32, u32>;
+pub type XTAL32K_CLK_FACTOR_R = crate::FieldReader<u32>;
 #[doc = "Field `XTAL32K_CLK_FACTOR` writer - xtal 32k watch dog backup clock factor"]
 pub type XTAL32K_CLK_FACTOR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, XTAL32K_CLK_FACTOR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, XTAL32K_CLK_FACTOR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - xtal 32k watch dog backup clock factor"]
     #[inline(always)]

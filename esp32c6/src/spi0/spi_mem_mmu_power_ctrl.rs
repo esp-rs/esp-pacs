@@ -55,7 +55,7 @@ pub type SPI_MMU_PAGE_SIZE_R = crate::FieldReader;
 pub type SPI_MMU_PAGE_SIZE_W<'a, const O: u8> =
     crate::FieldWriter<'a, SPI_MEM_MMU_POWER_CTRL_SPEC, 2, O>;
 #[doc = "Field `SPI_MEM_AUX_CTRL` reader - MMU PSRAM aux control register"]
-pub type SPI_MEM_AUX_CTRL_R = crate::FieldReader<u16, u16>;
+pub type SPI_MEM_AUX_CTRL_R = crate::FieldReader<u16>;
 #[doc = "Field `SPI_MEM_RDN_ENA` reader - ECO register enable bit"]
 pub type SPI_MEM_RDN_ENA_R = crate::BitReader;
 #[doc = "Field `SPI_MEM_RDN_RESULT` reader - MSPI module clock domain and AXI clock domain ECO register result register"]

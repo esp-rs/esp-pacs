@@ -14,7 +14,7 @@ impl From<crate::R<SAR2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `SARADC_SAR2_STATUS` reader - Need add description"]
-pub type SARADC_SAR2_STATUS_R = crate::FieldReader<u32, u32>;
+pub type SARADC_SAR2_STATUS_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

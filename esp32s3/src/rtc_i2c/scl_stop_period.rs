@@ -35,10 +35,10 @@ impl From<crate::W<SCL_STOP_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_STOP_PERIOD` reader - time period for SCL to stop after I2C end is triggered"]
-pub type SCL_STOP_PERIOD_R = crate::FieldReader<u32, u32>;
+pub type SCL_STOP_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `SCL_STOP_PERIOD` writer - time period for SCL to stop after I2C end is triggered"]
 pub type SCL_STOP_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_STOP_PERIOD_SPEC, 20, O, u32, u32>;
+    crate::FieldWriter<'a, SCL_STOP_PERIOD_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - time period for SCL to stop after I2C end is triggered"]
     #[inline(always)]

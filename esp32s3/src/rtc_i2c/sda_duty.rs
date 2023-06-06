@@ -35,9 +35,9 @@ impl From<crate::W<SDA_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `NUM` reader - time period for SDA to toggle after SCL goes low"]
-pub type NUM_R = crate::FieldReader<u32, u32>;
+pub type NUM_R = crate::FieldReader<u32>;
 #[doc = "Field `NUM` writer - time period for SDA to toggle after SCL goes low"]
-pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_DUTY_SPEC, 20, O, u32, u32>;
+pub type NUM_W<'a, const O: u8> = crate::FieldWriter<'a, SDA_DUTY_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]

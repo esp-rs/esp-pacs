@@ -18,7 +18,7 @@ pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - recorded dma's world status when dma access violated permission"]
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - recorded dma's address bit\\[25:4\\] status when dma access violated permission, real address is 0x3c00_0000+addr*16"]
-pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bit 0 - recorded dma's interrupt status when dma access violated permission"]
     #[inline(always)]

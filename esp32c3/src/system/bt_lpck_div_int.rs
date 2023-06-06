@@ -35,10 +35,10 @@ impl From<crate::W<BT_LPCK_DIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_NUM` reader - reg_bt_lpck_div_num"]
-pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
+pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_NUM` writer - reg_bt_lpck_div_num"]
 pub type BT_LPCK_DIV_NUM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_INT_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - reg_bt_lpck_div_num"]
     #[inline(always)]

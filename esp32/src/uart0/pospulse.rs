@@ -14,7 +14,7 @@ impl From<crate::R<POSPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `POSEDGE_MIN_CNT` reader - This register stores the count of rxd posedge edge. it is used in boudrate-detect process."]
-pub type POSEDGE_MIN_CNT_R = crate::FieldReader<u32, u32>;
+pub type POSEDGE_MIN_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the count of rxd posedge edge. it is used in boudrate-detect process."]
     #[inline(always)]

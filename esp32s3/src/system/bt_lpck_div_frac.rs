@@ -35,15 +35,15 @@ impl From<crate::W<BT_LPCK_DIV_FRAC_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_B` reader - This field is lower power clock frequent division factor b"]
-pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16, u16>;
+pub type BT_LPCK_DIV_B_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_B` writer - This field is lower power clock frequent division factor b"]
 pub type BT_LPCK_DIV_B_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16>;
 #[doc = "Field `BT_LPCK_DIV_A` reader - This field is lower power clock frequent division factor a"]
-pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16, u16>;
+pub type BT_LPCK_DIV_A_R = crate::FieldReader<u16>;
 #[doc = "Field `BT_LPCK_DIV_A` writer - This field is lower power clock frequent division factor a"]
 pub type BT_LPCK_DIV_A_W<'a, const O: u8> =
-    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, BT_LPCK_DIV_FRAC_SPEC, 12, O, u16>;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` reader - Set 1 to select rtc-slow clock as rtc low power clock"]
 pub type LPCLK_SEL_RTC_SLOW_R = crate::BitReader;
 #[doc = "Field `LPCLK_SEL_RTC_SLOW` writer - Set 1 to select rtc-slow clock as rtc low power clock"]

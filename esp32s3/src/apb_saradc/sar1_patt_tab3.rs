@@ -35,10 +35,10 @@ impl From<crate::W<SAR1_PATT_TAB3_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_SAR1_PATT_TAB3` reader - Item 8 ~ 11 for pattern table 1 (each item 6bit)"]
-pub type SARADC_SAR1_PATT_TAB3_R = crate::FieldReader<u32, u32>;
+pub type SARADC_SAR1_PATT_TAB3_R = crate::FieldReader<u32>;
 #[doc = "Field `SARADC_SAR1_PATT_TAB3` writer - Item 8 ~ 11 for pattern table 1 (each item 6bit)"]
 pub type SARADC_SAR1_PATT_TAB3_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SAR1_PATT_TAB3_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, SAR1_PATT_TAB3_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - Item 8 ~ 11 for pattern table 1 (each item 6bit)"]
     #[inline(always)]

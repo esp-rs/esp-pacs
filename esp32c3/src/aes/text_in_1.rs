@@ -35,9 +35,9 @@ impl From<crate::W<TEXT_IN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `TEXT_IN_1` reader - This bits stores text_in_1 that is a part of source text material."]
-pub type TEXT_IN_1_R = crate::FieldReader<u32, u32>;
+pub type TEXT_IN_1_R = crate::FieldReader<u32>;
 #[doc = "Field `TEXT_IN_1` writer - This bits stores text_in_1 that is a part of source text material."]
-pub type TEXT_IN_1_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_IN_1_SPEC, 32, O, u32, u32>;
+pub type TEXT_IN_1_W<'a, const O: u8> = crate::FieldWriter<'a, TEXT_IN_1_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores text_in_1 that is a part of source text material."]
     #[inline(always)]

@@ -39,15 +39,15 @@ pub type RTC_MEM_CRC_START_R = crate::BitReader;
 #[doc = "Field `RTC_MEM_CRC_START` writer - reg_rtc_mem_crc_start"]
 pub type RTC_MEM_CRC_START_W<'a, const O: u8> = crate::BitWriter<'a, RTC_FASTMEM_CONFIG_SPEC, O>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - reg_rtc_mem_crc_addr"]
-pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16, u16>;
+pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - reg_rtc_mem_crc_addr"]
 pub type RTC_MEM_CRC_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - reg_rtc_mem_crc_len"]
-pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16, u16>;
+pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - reg_rtc_mem_crc_len"]
 pub type RTC_MEM_CRC_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, RTC_FASTMEM_CONFIG_SPEC, 11, O, u16>;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - reg_rtc_mem_crc_finish"]
 pub type RTC_MEM_CRC_FINISH_R = crate::BitReader;
 impl R {

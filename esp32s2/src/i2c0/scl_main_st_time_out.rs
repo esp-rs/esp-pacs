@@ -35,10 +35,10 @@ impl From<crate::W<SCL_MAIN_ST_TIME_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_MAIN_ST_TO` reader - The threshold value of SCL_MAIN_FSM state unchanged period."]
-pub type SCL_MAIN_ST_TO_R = crate::FieldReader<u32, u32>;
+pub type SCL_MAIN_ST_TO_R = crate::FieldReader<u32>;
 #[doc = "Field `SCL_MAIN_ST_TO` writer - The threshold value of SCL_MAIN_FSM state unchanged period."]
 pub type SCL_MAIN_ST_TO_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_MAIN_ST_TIME_OUT_SPEC, 24, O, u32, u32>;
+    crate::FieldWriter<'a, SCL_MAIN_ST_TIME_OUT_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - The threshold value of SCL_MAIN_FSM state unchanged period."]
     #[inline(always)]

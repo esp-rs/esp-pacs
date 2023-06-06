@@ -14,7 +14,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_CNT` reader - Stores the number of valid data bytes in RX FIFO."]
-pub type RXFIFO_CNT_R = crate::FieldReader<u16, u16>;
+pub type RXFIFO_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `DSRN` reader - This register represents the level of the internal UART DSR signal."]
 pub type DSRN_R = crate::BitReader;
 #[doc = "Field `CTSN` reader - This register represents the level of the internal UART CTS signal."]
@@ -22,7 +22,7 @@ pub type CTSN_R = crate::BitReader;
 #[doc = "Field `RXD` reader - This register represents the level of the internal UART RXD signal."]
 pub type RXD_R = crate::BitReader;
 #[doc = "Field `TXFIFO_CNT` reader - Stores the number of data bytes in TX FIFO."]
-pub type TXFIFO_CNT_R = crate::FieldReader<u16, u16>;
+pub type TXFIFO_CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `DTRN` reader - This bit represents the level of the internal UART DTR signal."]
 pub type DTRN_R = crate::BitReader;
 #[doc = "Field `RTSN` reader - This bit represents the level of the internal UART RTS signal."]

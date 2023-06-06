@@ -35,9 +35,9 @@ impl From<crate::W<PLAIN__SPEC>> for W {
     }
 }
 #[doc = "Field `PLAIN_0` reader - Stores the nth 32-bit piece of plaintext."]
-pub type PLAIN_0_R = crate::FieldReader<u32, u32>;
+pub type PLAIN_0_R = crate::FieldReader<u32>;
 #[doc = "Field `PLAIN_0` writer - Stores the nth 32-bit piece of plaintext."]
-pub type PLAIN_0_W<'a, const O: u8> = crate::FieldWriter<'a, PLAIN__SPEC, 32, O, u32, u32>;
+pub type PLAIN_0_W<'a, const O: u8> = crate::FieldWriter<'a, PLAIN__SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the nth 32-bit piece of plaintext."]
     #[inline(always)]

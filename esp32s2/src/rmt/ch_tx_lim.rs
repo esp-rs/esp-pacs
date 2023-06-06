@@ -35,13 +35,13 @@ impl From<crate::W<CH_TX_LIM_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can send out."]
-pub type TX_LIM_R = crate::FieldReader<u16, u16>;
+pub type TX_LIM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can send out."]
-pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16, u16>;
+pub type TX_LIM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 9, O, u16>;
 #[doc = "Field `TX_LOOP_NUM` reader - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
-pub type TX_LOOP_NUM_R = crate::FieldReader<u16, u16>;
+pub type TX_LOOP_NUM_R = crate::FieldReader<u16>;
 #[doc = "Field `TX_LOOP_NUM` writer - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
-pub type TX_LOOP_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 10, O, u16, u16>;
+pub type TX_LOOP_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, CH_TX_LIM_SPEC, 10, O, u16>;
 #[doc = "Field `TX_LOOP_CNT_EN` reader - This register is the enabled bit for loop count."]
 pub type TX_LOOP_CNT_EN_R = crate::BitReader;
 #[doc = "Field `TX_LOOP_CNT_EN` writer - This register is the enabled bit for loop count."]

@@ -35,10 +35,10 @@ impl From<crate::W<PRO_CACHE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_CONNECT` reader - Configure which SRAM Block will be occupied by Icache or Dcache."]
-pub type PRO_CACHE_CONNECT_R = crate::FieldReader<u16, u16>;
+pub type PRO_CACHE_CONNECT_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_CACHE_CONNECT` writer - Configure which SRAM Block will be occupied by Icache or Dcache."]
 pub type PRO_CACHE_CONNECT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_CACHE_1_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_CACHE_1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]

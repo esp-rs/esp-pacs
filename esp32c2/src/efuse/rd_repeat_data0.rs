@@ -42,7 +42,7 @@ pub type FLASH_TPUW_R = crate::FieldReader;
 #[doc = "Field `SECURE_BOOT_EN` reader - The bit be set to enable secure boot."]
 pub type SECURE_BOOT_EN_R = crate::BitReader;
 #[doc = "Field `RPT4_RESERVED` reader - Reserved (used for four backups method)."]
-pub type RPT4_RESERVED_R = crate::FieldReader<u16, u16>;
+pub type RPT4_RESERVED_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:1 - The bit be set to disable software read high/low 128-bit of BLK3."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_VECBASE_OVERRIDE_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE` reader - world1 vecbase_override register, when core1 in world1 use this register to override vecbase register."]
-pub type CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE_R = crate::FieldReader<u32, u32>;
+pub type CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE_R = crate::FieldReader<u32>;
 #[doc = "Field `CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE` writer - world1 vecbase_override register, when core1 in world1 use this register to override vecbase register."]
 pub type CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_VECBASE_OVERRIDE_2_SPEC, 22, O, u32, u32>;
+    crate::FieldWriter<'a, CORE_1_VECBASE_OVERRIDE_2_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - world1 vecbase_override register, when core1 in world1 use this register to override vecbase register."]
     #[inline(always)]

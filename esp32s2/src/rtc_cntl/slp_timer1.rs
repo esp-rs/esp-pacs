@@ -35,9 +35,9 @@ impl From<crate::W<SLP_TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_VAL_HI` reader - Sets the higher 16 bits of the trigger threshold for the RTC timer."]
-pub type SLP_VAL_HI_R = crate::FieldReader<u16, u16>;
+pub type SLP_VAL_HI_R = crate::FieldReader<u16>;
 #[doc = "Field `SLP_VAL_HI` writer - Sets the higher 16 bits of the trigger threshold for the RTC timer."]
-pub type SLP_VAL_HI_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER1_SPEC, 16, O, u16, u16>;
+pub type SLP_VAL_HI_W<'a, const O: u8> = crate::FieldWriter<'a, SLP_TIMER1_SPEC, 16, O, u16>;
 #[doc = "Field `MAIN_TIMER_ALARM_EN` writer - Sets this bit to enable the timer alarm."]
 pub type MAIN_TIMER_ALARM_EN_W<'a, const O: u8> = crate::BitWriter<'a, SLP_TIMER1_SPEC, O>;
 impl R {

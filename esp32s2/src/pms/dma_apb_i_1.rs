@@ -67,10 +67,10 @@ pub type DMA_APB_I_SRAM_3_W_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_3_W` writer - Setting to 1 grants internal DMA permission to write SRAM Block 3."]
 pub type DMA_APB_I_SRAM_3_W_W<'a, const O: u8> = crate::BitWriter<'a, DMA_APB_I_1_SPEC, O>;
 #[doc = "Field `DMA_APB_I_SRAM_4_SPLTADDR` reader - Configure the split address of SRAM Block 4-21 for internal DMA access."]
-pub type DMA_APB_I_SRAM_4_SPLTADDR_R = crate::FieldReader<u32, u32>;
+pub type DMA_APB_I_SRAM_4_SPLTADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_APB_I_SRAM_4_SPLTADDR` writer - Configure the split address of SRAM Block 4-21 for internal DMA access."]
 pub type DMA_APB_I_SRAM_4_SPLTADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, DMA_APB_I_1_SPEC, 17, O, u32, u32>;
+    crate::FieldWriter<'a, DMA_APB_I_1_SPEC, 17, O, u32>;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_R` reader - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 low address region."]
 pub type DMA_APB_I_SRAM_4_L_R_R = crate::BitReader;
 #[doc = "Field `DMA_APB_I_SRAM_4_L_R` writer - Setting to 1 grants internal DMA permission to read SRAM Block 4-21 low address region."]

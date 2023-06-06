@@ -20,7 +20,7 @@ impl From<crate::W<PLDMND_SPEC>> for W {
     }
 }
 #[doc = "Field `PD` writer - Poll Demand. If the OWNER bit of a descriptor is not set, the FSM goes to the Suspend state. The host needs to write any value into this register for the IDMAC FSM to resume normal descriptor fetch operation. This is a write only ."]
-pub type PD_W<'a, const O: u8> = crate::FieldWriter<'a, PLDMND_SPEC, 32, O, u32, u32>;
+pub type PD_W<'a, const O: u8> = crate::FieldWriter<'a, PLDMND_SPEC, 32, O, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<PLDMND_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {

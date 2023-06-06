@@ -35,10 +35,10 @@ impl From<crate::W<SCL_LOW_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_LOW_PERIOD` reader - number of cycles that scl == 0"]
-pub type SCL_LOW_PERIOD_R = crate::FieldReader<u32, u32>;
+pub type SCL_LOW_PERIOD_R = crate::FieldReader<u32>;
 #[doc = "Field `SCL_LOW_PERIOD` writer - number of cycles that scl == 0"]
 pub type SCL_LOW_PERIOD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 25, O, u32, u32>;
+    crate::FieldWriter<'a, SCL_LOW_PERIOD_SPEC, 25, O, u32>;
 impl R {
     #[doc = "Bits 0:24 - number of cycles that scl == 0"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<TX_DSCR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_RETRY_THRESHOLD` reader - "]
-pub type WR_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
+pub type WR_RETRY_THRESHOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `WR_RETRY_THRESHOLD` writer - "]
 pub type WR_RETRY_THRESHOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TX_DSCR_CONF_SPEC, 11, O, u16, u16>;
+    crate::FieldWriter<'a, TX_DSCR_CONF_SPEC, 11, O, u16>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]

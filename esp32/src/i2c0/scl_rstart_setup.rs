@@ -35,9 +35,9 @@ impl From<crate::W<SCL_RSTART_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure the clock num between the posedge of SCL and the negedge of SDA for restart mark."]
-pub type TIME_R = crate::FieldReader<u16, u16>;
+pub type TIME_R = crate::FieldReader<u16>;
 #[doc = "Field `TIME` writer - This register is used to configure the clock num between the posedge of SCL and the negedge of SDA for restart mark."]
-pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_RSTART_SETUP_SPEC, 10, O, u16, u16>;
+pub type TIME_W<'a, const O: u8> = crate::FieldWriter<'a, SCL_RSTART_SETUP_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure the clock num between the posedge of SCL and the negedge of SDA for restart mark."]
     #[inline(always)]

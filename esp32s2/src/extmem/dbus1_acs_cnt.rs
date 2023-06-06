@@ -14,7 +14,7 @@ impl From<crate::R<DBUS1_ACS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS1_ACS_CNT` reader - The bits are used to count the number of dbus1 access dcache."]
-pub type DBUS1_ACS_CNT_R = crate::FieldReader<u32, u32>;
+pub type DBUS1_ACS_CNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to count the number of dbus1 access dcache."]
     #[inline(always)]

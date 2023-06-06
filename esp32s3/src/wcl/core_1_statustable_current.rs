@@ -35,10 +35,10 @@ impl From<crate::W<CORE_1_STATUSTABLE_CURRENT_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_STATUSTABLE_CURRENT` reader - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
-pub type CORE_1_STATUSTABLE_CURRENT_R = crate::FieldReader<u16, u16>;
+pub type CORE_1_STATUSTABLE_CURRENT_R = crate::FieldReader<u16>;
 #[doc = "Field `CORE_1_STATUSTABLE_CURRENT` writer - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
 pub type CORE_1_STATUSTABLE_CURRENT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CORE_1_STATUSTABLE_CURRENT_SPEC, 13, O, u16, u16>;
+    crate::FieldWriter<'a, CORE_1_STATUSTABLE_CURRENT_SPEC, 13, O, u16>;
 impl R {
     #[doc = "Bits 1:13 - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1"]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<CIS_CONF6_SPEC>> for W {
     }
 }
 #[doc = "Field `CIS_CONF_W6` reader - "]
-pub type CIS_CONF_W6_R = crate::FieldReader<u32, u32>;
+pub type CIS_CONF_W6_R = crate::FieldReader<u32>;
 #[doc = "Field `CIS_CONF_W6` writer - "]
-pub type CIS_CONF_W6_W<'a, const O: u8> = crate::FieldWriter<'a, CIS_CONF6_SPEC, 32, O, u32, u32>;
+pub type CIS_CONF_W6_W<'a, const O: u8> = crate::FieldWriter<'a, CIS_CONF6_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<SLC_RX_FIFO_PUSH_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC_RXFIFO_WDATA` reader - "]
-pub type SLC_RXFIFO_WDATA_R = crate::FieldReader<u16, u16>;
+pub type SLC_RXFIFO_WDATA_R = crate::FieldReader<u16>;
 #[doc = "Field `SLC_RXFIFO_WDATA` writer - "]
 pub type SLC_RXFIFO_WDATA_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SLC_RX_FIFO_PUSH_SPEC, 9, O, u16, u16>;
+    crate::FieldWriter<'a, SLC_RX_FIFO_PUSH_SPEC, 9, O, u16>;
 #[doc = "Field `SLC_RXFIFO_PUSH` reader - "]
 pub type SLC_RXFIFO_PUSH_R = crate::BitReader;
 #[doc = "Field `SLC_RXFIFO_PUSH` writer - "]

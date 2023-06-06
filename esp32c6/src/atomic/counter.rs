@@ -35,9 +35,9 @@ impl From<crate::W<COUNTER_SPEC>> for W {
     }
 }
 #[doc = "Field `WAIT_COUNTER` reader - delay counter"]
-pub type WAIT_COUNTER_R = crate::FieldReader<u16, u16>;
+pub type WAIT_COUNTER_R = crate::FieldReader<u16>;
 #[doc = "Field `WAIT_COUNTER` writer - delay counter"]
-pub type WAIT_COUNTER_W<'a, const O: u8> = crate::FieldWriter<'a, COUNTER_SPEC, 16, O, u16, u16>;
+pub type WAIT_COUNTER_W<'a, const O: u8> = crate::FieldWriter<'a, COUNTER_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - delay counter"]
     #[inline(always)]

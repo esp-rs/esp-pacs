@@ -14,7 +14,7 @@ impl From<crate::R<OUT_EOF_BFR_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_EOF_BFR_DES_ADDR` reader - "]
-pub type OUT_EOF_BFR_DES_ADDR_R = crate::FieldReader<u32, u32>;
+pub type OUT_EOF_BFR_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<REDCY_SIG1_SPEC>> for W {
     }
 }
 #[doc = "Field `REDCY_SIG1` reader - ******* Description ***********"]
-pub type REDCY_SIG1_R = crate::FieldReader<u32, u32>;
+pub type REDCY_SIG1_R = crate::FieldReader<u32>;
 #[doc = "Field `REDCY_SIG1` writer - ******* Description ***********"]
-pub type REDCY_SIG1_W<'a, const O: u8> = crate::FieldWriter<'a, REDCY_SIG1_SPEC, 31, O, u32, u32>;
+pub type REDCY_SIG1_W<'a, const O: u8> = crate::FieldWriter<'a, REDCY_SIG1_SPEC, 31, O, u32>;
 #[doc = "Field `REDCY_NANDOR` reader - ******* Description ***********"]
 pub type REDCY_NANDOR_R = crate::BitReader;
 impl R {

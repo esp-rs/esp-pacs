@@ -35,10 +35,10 @@ impl From<crate::W<TAR0_HIGH_SPEC>> for W {
     }
 }
 #[doc = "Field `MAIN_TIMER_TAR_HIGH0` reader - need_des"]
-pub type MAIN_TIMER_TAR_HIGH0_R = crate::FieldReader<u16, u16>;
+pub type MAIN_TIMER_TAR_HIGH0_R = crate::FieldReader<u16>;
 #[doc = "Field `MAIN_TIMER_TAR_HIGH0` writer - need_des"]
 pub type MAIN_TIMER_TAR_HIGH0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, TAR0_HIGH_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, TAR0_HIGH_SPEC, 16, O, u16>;
 #[doc = "Field `MAIN_TIMER_TAR_EN0` writer - need_des"]
 pub type MAIN_TIMER_TAR_EN0_W<'a, const O: u8> = crate::BitWriter<'a, TAR0_HIGH_SPEC, O>;
 impl R {

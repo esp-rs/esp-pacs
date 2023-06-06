@@ -35,9 +35,9 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMEOUT` reader - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub type TIMEOUT_R = crate::FieldReader<u32, u32>;
+pub type TIMEOUT_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMEOUT` writer - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub type TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMEOUT_SPEC, 20, O, u32, u32>;
+pub type TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, TIMEOUT_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]

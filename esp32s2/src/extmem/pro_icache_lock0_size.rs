@@ -35,10 +35,10 @@ impl From<crate::W<PRO_ICACHE_LOCK0_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_LOCK0_SIZE` reader - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
-pub type PRO_ICACHE_LOCK0_SIZE_R = crate::FieldReader<u16, u16>;
+pub type PRO_ICACHE_LOCK0_SIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PRO_ICACHE_LOCK0_SIZE` writer - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
 pub type PRO_ICACHE_LOCK0_SIZE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PRO_ICACHE_LOCK0_SIZE_SPEC, 16, O, u16, u16>;
+    crate::FieldWriter<'a, PRO_ICACHE_LOCK0_SIZE_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the first length of data locking, which is combined with PRO_ICACHE_LOCK0_ADDR_REG"]
     #[inline(always)]

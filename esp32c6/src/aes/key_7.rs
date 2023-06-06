@@ -35,9 +35,9 @@ impl From<crate::W<KEY_7_SPEC>> for W {
     }
 }
 #[doc = "Field `KEY_7` reader - This bits stores key_7 that is a part of key material."]
-pub type KEY_7_R = crate::FieldReader<u32, u32>;
+pub type KEY_7_R = crate::FieldReader<u32>;
 #[doc = "Field `KEY_7` writer - This bits stores key_7 that is a part of key material."]
-pub type KEY_7_W<'a, const O: u8> = crate::FieldWriter<'a, KEY_7_SPEC, 32, O, u32, u32>;
+pub type KEY_7_W<'a, const O: u8> = crate::FieldWriter<'a, KEY_7_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores key_7 that is a part of key material."]
     #[inline(always)]

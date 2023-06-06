@@ -35,10 +35,10 @@ impl From<crate::W<PHYSICAL_ADDRESS_SPEC>> for W {
     }
 }
 #[doc = "Field `PHYSICAL_ADDRESS` reader - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
-pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32, u32>;
+pub type PHYSICAL_ADDRESS_R = crate::FieldReader<u32>;
 #[doc = "Field `PHYSICAL_ADDRESS` writer - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
 pub type PHYSICAL_ADDRESS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, PHYSICAL_ADDRESS_SPEC, 30, O, u32, u32>;
+    crate::FieldWriter<'a, PHYSICAL_ADDRESS_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29 - Those bits stores the physical address. If linesize is 16-byte, the physical address should be aligned of 16 bytes. If linesize is 32-byte, the physical address should be aligned of 32 bytes. If linesize is 64-byte, the physical address should be aligned of 64 bytes."]
     #[inline(always)]

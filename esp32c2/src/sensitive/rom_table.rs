@@ -35,9 +35,9 @@ impl From<crate::W<ROM_TABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_TABLE` reader - Need add description"]
-pub type ROM_TABLE_R = crate::FieldReader<u32, u32>;
+pub type ROM_TABLE_R = crate::FieldReader<u32>;
 #[doc = "Field `ROM_TABLE` writer - Need add description"]
-pub type ROM_TABLE_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_TABLE_SPEC, 32, O, u32, u32>;
+pub type ROM_TABLE_W<'a, const O: u8> = crate::FieldWriter<'a, ROM_TABLE_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<SLAVE1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_DATA_BITLEN` reader - The transferred data bit length in SPI slave FD and HD mode."]
-pub type SLV_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
+pub type SLV_DATA_BITLEN_R = crate::FieldReader<u32>;
 #[doc = "Field `SLV_DATA_BITLEN` writer - The transferred data bit length in SPI slave FD and HD mode."]
-pub type SLV_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 18, O, u32, u32>;
+pub type SLV_DATA_BITLEN_W<'a, const O: u8> = crate::FieldWriter<'a, SLAVE1_SPEC, 18, O, u32>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
 pub type SLV_LAST_COMMAND_R = crate::FieldReader;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]

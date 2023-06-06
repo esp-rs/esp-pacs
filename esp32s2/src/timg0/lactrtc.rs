@@ -35,10 +35,9 @@ impl From<crate::W<LACTRTC_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_RTC_STEP_LEN` reader - Reserved."]
-pub type LACT_RTC_STEP_LEN_R = crate::FieldReader<u32, u32>;
+pub type LACT_RTC_STEP_LEN_R = crate::FieldReader<u32>;
 #[doc = "Field `LACT_RTC_STEP_LEN` writer - Reserved."]
-pub type LACT_RTC_STEP_LEN_W<'a, const O: u8> =
-    crate::FieldWriter<'a, LACTRTC_SPEC, 26, O, u32, u32>;
+pub type LACT_RTC_STEP_LEN_W<'a, const O: u8> = crate::FieldWriter<'a, LACTRTC_SPEC, 26, O, u32>;
 impl R {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]

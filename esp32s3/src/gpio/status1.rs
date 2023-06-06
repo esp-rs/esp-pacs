@@ -35,9 +35,9 @@ impl From<crate::W<STATUS1_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT` reader - GPIO interrupt status register for GPIO32-53"]
-pub type INTERRUPT_R = crate::FieldReader<u32, u32>;
+pub type INTERRUPT_R = crate::FieldReader<u32>;
 #[doc = "Field `INTERRUPT` writer - GPIO interrupt status register for GPIO32-53"]
-pub type INTERRUPT_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS1_SPEC, 22, O, u32, u32>;
+pub type INTERRUPT_W<'a, const O: u8> = crate::FieldWriter<'a, STATUS1_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO interrupt status register for GPIO32-53"]
     #[inline(always)]

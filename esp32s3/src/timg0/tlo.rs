@@ -14,7 +14,7 @@ impl From<crate::R<TLO_SPEC>> for R {
     }
 }
 #[doc = "Field `LO` reader - After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter of timer %s can be read here."]
-pub type LO_R = crate::FieldReader<u32, u32>;
+pub type LO_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - After writing to TIMG_T%sUPDATE_REG, the low 32 bits of the time-base counter of timer %s can be read here."]
     #[inline(always)]

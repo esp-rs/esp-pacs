@@ -35,9 +35,9 @@ impl From<crate::W<VERSION_SPEC>> for W {
     }
 }
 #[doc = "Field `SD_DATE` reader - "]
-pub type SD_DATE_R = crate::FieldReader<u32, u32>;
+pub type SD_DATE_R = crate::FieldReader<u32>;
 #[doc = "Field `SD_DATE` writer - "]
-pub type SD_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, VERSION_SPEC, 28, O, u32, u32>;
+pub type SD_DATE_W<'a, const O: u8> = crate::FieldWriter<'a, VERSION_SPEC, 28, O, u32>;
 impl R {
     #[doc = "Bits 0:27"]
     #[inline(always)]

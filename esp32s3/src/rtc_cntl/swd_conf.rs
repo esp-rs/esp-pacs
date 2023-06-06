@@ -43,10 +43,9 @@ pub type SWD_BYPASS_RST_R = crate::BitReader;
 #[doc = "Field `SWD_BYPASS_RST` writer - bypass super watch dog reset"]
 pub type SWD_BYPASS_RST_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - adjust signal width send to swd"]
-pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
+pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - adjust signal width send to swd"]
-pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16, u16>;
+pub type SWD_SIGNAL_WIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, SWD_CONF_SPEC, 10, O, u16>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - reset swd reset flag"]
 pub type SWD_RST_FLAG_CLR_W<'a, const O: u8> = crate::BitWriter<'a, SWD_CONF_SPEC, O>;
 #[doc = "Field `SWD_FEED` writer - Sw feed swd"]

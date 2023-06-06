@@ -35,7 +35,7 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGLS0STAT` reader - "]
-pub type RECORD_PRO_PDEBUGLS0STAT_R = crate::FieldReader<u32, u32>;
+pub type RECORD_PRO_PDEBUGLS0STAT_R = crate::FieldReader<u32>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` reader - "]
 pub type RECORD_PDEBUGLS0STAT_TYPE_R = crate::FieldReader;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` writer - "]

@@ -35,10 +35,10 @@ impl From<crate::W<APB_TSENS_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_TSENS_XPD_WAIT` reader - Need add description"]
-pub type REG_TSENS_XPD_WAIT_R = crate::FieldReader<u16, u16>;
+pub type REG_TSENS_XPD_WAIT_R = crate::FieldReader<u16>;
 #[doc = "Field `REG_TSENS_XPD_WAIT` writer - Need add description"]
 pub type REG_TSENS_XPD_WAIT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, APB_TSENS_CTRL2_SPEC, 12, O, u16, u16>;
+    crate::FieldWriter<'a, APB_TSENS_CTRL2_SPEC, 12, O, u16>;
 #[doc = "Field `REG_TSENS_XPD_FORCE` reader - Need add description"]
 pub type REG_TSENS_XPD_FORCE_R = crate::FieldReader;
 #[doc = "Field `REG_TSENS_XPD_FORCE` writer - Need add description"]

@@ -14,7 +14,7 @@ impl From<crate::R<TCBCNT_SPEC>> for R {
     }
 }
 #[doc = "Field `TCBCNT` reader - Number of bytes transferred by CIU unit to card."]
-pub type TCBCNT_R = crate::FieldReader<u32, u32>;
+pub type TCBCNT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Number of bytes transferred by CIU unit to card."]
     #[inline(always)]

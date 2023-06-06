@@ -14,7 +14,7 @@ impl From<crate::R<CPU_PERIPHERAL_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_PERI_BYTE_ERROR_ADDR` reader - Record the illegitimate address of CPU peripheral."]
-pub type CPU_PERI_BYTE_ERROR_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CPU_PERI_BYTE_ERROR_ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Record the illegitimate address of CPU peripheral."]
     #[inline(always)]

@@ -35,10 +35,10 @@ impl From<crate::W<CACHE_LOCK_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_LOCK_ADDR` reader - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
-pub type CACHE_LOCK_ADDR_R = crate::FieldReader<u32, u32>;
+pub type CACHE_LOCK_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `CACHE_LOCK_ADDR` writer - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
 pub type CACHE_LOCK_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, CACHE_LOCK_ADDR_SPEC, 32, O, u32, u32>;
+    crate::FieldWriter<'a, CACHE_LOCK_ADDR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
     #[inline(always)]
