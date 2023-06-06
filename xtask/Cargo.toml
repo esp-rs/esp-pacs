@@ -6,15 +6,12 @@ publish = false
 
 [dependencies]
 anyhow     = "1.0.71"
-clap       = { version = "4.2.7", features = ["derive"] }
+clap       = { version = "4.3.2", features = ["derive"] }
 env_logger = "0.10.0"
 form       = "0.10.0"
-log        = "0.4.17"
+log        = "0.4.18"
 semver     = "1.0.17"
 strum      = { version = "0.24.1", features = ["derive"] }
-svd2rust   = { version = "0.28.0", default-features = false }
+svd2rust   = { version = "0.29.0", default-features = false }
 svdtools   = "0.3.0"
-toml_edit  = "0.19.9"
-
-[patch.crates-io]
-svd2rust = { git = "https://github.com/rust-embedded/svd2rust.git", rev = "8f63b565f0a01de62f24f49b8e5d81d6d3c9a3c1" }
+toml_edit  = "0.19.10"
