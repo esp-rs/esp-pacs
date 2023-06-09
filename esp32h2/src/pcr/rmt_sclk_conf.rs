@@ -34,74 +34,65 @@ impl From<crate::W<RMT_SCLK_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `RMT_SCLK_DIV_A` reader - The denominator of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_A_R = crate::FieldReader;
-#[doc = "Field `RMT_SCLK_DIV_A` writer - The denominator of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 6, O>;
-#[doc = "Field `RMT_SCLK_DIV_B` reader - The numerator of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_B_R = crate::FieldReader;
-#[doc = "Field `RMT_SCLK_DIV_B` writer - The numerator of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 6, O>;
-#[doc = "Field `RMT_SCLK_DIV_NUM` reader - The integral part of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `RMT_SCLK_DIV_NUM` writer - The integral part of the frequency divider factor of the rmt function clock."]
-pub type RMT_SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 8, O>;
-#[doc = "Field `RMT_SCLK_SEL` reader - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
-pub type RMT_SCLK_SEL_R = crate::BitReader;
-#[doc = "Field `RMT_SCLK_SEL` writer - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
-pub type RMT_SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RMT_SCLK_CONF_SPEC, O>;
-#[doc = "Field `RMT_SCLK_EN` reader - Set 1 to enable rmt function clock"]
-pub type RMT_SCLK_EN_R = crate::BitReader;
-#[doc = "Field `RMT_SCLK_EN` writer - Set 1 to enable rmt function clock"]
-pub type RMT_SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, RMT_SCLK_CONF_SPEC, O>;
+#[doc = "Field `SCLK_DIV_A` reader - The denominator of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_A_R = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_A` writer - The denominator of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_A_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 6, O>;
+#[doc = "Field `SCLK_DIV_B` reader - The numerator of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_B_R = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_B` writer - The numerator of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_B_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 6, O>;
+#[doc = "Field `SCLK_DIV_NUM` reader - The integral part of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_NUM_R = crate::FieldReader;
+#[doc = "Field `SCLK_DIV_NUM` writer - The integral part of the frequency divider factor of the rmt function clock."]
+pub type SCLK_DIV_NUM_W<'a, const O: u8> = crate::FieldWriter<'a, RMT_SCLK_CONF_SPEC, 8, O>;
+#[doc = "Field `SCLK_SEL` reader - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
+pub type SCLK_SEL_R = crate::BitReader;
+#[doc = "Field `SCLK_SEL` writer - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
+pub type SCLK_SEL_W<'a, const O: u8> = crate::BitWriter<'a, RMT_SCLK_CONF_SPEC, O>;
+#[doc = "Field `SCLK_EN` reader - Set 1 to enable rmt function clock"]
+pub type SCLK_EN_R = crate::BitReader;
+#[doc = "Field `SCLK_EN` writer - Set 1 to enable rmt function clock"]
+pub type SCLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, RMT_SCLK_CONF_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_a(&self) -> RMT_SCLK_DIV_A_R {
-        RMT_SCLK_DIV_A_R::new((self.bits & 0x3f) as u8)
+    pub fn sclk_div_a(&self) -> SCLK_DIV_A_R {
+        SCLK_DIV_A_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_b(&self) -> RMT_SCLK_DIV_B_R {
-        RMT_SCLK_DIV_B_R::new(((self.bits >> 6) & 0x3f) as u8)
+    pub fn sclk_div_b(&self) -> SCLK_DIV_B_R {
+        SCLK_DIV_B_R::new(((self.bits >> 6) & 0x3f) as u8)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_num(&self) -> RMT_SCLK_DIV_NUM_R {
-        RMT_SCLK_DIV_NUM_R::new(((self.bits >> 12) & 0xff) as u8)
+    pub fn sclk_div_num(&self) -> SCLK_DIV_NUM_R {
+        SCLK_DIV_NUM_R::new(((self.bits >> 12) & 0xff) as u8)
     }
     #[doc = "Bit 20 - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
     #[inline(always)]
-    pub fn rmt_sclk_sel(&self) -> RMT_SCLK_SEL_R {
-        RMT_SCLK_SEL_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn sclk_sel(&self) -> SCLK_SEL_R {
+        SCLK_SEL_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - Set 1 to enable rmt function clock"]
     #[inline(always)]
-    pub fn rmt_sclk_en(&self) -> RMT_SCLK_EN_R {
-        RMT_SCLK_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn sclk_en(&self) -> SCLK_EN_R {
+        SCLK_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMT_SCLK_CONF")
+            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
+            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
             .field(
-                "rmt_sclk_div_a",
-                &format_args!("{}", self.rmt_sclk_div_a().bits()),
+                "sclk_div_num",
+                &format_args!("{}", self.sclk_div_num().bits()),
             )
-            .field(
-                "rmt_sclk_div_b",
-                &format_args!("{}", self.rmt_sclk_div_b().bits()),
-            )
-            .field(
-                "rmt_sclk_div_num",
-                &format_args!("{}", self.rmt_sclk_div_num().bits()),
-            )
-            .field(
-                "rmt_sclk_sel",
-                &format_args!("{}", self.rmt_sclk_sel().bit()),
-            )
-            .field("rmt_sclk_en", &format_args!("{}", self.rmt_sclk_en().bit()))
+            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bit()))
+            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
             .finish()
     }
 }
@@ -115,32 +106,32 @@ impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_sclk_div_a(&mut self) -> RMT_SCLK_DIV_A_W<0> {
-        RMT_SCLK_DIV_A_W::new(self)
+    pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<0> {
+        SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_sclk_div_b(&mut self) -> RMT_SCLK_DIV_B_W<6> {
-        RMT_SCLK_DIV_B_W::new(self)
+    pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<6> {
+        SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_sclk_div_num(&mut self) -> RMT_SCLK_DIV_NUM_W<12> {
-        RMT_SCLK_DIV_NUM_W::new(self)
+    pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<12> {
+        SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bit 20 - set this field to select clock-source. 0: do not select anyone clock, 1(default): 80MHz, 2: FOSC, 3: XTAL."]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_sclk_sel(&mut self) -> RMT_SCLK_SEL_W<20> {
-        RMT_SCLK_SEL_W::new(self)
+    pub fn sclk_sel(&mut self) -> SCLK_SEL_W<20> {
+        SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 21 - Set 1 to enable rmt function clock"]
     #[inline(always)]
     #[must_use]
-    pub fn rmt_sclk_en(&mut self) -> RMT_SCLK_EN_W<21> {
-        RMT_SCLK_EN_W::new(self)
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<21> {
+        SCLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
