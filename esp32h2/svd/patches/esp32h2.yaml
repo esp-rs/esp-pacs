@@ -157,6 +157,10 @@ PCNT:
       PULSE_CNT_RST_U3:
         name: CNT_RST_U3
 
+PCR:
+  RMT_SCLK_CONF:
+    _strip: "RMT_"
+
 SPI2:
   _strip: "SPI_"
 
