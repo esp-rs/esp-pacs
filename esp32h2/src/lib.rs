@@ -1251,7 +1251,7 @@ pub struct RNG {
 unsafe impl Send for RNG {}
 impl RNG {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rng::RegisterBlock = 0x6002_60b0 as *const _;
+    pub const PTR: *const rng::RegisterBlock = 0x600b_2800 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const rng::RegisterBlock {
