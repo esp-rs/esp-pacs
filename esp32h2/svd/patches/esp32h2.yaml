@@ -5,6 +5,8 @@ _modify:
     name: DMA
   ASSIST_DEBUG:
     baseAddress: 0x600C2000
+  RNG:
+    baseAddress: 0x600B2800
 
 ASSIST_DEBUG:
   _modify:
@@ -48,6 +50,17 @@ DMA:
     _strip_end: "_CH_INT_ST"
   "OUT_INT_ENA_CH%s":
     _strip_end: "_CH_INT_ENA"
+
+LEDC:
+  "*":
+    _strip_end: "_CH"
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+    _modify:
+      TICK_SEL_TIMER:
+        name: TICK_SEL
+      CLK_DIV_TIMER:
+        name: CLK_DIV
 
 LP_WDT:
   _modify:
@@ -227,13 +240,7 @@ RMT:
       RX_CH3_ERR_INT_CLR:
         name: CH1_RX_ERR_INT_CLR
 
-LEDC:
-  "*":
-    _strip_end: "_CH"
-  "TIMER%s_CONF":
-    _strip: "TIMER_"
-    _modify:
-      TICK_SEL_TIMER:
-        name: TICK_SEL
-      CLK_DIV_TIMER:
-        name: CLK_DIV
+RNG:
+  _modify:
+    DATA:
+      addressOffset: 8

@@ -2,7 +2,8 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 pub struct RegisterBlock {
-    #[doc = "0x00 - Random number data"]
+    _reserved0: [u8; 0x08],
+    #[doc = "0x08 - Random number data"]
     pub data: DATA,
 }
 #[doc = "DATA (r) register accessor: an alias for `Reg<DATA_SPEC>`"]
