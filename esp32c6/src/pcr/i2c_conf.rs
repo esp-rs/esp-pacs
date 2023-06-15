@@ -34,32 +34,32 @@ impl From<crate::W<I2C_CONF_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `I2C_CLK_EN` reader - Set 1 to enable i2c apb clock"]
-pub type I2C_CLK_EN_R = crate::BitReader;
-#[doc = "Field `I2C_CLK_EN` writer - Set 1 to enable i2c apb clock"]
-pub type I2C_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CONF_SPEC, O>;
-#[doc = "Field `I2C_RST_EN` reader - Set 0 to reset i2c module"]
-pub type I2C_RST_EN_R = crate::BitReader;
-#[doc = "Field `I2C_RST_EN` writer - Set 0 to reset i2c module"]
-pub type I2C_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CONF_SPEC, O>;
+#[doc = "Field `I2C0_CLK_EN` reader - Set 1 to enable i2c apb clock"]
+pub type I2C0_CLK_EN_R = crate::BitReader;
+#[doc = "Field `I2C0_CLK_EN` writer - Set 1 to enable i2c apb clock"]
+pub type I2C0_CLK_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CONF_SPEC, O>;
+#[doc = "Field `I2C0_RST_EN` reader - Set 0 to reset i2c module"]
+pub type I2C0_RST_EN_R = crate::BitReader;
+#[doc = "Field `I2C0_RST_EN` writer - Set 0 to reset i2c module"]
+pub type I2C0_RST_EN_W<'a, const O: u8> = crate::BitWriter<'a, I2C_CONF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable i2c apb clock"]
     #[inline(always)]
-    pub fn i2c_clk_en(&self) -> I2C_CLK_EN_R {
-        I2C_CLK_EN_R::new((self.bits & 1) != 0)
+    pub fn i2c0_clk_en(&self) -> I2C0_CLK_EN_R {
+        I2C0_CLK_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Set 0 to reset i2c module"]
     #[inline(always)]
-    pub fn i2c_rst_en(&self) -> I2C_RST_EN_R {
-        I2C_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn i2c0_rst_en(&self) -> I2C0_RST_EN_R {
+        I2C0_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C_CONF")
-            .field("i2c_clk_en", &format_args!("{}", self.i2c_clk_en().bit()))
-            .field("i2c_rst_en", &format_args!("{}", self.i2c_rst_en().bit()))
+            .field("i2c0_clk_en", &format_args!("{}", self.i2c0_clk_en().bit()))
+            .field("i2c0_rst_en", &format_args!("{}", self.i2c0_rst_en().bit()))
             .finish()
     }
 }
@@ -73,14 +73,14 @@ impl W {
     #[doc = "Bit 0 - Set 1 to enable i2c apb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_clk_en(&mut self) -> I2C_CLK_EN_W<0> {
-        I2C_CLK_EN_W::new(self)
+    pub fn i2c0_clk_en(&mut self) -> I2C0_CLK_EN_W<0> {
+        I2C0_CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set 0 to reset i2c module"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c_rst_en(&mut self) -> I2C_RST_EN_W<1> {
-        I2C_RST_EN_W::new(self)
+    pub fn i2c0_rst_en(&mut self) -> I2C0_RST_EN_W<1> {
+        I2C0_RST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
