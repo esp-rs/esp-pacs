@@ -19,7 +19,7 @@ pub struct RegisterBlock {
     #[doc = "0x1c - MSPI_CLK configuration register"]
     pub mspi_clk_conf: MSPI_CLK_CONF,
     #[doc = "0x20 - I2C configuration register"]
-    pub i2c_conf: I2C_CONF,
+    pub i2c0_conf: I2C0_CONF,
     #[doc = "0x24 - I2C_SCLK configuration register"]
     pub i2c_sclk_conf: I2C_SCLK_CONF,
     #[doc = "0x28 - UHCI configuration register"]
@@ -202,10 +202,10 @@ pub mod mspi_conf;
 pub type MSPI_CLK_CONF = crate::Reg<mspi_clk_conf::MSPI_CLK_CONF_SPEC>;
 #[doc = "MSPI_CLK configuration register"]
 pub mod mspi_clk_conf;
-#[doc = "I2C_CONF (rw) register accessor: an alias for `Reg<I2C_CONF_SPEC>`"]
-pub type I2C_CONF = crate::Reg<i2c_conf::I2C_CONF_SPEC>;
+#[doc = "I2C0_CONF (rw) register accessor: an alias for `Reg<I2C0_CONF_SPEC>`"]
+pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C configuration register"]
-pub mod i2c_conf;
+pub mod i2c0_conf;
 #[doc = "I2C_SCLK_CONF (rw) register accessor: an alias for `Reg<I2C_SCLK_CONF_SPEC>`"]
 pub type I2C_SCLK_CONF = crate::Reg<i2c_sclk_conf::I2C_SCLK_CONF_SPEC>;
 #[doc = "I2C_SCLK configuration register"]
