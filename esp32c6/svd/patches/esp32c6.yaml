@@ -34,7 +34,10 @@ ASSIST_DEBUG:
         name: CORE_0_DRAM0_EXCEPTION_MONITOR_INTR_ENA
 
 PCR:
-  I2C_CONF:
+  _modify:
+    I2C_CONF:
+      name: I2C0_CONF
+  I2C0_CONF:
     _modify:
       I2C_CLK_EN:
         name: I2C0_CLK_EN
