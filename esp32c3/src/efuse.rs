@@ -208,9 +208,9 @@ pub struct RegisterBlock {
     pub rd_rs_err0: RD_RS_ERR0,
     #[doc = "0x1c4 - Programming error record register 1 of BLOCK1-10."]
     pub rd_rs_err1: RD_RS_ERR1,
-    #[doc = "0x1c8 - eFuse clcok configuration register."]
+    #[doc = "0x1c8 - eFuse clock configuration register."]
     pub clk: CLK,
-    #[doc = "0x1cc - eFuse operation mode configuraiton register;"]
+    #[doc = "0x1cc - eFuse operation mode configuration register."]
     pub conf: CONF,
     #[doc = "0x1d0 - eFuse status register."]
     pub status: STATUS,
@@ -228,9 +228,9 @@ pub struct RegisterBlock {
     pub dac_conf: DAC_CONF,
     #[doc = "0x1ec - Configures read timing parameters."]
     pub rd_tim_conf: RD_TIM_CONF,
-    #[doc = "0x1f0 - Configurarion register 1 of eFuse programming timing parameters."]
+    #[doc = "0x1f0 - Configuration register 1 of eFuse programming timing parameters."]
     pub wr_tim_conf1: WR_TIM_CONF1,
-    #[doc = "0x1f4 - Configurarion register 2 of eFuse programming timing parameters."]
+    #[doc = "0x1f4 - Configuration register 2 of eFuse programming timing parameters."]
     pub wr_tim_conf2: WR_TIM_CONF2,
     _reserved114: [u8; 0x04],
     #[doc = "0x1fc - eFuse version register."]
@@ -646,11 +646,11 @@ pub type RD_RS_ERR1 = crate::Reg<rd_rs_err1::RD_RS_ERR1_SPEC>;
 pub mod rd_rs_err1;
 #[doc = "CLK (rw) register accessor: an alias for `Reg<CLK_SPEC>`"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
-#[doc = "eFuse clcok configuration register."]
+#[doc = "eFuse clock configuration register."]
 pub mod clk;
 #[doc = "CONF (rw) register accessor: an alias for `Reg<CONF_SPEC>`"]
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
-#[doc = "eFuse operation mode configuraiton register;"]
+#[doc = "eFuse operation mode configuration register."]
 pub mod conf;
 #[doc = "STATUS (r) register accessor: an alias for `Reg<STATUS_SPEC>`"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
@@ -686,11 +686,11 @@ pub type RD_TIM_CONF = crate::Reg<rd_tim_conf::RD_TIM_CONF_SPEC>;
 pub mod rd_tim_conf;
 #[doc = "WR_TIM_CONF1 (rw) register accessor: an alias for `Reg<WR_TIM_CONF1_SPEC>`"]
 pub type WR_TIM_CONF1 = crate::Reg<wr_tim_conf1::WR_TIM_CONF1_SPEC>;
-#[doc = "Configurarion register 1 of eFuse programming timing parameters."]
+#[doc = "Configuration register 1 of eFuse programming timing parameters."]
 pub mod wr_tim_conf1;
 #[doc = "WR_TIM_CONF2 (rw) register accessor: an alias for `Reg<WR_TIM_CONF2_SPEC>`"]
 pub type WR_TIM_CONF2 = crate::Reg<wr_tim_conf2::WR_TIM_CONF2_SPEC>;
-#[doc = "Configurarion register 2 of eFuse programming timing parameters."]
+#[doc = "Configuration register 2 of eFuse programming timing parameters."]
 pub mod wr_tim_conf2;
 #[doc = "DATE (rw) register accessor: an alias for `Reg<DATE_SPEC>`"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
