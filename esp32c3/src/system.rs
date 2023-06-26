@@ -32,7 +32,7 @@ pub struct RegisterBlock {
     pub cpu_intr_from_cpu_3: CPU_INTR_FROM_CPU_3,
     #[doc = "0x38 - rsa memory power control register"]
     pub rsa_pd_ctrl: RSA_PD_CTRL,
-    #[doc = "0x3c - edma clcok and reset register"]
+    #[doc = "0x3c - edma clock and reset register"]
     pub edma_ctrl: EDMA_CTRL,
     #[doc = "0x40 - cache control register"]
     pub cache_control: CACHE_CONTROL,
@@ -146,7 +146,7 @@ pub type RSA_PD_CTRL = crate::Reg<rsa_pd_ctrl::RSA_PD_CTRL_SPEC>;
 pub mod rsa_pd_ctrl;
 #[doc = "EDMA_CTRL (rw) register accessor: an alias for `Reg<EDMA_CTRL_SPEC>`"]
 pub type EDMA_CTRL = crate::Reg<edma_ctrl::EDMA_CTRL_SPEC>;
-#[doc = "edma clcok and reset register"]
+#[doc = "edma clock and reset register"]
 pub mod edma_ctrl;
 #[doc = "CACHE_CONTROL (rw) register accessor: an alias for `Reg<CACHE_CONTROL_SPEC>`"]
 pub type CACHE_CONTROL = crate::Reg<cache_control::CACHE_CONTROL_SPEC>;
