@@ -29,7 +29,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32c2, esp32c3, esp32c6, esp32h2]
+        chip: [esp32c2, esp32c3, esp32c6, esp32h2, esp32s2-ulp, esp32s3-ulp]
 
     steps:
       - uses: actions/checkout@v3
@@ -75,7 +75,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        chip: [esp32c2, esp32c3, esp32c6, esp32h2]
+        chip: [esp32c2, esp32c3, esp32c6, esp32h2, esp32s2-ulp, esp32s3-ulp]
 
     steps:
       - uses: actions/checkout@v3
