@@ -13,7 +13,7 @@ use svd2rust::{Config, Target};
 use toml_edit::Document;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
-#[strum(serialize_all = "lowercase")]
+#[strum(serialize_all = "kebab-case")]
 enum Chip {
     Esp32,
     Esp32c2,
@@ -21,7 +21,9 @@ enum Chip {
     Esp32c6,
     Esp32h2,
     Esp32s2,
+    Esp32s2Ulp,
     Esp32s3,
+    Esp32s3Ulp,
     Esp8266,
 }
 

@@ -4,19 +4,18 @@
 ![MIT/Apache-2.0 licensed](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue?style=flat-square)
 [![Matrix](https://img.shields.io/matrix/esp-rs:matrix.org?label=join%20matrix&color=BEC5C9&logo=matrix&style=flat-square)](https://matrix.to/#/#esp-rs:matrix.org)
 
-Peripheral Access Crates for Espressif SoCs and modules. For information on how to use these crates, please refer to the [svd2rust documentation].
+Peripheral Access Crates for Espressif SoCs and modules.
 
-If you discover any errors in an SVD file, please report the issue(s) upstream in the [espressif/svd] repository.
+For information on how to use these crates, please refer to the [svd2rust documentation].
 
 [svd2rust documentation]: https://docs.rs/svd2rust/latest/svd2rust/
-[espressif/svd]: https://github.com/espressif/svd/
 
 ## MSRV
 
 The **M**inimum **S**upported **R**ust **V**ersions are:
 
-- `1.65.0` for RISC-V devices (**ESP32-C2**, **ESP32-C3**, **ESP32-C6**, **ESP32-H2**)
-- `1.65.0` for Xtensa devices (**ESP32**, **ESP32-S2**, **ESP32-S3**, **ESP8266**)
+- `1.65.0` for RISC-V devices (**ESP32-C2/C3/C6**, **ESP32-H2**, **ESP32-S2/S3 RISC-V ULP coprocessors**)
+- `1.65.0` for Xtensa devices (**ESP32**, **ESP32-S2/S3**, **ESP8266**)
 
 Note that targeting the Xtensa ISA currently requires the use of the [esp-rs/rust] compiler fork, which can be installed using [esp-rs/espup].
 
@@ -51,7 +50,7 @@ Options:
   -h, --help  Print help
 ```
 
-For example, to generate a PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
+For example, to generate the PAC for the ESP32-C3 _without_ subsequently building the crate, from within the `xtask/` directory run:
 
 ```shell
 $ cargo run -- generate esp32c3
